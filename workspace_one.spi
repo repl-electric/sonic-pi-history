@@ -186,10 +186,10 @@ live :mountain_voices do |n|
         end
 
         #If we are feeling *brave*, lets try some overlap
-        #sleep beat_dur/2.0
-        #with_fx :slicer, phase: [quart/2, quart].choose  do
-        #  sample ah_candidate, rate: eery_ratio/[1.5, 2.0].choose, pan: 0.25, release: 0.01, decay: 0.01
-        #end
+        sleep beat_dur/2.0
+        with_fx :slicer, phase: [quart/2, quart].choose  do
+          sample ah_candidate, rate: eery_ratio/[1.5, 2.0].choose, pan: 0.25, release: 0.01, decay: 0.01
+        end
       end
     end
   end

@@ -38,7 +38,7 @@ end
 live :beat do |n|
   tempo = [60*2].choose
   drum_cutoff =  n % 4 < 3 ? 80 : 85
-  with_fx :lpf, cutoff: lambda{ 40 }  do
+  with_fx :lpf, cutoff: lambda{ 0 }  do
     with_bpm tempo do
       sleep_rate = 2.0
       sample S.drum_2
@@ -196,13 +196,13 @@ live :mountain_voices do |n|
 end
 
 #IN THE BEGINNING
-#begone :whispering_wind
-#begone :mountain_voices
-#begone :floating_voices
-#begone :dark_snares
-#begone :depths_voices
-#begone :mountain_beats
-#begone :dark_rolling
+begone :whispering_wind
+begone :mountain_voices
+begone :floating_voices
+begone :dark_snares
+begone :depths_voices
+begone :mountain_beats
+begone :dark_rolling
 begone :quiet_ambience
 begone :wail
 

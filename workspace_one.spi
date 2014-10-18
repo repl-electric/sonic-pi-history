@@ -180,7 +180,7 @@ live :mountain_voices do |n|
         sample S.eery_vocals, start: 0.4, finish: 0.5, amp: 1,
           rate: rates.choose.choose
 
-        ah_candidate = [Sop.ahp].choose.choose
+        ah_candidate = [Sop.ahp, Sop.yehp].choose.choose
         with_fx :slicer, phase: quart do
           sample ah_candidate, rate: eery_ratio, pan: -0.25, release: 0.01, decay: 0.01
         end

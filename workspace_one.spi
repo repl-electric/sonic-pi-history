@@ -127,7 +127,7 @@ live :floating_voices do |n|
       sync :beat
       with_fx :compressor do
         ratio = [1.5, 1.8, 0.5].choose
-        with_fx :slicer, phase: eery_ratio, pulse_width: 0.9 do
+#        with_fx :slicer, phase: eery_ratio, pulse_width: 0.9 do
           r = 1.0/4.0
           with_fx :pan, pan: lambda{rrand(-1,1)}  do
             sample S.ethereal_femininity, amp: 0.25, rate: r, attack_level: 0.9
@@ -141,7 +141,7 @@ live :floating_voices do |n|
             sample S.ethereal_femininity, amp: 0.25, rate: r, attack_level: 0.9
           end
         end
-      end
+   #   end
     end
   end
   sleep sample_duration(S.ethereal_femininity)

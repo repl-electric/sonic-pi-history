@@ -38,9 +38,9 @@ end
 live :beat do |n|
   tempo = [60*2].choose
   drum_cutoff =  n % 4 < 3 ? 80 : 85
-  with_fx :lpf, cutoff: lambda{ 80 }  do
+  with_fx :lpf, cutoff: lambda{ 0 }  do
     with_bpm tempo do
-      sleep_rate = 4.0
+      sleep_rate = 2.0
       sample S.drum_2
       if n % 4 == 1
         sample :drum_heavy_kick, rate: 0.8
@@ -82,7 +82,7 @@ live :dark_rolling do
 end
 
 eery_slicing_phase = [eery_ratio].choose
-live :mountain_echos do |n|
+live :mountain_beats do |n|
   vol = 1.0
   rate = n % 8 >= 4 ? eery_ratio/2.0 : -(eery_ratio/2.0)
   sync :beat
@@ -91,8 +91,8 @@ live :mountain_echos do |n|
     eery_slicing_phase = [beat_dur/4.0, eery_ratio].choose
   end
 
-  with_fx :slicer, phase: lambda{eery_slicing_phase} do sample S.eery_vocals, rate: rate, amp: vol+0.2 end
-  with_fx :lpf, cutoff: 100 do  sample S.eery_vocals, rate: eery_ratio/4.0, amp: vol end
+  #with_fx :slicer, phase: lambda{eery_slicing_phase} do sample S.eery_vocals, rate: rate, amp: vol+0.2 end
+  #with_fx :lpf, cutoff: 100 do  sample S.eery_vocals, rate: eery_ratio/4.0, amp: vol end
   sample S.eery_vocals, rate: (eery_ratio/4.0), amp: vol
   #sample S.eery_vocals, rate: (eery_ratio/8.0), amp: vol
   #sample S.eery_vocals, rate: -(eery_ratio/4.0), amp: vol
@@ -111,7 +111,7 @@ live :depths_voices do |n|
   sleep beat_dur
 
   #POWER LIES HERE
-  if n % 2 == 0
+  if n % 4 == 0
     with_fx :echo do
       with_fx :reverb do
         sample S.eery_vocals, start: 0.0, finish: 0.1, amp: 2.5, rate: eery_ratio/2.0
@@ -122,7 +122,7 @@ live :depths_voices do |n|
 end
 
 live :floating_voices do |n|
-  if n % 4 
+  if n % 4 == 2
     with_fx :echo do
       sync :beat
       with_fx :compressor do
@@ -169,42 +169,42 @@ end
 live :mountain_voices do |n|
   sync :beat
   vol = 0.5
-  if n % 4
+  if n % 4 == 1
     with_fx :echo, decay: beat_dur, phase: (quart+(bar/2.0))  do
       with_fx :reverb do
         rates = [
           #[eery_ratio/1.5, eery_ratio/1.5, eery_ratio],
-            [eery_ratio/1.5,eery_ratio/1.5, eery_ratio]
+          [beat_dur/4.0,beat_dur/2.0]
         ]
 
         sample S.eery_vocals, start: 0.4, finish: 0.5, amp: 1,
           rate: rates.choose.choose
 
-        ah_candidate = [Sop.ahp].choose.choose
-        with_fx :slicer, phase: quart do
-          sample ah_candidate, rate: eery_ratio, pan: -0.25, release: 0.01, decay: 0.01
-        end
+        #ah_candidate = [Sop.ehp, Sop.ahp].choose
+        #with_fx :slicer, phase: quart do
+        #  sample ah_candidate, rate: eery_ratio, pan: -0.25, release: 0.01, decay: 0.01
+        #end
 
         #If we are feeling *brave*, lets try some overlap
-        sleep beat_dur/2.0
-        with_fx :slicer, phase: [quart/2, quart].choose  do
-          sample ah_candidate, rate: eery_ratio/[1.5, 2.0].choose, pan: 0.25, release: 0.01, decay: 0.01
-        end
+        #sleep beat_dur/2.0
+        #with_fx :slicer, phase: [quart/2, quart].choose  do
+        #  sample ah_candidate, rate: eery_ratio/[1.5, 2.0].choose, pan: 0.25, release: 0.01, decay: 0.01
+        #end
       end
     end
   end
 end
 
 #IN THE BEGINNING
-#begone :whispering_wind
-#begone :mountain_voices
-#begone :floating_voices
-#begone :dark_snares
-#begone :depths_voices
-#begone :mountain_echos
-#begone :dark_rolling
-#begone :quiet_ambience
-#begone :wail
+begone :whispering_wind
+begone :mountain_voices
+begone :floating_voices
+begone :dark_snares
+begone :depths_voices
+begone :mountain_beats
+begone :dark_rolling
+begone :quiet_ambience
+begone :wail
 
 set_volume! 1.25
 #solo(:lead)

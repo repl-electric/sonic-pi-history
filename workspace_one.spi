@@ -88,7 +88,7 @@ live :mountain_beats do |n|
   sync :beat
 
   if n % 4 == 0
-    eery_slicing_phase = [beat_dur/4.0, eery_ratio].choose
+    eery_slicing_phase = [beat_dur/8.0, eery_ratio].choose
   end
 
   with_fx :slicer, phase: lambda{eery_slicing_phase} do sample S.eery_vocals, rate: rate, amp: vol+0.2 end

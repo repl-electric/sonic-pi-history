@@ -92,7 +92,7 @@ live :mountain_echos do |n|
   end
 
   with_fx :slicer, phase: lambda{eery_slicing_phase} do sample S.eery_vocals, rate: rate, amp: vol+0.2 end
-  #with_fx :lpf, cutoff: 100 do  sample S.eery_vocals, rate: eery_ratio/4.0, amp: vol end
+  with_fx :lpf, cutoff: 100 do  sample S.eery_vocals, rate: eery_ratio/4.0, amp: vol end
   sample S.eery_vocals, rate: (eery_ratio/4.0), amp: vol
   #sample S.eery_vocals, rate: (eery_ratio/8.0), amp: vol
   #sample S.eery_vocals, rate: -(eery_ratio/4.0), amp: vol

@@ -111,7 +111,7 @@ live :depths_voices do |n|
   sleep beat_dur
 
   #POWER LIES HERE
-  if n % 4 == 0
+  if n % 2 == 0
     with_fx :echo do
       with_fx :reverb do
         sample S.eery_vocals, start: 0.0, finish: 0.1, amp: 2.5, rate: eery_ratio/2.0

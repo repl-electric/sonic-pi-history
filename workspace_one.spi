@@ -203,7 +203,7 @@ begone :floating_voices
 begone :depths_voices
 #begone :mountain_echos
 #begone :dark_rolling
-begone :quiet_ambience
+#begone :quiet_ambience
 begone :wail
 
 set_volume! 1.25

@@ -122,7 +122,7 @@ live :depths_voices do |n|
 end
 
 live :floating_voices do |n|
-  if n % 4 == 2
+  if n % 4 
     with_fx :echo do
       sync :beat
       with_fx :compressor do

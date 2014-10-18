@@ -132,7 +132,7 @@ live :floating_voices do |n|
           with_fx :pan, pan: lambda{rrand(-1,1)}  do
             sample S.ethereal_femininity, amp: 0.25, rate: r, attack_level: 0.9
           end
-          r = 1.0/4.0
+          r = 1.0/2.0-0.01
           with_fx :pan, pan: lambda{rrand(-1,1)}  do
             sample S.ethereal_femininity, amp: 0.2, rate: r, attack_level: 0.9
           end

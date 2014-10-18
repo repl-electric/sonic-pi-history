@@ -173,8 +173,7 @@ live :mountain_voices do |n|
     with_fx :echo, decay: beat_dur, phase: (quart+(bar/2.0))  do
       with_fx :reverb do
         rates = [
-          #[eery_ratio/1.5, eery_ratio/1.5, eery_ratio],
-          [beat_dur/4.0,beat_dur/2.0]
+          [eery_ratio/1.5, eery_ratio/1.5, eery_ratio]
         ]
 
         sample S.eery_vocals, start: 0.4, finish: 0.5, amp: 1,

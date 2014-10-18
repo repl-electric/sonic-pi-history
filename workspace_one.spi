@@ -155,7 +155,7 @@ live :whispering_wind do
       pan_dir = [[1, 0.0, -1], [-1, 0, 1]].choose
 
       sync :beat
-      sleep eery_ratio/4.0
+      sleep 1/4.0
       sample s, rate: -1.0, pan: pan_dir[0], amp: pan_amps[0]
       sleep 1
       sample s, rate: 1.0, pan: pan_dir[1], amp:  pan_amps[1]

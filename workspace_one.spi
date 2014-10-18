@@ -40,7 +40,7 @@ live :beat do |n|
   drum_cutoff =  n % 4 < 3 ? 80 : 85
   with_fx :lpf, cutoff: lambda{ 60 }  do
     with_bpm tempo do
-      sleep_rate = 2.0
+      sleep_rate = 4.0
       sample S.drum_2
       if n % 4 == 1
         sample :drum_heavy_kick, rate: 0.8

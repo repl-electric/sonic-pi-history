@@ -169,7 +169,7 @@ end
 live :mountain_voices do |n|
   sync :beat
   vol = 0.5
-  if n % 4 == 1
+  if n % 2 == 1
     with_fx :echo, decay: beat_dur, phase: (quart+(bar/2.0))  do
       with_fx :reverb do
         rates = [

@@ -1,10 +1,15 @@
 
 
-live_loop :go do
+live_loop :drums do
 sample :drum_heavy_kick
+sleep 3
+sample :drum_heavy_kick
+sleep 1
+end
+
+live_loop :go do
 with_fx :echo do
 use_synth :prophet
-
 play 60
 sleep 1
 play 60

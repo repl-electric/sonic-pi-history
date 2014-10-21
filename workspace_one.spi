@@ -1,1 +1,6 @@
+
+
+live_loop do
 play 60
+sleep 1
+end

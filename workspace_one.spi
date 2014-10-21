@@ -3,9 +3,7 @@
 live_loop :drums do
 sample :drum_heavy_kick
 sleep 2
-
-sample :drum_tom_mid_soft
-
+sample :drum_tom_mid_hard
 sleep 1
 sample :drum_heavy_kick
 sleep 1

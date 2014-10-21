@@ -3,7 +3,6 @@
 live_loop :go do
 play 60
 sleep 1
-
+play 60
 sleep 0.5
-
 end

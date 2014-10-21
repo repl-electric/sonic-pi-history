@@ -20,8 +20,8 @@ sleep 1
 play 60
 sleep 1
 play [58, 56].choose
-sleep 0.5
+sleep 0.5/2
 play 58
-sleep 0.5
+sleep 0.5/2
 end
 end

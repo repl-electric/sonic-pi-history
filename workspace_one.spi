@@ -8,6 +8,7 @@ sleep 1
 end
 
 live_loop :go do
+sync :drums
 with_fx :echo do
 use_synth :prophet
 play 60

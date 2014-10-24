@@ -32,6 +32,7 @@ end
 live :synths do |n|
   use_synth :beep
   with_fx :slicer, phase: bar do
+  sync ::drums
   if n % 16 != 15
     play :D3
     sleep bar

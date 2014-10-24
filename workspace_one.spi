@@ -11,11 +11,11 @@ live(:drums) do
     if (n%4 == 0)
       sample csample("183102__dwsd__clp-bodacious.wav")
     end
-    if n == 8
+    if n == 7
       sample csample("183102__dwsd__clp-bodacious.wav")
         sleep bar/4.0
-        sample csample("183102__dwsd__clp-bodacious.wav")
-                sleep bar/4.0
+        sample csample("183102__dwsd__clp-bodacious.wav")       
+        sleep bar/4.0
     else
       sleep bar/2.0
     end

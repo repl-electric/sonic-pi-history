@@ -89,9 +89,9 @@ live :highlight do |n|
     play :C4, release: bar*8
     sleep bar*8
     play :D4, release: bar*4
-    sleep bar*8
+    sleep bar*4
     play :E4, release: bar*4
-    sleep bar*8
+    sleep bar*4
   end
   end
 end

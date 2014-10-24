@@ -93,8 +93,8 @@ end
 live :highlight do |n|
   use_synth :zawa
   with_fx :echo do
-  sync :drums
-  with_fx :lpf, cutoff: 60 do
+    sync :drums
+    with_fx :lpf, cutoff: 60 do
       play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8, disable_wave: 0, pulse_width: 0.9
       sleep bar*8
 

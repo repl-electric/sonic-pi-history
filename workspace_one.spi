@@ -31,5 +31,6 @@ end
 
 live :synths do
   use_synth :beep
-  play degree(1, :major, :F3)
+  play :F3
+  sleep bar
 end

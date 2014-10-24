@@ -3,6 +3,10 @@
 bar = 0.5
 clap_s = csample("183102__dwsd__clp-bodacious.wav")
 
+live(:words) do
+  sample Sop.yeh.choose
+end
+
 live(:drums) do
   with_fx :lpf, cutoff: 70 do
     15.times do |n|
@@ -98,10 +102,10 @@ live :highlight do |n|
       play_chord chord(:D3, :major),   release: bar*4, amp: 0.6, decay: bar*4
       sleep bar*4
 
-      play_chord chord(:D3, :sus4), release: bar*4, amp: 0.6, decay: bar*4
+      play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.6, decay: bar*4
       sleep bar*4
 
-      play_chord chord(:D3, :major),    release: bar*4, amp: 0.6, decay: bar*4
+      play_chord chord(:D3, :major),   release: bar*4, amp: 0.6, decay: bar*4
       sleep bar*4
     end
   end

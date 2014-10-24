@@ -33,11 +33,11 @@ live(:drums) do
   end
   sleep bar/2.0
   sample :drum_bass_soft
-  sleep bar / 1.2
+  sleep bar / 2.6
   sample :drum_bass_soft
-  sleep bar / 1.2
+  sleep bar / 2.6
   sample :drum_bass_soft
-  sleep bar / 1.2  
+  sleep bar / 2.6  
     #sample :drum_bass_soft
 
   end

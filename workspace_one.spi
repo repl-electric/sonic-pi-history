@@ -61,6 +61,6 @@ live :sins2 do |n|
   with_fx :lpf, cutoff: 70 do
     use_synth :pretty_bell
     play :D4, amp: 0.9, attack: 0.2, release: bar*8
-    sleep bar*8
+    sleep bar*16
   end
 end

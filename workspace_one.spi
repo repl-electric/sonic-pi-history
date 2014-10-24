@@ -12,10 +12,8 @@ live(:drums) do
  #   sample :drum_snare_soft if n % 2 == 0
   end
   
-#  sample :drum_bass_soft
-#  sleep bar/3
-#  sample :drum_bass_soft
-#  sleep bar/3
-#  sample :drum_bass_soft
-#  sleep bar/3
+  sample :drum_bass_soft
+  sleep bar/4
+  sample :drum_bass_soft
+  sleep bar/4
 end

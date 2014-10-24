@@ -2,7 +2,7 @@
 
 bar = 0.5
 
-with_fx :lpf, cutoff: 30 do
+with_fx :lpf, cutoff: 40 do
 live(:drums) do
   15.times do |n|
     sample :drum_bass_soft

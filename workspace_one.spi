@@ -50,6 +50,6 @@ live :sins do |n|
     play :D4, release: bar*8, attack: 0.25, decay: bar*8
     sleep bar*8
     play :C4, release: bar*8, attack: 0.25, decay: bar*8
-    
+        sleep bar*8
   end
 end

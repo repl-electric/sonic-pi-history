@@ -2,9 +2,10 @@
 bar = 0.5
 
 live_loop :drums do
-  7.times do
+  7.times do |n|
     sample :drum_bass_soft
     sleep bar
+    if n.mod(2) == 0 ample :drum_cymbal_soft
   end
   
   sample :drum_bass_soft

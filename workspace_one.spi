@@ -45,7 +45,6 @@ live :synths do |n|
 end
 
 live :sins do |n|
-  sync :timer
   with_fx :reverb do
     use_synth :beep
     play :D4, release: bar*8, attack: 0.25, decay: bar*2, amp: 0.5

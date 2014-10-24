@@ -45,7 +45,9 @@ live :synths do |n|
       play :D3
       sleep bar
     else
+      with_fx :reverb
       play :D4
+      end
       sleep bar/2.0
       play :D3
       sleep bar/2.0

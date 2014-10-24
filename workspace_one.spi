@@ -45,7 +45,9 @@ live :synths do |n|
 end
 
 live :sins do |n|
+  with_fx :reverb do
   use_synth :mod_sine
   play :D4
   sleep bar
+  end
 end

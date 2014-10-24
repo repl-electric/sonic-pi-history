@@ -3,7 +3,6 @@
 bar = 0.5
 clap_s = csample("183102__dwsd__clp-bodacious.wav")
 
-
   live(:drums) do
   with_fx :lpf, cutoff: 60 do
     15.times do |n|
@@ -114,4 +113,4 @@ end
 #begone :sins2
 #begone :noise
 #begone :synths
-begone :highlight
+#begone :highlight

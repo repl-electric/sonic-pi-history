@@ -69,7 +69,6 @@ live :sins2 do |n|
 end
 
 live :noise do |n|
-  sync :timer
   use_synth :pnoise
   with_fx :pan, pan: (Math.sin(n)) do
     with_fx :reverb do

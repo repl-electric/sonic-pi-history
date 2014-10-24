@@ -6,7 +6,6 @@ live(:drums) do
   3.times do |n|
     sample :drum_bass_soft, rate: 0.9
     sleep bar/2
-    
     #sample :drum_bass_soft, rate: 0.2
     sleep bar/2
  #   sample :drum_snare_soft if n % 2 == 0

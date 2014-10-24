@@ -60,13 +60,13 @@ live :sins do |n|
   sync :highlight
   with_fx :reverb do
     use_synth :beep
-    play :D4, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
+    play :D4, release: bar*8, attack: 0.25, decay: bar/2, amp: 0.5
     sleep bar*8
-    play :C4, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
+    play :C4, release: bar*8, attack: 0.25, decay: bar/2, amp: 0.5
     sleep bar*8
-    play :E4, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
+    play :E4, release: bar*8, attack: 0.25, decay: bar/2, amp: 0.5
     sleep bar*8
-    play :D3, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
+    play :D3, release: bar*8, attack: 0.25, decay: bar/2, amp: 0.5
     #  sleep bar*8
   end
 end

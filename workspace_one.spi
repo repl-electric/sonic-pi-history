@@ -4,7 +4,7 @@ bar = 0.5
 clap_s = csample("183102__dwsd__clp-bodacious.wav")
 
 live(:timer) do
-  sleep bar*4
+  sleep bar*16
 end
 
 with_fx :lpf, cutoff: 70 do

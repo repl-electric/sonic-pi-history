@@ -83,7 +83,7 @@ end
 
 live :highlight do |n|
   use_synth :zawa
-  with_fx :echo, phase: bar/16 do
+  with_fx :echo, phase: bar/8 do
     with_fx :lpf, cutoff: 60 do
       play_chord chord(:D3, :minor), release: bar*16, amp: 0.8
       sleep bar*16

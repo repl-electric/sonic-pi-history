@@ -28,7 +28,7 @@ live(:drums) do
     else
       sleep bar/2
     end
-    sample :drum_snare_soft if n % 8 == 0
+    sample :drum_tom_hi_hard if n % 8 == 0
     cue :circleofeight
   end
   sample :drum_bass_soft

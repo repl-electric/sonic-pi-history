@@ -3,7 +3,6 @@
 bar = 0.5
 
 live(:drums) do
-  sample :drum_heavy_kick
   7.times do |n|
     sample :drum_bass_soft
     sleep bar

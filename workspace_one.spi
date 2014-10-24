@@ -32,7 +32,6 @@ end
 live :synths do |n|
   use_synth :beep
   with_fx :slicer, phase: bar do
-
   if n == 17
     play :D2
   else

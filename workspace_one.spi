@@ -10,9 +10,9 @@ live(:drums) do
   end
   
   sample :drum_bass_soft
-  sleep bar/4
+  sleep bar/3
   sample :drum_bass_soft
-  sleep bar/4
+  sleep bar/3
   sample :drum_bass_soft
-  sleep bar/4
+  sleep bar/3
 end

@@ -30,6 +30,7 @@ end
 end
 
 live :synths do |n|
+  sync :drums
   use_synth :beep
   with_fx :slicer, phase: bar do
   if n % 16 != 15

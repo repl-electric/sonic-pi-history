@@ -34,6 +34,7 @@ with_fx :lpf, cutoff: 70 do
 end
 
 live :synths do |n|
+sync :timer
   use_synth :beep
   with_fx :slicer, phase: bar do
     if n % 16 != 15

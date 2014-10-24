@@ -108,10 +108,10 @@ live :highlight do |n|
       play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
 
-      play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*4, disable_wave: 0, pulse_width_slide: bar/2, wave: 2
+      play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
 
-      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, disable_wave: 0
+      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
     end
   end

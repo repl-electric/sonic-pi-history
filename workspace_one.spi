@@ -2,7 +2,7 @@
 
 bar = 0.5
 
-live_loop(:drums) do
+live(:drums) do
   sample :drum_heavy_kick
   7.times do |n|
     sample :drum_bass_soft

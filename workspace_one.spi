@@ -19,8 +19,6 @@ live(:drums) do
     else
       sleep bar/2.0
     end
-    
-
  #   sample :drum_snare_soft if n % 2 == 0
   end
   sample :drum_bass_soft
@@ -29,6 +27,9 @@ live(:drums) do
   sleep bar/2
   #sample :drum_bass_soft 
 end
+end
 
-
+live :synths do
+  use_synth :beep
+  play degree(1, :major, :F3)
 end

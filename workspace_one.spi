@@ -83,6 +83,6 @@ end
 
 live :highlight do |n|
   use_synth :zawa
-  play :D3
+  play :D4
   sleep bar
 end

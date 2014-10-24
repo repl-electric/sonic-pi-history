@@ -48,6 +48,6 @@ live :sins do |n|
   with_fx :reverb do
     use_synth :mod_sine
     play :D4
-    sleep bar*2
+    sleep bar*4
   end
 end

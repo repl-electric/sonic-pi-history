@@ -29,9 +29,13 @@ live(:drums) do
 end
 end
 
-live :synths do
+live :synths do |n|
   use_synth :beep
   with_fx :slicer, phase: bar do
+
+  if n == 17
+    play :D2
+  else
     play :D3
   end
   sleep bar

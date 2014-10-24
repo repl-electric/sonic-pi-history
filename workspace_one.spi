@@ -4,7 +4,7 @@ bar = 0.5
 clap_s = csample("183102__dwsd__clp-bodacious.wav")
 
 live(:words) do
-  sample Sop.yehp.choose
+  sample Sop.yehp.choose, release: bar*16
   sleep bar*16 
 end
 

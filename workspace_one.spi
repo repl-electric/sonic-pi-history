@@ -13,8 +13,8 @@ end
 
 live(:drums) do
   with_fx :lpf, cutoff: 60 do
-  cue :circleofeight
   15.times do |n|
+    cue :circleofeight
     sample :drum_bass_soft
     sleep bar/2.0
     if (n%4 == 0)
@@ -28,7 +28,7 @@ live(:drums) do
     else
       sleep bar/2
     end
-    cue :circleofeight
+
   end
   sample :drum_bass_soft
   sleep bar/2  

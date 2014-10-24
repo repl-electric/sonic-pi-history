@@ -31,13 +31,11 @@ live(:drums) do
       #sample :drum_snare_soft if n % 2 == 0
     cue :circleofeight
   end
-  sleep bar/2.0
+  sleep bar
   sample :drum_bass_soft
-  sleep bar / 2.6
+  sleep bar/2  
   sample :drum_bass_soft
-  sleep bar / 2.6
-  sample :drum_bass_soft
-  sleep bar / 2.6  
+  sleep bar/2  
     #sample :drum_bass_soft
 
   end

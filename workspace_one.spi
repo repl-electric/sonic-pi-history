@@ -64,5 +64,6 @@ live :sins2 do |n|
     play :D3, amp: 0.9, attack: 0.2, release: bar*4
     sleep bar*4
     play :C3, amp: 0.9, attack: 0.2, release: bar*4
+        sleep bar*4
   end
 end

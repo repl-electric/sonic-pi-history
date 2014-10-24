@@ -46,6 +46,6 @@ end
 
 live :sins do |n|
   use_synth :mod_sine
-  play :D4
+  play :D3
   sleep bar
 end

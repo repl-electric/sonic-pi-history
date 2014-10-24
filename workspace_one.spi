@@ -93,7 +93,7 @@ end
 
 live :highlight do |n|
   use_synth :zawa
-  use_synth_defaults disable_wave: 0, pulse_width_slide: bar, wave: 3, phase: bar*4.0
+  use_synth_defaults disable_wave: 0, pulse_width_slide: bar/2, wave: 3, phase: bar*4.0
   with_fx :echo do
   sync :circleofeight
   with_fx :lpf, cutoff: 60 do

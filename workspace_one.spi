@@ -68,10 +68,9 @@ live :sins2 do |n|
 end
 
 live :noise do
-with_fx :lpf, cutoff: 10 do
   use_synth :pnoise
-  play :D4
-  sleep bar * 8
+  with_fx :lpf, cutoff: 10 do 
+    play :D4
+    sleep bar * 8
   end
-
 end

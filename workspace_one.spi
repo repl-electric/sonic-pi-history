@@ -88,7 +88,8 @@ live :noise do |n|
    with_fx :reverb do 
     with_fx :reverb do
       with_fx :lpf, cutoff: 55 do
-        play :D6, release: bar*16, amp: 0.9
+        play :D6, release: bar*16, amp: 1.0
+        play :D6, release: bar*16, amp: 1.0
         sleep bar * 16
       end
     end

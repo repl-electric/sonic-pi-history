@@ -46,9 +46,9 @@ live :synths do |n|
       play :C2
       sleep bar
     else
-      play :D4
+      play :D2
       sleep bar/2.0
-      play :C3
+      play :D2
       sleep bar/2.0
     end
   end

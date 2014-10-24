@@ -90,9 +90,9 @@ live :highlight do |n|
       play_chord chord(:D3, :sus4), release: bar*8, amp: 0.6
       sleep bar*8
       play_chord chord(:D3, :"7sus4"), release: bar*4, amp: 0.6
-      sleep bar*8
+      sleep bar*4
       play_chord chord(:D4, :sus4), release: bar*4, amp: 0.6
-      sleep bar*8
+      sleep bar*4
     end
   end
 end

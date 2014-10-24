@@ -50,11 +50,10 @@ live :synths do |n|
       sleep bar/4.0
       play :D3
       sleep bar/4.0
-            play :D4
+      play :D4
       sleep bar/4.0
       play :D3
       sleep bar/4.0
-
     end
   end
 end

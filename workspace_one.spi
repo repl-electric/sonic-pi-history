@@ -1,16 +1,14 @@
+bar = 1
 
-bar = 0.5
-
-live_loop :drums do
-  sample :drum_heavy_kick
+live_loop(:drums) do
   7.times do |n|
     sample :drum_bass_soft
     sleep bar
-    sample(:drum_cymbal_pedal) if n % 2 == 0
+    sample :drum_cymbal_pedal if n % 2 == 0
   end
   
   sample :drum_bass_soft
-  sleep bar/2.0
+  sleep bar/2
   sample :drum_bass_soft
-  sleep bar/2.0
+  sleep bar/2
 end

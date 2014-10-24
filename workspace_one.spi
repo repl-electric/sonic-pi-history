@@ -71,6 +71,7 @@ live :sins do |n|
 end
 
 live :sins2 do |n|
+  sync :circleofeight
   with_fx :lpf, cutoff: 60 do
     use_synth :pretty_bell
     play :D4, amp: 0.9, attack: 0.2, release: bar*8, amp: 0.5

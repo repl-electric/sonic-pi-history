@@ -43,7 +43,7 @@ live :synths do |n|
   use_synth :beep
   with_fx :slicer, phase: bar do
     if n % 16 != 15
-      play :E3
+      play :A4
       sleep bar
     else
       play :D4

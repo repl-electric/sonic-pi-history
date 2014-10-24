@@ -40,6 +40,7 @@ live(:drums) do
 end
 
 live :synths do |n|
+  synth :circleofeight
   use_synth :beep
   with_fx :slicer, phase: bar do
     if n % 16 != 15

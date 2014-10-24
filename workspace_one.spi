@@ -8,7 +8,7 @@ live(:drums) do
     sleep bar/2
     
     sample :drum_bass_soft, rate: 0.8
-        sleep bar/2
+    sleep bar/2
  #   sample :drum_snare_soft if n % 2 == 0
   end
   

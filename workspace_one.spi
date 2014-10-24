@@ -45,7 +45,7 @@ live :synths do |n|
 end
 
 live :sins do |n|
-  use_synth :sin
+  use_synth :sine
   play :D4
   sleep bar
 end

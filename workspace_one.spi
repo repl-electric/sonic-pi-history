@@ -60,7 +60,7 @@ end
 
 live :sins2 do |n|
   with_fx :reverb do
-    use_synth :beep
+    use_synth :prophet
     play :C4, release: bar*4, attack: 0.25, decay: bar*2, amp: 0.5
     sleep bar*4
     play :D4, release: bar*4, attack: 0.25, decay: bar*2, amp: 0.5

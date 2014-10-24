@@ -69,7 +69,7 @@ end
 
 live :noise do |n|
   use_synth :pnoise
-  with_fx :pan, pan(n.mod 1)
+  with_fx :pan, pan(Math.sin(n))
   with_fx :reverb do
     with_fx :lpf, cutoff: 30 do
       play :D6, release: bar*32

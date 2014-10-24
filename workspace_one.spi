@@ -83,10 +83,12 @@ end
 
 live :highlight do |n|
   use_synth :zawa
+  with :echo do
   with_fx :lpf, cutoff: 60 do
     play :C4, release: bar*8
     sleep bar*8
     play :D4, release: bar*8
     sleep bar*8
+  end
   end
 end

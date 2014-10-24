@@ -56,6 +56,7 @@ live :synths do |n|
 end
 
 live :sins do |n|
+  sync :circleofeight
   sync :highlight
   with_fx :reverb do
     use_synth :beep

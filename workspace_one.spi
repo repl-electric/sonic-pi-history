@@ -92,19 +92,20 @@ end
 
 live :highlight do |n|
   use_synth :zawa
+  use_synth_defaults amp: 0.5, 
   with_fx :echo do
   sync :drums
   with_fx :lpf, cutoff: 60 do
-      play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8, disable_wave: 0, pulse_width_slide: bar, wave: 2
+      play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8
       sleep bar*8
 
-      play_chord chord(:D3, :sus4),    release: bar*8, amp: 0.5, decay: bar*8, disable_wave: 0 , pulse_width_slide: bar/2, wave: 2
+      play_chord chord(:D3, :sus4),    release: bar*8, amp: 0.5, decay: bar*8
       sleep bar*8
 
-      play_chord chord(:D3, :"7sus4"), release: bar*4, amp: 0.5, decay: bar*4, disable_wave: 0, pulse_width_slide: bar/2, wave: 2
+      play_chord chord(:D3, :"7sus4"), release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
 
-      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, disable_wave: 0, pulse_width_slide: bar/2, wave: 2
+      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
 
       play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*4, disable_wave: 0, pulse_width_slide: bar/2, wave: 2

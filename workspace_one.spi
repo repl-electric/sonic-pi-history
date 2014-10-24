@@ -106,10 +106,10 @@ live :highlight do |n|
       play_chord chord(:D3, :"7sus4"), release: bar*4, amp: 0.5, decay: bar*4, phase: bar
       sleep bar*4
 
-      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, phase: bar/2
+      play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, phase: bar
       sleep bar*4
 
-      play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*4, phase: bar/2
+      play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*4, phase: bar
       sleep bar*4
 
       play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, phase: bar*4

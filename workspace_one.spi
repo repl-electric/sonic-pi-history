@@ -28,6 +28,7 @@ live(:drums) do
         sleep bar/2.0
       end
       #sample :drum_snare_soft if n % 2 == 0
+      cue :circleofeight
     end
     sample :drum_bass_soft
     sleep bar/2
@@ -94,7 +95,7 @@ live :highlight do |n|
   use_synth :zawa
   use_synth_defaults disable_wave: 0, pulse_width_slide: bar, wave: 0, phase: bar
   with_fx :echo do
-  sync :drums
+  sync :circleofeight
   with_fx :lpf, cutoff: 60 do
       play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8
       sleep bar*8

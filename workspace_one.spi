@@ -83,7 +83,7 @@ end
 
 live :highlight do |n|
   use_synth :zawa
-  with_fx :lpf, cutout: 2 do
+  with_fx :lpf, cutout: 0 do
     play :D4
     sleep bar*4
   end

@@ -83,11 +83,10 @@ live :noise do |n|
 end
 
 live :highlight do |n|
-
   use_synth :zawa
   with_fx :echo do
     with_fx :lpf, cutoff: 100 do
-      sync :sins
+#      sync :sins
       play_chord chord(:D3, :major),   release: bar*8, amp: 0.5, decay: bar*8
       sleep bar*8
 

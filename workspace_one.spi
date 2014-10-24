@@ -31,6 +31,6 @@ end
 
 live :synths do
   use_synth :beep
-  play :F3
+  play :D3
   sleep bar
 end

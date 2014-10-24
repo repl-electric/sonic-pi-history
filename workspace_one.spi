@@ -84,5 +84,5 @@ end
 live :highlight do |n|
   use_synth :zawa
   play :D4
-  sleep bar
+  sleep bar*4
 end

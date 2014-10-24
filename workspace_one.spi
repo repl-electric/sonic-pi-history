@@ -47,7 +47,7 @@ end
 live :sins do |n|
   with_fx :reverb do
     use_synth :beep
-    play [:D4, :C4].choose, release: bar*8, attack: 0.5
+    play [:D4, :C4].choose, release: bar*8, attack: 0.25
     sleep bar*8
   end
 end

@@ -16,8 +16,7 @@ live(:drums) do
   sleep bar/2
   sample :drum_bass_soft
   sleep bar/2
-  sample :drum_bass_soft 
-
+  #sample :drum_bass_soft 
 end
 
 

@@ -4,7 +4,7 @@ bar = 1.0
 
 live(:drums) do
   7.times do |n|
-    sample :drum_bass_soft
+    sample :drum_bass_soft, rate: 0.9
     sleep bar/2
     
     sample :drum_bass_soft, rate: 0.2

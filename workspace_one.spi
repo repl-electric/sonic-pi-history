@@ -70,7 +70,7 @@ end
 live :noise do
   use_synth :pnoise
   with_fx :reverb do
-    with_fx :lpf, cutoff: 60 do
+    with_fx :lpf, cutoff: 30 do
       play :D6, release: bar*32
       sleep bar * 32
     end

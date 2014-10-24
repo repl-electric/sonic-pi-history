@@ -42,5 +42,12 @@ live :synths do |n|
     sleep bar/2.0
   end
   end
+end
+
+live :sins do |n|
+  use_synth :sin
+  play :D3
+  sleep bar
+
 
 end

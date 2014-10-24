@@ -103,7 +103,7 @@ live :highlight do |n|
       sleep bar*4
 
       play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.6, decay: bar*4
-      sleep bar*4
+ #     sleep bar*4
     end
   end
 end

@@ -115,9 +115,9 @@ live :highlight do |n|
   end
 end
 
-#begone :drums
-#begone :sins
-#begone :sins2
-#begone :noise
-#begone :synths
+begone :drums
+begone :sins
+begone :sins2
+begone :noise
+begone :synths
 #begone :highlight

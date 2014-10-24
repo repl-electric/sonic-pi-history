@@ -1,9 +1,13 @@
 
 
 live_loop :drums do
-
-  4.times do
+  7.times do
     sample :drum_bass_soft
     sleep 2
   end
+  
+  sample :drum_bass_soft
+  sleep 0.5
+  sample :drum_bass_soft
+  sleep 0.5
 end

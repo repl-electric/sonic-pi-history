@@ -32,9 +32,9 @@ live(:drums) do
     cue :circleofeight
   end
   sample :drum_bass_soft
-  sample :drum_cymbal_pedal
   sleep bar/2  
   sample :drum_bass_soft
+  sample :drum_cymbal_pedal
   sleep bar/2  
 
   end

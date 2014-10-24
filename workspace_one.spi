@@ -116,8 +116,10 @@ live :highlight do |n|
       play_chord chord(:D3, :sus4),    release: bar*4, amp: 0.5, decay: bar*2
       sleep bar*4
 
+      with_fx :echo do
       play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4
       sleep bar*4
+      end
     end
   end
 end

@@ -27,7 +27,7 @@ clap_s = csample("183102__dwsd__clp-bodacious.wav")
     sample :drum_bass_soft
     sleep bar/2
     #sample :drum_bass_soft
-    end
+    
   end
 end
 

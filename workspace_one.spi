@@ -84,7 +84,7 @@ end
 live :highlight do |n|
   use_synth :zawa
   with_fx :echo do
-  with_fx :lpf, cutoff: 40 do
+  with_fx :lpf, cutoff: 50 do
     play_chord chord(:D3, :minor), release: bar*16
     sleep bar*16
   end

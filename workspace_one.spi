@@ -61,7 +61,7 @@ end
 live :sins2 do |n|
   with_fx :lpf, cutoff: 70 do
     use_synth :prophet
-    play :D3, amp: 0.9, attack: 0.2, release: 0.2
+    play :D3, amp: 0.9, attack: 0.2, release: bar
     sleep bar*8
   end
 end

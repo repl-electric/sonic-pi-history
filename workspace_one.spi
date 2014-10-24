@@ -47,7 +47,7 @@ end
 live :sins do |n|
   with_fx :reverb do
     use_synth :mod_sine
-    play :D4
+    play :D4, release: 10
     sleep bar*4
   end
 end

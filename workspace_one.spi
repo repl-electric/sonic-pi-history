@@ -46,7 +46,7 @@ end
 
 live :sins do |n|
   with_fx :reverb do
-    use_synth :mod_sine
+    use_synth :beep
     play [:D4, :C4].choose, release: bar*4
     sleep bar*4
   end

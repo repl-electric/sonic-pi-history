@@ -12,7 +12,7 @@ live(:words) do
 end
 
 live(:drums) do
-  with_fx :lpf, cutoff: 60 do
+  with_fx :lpf, cutoff: 70 do
   cue :circleofeight
   15.times do |n|
     sample :drum_bass_soft

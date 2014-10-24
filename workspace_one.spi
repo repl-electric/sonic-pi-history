@@ -77,7 +77,7 @@ live :sins2 do |n|
     use_synth :pretty_bell
     play :D4, amp: 0.5, attack: 0.2, release: 0.1, amp: 0.5, decay: bar
     sleep bar*8
-    play :C4, amp: 0.5, attack: 0.2, release: 0.1, amp: 0.5, decay: 0.1
+    play :C4, amp: 0.5, attack: 0.2, release: 0.1, amp: 0.5, decay: bar
     sleep bar*8
   end
 end

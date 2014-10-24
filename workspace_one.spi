@@ -86,5 +86,7 @@ live :highlight do |n|
   with_fx :lpf, cutoff: 50 do
     play :C4
     sleep bar*4
+    play :D4
+    sleep bar*4
   end
 end

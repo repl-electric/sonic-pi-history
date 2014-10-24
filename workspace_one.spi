@@ -62,7 +62,7 @@ live :sins do |n|
     use_synth :beep
     play :D4, release: bar*4, attack: 0.25, decay: bar*2, amp: 0.5
     sleep bar*8
-    play :C4, release: bar*4, attack: 0.25, decay: bar*2, amp: 0.5
+    play :C4, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
     sleep bar*8
     play :E4, release: bar*4, attack: 0.25, decay: bar/2, amp: 0.5
     sleep bar*8

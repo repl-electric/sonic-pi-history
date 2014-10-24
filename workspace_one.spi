@@ -61,7 +61,7 @@ end
 live :sins2 do |n|
   with_fx :echo do
     use_synth :prophet
-    play :C2, release: bar*4, attack: 0.25, decay: bar*2, amp: 0.1
+    play :C2
     sleep bar*8
   end
 end

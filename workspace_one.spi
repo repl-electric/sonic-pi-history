@@ -87,7 +87,7 @@ live :highlight do |n|
     with_fx :lpf, cutoff: 60 do
       play_chord chord(:D3, :major), release: bar*16, amp: 0.6
       sleep bar*16
-      play_chord chord(:G3, :major), release: bar*16, amp: 0.6
+      play_chord chord(:D4, :major), release: bar*16, amp: 0.6
       sleep bar*16
     end
   end

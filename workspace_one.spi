@@ -4,15 +4,15 @@ bar = 1.0
 
 with_fx :lpf do
 live(:drums) do
-  15.times do |n|
+  14.times do |n|
     sample :drum_bass_soft
     sleep bar
     #sample :drum_bass_soft, rate: 0.2
 
  #   sample :drum_snare_soft if n % 2 == 0
   end
-  
   sample :drum_bass_soft
+    
   sleep bar/2
   sample :drum_bass_soft
   sleep bar/2

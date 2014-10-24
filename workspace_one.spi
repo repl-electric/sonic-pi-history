@@ -31,5 +31,5 @@ end
 
 live :synths do
   use_synth :beep
-  play degree(1, :major, :F3)
+  play degrees(1, :major, :F3)
 end

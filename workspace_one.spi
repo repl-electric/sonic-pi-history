@@ -40,7 +40,6 @@ live(:drums) do
 end
 
 live :synths do |n|
-  sync :circleofeight
   use_synth :beep
   with_fx :slicer, phase: bar do
     if n % 16 != 15
@@ -89,7 +88,6 @@ live :noise do |n|
      with_fx :reverb do
       with_fx :lpf, cutoff: 30 do
         play :D6, release: bar*16, amp: 2.5
-
         sleep bar * 16
       end
     end

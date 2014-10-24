@@ -81,7 +81,6 @@ live :noise do |n|
 end
 
 live :highlight do |n|
-  sync :timer
   use_synth :zawa
   with_fx :echo do
     with_fx :lpf, cutoff: 60 do

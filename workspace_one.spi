@@ -71,6 +71,6 @@ live :noise do
   use_synth :pnoise
   with_fx :lpf, cutoff: 10 do
   play :D2, release: bar*32
-  sleep bar * 16
+  sleep bar * 32
   end
 end

@@ -56,7 +56,7 @@ end
 live :sins do |n|
   sync :circleofeight
   sync :highlight
-  with_fx :rhpf, cutoff: 85 do
+  with_fx :rhpf, cutoff: 90 do
   with_fx :reverb do
     use_synth :beep
     play :D4, release: bar*8, attack: 0.25, decay: bar, amp: 0.5

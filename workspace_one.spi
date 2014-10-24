@@ -34,9 +34,13 @@ live :synths do |n|
   with_fx :slicer, phase: bar do
   if n == 17
     play :D2
+    sleep bar
   else
     play :D3
+    sleep bar/2.0
+    play :D3
+    sleep bar/2.0
   end
   end
-  sleep bar
+
 end

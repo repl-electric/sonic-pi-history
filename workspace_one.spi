@@ -5,7 +5,7 @@ clap_s = csample("183102__dwsd__clp-bodacious.wav")
 
 live(:words) do
   sync :drums
-  with_fx :hlpf, cutoff: 70 do
+  with_fx :rhpf, cutoff: 70 do
     sample Sop.yehp.choose, release: bar*16, amp: 2
   end
   sleep bar*8

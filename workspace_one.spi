@@ -67,8 +67,9 @@ live :sins2 do |n|
     end
 end
 
-live :noise do
+live :noise do |n|
   use_synth :pnoise
+  with_fx :pan, pan(n.mod 1)
   with_fx :reverb do
     with_fx :lpf, cutoff: 30 do
       play :D6, release: bar*32

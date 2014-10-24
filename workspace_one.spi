@@ -53,5 +53,7 @@ live :sins do |n|
     sleep bar*8
     play :E4, release: bar*8, attack: 0.25, decay: bar*2, amp: 0.5   
     sleep bar*8
+    play :E4, release: bar*8, attack: 0.25, decay: bar*2, amp: 0.5   
+    sleep bar*8
   end
 end

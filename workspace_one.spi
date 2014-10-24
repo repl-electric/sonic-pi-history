@@ -45,7 +45,7 @@ live :synths do |n|
       play :D3
       sleep bar
     else
-      with_fx :echo do
+      with_fx :echo, phase: bar/2  do
         play :D4
       end
       sleep bar/2.0

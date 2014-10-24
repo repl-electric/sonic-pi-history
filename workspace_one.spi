@@ -71,7 +71,7 @@ live :noise do |n|
   use_synth :pnoise
   with_fx :pan, pan: (Math.sin(n)) do
   with_fx :reverb do
-    with_fx :lpf, cutoff: 50 do
+    with_fx :lpf, cutoff: 60 do
       play :D6, release: bar*16
       sleep bar * 16
     end

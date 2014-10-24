@@ -49,6 +49,7 @@ live :synths do |n|
 end
 
 live :sins do |n|
+  sync :timer
   with_fx :reverb do
     use_synth :beep
     play :D4, release: bar*8, attack: 0.25, decay: bar*2, amp: 0.5
@@ -99,10 +100,8 @@ live :highlight do |n|
       sleep bar*4
       play_chord chord(:D3, :"7sus4"), release: bar*4, amp: 0.6, decay: bar*4
       sleep bar*4
-      play_chord chord(:D4, :sus4),   release: bar*4, amp: 0.6, decay: bar*4
+      play_chord chord(:D4, :sus4),    release: bar*4, amp: 0.6, decay: bar*4
       sleep bar*4
-
-
     end
   end
 end

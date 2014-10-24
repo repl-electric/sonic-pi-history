@@ -37,5 +37,6 @@ live :synths do |n|
   else
     play :D3
   end
+  end
   sleep bar
 end

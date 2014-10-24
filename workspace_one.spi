@@ -31,6 +31,8 @@ end
 
 live :synths do
   use_synth :beep
+  with_fx :slicer do
   play :D3
+  end
   sleep bar
 end

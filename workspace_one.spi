@@ -91,10 +91,10 @@ live :noise do |n|
 end
 
 live :highlight do |n|
-  use_synth :zawa, disable_wave: 1
+  use_synth :zawa
   with_fx :echo do
     with_fx :lpf, cutoff: 60 do
-      play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8
+      play_chord chord(:D3, :major),   release: bar*8, amp: 0.4, decay: bar*8, disable_wave: 1
       sleep bar*8
 
       play_chord chord(:D3, :sus4),    release: bar*8, amp: 0.5, decay: bar*8

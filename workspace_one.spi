@@ -83,6 +83,7 @@ live :sins2 do |n|
 end
 
 live :noise do |n|
+  synth :circleofeight
   use_synth :pnoise
   with_fx :pan, pan: (Math.sin(n)) do
    with_fx :reverb do 

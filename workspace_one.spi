@@ -9,9 +9,9 @@ live(:drums) do
     sleep bar/2.0
     
     
-    if (n%2 == 0)
+    if (n%4 == 0)
       sample csample("183102__dwsd__clp-bodacious.wav")
-      end
+    end
 
     
      sleep bar/2.0

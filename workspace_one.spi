@@ -60,7 +60,7 @@ live_loop :stars do
     sleep bar
     play [:C6].choose
     sleep bar
-    play [:C6].choose
+    play [:E6].choose
   end
   end
 end

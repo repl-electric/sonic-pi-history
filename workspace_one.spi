@@ -49,7 +49,8 @@ end
 end
 
 live_loop :stars do
+  
   sync :circle
-  play :D5
+  play :C6
   
 end

@@ -134,7 +134,7 @@ with_fx :lpf, cutoff: 100 do
   use_synth_defaults attack: 0.05, release: 0.05, decay: 0.01, env_curve: 4, note_slide_curve: -0.8, note_slide: 0.1, note_slide_shape: 5
   with_fx :echo, phase: bar/4 do
     with_fx :reverb, room: 0.9, dry: 0.9 do
-      play :D6, amp: 0.5
+      #play :D6, amp: 0.5
       sleep bar*4
 
       if n % 16 == 0

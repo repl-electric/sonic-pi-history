@@ -12,4 +12,10 @@ live_loop :beep do
   sleep bar
   play degree(3, :D3, :major)
   sleep bar
+  sleep bar
+  
+  play degree(4, :D3, :major)
+  sleep bar
+
+  
   end

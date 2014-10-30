@@ -85,11 +85,6 @@ live :beep do |n|
   play degree(9, :D3, :major)
   sleep bar
   play degree(x, :D3, :major)
-  
-  
-  
-  
-  
 end
 end
 end

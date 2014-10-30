@@ -8,7 +8,6 @@ live_loop :beep do
   play degree(1, :D3, :major)
   sleep bar
   sleep bar
-
   play degree(2, :D3, :major)
   sleep bar
   sleep bar
@@ -17,6 +16,7 @@ live_loop :beep do
   play degree(3, :D3, :major)
   sleep bar
   sleep bar
+  play degree(7, :D3, :major)
   play degree(5, :D3, :major)
   sleep bar
 end

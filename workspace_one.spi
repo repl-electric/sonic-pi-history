@@ -107,7 +107,7 @@ live :highlight do |n|
     with_fx :lpf, cutoff: 60 do
 
       with_fx :reverb do
-        play_chord chord(:D2, :major),   release: bar*4, amp: 0.5, decay: bar*4, phase: bar*2
+        play_chord chord(:D3, :major),   release: bar*4, amp: 0.5, decay: bar*4, phase: bar*2
         sleep bar*4
       end
     end

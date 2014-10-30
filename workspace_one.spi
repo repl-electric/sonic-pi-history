@@ -84,7 +84,7 @@ live :beep do |n|
   sleep bar/2.0
   play degree(x, :D3, :major)
   sleep bar/2.0
-    play degree(x, :D3, :major)
+  play degree(x, :D3, :major)
 end
 end
 end

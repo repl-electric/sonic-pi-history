@@ -1,9 +1,11 @@
 bar = 1.0/2.0
 
 live_loop :d do
+  with_fx :lpf, cutoff: 60 do
   sample :drum_bass_soft
   sleep bar
   sleep bar
+  end
 end
 
 live_loop :beep do

@@ -139,7 +139,7 @@ live :sparkle do |n|
 
         if n % 16 == 0
           with_fx :echo, phase: bar*2 do
-            play :C6, amp: 0.5
+            #play :C6, amp: 0.5
             sleep bar*4
             #play :C6, amp: 0.5
             #sleep bar*2

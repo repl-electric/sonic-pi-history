@@ -14,6 +14,7 @@ live :d do |n|
   sample :drum_bass_soft
   sleep bar
   if n % 16 == 0 
+  with_fx :reverb do
     sample :drum_bass_soft
     sleep bar/4.0
     sample :drum_cymbal_pedal
@@ -21,9 +22,10 @@ live :d do |n|
     sample :drum_bass_soft
     sleep bar/4.0
     sample :drum_cymbal_pedal
-    sleep bar/4.0     
+    sleep bar/4.0   
+  end  
   else
-      sample :drum_cymbal_pedal
+    sample :drum_cymbal_pedal
     sleep bar
   end
   end

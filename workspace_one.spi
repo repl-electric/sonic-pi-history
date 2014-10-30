@@ -8,6 +8,7 @@ live :timer do
 end
 
 live :d do |n|
+
   with_fx :lpf, cutoff: 80 do
   sync :circle
   sample :drum_bass_soft
@@ -53,6 +54,7 @@ end
 end
 
 live_loop :stars do
+use_synth :mod_fm
   sync :circle
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do

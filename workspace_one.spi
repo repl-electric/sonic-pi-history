@@ -68,8 +68,8 @@ live :beep do |n|
   
     sync :circle
 
-  play degree(3, :D2, :major)
-  play degree(1, :D2, :major)
+  play degree(3, :D3, :major)
+  play degree(1, :D3, :major)
   sleep bar
   sleep bar
   play degree(2, :D3, :major)

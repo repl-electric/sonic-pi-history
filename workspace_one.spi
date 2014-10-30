@@ -105,13 +105,13 @@ live :highlight do |n|
   with_fx :echo do
     sync :circleofeight
     with_fx :lpf, cutoff: 60 do
-      play_chord chord(:D2, :major,   release: bar*8, amp: vol, decay: bar, phase: bar*2
+      play_chord chord(:D2, :major),   release: bar*8, amp: vol, decay: bar, phase: bar*2
       sleep bar*8
 
-      play_chord chord(:D2, :major,    release: bar*8, amp: vol, decay: bar*2, phase: bar*2
+      play_chord chord(:D2, :sus4),    release: bar*8, amp: vol, decay: bar*2, phase: bar*2
       sleep bar*8
 
-      play_chord chord(:D2, :major, release: bar*4, amp: vol+0.1, decay: bar*2, phase: bar*2
+      play_chord chord(:D2, :"7sus4"), release: bar*4, amp: vol+0.1, decay: bar*2, phase: bar*2
       sleep bar*4
 
       play_chord chord(:D3, :major),   release: bar*4, amp: vol+0.1, decay: bar*2, phase: bar*2

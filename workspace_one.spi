@@ -4,6 +4,7 @@ live_loop :beep do
   with_fx :echo, phase: bar/1.0 do
   with_fx :reverb do
   use_synth_defaults attack: 0.05, release: 0.05
+  play degree(2, :D3, :major)
   play degree(1, :D3, :major)
   sleep bar
   sleep bar

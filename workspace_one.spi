@@ -45,10 +45,11 @@ live_loop :beep do
   play degree(3, :D3, :major)
   sleep bar
   sleep bar
-  play degree(8, :D3, :major)
+  x = [8,7].choose
+  play degree(x, :D3, :major)
   play degree(5, :D3, :major)
   sleep bar
-  play degree(8, :D3, :major)
+  play degree(x, :D3, :major)
 end
 end
 end

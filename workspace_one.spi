@@ -59,6 +59,8 @@ live_loop :stars do
     play [:D6].choose
     sleep bar
     play [:C6].choose
+    sleep bar
+    play [:C6].choose
   end
   end
 end

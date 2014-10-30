@@ -51,6 +51,8 @@ end
 live_loop :stars do
   
   sync :circle
+  with_fx :echo do
   play :C6
+  end
   
 end

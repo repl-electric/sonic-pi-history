@@ -3,6 +3,7 @@
 bar = 1.0/2.0
 
 live :d do |n|
+  cue :circle
   with_fx :lpf, cutoff: 70 do
   sample :drum_bass_soft
   sleep bar
@@ -21,6 +22,7 @@ live_loop :beep do
   with_fx :echo, phase: bar/1.0 do
   with_fx :reverb do
   use_synth_defaults attack: 0.05, release: 0.05
+  sync cue :circle
   play degree(3, :D3, :major)
   play degree(1, :D3, :major)
   sleep bar

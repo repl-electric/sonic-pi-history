@@ -58,11 +58,11 @@ live_loop :stars do
   with_fx :echo, phase: bar/2.0 do
     play [:D6].choose
     sleep bar
-    play [:C6].choose
+    play [:C5].choose
     sleep bar/2.0
     play [:D5].choose
     sleep bar/2.0
-        play [:D5].choose
+    play [:D5].choose
   end
   end
 end

@@ -8,7 +8,7 @@ live :timer do
 end
 
 live :d do |n|
-  with_fx :lpf, cutoff: 70 do
+  with_fx :lpf, cutoff: 80 do
   sync :circle
   sample :drum_bass_soft
   sleep bar

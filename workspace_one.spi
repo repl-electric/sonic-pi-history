@@ -18,17 +18,17 @@ live(:drums) do
       sample :drum_bass_soft
       sleep bar/2.0
       sleep bar/2.0
-#      if (n%4 == 0)
-#        sample clap_s
-#      end
-#      if n == 7
-#        sample clap_s
-#        sleep bar/4
-#        sample clap_s
-#        sleep bar/4
-#      else
-#        sleep bar/2
-#      end
+      #      if (n%4 == 0)
+      #        sample clap_s
+      #      end
+      #      if n == 7
+      #        sample clap_s
+      #        sleep bar/4
+      #        sample clap_s
+      #        sleep bar/4
+      #      else
+      #        sleep bar/2
+      #      end
 
     end
     sleep bar/2
@@ -129,40 +129,40 @@ live :highlight do |n|
 end
 
 live :sparkle do |n|
-with_fx :lpf, cutoff: 100 do
-  synth :pretty_bell
-  use_synth_defaults attack: 0.05, release: 0.05, decay: 0.01, env_curve: 4, note_slide_curve: -0.8, note_slide: 0.1, note_slide_shape: 5
-  with_fx :echo, phase: bar/4 do
-    with_fx :reverb, room: 0.9, dry: 0.9 do
-      #play :D6, amp: 0.5
-      sleep bar*4
-
-      if n % 16 == 0
-        with_fx :echo, phase: bar*2 do
-          play :C6, amp: 0.5
-          sleep bar*4
-          #play :C6, amp: 0.5
-          #sleep bar*2
-        end
-      elsif n % 16 == 15
-        with_fx :echo, phase: bar/2 do
-          play :E6, amp: 0.5
-          sleep bar*2
-          play :E6, amp: 0.5
-          sleep bar*2
-
-        end
-
-      else
-        with_fx :echo, phase: bar/2 do
+  with_fx :lpf, cutoff: 100 do
+    synth :pretty_bell
+    use_synth_defaults attack: 0.05, release: 0.05, decay: 0.01, env_curve: 4, note_slide_curve: -0.8, note_slide: 0.1, note_slide_shape: 5
+    with_fx :echo, phase: bar/4 do
+      with_fx :reverb, room: 0.9, dry: 0.9 do
         play :D6, amp: 0.5
         sleep bar*4
-        end
-      end
 
+        if n % 16 == 0
+          with_fx :echo, phase: bar*2 do
+            play :C6, amp: 0.5
+            sleep bar*4
+            #play :C6, amp: 0.5
+            #sleep bar*2
+          end
+        elsif n % 16 == 15
+          with_fx :echo, phase: bar/2 do
+            play :E6, amp: 0.5
+            sleep bar*2
+            play :E6, amp: 0.5
+            sleep bar*2
+
+          end
+
+        else
+          with_fx :echo, phase: bar/2 do
+            play :D6, amp: 0.5
+            sleep bar*4
+          end
+        end
+
+      end
     end
   end
-end
 end
 
 #begone :drums

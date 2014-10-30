@@ -54,7 +54,7 @@ end
 end
 
 live_loop :stars do
-use_synth :zawa
+use_synth :bell
   sync :circle
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do

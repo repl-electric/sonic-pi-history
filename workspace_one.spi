@@ -40,11 +40,12 @@ live :d do |n|
   end
 end
 
-live_loop :beep do
+live :beep do |n|
   with_fx :echo, phase: bar/[1.0,2.0,4.0].choose do
   with_fx :reverb do
   use_synth_defaults attack: 0.05, release: 0.05
   sync :circle
+
   play degree(3, :D3, :major)
   play degree(1, :D3, :major)
   sleep bar
@@ -62,6 +63,33 @@ live_loop :beep do
   play degree(5, :D3, :major)
   sleep bar
   play degree(x, :D3, :major)
+  
+  
+  
+    sync :circle
+
+  play degree(3, :D2, :major)
+  play degree(1, :D2, :major)
+  sleep bar
+  sleep bar
+  play degree(2, :D3, :major)
+  sleep bar
+  sleep bar
+  play degree(3, :D3, :major)
+  sleep bar
+  play degree(3, :D3, :major)
+  sleep bar
+  sleep bar
+  x = [8,7].choose
+  play degree(x, :D3, :major)
+  play degree(5, :D3, :major)
+  sleep bar
+  play degree(x, :D3, :major)
+  
+  
+  
+  
+  
 end
 end
 end

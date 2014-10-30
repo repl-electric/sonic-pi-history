@@ -100,7 +100,7 @@ use_synth :pretty_bell
     sleep bar/2.0
 
   if n % 8 == 0
-    play [:D3].choose
+    play [:D3].choose, attack: 0.3
     sleep bar/2.0
     play [:D3].choose
     sleep bar

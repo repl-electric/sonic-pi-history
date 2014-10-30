@@ -58,9 +58,9 @@ use_synth :pretty_bell
   sync :circle
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do
-    play [:D4].choose
+    play [:D2].choose
     sleep bar
-    play [:D4].choose
+    play [:D2].choose
     sleep bar/2.0
 
   if n % 32 == 0

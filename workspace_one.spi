@@ -100,9 +100,9 @@ use_synth :pretty_bell
     sleep bar/2.0
 
   if n % 32 == 0
-    play [:D2].choose
+    play [:D3].choose
     sleep bar/2.0
-    play [:D2].choose
+    play [:D3].choose
     sleep bar
 
   else

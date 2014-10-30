@@ -24,6 +24,15 @@ live :d do |n|
     sample :drum_cymbal_pedal
     sleep bar/4.0   
   end  
+  elsif n % 32 == 0 
+    sample :drum_bass_soft
+    sleep bar/8.0
+    sample :drum_cymbal_pedal
+    sleep bar/8.0
+    sample :drum_bass_soft
+    sleep bar/8.0
+    sample :drum_cymbal_pedal
+    sleep bar/8.0   
   else
     sample :drum_cymbal_pedal
     sleep bar

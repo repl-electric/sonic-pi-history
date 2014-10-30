@@ -50,6 +50,6 @@ end
 
 live_loop :stars do
   sync :circle
-  play :C5
+  play :D5
   
 end

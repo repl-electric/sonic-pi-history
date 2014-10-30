@@ -54,7 +54,7 @@ end
 end
 
 live_loop :stars do
-use_synth :mod_tri
+use_synth :prophet
   sync :circle
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do

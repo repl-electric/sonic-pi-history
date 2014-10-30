@@ -1,5 +1,11 @@
 bar = 1.0/2.0
 
+live_loop :d do
+  sample :drum_bass_soft
+  sleep bar
+  sleep bar
+end
+
 live_loop :beep do
   with_fx :echo, phase: bar/1.0 do
   with_fx :reverb do

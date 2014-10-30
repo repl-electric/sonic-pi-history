@@ -63,10 +63,8 @@ live :beep do |n|
   play degree(5, :D3, :major)
   sleep bar
   play degree(x, :D3, :major)
-  
-  
-  
-    sync :circle
+   
+  sync :circle
 
   play degree(3, :D3, :major)
   play degree(1, :D3, :major)
@@ -83,8 +81,10 @@ live :beep do |n|
   x = [6].choose
   play degree(x, :D3, :major)
   play degree(9, :D3, :major)
-  sleep bar
+  sleep bar/2.0
   play degree(x, :D3, :major)
+  sleep bar/2.0
+    play degree(x, :D3, :major)
 end
 end
 end

@@ -23,6 +23,7 @@ live :d do |n|
     sample :drum_cymbal_pedal
     sleep bar/4.0     
   else
+      sample :drum_cymbal_pedal
     sleep bar
   end
   end

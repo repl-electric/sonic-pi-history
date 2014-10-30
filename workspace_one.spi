@@ -54,7 +54,7 @@ end
 end
 
 live_loop :stars do
-use_synth :mod_fm
+use_synth :zawa
   sync :circle
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do

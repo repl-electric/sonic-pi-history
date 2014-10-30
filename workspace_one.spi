@@ -72,7 +72,7 @@ live :beep do |n|
   play degree(1, :D3, :major)
   sleep bar
   sleep bar
-  play degree(2, :D3, :major)
+  play degree(1, :D3, :major)
   sleep bar
   sleep bar
   play degree(4, :D3, :major)

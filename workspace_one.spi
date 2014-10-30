@@ -129,7 +129,7 @@ live :highlight do |n|
 end
 
 live :sparkle do |n|
-with_fx :lpf, cutoff: 90 do
+with_fx :lpf, cutoff: 100 do
   synth :pretty_bell
   use_synth_defaults attack: 0.05, release: 0.05, decay: 0.01, env_curve: 4, note_slide_curve: -0.8, note_slide: 0.1, note_slide_shape: 5
   with_fx :echo, phase: bar/4 do

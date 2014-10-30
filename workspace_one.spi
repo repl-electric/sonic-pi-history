@@ -57,6 +57,8 @@ live_loop :stars do
   with_fx :reverb do
   with_fx :echo, phase: bar/2.0 do
     play [:D6].choose
+    sleep bar
+    play [:C6].choose
   end
   end
 end

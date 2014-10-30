@@ -99,7 +99,7 @@ use_synth :pretty_bell
     play [:D2].choose
     sleep bar/2.0
 
-  if n % 32 == 0
+  if n % 16 == 0
     play [:D3].choose
     sleep bar/2.0
     play [:D3].choose

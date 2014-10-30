@@ -62,9 +62,10 @@ use_synth :pretty_bell
     sleep bar
     play [:D4].choose
     sleep bar/2.0
-      play [:C4].choose
-          sleep bar/2.0
-                play [:C4].choose
+    play [:C4].choose
+    sleep bar/2.0
+    play [:C4].choose
+       sleep bar
   end
   end
 end

@@ -1,7 +1,7 @@
 bar = 1.0
 
 live_loop :beep do
-  use_synth_defaults attack: 0.1
+  use_synth_defaults, attack: 0.1
   play degree(1, :D3, :major)
   sleep bar
   sleep bar

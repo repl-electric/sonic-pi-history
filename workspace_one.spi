@@ -49,10 +49,8 @@ end
 end
 
 live_loop :stars do
-  
   sync :circle
   with_fx :echo do
-  play :C6
+    play [:C6, :D6].choose
   end
-  
 end

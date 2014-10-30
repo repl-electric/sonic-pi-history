@@ -80,7 +80,7 @@ live :beep do |n|
   play degree(4, :D3, :major)
   sleep bar
   sleep bar
-  x = [8,7].choose
+  x = [6].choose
   play degree(x, :D3, :major)
   play degree(9, :D3, :major)
   sleep bar

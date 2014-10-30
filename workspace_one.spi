@@ -60,8 +60,11 @@ use_synth :pretty_bell
   with_fx :echo, phase: bar/2.0 do
     play [:D4].choose
     sleep bar
-    play [:C4].choose
+    play [:D4].choose
     sleep bar/2.0
+      play [:C4].choose
+          sleep bar/2.0
+                play [:C4].choose
   end
   end
 end

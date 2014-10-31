@@ -77,6 +77,14 @@ live :higher do |n|
   end
 end
 
+live :higher do |n|
+  sync :high
+  use_synth :beep
+  play degree(6, :A3, :major)
+
+end
+
+
 live :otherhigher do |n|
   sync :other_high
   use_synth :beep

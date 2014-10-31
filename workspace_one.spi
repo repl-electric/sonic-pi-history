@@ -14,8 +14,10 @@ live :drummer do |n|
   play degree(1, :A2, :major)
   sleep bar
   if n%16 == 15
+  elsif n%16 == 0
+    play degree(1, :A3, :major)
   else
-  play degree(1, :A2, :major)
+    play degree(1, :A2, :major)
   end
   sleep bar
 end

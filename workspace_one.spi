@@ -81,7 +81,7 @@ live :beeping do
         play degree(5, :A3, :major)
         sleep bar/2.0
       end
-      end
+
 
       
       

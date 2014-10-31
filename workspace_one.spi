@@ -12,6 +12,9 @@ live :beeping do |n|
   with_fx :echo, phase: bar/4.0 do
   with_fx :reverb do
     play degree(1, :A3, :major)
+    sleep bar/2.0
+    play degree(3, :A3, :major)
+    sleep bar/2.0
   end
   end
 end

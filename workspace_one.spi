@@ -80,7 +80,7 @@ end
 live :words do
   sync :circle
   sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav", amp: 5 
-  sleep 2*sample_duration("/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav")
+  sleep 8*sample_duration("/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav")
 end
 
 live :beeping do

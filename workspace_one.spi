@@ -75,7 +75,7 @@ live :beeping do
           sleep bar/2.0
           play degree(4, :A3, :major)
           sleep bar/4.0
-          with_fx :lpf do
+          with_fx :lpf, cutoff: 60 do
             sample :drum_tom_lo_soft
           end
           play degree(4, :A3, :major)

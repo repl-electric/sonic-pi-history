@@ -1,3 +1,5 @@
+["support", "soprano", "samples"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
+
 bar = 1.0/1.0
 live_loop :timer do
   cue :circle
@@ -5,7 +7,7 @@ live_loop :timer do
   sleep bar
 end
 
-live_loop :drummer do
+live :drummer do
   use_synth :beep
   use_synth_defaults attack: 0.1, release: 0.01
   sync :circle

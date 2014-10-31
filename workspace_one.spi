@@ -81,11 +81,13 @@ live :higher2 do |n|
   sync :high
   use_synth :beep
   with_fx :echo, phase: bar/2 do
+    if n% 2 == 0
     play degree(5, :A4, :major), release: 1, attack: 0.1
     sleep bar
     #with_fx :reverb do
-      play degree(1, :A4, :major), release: 1, attack: 0.01 
+    play degree(1, :A4, :major), release: 1, attack: 0.01 
     #end
+    end
   end
 end
 

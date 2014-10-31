@@ -77,7 +77,7 @@ live :higher do |n|
   end
 end
 
-live :higher do |n|
+live :higher2 do |n|
   sync :high
   use_synth :beep
   with_fx :echo, phase: bar do

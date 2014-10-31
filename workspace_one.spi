@@ -152,8 +152,6 @@ define :endbeep do |n|
   end
 end
 
-end
-
 live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
@@ -171,4 +169,4 @@ live :beeping do
     end
     # end
   end
-  end
+end

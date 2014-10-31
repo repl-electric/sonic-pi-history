@@ -30,7 +30,7 @@ live :drummer do |n|
     end
    elsif n%16 == 1
     with_fx :reverb do
-    sample :drum_bass_soft
+    sample :drum_bass_hard
     play degree(1, :A4, :major)
     sleep bar/3
     play degree(1, :A4, :major)

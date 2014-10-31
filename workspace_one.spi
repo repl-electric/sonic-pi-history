@@ -69,7 +69,7 @@ live :higher do |n|
   sync :high
   
   use_synth :beep
-  with_fx :slicer,  do
+  with_fx :slicer  do
     play degree(6, :A3, :major), release: bar*2, attack: 0.5
   end
   use_synth :zawa

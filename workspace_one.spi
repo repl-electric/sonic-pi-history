@@ -7,11 +7,6 @@ live :timer do |n|
   sleep bar
 end
 
-live :drums do |n|
-  sync :timer
-  play degree(1, :A2, :major)
-  sleep bar
-end
 
 live :beeping do |n|
   sync :timer 

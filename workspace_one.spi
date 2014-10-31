@@ -69,7 +69,7 @@ live :higher do |n|
     with_fx :echo, phase: bar do
       with_fx :reverb do
         use_synth :zawa
-        play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.3,  cutoff: 50
+        play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.3,  cutoff: 50, res_slide: 0.2
       end
     end
   end

@@ -82,7 +82,7 @@ live :higher2 do |n|
   #use_synth :beep
   with_fx :reverb do
     sync :high
-    sample csample("urmohum.wav"), amp: 5
+    sample csample("urmohum.wav"), amp: 8
     if n%2 == 0
     play degree(5, :A4, :major), release: 0.3, attack: 0.01
     sleep bar*1

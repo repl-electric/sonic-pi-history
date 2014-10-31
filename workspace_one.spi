@@ -8,7 +8,7 @@ end
 live_loop :drummer do
   use_synth :beep
   sync :circle
-  play degree(1, :D2, :major)
+  play degree(1, :E2, :major)
   sleep bar
   sleep bar
 end

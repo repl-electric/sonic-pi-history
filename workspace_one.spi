@@ -11,9 +11,9 @@ live_loop :drummer do
 end
 
 live_loop :beeping do
+  sync :timer
   with_fx :echo do
     with_fx :reverb do
-      sync :timer
       play 60
       sleep 2
     end

@@ -67,9 +67,13 @@ end
 
 live :higher do
   sync :high
+  
+    use_synth :beep
+    play degree(5, :A3, :major)
   use_synth :zawa
   with_fx :lpf, cutoff: 70 do
   with_fx :echo, phase: bar do 
+  
   with_fx :reverb do
     play_chord chord(:A5, :major), release: bar*1, attack: bar, decay: bar, amp: 0.3
   end

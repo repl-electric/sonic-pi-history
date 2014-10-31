@@ -17,8 +17,9 @@ end
 live_loop :beeping do
   use_synth :beep
   sync :timer 
-  with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
+  with_fx :echo, phase: bar/4.0 do
+  
       play degree(1, :A3, :major)
       sleep bar/2.0
       play degree(3, :A3, :major)

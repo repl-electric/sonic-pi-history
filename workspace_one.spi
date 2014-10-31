@@ -67,7 +67,7 @@ end
 
 live :higher do
   sync :high
-  use_synth :prophet
+  use_synth :supersaw
   play degree(5, :A3, :major), release: bar*2
 
 end

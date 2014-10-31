@@ -18,5 +18,5 @@ live_loop :beeping do
       sync :timer
       sleep 2
     end
-  #end
+  end
 end

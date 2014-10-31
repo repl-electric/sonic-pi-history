@@ -49,14 +49,14 @@ end
 
 live :highlights do |n|
 #  sync :high
-sync :circle
+  sync :circle
   use_synth :fm
-  if n%2 == 0
+  #if n%2 == 0
     play degree(6, :A3, :major), attack: 1, release: bar*2
     sleep bar/8.0
     play degree(4, :A3, :major), attack: 1, release: bar*2
     sleep bar/8.0
-  end
+  #end
 end
 
 live :beeping do

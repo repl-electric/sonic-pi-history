@@ -78,7 +78,8 @@ live :higher do |n|
 end
 
 live :higher2 do |n|
-  use_synth :beep
+  use_synth :tb303
+  #use_synth :beep
   with_fx :reverb do
     sync :high
     if n%2 == 0

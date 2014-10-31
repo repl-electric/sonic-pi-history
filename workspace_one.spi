@@ -78,7 +78,6 @@ live :higher do |n|
 end
 
 live :higher2 do |n|
-
   use_synth :beep
   with_fx :reverb do
     sync :high
@@ -106,6 +105,30 @@ live :otherhigher do |n|
   use_synth :beep
   play degree(5, :A3, :major), release: bar*2, attack: bar*2
 end
+
+live :otherhigher2 do |n|
+  use_synth :beep
+  with_fx :reverb do
+    sync :other_high
+    if n%2 == 0
+    play degree(5, :A4, :major), release: 0.3, attack: 0.01
+    sleep bar*1
+    #with_fx :reverb do
+    play degree(3, :A4, :major), release: 0.2, attack: 0.01 
+    
+    sleep bar*1
+    with_fx :reverb do
+      play degree(3, :A4, :major), release: bar*2, attack: 0.01, decay: bar/4
+      sleep bar/2
+      play degree(6, :A4, :major), release: 0.25, attack: 0.01 
+      sleep bar/2
+      play degree(6, :A4, :major), release: 0.1, attack: 0.01 
+      sleep bar
+    end
+    end
+  end
+end
+
 
 live :words do
   sync :circle

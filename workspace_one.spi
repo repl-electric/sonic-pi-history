@@ -82,7 +82,7 @@ live :higher2 do |n|
   use_synth :beep
   with_fx :reverb do
     if n%2 == 0
-    play degree(5, :A4, :major), release: 0.3, attack: 0.1
+    play degree(5, :A4, :major), release: 0.3, attack: 0.01
     sleep bar*1
     #with_fx :reverb do
     play degree(3, :A4, :major), release: 0.2, attack: 0.01 

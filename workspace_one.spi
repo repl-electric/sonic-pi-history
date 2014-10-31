@@ -49,7 +49,7 @@ live :drummer do |n|
   elsif n%16 == 0
     play degree(2, :A1, :major)
     sleep bar
-    play degree(2, :A1, :major)
+    play degree(4, :A1, :major)
     sleep bar
     else
     play degree(4, :A1, :major)

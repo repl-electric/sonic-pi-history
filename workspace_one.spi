@@ -30,13 +30,13 @@ live :drummer do |n|
     sample :drum_bass_soft
     play degree(1, :A4, :major) 
     sleep bar/3.0
-        sample :drum_cymbal_pedal
+    sample :drum_cymbal_pedal
     play degree(1, :A4, :major)
     sleep bar/3.0
         sample :drum_cymbal_pedal
     play degree(1, :A4, :major) 
     sleep bar/3.0
-        sample :drum_cymbal_pedal
+    sample :drum_cymbal_pedal
     else
     sample :drum_bass_soft
     play degree(1, :A2, :major)
@@ -55,6 +55,7 @@ live :beeping do
 #    with_fx :lpf, cutoff: 120, _slide: 5 do
     with_fx :echo, phase: bar/4.0 do
      with_fx :reverb do
+     8.times do
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0
@@ -66,6 +67,24 @@ live :beeping do
         play degree(4, :A3, :major)
         sleep bar/2.0
       end
+      end
+      
+       8.times do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+        play degree(5, :A3, :major)
+        sleep bar/2.0
+      end
+      end
+
+      
+      
     end
  # end
 end

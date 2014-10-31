@@ -45,7 +45,7 @@ live :beep do |n|
   use_synth :beep
   with_fx :echo, phase: bar do
     with_fx :reverb do
-      use_synth_defaults attack: 0.05, release: 0.05
+#      use_synth_defaults attack: 0.05, release: 0.05
       sync :circle
 
       play degree(3, :D3, :major)

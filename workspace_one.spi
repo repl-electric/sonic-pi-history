@@ -7,12 +7,11 @@ live :timer do
   sleep bar
 end
 
-
 live :beeping do |n|
-
-  sync :circle
-  
+  sync :circle 
+  with_fx :echo do
+  with_fx :reverb do
   play 60
-
-
+  end
+  end
 end

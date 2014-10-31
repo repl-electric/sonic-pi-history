@@ -103,7 +103,7 @@ live :beeping do
           play degree(5, :A3, :major)
           sleep bar/4.0
           with_fx :lpf, cutoff: 70 do
-          sample :drum_tom_hi_soft
+            sample :drum_tom_hi_soft
           end
           play degree(5, :A3, :major)
           sleep bar/4.0

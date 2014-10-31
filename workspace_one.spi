@@ -103,7 +103,7 @@ live :beeping do
         end
       end
 
-      8.times do |n|
+      0.times do |n|
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0

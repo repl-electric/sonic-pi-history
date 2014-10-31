@@ -9,12 +9,9 @@ end
 
 live :drummer do |n|
   use_synth :beep
-  use_synth_defaults attack: 0.01, release: 0.01
-  
+  use_synth_defaults attack: 0.01, release: 0.05
   with_fx :reverb do
   sync :circle
-
-  
   if n%16 == 15
       sleep bar
       sleep bar

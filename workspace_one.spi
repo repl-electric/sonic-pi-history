@@ -47,12 +47,13 @@ live :drummer do |n|
   end
 end
 
-live :highlights do
+live :highlights do |n|
   sync :high
-  
-  play degree(6, :A3, :major)
-end
 
+  if n%2 == 0
+  play degree(6, :A3, :major)
+  end
+end
 
 live :beeping do
   use_synth :beep

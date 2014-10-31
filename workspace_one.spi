@@ -28,10 +28,22 @@ live :drummer do |n|
       play degree(1, :A4, :major)
       sleep bar/3
     end
+   elsif n%16 == 1
+    with_fx :reverb do
+    sample :drum_bass_soft
+    play degree(1, :A4, :major)
+    sleep bar/3
+    play degree(1, :A4, :major)
+    sleep bar/3
+      play degree(1, :A4, :major)
+      sleep bar/3
+    end
+
     else
     sample :drum_bass_soft
     play degree(1, :A2, :major)
     sleep bar
+    sample :drum_bass_soft
     play degree(1, :A2, :major)
     sleep bar
   end

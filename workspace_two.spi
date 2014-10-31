@@ -13,10 +13,10 @@ live_loop :beeping do
 
   with_fx :echo do
 
-  with_fx :reverb do
+  #with_fx :reverb do
       sync :timer
       play 60
       sleep 2
     end
-  end
+  #end
 end

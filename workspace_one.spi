@@ -73,14 +73,10 @@ live :highlights do |n|
         play degree(4, :A3, :major), attack: bar, release: bar*1, amp: vol
       end
     else
-    play degree(3, :A3, :major), attack: bar, release: bar*2, amp: vol
+    play degree(1, :A3, :major), attack: bar, release: bar*2, amp: vol
     end
     sleep bar*2
-
-
-    
-    
-    
+   
   #end
 end
 

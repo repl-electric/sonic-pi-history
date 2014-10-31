@@ -80,8 +80,8 @@ end
 live :higher do |n|
   sync :high
   use_synth :beep
-  play degree(6, :A3, :major)
-
+  with_fx :echo
+  play degree(5, :A3, :major)
 end
 
 

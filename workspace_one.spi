@@ -55,7 +55,7 @@ live :beeping do |n|
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
-      8.times do
+      8.times do |n|
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0

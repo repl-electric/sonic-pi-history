@@ -67,7 +67,7 @@ end
 
 live :higher do
   sync :high
-  play :C4, release: bar
+  play :A4, release: bar
 
 end
 

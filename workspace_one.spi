@@ -9,7 +9,7 @@ end
 
 live :drummer do |n|
   use_synth :beep
-  use_synth_defaults attack: bar/8, release: bar/8
+  use_synth_defaults attack: 0.1, release: bar/8
   sync :circle
   if n%16 == 15
       sleep bar
@@ -18,13 +18,10 @@ live :drummer do |n|
     play degree(1, :A2, :major)
       sleep bar
       sleep bar
- 
-
   else
     play degree(1, :A2, :major)
     sleep bar
     sleep bar
-
   end
 
 end

@@ -69,7 +69,7 @@ live :higher do
   sync :high
   use_synth :pretty_bell
 #  with_fx :lpf, cutoff: 80 do
-  play degree(5, :A3, :major), release: bar*2, attack: bar*2, decay: bar
+  play degree(5, :A3, :major), release: bar*2, attack: bar*2, decay: bar, amp: 0.3
 #  end
 end
 

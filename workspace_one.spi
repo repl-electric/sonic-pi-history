@@ -104,7 +104,7 @@ define :startbeep do |n|
   sleep bar/2.0
 
   if n == 3 || n == 7
-    play degree(1, :A3, :major)
+    play degree(3, :A3, :major)
     sleep bar/2.0
     play degree(4, :A3, :major)
     sleep bar/4.0

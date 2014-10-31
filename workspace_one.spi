@@ -13,7 +13,7 @@ live :drummer do |n|
   with_fx :reverb do
   sync :circle
   if n%16 == 15
-      play degree(7, :A1, :major)
+      play degree(6, :A1, :major)
       sleep bar
       sleep bar
   elsif n%16 == 0

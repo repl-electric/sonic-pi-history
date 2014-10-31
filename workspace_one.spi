@@ -8,109 +8,108 @@ live :timer do
 end
 
 live :d do |n|
-
   with_fx :lpf, cutoff: 80 do
-  sync :circle
-  sample :drum_bass_soft
-  sleep bar
-  if n % 32 == 0 
-  with_fx :reverb do
+    sync :circle
     sample :drum_bass_soft
-    sleep bar/4.0
-    sample :drum_cymbal_pedal
-    sleep bar/4.0
-    sample :drum_bass_soft
-    sleep bar/4.0
-    sample :drum_cymbal_pedal
-    sleep bar/4.0   
-  end  
-  elsif n % 16 == 0
-    sample :drum_cymbal_pedal
-    sleep bar/4.0
-    sample :drum_bass_soft
-    sleep bar/4.0
-    sample :drum_cymbal_pedal
-    sleep bar/4.0
-    sample :drum_bass_soft
-    sleep bar/4.0   
-  else
-    sample :drum_cymbal_pedal
     sleep bar
-  end
+    if n % 32 == 0
+      with_fx :reverb do
+        sample :drum_bass_soft
+        sleep bar/4.0
+        sample :drum_cymbal_pedal
+        sleep bar/4.0
+        sample :drum_bass_soft
+        sleep bar/4.0
+        sample :drum_cymbal_pedal
+        sleep bar/4.0
+      end
+    elsif n % 16 == 0
+      sample :drum_cymbal_pedal
+      sleep bar/4.0
+      sample :drum_bass_soft
+      sleep bar/4.0
+      sample :drum_cymbal_pedal
+      sleep bar/4.0
+      sample :drum_bass_soft
+      sleep bar/4.0
+    else
+      sample :drum_cymbal_pedal
+      sleep bar
+    end
   end
 end
 
 live :beep do |n|
   with_fx :echo, phase: bar/[1.0,2.0,4.0].choose do
-  with_fx :reverb do
-  use_synth_defaults attack: 0.05, release: 0.05
-  sync :circle
+    with_fx :reverb do
+      use_synth_defaults attack: 0.05, release: 0.05
+      sync :circle
 
-  play degree(3, :D3, :major)
-  play degree(1, :D3, :major)
-  sleep bar
-  sleep bar
-  play degree(2, :D3, :major)
-  sleep bar
-  sleep bar
-  play degree(3, :D3, :major)
-  sleep bar
-  play degree(3, :D3, :major)
-  sleep bar
-  sleep bar
-  x = [8,7].choose
-  play degree(x, :D3, :major)
-  play degree(5, :D3, :major)
-  sleep bar
-  play degree(x, :D3, :major)
-   
-  sync :circle
+      play degree(3, :D3, :major)
+      play degree(1, :D3, :major)
+      sleep bar
+      sleep bar
+      play degree(2, :D3, :major)
+      sleep bar
+      sleep bar
+      play degree(3, :D3, :major)
+      sleep bar
+      play degree(3, :D3, :major)
+      sleep bar
+      sleep bar
+      x = [8,7].choose
+      play degree(x, :D3, :major)
+      play degree(5, :D3, :major)
+      sleep bar
+      play degree(x, :D3, :major)
 
-  play degree(3, :D3, :major)
-  play degree(1, :D3, :major)
-  sleep bar
-  sleep bar
-  play degree(1, :D3, :major)
-  sleep bar
-  sleep bar
-  play degree(4, :D3, :major)
-  sleep bar
-  play degree(4, :D3, :major)
-  sleep bar
-  sleep bar
-  x = [6].choose
-  play degree(x, :D3, :major)
-  play degree(9, :D3, :major)
-  sleep bar/2.0
-  play degree(x, :D3, :major)
-  sleep bar/2.0
-  play degree(x, :D3, :major)
-end
-end
+      sync :circle
+
+      play degree(3, :D3, :major)
+      play degree(1, :D3, :major)
+      sleep bar
+      sleep bar
+      play degree(1, :D3, :major)
+      sleep bar
+      sleep bar
+      play degree(4, :D3, :major)
+      sleep bar
+      play degree(4, :D3, :major)
+      sleep bar
+      sleep bar
+      x = [6].choose
+      play degree(x, :D3, :major)
+      play degree(9, :D3, :major)
+      sleep bar/2.0
+      play degree(x, :D3, :major)
+      sleep bar/2.0
+      play degree(x, :D3, :major)
+    end
+  end
 end
 
 live :stars do |n|
-use_synth :pretty_bell
+  use_synth :pretty_bell
   sync :circle
   with_fx :reverb do
-  with_fx :echo, phase: bar/2.0 do
-    play [:D2].choose
-    sleep bar
-    play [:D2].choose
-    sleep bar/2.0
+    with_fx :echo, phase: bar/2.0 do
+      play [:D2].choose
+      sleep bar
+      play [:D2].choose
+      sleep bar/2.0
 
-  if n % 8 == 0
-    play [:D3, :E3].choose, attack: 0.01,  release: 0.1
-    sleep bar/2.0
-    play [:D3, :E3].choose, attack: 0.01, release: 0.1
-    sleep bar
+      if n % 8 == 0
+        play [:D3, :E3].choose, attack: 0.01,  release: 0.1
+        sleep bar/2.0
+        play [:D3, :E3].choose, attack: 0.01, release: 0.1
+        sleep bar
 
-  else
-    play [:C2].choose
-    sleep bar/2.0
-    play [:C2].choose
-    sleep bar
+      else
+        play [:C2].choose
+        sleep bar/2.0
+        play [:C2].choose
+        sleep bar
+      end
     end
-  end
   end
 end

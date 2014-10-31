@@ -69,7 +69,9 @@ live :higher do
   sync :high
   use_synth :zawa
   with_fx :lpf, cutoff: 70 do
+  with_reverb do
   play_chord [:A5], release: bar*2, attack: bar, decay: bar, amp: 0.3
+  end
   end
 end
 

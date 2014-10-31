@@ -93,7 +93,7 @@ live :higher2 do |n|
     sleep bar
     play degree(5, :A4, :major), release: 0.25, attack: 0.01 
     sleep bar
-    play degree(5, :A4, :major), release: 0.35, attack: 0.01 
+    play degree(5, :A4, :major), release: bar/2.0, attack: 0.01 
     sleep bar
     end
     end

@@ -39,10 +39,10 @@ live :drumers do |n|
   end
 end
 
-live_loop :beep do
-  puts "TEST"
-  sleep 5
-end
+#live_loop :beep do
+#  puts "TEST"
+##  sleep 5
+#end
 
 live :beeper do |n|
   use_synth :beep

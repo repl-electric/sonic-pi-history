@@ -68,9 +68,9 @@ end
 live :higher do
   sync :high
   use_synth :dull_bell
-  with_fx :lpf, cutoff: 80 do
+#  with_fx :lpf, cutoff: 80 do
   play degree(5, :A3, :major), release: bar*2, attack: bar
-  end
+#  end
 end
 
 live :beeping do

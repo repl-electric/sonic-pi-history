@@ -11,7 +11,7 @@ live :beeping do |n|
   sync :circle 
   with_fx :echo, phase: bar/4.0 do
   with_fx :reverb do
-  play 60
+    play degree(1, :A3, :major)
   end
   end
 end

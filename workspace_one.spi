@@ -77,6 +77,11 @@ live :higher do
   end
 end
 
+live :words do
+  sync :circle
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
+end
+
 live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do

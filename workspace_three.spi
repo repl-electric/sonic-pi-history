@@ -1,0 +1,11 @@
+
+live_loop :beep do
+  puts "TEST"
+  sleep 5
+end
+
+live_loop :test do
+  puts "HI"
+  sleep 5
+  play 60
+end

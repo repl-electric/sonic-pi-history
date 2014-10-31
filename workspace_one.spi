@@ -18,6 +18,7 @@ live :drummer do |n|
       sleep bar
       sleep bar
   elsif n%16 == 0
+        sample :drum_bass_soft
     play degree(1, :A4, :major)
     sleep bar
     play degree(1, :A4, :major)

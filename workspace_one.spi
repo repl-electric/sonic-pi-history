@@ -19,14 +19,8 @@ live_loop :beeping do
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
       play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(3, :A3, :major)
-      sleep bar/2.0
-    
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(4, :A3, :major)
-      sleep bar/2.0
+      sleep bar*2
+
     end
   end
 end

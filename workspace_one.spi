@@ -53,9 +53,9 @@ live :highlights do |n|
   use_synth :fm
   #if n%2 == 0
     play degree(6, :A3, :major), attack: bar, release: bar*2
-    sleep bar*4
+    sleep bar*2
     play degree(4, :A3, :major), attack: bar, release: bar*2
-    sleep bar*4
+    sleep bar*2
   #end
 end
 

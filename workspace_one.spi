@@ -68,8 +68,8 @@ end
 live :higher do |n|
   sync :high
   
-    use_synth :beep
-    play degree(5, :A3, :major)
+  use_synth :beep
+  play degree(5, :A3, :major), release: bar*2
   use_synth :zawa
   with_fx :lpf, cutoff: 70 do
   with_fx :echo, phase: bar do 

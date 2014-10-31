@@ -82,7 +82,7 @@ live :higher2 do |n|
   use_synth :beep
   with_fx :echo, phase: bar/2 do
     play degree(5, :A5, :major), release: 1, attack: 0.1
-    sleep bar/2.0
+    sleep bar
     #with_fx :reverb do
       play degree(6, :A5, :major), release: 1, attack: 0.01 
     #end

@@ -23,10 +23,10 @@ live :drummer do |n|
   else
     play degree(1, :A2, :major)
     sleep bar
-        sleep bar
+    sleep bar
 
   end
-  sleep bar
+
 end
 
 live_loop :beeping do

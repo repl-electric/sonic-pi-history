@@ -10,6 +10,8 @@ end
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
+
+  with_fx :lpf, :cutout 70 do
   with_fx :reverb do
   sync :circle
   if n%16 == 15
@@ -33,6 +35,7 @@ live :drummer do |n|
     sleep bar
     play degree(1, :A2, :major)
     sleep bar
+  end
   end
   end
 

@@ -79,7 +79,7 @@ end
 
 live :words do
   sync :circle
-  sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav", amp 5 
 end
 
 live :beeping do

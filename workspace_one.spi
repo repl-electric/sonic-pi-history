@@ -15,16 +15,15 @@ live :drummer do |n|
       sync :circle
       if n%16 == 7
         sample :drum_bass_soft
-        play degree(1, :A4, :major)
+        play degree(1, :A3, :major)
         sleep bar/2.0
-        play degree(1, :A4, :major)
-       sleep bar/2.0
-        play degree(1, :A4, :major)
-               sleep bar/2.0
-                       play degree(1, :A4, :major)
-                       sleep bar/2.0
-                               play degree(1, :A4, :major)
-       
+        play degree(1, :A3 :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
       elsif n%16 == 14
         #sample :drum_bass_hard
         play degree(1, :A4, :major)
@@ -115,9 +114,6 @@ live :beeping do
         end
       end
     end
-
-
-
   end
   # end
 end

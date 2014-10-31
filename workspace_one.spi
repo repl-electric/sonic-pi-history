@@ -67,6 +67,7 @@ live :beeping do
           sleep bar/2.0
           play degree(4, :A3, :major)
           sleep bar/4.0
+                  sample :drum_bass_soft
           play degree(4, :A3, :major)
           sleep bar/4.0
         else

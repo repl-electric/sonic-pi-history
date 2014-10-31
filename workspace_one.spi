@@ -187,7 +187,7 @@ define :endbeep do |n|
     play degree(6, :A3, :major)
     sleep bar/4.0
   else
-    play degree(1, :A3, :major)
+    play degree(5, :A3, :major)
     sleep bar/2.0
     play degree(6, :A3, :major)
     sleep bar/2.0
@@ -223,3 +223,5 @@ end
 #begone :highlights
 #begone :drummer
 set_volume! 1
+
+fadeout()

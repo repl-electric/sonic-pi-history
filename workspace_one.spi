@@ -55,7 +55,7 @@ live :highlights do |n|
   if n%2 == 0
     play degree(6, :A3, :major), attack: 1
     sleep bar/8.0
-    play degree(6, :A3, :major)
+    play degree(6, :A3, :major), attack: 1
     sleep bar/8.0
   end
 end

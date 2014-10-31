@@ -84,8 +84,8 @@ end
 
 live :otherhigher do |n|
   sync :other_high
+  use_synth :beep
   play degree(5, :A3, :major)
-  
 end
 
 

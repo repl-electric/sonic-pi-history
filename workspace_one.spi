@@ -68,7 +68,7 @@ end
 live :higher do
   sync :high
   play degree(1, :A4, :major)
-  
+
 end
 
 live :beeping do
@@ -97,8 +97,8 @@ live :beeping do
           play degree(1, :A3, :major)
           sleep bar/2.0
           play degree(4, :A3, :major)
-          cue :high
           sleep bar/2.0
+cue :high
         end
       end
 

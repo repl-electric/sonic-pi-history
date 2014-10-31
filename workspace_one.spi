@@ -68,7 +68,7 @@ end
 live :higher do
   sync :high
   use_synth :supersaw
-  play degree(5, :A3, :major), release: bar*2
+  play degree(5, :A3, :major), release: bar*4
 
 end
 

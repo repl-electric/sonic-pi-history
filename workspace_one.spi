@@ -10,7 +10,7 @@ end
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
-  with_fx :lpf, cutout: 60 do
+  with_fx :lpf, cutout: 50 do
     with_fx :reverb do
       sync :circle
       if n%16 == 7
@@ -53,31 +53,17 @@ live :highlights do |n|
   use_synth :fm
   vol = 0.5
   #if n%2 == 0
-    play degree(5, :A2, :major), attack: bar, release: bar*2, amp: vol
+    play degree(5, :A2, :major),     attack: bar, release: bar*2, amp: vol
     sleep bar*2
     if n % 16 == 0
       with_fx :reverb do
         play degree(7, :A2, :major), attack: bar, release: bar*2, amp: vol
       end
     else
-      play degree(8, :A2, :major), attack: bar, release: bar*2, amp: vol
+      play degree(8, :A2, :major),   attack: bar, release: bar*2, amp: vol
     end
     sleep bar*2
     
-#    sync :circle
-  
-#    play degree(1, :A3, :major), attack: bar, release: bar*2, amp: vol
-#    sleep bar*2
-#    if n % 16 == 0
-#      with_fx :reverb do
-#        play degree(4, :A3, :major), attack: bar, release: bar*1, amp: vol
-#      end
-#    else
-#      play degree(3, :A3, :major), attack: bar, release: bar*2, amp: vol
-##    end
-#    sleep bar*2
-   
-  #end
 end
 
 live :beeping do

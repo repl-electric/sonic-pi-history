@@ -82,7 +82,7 @@ live :higher do |n|
   use_synth :beep
   with_fx :echo do
   play degree(5, :A3, :major)
-  en
+  end
 end
 
 

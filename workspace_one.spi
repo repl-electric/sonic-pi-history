@@ -69,7 +69,7 @@ live :higher do
   sync :high
   use_synth :zawa
   with_fx :lpf, cutoff: 50 do
-  play_chord [degree(5, :A3, :major)], release: bar*2, attack: bar, decay: bar, amp: 0.3
+  play_chord [:A3], release: bar*2, attack: bar, decay: bar, amp: 0.3
   end
 end
 

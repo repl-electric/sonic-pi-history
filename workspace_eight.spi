@@ -10,7 +10,7 @@ end
 
 live_loop :beep do
   puts "TEST"
-#  sleep 5
+  sleep 5
 end
 
 live :beeper do |n|

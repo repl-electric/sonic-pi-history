@@ -67,7 +67,6 @@ end
 
 live :higher do |n|
   sync :high
-  
   use_synth :beep
   #with_fx :slicer, phase: bar/2  do
     play degree(6, :A3, :major), release: bar*2, attack: bar*2
@@ -82,6 +81,11 @@ live :higher do |n|
   end
   end
 end
+
+live :otherhigher do |n|
+  sync :other_high
+end
+
 
 live :words do
   sync :circle
@@ -149,6 +153,7 @@ live :beeping do
           sleep bar/2.0
           play degree(5, :A3, :major)
           sleep bar/2.0
+          cue :other_high
         end
       end
     end

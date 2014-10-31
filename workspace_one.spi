@@ -10,7 +10,7 @@ end
 live :drums do |n|
   sync :circle
   play degree(1, :A2, :major)
-
+  sleep bar
 end
 
 live :beeping do |n|

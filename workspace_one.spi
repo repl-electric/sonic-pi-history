@@ -23,6 +23,7 @@ live :drummer do |n|
                sleep bar/2.0
                        play degree(1, :A4, :major)
                        sleep bar/2.0
+                               play degree(1, :A4, :major)
        
       elsif n%16 == 14
         #sample :drum_bass_hard

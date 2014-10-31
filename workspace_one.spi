@@ -15,6 +15,13 @@ live :beeping do |n|
     sleep bar/2.0
     play degree(3, :A3, :major)
     sleep bar/2.0
+    
+    play degree(1, :A3, :major)
+    sleep bar/2.0
+    play degree(4, :A3, :major)
+    sleep bar/2.0
+  
+    
   end
   end
 end

@@ -47,6 +47,13 @@ live :drummer do |n|
   end
 end
 
+live :highlights do
+  sync :high
+  
+  play degree(6, :A3, :major)
+end
+
+
 live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
@@ -73,6 +80,7 @@ live :beeping do
           play degree(1, :A3, :major)
           sleep bar/2.0
           play degree(4, :A3, :major)
+          cue :high
           sleep bar/2.0
         end
       end

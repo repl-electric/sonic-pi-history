@@ -25,11 +25,12 @@ live :drummer do |n|
     sleep bar/3
     play degree(1, :A4, :major)
     sleep bar/3
-      play degree(1, :A4, :major)
-      sleep bar/3
+    play degree(1, :A4, :major)
+    sample :drum_bass_soft
+    sleep bar/3
     end
    elsif n%16 == 1
-    sample :drum_bass_hard
+    sample :drum_bass_soft
     play degree(1, :A4, :major)
     sleep bar
     play degree(1, :A4, :major)

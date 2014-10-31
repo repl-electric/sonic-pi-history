@@ -11,51 +11,51 @@ live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
   with_fx :lpf, cutout: 60 do
-  with_fx :reverb do
-  sync :circle
-  if n%16 == 14
-      #sample :drum_bass_hard
-      play degree(1, :A2, :major)
-      sleep bar
-      sleep bar
-  elsif n%16 == 15
     with_fx :reverb do
-    sample :drum_bass_soft
-    play degree(1, :A4, :major)
-    sample :drum_bass_soft
-    sleep bar
-    play degree(1, :A4, :major)
-    end
-   elsif n%16 == 0
-    sample :drum_bass_soft
-    play degree(1, :A4, :major) 
-    sleep bar/3.0
-    sample :drum_cymbal_pedal
-    play degree(1, :A4, :major)
-    sleep bar/3.0
+      sync :circle
+      if n%16 == 14
+        #sample :drum_bass_hard
+        play degree(1, :A2, :major)
+        sleep bar
+        sleep bar
+      elsif n%16 == 15
+        with_fx :reverb do
+          sample :drum_bass_soft
+          play degree(1, :A4, :major)
+          sample :drum_bass_soft
+          sleep bar
+          play degree(1, :A4, :major)
+        end
+      elsif n%16 == 0
+        sample :drum_bass_soft
+        play degree(1, :A4, :major)
+        sleep bar/3.0
         sample :drum_cymbal_pedal
-    play degree(1, :A4, :major) 
-    sleep bar/3.0
-    sample :drum_cymbal_pedal
-    else
-    sample :drum_bass_soft
-    play degree(1, :A2, :major)
-    sleep bar
-    sample :drum_cymbal_pedal
-    play degree(1, :A2, :major)
-    sleep bar
-  end
-  end
+        play degree(1, :A4, :major)
+        sleep bar/3.0
+        sample :drum_cymbal_pedal
+        play degree(1, :A4, :major)
+        sleep bar/3.0
+        sample :drum_cymbal_pedal
+      else
+        sample :drum_bass_soft
+        play degree(1, :A2, :major)
+        sleep bar
+        sample :drum_cymbal_pedal
+        play degree(1, :A2, :major)
+        sleep bar
+      end
+    end
   end
 
 end
 
 live :beeping do
-    use_synth :beep
-#    with_fx :lpf, cutoff: 120, _slide: 5 do
-    with_fx :echo, phase: bar/4.0 do
-     with_fx :reverb do
-     8.times do
+  use_synth :beep
+  #    with_fx :lpf, cutoff: 120, _slide: 5 do
+  with_fx :echo, phase: bar/4.0 do
+    with_fx :reverb do
+      8.times do
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0
@@ -67,24 +67,24 @@ live :beeping do
         play degree(4, :A3, :major)
         sleep bar/2.0
       end
-      end
-      
-       8.times do
-        sync :circle
-        play degree(1, :A3, :major)
-        sleep bar/2.0
-        play degree(3, :A3, :major)
-        sleep bar/2.0
-
-        play degree(1, :A3, :major)
-        sleep bar/2.0
-        play degree(5, :A3, :major)
-        sleep bar/2.0
-      end
 
 
-      
-      
+    8.times do
+      sync :circle
+      play degree(1, :A3, :major)
+      sleep bar/2.0
+      play degree(3, :A3, :major)
+      sleep bar/2.0
+
+      play degree(1, :A3, :major)
+      sleep bar/2.0
+      play degree(5, :A3, :major)
+      sleep bar/2.0
     end
- # end
+    end
+
+
+
+  end
+  # end
 end

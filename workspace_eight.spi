@@ -1,0 +1,17 @@
+
+live_loop :poop do
+sleep 1
+ play 50
+end
+
+live_loop :beep do
+  puts "TEST"
+  play :A6
+  sleep 5
+end
+
+live_loop :coop do
+  puts "wooo"
+  sleep 3
+  play :A3
+end

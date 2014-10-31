@@ -14,7 +14,7 @@ live :drummer do |n|
   with_fx :reverb do
   sync :circle
   if n%16 == 15
-      sample :drum_bass_hard
+      #sample :drum_bass_hard
       play degree(1, :A2, :major)
       sleep bar
       sleep bar

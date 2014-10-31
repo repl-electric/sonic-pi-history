@@ -65,7 +65,7 @@ live :highlights do |n|
 
 end
 
-live :higher do
+live :higher do |n|
   sync :high
   
     use_synth :beep
@@ -83,7 +83,7 @@ end
 
 live :words do
   sync :circle
-  sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav", amp: 5 
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav", amp: 1 
   sleep 8*sample_duration("/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav")
 end
 

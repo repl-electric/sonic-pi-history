@@ -77,35 +77,30 @@ live :beeping do
         end
       end
 
-      5.times do
+      8.times do |n|
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0
         play degree(3, :A3, :major)
         sleep bar/2.0
 
+        if n == 5 || n == 7
+        play degree(1, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        else
         play degree(1, :A3, :major)
         sleep bar/2.0
         play degree(5, :A3, :major)
         sleep bar/2.0
+        end
       end
 
-      1.times do
-        sync :circle
-        play degree(1, :A3, :major)
-        sleep bar/2.0
-        play degree(3, :A3, :major)
-        sleep bar/2.0
-
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
-      end
 
       1.times do
         sync :circle

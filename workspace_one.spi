@@ -81,7 +81,7 @@ live :higher2 do |n|
   sync :high
   use_synth :beep
   with_fx :echo, phase: bar/4 do
-    play degree(5, :A4, :major), attack: 0.1, release: bar/2
+    play degree(5, :A5, :major), attack: 0.1, release: bar/2
   end
 end
 

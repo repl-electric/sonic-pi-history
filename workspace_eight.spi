@@ -1,10 +1,11 @@
 
 live_loop :poop do
-sleep 1
+  sleep 1
  play 50
 end
 
 live_loop :beep do
+  use_synth :beep
   puts "TEST"
   play :A6
   sleep 5

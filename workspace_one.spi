@@ -86,7 +86,7 @@ end
 
 live :words do
   sync :circle
-  with_fx :ixi_techno do
+  with_fx :ixi_techno, phase: bar do
     sample "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav", amp: 1
     sleep 8*sample_duration("/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav")
   end

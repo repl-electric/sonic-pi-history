@@ -72,7 +72,7 @@ live :higher do |n|
     with_fx :echo, phase: bar do
 
       with_fx :reverb do
-        play_chord chord(:A5, :major), release: bar*1, attack: bar, decay: bar, amp: 0.3
+        play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.3
       end
     end
   end

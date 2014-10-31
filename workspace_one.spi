@@ -53,7 +53,7 @@ live :highlights do |n|
   use_synth :fm
   vol = 0.5
   #if n%2 == 0
-    play degree(1, :A3, :major), attack: bar, release: bar*2, amp: vol
+    play degree(3, :A3, :major), attack: bar, release: bar*2, amp: vol
     sleep bar*2
     if n % 16 == 0
       with_fx :reverb do

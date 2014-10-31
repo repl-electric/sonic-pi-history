@@ -50,6 +50,7 @@ end
 live :highlights do |n|
   sync :high
 
+  use_synth :fm
   if n%2 == 0
     play degree(6, :A3, :major)
     sleep bar/8.0

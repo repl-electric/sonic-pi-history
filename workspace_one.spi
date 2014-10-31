@@ -13,14 +13,18 @@ live :drummer do |n|
   sync :circle
   if n%16 == 15
       sleep bar
+      sleep bar
   elsif n%16 == 0
     play degree(1, :A2, :major)
-    sleep bar
-    play degree(1, :A5, :major)
+      sleep bar
+      sleep bar
+ 
+
   else
     play degree(1, :A2, :major)
     sleep bar
-    play degree(1, :A2, :major)
+        sleep bar
+
   end
   sleep bar
 end

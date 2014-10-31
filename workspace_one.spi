@@ -1,13 +1,11 @@
 bar = 1.0/1.0
 live_loop :timer do
-  cue :circle
   sleep bar
   sleep bar
 end
 
 live_loop :drummer do
-  use_synth :beep
-  sync :circle
+  sync :timer
   play degree(1, :A2, :major)
   sleep bar
   sleep bar
@@ -15,7 +13,7 @@ end
 
 live_loop :beeping do
   use_synth :beep
-  sync :circle
+  sync :timer
   with_fx :echo do
     with_fx :reverb do
       play :A3

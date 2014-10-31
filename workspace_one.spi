@@ -17,7 +17,7 @@ end
 
 live_loop :beeping do
     use_synth :beep
-  with_fx :lpf, cutoff: 100, _slide: 1 do
+  with_fx :lpf, cutoff: 10, _slide: 1 do
 #    with_fx :echo, phase: bar/4.0 do
  #     with_fx :reverb do
         sync :circle

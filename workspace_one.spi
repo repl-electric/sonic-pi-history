@@ -111,10 +111,10 @@ live :otherhigher2 do |n|
   with_fx :reverb do
     sync :other_high
     if n%2 == 0
-    play degree(5, :A4, :major), release: 0.3, attack: 0.01
+    play degree(5, :A3, :major), release: 0.3, attack: 0.01
     sleep bar*1
     #with_fx :reverb do
-    play degree(3, :A4, :major), release: 0.2, attack: 0.01 
+    play degree(3, :A3, :major), release: 0.2, attack: 0.01 
     
     sleep bar*1
     with_fx :reverb do

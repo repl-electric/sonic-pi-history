@@ -41,7 +41,7 @@ live :drummer do |n|
         sample :drum_bass_soft
         play degree(1, :A4, :major)
         sleep bar
-#        sample :drum_cymbal_pedal
+        #        sample :drum_cymbal_pedal
         play degree(1, :A4, :major)
         sleep bar
       end
@@ -96,7 +96,7 @@ live :beeping do
         sleep bar/2.0
       end
 
-            1.times do
+      1.times do
         sync :circle
         play degree(1, :A3, :major)
         sleep bar/2.0
@@ -111,41 +111,69 @@ live :beeping do
         sleep bar/4.0
       end
 
+      5.times do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(5, :A3, :major)
+        sleep bar/2.0
+      end
+
+      1.times do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+
+        play degree(1, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+      end
       
-    7.times do
-      sync :circle
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(3, :A3, :major)
-      sleep bar/2.0
+            1.times do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
 
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(5, :A3, :major)
-      sleep bar/2.0
-    end
-    
-    1.times do
-      sync :circle
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(3, :A3, :major)
-      sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(5, :A3, :major)
+        sleep bar/2.0
+      end
 
-      play degree(1, :A3, :major)
-      sleep bar/4.0
-      play degree(5, :A3, :major)
-      sleep bar/4.0
-      play degree(5, :A3, :major)
-      sleep bar/4.0
-      play degree(5, :A3, :major)
-      sleep bar/4.0
-    end
+1.times do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+
+        play degree(1, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+        play degree(5, :A3, :major)
+        sleep bar/4.0
+      end
 
 
-    
-    
-    
+
+
     end
 
 

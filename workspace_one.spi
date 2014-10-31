@@ -84,7 +84,7 @@ live :higher2 do |n|
     play degree(5, :A5, :major), release: 1, attack: 0.1
     sleep bar
     #with_fx :reverb do
-      play degree(6, :A5, :major), release: 1, attack: 0.01 
+      play degree(1, :A5, :major), release: 1, attack: 0.01 
     #end
   end
 end

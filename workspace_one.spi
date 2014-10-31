@@ -13,7 +13,14 @@ live :drummer do |n|
   with_fx :lpf, cutout: 60 do
     with_fx :reverb do
       sync :circle
-      if n%16 == 14
+
+      if n%16 == 8
+        #sample :drum_bass_hard
+        play degree(1, :A4, :major)
+        sleep bar
+                play degree(1, :A4, :major)
+        sleep bar
+      elsif n%16 == 14
         #sample :drum_bass_hard
         play degree(1, :A4, :major)
         sleep bar

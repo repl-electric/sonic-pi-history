@@ -16,21 +16,21 @@ live_loop :drummer do
 end
 
 live_loop :beeping do
-with_fx :lpf, cutoff: 100, _slide: 1 do
-  use_synth :beep
-  with_fx :echo, phase: bar/4.0 do
-    with_fx :reverb do
-      sync :circle
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(3, :A3, :major)
-      sleep bar/2.0
-    
-      play degree(1, :A3, :major)
-      sleep bar/2.0
-      play degree(4, :A3, :major)
-      sleep bar/2.0
+    use_synth :beep
+  with_fx :lpf, cutoff: 100, _slide: 1 do
+    with_fx :echo, phase: bar/4.0 do
+      with_fx :reverb do
+        sync :circle
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(3, :A3, :major)
+        sleep bar/2.0
+
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(4, :A3, :major)
+        sleep bar/2.0
+      end
     end
   end
-end
 end

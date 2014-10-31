@@ -103,7 +103,7 @@ end
 
 live :otherhigher do |n|
   sync :other_high
-  sample csample("urmohum.wav")
+  sample csample("urmohum.wav"), amp: 1
   use_synth :beep
   play degree(5, :A3, :major), release: bar*2, attack: bar*2
 end

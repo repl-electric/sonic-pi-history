@@ -9,7 +9,7 @@ end
 
 live :beeping do |n|
   sync :circle 
-  with_fx :echo, phase: bar do
+  with_fx :echo, phase: bar/2.0 do
   with_fx :reverb do
   play 60
   end

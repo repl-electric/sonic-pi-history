@@ -58,7 +58,7 @@ live :drummer do |n|
 
 end
 
-live_loop :beeping do
+live :beeping do
     use_synth :beep
 #    with_fx :lpf, cutoff: 120, _slide: 5 do
     with_fx :echo, phase: bar/4.0 do

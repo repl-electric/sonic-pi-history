@@ -41,6 +41,11 @@ live :drumers do |n|
   end
 end
 
+live_loop :beep do
+  puts "TEST"
+  sleep 5
+end
+
 live :beeper do |n|
   use_synth :beep
   with_fx :echo, phase: bar do

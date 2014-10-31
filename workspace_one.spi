@@ -65,6 +65,13 @@ live :highlights do |n|
 
 end
 
+live :higher do
+  synth :high
+  
+  play degree(1, :A4, :major)
+  
+end
+
 live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do

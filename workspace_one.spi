@@ -66,8 +66,7 @@ live :highlights do |n|
 end
 
 live :higher do
-  cue :high
-  
+  synth :high
   play degree(1, :A4, :major)
   
 end

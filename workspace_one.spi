@@ -8,7 +8,7 @@ live :timer do |n|
 end
 
 live :drummer do |n|
-
+  sync :timer
   play degree(1, :A2, :major)
   sleep bar*2
 end

@@ -66,7 +66,7 @@ live :highlights do |n|
 end
 
 live :higher do
-  synth :high
+  sync :high
   play degree(1, :A4, :major)
   
 end

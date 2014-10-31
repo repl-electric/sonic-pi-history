@@ -36,7 +36,7 @@ live :drummer do |n|
         play degree(1, :A4, :major)
         sleep bar/3.0
       else
-        #sample :drum_bass_soft
+        sample :drum_bass_hard
         play degree(1, :A4, :major)
         sleep bar
         #        sample :drum_cymbal_pedal

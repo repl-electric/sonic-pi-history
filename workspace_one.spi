@@ -82,6 +82,8 @@ live :higher2 do |n|
   use_synth :beep
   with_fx :echo, phase: bar/2 do
     play degree(5, :A5, :major), release: 1
+    sleep bar
+    play degree(5, :A5, :major), release: 1
   end
 end
 

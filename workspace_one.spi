@@ -166,4 +166,5 @@ live :beeping do
   end
 end
 
-fadeout()
+
+set_volume 1

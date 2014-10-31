@@ -41,7 +41,7 @@ live :drummer do |n|
         with_fx :lpf, cutoff: 80 do
           sample :drum_bass_soft
         end
-        sample csample("urmohum.wav"), amp: 12
+        #sample csample("urmohum.wav"), amp: 12
         play degree(1, :A4, :major)
         sleep bar
         play degree(1, :A4, :major)

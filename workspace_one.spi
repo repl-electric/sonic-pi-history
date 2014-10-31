@@ -7,8 +7,7 @@ end
 live_loop :drummer do
   sync :timer
   play degree(1, :A2, :major)
-  sleep bar
-  sleep bar
+  sleep bar*2
 end
 
 live_loop :beeping do

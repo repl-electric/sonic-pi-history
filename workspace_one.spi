@@ -9,7 +9,7 @@ end
 
 live :drummer do |n|
   use_synth :beep
-  use_synth_defaults attack: 0.2, release: bar/2
+  use_synth_defaults attack: 0.2, release: bar/4
   sync :circle
   play degree(1, :A2, :major)
   sleep bar

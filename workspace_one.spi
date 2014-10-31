@@ -43,7 +43,7 @@ end
 
 live :beep do |n|
   use_synth :beep
-  with_fx :echo, phase: bar/[1.0,2.0,4.0].choose do
+  with_fx :echo, phase: bar do
     with_fx :reverb do
       use_synth_defaults attack: 0.05, release: 0.05
       sync :circle

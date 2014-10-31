@@ -64,14 +64,11 @@ end
 live :higher do |n|
   sync :high
   use_synth :beep
-  #with_fx :slicer, phase: bar/2  do
   play degree(6, :A3, :major), release: bar*2, attack: bar*2
-  #end
-  use_synth :zawa
   with_fx :lpf, cutoff: 70 do
     with_fx :echo, phase: bar do
-
       with_fx :reverb do
+        use_synth :zawa
         play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.3
       end
     end

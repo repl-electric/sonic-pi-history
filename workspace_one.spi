@@ -56,13 +56,7 @@ live :highlights do |n|
   #if n%2 == 0
     play degree(1, :A2, :major),     attack: bar, release: bar*2, amp: vol
     sleep bar*2
-    if n % 16 == 0
-      with_fx :reverb do
-        play degree(2, :A2, :major), attack: bar, release: bar*2, amp: vol
-      end
-    else
-      play degree(2, :A2, :major),   attack: bar, release: bar*2, amp: vol
-    end
+    play degree(2, :A2, :major),   attack: bar, release: bar*2, amp: vol
     sleep bar*2
 end
 

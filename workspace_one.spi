@@ -54,7 +54,7 @@ live :drummer do |n|
     else
     play degree(1, :A1, :major)
     sleep bar
-    play degree(1, :A1, :major)
+    play degree(4, :A1, :major)
     sleep bar
   end
   end

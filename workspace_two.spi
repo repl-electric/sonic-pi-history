@@ -1,0 +1,20 @@
+live_loop :timer do
+  sleep 1
+  sleep 1
+end
+ 
+live_loop :drummer do
+  sync :timer
+  play degree(1, :A2, :major)
+  sleep 2
+end
+ 
+live_loop :beeping do
+  sync :timer
+  with_fx :echo do
+    with_fx :reverb do
+      play 60
+      sleep 2
+    end
+  end
+end

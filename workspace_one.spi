@@ -13,7 +13,7 @@ live :drummer do |n|
   with_fx :lpf, cutout: 60 do
     with_fx :reverb do
       sync :circle
-      if n%16 == 8
+      if n%16 == 7
         sample :drum_bass_soft
         play degree(1, :A4, :major)
         sleep bar

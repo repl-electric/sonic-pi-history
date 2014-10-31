@@ -15,7 +15,7 @@ live :drummer do |n|
       sync :circle
       if n%16 == 14
         #sample :drum_bass_hard
-        play degree(1, :A2, :major)
+        play degree(1, :A4, :major)
         sleep bar
         sleep bar
       elsif n%16 == 15

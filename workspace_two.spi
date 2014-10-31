@@ -1,4 +1,5 @@
 live_loop :timer do
+cue :timer
   sleep 1
   sleep 1
 end

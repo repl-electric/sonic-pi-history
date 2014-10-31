@@ -69,7 +69,7 @@ live :higher do
   sync :high
   use_synth :supersaw
   with_fx :lpf, cutoff: 80 do
-  play degree(5, :A3, :major), release: bar*2, attack: 0.1
+  play degree(5, :A3, :major), release: bar*2, attack: 0.5
   end
 end
 

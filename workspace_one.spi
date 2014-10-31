@@ -70,7 +70,7 @@ live :higher do |n|
   
   use_synth :beep
   #with_fx :slicer, phase: bar/2  do
-    play degree(6, :A3, :major), release: bar*2, attack: bar/2
+    play degree(6, :A3, :major), release: bar*2, attack: bar
   #end
   use_synth :zawa
   with_fx :lpf, cutoff: 70 do

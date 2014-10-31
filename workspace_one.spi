@@ -67,7 +67,7 @@ end
 
 live :higher do
   sync :high
-  play :E5
+  play :E5, :release bar/2
 
 end
 

@@ -1,8 +1,7 @@
 ["support", "soprano", "samples"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 
 bar = 1.0/1.0
-live :timer do |n|
-  
+live :timer do |n| 
   sleep bar
   sleep bar
 end
@@ -12,7 +11,6 @@ live :drummer do |n|
   play degree(1, :A2, :major)
   sleep bar*2
 end
-
 
 live :beeping do |n|
   sync :timer 

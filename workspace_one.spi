@@ -67,7 +67,7 @@ end
 
 live :higher do
   sync :high
-  play degree(5, :A3, :major)
+  play :A4
 
 end
 

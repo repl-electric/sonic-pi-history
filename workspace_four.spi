@@ -1,4 +1,0 @@
-live_loop :beep do
-  play 60
-  sleep 5
-end

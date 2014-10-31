@@ -62,7 +62,7 @@ live :beeping do
         play degree(3, :A3, :major)
         sleep bar/2.0
 
-        if n % 8 > 6
+        if n == 3 || n == 6
           play degree(1, :A3, :major)
           sleep bar/2.0
           play degree(4, :A3, :major)
@@ -85,19 +85,19 @@ live :beeping do
         sleep bar/2.0
 
         if n == 5 || n == 7
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
-        play degree(5, :A3, :major)
-        sleep bar/4.0
+          play degree(1, :A3, :major)
+          sleep bar/4.0
+          play degree(5, :A3, :major)
+          sleep bar/4.0
+          play degree(5, :A3, :major)
+          sleep bar/4.0
+          play degree(5, :A3, :major)
+          sleep bar/4.0
         else
-        play degree(1, :A3, :major)
-        sleep bar/2.0
-        play degree(5, :A3, :major)
-        sleep bar/2.0
+          play degree(1, :A3, :major)
+          sleep bar/2.0
+          play degree(5, :A3, :major)
+          sleep bar/2.0
         end
       end
     end

@@ -67,7 +67,7 @@ end
 
 live :higher do
   sync :high
-  play degree(2, :A3, :major), release: bar
+  play degree(3, :A3, :major), release: bar
 
 end
 

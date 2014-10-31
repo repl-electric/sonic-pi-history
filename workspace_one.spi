@@ -10,7 +10,8 @@ live :drummer do
   use_synth :beep
   sync :timer
   play degree(1, :A2, :major)
-  sleep bar*2
+  sleep bar
+  sleep bar
 end
 
 live :beeping do

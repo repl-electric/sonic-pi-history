@@ -7,7 +7,7 @@ live_loop :timer do
   sleep bar
 end
 
-live :drummer do
+live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.1, release: 0.01
   sync :circle

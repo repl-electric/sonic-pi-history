@@ -1,4 +1,29 @@
 ["support", "soprano", "samples"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
+module SonicPi
+class Scale
+    def self.resolve_degree_index(degree)
+      if idx = DEGREES[degree]
+        return idx
+      elsif degree.is_a? Numeric
+        return degree - 1
+      else
+        raise InvalidDegreeError, "Invalid scale degree #{degree.inspect}, expecting #{DEGREES.keys.join ','} or a number"
+      end
+    end
+
+
+    def self.resolve_degree(degree, tonic, scale)
+      scale = Scale.new(tonic, scale)
+      index = resolve_degree_index(degree)
+      scale.notes[index]
+    end
+end
+end
+
+def degree(degree, tonic, scale)
+  SonicPi::Scale.resolve_degree(degree, tonic, scale)
+end
+
 
 bar = 1.0/1.0
 live :timer do

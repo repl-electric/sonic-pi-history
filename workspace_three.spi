@@ -7,5 +7,6 @@ end
 live_loop :test do
   puts "HI"
   sleep 5
+  use_synth :beep
   play 60
 end

@@ -150,7 +150,7 @@ live :otherhigher2 do |n|
 
       sleep bar*1
       with_fx :reverb, room: 0.9 do
-        play degree(5, :A3, :major), release: bar*2, attack: 0.01, decay: bar/8, , amp: vol
+        play degree(5, :A3, :major), release: bar*2, attack: 0.01, decay: bar/8, amp: vol
         sleep bar/2
         play degree(3, :A3, :major), release: 0.15, attack: 0.01, amp: vol
         sleep bar/2

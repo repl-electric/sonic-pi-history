@@ -13,7 +13,7 @@ live :dr do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
-  #sample :drum_bass_soft
+  sample :drum_bass_soft
 
   play degree(1, :A3, :major)
   sleep bar/2.0
@@ -28,8 +28,6 @@ live :dr do |n|
   play degree(1, :A4, :major)
   sleep bar/4.0
   play degree(1, :A3, :major)
-
-
   
   #play degree(1, :A4, :major)
   with_fx :lpf, cutoff: 70 do
@@ -242,12 +240,12 @@ live :beeping do
   with_fx :echo, phase: bar/4.0 do
     cue   :start
     with_fx :reverb do
-      1.times do |n|
+      8.times do |n|
 
         startbeep(n)
       end
 
-      1.times do |n|
+      7.times do |n|
         sync :circle
         endbeep(n)
       end

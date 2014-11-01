@@ -2,7 +2,7 @@
 
 gravity_s = "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
 
-bar = 1.0/32.0
+bar = 1.0/1.0
 live :timer do
   cue :circle
   sleep bar
@@ -15,7 +15,7 @@ live :end_of_bar do |n|
   sync   :start
   play degree(1, :A2, :major)
   sleep bar/2.0
-  with_fx :lpf, cutoff: 100 do sample :drum_bass_soft end
+  with_fx :lpf, cutoff: 80 do sample :drum_bass_soft end
 
   play degree(3, :A2, :major)
   sleep bar/4.0
@@ -25,7 +25,7 @@ live :end_of_bar do |n|
   sleep bar/4.0
   play degree(4, :A2, :major)
   sleep bar/4.0
-  with_fx :lpf, cutoff: 100 do sample :drum_bass_soft end
+  with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
 
   play degree(4, :A2, :major)
   with_fx :lpf, cutoff: 90 do sample :drum_tom_lo_soft end
@@ -36,7 +36,7 @@ end
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
-  with_fx :lpf, cutoff: 100 do
+  with_fx :lpf, cutoff: 80 do
     with_fx :reverb do
       sync :circle
       puts n
@@ -84,18 +84,18 @@ live :highlights do |n|
   use_synth :fm
   vol = 0.6
   sync :circle
-  play degree(1, :A2, :major), attack: bar*2, release: bar*4, amp: vol
+  play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   sleep bar*1
   sync :circle
-  play degree(3, :A2, :major), attack: bar*2, release: bar*4, amp: vol
+  play degree(4, :A2, :major), attack: bar, release: bar*1, amp: vol
   sleep bar*1
 end
 
 live :higher do |n|
-  vol = 0.6
+  vol = 0.7
   sync :high
   use_synth :beep
-  play degree(5, :A3, :major), release: bar*2, attack: bar*2, amp: vol
+  play degree(6, :A3, :major), release: bar*2, attack: bar*2, amp: vol
 
   with_fx :lpf, cutoff: 70 do
     with_fx :echo, phase: bar do
@@ -133,12 +133,13 @@ end
 
 live :otherhigher do |n|
   sync :other_high
+
   use_synth :beep
-  play degree(5, :A3, :major), release: bar*2, attack: bar*2, amp: 0.8
+  play degree(5, :A3, :major), release: bar*2, attack: bar*2
 end
 
 live :otherhigher2 do |n|
-  vol = 0.6
+  vol = 0.7
   use_synth :tb303
   with_fx :reverb do
     sync :other_high
@@ -150,11 +151,11 @@ live :otherhigher2 do |n|
 
       sleep bar*1
       with_fx :reverb, room: 0.9 do
-        play degree(5, :A3, :major), release: bar*2, attack: 0.01, decay: bar/8, amp: vol
+        play degree(5, :A3, :major), release: bar*2, attack: 0.01, decay: bar/8
         sleep bar/2
-        play degree(3, :A3, :major), release: 0.15, attack: 0.01, amp: vol
+        play degree(3, :A3, :major), release: 0.15, attack: 0.01
         sleep bar/2
-        play degree(3, :A3, :major), release: 0.1, attack: 0.01, amp: vol
+        play degree(3, :A3, :major), release: 0.1, attack: 0.01
         sleep bar
       end
     end
@@ -171,25 +172,25 @@ end
 
 define :startbeep do |n|
   use_synth_defaults amp: 0.5
-  play degree(1, :A2, :major)
+  play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(3, :A2, :major)
+  play degree(3, :A3, :major)
   sleep bar/2.0
 
   if n == 3 || n == 7
-    play degree(1, :A2, :major)
+    play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(3, :A2, :major)
+    play degree(4, :A3, :major)
     sleep bar/4.0
     with_fx :lpf, cutoff: 70 do sample :drum_tom_lo_soft end
-    play degree(1, :A2, :major)
+    play degree(4, :A3, :major)
     sleep bar/4.0
   else
     with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-    play degree(1, :A2, :major)
+    play degree(1, :A3, :major)
     sleep bar/2.0
     with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-    play degree(1, :A2, :major)
+    play degree(4, :A3, :major)
     sleep bar/2.0
     cue :high
   end
@@ -197,30 +198,30 @@ end
 
 define :endbeep do |n|
   use_synth_defaults amp: 1
-  play degree(1, :A2, :major)
+  play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(3, :A2, :major)
+  play degree(3, :A3, :major)
   sleep bar/2.0
 
   if n == 3 || n == 7
-    play degree(1, :A2, :major)
+    play degree(1, :A3, :major)
     sleep bar/4.0
     with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
-    play degree(1, :A2, :major)
+    play degree(5, :A3, :major)
     sleep bar/4.0
-    play degree(3, :A2, :major)
+    play degree(5, :A3, :major)
     sleep bar/4.0
     with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
-    play degree(3, :A2, :major)
+    play degree(5, :A3, :major)
 
     sleep bar/4.0
     if n == 7 || n == 4
       with_fx :lpf, cutoff: 90 do sample(:drum_tom_hi_soft); end
     end
   else
-    play degree(3, :A2, :major)
+    play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(3, :A2, :major)
+    play degree(5, :A3, :major)
     sleep bar/2.0
     cue :other_high
   end
@@ -244,13 +245,13 @@ live :beeping do
   end
 end
 
-#begone :beeping
+begone :beeping
 begone :words
 begone :otherhigher2
 begone :otherhigher
 begone :higher2
 begone :higher
-#begone :highlights
+begone :highlights
 #begone :drummer
 
 set_volume! 1

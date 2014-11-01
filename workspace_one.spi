@@ -15,10 +15,10 @@ live :dr do |n|
   sync   :start
   sample :drum_bass_soft
 
-  play degree(1, :A3, :major)
+  play degree(1, :A4, :major)
   sleep bar/2.0
 
-  play degree(1, :A3, :major)
+  play degree(1, :A4, :major)
   sleep bar/4.0
   play degree(1, :A3, :major)
   sleep bar/4.0
@@ -30,11 +30,11 @@ live :dr do |n|
   
   #play degree(1, :A4, :major)
   with_fx :lpf, cutoff: 70 do
-  sample :drum_tom_lo_soft
+    sample :drum_tom_lo_soft
   end
   sleep bar/2.0                     
   with_fx :reverb do
-  sample :drum_bass_soft
+    sample :drum_bass_soft
   end
 end
 

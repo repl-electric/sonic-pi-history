@@ -210,23 +210,27 @@ define :endbeep do |n|
     sleep bar/4.0
     with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
     play degree(6, :A3, :major)
+
+    if n == 4
+        if n == 4
+      with_fx :lpf, cutoff: 90 do sample(:drum_tom_hi_soft); end
+    end
+
+    else
+    end
+
     sleep bar/4.0
+
+
+
     if n == 7 
       with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
     end
   else
     play degree(5, :A3, :major)
-    sleep bar/2.0
-    
-    
+    sleep bar/2.0 
     play degree(6, :A3, :major)
     sleep bar/2.0
-    
-    if n == 4
-      with_fx :lpf, cutoff: 90 do sample(:drum_tom_hi_soft); end
-    end
-
-    
     cue :other_high
   end
 end

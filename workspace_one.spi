@@ -133,9 +133,8 @@ end
 
 live :otherhigher do |n|
   sync :other_high
-
   use_synth :beep
-  play degree(5, :A3, :major), release: bar*2, attack: bar*2
+  play degree(5, :A3, :major), release: bar*2, attack: bar*2, amp: 0.8
 end
 
 live :otherhigher2 do |n|

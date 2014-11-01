@@ -12,7 +12,7 @@ end
 
 live :end_of_bar do |n|
   use_synth :beep
-  use_synth_defaults attack: 0.01, release: 0.05
+  use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
   play degree(1, :A2, :major)
   sleep bar/2.0

@@ -241,12 +241,12 @@ live :beeping do
   with_fx :echo, phase: bar/4.0 do
     cue   :start
     with_fx :reverb do
-      8.times do |n|
+      1.times do |n|
 
         startbeep(n)
       end
 
-      7.times do |n|
+      1.times do |n|
         sync :circle
         endbeep(n)
       end

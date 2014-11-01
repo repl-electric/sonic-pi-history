@@ -220,7 +220,7 @@ define :endbeep do |n|
   else
     play degree(3, :A2, :major)
     sleep bar/2.0
-    play degree(3, :A2 :major)
+    play degree(3, :A2, :major)
     sleep bar/2.0
     cue :other_high
   end

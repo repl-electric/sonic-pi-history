@@ -34,7 +34,7 @@ end
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
-  with_fx :lpf, cutoff: 100 do
+  with_fx :lpf, cutoff: 80 do
     with_fx :reverb do
       sync :circle
       puts n
@@ -162,7 +162,6 @@ live :otherhigher2 do |n|
     end
   end
 end
-
 
 live :words do
   sync :circle

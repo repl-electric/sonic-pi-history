@@ -13,7 +13,6 @@ live :dr do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
-  puts "NOW!"
   sample :drum_bass_soft
 
   play degree(1, :A3, :major)
@@ -35,7 +34,6 @@ live :dr do |n|
   end
   sleep bar/2.0                     
   sample :drum_bass_soft
-  
 end
 
 

@@ -81,7 +81,7 @@ live :drummer do |n|
         sleep bar
       end
     end
-                                                            end
+  end
 end
 
 live :highlights do |n|

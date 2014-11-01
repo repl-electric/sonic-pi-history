@@ -227,7 +227,9 @@ live :beeping do
     with_fx :reverb do
       8.times do |n|
         sync :circle
-          with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
+        if n %2 == 0 
+        with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
+        end
         startbeep(n)
       end
 

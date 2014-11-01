@@ -3,7 +3,6 @@
 gravity_s = "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog Snares & Claps/17.wav"
 
-
 bar = 1.0/1.0
 live :timer do
   cue :circle
@@ -30,8 +29,9 @@ live :dr do |n|
   with_fx :lpf, cutoff: 90 do
     sample :drum_tom_lo_soft
   end
-  sleep bar/2.0
   sample clap_s, amp: 0.1
+  sleep bar/2.0
+
   with_fx :reverb do with_fx :lpf, cutoff: 100 do sample :drum_tom_hi_soft end
   end
 end

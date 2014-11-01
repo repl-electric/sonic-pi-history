@@ -12,14 +12,15 @@ end
 live :dr do |n|
   sync   :start
   puts "NOW!"
-          sample :drum_bass_soft
+  sample :drum_bass_soft
   play degree(1, :A4, :major)
   sleep bar/2.0
   play degree(1, :A4, :major)
   sleep bar/4.0
   play degree(1, :A4, :major)
-  play degree(1, :A4, :major)
   sleep bar/4.0
+  play degree(1, :A4, :major)
+
   sleep bar/2.0                     
   play degree(1, :A4, :major)
   sleep bar/4.0

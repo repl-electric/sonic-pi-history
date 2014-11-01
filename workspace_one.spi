@@ -257,4 +257,4 @@ begone :highlights
 #begone :drummer
 
 set_volume! 1
-#fadeout()
+fadeout()

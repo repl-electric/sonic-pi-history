@@ -83,7 +83,7 @@ end
 
 live :highlights do |n|
   use_synth :fm
-  vol = 0.7
+  vol = 0.5
   sync :circle
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   sleep bar*1

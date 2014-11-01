@@ -2,7 +2,7 @@
 
 gravity_s = "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
 
-sample gravity_s, amp: 0.1
+#sample gravity_s, amp: 0.1
 
 bar = 1.0/1.0
 live :timer do
@@ -247,7 +247,7 @@ live :beeping do
   end
 end
 
-begone :beeping
+#begone :beeping
 begone :words
 begone :otherhigher2
 begone :otherhigher

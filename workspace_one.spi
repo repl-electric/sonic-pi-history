@@ -11,16 +11,16 @@ end
 
 live :dr do |n|
   sync   :start
-          puts "NOW!"
-        play degree(1, :A5, :major), amp: 2
-        sleep bar/2.0
-        play degree(1, :A5, :major), amp: 2
-        sleep bar/2.0
-        play degree(1, :A5, :major), amp: 2
-        sleep bar/2.0                     
-#        play degree(1, :A3, :major)
-        sleep bar/2.0
-        
+  puts "NOW!"
+  play degree(1, :A5, :major), amp: 2
+  sleep bar/2.0
+  play degree(1, :A5, :major), amp: 2
+  sleep bar/2.0
+  play degree(1, :A5, :major), amp: 2
+  sleep bar/2.0                     
+  play degree(1, :A3, :major)
+  sleep bar/2.0
+   
         sleep bar
   
 end
@@ -241,14 +241,17 @@ live :beeping do
     cue   :start
     with_fx :reverb do
       8.times do |n|
-        sync :circle
+
         startbeep(n)
       end
 
-      8.times do |n|
+      7.times do |n|
         sync :circle
         endbeep(n)
       end
+      sync :circle
+      cue :start
+      endbeep(n)
     end
     # end
   end

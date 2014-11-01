@@ -10,7 +10,7 @@ live :timer do
   sleep bar
 end
 
-live :dr do |n|
+live :end_of_bar do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
@@ -243,14 +243,14 @@ live :beeping do
   end
 end
 
-#begone :beeping
-#begone :words
+begone :beeping
+begone :words
 begone :otherhigher2
-#begone :otherhigher
+begone :otherhigher
 begone :higher2
-#begone :higher
-#begone :highlights
-#begone :drummer
+begone :higher
+begone :highlights
+begone :drummer
 set_volume! 1
 
 #fadeout()

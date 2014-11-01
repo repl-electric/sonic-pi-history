@@ -212,7 +212,6 @@ define :endbeep do |n|
     play degree(6, :A3, :major)
 
     if n == 4
-        if n == 4
       with_fx :lpf, cutoff: 90 do sample(:drum_tom_hi_soft); end
     end
 

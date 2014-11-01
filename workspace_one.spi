@@ -13,7 +13,7 @@ live :dr do |n|
   use_synth :beep
   use_synth_defaults attack: 0.02, release: 0.02
   sync   :start
-  play degree(1, :A3, :major)
+  play degree(1, :A4, :major)
   sleep bar/2.0
 
   play degree(1, :A4, :major)
@@ -22,9 +22,9 @@ live :dr do |n|
   sleep bar/4.0
 
   sleep bar/4.0
-  play degree(1, :A4, :major)
+  play degree(3, :A4, :major)
   sleep bar/4.0
-  play degree(1, :A3, :major)
+  play degree(3, :A4, :major)
   with_fx :lpf, cutoff: 90 do
     sample :drum_tom_lo_soft
   end

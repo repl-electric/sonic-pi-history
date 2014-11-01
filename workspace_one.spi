@@ -29,7 +29,7 @@ live :dr do |n|
   with_fx :lpf, cutoff: 90 do
     sample :drum_tom_lo_soft
   end
-  sample clap_s, amp: 0.9
+  sample clap_s, amp: 1.0
   sleep bar/2.0
   with_fx :reverb do with_fx :lpf, cutoff: 100 do sample :drum_tom_hi_soft end
   end

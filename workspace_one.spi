@@ -16,8 +16,8 @@ live :drummer do |n|
     with_fx :reverb do
       sync :circle
       puts n
-      case n%16
-      when 0
+      case (n%16)+1
+      when 1
         sample :drum_bass_soft
         play degree(1, :A3, :major)
         sleep bar/2.0
@@ -28,7 +28,7 @@ live :drummer do |n|
         sleep bar/2.0
         play degree(1, :A3, :major)
         sleep bar/2.0
-      when 7
+      when 8
         sample :drum_bass_soft
         play degree(1, :A3, :major)
         sleep bar/2.0
@@ -38,7 +38,7 @@ live :drummer do |n|
         sleep bar/2.0
         play degree(1, :A3, :major)
         sleep bar/2.0
-      when 15
+      when 16
         play degree(1, :A4, :major)
         sleep bar
         sleep bar

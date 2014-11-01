@@ -34,8 +34,8 @@ live :dr do |n|
   with_fx :lpf, cutoff: 70 do
     sample :drum_tom_lo_soft
   end
+    sample :drum_bass_soft
   sleep bar/2.0                     
-  sample :drum_bass_soft
 
 end
 

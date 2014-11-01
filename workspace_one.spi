@@ -9,6 +9,23 @@ live :timer do
   sleep bar
 end
 
+live :dr do |n|
+  sync   :start
+          puts "NOW!"
+        play degree(1, :A5, :major), amp: 2
+        sleep bar/2.0
+        play degree(1, :A5, :major), amp: 2
+        sleep bar/2.0
+        play degree(1, :A5, :major), amp: 2
+        sleep bar/2.0                     
+#        play degree(1, :A3, :major)
+        sleep bar/2.0
+        
+        sleep bar
+  
+end
+
+
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
@@ -44,7 +61,7 @@ live :drummer do |n|
         play degree(1, :A5, :major), amp: 2
         sleep bar/2.0
         play degree(1, :A5, :major), amp: 2
-        sleep bar/2.0
+        sleep bar/2.0                     
 #        play degree(1, :A3, :major)
         sleep bar/2.0
         
@@ -221,6 +238,7 @@ live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
   with_fx :echo, phase: bar/4.0 do
+    cue   :start
     with_fx :reverb do
       8.times do |n|
         sync :circle

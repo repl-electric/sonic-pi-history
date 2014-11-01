@@ -29,7 +29,7 @@ live :dr do |n|
     sample :drum_tom_lo_soft
   end
   sleep bar/2.0
-  with_fx :echo do sample :drum_tom_hi_soft end
+  with_fx :reverb do sample :drum_tom_hi_soft end
 end
 
 live :drummer do |n|

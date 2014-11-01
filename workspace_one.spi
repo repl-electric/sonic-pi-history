@@ -17,6 +17,17 @@ live :drummer do |n|
       sync :circle
       puts n
       case n%16
+      when 0
+        sample :drum_bass_soft
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+        play degree(1, :A3, :major)
+        sleep bar/2.0
+
       when 7
         sample :drum_bass_soft
         play degree(1, :A3, :major)

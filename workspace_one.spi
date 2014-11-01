@@ -29,7 +29,7 @@ live :drummer do |n|
       when n%16 == 15
         play degree(1, :A4, :major)
         sleep bar
-        sample :drum_bass_soft
+        sample :drum_cymbal_closed
         sleep bar
         sample :drum_bass_soft
       else

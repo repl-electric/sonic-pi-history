@@ -15,7 +15,7 @@ live :end_of_bar do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
-  play degree(1, :A2, :major)
+  play degree(1, :A4, :major)
   sleep bar/2.0
   with_fx :lpf, cutoff: 100 do sample :drum_bass_soft end
 

@@ -29,6 +29,7 @@ live :dr do |n|
     sample :drum_tom_lo_soft
   end
   sleep bar/2.0
+      sample :drum_tom_lo_soft
 end
 
 live :drummer do |n|

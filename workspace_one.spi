@@ -32,7 +32,7 @@ live :dr do |n|
   with_fx :reverb do 
     with_fx :lpf do sample :drum_tom_hi_soft
     end
-    end
+  end
 end
 
 live :drummer do |n|

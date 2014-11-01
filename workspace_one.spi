@@ -188,7 +188,7 @@ define :startbeep do |n|
 
     play degree(1, :A3, :major)
     sleep bar/2.0
-        with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
+    with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
     play degree(4, :A3, :major)
     sleep bar/2.0
     cue :high
@@ -231,10 +231,10 @@ live :beeping do
     with_fx :reverb do
       8.times do |n|
         sync :circle
-        if n % 2 == 0 
-          with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-          with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-        end
+#        if n % 2 == 0 
+#          with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
+#          with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
+#        end
         startbeep(n)
       end
 

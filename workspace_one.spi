@@ -3,7 +3,7 @@
 gravity_s = "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog Snares & Claps/04.wav"
 
-bar = 1.0/8.0
+bar = 1.0/12.0
 live :timer do
   cue :circle
   sleep bar

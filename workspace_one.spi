@@ -17,6 +17,9 @@ live :dr do |n|
   play degree(1, :A4, :major), amp: 2
   sleep bar/4.0
   play degree(1, :A4, :major), amp: 2
+  play degree(1, :A4, :major)
+  sleep bar/4.0
+
   sleep bar/2.0                     
   play degree(1, :A4, :major)
   sleep bar/4.0

@@ -10,6 +10,7 @@ live :timer do
 end
 
 live :dr do |n|
+  use_synth_defaults attack: 0.01, release: 0.01
   sync   :start
   puts "NOW!"
   sample :drum_bass_soft

@@ -28,7 +28,7 @@ live :dr do |n|
   sleep bar/4.0
   
   #play degree(1, :A4, :major)
-  sample :drum_bass_hard
+  sample :drum_tom_lo_soft
   sleep bar/2.0                     
 
 end

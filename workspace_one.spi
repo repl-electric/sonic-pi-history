@@ -221,7 +221,7 @@ define :endbeep do |n|
     sleep bar/4.0
     if n == 7 
       with_fx :lpf, cutoff: 70 do
-      sample :drum_tom_lo_soft
+      sample :drum_tom_hi_soft
       end
     end
   else

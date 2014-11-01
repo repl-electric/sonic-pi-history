@@ -238,7 +238,7 @@ live :beeping do
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
-      8.times do |n|
+      1.times do |n|
         sync :circle
         startbeep(n)
       end

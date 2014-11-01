@@ -31,8 +31,9 @@ live :dr do |n|
   
   #play degree(1, :A4, :major)
   with_fx :lpf, cutoff: 70 do
-       # sample :drum_tom_lo_soft
-  sample :drum_bass_soft
+        sample :drum_tom_lo_soft
+        end
+  #sample :drum_bass_soft
   sleep bar/4.0
 end
 

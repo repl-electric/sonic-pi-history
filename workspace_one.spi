@@ -247,13 +247,11 @@ live :beeping do
         startbeep(n)
       end
 
-      7.times do |n|
+      8.times do |n|
         sync :circle
+        cue :start if n == 6
         endbeep(n)
       end
-      sync :circle
-      cue :start
-      endbeep(7)
     end
     # end
   end

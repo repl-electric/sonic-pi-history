@@ -221,13 +221,11 @@ define :endbeep do |n|
     end
     play degree(6, :A3, :major)
     sleep bar/4.0
-        if n == 7 
+    if n == 7 
       with_fx :lpf, cutoff: 70 do
       sample :drum_tom_lo_soft
       end
     end
-
-
   else
     play degree(5, :A3, :major)
     sleep bar/2.0

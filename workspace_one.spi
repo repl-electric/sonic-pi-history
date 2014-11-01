@@ -13,7 +13,6 @@ live :dr do |n|
   use_synth :beep
   use_synth_defaults attack: 0.02, release: 0.02
   sync   :start
-  puts "START THE ND"
   play degree(1, :A3, :major)
   sleep bar/2.0
 
@@ -26,7 +25,7 @@ live :dr do |n|
   play degree(1, :A4, :major)
   sleep bar/4.0
   play degree(1, :A3, :major)
-  with_fx :lpf, cutoff: 70 do
+  with_fx :lpf, cutoff: 90 do
     sample :drum_tom_lo_soft
   end
   sleep bar/2.0

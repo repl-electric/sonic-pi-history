@@ -175,22 +175,22 @@ define :startbeep do |n|
   play degree(3, :A3, :major)
   sleep bar/2.0
 
-  if n == 3 || n == 7
-    play degree(1, :A3, :major)
+#  if n == 3 || n == 7
+#    play degree(1, :A3, :major)
+#    sleep bar/2.0
+#    play degree(4, :A3, :major)
+#    sleep bar/4.0
+#    with_fx :lpf, cutoff: 70 do sample :drum_tom_lo_soft end
+#    play degree(4, :A3, :major)
+#    sleep bar/4.0
+#  else
+#    with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
+#    play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(4, :A3, :major)
-    sleep bar/4.0
-    with_fx :lpf, cutoff: 70 do sample :drum_tom_lo_soft end
-    play degree(4, :A3, :major)
-    sleep bar/4.0
-  else
-    with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-    play degree(1, :A3, :major)
+#    with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
+#    play degree(4, :A3, :major)
     sleep bar/2.0
-    with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
-    play degree(4, :A3, :major)
-    sleep bar/2.0
-    cue :high
+#    cue :high
   end
 end
 
@@ -249,8 +249,8 @@ begone :otherhigher2
 begone :otherhigher
 begone :higher2
 begone :higher
-#begone :highlights
-#begone :drummer
+begone :highlights
+begone :drummer
 set_volume! 1
 
 #fadeout()

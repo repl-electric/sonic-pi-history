@@ -96,7 +96,7 @@ live :higher do |n|
   sync :high
   use_synth :beep
 
-  play degree(1, :F3, :major), release: bar*2, attack: bar*2
+#  play degree(1, :F3, :major), release: bar*2, attack: bar*2
 
   with_fx :lpf, cutoff: 70 do
     with_fx :echo, phase: bar do

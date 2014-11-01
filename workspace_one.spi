@@ -19,10 +19,8 @@ live :drummer do |n|
       case (n%16)+1
       when 1
         sample :drum_bass_soft
-        sleep 0.1
-        sample :drum_bass_soft
         play degree(1, :A3, :major)
-        sleep (bar/2.0) - 0.1
+        sleep (bar/2.0)
         play degree(1, :A3, :major)
         sleep bar/2.0
         play degree(1, :A3, :major)

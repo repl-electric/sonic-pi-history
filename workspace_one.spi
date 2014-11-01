@@ -31,7 +31,7 @@ live :drummer do |n|
         sleep bar
         sample :drum_cymbal_closed
         sleep bar
-        sample :drum_bass_soft
+        sample :drum_snare_soft
       else
         with_fx :lpf, cutoff: 80 do
           sample :drum_bass_soft

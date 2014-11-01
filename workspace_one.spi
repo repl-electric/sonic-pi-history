@@ -32,7 +32,6 @@ live :dr do |n|
   sleep bar/2.0
 end
 
-
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01

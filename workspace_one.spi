@@ -41,7 +41,7 @@ live :drummer do |n|
         play degree(1, :A4, :major)
         sleep bar
         sample :drum_bass_soft
-        sleep 0.1
+        sleep 0.05
         sample :drum_bass_soft
 
         sleep bar - 0.1

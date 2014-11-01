@@ -243,6 +243,7 @@ live :beeping do
     cue   :start
     with_fx :reverb do
       8.times do |n|
+              sync :circle
         startbeep(n)
       end
 

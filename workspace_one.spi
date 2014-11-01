@@ -141,7 +141,7 @@ live :otherhigher do |n|
 end
 
 live :otherhigher2 do |n|
-  vol = 0.7
+  vol = 0.5
   use_synth :tb303
   with_fx :reverb do
     sync :other_high

@@ -12,7 +12,6 @@ end
 live :dr do |n|
   use_synth :beep
   use_synth_defaults attack: 0.02, release: 0.02
-  sync :circle
   sync   :start
   puts "START THE ND"
   play degree(1, :A3, :major)

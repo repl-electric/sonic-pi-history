@@ -223,7 +223,7 @@ define :endbeep do |n|
     sleep bar/2.0
     
     if n == 4
-      with_fx :lpf, cutoff: 80 do sample(:drum_tom_hi_soft); end
+      with_fx :lpf, cutoff: 90 do sample(:drum_tom_hi_soft); end
     end
 
     

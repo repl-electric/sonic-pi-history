@@ -16,17 +16,17 @@ live :dr do |n|
   puts "NOW!"
   sample :drum_bass_soft
 
-  play degree(1, :A4, :major)
+  play degree(1, :A3, :major)
   sleep bar/2.0
 
-  play degree(1, :A4, :major)
+  play degree(1, :A3, :major)
   sleep bar/4.0
-  play degree(1, :A4, :major)
+  play degree(1, :A3, :major)
   sleep bar/4.0
 
-  play degree(1, :A4, :major)
+  play degree(1, :A3, :major)
   sleep bar/4.0
-  play degree(1, :A4, :major)
+  play degree(1, :A3, :major)
   sleep bar/4.0
   
   #play degree(1, :A4, :major)

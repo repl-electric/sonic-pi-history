@@ -252,7 +252,7 @@ live :beeping do
       end
       sync :circle
       cue :start
-      endbeep(n)
+      endbeep(7)
     end
     # end
   end

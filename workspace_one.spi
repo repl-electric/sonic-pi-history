@@ -36,7 +36,7 @@ live :dr do |n|
   end
   sleep bar/2.0                     
   with_fx :reverb do
-    sample :drum_bass_soft
+    sample :drum_bass_hard
   end
 end
 

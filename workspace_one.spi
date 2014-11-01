@@ -186,9 +186,7 @@ define :startbeep do |n|
     sleep bar/2.0
     play degree(4, :A3, :major)
     sleep bar/4.0
-    with_fx :lpf, cutoff: 70 do
-      sample :drum_tom_lo_soft
-    end
+    with_fx :lpf, cutoff: 70 do sample :drum_tom_lo_soft end
     play degree(4, :A3, :major)
     sleep bar/4.0
   else
@@ -242,7 +240,7 @@ live :beeping do
 
       8.times do |n|
         sync :circle
-        cue :start if n == 0
+        cue :start if n == 7
         endbeep(n)
       end
     end

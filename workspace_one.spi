@@ -42,7 +42,7 @@ live :drummer do |n|
         sleep bar
         sample :
         sleep bar
-      when 4 OR 12
+      when 4 or 12
         with_fx :lpf, cutoff: 80 do
           sample :drum_bass_soft, rate: 1.0 + 0.1*n%2
         end

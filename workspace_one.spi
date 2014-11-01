@@ -206,7 +206,7 @@ define :endbeep do |n|
     play degree(1, :A3, :major)
     sleep bar/4.0
     with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
-    play degree(5, :A3, :major)
+    play degree(1, :A3, :major)
     sleep bar/4.0
     play degree(3, :A3, :major)
     sleep bar/4.0

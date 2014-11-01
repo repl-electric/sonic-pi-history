@@ -19,10 +19,10 @@ live :drummer do |n|
       case (n%16)+1
       when 1
         sample :drum_bass_soft
-        sleep bar/4.0
+        sleep bar/5.0
         sample :drum_bass_soft
         play degree(1, :A3, :major)
-        sleep (bar/2.0) - bar/4.0
+        sleep (bar/2.0) - bar/5.0
         play degree(1, :A3, :major)
         sleep bar/2.0
         play degree(1, :A3, :major)
@@ -51,7 +51,6 @@ live :drummer do |n|
         sleep bar
         play degree(1, :A4, :major)- n%2
         sleep bar
-
       else
         with_fx :lpf, cutoff: 80 do
           sample :drum_bass_soft, rate: 1.0 + 0.1*n%2

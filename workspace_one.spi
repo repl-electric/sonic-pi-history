@@ -155,9 +155,9 @@ live :otherhigher2 do |n|
       with_fx :reverb, room: 0.9 do
         play degree(5, :A3, :major), release: bar*2, attack: 0.01, decay: bar/8
         sleep bar/2
-        play degree(3, :A3, :major), release: 0.15, attack: 0.01
+        play degree(3, :A3, :major), release: 0.15, attack: 0.01, amp: vol
         sleep bar/2
-        play degree(3, :A3, :major), release: 0.1, attack: 0.01
+        play degree(3, :A3, :major), release: 0.1, attack: 0.01, amp: vol
         sleep bar
       end
     end
@@ -250,9 +250,9 @@ end
 #begone :beeping
 #begone :words
 #begone :otherhigher2
-#begone :otherhigher
+begone :otherhigher
 #begone :higher2
-#begone :higher
+begone :higher
 #begone :highlights
 #begone :drummer
 

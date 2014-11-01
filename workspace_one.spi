@@ -238,9 +238,8 @@ live :beeping do
         cue :start if n == 7
         endbeep(n)
         if n % 2 == 0 
-          with_fx :lpf, cutoff: 80 do sample :drum_bass_soft end
+          with_fx :lpf, cutoff: 80 do sample :drum_snare_soft end
         end
-
       end
     end
     # end

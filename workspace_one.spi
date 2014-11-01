@@ -250,7 +250,7 @@ begone :otherhigher
 begone :higher2
 begone :higher
 begone :highlights
-begone :drummer
+#begone :drummer
 set_volume! 1
 
 #fadeout()

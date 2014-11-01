@@ -35,7 +35,7 @@ live :dr do |n|
     sample :drum_tom_lo_soft
   end
   sleep bar/2.0                     
-    sample :drum_bass_hard
+  sample :drum_bass_soft
 
 end
 

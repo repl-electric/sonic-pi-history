@@ -227,7 +227,7 @@ live :beeping do
     with_fx :reverb do
       8.times do |n|
         sync :circle
-        if n %2 == 0 
+        if n % 2 == 0 
           with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
         end
         startbeep(n)
@@ -237,6 +237,10 @@ live :beeping do
         sync :circle
         cue :start if n == 7
         endbeep(n)
+        if n % 2 == 0 
+          with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
+        end
+
       end
     end
     # end

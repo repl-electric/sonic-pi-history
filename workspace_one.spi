@@ -50,7 +50,7 @@ live :drummer do |n|
         sleep bar/2.0
         play degree(1, :A4, :major)
         sleep bar/2.0
-        play degree(1, :A4, :major)- n%2
+        play degree(1-+n%2, :A4, :major)- n%2
         sleep bar
       else
         with_fx :lpf, cutoff: 80 do

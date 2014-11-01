@@ -39,7 +39,7 @@ live :drummer do |n|
         sleep bar/2.0
       when 16
         puts "\n\n\n\n\nNOW!"
-        play degree(1, :A3, :major)
+        play degree(1, :A3, :major), amp: 2
         sleep bar/2.0
         play degree(1, :A3, :major)
         sleep bar/2.0

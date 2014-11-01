@@ -241,9 +241,9 @@ live :beeping do
         startbeep(n)
       end
 
-      4.times do |n|
+      1.times do |n|
         sync :circle
-        cue :start if n == 3
+        cue :start if n == 0
         endbeep(n)
       end
     end

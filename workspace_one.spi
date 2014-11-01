@@ -220,7 +220,7 @@ define :endbeep do |n|
     play degree(6, :A3, :major)
     sleep bar/4.0
     if n == 7 
-      with_fx :lpf, cutoff: 70 { sample(:drum_tom_hi_soft) }
+      with_fx :lpf, cutoff: 70 do sample(:drum_tom_hi_soft); end
     end
   else
     play degree(5, :A3, :major)

@@ -15,6 +15,7 @@ live :drummer do |n|
   #with_fx :lpf, cutoff: 100 do
     with_fx :reverb do
       sync :circle
+      puts n
       case n
       when n%16 == 7
         sample :drum_bass_soft

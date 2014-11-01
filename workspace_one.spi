@@ -24,11 +24,11 @@ live :dr do |n|
   sleep bar/4.0
 
   sleep bar/4.0
-  play degree(4, :A4, :major)
+  play degree(4, :A2, :major)
   sleep bar/4.0
   with_fx :lpf, cutoff: 90 do sample :drum_bass_soft end
 
-  play degree(4, :A4, :major)
+  play degree(4, :A2, :major)
   with_fx :lpf, cutoff: 90 do sample :drum_tom_lo_soft end
   sleep bar/2.0
   with_fx :reverb do with_fx :lpf, cutoff: 90 do sample :drum_tom_hi_soft end end
@@ -95,12 +95,12 @@ end
 live :higher do |n|
   sync :high
   use_synth :beep
-  play :D3, release: bar*2, attack: bar*2
+  play degree(6, :A3, :major), release: bar*2, attack: bar*2
   with_fx :lpf, cutoff: 70 do
     with_fx :echo, phase: bar do
       with_fx :reverb do
         use_synth :zawa
-#        play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.4,  cutoff: 50, res_slide: 0.2
+        play_chord chord(:A5, :major), release: bar*2, attack: bar, decay: bar, amp: 0.3,  cutoff: 50, res_slide: 0.2
       end
     end
   end

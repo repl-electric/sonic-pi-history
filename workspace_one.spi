@@ -239,7 +239,6 @@ live :beeping do
   use_synth :beep
   #    with_fx :lpf, cutoff: 120, _slide: 5 do
   with_fx :echo, phase: bar/4.0 do
-    cue   :start
     with_fx :reverb do
       8.times do |n|
         sync :circle

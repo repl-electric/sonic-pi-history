@@ -30,7 +30,7 @@ live :dr do |n|
   end
   sleep bar/2.0
   with_fx :reverb do 
-    with_fx :lpf, cutoff: 80 do sample :drum_tom_hi_soft
+    with_fx :lpf, cutoff: 85 do sample :drum_tom_hi_soft
     end
   end
 end

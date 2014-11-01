@@ -172,7 +172,7 @@ define :startbeep do |n|
   use_synth_defaults amp: 0.5
   play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(3, :A3, :major)
+#  play degree(3, :A3, :major)
   sleep bar/2.0
 
 #  if n == 3 || n == 7
@@ -250,7 +250,7 @@ begone :otherhigher
 begone :higher2
 begone :higher
 begone :highlights
-begone :drummer
+#begone :drummer
 set_volume! 1
 
 #fadeout()

@@ -292,7 +292,7 @@ end
 
 define :endbeep do |n|
   use_synth_defaults amp: 0.4
-  play degree(1, :A3, :major)
+  play degree(3, :A3, :major)
   sleep bar/2.0
   play degree(3, :A3, :major)
   sleep bar/2.0
@@ -317,7 +317,7 @@ define :endbeep do |n|
   else
     sample :drum_cymbal_closed, rate: 1.0, amp: 0.2
     play_pattern_timed([degree(1, :A3, :major),
-                       degree(5, :A3, :major)], [2.0,2.0] )
+                        degree(5, :A3, :major)], [2.0,2.0] )
     
 
     cue :other_high

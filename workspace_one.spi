@@ -235,7 +235,7 @@ end
 define :startbeep do |n|
 
   if n%8 == 7
-    use_synth :fm
+    use_synth :pretty_bell
     play_chord chord(:E3, :"major"), attack: bar/8, release: bar/8
   end
 

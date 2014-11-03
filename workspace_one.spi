@@ -53,7 +53,7 @@ live :drummer do |n|
 #        sleep bar/4.0
 #        play degree(1, :A3, :major)
 #        sleep bar/4.0
-      when 7,15
+      when false
         sample :drum_bass_soft, amp: 0.8
         play degree(1, :A3, :major)
         sleep bar/4.0

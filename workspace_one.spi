@@ -349,9 +349,9 @@ live :beeping do
       end
 
       8.times do |n|
-  #      sync :circle
- #       cue :start if n == 7
-#        endbeep(n)
+        sync :circle
+        cue :start if n == 7
+        endbeep(n)
       end
     end
   end

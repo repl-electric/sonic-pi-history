@@ -146,7 +146,7 @@ live :highlights do |n|
 end
 
 live :higher do |n|
-  vol = 0.1
+  vol = 0.4
   sync :high
   use_synth :beep
   play degree(5, :A3, :major), release: bar*2, attack: bar*2, amp: vol

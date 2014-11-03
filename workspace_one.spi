@@ -103,9 +103,9 @@ live :drummer do |n|
  #       sleep bar
       else
         sample :drum_bass_soft, rate: 1.0 + 0.1*n%2
-        play degree(1, :A3, :major), amp: 0.5
+        play degree(1, :A4, :major), amp: 0.5
         sleep bar
-        play degree(1, :A3, :major), amp: 0.6
+        play degree(1, :A4, :major), amp: 0.6
         sleep bar
       end
  #   end

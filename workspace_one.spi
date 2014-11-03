@@ -236,7 +236,7 @@ define :startbeep do |n|
 
   #if n%8 == 7
     use_synth :mod_tri
-    play_chord chord(:E3, :"major"), attack: bar/4, release: bar/4, mod_invert_wav: 0, mod_range: 1,
+    play_chord chord(:E3, :"major"), attack: bar/4, release: bar/4, mod_invert_wav: 0, mod_range: 0.25,
                                      note_slide: 2, mod_phase: 0.25
   #end
 

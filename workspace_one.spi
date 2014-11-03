@@ -280,7 +280,7 @@ define :startbeep do |n|
       sleep bar/4.0 
     end
     
-    #cue :high
+    cue :high
   end
 end
 

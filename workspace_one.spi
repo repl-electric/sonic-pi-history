@@ -292,9 +292,9 @@ define :startbeep do |n|
       play_chord chord(:A3, :"major"), attack: bar/16, release: bar/16, amp: 0.9
       sleep bar/4.0
       play degree(5, :A3, :major)
-
-      play degree(5, :A3, :major)
       sleep bar/4.0 
+      play degree(5, :A3, :major)
+
     end
     
     #cue :high

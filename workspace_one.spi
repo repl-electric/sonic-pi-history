@@ -263,6 +263,7 @@ define :startbeep do |n|
     use_synth :supersaw
     play_chord chord(:E3, :"major"), attack: bar/16, release: bar/16
   end
+  use_synth :beep
 
   play degree(1, :A3, :major)
   sleep bar/2.0

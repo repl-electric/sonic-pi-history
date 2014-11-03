@@ -314,11 +314,11 @@ live :sing do |n|
   sync :startstart
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/vor_sopr_sustain_mm_p_03.wav"
   with_fx :slicer, phase: bar*4 do
-  with_fx :reverb do
-  with_fx :echo, phase: bar/4 do
+#  with_fx :reverb do
+ # with_fx :echo, phase: bar/4 do
   sample s, amp: 1.0
-  end
-  end
+  #end
+  #end
   end
   sleep sample_duration(s)
 end

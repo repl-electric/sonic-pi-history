@@ -236,7 +236,7 @@ define :startbeep do |n|
 
   #if n%8 == 7
     use_synth :mod_sine
-    play_chord chord(:D3, :"major"), attack: bar/16, release: bar/16
+    play_chord chord(:D3, :"major"), attack: bar/8, release: bar/16
   #end
 
   use_synth :beep

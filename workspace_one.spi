@@ -140,11 +140,11 @@ live :highlights do |n|
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_01_r.wav"
 #  if n % 2 == 0
 
-  with_fx :reverb do
+#  with_fx :reverb do
     sample s, amp: 1.5, decay: 0.1, release: 0.1
     sleep(bar/4)
     sample s, amp: 1.5, decay: 0.1, release: 0.1
-  end
+ # end
   sleep (bar/4)*3
   #  sleep bar/2
 #  end

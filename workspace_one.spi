@@ -319,7 +319,7 @@ live :sing do |n|
   sample s, amp: 1.0
   #end
   #end
-  end
+ # end
   sleep sample_duration(s)
 end
 

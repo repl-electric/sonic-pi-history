@@ -247,10 +247,10 @@ define :startbeep do |n|
 
     if n%2 == 0
       sleep (bar/2.0)
-      sample :drum_snare_soft, rate: 0.5, amp: 0.4, pan: -0.8
+      sample :drum_snare_soft, rate: 0.5, amp: 0.1, pan: -0.8
     else
       sleep (bar/2.0)
-      sample :drum_snare_soft, rate: 0.5, amp: 0.4, pan: 0.8
+      sample :drum_snare_soft, rate: 0.5, amp: 0.1, pan: 0.8
     end
 
     play degree(1, :A2, :major)

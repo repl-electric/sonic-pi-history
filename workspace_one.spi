@@ -137,6 +137,7 @@ live :highlights do |n|
   vol = 0.4
   sync :circle
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
+
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_03_r.wav"
   #  if n % 2 == 0
   sleep (bar)
@@ -164,9 +165,14 @@ live :highlights do |n|
     end
   end
 
+  sleep bar*1
+  
+  sync :circle  
+  play degree(3, :A2, :sus4), attack: bar, release: bar*1, amp: vol
+  sleep bar*1
   #  end
 
-  sleep bar*1
+
 end
 
 live :higher do |n|

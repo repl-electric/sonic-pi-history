@@ -259,7 +259,7 @@ end
 define :startbeep do |n|
   use_synth_defaults amp: 0.4
 
-  if n%16 == 15
+  if n%32 == 24
     play_chord chord(:A3, :"major"), attack: bar/16, release: bar/16, amp: 0.9
   end
 
@@ -281,7 +281,7 @@ define :startbeep do |n|
   else
     sample :drum_cymbal_closed, rate: 1.0, amp: 0.1
     play degree(1, :A3, :major)
-
+    
     if n%2 == 0
       sleep (bar/2.0)
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25

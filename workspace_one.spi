@@ -287,10 +287,14 @@ define :startbeep do |n|
 
     if n%4 < 2
       play degree(4, :A3, :major)
+      sleep bar/2.0
     else
       play degree(5, :A3, :major)
+      sleep bar/4.0
+      play degree(5, :A3, :major)
+      sleep bar/4.0
     end
-    sleep bar/2.0
+    
     #cue :high
   end
 end

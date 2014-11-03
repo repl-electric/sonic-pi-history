@@ -256,7 +256,7 @@ define :startbeep do |n|
     sample :drum_cymbal_closed
     play degree(1, :A2, :major)
     sleep bar/2.0
-#    sample :drum_snare_soft
+#   sample :drum_snare_soft
     sample :drum_cymbal_closed
     play degree(1, :A2, :major)
     sleep bar/2.0
@@ -315,12 +315,12 @@ end
 
 #begone :beeping
 begone :end_of_bar
-begone :words
+#begone :words
 begone :otherhigher2
-begone :otherhigher
+#begone :otherhigher
 begone :higher2
-begone :higher
-begone :highlights
+#begone :higher
+#begone :highlights
 #begone :drummer
 
 set_volume! 1

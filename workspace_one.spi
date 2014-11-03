@@ -311,7 +311,7 @@ end
 
 live :sing do |n|
   sync :circle
-  sample Sop.yehp[0]
+  sample Sop.yehp[1]
 end
 
 #begone :beeping

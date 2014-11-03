@@ -142,10 +142,10 @@ live :highlights do |n|
 
 #  with_fx :reverb do
     sample s, amp: 1.5, decay: 0.1, release: 0.1
-    sleep(bar/2)
-    sample s, amp: 1.5, decay: 0.1, release: 0.1
+#    sleep(bar/2)
+ #   sample s, amp: 1.5, decay: 0.1, release: 0.1
  # end
-  sleep (bar/2)
+  sleep (bar)
   #  sleep bar/2
 #  end
  

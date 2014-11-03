@@ -11,30 +11,6 @@ live :timer do
   sleep bar
 end
 
-live :end_of_bar do |n|
-  use_synth :beep
-  use_synth_defaults attack: 0.01, release: 0.01
-  sync   :start
-  play degree(1, :A4, :major)
-  sleep bar/2.0
-  sample :drum_bass_soft
-
-  play degree(3, :A4, :major)
-  sleep bar/4.0
-  play degree(1, :A4, :major)
-  sleep bar/4.0
-
-  sleep bar/4.0
-  play degree(4, :A4, :major)
-  sleep bar/4.0
-  sample :drum_bass_soft
-
-  play degree(4, :A4, :major)
-  sample :drum_tom_hi_soft
-  sleep bar/2.0
-  sample :drum_tom_lo_soft
-end
-
 live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01, amp: 0.2

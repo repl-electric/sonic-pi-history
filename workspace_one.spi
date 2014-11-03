@@ -138,9 +138,8 @@ live :highlights do |n|
   sync :circle
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/vor_sopr_sustain_mm_p_01.wav"
- 
   if n %4 == 0
- sample s, amp: 1.0, decay: 0.1, release: 0.1
+    sample s, amp: 1.0, decay: 0.1, release: 0.1
   end
  
   sleep bar*1
@@ -332,13 +331,13 @@ live :sing do |n|
 #  sleep sample_duration(s)
 end
 
-#begone :beeping
+begone :beeping
 begone :end_of_bar
-#begone :words
+begone :words
 begone :otherhigher2
-#begone :otherhigher
+begone :otherhigher
 begone :higher2
-#begone :higher
+begone :higher
 #begone :highlights
 #begone :drummer
 

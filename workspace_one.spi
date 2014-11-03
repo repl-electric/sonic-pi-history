@@ -112,7 +112,7 @@ live :drummer do |n|
         #sample :drum_cymbal_closed
 #        sample :drum_cymbal_open
         sleep bar/2.0
-        sample :drum_bass_soft, amp: 0.6, rate: 0.9
+        sample :drum_bass_soft, amp: 0.5, rate: 0.9
  #       sample :drum_cymbal_closed
         sleep (bar/2.0)
         sample :drum_bass_soft, amp: 0.5, rate: 1.0
@@ -135,7 +135,7 @@ live :drummer do |n|
 #        sample :drum_bass_soft, amp: 0.6, rate: 0.9
  #       sample :drum_cymbal_closed
        sample :drum_bass_soft, amp: 0.5, rate: 1.0 
- sleep (bar/2.0)
+        sleep (bar/2.0)
  
         sleep bar/4.0
   #      sample :drum_cymbal_closed

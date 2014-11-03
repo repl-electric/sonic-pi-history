@@ -169,7 +169,7 @@ live :highlights do |n|
   
   sync :circle  
   
-  play_chord chord(:A3, :minor), attack: bar, release: bar*1, amp: vol
+  play_chord [degree(3, :A2, :major), degree(1, :A2, :major)], attack: bar, release: bar*1, amp: vol
   sleep bar*1
   #  end
 

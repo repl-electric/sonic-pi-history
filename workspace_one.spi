@@ -235,7 +235,7 @@ end
 define :startbeep do |n|
 
   #if n%8 == 7
-    use_synth :prophet
+    use_synth :tb303
     play_chord chord(:E3, :"major"), attack: bar/8, release: bar/8, mod_invert_wav: 0, mod_range: 0.25,
                                      note_slide: 2, mod_phase: 0.25
   #end

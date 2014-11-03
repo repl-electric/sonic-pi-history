@@ -108,7 +108,7 @@ live :drummer do |n|
         play degree(1, :A3, :major)
         sleep bar/4.0
         play degree(1, :A3, :major)
-        sleep bar/4.0
+
         #sample :drum_cymbal_closed
 #        sample :drum_cymbal_open
         sleep bar/2.0
@@ -116,6 +116,7 @@ live :drummer do |n|
  #       sample :drum_cymbal_closed
         sleep (bar/2.0)
         sample :drum_bass_soft, amp: 0.3, rate: 1.0
+                sleep bar/4.0
   #      sample :drum_cymbal_closed
       end
  #   end

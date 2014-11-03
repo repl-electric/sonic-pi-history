@@ -244,7 +244,7 @@ define :startbeep do |n|
   sleep bar/2.0
 
   if n == 3 || n == 7
-    sample :drum_cymbal_closed, rate: 1.0, amp: 0.2
+    sample :drum_cymbal_closed, rate: 1.0, amp: 0.1
     play degree(1, :A2, :major)
     sleep bar/2.0
     play degree(4, :A2, :major)

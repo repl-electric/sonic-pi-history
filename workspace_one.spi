@@ -312,7 +312,7 @@ end
 
 live :sing do |n|
   sync :startstart
-  s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_08.wav"
+  s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/vor_sopr_sustain_mm_p_08.wav"
   with_fx :reverb do
   with_fx :echo, phase: bar/2 do
   sample s, amp: 0.1

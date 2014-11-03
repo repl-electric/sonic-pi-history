@@ -53,7 +53,7 @@ live :drummer do |n|
         sleep bar/4.0
         play degree(1, :A3, :major)
         sleep bar/4.0
-      when 8,9
+      when 7,15
         sample :drum_bass_soft, amp: 0.8
         play degree(1, :A3, :major)
         sleep bar/4.0
@@ -86,8 +86,7 @@ live :drummer do |n|
         sample :drum_tom_hi_soft
         sleep bar/2.0
         sample :drum_tom_lo_soft
-         
-      
+          
       
       
 

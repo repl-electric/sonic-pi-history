@@ -271,10 +271,10 @@ define :startbeep do |n|
     
     case (n%32)
     when 5,6,12
-      sample :drum_tom_lo_hard, rate: -1
+      sample :drum_tom_lo_soft, rate: -1
       play degree(6, :A3, :major), release: bar, attack: 0.1, decay: bar/4
       sleep bar/4.0
-      sample :drum_tom_lo_hard
+      sample :drum_tom_lo_soft
       play degree(5, :A3, :major)
       sleep bar/4.0 
       play degree(4, :A3, :major)

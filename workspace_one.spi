@@ -113,7 +113,7 @@ live :drummer do |n|
         sleep bar/8.0
         sleep bar/8.0
         sample :drum_cymbal_closed
-        sleep (bar/8.0)
+        sleep (bar/4.0)
         sample :drum_cymbal_closed
         sleep (bar/8.0)
       end

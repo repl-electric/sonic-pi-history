@@ -266,7 +266,6 @@ define :startbeep do |n|
     if n%2 == 0
       sleep (bar/2.0)
       sample :drum_snare_soft, rate: 0.99
-      sleep(sample_duration(:drum_snare_soft))
     else
       sleep (bar/2.0)
       sample :drum_snare_soft, rate: 1

@@ -110,7 +110,7 @@ live :higher do |n|
 end
 
 live :higher2 do |n|
-  vol = 0.2
+  vol = 0.1
   use_synth :tb303
   #use_synth :beep
   with_fx :reverb do

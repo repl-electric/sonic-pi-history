@@ -240,7 +240,7 @@ define :startbeep do |n|
   end
 
   use_synth :beep
-  use_synth_defaults amp: 0.4
+  use_synth_defaults amp: 0.9
   
   play degree(1, :A3, :major)
   sleep bar/2.0

@@ -271,7 +271,6 @@ define :startbeep do |n|
 
     
     case (n%32)
-    
     when 14,15
       play degree(6, :A3, :major), release: bar, attack: 0.1, decay: bar/4
       sleep bar/4.0

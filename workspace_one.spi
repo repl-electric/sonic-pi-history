@@ -39,7 +39,7 @@ live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01, amp: 0.1
   #with_fx :lpf, cutoff: 70 do
-    with_fx :reverb do
+#    with_fx :reverb do
       sync :circle
       puts n
       case (n%16)+1
@@ -78,7 +78,7 @@ live :drummer do |n|
         play degree(1, :A4, :major)
         sleep bar
       end
-    end
+ #   end
   #end
 end
 

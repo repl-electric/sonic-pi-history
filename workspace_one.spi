@@ -264,8 +264,8 @@ define :startbeep do |n|
     play degree(1, :A2, :major)
 
     if n%2 == 0
-      sleep (bar/2.0) - sample_duration(:drum_snare_soft)
-      sample :drum_snare_soft, rate: 1
+      sleep (bar/2.0)
+      sample :drum_snare_soft, rate: -1
       sleep(sample_duration(:drum_snare_soft))
     else
       sleep (bar/2.0)

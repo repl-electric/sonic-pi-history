@@ -233,7 +233,6 @@ live :words do
 end
 
 define :startbeep do |n|
-
   if n%8 == 7
     use_synth :mod_tri
     play_chord chord(:E3, :"major"), attack: bar/8, release: bar/8, mod_invert_wav: 0, mod_range: 0.25,
@@ -328,10 +327,10 @@ live :beeping do
         startbeep(n)
       end
 
-      #8.times do |n|
-      #  sync :circle
-      #  endbeep(n)
-      #end
+      8.times do |n|
+        sync :circle
+        endbeep(n)
+      end
     end
   end
 end

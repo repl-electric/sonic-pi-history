@@ -249,14 +249,14 @@ define :startbeep do |n|
     sleep bar/2.0
     play degree(4, :A2, :major)
     sleep bar/4.0
-  sample :drum_tom_lo_soft
+    sample :drum_tom_lo_soft
     play degree(4, :A2, :major)
     sleep bar/4.0
   else
-  sample :drum_snare_soft
+    sample :drum_snare_soft
     play degree(1, :A2, :major)
     sleep bar/2.0
-  sample :drum_snare_soft
+    sample :drum_snare_hard
     play degree(1, :A2, :major)
     sleep bar/2.0
     cue :high
@@ -273,7 +273,7 @@ define :endbeep do |n|
   if n == 3 || n == 7
     play degree(1, :A3, :major)
     sleep bar/4.0
-  sample(:drum_tom_hi_soft)
+    sample(:drum_tom_hi_soft)
     play degree(5, :A3, :major)
     sleep bar/4.0
     play degree(5, :A3, :major)
@@ -283,7 +283,7 @@ define :endbeep do |n|
 
     sleep bar/4.0
     if n == 7 || n == 4
-  sample(:drum_tom_hi_soft)
+      sample(:drum_tom_hi_soft)
     end
   else
     play degree(5, :A3, :major)

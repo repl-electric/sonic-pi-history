@@ -138,18 +138,18 @@ live :highlights do |n|
   sync :circle
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_01_r.wav"
-  if n % 2 == 0
+#  if n % 2 == 0
     sample s, amp: 1.0, decay: 0.1, release: 0.1
-  end
+#  end
  
   sleep bar*1
   sync :circle
   play degree(3, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_04_r.wav"
 
-  if n % 2 == 0
+#  if n % 2 == 0
     sample s, amp: 1.0, decay: 0.1, release: 0.1
-  end
+#  end
   
   sleep bar*1
 end

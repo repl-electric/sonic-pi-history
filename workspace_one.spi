@@ -301,7 +301,7 @@ define :startbeep do |n|
       sleep bar/4.0 
     end
     
-    cue :high
+    #cue :high
   end
 end
 
@@ -335,7 +335,7 @@ define :endbeep do |n|
                         degree(5, :A3, :major)], [2.0,2.0] )
     
 
-    cue :other_high
+    #cue :other_high
   end
 end
 

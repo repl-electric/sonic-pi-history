@@ -99,7 +99,7 @@ live :drummer do |n|
 ##        sleep bar/2.0
  #       play degree(1, :A4, :major)- n%2
  #       sleep bar
-      when n > 8
+      when n < 8
         sample :drum_bass_soft, amp: 0.5, rate: 1.0
         play degree(1, :A3, :major)
         sleep (bar/4.0)

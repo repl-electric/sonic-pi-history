@@ -260,7 +260,7 @@ define :startbeep do |n|
   use_synth_defaults amp: 0.4
 
   if n%8 == 7
-    play_chord chord(:A3, :"major"), attack: bar/32, release: bar/32, amp: 0.9
+    play_chord chord(:A3, :"major"), attack: bar/32, release: bar/32, amp: 0.5
   end
 
   play degree(1, :A3, :major)

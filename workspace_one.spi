@@ -44,9 +44,9 @@ live :drummer do |n|
   puts n
 
   if n%2 == 0 
-    sample :drum_bass_soft, amp: 0.5, rate: -1.0
+    sample :drum_bass_soft, amp: 0.2, rate: -1.0
   else
-    sample :drum_bass_soft, amp: 0.5, rate: 1.0
+    sample :drum_bass_soft, amp: 0.2, rate: 1.0
   end
   
   case (n%16)+1

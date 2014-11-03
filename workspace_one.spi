@@ -86,18 +86,6 @@ live :drummer do |n|
     sample :drum_tom_hi_soft
     sleep bar/2.0
     sample :drum_tom_lo_soft
-
-
-    #        play degree(1, :A4, :major), amp: 0.6
-    #        sleep bar
-    #      when 4, 12
-    #        with_fx :lpf, cutoff: 80 do sample :drum_bass_soft, rate: 1.0 + 0.1*n%2 end
-    #        play degree(1, :A4, :major)
-    ##        sleep bar/2.0
-    #        play degree(1, :A4, :major)
-    ##        sleep bar/2.0
-    #       play degree(1, :A4, :major)- n%2
-    #       sleep bar
   when 1..8
     sample :drum_bass_soft, amp: 0.5, rate: 1.0
     play degree(1, :A3, :major)
@@ -119,7 +107,7 @@ live :drummer do |n|
     #      sample :drum_cymbal_closed
 
   when 8..16
-    sample :drum_bass_soft, amp: 0.5, rate: 1.0
+    sample :drum_bass_soft, amp: 0.5, rate: -1.0
     play degree(1, :A3, :major)
     sleep (bar/4.0)
     # sample :drum_bass_soft, amp: 0.5, rate: 1.0

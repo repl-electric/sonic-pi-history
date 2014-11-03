@@ -134,7 +134,7 @@ live :higher2 do |n|
 end
 
 live :otherhigher do |n|
-  vol = 0.2
+  vol = 0.1
   sync :other_high
 
   use_synth :beep

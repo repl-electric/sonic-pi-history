@@ -109,9 +109,9 @@ live :drummer do |n|
         sleep bar/4.0
         play degree(1, :A3, :major)
         sleep bar/4.0
-        sample :drum_cymbal_closed
+        #sample :drum_cymbal_closed
 #        sample :drum_cymbal_open
-        #play degree(1, :A3, :major)
+        play degree(1, :A3, :major)
         sleep bar/4.0
 
       end

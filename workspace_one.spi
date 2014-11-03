@@ -311,8 +311,8 @@ end
 
 live :sing do |n|
   sync :circle
-  sample Sop.yehp[1]
-  sleep sample_duration(Sop.yehp[1])
+  sample Sop.yehp[2]
+  sleep sample_duration(Sop.yehp[2])
 end
 
 #begone :beeping

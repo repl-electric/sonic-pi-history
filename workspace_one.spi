@@ -289,8 +289,8 @@ define :startbeep do |n|
       play degree(4, :A3, :major)
       sleep bar/2.0
     else
-      play degree(4, :A3, :major)
-      sleep bar/8.0
+      play degree(2, :A3, :major)
+#      sleep bar/8.0
       play degree(5, :A3, :major)
       sleep bar/8.0*3
     end

@@ -273,7 +273,7 @@ define :startbeep do |n|
       play degree(4, :A3, :major)
       sleep bar/2.0
     else
-      play degree(5, :A3, :major), release: bar*2, attack: 0.1, decay: bar/2
+      play degree(5, :A3, :major), release: bar, attack: 0.1, decay: bar/2
 
       play degree(4, :A3, :major)
       sleep bar/4.0

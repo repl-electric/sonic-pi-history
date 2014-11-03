@@ -162,7 +162,7 @@ live :highlights do |n|
 
 #  end
   
-  #sleep bar*1
+  sleep bar*1
 end
 
 live :higher do |n|

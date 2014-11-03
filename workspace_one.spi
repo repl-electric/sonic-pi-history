@@ -139,11 +139,14 @@ live :highlights do |n|
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_01_r.wav"
 #  if n % 2 == 0
-  sleep bar/2
+
   with_fx :reverb do
     sample s, amp: 1.0, decay: 0.1, release: 0.1
+    
+    sample s, amp: 1.0, decay: 0.1, release: 0.1
   end
-  sleep bar/2
+  sleep bar
+  #  sleep bar/2
 #  end
  
   #sleep bar*1

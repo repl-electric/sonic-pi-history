@@ -296,8 +296,8 @@ end
 
 live :beeping do
   use_synth :beep
-  #with_fx :echo, phase: bar/4.0 do
-  #  with_fx :reverb do
+  with_fx :echo, phase: bar/4.0 do
+    with_fx :reverb do
       8.times do |n|
         sync :circle
         startbeep(n)
@@ -307,8 +307,8 @@ live :beeping do
         sync :circle
         cue :start if n == 7
         endbeep(n)
-   #   end
-  #  end
+      end
+    end
   end
 end
 

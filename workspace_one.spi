@@ -168,7 +168,7 @@ live :highlights do |n|
   sleep bar*1
   
   sync :circle  
-  play_chord chord(:F2, :"sus4"), attack: bar, release: bar*1, amp: vol
+  play_chord chord(:F2, :"7sus4"), attack: bar, release: bar*1, amp: vol
   sleep bar*1
   #  end
 

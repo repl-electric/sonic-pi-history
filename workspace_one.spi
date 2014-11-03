@@ -71,6 +71,17 @@ live :drummer do |n|
         sleep (bar/8)*3
         play degree(1, :A4, :major)
         sleep bar
+
+      when 4, 12
+        with_fx :lpf, cutoff: 80 do sample :drum_bass_soft, rate: 1.0 + 0.1*n%2 end
+        play degree(1, :A4, :major)
+        sleep bar/2.0
+        play degree(1, :A4, :major)
+        sleep bar/2.0
+        play degree(1, :A4, :major)- n%2
+        sleep bar
+
+
       else
         sample :drum_bass_soft, rate: 1.0 + 0.1*n%2
         play degree(1, :A4, :major), amp: 0.5

@@ -328,10 +328,10 @@ live :beeping do
         startbeep(n)
       end
 
-      8.times do |n|
-        sync :circle
-        endbeep(n)
-      end
+      #8.times do |n|
+      ##  sync :circle
+      #  endbeep(n)
+      #end
     end
   end
 end

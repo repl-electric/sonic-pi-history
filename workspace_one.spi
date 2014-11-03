@@ -311,7 +311,7 @@ end
 
 live :sing do |n|
   sync :circle
-  s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_05.wav"
+  s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_06.wav"
   with_fx :echo, phase: bar do
   sample s, amp: 0.1
   end

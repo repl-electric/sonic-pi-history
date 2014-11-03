@@ -169,7 +169,7 @@ live :highlights do |n|
   
   sync :circle  
   
-  play_chord chord(:A2, :"dom7"), attack: bar, release: bar*1, amp: vol
+  play_chord chord(:A2, :"dim"), attack: bar, release: bar*1, amp: vol
   sleep bar*1
   #  end
 

@@ -169,7 +169,7 @@ live :highlights do |n|
   
   sync :circle  
   puts "HERE-----------------------------------------------------------"
-  play chord(:A3, :"sus4").last, attack: bar, release: bar*1, amp: vol
+  play chord(:A3, :"sus4").first, attack: bar, release: bar*1, amp: vol
   sleep bar*1
   #  end
 

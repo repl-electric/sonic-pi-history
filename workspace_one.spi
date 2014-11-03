@@ -269,7 +269,7 @@ define :startbeep do |n|
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
 
-    if n%32 == 15 || n%32 == 31
+    if n%32 != 15 || n%32 != 31
       play degree(4, :A3, :major)
       sleep bar/2.0
     else

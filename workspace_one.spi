@@ -44,7 +44,7 @@ live :drummer do |n|
       puts n
       case (n%16)+1
       when 1
-        sample :drum_bass_soft, amp: 1.0
+        sample :drum_bass_soft, amp: 1.0, rate: -1
         play degree(1, :A3, :major)
         sleep (bar/2.0)
         play degree(1, :A3, :major)

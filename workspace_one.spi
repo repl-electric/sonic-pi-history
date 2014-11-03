@@ -342,7 +342,7 @@ live :sing do |n|
 #  sleep sample_duration(s)
 end
 
-begone :beeping
+#begone :beeping
 begone :end_of_bar
 begone :words
 begone :otherhigher2

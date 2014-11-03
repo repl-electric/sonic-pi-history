@@ -290,10 +290,10 @@ define :startbeep do |n|
       sleep bar/2.0
     else
       play_chord chord(:A3, :"sus4"), attack: bar/6, release: bar/6, amp: 0.9
-#      play degree(6, :A3, :major)
-#      sleep bar/8.0
- #     play degree(5, :A3, :major)
-      sleep bar/2
+      play degree(6, :A3, :major)
+      sleep bar/4.0
+      play degree(5, :A3, :major)
+      sleep bar/4.0 
     end
     
     #cue :high

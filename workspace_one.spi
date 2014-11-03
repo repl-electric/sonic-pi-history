@@ -107,6 +107,7 @@ live :drummer do |n|
         sleep (bar/4.0)
         play degree(1, :A3, :major)
         sleep bar/4.0
+        sample :drum_cymbal_pedal
         play degree(1, :A3, :major)
         sleep bar/4.0
         sample :drum_cymbal_pedal

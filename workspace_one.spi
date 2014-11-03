@@ -30,7 +30,7 @@ live :end_of_bar do |n|
   with_fx :lpf, cutoff: 100 do sample :drum_bass_soft end
 
   play degree(4, :A4, :major)
-  with_fx :lpf, cutoff: 90 do sample :drum_tom_lo_soft end
+  with_fx :lpf, cutoff: 100 do sample :drum_tom_lo_soft end
   sleep bar/2.0
   with_fx :reverb do with_fx :lpf, cutoff: 90 do sample :drum_tom_hi_soft end end
 end

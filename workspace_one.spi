@@ -237,7 +237,7 @@ define :startbeep do |n|
   use_synth_defaults amp: 0.4
 
   if n%8 == 7
-    use_synth :supersaw
+    use_synth :beep
     play_chord chord(:E3, :"major"), attack: bar/16, release: bar/16
   end
 

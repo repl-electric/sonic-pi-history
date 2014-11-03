@@ -249,6 +249,7 @@ live :beeping do
 end
 
 #begone :beeping
+begone :end_bar
 begone :words
 begone :otherhigher2
 begone :otherhigher

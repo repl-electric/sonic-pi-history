@@ -311,7 +311,7 @@ end
 
 live :sing do |n|
   sync :circle
-  s =     "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_04.wav"
+  s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_05.wav"
   sample s
   sleep sample_duration(s)
 end

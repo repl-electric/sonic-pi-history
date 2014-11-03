@@ -315,7 +315,7 @@ define :endbeep do |n|
                         degree(5, :A3, :major)], [bar/2.0,bar/2.0] )
     
 
-    #cue :other_high
+    cue :other_high
   end
 end
 

@@ -153,10 +153,10 @@ live :highlights do |n|
 
 #  if n % 2 == 0
   with_fx :reverb do
-  sleep bar/2.0
+  sleep bar
     sample s, amp: 0.5, decay: 0.1, release: 0.1
   end
-    sleep bar/2.0
+
 #  end
   
   #sleep bar*1

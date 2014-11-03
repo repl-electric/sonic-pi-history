@@ -39,109 +39,109 @@ live :drummer do |n|
   use_synth :beep
   use_synth_defaults attack: 0.01, release: 0.01, amp: 0.2
   #with_fx :lpf, cutoff: 70 do
-#    with_fx :reverb do
-      sync :circle
-      puts n
-      case (n%16)+1
-      when false
-        sample :drum_bass_soft, amp: 1.0
-        play degree(1, :A3, :major)
-        sleep (bar/4.0)
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-       play degree(1, :A3, :major)
-        sleep bar/4.0
-      when false
-        sample :drum_bass_soft, amp: 0.8
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A4, :major)
-        sleep bar/4.0
-      when 16
-        sample :drum_bass_soft, rate: 1.2
-        play degree(1, :A3, :major), amp: 0.5      
-        sleep bar/8
-        play degree(1, :A3, :major), amp: 0.6
-        sleep (bar/8)*3
+  #    with_fx :reverb do
+  sync :circle
+  puts n
+  case (n%16)+1
+  when false
+    sample :drum_bass_soft, amp: 1.0
+    play degree(1, :A3, :major)
+    sleep (bar/4.0)
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+  when false
+    sample :drum_bass_soft, amp: 0.8
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A4, :major)
+    sleep bar/4.0
+  when 16
+    sample :drum_bass_soft, rate: 1.2
+    play degree(1, :A3, :major), amp: 0.5
+    sleep bar/8
+    play degree(1, :A3, :major), amp: 0.6
+    sleep (bar/8)*3
 
-        sample :drum_bass_soft
-        play degree(3, :A3, :major)
+    sample :drum_bass_soft
+    play degree(3, :A3, :major)
 
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
 
-        sleep bar/4.0
-        play degree(4, :A3, :major)
-        sleep bar/4.0
-        sample :drum_bass_soft
+    sleep bar/4.0
+    play degree(4, :A3, :major)
+    sleep bar/4.0
+    sample :drum_bass_soft
 
-        play degree(4, :A3, :major)
-        sample :drum_tom_hi_soft
-        sleep bar/2.0
-        sample :drum_tom_lo_soft
-     
+    play degree(4, :A3, :major)
+    sample :drum_tom_hi_soft
+    sleep bar/2.0
+    sample :drum_tom_lo_soft
 
-#        play degree(1, :A4, :major), amp: 0.6
-#        sleep bar
-#      when 4, 12
-#        with_fx :lpf, cutoff: 80 do sample :drum_bass_soft, rate: 1.0 + 0.1*n%2 end
-#        play degree(1, :A4, :major)
-##        sleep bar/2.0
-#        play degree(1, :A4, :major)
-##        sleep bar/2.0
- #       play degree(1, :A4, :major)- n%2
- #       sleep bar
-      when 1..8
-        sample :drum_bass_soft, amp: 0.5, rate: 1.0
-        play degree(1, :A3, :major)
-        sleep (bar/4.0)
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
 
-        #sample :drum_cymbal_closed
-#        sample :drum_cymbal_open
-        sleep bar/2.0
-       # sample :drum_bass_soft, amp: 0.5, rate: 0.8
- #       sample :drum_cymbal_closed
-        sleep (bar/2.0)
-       # sample :drum_bass_soft, amp: 0.5, rate: 0.9
-        sleep bar/4.0
-  #      sample :drum_cymbal_closed
-  
-        when 8..16
-        sample :drum_bass_soft, amp: 0.5, rate: 1.0
-        play degree(1, :A3, :major)
-        sleep (bar/4.0)
-       # sample :drum_bass_soft, amp: 0.5, rate: 1.0 
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
-        sleep bar/4.0
-        play degree(1, :A3, :major)
+    #        play degree(1, :A4, :major), amp: 0.6
+    #        sleep bar
+    #      when 4, 12
+    #        with_fx :lpf, cutoff: 80 do sample :drum_bass_soft, rate: 1.0 + 0.1*n%2 end
+    #        play degree(1, :A4, :major)
+    ##        sleep bar/2.0
+    #        play degree(1, :A4, :major)
+    ##        sleep bar/2.0
+    #       play degree(1, :A4, :major)- n%2
+    #       sleep bar
+  when 1..8
+    sample :drum_bass_soft, amp: 0.5, rate: 1.0
+    play degree(1, :A3, :major)
+    sleep (bar/4.0)
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
 
-        #sample :drum_cymbal_closed
-#        sample :drum_cymbal_open
-        sleep bar/2.0
-#        sample :drum_bass_soft, amp: 0.6, rate: 0.9
- #       sample :drum_cymbal_closed
+    #sample :drum_cymbal_closed
+    #        sample :drum_cymbal_open
+    sleep bar/2.0
+    # sample :drum_bass_soft, amp: 0.5, rate: 0.8
+    #       sample :drum_cymbal_closed
+    sleep (bar/2.0)
+    # sample :drum_bass_soft, amp: 0.5, rate: 0.9
+    sleep bar/4.0
+    #      sample :drum_cymbal_closed
 
-        sleep (bar/2.0)
- 
-        sleep bar/4.0
-  #      sample :drum_cymbal_closed
-  
-      end
- #   end
+  when 8..16
+    sample :drum_bass_soft, amp: 0.5, rate: 1.0
+    play degree(1, :A3, :major)
+    sleep (bar/4.0)
+    # sample :drum_bass_soft, amp: 0.5, rate: 1.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+    sleep bar/4.0
+    play degree(1, :A3, :major)
+
+    #sample :drum_cymbal_closed
+    #        sample :drum_cymbal_open
+    sleep bar/2.0
+    #        sample :drum_bass_soft, amp: 0.6, rate: 0.9
+    #       sample :drum_cymbal_closed
+
+    sleep (bar/2.0)
+
+    sleep bar/4.0
+    #      sample :drum_cymbal_closed
+
+  end
+  #   end
   #end
 end
 
@@ -255,16 +255,17 @@ define :startbeep do |n|
   else
     sample :drum_cymbal_closed, rate: 1.0, amp: 0.1
     play degree(1, :A2, :major)
-    
+
     if n%2 == 0
       sleep (bar/2.0) - sample_duration(:drum_snare_soft)
       sample :drum_snare_soft, rate: -1
-      else
+          sleep(sample_duration(:drum_snare_soft))
+    else
       sleep (bar/2.0)
       sample :drum_snare_soft, rate: 1
-      end
-    sleep(sample_duration(:drum_snare_soft))
-#    sample :drum_cymbal_closed, rate: 1.0-0.01, amp: 0.1
+    end
+
+    #    sample :drum_cymbal_closed, rate: 1.0-0.01, amp: 0.1
     play degree(1, :A2, :major)
     sleep bar/2.0
     cue :high

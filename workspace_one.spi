@@ -41,8 +41,6 @@ live :drummer do |n|
   with_fx :lpf, cutoff: 70 do
     with_fx :reverb do
       sync :circle
-      puts n
-
       if n%2 == 0
         sample :drum_bass_soft, amp: 0.2, rate: -1.0
       else

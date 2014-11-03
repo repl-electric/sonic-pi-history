@@ -282,7 +282,7 @@ define :endbeep do |n|
     play degree(5, :A3, :major)
     sleep bar/4.0
     sample(:drum_tom_hi_soft)
-    sample :drum_cymbal_open, rate: 1.0, amp: 0.2
+    sample :drum_cymbal_open, rate: 1.0, amp: 0.1
     play degree(5, :A3, :major)
 
     sleep bar/4.0

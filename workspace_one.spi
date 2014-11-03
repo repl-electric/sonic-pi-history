@@ -77,7 +77,7 @@ live :drummer do |n|
         sleep bar/4
         play degree(1, :A4, :major)
 
-        sleep bar/3
+        sleep (bar/4)*3
         play degree(1, :A4, :major)
         sleep bar
       end

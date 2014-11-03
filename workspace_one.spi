@@ -142,7 +142,7 @@ live :highlights do |n|
   sleep (bar)
   with_fx :echo, phase: bar do
   with_fx :reverb do
-    sample s, amp: 0.4, decay: 0.1, release: 0.1
+    sample s, amp: 0.4
 #    sleep(bar/2)
  #   sample s, amp: 1.5, decay: 0.1, release: 0.1
   end

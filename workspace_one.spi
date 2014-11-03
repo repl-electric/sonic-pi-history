@@ -309,6 +309,11 @@ live :beeping do
   end
 end
 
+live :sing do |n|
+  sync :circle
+  sample Sop.yeh_p[0]
+end
+
 #begone :beeping
 begone :end_of_bar
 #begone :words

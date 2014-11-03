@@ -313,7 +313,7 @@ live :beeping do
 end
 
 #begone :beeping
-#begone :end_of_bar
+begone :end_of_bar
 begone :words
 begone :otherhigher2
 begone :otherhigher

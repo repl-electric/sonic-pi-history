@@ -239,7 +239,7 @@ define :startbeep do |n|
     play_chord chord(:E3, :"major"), attack: bar/16, release: bar/16
   end
 
-    use_synth :beep
+  use_synth :beep
   use_synth_defaults amp: 0.4
 
   

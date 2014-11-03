@@ -270,7 +270,7 @@ define :startbeep do |n|
     end
     
     case (n%32)
-    when 0..31
+    when 6
     puts n
       sample :drum_tom_hi_soft
       play degree(6, :A3, :major), release: bar, attack: 0.1, decay: bar/4

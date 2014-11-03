@@ -256,7 +256,7 @@ define :startbeep do |n|
     play degree(1, :A2, :major)
     sleep bar/2.0
 #   sample :drum_snare_soft
-    sample :drum_cymbal_closed, rate: 1.0, amp: 1.0
+    sample :drum_cymbal_closed, rate: 1.0, amp: 0.91
     play degree(1, :A2, :major)
     sleep bar/2.0
     cue :high

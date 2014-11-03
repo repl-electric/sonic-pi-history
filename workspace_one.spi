@@ -138,34 +138,34 @@ live :highlights do |n|
   sync :circle
   play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_03_r.wav"
-#  if n % 2 == 0
+  #  if n % 2 == 0
   sleep (bar)
   with_fx :echo, phase: bar do
-  with_fx :reverb do
-    sample s, amp: 0.1
-#    sleep(bar/2)
- #   sample s, amp: 1.5, decay: 0.1, release: 0.1
-  end
+    with_fx :reverb do
+      sample s, amp: 0.1
+      #    sleep(bar/2)
+      #   sample s, amp: 1.5, decay: 0.1, release: 0.1
+    end
   end
 
   #  sleep bar/2
-#  end
- 
+  #  end
+
   #sleep bar*1
   sync :circle
   play degree(3, :A2, :major), attack: bar, release: bar*1, amp: vol
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/releases/vor_sopr_sustain_mm_p_08_r.wav"
 
-#  if n % 2 == 0
+  #  if n % 2 == 0
   sleep bar
   with_fx :echo, phase: bar do
-  with_fx :reverb do
-    sample s, amp: 0.1
-  end
+    with_fx :reverb do
+      sample s, amp: 0.1
+    end
   end
 
-#  end
-  
+  #  end
+
   sleep bar*1
 end
 
@@ -277,7 +277,7 @@ define :startbeep do |n|
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
 
-    play degree(1, :A2, :major)
+    play degree(1, :A3, :major)
     sleep bar/2.0
     cue :high
   end
@@ -321,7 +321,7 @@ live :beeping do
   use_synth :beep
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
-       8.times do |n|
+      8.times do |n|
         #cue :startstart
         sync :circle
         startbeep(n)
@@ -339,14 +339,14 @@ end
 live :sing do |n|
   sync :startstart
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Mm p/vor_sopr_sustain_mm_p_03.wav"
-#  with_fx :slicer, phase: bar*2 do
-#  with_fx :reverb do
- # with_fx :echo, phase: bar/4 do
-#  sample s, amp: 1.0
+  #  with_fx :slicer, phase: bar*2 do
+  #  with_fx :reverb do
+  # with_fx :echo, phase: bar/4 do
+  #  sample s, amp: 1.0
   #end
   #end
- # end
-#  sleep sample_duration(s)
+  # end
+  #  sleep sample_duration(s)
 end
 
 #begone :beeping

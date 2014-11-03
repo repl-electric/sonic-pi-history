@@ -295,6 +295,7 @@ live :beeping do
   use_synth :beep
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
+      cue :startstart
       8.times do |n|
         sync :circle
         startbeep(n)
@@ -310,7 +311,7 @@ live :beeping do
 end
 
 live :sing do |n|
-  sync :circle
+  sync :startstart
   s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh p/vor_sopr_sustain_eh_p_07.wav"
   with_fx :reverb do
   with_fx :echo, phase: bar*2 do

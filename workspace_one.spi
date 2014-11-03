@@ -160,7 +160,7 @@ live :highlights do |n|
   sleep bar
   with_fx :echo, phase: bar do
   with_fx :reverb do
-    sample s, amp: 0.4
+    sample s, amp: 0.2
   end
   end
 

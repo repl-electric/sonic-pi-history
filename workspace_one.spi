@@ -323,7 +323,6 @@ live :beeping do
   with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
       8.times do |n|
-        #cue :startstart
         sync :circle
         startbeep(n)
       end

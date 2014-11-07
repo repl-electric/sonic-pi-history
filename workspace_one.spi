@@ -1,6 +1,6 @@
 ["support", "soprano", "samples"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 gravity_s = "/Users/josephwilk/Dropbox/repl-electric/samples/stars_gravity.wav"
-bar = 1.0/2.0
+bar = 1.0/4.0
 live :timer do
   cue :circle
   sleep bar

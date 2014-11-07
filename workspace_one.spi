@@ -167,10 +167,12 @@ define :startbeep do |n|
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
 
+    if n%32 == 6
     play degree(4, :A3, :major)
     sleep bar/4.0
     play degree(4, :A3, :major)
     sleep bar/4.0
+    end
   else
     sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
     play degree(1, :A3, :major)
@@ -265,7 +267,7 @@ begone :otherhigher
 begone :higher2
 begone :higher
 begone :highlights
-begone :drummer
+#begone :drummer
 #begone :low_undertones2
 begone :low_undertones
 set_volume! 1.0

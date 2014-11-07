@@ -191,7 +191,6 @@ define :startbeep do |n|
       play degree(4, :A3, :major)
       sleep bar/4.0
     end
-
     cue :high
 end
 end

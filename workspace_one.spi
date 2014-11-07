@@ -177,12 +177,12 @@ define :startbeep do |n|
     when 6, 12
       play degree(4, :A3, :major)
       sleep bar/4.0
-      #play degree(4, :A3, :major)
+      play degree(4, :A3, :major)
       sleep bar/4.0
     else
       play degree(4, :A3, :major)
       sleep bar/4.0
-      play degree(4, :A3, :major)
+      #play degree(4, :A3, :major)
       sleep bar/4.0
     end
 

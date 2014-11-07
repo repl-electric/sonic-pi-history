@@ -80,7 +80,7 @@ live :higher do |n|
   play degree(6, :A3, :major), release: bar*2, attack: bar*2, amp: vol
 end
 live :higher2 do |n|
-  vol = 0.2
+  vol = 0.5
   use_synth :tb303
   #use_synth :beep
   with_fx :reverb do

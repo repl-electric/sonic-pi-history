@@ -193,14 +193,6 @@ define :startbeep do |n|
     cue :high
   end
 end
-
-
-
-
-
-
-
-
 define :endbeep do |n|
   with_fx :reverb do
     sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1))
@@ -245,8 +237,8 @@ live :beeping do
       end
 
       8.times do |n|
-      #  sync :circle
-      #  endbeep(n)
+        sync :circle
+        endbeep(n)
       end
     end
   end

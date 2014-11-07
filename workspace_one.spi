@@ -146,6 +146,7 @@ define :startbeep do |n|
   sleep bar/2.0
   play degree(3, :A3, :major)
   sleep bar/2.0
+
   case (n%32)
   when 3,7,  11,15,  27,31
     sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
@@ -175,11 +176,9 @@ define :startbeep do |n|
     sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
     play degree(1, :A3, :major)
     sleep (bar/2.0)
-    if n%2 == 0
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
-    else
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
-    end
+
+    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25)
+
     if n%32 == 12
       play degree(4, :A3, :major)
       sleep bar/5.0

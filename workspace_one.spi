@@ -33,15 +33,15 @@ live :drummer do |n|
         sleep bar/2.0
         sample :drum_tom_lo_soft
       when 1..8
-        play_timed_pattern [degree(1, :A4, :major), degree(1, :A4, :major),        
-                            degree(1, :A4, :major), degree(1, :A4, :major)],
-                           [bar/4.0, bar/4.0, bar/4.0]
+        play_timed_pattern [degree(1, :A4, :major), degree(1, :A4, :major),
+        degree(1, :A4, :major), degree(1, :A4, :major)],
+          [bar/4.0, bar/4.0, bar/4.0]
         sleep bar/4.0
         sleep bar
       when 8..16
         play_timed_pattern [degree(1, :A4, :major), degree(1, :A4, :major),
-                            degree(1, :A4, :major), degree(1, :A4, :major)],
-                           [bar/4.0, bar/4.0, bar/4.0]
+        degree(1, :A4, :major), degree(1, :A4, :major)],
+          [bar/4.0, bar/4.0, bar/4.0]
         sleep bar/4.0
         sleep bar
 end end end end
@@ -144,7 +144,7 @@ define :startbeep do |n|
   sleep bar/2.0
   play degree(3, :A3, :major)
   sleep bar/2.0
-  case (n%8) #32
+  case (n%32)
   when 3,7,  11,15,  27,31    #0-8 8-16 24-32
     sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
     play degree(1, :A3, :major)
@@ -166,7 +166,7 @@ define :startbeep do |n|
     else
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
-    
+
     play degree(4, :A3, :major)
     sleep bar/4.0
     play degree(4, :A3, :major)
@@ -192,7 +192,7 @@ define :startbeep do |n|
       sleep bar/4.0
     end
     cue :high
-end
+  end
 end
 define :endbeep do |n|
   with_fx :reverb do

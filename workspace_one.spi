@@ -248,9 +248,9 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
   if n % 8 == 7
-     play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
+     #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
   else
-     play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
+     #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
   end
   sleep bar*4
   #  cue :high

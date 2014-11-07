@@ -220,15 +220,15 @@ define :endbeep do |n|
     sample :drum_cymbal_closed, rate: 1.99, amp: 0.1, start: 0.1
     play degree(1, :A3, :major)
     sleep bar/4.0
- #   sample(:drum_tom_hi_soft)
- #   play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.01: 0.0)
+    sample(:drum_tom_hi_soft)
+    play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.01: 0.0)
     sleep bar/4.0
- #   play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.02: 0.0)
+    play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.02: 0.0)
     sleep bar/4.0
- #   sample :drum_tom_hi_soft
- #   sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1
- #   sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
- #   play degree(5, :A3, :major), amp: (n%8 == 7 ? 1 : 0.95), release: bar*2, decay: bar/2.0
+    sample :drum_tom_hi_soft
+    sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1
+    sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
+    play degree(5, :A3, :major), amp: (n%8 == 7 ? 1 : 0.95), release: bar*2, decay: bar/2.0
     sleep bar/4.0
 
     if n == 7 || n == 4

@@ -19,7 +19,7 @@ live :drummer do |n|
       end
       case (n%16)+1
       when 16
-        sample :drum_bass_soft, rate: 1.2
+ #       sample :drum_bass_soft, rate: 1.2
         play degree(1, :A3, :major), amp: 0.5
         sleep bar/8
         play degree(1, :A3, :major), amp: 0.6

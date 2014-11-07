@@ -104,7 +104,7 @@ live :higher2 do |n|
         sync :circle
     
     #end  
-    play chord(:A4, :major), release: 2, attack: 0.01, amp: vol
+    play chord(:A4, :major), release: 3, attack: 0.01, amp: vol
     sleep bar/2
     play degree(4, :A4, :major), release: 0.3, attack: 0.01, amp: vol
     sleep bar/2

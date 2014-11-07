@@ -192,6 +192,7 @@ define :startbeep do |n|
   end
 end
 define :endbeep do |n|
+  drums = false
   with_fx :reverb do
     sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1))
   end
@@ -203,23 +204,23 @@ define :endbeep do |n|
   sleep bar/2.0
   case n%8
   when 3, 7
-    sample :drum_cymbal_closed, rate: 1.99, amp: 0.1, start: 0.1
+    sample :drum_cymbal_closed, rate: 1.99, amp: 0.1, start: 0.1 if drums
     play degree(1, :A3, :major)
     sleep bar/4.0
-    sample(:drum_tom_hi_soft)
+    sample(:drum_tom_hi_soft)  if drums
     play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.01: 0.0)
     sleep bar/4.0
     play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.02: 0.0)
     sleep bar/4.0
-    sample :drum_tom_hi_soft
-    sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1
-    sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
+    sample :drum_tom_hi_soft  if drums
+    sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1  if drums
+    sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)  if drums
     play degree(5, :A3, :major), amp: (n%8 == 7 ? 1.0 : 0.95), release: bar*2, decay: bar/2.0
     sleep bar/4.0
 
-    sample(:drum_tom_hi_soft) if (n == 7 || n == 4)
+    sample(:drum_tom_hi_soft) if (n == 7 || n == 4) && drums
   else
-    sample :drum_cymbal_closed, rate: 1.0, start: rrand(0.05,0.1), amp: 0.1
+    sample :drum_cymbal_closed, rate: 1.0, start: rrand(0.05,0.1), amp: 0.1 if drums
     play_pattern_timed([degree(1, :A3, :major),
                         degree(5, :A3, :major)], [bar/2.0,bar/2.0] )
     cue :other_high

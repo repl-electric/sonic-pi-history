@@ -38,7 +38,7 @@ live :drummer do |n|
         sleep bar/2.0
      #   sample :drum_tom_lo_soft
       when 1..8
- #       sample :drum_bass_soft, amp: 0.5, rate: 1.0
+        sample :drum_bass_soft, amp: 0.5, rate: 1.0
         play degree(1, :A4, :major)
         sleep (bar/4.0)
         #sample :drum_cymbal_closed, amp: 1.0, rate: 1.0

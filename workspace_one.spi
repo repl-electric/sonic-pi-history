@@ -64,7 +64,7 @@ live :drummer do |n|
         sleep (bar/2.0)
 end end end end
 live :highlights do |n|
-  use_synth :fm
+  use_synth :beep
   vol = 0.4
   if n%16 == 0
     2.times do

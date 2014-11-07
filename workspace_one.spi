@@ -235,7 +235,7 @@ define :endbeep do |n|
       sample(:drum_tom_hi_soft)
     end
   else
-    sample :drum_cymbal_closed, rate: 1.0, start: 0.1, amp: 0.1
+   # sample :drum_cymbal_closed, rate: 1.0, start: 0.1, amp: 0.1
     play_pattern_timed([degree(1, :A3, :major),
                         degree(5, :A3, :major)], [bar/2.0,bar/2.0] )
     cue :other_high

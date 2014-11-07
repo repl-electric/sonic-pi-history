@@ -84,10 +84,10 @@ live :highlights do |n|
     end
   else
     sync :circle
-    play degree(3, :A2, :major), attack: bar, release: bar*1, amp: vol
+    play degree(1, :A2, :major), attack: bar, release: bar*1, amp: vol
     sleep (bar)
     sync :circle
-    play degree(6, :A2, :major), attack: bar, release: bar*1, amp: vol
+    play degree(4, :A2, :major), attack: bar, release: bar*1, amp: vol
     sleep bar
   end
 end

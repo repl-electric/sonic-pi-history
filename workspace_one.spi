@@ -250,7 +250,7 @@ live :low_undertones do |n|
   if n % 8 == 7
      play degree([3].choose, :A1, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
   else
-     play degree([1].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
+     play degree([1].choose, :A1, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
   end
   sleep bar*4
   #  cue :high

@@ -84,7 +84,7 @@ live :higher2 do |n|
   use_synth :tb303
   #use_synth :beep
   with_fx :reverb do
-    sync :high
+    sync :circle
     #if n%2 == 0
     play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
     sleep bar/2

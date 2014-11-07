@@ -211,7 +211,7 @@ define :endbeep do |n|
   end
   vol = 0.4
   use_synth_defaults amp: 0.4
- # play degree(1, :A3, :major)
+  play degree(1, :A3, :major)
   sleep bar/2.0
  # play degree(3, :A3, :major)
   sleep bar/2.0

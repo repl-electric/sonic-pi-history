@@ -185,9 +185,9 @@ define :startbeep do |n|
       sleep (bar/2.0)
     end
     if n%2 == 0
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
+  #    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
     else
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
+   #   sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
     case (n%32)
     when 6, 12

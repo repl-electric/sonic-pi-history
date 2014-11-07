@@ -164,7 +164,7 @@ define :startbeep do |n|
   sleep bar/2.0
   case (n%8)
   when 3,7
-    sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
+ #   sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
     play degree(1, :A3, :major)
     sleep bar/2.0
     play degree(4, :A3, :major)

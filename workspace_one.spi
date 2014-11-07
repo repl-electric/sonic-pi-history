@@ -100,7 +100,7 @@ live :higher2 do |n|
         sleep bar/2
       end
       
-       sync :high
+      sync :high
 
       play degree(5, :A4, :major), release: 0.3, attack: 0.01, amp: vol
       sleep bar/2

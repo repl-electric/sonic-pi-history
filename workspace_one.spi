@@ -92,11 +92,11 @@ live :higher2 do |n|
 
     sleep bar*1
     with_fx :reverb do
-      play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+      play degree(1, :E4, :major), release: 0.1, attack: 0.01, amp: vol
       sleep bar/2
-      play degree(4, :A4, :major), release: 0.15, attack: 0.01, amp: vol
+      play degree(4, :E4, :major), release: 0.15, attack: 0.01, amp: vol
       sleep bar/2
-      play degree(3, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+      play degree(3, :E4, :major), release: 0.1, attack: 0.01, amp: vol
       sleep bar
     end
 

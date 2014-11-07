@@ -139,7 +139,7 @@ live :words do
   end
 end
 define :startbeep do |n|
-  notes = [1, 0, 0, 0, 0]
+  notes = [0, 0, 0, 0, 0]
   drums = true
   
   use_synth_defaults amp: 0.4, release: bar/2.0

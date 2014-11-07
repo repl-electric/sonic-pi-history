@@ -251,8 +251,8 @@ live :beeping do
       end
 
       8.times do |n|
-#        sync :circle
- #       endbeep(n)
+        sync :circle
+        endbeep(n)
       end
     end
   end

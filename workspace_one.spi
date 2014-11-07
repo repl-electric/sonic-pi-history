@@ -179,9 +179,9 @@ define :startbeep do |n|
 
     if n%32 == 12
       play degree(4, :A3, :major)
-      sleep bar/5.0
+      sleep bar/4.0
       play degree(4, :A3, :major)
-      sleep bar/5.0
+      sleep bar/4.0
     else
       play degree(4, :A3, :major)
       sleep bar/4.0

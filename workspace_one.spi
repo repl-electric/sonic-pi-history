@@ -85,43 +85,33 @@ live :higher2 do |n|
   #use_synth :beep
   with_fx :reverb do
     sync :high
-    #if n%2 == 0 
-      play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
-      sleep bar*1
-      play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
+    #if n%2 == 0
+    play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
+    sleep bar*1
+    play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
 
-      sleep bar*1
-      with_fx :reverb do
-        play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
-        sleep bar/2
-        play degree(4, :A4, :major), release: 0.15, attack: 0.01, amp: vol
-        sleep bar/2
-        play degree(3, :A4, :major), release: 0.1, attack: 0.01, amp: vol
-        sleep bar
-      end
-      
-      sync :high
-
-      play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
+    sleep bar*1
+    with_fx :reverb do
+      play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
       sleep bar/2
-      play degree(2, :A4, :major), release: 0.2, attack: 0.01, amp: vol
-
+      play degree(4, :A4, :major), release: 0.15, attack: 0.01, amp: vol
       sleep bar/2
+      play degree(3, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+      sleep bar
+    end
 
-        play degree(3, :A4, :major), release: bar*2, attack: 0.01, decay: bar/4, amp: vol
-        sleep bar/2
-        play degree(3, :A4, :major), release: 0.15, attack: 0.01, amp: vol
-        sleep bar/2
-        play degree(6, :A4, :major), release: 0.1, attack: 0.01, amp: vol
-        sleep bar
+    sync :high
 
-           
-      
-      
-      
-      
-      
-      
+    play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
+    sleep bar/2
+    play degree(2, :A4, :major), release: 0.2, attack: 0.01, amp: vol
+    sleep bar/2
+    play degree(3, :A4, :major), release: bar*2, attack: 0.01, decay: bar/4, amp: vol
+    sleep bar/2
+    play degree(3, :A4, :major), release: 0.15, attack: 0.01, amp: vol
+    sleep bar/2
+    #play degree(6, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+    #sleep bar
     #end
   end
 end
@@ -176,7 +166,7 @@ define :startbeep do |n|
     play degree(4, :A3, :major)
     sleep bar/4.0
     sample :drum_tom_lo_soft
-  #  play degree(4, :A3, :major)
+    #  play degree(4, :A3, :major)
     sleep bar/4.0
   when 6, 30
     sample :drum_cymbal_closed, rate: 0.98, start: 0.05, amp: 0.1 if drums
@@ -203,7 +193,7 @@ define :startbeep do |n|
     if n%32 == 12
       play degree(4, :A3, :major)
       sleep bar/4.0
-     play degree(4, :A3, :major)
+      play degree(4, :A3, :major)
       sleep bar/4.0
     else
       play degree(4, :A3, :major)
@@ -271,9 +261,9 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
   if n % 8 == 7
-     #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
+    #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
   else
-     #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
+    #play degree([1].choose, :A1, :major), attack: bar/2, release: bar*4, decay: bar*4, amp: 0.4
   end
   sleep bar*4
   #  cue :high

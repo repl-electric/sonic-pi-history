@@ -181,7 +181,7 @@ define :startbeep do |n|
    #   play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 1.1
       sleep (bar/4.0)
     else
-   #   play degree(1, :A3, :major)
+      play degree(1, :A3, :major)
       sleep (bar/2.0)
     end
     if n%2 == 0

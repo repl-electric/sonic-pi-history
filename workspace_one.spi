@@ -162,7 +162,7 @@ define :startbeep do |n|
     when 6
       play degree(4, :E3, :major), attack: 0.03, amp: 1.0, release: bar/4
       sleep (bar/4.0)
-      play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 1.0
+      play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 0.6
       sleep (bar/4.0)
     else
       play degree(1, :A3, :major)

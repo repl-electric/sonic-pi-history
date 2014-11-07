@@ -139,7 +139,7 @@ live :words do
   end
 end
 define :startbeep do |n|
-  drums = false
+  drums = true
   use_synth_defaults amp: 0.4, release: bar/2.0
   play degree(1, :A3, :major)
   sleep bar/2.0
@@ -192,7 +192,7 @@ define :startbeep do |n|
   end
 end
 define :endbeep do |n|
-  drums = false
+  drums = true
   with_fx :reverb do
     sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1))
   end
@@ -248,9 +248,9 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
   if n % 8 == 7
-    #    play degree([3].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
+     play degree([3].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
   else
-    #   play degree([1].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
+     play degree([1].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4
   end
   sleep bar*4
   #  cue :high

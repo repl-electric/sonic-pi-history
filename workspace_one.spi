@@ -117,7 +117,7 @@ live :higher2 do |n|
     sleep bar/2
     play chord(:C4, :major), release: 0.3, attack: 0.01, amp: vol
     sleep bar/2
-    play degree(5, :A4, :major), release: bar*8, attack: 0.01, amp: vol, decay: 2
+    play chord(:E4, :major), release: bar*8, attack: 0.01, amp: vol, decay: 2
 
 #    play degree(1, :A4, :major), release: bar*2, attack: 0.01, amp: vol
     sleep bar

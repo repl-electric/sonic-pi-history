@@ -138,14 +138,16 @@ live :words do
     sleep 8*sample_duration(gravity_s)
   end
 end
+
+
 define :startbeep do |n|
   use_synth_defaults amp: 0.4, release: bar/2.0
   play degree(1, :A3, :major)
   sleep bar/2.0
   play degree(3, :A3, :major)
   sleep bar/2.0
-  case (n%32)
-  when 3,7,  11,15,  27,31    #0-8 8-16 24-32
+  case (n%8)
+  when 3,7
     sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
     play degree(1, :A3, :major)
     sleep bar/2.0
@@ -154,35 +156,25 @@ define :startbeep do |n|
     sample :drum_tom_lo_soft
     play degree(4, :A3, :major)
     sleep bar/4.0
-  when 6, 30
-    sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
-    play degree(4, :E3, :major), attack: 0.03, amp: 1.0, release: bar/4
-    sleep (bar/4.0)
-    play degree(4, :E3, :major), attack: 0.03, release: bar/4
-    sleep (bar/4.0)
-
-    if n%2 == 0
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
-    else
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
-    end
-
-    if n%32 == 6
-    play degree(4, :A3, :major)
-    sleep bar/4.0
-    play degree(4, :A3, :major)
-    sleep bar/4.0
-    end
   else
     sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
-    play degree(1, :A3, :major)
-    sleep (bar/2.0)
+    case n%16
+    when 6
+      play degree(4, :E3, :major), attack: 0.03, amp: 1.0, release: bar/4
+      sleep (bar/4.0)
+      play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 1.1
+      sleep (bar/4.0)
+    else
+      play degree(1, :A3, :major)
+      sleep (bar/2.0)
+    end
     if n%2 == 0
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
     else
       sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
-    if n%32 == 12
+    case (n%32)
+    when 6, 12
       play degree(4, :A3, :major)
       sleep bar/4.0
       play degree(4, :A3, :major)
@@ -190,12 +182,21 @@ define :startbeep do |n|
     else
       play degree(4, :A3, :major)
       sleep bar/4.0
-      play degree(4, :A3, :major)
+            play degree(4, :A3, :major)
       sleep bar/4.0
     end
+
     cue :high
   end
 end
+
+
+
+
+
+
+
+
 define :endbeep do |n|
   with_fx :reverb do
     sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1))

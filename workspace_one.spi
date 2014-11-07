@@ -158,47 +158,47 @@ live :words do
 end
 define :startbeep do |n|
   use_synth_defaults amp: 0.4, release: bar/2.0
-  play degree(1, :A3, :major)
+  #play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(3, :A3, :major)
+  #play degree(3, :A3, :major)
   sleep bar/2.0
   case (n%8)
   when 3,7
-    sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
-    play degree(1, :A3, :major)
+  #  sample :drum_cymbal_pedal, rate: 0.99, amp: 0.09, start: 0.1
+  #  play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(4, :A3, :major)
+  #  play degree(4, :A3, :major)
     sleep bar/4.0
-    sample :drum_tom_lo_soft
-    play degree(4, :A3, :major)
+  #  sample :drum_tom_lo_soft
+  #  play degree(4, :A3, :major)
     sleep bar/4.0
   else
-    sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
+   # sample :drum_cymbal_pedal, rate: 0.98, start: 0.15, amp: 0.1
     case n%16
     when 6
-      play degree(4, :E3, :major), attack: 0.03, amp: 1.0, release: bar/4
+   #   play degree(4, :E3, :major), attack: 0.03, amp: 1.0, release: bar/4
       sleep (bar/4.0)
-      play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 1.1
+   #   play degree(4, :E3, :major), attack: 0.03, release: bar/4, amp: 1.1
       sleep (bar/4.0)
     else
-      play degree(1, :A3, :major)
+   #   play degree(1, :A3, :major)
       sleep (bar/2.0)
     end
     if n%2 == 0
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
+   #   sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: -0.25
     else
-      sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
+   #   sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: 0.25
     end
     case (n%32)
     when 6, 12
-      play degree(4, :A3, :major)
+   #   play degree(4, :A3, :major)
       sleep bar/4.0
-      play degree(4, :A3, :major)
+    #  play degree(4, :A3, :major)
       sleep bar/4.0
     else
-      play degree(4, :A3, :major)
+ #     play degree(4, :A3, :major)
       sleep bar/4.0
-      play degree(4, :A3, :major)
+  #    play degree(4, :A3, :major)
       sleep bar/4.0
     end
 
@@ -211,33 +211,33 @@ define :endbeep do |n|
   end
   vol = 0.4
   use_synth_defaults amp: 0.4
-  play degree(1, :A3, :major)
+ # play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(3, :A3, :major)
+ # play degree(3, :A3, :major)
   sleep bar/2.0
 
   if n%8 == 3 || n%8 == 7
-    sample :drum_cymbal_closed, rate: 1.99, amp: 0.1, start: 0.1
-    play degree(1, :A3, :major)
+ #   sample :drum_cymbal_closed, rate: 1.99, amp: 0.1, start: 0.1
+ #   play degree(1, :A3, :major)
     sleep bar/4.0
-    sample(:drum_tom_hi_soft)
-    play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.01: 0.0)
+ #   sample(:drum_tom_hi_soft)
+ #   play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.01: 0.0)
     sleep bar/4.0
-    play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.02: 0.0)
+ #   play degree(5, :A3, :major), amp: vol+(n%8 == 7 ? 0.02: 0.0)
     sleep bar/4.0
-    sample :drum_tom_hi_soft
-    sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1
-    sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
-    play degree(5, :A3, :major), amp: (n%8 == 7 ? 1 : 0.95), release: bar*2, decay: bar/2.0
+ #   sample :drum_tom_hi_soft
+ #   sample :drum_cymbal_open, rate: 0.80, amp: 0.05, start: 0.1
+ #   sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
+ #   play degree(5, :A3, :major), amp: (n%8 == 7 ? 1 : 0.95), release: bar*2, decay: bar/2.0
     sleep bar/4.0
 
     if n == 7 || n == 4
-      sample(:drum_tom_hi_soft)
+ #     sample(:drum_tom_hi_soft)
     end
   else
-    sample :drum_cymbal_closed, rate: 1.0, start: 0.1, amp: 0.1
-    play_pattern_timed([degree(1, :A3, :major),
-                        degree(5, :A3, :major)], [bar/2.0,bar/2.0] )
+ #   sample :drum_cymbal_closed, rate: 1.0, start: 0.1, amp: 0.1
+ #   play_pattern_timed([degree(1, :A3, :major),
+ #                       degree(5, :A3, :major)], [bar/2.0,bar/2.0] )
     cue :other_high
   end
 end
@@ -251,8 +251,8 @@ live :beeping do
       end
 
       8.times do |n|
-        sync :circle
-        endbeep(n)
+#        sync :circle
+ #       endbeep(n)
       end
     end
   end
@@ -271,13 +271,13 @@ live :low_undertones do |n|
   #  cue :high
 end
 
-#begone :beeping
-#begone :words
+begone :beeping
+begone :words
 begone :otherhigher2
 begone :otherhigher
 begone :higher2
 begone :higher
-#begone :highlights
+begone :highlights
 #begone :drummer
 #begone :low_undertones2
 begone :low_undertones

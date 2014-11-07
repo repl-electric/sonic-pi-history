@@ -102,7 +102,7 @@ live :higher2 do |n|
     sleep bar/2
     play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
     sleep bar/2
-    play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+    play degree(1, :A4, :major), release: 0.2, attack: 0.01, amp: vol
     sleep bar
     
     play degree(5, :A4, :major), release: 0.15, attack: 0.01, amp: vol

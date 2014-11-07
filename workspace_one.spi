@@ -139,8 +139,9 @@ live :words do
   end
 end
 define :startbeep do |n|
-  notes = [1,3, 1, 4, 4]
-
+  notes = [1, 3, 1, 4, 4]
+  drums = true
+  
   use_synth_defaults amp: 0.4, release: bar/2.0
   play degree(notes[0], :A3, :major)
   sleep bar/2.0
@@ -148,22 +149,22 @@ define :startbeep do |n|
   sleep bar/2.0
   case (n%32)
   when 3,7,  11,15,  27,31
-    sample :drum_cymbal_closed, rate: 0.99, amp: 0.09, start: 0.1
+    sample :drum_cymbal_closed, rate: 0.99, amp: 0.09, start: 0.1 if drums
     play degree(notes[2], :A3, :major)
     sleep bar/2.0
     play degree(notes[3], :A3, :major)
     sleep bar/4.0
-    sample :drum_tom_lo_soft
+    sample :drum_tom_lo_soft if drums
     play degree(notes[4], :A3, :major)
     sleep bar/4.0
   when 6, 30
-    sample :drum_cymbal_closed, rate: 0.98, start: 0.05, amp: 0.1
+    sample :drum_cymbal_closed, rate: 0.98, start: 0.05, amp: 0.1 if drums
     play degree(4, :E3, :major), attack: 0.03, amp: 0.5, release: bar/4
     sleep (bar/4.0)
     play degree(4, :E3, :major), attack: 0.03, release: bar/4
     sleep (bar/4.0)
 
-    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25)
+    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25) if drums
 
     if n%32 == 6
       play degree(4, :A3, :major)
@@ -172,11 +173,11 @@ define :startbeep do |n|
       sleep bar/4.0
     end
   else
-    sample :drum_cymbal_closed, rate: 0.98, start: 0.15, amp: 0.1
+    sample :drum_cymbal_closed, rate: 0.98, start: 0.15, amp: 0.1 if drums
     play degree(1, :A3, :major)
     sleep (bar/2.0)
 
-    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25)
+    sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25) if drums
 
     if n%32 == 12
       play degree(4, :A3, :major)

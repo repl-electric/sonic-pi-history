@@ -94,7 +94,7 @@ live :higher2 do |n|
     sync :circle
     
     #with_fx :reverb do
-    play chord(:A4, :major), release: 0.1, attack: 0.01, amp: vol
+    play chord(:A4, :major), release: 1, attack: 0.01, amp: vol
     sleep bar/2
     play degree(4, :A4, :major), release: 0.15, attack: 0.01, amp: vol
     sleep bar/2

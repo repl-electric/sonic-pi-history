@@ -214,7 +214,7 @@ end
 define :endbeep do |n|
   #sample :guit_harmonics
   with_fx :reverb do 
-    sample :guit_harmonics if (dice(6) <= 3 ? (n%8 >= 6) : (n%8 <= 1)) 
+    sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1)) 
   end
   vol = 0.4
   use_synth_defaults amp: 0.4

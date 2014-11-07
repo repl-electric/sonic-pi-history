@@ -232,7 +232,7 @@ define :endbeep do |n|
     sleep bar/4.0
 
     if n == 7 || n == 4
- #     sample(:drum_tom_hi_soft)
+      sample(:drum_tom_hi_soft)
     end
   else
  #   sample :drum_cymbal_closed, rate: 1.0, start: 0.1, amp: 0.1

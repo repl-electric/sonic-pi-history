@@ -84,40 +84,28 @@ live :higher2 do |n|
   use_synth :tb303
   #use_synth :beep
   with_fx :reverb do
-    sync :circle
+    sync :high
     #if n%2 == 0
-    play chord(:A4, :major), release: 3, attack: 0.01, amp: vol
-    sleep bar/2
+    play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
+    sleep bar*1
     play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
-    sleep bar
-    
-    sync :circle
-    
-    #with_fx :reverb do
-    play chord(:A4, :major), release: 3, attack: 0.01, amp: vol
+    sleep bar*1
+    with_fx :reverb do
+    play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
     sleep bar/2
     play degree(4, :A4, :major), release: 0.15, attack: 0.01, amp: vol
     sleep bar/2
-    play degree(3, :A4, :major), release: bar*2, attack: 0.1, amp: vol
+    play degree(1, :A4, :major), release: 0.1, attack: 0.01, amp: vol
+    sleep bar
+    end
+    play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
+    sleep bar/2
+    play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
+    sleep bar/2
+    play degree(1, :A4, :major), release: 0.1, attack: 0.01, , amp: vol
     sleep bar
     
-        sync :circle
-    
-    #end  
-    play chord(:A4, :major), release: 3, attack: 0.01, amp: vol
-    sleep bar/2
-    play degree(4, :A4, :major), release: 0.3, attack: 0.01, amp: vol
-    sleep bar/2
-    play degree(3, :A4, :major), release: bar*2, attack: 0.1, amp: vol
-    sleep bar
-    
-        sync :circle
-    
-    #play chord(:A4, :major), release: 0.3, attack: 0.01, amp: vol
-    sleep bar/2
-   # play chord(:C4, :major), release: 0.3, attack: 0.01, amp: vol
-    sleep bar/2
-   # play chord(:E4, :major), release: bar*8, attack: 0.01, amp: vol, decay: 2
+    play degree(5, :A4, :major), release: 0.15, attack: 0.01, amp: vol
 
 #    play degree(1, :A4, :major), release: bar*2, attack: 0.01, amp: vol
     sleep bar

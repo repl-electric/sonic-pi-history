@@ -138,8 +138,6 @@ live :words do
     sleep 8*sample_duration(gravity_s)
   end
 end
-
-
 define :startbeep do |n|
   use_synth_defaults amp: 0.4, release: bar/2.0
   play degree(1, :A3, :major)
@@ -182,7 +180,7 @@ define :startbeep do |n|
     if n%32 == 12
       play degree(4, :A3, :major)
       sleep bar/5.0
-      play degree(4, :A3, :major)
+      play degree(5, :A3, :major)
       sleep bar/5.0
     else
       play degree(4, :A3, :major)

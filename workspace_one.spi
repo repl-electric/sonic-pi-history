@@ -150,7 +150,7 @@ define :startbeep do |n|
     sample :drum_cymbal_closed, rate: 0.99, amp: 0.09, start: 0.1
     play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(4, :A3, :major), amp: 0.6
+    play degree(4, :A3, :major), amp: 1.6
     sleep bar/4.0
     sample :drum_tom_lo_soft
     play degree(4, :A3, :major), amp: 0.6

@@ -62,23 +62,23 @@ live :drummer do |n|
         play degree(1, :A4, :major)
         sleep bar/2.0
         sleep (bar/2.0)
-end end  end end
+end end end end
 live :highlights do |n|
   use_synth :fm
   vol = 0.4
   if n % 16 == 0
     2.times do
       sync :circle
-        with_fx :reverb, room: 0.9 do
-          play degree(1, :A2, :major), attack: bar, release: bar*2, amp: vol, decay: bar*2
-        end
+      with_fx :reverb, room: 0.9 do
+        play degree(1, :A2, :major), attack: bar, release: bar*2, amp: vol, decay: bar*2
+      end
       sleep bar/2
       sleep bar/2
 
       sync :circle
-        with_fx :reverb, room: 0.9 do
-          play degree(4, :A2, :major), attack: bar, release: bar*2, amp: vol, decay: bar*2
-        end
+      with_fx :reverb, room: 0.9 do
+        play degree(4, :A2, :major), attack: bar, release: bar*2, amp: vol, decay: bar*2
+      end
       sleep bar/2
       sleep bar/2
     end
@@ -97,7 +97,6 @@ live :higher do |n|
   use_synth :beep
   play degree(6, :A3, :major), release: bar*2, attack: bar*2, amp: vol
 end
-
 live :higher2 do |n|
   vol = 0.2
   use_synth :tb303
@@ -121,7 +120,6 @@ live :higher2 do |n|
     end
   end
 end
-
 live :otherhigher do |n|
   vol = 0.4
   sync :other_high
@@ -129,7 +127,6 @@ live :otherhigher do |n|
   use_synth :beep
   play degree(5, :A3, :major), release: bar*2, attack: bar*2, amp: vol
 end
-
 live :otherhigher2 do |n|
   vol = 0.1
   use_synth :tb303
@@ -138,7 +135,6 @@ live :otherhigher2 do |n|
     if n%2 == 0
       play degree(5, :A3, :major), release: 0.3, attack: 0.01, amp: vol
       sleep bar*1
-      #with_fx :reverb do
       play degree(3, :A3, :major), release: 0.2, attack: 0.01, amp: vol
 
       sleep bar*1
@@ -153,7 +149,6 @@ live :otherhigher2 do |n|
     end
   end
 end
-
 live :words do
   sync :circle
   with_fx :ixi_techno, phase: bar*4 do
@@ -162,7 +157,6 @@ live :words do
   end
 end
 define :startbeep do |n|
-#  sample :elec_blip
   use_synth_defaults amp: 0.4, release: bar/2.0
   play degree(1, :A3, :major)
   sleep bar/2.0
@@ -204,7 +198,7 @@ define :startbeep do |n|
     else
       play degree(4, :A3, :major)
       sleep bar/4.0
-            play degree(4, :A3, :major)
+      play degree(4, :A3, :major)
       sleep bar/4.0
     end
 
@@ -212,9 +206,8 @@ define :startbeep do |n|
   end
 end
 define :endbeep do |n|
-  #sample :guit_harmonics
-  with_fx :reverb do 
-    sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1)) 
+  with_fx :reverb do
+    sample :guit_harmonics if (dice(n%7) <= 3 ? (n%8 >= 6) : (n%8 <= 1))
   end
   vol = 0.4
   use_synth_defaults amp: 0.4
@@ -237,7 +230,7 @@ define :endbeep do |n|
     sample :elec_ping, amp: (n%8 == 3 ? 0.3 : 1.0)
     play degree(5, :A3, :major), amp: (n%8 == 7 ? 1 : 0.95), release: bar*2, decay: bar/2.0
     sleep bar/4.0
-    
+
     if n == 7 || n == 4
       sample(:drum_tom_hi_soft)
     end

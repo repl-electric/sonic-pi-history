@@ -139,23 +139,21 @@ live :words do
   end
 end
 define :startbeep do |n|
-  notes = [8, 16, 8, 8, 8]
-  drums = false
-  
+  drums = true
   use_synth_defaults amp: 0.4, release: bar/2.0
-  play degree(notes[0], :A3, :major)
+  play degree(1, :A3, :major)
   sleep bar/2.0
-  play degree(notes[1], :A3, :major)
+  play degree(3, :A3, :major)
   sleep bar/2.0
   case (n%32)
   when 3,7,  11,15,  27,31
     sample :drum_cymbal_closed, rate: 0.99, amp: 0.09, start: 0.1 if drums
-    play degree(notes[2], :A3, :major)
+    play degree(1, :A3, :major)
     sleep bar/2.0
-    play degree(notes[3], :A3, :major)
+    play degree(4, :A3, :major)
     sleep bar/4.0
-    sample :drum_tom_lo_soft if drums
-    play degree(notes[4], :A3, :major)
+    sample :drum_tom_lo_soft
+    play degree(4, :A3, :major)
     sleep bar/4.0
   when 6, 30
     sample :drum_cymbal_closed, rate: 0.98, start: 0.05, amp: 0.1 if drums
@@ -236,10 +234,10 @@ live :beeping do
         startbeep(n)
       end
 
-  #    8.times do |n|
- #       sync :circle
-#        endbeep(n)
-   #   end
+      8.times do |n|
+        sync :circle
+        endbeep(n)
+      end
     end
   end
 end

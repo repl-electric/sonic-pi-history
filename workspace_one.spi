@@ -85,7 +85,7 @@ live :higher2 do |n|
   #use_synth :beep
   with_fx :reverb do
     sync :high
-    #if n%2 == 0
+    #if n%2 == 0 
       play degree(1, :A4, :major), release: 0.3, attack: 0.01, amp: vol
       sleep bar*1
       play degree(4, :A4, :major), release: 0.2, attack: 0.01, amp: vol
@@ -101,7 +101,7 @@ live :higher2 do |n|
       end
 
       play degree(5, :A4, :major), release: 0.3, attack: 0.01, amp: vol
-      sleep bar*1
+      sleep bar/2
       play degree(3, :A4, :major), release: 0.2, attack: 0.01, amp: vol
 
       sleep bar*1

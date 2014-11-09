@@ -244,7 +244,8 @@ live :beeping do
 end
 
 live :low_undertones do |n|
-  use_synth :tri
+#  use_synth :tri
+  use_synth :beep
   #  use_synth_defaults
   sync :circle
   if n % 8 == 7
@@ -265,6 +266,6 @@ begone :higher
 #begone :highlights
 #begone :drummer
 #begone :low_undertones2
-begone :low_undertones
+#begone :low_undertones
 set_volume! 1.0
 #fadeout()

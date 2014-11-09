@@ -249,11 +249,11 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
  10.times do
- with_fx :echo, phase: bar/4.0 do
+ #with_fx :echo, phase: bar/4.0 do
   play degree(1, :A2, :major), attack: 0.05, release: 0.05
   sleep 1
  
-  end
+  #end
   end
   
   if n % 8 == 7

@@ -249,7 +249,7 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
  #10.times do
- with_bpm 126 do
+ with_bpm 256 do
   play_chord chord(:A2, :major), attack: 0.1, release: 0.1, decay: 0.1
   sleep bar 
   play_chord chord(:A2, :major), attack: 0.1, release: 0.1, decay: 0.1

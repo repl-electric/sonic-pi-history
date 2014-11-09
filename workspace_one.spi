@@ -246,7 +246,7 @@ end
 live :low_undertones do |n|
 #  use_synth :tri
   use_synth :supersaw
-  use_synth_defaults :amp 0.1
+  use_synth_defaults amp: 0.1
   sync :circle
  #10.times do
  #with_bpm 256/2.0 do

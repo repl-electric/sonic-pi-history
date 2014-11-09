@@ -248,7 +248,7 @@ live :low_undertones do |n|
   use_synth :beep
   #  use_synth_defaults
   #sync :circle
-  with_bpm 256 do
+ 10.times do
   play degree(1, :A3, :major)
   sleep 1
   play degree(1, :A3, :major)

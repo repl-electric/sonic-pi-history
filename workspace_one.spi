@@ -228,7 +228,7 @@ define :endbeep do |n|
 end
 live :beeping do
   use_synth :fm
-  with_fx :echo, phase: bar/1.0 do
+  with_fx :echo, phase: bar/8.0 do
     with_fx :reverb do
       8.times do |n|
         sync :circle

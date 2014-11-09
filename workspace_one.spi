@@ -248,11 +248,12 @@ live :low_undertones do |n|
   use_synth :beep
   #  use_synth_defaults
   #sync :circle
-  
+  with_bpm 256 do
   play degree(1, :A3, :major)
   sleep 1
   play degree(1, :A3, :major)
   sleep 1
+  end
   
   if n % 8 == 7
     #    play degree([3].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4

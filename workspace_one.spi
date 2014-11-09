@@ -249,7 +249,7 @@ live :low_undertones do |n|
   #  use_synth_defaults
   sync :circle
  #10.times do
- with_fx :slicer, phase: bar/8.0 do
+ with_fx :slicer, phase: bar/4.0 do
   play degree(1, :A3, :major), attack: 1, release: 2, decay: 2
   
  

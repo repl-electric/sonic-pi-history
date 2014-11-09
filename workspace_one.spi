@@ -255,6 +255,8 @@ live :low_undertones do |n|
   play_chord chord(:A3, :major), attack: 0.1, release: 0.1, decay: 0.1
   sleep bar 
   play_chord chord(:A3, :major), attack: 0.1, release: 0.1, decay: 0.1
+  sleep bar 
+  play_chord chord(:A3, :major), attack: 0.1, release: 0.1, decay: 0.1
     sleep bar 
  #end
   #end

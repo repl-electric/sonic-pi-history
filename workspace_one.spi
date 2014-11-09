@@ -250,7 +250,7 @@ live :low_undertones do |n|
   sync :circle
  #10.times do
  with_fx :slicer, phase: bar/2.0 do
-  play_chord degree(2, :A3, :major), attack: 1, release: 2, decay: 2
+  play_chord chord(:A3, :major), attack: 1, release: 2, decay: 2
   
  
   #end

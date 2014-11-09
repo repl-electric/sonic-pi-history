@@ -251,6 +251,8 @@ live :low_undertones do |n|
   
   play degree(1, :A3, :major)
   sleep 1
+  play degree(1, :A3, :major)
+  sleep 1
   
   if n % 8 == 7
     #    play degree([3].choose, :A2, :major), attack: bar/2, release: bar, decay: bar, amp: 0.4

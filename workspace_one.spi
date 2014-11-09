@@ -251,8 +251,7 @@ live :low_undertones do |n|
  #10.times do
  with_fx :slicer, phase: bar/4.0 do
   play_chord chord(:A3, :major), attack: 1, release: 2, decay: 2
-  
- 
+  sleep bar*2
   #end
   end
   

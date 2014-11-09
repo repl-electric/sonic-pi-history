@@ -247,7 +247,7 @@ live :low_undertones do |n|
 #  use_synth :tri
   use_synth :beep
   #  use_synth_defaults
-  sync :circle
+  #sync :circle
   
   play degree(1, :A3, :major)
   sleep 1

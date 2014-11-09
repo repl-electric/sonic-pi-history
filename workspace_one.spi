@@ -252,10 +252,7 @@ live :low_undertones do |n|
  with_fx :echo, phase: bar/4.0 do
   play degree(1, :A3, :major)
   sleep 1
-  play degree(1, :A3, :major)
-  sleep 1
-  play degree(1, :A3, :major)
-  sleep 1
+ 
   end
   end
   

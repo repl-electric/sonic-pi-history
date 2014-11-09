@@ -253,6 +253,7 @@ live :low_undertones do |n|
   sleep 1
   play degree(1, :A3, :major)
   sleep 1
+  play degree(1, :A3, :major)
   end
   
   if n % 8 == 7

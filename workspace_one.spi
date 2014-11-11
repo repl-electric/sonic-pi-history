@@ -233,7 +233,8 @@ live :beeping do
     with_fx :reverb do
       8.times do |n|
         sync :circle
-        startbeep(n, notes = [1, 3, 1, 4, 4])
+        startbeep(n, notes = [1, _, 1, 4, 4])
+        #[1, 3, 1, 4, 4]
       end
 
       8.times do |n|

@@ -139,7 +139,6 @@ live :words do
     sleep 8*sample_duration(gravity_s)
   end
 end
-#notes = [1, 3, 1, 4, 4]
 define :startbeep do |n, notes|
   drums = true
   use_synth_defaults amp: 0.4, release: bar/2.0
@@ -234,8 +233,7 @@ live :beeping do
     with_fx :reverb do
       8.times do |n|
         sync :circle
-        startbeep(n, notes = [_, 3, 1, 3, 1])
-        #[1, 3, 1, 4, 4]
+        startbeep(n, notes = [1, 3, 1, 4, 4])
       end
 
       8.times do |n|

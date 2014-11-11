@@ -173,15 +173,15 @@ define :startbeep do |n, notes|
     end
   else
     sample :drum_cymbal_closed, rate: 0.98, start: 0.15, amp: 0.1 if drums
-    play degree(notes[3], :A3, :major)
+    play degree(notes[2], :A3, :major)
     sleep (bar/2.0)
 
     sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25) if drums
 
     if n%32 == 12
-      play degree(notes[4], :A3, :major)
+      play degree(notes[3], :A3, :major)
       sleep bar/4.0
-      play degree(notes[5], :A3, :major)
+      play degree(notes[4], :A3, :major)
       sleep bar/4.0
     else
       play degree(4, :A3, :major)

@@ -160,7 +160,7 @@ define :startbeep do |n, notes|
     sample :drum_cymbal_closed, rate: 0.98, start: 0.05, amp: 0.1 if drums
     play(degree(notes[3], :E3, :major), attack: 0.03, amp: 0.5, release: bar/4)  if notes[3]
     sleep (bar/4.0)
-    play degree(notes[3], :E3, :major), attack: 0.03, release: bar/4 if if notes[3]
+    play degree(notes[3], :E3, :major), attack: 0.03, release: bar/4 if notes[3]
     sleep (bar/4.0)
 
     sample :drum_snare_soft, rate: 0.5, amp: 0.05, pan: (n%2 == 0 ? -0.25 : 0.25) if drums

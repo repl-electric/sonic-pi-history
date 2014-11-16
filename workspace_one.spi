@@ -229,7 +229,7 @@ define :endbeep do |n|
 end
 live :beeping do
   use_synth :beep
-  with_fx :echo, phase: bar/2.0 do
+  with_fx :echo, phase: bar/4.0 do
     with_fx :reverb do
       8.times do |n|
         sync :circle

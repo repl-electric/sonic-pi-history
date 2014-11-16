@@ -262,7 +262,7 @@ live :low_undertones do |n|
   #  cue :high
 end
 
-begone :beeping
+#begone :beeping
 begone :words
 begone :otherhigher2
 begone :otherhigher

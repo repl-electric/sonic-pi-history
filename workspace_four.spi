@@ -29,7 +29,7 @@ end
 live_loop :dark do
   use_synth :beep
   sync :start
-  with_fx(:reverb){sample p1_s, amp: 4, rate: 0.99}
+  with_fx(:reverb, room: 1, mix: 1){sample p1_s, amp: 4, rate: 0.99}
   sample :ambi_lunar_land, rate: 0.45, amp: 1.5
   play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
   use_synth :noise

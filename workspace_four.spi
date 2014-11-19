@@ -64,3 +64,10 @@ live_loop :beep do
   end
   end
 end
+
+
+live_loop do
+  use_synth :sine
+  sync :start
+  play degree(:i, :A1, :minor), release: bar*4
+end

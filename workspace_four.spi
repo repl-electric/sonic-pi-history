@@ -4,8 +4,10 @@ quart = 2*bar
 set_volume! 1.0
 p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
+v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 
 live_loop :metro do
+sample v_s
   cue :start; cue :quart;  cue :bar
   sleep bar
   cue :bar

@@ -7,7 +7,6 @@ p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__pian
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 
 live_loop :metro do
-  sample v_s, amp: 10
   cue :start; cue :quart;  cue :bar
   sleep bar
   cue :bar
@@ -16,6 +15,11 @@ live_loop :metro do
   sleep bar
   cue :bar
   sleep bar
+end
+
+live_loop :vio do
+  3.times{sync :start}
+  sample v_s, amp: 10
 end
 
 live_loop :piano do

@@ -43,7 +43,7 @@ live_loop :beep do
   sync :bar
   
   direction = rand_i(-1..1)
-  with_synth :noise{play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
+  with_synth(:noise){play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.8*direction
   sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.7*direction

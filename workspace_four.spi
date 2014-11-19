@@ -20,7 +20,7 @@ end
 live_loop :piano do
   sync :quart
   with_fx :echo do
-  sample p_s
+  sample p1_s
   end
 end
 

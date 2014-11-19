@@ -21,16 +21,23 @@ live_loop :beep do
   #with_fx :echo, phase: bar/4 do
   sync :start
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
-  sleep bar/8
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
-  sleep bar/8
+  sleep bar/4
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
   sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
+  sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
 
-  play degree(:i, :A3, :minor), attack: 0.01, release: 0.45, amp: 1.5
-  sleep bar/8
+  sleep bar/4
+ 
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
+  sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
+  sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.2
+  sleep bar/4
   play degree(:i, :A3, :minor), attack: 0.01, release: 0.45, amp: 1.5
   sleep bar/4
-  #end
+   #end
   end
 end

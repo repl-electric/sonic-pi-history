@@ -65,9 +65,8 @@ live_loop :beep do
   end
 end
 
-
 live_loop :deep do
   use_synth :sine
   sync :start
-  play degree(:i, :A1, :minor), release: bar*4
+  play degree(:i, :A1, :minor), release: bar*4, decay: bar*4
 end

@@ -41,22 +41,22 @@ live_loop :beep do
   sync :bar
     
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.009, release: 0.1
-  sleep bar/4 
+  sleep bar/2 
   
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.005, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.007, release: 0.1
-  sleep bar/4
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5
-  sleep bar/4
+  sleep bar/2
   end
   end
 end

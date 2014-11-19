@@ -18,7 +18,7 @@ live_loop :metro do
 end
 
 live_loop :drum do
-  sync :bar
+  sync :quart
   with_fx :lpf do
   sample :drum_bass_soft
   end

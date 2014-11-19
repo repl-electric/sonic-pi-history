@@ -9,9 +9,8 @@ live_loop :metro do
   sleep bar
   cue :bar
   sleep bar
- cue :quart
-  
- cue :bar
+  cue :quart
+  cue :bar
   sleep bar
   cue :bar
   sleep bar

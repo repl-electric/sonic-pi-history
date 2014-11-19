@@ -1,8 +1,16 @@
 bar = 1/2.0
 
+live_loop :metro do
+  cue :start
+  sleep bar
+end
+
 live_loop :dark do
   use_synth :beep
   play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 2
   use_synth :noise
   play degree(:i, :A1, :minor), release: bar*2, amp: 0.05
+ 
+  3.times{ sync :start}
+ 
  end

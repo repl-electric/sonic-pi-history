@@ -4,9 +4,11 @@ p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 
 live_loop :metro do
   cue :start
+  cue :quart
   cue :bar
   sleep bar
   cue :bar
+  cue :quart
   sleep bar
   cue :bar
   sleep bar
@@ -15,7 +17,7 @@ live_loop :metro do
 end
 
 live_loop :piano do
-  sync :start
+  sync :quart
   sample p_s
 end
 

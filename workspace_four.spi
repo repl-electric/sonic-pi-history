@@ -1,5 +1,5 @@
 bar = 1/2.0
-
+set_volume! 0.1
 p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 
 live_loop :metro do

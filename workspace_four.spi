@@ -22,9 +22,9 @@ live_loop :beep do
   sync :start
   play degree(:i, :A3, :minor), attack:  0.1, release: 0.3
   sleep bar/4
-  play degree(:i, :A3, :minor)+2, attack:  0.1, release: 0.3
+  play degree(:i, :A3, :minor)+2, attack:  0.01, release: 0.3
   sleep bar/4
-  play degree(:i, :A3, :minor), attack: 0.1, release: 0.3
+  play degree(:i, :A3, :minor), attack: 0.01, release: 0.3
   sleep bar/4
   play degree(:i, :A3, :minor), attack: 0.09, release: 0.3
 

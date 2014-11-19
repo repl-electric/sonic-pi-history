@@ -39,23 +39,25 @@ live_loop :beep do
   with_fx :lpf, cutoff: 80 do
   with_fx :echo, phase: bar do
   sync :bar
+  
+  direction = rand_i(-1..1)
     
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.9
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.9*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.8
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.8*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.7
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.7*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.009, release: 0.1, pan: 0.6
+  play degree(:i, :A3, :minor), attack: 0.009, release: 0.1, pan: 0.6*direction
   sleep bar/1 
   
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.5
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.5*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.005, release: 0.1, pan: 0.4
+  play degree(:i, :A3, :minor), attack: 0.005, release: 0.1, pan: 0.4*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.007, release: 0.1, pan: 0.3
+  play degree(:i, :A3, :minor), attack: 0.007, release: 0.1, pan: 0.3*direction
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5, pan: 0.1
+  play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5, pan: 0.1*direction
   sleep bar/1
   end
   end

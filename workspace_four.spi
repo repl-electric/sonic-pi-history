@@ -38,28 +38,25 @@ live_loop :beep do
   use_synth_defaults sustain: 0.1, attack: 0.01, decay: 0.15, amp: 1.0
   with_fx :lpf, cutoff: 80 do
   with_fx :echo, phase: bar do
-  with_fx :pan do |p|
   sync :bar
     
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
-  control p, pan: 0.1
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.9
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.8
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.7
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.009, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.009, release: 0.1, pan: 0.6
   sleep bar/1 
   
-  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1, pan: 0.5
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.005, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.005, release: 0.1, pan: 0.4
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.007, release: 0.1
+  play degree(:i, :A3, :minor), attack: 0.007, release: 0.1, pan: 0.3
   sleep bar/1
-  play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5
+  play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5, pan: 0.1
   sleep bar/1
-  end
   end
   end
 end

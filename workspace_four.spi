@@ -19,7 +19,9 @@ end
 
 live_loop :vio do
   3.times{sync :start}
-  sample v_s, amp: 10
+  with_fx :reverb, room: 1 do
+    sample v_s, amp: 10
+  end
 end
 
 live_loop :piano do

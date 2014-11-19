@@ -20,7 +20,7 @@ end
 live_loop :drum do
   sync :quart
   with_fx :lpf do
-  sample :drum_bass_hard
+  sample :elec_triangle
   end
 end
 

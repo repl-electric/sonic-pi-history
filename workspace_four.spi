@@ -22,7 +22,7 @@ end
 live_loop :piano do
   sync :quart
   with_fx :reverb do
-    sample p_s, amp: 2
+    #sample p_s, amp: 2
   end
 end
 

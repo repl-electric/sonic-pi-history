@@ -16,7 +16,7 @@ end
 
 live_loop :beep do
   use_synth :prophet
-  with_fx :reverb do
+  with_fx :echo do
   sync :start
   play degree(:i, :A3, :minor), attack:  0.001, release: 0.1
   sleep bar/4

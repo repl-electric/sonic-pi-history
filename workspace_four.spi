@@ -68,5 +68,7 @@ end
 live_loop :deep do
   use_synth :sine
   sync :start
+  with_fx :slicer do
   play degree(6, :A1, :minor), release: bar*4, decay: bar*4, amp: 2
+  end
 end

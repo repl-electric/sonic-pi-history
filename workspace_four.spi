@@ -68,5 +68,5 @@ end
 live_loop :deep do
   use_synth :sine
   sync :start
-  play degree(:i, :A1, :minor), release: bar*4, decay: bar*4, amp: 4
+  play degree(:ii, :A1, :minor), release: bar*4, decay: bar*4, amp: 4
 end

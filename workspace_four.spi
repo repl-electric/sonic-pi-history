@@ -40,7 +40,7 @@ live_loop :beep do
   sync :bar
     
   with_fx :slicer, phase: bar/2 do
-    play degree(:i, :A3, :minor), attack: 0.01, release: (bar/4)*3
+    play degree(:i, :A4, :minor), attack: 0.01, release: (bar/4)*3
   #sleep bar/4
 #  play degree(:i, :A3, :minor), attack:  0.01, release: 0.3
   #sleep bar/4

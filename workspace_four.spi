@@ -1,10 +1,7 @@
+bar = 1/2.0
 
-
-
-
-
-
-live_loop :beep do
-  play 60
-  sleep 5
+live_loop :dark do
+  use_synth :beep
+  play degree(:i, :A1, :minor), release: bar*4
+  
 end

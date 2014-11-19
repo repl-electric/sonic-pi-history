@@ -43,13 +43,13 @@ live_loop :beep do
   direction = rand_i(-1..1)
     
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.8*direction
-  sleep bar/1
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.7*direction
-  sleep bar/1
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.6*direction
-  sleep bar/1
+  sleep bar/2
   play degree(:i, :A3, :minor), attack: 0.009, release: 0.3, pan: 0.5*direction
-  sleep bar/1 
+  sleep bar/2 
   
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.4*direction
   sleep bar/1

@@ -87,7 +87,7 @@ end
 live_loop :beep do
  sync :bar
  direction = rand_i(-1..1)
- beeper degree(1, :A3, :minor), direction
+ beeper degree(2, :A3, :minor), direction
 end
 
 live_loop :deep do

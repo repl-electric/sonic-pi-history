@@ -49,35 +49,41 @@ live_loop :dark do
   15.times{ sync :start }
 end
 
-live_loop :beep do
+define :beeper do |note|
   use_synth :supersaw #:mod_saw
   use_synth_defaults sustain: 0.2, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.01
   with_fx :lpf, cutoff: 80 do
   with_fx :echo, phase: bar do
-  sync :bar
+ 
   
   direction = rand_i(-1..1)
-  play degree(:i, :A3, :minor), attack: 0.001,  pan: 0.8*direction
+  play note, attack: 0.001,  pan: 0.8*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.001,  pan: 0.7*direction
+  play note, attack: 0.001,  pan: 0.7*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.001,  pan: 0.6*direction
+  play note, attack: 0.001,  pan: 0.6*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.009,  pan: 0.5*direction
+  play note, attack: 0.009,  pan: 0.5*direction
   sleep bar/2 
   
-  play degree(:i, :A3, :minor), attack: 0.001, pan: 0.4*direction
+  play note, attack: 0.001, pan: 0.4*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.005, pan: 0.3*direction
+  play note, attack: 0.005, pan: 0.3*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.007,  pan: 0.2*direction
+  play note, attack: 0.007,  pan: 0.2*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.009,  amp: 1.5, pan: 0.1*direction
+  play note, attack: 0.009,  amp: 1.5, pan: 0.1*direction
   sleep bar/2
   
   sleep bar
   end
   end
+end
+
+
+live_loop :beep do
+ sync :bar
+  beeper degree(:i, :A3, :minor)
 end
 
 live_loop :deep do

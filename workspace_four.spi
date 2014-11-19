@@ -1,8 +1,15 @@
 bar = 1/0.5
 
+p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
+
 live_loop :metro do
   cue :start
   sleep bar
+end
+
+live_loop :piano do
+  sync :start
+  sample p_s
 end
 
 live_loop :dark do

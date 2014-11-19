@@ -37,7 +37,7 @@ live_loop :beep do
   use_synth :supersaw
   use_synth_defaults sustain: 0.1, attack: 0.01, decay: 0.15, amp: 1.0
   with_fx :lpf, cutoff: 80 do
-  with_fx :reverb, room: 0.8 do
+  with_fx :echo, room: 0.8 do
   sync :bar
     
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1

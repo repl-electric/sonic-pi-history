@@ -83,7 +83,7 @@ end
 
 live_loop :beep do
  sync :bar
-  beeper degree(4, :A3, :minor)
+ beeper degree(3, :A3, :minor)
 end
 
 live_loop :deep do

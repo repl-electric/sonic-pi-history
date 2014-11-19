@@ -11,5 +11,5 @@ live_loop :dark do
   use_synth :noise
   play degree(:i, :A1, :minor), release: bar*4, amp: 0.03
  
-  16.times{ sync :start}
+  15.times{ sync :start}
   end

@@ -17,6 +17,11 @@ live_loop :metro do
   sleep bar
 end
 
+live_loop :drum do
+  sync :bar
+  sample :drum_bass_soft
+end
+
 live_loop :vio do
   3.times{sync :start}
   with_fx :reverb, room: 1, mix: 1 do

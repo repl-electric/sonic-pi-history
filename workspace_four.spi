@@ -15,13 +15,13 @@ end
 
 live_loop :beep do
   use_synth :prophet
-  play degree(:i, :A3, :minor), attack: 0.001
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
   sleep bar/4
-  play degree(:i, :A3, :minor), attack: 0.001
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
   sleep bar/2
 
-  play degree(:i, :A3, :minor), attack: 0.001
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
   sleep bar/4
-  play degree(:i, :A3, :minor), attack: 0.001 
+  play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
   sleep bar/2
 end

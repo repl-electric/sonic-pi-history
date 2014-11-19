@@ -238,7 +238,7 @@ live :beeping do
 #      8.times do |n|
  #       sync :circle
  #      endbeep(n)
-      end
+  #    end
     end
   end
 end

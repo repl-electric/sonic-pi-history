@@ -37,7 +37,7 @@ end
 
 live_loop :beep do
   use_synth :prophet #:mod_saw
-  use_synth_defaults sustain: 0.1, attack: 0.01, decay: 0.15, amp: 1.0
+  use_synth_defaults sustain: 0.1, attack: 0.1, decay: 0.15, amp: 1.0
   with_fx :lpf, cutoff: 60 do
   with_fx :echo, phase: bar do
   sync :bar

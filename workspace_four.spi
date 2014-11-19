@@ -2,7 +2,7 @@ bar = 1/0.5
 
 live_loop :metro do
   cue :start
-  sleep bar*2
+  sleep bar
 end
 
 live_loop :dark do

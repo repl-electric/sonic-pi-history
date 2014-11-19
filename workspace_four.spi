@@ -4,7 +4,13 @@ p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 
 live_loop :metro do
   cue :start
-  sleep bar*4
+  sleep bar
+  cue :bar
+  sleep bar
+  cue :bar
+  sleep bar
+  cue :bar
+  sleep bar
 end
 
 live_loop :piano do

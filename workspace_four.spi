@@ -33,7 +33,7 @@ live_loop :vio do
 end
 
 live_loop :radio do
-  sample radio_s, amp: 4, rate: 0.1
+  sample radio_s, amp: 8, rate: 0.1
   sleep sample_duration(radio_s)
 end
 

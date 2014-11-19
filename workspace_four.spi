@@ -16,6 +16,7 @@ end
 
 live_loop :beep do
   use_synth :prophet
+  with_fx :lpf, cutoff: 100 do
   with_fx :echo, phase: bar/4 do
   sync :start
   play degree(:i, :A3, :minor), attack:  0.001, release: 0.2
@@ -26,5 +27,6 @@ live_loop :beep do
   sleep bar/4
   play degree(:i, :A3, :minor), attack:  0.005, release: 0.25, amp: 1.5
   sleep bar/2
+  end
   end
 end

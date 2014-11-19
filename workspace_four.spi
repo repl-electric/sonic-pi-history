@@ -6,9 +6,7 @@ p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
 
 live_loop :metro do
-  cue :start
-  cue :quart
-  cue :bar
+  cue :start; cue :quart;  cue :bar
   sleep bar
   cue :bar
   sleep bar

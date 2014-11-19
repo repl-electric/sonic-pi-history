@@ -14,7 +14,7 @@ live_loop :metro do
 end
 
 live_loop :piano do
-  sync :start
+  sync :bar
   sample p_s
 end
 

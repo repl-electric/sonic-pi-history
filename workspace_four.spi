@@ -16,7 +16,7 @@ end
 
 live_loop :beep do
   use_synth :prophet
-  use_synth_defaults sustain: 0.1, attack: 0.1
+  use_synth_defaults sustain: 0.1, attack: 0.1, decay: 1
   with_fx :lpf, cutoff: 90 do
   #with_fx :echo, phase: bar/4 do
   sync :start

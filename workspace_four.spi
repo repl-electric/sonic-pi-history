@@ -58,7 +58,7 @@ end
 define :beeper do |note, direction|
   use_synth :supersaw #:mod_saw
   use_synth_defaults env_curve: 7 ,sustain: 0.2, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.01, attack_level: 0.8 
-  with_fx :lpf, cutoff: 120 do
+  with_fx :lpf, cutoff: 130 do
   with_fx :echo, phase: bar do
   
   play note, attack: 0.001,  pan: 0.8*direction

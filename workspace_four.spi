@@ -56,13 +56,21 @@ live_loop :beep do
   play degree(:i, :A3, :minor), attack: 0.009, release: 0.3, pan: 0.5*direction
   sleep bar/2 
   
+   with_synth(:noise){play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
+ 
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.3, pan: 0.4*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.005, release: 0.3, pan: 0.3*direction
+ with_synth(:noise){play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
+  
+ play degree(:i, :A3, :minor), attack: 0.005, release: 0.3, pan: 0.3*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.007, release: 0.3, pan: 0.2*direction
+ with_synth(:noise){play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
+  
+ play degree(:i, :A3, :minor), attack: 0.007, release: 0.3, pan: 0.2*direction
   sleep bar/2
-  play degree(:i, :A3, :minor), attack: 0.009,  release: 0.3, amp: 1.5, pan: 0.1*direction
+ with_synth(:noise){play(degree(:i, :A3, :minor), attack: 0.2, release: bar/2, pan: 0.8*direction)}
+  
+ play degree(:i, :A3, :minor), attack: 0.009,  release: 0.3, amp: 1.5, pan: 0.1*direction
   sleep bar/2
   
   sleep bar

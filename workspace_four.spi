@@ -24,9 +24,9 @@ live_loop :beep do
   sleep bar/4
   play degree(:i, :A2, :minor)+2, attack:  0.1, release: 0.3
   sleep bar/4
-  play degree(:i, :A2, :minor), attack: 0.1, release: 0.2
+  play degree(:i, :A2, :minor), attack: 0.1, release: 0.3
   sleep bar/4
-  play degree(:i, :A2, :minor), attack: 0.09, release: 0.2
+  play degree(:i, :A2, :minor), attack: 0.09, release: 0.3
 
   sleep bar/4
  

@@ -10,6 +10,18 @@ live_loop :dark do
   play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 2
   use_synth :noise
   play degree(:i, :A1, :minor), release: bar*4, amp: 0.03
- 
   15.times{ sync :start}
-  end
+end
+
+live_loop :beep do
+  use_synth :prophet
+  play degree(:i, :A3, :minor), attack: 0.001
+  sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001
+  sleep bar/2
+
+  play degree(:i, :A3, :minor), attack: 0.001
+  sleep bar/4
+  play degree(:i, :A3, :minor), attack: 0.001 
+  sleep bar/2
+end

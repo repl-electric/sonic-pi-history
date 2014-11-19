@@ -5,6 +5,7 @@ set_volume! 1.0
 p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
+radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
@@ -29,6 +30,11 @@ live_loop :vio do
   with_fx :reverb, room: 1, mix: 1 do
     sample v_s, amp: 20
   end
+end
+
+live_loop :radio do
+  sample radio_s
+  sleep sample_duration(radio_s)
 end
 
 live_loop :piano do

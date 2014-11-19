@@ -19,7 +19,9 @@ end
 
 live_loop :drum do
   sync :bar
+  with_fx :lpf do
   sample :drum_bass_soft
+  end
 end
 
 live_loop :vio do

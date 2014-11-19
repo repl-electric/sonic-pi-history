@@ -20,8 +20,9 @@ end
 live_loop :piano do
   sync :quart
   with_fx :reverb do
-  sample p_s, amp: 2
-  end
+  sample p1_s, amp: 2
+ 
+ end
 end
 
 live_loop :dark do

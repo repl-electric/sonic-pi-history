@@ -7,6 +7,7 @@ end
 
 live_loop :dark do
   use_synth :beep
+  sync :start
   play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
   use_synth :noise
   play degree(:i, :A1, :minor), release: bar*4, amp: 0.03

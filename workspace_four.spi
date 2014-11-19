@@ -16,7 +16,7 @@ end
 
 live_loop :beep do
   use_synth :supersaw
-  use_synth_defaults sustain: 0.1, attack: 0.1#, decay: 0.50
+  use_synth_defaults sustain: 0.1, attack: 0.1, decay: 0.50
   with_fx :lpf, cutoff: 90 do
  # with_fx :reverb, room: 0.8 do
   sync :start

@@ -38,10 +38,9 @@ live_loop :beep do
   with_fx :lpf, cutoff: 90 do
   with_fx :reverb, room: 0.8 do
   sync :bar
-  
-  
+    
   with_fx :echo, phase: bar/4 do
-  play degree(:i, :A3, :minor), attack:  0.01, release: 0.3
+    play degree(:i, :A3, :minor), attack:  0.01, release: 0.3*4
   #sleep bar/4
 #  play degree(:i, :A3, :minor), attack:  0.01, release: 0.3
   #sleep bar/4

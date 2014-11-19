@@ -38,6 +38,7 @@ live_loop :beep do
   use_synth_defaults sustain: 0.1, attack: 0.01, decay: 0.15, amp: 1.0
   with_fx :lpf, cutoff: 80 do
   with_fx :echo, phase: bar do
+  with_fx :pan do |p|
   sync :bar
     
   play degree(:i, :A3, :minor), attack: 0.001, release: 0.1
@@ -57,6 +58,7 @@ live_loop :beep do
   sleep bar/1
   play degree(:i, :A3, :minor), attack: 0.009,  release: 0.1, amp: 1.5
   sleep bar/1
+  end
   end
   end
 end

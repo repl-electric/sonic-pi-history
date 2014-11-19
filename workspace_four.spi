@@ -19,7 +19,7 @@ end
 
 live_loop :piano do
   sync :start
-  with_fx :echo do
+  with_fx :reverb do
   sample p1_s
   end
 end

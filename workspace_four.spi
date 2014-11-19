@@ -29,7 +29,7 @@ live_loop :beep do
   play degree(:i, :A3, :minor), attack: 0.005, release: 0.35, amp: 1.5
   sleep bar/8
   play degree(:i, :A3, :minor), attack: 0.005, release: 0.35, amp: 1.5
-  sleep bar/4
+  sleep bar/8
   #end
   end
 end

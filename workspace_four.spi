@@ -56,31 +56,31 @@ live_loop :dark do
 end
 
 define :beeper do |note, direction|
-  use_synth :mod_dsaw #:mod_dsaw #:mod_saw
-  use_synth_defaults detune: 0.0, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 0.2, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.01, attack_level: 0.8 
-  with_fx :lpf, cutoff: 100 do
+  use_synth :supersaw #:mod_dsaw #:mod_saw
+  use_synth_defaults detune: 0.01, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 0.2, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.01, attack_level: 0.8 
+  #with_fx :lpf, cutoff: 100 do
   with_fx :echo, phase: bar, max_phase: 1 do
   
-  play note, attack: 0.1,  pan: 0.8*direction
+  play note, attack: 0.09,  pan: 0.8*direction
   sleep bar/2
-  play note, attack: 0.1,  pan: 0.7*direction
+  play note, attack: 0.09,  pan: 0.7*direction
   sleep bar/2
-  play note, attack: 0.1,  pan: 0.6*direction
+  play note, attack: 0.09,  pan: 0.6*direction
   sleep bar/2
-  play note, attack: 0.1,  pan: 0.5*direction
+  play note, attack: 0.09,  pan: 0.5*direction
   sleep bar/2 
   
-  play note, attack: 0.1, pan: 0.4*direction
+  play note, attack: 0.01, pan: 0.4*direction
   sleep bar/2
-  play note, attack: 0.15, pan: 0.3*direction
+  play note, attack: 0.05, pan: 0.3*direction
   sleep bar/2
-  play note, attack: 0.17,  pan: 0.2*direction
+  play note, attack: 0.07,  pan: 0.2*direction
   sleep bar/2
-  play note, attack: 0.19,  amp: 1.5, pan: 0.1*direction
+  play note, attack: 0.09,  amp: 1.5, pan: 0.1*direction
   sleep bar/2
   
   sleep bar
-  end
+  #end
   end
 end
 
@@ -88,20 +88,20 @@ end
 live_loop :beep do
  sync :bar
  @direction = rand_i(-1..1)
- beeper [degree(1, :A3, :minor), 
-         degree(5, :A2, :minor), 
-         degree(6, :A2, :minor),
-         degree(3, :A2, :minor)].choose, @direction
+ beeper [chord_degree(1, :A3, :minor), 
+         chord_degree(5, :A2, :minor), 
+         chord_degree(6, :A2, :minor),
+         chord_degree(3, :A2, :minor)].choose, @direction
          end
 
          
  live_loop :beep2 do
  sync :bar
  #sleep 0.025
- beeper [degree(1, :A3, :minor), 
-         degree(5, :A2, :minor), 
-         degree(6, :A2, :minor),
-         degree(3, :A2, :minor)].choose, @direction<0 ? 1 :-1
+ beeper [chord_degree(1, :A3, :minor), 
+         chord_degree(5, :A2, :minor), 
+         chord_degree(6, :A2, :minor),
+         chord_degree(3, :A2, :minor)].choose, @direction<0 ? 1 :-1
          end
         
          

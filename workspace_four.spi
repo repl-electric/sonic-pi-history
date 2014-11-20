@@ -21,7 +21,7 @@ end
 live_loop :drum do
   sync :quart
   with_fx :lpf do
-    sample :elec_triangle, amp: 0.1
+    sample :elec_triangle, amp: 0.3
   end
 end
 

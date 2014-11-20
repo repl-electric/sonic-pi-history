@@ -91,7 +91,13 @@ live_loop :beep do
          chord_degree(5, :A2, :minor), 
          chord_degree(6, :A2, :minor),
          chord_degree(3, :A2, :minor)].choose, direction
-end
+
+         beeper [chord_degree(1, :A3, :minor), 
+         chord_degree(5, :A2, :minor), 
+         chord_degree(6, :A2, :minor),
+         chord_degree(3, :A2, :minor)].choose, direction
+
+         end
 
 live_loop :deep do
   use_synth :fm

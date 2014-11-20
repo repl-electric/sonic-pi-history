@@ -97,9 +97,9 @@ live_loop :beep do
  sync :bar
  @direction = rand_i(-1..1)
  beeper [degree(1, :A3, :minor), 
-         degree(1, :A2, :minor), 
-         degree(1, :A2, :minor),
-         degree(1, :A2, :minor)].choose, @direction
+         degree(6, :A2, :minor), 
+         degree(6, :A2, :minor),
+         degree(6, :A2, :minor)].choose, @direction
          end
 
          

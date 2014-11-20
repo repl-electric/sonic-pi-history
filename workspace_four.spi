@@ -79,7 +79,7 @@ define :beeper do |note, direction|
 
   sleep bar/2
   play note, attack: 0.07,  pan: 0.2*direction
-  sample p_s, amp: 12, rate: -0.8
+  sample p_s, amp: 22, rate: -0.8
 
   sleep bar/2
   play note, attack: 0.09,  amp: 1.5, pan: 0.1*direction

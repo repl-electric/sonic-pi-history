@@ -90,7 +90,7 @@ live_loop :beep do
  @direction = rand_i(-1..1)
  beeper [degree(1, :A3, :minor), 
          degree(5, :A2, :minor), 
-         chord_degree(6, :A2, :minor),
+         degree(6, :A2, :minor),
          chord_degree(3, :A2, :minor)].choose, @direction
          end
 

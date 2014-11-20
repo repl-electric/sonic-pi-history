@@ -70,13 +70,13 @@ define :beeper do |note, direction|
   play note, attack: 0.1,  pan: 0.5*direction
   sleep bar/2 
   
-  play note, attack: 0.01, pan: 0.4*direction
+  play note, attack: 0.1, pan: 0.4*direction
   sleep bar/2
-  play note, attack: 0.05, pan: 0.3*direction
+  play note, attack: 0.15, pan: 0.3*direction
   sleep bar/2
-  play note, attack: 0.07,  pan: 0.2*direction
+  play note, attack: 0.17,  pan: 0.2*direction
   sleep bar/2
-  play note, attack: 0.09,  amp: 1.5, pan: 0.1*direction
+  play note, attack: 0.19,  amp: 1.5, pan: 0.1*direction
   sleep bar/2
   
   sleep bar

@@ -113,4 +113,6 @@ live_loop :deep do
 end
 
 begone :deep
-begone :beep
+#begone :beep
+begone :piano
+begone :dark

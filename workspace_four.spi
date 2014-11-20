@@ -55,7 +55,7 @@ live_loop :dark do
   15.times{ sync :start }
 end
 
-define :beeper do |note, direction|
+define :beeper do |note, direction, room_size|
   use_synth :mod_tri #:mod_dsaw #:mod_saw
   use_synth_defaults detune: 0.0, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 0.2, attack: 0.01, decay: 0.15, amp: 2.0, release: 0.01, attack_level: 0.8 
 
@@ -102,13 +102,16 @@ define :beeper do |note, direction|
 end
 
 @direction = 1
+room_size = 0
 live_loop :beep do
- sync :bar
+  sync :bar
  @direction = rand_i(-1..1)
  beeper [chord_degree(1, :A3, :minor).choose, 
          chord_degree(1, :A3, :minor).choose, 
          chord_degree(1, :A3, :minor).choose,
-         chord_degree(1, :A3, :minor).choose].choose, @direction
+         chord_degree(1, :A3, :minor).choose].choose, @direction, room_size
+         
+         room_size += 1
          end
 
          

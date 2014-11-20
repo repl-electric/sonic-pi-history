@@ -62,7 +62,7 @@ define :beeper do |note, direction|
   with_fx :echo, phase: bar*1.1, max_phase: 1 do
   
   play note, attack: 0.09,  pan: 0.8*direction
-  with_synth(:bnoise){play note, attack: 0.09,  pan: 0.8*direction}
+  with_synth(:cnoise){play note, attack: 0.09,  pan: 0.8*direction}
   sleep bar/2
   play note, attack: 0.09,  pan: 0.7*direction
   with_synth(:bnoise){play note, attack: 0.09,  pan: 0.8*direction}
@@ -72,7 +72,6 @@ define :beeper do |note, direction|
   sleep bar/2
   play note, attack: 0.09,  pan: 0.5*direction
   with_synth(:bnoise){play note, attack: 0.09,  pan: 0.8*direction}
-
   sleep bar/2 
   
   play note, attack: 0.01, pan: 0.4*direction

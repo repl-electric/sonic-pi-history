@@ -59,6 +59,7 @@ define :beeper do |note, direction|
   use_synth :mod_tri #:mod_dsaw #:mod_saw
   use_synth_defaults detune: 0.0, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 0.2, attack: 0.01, decay: 0.15, amp: 2.0, release: 0.01, attack_level: 0.8 
 
+  with_fx :reverb do
   with_fx :lpf do
   with_fx :distortion, distort: 0.1, cutoff: 90 do
   with_fx :echo, phase: bar*1.1, max_phase: 1 do
@@ -94,6 +95,7 @@ define :beeper do |note, direction|
   sleep bar/2
   
   sleep bar
+  end
   end
   end
   end

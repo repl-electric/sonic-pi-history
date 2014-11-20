@@ -94,7 +94,7 @@ define :beeper do |note, direction, room_size|
 
   sleep bar/2
   
-  sleep bar
+  #sleep bar
   end
   end
   #end

@@ -92,7 +92,7 @@ define :beeper do |note, direction|
   sleep bar/2
   
   sleep bar
- end
+  end
   end
 end
 

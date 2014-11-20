@@ -123,8 +123,8 @@ live_loop :deep do
   #end
 end
 
-begone :deep
+#begone :deep
 #begone :beep
 #begone :piano
 #begone :dark
-begone :radio
+#begone :radio

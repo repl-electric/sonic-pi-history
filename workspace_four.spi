@@ -98,9 +98,9 @@ live_loop :beep do
  live_loop :beep2 do
  sync :bar
  #sleep 0.025
- beeper [chord_degree(1, :A3, :minor), 
-         chord_degree(5, :A2, :minor), 
-         chord_degree(6, :A2, :minor),
+ beeper [degree(1, :A3, :minor), 
+         degree(5, :A2, :minor), 
+         degree(6, :A2, :minor),
          chord_degree(3, :A2, :minor)].choose, @direction<0 ? 1 :-1
          end
         

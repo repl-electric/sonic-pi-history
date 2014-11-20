@@ -111,3 +111,6 @@ live_loop :deep do
   #play degree(1, :A1, :minor), release: bar*4, decay: bar*4, amp: 0.2
   #end
 end
+
+begone :deep
+begone :beep

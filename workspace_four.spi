@@ -103,15 +103,6 @@ live_loop :beep do
          end
 
          
- live_loop :beep2 do
- sync :bar
- #sleep 0.025
- beeper [degree(1, :A3, :minor), 
-         degree(5, :A2, :minor), 
-         degree(6, :A2, :minor),
-         degree(3, :A2, :minor)].choose, @direction<0 ? 1 :-1
-         end
-        
          
 live_loop :deep do
   use_synth :fm

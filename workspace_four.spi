@@ -1,5 +1,14 @@
 ["piano"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
+module Piano
+  ROOT ="/Users/josephwilk/Dropbox/repl-electric/samples/pi/9133__neatonk__misstereopiano/"
 
+  FILE_FORMAT = " 148532__neatonk__piano-med-"
+  TYPE = ".wav"
+
+  def self.a3
+    ROOT + FILE_FORMAT + "a3" + TYPE
+  end
+end
 bar = 1/2.0
 quart = 2*bar
 

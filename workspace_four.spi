@@ -93,7 +93,7 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
 
   sleep bar/2
   
-#  sleep bar
+  sleep bar
   end
   end
   end

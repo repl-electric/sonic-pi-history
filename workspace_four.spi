@@ -5,8 +5,8 @@ module Piano
   FILE_FORMAT = "148532__neatonk__piano-med-"
   TYPE = ".wav"
 
-  def self.a3
-    ROOT + FILE_FORMAT + "a3" + TYPE
+  def self.note(n)
+    ROOT + FILE_FORMAT + n.downcase + TYPE
   end
 end
 bar = 1/2.0

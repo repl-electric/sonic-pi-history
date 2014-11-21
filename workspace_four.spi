@@ -51,14 +51,15 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-#  [p_a2_s, p_c4_s, p_c3_s].each do |n|
-  sync :quart
+  [chord_degree(:i, :A4, :minor].each do |n|
+  sync :start
   use_synth :beep
   
   with_fx :reverb do
+   play n, amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
  # sample n, amp: 2
-#  end
+  end
   end
 end
 

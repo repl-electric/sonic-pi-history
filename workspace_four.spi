@@ -80,7 +80,7 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
   #sample p_s, amp: 1, rate: 0.8
 
   sleep bar/2
-  play note, attack: attack1 pan: 0.3*direction
+  play note, attack: attack1, pan: 0.3*direction
   #sample p_s, amp: 1, rate: 0.8
 
   sleep bar/2

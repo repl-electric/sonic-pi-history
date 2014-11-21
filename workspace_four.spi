@@ -64,14 +64,14 @@ live_loop :piano2 do
 
     with_fx :reverb, room: 0.5 do
   #  with_fx :distortion, mix: 0.1 do
-      play chord_degree(6, :A1, :melodic_minor_desc), amp: 0.5, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
+      play chord_degree(6, :A1, :major), amp: 0.5, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
    # end
     end
 
     2.times{sync :start}
     with_fx :reverb, room: 0.3 do
     #with_fx :distortion, mix: 0.1 do
-      play chord_degree(4, :A1, :melodic_minor_desc), amp: 0.5, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
+      play chord_degree(4, :A1, :major), amp: 0.5, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
    # end
     end
 
@@ -83,9 +83,9 @@ live_loop :dark do
   sync :start
   with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 4, rate: 0.99}
   sample :ambi_lunar_land, rate: 0.25, amp: 0.9
-  play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
+  play degree(:i, :A1, :major), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
   use_synth :noise
-  play degree(:i, :A1, :minor), release: bar*4, amp: 0.1
+  play degree(:i, :A1, :major), release: bar*4, amp: 0.1
   24.times{ sync :start }
 end
 
@@ -135,7 +135,7 @@ live_loop :beep do
   # degree(6, :A2, :major)
 
  
- n =  [degree(6, :A2, :minor), degree(4, :A2, :minor)].choose
+ n =  [degree(6, :A2, :major), degree(4, :A2, :major)].choose
  #sync :start
   
  4.times do
@@ -152,7 +152,7 @@ live_loop :deep do
   use_synth :fm
   sync :start
   with_fx :slicer, phase: bar*4 do
-    play degree(1, :A1, :minor), release: bar*4, decay: bar*4, amp: 0.2
+    play degree(1, :A1, :major), release: bar*4, decay: bar*4, amp: 0.2
   end
 end
 

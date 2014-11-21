@@ -4,6 +4,8 @@ quart = 2*bar
 set_volume! 1.0
 p_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
+piano_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
+
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
@@ -40,7 +42,8 @@ end
 live_loop :piano do
   sync :quart
   with_fx :reverb do
-    sample p_s, amp: 2
+#    sample p_s, amp: 2
+    sample piano_c4_s
   end
 end
 

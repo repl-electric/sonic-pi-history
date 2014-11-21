@@ -4,6 +4,8 @@ quart = 2*bar
 set_volume! 1.0
 pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 
+
+p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
 p1_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
 piano_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
 
@@ -43,7 +45,7 @@ end
 live_loop :piano do
   sync :quart
   with_fx :reverb do
-    sample pa_s, amp: 2
+    sample p_c3_s, amp: 2
   end
 end
 
@@ -66,7 +68,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
   
   with_fx :reverb do |r|
-  with_fx :lpf, cutoff: cutoff do
+  with_fx :lpf, cutoff: cutoff, cutoff_slide: 50 do
   with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
  6.times do |n|

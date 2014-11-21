@@ -68,7 +68,10 @@ live_loop :piano do
         sample Piano.note(:a5), amp: 4
         sleep bar/4
         sample Piano.note(:a6), amp: 4
+        sleep bar/4
+        sample Piano.note(:a5), amp: 4
 
+        
         #        sample pa_s, amp: 2
   end
 end

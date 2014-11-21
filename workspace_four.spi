@@ -77,6 +77,8 @@ live_loop :piano2 do
   with_fx :reverb, room: 0.3 do
     with_fx :distortion, mix: 0.2 do
       play chord_degree(4, :A1, :major).first, amp: 1.1, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.0
+      play chord_degree(4, :A1, :major).first-1, amp: 1.1, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.0
+
     end
   end
   end

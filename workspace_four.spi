@@ -63,10 +63,10 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
   with_fx :reverb do |r|
   with_fx :lpf, cutoff: cutoff do
 #  with_fx :echo, phase: bar*1.1, max_phase: 1, mix: 0.5 do
-  with_fx :distortion, distort: 0.1, cutoff: 90 do
+  with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
  3.times do 
-  control(r, room: 0.1)
+  control(r, room: 0.1) ; control(d, distort: 0.1)
   play note-1, attack: 0.001,  pan: 0.8*direction
   sleep bar/2
   control(r, room: 0.3)

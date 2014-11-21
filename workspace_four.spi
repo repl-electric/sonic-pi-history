@@ -51,7 +51,9 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  [chord_degree(:i, :A4, :minor)].each do |n|
+  [chord_degree(:i, :A4, :minor),
+  chord_degree(:ii, :A4, :minor)
+  ].each do |n|
   sync :start
   use_synth :beep
   

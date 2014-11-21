@@ -77,7 +77,7 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
 #  with_fx :reverb, room: 0.8 do
   control(r, room: 0.8)
  
-    play note+2, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: 0.5 
+    play note+3, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: 0.5 
 #  end
 #  with_synth(:pnoise){play note, release: bar/2, amp: 0.3,  pan: 0.8*direction}
   sleep bar/2

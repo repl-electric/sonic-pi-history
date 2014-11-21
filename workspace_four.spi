@@ -43,7 +43,7 @@ end
 
 live_loop :piano do
   sync :quart
-  use_synth :sine
+  use_synth :beep
   #with_fx :reverb do
    play :A3, amp: 8
 #    sample pa_s, amp: 2

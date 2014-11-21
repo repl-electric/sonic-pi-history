@@ -50,8 +50,6 @@ end
 
 live_loop :piano2 do
 #  [p_a2_s, p_c4_s, p_c3_s].each do |n|
- 
-
   sync :start
   use_synth :beep
   

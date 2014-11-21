@@ -67,7 +67,7 @@ live_loop :piano2 do
     #end
 
     
-    with_fx :reverb, room: 0.9 do
+    with_fx :reverb, room: 0.5 do
       play n, amp: 1.0, attack: 0.001, release: 1.0, decay: 1.0, sustain: 1
     end
   end

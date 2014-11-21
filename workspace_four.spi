@@ -108,7 +108,7 @@ live_loop :beep do
  
  a1,a2 = *[0.01, 0.1].shuffle
  
- beeper degree(3, :A3, :major), @direction, room_size, 120, a1,a2
+ beeper degree(3, :A3, :major), @direction, 1, 120, a1,a2
  room_size += 1
 end
      

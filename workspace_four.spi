@@ -67,6 +67,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
 
  6.times do |n|
   control(r, room: 0.1) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
+  sample :elec_fuzz_tomc
   sleep bar/2
   control(r, room: 0.3, distort: 0.5); play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
   sleep bar/2
@@ -75,8 +76,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   control(r, room: 1.0); control(d, distort: 0.0); play note, attack: 0.001,  pan: 0.5*direction, detune: (detune_factor2+(n*0.001))
   sleep bar/2
 end
-  sleep bar/2
-   
+  sleep bar/2  
   end
  # end
   end

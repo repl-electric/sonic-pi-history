@@ -122,7 +122,7 @@ live_loop :sawnoise do
   sync :start
   use_synth :pnoise
   with_fx :hpf, cutoff: 120 do
-    play degree([1,3].choos, :A3, :minor), release: bar*4, decay: bar*4, amp: 0.9
+    play degree([1,3].choose, :A3, :minor), release: bar*4, decay: bar*4, amp: 0.9
   end
 end
 

@@ -119,9 +119,8 @@ live_loop :deep do
 end
 
 live_loop :sawnoise do
-  sync :start
+  3.times{sync :start}
   use_synth :supersaw
-  
   with_fx :reverb do
   with_fx :echo do
   with_fx :hpf, cutoff: 100 do

@@ -53,7 +53,7 @@ end
 live_loop :piano2 do
   use_synth :zawa
   [
-    chord_degree(6, :A1, :minor), chord_degree(3, :A2, :minor), chord_degree(5, :A2, :minor)
+    chord_degree(7, :A1, :minor), chord_degree(3, :A2, :minor), chord_degree(5, :A2, :minor)
   ].each do |n|
   2.times{  sync :start}
   with_fx :reverb, room: 1 do

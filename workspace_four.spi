@@ -51,7 +51,7 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  use_synth :saw
+  use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do

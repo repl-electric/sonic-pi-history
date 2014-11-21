@@ -57,14 +57,13 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  use_synth :tri #prophet
+  use_synth :prophet
   sync :start
 
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 3 do |r|
       with_fx :distortion, mix: 0.5 do
         play chord_degree(1, :A2, :major).take(3), amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
-
 
         #        play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
         #       sleep bar/2

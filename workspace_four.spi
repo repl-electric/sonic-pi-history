@@ -51,8 +51,8 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  [chord_degree(4,   :A2, :minor),
-   chord_degree(4, :A2, :minor)
+  [chord_degree(1, :A3, :minor),
+   chord_degree(1, :A3, :minor)
   ].each do |n|
 
   2.times{  sync :start}

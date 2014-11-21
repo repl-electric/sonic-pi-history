@@ -143,20 +143,20 @@ live_loop :deep do
 end
 
 n = 0
-live_loop :sawnoise do
-  use_synth :prophet
-  2.times{sync :start}
+#live_loop :sawnoise do
+#  use_synth :prophet
+#  2.times{sync :start}
 
-  1.times do
-    with_fx :reverb, room: 1 do
-      with_fx :reverb, room: 1 do
-        with_fx :reverb, room: 1 do
-          with_fx :echo, decay: 1 do
-            with_fx :hpf, cutoff: 115 do
-              play degree([1,3].choose, :A2, :minor), release: bar*4, decay: bar*4, amp: 1.0
-  end end end end end end
-  n+= 1
-end
+#  1.times do
+#    with_fx :reverb, room: 1 do
+#      with_fx :reverb, room: 1 do
+#        with_fx :reverb, room: 1 do
+#          with_fx :echo, decay: 1 do
+#            with_fx :hpf, cutoff: 115 do
+#              play degree([1,3].choose, :A2, :minor), release: bar*4, decay: bar*4, amp: 1.0
+#  end end end end end end
+#  n+= 1
+#end
 
 #begone :deep
 #begone :vio

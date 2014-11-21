@@ -59,7 +59,7 @@ live_loop :piano2 do
     with_fx :distortion, mix: 0.5 do
       play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
       sleep bar/2
-      with_synth(:dull_bell){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
+      with_synth(:dsaw){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
     end
   end
 

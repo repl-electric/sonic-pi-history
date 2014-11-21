@@ -120,7 +120,7 @@ end
 
 n = 0
 live_loop :sawnoise do
-  use_synth :supersaw
+  use_synth :prophet
   2.times{sync :start}
   with_fx :reverb do
   with_fx :echo do

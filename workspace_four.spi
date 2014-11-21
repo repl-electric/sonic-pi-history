@@ -58,8 +58,8 @@ live_loop :piano2 do
   with_fx :reverb do
     play :A3
 
-  sample n, amp: 2
-  end
+ # sample n, amp: 2
+#  end
   end
 end
 

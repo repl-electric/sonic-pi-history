@@ -62,7 +62,6 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   
   with_fx :reverb do |r|
   with_fx :lpf, cutoff: cutoff do
-#  with_fx :echo, phase: bar*1.1, max_phase: 1, mix: 0.5 do
   with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
  6.times do |n|
@@ -77,7 +76,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   sample :elec_soft_kick, rate: 1, start: 0.1
 
   sleep bar/2
-  control(r, room: 1.0); control(d, distort: 0.0); play note, attack: 0.001,  pan: 0.5*direction, detune: (detune_factor2+(n*0.001))
+  control(r, room: 1.0); control(d, distort: 0.0); play note, attack: 0.01,  pan: 0.5*direction, detune: (detune_factor2+(n*0.001))
   sample :elec_soft_kick, rate: 1, start: 0.1
 
   sleep bar/2

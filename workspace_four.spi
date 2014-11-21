@@ -116,8 +116,17 @@ live_loop :beep do
   sync :bar
  @direction = rand_i(-1..1)
  
+    chord_degree(1, :A1, :minor), chord_degree(3, :A1, :minor), 
+    chord_degree(4, :A1, :minor), chord_degree(1, :A1, :minor), 
+    chord_degree(6, :A1, :minor), chord_degree(5, :A1, :minor)
+ 
+ 
+ 
+ []
  #-10.0, -5.0
 # degree(6, :A2, :major)
+  [degree(1, :A3, :major), degree(3, :A3, :major)]
+
  beeper degree(1, :A3, :major), @direction, 1, @cutoff, 0.0, 0.0 #-0.005
  room_size += 1
 end

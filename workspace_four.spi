@@ -57,13 +57,12 @@ live_loop :piano2 do
     chord_degree(4, :A2, :minor), chord_degree(1, :A2, :minor), 
     chord_degree(6, :A2, :minor), chord_degree(5, :A2, :minor)
   ].each do |n|
-  2.times{  sync :start}
+  4.times{  sync :start}
   with_fx :reverb, room: 1 do
     play n, amp: 1.0, attack: 0.001, release: 1.0, decay: 1.0, sustain: 1
   end
   end
 end
-
 
 live_loop :dark do
   use_synth :beep

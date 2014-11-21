@@ -65,7 +65,7 @@ live_loop :piano do
         play degree(4, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
         sleep bar/4
         play degree(1, :"A#{dice(6)}", :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
-        sample Piano.note(:a5), amp: 4
+        sample Piano.note(:a6), amp: 4
         #        sample pa_s, amp: 2
   end
 end

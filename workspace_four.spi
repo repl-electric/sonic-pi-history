@@ -46,7 +46,7 @@ live_loop :piano do
   use_synth :beep
   with_fx :reverb do
     sample pa_s, amp: 2
-    play degree([4,5].choose, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play degree([4,5, 6].choose, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
     play degree(4, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4

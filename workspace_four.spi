@@ -52,30 +52,30 @@ end
 
 live_loop :piano2 do
   use_synth :saw
-    sync :start
+  sync :start
 
-    with_fx :reverb, room: 0.9 do
+  with_fx :reverb, room: 0.9 do
     with_fx :distortion, mix: 0.1 do
       play chord_degree(6, :A1, :major), amp: 1.0, attack: 0.1, release: 0.5, decay: 2.0, sustain: 2.0
     end
-    end
+  end
 
-    4.times{sync :start}
+  4.times{sync :start}
 
-    with_fx :reverb, room: 0.5 do
+  with_fx :reverb, room: 0.5 do
     with_fx :distortion, mix: 0.1 do
       play chord_degree(7, :A1, :major), amp: 1.0, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
     end
-    end
+  end
 
-    2.times{sync :start}
-    with_fx :reverb, room: 0.3 do
+  2.times{sync :start}
+  with_fx :reverb, room: 0.3 do
     with_fx :distortion, mix: 0.1 do
       play chord_degree(6, :A1, :major), amp: 1.0, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
     end
-    end
+  end
 
-    3.times{sync :start}  
+  3.times{sync :start}
 end
 
 live_loop :dark do
@@ -129,22 +129,22 @@ end
 @direction = 1
 room_size = 0
 live_loop :beep do
-#  sync :bar
+  #  sync :bar
 
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
- 
- n =  [degree(6, :A2, :major), degree(4, :A2, :major)].choose
- #sync :start
-  
- 4.times do
- @direction = rand_i(-1..1)
+
+  n =  [degree(6, :A2, :major), degree(4, :A2, :major)].choose
+  #sync :start
+
+  4.times do
+    @direction = rand_i(-1..1)
 
     sync :bar
-    beeper n, @direction, 1, 100, 0, 0.005 #0, -5.0
+    beeper n, @direction, 1, 100, 0, -5.0
     room_size += 1
-    end
+  end
 
 end
 

@@ -65,7 +65,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
 #  with_fx :echo, phase: bar*1.1, max_phase: 1, mix: 0.5 do
   with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
- 4.times do 
+ 6.times do 
   control(r, room: 0.1) ; control(d, distort: 0.5)
   play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
   sleep bar/2
@@ -93,12 +93,6 @@ room_size = 0
 live_loop :beep do
   sync :bar
  @direction = rand_i(-1..1)
- 
- #if @direction == 1
- # a1,a2 = *[0.01, 0.1]
- # else
-  a2,a1 = *[0.01, 0.2]
-# end
  
  #-10.0, -5.0
  beeper degree(6, :A2, :major), @direction, 1, 120, 0.0, -5.0 #-0.005

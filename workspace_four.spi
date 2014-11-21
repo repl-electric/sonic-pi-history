@@ -51,17 +51,17 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
- 2.times{sync :start}
+  2.times{sync :start}
   use_synth :dsaw
   [
-  #  chord_degree(1, :A1, :minor), chord_degree(2, :A1, :minor),
-  #  chord_degree(4, :A1, :minor), chord_degree(1, :A1, :minor),
-  #  chord_degree(6, :A1, :minor), chord_degree(5, :A1, :minor)
+    #  chord_degree(1, :A1, :minor), chord_degree(2, :A1, :minor),
+    #  chord_degree(4, :A1, :minor), chord_degree(1, :A1, :minor),
+    #  chord_degree(6, :A1, :minor), chord_degree(5, :A1, :minor)
   ].each do |n|
     2.times{sync :start}
 
     if n == chord_degree(5, :A1, :minor)
-    with_fx(:echo){ with_synth(:supersaw){play degree(5, :A3, :minor), amp: 1, sustain: 1, release: 1, attack: 1}}
+      with_fx(:echo){ with_synth(:supersaw){play degree(5, :A3, :minor), amp: 1, sustain: 1, release: 1, attack: 1}}
     else
       #with_synth(:supersaw){play degree(1, :A1, :minor), amp: 1, sustain: 2, release: 1, attack: 1}
     end
@@ -91,7 +91,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   with_fx :reverb do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
-      
+
         n_cut = rrand(50,cutoff);
         control(c, cutoff: n_cut);
         6.times do |n|
@@ -102,7 +102,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           sample :elec_soft_kick, rate: 1, start: 0.1
 
           n_cut += cutoff/(4*6); control(c, cutoff: n_cut);
-           
+
           sleep bar/2
           control(r, room: 0.8); play note, attack: 0.01, pan: 0.6*direction, detune: detune_factor2
           sample :elec_soft_kick, rate: 1, start: 0.1
@@ -134,7 +134,7 @@ live_loop :beep do
   ].each do |n|
     @direction = rand_i(-1..1)
 
-    beeper n, @direction, 1, 100, 0.0, -0.005
+    beeper n, @direction, 1, 100, -10.0, -5.0
     room_size += 1
   end
 end

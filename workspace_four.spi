@@ -50,7 +50,7 @@ end
 live_loop :dark do
   use_synth :beep
   sync :start
-    @cutoff = 100
+   # @cutoff = 100
   with_fx(:reverb, room: 1, mix: 1){sample p1_s, amp: 4, rate: 0.99}
   sample :ambi_lunar_land, rate: 0.25, amp: 0.9
   play degree(:i, :A1, :minor), attack: 0.1, release: bar*4, decay: bar*4, amp: 8

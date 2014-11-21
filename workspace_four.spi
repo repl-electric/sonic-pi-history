@@ -77,18 +77,17 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
  sleep bar/2
  
 
-  play note-2, attack: attack1,  pan: 0.8*direction
+  play note-2, attack: attack2,  pan: 0.8*direction
 #  with_synth(:pnoise){play note, release: bar/2, amp: 0.3,  pan: 0.8*direction}
   sleep bar/2
-  play note-2, attack: attack1,  pan: 0.7*direction
+  play note-2, attack: attack2,  pan: 0.7*direction
 #  with_synth(:pnoise){play note, release: bar/2,  amp: 0.3,  pan: 0.8*direction}
   sleep bar/2
-  play note+2, attack: attack2,  pan: 0.6*direction
+  play note+2, attack: attack1,  pan: 0.6*direction
 #  with_synth(:pnoise){play note, release: bar/2, amp: 0.3,  pan: 0.8*direction}
   sleep bar/2
-  play note+2, attack: attack2,  pan: 0.5*direction
+  play note+2, attack: attack1,  pan: 0.5*direction
 #  with_synth(:pnoise){play note, release: bar/2, amp: 0.3,  pan: 0.8*direction}
-
  sleep bar/2
  
 

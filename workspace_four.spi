@@ -113,7 +113,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
 
           sleep bar/2
         end
-        sleep bar/2
+        #sleep bar/2
       end
     end
   end

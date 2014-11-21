@@ -54,11 +54,11 @@ live_loop :piano2 do
   use_synth :saw
     sync :start
 
-    with_fx :reverb, room: 0.9 do
-    with_fx :distortion, mix: 0.1 do
+  #  with_fx :reverb, room: 0.9 do
+#    with_fx :distortion, mix: 0.1 do
       play chord_degree(5, :A1, :major), amp: 1.5, attack: 0.1, release: 0.5, decay: 2.0, sustain: 2.0
-    end
-    end
+ #   end
+ #   end
 
     4.times{sync :start}
 

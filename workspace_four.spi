@@ -49,12 +49,12 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  [p_a2_s].each |n| do
+  [p_a2_s].each do |n|
   sync :start
   with_fx :reverb do
     sample n, amp: 2
   end
-  end
+
   end
 end
 

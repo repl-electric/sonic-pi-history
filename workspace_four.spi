@@ -45,7 +45,7 @@ end
 live_loop :piano do
   sync :quart
   with_fx :reverb do
-    sample p_c3_s, amp: 2
+    sample pa_s, amp: 2
   end
 end
 

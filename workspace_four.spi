@@ -67,7 +67,7 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
 
  3.times do 
   control(r, room: 0.1) ; control(d, distort: 0.1)
-  play note-1, attack: 0.001,  pan: 0.8*direction
+  play note-1, attack: 0.001,  pan: 0.8*direction,  decay: (bar/2)*4, release: bar*2
   sleep bar/2
   control(r, room: 0.3);
  

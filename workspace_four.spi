@@ -66,7 +66,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
   
   with_fx :reverb do |r|
-  with_fx :lpf, cutoff: cutoff, cutoff_slide: 50 do
+  with_fx :lpf, cutoff: cutoff, cutoff_slide: 100 do
   with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
  6.times do |n|

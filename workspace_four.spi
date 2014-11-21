@@ -52,7 +52,7 @@ end
 
 live_loop :piano2 do
   2.times{sync :start}
-  use_synth :saw
+  use_synth :dull_bell
   [
       chord_degree(1, :A1, :minor), chord_degree(2, :A1, :minor),
     #  chord_degree(4, :A1, :minor), chord_degree(1, :A1, :minor),

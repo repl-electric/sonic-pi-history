@@ -2,7 +2,7 @@
 module Piano
   ROOT ="/Users/josephwilk/Dropbox/repl-electric/samples/pi/9133__neatonk__misstereopiano/"
 
-  FILE_FORMAT = "148532__neatonk__piano-med-"
+  FILE_FORMAT = "neatonk__piano-med-"
   TYPE = ".wav"
 
   def self.note(n)

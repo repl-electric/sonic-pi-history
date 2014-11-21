@@ -51,12 +51,11 @@ live_loop :piano do
     play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-
   end
 end
 
 live_loop :piano2 do
-  use_synth :prophet
+  use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do

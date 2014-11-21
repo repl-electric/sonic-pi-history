@@ -123,10 +123,10 @@ live_loop :sawnoise do
 end
 
 begone :deep
-begone :vio
-begone :deep
+#begone :vio
+#begone :deep
 #begone :beep
-begone :piano
+#begone :piano
 begone :dark
 begone :radio
 begone :sawnoise

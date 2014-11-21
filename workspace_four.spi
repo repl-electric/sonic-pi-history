@@ -100,7 +100,7 @@ live_loop :beep do
   a2,a1 = *[0.01, 0.2]
 # end
  
- beeper degree(6, :A2, :major), @direction, 1, 120, -0.009 #-0.005
+ beeper degree(6, :A2, :major), @direction, 1, 120, -0.01 #-0.005
  room_size += 1
 end
      

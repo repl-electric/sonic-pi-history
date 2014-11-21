@@ -117,9 +117,9 @@ live_loop :beep do
  
  #-10.0, -5.0
 # degree(6, :A2, :major)
-  [degree(1, :A2, :major), degree(3, :A2, :major),
-   degree(4, :A2, :major), degree(1, :A2, :major),
-   degree(6, :A2, :major), degree(5, :A2, :major)
+  [degree(6, :A2, :major), degree(6, :A2, :major),
+   degree(6, :A2, :major), degree(6, :A2, :major),
+   degree(6, :A2, :major), degree(6, :A2, :major)
   
   ].each do |n|
    @direction = rand_i(-1..1)

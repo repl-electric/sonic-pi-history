@@ -55,7 +55,7 @@ live_loop :dark do
   15.times{ sync :start }
 end
 
-define :beeper do |note, direction, room_size, cutoff, detune_factor|
+define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_dsaw #:mod_saw
   use_synth_defaults detune: 0.0, sustain_level: 0.2, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8 
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
@@ -67,17 +67,17 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor|
 
  4.times do 
   control(r, room: 0.1) ; control(d, distort: 0.5)
-  play note, attack: 0.001,  pan: 0.8*direction, detune: 0.0
+  play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor
   sleep bar/2
   control(r, room: 0.3, distort: 0.5);
  
-  play note, attack: 0.001, pan: 0.7*direction, detune: 0.0
+  play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor
   sleep bar/2
   control(r, room: 0.8)
-  play note, attack: 0.001,  pan: 0.6*direction, detune: detune_factor
+  play note, attack: 0.001,  pan: 0.6*direction, detune: detune_factor2
   sleep bar/2
   control(r, room: 1.0); control(d, distort: 0.0)
-  play note, attack: 0.001,  pan: 0.5*direction, detune: (detune_factor+0.001)
+  play note, attack: 0.001,  pan: 0.5*direction, detune: (detune_factor2+0.001)
   sleep bar/2
 end
   sleep bar/2

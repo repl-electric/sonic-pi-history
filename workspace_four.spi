@@ -92,7 +92,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
 
         6.times do |n|
-          control(c, cutoff: rrand(70,cutoff)); control(r, room: 0.1) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
+          control(c, cutoff: lambda{rrand(70,cutoff)}); control(r, room: 0.1) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: 0.1
           sleep bar/2
           control(r, room: 0.3, distort: 0.5); play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1

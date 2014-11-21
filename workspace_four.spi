@@ -55,24 +55,24 @@ live_loop :piano2 do
     sync :start
 
     with_fx :reverb, room: 0.9 do
-#    with_fx :distortion, mix: 0.1 do
+    with_fx :distortion, mix: 0.1 do
       play chord_degree(5, :A1, :major).choose, amp: 1.0, attack: 0.1, release: 0.5, decay: 2.0, sustain: 2.0
- #   end
+    end
     end
 
     4.times{sync :start}
 
     with_fx :reverb, room: 0.5 do
-  #  with_fx :distortion, mix: 0.1 do
+    with_fx :distortion, mix: 0.1 do
       play chord_degree(6, :A1, :major).choose, amp: 1.0, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
-   # end
+    end
     end
 
     1.times{sync :start}
     with_fx :reverb, room: 0.3 do
-    #with_fx :distortion, mix: 0.1 do
+    with_fx :distortion, mix: 0.1 do
       play chord_degree(4, :A1, :major).choose, amp: 1.0, attack: 0.1, release: 0.5, decay: 1.0, sustain: 1.0
-   # end
+    end
     end
 
     3.times{sync :start}  

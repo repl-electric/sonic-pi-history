@@ -49,10 +49,16 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  [p_a2_s, p_c4_s, p_c3_s].each do |n|
+#  [p_a2_s, p_c4_s, p_c3_s].each do |n|
+ 
+
   sync :start
+  use_synth :beep
+  
   with_fx :reverb do
-    sample n, amp: 2
+    play :A3
+
+  sample n, amp: 2
   end
   end
 end

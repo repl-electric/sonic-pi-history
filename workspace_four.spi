@@ -57,7 +57,7 @@ end
 
 define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
   use_synth :mod_dsaw #:mod_saw
-  use_synth_defaults detune: 0.01, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8 
+  use_synth_defaults detune: 0.0, sustain_level: 0.1, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8 
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
   
   with_fx :reverb do |r|
@@ -67,17 +67,17 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
 
  3.times do 
   control(r, room: 0.1) ; control(d, distort: 0.1)
-  play note, attack: 0.001,  pan: 0.8*direction,  decay: (bar/2)*6, release: bar*6
+  play note, attack: 0.001,  pan: 0.8*direction,  decay: (bar/2)*6, release: bar*6, detune: 0.0
   sleep bar/2
   control(r, room: 0.3);
  
-  play note, attack: 0.001, pan: 0.7*direction
+  play note, attack: 0.001, pan: 0.7*direction, , detune: 0.01
   sleep bar/2
   control(r, room: 0.8)
-  play note, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: (bar/2)
+  play note, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: (bar/2), , detune: 0.02
   sleep bar/2
   control(r, room: 1.0); control(d, distort: 0.0)
-  play note, attack: 0.01,  pan: 0.5*direction, release: 0.5, decay: (bar/2)/2
+  play note, attack: 0.01,  pan: 0.5*direction, release: 0.5, decay: (bar/2)/2, , detune: 0.3
   sleep bar/2
 end
   sleep bar/2

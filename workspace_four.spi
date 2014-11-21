@@ -95,7 +95,7 @@ live_loop :beep do
  @direction = rand_i(-1..1)
  
  #-10.0, -5.0
- beeper degree(6, :A2, :major), @direction, 1, 100, 0.0, -0.005 #-0.005
+ beeper degree(6, :A2, :major), @direction, 1, 100, 0.0, -5.0 #-0.005
  room_size += 1
 end
 

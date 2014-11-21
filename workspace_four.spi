@@ -54,7 +54,7 @@ live_loop :piano2 do
   use_synth :beep
   
   with_fx :reverb do
-    play :A3
+    play :A3, amp: 2
 
  # sample n, amp: 2
 #  end

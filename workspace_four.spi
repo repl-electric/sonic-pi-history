@@ -59,7 +59,7 @@ live_loop :piano2 do
   ].each do |n|
   4.times{sync :start}
   with_fx :reverb, room: 1 do
-    play n, amp: 1.0, attack: 0.001, release: 2.0, decay: 2.0, sustain: 2
+    play n, amp: 2.0, attack: 0.001, release: 2.0, decay: 2.0, sustain: 2
   end
   end
 end

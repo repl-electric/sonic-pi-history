@@ -112,7 +112,7 @@ live_loop :sawnoise do
   use_synth :prophet
   2.times{sync :start}
 
-  4.times do
+  1.times do
   with_fx :reverb do
   with_fx :reverb do
   with_fx :reverb do
@@ -131,13 +131,6 @@ end
 #begone :dark
 #begone :radio
 #begone :sawnoise
-
-
-
-
-
-
-
 
 
 #3.times do 

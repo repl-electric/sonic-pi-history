@@ -105,7 +105,10 @@ room_size = 0
 live_loop :beep do
   sync :bar
  @direction = rand_i(-1..1)
- beeper degree(3, :A3, :major), @direction, room_size, 120, 0.01, 0.1
+ 
+ a1,a2 = *[0.01, 0.1].shuffle
+ 
+ beeper degree(3, :A3, :major), @direction, room_size, 120, a1,a2
  room_size += 1
 end
      

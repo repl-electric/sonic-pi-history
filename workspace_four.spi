@@ -59,8 +59,9 @@ live_loop :piano2 do
   ].each do |n|
   4.times{sync :start}
   
-  
+  if n == chord_degree(5, :A1, :minor){
   with_synth(:supersaw){play degree(6, :A3, :minor), amp: 1, sustain: 4, release: 1}
+  }
 
   
   with_fx :reverb, room: 1 do

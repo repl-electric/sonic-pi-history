@@ -57,6 +57,9 @@ end
 live_loop :piano do
   sync :quart
   use_synth :beep
+
+
+  with_fx :bitcrusher do
   with_fx :reverb, room: 1, mix: 1.0 do
     #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     with_fx :echo do
@@ -65,9 +68,10 @@ live_loop :piano do
         sample Piano.note(:a6, :loud), amp: 4
         sleep bar/4
         sample Piano.note(:a5), amp: 4
-end
+      end
         
         #        sample pa_s, amp: 2
+  end
   end
 end
 

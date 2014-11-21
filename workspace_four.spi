@@ -122,7 +122,7 @@ live_loop :sawnoise do
   n+= 1
 end
 
-begone :deep
+#begone :deep
 #begone :vio
 #begone :deep
 #begone :beep

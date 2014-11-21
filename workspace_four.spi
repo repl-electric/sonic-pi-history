@@ -121,9 +121,12 @@ end
 live_loop :sawnoise do
   sync :start
   use_synth :supersaw
+  
   with_fx :reverb do
+  with_fx :echo do
   with_fx :hpf, cutoff: 100 do
     play degree([1,3].choose, :A1, :minor), release: bar*4, decay: bar*4, amp: 1.0
+  end
   end
   end
 end

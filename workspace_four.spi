@@ -57,7 +57,7 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  use_synth :prophet
+  use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do
@@ -109,12 +109,12 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   with_fx :reverb do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
-
         n_cut = rrand(50,cutoff);
         control(c, cutoff: n_cut);
         7.times do |n|
           control(r, room: 0.1) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: 0.1
+          
           sleep bar/2
           control(r, room: 0.3, distort: 0.5); play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: 0.1

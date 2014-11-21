@@ -32,7 +32,7 @@ end
 live_loop :vio do
   3.times{sync :start}
   with_fx :reverb, room: 0.1, mix: 0.1 do
-    sample v_s, amp: 40
+    sample v_s, amp: 90
   end
 end
 

@@ -48,6 +48,8 @@ live_loop :piano do
     play degree(5, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
     play degree(5, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    sleep bar/4
+    play degree(5, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
     sample pa_s, amp: 2
   end

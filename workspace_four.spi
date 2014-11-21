@@ -122,7 +122,7 @@ live_loop :sawnoise do
   sync :start
   use_synth :supersaw
   with_fx :hpf, cutoff: 90 do
-    play degree(1, :A1, :minor), release: bar*4, decay: bar*4, amp: 0.2
+    play degree(6, :A1, :minor), release: bar*4, decay: bar*4, amp: 0.2
   end
   
 end

@@ -60,11 +60,11 @@ live_loop :piano2 do
   ].each do |n|
     2.times{sync :start}
 
-    if n == chord_degree(5, :A1, :minor)
-      with_fx(:echo){ with_synth(:supersaw){play degree(5, :A3, :minor), amp: 1, sustain: 1, release: 1, attack: 1}}
-    else
+    #if n == chord_degree(5, :A1, :minor)
+    #  with_fx(:echo){ with_synth(:supersaw){play degree(5, :A3, :minor), amp: 1, sustain: 1, release: 1, attack: 1}}
+    #else
       #with_synth(:supersaw){play degree(1, :A1, :minor), amp: 1, sustain: 2, release: 1, attack: 1}
-    end
+    #end
 
     with_fx :reverb, room: 0.1 do
       play n, amp: 1.0, attack: 0.001, release: 1.0, decay: 1.0, sustain: 1

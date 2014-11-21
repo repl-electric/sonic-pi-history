@@ -132,6 +132,7 @@ live_loop :sawnoise do
   n+= 1
 end
 
+begone :vilo
 begone :deep
 #begone :beep
 begone :piano

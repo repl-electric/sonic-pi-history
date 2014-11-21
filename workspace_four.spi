@@ -51,11 +51,11 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  [chord_degree(:i,   :A3, :minor),
-   chord_degree(:iii, :A3, :minor)
+  [chord_degree(:i,   :A2, :minor),
+   chord_degree(:iii, :A2, :minor)
   ].each do |n|
 
-2.times{  sync :start}
+  2.times{  sync :start}
   use_synth :beep
   
   with_fx :reverb do

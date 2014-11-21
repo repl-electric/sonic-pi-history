@@ -208,10 +208,9 @@ live_loop :sawnoise do
       with_fx :reverb, room: 1 do
         with_fx :reverb, room: 1 do
           with_fx :echo, decay: 1 do
-            with_fx :lpf, cutoff 110 do
+            with_fx :lpf, cutoff: 110 do
             with_fx :hpf, cutoff: 115 do
-              play degree([1,3].choose, :A1, :minor), release: bar*4, decay: bar*4, amp: 1.0
-              
+              play degree([1,3].choose, :A1, :minor), release: bar*4, decay: bar*4, amp: 1.0             
   end end end end end end end
   n+= 1
 end

@@ -67,11 +67,11 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
 
  4.times do 
   control(r, room: 0.1) ; control(d, distort: 0.5)
-  play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor
+  play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
   sleep bar/2
   control(r, room: 0.3, distort: 0.5);
  
-  play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor
+  play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
   sleep bar/2
   control(r, room: 0.8)
   play note, attack: 0.001,  pan: 0.6*direction, detune: detune_factor2
@@ -100,7 +100,7 @@ live_loop :beep do
   a2,a1 = *[0.01, 0.2]
 # end
  
- beeper degree(6, :A2, :major), @direction, 1, 120, 0.0, -5.0 #-0.005
+ beeper degree(6, :A2, :major), @direction, 1, 120, -5.0 #-0.005
  room_size += 1
 end
      

@@ -51,7 +51,7 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  use_synth :supersaw
+  use_synth :zawa
     sync :start
 
     with_fx :reverb, room: 0.9 do

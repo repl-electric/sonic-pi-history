@@ -82,7 +82,6 @@ live_loop :piano2 do
         #       sleep bar/2
         #      with_synth(:tri){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
       end
-#      148600__neatonk__piano-med-c3.wav
 
       4.times{sync :start}
 

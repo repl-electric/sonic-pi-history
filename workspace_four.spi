@@ -60,7 +60,7 @@ live_loop :piano2 do
   4.times{sync :start}
   
   if n == chord_degree(5, :A1, :minor)
-    with_synth(:supersaw){play degree(1, :A4, :minor), amp: 1, sustain: 2, release: 1, attack: 1}
+    with_synth(:supersaw){play degree(1, :A3, :minor), amp: 1, sustain: 2, release: 1, attack: 1}
   end
   
   with_fx :reverb, room: 1 do

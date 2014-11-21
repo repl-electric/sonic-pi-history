@@ -51,11 +51,12 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
+  use_synth :prophet
+
   [chord_degree(1, :A3, :minor), chord_degree(3, :A3, :minor), chord_degree(1, :A3, :minor), chord_degree(4, :A3, :minor)
   ].each do |n|
 
   2.times{  sync :start}
-  use_synth :prophet
   
   with_fx :reverb do
    play n, amp: 1.0, attack: 0.001, release: 0.8, decay: 0.8

@@ -6,9 +6,11 @@ module Piano
   TYPE = ".wav"
 
   def self.note(n)
-    ROOT + FILE_FORMAT + n.downcase + TYPE
+    "#{ROOT}#{FILE_FORMAT}#{n.downcase}#{TYPE}"
   end
 end
+
+
 bar = 1/2.0
 quart = 2*bar
 

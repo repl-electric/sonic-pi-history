@@ -51,9 +51,9 @@ end
 live_loop :piano2 do
   [p_a2_s].each |n| do
   sync :start
-
   with_fx :reverb do
     sample n, amp: 2
+  end
   end
   end
 end

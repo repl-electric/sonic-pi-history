@@ -127,11 +127,11 @@ live_loop :sawnoise do
   n+= 1
 end
 
-#begone :deep
-#begone :vio
-#begone :deep
+begone :deep
+begone :vio
+begone :deep
 #begone :beep
-#begone :piano
-#begone :dark
-#begone :radio
-#begone :sawnoise
+begone :piano
+begone :dark
+begone :radio
+begone :sawnoise

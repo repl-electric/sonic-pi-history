@@ -152,7 +152,7 @@ live_loop :beep do
     @direction = rand_i(-1..1)
 
     sync :bar
-    beeper n, @direction, 1, 120, -10, 0.0 #0, -5.0
+    beeper n, @direction, 1, 120, 0, -5.0 #0, -5.0
     room_size += 1
   end
 

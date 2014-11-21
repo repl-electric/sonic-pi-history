@@ -67,11 +67,11 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor|
 
  4.times do 
   control(r, room: 0.1) ; control(d, distort: 0.5)
-  play note, attack: 0.001,  pan: 0.8*direction,  decay: (bar/2)*6, release: bar*6, detune: 0.0
+  play note, attack: 0.01,  pan: 0.8*direction,  decay: (bar/2)*6, release: bar*6, detune: 0.0
   sleep bar/2
   control(r, room: 0.3, distort: 0.5);
  
-  play note, attack: 0.001, pan: 0.7*direction, detune: 0.0
+  play note, attack: 0.01, pan: 0.7*direction, detune: 0.0
   sleep bar/2
   control(r, room: 0.8)
   play note, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: (bar/2), detune: detune_factor

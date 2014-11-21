@@ -58,14 +58,14 @@ live_loop :piano do
   sync :quart
   use_synth :beep
   with_fx :reverb do
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sample pa_s, amp: 2
 
-    #    play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    #    sleep bar/4
-    #    play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    #    sleep bar/4
-    #    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
+        play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/4
+        play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/4
+        play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
   end
 end
 
@@ -79,9 +79,9 @@ live_loop :piano2 do
       with_fx(:reverb, room: 1, mix: 1){sample Piano.note(:a2), amp: 1, rate: 1.0}
       
       #play chord_degree(1, :A2, :major).take(3), amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.8
-                play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
-               sleep bar/2
-              with_synth(:tri){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
+        play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
+        sleep bar/2
+        with_synth(:tri){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
       end
 
       4.times{sync :start}

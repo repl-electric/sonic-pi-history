@@ -57,7 +57,7 @@ end
 live_loop :piano do
   sync :quart
   use_synth :beep
-  with_fx :reverb do
+  with_fx :reverb, room: 1 do
     #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
         sample Piano.note(:a5), amp: 4

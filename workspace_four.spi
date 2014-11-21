@@ -69,6 +69,8 @@ define :beeper do |note, direction, room_size, cutoff, attack1, attack2|
     play note-1, attack: 0.001,  pan: 0.8*direction
 #  with_synth(:pnoise){play note, release: bar/2, amp: 0.3,  pan: 0.8*direction}
   sleep bar/2
+  control(r, room: 0.3)
+ 
   play note-1, attack: 0.001,  pan: 0.7*direction
 #  with_synth(:pnoise){play note, release: bar/2,  amp: 0.3,  pan: 0.8*direction}
   sleep bar/2

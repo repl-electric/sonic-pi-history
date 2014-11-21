@@ -109,7 +109,7 @@ end
   end
 end
 
-@cutoff = 100
+@cutoff = 120
 @direction = 1
 room_size = 0
 live_loop :beep do

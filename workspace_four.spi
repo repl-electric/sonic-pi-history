@@ -75,6 +75,8 @@ live_loop :piano2 do
       play chord_degree(3, :A2, :minor), amp: 1, attack: 0.1, release: 0.5, decay: 0.5, sustain: 1.0
    # end
     end
+
+      2.times{sync :start}
   
 
 end

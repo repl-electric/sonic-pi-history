@@ -136,9 +136,9 @@ live_loop :beep do
 
  @direction = rand_i(-1..1)
 
- n =  [degree(6, :A2, :minor), degree(3, :A2, :minor)]
- 
-  4.times do
+ n =  [degree(6, :A2, :minor), degree(4, :A2, :minor)]
+
+ 4.times do
     sync :bar
     beeper n, @direction, 1, 100, 0, 0.005 #0, -5.0
     room_size += 1

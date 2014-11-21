@@ -118,6 +118,15 @@ live_loop :deep do
   end
 end
 
+live_loop :sawnoise do
+  sync :start
+  use_synth :supersaw
+  with :hpf, cutoff: 90 do
+    play degree(1, :A1, :minor), release: bar*4, decay: bar*4, amp: 0.2
+  end
+  
+end
+
 begone :deep
 #begone :beep
 #begone :piano

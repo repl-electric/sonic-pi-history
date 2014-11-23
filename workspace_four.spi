@@ -60,6 +60,8 @@ end
 
 live_loop :q do
   3.times {sync :one}
+    sample pa_s, amp: 2
+
   sample :drum_snare_soft, start: 0.01, amp: 4
 end
 

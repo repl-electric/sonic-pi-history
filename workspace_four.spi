@@ -57,7 +57,7 @@ end
 
 live_loop :q do
   sync :one
-  sample :bd_gas, amp: 2
+  sample :bd_gas, amp: 4
 end
 
 live_loop :radio do

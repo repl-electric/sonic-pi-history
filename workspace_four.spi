@@ -60,7 +60,7 @@ end
 
 live_loop :q do
   sync :one
-  sample :elec_filt_snare, start: 0.5,  amp: 4
+  sample :elec_filt_snare, start: 0.6, amp: 4
 end
 
 live_loop :radio do

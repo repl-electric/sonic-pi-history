@@ -59,7 +59,7 @@ live_loop :vio do
 end
 
 live_loop :q do
-  sync :one
+  3.times {sync :one}
   sample :drum_snare_soft, start: 0.01, amp: 4
 end
 

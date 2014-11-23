@@ -59,8 +59,9 @@ live_loop :vio do
 end
 
 live_loop :q do
-  4.times {sync :half}
+  7.times {sync :half}
   sample pa_s, amp: 2
+  1.times {sync :half}
  
 #  sample :drum_snare_soft, start: 0.01, amp: 4
 end

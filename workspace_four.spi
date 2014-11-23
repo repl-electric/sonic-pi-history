@@ -38,7 +38,9 @@ live_loop :metro do
   cue :one
   sleep bar/2
   cue :bar
-  sleep bar
+  sleep bar/2
+  cue :one
+  sleep bar/2
 end
 
 live_loop :drum do

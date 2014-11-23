@@ -55,6 +55,11 @@ live_loop :vio do
   end
 end
 
+live_loop :q do
+  sync :one
+  sample :bd_gas
+end
+
 live_loop :radio do
   sample radio_s, amp: 8, rate: 0.1
   sleep sample_duration(radio_s)

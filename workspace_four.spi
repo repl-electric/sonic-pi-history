@@ -43,7 +43,6 @@ live_loop :metro do
 
   cue :bar
   sample :bd_zome, amp: 2
-
   sleep bar/2; cue :quart; sleep bar/2
 end
 

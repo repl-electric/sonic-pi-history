@@ -22,7 +22,8 @@ p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__pi
 p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
 
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
-radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
+#radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
+radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/59316__vibe-crc__radio-noise-clicks.wav"
 
 live_loop :metro do
   cue :start; cue :half; cue :bar

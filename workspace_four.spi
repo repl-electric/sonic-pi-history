@@ -26,6 +26,8 @@ radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus_
 
 live_loop :metro do
   cue :start; cue :half; cue :bar
+  sample :elec_pop
+
   sample :bd_zome, amp: 2
 
   sleep bar/2; cue :quart; sleep bar/2  

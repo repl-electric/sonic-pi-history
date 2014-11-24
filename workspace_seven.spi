@@ -1,0 +1,24 @@
+live_loop :metro do
+  cue :bar; cue :eight
+  sleep bar/2; 
+  cue :quart; cue :eight 
+  sleep bar/2  
+  cue :bar; cue :eight
+  sleep bar/2; 
+  cue :quart; cue :eight
+  sleep bar/2
+  cue :half; cue :eight
+  cue :bar
+  sleep bar/2; 
+  cue :quart; cue :eight 
+  sleep bar/2
+  cue :bar; cue :eight
+  sleep bar/2; 
+  cue :quart; cue :eight
+  sleep bar/2
+end
+
+live_loop :d do
+ sync :eight
+ sample :elec_blup
+end

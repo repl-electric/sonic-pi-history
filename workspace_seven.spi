@@ -20,7 +20,7 @@ live_loop :metro do
 end
 
 live_loop :d do
- 4.times{sample :elec_blip; sync :sixteen;sync :sixteen; }
+ 4.times{sample :elec_blip; sync :sixteen;sync :sixteen;}
  sync :sixteen; sample :elec_blip
  sync :sixteen; sample :elec_blip
  sync :sixteen; sample :elec_blip
@@ -32,7 +32,7 @@ end
 
 live_loop :b2 do
   sample :bd_fat
-  2.times{sync :quart}
+  2.times{sync :eight}
 end
 
 # 1 (2) 3 (4) 5 (6) 7 (8)

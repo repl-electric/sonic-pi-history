@@ -52,7 +52,7 @@ end
 
 live_loop :q do
   7.times {sync :quart}
-  sample pa_s, amp: 2
+  sample Piano.note(:a3), amp: 2
   1.times {sync :quart}
  
 #  sample :drum_snare_soft, start: 0.01, amp: 4

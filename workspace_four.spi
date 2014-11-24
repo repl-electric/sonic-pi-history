@@ -51,9 +51,7 @@ end
 
 live_loop :q do
   7.times {sync :quart;}
-  with_fx :slicer, phase: bar/12 do
-    sample pa_s, amp: 2, rate: -2.0
-  end
+  with_fx :slicer, phase: bar/12{ sample pa_s, amp: 2, rate: -2.0 }
   1.times {sync :quart}
 #  sample pa_s, amp: 2
 
@@ -65,12 +63,12 @@ live_loop :radio do
   sleep sample_duration(radio_s)
 end
 
-n = 0
+i = 0
 live_loop :piano do
   sync :half
   use_synth :beep
   with_fx :reverb do
-    play degree(1, :A4, :minor), amp: rrand(0.9, 1), attack: rrand(0.001, 1/1+(n % 32)), release: 0.01, decay: 0.1 
+    play degree(1, :A4, :minor), amp: rrand(0.9, 1), attack: rrand(0.001, 1/1+(i % 32)), release: 0.01, decay: 0.1 
     sample pa_s, amp: rrand(1.5, 2), attack: rrand(0, 0.1), env_curve: 1
 
     #    play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
@@ -78,8 +76,8 @@ live_loop :piano do
     #    play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     #    sleep bar/4
     #    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
-  end
-  n+= 1
+˘  end
+  i+= 1
 end
 
 live_loop :piano2 do

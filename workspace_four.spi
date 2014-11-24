@@ -29,6 +29,9 @@ live_loop :metro do
   sample :bd_zome, amp: 2
 
   sleep bar/2; cue :quart; sleep bar/2  
+  
+  sample :elec_pop
+  
   cue :bar
   sleep bar/2; cue :quart; sleep bar/2
   cue :half; cue :bar

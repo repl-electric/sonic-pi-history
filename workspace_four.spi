@@ -25,18 +25,18 @@ v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-norma
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
 live_loop :metro do
-  cue :start; cue :quart; cue :bar
-  sleep bar/2; cue :half; sleep bar/2  
+  cue :start; cue :half; cue :bar
+  sleep bar/2; cue :quart; sleep bar/2  
   cue :bar
-  sleep bar/2; cue :half; sleep bar/2
-  cue :quart; cue :bar
-  sleep bar/2; cue :half; sleep bar/2
+  sleep bar/2; cue :quart; sleep bar/2
+  cue :half; cue :bar
+  sleep bar/2; cue :quart; sleep bar/2
   cue :bar
-  sleep bar/2; cue :half; sleep bar/2
+  sleep bar/2; cue :quart; sleep bar/2
 end
 
 live_loop :drum do
-  sync :quart
+  sync :halfquart
 #  sample :bd_gas, amp: 4
   with_fx :lpf do
     sample :elec_triangle, amp: 0.3
@@ -51,9 +51,9 @@ live_loop :vio do
 end
 
 live_loop :q do
-  7.times {sync :half}
+  7.times {sync :quart}
   sample pa_s, amp: 2
-  1.times {sync :half}
+  1.times {sync :quart}
  
 #  sample :drum_snare_soft, start: 0.01, amp: 4
 end
@@ -64,7 +64,7 @@ live_loop :radio do
 end
 
 live_loop :piano do
-  sync :quart
+  sync :half
   use_synth :beep
   with_fx :reverb do
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

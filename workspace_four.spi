@@ -52,7 +52,7 @@ end
 
 live_loop :q do
   7.times {sync :quart}
-  sample Piano.note(:a5), amp: 2
+  sample Piano.note(:a6), amp: 2
   1.times {sync :quart}
   sample Piano.note(:a6), amp: 2
 

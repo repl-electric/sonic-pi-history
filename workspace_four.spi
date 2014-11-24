@@ -124,6 +124,7 @@ live_loop :piano2 do
 end
 end
 
+with_fx :level, amp: 0 do
 live_loop :dark do
   use_synth :beep
   sync :start
@@ -133,6 +134,7 @@ live_loop :dark do
   use_synth :noise
   play degree(:i, :A1, :major), release: bar*4, amp: 0.1
   16.times{ sync :start }
+end
 end
 
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|

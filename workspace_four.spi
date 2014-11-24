@@ -52,7 +52,7 @@ end
 x = 0
 live_loop :q do
   15.times {sync :quart;}
-  with_fx(:slicer, phase: bar/(1+x%32)){sample pa_s, amp: 2, rate: -2.0 }
+  with_fx(:slicer, phase: bar/(1+x%16)){sample pa_s, amp: 2, rate: -2.0 }
   1.times {sync :quart}
 #  sample pa_s, amp: 2
 

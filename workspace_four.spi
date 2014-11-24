@@ -53,11 +53,10 @@ end
 with_fx :reverb do
 live_loop :q do
   7.times {sync :quart}
-  sample Piano.note(:a6), amp: 2
+  sample Piano.note(:a6), amp: 1
   1.times {sync :quart}
-  sample Piano.note(:a6), amp: 2
-
-  
+  sample Piano.note(:a6), amp: 1
+ 
 #  sample :drum_snare_soft, start: 0.01, amp: 4
 end
 end

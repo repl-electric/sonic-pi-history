@@ -51,7 +51,9 @@ end
 
 live_loop :q do
   7.times {sync :quart;}
-  sample pa_s, amp: 2, rate: -2.0
+  with_fx :compressor do
+    sample pa_s, amp: 2, rate: -2.0
+  end
   1.times {sync :quart}
 #  sample pa_s, amp: 2
 

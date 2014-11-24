@@ -42,7 +42,6 @@ live_loop :metro do
 
   cue :bar
   sleep bar/2; cue :quart; sleep bar/2
- 
 
 end
 

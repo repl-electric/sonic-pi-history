@@ -37,13 +37,14 @@ end
 
 live_loop :drum do
   sync :half
-  sample :bd_zome, amp: 4
   with_fx :lpf do
     sample :elec_triangle, amp: 0.3
   end
 end
 
 live_loop :vio do
+  sample :bd_zome, amp: 4
+
   4.times{sync :start}
   with_fx :reverb, room: 1.0, mix: 1.0 do
     sample v_s, amp: 90

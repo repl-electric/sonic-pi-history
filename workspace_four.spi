@@ -49,13 +49,15 @@ live_loop :vio do
   end
 end
 
+x = 0
 live_loop :q do
   7.times {sync :quart;}
-  with_fx(:slicer, phase: bar/12){sample pa_s, amp: 2, rate: -2.0 }
+  with_fx(:slicer, phase: bar/(1+x%32)){sample pa_s, amp: 2, rate: -2.0 }
   1.times {sync :quart}
 #  sample pa_s, amp: 2
 
   #  sample :drum_snare_soft, start: 0.01, amp: 4
+  x+=1
 end
 
 live_loop :radio do

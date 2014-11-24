@@ -21,6 +21,6 @@ live_loop :metro do
 end
 
 live_loop :d do
- sync :eight
+ 6.times{sync :eight}
  sample :elec_blup
 end

@@ -51,7 +51,7 @@ end
 
 live_loop :q do
   7.times {sync :quart;}
-  with_fx :slicer do
+  with_fx :slicer, bar/8 do
     sample pa_s, amp: 2, rate: -2.0
   end
   1.times {sync :quart}

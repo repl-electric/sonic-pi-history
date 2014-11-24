@@ -34,6 +34,9 @@ live_loop :metro do
   
   cue :bar
   sleep bar/2; cue :quart; sleep bar/2
+
+  sample :elec_pop
+
   cue :half; cue :bar
   sleep bar/2; cue :quart; sleep bar/2
   sample :sn_dolf, amp: 2

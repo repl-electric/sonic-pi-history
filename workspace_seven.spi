@@ -21,7 +21,7 @@ live_loop :metro do
 end
 
 live_loop :d do
- 6.times{sync :eight; sample :elec_blup}
+ 6.times{sync :eight; sample :elec_blip}
  sync :eight
  #sample :elec_blup
  sync :eight

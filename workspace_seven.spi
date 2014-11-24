@@ -1,3 +1,5 @@
+bar = 1/2.0
+
 live_loop :metro do
   cue :bar; cue :eight
   sleep bar/2; 

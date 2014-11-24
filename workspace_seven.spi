@@ -35,7 +35,7 @@ live_loop :b2 do
   sample :bd_fat
 end
 
-live_loop :b2 do
+live_loop :b4 do
   6.times{sync :eight}
   sample :elec_mid_snare
 end

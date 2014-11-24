@@ -23,5 +23,8 @@ end
 live_loop :d do
  6.times{sync :eight; sample :elec_blup}
  sync :eight
+ #sample :elec_blup
+ sync :eight
  sample :elec_blup
+
 end

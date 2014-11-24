@@ -37,7 +37,7 @@ end
 
 live_loop :drum do
   sync :half
-  sample :bass_hit_c, amp: 4
+  sample :bd_zome, amp: 4
   with_fx :lpf do
     sample :elec_triangle, amp: 0.3
   end

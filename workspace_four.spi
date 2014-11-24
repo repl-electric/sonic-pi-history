@@ -51,7 +51,7 @@ end
 
 live_loop :q do
   7.times {sync :quart;}
-  with_fx(:echo, phase: bar/8){sample pa_s, amp: 2, rate: -2.0}
+  with_fx(:echo, phase: bar/8){sample pa_s, amp: 2, rate: 2.0}
   1.times {sync :quart}
   #sample pa_s, amp: 2
   #sample :drum_snare_soft, start: 0.01, amp: 4

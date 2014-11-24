@@ -32,7 +32,6 @@ end
 
 live_loop :b2 do
   sample :bd_fat
-
   2.times{sync :quart}
 end
 

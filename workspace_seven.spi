@@ -25,6 +25,6 @@ live_loop :d do
  sync :eight
  #sample :elec_blup
  sync :eight
- sample :elec_blup
+ sample :elec_blip
 
 end

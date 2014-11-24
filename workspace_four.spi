@@ -50,17 +50,12 @@ live_loop :vio do
   end
 end
 
-with_fx :compressor do
-with_fx :reverb, room: 1, mix: 1 do
 live_loop :q do
   7.times {sync :quart}
-  sample Piano.note(:a6), amp: 1
+  sample pa_s, amp: 2
   1.times {sync :quart}
-  sample Piano.note(:a6), amp: 1
  
 #  sample :drum_snare_soft, start: 0.01, amp: 4
-end
-end
 end
 
 live_loop :radio do

@@ -211,14 +211,6 @@ live_loop :beep2 do
   end
 end
 
-live_loop :deep do
-  use_synth :fm
-  sync :start
-  with_fx :slicer, phase: bar*4 do
-    play degree(1, :A1, :major), release: bar*4, decay: bar*4, amp: 1.2
-  end
-end
-
 n = 0
 live_loop :sawnoise do
   use_synth :prophet

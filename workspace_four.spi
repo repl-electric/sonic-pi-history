@@ -51,7 +51,7 @@ end
 
 live_loop :q do
   7.times {sync :quart;}
-  sample pa_s, amp: 2, rate: -1.0
+  sample pa_s, amp: 2, rate: -2.0
   1.times {sync :quart}
 #  sample pa_s, amp: 2
 

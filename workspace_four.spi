@@ -26,26 +26,13 @@ radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus_
 
 live_loop :metro do
   cue :start; cue :half; cue :bar
-  sample :elec_pop
-  sample :bd_zome, amp: 2
-
   sleep bar/2; cue :quart; sleep bar/2  
-  
-  sample :elec_pop
-  
   cue :bar
   sleep bar/2; cue :quart; sleep bar/2
-  sample :elec_pop
-
-
   cue :half; cue :bar
   sleep bar/2; cue :quart; sleep bar/2
-  sample :drum_snare_hard, amp: 2
-
   cue :bar
   sleep bar/2; cue :quart; sleep bar/2
-  sample :elec_pop
-
 end
 
 live_loop :drum do
@@ -69,7 +56,6 @@ live_loop :q do
  
 #  sample :drum_snare_soft, start: 0.01, amp: 4
 end
-
 
 live_loop :radio do
   sample radio_s, amp: 8, rate: 0.1

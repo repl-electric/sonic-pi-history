@@ -40,5 +40,5 @@ end
 live_loop :b3 do
   5.times{sync :eight}
   sample :drum_snare_hard
-  2.times{sync :eight}
+  3.times{sync :eight}
 end

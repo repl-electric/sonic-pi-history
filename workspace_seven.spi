@@ -31,6 +31,6 @@ live_loop :d do
 end
 
 live_loop :b2 do
-  2.times{sync :quart }
-  sample :bd_808
+  2.times{sync :quart}
+  sample :bd_fat
 end

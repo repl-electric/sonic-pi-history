@@ -53,8 +53,7 @@ live_loop :q do
   15.times {sync :quart}
   sample pa_s, amp: 2
   1.times {sync :quart}
- 
-#  sample :drum_snare_soft, start: 0.01, amp: 4
+  #sample :drum_snare_soft, start: 0.01, amp: 4
 end
 
 live_loop :radio do
@@ -78,7 +77,7 @@ live_loop :piano do
 end
 
 live_loop :piano2 do
-  use_synth :tri
+  use_synth :prophet
   sync :start
 
   with_fx :echo, mix: 0.2 do

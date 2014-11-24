@@ -42,11 +42,13 @@ live_loop :drum do
   end
 end
 
+with_fx :level, amp: 0 do
 live_loop :vio do
   4.times{sync :start}
   with_fx :reverb, room: 1.0, mix: 1.0 do
     sample v_s, amp: 90
   end
+end
 end
 
 live_loop :q do

@@ -1,27 +1,26 @@
-bar = 1/4.0
+bar = 1/2.0
 
 live_loop :metro do
-  cue :bar; cue :eight
-  sleep bar/2; 
-  cue :quart; cue :eight 
-  sleep bar/2  
-  cue :bar; cue :eight
-  sleep bar/2; 
-  cue :quart; cue :eight
-  sleep bar/2
-  cue :half; cue :eight
-  cue :bar
-  sleep bar/2; 
-  cue :quart; cue :eight 
-  sleep bar/2
-  cue :bar; cue :eight
-  sleep bar/2; 
-  cue :quart; cue :eight
-  sleep bar/2
+  cue :bar; cue :eight; cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :quart; cue :eight;  cue :sixteen 
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :bar; cue :eight;  cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :quart; cue :eight;  cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :half; cue :eight; cue :bar;  cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :quart; cue :eight ; cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :bar; cue :eight; cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :quart; cue :eight; cue :sixteen
+  sleep bar/4; cue :sixteen; sleep bar/4;
 end
 
 live_loop :d do
- 4.times{sync :eight; sample :elec_blip}
+ 4.times{sync :sixteen; sample :elec_blip}
  sync :eight
  #sample :elec_blup
  sync :eight

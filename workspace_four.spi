@@ -50,10 +50,11 @@ live_loop :vio do
 end
 
 live_loop :q do
-  15.times {sync :quart}
+  7.times {sync :quart}
   sample pa_s, amp: 2
   1.times {sync :quart}
-  #sample :drum_snare_soft, start: 0.01, amp: 4
+ 
+#  sample :drum_snare_soft, start: 0.01, amp: 4
 end
 
 live_loop :radio do

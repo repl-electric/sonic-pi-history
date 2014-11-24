@@ -53,7 +53,7 @@ live_loop :q do
   7.times {sync :quart;}
   with_fx :reverb do
   with_fx :slicer, phase: bar/12 do
-    sample pa_s, amp: 2, rate: 1.0
+    sample pa_s, amp: 5, rate: 1.0
   end
   end
   1.times {sync :quart}

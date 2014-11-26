@@ -40,7 +40,7 @@ live_loop :kick do
   end
  
   sync :sixteen
-  sample :drum_heavy_kick, start: 0.1
+  sample :drum_heavy_kick, start: 0.01
   (2).times{sync :sixteen}
  
   if(double)
@@ -51,7 +51,7 @@ live_loop :kick do
   end
   
   sync :sixteen
-  sample :drum_heavy_kick, start: 0.1
+  sample :drum_heavy_kick, start: 0.01
   (3).times{sync :sixteen}
 end
 

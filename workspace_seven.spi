@@ -54,12 +54,12 @@ live_loop :striate do
   sample s
   2.times{sync :sixteen}
   
-  10.times {
+  8.times {
     sample s
     sync :middle
   }
 
-  1.times{sync :sixteen}
+  2.times{sync :sixteen}
   sample s, amp: 0.8
  
   2.times{sync :sixteen}

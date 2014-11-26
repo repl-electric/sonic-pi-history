@@ -123,7 +123,7 @@ with_fx :lpf, cutoff: 80 do
   15.times{sync :sixteen}
   
   sync :sixteen
-  play_chord chord(:A2, :major), release: 1, decay: 1, sustain: 1
+  play_chord chord(:A1, :major), release: 1, decay: 1, sustain: 1
   15.times{sync :sixteen}
   end
   end

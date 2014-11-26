@@ -55,8 +55,8 @@ live_loop :striate do
   2.times{sync :sixteen}
   
   8.times {
+  sync :middle
     sample s
-    sync :middle
   }
 
   2.times{sync :sixteen}

@@ -115,7 +115,7 @@ with_fx :distortion, distort: 0.1 do
 with_fx :lpf, cutoff: 80 do
   sync :sixteen
   use_synth :saw
-  play_chord chord(:A1, :major), release: 1, decay: 0.5, sustain: 0.5
+  play_chord chord(:A1, :major), release: 0.5, decay: 0.5, sustain: 0.5
   15.times{sync :sixteen}
   
   end

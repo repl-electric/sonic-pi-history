@@ -56,24 +56,24 @@ live_loop :striate do
   sample s
   1.times{sync :sixteen}
   
-  6.times {
+  4.times {
   sample s
    
   sync :middle; 
   }
 
-  2.times{sync :sixteen}
+#  2.times{sync :sixteen}
   #sample s, amp: 0.8
  
-  2.times{sync :sixteen}
+  4.times{sync :sixteen}
   with_fx :distortion, distort: 0.2 do
     sample s, amp: 0.8
   end
  
-  2.times{sync :sixteen}
+  4.times{sync :sixteen}
   with_fx :distortion, distort: 0.2 do
     sample s, amp: 0.8
   end
   
-  3.times{ sync :sixteen}
+  4.times{ sync :sixteen}
 end

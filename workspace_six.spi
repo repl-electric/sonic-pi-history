@@ -31,10 +31,10 @@ live_loop :kick do
  # end
   
   4.times{sync :sixteen}
-  sample :drum_snare_soft
-
-  4.times{sync :sixteen}
   sample :elec_soft_kick
+  
+  4.times{sync :sixteen}
+  sample :drum_snare_soft
  
    
   (15-4).times{sync :sixteen} 

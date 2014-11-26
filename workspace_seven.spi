@@ -14,7 +14,7 @@ live_loop :ride do
 end
 
 live_loop :kick do
-  double = (dice(6) > 1)
+  double = (dice(6) > 4)
   s = [:elec_snare, :elec_hollow_kick].choose
   
   sync :sixteen

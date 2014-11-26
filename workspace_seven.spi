@@ -9,7 +9,7 @@ end
 
 live_loop :kick do
   double = (dice(6) > 5)
-  s = [:elec_snare, :elec_hollow_kick].choose
+  s = [:elec_snare, :elec_hollow_kick, :elec_fuzz_tom].choose
   
   sync :sixteen
   sample :elec_hollow_kick, start: 0.0, amp: 2.0

@@ -8,7 +8,7 @@ end
 
 live_loop :ride do
   sample :drum_cymbal_closed
-  2.times{sync :sixteen}
+  1.times{sync :sixteen}
  # sample :drum_cymbal_closed
 #  14.times{sync :sixteen}
 end

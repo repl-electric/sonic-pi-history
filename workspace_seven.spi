@@ -73,11 +73,11 @@ live_loop :striate do
   sample s; 
   sync :sixteen; 
  
-  4.times { sample s; sync :middle;}
+  6.times { sample s; sync :middle;}
 #  sync :sixteen
   
   #BAR2
-  3.times{sync :sixteen}
+  #3.times{sync :sixteen}
 #  sample s, amp: 0.8
 
   #BAR3

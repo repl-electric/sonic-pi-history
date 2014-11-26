@@ -15,11 +15,10 @@ live_loop :kick do
   sync :sixteen
   sample :drum_heavy_kick
 
-    (3).times{sync :sixteen}
+  (3).times{sync :sixteen}
  
   sync :sixteen
-  sample :drum_heavy_kick
- 
+  sample :drum_heavy_kick 
 end
 
 live_loop :striate do

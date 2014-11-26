@@ -90,7 +90,7 @@ live_loop :striate do
     sample s, amp: 0.8, rate: 0.9
   end
 
-  if(dice(6) >= 3)
+  if(dice(6) >= 5)
     2.times{sync :sixteen} 
     sample s, amp: 2.9, rate: 0.9
     1.times{sync :sixteen} 

@@ -16,7 +16,7 @@ live_loop :kick do
   (3).times{sync :sixteen}
 
   sync :sixteen
-  sample :elec_soft_kick
+  sample :sn_dolf
   (2).times{sync :sixteen}
 
   if(double)

@@ -69,9 +69,11 @@ end
 live_loop :striate do
   #BAR1
   s = :elec_blip2
-  sync :sixteen; sample s; sync :sixteen
+  sync :sixteen; sample s; 
   6.times { sample s; sync :middle;}
 
+  sync :sixteen
+  
   #BAR2
   3.times{sync :sixteen}
 #  sample s, amp: 0.8

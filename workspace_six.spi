@@ -111,7 +111,7 @@ end
 
 
 live_loop :bass do
-with_fx :distortion, distort: 0.4 do
+with_fx :distortion, distort: 0.1 do
 with_fx :lpf, cutoff: 80 do
   sync :sixteen
   use_synth :saw

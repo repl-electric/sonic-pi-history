@@ -31,8 +31,50 @@ live_loop :kick do
  # end
   (3).times{sync :sixteen}
 
-  (16-4).times{sync :sixteen}
+  (16-4).times{sync :sixteen} 
+end
+end
+#end
+
+
+with_fx :level, amp: 1 do
+with_fx :lpf, cutoff: 80 do
+live_loop :striate do
+  #BAR1
+  s = :elec_blip2
+  sync :sixteen; 
+  sample s, rate: 0.9
   
+  sync :middle; 
+  with_fx :echo, phase: bar/2 do
+  5.times { sync :middle; sample s, rate: 1.01; }
+  end
+#  sync :sixteen
+  
+  #BAR2
+  #3.times{sync :sixteen}
+
+  #BAR3
+  sync :sixteen
+  with_fx :distortion, distort: 0.8 do
+    sample s, amp: 0.8, rate: 0.9
+  end
+
+  if(dice(6) >= 5)
+    2.times{sync :sixteen} 
+    sample s, amp: 1.0, rate: 0.9
+    1.times{sync :sixteen} 
+  else
+    3.times{sync :sixteen} 
+  end
+  
+  #BAR4
+  sync :sixteen
+  with_fx :distortion, distort: 0.5 do
+    sample s, amp: 0.8, rate: 0.8
+  end
+  3.times{sync :sixteen}
+end
 end
 end
 #end

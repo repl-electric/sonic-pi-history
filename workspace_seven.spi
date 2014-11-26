@@ -51,12 +51,15 @@ live_loop :kick do
 end
 
 live_loop :striate do
-  s = :drum_cymbal_pedal
+  s = sample :elec_chime
   sync :sixteen
   sample s
   2.times{sync :sixteen}
   
-  8.times {sync :middle; sample s}
+  8.times {
+    sync :middle; 
+    sample s
+  }
 
   2.times{sync :sixteen}
   sample s, amp: 0.8

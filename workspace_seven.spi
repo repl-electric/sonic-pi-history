@@ -27,6 +27,6 @@ end
 
 live_loop :striate do
   sync :sixteen
-  sample :elec_beep
+  sample :elec_blip
 
 end

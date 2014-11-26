@@ -2,7 +2,6 @@ bar = 1/8.0
 
 live_loop :metro do
   cue :sixteen; cue :middle; 
- 
   sleep bar/2; 
   cue :middle; 
   sleep bar/2;
@@ -21,8 +20,8 @@ live_loop :striate do
   sample :elec_blip
   }
   
-  8.times {
-  sync :sixteen
+  4.times {
+  2.times{sync :sixteen}
   sample :elec_blip
   }
 

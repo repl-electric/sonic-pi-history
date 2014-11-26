@@ -54,7 +54,7 @@ live_loop :striate do
   s = :drum_cymbal_closed
   sync :sixteen
   sample s
-  2.times{sync :sixteen}
+  1.times{sync :sixteen}
   
   7.times {
   sample s

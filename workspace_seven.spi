@@ -20,7 +20,7 @@ with_fx :level, amp: 1 do
 live_loop :kick do
   double = (dice(6) > 4)
   s = [:elec_snare, :elec_hollow_kick].choose
-  
+
   
   #BAR1
   sync :sixteen

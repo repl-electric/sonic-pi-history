@@ -108,3 +108,9 @@ end
 end
 end
 #end
+
+
+live_loop :bass do
+  sync :sixteen
+  15.times{sync :sixteen}
+end

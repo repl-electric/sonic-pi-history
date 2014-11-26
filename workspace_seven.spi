@@ -24,7 +24,7 @@ live_loop :kick do
   (3).times{sync :sixteen}
 
   sync :sixteen
-  sample :drum_snare_soft, amp: 2
+  sample :drum_snare_soft, amp: 3
   (2).times{sync :sixteen}
 
   if(double)

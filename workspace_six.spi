@@ -29,9 +29,8 @@ live_loop :kick do
     sample :drum_heavy_kick, start: 0.0, amp: 1.0
     end
  # end
-  (3).times{sync :sixteen}
-
-  (16-4).times{sync :sixteen} 
+ 
+  (15).times{sync :sixteen} 
 end
 end
 #end

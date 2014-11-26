@@ -4,10 +4,17 @@ live_loop :metro do
   cue :sixteen; cue :middle; sleep bar/2; cue :middle; sleep bar/2;
 end
 
+
+|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|
+
 live_loop :kick do
   sync :sixteen
   sample :drum_heavy_kick
-  15.times{sync :sixteen}
+  (1*4).times{sync :sixteen}
+  
+  sample :drum_heavy_kick
+
+  
 end
 
 live_loop :striate do

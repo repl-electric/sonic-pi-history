@@ -20,12 +20,11 @@ live_loop :kick do
   double = (dice(6) > 4)
   s = [:elec_snare, :elec_hollow_kick].choose
   
-  d = rrand(0,1)
   
   #BAR1
   sync :sixteen
 #  with_fx :echo, phase: bar*[9].choose do
-  with_fx :distortion, distort: d do
+  with_fx :distortion do
     sample :drum_heavy_kick, start: 0.0, amp: 1.0
     end
  # end
@@ -33,7 +32,7 @@ live_loop :kick do
 
   #BAR2
   sync :sixteen
-  with_fx :distortion, distort: d do
+  with_fx :distortion do
   sample :drum_snare_soft, amp: 0.8
   end
   (2).times{sync :sixteen}

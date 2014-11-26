@@ -72,7 +72,7 @@ live_loop :striate do
   end
 
   2.times{sync :sixteen} 
-  sample :drum_snare_soft
+  sample :drum_snare_hard
   1.times {sync :sixteen}
   
   #BAR4

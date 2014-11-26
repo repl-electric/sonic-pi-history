@@ -31,6 +31,8 @@ live_loop :kick do
  # end
   (3).times{sync :sixteen}
 
+  (16-4).times{sync :sixteen}
+  
 end
 end
 #end

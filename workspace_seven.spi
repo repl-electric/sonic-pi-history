@@ -19,8 +19,8 @@ live_loop :kick do
   
   sync :sixteen
   with_fx :reverb do
-  with_fx :echo, phase: (bar/(rrand(6,8))) do
-  sample :drum_heavy_kick, start: 0.0, amp: 2.0
+  with_fx :echo, phase: bar/8 do
+    sample :drum_heavy_kick, start: 0.0, amp: 2.0
   end
   end
   (3).times{sync :sixteen}

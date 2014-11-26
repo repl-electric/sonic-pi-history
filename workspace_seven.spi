@@ -35,7 +35,7 @@ live_loop :kick do
   end
  
   sync :sixteen
-  sample :bd_fat
+  sample :bass_hard_c
   (2).times{sync :sixteen}
  
   if(double)

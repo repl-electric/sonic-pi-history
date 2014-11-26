@@ -45,7 +45,7 @@ live_loop :kick do
 
   #BAR3
   sync :sixteen
-  sample :sn_dolf, start: 0.01
+  sample :sn_dolf, start: 0.05
   (2).times{sync :sixteen}
  
   if(double)

@@ -51,7 +51,7 @@ live_loop :kick do
 end
 
 live_loop :striate do
-  s = :elec_plip
+  s = sample :bd_808
   sync :sixteen
   sample s
   2.times{sync :sixteen}

@@ -1,22 +1,7 @@
-bar = 1/2.0
+bar = 1/8.0
 
 live_loop :metro do
-  cue :bar; cue :eight; cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :quart; cue :eight;  cue :sixteen 
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :bar; cue :eight;  cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :quart; cue :eight;  cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :half; cue :eight; cue :bar;  cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :quart; cue :eight ; cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :bar; cue :eight; cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
-  cue :quart; cue :eight; cue :sixteen
-  sleep bar/4; cue :sixteen; sleep bar/4;
+  cue :sixteen; sleep bar;
 end
 
 live_loop :kick do

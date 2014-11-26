@@ -1,4 +1,4 @@
- bar = 1/5.0
+ bar = 1/6.0
 
 live_loop :metro do
   cue :sixteen; cue :middle; sleep bar/2; cue :middle; sleep bar/2;

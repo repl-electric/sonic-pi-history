@@ -21,8 +21,10 @@ live_loop :kick do
   (2).times{sync :sixteen}
  
   if(dice(6) > 3)
-  sample :elec_soft_kick
-  sync :sixteen
+    sample :elec_soft_kick
+    sync :sixteen
+  else
+    sync :sixteen
   end
   
   sync :sixteen

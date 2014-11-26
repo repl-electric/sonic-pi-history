@@ -10,6 +10,8 @@ end
 live_loop :ride do
   2.times{sync :sixteen}
   sample :drum_cymbal_closed
+  14.times{sync :sixteen}
+
 end
 
 live_loop :kick do

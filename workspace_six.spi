@@ -50,7 +50,7 @@ end
 
 
 with_fx :level, amp: 1 do
-with_fx :lpf, cutoff: 80 do
+with_fx :lpf, cutoff: 100 do
 live_loop :striate do
   #BAR1
   s = :elec_blip2

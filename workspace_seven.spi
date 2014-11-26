@@ -77,7 +77,7 @@ live_loop :striate do
   
   sync :middle; 
   with_fx :echo, phase: bar*4 do
-  5.times { sync :middle; sample s rate: 1.1; }
+  5.times { sync :middle; sample s, rate: 1.1; }
   end
 #  sync :sixteen
   

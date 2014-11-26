@@ -40,7 +40,7 @@ live_loop :kick do
   end
  
   sync :sixteen
-  sample :drum_bass_hard
+  sample :drum_snare_soft
   (2).times{sync :sixteen}
  
   if(double)

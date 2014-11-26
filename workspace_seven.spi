@@ -57,24 +57,26 @@ end
 
 
 live_loop :striate do
+  #BAR1
   s = :drum_cymbal_closed
-  sync :sixteen
-  sample s
-  sync :sixteen
+  sync :sixteen; sample s; sync :sixteen
   4.times { sample s; sync :middle;}
 
+  #BAR2
   4.times{sync :sixteen}
   #sample s, amp: 0.8
+
+  #BAR3
   sync :sixteen
   with_fx :distortion, distort: 0.2 do
     sample s, amp: 0.8
   end
- 
   3.times{sync :sixteen} 
+
+  #BAR4
   sync :sixteen
   with_fx :distortion, distort: 0.2 do
     sample s, amp: 0.8
   end
-  
-  4.times{sync :sixteen}
+  3.times{sync :sixteen}
 end

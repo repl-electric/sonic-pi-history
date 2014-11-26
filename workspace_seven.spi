@@ -72,9 +72,9 @@ live_loop :striate do
   sync :sixteen; 
   sample s; 
   
-  #sync :sixteen; 
+  sync :middle; 
  
-  8.times { sample s; sync :middle;}
+  5.times { sample s; sync :middle;}
 #  sync :sixteen
   
   #BAR2

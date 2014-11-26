@@ -66,10 +66,10 @@ live_loop :striate do
   #BAR1
   s = :drum_cymbal_closed
   sync :sixteen; sample s; sync :sixteen
-  4.times { sample s; sync :middle;}
+  6.times { sample s; sync :middle;}
 
   #BAR2
-  4.times{sync :sixteen}
+  3.times{sync :sixteen}
   sample s, amp: 0.8
 
   #BAR3

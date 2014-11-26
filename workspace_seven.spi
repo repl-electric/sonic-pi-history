@@ -13,7 +13,7 @@ live_loop :kick do
   (3).times{sync :sixteen}
  
   sync :sixteen
-  sample :drum_heavy_kick
+  sample :elec_soft_kick
 
   (3).times{sync :sixteen}
  

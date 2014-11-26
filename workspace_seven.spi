@@ -18,7 +18,6 @@ live_loop :striate do
   7.times {
   sample :elec_blip
   sync :middle
-
   }
   
   4.times {

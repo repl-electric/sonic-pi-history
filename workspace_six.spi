@@ -1,0 +1,37 @@
+ bar = 1/8.0
+
+live_loop :metro do
+  cue :sixteen; cue :middle; sleep bar/2; cue :middle; sleep bar/2;
+end
+
+#|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|
+
+live_loop :ride do
+  2.times{sync :sixteen}
+  sample :drum_cymbal_closed
+  2.times{sync :sixteen}
+  sample :drum_cymbal_closed
+  12.times{sync :sixteen}
+end
+
+#|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|
+
+with_fx :level, amp: 1 do
+live_loop :kick do
+  double = (dice(6) > 4)
+  s = [:elec_snare, :elec_hollow_kick].choose
+
+  
+  #BAR1
+  sync :sixteen
+#  with_fx :echo, phase: bar*[9].choose do
+  with_fx :distortion, distort: 0.8 do
+    sample :drum_heavy_kick, start: 0.0, amp: 1.0
+    end
+ # end
+  (3).times{sync :sixteen}
+
+end
+end
+end
+#end

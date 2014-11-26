@@ -9,7 +9,7 @@ end
 
 live_loop :kick do
   sync :sixteen
-  sample :elec_soft_kick, start: 0.0, amp: 1.2
+  sample :elec_soft_kick, start: 0.0, amp: 1.5
   (3).times{sync :sixteen}
 
   sync :sixteen
@@ -19,10 +19,10 @@ live_loop :kick do
   sample :elec_soft_kick, start: 0.09
 
   (3).times{sync :sixteen}
+
   sync :sixteen
   sample :elec_soft_kick, start: 0.05
   (3).times{sync :sixteen}
-
 end
 
 live_loop :striate do

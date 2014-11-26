@@ -12,12 +12,12 @@ end
 
 live_loop :striate do
   sync :sixteen
-  sample :elec_flip
+  sample :elec_wood
   2.times{sync :sixteen}
   
   7.times {
-  sample :elec_flip
-  sync :sixteen
+    sample :elec_flip
+    sync :sixteen
   }
 
   2.times{sync :sixteen}

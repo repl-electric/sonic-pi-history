@@ -113,6 +113,6 @@ end
 live_loop :bass do
   sync :sixteen
   use_synth :saw
-  play_chord chord(:A1, :major)
+  play_chord chord(:A1, :major), release: 1
   15.times{sync :sixteen}
 end

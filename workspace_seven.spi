@@ -8,7 +8,7 @@ end
 
 live_loop :ride do
   2.times{sync :sixteen}
-  sample :drum_cymbal_closed
+  sample :drum_cymbal_OPEN
 
  # sample :drum_cymbal_closed
 #  14.times{sync :sixteen}
@@ -64,7 +64,6 @@ live_loop :kick do
 end
 
 #|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|
-
 
 live_loop :striate do
   #BAR1

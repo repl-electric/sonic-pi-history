@@ -25,7 +25,7 @@ live_loop :kick do
   #BAR1
   sync :sixteen
 #  with_fx :echo, phase: bar*[9].choose do
-  with_fx :distortion, rate: 0.9 do
+  with_fx :distortion, distort: 0.9 do
     sample :drum_heavy_kick, start: 0.0, amp: 1.0
     end
  # end

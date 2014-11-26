@@ -20,11 +20,11 @@ live_loop :striate do
     sync :sixteen
   }
 
+  2.times{sync :sixteen}
+  sample :elec_blip
+  
   3.times{sync :sixteen}
   sample :elec_blip
   
-  1.times{sync :sixteen}
-  sample :elec_blip
-  
-  2.times{ sync :sixteen}
+  1.times{ sync :sixteen}
 end

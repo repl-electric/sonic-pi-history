@@ -63,7 +63,7 @@ live_loop :striate do
   
   #BAR2
   2.times{sync :sixteen}
-  sample s, amp: 1.0, rate: 0.8
+  sample s, amp: 1.0, rate: 0.8 if dice(6) > 4
   2.times{sync :sixteen}
 
   #BAR3

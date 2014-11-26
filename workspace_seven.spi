@@ -6,7 +6,7 @@ end
 
 live_loop :kick do
   sync :sixteen
-  sample :drum_heavy_kick
+#  sample :drum_heavy_kick
   15.times{sync :sixteen}
 end
 

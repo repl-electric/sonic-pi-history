@@ -62,9 +62,11 @@ live_loop :synths do
   15.times{sync :sixteen}
 
   play chord(:A2, :m7)[-2], release: 1, decay: 1, sustain: 1 
-  15.times{sync :sixteen}
-
+  15.times{sync :sixteen} 
   
+  play chord(:A2, :m7)[-3], release: 1, decay: 1, sustain: 1 
+  15.times{sync :sixteen} 
+
 end
 
 with_fx :level, amp: 1 do

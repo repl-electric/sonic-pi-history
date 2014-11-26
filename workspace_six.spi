@@ -16,6 +16,8 @@ live_loop :ride do
     sync :sixteen
     sample :drum_cymbal_closed, start: 0.2, amp: rrand(0.9,1.0) 
     sync :sixteen
+        sample :drum_cymbal_closed, start: 0.2, amp: rrand(0.9,1.0) 
+
   }
 end
 

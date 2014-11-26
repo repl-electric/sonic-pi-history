@@ -55,6 +55,13 @@ end
 end
 #end
 
+live_loop :synths do
+  sync :sixteen
+  
+  play :A3
+  
+  15.times{sync :sixteen}
+end
 
 with_fx :level, amp: 1 do
 with_fx :lpf, cutoff: 100 do

@@ -16,12 +16,11 @@ live_loop :kick do
   (3).times{sync :sixteen}
  
   sync :sixteen
-  sample :elec_soft_kick, start: 0.1
-
+  sample :elec_snare
   (3).times{sync :sixteen}
 
   sync :sixteen
-  sample :elec_soft_kick, start: 0.1
+  sample :elec_snare
   (3).times{sync :sixteen}
 end
 

@@ -8,14 +8,13 @@ end
 
 live_loop :ride do
   2.times{sync :sixteen}
-  sample :drum_cymbal_closed
+  sample :drum_cymbal_closed, rate:
   2.times{sync :sixteen}
   sample :drum_cymbal_closed
 
   12.times{
-  sync :sixteen
-    sample :drum_cymbal_closed      
-
+    sync :sixteen
+    sample :drum_cymbal_closed, start: 0.01 
   }
 end
 

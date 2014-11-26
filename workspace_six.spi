@@ -58,7 +58,7 @@ end
 live_loop :synths do
   sync :sixteen
   use_synth :prophet  
-  play :A2, release: 2, decay: 2
+  play :A2, release: 2, decay: 2, sustain: 2
   
   15.times{sync :sixteen}
 end

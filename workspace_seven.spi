@@ -20,12 +20,14 @@ live_loop :kick do
   double = (dice(6) > 4)
   s = [:elec_snare, :elec_hollow_kick].choose
   
+  #BAR1
   sync :sixteen
 #  with_fx :echo, phase: bar*[9].choose do
     sample :drum_heavy_kick, start: 0.0, amp: 2.0
  # end
   (3).times{sync :sixteen}
 
+  #BAR2
   sync :sixteen
   sample :drum_snare_soft, amp: 3
   (2).times{sync :sixteen}

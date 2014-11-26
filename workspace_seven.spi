@@ -31,7 +31,9 @@ live_loop :kick do
 
   #BAR2
   sync :sixteen
+  with_fx :distortion, distort: 0.8 do
   sample :drum_snare_soft, amp: 3
+  end
   (2).times{sync :sixteen}
 
   if(double)

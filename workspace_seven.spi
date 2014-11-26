@@ -49,6 +49,7 @@ live_loop :kick do
 end
 
 live_loop :striate do
+  s = sample :elec_chime
   sync :sixteen
   sample :elec_blip
   2.times{sync :sixteen}

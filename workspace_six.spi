@@ -55,23 +55,23 @@ end
 end
 #end
 
-live_loop :synths do
-with_fx :distortion, distort: 0.5 do
-  sync :sixteen
-  use_synth :prophet  
-  play chord(:A2, :m7)[-1], release: 1, decay: 1, sustain: 1 
-  15.times{sync :sixteen}
+#live_loop :synths do
+#with_fx :distortion, distort: 0.5 do
+#  sync :sixteen
+#  use_synth :prophet  
+#  play chord(:A2, :m7)[-1], release: 1, decay: 1, sustain: 1 
+#  15.times{sync :sixteen}
 
-  play chord(:A2, :m7)[-2], release: 1, decay: 1, sustain: 1 
-  15.times{sync :sixteen} 
+#  play chord(:A2, :m7)[-2], release: 1, decay: 1, sustain: 1 
+#  15.times{sync :sixteen} 
   
-  play chord(:A2, :m7)[-4], release: 1, decay: 1, sustain: 1 
-  15.times{sync :sixteen} 
+#  play chord(:A2, :m7)[-4], release: 1, decay: 1, sustain: 1 
+#  15.times{sync :sixteen} 
 
-  play_chord chord(:A2, :m7), release: 1, decay: 1, sustain: 1 
-  15.times{sync :sixteen} 
-  end
-end
+#  play_chord chord(:A2, :m7), release: 1, decay: 1, sustain: 1 
+#  15.times{sync :sixteen} 
+#  end
+#end
 
 with_fx :level, amp: 1 do
 with_fx :lpf, cutoff: 100 do

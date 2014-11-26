@@ -85,11 +85,14 @@ live_loop :striate do
   with_fx :distortion, distort: 0.8 do
     sample s, amp: 0.8
   end
+
+  if(dice(6) >=5)
   2.times{sync :sixteen} 
   sample s, amp: 0.8
   1.times{sync :sixteen} 
-
-  
+  else
+  3.times{sync :sixteen} 
+  end
   
   #BAR4
   sync :sixteen

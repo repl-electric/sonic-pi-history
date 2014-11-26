@@ -43,7 +43,6 @@ live_loop :kick do
   2.times{sync :sixteen}
 
   sample :elec_soft_kick
-
   3.times{sync :sixteen}
 end
 end
@@ -72,7 +71,9 @@ live_loop :striate do
     sample s, amp: 0.8, rate: 0.9
   end
 
-  3.times{sync :sixteen} 
+  2.times{sync :sixteen} 
+  sample :elec_soft_kick
+  1.times {sync :sixteen}
   
   #BAR4
   sync :sixteen

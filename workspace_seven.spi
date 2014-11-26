@@ -22,9 +22,10 @@ live_loop :striate do
 
   2.times{sync :sixteen}
   sample :elec_flip
+  sample :elec_wood
+ 
  
   2.times{sync :sixteen}
-  sample :elec_wood
   sample :elec_flip
   
   2.times{ sync :sixteen}

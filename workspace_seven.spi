@@ -16,7 +16,7 @@ end
 
 #|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|
 
-
+with_fx :level, amp: 0 do
 live_loop :kick do
   double = (dice(6) > 4)
   s = [:elec_snare, :elec_hollow_kick].choose
@@ -61,6 +61,7 @@ live_loop :kick do
   sync :sixteen
   sample :drum_heavy_kick, start: 0.01
   (3).times{sync :sixteen}
+end
 end
 
 #|1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 16|

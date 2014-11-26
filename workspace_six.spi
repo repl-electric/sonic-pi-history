@@ -113,6 +113,6 @@ end
 live_loop :bass do
   sync :sixteen
   use_synth :supersaw
-  play_chord chord(:A2, :major)
+  play_chord chord(:A1, :major)
   15.times{sync :sixteen}
 end

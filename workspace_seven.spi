@@ -18,7 +18,7 @@ live_loop :kick do
   s = [:elec_snare, :elec_hollow_kick].choose
   
   sync :sixteen
-  with_fx :reverb do
+  with_fx :echo do
   sample :drum_heavy_kick, start: 0.0, amp: 2.0
   end
   (3).times{sync :sixteen}

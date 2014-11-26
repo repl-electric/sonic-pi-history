@@ -26,7 +26,5 @@ live_loop :striate do
   2.times{sync :sixteen}
   sample :elec_flip
   
-  2.times{
-    sync :sixteen
-  }
+  2.times{ sync :sixteen}
 end

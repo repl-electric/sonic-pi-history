@@ -112,7 +112,7 @@ end
 
 live_loop :bass do
   sync :sixteen
-  use_synth :mod_fm
+  use_synth :saw
   play_chord chord(:A1, :major)
   15.times{sync :sixteen}
 end

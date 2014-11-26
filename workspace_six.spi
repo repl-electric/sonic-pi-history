@@ -56,7 +56,7 @@ end
 #end
 
 live_loop :synths do
-with_fx :distortion, distort: 0.8 do
+with_fx :distortion, distort: 0.5 do
   sync :sixteen
   use_synth :prophet  
   play chord(:A2, :m7)[-1], release: 1, decay: 1, sustain: 1 

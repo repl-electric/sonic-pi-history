@@ -52,7 +52,7 @@ live_loop :striate do
   s = :elec_plip
   sync :sixteen
   sample s
-  3.times{sync :sixteen}
+  2.times{sync :sixteen}
   
   8.times {
     sample s
@@ -72,5 +72,5 @@ live_loop :striate do
     sample s, amp: 0.5
   end
   
-  2.times{ sync :sixteen}
+  3.times{ sync :sixteen}
 end

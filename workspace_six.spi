@@ -58,7 +58,7 @@ end
 live_loop :synths do
   sync :sixteen
   use_synth :prophet  
-  play_chord chord(:A2, :m7), release: 1, decay: 1, sustain: 1 
+  play_chord chord(:A2, :m7).choose, release: 1, decay: 1, sustain: 1 
   15.times{sync :sixteen}
 end
 

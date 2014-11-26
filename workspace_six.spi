@@ -62,8 +62,7 @@ live_loop :striate do
   end
   
   #BAR2
-  2.times{sync :sixteen}
-  2.times{sync :sixteen}
+  4.times{sync :sixteen}
 
   #BAR3
   sync :sixteen

@@ -68,7 +68,7 @@ end
 
 live_loop :striate do
   #BAR1
-  s = :drum_cymbal_closed
+  s = :elec_blip2
   sync :sixteen; sample s; sync :sixteen
   6.times { sample s; sync :middle;}
 

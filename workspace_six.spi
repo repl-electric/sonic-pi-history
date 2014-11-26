@@ -119,15 +119,15 @@ with_fx :lpf, cutoff: 80 do
   15.times{sync :sixteen}
 
   sync :sixteen
-  play_chord chord_degree(1, :A1, :major), release: 1, decay: 1, sustain: 1
-  15.times{sync :sixteen}
-  
-  sync :sixteen
   play_chord chord_degree(3, :A1, :major), release: 1, decay: 1, sustain: 1
   15.times{sync :sixteen}
   
   sync :sixteen
   play_chord chord_degree(2, :A1, :major), release: 1, decay: 1, sustain: 1
+  15.times{sync :sixteen}
+  
+  sync :sixteen
+  play_chord chord_degree(1, :A1, :major), release: 1, decay: 1, sustain: 1
   15.times{sync :sixteen}
   
   end

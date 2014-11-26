@@ -24,3 +24,9 @@ live_loop :kick do
   sample :drum_heavy_kick
   15.times{sync :sixteen}
 end
+
+live_loop :striate do
+  sync :sixteen
+  sample :elec_beep
+
+end

@@ -8,9 +8,9 @@ end
 
 live_loop :ride do
   2.times{sync :sixteen}
-  sample :drum_cymbal_closed, rate: 1, amp: rrand(1.0, 1.1)
-  2.times{sync :sixteen}
   sample :drum_cymbal_closed, rate: 1, amp: rrand(1.1, 1.2)
+  2.times{sync :sixteen}
+  sample :drum_cymbal_closed, rate: 1, amp: rrand(1.0, 1.1)
 
   6.times{
     sync :sixteen

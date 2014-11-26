@@ -11,7 +11,15 @@ live_loop :kick do
 end
 
 live_loop :striate do
+
+  8.times {
   sync :middle
   sample :elec_blip
+  }
+  
+  8.times {
+  sync :sixteen
+  sample :elec_blip
+  }
 
 end

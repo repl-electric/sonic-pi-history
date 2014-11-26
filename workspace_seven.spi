@@ -11,6 +11,10 @@ live_loop :kick do
   sync :sixteen
   sample :elec_soft_kick, start: 0.0
   (3).times{sync :sixteen}
+
+  sync :sixteen
+  (3).times{sync :sixteen}
+ 
  
   sync :sixteen
   sample :elec_soft_kick, start: 0.1

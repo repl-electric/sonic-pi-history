@@ -1,10 +1,7 @@
 bar = 1/8.0
 
 live_loop :metro do
-  cue :sixteen; cue :middle; 
-  sleep bar/2; 
-  cue :middle; 
-  sleep bar/2;
+  cue :sixteen; cue :middle; sleep bar/2; cue :middle; sleep bar/2;
 end
 
 live_loop :kick do
@@ -15,6 +12,9 @@ end
 
 live_loop :striate do
   sync :sixteen
+  sample :elec_flip
+  sync :sixteen
+  
   10.times {
   sample :elec_flip
   sync :middle

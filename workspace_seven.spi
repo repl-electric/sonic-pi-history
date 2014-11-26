@@ -36,7 +36,9 @@ live_loop :striate do
   }
 
   1.times{sync :sixteen}
+  with_fx :distortion do
   sample :elec_blip, amp: 2
+  end
   
   4.times{sync :sixteen}
   sample :elec_blip, amp: 2

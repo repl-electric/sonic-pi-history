@@ -57,7 +57,7 @@ end
 
 live_loop :synths do
   sync :sixteen
-  
+  use_synth :prophet  
   play :A3
   
   15.times{sync :sixteen}

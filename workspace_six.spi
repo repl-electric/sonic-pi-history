@@ -42,11 +42,9 @@ live_loop :kick do
   2.times{sync :sixteen}
  
   sample :drum_snare_soft, amp: 3
-
   1.times{sync :sixteen}
-    sample :drum_snare_soft, amp: 3
+  sample :drum_snare_soft, amp: 3 if dice(6) >= 5
   1.times{sync :sixteen}
-
   
   sample :elec_soft_kick
   2.times{sync :sixteen}

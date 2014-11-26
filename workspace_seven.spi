@@ -100,7 +100,7 @@ live_loop :striate do
   #BAR4
   sync :sixteen
   with_fx :distortion, distort: 0.8 do
-    sample s, amp: 0.8, rate: 1.01
+    sample s, amp: 0.8, rate: 1.0
   end
   3.times{sync :sixteen}
 end

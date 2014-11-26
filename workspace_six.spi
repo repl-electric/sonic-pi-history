@@ -74,7 +74,7 @@ end
 #end
 
 with_fx :level, amp: 1 do
-with_fx :lpf, cutoff: 100 do
+with_fx :lpf, cutoff: 120 do
 live_loop :striate do
   #BAR1
   s = :elec_hollow_kick

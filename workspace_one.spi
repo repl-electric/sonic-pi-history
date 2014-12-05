@@ -228,7 +228,7 @@ end
 live_loop :drums do
   with_fx :lpf, cutoff: 60 do
   sync :bar
-    sample p_a2_s, attack: 0.01
+    sample p_a2_s, attack: 0.001
     sync :bar
   end
 end

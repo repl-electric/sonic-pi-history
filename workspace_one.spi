@@ -23,6 +23,12 @@ live_loop :metro do
   sleep bar
 end
 
+live_loop :highlights do
+ sync :high
+ use_synth :sine
+ play :A4
+end
+
 with_fx :level, amp: 1 do
 live_loop :drum do
   sync :quart
@@ -50,10 +56,10 @@ live_loop :piano do
     sample pa_s, amp: 2
 
     play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/4
-       play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-        sleep bar/4
-        play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
+    sleep bar/4
+    play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    sleep bar/4
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
   end
 end
 end

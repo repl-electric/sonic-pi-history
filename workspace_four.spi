@@ -23,3 +23,19 @@ end
 sleep bar*4
 end
 end
+
+
+live_loop :drums do
+  sync :quart
+  play 
+
+  sync :quart
+
+  
+  sync :quart
+
+
+  sync :quart
+
+  
+end

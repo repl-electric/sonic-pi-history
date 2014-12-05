@@ -221,7 +221,7 @@ room_size = 0
 @@beep_note = chord_degree(1, :A3, :major).choose
 
 live_loop :beep2 do
-  3.times{sync :start}
+  sync :start
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
@@ -237,7 +237,7 @@ live_loop :beep2 do
 end
 
 live_loop :beep do
-  3.times{sync :start}
+  sync :start
 
   #-10.0, -5.0
   # degree(6, :A2, :major)

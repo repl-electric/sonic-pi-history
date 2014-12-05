@@ -31,8 +31,8 @@ live_loop :highlights do
  high_n += 1
 end
 
-with_fx :level, amp: 1 do
 live_loop :drum do
+with_fx :level, amp: 0 do
   sync :quart
   with_fx :lpf do
     sample :elec_triangle, amp: 0.2
@@ -40,8 +40,8 @@ live_loop :drum do
 end
 end
 
-with_fx :level, amp: 0 do
 live_loop :vio do
+with_fx :level, amp: 0 do
   4.times{sync :start}
   with_fx :reverb, room: 1.0, mix: 1.0 do
     sample v_s, amp: 90
@@ -49,8 +49,8 @@ live_loop :vio do
 end
 end
 
-with_fx :level, amp: 1 do
 live_loop :piano do
+with_fx :level, amp: 0 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
@@ -66,8 +66,8 @@ live_loop :piano do
 end
 end
 
-with_fx :level, amp: 1 do
 live_loop :piano2 do
+with_fx :level, amp: 0 do
   use_synth :tri
   sync :start
 
@@ -111,8 +111,9 @@ live_loop :piano2 do
 end
 end
 
-with_fx :level, amp: 1 do
 live_loop :dark do
+with_fx :level, amp: 0 do
+
   use_synth :beep
   sync :start
   with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 2, rate: 0.99}
@@ -166,8 +167,9 @@ end
 @direction = 1
 room_size = 0
 
-with_fx :level, amp: 1 do
 live_loop :beep do
+with_fx :level, amp: 0 do
+
   #  sync :bar
 
   #-10.0, -5.0
@@ -186,8 +188,9 @@ live_loop :beep do
 end
 end
 
-with_fx :level, amp: 1 do
 live_loop :beep2 do
+with_fx :level, amp: 0 do
+
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
@@ -226,8 +229,8 @@ live_loop :fuzz do
   sleep bar/2
 end
 
-with_fx :level, amp: 1 do
 live_loop :radio do
+with_fx :level, amp: 0 do
   sample radio_s, amp: 1, rate: 0.4
   sleep sample_duration(radio_s)
 end

@@ -30,6 +30,7 @@ live_loop :drum do
   end
 end
 
+with_fx :amp 0
 live_loop :vio do
   4.times{sync :start}
   with_fx :reverb, room: 1.0, mix: 1.0 do

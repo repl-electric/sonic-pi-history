@@ -215,8 +215,7 @@ end
 live_loop :fuzz do
   n=0.1
   with_fx :echo do |r|
-  with_fx :hpf, cutoff: 115 do
-
+  with_fx :hpf, cutoff: 130 do
   use_synth :dsaw
   play degree(1, :A3, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
   4.times do |i|
@@ -225,7 +224,6 @@ live_loop :fuzz do
   sleep bar*2
   end
   end 
-  
   end
   sleep bar/2
   end

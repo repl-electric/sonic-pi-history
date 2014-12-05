@@ -213,7 +213,7 @@ end
 end
 
 live_loop :fuzz do
-  n=0.25
+  n=0.0
   with_fx :echo do |r|
   with_fx :hpf, cutoff: 120 do
 

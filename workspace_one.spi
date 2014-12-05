@@ -202,20 +202,20 @@ live_loop :beep2 do
 end
 end
 
-live_loop :bazz do
-  use_synth :prophet
-  sync :start
-  with_fx :hpf, cutoff: 120 do
-    play :A3
-  end
-end
-
 live_loop :fuzz do
   n=0.2
   with_fx :echo do |r|
   with_fx :hpf, cutoff: 125 do
   use_synth :dsaw
   play degree(1, :A3, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
+
+  with_synth :prophet
+  with_fx :hpf, cutoff: 120 do
+    play :A3
+  end
+  end
+
+
   4.times do |i|
   control r, phase: n
   n += 0.01
@@ -225,5 +225,11 @@ live_loop :fuzz do
   end
   sleep bar/2
 end
+
+live_loop :bazz do
+  use_synth :prophet
+  sync :start
+end
+
   
   

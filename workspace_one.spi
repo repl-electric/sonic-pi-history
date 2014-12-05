@@ -25,7 +25,7 @@ end
 
 live_loop :highlights do
  sync :high
- use_synth :pretty_bell
+ use_synth :sine
  play :A4 
 end
 

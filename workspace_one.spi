@@ -23,11 +23,13 @@ live_loop :metro do
   sleep bar
 end
 
+with_fx :level, amp: 0 do
 live_loop :drum do
   sync :quart
   with_fx :lpf do
     sample :elec_triangle, amp: 0.2
   end
+end
 end
 
 with_fx :level, amp: 0 do

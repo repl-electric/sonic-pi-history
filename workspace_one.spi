@@ -205,7 +205,7 @@ end
 live_loop :bazz do
   use_synth :prophet
   sync :start
-  with_fx :hpf, :cutoff 120 do
+  with_fx :hpf, cutoff: 120 do
     play :A1
   end
 end

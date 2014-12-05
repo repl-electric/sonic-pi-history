@@ -228,9 +228,9 @@ end
 live_loop :drums do
   with_fx :lpf, cutoff: 70 do
   sync :bar
-  sample p_a2_s, attack: 0.001, release: 2, sustain: 2, attack_level: 0.4
+  sample p_a2_s, attack: 0.0001, release: 2, sustain: 2, attack_level: 0.4
   sync :bar
-  sample p_a2_s, attack: 0.001, release: 2, sustain: 2, attack_level: 0.4
+  sample p_a2_s, attack: 0.0001, release: 2, sustain: 2, attack_level: 0.4
 
   sync :bar
 

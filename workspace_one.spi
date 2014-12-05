@@ -218,11 +218,10 @@ live_loop :fuzz do
   with_fx :hpf, cutoff: 120 do
 
   use_synth :dsaw
-
   play degree(8, :A2, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar/2
   8.times do
   control r, phase: n
-  n += 0.1
+  n += 0.15
   sleep bar/2
 
   end

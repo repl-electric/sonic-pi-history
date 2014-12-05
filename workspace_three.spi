@@ -38,7 +38,7 @@ with_fx :reverb do
   #1
   sync :eight
   with_fx :slicer, phase: bar/8 do
-    sample :elec_soft_kick, amp: 12
+  #  sample :elec_soft_kick, amp: 12
   end
   sync :eight
 

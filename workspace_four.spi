@@ -6,6 +6,6 @@ with_fx :hpf, cutoff: 115 do
 use_synth :dsaw
 play degree(6, :A2, :major)
 end
-sleep bar*2
+sleep bar
 end
 end

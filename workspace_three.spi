@@ -94,7 +94,7 @@ live_loop :piano do
 
     if(dice(6) > ((p_count % 6)+2))
       sleep bar/4
-      sample pa_s, amp: 8, rate: [-1.2].choose #-1.2
+      #sample pa_s, amp: 8, rate: [-1.2].choose #-1.2
     end
 
 #      if(p_count % 4 <= 2)

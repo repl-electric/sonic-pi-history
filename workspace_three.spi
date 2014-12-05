@@ -181,7 +181,7 @@ end
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   with_fx :lpf, cutoff: rrand(80, 120) do
   use_synth :mod_dsaw #:mod_saw
-  use_synth_defaults mod_range: 2, detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8
+  use_synth_defaults mod_range: 1, detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
   with_fx :reverb do |r|

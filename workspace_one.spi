@@ -205,8 +205,8 @@ end
 live_loop :bazz do
   use_synth :prophet
   sync :start
-  with_fx :lpf do
-  play :A1
+  with_fx :hpf, do
+    play :A1
   end
 end
 

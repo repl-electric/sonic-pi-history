@@ -44,7 +44,8 @@ end
 
 live_loop :vio do
 with_fx :level, amp: 1 do
-  4.times{sync :start}
+  #4.times{sync :start}
+  sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
     sample v_s, amp: 90
   end
@@ -109,7 +110,7 @@ with_fx :level, amp: 1 do
     end
   end
 
-  2.times{sync :start}
+  2.times{sync :start; cue :otherhigh}
 end
 end
 

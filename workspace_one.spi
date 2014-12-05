@@ -202,6 +202,11 @@ live_loop :beep2 do
 end
 end
 
+live_loop :bazz do
+  sync :start
+  play :A1
+
+end
 
 live_loop :fuzz do
   n=0.2

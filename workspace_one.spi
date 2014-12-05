@@ -208,7 +208,7 @@ live_loop :fuzz do
   with_fx :echo do |r|
   with_fx :hpf, cutoff: 125 do
   use_synth :dsaw
-  play degree(1, :A3, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
+  play degree(1, :A4, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
 
   with_synth :prophet do
   with_fx :hpf, cutoff: 120 do

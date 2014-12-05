@@ -185,7 +185,7 @@ live_loop :beep do
 end
 end
 
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 live_loop :beep2 do
   #  sync :bar
   #-10.0, -5.0

@@ -214,7 +214,7 @@ end
 
 live_loop :fuzz do
   n=1.0
-  with_fx :reverb do |r|
+  with_fx :echo do |r|
   with_fx :hpf, cutoff: 120 do
 
   use_synth :dsaw

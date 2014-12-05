@@ -203,8 +203,9 @@ end
 end
 
 live_loop :bazz do
+  use_synth :prophet
   sync :start
-  play :A2
+  play :A1
 
 end
 

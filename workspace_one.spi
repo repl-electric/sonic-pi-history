@@ -225,8 +225,8 @@ live_loop :fuzz do
   end 
   n += 0.1
   end
-  end
   sleep bar*4
+  end
   
 
   end

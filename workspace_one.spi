@@ -202,7 +202,7 @@ live_loop :beep2 do
 end
 end
 
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 live_loop :deep do
   use_synth :fm
   sync :start

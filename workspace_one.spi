@@ -101,7 +101,7 @@ with_fx :level, amp: 1 do
         #sample Piano.note(:c2)
 
         play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
-        with_synth(:tri){play chord_degree(4, :A2, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
         
         
         

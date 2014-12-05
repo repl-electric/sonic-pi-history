@@ -222,9 +222,10 @@ live_loop :fuzz do
   8.times do
   play degree(8, :A2, :major), release: bar*3, decay: bar*1, amp: 1.0, attack: 1.0
   control r, damp: n
-  end 
   n += 0.1
   end
-  sleep bar*4
+ end 
+  
+ sleep bar*4
   end
   end

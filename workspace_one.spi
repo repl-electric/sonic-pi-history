@@ -27,7 +27,7 @@ high_n = 0
 live_loop :highlights do
  sync :high
  use_synth :sine
- play high_n % 4 > 2 ? degree(1, :A4, :major) : degree(1, :A3, :major)  
+ play high_n % 2 > 1 ? degree(1, :A4, :major) : degree(1, :A3, :major)
  high_n += 1
 end
 

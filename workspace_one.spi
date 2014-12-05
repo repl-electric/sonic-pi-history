@@ -209,33 +209,13 @@ live_loop :sawnoise do
   n+= 1
 end
 
-#begone :deep
-#begone :vio
-#begone :deep
-#begone :beep
-#begone :piano
-#begone :dark
-#begone :radio
-#begone :sawnoise
+live_loop :fuzz do
+with_fx :reverb do
 
-
-#3.times do
-#  control(r, room: 0.1) ; control(d, distort: 0.5)
-#  play note, attack: 0.001,  pan: 0.8*direction,  decay: (bar/2)*6, release: bar*6, detune: 0.0
-#  sleep bar/2
-#  control(r, room: 0.3, distort: 0.5);
-
-#  play note, attack: 0.001, pan: 0.7*direction, detune: 0.0
-#  sleep bar/2
-#  control(r, room: 0.8)
-#  play note, attack: 0.01,  pan: 0.6*direction, release: 0.5, decay: (bar/2), detune: detune_factor
-#  sleep bar/2
-#  control(r, room: 1.0); control(d, distort: 0.0)
-#  play note, attack: 0.01,  pan: 0.5*direction, release: 0.5, decay: (bar/2)/2, detune: detune_factor
-#  sleep bar/2
-#end
-#  sleep bar/2
-#
-# end
-# end
-#  end
+with_fx :hpf, cutoff: 120 do
+use_synth :dsaw
+play degree(4, :A2, :major), release: bar*3, decay: bar*1, amp: 0.9, attack: 0.5
+end
+sleep bar*4
+end
+end

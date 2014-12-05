@@ -225,11 +225,3 @@ live_loop :fuzz do
   end
   sleep bar/2
 end
-
-live_loop :bazz do
-  use_synth :prophet
-  sync :start
-end
-
-  
-  

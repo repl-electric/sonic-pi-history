@@ -6,6 +6,6 @@ with_fx :hpf, cutoff: 110 do
 use_synth :mod_dsaw
 play degree(6, :A2, :major),  mod_phase: 1.1
 end
-sleep bar*1
+sleep bar*2
 end
 end

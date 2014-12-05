@@ -15,7 +15,7 @@ end
 live_loop :fuzz do
 with_fx :reverb do
 
-with_fx :hpf, cutoff: 114 do
+with_fx :hpf, cutoff: 120 do
 use_synth :dsaw
 play degree(6, :A2, :major), release: bar*3, decay: bar*1, amp: 0.9, attack: 0.5
 end

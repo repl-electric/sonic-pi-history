@@ -229,4 +229,6 @@ live_loop :fuzz do
   end 
   
   end
+  sleep bar/1000
+
   end

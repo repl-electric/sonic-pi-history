@@ -227,7 +227,7 @@ end
 
 live_loop :drums do
   use_synth :mod_dsaw
-  use_synth_defaults mod_range: 0
+  use_synth_defaults mod_range: 0.01
   with_fx :lpf, cutoff: 70 do
   sync :start
   play :A2

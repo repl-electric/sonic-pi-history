@@ -47,7 +47,7 @@ with_fx :level, amp: 1 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
-    sample v_s, amp: 90
+    sample v_s, amp: 90, rate: rrand(1.0, 1.01)
   end
 end
 end

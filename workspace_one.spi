@@ -119,7 +119,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
         n_cut = rrand(50,cutoff);
         control(c, cutoff: n_cut);
         7.times do |n|
-          control(r, mix: mix: 0.5)
+          control(r, mix: 0.5)
           control(r, room: 0.1) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: 0.1
 

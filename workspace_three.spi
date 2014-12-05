@@ -187,7 +187,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   with_fx :reverb do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
-        n_mod_phase = 10.9
+        n_mod_phase = (bar/2)* 4
         n_cut = rrand(30,cutoff);
         n_mix = 0.5
         control(c, cutoff: n_cut);

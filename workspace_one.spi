@@ -219,7 +219,7 @@ live_loop :fuzz do
 
   use_synth :dsaw
 
-  play degree(8, :A2, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
+  play degree(8, :A2, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar/2
   8.times do
   control r, room: n
   n -= 0.01

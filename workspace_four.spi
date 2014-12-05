@@ -1,5 +1,5 @@
 
 with_fx :hpf, cutoff: 110 do
 use_synth :dsaw
-play degree(7, :A2, :major)
+play degree(5, :A2, :major)
 end

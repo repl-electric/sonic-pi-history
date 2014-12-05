@@ -178,7 +178,7 @@ with_fx :level, amp: 1 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  n =  [degree(6, :A4, :major)].choose
+  n =  [degree(1, :A4, :major)].choose
   #sync :start
 
   4.times do

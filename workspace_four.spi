@@ -3,7 +3,7 @@ bar = 1/2.0
 live_loop :fuzz do
 with_fx :reverb do
 with_fx :hpf, cutoff: 110 do
-use_synth :dsaw
+use_synth :mod_dsaw
 play degree(6, :A2, :major)
 end
 sleep bar

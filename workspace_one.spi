@@ -204,7 +204,7 @@ end
 
 live_loop :bazz do
   sync :start
-  play :A1
+  play :A2
 
 end
 

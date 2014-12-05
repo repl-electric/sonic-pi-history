@@ -226,10 +226,9 @@ live_loop :fuzz do
 end
 
 live_loop :drums do
-  with_fx :lpf do
+  with_fx :lpf, cutoff: 80  do
   sync :bar
-  sample p_a2_s
-  
-  sync :bar
+    sample p_a2_s
+    sync :bar
   end
 end

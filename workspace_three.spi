@@ -223,7 +223,9 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           n_mix = n_mix - 0.05 if n_mix > 0.2
         end
         sleep bar/2
-      end end end end end
+      end end end end 
+      sleep bar
+      end
 
 @cutoff = 100
 @direction = 1

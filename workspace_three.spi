@@ -222,7 +222,6 @@ room_size = 0
 
 live_loop :beep2 do
   sync :start
-
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)

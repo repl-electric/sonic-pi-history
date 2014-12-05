@@ -164,6 +164,8 @@ end
 @cutoff = 100
 @direction = 1
 room_size = 0
+
+with_fx :level, amp: 0 do
 live_loop :beep do
   #  sync :bar
 
@@ -180,6 +182,7 @@ live_loop :beep do
     beeper n, @direction, 1, 80, 0, 0.001
     room_size += 1
   end
+end
 end
 
 live_loop :beep2 do

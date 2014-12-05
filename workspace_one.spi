@@ -213,11 +213,15 @@ end
 end
 
 live_loop :fuzz do
-  with_fx :reverb do
+  with_fx :reverb do |r|
   with_fx :hpf, cutoff: 120 do
+  n=0
+
   use_synth :dsaw
   play degree(8, :A2, :major), release: bar*3, decay: bar*1, amp: 1.0, attack: 1.0
-  end
+  control r, :phase n
+  end 
+  n+= 0.01
   sleep bar*4
   end
 end

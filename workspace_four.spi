@@ -1,6 +1,6 @@
 bar = 1/2.0
 
-set_volume! 2
+set_volume! 4
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar

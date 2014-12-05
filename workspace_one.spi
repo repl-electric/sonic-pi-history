@@ -219,7 +219,7 @@ live_loop :fuzz do
 
   use_synth :dsaw
   play degree(8, :A2, :major), release: bar*3, decay: bar*1, amp: 1.0, attack: 1.0
-  control r, phase: n
+  control r, room: n
   end 
   n+= 0.01
   sleep bar*4

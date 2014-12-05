@@ -199,7 +199,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         n_cut = rrand(30,cutoff);
-        n_mix = 0.7
+        n_mix = 0.6
         control(c, cutoff: n_cut);
         7.times do |n|
           control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1

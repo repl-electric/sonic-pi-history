@@ -59,17 +59,17 @@ with_fx :level, amp: 0 do
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sample pa_s, amp: 2
 
-    play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/4
-    play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
+    #play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+   # sleep bar/4
+    #play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    #sleep bar/4
+    #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
   end
 end
 end
 
 live_loop :piano2 do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   use_synth :tri
   sync :start
 
@@ -101,7 +101,7 @@ with_fx :level, amp: 0 do
         #sample Piano.note(:c2)
 
         play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
-        with_synth(:tri){play chord_degree(4, :A4, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
+        with_synth(:tri){play chord_degree(4, :A2, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
         
         
         

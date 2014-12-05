@@ -49,14 +49,14 @@ with_fx :reverb do
   sync :eight
 
   roll = dice(6)
-  sample :elec_soft_kick, amp: 12 if roll > 4
+  #sample :elec_soft_kick, amp: 12 if roll > 4
   #3
   sync :eight
   with_fx :reverb, room: 1, mix: 0.5 do
     #sample [:elec_hi_snare].choose
   end
   sync :eight
-  sample :elec_soft_kick, amp: 12 if roll > 4
+ # sample :elec_soft_kick, amp: 12 if roll > 4
 
   #4
   sync :eight

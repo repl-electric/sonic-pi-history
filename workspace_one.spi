@@ -243,7 +243,7 @@ live_loop :drums do
 
   play :A2
   sample p_a2_s, attack: 0.0001, release: 4, sustain: 4, attack_level: 0.4
-  sleep bar/4
+  sleep bar/2
  
   end
 end

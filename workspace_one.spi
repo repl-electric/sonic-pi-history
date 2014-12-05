@@ -134,7 +134,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           sample :elec_soft_kick, rate: 1, start: 0.1
 
           sleep bar/2
-          control(r, room: 1.0, mix: 0.8); control(d, distort: 0.0); play note, attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.001))
+          control(r, room: 1.0, mix: 0.6); control(d, distort: 0.0); play note, attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.001))
           sample :elec_soft_kick, rate: 1, start: 0.1
 
           sleep bar/2

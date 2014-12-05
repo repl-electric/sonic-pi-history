@@ -27,7 +27,7 @@ end
 
 live_loop :drums do
   sync :quart
-  play 
+  sample :drum_cymbal_pedal
 
   sync :quart
 

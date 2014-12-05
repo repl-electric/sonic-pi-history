@@ -53,7 +53,7 @@ with_fx :reverb do
   #3
   sync :eight
   with_fx :reverb, room: 1, mix: 0.5 do
-    sample [:elec_hi_snare].choose
+    #sample [:elec_hi_snare].choose
   end
   sync :eight
   sample :elec_soft_kick, amp: 12 if roll > 4

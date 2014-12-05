@@ -7,7 +7,7 @@ with_fx :reverb do
 
 with_fx :hpf, cutoff: 115 do
 use_synth :dsaw
-play degree(5, :A2, :major), release: bar*2, amp: 0.9
+play degree(6, :A2, :major), release: bar*2, amp: 0.9
 end
 sleep bar
 end

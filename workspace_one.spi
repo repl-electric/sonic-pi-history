@@ -226,6 +226,7 @@ live_loop :fuzz do
 end
 
 live_loop :drums do
+use_synth :mod_dsaw
   with_fx :lpf, cutoff: 70 do
   sync :start
   sample p_a2_s, attack: 0.0001, release: 4, sustain: 4, attack_level: 0.4

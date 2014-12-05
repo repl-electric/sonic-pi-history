@@ -25,8 +25,8 @@ end
 
 live_loop :highlights do
  sync :high
- use_synth :sine
- play :A4
+ use_synth :pretty_bell
+ play :A4 
 end
 
 with_fx :level, amp: 1 do

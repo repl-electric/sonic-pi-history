@@ -4,7 +4,7 @@ live_loop :fuzz do
 with_fx :reverb do
 with_fx :hpf, cutoff: 110 do
 use_synth :mod_dsaw
-play degree(6, :A2, :major),  mod_phase: 0.5, release: 1, attack: 0.7, mod_range: 1.0
+play degree(6, :A2, :major),  mod_phase: 0.5, release: 1, attack: 0.7, mod_range: 2.0
 end
 sleep bar*2
 end

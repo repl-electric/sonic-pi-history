@@ -1,4 +1,4 @@
-
+bar = 1/2.0
 
 live_loop :fuzz do
 with_fx :hpf, cutoff: 110 do

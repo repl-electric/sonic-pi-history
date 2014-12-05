@@ -1,8 +1,18 @@
 bar = 1/2.0
 
+
+live_loop :metro do
+  cue :start; cue :quart;  cue :bar
+  sleep bar
+  cue :bar
+  sleep bar
+  cue :quart; cue :bar
+  sleep bar
+  cue :bar
+  sleep bar
+end
+
 live_loop :fuzz do
-
-
 with_fx :reverb do
 
 with_fx :hpf, cutoff: 114 do

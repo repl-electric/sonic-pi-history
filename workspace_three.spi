@@ -236,7 +236,7 @@ live_loop :beep2 do
 end
 
 live_loop :beep do
-  #  sync :bar
+  sync :start
 
   #-10.0, -5.0
   # degree(6, :A2, :major)

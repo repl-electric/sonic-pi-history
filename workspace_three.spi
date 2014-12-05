@@ -127,15 +127,25 @@ live_loop :piano do
   p_count += 1
 end
 
+
+p2_n = 0
 live_loop :piano2 do
   use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
-      with_fx :distortion, mix: 0.5 do
-        #with_fx(:reverb, room: 1, mix: 1){sample Piano.note(:a2), amp: 1, rate: 1.0}
 
+      case p2_n%8
+
+      when 7
+      
+      
+      
+      
+      else
+      #with_fx(:reverb, room: 1, mix: 1){sample Piano.note(:a2), amp: 1, rate: 1.0}
+      with_fx :distortion, mix: 0.5 do
         #play chord_degree(1, :A2, :major).take(3), amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.8
         play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
         sleep bar/2
@@ -162,9 +172,11 @@ live_loop :piano2 do
         with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
       end
     end
+    end
   end
 
   2.times{sync :start}
+  p2_n += 1
 end
 
 live_loop :dark do

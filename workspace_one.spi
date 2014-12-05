@@ -207,7 +207,7 @@ live_loop :deep do
   use_synth :fm
   sync :start
   with_fx :slicer, phase: bar*2 do
-    play degree(1, :A1, :major), release: bar*12, decay: bar*12, amp: 0.5
+    play degree(1, :A1, :major), release: bar*12, decay: bar*12, amp: 0.2
   end
 end
 end

@@ -27,8 +27,8 @@ r_count = 0
 live_loop :rides do
   with_fx :reverb do
   sync :eight
-  sample :drum_cymbal_closed, start: (r_count % 16 >= 12 ? 0.05 : 0.3), rate: rrand(0.99,1.01)
-  2.times {sync :eight}
+  #sample :drum_cymbal_closed, start: (r_count % 16 >= 12 ? 0.05 : 0.3), rate: rrand(0.99,1.01)
+  #2.times {sync :eight}
   r_count+=1
   end
 end

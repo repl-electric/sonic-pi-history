@@ -41,7 +41,7 @@ live_loop :vio do
 end
 end
 
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 live_loop :piano do
   sync :quart
   use_synth :beep

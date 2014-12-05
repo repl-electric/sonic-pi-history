@@ -220,7 +220,7 @@ end
 
 with_fx :level, amp: 1 do
 live_loop :radio do
-  sample radio_s, amp: 8, rate: 0.4
+  sample radio_s, amp: 2, rate: 0.4
   sleep sample_duration(radio_s)
 end
 end

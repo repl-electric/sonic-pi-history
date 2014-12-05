@@ -213,7 +213,7 @@ end
 end
 
 live_loop :fuzz do
-  n=bar/2
+  n=0.1
   with_fx :reverb do |r|
   with_fx :hpf, cutoff: 120 do
 
@@ -227,6 +227,4 @@ live_loop :fuzz do
   end
   sleep bar*4
   end
-  
-
   end

@@ -1,5 +1,5 @@
 
 with_fx :hpf, cutoff: 110 do
 use_synth :dsaw
-play :A3
+play :A2
 end

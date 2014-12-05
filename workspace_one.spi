@@ -211,7 +211,7 @@ live_loop :fuzz do
 
   with_synth :prophet do
   with_fx :hpf, cutoff: 120 do
-    play :A1
+    play :A1, release: bar*4
   end
   end
 

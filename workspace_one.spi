@@ -23,10 +23,12 @@ live_loop :metro do
   sleep bar
 end
 
+high_n = 0
 live_loop :highlights do
  sync :high
  use_synth :sine
- play :A4 
+ play high_n % 4 > 2 ? degree(1, :A4, :major) : degree(1, :A3, :major)  
+ high_n += 1
 end
 
 with_fx :level, amp: 1 do

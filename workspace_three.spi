@@ -210,7 +210,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           sample :elec_soft_kick, rate: 1, start: 0.1
 
           sleep bar/2
-          n_mod_phase = n_mod_phase + 0.1
+          n_mod_phase = n_mod_phase - 0.1
           n_mix = n_mix - 0.05 if n_mix > 0.2
         end
         sleep bar/2

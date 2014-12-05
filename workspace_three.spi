@@ -108,7 +108,7 @@ live_loop :piano2 do
 
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
-
+cue :fire
       case p2_n%8
 
       when 0,3,7

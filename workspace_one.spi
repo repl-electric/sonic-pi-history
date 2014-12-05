@@ -23,7 +23,7 @@ live_loop :metro do
   sleep bar
 end
 
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 live_loop :drum do
   sync :quart
   with_fx :lpf do

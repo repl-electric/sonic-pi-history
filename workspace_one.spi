@@ -221,7 +221,7 @@ live_loop :fuzz do
   play degree(1, :A3, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
   8.times do |i|
   control r, phase: n
-  n += (i%2 * 0.05)
+  n += (i%1 * 0.05)
   sleep bar
   end
   end 

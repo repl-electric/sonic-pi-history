@@ -114,7 +114,7 @@ end
 end
 
 live_loop :dark do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 
   use_synth :beep
   sync :start

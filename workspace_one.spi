@@ -99,7 +99,7 @@ with_fx :level, amp: 1 do
     #play degree(6, :A4, :major), amp: 1.2, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
 
      with_fx :distortion, mix: 0.01 do
-       play chord_degree(6, :A4, :major), decay: bar*2
+       play chord_degree(1, :A4, :major), decay: bar*2
      end
 
     sleep bar/2

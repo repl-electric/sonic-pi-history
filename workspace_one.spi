@@ -25,7 +25,7 @@ end
 
 high_n = 0
 live_loop :highlights do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
  sync :high
  use_synth :sine
  play high_n % 2 == 0 ? degree(1, :A4, :major) : degree(1, :A3, :major)

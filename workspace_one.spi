@@ -74,9 +74,9 @@ with_fx :level, amp: 1 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.01, release: 0.01, decay: 0.1
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.01, release: 0.1, decay: 0.1
     sleep bar/2
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.01, release: 0.01, decay: 0.1
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.01, release: 0.1, decay: 0.1
     sleep bar/2
   end
 end

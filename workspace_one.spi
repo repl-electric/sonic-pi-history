@@ -118,7 +118,7 @@ with_fx :level, amp: 1 do
     play degree(2, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
 
      with_fx :distortion, mix: 0.01 do
-       play chord_degree(4, :A4, :maj7),decay: bar*2
+       play chord_degree(4, :A4, :major),decay: bar*2
      end
 
   sleep bar*2

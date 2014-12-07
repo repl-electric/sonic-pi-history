@@ -69,7 +69,7 @@ with_fx :level, amp: 1 do
 end
 end
 
-live_loop :piano do
+live_loop :peeep do
 with_fx :level, amp: 1 do
   sync :quart
   use_synth :beep

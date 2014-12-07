@@ -78,21 +78,21 @@ with_fx :level, amp: 1 do
     3.times {
     play degree(1, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
-    play degree(4, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
+    play degree(4, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
     sleep bar/2
-    play degree(5, :A5, :major), amp: 1.0, attack: 0.09, release: 0.2, decay: bar-0.05
+    play degree(5, :A4, :major), amp: 1.0, attack: 0.09, release: 0.2, decay: bar-0.05
     sleep bar
     }
 
     play degree(1, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
-    play degree(4, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
+    play degree(4, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
     sleep bar/4
     
-    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
+    play degree(1, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 
 
     sleep bar/4
-    play degree(5, :A5, :major), amp: 1.0, attack: 0.09, release: 0.2, decay: bar-0.05
+    play degree(5, :A4, :major), amp: 1.0, attack: 0.09, release: 0.2, decay: bar-0.05
  
     sleep bar/4
     play degree(1, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 

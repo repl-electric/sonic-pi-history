@@ -76,7 +76,7 @@ with_fx :level, amp: 1 do
   use_synth_defaults cutoff: 100
   with_fx :reverb do
 
-    0.times {
+    3.times {
       play degree(1, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
       sleep bar/2
       play degree(4, :A4, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2 

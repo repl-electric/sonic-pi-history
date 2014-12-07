@@ -96,9 +96,9 @@ with_fx :level, amp: 1 do
 
     play degree(2, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar/2
     sleep bar
-    play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.01, decay: bar/4
+    play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
-    play degree(1, :A4, :major), amp: 1.0, attack: 0.01, release: 0.01, decay: bar/4
+    play degree(1, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
     play degree(1, :A4, :major), amp: 1.0, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2

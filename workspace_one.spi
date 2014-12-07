@@ -68,7 +68,7 @@ live_loop :chords do
  #with_fx :slicer, phase: bar/2 do
  use_synth :tri #:dsaw
  play chord_degree(4, :A2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
- sleep bar*2
+ sleep bar/2
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
  sync :start
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.4

@@ -78,12 +78,12 @@ with_fx :level, amp: 1 do
 
     with_fx :pan, pan: -0.25 do
     #3.times {
-      play degree(4, :A4, :major), attack: 0.01, release: 0.1, decay: bar/2
-      sleep bar/2
-      play degree(1, :A4, :major),  attack: 0.01, release: 0.1, decay: bar/2 
-      sleep bar/2
-      play degree(1, :A4, :major),  attack: 0.09, release: 0.2, decay: bar*2-0.05
-      sleep bar*2
+#      play degree(4, :A4, :major), attack: 0.01, release: 0.1, decay: bar/2
+#      sleep bar/2
+#      play degree(1, :A4, :major),  attack: 0.01, release: 0.1, decay: bar/2 
+#      sleep bar/2
+#      play degree(1, :A4, :major),  attack: 0.09, release: 0.2, decay: bar*2-0.05
+#      sleep bar*2
     #}
 
 

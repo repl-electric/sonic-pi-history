@@ -76,7 +76,7 @@ with_fx :level, amp: 1 do
   with_fx :reverb do
     play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
     sleep bar
-    play degree(3, :A5, :major), amp: 1.0, attack: 0.01, release: 0.1, decay: bar/2
+    play degree(5, :A5, :major), amp: 1.0, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
     play degree(1, :A5, :major), amp: 1.0, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2

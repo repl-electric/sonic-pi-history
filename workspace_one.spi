@@ -72,7 +72,7 @@ end
 live_loop :peeep do
 with_fx :level, amp: 1 do
   sync :quart
-  use_synth :zawa    #:mod_pulse #:mod_beep
+  use_synth :prophet    #:mod_pulse #:mod_beep
   use_synth_defaults cutoff: 90, res: 1.001, amp: 0.8
   with_fx :reverb do
 

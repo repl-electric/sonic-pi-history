@@ -122,7 +122,7 @@ with_fx :level, amp: 1 do
      end
 
   sleep bar*2
- #   play degree(6, :A4, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
+    play degree(6, :A4, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
     sleep bar/4
     with_fx :echo, phase: bar/8 do
 #      if(dice(6) > 4)

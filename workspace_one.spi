@@ -64,7 +64,7 @@ end
 end
 
 live_loop :peeep do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 5 do
   3.times {sync :quart}
   use_synth :beep    #:mod_pulse #:mod_beep
   use_synth_defaults cutoff: 130, res: 1.001, amp: 0.8

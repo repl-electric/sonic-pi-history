@@ -69,6 +69,16 @@ with_fx :level, amp: 1 do
 end
 end
 
+live_loop :piano do
+with_fx :level, amp: 1 do
+  sync :quart
+  use_synth :beep
+  with_fx :reverb do
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+  end
+end
+end
+
 live_loop :piano2 do
 with_fx :level, amp: 0 do
   use_synth :tri

@@ -62,19 +62,19 @@ with_fx :level, amp: 1 do
   end
 end
 end
-
 live_loop :chords do
  sync :start
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do
  use_synth :tri #:dsaw
- play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
+ play chord_degree(4, :A2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
+sleep bar
+ play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
  sync :start
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.4
  #end
  end
 end
-
 live_loop :peeep do
 with_fx :level, amp: 1 do
   3.times {sync :quart}
@@ -285,27 +285,4 @@ with_fx :level, amp: 1 do
     room_size += 1
   end
 end
-end
-
-live_loop :fuzz do
-  n=0.2
-  with_fx :echo do |r|
-  with_fx :hpf, cutoff: 125 do
-  use_synth :dsaw
-  play degree(1, :A3, :major), release: bar*4, decay: bar*4, amp: 1.0, attack: bar
-
-  with_synth :prophet do
-  with_fx :hpf, cutoff: 120 do
-    play :A2, release: bar*8, decay: bar*8, attack: bar*4
-  end
-  end
-
-  4.times do |i|
-  control r, phase: n
-  n += 0.01
-  sleep bar*2
-  end
-  end 
-  end
-  sleep bar/2
 end

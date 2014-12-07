@@ -70,7 +70,7 @@ live_loop :chords do
  use_synth :tri #:dsaw
  play chord_degree(4, :A3, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 1.0
  sync :start
- play chord_degree(4, :A3, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 1.0
+ play chord_degree(4, :A3, :major)[0..3], decay: bar*2, release: 1, attack: 0.2, amp: 1.0
  end
  end
 end

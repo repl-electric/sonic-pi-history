@@ -63,6 +63,13 @@ with_fx :level, amp: 1 do
 end
 end
 
+live_loop :chords do
+ sync :start
+  with_synth :dsaw do
+    play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
+  end
+end
+
 live_loop :peeep do
 with_fx :level, amp: 1 do
   3.times {sync :quart}

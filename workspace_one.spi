@@ -242,7 +242,7 @@ end
 room_size = 0
 
 live_loop :beep do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
 
   #  sync :bar
 

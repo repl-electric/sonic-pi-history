@@ -135,7 +135,7 @@ with_fx :level, amp: 5 do
 #      end
 
       with_synth :dsaw do
-        play chord_degree(6, :A2, :major), decay: 2*bar
+        play chord_degree(6, :A2, :major), decay: 2*bar, amp: 0.2
       end
     end
     sleep bar/4

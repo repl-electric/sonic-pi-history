@@ -73,7 +73,7 @@ live_loop :peeep do
 with_fx :level, amp: 1 do
   sync :start
   use_synth :dsaw
-  use_synth_defaults cutoff: 70, res: 1.001
+  use_synth_defaults cutoff: 70, res: 1.001, amp: 0.8
   with_fx :reverb do
 
     3.times {

@@ -65,7 +65,7 @@ end
 
 live_loop :chords do
  sync :start
- with_fx :echo do
+ with_fx :echo, phase: bar do
  use_synth :dsaw
  play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
  sync :start

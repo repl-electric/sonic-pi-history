@@ -1,11 +1,14 @@
 ["piano"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 bar = 1/2.0
 quart = 2*bar
+
 set_volume! 1.0
 pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
+
 p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
 p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
 p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
+
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
@@ -29,6 +32,7 @@ with_fx :level, amp: 0 do
  high_n += 1
 end
 end
+
 live_loop :drum do
 with_fx :level, amp: 1 do
   sync :quart
@@ -37,6 +41,7 @@ with_fx :level, amp: 1 do
   end
 end
 end
+
 live_loop :vio do
 with_fx :level, amp: 0 do
   #4.times{sync :start}
@@ -46,6 +51,7 @@ with_fx :level, amp: 0 do
   end
 end
 end
+
 live_loop :piano do
 with_fx :level, amp: 1 do
   sync :quart
@@ -140,7 +146,9 @@ with_fx :level, amp: 1 do
 
     end
     sleep bar/4
-    end   
+    end
+    
+  #end
 end
 end
 

@@ -1,1 +1,1 @@
-play chord_degree(2, :A4, :major)[0..2], release: 8, decay: 8
+play chord_degree(4, :A4, :major)[0..2], release: 8, decay: 8

@@ -71,7 +71,7 @@ end
 
 live_loop :peeep do
 with_fx :level, amp: 1 do
-  sync :bar
+  sync :start
   use_synth :dsaw
   use_synth_defaults cutoff: 100
   with_fx :reverb do

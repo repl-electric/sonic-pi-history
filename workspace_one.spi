@@ -65,11 +65,13 @@ end
 
 live_loop :chords do
  sync :start
+ with_fx :reverb do
  with_fx :slicer, phase: bar*8 do
  use_synth :dsaw
  play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.5
  sync :start
  play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.5
+ end
  end
 end
 

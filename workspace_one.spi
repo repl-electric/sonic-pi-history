@@ -76,7 +76,7 @@ with_fx :level, amp: 1 do
   use_synth_defaults cutoff: 90, res: 1.001, amp: 0.8
   with_fx :reverb do
 
-    with_fx :pan, pan: 0 do
+    with_fx :pan, pan: 0.25 do
     #3.times {
 #      play degree(4, :A4, :major), attack: 0.01, release: 0.1, decay: bar/2
 #      sleep bar/2

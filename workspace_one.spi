@@ -113,7 +113,7 @@ with_fx :level, amp: 5 do
         with_synth :dsaw do
 
 #     with_fx :distortion, mix: 0.01 do
-       play chord_degree(4, :A4, :major), decay: bar*2
+       play chord_degree(4, :A2, :major), decay: bar*2
  #    end
  end
     

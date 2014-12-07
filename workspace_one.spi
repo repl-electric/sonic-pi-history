@@ -72,7 +72,7 @@ end
 live_loop :peeep do
 with_fx :level, amp: 1 do
   sync :quart
-  use_synth :beep
+  use_synth :sin
   with_fx :reverb do
 
     3.times {

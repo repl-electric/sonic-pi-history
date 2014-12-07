@@ -59,12 +59,6 @@ with_fx :level, amp: 1 do
   with_fx :reverb do
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sample pa_s, amp: 2
-
-    #play degree([4,5].choose, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-   # sleep bar/4
-    #play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    #sleep bar/4
-    #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   #:A5
   end
 end
 end
@@ -77,24 +71,19 @@ with_fx :level, amp: 1 do
   with_fx :reverb do
 
     with_fx :pan, pan: 0.25 do
-    #3.times {
-#      play degree(4, :A4, :major), attack: 0.01, release: 0.1, decay: bar/2
-#      sleep bar/2
-#      play degree(1, :A4, :major),  attack: 0.01, release: 0.1, decay: bar/2 
-#      sleep bar/2
-#      play degree(1, :A4, :major),  attack: 0.09, release: 0.2, decay: bar*2-0.05
-#      sleep bar*2
-    #}
-
   
-#    play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
-#    sleep bar
-#    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
-#    sleep bar/2
-#    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
-#    sleep bar/2
+    play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
+    sleep bar
+    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
+    sleep bar/2
+    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
+    sleep bar/2
 
-#    play chord_degree(4, :A4, :major)
+    play chord_degree(4, :A4, :major)
+
+     with_fx :distortion, mix: 0.01 do
+       play chord_degree(4, :A4, :major7),decay: bar*4
+     end
     play degree(1, :A4, :major), amp: 1.0, attack: 0.05, release: 0.25, decay: bar/2
     sleep bar
     play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
@@ -102,27 +91,45 @@ with_fx :level, amp: 1 do
     play degree(2, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
     play degree(2, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
-    sleep bar*2
-    play degree(6, :A4, :major), amp: 1.2, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
-    sleep bar/2
 
+     with_fx :distortion, mix: 0.01 do
+       play chord_degree(4, :A4, :major7),decay: bar*2
+     end
+
+  sleep bar*2
+ #   play degree(6, :A4, :major), amp: 1.2, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
+
+     with_fx :distortion, mix: 0.01 do
+       play chord_degree(6, :A4, :major), decay: bar*4
+     end
+
+    sleep bar/2
     sync :quart
+
+     with_fx :distortion, mix: 0.01 do
+       play chord_degree(4, :A4, :major), decay: bar*4
+     end
     
     play degree(1, :A4, :major), amp: 1.0, attack: 0.05, release: 0.25, decay: bar/2
     sleep bar
     play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
-    play degree(2, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
+   play degree(2, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
     play degree(2, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
-    sleep bar*2
-    play degree(6, :A4, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
+
+     with_fx :distortion, mix: 0.01 do
+       play chord_degree(4, :A4, :major7),decay: bar*2
+     end
+
+  sleep bar*2
+ #   play degree(6, :A4, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
     sleep bar/4
     with_fx :echo, phase: bar/8 do
 #      if(dice(6) > 4)
-        play degree(4, :A5, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
+ #       play degree(4, :A5, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
 #      else
-        play degree(6, :A4, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
+#        play degree(6, :A4, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
 #      end
 
       with_fx :distortion, mix: 0.01 do
@@ -170,10 +177,7 @@ with_fx :level, amp: 0 do
         #sample Piano.note(:c2)
 
         play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
-        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
-        
-        
-        
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
     end
   end

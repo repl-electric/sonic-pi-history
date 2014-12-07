@@ -66,9 +66,9 @@ end
 live_loop :chords do
  sync :start
  use_synth :dsaw
- play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.1
+ play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
  sync :start
- play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.1 
+ play chord_degree(4, :A2, :major)[0..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
 end
 
 live_loop :peeep do

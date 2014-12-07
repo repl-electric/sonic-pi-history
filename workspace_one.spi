@@ -53,7 +53,7 @@ end
 end
 
 live_loop :piano do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
@@ -93,7 +93,6 @@ with_fx :level, amp: 1 do
     play degree(5, :A4, :major), amp: 1.0, attack: 0.09, release: 0.2, decay: bar-0.05
     sleep bar
 
-  
   
   
   

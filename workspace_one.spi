@@ -137,7 +137,7 @@ end
 
 live_loop :piano2 do
 with_fx :level, amp: 1 do
-  use_synth :mod_tri
+  use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do

@@ -234,7 +234,6 @@ with_fx :level, amp: 1 do
 
   n =  [degree(6, :A3, :major)].choose
 
-
   #sync :start
 
   4.times do

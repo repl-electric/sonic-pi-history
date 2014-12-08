@@ -43,9 +43,10 @@ with_fx :level, amp: 1 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
-    a5_s = "/Users/josephwilk/.overtone/orchestra/violin//violin_A5_phrase_mezzo-forte_arco-legato.wav"
+    a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
+    b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B4_phrase_mezzo-piano_arco-major-trill.wav"
   
-    sample a5_s
+    sample [a5_s, b4_s].choose
   
 #    sample v_s, amp: 90
   end

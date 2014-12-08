@@ -266,7 +266,6 @@ end
 
 live_loop :vio_dark do
 sync :start
-
 a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin//violin_A4_very-long_decrescendo_arco-normal.wav"
 sample a4_long_s, amp: 10, rate: 1.0
 end

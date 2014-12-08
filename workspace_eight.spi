@@ -151,7 +151,7 @@ with_fx :level, amp: 1 do
 
         play chord_degree(6, :A1, :major)[0], amp: 1.1, attack: 0.01, release: 0.5, decay: 1.5, sustain: 1.0
         sleep bar/2
-        with_synth(:tri){play chord_degree(6, :A1, :major)[2], amp: 1.1, attack: 0.01, release: 0.5, decay: 1.5, sustain: 1.0}
+        with_synth(:tri){play chord_degree(4, :A1, :major)[2], amp: 1.1, attack: 0.01, release: 0.5, decay: 1.5, sustain: 1.0}
       end
 
       2.times{sync :start}

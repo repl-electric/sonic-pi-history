@@ -11,7 +11,6 @@ p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__pi
 
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
-
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
   sleep bar
@@ -44,6 +43,10 @@ with_fx :level, amp: 1 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
+    a5_s = "/Users/josephwilk/.overtone/orchestra/violin//violin_A5_phrase_mezzo-forte_arco-legato.wav"
+  
+    sample a5_s
+  
     sample v_s, amp: 90
   end
 end

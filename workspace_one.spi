@@ -38,6 +38,8 @@ with_fx :level, amp: 1 do
   end
 end
 end
+
+vio_pan = -1
 live_loop :vio do
 with_fx :level, amp: 1 do
   #4.times{sync :start}
@@ -47,12 +49,13 @@ with_fx :level, amp: 1 do
     b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B5_phrase_mezzo-piano_arco-major-trill.wav"
   
 #    with_fx :slicer, phase: bar/8 do
-      sample [b4_s].choose, amp: 5, pan: rrand(-1, 1)
+     sample [b4_s].choose, amp: 5, pan: (vio_pan % 2) * 0.2
 #    end
   
 #    sample v_s, amp: 90
   end
 end
+vio_pan += 1
 end
 live_loop :piano do
 with_fx :level, amp: 1 do

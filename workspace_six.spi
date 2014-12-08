@@ -12,7 +12,7 @@ a6_s = "#{root}/violin_A5_1_fortissimo_arco-normal.wav"
 
 
 with_fx :reverb do
-sample a6_s, amp: 4
+sample a6_s, amp: 2
 end
 
 #sample a4_long_s, amp: 10, rate: 0.1

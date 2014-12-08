@@ -22,4 +22,4 @@ with_fx :reverb do
 end
 end
 
-sample a4_long_s, amp: 10, rate: 0.8
+sample a4_long_s, amp: 10, rate: 1.0

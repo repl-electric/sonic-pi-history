@@ -47,11 +47,9 @@ with_fx :level, amp: 1 do
   with_fx :reverb, room: 1.0, mix: 1.0 do
     a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
     b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B5_phrase_mezzo-piano_arco-major-trill.wav"
-  
 #    with_fx :slicer, phase: bar/8 do
-     sample [b4_s].choose, amp: 1, pan: (vio_pan % 2)
-#    end
-  
+     sample [b4_s].choose, amp: 1, pan: Math.sin((vio_pan % 2))
+#    end 
 #    sample v_s, amp: 90
   end
 end

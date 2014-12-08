@@ -1,5 +1,4 @@
 root = "/Users/josephwilk/.overtone/orchestra/violin/"
 a3_s = "#{root}violin_A3_1_piano_arco-normal.wav"
 
-
-sample v_s, amp: 50
+sample a3_s, amp: 50

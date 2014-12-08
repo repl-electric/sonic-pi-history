@@ -86,7 +86,7 @@ with_fx :level, amp: 1 do
 end
 end
 live_loop :peeep do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   3.times {sync :quart}
   use_synth :beep    #:mod_pulse #:mod_beep
   use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
@@ -146,7 +146,7 @@ end
 end
 
 live_loop :piano2 do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   use_synth :tri
   sync :start
 

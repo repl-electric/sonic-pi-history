@@ -22,7 +22,6 @@ live_loop :metro do
   cue :bar
   sleep bar
 end
-
 high_n = 0
 live_loop :highlights do
 with_fx :level, amp: 0 do
@@ -32,7 +31,6 @@ with_fx :level, amp: 0 do
  high_n += 1
 end
 end
-
 live_loop :drum do
 with_fx :level, amp: 1 do
   sync :quart
@@ -41,7 +39,6 @@ with_fx :level, amp: 1 do
   end
 end
 end
-
 live_loop :vio do
 with_fx :level, amp: 1 do
   #4.times{sync :start}
@@ -51,7 +48,6 @@ with_fx :level, amp: 1 do
   end
 end
 end
-
 live_loop :piano do
 with_fx :level, amp: 1 do
   sync :quart

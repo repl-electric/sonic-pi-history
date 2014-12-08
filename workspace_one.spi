@@ -49,7 +49,7 @@ with_fx :level, amp: 1 do
     b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B5_phrase_mezzo-piano_arco-major-trill.wav"
   
 #    with_fx :slicer, phase: bar/8 do
-     sample [b4_s].choose, amp: 5, pan: (vio_pan % 2)
+     sample [b4_s].choose, amp: 2, pan: (vio_pan % 2)
 #    end
   
 #    sample v_s, amp: 90

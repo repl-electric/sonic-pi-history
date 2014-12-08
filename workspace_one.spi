@@ -277,7 +277,7 @@ end
 end
 
 live_loop :vio_dark do
-with_fx :level, amp: 0.2 do
+with_fx :level, amp: 0.4 do
 sync :start
 with_fx :echo do
 with_fx :reverb do

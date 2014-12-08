@@ -228,7 +228,7 @@ with_fx :level, amp: 1 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  n = [degree(4, :A3, :major)].choose
+  n = [degree(6, :A3, :major)].choose
   #n =  [degree(6, :A3, :major)].choose #fm
 
   #sync :start
@@ -267,10 +267,8 @@ live_loop :vio_dark do
 sync :start
 with_fx :echo do
 with_fx :reverb do
-with_fx :distortion, mix: 1 do
 a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
 #sample a4_long_s, amp: 40, rate: -1.0
-end
 end
 end
 end

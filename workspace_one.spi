@@ -250,7 +250,7 @@ with_fx :level, amp: 1 do
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
-    n =  [degree(6, :A3, :major)].choose
+    n =  [degree(4, :A4, :major)].choose
   #sync :start
 
   4.times do

@@ -4,4 +4,4 @@ gs5_s = "#{root}/violin_Gs5_1_mezzo-forte_arco-normal.wav"
 
 a_s = "#{root}/violin_A4_very-long_decrescendo_arco-normal.wav"
 
-sample a_s, amp: 10, rate: 0.2
+sample a_s, amp: 10, rate: 0.1

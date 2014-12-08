@@ -46,7 +46,7 @@ with_fx :level, amp: 1 do
     a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
     b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B5_phrase_mezzo-piano_arco-major-trill.wav"
   
-    with_fx :slicer do
+    with_fx :slicer, phase: bar/4 do
     sample [b4_s].choose, amp: 5, pan: rrand(-1, 1)
     end
   

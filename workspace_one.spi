@@ -131,7 +131,7 @@ end
 end
 
 live_loop :piano2 do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   use_synth :tri
   sync :start
 

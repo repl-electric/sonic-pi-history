@@ -183,7 +183,7 @@ end
 end
 
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
-  use_synth :mod_fm
+  use_synth :mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
@@ -230,9 +230,9 @@ with_fx :level, amp: 1 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  #n = [degree(4, :A4, :major)].choose mod_fm
+  n = [degree(4, :A4, :major)].choose
 
-  n =  [degree(6, :A3, :major)].choose
+  #n =  [degree(6, :A3, :major)].choose
 
   #sync :start
 
@@ -253,8 +253,8 @@ with_fx :level, amp: 1 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  n =  [degree(4, :A3, :major)].choose
-   #n =  [degree(1, :A4, :major)].choose mod_fm
+  #n =  [degree(4, :A3, :major)].choose
+  n =  [degree(1, :A4, :major)].choose
 
   #sync :start
 

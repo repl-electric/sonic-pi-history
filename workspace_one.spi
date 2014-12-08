@@ -270,7 +270,7 @@ with_fx :level, amp: 1 do
 
   4.times do
     sync :bar
-    beeper n, @direction == -1 ? 0 : -1, 1, 50, 0, 0.01
+    beeper n, @direction == -1 ? 0 : -1, 1, 60, 0, 0.01
     room_size += 1
   end
 end

@@ -7,6 +7,10 @@ a5_s = "#{root}/violin_A5_phrase_mezzo-forte_arco-legato.wav"
 
 #sample a4_long_s, amp: 10, rate: 0.1
 
-sample a5_s
+a5_s = "/Users/josephwilk/.overtone/orchestra/violin//violin_A5_phrase_mezzo-forte_arco-legato.wav"
+a6_s = "#{root}/violin_A6_1_fortissimo_arco-normal.wav"
+
+
+sample a6_s
 
 #sample a4_long_s, amp: 10, rate: 0.1

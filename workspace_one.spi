@@ -181,7 +181,7 @@ end
 end
 
 live_loop :dark do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   use_synth :beep
   sync :start
   with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 2, rate: 0.99}

@@ -2,4 +2,6 @@ root = "/Users/josephwilk/.overtone/orchestra/violin/"
 a3_s = "#{root}violin_A3_1_piano_arco-normal.wav"
 gs5_s = "#{root}/violin_Gs5_1_mezzo-forte_arco-normal.wav"
 
-sample gs5_s, amp: 50
+a_s = "#{root}/violin_A4_very-long_decrescendo_arco-normal.wav"
+
+sample a_s, amp: 50

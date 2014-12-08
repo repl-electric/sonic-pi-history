@@ -12,7 +12,7 @@ a6_s = "#{root}/violin_A6_1_fortissimo_arco-normal.wav"
 
 a6_mfa_s = "#{root}/violin_A6_1_mezzo-forte_artificial-harmonic.wav"
 
-with_fx :distortion, mix: 0.9 do
+with_fx :distortion, mix: 1.0 do
 with_fx :reverb do
 sample a6_mfa_s, amp: 5, rate: 1.0
 end

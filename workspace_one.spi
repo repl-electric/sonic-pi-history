@@ -94,7 +94,7 @@ with_fx :level, amp: 1 do
 
     with_synth :mod_pulse do
     with_fx :distortion, mix: 0.01 do
-      play chord_degree(4, :A4)[0..2], decay: bar*2, amp: 0.3
+      play chord_degree(4, :A4)[0..2], decay: bar*2, amp: 0.2
     end
     end
 

@@ -132,10 +132,16 @@ with_fx :level, amp: 1 do
     play degree(4, :A3, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
     sleep bar/4
     with_fx :echo, phase: bar/8 do
-      play degree(4, :A5, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
+#      if(dice(6) > 4)
+        play degree(4, :A5, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
+#      else
+#        play degree(6, :A4, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
+#      end
+
       with_fx :distortion, mix: 0.01 do
-      play chord_degree(6, :A3, :major)
-    end
+        play chord_degree(6, :A3, :major)
+      end
+
     end
     sleep bar/4
     end
@@ -243,13 +249,14 @@ end
 room_size = 0
 
 live_loop :beep do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
+
   #  sync :bar
 
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  n =  [degree(6, :A3, :major)].choose
+#  n =  [degree(6, :A3, :major)].choose
   #sync :start
 
   4.times do

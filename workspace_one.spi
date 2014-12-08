@@ -90,7 +90,7 @@ with_fx :level, amp: 1 do
   use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
   with_fx :reverb do
 
-    with_fx :echo, phase: bar/12 do |e|
+    with_fx :echo, phase: bar/2 do |e|
     #with_fx :pan, pan: 0.25 do
     play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
     sleep bar

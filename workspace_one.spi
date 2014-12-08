@@ -47,7 +47,7 @@ with_fx :level, amp: 1 do
   
     sample a5_s
   
-    sample v_s, amp: 90
+#    sample v_s, amp: 90
   end
 end
 end

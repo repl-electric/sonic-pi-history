@@ -14,7 +14,11 @@ a6_mfa_s = "#{root}/violin_A6_1_mezzo-forte_artificial-harmonic.wav"
 
 with_fx :distortion, mix: 1.0 do
 with_fx :reverb do
+
+loop do
 sample a6_mfa_s, amp: 2, rate: 1.0
+sleep sample_duration(a6_mfa_s)
+end
 end
 end
 

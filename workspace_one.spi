@@ -1,3 +1,4 @@
 use_synth :dark_ambience
-use_synth_defaults :rev 2
+use_synth_defaults :rev 2 do
 play 70
+end

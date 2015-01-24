@@ -231,7 +231,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   end
 end
 
-@cutoff = 100
+@cutoff = 200
 @direction = 1
 room_size = 0
 
@@ -263,8 +263,8 @@ with_fx :level, amp: 0 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  #n =  [degree(6, :A3, :major)].choose
-  n =  [degree(1, :A3, :major)].choose #fm
+  n =  [degree(6, :A3, :major)].choose
+  #n =  [degree(1, :A3, :major)].choose #fm
 
   #sync :start
 

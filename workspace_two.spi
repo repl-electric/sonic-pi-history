@@ -275,13 +275,11 @@ with_fx :level, amp: 1 do
   end
 end
 end
-
 live_loop :poepepep do
 use_synth :growl 
 sync :start
 play 40
 end
-
 live_loop :vio_dark do
 with_fx :level, amp: 1.0 do
 sync :start

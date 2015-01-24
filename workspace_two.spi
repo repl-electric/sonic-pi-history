@@ -282,4 +282,7 @@ play degree(4, :A2, :major)
 16.times{sync :bar}
 play degree(6, :A2, :major)
 16.times{sync :bar}
+play degree(5, :A2, :major)
+16.times{sync :bar}
+
 end

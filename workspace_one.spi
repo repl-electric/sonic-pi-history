@@ -182,7 +182,7 @@ end
 live_loop :dark do
 with_fx :level, amp: 1  do
   use_synth :dark_ambience
-  use_synth_defaults release: 12, amp: 4
+  use_synth_defaults release: 24, amp: 4
   play :A5
   
   sync :start

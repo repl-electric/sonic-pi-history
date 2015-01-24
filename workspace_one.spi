@@ -301,4 +301,4 @@ play degree(5, :A3, :major)
 16.times{sync :bar}
 end
 end
-set_volume! 0.8
+set_volume! 0.5

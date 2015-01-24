@@ -181,8 +181,11 @@ end
 end
 
 live_loop :dark do
-with_fx :level, amp: 4 do
-  use_synth :beep
+with_fx :level, amp: 0 do
+  use_synth :dark_ambience
+  
+  play :A2
+  
   sync :start
   with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 2, rate: 0.99}
   sample :ambi_lunar_land, rate: 0.25, amp: 0.9

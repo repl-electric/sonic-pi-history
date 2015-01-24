@@ -233,7 +233,7 @@ end
 
 @cutoff = 200
 @direction = 1
-room_size = 0
+room_size =5
 
 live_loop :beep do
 with_fx :level, amp: 1 do

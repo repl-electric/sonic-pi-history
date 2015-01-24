@@ -304,4 +304,4 @@ end
 set_volume! 1.0
 
 
-fadeout
+fade()

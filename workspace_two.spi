@@ -277,6 +277,6 @@ end
 end
 live_loop :poepepep do
 use_synth :growl 
-play 50
+play 40
 sleep 1
 end

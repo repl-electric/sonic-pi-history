@@ -57,7 +57,7 @@ end
 vio_pan += 1
 end
 live_loop :piano do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
@@ -75,7 +75,7 @@ with_fx :level, amp: 1 do
  sync :start
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do
- use_synth :dsaw
+ use_synth :tri #:dsaw
  play chord_degree(4, :A2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
  sleep bar/2
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
@@ -86,7 +86,7 @@ with_fx :level, amp: 1 do
 end
 end
 live_loop :peeep do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   3.times {sync :quart}
   use_synth :beep    #:mod_pulse #:mod_beep
   use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
@@ -146,7 +146,7 @@ end
 end
 
 live_loop :piano2 do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   use_synth :tri
   sync :start
 
@@ -181,7 +181,7 @@ end
 end
 
 live_loop :dark do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 0 do
   use_synth :beep
   sync :start
   with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 2, rate: 0.99}
@@ -302,4 +302,4 @@ play degree(5, :A1, :major)
 16.times{sync :bar}
 end
 end
-set_volume! 0.0
+set_volume! 1.0

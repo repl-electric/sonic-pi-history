@@ -278,6 +278,6 @@ end
 live_loop :poepepep do
 use_synth :growl 
 use_synth_defaults amp: 5, release: 8
-play degree(1, :A3, :major)
+play degree(1, :A2, :major)
 sleep 8
 end

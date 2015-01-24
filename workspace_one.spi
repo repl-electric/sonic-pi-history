@@ -181,9 +181,9 @@ end
 end
 
 live_loop :dark do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 1  do
   use_synth :dark_ambience
-  wyse
+  
   play :A2
   
   sync :start

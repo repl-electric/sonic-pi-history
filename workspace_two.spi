@@ -64,7 +64,7 @@ with_fx :level, amp: 1 do
     sample pa_s, amp: 2, rate: -1
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
-   # play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
    # play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
   end
@@ -280,8 +280,7 @@ live_loop :vio_dark do
 with_fx :level, amp: 1.0 do
 sync :start
 with_fx :echo do
-with_fx :reverb do
-a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
+77777a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
 #sample a4_long_s, amp: 1, rate: 1.0
 sample a4_long_s, amp: 1, rate: 1.0
 sleep sample_duration(a4_long_s)
@@ -290,4 +289,4 @@ end
 end
 end
  
-set_volume! 1.0
+set_volume! 1.                                      aqsz89a888§9e•∂∑ewb                           n      fvdrrrcr∂66767666666660

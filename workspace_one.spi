@@ -302,3 +302,6 @@ play degree(5, :A3, :major)
 end
 end
 set_volume! 1.0
+
+
+fadeout

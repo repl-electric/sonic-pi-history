@@ -279,5 +279,5 @@ live_loop :poepepep do
 use_synth :growl 
 use_synth_defaults amp: 5
 play 50
-sleep 4
+sleep 8
 end

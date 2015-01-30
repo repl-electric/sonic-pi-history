@@ -77,8 +77,8 @@ with_fx :level, amp: 1 do
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.8
  sync :start
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.8
- end
- end
+end
+end
 end
 end
 live_loop :peeep do
@@ -145,7 +145,6 @@ live_loop :piano2 do
 with_fx :level, amp: 0 do
   use_synth :tri
   sync :start
-
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
       with_fx :distortion, mix: 0.5 do
@@ -174,7 +173,6 @@ with_fx :level, amp: 0 do
   2.times{sync :start; cue :otherhigh}
 end
 end
-
 live_loop :dark do
 with_fx :level, amp: 1 do
   use_synth :beep
@@ -225,7 +223,6 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
     end
   end
 end
-
 @cutoff = 100
 @direction = 1
 room_size = 0
@@ -244,7 +241,7 @@ end
 end
 live_loop :beep2 do
 notes = [degree(5, :A3, :major), degree(6, :A3, :major)].shuffle
-with_fx :level, amp: 1.0 do
+with_fx :level, amp: 2.0 do
   4.times do |i|
     n = notes[i % 2] #fm
     sync :bar

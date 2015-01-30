@@ -245,7 +245,7 @@ with_fx :level, amp: 2.0 do
   4.times do |i|
     n = notes[i % 2] #fm
     sync :bar
-    beeper n, @direction == -1 ? 0 : 1, 1, 90, 10, 0.1
+    beeper n, @direction == -1 ? 0 : 1, 1, 9, 10, 0.1
     room_size += 1
   end
 end

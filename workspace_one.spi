@@ -232,7 +232,7 @@ end
 room_size = 0
 
 live_loop :beep do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1.0 do
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
@@ -244,7 +244,6 @@ with_fx :level, amp: 0 do
 
   4.times do
     @direction = rand_i(-1..1)
-
     sync :bar
     beeper n, @direction, 1, 100, 0, 0.001
     room_size += 1
@@ -254,24 +253,14 @@ end
 
 live_loop :beep2 do
 with_fx :level, amp: 1 do
-
-  #  sync :bar
-  #-10.0, -5.0
-  # degree(6, :A2, :major)
-
-  #n =  [degree(6, :A3, :major)].choose
-  n =  [degree(4, :A3, :major)].choose #fm
-
-  #sync :start
-
   4.times do
+    n =  [degree(6, :A3, :major)].choose #fm
     sync :bar
-    beeper n, @direction == -1 ? 0 : -1, 1, 90, 0, 0.01
+    beeper n, @direction == -1 ? 0 : 100, 1, 90, 0, 0.01
     room_size += 1
   end
 end
 end
-
 live_loop :vio_dark do
 with_fx :level, amp: 1.0 do
 sync :start
@@ -281,10 +270,7 @@ a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_de
 #sample a4_long_s, amp: 1, rate: 1.0
 sample a4_long_s, amp: 1, rate: 1.0
 sleep sample_duration(a4_long_s)
-end
-end
-end
-end
+end end end end
 
 live_loop :across_the_night do
 with_fx :level, amp: 1.0 do

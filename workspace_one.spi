@@ -60,7 +60,7 @@ with_fx :level, amp: 2 do
   use_synth :beep
   with_fx :reverb do
     sample pa_s, amp: 2, rate: -1
-    play degree(4, :A4, :major), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play degree(1, :A4, :major), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     if(piano_count % 4 == 0)
     play degree(5, :A4, :major), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

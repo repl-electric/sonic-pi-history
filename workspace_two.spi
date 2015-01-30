@@ -1,10 +1,10 @@
 live_loop :beep2 do
-with_fx :level, amp: 1 do
+#with_fx :level, amp: 1 do
   4.times do |i|
     n =  [degree(5, :A3, :major), degree(6, :A3, :major)][i % 2].choose #fm
     sync :bar
     beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
     room_size += 1
   end
-end
+#end
 end

@@ -1,36 +1,3 @@
-bar = 1/2.0
-
-set_volume! 4
-
-live_loop :metro do
-  cue :start; cue :quart;  cue :bar
-  sleep bar
-  cue :bar
-  sleep bar
-  cue :quart; cue :bar
-  sleep bar
-  cue :bar
-  sleep bar
-end
-
-
-
-
-live_loop :drums do
-  sync :quart
-  sample :drum_bass_soft
-
-  sync :quart
-  sample :drum_bass_soft
-
-  
-  sync :quart
-  sample :drum_bass_soft
-  sleep bar/2
-  sample :drum_bass_soft
-  sleep bar/2
-
-  sync :quart
-  sample :drum_bass_soft
-
+in_thread do
+  1[0]
 end

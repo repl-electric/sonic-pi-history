@@ -252,10 +252,10 @@ end
 end
 live_loop :beep2 do
 
-notes = n =  [degree(5, :A3, :major), degree(6, :A3, :major)]
+notes = [degree(5, :A3, :major), degree(6, :A3, :major)]
 with_fx :level, amp: 1.0 do
   4.times do |i|
-    notes[i % 2] #fm
+    n = notes[i % 2] #fm
     sync :bar
     beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
     room_size += 1

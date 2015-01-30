@@ -229,7 +229,7 @@ room_size = 0
 
 live_loop :beep do
 with_fx :level, amp: 2.0 do
-  notes = [degree(1, :A3, :major), degree(3, :A3, :major)].shuffle.choose
+  notes = [degree(1, :A3, :major), degree(3, :A3, :major)].choose
   4.times do |i|
     n = notes[i%2]
     @direction = rand_i(-1..1)

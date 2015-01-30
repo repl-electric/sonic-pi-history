@@ -80,7 +80,7 @@ with_fx :level, amp: 1 do
  sleep bar/2
  play chord_degree(4, :A3, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.5
  sync :start
- play chord_degree(4, :A3, :major)[1..4], decay: bar*2, release: 1, attack: 0.2, amp: 0.5
+ play chord_degree(4, :A3, :major)[0..3], decay: bar*2, release: 1, attack: 0.2, amp: 0.5
  end
  #end
 end

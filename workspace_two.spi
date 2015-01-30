@@ -1,6 +1,6 @@
 live_loop :beep2 do
 #with_fx :level, amp: 1 do
-  0/1
+  1/0
   sleep 1
 #end
 end

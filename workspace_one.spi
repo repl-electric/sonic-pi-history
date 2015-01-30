@@ -240,12 +240,14 @@ with_fx :level, amp: 2.0 do
 end
 end
 live_loop :beep2 do
-notes = [degree(5, :A3, :major), degree(6, :A3, :major)].shuffle
+notes = [degree(5, :A3, :major), degree(6, :A3, :major), nil].shuffle
 with_fx :level, amp: 2.0 do
   4.times do |i|
     n = notes[i % 2] #fm
     sync :bar
-    beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
+    if n
+      beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
+    end
     room_size += 1
   end
 end

@@ -234,7 +234,7 @@ with_fx :level, amp: 2.0 do
     n = notes[i%2]
     @direction = rand_i(-1..1)
     sync :bar
-    beeper n, @direction, 1, 100, 0, 0.001
+    beeper n, @direction, 1, 100, 10, 0.001
     room_size += 1
   end
 end

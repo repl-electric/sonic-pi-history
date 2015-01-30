@@ -52,6 +52,8 @@ with_fx :level, amp: 1 do
 end
 vio_pan += 1
 end
+
+piano_count = 0
 live_loop :piano do
 with_fx :level, amp: 2 do
   sync :quart
@@ -60,11 +62,15 @@ with_fx :level, amp: 2 do
     sample pa_s, amp: 2, rate: -1
     play degree(4, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
+
+    if(piano_count % 2 == 0){
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
+    }
     #play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
   end
 end
+piano_count+=1
 end
 live_loop :chords do
 with_fx :level, amp: 1 do

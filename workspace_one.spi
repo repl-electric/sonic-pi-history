@@ -255,7 +255,7 @@ with_fx :level, amp: 1 do
   4.times do
     n =  [degree(6, :A3, :major)].choose #fm
     sync :bar
-    beeper n, @direction == -1 ? 0 : 100, 1, 90, 0, 0.01
+    beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
     room_size += 1
   end
 end

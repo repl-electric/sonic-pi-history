@@ -1,5 +1,5 @@
 live_loop :beep2 do
-with_fx :level, amp: 1 do
-  1
-end
+#with_fx :level, amp: 1 do
+  1[0]
+#end
 end

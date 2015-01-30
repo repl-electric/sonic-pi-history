@@ -250,7 +250,6 @@ with_fx :level, amp: 1.0 do
   end
 end
 end
-
 live_loop :beep2 do
 with_fx :level, amp: 1 do
   4.times do

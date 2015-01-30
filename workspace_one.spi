@@ -64,7 +64,7 @@ with_fx :level, amp: 2 do
     play degree(1, :A4, :major), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     if(piano_count % 4 == 0)
-    play degree(5, :A4, :major), amp: 1.0, attack: 0.001, release: 1.1, decay: 0.1
+    play degree(5, :A4, :major), amp: 1.0, attack: 0.001, release: 1.0, decay: 0.1
     sleep bar
     play degree(5, :A4, :major), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     end

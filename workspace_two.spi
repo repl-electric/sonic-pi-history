@@ -1,6 +1,6 @@
 live_loop :b do
   sync :fire
-  sample :drum_heavy_kick, amp: 2, rate: -1
+  sample :drum_heavy_kick, amp: 2, rate: 1
 end
 
 n = 0

@@ -246,7 +246,7 @@ with_fx :level, amp: 1.0 do
 end
 end
 live_loop :beep2 do
-with_fx :level, amp: 1.0 do
+with_fx :level, amp: 1.5 do
   notes = [degree(4, :A3, :major), degree(4, :A3, :major)]
   4.times do |i|
     n = notes[i % 2] #fm

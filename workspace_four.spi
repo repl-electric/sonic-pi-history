@@ -2,4 +2,5 @@ live_loop :ambi do
   with_synth :dark_sea_horn do
   play degree(1, :A2, :major)
   end
+  sleep 4
 end

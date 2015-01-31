@@ -6,7 +6,7 @@ live_loop :b do
 end
 
 live_loop :synths do
-  with_synth :supersaw do
+  with_synth :prophet do
 
     synth :fire
     with_fx :slicer do

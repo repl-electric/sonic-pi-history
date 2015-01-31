@@ -1,6 +1,6 @@
 
 live_loop :a do
-  play :A3
+  play :A2
   sleep 1
 end
 

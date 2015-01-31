@@ -6,7 +6,9 @@ end
 n = 0
 live_loop :g do
   sync :fire
-  if n %2 sample :drum_cymbal_closed
+  if n %2 
+    sample :drum_cymbal_closed
+    end
   n+=1
 end
 

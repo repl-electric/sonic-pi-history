@@ -31,9 +31,9 @@ live_loop :g do
 end
 
 live_loop :bassss do
-#  with_fx :bitcrusher do
+  with_fx :bitcrusher do
     sample :loop_amen
     cue :fire
     sleep sample_duration :loop_amen
-#  end
+  end
 end

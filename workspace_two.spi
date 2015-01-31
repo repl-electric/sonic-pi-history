@@ -5,7 +5,7 @@ end
 
 n = 0
 live_loop :g do
-  x = [:drum_cymbal_closed, :drum_cymbal_open].shuffle.choose
+  x = [:drum_cymbal_closed, :drum_tom_low].shuffle.choose
   sync :fire
   if n%2 ==0
     sample :drum_cymbal_closed

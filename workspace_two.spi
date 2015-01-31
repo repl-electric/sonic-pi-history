@@ -5,8 +5,8 @@ live_loop :a do
 end
 
 live_loop :b do
-sleep 1
-play :D2
+  sample :drum_heavy_kick
+  sleep 1
 end
 
 live_loop :bassss do

@@ -1,9 +1,11 @@
 live_loop :b do
+  sync :fire
   sample :drum_heavy_kick
-  sleep 1
+
 end
 
 live_loop :bassss do
   sample :loop_amen
+  cue :fire
   sleep sample_duration :loop_amen
 end

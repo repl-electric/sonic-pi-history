@@ -7,9 +7,12 @@ end
 
 live_loop :synths do
   with_synth :supersaw do
+
     synth :fire
-    play :A1
-    sleep 2
+    with_fx :slicer do
+      play :A1
+      sleep 2
+    end
   end
 end
 

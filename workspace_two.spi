@@ -9,7 +9,7 @@ live_loop :synths do
   with_synth :prophet do
     synth :fire
     with_fx :slicer do
-      play :A2, attack: 0.9
+      play :A2, attack: 1.9
       sleep 2
     end
   end

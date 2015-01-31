@@ -1,6 +1,6 @@
 live_loop :b do
   sync :fire
-  sample :drum_heavy_kick, amp: 2
+  sample :drum_heavy_kick, amp: 2, rate: -1
 end
 
 n = 0
@@ -14,8 +14,6 @@ live_loop :g do
   end
   n+=1
 end
-
-
 
 live_loop :bassss do
   sample :loop_amen

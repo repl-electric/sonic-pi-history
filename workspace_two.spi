@@ -7,10 +7,9 @@ end
 
 live_loop :synths do
   with_synth :prophet do
-
     synth :fire
     with_fx :slicer do
-      play :A1
+      play :A2
       sleep 2
     end
   end

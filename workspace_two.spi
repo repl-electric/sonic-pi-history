@@ -5,6 +5,12 @@ live_loop :b do
   end
 end
 
+live_loop :synths do
+  with_synth :supersaw do
+    play :A2
+  end
+end
+
 n = 0
 live_loop :g do
   x = [:drum_cymbal_closed].shuffle.choose

@@ -1,4 +1,5 @@
 
 loop do
-play :A3
+  play :A3
+  sleep 1
 end

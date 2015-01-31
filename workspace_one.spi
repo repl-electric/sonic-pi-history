@@ -192,7 +192,6 @@ with_fx :level, amp: 0 do
   32.times{ sync :start }
 end
 end
-
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
@@ -236,7 +235,7 @@ room_size = 0
 
 live_loop :beep do
 with_fx :level, amp: 1.0 do
-  notes = [degree(1, :A3, :major), degree(1, :A3, :major)]
+  notes = [degree(1, :A3, :major), degree(6, :A3, :major)]
   4.times do |i|
     n = notes[i%2]
     @direction = rand_i(-1..1)
@@ -247,8 +246,8 @@ with_fx :level, amp: 1.0 do
 end
 end
 live_loop :beep2 do
-notes = [degree(4, :A3, :major), degree(4, :A3, :major)]
 with_fx :level, amp: 1.0 do
+  notes = [degree(4, :A3, :major), degree(4, :A3, :major)]
   4.times do |i|
     n = notes[i % 2] #fm
     sync :bar

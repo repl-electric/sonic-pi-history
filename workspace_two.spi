@@ -3,3 +3,5 @@ loop do
   play :A3
   sleep 1
 end
+
+play 40

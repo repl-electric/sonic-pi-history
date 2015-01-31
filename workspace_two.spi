@@ -5,14 +5,17 @@ end
 
 n = 0
 live_loop :g do
+  x = [:drum_cymbal_closed, :drum_cymbal_open].shuffle.choose
   sync :fire
   if n%2 ==0
     sample :drum_cymbal_closed
   elsif n%4 == 1
-    sample :drum_cymbal_closed, rate: 1.1
+    sample x, rate: 1.1
   end
   n+=1
 end
+
+
 
 live_loop :bassss do
   sample :loop_amen

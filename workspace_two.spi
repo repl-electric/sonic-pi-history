@@ -6,5 +6,5 @@ end
 
 live_loop :b do
 sleep 1
-play 40
+play 60
 end

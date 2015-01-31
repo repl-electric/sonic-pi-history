@@ -8,3 +8,7 @@ live_loop :b do
 sleep 1
 play :D4
 end
+
+live_loop :bassss do
+  sample :loop_amen
+end

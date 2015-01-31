@@ -8,7 +8,7 @@ live_loop :synths do
   with_synth :supersaw do
     synth :fire
 #    with_fx :slicer, phase: 1/8.0 do
-      play_chord :B2, attack: 1.0, release: 1.0
+      play_chord chord_degree(1, :A3 :major), attack: 1.0, release: 1.0
       sleep 2
 #    end
   end

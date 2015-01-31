@@ -7,7 +7,9 @@ end
 
 live_loop :synths do
   with_synth :supersaw do
-    play :A2
+    synth :fire
+    play :A3
+    sleep 1
   end
 end
 

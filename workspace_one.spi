@@ -55,7 +55,7 @@ end
 
 piano_count = 0
 live_loop :piano do
-with_fx :level, amp: 2 do
+with_fx :level, amp: 0 do
   sync :quart
   use_synth :beep
   with_fx :reverb do

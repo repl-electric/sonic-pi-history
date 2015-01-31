@@ -8,7 +8,7 @@ end
 live_loop :synths do
   with_synth :prophet do
     synth :fire
-    with_fx :slicer, phase 1/2 do
+    with_fx :slicer, phase 1/2.0 do
       play :A2, attack: 1.0
       sleep 2
     end

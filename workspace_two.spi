@@ -1,8 +1,4 @@
 
-live_loop :a do
-  play :A2
-  sleep 1
-end
 
 live_loop :b do
   sample :drum_heavy_kick

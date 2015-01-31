@@ -7,3 +7,9 @@ live_loop :ambi do
   play degree(5, :A2, :major), release: 8.0
   end
 end
+
+live_loop :dark do
+  with_synth :dark_ambience do
+    play :A2
+  end
+end

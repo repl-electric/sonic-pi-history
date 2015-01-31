@@ -4,9 +4,8 @@ live_loop :b do
     sample :drum_heavy_kick, amp: 2, rate: 1
   end
 end
-
 live_loop :synths do
-  with_synth :prophet do
+  with_synth :zawa do
     synth :fire
 #    with_fx :slicer, phase: 1/8.0 do
       play :B2, attack: 1.0, release: 1.0
@@ -26,7 +25,6 @@ live_loop :g do
   end
   sleep 1/2
   sample :drum_cymbal_closed
-
   n+=1
 end
 

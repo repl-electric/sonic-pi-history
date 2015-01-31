@@ -6,7 +6,7 @@ end
 
 live_loop :b do
 sleep 1
-play :D4
+play :D2
 end
 
 live_loop :bassss do

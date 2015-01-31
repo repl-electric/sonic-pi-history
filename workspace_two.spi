@@ -3,9 +3,11 @@ live_loop :b do
   sample :drum_heavy_kick, amp: 2
 end
 
+n = 0
 live_loop :g do
   sync :fire
-  sample :drum_cymbal_closed
+  if n %2 sample :drum_cymbal_closed
+  n+=1
 end
 
 live_loop :bassss do

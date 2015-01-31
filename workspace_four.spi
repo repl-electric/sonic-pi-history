@@ -1,0 +1,4 @@
+live_loop :ambi do
+  with_synth :dark_sea_horn
+  play degree(1, :A2, :major)
+end

@@ -5,7 +5,6 @@ end
 
 live_loop :g do
   sync :fire
-  sleep 1
   sample :drum_cymbal_closed
 end
 

@@ -1,9 +1,9 @@
 live_loop :ambi do
-  with_synth :dark_sea_horn, release: 8.0 do
-  play degree(4, :A2, :major)
+  with_synth :dark_sea_horn do
+  play degree(4, :A2, :major), release: 8.0
   sleep 6
-  play degree(6, :A2, :major)
+  play degree(6, :A2, :major), release: 8.0
   sleep 6
-  play degree(5, :A2, :major)
+  play degree(5, :A2, :major), release: 8.0
   end
 end

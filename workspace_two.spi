@@ -1,5 +1,3 @@
-
-
 live_loop :b do
   sample :drum_heavy_kick
   sleep 1

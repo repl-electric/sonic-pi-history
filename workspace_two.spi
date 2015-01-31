@@ -6,8 +6,10 @@ end
 n = 0
 live_loop :g do
   sync :fire
-  if n %2 ==0
+  if n%2 ==0
     sample :drum_cymbal_closed
+  elsif n%4 == 1
+    sample :drum_cymbal_closed, rate: 0.8
   end
   n+=1
 end

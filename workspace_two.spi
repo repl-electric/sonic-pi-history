@@ -12,6 +12,9 @@ live_loop :g do
   elsif n%4 == 1
     sample x, rate: 1.1
   end
+  sleep 1/2
+      sample :drum_cymbal_closed
+
   n+=1
 end
 

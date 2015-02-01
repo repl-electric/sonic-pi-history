@@ -51,7 +51,7 @@ end
 
 live_loop :indie do
 sync :fire
-sample :loop_industrial, amp: 0.25
+sample :loop_compus, amp: 0.25
 end
 
 live_loop :indie2 do

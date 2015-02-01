@@ -39,7 +39,7 @@ live_loop :bassss do
       end
     end
     sample :loop_amen, rate: 0.4
-    sample :loop_amen, rate: 1.0
+    sample :loop_amen, rate: -1.0
 
     cue :fire
     sleep sample_duration(:loop_amen)

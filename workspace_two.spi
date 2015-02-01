@@ -30,9 +30,9 @@ end
 live_loop :drums_highlights do
   #sample :sn_zome
   sync :MAD
-  sample :loop_industrial, amp: 1.0
+  sample :loop_compus, amp: 1.0
   sync :kick
   with_fx :reverb, room: 10 do
-  sample :loop_industrial, amp: 1.0
+  sample :loop_compus, amp: 1.0
   end
 end

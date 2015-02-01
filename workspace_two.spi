@@ -6,8 +6,8 @@ live_loop :b do
 end
 live_loop :synths do
   with_synth :supersaw do
-    sync :fire
-    with_fx :slicer, phase: 1/4.0 do
+      sync :fire
+      with_fx :slicer, phase: 1/4.0 do
       play_chord chord_degree(1, :A2, :major), attack: 0.2, release: 4.0
       #sleep 2
       sync :fire
@@ -32,7 +32,7 @@ end
 
 a = 0
 live_loop :bassss do
-    if(a % 4 == 0)
+    if(a % 2 == 0)
       with_fx :bitcrusher, bits: 5+dice(a%7) do
         sample :loop_amen, rate: 1
       end

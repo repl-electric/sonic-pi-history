@@ -7,7 +7,7 @@ def say(words)
                   play n, release: 8, attack: 1
                   sleep 8
                 else
-                play n, release: 6.0, attack: 1
+                play n, release: 6.0, attack: 0.1
                   sleep 6.0
                 end}
 end

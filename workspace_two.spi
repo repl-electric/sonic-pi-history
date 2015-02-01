@@ -31,10 +31,18 @@ live_loop :g do
   n+=1
 end
 
+a = 0
 live_loop :bassss do
 #  with_fx :wobble, phase: 1/12.0 do
+    
     sample :loop_amen
+    
+    if(a % 8 == 0)
+      sample :loop_amen, rate: -1
+    end
+    
     cue :fire
     sleep sample_duration :loop_amen
 #  end
+  a += 1
 end

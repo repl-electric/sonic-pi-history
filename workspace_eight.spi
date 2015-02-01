@@ -1,4 +1,5 @@
 def say(words)
+  use_synth :dark_sea_horn
   t = scale(:e2, :minor_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length-1]}
   #play_pattern_timed notes, [1/2.0]
@@ -11,6 +12,6 @@ def say(words)
                 end}
 end
 
-say <<-EOF 
+say <<-POEM
 Tiger tiger burning bright in the forest of the night
-EOF
+POEM

@@ -23,7 +23,7 @@ end
 
 live_loop :hats do
   sync :kick
-  #sample :drum_cymbal_closed
+  sample :drum_cymbal_closed
   sample :loop_industrial, amp: 0.4
 end
 

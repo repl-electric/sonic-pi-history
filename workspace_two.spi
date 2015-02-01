@@ -34,7 +34,7 @@ end
 a = 0
 live_loop :bassss do
     if(a % 4 == 0)
-      with_fx :bitcrusher, bits: dice(10+(a%7)) do
+      with_fx :bitcrusher, bits: dice(8+(a%7)) do
         sample :loop_amen, rate: 1
       end
     end

@@ -7,7 +7,7 @@ end
 
 s=0
 live_loop :synths do
-  with_synth :dark_sea_horn do
+  with_synth :supersaw do
     with_fx :echo, phase: 1/32.0 do
       sync :fire
       with_fx :echo, phase: 1/4.0 do

@@ -2,6 +2,6 @@ play 60
 
 loop do
   use_synth :dark_sea_horn
-  play :A3
+  play :A2
   sleep 1
 end

@@ -38,8 +38,10 @@ live_loop :bassss do
     if(a % 8 == 0)
       with_fx :bitcrusher do
       sample :loop_amen, rate: 1
-      
+      end
+      end
       sample :loop_amen
+      
     end     
     
     cue :fire

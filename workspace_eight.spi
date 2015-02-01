@@ -3,7 +3,7 @@ def say(words)
   with_fx :flanger do
   use_synth :dark_sea_horn
   use_synth_defaults release: 2.0 
-  t = scale(:a1, :major_pentatonic, num_octaves: 2)
+  t = scale(:a2, :major_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length]}
   notes.map{|n| if n.chr == " "
                   play n, release: 8, attack: 0.1

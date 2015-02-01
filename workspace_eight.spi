@@ -1,5 +1,5 @@
 def say(words)
-  puts words.split("").map(&:ord)
+  notes = words.split("").map(&:ord).map({|n| n/2})
 end
 
 say("hi")

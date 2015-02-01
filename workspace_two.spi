@@ -52,7 +52,7 @@ end
 
 live_loop :indie do
 
-
+  sync :fire
  sample :loop_industrial
-
+ 
 end

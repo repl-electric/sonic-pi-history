@@ -1,4 +1,5 @@
 def say(words)
+  with_fx :reverb do
   with_fx :bitcrusher do
   use_synth :dark_sea_horn
   use_synth_defaults release: 2.0 
@@ -11,6 +12,7 @@ def say(words)
                 play n, release: 6.0, attack: 0.1
                   sleep 2.0
                 end}
+  end
   end
 end
 

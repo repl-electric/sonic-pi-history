@@ -4,11 +4,11 @@ def say(words)
   t = scale(:a2, :major_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length-1]}
   notes.map{|n| if n.chr == " "
-                  play n, release: 4, attack: 3
-                  sleep 4
+                  play n, release: 8, attack: 6
+                  sleep 8
                 else
                 play n, release: 2.0, attack: 2
-                  sleep 2.0
+                  sleep 4.0
                 end}
 end
 

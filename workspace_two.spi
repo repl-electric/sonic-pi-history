@@ -33,6 +33,8 @@ live_loop :drums_highlights do
   sync :MAD
   sample :loop_industrial
   sync :kick
-  sample :loop_industrial
+ sample :sn_zome
+ 
+ sample :loop_industrial
   
 end

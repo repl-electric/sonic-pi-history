@@ -1,6 +1,6 @@
 def say(words)
   with_fx :reverb, room: 100 do
-  with_fx :lpf do
+  #with_fx :lpf do
   use_synth :growl
   t = scale(:a2, :major_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length]}
@@ -12,7 +12,7 @@ def say(words)
                   sleep 2.0
                 end
            }
-end end end
+end end
 
 say <<-POEM
 Burning in the night

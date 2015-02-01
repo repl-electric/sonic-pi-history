@@ -63,6 +63,6 @@ sleep 1/4.0
 sample :drum_cymbal_pedal
 sync :fire
 with_fx :reverb do
-sample :loop_industrial, amp: 0.9
+sample :loop_compus, amp: 0.9
 end
 end

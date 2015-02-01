@@ -37,6 +37,7 @@ end
 a = 0
 live_loop :bassss do
     if(a % 8 == 0)
+      cue :go_mad
       sample :sn_zome, rate: 0.4    
       with_fx :bitcrusher, bits: 5+dice(a%7) do
         sample :loop_amen, rate: 1
@@ -51,8 +52,11 @@ live_loop :bassss do
 end
 
 live_loop :indie do
+ sync :fire
+ sample :loop_industrial, amp: 0.5
+end
 
-  sync :fire
- sample :loop_industrial
- 
+live_loop :indie2 do
+sync :go_mad
+sample :loop_industrial, :amp 1.0
 end

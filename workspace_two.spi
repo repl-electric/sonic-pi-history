@@ -8,13 +8,11 @@ end
 s=0
 live_loop :synths do
   with_synth :dark_sea_horn do
-    with_fx :echo, phase: 1/8 do
       sync :fire
       with_fx :echo, phase: 1/4.0 do
       play_chord chord_degree(1, :A1, :major), attack: 0.2, release: 6.0
       #sleep 1/2
       #play_chord chord_degree(1, :A1, :major), attack: 0.2, release: 1.0  
-    end
     end
   end
   s+=1

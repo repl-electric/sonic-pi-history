@@ -36,7 +36,7 @@ end
 
 a = 0
 live_loop :bassss do
-    if(a % 8 == 0) || a % 4 == 0)
+    if(a % 8 == 0) || (a % 4 == 0)
       cue :go_mad
       sample :sn_zome, rate: 0.4    
       with_fx :bitcrusher, bits: 5+dice(a%7) do

@@ -12,5 +12,5 @@ def say(words)
 end
 
 say <<-EOF 
-"Tiger tiger burning bright in the forest of the night"
+Tiger tiger burning bright in the forest of the night
 EOF

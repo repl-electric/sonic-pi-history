@@ -35,7 +35,7 @@ a = 0
 live_loop :bassss do
 #  with_fx :wobble, phase: 1/12.0 do
     
-    if(a % 8 == 0)
+    if(a % 4 == 0)
       with_fx :bitcrusher do
       sample :loop_amen, rate: 1
       end

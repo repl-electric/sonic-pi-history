@@ -1,7 +1,8 @@
 play 60
 
 live_loop :darkness do
-   sample :drum_bass_soft
+  sample :drum_bass_hard
+  cue :kick
   use_synth :dark_sea_horn
   play :A1
   sleep 1

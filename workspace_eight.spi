@@ -1,5 +1,4 @@
 def say(words)
-  with_fx :slicer, phase: 1/8.0 do
   with_fx :reverb, room: 100 do
   with_fx :lpf do
   use_synth :dark_sea_horn
@@ -13,7 +12,7 @@ def say(words)
                   play n, release: 6.0, attack: 0.1
                   sleep 2.0
                 end}
-end end end end
+end end end
 
 say <<-POEM
 Tiger tiger burning bright in the forest of the night

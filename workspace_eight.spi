@@ -1,5 +1,5 @@
 def say(words)
-  puts words.split("")
+  puts words.split("").map(&:char)
 end
 
 say("hi")

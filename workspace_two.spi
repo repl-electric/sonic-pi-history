@@ -9,6 +9,7 @@ end
 
 n = 0
 live_loop :drums do
+  cue :kick
   sample :drum_bass_hard
 
   sample :loop_amen
@@ -23,4 +24,7 @@ end
 live_loop :drums_highlights do
   sync :MAD
   sample :loop_industrial
+  sync :kick
+  sample :loop_industrial
+  
 end

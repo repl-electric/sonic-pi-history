@@ -4,14 +4,17 @@ live_loop :b do
     sample :drum_heavy_kick, amp: 2, rate: 1
   end
 end
+
+s=0
 live_loop :synths do
   with_synth :supersaw do
       sync :fire
       with_fx :slicer, phase: 1/10.0 do
-      play_chord chord_degree([1, 4,5].choose, :A2, :major), attack: 0.2, release: 4.0
+      play_chord chord_degree([1, 4, 5][s], :A2, :major), attack: 0.2, release: 4.0
       #sleep 2
     end
   end
+  s+=1
 end
 
 n = 0

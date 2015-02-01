@@ -1,6 +1,6 @@
 def say(words)
   notes = words.split("").map(&:ord).map{|n| n/2}
-  play_pattern_timed [1], notes
+  play_pattern_timed notes, [1]
 end
 
 say("hi")

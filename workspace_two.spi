@@ -1,8 +1,9 @@
 play 60
 
 live_loop :darkness do
-  #use_synth :dark_sea_horn
-  #play :A1
+  use_synth :dark_sea_horn
+  play :A1
+  sleep 1
 end
 
 n = 0

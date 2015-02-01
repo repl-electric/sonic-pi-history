@@ -5,10 +5,10 @@ def say(words)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length]}
   notes.map{|n| if n.chr == " "
                   play n, release: 8, attack: 0.1
-                  sleep 8
+                  sleep 4
                 else
                 play n, release: 6.0, attack: 0.1
-                  sleep 6.0
+                  sleep 2.0
                 end}
 end
 

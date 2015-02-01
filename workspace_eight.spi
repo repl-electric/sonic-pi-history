@@ -1,5 +1,5 @@
 def say(words)
-  with_fx :reverb do
+  with_fx :reverb, room: 10 do
   with_fx :flanger do
   use_synth :dark_sea_horn
   use_synth_defaults release: 2.0 

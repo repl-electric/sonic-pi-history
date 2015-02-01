@@ -5,7 +5,7 @@ live_loop :darkness do
   cue :kick
   #use_synth :dark_sea_horn
   #play :A1
-  sleep 1/2.0
+  sleep 1/4.0
 end
 
 n = 0

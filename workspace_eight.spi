@@ -1,4 +1,5 @@
 def say(words)
+  with_fx :bitcrusher do
   use_synth :mod_fm
   use_synth_defaults release: 2.0 
   t = scale(:a2, :major_pentatonic, num_octaves: 2)
@@ -10,6 +11,7 @@ def say(words)
                 play n, release: 6.0, attack: 0.1
                   sleep 2.0
                 end}
+                end
 end
 
 say <<-POEM

@@ -1,5 +1,5 @@
 def say(words)
-  with_fx :slicer do
+  with_fx :slicer, phase: 0.5 do
   with_fx :reverb, room: 100 do
   with_fx :lpf do
   use_synth :dark_sea_horn

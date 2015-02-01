@@ -1,7 +1,7 @@
 def say(words)
   t = scale(:e3, :minor_pentatonic, num_octaves: 1)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length-1]}
-  play_pattern_timed notes, [1]
+  play_pattern_timed notes, [1/2]
 end
 
 say("hi how ar eyou")

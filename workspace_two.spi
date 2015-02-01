@@ -24,6 +24,7 @@ end
 live_loop :hats do
   sync :kick
   sample :drum_cymbal_closed
+  sample :loop_industrial, amp: 0.6
 end
 
 live_loop :drums_highlights do
@@ -31,6 +32,5 @@ live_loop :drums_highlights do
   sync :MAD
   sample :loop_industrial
   sync :kick
-  sample :sn_zome 
   sample :loop_industrial
 end

@@ -9,10 +9,9 @@ live_loop :synths do
     sync :fire
     with_fx :slicer, phase: 1/8.0 do
       play_chord chord_degree(4, :A3, :major), attack: 0.2, release: 4.0
-      sleep 2
+      #sleep 2
       sync :fire
       play_chord chord_degree(5, :A3, :major), attack: 0.2, release: 4.0
-
     end
   end
 end

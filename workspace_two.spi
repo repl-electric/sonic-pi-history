@@ -15,7 +15,7 @@ live_loop :drums do
   sample :loop_amen
   if(n%8==0)
     cue :MAD
-    with_fx(:bitcrusher, bits: 6+ n%7 ){sample :loop_amen}
+    with_fx(:bitcrusher, bits: 5+ n%7 ){sample :loop_amen}
   end
   sleep sample_duration :loop_amen
   n+=1 
@@ -24,17 +24,13 @@ end
 live_loop :hats do
   sync :kick
   sample :drum_cymbal_pedal
-
 end
 
 live_loop :drums_highlights do
   sample :sn_zome
-
   sync :MAD
   sample :loop_industrial
   sync :kick
- sample :sn_zome
- 
- sample :loop_industrial
-  
+  sample :sn_zome 
+  sample :loop_industrial
 end

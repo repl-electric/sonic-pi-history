@@ -59,4 +59,6 @@ end
 live_loop :indie2 do
 sync :go_mad
 sample :loop_industrial, amp: 1.0
+sync :fire
+sample :loop_industrial, amp: 1.0
 end

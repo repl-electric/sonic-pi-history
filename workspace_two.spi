@@ -52,6 +52,7 @@ end
 live_loop :indie do
 sync :fire
 sample :loop_garzul
+ sample :loop_mika
 sample :loop_compus, amp: 0.25
 end
 

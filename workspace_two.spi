@@ -1,16 +1,14 @@
 play 60
 
 live_loop :darkness do
-  sample :drum_bass_hard
-  cue :kick
   #use_synth :dark_sea_horn
   #play :A1
-  sleep 1/4.0
 end
 
 n = 0
 live_loop :drums do
-  sync :kick
+  sample :drum_bass_hard
+
   sample :loop_amen
   if(n%8==0)
     cue :MAD

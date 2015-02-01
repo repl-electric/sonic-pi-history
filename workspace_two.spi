@@ -23,7 +23,7 @@ end
 
 live_loop :hats do
   sync :kick
-  sample :drum_cymbal_pedal
+  sample :drum_cymbal_closed
 end
 
 live_loop :drums_highlights do

@@ -64,5 +64,5 @@ sample :drum_cymbal_pedal
 sleep 1/4.0
 sample :drum_cymbal_pedal
 sync :fire
-sample :loop_industrial, amp: 1.0
+sample :loop_industrial, amp: 0.9
 end

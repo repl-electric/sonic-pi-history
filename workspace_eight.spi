@@ -11,4 +11,4 @@ def say(words)
                 end}
 end
 
-say("Tiger tiger burning bright in the forest of the night")
+say <<- "Tiger tiger burning bright in the forest of the night"

@@ -57,10 +57,10 @@ live_loop :indie do
 end
 
 live_loop :indie2 do
-s = [:loop_compus, :loop_industrial].choose
+indie_sample = [:loop_compus, :loop_industrial].choose
 
 sync :go_mad
-sample s, amp: 1.0
+sample indie_sample, amp: 1.0
 sample :drum_cymbal_pedal
 sleep 1/4.0
 sample :drum_cymbal_pedal

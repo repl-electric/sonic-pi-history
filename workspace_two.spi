@@ -1,6 +1,7 @@
 play 60
 
 live_loop :darkness do
+   sample :drum_bass_soft
   use_synth :dark_sea_horn
   play :A1
   sleep 1
@@ -21,4 +22,5 @@ live_loop :drums_highlights do
   sync :MAD
   sample :loop_industrial
 
+  
 end

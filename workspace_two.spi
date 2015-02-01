@@ -21,6 +21,12 @@ live_loop :drums do
   n+=1 
 end
 
+live_loop :hats do
+  sync :kick
+  sample :sn_zome
+
+end
+
 live_loop :drums_highlights do
   sync :MAD
   sample :loop_industrial

@@ -30,7 +30,7 @@ end
 live_loop :drums_highlights do
   sample :sn_zome, rate: 0.9
   sync :MAD
-  sample :loop_industrial
+  sample :loop_industrial, amp: 1.0
   sync :kick
   sample :loop_industrial
 end

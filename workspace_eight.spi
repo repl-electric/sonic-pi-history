@@ -1,5 +1,5 @@
 def say(words)
-  use_synth :zawa
+  use_synth :dsaw
   use_synth_defaults release: 2.0 
   t = scale(:a3, :major_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length]}

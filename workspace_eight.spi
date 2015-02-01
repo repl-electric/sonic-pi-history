@@ -1,6 +1,6 @@
 def say(words)
   with_fx :reverb, room: 100 do
-  with_fx :flanger do
+  with_fx :lfo do
   use_synth :dark_sea_horn
   use_synth_defaults release: 2.0 
   t = scale(:a2, :major_pentatonic, num_octaves: 2)
@@ -12,9 +12,7 @@ def say(words)
                 play n, release: 6.0, attack: 0.1
                   sleep 2.0
                 end}
-  end
-  end
-end
+end end end
 
 say <<-POEM
 Tiger tiger burning bright in the forest of the night

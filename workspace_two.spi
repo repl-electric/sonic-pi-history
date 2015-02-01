@@ -49,3 +49,10 @@ live_loop :bassss do
     sleep sample_duration(:loop_amen)
   a += 1
 end
+
+live_loop :indie do
+
+
+ sample :loop_industrial
+
+end

@@ -2,7 +2,7 @@ play 60
 
 live_loop :darkness do
   use_synth :dark_sea_horn
-  play :A1, 
+  play :A1 
   sleep 6
 end
 

@@ -1,5 +1,6 @@
 play 60
 
 loop do
-play 60
+  play 60
+  sleep 1
 end

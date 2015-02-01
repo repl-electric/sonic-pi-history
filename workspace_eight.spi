@@ -1,7 +1,7 @@
 def say(words)
   use_synth :dark_sea_horn
   use_synth_defaults release: 2.0 
-  t = scale(:e2, :major_pentatonic, num_octaves: 2)
+  t = scale(:f2, :major_pentatonic, num_octaves: 2)
   notes = words.split("").map(&:ord).map{|n| t[n%t.length-1]}
   #play_pattern_timed notes, [1/2.0]
   notes.map{|n| if n.chr == " "

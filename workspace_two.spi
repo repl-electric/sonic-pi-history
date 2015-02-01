@@ -33,19 +33,14 @@ end
 
 a = 0
 live_loop :bassss do
-#  with_fx :wobble, phase: 1/12.0 do
-    
     if(a % 4 == 0)
       with_fx :bitcrusher do
-      sample :loop_amen, rate: 1
+        sample :loop_amen, rate: 1
       end
     end
-      sample :loop_amen
-      
-        
+    sample :loop_amen
     
     cue :fire
     sleep sample_duration :loop_amen
-#  end
   a += 1
 end

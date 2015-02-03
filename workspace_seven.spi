@@ -1,6 +1,8 @@
 
 live_loop :highs do
   sample :sn_dolf 
+  sample :drum_cymbal_closed
+
   sync :FIRE
   #play :A2
   sample :loop_industrial

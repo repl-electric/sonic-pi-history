@@ -6,6 +6,8 @@ live_loop :foo do
 
   sync :kick
 #  play [:A3,:A2].choose
+  sample :loop_industrial
+
   sample :drum_bass_hard
   sleep 1
 end

@@ -1,6 +1,7 @@
 
 
 live_loop :hihgh do
+sample :sn_zome
 #play 40
 sync :kick
 sample :loop_industrial
@@ -13,10 +14,10 @@ sample :loop_amen
 
 if n% 4 == 0
   with_fx :bitcrusher do
+  cue :MAD
   sample :loop_amen
   end
 end
-
 
 sleep sample_duration(:loop_amen)
 end

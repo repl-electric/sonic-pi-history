@@ -3,4 +3,8 @@
 loop do
 play 60
 sleep 1/4.0
+play 60
+sleep 1/1.0
+
+
 end

@@ -3,7 +3,7 @@
 live_loop :darkness do
   sync :MAD
   use_synth :dark_sea_horn
-  play :A1, release: 32, amp: 0.5
+  play :A1, release: 32, amp: 0.9
   sleep 6
 end
 
@@ -15,7 +15,7 @@ live_loop :drums do
   sample :loop_amen
   if(n%1==0)
     cue :MAD
-    with_fx(:bitcrusher, bits: 4+ n%7 ){sample :loop_amen}
+    with_fx(:bitcrusher, bits: 4+n%7 ){sample :loop_amen}
   end
   sleep sample_duration :loop_amen
   n+=1 

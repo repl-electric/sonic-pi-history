@@ -5,8 +5,18 @@ live_loop :drums do
   sample :drum_bass_hard
 end
 
+n=0
 live_loop :amen do
 sample :loop_amen
 cue :fire
+
+  if(n%4 == 0)
+    with_fx :bitcrusher do
+      sample :loop_amen
+      end
+
+  end
+
+
 sleep sample_duration :loop_amen
 end

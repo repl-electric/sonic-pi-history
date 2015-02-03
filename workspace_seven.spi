@@ -1,6 +1,6 @@
 
 
-live_loop do
+live_loop :foo do
 #  play [:A3,:A2].choose
   sample :drum_bass_hard
   sleep 1

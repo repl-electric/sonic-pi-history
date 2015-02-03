@@ -2,6 +2,13 @@ dur = sample_duration :loop_compus
 bar = dur / 4
 quart = dur / 16
 
+live_loop :poop do
+  sync :kick
+play :C1, mod_range: 12, amp: rrand(0.5, 1), mod_phase: [8, 16, 32].choose , release: 1, cutoff: rrand(50, 90)
+  play :C2, mod_range: [24, 36, 34].choose, amp: 0.35, mod_phase: sd/16, release: 2, cutoff: 60, pulse_width: rand
+  
+end
+
 n=0
 live_loop :drums do
 cue :kick

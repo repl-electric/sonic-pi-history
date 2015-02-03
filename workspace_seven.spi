@@ -1,7 +1,7 @@
 
 
 live_loop :hihgh do
-play 40
+#play 40
 sleep 1/2.0
 end
 

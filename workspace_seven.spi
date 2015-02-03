@@ -1,3 +1,7 @@
+dur = sample_duration :loop_compus
+bar = dur / 4
+quart = dur / 16
+
 n=0
 live_loop :drums do
 cue :kick

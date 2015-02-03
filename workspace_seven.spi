@@ -1,5 +1,5 @@
 
 loop do
-  play :A3
+  sample :loop_industrial
   sleep 1
 end

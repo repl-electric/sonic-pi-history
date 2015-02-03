@@ -1,6 +1,7 @@
 n = 0
 
 live_loop :drums do
+  cue :kick
   sample :drum_bass_hard
   sample :drum_cymbal_closed
   sample :loop_industrial, amp: 0.1
@@ -19,6 +20,6 @@ live_loop :hihglights do
   sync :MAD
   sample :loop_industrial, amp: 1.0
 
-  sync :MAD
+  sync :kick
   with_fx(:reverb, room: 10){sample :loop_industrial, amp: 1.0}
 end

@@ -5,7 +5,9 @@ live_loop :highs do
   sample :loop_industrial
     sync :kick
     
+with_fx :reverb do
       sample :loop_industrial
+      end
 
   end
 

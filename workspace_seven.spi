@@ -1,6 +1,6 @@
 
 loop do
-play 60
+sample :
 sleep 1
 end
 

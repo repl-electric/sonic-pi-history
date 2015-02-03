@@ -14,6 +14,8 @@ def say(words)
            }
 end end end
 
-say <<-POEM
-Tiger tiger burning bright
-POEM
+
+
+
+say <<-NIGHT
+NIGHT

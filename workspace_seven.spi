@@ -3,9 +3,8 @@
 live_loop :hihgh do
 #play 40
 
-cue :kick
+sync :kick
 sample :loop_industrial
-sleep 0.5
 end
 
 live_loop :drums do

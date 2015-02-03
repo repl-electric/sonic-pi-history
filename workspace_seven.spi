@@ -6,7 +6,7 @@ live_loop :foo do
   sleep 1
 end
 
-live_loop do
+live_loop :pop do
 sample :loop_amen
 sleep sample_duration :loop_amen
 end

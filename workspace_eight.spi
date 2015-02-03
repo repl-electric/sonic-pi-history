@@ -15,5 +15,5 @@ def say(words)
 end end end
 
 say <<-POEM
-Tiger Tiger buring bright
+Tiger tiger burning bright
 POEM

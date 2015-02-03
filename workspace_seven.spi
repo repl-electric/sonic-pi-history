@@ -1,4 +1,6 @@
 
 loop do
-play 60
+  play 60
 end
+
+sample :loop_amen

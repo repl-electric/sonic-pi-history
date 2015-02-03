@@ -3,7 +3,7 @@
 live_loop :darkness do
   sync :MAD
   use_synth :dark_sea_horn
-  play :A1, release: 32, amp: 0.1
+  play :A1, release: 32, amp: 0.5
   sleep 6
 end
 

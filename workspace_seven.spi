@@ -1,5 +1,6 @@
 
 live_loop :highs do
+sample :sn_dolf
   sync :FIRE
   #play :A2
   sample :loop_industrial

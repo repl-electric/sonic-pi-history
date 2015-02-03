@@ -44,7 +44,7 @@ end
 
 define :stacks do
   use_synth :supersaw
-  vol = 0.92
+  vol = 1.92
   with_fx :reverb, room: 0.9 do
     with_fx :slicer, phase: quart do
       sync :kick

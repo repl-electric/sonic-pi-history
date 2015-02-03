@@ -3,12 +3,10 @@ live_loop :drums do
   sample :sn_dolf
   sync :fire
   sample :loop_industrial
-
   sync :BAMG
   with_fx :reverb do
-  sample :loop_industrial
+    sample :loop_industrial
   end
-  
 end
 
 n=0
@@ -16,8 +14,8 @@ live_loop :amen do
 sample :loop_amen
   sample :drum_bass_hard
 
-cue :fire
-  if(n%4 == 0)
+  cue :fire
+  if(n%2 == 0)
     cue :BAMG
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen

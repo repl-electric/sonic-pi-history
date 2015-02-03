@@ -1,11 +1,12 @@
 
 
 live_loop :drums do
+  sync :fire
   sample :drum_bass_hard
-  sleep 1/2.0
 end
 
 live_loop :amen do
 sample :loop_amen
+cue :fire
 sleep sample_duration :loop_amen
 end

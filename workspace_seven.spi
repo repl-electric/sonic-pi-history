@@ -1,5 +1,5 @@
 n = 0
-with_fx :bitcrusher, bits: 7 do
+with_fx :bitcrusher, bits: 4 do
 live_loop :drums do
   cue :kick
   sample :drum_bass_hard, rate: rand_i(1)

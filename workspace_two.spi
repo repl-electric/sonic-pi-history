@@ -1,5 +1,3 @@
-
-
 d_n = 0
 live_loop :darkness do
   sync :MAD
@@ -17,7 +15,7 @@ live_loop :drums do
   sample :drum_bass_hard
 
   sample :loop_amen
-  if(n%2==0)
+  if(n%1==0)
     cue :MAD
     with_fx(:bitcrusher, bits: 4+n%7 ){sample :loop_amen}
   end

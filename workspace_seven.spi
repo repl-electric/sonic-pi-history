@@ -1,6 +1,9 @@
 
 
 live_loop :foo do
+  sync :BOOM
+  sample :loop_industrial
+
   sync :kick
 #  play [:A3,:A2].choose
   sample :drum_bass_hard
@@ -14,6 +17,7 @@ live_loop :pop do
   sample :loop_amen, rate: 0.5 if rand < 0.5
   
   if n % 4 ==0
+    cue :BOOM
     with_fx :bitcrusher, bits: 4+n%7 do
     sample :loop_amen
     end

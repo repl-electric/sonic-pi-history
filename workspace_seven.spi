@@ -18,6 +18,7 @@ end
 
 live_loop :hihglights do
   sync :MAD
+  sample :sn_dolf
   sample :loop_industrial, amp: 1.0
 
   sync :kick

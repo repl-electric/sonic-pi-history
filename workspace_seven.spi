@@ -1,6 +1,8 @@
 
 live_loop :drums do
   sync :kick
+  sample :loop_industrial
+
   sample :drum_bass_hard
   sync :mad
   sample :loop_industrial

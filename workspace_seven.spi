@@ -23,6 +23,7 @@ if n% 4 == 0
   cue :MAD
   sample :loop_amen
   end
+  n+=1
 end
 
 sleep sample_duration(:loop_amen)

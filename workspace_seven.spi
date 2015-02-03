@@ -6,7 +6,7 @@ live_loop :drums do
   sample :drum_cymbal_closed
   sample :loop_industrial, amp: 0.1
   
-  if(n%2 == 0)
+  if(n%1 == 0)
     cue :MAD
     with_fx(:bitcrusher, bits: 4+n%7){sample :loop_amen}
   end

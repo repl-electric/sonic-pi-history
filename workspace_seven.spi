@@ -1,11 +1,20 @@
+n=0
 live_loop :drums do
   sample :drum_bass_hard
   sample :loop_amen, rate: [1/2.0,1.0].choose if rand < 2
   sample :loop_amen
 
+  if(n %8 == 0)
+    with_fx :bitcrusher do
+    sample :loop_amen
+    end
+  end
+  
   sleep sample_duration :loop_amen
+  n+= 1
 end
 
-live_loop do
+live_loop :thing do
+  
   
 end

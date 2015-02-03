@@ -1,6 +1,6 @@
 
 live_loop :highs do
-  play 60
+  play 40
   sleep 1
 end
 

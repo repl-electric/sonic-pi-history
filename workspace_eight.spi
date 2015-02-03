@@ -17,8 +17,3 @@ end end end
 say <<-NIGHT
 Tiger Tiger burning bright
 NIGHT
-
-live_loop :d do
-  sample :ambi_choir
-  sleep 8
-end

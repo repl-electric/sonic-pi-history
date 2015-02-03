@@ -1,5 +1,4 @@
-
-
-ar = (sample_duration :loop_amen_full) / dur
-
-sample :loop_amen_full, amp: 0.5, rate: [ar, ar/2].choose if rand < 0.5
+live_loop :drums do
+  sample :loop_amen
+  sleep sample_duration :loop_amen
+end

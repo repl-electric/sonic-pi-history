@@ -1,6 +1,6 @@
 
 
 loop do
-  play 60
+  play [60,70].choose
   sleep 1
 end

@@ -6,5 +6,5 @@ end
 
 live_loop :a do
 sample :loop_amen
-sleep sample_duration :loop_amed
+sleep sample_duration :loop_amen
 end

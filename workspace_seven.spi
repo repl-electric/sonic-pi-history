@@ -5,6 +5,10 @@ sample :sn_dolf
 #play 40
 sync :kick
 sample :loop_industrial
+
+sync :kick
+sample :loop_industrial
+
 end
 
 n = 0

@@ -1,5 +1,5 @@
 n = 0
-
+with_fx :bitcrusher do
 live_loop :drums do
   cue :kick
   sample :drum_bass_hard, rate: rand_i(1)
@@ -22,4 +22,5 @@ live_loop :hihglights do
   sample :loop_industrial, amp: 1.0
   sync :kick
   with_fx(:reverb, room: 10){sample :loop_industrial, amp: 1.0}
+end
 end

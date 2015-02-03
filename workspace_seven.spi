@@ -15,7 +15,7 @@ sample :loop_amen
   sample :drum_bass_hard
 
   cue :fire
-  if(n%2 == 0)
+  if(n%1 == 0)
     cue :BAMG
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen

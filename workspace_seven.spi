@@ -7,4 +7,5 @@ end
 
 live_loop :drums do
 sample :loop_amen
+sleep sample_duration(:loop_amen)
 end

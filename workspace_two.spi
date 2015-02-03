@@ -11,7 +11,7 @@ end
 
 live_loop :poop do
   sync :kick
-    use_synth :beep
+    use_synth :dsaw
     with_fx :echo, phase: 0.125, mix: 0.8  do
     notes = scale(:f2, :minor_pentatonic, num_octaves: 1)
     4.times do

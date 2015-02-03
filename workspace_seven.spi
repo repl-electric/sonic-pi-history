@@ -4,3 +4,5 @@ loop do
   play [:A3,:A2].choose
   sleep 1
 end
+
+sample :loop_amen

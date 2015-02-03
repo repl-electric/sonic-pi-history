@@ -1,7 +1,15 @@
+n = 0
+
 live_loop :drums do
   sample :drum_bass_hard
   sample :drum_cymbal_closed
   
+  if(n%8 == 0)
+    with_fx(:bitcrusher){sample :loop_amen}
+  end
+  
+  
   sample :loop_amen
   sleep sample_duration(:loop_amen)
+  n+=1
 end

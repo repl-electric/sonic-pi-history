@@ -17,8 +17,9 @@ live_loop :drums do
 end
 
 live_loop :hihglights do
-  sync :MAD
   sample :sn_dolf
+  sync :MAD
+
   sample :loop_industrial, amp: 1.0
 
   sync :kick

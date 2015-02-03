@@ -22,7 +22,7 @@ live_loop :thing do
     sync :hit
     sample :loop_industrial
     sync :kick
-    with_fx(:reverb) do
+    with_fx(:reverb, room: 10) do
       sample :loop_industrial
     end
 

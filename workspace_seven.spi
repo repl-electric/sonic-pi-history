@@ -30,14 +30,3 @@ live_loop :thing do
       sample :loop_industrial
     end
 end
-
-define :beats do
-  sync :kick
-  with_fx :echo, phase: quart * 3, decay: dur, mix: 0.6 do
-    # make sure only one of the following 3 lines is active
-    # (uncommented) at a time
-    #sample :loop_compus, rate: 0.5
-    #sample :loop_compus, rate: 1
-    sample :loop_compus, rate: [0.25, 0.5, 1, 1, 1].choose if rand < 0.9
-  end
-end

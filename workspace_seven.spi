@@ -1,8 +1,12 @@
 
 live_loop :drums do
-
   sample :sn_dolf
   sync :fire
+  sample :loop_industrial
+
+  sync :BAMG
+  sample :loop_industrial
+  
 end
 
 n=0

@@ -41,22 +41,3 @@ define :beats do
     sample :loop_compus, rate: [0.25, 0.5, 1, 1, 1].choose if rand < 0.9
   end
 end
-
-define :stacks do
-  use_synth :supersaw
-  vol = 1.92
-  with_fx :reverb, room: 0.9 do
-    with_fx :slicer, phase: quart do
-      sync :kick
-      play_chord [[:C2, :Eb3, :Ab4],[:D2, :F3, :Ab4]].choose,
-        cutoff: rrand(100,130), pan: -0.25,
-        amp: vol, env_curve: 7, decay: bar, release: bar
-    end
-    sleep bar * 2
-    with_fx :slicer, phase: quart do
-      play_chord [[:C3, :Eb3, :G3],[:Bb2, :Eb3, :G3]].choose,
-        cutoff: rrand(100,130), pan: 0.25,
-        amp: vol, env_curve: 7, decay: bar, release: bar
-    end
-  end
-end

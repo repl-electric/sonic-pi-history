@@ -2,7 +2,6 @@
 live_loop :b do
   sync :kick
   sample [:loop_industrial, :loop_compus].choose
-  sleep 1
 end
 
 live_loop :a do

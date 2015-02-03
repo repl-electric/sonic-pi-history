@@ -15,5 +15,5 @@ def say(words)
 end end end
 
 say <<-NIGHT
-
+Tiger tiger burning bright
 NIGHT

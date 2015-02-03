@@ -21,7 +21,7 @@ live_loop :pop do
   sample :loop_amen
   sample :loop_amen, rate: 0.5 if rand < 0.5
   
-  if n % 4 ==0
+  if n % 2 ==0
     cue :BOOM
     with_fx :bitcrusher, bits: 4+n%7 do
     sample :loop_amen

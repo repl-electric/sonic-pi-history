@@ -17,7 +17,8 @@ live_loop :pop do
   cue :kick
 
   sample :drum_bass_hard
-
+sample :loop_industrial, amp: 0.1
+  
   sample :loop_amen
   sample :loop_amen, rate: 0.5 if rand < 0.5
   

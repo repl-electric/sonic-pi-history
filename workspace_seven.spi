@@ -7,14 +7,15 @@ live_loop :foo do
   sync :kick
 #  play [:A3,:A2].choose
   sample :loop_industrial
-
-  sample :drum_bass_hard
   sleep 1
 end
 
 n=0
 live_loop :pop do
   cue :kick
+
+  sample :drum_bass_hard
+
   sample :loop_amen
   sample :loop_amen, rate: 0.5 if rand < 0.5
   

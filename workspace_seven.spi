@@ -1,27 +1,21 @@
+# Echo Drama
 
-live_loop :drums do
-  sample :sn_dolf
-  sync :fire
-  sample :loop_industrial
-  sync :BAMG
-  with_fx :reverb do
-    sample :loop_industrial
-  end
-end
+# Coded by Sam Aaron
 
-n=0
-live_loop :amen do
-sample :loop_amen
-  sample :drum_bass_hard
+use_random_seed 667
 
-  cue :fire
-  if(n%1 == 0)
-    cue :BAMG
-    with_fx :bitcrusher, bits: 4+n%7 do
-      sample :loop_amen
+with_fx :lpf, cutoff: 90 do
+  with_fx :reverb, room: 0.8, mix: 0.25 do
+    with_fx :distortion, distort: 0.3, amp: 0.8 do
+      with_fx(:echo, delay: 0.5, decay: 4) do
+        live_loop :foo do
+          use_bpm 45
+          use_synth :tb303
+          play chord([:b0, :e0, :b1, :b2, :e1, :e2, :b3, :e3].choose, :minor).choose, cutoff: rrand(40, 100), amp: 0.5, attack: 0, release: 2
+          sleep [0.25, 0.5, 0.5, 0.5, 1, 1].choose
+        end
+      end
     end
   end
-
-sleep sample_duration :loop_amen
-  n+=1
 end
+ 

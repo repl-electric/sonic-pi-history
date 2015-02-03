@@ -5,6 +5,7 @@ live_loop :hihgh do
 
 cue :kick
 sample :loop_industrial
+sleep 0.5
 end
 
 live_loop :drums do

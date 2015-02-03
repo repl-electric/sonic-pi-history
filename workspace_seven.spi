@@ -10,6 +10,8 @@ n = 0
 live_loop :drums do
   sample :drum_bass_hard
   sample :loop_amen
+  sample :loop_industrial, :amp 0.1
+
   
   if(n%8==0)
     cue :FIRE

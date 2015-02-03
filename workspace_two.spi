@@ -3,7 +3,7 @@
 live_loop :darkness do
   sync :MAD
   use_synth :dark_sea_horn
-  with_fx :slicer do
+  with_fx :slicer, phase: 1/2.0 do
   play :A1, release: 32, amp: 0.9
   end
   sleep 6

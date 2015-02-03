@@ -1,1 +1,4 @@
-play :A3
+
+loop do
+  play :A3
+end

@@ -20,14 +20,9 @@ live_loop :drums do
   
   if(n%2==0)
     cue :FIRE
-    with_fx(:bitcrusher){sample :loop_amen}
+    with_fx(:bitcrusher, bits: 4 + n%7){sample :loop_amen}
   end
   
   sleep sample_duration(:loop_amen)
-  
-  
-  
   n+= 1
-  
-  
 end

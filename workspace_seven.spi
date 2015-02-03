@@ -1,8 +1,12 @@
 
 
-loop do
-  play [:A3,:A2].choose
+live_loop do
+#  play [:A3,:A2].choose
+  sample :drum_bass_hard
   sleep 1
 end
 
+live_loop do
 sample :loop_amen
+sleep sample_duration :loop_amen
+end

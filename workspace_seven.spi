@@ -1,20 +1,21 @@
 
-
 live_loop :drums do
+
+  sample :sn_dolf
   sync :fire
-  sample :drum_bass_hard
 end
 
 n=0
 live_loop :amen do
 sample :loop_amen
-cue :fire
+  sample :drum_bass_hard
 
+cue :fire
   if(n%4 == 0)
     cue :BAMG
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
-      end
+    end
   end
 
 sleep sample_duration :loop_amen

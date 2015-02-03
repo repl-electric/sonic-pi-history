@@ -4,3 +4,5 @@ loop do
 play 40
 sleep 1/2.0
 end
+
+sample :loop_amen

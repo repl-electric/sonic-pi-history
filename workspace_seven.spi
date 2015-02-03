@@ -1,8 +1,11 @@
 
 
-loop do
+live_loop :drums do
   sample :drum_bass_hard
   sleep 1/2.0
 end
 
+live_loop do
 sample :loop_amen
+sleep sample_duration :loop_amen
+end

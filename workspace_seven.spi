@@ -1,6 +1,6 @@
 
 
 loop do
-  play [60,70].choose
+  play [:A3,:A2].choose
   sleep 1
 end

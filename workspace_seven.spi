@@ -6,7 +6,9 @@ live_loop :foo do
 
   sync :kick
 #  play [:A3,:A2].choose
-  sample :loop_industrial
+  with_fx :reverb do
+    sample :loop_industrial
+    end
   sleep 1
 end
 

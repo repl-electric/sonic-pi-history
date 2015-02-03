@@ -32,7 +32,7 @@ live_loop :thing do
 end
 
 define :beats do
-  sync :loop
+  sync :kick
   with_fx :echo, phase: quart * 3, decay: dur, mix: 0.6 do
     # make sure only one of the following 3 lines is active
     # (uncommented) at a time

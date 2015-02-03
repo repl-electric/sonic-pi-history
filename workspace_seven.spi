@@ -11,12 +11,12 @@ sample :loop_amen
 cue :fire
 
   if(n%4 == 0)
+    cue :BAMG
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
       end
-
   end
 
-
 sleep sample_duration :loop_amen
+  n+=1
 end

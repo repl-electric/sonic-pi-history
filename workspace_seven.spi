@@ -1,9 +1,11 @@
 
 live_loop :highlights do
   sync :boom
+  sample :loop_industrial
+
   sample :sn_dolf
   sync :kick
-sample :loop_industrial
+  sample :loop_industrial
 sleep 1
 end
 
@@ -20,9 +22,8 @@ live_loop :drums do
       end
     when 3
       with_fx :flanger do
-      sample :loop_amen
+        sample :loop_amen
       end
-      
   end
 sample :loop_amen
 sleep sample_duration :loop_amen

@@ -16,7 +16,7 @@ live_loop :b do
   case n%7
     when 0 
     cue :boom
-    with_fx :bitcrusher do
+    with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
     end
   

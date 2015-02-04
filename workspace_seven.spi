@@ -41,7 +41,9 @@ live_loop :drums do
   case (n%1)
   when 0 
     cue :hit
-    with_fx(:bitcrusher, bits: 8){sample :loop_amen}
+    with_fx :flanger do
+    with_fx(:bitcrusher, bits: 8, sa){sample :loop_amen}
+    end
   end
 
   if rand > 0.0

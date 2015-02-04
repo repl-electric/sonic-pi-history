@@ -69,9 +69,9 @@ end
 
 live_loop :s do
   sync :start
-  sample :ambi_choir, rate: 0.5, amp: 0.4
+  sample :ambi_choir, rate: 0.5, amp: 0.3
   sync :bar
-    sample :ambi_choir, rate: 0.6, amp: 0.4
+  sample :ambi_choir, rate: 0.6, amp: 0.5
 
 end
 

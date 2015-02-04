@@ -13,7 +13,7 @@ end
 live_loop :d do
   sync :kick
   use_synth :dark_sea_horn
-  play [:A2, :C2].choose, attack: 0.01, release: 0.5
+  play [:A2, :C2][n%2], attack: 0.01, release: 0.5
 end
 
 n = 0

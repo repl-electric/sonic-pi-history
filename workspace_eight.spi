@@ -30,7 +30,6 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 0.2 do
 say <<-FOREST
-Tiger tiger burning bright
 FOREST
 end
 end
@@ -60,23 +59,6 @@ live_loop :chords do;with_fx :level, amp: 1 do;sync :bar ;with_fx :reverb, room:
   end
   end
 end
-end
-
-live_loop :s do
-  sync :start
-#  sample :ambi_choir, rate: 0.5, amp: 0.3
-  sync :bar
-#  sample :ambi_choir, rate: 0.6, amp: 0.5
-end
-
-live_loop :h do
-  sync :start
-#  sample :ambi_swoosh
-end
-
-live_loop :poop do
-  sync :start
-  sample :elec_soft_kick
 end
 
 set_volume! 1.0

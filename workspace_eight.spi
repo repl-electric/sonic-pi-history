@@ -67,4 +67,8 @@ live_loop :chords do;with_fx :level, amp: 1 do;sync :bar ;with_fx :reverb, room:
 end
 end
 
+live_loop :s do
+  sync :bar
+  sample :ambi_piano
+end
 set_volume! 1.0

@@ -1,4 +1,4 @@
-use_bpm 60
+la = sample_duration :loop_amen
 
 live_loop :high do
   sync :hit
@@ -33,7 +33,7 @@ live_loop :his do
   sync :kick
   
   8.times {
-    sample :drum_cymbal_pedal
+    sample :drum_cymbal_pedal, start: 0.1
     sleep 1/2
   }
 end

@@ -12,7 +12,8 @@ live_loop :b do
   sample :loop_amen
   
   cond n%8
-    when 0 sample :loop_amen
+    when 0 
+    sample :loop_amen
   
   end
   

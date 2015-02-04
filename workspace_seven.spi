@@ -15,9 +15,10 @@ n = 0
 live_loop :d do
   sync :kick
   use_synth :growl
+  
   play [degree(1,:f3,:major),
         degree(1,:f3,:major)
-  ][n%2], attack: 0.01, release: 1.0, amp: 4
+  ][n%2], attack: 0.01, release: 0.01, amp: 4
   
 end
 

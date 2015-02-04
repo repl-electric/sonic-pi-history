@@ -13,22 +13,6 @@ end
 
 n = 0
 
-np=0
-live_loop :d do
-  sample :sn_dolf  if np % 7 == 0 || np % 7 == 3
- d = sample_duration :loop_amen
-#  sync :kick
-  use_synth :prophet
-  sync :kick
-  with_fx :slicer, phase: d/12 do
-  play [degree(1,:f3,:major),
-        degree(1,:f3,:major)
-  ][n%2], attack: 0.1, release: 1.1, amp: 0.5
-  end
-  sleep d
-  np+=1
-end
-
 live_loop :his do
   sync :kick
   sample :drum_cymbal_pedal, start: 0.0

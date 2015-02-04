@@ -77,7 +77,7 @@ end
 live_loop :h do
   sync :bar
   sample :ambi_swoosh
-  sample :guit_e_fifths
+  sample :elec_soft_kick
 end
 
 set_volume! 1.0

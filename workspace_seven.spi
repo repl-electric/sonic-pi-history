@@ -1,11 +1,13 @@
 
 
 live_loop :a do
+  sync :kick
 sample :loop_industrial
   sleep 1
 end
 
 live_loop :b do
+  cue :kick
 sample :loop_amen
 sleep sample_duration :loop_amen
 end

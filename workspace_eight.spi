@@ -5,7 +5,9 @@ live_loop :schedule do
   cue :start
   7.times do
     cue :bar
-    sleep 2
+    sleep 1
+    cue :quart
+    sleep 1
   end
 end
 

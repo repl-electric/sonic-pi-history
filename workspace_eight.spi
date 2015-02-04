@@ -30,7 +30,7 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 0.2 do
 say <<-FOREST
-Ruby Australia
+
 FOREST
 end
 end
@@ -43,11 +43,9 @@ live_loop :drums do
 end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
-  play :a1
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
-  play degree(1,:A2,:major), release: 1
 end
 
 live_loop :chords do;with_fx :level, amp: 1 do;sync :bar ;with_fx :reverb, room: 0.8, mix: 0.5 do

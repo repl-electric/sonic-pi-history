@@ -1,13 +1,16 @@
 
 live_loop :high do
   sync :kick
-sample :loop_industrial
+  sample :loop_industrial
 sleep 1
 end
 
+n = 0
 live_loop :drums do
+  sample :drum_bass_hard
   cue :kick
 sample :loop_amen
   
   sleep sample_duration :loop_amen
+  n+1
 end

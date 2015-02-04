@@ -19,6 +19,6 @@ end end end
 #NIGHT
 
 live_loop :drums do
-  sample :drum_bass_soft, amp: 1
+  sample :drum_bass_soft, amp: 0.2
   sleep 4
 end

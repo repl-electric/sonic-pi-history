@@ -1,4 +1,5 @@
 
 loop do
-sample :drum_bass_hard
+  sample :drum_bass_hard
+  sleep 1.0
 end

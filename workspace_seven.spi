@@ -45,8 +45,8 @@ live_loop :drums do
   end
 
   if rand > 0.0
-    sleep la/32.0
-    sample :drum_bass_hard
+    sleep la/32:.0
+    sample :drum_bass_hard, rate: -1
   end
 
   sleep sample_duration :loop_amen

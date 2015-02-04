@@ -76,7 +76,7 @@ end
 live_loop :sun do
   sync :bar
   a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
-#  sample a4_long_s, amp: 1, rate: 1.0
+  sample a4_long_s, amp: 1, rate: 1.0
   sleep sample_duration(a4_long_s)
 end
 

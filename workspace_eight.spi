@@ -50,7 +50,7 @@ end
 live_loop :drums do; use_synth :growl; sync :bar
   play degree(1, :A3, :major), release: bar
   sleep bar
-  play degree(4, :A3, :major), release: bar
+  play degree(1, :A3, :major), release: bar
   sleep bar
   play degree(5, :A3, :major), release: bar*2
   sleep bar*2

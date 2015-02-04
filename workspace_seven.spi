@@ -1,6 +1,7 @@
 la = sample_duration :loop_amen
 
 live_loop :high do
+sample :sn_dolf
   sync :hit
     sample :loop_industrial
 

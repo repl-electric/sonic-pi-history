@@ -39,6 +39,6 @@ end
 live_loop :dark do
   use_synth :dark_ambience
   sync :bar
-  play [:A3].choose, amp: 8
+  play [:A4].choose, amp: 8
   #sleep 1
 end

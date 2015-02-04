@@ -31,7 +31,7 @@ end
 
 live_loop :his do
   sync :kick
-  sample :drum_cymbal_closed, start: 0.0
+  sample :drum_cymbal_open, start: 0.0
   
   8.times {
     sample :drum_cymbal_closed, start: 0.1

@@ -54,12 +54,3 @@ live_loop :drums do
   play degree(1, :A2, :major), amp: 1, release: 1
   #sleep 1
 end
-
-live_loop :drum do
-with_fx :level, amp: 0.2 do
-  sync :bar
-  with_fx :lpf do
-    sample :elec_triangle, amp: 0.5
-  end
-end
-end

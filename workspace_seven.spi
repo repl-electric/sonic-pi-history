@@ -13,6 +13,7 @@ end
 
 n = 0
 live_loop :d do
+  sample :sn_dolf
  d = sample_duration :loop_amen
 #  sync :kick
   use_synth :prophet

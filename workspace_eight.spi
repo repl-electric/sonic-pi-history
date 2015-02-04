@@ -72,13 +72,11 @@ live_loop :s do
   sample :ambi_choir, rate: 0.5, amp: 0.3
   sync :bar
   sample :ambi_choir, rate: 0.6, amp: 0.5
-
 end
-
 
 live_loop :h do
   sync :start
-  sample
+  sample :ambi_glass_rub
 end
 
 set_volume! 1.0

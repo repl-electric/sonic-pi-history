@@ -48,7 +48,8 @@ end
 
 live_loop :high do
   sync :bar
-  play :A4
+  
+  play scale(:a2, :major_pentatonic, num_octaves: 2).shuffle.choose
 end
 
 live_loop :drums do; use_synth :growl; sync :bar

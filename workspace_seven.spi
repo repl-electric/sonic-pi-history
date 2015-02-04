@@ -1,12 +1,17 @@
 
 live_loop :highlights do
+  sample :drum_bass_hard
   sync :kick
 sample :loop_industrial
 sleep 1
 end
 
+n=0
 live_loop :drums do
   cue :kick
+  
+  if
 sample :loop_amen
 sleep sample_duration :loop_amen
+n+1
 end

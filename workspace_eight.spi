@@ -51,3 +51,9 @@ live_loop :drums do
   play degree(1, :A3, :major), amp: 1, release: 1
   #sleep 1
 end
+
+live_loop :pinger do
+  use_synth :beep
+  play_pattern_timed [1,1/2], [:A3, :A3]
+
+end

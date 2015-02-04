@@ -57,7 +57,7 @@ end
 
 live_loop :drum do
 with_fx :level, amp: 0.2 do
-  sync :quart
+  sync :bar
   with_fx :lpf do
     sample :elec_triangle, amp: 0.2
   end

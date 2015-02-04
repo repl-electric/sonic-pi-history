@@ -82,7 +82,7 @@ vio_pan += 1
 end
 
 live_loop :chords do
-with_fx :level, amp: 1 do
+with_fx :level, amp: 5 do
  sync :bar
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do

@@ -15,7 +15,7 @@ n = 0
 live_loop :d do
   sync :kick
   use_synth :growl
-  play [:A2, :C2][n%2], attack: 0.01, release: 1.0, amp: 2
+  play [:A2, :C2][n%2], attack: 0.01, release: 1.0, amp: 8
 end
 
 live_loop :drums do

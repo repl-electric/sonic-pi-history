@@ -13,7 +13,9 @@ live_loop :b do
   
   case n%8
     when 0 
-    sample :loop_amen
+    with_fx :bitcrusher do
+      sample :loop_amen
+      end
   
   end
   

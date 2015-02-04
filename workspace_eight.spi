@@ -76,7 +76,7 @@ end
 
 live_loop :h do
   sync :bar
-  sample :ambi_glass_rub
+  sample :ambi_lunar_land
 end
 
 set_volume! 1.0

@@ -110,7 +110,6 @@ with_fx :level, amp: 1 do
   use_synth :beep
   sync :start
   sample :ambi_lunar_land, rate: 0.25, amp: 0.9
-  play degree(:i, :A1, :major), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
   #32.times{ sync :start }
 end
 end

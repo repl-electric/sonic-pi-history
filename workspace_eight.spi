@@ -83,6 +83,7 @@ live_loop :sea do
     play :A2, release: bar*4, attack: 0.1
   end
   end
+  end
   s_inc+=1
 end
 

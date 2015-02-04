@@ -76,13 +76,12 @@ end
 
 live_loop :h do
   sync :start
-  sample :ambi_swoosh
+#  sample :ambi_swoosh
 end
 
 live_loop :poop do
   sync :start
   sample :elec_soft_kick
-
 end
 
 set_volume! 1.0

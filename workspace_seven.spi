@@ -1,8 +1,10 @@
 
 
-loop do
+live_loop :a do
 sample :loop_industrial
   sleep 1
 end
 
+live_loop :b do
 sample :loop_amen
+end

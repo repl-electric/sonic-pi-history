@@ -30,6 +30,7 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 1.0 do
 say <<-FOREST
+
 FOREST
 end
 end
@@ -45,4 +46,5 @@ live_loop :dark do; use_synth :dark_ambience; sync :bar
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
+  play degree(1, :major, :A2)
 end

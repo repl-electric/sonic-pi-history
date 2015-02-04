@@ -50,7 +50,7 @@ n_inc = 0
 live_loop :high do
   use_synth :singer
   sync :quart
-  use_synth_defaults #release: quart
+  use_synth_defaults release: quart
   play chord_degree([1,3,4,  1,3,5][n_inc%6], :A3, :major_pentatonic)
   n_inc+=1
 end

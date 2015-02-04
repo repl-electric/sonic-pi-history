@@ -14,11 +14,14 @@ def say(words)
            }
 end end end
 
-#say <<-NIGHT
-##Tiger tiger burning bright
-#NIGHT
+live_loop :poem do
+say <<-FOREST
+Tiger tiger burning bright
+FOREST
+end
 
 live_loop :drums do
+  use_synth :beep
   sample :drum_bass_soft, amp: 0.5
   sleep 4
 end

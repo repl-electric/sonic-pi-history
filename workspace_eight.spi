@@ -43,14 +43,13 @@ live_loop :drums do
 end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
-  play :A3
+  play :A4
 end
 
 n_inc = 0
 live_loop :high do; sync :quart; use_synth_defaults release: quart
   #Pick a synth
   use_synth :singer
-  
   play chord_degree(ring(1,3,4,   1,3,5)[n_inc], :A2, :major_pentatonic)
   n_inc+=1
 end

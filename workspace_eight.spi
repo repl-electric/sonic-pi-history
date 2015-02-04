@@ -69,6 +69,13 @@ end
 
 live_loop :s do
   sync :start
-  sample :ambi_dark_woosh
+  sample :ambi_dark_woosh, amp: 0.5
 end
+
+live_loop :f do
+
+  sample
+end
+
+
 set_volume! 1.0

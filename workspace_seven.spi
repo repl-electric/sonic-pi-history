@@ -30,10 +30,6 @@ end
 live_loop :drums do
   sample :drum_bass_hard
   cue :kick
-  if rand > 0.9
-    sleep la/8
-    sample :drum_bass_hard
-  end
 
   sample :loop_amen, amp: 0.1, rate: 0.5 if rand > 0.5
 
@@ -47,6 +43,12 @@ live_loop :drums do
     cue :hit
     with_fx(:bitcrusher, bits: 4+n%7){sample :loop_amen}
   end
+
+  if rand > 0.9
+    sleep la/8
+    sample :drum_bass_hard
+  end
+
   sleep sample_duration :loop_amen
   n+=1
 end

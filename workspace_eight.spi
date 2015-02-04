@@ -29,6 +29,6 @@ end
 live_loop :drums do
   use_synth :beep
 
-  play :A2
+  play :A1
   sleep 1
 end

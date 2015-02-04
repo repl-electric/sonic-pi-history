@@ -14,7 +14,7 @@ end
 n = 0
 live_loop :d do
 #  sync :kick
-  use_synth :growl
+  use_synth :dsaw
   
   play [degree(1,:f3,:major),
         degree(1,:f3,:major)

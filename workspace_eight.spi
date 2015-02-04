@@ -65,3 +65,5 @@ with_fx :level, amp: 1 do
  end
 end
 end
+
+set_volume! 0.9

@@ -75,7 +75,7 @@ live_loop :s do
 end
 
 live_loop :h do
-  sync :start
+  sync :bar
   sample :ambi_glass_rub
 end
 

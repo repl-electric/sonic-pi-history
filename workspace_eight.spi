@@ -22,6 +22,8 @@ end
 
 live_loop :drums do
   use_synth :beep
+
+  play :A1
   sample :drum_bass_soft, amp: 0.5
   sleep 4
 end

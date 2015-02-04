@@ -1,6 +1,9 @@
 live_loop :schedule do
-  cue :bar
-  sleep 2
+  cue :start
+  7.times do
+    cue :bar
+    sleep 2
+  end
 end
 
 def say(words)

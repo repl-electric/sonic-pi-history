@@ -1,4 +1,4 @@
 loop do
-play 60
+sample :loop_industrial
 sleep 1
 end

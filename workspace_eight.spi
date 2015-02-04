@@ -64,12 +64,7 @@ live_loop :chords do;with_fx :level, amp: 1.0 do;sync :bar ;with_fx :reverb, roo
 end
 end
 
-live_loop :sun do
-  sync :bar
-  a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
-  sample a4_long_s, amp: 1, rate: 1.0
-  sleep sample_duration(a4_long_s)
-end
+
 
 vio_pan = -1
 live_loop :vio do

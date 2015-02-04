@@ -40,6 +40,6 @@ live_loop :dark do
   use_synth :dark_ambience
   sync :bar
   
-  play :A4
+  play :A5
   #sleep 1
 end

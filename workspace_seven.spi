@@ -4,9 +4,18 @@ live_loop :b do
   sample [:loop_industrial].choose
 end
 
+n=0
 live_loop :a do
   sample :drum_bass_hard
   cue :kick
+  
+  if n % 8 == 0 
+    with_fx :bitcrusher do
+      sample :loop_amen
+    end
+  end
+  
   sample :loop_amen
   sleep sample_duration :loop_amen
+  n+=1
 end

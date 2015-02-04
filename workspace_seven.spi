@@ -12,6 +12,7 @@ end
 n=0
 live_loop :a do
   sample :drum_bass_hard
+  sample :drum_cymbal_closed
   sample [:loop_industrial].choose, amp: 0.1
   cue :kick
   if n % 2 == 0 

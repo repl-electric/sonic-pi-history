@@ -69,6 +69,6 @@ end
 
 live_loop :s do
   sync :bar
-  sample :ambi_piano
+  sample :ambi_dark_woosh
 end
 set_volume! 1.0

@@ -25,7 +25,7 @@ end end end
 
 live_loop :poem do
 say <<-FOREST
-Tiger tiger burning bright
+#Tiger tiger burning bright
 FOREST
 end
 
@@ -39,7 +39,6 @@ end
 live_loop :dark do
   use_synth :dark_ambience
   sync :bar
-  
   play [:A5, :A6].choose
   #sleep 1
 end

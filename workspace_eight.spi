@@ -75,7 +75,7 @@ live_loop :s do
 end
 
 live_loop :h do
-  sync :bar
+  sync :start
   sample :ambi_swoosh
 end
 

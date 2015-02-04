@@ -15,7 +15,7 @@ n = 0
 
 np=0
 live_loop :d do
-  sample :sn_dolf  if np %7 == 0 || np%7 == 3
+  sample :sn_dolf  if np % 7 == 0 || np % 7 == 3
  d = sample_duration :loop_amen
 #  sync :kick
   use_synth :prophet
@@ -31,6 +31,7 @@ end
 
 live_loop :drums do
   sample :drum_bass_hard
+  sample :drum_cymbal_hard
   cue :kick
   sample :loop_amen, amp: 0.1, rate: 0.5 if rand > 0.5
 

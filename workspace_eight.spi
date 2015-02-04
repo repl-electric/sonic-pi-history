@@ -51,7 +51,7 @@ live_loop :high do
   use_synth_defaults release: quart
 #  play scale(:a1, :major_pentatonic, num_octaves: 2).shuffle.choose
   
-  play chord_degree([0..7].choose, :A1,:major_pentatonic)
+  play chord_degree(0..7.choose, :A1,:major_pentatonic)
   
   #play scale(:a1, :major_pentatonic, num_octaves: 2).shuffle.choose
 end

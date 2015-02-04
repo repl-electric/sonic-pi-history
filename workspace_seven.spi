@@ -10,6 +10,11 @@ live_loop :high do
   #sleep 1
 end
 
+live_loop :d do
+  use_synth :dark_sea_horn
+  play :A3
+end
+
 n = 0
 live_loop :drums do
   sample :drum_bass_hard

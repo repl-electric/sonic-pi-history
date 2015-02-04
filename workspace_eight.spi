@@ -55,6 +55,6 @@ end
 live_loop :pinger do
   use_synth :beep
   sync :bar
-  play_pattern_timed [:A3, :A3], [1,1, 1/2.0, 1]
+  play_pattern_timed [degree(1, :A3, :major)], [1,1, 1/2.0, 1]
 
 end

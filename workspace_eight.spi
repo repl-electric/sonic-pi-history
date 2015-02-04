@@ -83,7 +83,7 @@ end
 
 live_loop :chords do
 with_fx :level, amp: 1 do
- sync :start
+ sync :bar
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do
  use_synth :tri #:dsaw

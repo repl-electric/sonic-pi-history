@@ -75,7 +75,7 @@ vio_pan = -1
 live_loop :vio do
 with_fx :level, amp: 1 do
   #4.times{sync :start}
-  sync :bar
+  sync :start
   with_fx :reverb, room: 1.0, mix: 1.0 do
     a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
     a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"

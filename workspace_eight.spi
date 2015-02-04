@@ -4,7 +4,7 @@ live_loop :schedule do
 end
 
 def say(words)
-sync :bar
+  sync :bar
   with_fx :reverb, room: 100 do
   with_fx :lpf do
   use_synth :dark_sea_horn
@@ -29,6 +29,6 @@ end
 live_loop :drums do
   use_synth :beep
 
-  play :A1
+  play :A2
   sleep 1
 end

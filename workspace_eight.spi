@@ -72,10 +72,10 @@ live_loop :s do
   sample :ambi_dark_woosh, amp: 0.5
 end
 
-live_loop :f do
+#live_loop :f do
 
 #  sample
-end
+#end
 
 
 set_volume! 1.0

@@ -9,9 +9,9 @@ n = 0
 live_loop :drums do
   sample :drum_bass_hard
   cue :kick
-sample :loop_amen
+  sample :loop_amen
   
-  case (n%7)
+  case n%7
     when 0 
       with_fx(:bitcrusher){sample :loop_amen}
   end

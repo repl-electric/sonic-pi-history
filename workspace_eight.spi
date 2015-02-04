@@ -15,7 +15,7 @@ def say(words)
   with_fx :reverb, room: 100 do
   with_fx :lpf do
   use_synth :dark_sea_horn
-  t = scale(:a2, :major_pentatonic, num_octaves: 2).shuffle
+  t = scale(:a1, :major_pentatonic, num_octaves: 2).shuffle
   notes = words.strip.split("").map(&:ord).map{|n| t[n%t.length]}
   notes.map{|n| if n.chr == " "
                   play n, release: 6, attack: 3

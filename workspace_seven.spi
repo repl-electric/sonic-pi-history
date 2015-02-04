@@ -11,8 +11,10 @@ live_loop :high do
 end
 
 live_loop :d do
+  sync :kick
   use_synth :dark_sea_horn
   play :A3
+  
 end
 
 n = 0

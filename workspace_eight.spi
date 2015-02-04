@@ -24,9 +24,11 @@ def say(words)
 end end end
 
 live_loop :poem do
+with_fx :level, amp: 0 do
 say <<-FOREST
 Tiger tiger burning bright
 FOREST
+en
 end
 
 live_loop :drums do

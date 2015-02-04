@@ -69,7 +69,7 @@ end
 
 live_loop :s do
   sync :bar
-  sample :ambi_choir, rate: 0.8
+  sample :ambi_choir, rate: 0.5
 end
 
 #live_loop :f do

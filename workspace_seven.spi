@@ -18,8 +18,9 @@ live_loop :drums do
 
   if rand > 0.9
     sample :loop_amen, rate: -1
-    end
-
+  else
+      sample :loop_amen, rate: -1
+  end
   case (n%2)
   when 0 
     cue :hit

@@ -46,5 +46,5 @@ live_loop :dark do; use_synth :dark_ambience; sync :bar
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
-  play degree(1, :major, :A2), release: 2
+  play degree(1,:A2,:major, ), release: 2
 end

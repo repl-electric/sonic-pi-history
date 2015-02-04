@@ -48,7 +48,7 @@ end
 
 live_loop :high do
   sync :bar
-  play :A6
+  play :A5
 end
 
 live_loop :drums do; use_synth :growl; sync :bar

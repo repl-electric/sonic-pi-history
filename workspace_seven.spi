@@ -34,7 +34,7 @@ live_loop :his do
   
   8.times {
     sample :drum_cymbal_pedal, start: 0.1
-    sleep 1/2
+    sleep d/8
   }
 end
 

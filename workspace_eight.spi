@@ -48,7 +48,7 @@ end
 
 n_inc = 0
 live_loop :high do
-  use_synth :bnoise
+  use_synth :singer
   sync :quart
   use_synth_defaults release: quart
 #  play scale(:a1, :major_pentatonic, num_octaves: 2).shuffle.choose

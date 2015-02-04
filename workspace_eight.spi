@@ -76,7 +76,7 @@ end
 live_loop :sea do
   sync :bar
   use_synth :pnoise
-  with_fx :lpf, cutoff: 10 do
+  with_fx :lpf, cutoff: 100 do
   play :A2
   end
   

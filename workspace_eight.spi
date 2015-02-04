@@ -79,7 +79,7 @@ live_loop :sea do
   use_synth :pnoise
   with_fx :reverb do
     with_fx :pan, pan: Math.sine(s_inc)
-    with_fx :lpf, cutoff: 20 do
+    with_fx :lpf, cutoff: 80 do
     play :A2, release: bar*4, attack: 0.1
   end
   end

@@ -68,7 +68,7 @@ end
 end
 
 live_loop :s do
-  sync :start
+  sync :bar
   sample :ambi_dark_woosh, amp: 0.5
 end
 

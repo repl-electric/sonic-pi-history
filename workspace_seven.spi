@@ -16,9 +16,11 @@ live_loop :d do
 #  sync :kick
   use_synth :prophet
   sync :kick
+  with_fx :slicer do
   play [degree(1,:f3,:major),
         degree(4,:f3,:major)
   ][n%2], attack: 0.1, release: 1.1, amp: 0.5
+  end
   sleep 1/4.0
 end
 

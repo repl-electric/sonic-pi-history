@@ -46,6 +46,6 @@ end
 live_loop :drums do
   use_synth :growl
   sync :bar
-  play :A3, amp: 4
+  play :A3, amp: 3
   #sleep 1
 end

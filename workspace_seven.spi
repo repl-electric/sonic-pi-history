@@ -13,7 +13,9 @@ live_loop :drums do
   
   case n % 8
     when 0 
-      #with_fx(:bitcrusher){sample :loop_amen}
+      with_fx(:bitcrusher){sample :loop_amen}
+    else
+    end
   end
   
   

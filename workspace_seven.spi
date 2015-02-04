@@ -46,6 +46,11 @@ live_loop :drums do
  #   end
  
   when 4
+      with_fx :flanger,  do
+      sample :loop_amen
+    end
+
+  
   end
 
   if rand > 0.0

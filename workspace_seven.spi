@@ -5,8 +5,17 @@ sleep 1
 
 end
 
+n = 0
 live_loop :b do
 sample :loop_amen
 cue :kick
+
+  case n%7
+    when 0
+      sample :loop_amen
+
+  end
+
 sleep sample_duration :loop_amen
+  n+=1
 end

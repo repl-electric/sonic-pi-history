@@ -29,6 +29,13 @@ end
 live_loop :drums do
   use_synth :beep
 
-  play :A1
+  play scale()
+  sleep 1
+end
+
+live_loop :dark do
+  use_synth :dark_ambience
+
+  play :A3
   sleep 1
 end

@@ -2,7 +2,7 @@
 live_loop :high do
   sync :kick
   sample :loop_industrial
-sleep 1
+  #sleep 1
 end
 
 n = 0

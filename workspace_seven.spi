@@ -4,7 +4,9 @@ live_loop :b do
   sync :hit
   sample [:loop_industrial].choose
   sync :kick
+  with_fx :reverb do
   sample [:loop_industrial].choose
+  end
 end
 
 n=0
@@ -13,8 +15,6 @@ live_loop :a do
   sample [:loop_industrial].choose, amp: 0.1
 
   cue :kick
-
-  
   if n % 8 == 0 
     cue :hit
     with_fx :bitcrusher, bits: 4+n%7 do

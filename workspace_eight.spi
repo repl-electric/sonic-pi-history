@@ -30,7 +30,6 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 0.2 do
 say <<-FOREST
-Tiger tiger burning bright
 FOREST
 end
 end
@@ -43,14 +42,13 @@ live_loop :drums do
 end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
-  play :A3
 end
 
 n_inc = 0
-live_loop :high do
-  use_synth :singer
-  sync :quart
-  use_synth_defaults release: quart
+live_loop :high do; sync :quart; use_synth_defaults release: quart
+  #Pick a synth
+  #use_synth :singer
+  
   play chord_degree([1,3,4,  1,3,5][n_inc%6], :A3, :major_pentatonic)
   n_inc+=1
 end
@@ -71,20 +69,6 @@ live_loop :chords do;with_fx :level, amp: 1.0 do;sync :bar ;with_fx :reverb, roo
   end
   end
 end
-end
-
-s_inc = 0
-live_loop :sea do
-  sync :start
-  use_synth :pnoise
-  with_fx :reverb do
-    with_fx :pan, pan: Math.sin(s_inc) do
-    with_fx :lpf, cutoff: 80 do
-    play :A2, release: bar*4, attack: 0.1
-  end
-  end
-  end
-  s_inc+=1
 end
 
 set_volume! 1.0

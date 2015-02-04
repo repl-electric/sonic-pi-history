@@ -13,7 +13,7 @@ live_loop :b do
   cue :kick
   sample :loop_amen
   
-  case n%8
+  case n%7
     when 0 
     cue :boom
     with_fx :bitcrusher do

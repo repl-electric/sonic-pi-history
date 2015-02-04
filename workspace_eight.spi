@@ -71,5 +71,22 @@ live_loop :sun do
   sleep sample_duration(a4_long_s)
 end
 
+vio_pan = -1
+live_loop :vio do
+with_fx :level, amp: 1 do
+  #4.times{sync :start}
+  sync :otherhigh
+  with_fx :reverb, room: 1.0, mix: 1.0 do
+    a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
+    a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
+
+    with_fx :slicer, phase: bar/8 do
+     sample [a4_s, a5_s].choose, amp: 2.5, pan: Math.sin((vio_pan))
+    end 
+#    sample v_s, amp: 90
+  end
+end
+vio_pan += 1
+end
 
 set_volume! 1.0

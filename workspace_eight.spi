@@ -1,4 +1,10 @@
+live_loop :schedule do
+  cue :bar
+  sleep 2
+end
+
 def say(words)
+sync :bar
   with_fx :reverb, room: 100 do
   with_fx :lpf do
   use_synth :dark_sea_horn

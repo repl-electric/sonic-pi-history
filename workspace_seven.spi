@@ -1,5 +1,6 @@
 
 live_loop :drums do
+  sample :sn_dolf
   sync :boom
   sample :loop_industrial
 #  sleep 1.0
@@ -8,8 +9,6 @@ live_loop :drums do
   with_fx :reverb do
   sample :loop_industrial
   end
-
-  
   end
 
 n=0

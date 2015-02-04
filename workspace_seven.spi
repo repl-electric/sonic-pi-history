@@ -38,12 +38,14 @@ live_loop :drums do
   else
     sample :loop_amen, rate: 1
   end
-  case (n%1)
-  when 0 
+  case (n%8)
+  when 0
     cue :hit
 #    with_fx :flanger,  do
       with_fx(:bitcrusher, bits: 6){sample :loop_amen}
  #   end
+ 
+  when 4
   end
 
   if rand > 0.0

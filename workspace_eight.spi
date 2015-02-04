@@ -48,6 +48,6 @@ end
 live_loop :drums do
   use_synth :growl
   sync :bar
-  play degree(1, :A2, :major), amp: 1, release: 1
+  play degree(1, :A3, :major), amp: 1, release: 1
   #sleep 1
 end

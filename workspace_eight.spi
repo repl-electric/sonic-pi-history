@@ -46,6 +46,7 @@ live_loop :dark do; use_synth :dark_ambience; sync :bar
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
+  play :A2
 end
 
 live_loop :chords do;with_fx :level, amp: 1 do;sync :bar ;with_fx :reverb, room: 0.8, mix: 0.5 do

@@ -54,9 +54,9 @@ live_loop :chords do;with_fx :level, amp: 1 do;sync :bar ;with_fx :reverb, room:
  with_fx :slicer, phase: bar/2 do
   use_synth :tri #:dsaw
   use_synth_defaults decay: bar*2, release: 1, attack: 0.2, amp: 0.2
-  play chord_degree(4, :A2, :major_pentatonic)[0]
+  play chord_degree(4, :A2, :major)[0]
   sleep bar/2
-  play chord_degree(4, :A2, :major_pentatonic)[1..2]
+  play chord_degree(4, :A2, :major)[1..2]
   sync :bar
   play chord_degree(4, :A2, :major)[1..2]
   end

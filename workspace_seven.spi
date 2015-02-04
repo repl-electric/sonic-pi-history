@@ -3,7 +3,6 @@ live_loop :drums do
   sample :sn_dolf
   sync :boom
   sample :loop_industrial
-#  sleep 1.0
   sync :kick
 
   with_fx :reverb do
@@ -15,10 +14,8 @@ n=0
 live_loop :beats do 
   cue :kick
   sample :drum_bass_hard
-
   sample :loop_amen
-
-  case n%7
+  case n%4
   when 0
     cue :boom
   with_fx :bitcrusher, bits: 4+n%7 do

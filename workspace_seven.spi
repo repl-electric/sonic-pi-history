@@ -1,5 +1,5 @@
 
-loop do
+live_loop :high do
 sample :loop_industrial
 sleep 1
 end

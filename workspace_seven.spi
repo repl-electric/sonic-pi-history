@@ -1,8 +1,10 @@
 
 
 live_loop :a do
+  sync :boom
+  sample :loop_industrial  
   sync :kick
-sample :loop_industrial
+  sample :loop_industrial
   sleep 1
 end
 
@@ -13,9 +15,10 @@ live_loop :b do
   
   case n%8
     when 0 
+    cue :boom
     with_fx :bitcrusher do
       sample :loop_amen
-      end
+    end
   
   end
   

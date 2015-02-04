@@ -6,8 +6,16 @@ sample :loop_industrial
   sleep 1
 end
 
+n = 0
 live_loop :b do
   cue :kick
-sample :loop_amen
-sleep sample_duration :loop_amen
+  sample :loop_amen
+  
+  cond n%8
+    when 0 sample :loop_amen
+  
+  end
+  
+  sleep sample_duration :loop_amen
+  n+=1
 end

@@ -37,7 +37,6 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 0.6 do
 say <<-FOREST
-Tiger tiger burning bright
 FOREST
 end
 end

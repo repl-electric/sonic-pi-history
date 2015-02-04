@@ -28,7 +28,7 @@ def say(words)
 end end end
 
 live_loop :poem do
-with_fx :level, amp: 0.6 do
+with_fx :level, amp: 1. do
 say <<-FOREST
 FOREST
 end

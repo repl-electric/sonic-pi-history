@@ -73,16 +73,17 @@ live_loop :chords do;with_fx :level, amp: 1.0 do;sync :bar ;with_fx :reverb, roo
 end
 end
 
+s_inc = 0
 live_loop :sea do
   sync :start
   use_synth :pnoise
   with_fx :reverb do
+    with_fx :pan, :pan Math.sine(s_inc)
     with_fx :lpf, cutoff: 20 do
     play :A2, release: bar*4, attack: 0.1
   end
   end
-  
-
+  s_inc+=1
 end
 
 set_volume! 1.0

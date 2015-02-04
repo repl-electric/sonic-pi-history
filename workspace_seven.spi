@@ -13,15 +13,16 @@ end
 
 n = 0
 live_loop :d do
+ d = sample_duration :loop_amen
 #  sync :kick
   use_synth :prophet
   sync :kick
-  with_fx :slicer, phase: 0.25 do
+  with_fx :slicer, phase: d/5 do
   play [degree(1,:f3,:major),
         degree(4,:f3,:major)
   ][n%2], attack: 0.1, release: 1.1, amp: 0.5
   end
-  sleep 1/4.0
+  sleep d
 end
 
 live_loop :drums do

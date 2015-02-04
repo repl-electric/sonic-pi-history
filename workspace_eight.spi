@@ -93,7 +93,7 @@ with_fx :level, amp: 5 do
   play_pattern_timed [chord_degree(4, :A2, :major)[0],
                       chord_degree(4, :A2, :major)[1..2],
                       chord_degree(4, :A2, :major)[1..2]],
-                      [bar/2]
+                      [bar/2, bar, bar]
  end
  end
 end

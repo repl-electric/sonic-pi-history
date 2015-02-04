@@ -38,7 +38,7 @@ live_loop :his do
   }
   4.times {
     sample :drum_cymbal_closed, start: 0.1
-    sleep la/2.0/2.0
+    sleep la/4.0/2.0
   }  
   
 end

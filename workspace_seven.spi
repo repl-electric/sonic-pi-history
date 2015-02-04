@@ -12,8 +12,10 @@ live_loop :high do
 end
 
 n = 0
+
+np=0
 live_loop :d do
-  sample :sn_dolf
+  sample :sn_dolf  if np %7 == 0 || np%7 == 3
  d = sample_duration :loop_amen
 #  sync :kick
   use_synth :prophet
@@ -24,6 +26,7 @@ live_loop :d do
   ][n%2], attack: 0.1, release: 1.1, amp: 0.5
   end
   sleep d
+  np+=1
 end
 
 live_loop :drums do

@@ -24,9 +24,9 @@ def say(words)
 end end end
 
 live_loop :poem do
-#say <<-FOREST
-#Tiger tiger burning bright
-#FOREST
+say <<-FOREST
+Tiger tiger burning bright
+FOREST
 end
 
 live_loop :drums do
@@ -39,6 +39,6 @@ end
 live_loop :dark do
   use_synth :dark_ambience
   sync :bar
-  play [:A4].choose, amp: 8
+  play [:A3].choose, amp: 8
   #sleep 1
 end

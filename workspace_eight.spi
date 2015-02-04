@@ -40,11 +40,15 @@ live_loop :drums do
   sync :bar
   sample :drum_bass_soft
   play :A3
-  #sleep 1
 end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
   play :A5
+end
+
+live_loop :high do
+  sync :bar
+  play :A6
 end
 
 live_loop :drums do; use_synth :growl; sync :bar

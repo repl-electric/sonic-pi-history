@@ -55,11 +55,6 @@ live_loop :drums do
   #sleep 1
 end
 
-live_loop :pinger do
-  use_synth :beep
-  sync :bar
-  play_pattern_timed [degree(1, :A3, :major)], [1,1, 1/2.0, 1]
-end
 
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90

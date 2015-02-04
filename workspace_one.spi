@@ -4,7 +4,7 @@
 #
 # Coded by Robin Newman
 
-use_bpm 260
+use_bpm 360
 use_synth_defaults release: 0.5, amp: 0.7, cutoff: 90
 use_synth :beep
 

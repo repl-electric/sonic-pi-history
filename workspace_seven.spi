@@ -1,5 +1,8 @@
 
 live_loop :b do
+  sample :sn_dolf
+  sync :hit
+  sample [:loop_industrial].choose
   sync :kick
   sample [:loop_industrial].choose
 end
@@ -9,7 +12,9 @@ live_loop :a do
   sample :drum_bass_hard
   cue :kick
   
+  
   if n % 8 == 0 
+    cue :hit
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
     end

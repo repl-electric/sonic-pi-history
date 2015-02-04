@@ -10,11 +10,9 @@ live_loop :drums do
   sample :drum_bass_hard
   cue :kick
   sample :loop_amen
-  case (n%7)
-  when 0 
+  if(n%7 == 0)
     cue :hit
     with_fx(:bitcrusher, bits: 4+n%7){sample :loop_amen}
-  when 1
   end
   sleep sample_duration :loop_amen
   n+1

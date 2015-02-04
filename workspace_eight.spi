@@ -1,3 +1,6 @@
+bar = 1/2.0
+quart = 2*bar
+
 live_loop :schedule do
   cue :start
   7.times do

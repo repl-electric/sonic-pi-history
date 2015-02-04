@@ -15,7 +15,7 @@ live_loop :a do
   sample :drum_cymbal_closed
   sample [:loop_industrial].choose, amp: 0.1
   cue :kick
-  if n % 2 == 0 
+  if n % 1 == 0 
     cue :hit
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen

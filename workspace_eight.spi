@@ -76,7 +76,7 @@ end
 
 live_loop :h do
   sync :start
-  sample :ambi_lunar_land
+  sample :ambi_swoosh
 end
 
 set_volume! 1.0

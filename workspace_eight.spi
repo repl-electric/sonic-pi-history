@@ -28,7 +28,7 @@ with_fx :level, amp: 0 do
 say <<-FOREST
 Tiger tiger burning bright
 FOREST
-en
+end
 end
 
 live_loop :drums do

@@ -31,8 +31,11 @@ end
 
 live_loop :his do
   sync :kick
+  
+  8.times {
     sample :drum_cymbal_pedal
-
+    sleep 1/2
+  }
 end
 
 live_loop :drums do

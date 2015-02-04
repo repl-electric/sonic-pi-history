@@ -1,19 +1,12 @@
-bar = 1/2.0
+bar = 1
 quart = 2*bar
-
-pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
-
-p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
-p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
-p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
-
 live_loop :schedule do
   cue :start
   7.times do
     cue :bar
-    sleep 1
+    sleep bar
     cue :quart
-    sleep 1
+    sleep bar
   end
 end
 

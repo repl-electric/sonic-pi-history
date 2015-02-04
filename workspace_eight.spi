@@ -64,4 +64,11 @@ live_loop :chords do;with_fx :level, amp: 1.0 do;sync :bar ;with_fx :reverb, roo
 end
 end
 
+live_loop :sun do
+  sync :start
+  sample :elec_soft_kick
+
+end
+
+
 set_volume! 1.0

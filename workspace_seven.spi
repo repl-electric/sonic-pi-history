@@ -30,6 +30,9 @@ end
 live_loop :drums do
   sample :drum_bass_hard
   cue :kick
+  sleep la/16
+  sample :drum_bass_hard
+
   sample :loop_amen, amp: 0.1, rate: 0.5 if rand > 0.5
 
   if rand > 0.9

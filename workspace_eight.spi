@@ -29,7 +29,7 @@ end
 live_loop :drums do
   use_synth :beep
 
-  play scale()
+  play :A1
   sleep 1
 end
 

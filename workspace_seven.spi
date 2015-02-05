@@ -1,14 +1,19 @@
 dur = sample_duration(:loop_amen)
 
+n=0
 live_loop :a do
   cue :hihgh
-sample :loop_amen
+
+    sample :drum_bass_hard
+  sample :loop_amen
 sleep dur
+n+=1
 end
+
 
 
 live_loop :b do
   sync :hihgh
-sample :loop_industrial
-sleep 1
+  sample :loop_industrial
+  sleep 1
 end

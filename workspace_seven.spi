@@ -1,6 +1,7 @@
 
 
 live_loop :b do
+  sample :sn_dolf
   sync :high
   sample :loop_industrial
   sleep 1

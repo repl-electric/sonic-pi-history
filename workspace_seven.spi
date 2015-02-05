@@ -7,5 +7,4 @@ end
 live_loop :a do
   sync :high
   sample :loop_industrial
-
 end

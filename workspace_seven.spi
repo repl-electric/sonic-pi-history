@@ -1,4 +1,7 @@
 
-loop do
-  sample :loop_industrial
-end
+play 60
+play 40
+
+#loop do
+#  sample :loop_industrial
+#end

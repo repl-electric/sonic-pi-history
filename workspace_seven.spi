@@ -1,7 +1,7 @@
 live_loop :a do
   sync :hit
   sample :loop_industrial
-  sleep 1
+  
 end
 
 live_loop :b do

@@ -1,4 +1,4 @@
 loop do
   sample :loop_amen
-  sleep 1
+  sleep sample_duration(:loop_amen)
 end

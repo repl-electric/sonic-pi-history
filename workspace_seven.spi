@@ -2,3 +2,5 @@ loop do
   sample :loop_industrial
   sleep 1
 end
+
+sample :loop_amen

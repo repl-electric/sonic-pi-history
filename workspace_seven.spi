@@ -6,13 +6,14 @@ end
 
 n=0
 live_loop :b do
-  cue :hit
   sample :loop_amen
 #  sample :loop_amen, rate: [-1, 0.5, 2].choose
   
   case n %2
     when 0
-      with_fx :bitcrusher, bits: 4+n%7 do
+  cue :hit
+
+    with_fx :bitcrusher, bits: 4+n%7 do
         sample :loop_amen
       end
   end

@@ -7,7 +7,9 @@ end
 n=0
 live_loop :b do
   cue :hit
-sample :loop_amen, rate: [-1, 0.5, 1,1,1,1,1].choose
+sample :loop_amen
+
+  sample :loop_amen, rate: [-1, 0.5, 1,1,1,1,1].choose
 sleep sample_duration :loop_amen
 n+=1
 end

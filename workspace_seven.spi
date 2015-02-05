@@ -9,11 +9,16 @@ live_loop :a do
 
     case n%2
     when 0
-  cue :hit
+      cue :hit
 
       with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
       end
+      
+    when 1
+      with_fx :flanger, bits: 4+n%7 do
+      sample :loop_amen
+      end    
     end
   sleep dur
   n+=1

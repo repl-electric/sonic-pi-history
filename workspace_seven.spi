@@ -14,7 +14,9 @@ sample :drum_bass_hard
 
   case n%7
   when 0
-  sample :loop_amen
+  with_fx :bitcrusher do
+    sample :loop_amen
+    end 
   end
 
 

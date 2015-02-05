@@ -1,4 +1,9 @@
 
+play 50 
+play 70 
+play 30
+
+
 loop do
-sample :loop_industrial
+  sample :loop_industrial
 end

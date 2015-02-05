@@ -23,6 +23,8 @@ live_loop :b do
   sync :hit
   sample :loop_industrial
   sync :hi
-    sample :loop_industrial
+  with_fx :reverb do
+  sample :loop_industrial
+  end
 
 end

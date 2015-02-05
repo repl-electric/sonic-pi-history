@@ -14,7 +14,7 @@ define :drums do
 
   cue :fast_drums
   8.times do
-    sample :drum_heavy_kick, rate: 0.8
+    sample :drum_heavy_kick, rate: 0.9
     sleep 0.125
   end
 end

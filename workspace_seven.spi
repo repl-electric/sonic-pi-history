@@ -2,6 +2,8 @@ n=0
 live_loop :b do
   cue :high
   sample :drum_bass_hard
+      sample :loop_amen, rate: 0.5
+
   
   case n % 4
   when 0 

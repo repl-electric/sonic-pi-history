@@ -12,14 +12,12 @@ live_loop :a do
 sample :drum_bass_hard
   sample :loop_amen
 
-  case n%4
+  case n%2
   when 0
   with_fx :bitcrusher, bits: 4+n%7 do
     sample :loop_amen
     end 
   end
-
-
 sleep sample_duration :loop_amen
 n=+1
 end

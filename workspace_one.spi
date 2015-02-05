@@ -32,7 +32,7 @@ define :synths do
   notes = [:F, :C, :D, :D, :G, :C, :D, :D]
   notes.each do |n|
     play note(n, octave: 3)
-    play note(n, octave: 1)
+    play note(n, octave: 2)
     sleep 1
   end
 end

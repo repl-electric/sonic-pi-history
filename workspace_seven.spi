@@ -3,7 +3,7 @@ live_loop :b do
   cue :high
   sample :drum_bass_hard
   
-  case n % 7
+  case n % 2
   when 0 
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen

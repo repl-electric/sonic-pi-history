@@ -4,3 +4,5 @@ loop do
 sample :loop_amen
 sleep dur
 end
+
+sample :loop_industrial

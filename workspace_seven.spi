@@ -1,3 +1,5 @@
 dur = sample_duration(:loop_amen)
 
-sample :loop_amen
+loop do
+  sample :loop_amen
+end

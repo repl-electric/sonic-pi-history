@@ -24,7 +24,7 @@ cue :kick
     with_fx :bitcrusher, bits: 4+n%7 do
         sample :loop_amen
       end
-\
+
   end
   
 sleep sample_duration :loop_amen

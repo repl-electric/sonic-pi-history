@@ -1,8 +1,10 @@
 dur = sample_duration(:loop_amen)
 
-loop do
+live_loop :a do
   sample :loop_amen
   sleep dur
 end
 
-sample :loop_industrial
+live_loop :b do
+  sample :loop_industrial
+end

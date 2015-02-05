@@ -5,6 +5,13 @@ live_loop :a do
   cue :hit
   sample :drum_bass_hard
   sample :loop_amen
+
+    case n%7
+    when 0
+      sample :loop_amen
+      end
+
+  
   sleep dur
   n+=1
 end

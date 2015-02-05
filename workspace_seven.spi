@@ -1,6 +1,7 @@
 
 loop do
-play 60
-play 64
+sample :loop_industrial
 sleep 1/12.0
 end
+
+s

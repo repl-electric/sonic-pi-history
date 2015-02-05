@@ -2,6 +2,7 @@ dur = sample_duration(:loop_amen)
 
 n=0
 live_loop :a do
+  cue :hi
   sample :drum_bass_hard
   sample :loop_amen
   sample :loop_industrial, amp: 0.2
@@ -21,4 +22,7 @@ end
 live_loop :b do
   sync :hit
   sample :loop_industrial
+  sync :hi
+    sample :loop_industrial
+
 end

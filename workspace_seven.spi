@@ -2,4 +2,5 @@
 loop do
 play 60
 play 64
+sleep 1
 end

@@ -1,3 +1,4 @@
 
-
-sample :loop_industrial
+loop do
+  sample :loop_industrial
+end

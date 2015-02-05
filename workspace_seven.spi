@@ -2,10 +2,10 @@
 live_loop :highs do
   sample :sn_dolf
   sync :higher
-  sample [:loop_industrial, :loop_compus].choose
+  sample [:loop_industrial].choose
 
   sync :hit
-  sample [:loop_industrial, :loop_compus].choose
+  sample [:loop_industrial].choose
 end
 
 n=0 

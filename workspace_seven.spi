@@ -1,7 +1,9 @@
 live_loop :a do
   sample :sn_dolf
   sync :hit
+  with_fx :reverb do
   sample :loop_industrial
+  end
   
 end
 

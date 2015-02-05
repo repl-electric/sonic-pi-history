@@ -1,11 +1,13 @@
 dur = sample_duration(:loop_amen)
 
 live_loop :a do
+  cue :hit
   sample :loop_amen
   sleep dur
 end
 
 live_loop :b do
+  sync :hit
   sample :loop_industrial
   sleep 1
 end

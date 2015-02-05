@@ -21,5 +21,4 @@ end
 live_loop :b do
   sync :hit
   sample :loop_industrial
-  sleep 1
 end

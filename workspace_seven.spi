@@ -14,8 +14,6 @@ live_loop :a do
       sample :loop_amen
       end
     end
-
-  
   sleep dur
   n+=1
 end

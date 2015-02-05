@@ -4,11 +4,11 @@ live_loop :b do
   sample :sn_dolf
   sync :high
   sample :loop_industrial
-  sleep 1
 end
 
 n=0
 live_loop :a do
+  sample 
   cue :high
 sample :loop_amen
 

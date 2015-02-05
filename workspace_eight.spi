@@ -34,26 +34,7 @@ end end end
 live_loop :poem do
 with_fx :level, amp: 0.2 do
 say <<-FOREST_OF_THE_NIGHT
- sjks df jklsdf jklfsd kjlsdf jklsfd jklsdf jklsfd 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Tiger tiger burning bright in the
 FOREST_OF_THE_NIGHT
 end
 end

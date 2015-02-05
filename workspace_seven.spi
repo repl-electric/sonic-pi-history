@@ -2,4 +2,5 @@ dur = sample_duration(:loop_amen)
 
 loop do
   sample :loop_amen
+  sleep dur
 end

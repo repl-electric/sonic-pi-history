@@ -9,9 +9,9 @@ live_loop :a do
   
   case n %7
   when 0
-    with_fx :bitcrusher do
+    with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
-      end
+    end
 
   end
   

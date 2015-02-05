@@ -8,6 +8,7 @@ n=0
 live_loop :b do
   sample :loop_amen
 #  sample :loop_amen, rate: [-1, 0.5, 2].choose
+  sample :loop_industrial
   
   case n %2
     when 0

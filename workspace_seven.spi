@@ -1,12 +1,11 @@
 
 live_loop :highs do
   synth :hit
-sample :loop_industrial
-sleep 1
+  sample :loop_industrial
 end
 
 live_loop :drums do
   cue :hit
-sample :loop_amen
-sleep sample_duration :loop_amen
+  sample :loop_amen
+  sleep sample_duration :loop_amen
 end

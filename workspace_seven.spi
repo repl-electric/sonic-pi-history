@@ -12,6 +12,11 @@ live_loop :a do
 sample :drum_bass_hard
   sample :loop_amen
 
+  case n%7
+  when 0
+  sample :loop_amen
+  end
+
 
 sleep sample_duration :loop_amen
 n=+0

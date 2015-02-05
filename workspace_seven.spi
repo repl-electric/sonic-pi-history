@@ -1,6 +1,8 @@
 live_loop :a do
   sample :sn_dolf
   sync :hit
+    sample :loop_industrial
+sync :kick
   with_fx :reverb do
   sample :loop_industrial
   end
@@ -9,6 +11,7 @@ end
 
 n=0
 live_loop :b do
+cue :kick
   sample :drum_bass_hard
   sample :loop_amen
 #  sample :loop_amen, rate: [-1, 0.5, 2].choose

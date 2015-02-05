@@ -1,6 +1,8 @@
-loop do
+live_loop :b do
   sample :loop_amen
   sleep sample_duration(:loop_amen)
 end
 
+live_loop :a do
 sample :loop_industrial
+end

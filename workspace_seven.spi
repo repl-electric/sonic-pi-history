@@ -2,6 +2,13 @@ n=0
 live_loop :b do
   cue :high
   sample :drum_bass_hard
+  
+  case n % 7
+  when 0 
+    sample :loop_amen
+
+  end
+  
   sample :loop_amen
   sleep sample_duration(:loop_amen)
   n+=1

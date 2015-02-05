@@ -1,6 +1,6 @@
 
 live_loop :highs do
-  synth :hit
+  sync :hit
   sample :loop_industrial
 end
 

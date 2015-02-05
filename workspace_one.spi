@@ -1,19 +1,23 @@
-# Compus Beats
+# Ambient
 
 # Coded by Sam Aaron
 
-sd = sample_duration :loop_compus
+load_samples(sample_names :ambi)
+sleep 2
 
-live_loop :loopr do
-  sample :loop_compus, rate: [0.5, 1, 1, 1, 1, 2].choose if rand < 0.9
-  sleep sd
-end
+with_fx :reverb, mix: 0.3 do
+  live_loop :foo do
+    # try changing the sp_ vars..
+    sp_name = choose sample_names :ambi
+    # sp_name = choose sample_names :drum
+    sp_time = [1, 2].choose
+    #sp_time = 0.5
+    sp_rate = 1
+    #sp_rate = 4
 
-live_loop :bass do
-  sample :bass_voxy_c, amp: rrand(0.1, 0.2), rate: [0.5, 0.5, 1, 1,2,4].choose if rand < 0.25
-  use_synth :mod_pulse
-  play :C1, mod_range: 10, amp: rrand(0.5, 1), mod_phase: [8, 16, 32].choose / sd, release: 1, cutoff: rrand(50, 90)
-  play :C2, mod_range: [24, 36, 34].choose, amp: 0.35, mod_phase: sd/16, release: 2, cutoff: 60, pulse_width: rand
-  sleep sd / 4
+    s = sample sp_name, rate: sp_rate * choose([0.5, 1]), pan: rrand(-1, 1), pan_slide: sp_time
+    control s, pan: rrand(-1, 1)
+    sleep sp_time
+  end
 end
  

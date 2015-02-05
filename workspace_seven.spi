@@ -5,7 +5,7 @@ live_loop :highs do
   sample [:loop_industrial, :loop_compus].choose
 
   sync :hit
-  sample :loop_industrial
+  sample [:loop_industrial, :loop_compus].choose
 end
 
 n=0 

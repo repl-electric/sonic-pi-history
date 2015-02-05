@@ -8,7 +8,7 @@ end
 
 n=0
 live_loop :a do
-  
+  sample :drum_bass_hard
   cue :high
 sample :loop_amen
 

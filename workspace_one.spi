@@ -1,23 +1,21 @@
-# Ambient
+# Echo Drama
 
 # Coded by Sam Aaron
 
-load_samples(sample_names :ambi)
-sleep 2
+use_random_seed 667
 
-with_fx :reverb, mix: 0.3 do
-  live_loop :foo do
-    # try changing the sp_ vars..
-    sp_name = choose sample_names :ambi
-    # sp_name = choose sample_names :drum
-    sp_time = [1, 2].choose
-    #sp_time = 0.5
-    sp_rate = 1
-    #sp_rate = 4
-
-    s = sample sp_name, rate: sp_rate * choose([0.5, 1]), pan: rrand(-1, 1), pan_slide: sp_time
-    control s, pan: rrand(-1, 1)
-    sleep sp_time
+with_fx :lpf, cutoff: 90 do
+  with_fx :reverb, room: 0.8, mix: 0.25 do
+    with_fx :distortion, distort: 0.3, amp: 0.8 do
+      with_fx(:echo, delay: 0.5, decay: 4) do
+        live_loop :foo do
+          use_bpm 45
+          use_synth :tb303
+          play chord([:b0, :e0, :b1, :b2, :e1, :e2, :b3, :e3].choose, :minor).choose, cutoff: rrand(40, 100), amp: 0.5, attack: 0, release: 2
+          sleep [0.25, 0.5, 0.5, 0.5, 1, 1].choose
+        end
+      end
+    end
   end
 end
  

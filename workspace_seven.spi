@@ -1,6 +1,5 @@
 
-play 60
-play 524
-#loop do
-#  sample :loop_industrial
-#end
+loop do
+  sample :loop_industrial
+  sleep 1
+end

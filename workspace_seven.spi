@@ -4,10 +4,10 @@ n=0
 live_loop :a do
   cue :hihgh
 
-    sample :drum_bass_hard
+  sample :drum_bass_hard
   sample :loop_amen
   
-  case n %7
+  case n %4
   when 0
     with_fx :bitcrusher, bits: 4+n%7 do
       sample :loop_amen
@@ -18,9 +18,6 @@ live_loop :a do
 sleep dur
 n+=1
 end
-
-
-
 live_loop :b do
   sync :hihgh
   sample :loop_industrial

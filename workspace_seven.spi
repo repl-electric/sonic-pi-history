@@ -1,25 +1,7 @@
 dur = sample_duration(:loop_amen)
 
-n=0
+
 live_loop :a do
-  cue :hihgh
-
-  sample :drum_bass_hard
   sample :loop_amen
-  
-  case n %2
-  when 0
-    with_fx :bitcrusher, bits: 4+n%7 do
-      sample :loop_amen
-    end
-
-  end
-  
-sleep dur
-n+=1
-end
-live_loop :b do
-  sync :hihgh
-  sample :loop_industrial
-  sleep 1
+  sleep dur
 end

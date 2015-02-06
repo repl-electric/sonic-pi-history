@@ -32,7 +32,7 @@ def say(words)
 end end end
 
 live_loop :poem do
-with_fx :level, amp: 0.2 do
+with_fx :level, amp: 0.3 do
 say <<-FOREST_OF_THE_NIGHT
 Tiger tiger burning bright
 FOREST_OF_THE_NIGHT

@@ -76,7 +76,7 @@ end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
   with_fx :level, amp: 3.0 do
-    play :C4
+    play :A3
   end
 end
 

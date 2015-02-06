@@ -8,4 +8,5 @@ end
 n = 0
 live_loop :a do
   sample :loop_industrial
+  sleep 1
 end

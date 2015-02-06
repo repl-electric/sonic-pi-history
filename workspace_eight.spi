@@ -46,7 +46,7 @@ end end end
 
 
 
-live_loop :poem do;with_fx :level, amp: 0.01 do
+live_loop :poem do;with_fx :level, amp: 0.8 do
 say <<-FOREST_OF_THE_NIGHT
 Tiger tiger burning bright
 FOREST_OF_THE_NIGHT

@@ -66,7 +66,7 @@ live_loop :drums do; use_synth :growl; sync :bar
   sleep bar
 end
 
-live_loop :chords do;with_fx :level, amp: 1.0 do;sync :bar ;with_fx :reverb, room: 0.8, mix: 0.5 do
+live_loop :chords do;with_fx :level, amp: 1.10 do;sync :bar ;with_fx :reverb, room: 0.8, mix: 0.5 do
  with_fx :slicer, phase: bar/4.0 do
   use_synth :tri; use_synth_defaults decay: bar*2, release: 1, attack: 0.2, amp: 0.2
   play chord_degree(4, :A2, :major)[0]

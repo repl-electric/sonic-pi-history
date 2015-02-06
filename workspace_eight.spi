@@ -79,7 +79,9 @@ live_loop :drums do
 end
 
 live_loop :dark do; use_synth :dark_ambience; sync :bar
+  with_fx :level, amp: 2.0 do
   play :A4
+  end
 end
 
 n_inc = 0

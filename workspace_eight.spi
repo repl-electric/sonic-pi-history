@@ -60,7 +60,9 @@ live_loop :high do; sync :quart; use_synth_defaults release: quart
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
+  with_fx :level, amp: 2.0 do
   play degree(1, :A2, :major), release: bar
+  end
   sleep bar
 end
 

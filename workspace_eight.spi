@@ -82,4 +82,4 @@ live_loop :chords do;with_fx :level, amp: 1.1 do;sync :bar ;with_fx :reverb, roo
 end
 end
 
-set_volume! 1.0
+set_volume! 0.9

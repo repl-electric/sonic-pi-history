@@ -55,7 +55,7 @@ end
 
 n_inc = 0
 live_loop :high do; sync :quart; use_synth_defaults release: quart
-  with_fx :level, amp: 1.5 do
+  with_fx :level, amp: 2.0 do
     use_synth :singer
     play chord_degree(ring(1,3,4,   1,3,5)[n_inc], :A1, :major_pentatonic)
     n_inc+=1

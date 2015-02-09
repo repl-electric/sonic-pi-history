@@ -1,1 +1,4 @@
-play 60
+with_fx :bitcrusher do
+  sample :loop_amen
+  sleep sample_duration :loop_amen
+end

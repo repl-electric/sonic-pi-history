@@ -7,7 +7,7 @@ with_fx :bitcrusher do
 end
 end
 
-live_loop :a do
+live_loop :b do
   sync :hit
   sample :drum_bass_hard
 end

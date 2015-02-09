@@ -1,5 +1,5 @@
 
-live_loop :a do
+live_loop :h do
   cue :hit
 with_fx :bitcrusher do
   sample :loop_amen
@@ -7,7 +7,7 @@ with_fx :bitcrusher do
 end
 end
 
-live_loop :b do
+live_loop :k do
   sync :hit
   sample :drum_bass_hard
 end

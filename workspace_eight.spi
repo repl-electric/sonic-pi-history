@@ -69,9 +69,9 @@ live_loop :drums do; use_synth :growl; sync :bar
   sleep bar*2
 
     with_fx :level, amp: 1.1 do
-  play degree(1, :A2, :major), release: bar*2
+  play degree(1, :A2, :major), release: bar
   end
-  sleep bar*2
+  sleep bar
 
   end
 

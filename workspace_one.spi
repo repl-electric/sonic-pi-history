@@ -1,3 +1,4 @@
 live_loop :test do
+puts "run?"
  sample :loop_amen
 end

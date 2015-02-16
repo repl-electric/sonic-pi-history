@@ -1,5 +1,5 @@
 live_loop :aaaaa do
 puts "run?"
- sample :lossop_amen
+ play 60
  sleep 1
 end

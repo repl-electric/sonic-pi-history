@@ -1,4 +1,4 @@
-live_loop :test do
+live_loop :aaaaa do
 puts "run?"
  sample :loop_amen
  sleep 1

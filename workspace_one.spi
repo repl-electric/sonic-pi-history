@@ -1,5 +1,1 @@
-live_loop :aaaaa do
-puts "run?"
- play 60
- sleep 1
-end
+play 60

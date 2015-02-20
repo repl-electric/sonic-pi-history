@@ -3,4 +3,6 @@ loop do
 play 60
 sleep 0.15
 play 50
+play 40
+
 end

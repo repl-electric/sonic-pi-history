@@ -1,1 +1,3 @@
-play 60
+live_loop :poop do
+  sample :loop_amen
+end

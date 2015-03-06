@@ -1,4 +1,3 @@
 
-puts "START"
-#sample :loop_amen
-puts "STOP"
+use_synth :beep
+play 60

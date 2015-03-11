@@ -15,9 +15,9 @@ live_loop :drums do
   when 0
     with_fx(:reverb){
     with_fx(:bitcrusher){
-#      sample :drum_snare_soft, amp: 1.1}}
+      sample :drum_snare_soft, amp: 1.1}}
   else
- #   sample :drum_snare_soft, start: 0.25
+    sample :drum_snare_soft, start: 0.95
   end
   sleep beat
   n+=1

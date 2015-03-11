@@ -1,0 +1,9 @@
+live_loop :timer do
+  cue :hit
+  sleep 1
+end
+
+live_loop :drums do
+  sample :drum_bass_hard
+  sleep 1
+end

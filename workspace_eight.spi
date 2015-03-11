@@ -1,7 +1,7 @@
 beat = 1/2.0
 
 live_loop :ride do
-  sample :bd_tek
+  sample :bd_ada
   sleep beat/2
 end
 

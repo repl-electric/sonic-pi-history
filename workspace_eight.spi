@@ -9,8 +9,9 @@ n=0
 live_loop :drums do
   sample :drum_bass_hard
   sleep beat
+    with_fx(:reverb){
     with_fx(:slicer, phase: beat/8){
-      sample :drum_snare_soft}
+      sample :drum_snare_soft}}
   sleep beat
   n+=1
 end

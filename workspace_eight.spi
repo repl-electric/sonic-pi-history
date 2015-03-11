@@ -33,7 +33,7 @@ live_loop :synth do
                         degree(1, :A0, :major), degree(1, :A0, :major),                      
                         degree(4, :A0, :major), degree(4, :A0, :major),
                         degree(4, :A0, :major), degree(4, :A0, :major)], 
-                        [beat/2, beat/2, beat/2, beat]
+                        [beat/2, beat/4, beat/4, beat]
   end
 #  sleep beat*2
   z+=1

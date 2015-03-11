@@ -7,7 +7,7 @@ end
 
 n=0
 live_loop :drums do
-  with_fx(:lpf, cutoff: 100){
+  with_fx(:lpf, cutoff: 120){
   sample :drum_bass_hard}
   sleep beat
   case n%6

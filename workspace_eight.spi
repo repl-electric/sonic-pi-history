@@ -23,6 +23,6 @@ end
 
 live_loop :synth do
   use_synth :dsaw
-  play 
+  play :A3
 sleep 1
 end

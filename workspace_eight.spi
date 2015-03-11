@@ -1,7 +1,7 @@
 beat = 1/2.0
 
 live_loop :ride do
-  sleep beat/2
+  sleep beat
   sample :drum_cymbal_pedal, amp: 0.3
 
 end

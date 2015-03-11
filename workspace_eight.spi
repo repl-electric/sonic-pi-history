@@ -23,7 +23,9 @@ live_loop :drums do
 end
 
 live_loop :synth do
+  with_fx(:lfo) do
   use_synth :dsaw
+  end
 #  play :A1, amp: 0.2
-sleep 1
+  sleep beat
 end

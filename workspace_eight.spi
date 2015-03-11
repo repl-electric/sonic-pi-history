@@ -1,8 +1,8 @@
 beat = 1/2.0
 
-live_loop :timer do
-  cue :hit
-  sleep 1
+live_loop :ride do
+  sample :perc_snap
+  sleep beat/2
 end
 
 n=0

@@ -7,6 +7,7 @@ end
 
 n=0
 live_loop :drums do
+  cue :hit
   with_fx(:lpf, cutoff: 80){
   sample :drum_bass_hard}
   sleep beat
@@ -24,7 +25,7 @@ end
 
 z=0
 live_loop :synth do
-  
+sync :hit
   use_synth :dsaw
   use_synth_defaults amp: 0.3, detune: 0.1
   with_fx :lpf do
@@ -36,9 +37,8 @@ live_loop :synth do
                         degree(4, :A1, :major) ,
                         degree(4, :A1, :major),
                         degree(4, :A1, :major),
-                        degree(4, :A1, :major),
-                        
-                        ], [1/2.0, 1/4.0, 1]
+                        degree(4, :A1, :major)], 
+                        [1/2.0, 1/4.0, 1]
   end
   sleep beat*2
   z+=1

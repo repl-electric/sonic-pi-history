@@ -6,4 +6,6 @@ end
 live_loop :drums do
   sample :drum_bass_hard
   sleep 1
+  sample :drum_snare_soft
+  sleep 1
 end

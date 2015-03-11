@@ -23,6 +23,6 @@ end
 
 live_loop :synth do
   use_synth :dsaw
-  play :A1, amp: 0.5
+  play :A1, amp: 0.2
 sleep 1
 end

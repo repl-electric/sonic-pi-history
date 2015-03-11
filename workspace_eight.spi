@@ -2,7 +2,7 @@ beat = 1/2.0
 
 live_loop :ride do
   sleep beat/2.0
-  sample :drum_cymbal_soft, amp: 0.2
+  sample :drum_splash_soft, amp: 0.2
 end
 
 n=0

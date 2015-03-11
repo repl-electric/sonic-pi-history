@@ -3,7 +3,6 @@ beat = 1/2.0
 live_loop :ride do
   sleep beat
   sample :drum_cymbal_pedal, amp: 0.3
-
 end
 
 n=0
@@ -12,7 +11,7 @@ live_loop :drums do
   sleep beat
   case n%6
   when 0
-    with_fx(:slicer){sample :drum_snare_soft}
+    with_fx(:slicer, rate: 0.5){sample :drum_snare_soft}
   else
     sample :drum_snare_soft
   end

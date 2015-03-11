@@ -27,5 +27,5 @@ live_loop :synth do
   use_synth :dsaw
   play :A1, amp: 0.3
   end
-  sleep beat
+  sleep beat*2
 end

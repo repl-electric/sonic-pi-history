@@ -27,6 +27,5 @@ live_loop :synth do
   use_synth :dsaw
   play :A1, amp: 0.8
   end
-
   sleep beat
 end

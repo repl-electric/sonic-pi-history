@@ -27,7 +27,7 @@ live_loop :synth do
   
   use_synth :dsaw
   with_fx :lpf do
-    play [:A1, :A1, :A1 ,:A1 
+    play [:A1, :A1, :A1 ,:A1, 
           :D1, :D1, :D1, :D1][z%2], amp: 0.3, detune: 0.1
   end
   sleep beat*2

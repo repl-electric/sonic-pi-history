@@ -34,7 +34,7 @@ live_loop :synth do
                         degree(1, :A1, :major),
                         degree(1, :A1, :major),
                         
-                        degree(3 :A1, :major) ,
+                        degree(3, :A1, :major) ,
                         degree(3, :A1, :major),
                         degree(3, :A1, :major),
                         degree(3, :A1, :major)], 

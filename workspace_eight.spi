@@ -29,16 +29,11 @@ live_loop :synth do
   use_synth :dsaw
   use_synth_defaults amp: 0.3, detune: 0.1, attack: 0.01
   with_fx :lpf do
-    play_pattern_timed [degree(1, :A1, :major), 
-                        degree(1, :A1, :major),
-                        degree(1, :A1, :major),
-                        degree(1, :A1, :major),
-                        
-                        degree(3, :A1, :major) ,
-                        degree(3, :A1, :major),
-                        degree(3, :A1, :major),
-                        degree(3, :A1, :major)], 
-                        [1/2.0, 1/4.0, 1]
+    play_pattern_timed [degree(1, :A1, :major), degree(1, :A1, :major),
+                        degree(1, :A1, :major), degree(1, :A1, :major),                      
+                        degree(3, :A1, :major), degree(3, :A1, :major),
+                        degree(3, :A1, :major), degree(3, :A1, :major)], 
+                        [1/2.0, 1/4.0, 1 1]
   end
   sleep beat*2
   z+=1

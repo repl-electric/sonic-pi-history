@@ -26,6 +26,6 @@ live_loop :synth do
   with_fx :lpf do
   use_synth :dsaw
   end
-  play :A1, amp: 0.2
+  play :A1, amp: 0.5
   sleep beat
 end

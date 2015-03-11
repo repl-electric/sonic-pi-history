@@ -5,9 +5,18 @@ live_loop :timer do
   sleep 1
 end
 
+n=0
 live_loop :drums do
   sample :drum_bass_hard
   sleep beat
-  sample :drum_snare_soft
+
+  case n%6==0
+  when 0
+    with_fx(:reverb){sample :drum_snare_soft}
+  else
+    sample :drum_snare_soft
+  end
   sleep beat
+
+  n+=1
 end

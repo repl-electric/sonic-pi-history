@@ -22,10 +22,13 @@ live_loop :drums do
   n+=1
 end
 
+z=0
 live_loop :synth do
+  
   use_synth :dsaw
   with_fx :lpf do
-    play :A1, amp: 0.3, detune: 0.1
+    play (cycle :A1, :D1) amp: 0.3, detune: 0.1
   end
   sleep beat*2
+  z+=1
 end

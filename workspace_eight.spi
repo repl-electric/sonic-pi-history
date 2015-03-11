@@ -1,3 +1,5 @@
+beat = 1/2.0
+
 live_loop :timer do
   cue :hit
   sleep 1
@@ -5,7 +7,7 @@ end
 
 live_loop :drums do
   sample :drum_bass_hard
-  sleep 1
+  sleep beat
   sample :drum_snare_soft
-  sleep 1
+  sleep beat
 end

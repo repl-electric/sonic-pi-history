@@ -3,7 +3,7 @@ beat = 1/4.0
 
 r=0
 live_loop :ride do
-  if(r % 32 == 0)
+  if(r % 12 == 0)
     sleep beat/2
     sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 
          amp: 0.8, start: 0.45

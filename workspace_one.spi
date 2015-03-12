@@ -1,6 +1,15 @@
 beat = 1/4.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
+live_loop :clock do
+  cue :beat
+  sleep bar/2
+  cue :half_beat
+  sleep bar/2
+  cue :half_beat
+  sleep bar/2
+end
+
 r=0
 live_loop :ride do   
   sleep beat/2

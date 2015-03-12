@@ -24,7 +24,7 @@ end
 
 live_loop :heart do
   sync :hit
-  sample :elec_hollow_kick
+  sample :elec_hollow_kick, start: 0.1
 end
 
 n=0

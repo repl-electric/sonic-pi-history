@@ -40,7 +40,7 @@ z=0
 live_loop :synth do
   sync :hit
   use_synth :dsaw
-  use_synth_defaults amp: 0.8, detune: 8.1, attack: 0.001, release: 0.8
+  use_synth_defaults amp: 0.8, detune: 12.1, attack: 0.001, release: 0.8
   with_fx :lpf do
     play_pattern_timed [degree(1, :C0, :major), degree(1, :C0, :major),
                         degree(1, :C0, :major), degree(1, :C0, :major),                      

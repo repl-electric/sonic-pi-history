@@ -3,7 +3,7 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 
 r=0
 live_loop :ride do   
- # sync :hit
+  sync :hit
   start = case r%6
     when 0
     0.3  

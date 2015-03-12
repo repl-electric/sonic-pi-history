@@ -13,7 +13,7 @@ live_loop :ride do
   end
   with_fx :reverb do
   sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 
-         amp: 0.2, start: start
+         amp: 0.5, start: start
   end
   r+=1
 end

@@ -9,8 +9,9 @@ live_loop :ride do
     else
     0.45
   end
-   case r%6
+  case r%6
   when 0
+   0
   else
     with_fx :reverb do
     sample shaker_s,amp: 0.4, start: start

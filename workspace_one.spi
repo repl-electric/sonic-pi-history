@@ -51,8 +51,7 @@ live_loop :synth do
   with_fx :lpf do
     play_pattern_timed [degree(1, :C0, :minor), degree(1, :C0, :minor),
                         degree(1, :C0, :minor), degree(1, :C0, :minor),                      
-                        degree(4, :C0, :minor), degree(4, :C0, :minor),
-                        degree(4, :C0, :minor), degree(4, :C0, :minor)], 
+], 
                         [beat, beat, beat,
                          beat, beat, beat]
   end

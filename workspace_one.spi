@@ -11,7 +11,7 @@ end
 
 r=0
 live_loop :ride do
-sync :half_beat   
+  sync :half_beat   
   sleep beat/2
 
   start = case r%6
@@ -27,7 +27,6 @@ sync :half_beat
   
   sleep beat/2
   sample shaker_s, amp: 0.2, start: 0.3
-  sleep beat/2
   r+=1
 end
 

@@ -39,13 +39,14 @@ z=0
 live_loop :synth do
   sync :hit
   use_synth :dsaw
-  use_synth_defaults amp: 1.0, detune: 0.1, attack: 0.001, release: 0.25
+  use_synth_defaults amp: 1.0, detune: 1.1, attack: 0.001, release: 0.25
   with_fx :lpf do
     play_pattern_timed [degree(1, :A0, :major), degree(1, :A0, :major),
                         degree(1, :A0, :major), degree(1, :A0, :major),                      
                         degree(4, :A0, :major), degree(4, :A0, :major),
                         degree(4, :A0, :major), degree(4, :A0, :major)], 
-                        [beat/4, beat/4, beat/4, beat*2, beat*2, beat*2]
+                        [beat/4, beat/4, beat/4,
+                         beat*2, beat*2, beat*2]
   end
 #  sleep beat*2
   z+=1

@@ -4,8 +4,16 @@ beat = 1/4.0
 r=0
 live_loop :ride do
   sleep beat*2
+  
+  start = case r%8
+    when 0
+    0.3  
+    else
+    0.45
+  when
+  
   sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 
-         amp: 0.2, start: 0.45 - 0.1*(r%4) 
+         amp: 0.2, start:  
   r+=1
 end
 

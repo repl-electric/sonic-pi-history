@@ -4,7 +4,7 @@ beat = 1/4.0
 live_loop :ride do
   sleep beat*2
   sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 
-         amp: 0.2, start: 0.4 
+         amp: 0.2, start: 0.6 
 end
 
 n=0

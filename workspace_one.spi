@@ -3,7 +3,6 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 
 r=0
 live_loop :ride do   
-  sync :hit
   sleep beat/2
 
   start = case r%6

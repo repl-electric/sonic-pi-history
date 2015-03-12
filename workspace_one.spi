@@ -9,17 +9,13 @@ live_loop :ride do
     else
     0.45
   end
-  case r%6
-  when 5
-   sleep beat/2
-  else
-    with_fx :reverb do
-    sample shaker_s,amp: 0.4, start: start
-      sleep beat/2
+   case r%6
+  with_fx :reverb do
+  sample shaker_s,amp: 0.4, start: start
+  end
 
-  end
-  end
   
+  sleep beat/2
   sample shaker_s, amp: 0.4, start: 0.3
   sleep beat/2
   sleep beat

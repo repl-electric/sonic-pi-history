@@ -24,7 +24,7 @@ n=0
 live_loop :drums do
   cue :hit
   with_fx(:lpf, cutoff: 80){
-  sample :drum_heavy_kick}
+  sample :drum_heavy_kick amp: 2}
   sleep beat
   case n%6
   when 0

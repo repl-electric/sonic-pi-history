@@ -22,6 +22,11 @@ live_loop :ride do
   r+=1
 end
 
+live_loop :heart do
+  sync :hit
+  sample :elec_hollow_kick
+end
+
 n=0
 live_loop :drums do
   cue :hit

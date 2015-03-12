@@ -3,11 +3,11 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 
 live_loop :clock do
   cue :beat
-  sleep bar/2
+  sleep beat/2
   cue :half_beat
-  sleep bar/2
+  sleep beat/2
   cue :half_beat
-  sleep bar/2
+  sleep beat/2
 end
 
 r=0

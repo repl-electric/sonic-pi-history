@@ -51,7 +51,7 @@ live_loop :synth do
   sync :hit
   use_synth :pulse
   use_synth_defaults amp: 0.4, detune: 0.1, attack: 0.001, release: 0.8
-  with_fx :lpf, cutout: 100 do
+  with_fx :lpf, cutoff: 100 do
     play_pattern_timed [degree(1, :C1, :minor), degree(1, :C1, :minor),
                         degree(1, :C1, :minor), degree(1, :C1, :minor)], 
                         [beat/2, beat/2,

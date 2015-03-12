@@ -10,7 +10,8 @@ live_loop :clock do
 end
 
 r=0
-live_loop :ride do   
+live_loop :ride do
+sync :half_beat   
   sleep beat/2
 
   start = case r%6

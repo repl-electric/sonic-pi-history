@@ -14,7 +14,7 @@ end
 
 r=0
 live_loop :ride do
-  sync :beat   
+  sync :half_beat   
   sleep beat
 
   start = case r%6

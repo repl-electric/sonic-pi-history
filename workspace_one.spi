@@ -10,7 +10,7 @@ live_loop :ride do
     0.45
   end
   case r%6
-  when 1
+  when 5
    0
   else
     with_fx :reverb do

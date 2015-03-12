@@ -28,6 +28,8 @@ live_loop :ride do
   
   sleep beat/2
   sample shaker_s, amp: 0.2, start: 0.3
+  sleep beat/2
+
   r+=1
 end
 

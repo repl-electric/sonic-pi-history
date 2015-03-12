@@ -1,5 +1,10 @@
 beat = 1/4.0
+
+
 r=0
+live_loop :ride do
+  sleep beat*2
+    
   start = case r%6
     when 0
     0.3  

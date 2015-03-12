@@ -13,9 +13,9 @@ live_loop :ride do
   with_fx :reverb do
   sample shaker_s,amp: 0.7, start: start
   end
-  sleep beat/2
+  sleep beat
   sample shaker_s, amp: 0.7, start: 0.3
-  sleep beat/2
+  sleep beat
   r+=1
 end
 

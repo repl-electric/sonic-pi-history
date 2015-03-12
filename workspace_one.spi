@@ -2,8 +2,7 @@ beat = 1/4.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
 r=0
-live_loop :ride do
-    
+live_loop :ride do   
   start = case r%6
     when 0
     0.3  
@@ -16,9 +15,7 @@ live_loop :ride do
   sleep beat/2
   sample shaker_s, amp: 0.7, start: 0.3
   sleep beat/2
-
   sleep beat
-
   r+=1
 end
 
@@ -50,7 +47,7 @@ z=0
 live_loop :synth do
   sync :hit
   use_synth :pulse
-  use_synth_defaults amp: 0.0, detune: 0.1, attack: 0.001, release: 0.8
+  use_synth_defaults amp: 0.2, detune: 0.1, attack: 0.001, release: 0.8
   with_fx :lpf do
     play_pattern_timed [degree(1, :C0, :minor), degree(1, :C0, :minor),
                         degree(1, :C0, :minor), degree(1, :C0, :minor),                      

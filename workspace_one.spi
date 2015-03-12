@@ -30,10 +30,10 @@ live_loop :drums do
   when 0
     with_fx(:reverb){
     with_fx(:bitcrusher, bits: 6){
-      sample :drum_snare_soft, amp: 1.0}}
+      sample :drum_snare_soft, amp: 1.2}}
   when 3
     with_fx(:bitcrusher, bits: 8){
-      sample :drum_snare_soft, amp: 1.0, start: 0.2}
+      sample :drum_snare_soft, amp: 1.2, start: 0.2}
   when 5
     with_fx(:bitcrusher, bits: 7){
       sample :drum_snare_soft, amp: 1.0, start: 0.2}

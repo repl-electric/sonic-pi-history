@@ -3,13 +3,22 @@ beat = 1/4.0
 
 r=0
 live_loop :ride do
+
+  if(r % 32 == 0)
+  sleep beat
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 
+         amp: 1.9, start: start
+  sleep beat
+         else
   sleep beat*2
+  end
+  
   
   start = case r%6
     when 0
     0.3  
     else
-    0.0
+    0.45
   end
   with_fx :reverb do
   sample "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav", 

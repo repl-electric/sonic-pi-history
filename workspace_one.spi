@@ -92,8 +92,10 @@ end
 
 live_loop :pulse do
   sync :start
+  with_fx :reverb do
   with_synth :pulse  do
     play :C4, release: beat*16, amp: 0.025
+  end
   end
   sleep beat*16
 end

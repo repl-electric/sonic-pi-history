@@ -16,7 +16,7 @@ beat = 1/4.0
 
 use_synth :dsaw
 
-play_pattern_timed [:G3, :G3, :G3, :G3, :G3, :G3], 
+play_pattern_timed [:G4, :G4, :G4, :G4, :G4, :G4], 
                    [beat, beat, beat, beat, beat, beat]
 
                    

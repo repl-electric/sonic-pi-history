@@ -14,7 +14,7 @@ beat = 1/4.0
 
 :E3
 
-use_synth :beep
+use_synth :saw
 
 play_pattern_timed [:E3, :E3, :E3, :E3, :E3, :E3], 
                    [beat, beat, beat, beat, beat, beat]

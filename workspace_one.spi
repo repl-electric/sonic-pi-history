@@ -5,7 +5,7 @@ high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK
 high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_2.wav"
 
 live_loop :clapper do
-#32.times{sync :hit}
+32.times{sync :hit}
 sample clap_s, start: 0.2, amp: 0.25
 sync :hit
 sample clap_s, start: 0.1, amp: 0.3
@@ -13,8 +13,6 @@ sync :hit
 sample clap_s, start: 0.09, amp: 0.4
 sync :hit
 sample clap_s, amp: 0.4, rate: -1.0
-sleep sample_duration(clap_s)
-sample high_hat2_s, amp: 2
 end
 
 def degrees_seq(pattern, root, scale=nil)

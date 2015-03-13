@@ -88,11 +88,9 @@ live_loop :synth do
   use_synth_defaults detune: 0.1, amp: 1.0, attack: 0.01, release: 0.15, note_slide: 2.0
   with_fx :lpf, cutoff: 70 do
   sync :beat
-   play_pattern_timed chord_seq(21141111, :A1), 
+   play_pattern_timed chord_seq(21141111, :A2), 
                       [beat/4, beat/2, beat/4, beat/4,
-                      beat/4, beat, beat/4, beat/4
-                      ]
-                  
+                      beat/4, beat, beat/4, beat/4]
               end
   z+=1
 end 

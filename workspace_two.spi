@@ -1,5 +1,5 @@
 def degree_seq(pattern, root, scale=nil)
-  scale = if(root.to_s[0].uppercase?)
+  scale = if(root.to_s[0].upper?)
       :major
     else
       :minor

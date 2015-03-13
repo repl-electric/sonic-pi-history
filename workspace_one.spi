@@ -141,4 +141,12 @@ live_loop :atmos do
   sync :hit
   play degree(3, :Cs3, :major), attack: 4, release: beat*32, amp: 0.5
   sleep beat*32
+  
+  sync :hit
+  play degree(3, :Cs3, :major), attack: 4, release: beat*32, amp: 0.5
+  sleep beat*32
+
+  sync :hit
+  play degree(7, :Cs2, :major), attack: 4, release: beat*32, amp: 0.5
+  sleep beat*32 
 end

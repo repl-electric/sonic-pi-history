@@ -1,12 +1,16 @@
 beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
+clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
 
 live_loop :clapper do
  32.times{sync :hit}
- sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.2, amp: 0.25
+ sample clap_s, start: 0.2, amp: 0.25
  sync :hit
- sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.1, amp: 0.5
-end
+ sample clap_2, start: 0.1, amp: 0.5
+ sync :hit
+ sample clap_2, start: 0.09, amp: 0.5
+
+ end
 
 def degrees_seq(pattern, root, scale=nil)
   if !scale

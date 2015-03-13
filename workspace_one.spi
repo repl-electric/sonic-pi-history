@@ -8,7 +8,7 @@ def degrees_seq(pattern, root, scale=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 
-def chorddegrees_seq(pattern, root, scale=nil)
+def chord_seq(pattern, root, scale=nil)
   if !scale
     scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end

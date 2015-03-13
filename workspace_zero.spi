@@ -43,7 +43,7 @@ end
 r=0
 live_loop :ride do
 sync :half_beat   
-sample (cycle high_hat_s, high_hat2_s), amp: 0.2
+sample (cycle high_hat_s, high_hat2_s)[r], amp: 0.2
 #sleep beat
 
   2.times do

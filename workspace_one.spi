@@ -93,7 +93,7 @@ end
 live_loop :pulse do
   sync :start
   with_synth :pulse  do
-    play :C3, release: beat*16, amp: 0.025
+    play :C4, release: beat*16, amp: 0.025
   end
   sleep beat*16
 end

@@ -84,7 +84,7 @@ live_loop :synth do
    with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
-   play_pattern_timed degrees_seq(414141, :F3), 
+   play_pattern_timed degrees_seq(414141, :F4), 
                       [beat/4, beat/2, beat/4, beat/2, beat/4, beat/4]
  #                     end
 #                      sync :start

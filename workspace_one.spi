@@ -2,6 +2,7 @@ beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
 high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_1.wav"
+high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_2.wav"
 
 live_loop :clapper do
 32.times{sync :hit}
@@ -12,6 +13,7 @@ sync :hit
 sample clap_s, start: 0.09, amp: 0.4
 sync :hit
 sample clap_s, amp: 0.4, rate: -1.0
+sample high_hat2_s
 end
 
 def degrees_seq(pattern, root, scale=nil)
@@ -42,8 +44,7 @@ end
 r=0
 live_loop :ride do
 sync :half_beat   
-  sample high_hat_s, amp: 0.2
-
+sample high_hat_s, amp: 0.2
 #sleep beat
 
   2.times do

@@ -73,12 +73,15 @@ live_loop :synth do
    with_fx :lpf, cutoff: 70 do
 
   4.times do
+  sync :start
    play_pattern_timed [degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major)], 
                       [beat/4, beat/2, beat/4, beat/2]
                       end
-
+4.times do
+sync :start
    play_pattern_timed [degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major)], 
                       [beat/4, beat/2, beat/4, beat/2]
+                      end
                     
                   
                   end

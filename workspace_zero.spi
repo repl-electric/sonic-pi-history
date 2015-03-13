@@ -118,21 +118,21 @@ live_loop :synth do
 
 #with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.2 do
 
-    my = play degrees_seq(222222222222222, :Cs3), release: beat/2*16*3
-    control my, note: degrees_seq(2, :Cs3)[0]
+    my = play degrees_seq(222222222222222, :Cs4), release: beat/2*16*3
+    control my, note: degrees_seq(2, :Cs4)[0]
 
-    play_pattern_timed degrees_seq(222222222222222222, :Cs3),
+    play_pattern_timed degrees_seq(222222222222222222, :Cs4),
       [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
     sync :hit
-    control my, note: degrees_seq(1, :Cs3)[0]
+    control my, note: degrees_seq(1, :Cs4)[0]
 
-    play_pattern_timed degrees_seq(1111111111111111111, :Cs3),
+    play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
       [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
     sync :hit
 
-    control my, note: degrees_seq(7, :Cs3)[0]
+    control my, note: degrees_seq(7, :Cs4)[0]
 
-    play_pattern_timed degrees_seq(77777777777777777777, :Cs2),
+    play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
       [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
     #  play_pattern_timed chord_seq(21141111, :A1),

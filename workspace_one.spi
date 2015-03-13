@@ -82,9 +82,6 @@ live_loop :synth do
   use_synth :dsaw
   use_synth_defaults detune: 0.1, amp: 0.5, attack: 0.001, release: 0.25
    with_fx :lpf, cutoff: 70 do
-
-  root = :A1
-  
   sync :beat
 #  2.times do
    play_pattern_timed degree_seq(1111, :A1, :major), 

@@ -80,7 +80,7 @@ z=0
 live_loop :synth do
  # sync :beat
   use_synth :dsaw
-  use_synth_defaults detune: 0.1, amp: 1.0, attack: 0.001, release: 0.25
+  use_synth_defaults detune: 0.1, amp: 1.0, attack: 0.001, release: 0.25, 
    with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
@@ -107,5 +107,11 @@ live_loop :pulse do
     play degree(1, :A3,:major), release: beat*16, amp: 0.01
   end
   end
+  sleep beat*16
+end
+
+live_loop :atmos do
+  use_synth :dark_ambience
+  play :A1, release: beat*16
   sleep beat*16
 end

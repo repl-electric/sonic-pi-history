@@ -3,7 +3,7 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 
 live_loop :clapper do
  32.times{sync :hit}
- sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
+ sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.1, amp: 0.5
 end
 
 def degrees_seq(pattern, root, scale=nil)

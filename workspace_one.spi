@@ -91,6 +91,7 @@ live_loop :synth do
 end 
 
 live_loop :pulse do
+  sync :start
   with_synth :pulse  do
     play :C2, release: beat*8
   end

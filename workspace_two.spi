@@ -9,4 +9,4 @@ end
 beat = 1/2.0
 
 play_pattern_timed [:E3], 
-                   [beat/2, beat/2, beat/2, beat/2, beat/4, beat/4]
+                   [beat, beat, beat, beat, beat, beat]

@@ -51,7 +51,7 @@ sync :half_beat
     else
     0.45
   end
-#  sample high_hat_s
+ sample high_hat_s, amp: 0.4
   with_fx :reverb do
   sample shaker_s,amp: 0.4, start: start
   end

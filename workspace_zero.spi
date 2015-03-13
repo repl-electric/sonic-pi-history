@@ -65,6 +65,7 @@ end
 r=0
 r2 = 0
 live_loop :ride do
+with_fx :level, amp: 0.1
   sync :half_beat
   sample (ring high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.3, start: 0.01
   #sleep beat
@@ -83,6 +84,7 @@ live_loop :ride do
     r+=1
   end
   r2+=1
+end
 end
 
 live_loop :heart do

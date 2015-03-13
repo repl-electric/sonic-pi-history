@@ -93,7 +93,7 @@ live_loop :synth do
 
 
 play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
-                   [beat, beat, beat, beat, beat, beat]
+                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
 play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
                    [beat, beat, beat, beat, beat, beat]
@@ -101,9 +101,6 @@ play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5],
 
 play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
                    [beat, beat, beat, beat, beat, beat]
-
-
-
 
  
 #  play_pattern_timed chord_seq(21141111, :A1), 

@@ -132,7 +132,7 @@ with_fx :level, amp: 1.0 do
   use_synth :dsaw
   use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
 
-  with_fx :lpf, cutoff: 70 do
+  with_fx :lpf, cutoff: 120 do
     sync :hit
     my = play degrees_seq(222222222222222, :Cs3), release: beat/2*16*3, attack: 1
     control my, note: degrees_seq(2, :Cs3)[0]

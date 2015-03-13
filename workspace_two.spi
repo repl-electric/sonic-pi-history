@@ -15,7 +15,7 @@ beat = 1/2.0
 
 use_synth :dsaw
 
-play_pattern_timed degree_seq(2222, :D4), 
+play_pattern_timed degree_seq(11111111, :D4), 
                    [beat, beat, beat, beat, beat, beat]
 
                   

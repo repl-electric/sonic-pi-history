@@ -1,0 +1,3 @@
+def degree_seq(pattern, root, scale)
+  pattern.to_s.split.map(&:to_i)
+end

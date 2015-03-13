@@ -6,7 +6,6 @@ live_loop :clapper do
  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.2, amp: 0.25
  sync :hit
  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.1, amp: 0.5
-
 end
 
 def degrees_seq(pattern, root, scale=nil)
@@ -64,6 +63,10 @@ end
 n=0
 live_loop :drums do
   cue :hit
+  
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", rate: 0.1, amp: 0.25
+
+  
   with_fx(:lpf, cutoff: 40){
   sample :drum_heavy_kick, amp: 2}
   sleep beat

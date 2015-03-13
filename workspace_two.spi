@@ -8,4 +8,4 @@ def degree_seq(pattern, root, scale=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 
-puts degree_seq(444, :A2)
+puts degree_seq(111, :A2)

@@ -74,11 +74,11 @@ live_loop :synth do
 
   root = :A1
    
-  sync :start
-  2.times do
+  sync :beat
+#  2.times do
    play_pattern_timed [degree(1,root,:major),degree(1,root,:major),degree(1,root,:major),degree(1,root,:major)], 
                       [beat/4, beat/2, beat/4, beat/2, beat/4, beat/4]
-                      end
+ #                     end
 #                      sync :start
 
 #  4.times do

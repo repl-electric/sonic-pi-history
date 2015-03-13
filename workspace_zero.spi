@@ -41,10 +41,10 @@ sleep beat/2
 end
 
 r=0
+r2 = 0
 live_loop :ride do
 sync :half_beat   
-puts r
-sample (ring high_hat_s, high_hat2_s)[r], amp: 3.2
+sample (ring high_hat_s, high_hat2_s)[r2], amp: 3.2
 #sleep beat
 2.times do
 start = case r%6
@@ -59,7 +59,9 @@ end
 sleep beat/2
 sample shaker_s, amp: 0.2, start: 0.3
 r+=1
-end end
+end 
+r2+=1
+end
 
 live_loop :heart do
   sync :hit

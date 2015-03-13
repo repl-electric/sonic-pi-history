@@ -18,7 +18,7 @@ use_synth :dsaw
 
 play :Ds5
 
-play degree(1, :A5, :major)
+play degree(1, :B5, :major)
 
 
 

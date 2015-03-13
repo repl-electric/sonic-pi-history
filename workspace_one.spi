@@ -89,16 +89,16 @@ live_loop :synth do
   with_fx :lpf, cutoff: 120 do
   sync :hit
 
-play_pattern_timed degrees_seq(1111111, :Cs4), 
+play_pattern_timed degrees_seq(1111111, :Cs3), 
                    [beat/4, beat/2, beat/4, beat/4, beat/4, beat/4]
 
                      sync :hit
                    
-play_pattern_timed degrees_seq(2222222, :Cs4), 
+play_pattern_timed degrees_seq(2222222, :Cs3), 
                    [beat/4, beat/2, beat/4, beat/4, beat/4, beat/4]
                      sync :hit
                    
-play_pattern_timed degrees_seq(7777777, :Cs3), 
+play_pattern_timed degrees_seq(7777777, :Cs2), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
  

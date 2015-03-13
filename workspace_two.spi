@@ -19,12 +19,13 @@ use_synth :dsaw
 play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
                    [beat, beat, beat, beat, beat, beat]
 
+                   play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
+                   [beat, beat, beat, beat, beat, beat]
+
 
 play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
                    [beat, beat, beat, beat, beat, beat]
 
-play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
-                   [beat, beat, beat, beat, beat, beat]
 
                   
                   

@@ -3,7 +3,10 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 
 live_loop :clapper do
  32.times{sync :hit}
+ sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.2, amp: 0.25
+ sync :hit
  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", start: 0.1, amp: 0.5
+
 end
 
 def degrees_seq(pattern, root, scale=nil)
@@ -97,12 +100,11 @@ live_loop :synth do
 
   my = play degrees_seq(222222222222222, :Cs2), release: beat/2*16*3
 
-   control my, note: degrees_seq(2, :Cs2)[0]
-
+  control my, note: degrees_seq(2, :Cs2)[0]
   
-   play_pattern_timed degrees_seq(222222222222222222, :Cs2), 
-                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-                     sync :hit
+  play_pattern_timed degrees_seq(222222222222222222, :Cs2), 
+                     [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+  sync :hit
                      
   control my, note: degrees_seq(1, :Cs2)[0]
   
@@ -113,11 +115,9 @@ play_pattern_timed   degrees_seq(1111111111111111111, :Cs2),
    control my, note: degrees_seq(7, :Cs2)[0]
 
                    
-play_pattern_timed   degrees_seq(77777777777777777777, :Cs1), 
+  play_pattern_timed   degrees_seq(77777777777777777777, :Cs1), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
   
-  
-                   
  
 #  play_pattern_timed chord_seq(21141111, :A1), 
 ##                     [beat/4, beat/2, beat/4, beat/4,

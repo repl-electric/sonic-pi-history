@@ -90,9 +90,8 @@ live_loop :synth do
   sync :hit
   
   play degree(2, :A1, :major)
-  sleep beat/4
+  sync :hit
   play degree(1, :A1, :major)
-  sleep beat/2
  
   
    play_pattern_timed chord_seq(21141111, :A1), 

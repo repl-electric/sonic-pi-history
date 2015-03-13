@@ -116,7 +116,7 @@ z=0
 live_loop :synth do
   # sync :beat
   use_synth :dsaw
-  use_synth_defaults detune: 0.1, amp: 0.0, attack: 0.001, release: 0.25, note_slide: 1.0
+  use_synth_defaults detune: 0.1, amp: 0.4, attack: 0.001, release: 0.25, note_slide: 1.0
   with_fx :lpf, cutoff: 70 do
     sync :hit
     my = play degrees_seq(222222222222222, :Cs4), release: beat/2*16*3, attack: 1

@@ -81,10 +81,10 @@ live_loop :synth do
                       end
                       sync :start
 
-  4.times do
-   play_pattern_timed [degree(3,root,:major),degree(3,root,:major),degree(3,root,:major),degree(3,root,:major)], 
-                      [beat/4, beat/2, beat/4, beat/2]
-                     end
+#  4.times do
+ #  play_pattern_timed [degree(3,root,:major),degree(3,root,:major),degree(3,root,:major),degree(3,root,:major)], 
+  #                    [beat/4, beat/2, beat/4, beat/2]
+   #                  end
                     
                   
                   end

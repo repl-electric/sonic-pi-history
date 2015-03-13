@@ -112,7 +112,7 @@ z=0
 live_loop :synth do
   # sync :beat
   use_synth :dsaw
-  use_synth_defaults detune: 12.0, amp: 0.45, attack: 0.001, release: 0.25, note_slide: 1.0
+  use_synth_defaults detune: 8.0, amp: 0.45, attack: 0.001, release: 0.25, note_slide: 1.0
   with_fx :lpf, cutoff: 70 do
     sync :hit
 

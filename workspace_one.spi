@@ -94,7 +94,7 @@ play_pattern_timed degrees_seq(111111111111111, :Cs3),
 
                      sync :hit
 
-play_pattern_timed degrees_seq(7777777, :Cs2), 
+play_pattern_timed degrees_seq(777777777777777, :Cs2), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
   
   

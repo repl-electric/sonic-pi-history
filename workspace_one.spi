@@ -89,10 +89,10 @@ live_loop :synth do
   with_fx :lpf, cutoff: 70 do
   sync :beat
   
-    play degree(2, :A1, :major)
-    sleep beat/4
-    play degree(1, :A1, :major)
-    sleep beat/2
+  play degree(2, :A1, :major)
+  sleep beat/4
+  play degree(1, :A1, :major)
+  sleep beat/2
  
   
    play_pattern_timed chord_seq(21141111, :A1), 

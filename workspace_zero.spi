@@ -187,5 +187,5 @@ end
 
 live_loop :hollowed do
   sync :hit
-  hollowed_synth degree(2, :Cs5, :major)
+  hollowed_synth degree(1, :Cs5, :major)
 end

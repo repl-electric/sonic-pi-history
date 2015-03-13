@@ -138,7 +138,6 @@ live_loop :synth do
         control my, note: degrees_seq(7, :Cs3)[0]
       end
 
-
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 

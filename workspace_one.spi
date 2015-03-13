@@ -93,15 +93,13 @@ play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5],
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
                      sync :hit
-
                    
 play_pattern_timed degrees_seq(2222222, :Cs5), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-
                      sync :hit
 
                    
-play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
+play_pattern_timed degrees_seq(7777777, :Cs4), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
  

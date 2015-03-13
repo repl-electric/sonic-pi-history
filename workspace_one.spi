@@ -14,7 +14,7 @@ sample clap_s, start: 0.09, amp: 0.4
 sync :hit
 sample clap_s, amp: 0.4, rate: -1.0
 sleep sample_duration(clap_s)
-sample high_hat2_s
+sample high_hat2_s, amp: 2
 end
 
 def degrees_seq(pattern, root, scale=nil)

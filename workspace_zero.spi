@@ -8,7 +8,7 @@ snare2_s = :drum_snare_soft
 voice_s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Ah p/vor_sopr_sustain_ah_p_01.wav"
 
 live_loop :clapper do
-  with_fx :level, amp: 0.5 do
+  with_fx :level, amp: 0.0 do
     32.times{sync :hit}
     sample clap_s, start: 0.2, amp: 0.25
     sync :hit

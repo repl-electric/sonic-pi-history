@@ -89,7 +89,7 @@ live_loop :synth do
   with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
-   play_pattern_timed chord_seq(1111, :E2), 
+   play_pattern_timed chord_seq(3333, :E2), 
                       [beat/4, beat/2, beat/4, beat/4]
                   
               end

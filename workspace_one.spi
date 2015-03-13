@@ -93,14 +93,15 @@ play_pattern_timed degrees_seq(1111111, :Cs3),
                    [beat/4, beat/2, beat/4, beat/4, beat/4, beat/4]
 
                      sync :hit
-                   
+
+play_pattern_timed degrees_seq(7777777, :Cs2), 
+                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+  
+  
 play_pattern_timed degrees_seq(2222222, :Cs3), 
                    [beat/4, beat/2, beat/4, beat/4, beat/4, beat/4]
                      sync :hit
                    
-play_pattern_timed degrees_seq(7777777, :Cs2), 
-                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-
  
 #  play_pattern_timed chord_seq(21141111, :A1), 
 ##                     [beat/4, beat/2, beat/4, beat/4,

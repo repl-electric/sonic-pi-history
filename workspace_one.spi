@@ -69,7 +69,7 @@ z=0
 live_loop :synth do
   sync :beat
   use_synth :pulse
-  use_synth_defaults amp: 0.5, attack: 0.1, release: 0.1
+  use_synth_defaults amp: 0.5, attack: 0.09, release: 0.1
    with_fx :lpf, cutoff: 70 do
 
   root = :F1

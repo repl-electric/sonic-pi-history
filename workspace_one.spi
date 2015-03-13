@@ -104,6 +104,6 @@ end
 
 live_loop :atmos do
   use_synth :dark_ambience
-  play :E1, attack: 4, release: beat*32, amp: 0.5
+  play :E2, attack: 4, release: beat*32, amp: 0.5
   sleep beat*32
 end

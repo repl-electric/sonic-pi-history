@@ -148,9 +148,9 @@ with_fx :level, amp: 1.0 do
       sync :hit
 
       if(dice(6) >= 5)
-        control my, note: degrees_seq(7, :Cs4)[0]
-      else
         control my, note: degrees_seq(7, :Cs3)[0]
+      else
+        control my, note: degrees_seq(7, :Cs2)[0]
       end
 
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),

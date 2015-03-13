@@ -51,7 +51,7 @@ end
 n=0
 live_loop :drums do
   cue :hit
-  with_fx(:lpf, cutoff: 110){
+  with_fx(:lpf, cutoff: 40){
   sample :drum_heavy_kick, amp: 2}
   sleep beat
   case n%6
@@ -66,7 +66,7 @@ live_loop :drums do
     with_fx(:bitcrusher, bits: 7){
       sample :drum_snare_soft, amp: 1.3, start: 0.15}
   else
-    sample :drum_snare_soft, start: 0.90, amp: 1.1, rate: 1.0
+    sample :drum_snare_soft, start: 0.20, amp: 1.1, rate: 1.0
   end
   sleep beat
   n+=1

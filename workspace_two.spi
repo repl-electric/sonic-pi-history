@@ -1,5 +1,10 @@
 def degree_seq(pattern, root, scale=nil)
-  if(root.to_s[0].uppercase?)
+  scale = if(root.to_s[0].uppercase?)
+      :major
+    else
+      :minor
+    end
+  end
   pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 

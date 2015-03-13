@@ -157,7 +157,7 @@ live_loop :atmos do
   cue :atmosphere
   use_synth :dark_ambience
   sync :hit
-  play degree(3, :Cs3, :major), attack: 4, release: beat*32, amp: 0.9
+  play degree(3, :Cs3, :major), attack: 4, release: beat*32, amp: 1.0
   sleep beat*32
 
   sync :hit

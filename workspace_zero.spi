@@ -200,4 +200,4 @@ live_loop :hollowed do
   hollowed_synth degree(1, :Cs4, :major)
 end
 
-set_volume! 0.99
+set_volume! 0.98

@@ -3,44 +3,47 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
 
 live_loop :clapper do
- 32.times{sync :hit}
- sample clap_s, start: 0.2, amp: 0.25
- sync :hit
- sample clap_s, start: 0.1, amp: 0.3
- sync :hit
- sample clap_s, start: 0.09, amp: 0.4
+32.times{sync :hit}
+sample clap_s, start: 0.2, amp: 0.25
+sync :hit
+sample clap_s, start: 0.1, amp: 0.3
+sync :hit
+sample clap_s, start: 0.09, amp: 0.4
+sync :hit
+sample clap_s, amp: 0.4, rate: -1
 
- end
+
+end
 
 def degrees_seq(pattern, root, scale=nil)
-  if !scale
-    scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-  end
-  pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
+if !scale
+  scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+end
+pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 
 def chord_seq(pattern, root, scale=nil)
-  if !scale
-    scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-  end
-  pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, scale)}
+if !scale
+  scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+end
+pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, scale)}
 end
 
 live_loop :clock do
-  cue :start; cue :beat; cue :half_beat
-  sleep beat/2
-  cue :half_beat
-  sleep beat/2
-  cue :half_beat; cue :beat
-  sleep beat/2
-  cue :half_beat
-  sleep beat/2
+cue :start; cue :beat; cue :half_beat
+sleep beat/2
+cue :half_beat
+sleep beat/2
+cue :half_beat; cue :beat
+sleep beat/2
+cue :half_beat
+sleep beat/2
 end
 
 r=0
 live_loop :ride do
-  sync :half_beat   
- # sleep beat
+sync :half_beat   
+#sleep beat
 
   2.times do
   start = case r%6

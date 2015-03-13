@@ -79,7 +79,7 @@ live_loop :drums do
   sleep beat
   case n%6
   when 0
-    with_fx(:echo, phase: beat/4, decay: 1.5){with_fx(:bitcrusher, bits: 6){
+    with_fx(:echo, phase: beat/4, decay: 9.5){with_fx(:bitcrusher, bits: 6){
       sample snare2_s, amp: 1.2}}
   when 3
     with_fx(:bitcrusher, bits: 8){

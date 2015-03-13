@@ -94,7 +94,7 @@ live_loop :pulse do
   sync :start
   with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do
   with_synth :pulse  do
-    play :C3, release: beat*16, amp: 0.01
+    play degree(1, :C3,:major), release: beat*16, amp: 0.01
   end
   end
   sleep beat*16

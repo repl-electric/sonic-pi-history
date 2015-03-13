@@ -1,6 +1,13 @@
 beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
+def degree_seq(pattern, root, scale=nil)
+  if !scale
+    scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  end
+  pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
+end
+
 live_loop :clock do
   cue :start; cue :beat; cue :half_beat
   sleep beat/2

@@ -73,7 +73,12 @@ live_loop :synth do
    with_fx :lpf, cutoff: 70 do
    play_pattern_timed [degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major)], 
                       [beat/4, beat/2]
-  end
+
+   play_pattern_timed [degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major)], 
+                      [beat/4, beat/2]
+                    
+                  
+                  end
 #  sleep beat*2
   z+=1
 end 

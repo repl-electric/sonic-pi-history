@@ -72,7 +72,7 @@ live_loop :synth do
   use_synth_defaults amp: 0.5, attack: 0.2, release: 0.2
 #  with_fx :lpf, cutoff: 180 do
    play_pattern_timed [degree(1,:C1,:minor),degree(1,:C1,:minor),degree(1,:C1,:minor),degree(1,:C1,:minor)], 
-                        [beat/4]
+                        [beat/8]
  # end
 #  sleep beat*2
   z+=1

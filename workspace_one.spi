@@ -90,7 +90,7 @@ live_loop :synth do
   sync :hit
 
 play_pattern_timed degrees_seq(1111111, :Cs4), 
-                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+                   [beat/4, beat/2, beat/4, beat/4, beat/4, beat/4]
 
                      sync :hit
                    

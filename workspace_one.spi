@@ -65,6 +65,10 @@ live_loop :drums do
   n+=1
 end
 
+def degree_seq(pattern, root, scale)
+  pattern.to_s.split
+end
+
 z=0
 live_loop :synth do
  # sync :beat
@@ -73,11 +77,7 @@ live_loop :synth do
    with_fx :lpf, cutoff: 70 do
 
   root = :A1
-   
-def degree_seq(pattern, root, scale)
-  pattern.to_s.split
-end
-   
+  
   sync :beat
 #  2.times do
    play_pattern_timed degree_seq(1111, root, :major), 

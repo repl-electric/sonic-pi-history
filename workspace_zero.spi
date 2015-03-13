@@ -132,7 +132,12 @@ live_loop :synth do
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit
 
-      control my, note: degrees_seq(7, :Cs4)[0]
+      if(dice(6) >= 5)
+        control my, note: degrees_seq(7, :Cs4)[0]
+      else
+        control my, note: degrees_seq(7, :Cs3)[0]
+      end
+
 
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]

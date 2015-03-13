@@ -91,20 +91,20 @@ live_loop :synth do
 
   my = play degrees_seq(222222222222222, :Cs2), release: 100
   
-   play_pattern_timed degrees_seq(222222222222222, :Cs2), 
+   play_pattern_timed degrees_seq(222222222222222222, :Cs2), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
                      sync :hit
                      
   control my, note: degrees_seq(1, :Cs2)[0]
   
-play_pattern_timed degrees_seq(111111111111111, :Cs2), 
+play_pattern_timed   degrees_seq(1111111111111111111, :Cs2), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
                    sync :hit
 
    control my, note: degrees_seq(7, :Cs2)[0]
 
                    
-play_pattern_timed degrees_seq(777777777777777, :Cs1), 
+play_pattern_timed   degrees_seq(77777777777777777777, :Cs1), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
   
   

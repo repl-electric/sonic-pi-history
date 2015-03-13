@@ -78,7 +78,7 @@ with_fx :level, amp: 0.5 do
       0.45
     end
     with_fx :reverb do
-    #  sample shaker_s,amp: 0.4, start: start
+      sample shaker_s,amp: 0.4, start: start
     end
     sleep beat/2
     #sample shaker_s, amp: 0.2, start: 0.3

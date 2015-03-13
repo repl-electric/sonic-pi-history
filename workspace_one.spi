@@ -72,8 +72,9 @@ live_loop :synth do
   use_synth_defaults amp: 0.5, attack: 0.1, release: 0.2
    with_fx :lpf, cutoff: 70 do
 
+     sync :start
+
   4.times do
-  sync :start
    play_pattern_timed [degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major)], 
                       [beat/4, beat/2, beat/4, beat/2]
                       end

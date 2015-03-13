@@ -8,5 +8,5 @@ end
 
 beat = 1/2.0
 
-play_pattern_timed degree_seq(111, :A1, :major), 
+play_pattern_timed degree_seq(1111, :A1, :major), 
                    [beat/4, beat/2, beat/4, beat/2, beat/4, beat/4]

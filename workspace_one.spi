@@ -1,7 +1,7 @@
 beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
-def degree_seq(pattern, root, scale=nil)
+def degrees_seq(pattern, root, scale=nil)
   if !scale
     scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end
@@ -84,7 +84,7 @@ live_loop :synth do
    with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
-   play_pattern_timed degree_seq(444444, :D2), 
+   play_pattern_timed degrees_seq(444444, :D2), 
                       [beat/4, beat/2, beat/4, beat/2, beat/4, beat/4]
  #                     end
 #                      sync :start

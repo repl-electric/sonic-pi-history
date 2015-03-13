@@ -9,22 +9,21 @@ voice_s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Ah
 
 live_loop :clapper do
   with_fx :level, amp: 0 do
-  32.times{sync :hit}
-  sample clap_s, start: 0.2, amp: 0.25
-  sync :hit
-  sample clap_s, start: 0.1, amp: 0.3
-  sync :hit
-  sample clap_s, start: 0.09, amp: 0.4
-  sync :hit
-  sample clap_s, amp: 0.4, rate: -1.0
-end
+    32.times{sync :hit}
+    sample clap_s, start: 0.2, amp: 0.25
+    sync :hit
+    sample clap_s, start: 0.1, amp: 0.3
+    sync :hit
+    sample clap_s, start: 0.09, amp: 0.4
+    sync :hit
+    sample clap_s, amp: 0.4, rate: -1.0
+  end
 end
 
 live_loop :voices do
   sync :atmosphere
-with_fx(:reverb, room: 1.0, damp: 1){
-  with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
-    sample voice_s}}}
+  with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
+  sample voice_s}}}
 end
 
 def degrees_seq(pattern, root, s=nil)

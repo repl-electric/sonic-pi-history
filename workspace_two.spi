@@ -20,7 +20,7 @@ use_synth :dsaw
 #play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
  #                  [beat, beat, beat, beat, beat, beat]
 
-play_pattern_timed ["C#5"], 
+play_pattern_timed ["#C5"], 
                    [beat, beat, beat, beat, beat, beat]
 
  

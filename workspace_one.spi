@@ -10,9 +10,7 @@ sample clap_s, start: 0.1, amp: 0.3
 sync :hit
 sample clap_s, start: 0.09, amp: 0.4
 sync :hit
-sample clap_s, amp: 0.4, rate: -1
-
-
+sample clap_s, amp: 0.4, rate: -1.0
 end
 
 def degrees_seq(pattern, root, scale=nil)
@@ -57,7 +55,7 @@ sync :half_beat
   sample shaker_s,amp: 0.4, start: start
   end
   sleep beat/2
-  sample shaker_s, amp: 0.2, start: 0.3
+#  sample shaker_s, amp: 0.2, start: 0.3
   r+=1
   end
 end

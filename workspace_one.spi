@@ -93,7 +93,7 @@ live_loop :synth do
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
                      sync :hit
                      
-                     ctl my, note: :A3
+                     control my, note: :A3
   
 play_pattern_timed degrees_seq(111111111111111, :Cs2), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]

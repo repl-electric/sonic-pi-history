@@ -16,27 +16,6 @@ def hollowed_synth(n)
   end
 end
 
-live_loop :clapper do
-  with_fx :level, amp: 0.0 do
-    32.times{sync :hit}
-    sample clap_s, start: 0.2, amp: 0.25
-    sync :hit
-    sample clap_s, start: 0.1, amp: 0.3
-    sync :hit
-    sample clap_s, start: 0.09, amp: 0.4
-    sync :hit
-    sample clap_s, amp: 0.4, rate: -1.0
-  end
-end
-
-live_loop :voices do
-  with_fx :level, amp: 0.5 do
-    sync :atmosphere
-    with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
-    sample voice_s, attack: 1.0, amp: 0.5}}}}}
-  end
-end
-
 def degrees_seq(pattern, root, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
@@ -62,8 +41,29 @@ live_loop :clock do
   sleep beat/2
 end
 
+live_loop :clapper do
+  with_fx :level, amp: 1.0 do
+    32.times{sync :hit}
+    sample clap_s, start: 0.2, amp: 0.25
+    sync :hit
+    sample clap_s, start: 0.1, amp: 0.3
+    sync :hit
+    sample clap_s, start: 0.09, amp: 0.4
+    sync :hit
+    sample clap_s, amp: 0.4, rate: -1.0
+  end
+end
+
+live_loop :voices do
+  with_fx :level, amp: 0.5 do
+    sync :atmosphere
+    with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
+    sample voice_s, attack: 1.0, amp: 0.5}}}}}
+  end
+end
+
 r=0
-r2 = 0
+r2=0
 live_loop :ride do
 with_fx :level, amp: 0.1 do
   sync :half_beat

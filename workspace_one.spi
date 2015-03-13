@@ -6,9 +6,9 @@ live_loop :clapper do
  32.times{sync :hit}
  sample clap_s, start: 0.2, amp: 0.25
  sync :hit
- sample clap_2, start: 0.1, amp: 0.5
+ sample clap_2, start: 0.1, amp: 0.3
  sync :hit
- sample clap_2, start: 0.09, amp: 0.5
+ sample clap_2, start: 0.09, amp: 0.4
 
  end
 

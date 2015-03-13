@@ -95,5 +95,6 @@ live_loop :pulse do
   with_synth :pulse  do
     play :C2, release: beat*8, amp: 0.1
   end
+  sleep beat*8
   
 end

@@ -1,7 +1,7 @@
 use_synth :pulse
 
 with_fx :pitch_shift, pitch_dis: 0.01 do
-#with_fx :slicer, phase: 1/128.0 do
+with_fx :slicer, phase: 1/128.0 do
 play degree(5, :Cs4, :major), release: 4
-#end
+end
 end

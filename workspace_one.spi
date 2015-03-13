@@ -1,6 +1,7 @@
 beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
+high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_1.wav"
 
 live_loop :clapper do
 32.times{sync :hit}
@@ -50,7 +51,7 @@ sync :half_beat
     else
     0.45
   end
-  
+  sample high_hat_s
   with_fx :reverb do
   sample shaker_s,amp: 0.4, start: start
   end
@@ -68,7 +69,7 @@ end
 n=0
 live_loop :drums do
   cue :hit
-  #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav", rate: 0.1, amp: 0.25
+  #sample clap_s, rate: 0.1, amp: 0.25
   
   with_fx(:lpf, cutoff: 40){
   sample :drum_heavy_kick, amp: 2}
@@ -95,7 +96,6 @@ def degree_seq(pattern, root, scale)
   pattern.to_s.split.map(&:to_i)
 end
 
-
 z=0
 live_loop :synth do
  # sync :beat
@@ -105,23 +105,20 @@ live_loop :synth do
   sync :hit
 
   my = play degrees_seq(222222222222222, :Cs2), release: beat/2*16*3
-
   control my, note: degrees_seq(2, :Cs2)[0]
   
   play_pattern_timed degrees_seq(222222222222222222, :Cs2), 
                      [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-  sync :hit
-                     
+  sync :hit                  
   control my, note: degrees_seq(1, :Cs2)[0]
   
-play_pattern_timed   degrees_seq(1111111111111111111, :Cs2), 
-                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-                   sync :hit
+  play_pattern_timed degrees_seq(1111111111111111111, :Cs2), 
+                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+  sync :hit
 
-   control my, note: degrees_seq(7, :Cs2)[0]
-
+  control my, note: degrees_seq(7, :Cs2)[0]
                    
-  play_pattern_timed   degrees_seq(77777777777777777777, :Cs1), 
+  play_pattern_timed degrees_seq(77777777777777777777, :Cs1), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
   
  

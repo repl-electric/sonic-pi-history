@@ -18,6 +18,9 @@ use_synth :dsaw
 
 play :Ds5
 
+play degree(1, :A5, :major)
+
+
 
 #play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
 #                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]

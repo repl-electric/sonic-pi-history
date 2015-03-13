@@ -2,6 +2,7 @@ beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
 live_loop :clapper do
+sync :start
  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
  sleep 100
 end

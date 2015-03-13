@@ -75,7 +75,7 @@ live_loop :synth do
                       [beat/4, beat/2, beat/4, beat/2]
 
    play_pattern_timed [degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major),degree(2,:C1,:major)], 
-                      [beat/4, beat/2]
+                      [beat/4, beat/2, beat/4, beat/2]
                     
                   
                   end

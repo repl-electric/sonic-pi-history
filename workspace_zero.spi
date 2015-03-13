@@ -22,7 +22,7 @@ end
 
 live_loop :voices do
   sync :atmosphere
-  with_fx(:reverb){sample voice_s}
+  with_fx(:reverb, room: 10){sample voice_s}
 end
 
 def degrees_seq(pattern, root, s=nil)

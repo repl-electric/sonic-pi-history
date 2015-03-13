@@ -5,7 +5,7 @@ def degree_seq(pattern, root, scale=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 
-beat = 1/2.0
+beat = 1/4.0
 
 :G3
 
@@ -22,7 +22,6 @@ play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5],
 
 play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
                    [beat, beat, beat, beat, beat, beat]
-
 
 play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
                    [beat, beat, beat, beat, beat, beat]

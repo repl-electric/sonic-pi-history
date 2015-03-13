@@ -92,7 +92,7 @@ end
 
 live_loop :pulse do
   sync :start
-  with_fx :reverb, room: 400 do
+  with_fx :reverb, room: 400, mix: 0.9 do
   with_synth :pulse  do
     play :C4, release: beat*16, amp: 0.025
   end

@@ -80,7 +80,7 @@ with_fx :level, amp: 0.1 do
       sample shaker_s,amp: 0.4, start: start
     end
     sleep beat/2
-    sample shaker_s, amp: 0.2, start: 0.3
+    #sample shaker_s, amp: 0.2, start: 0.3
     r+=1
   end
   r2+=1

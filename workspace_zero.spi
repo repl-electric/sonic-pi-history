@@ -21,11 +21,11 @@ live_loop :clapper do
 end
 
 live_loop :voices do
-with_fx :level, amp: 0.0 do
-  sync :atmosphere
-  with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
-  sample voice_s, attack: 1.0, amp: 0.5}}}}}
-end
+  with_fx :level, amp: 0.0 do
+    sync :atmosphere
+    with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
+    sample voice_s, attack: 1.0, amp: 0.5}}}}}
+  end
 end
 
 def degrees_seq(pattern, root, s=nil)
@@ -88,18 +88,21 @@ live_loop :drums do
   with_fx(:lpf, cutoff: 10){
   sample :drum_heavy_kick, amp: 2, rate: 1.0} #0.7}
   sleep beat
-  case n%6
-  when 0
-    with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
-    #sample snare2_s, amp: 1.2}}}
-  when 3
-    with_fx(:bitcrusher, bits: 8){
-    #sample snare2_s, amp: 1.2, start: 0.15}
-  when 5
-    with_fx(:bitcrusher, bits: 7){
-    #sample snare2_s, amp: 1.3, start: 0.15}
-  else
-    #sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0
+
+  with_fx :level, amp: 0.0 do
+    case n%6
+    when 0
+      with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
+      sample snare2_s, amp: 1.2}}}
+    when 3
+      with_fx(:bitcrusher, bits: 8){
+      sample snare2_s, amp: 1.2, start: 0.15}
+    when 5
+      with_fx(:bitcrusher, bits: 7){
+      sample snare2_s, amp: 1.3, start: 0.15}
+    else
+      sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0
+    end
   end
   sleep beat
   n+=1
@@ -120,24 +123,24 @@ live_loop :synth do
     control my, note: degrees_seq(2, :Cs4)[0]
 
     with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01 do
-    play_pattern_timed degrees_seq(222222222222222222, :Cs4),
-      [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-    sync :hit
-    control my, note: degrees_seq(1, :Cs4)[0]
+      play_pattern_timed degrees_seq(222222222222222222, :Cs4),
+        [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+      sync :hit
+      control my, note: degrees_seq(1, :Cs4)[0]
 
-    play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
-      [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-    sync :hit
+      play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
+        [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+      sync :hit
 
-    control my, note: degrees_seq(7, :Cs4)[0]
+      control my, note: degrees_seq(7, :Cs4)[0]
 
-    play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
-      [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+      play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
+        [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 
-    #  play_pattern_timed chord_seq(21141111, :A1),
-    ##                     [beat/4, beat/2, beat/4, beat/4,
-    #                      beat/4, beat/2, beat/2, beat/4]
-     end
+      #  play_pattern_timed chord_seq(21141111, :A1),
+      ##                     [beat/4, beat/2, beat/4, beat/4,
+      #                      beat/4, beat/2, beat/2, beat/4]
+    end
   end
   z+=1
 end

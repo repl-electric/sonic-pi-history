@@ -2,6 +2,6 @@ use_synth :pulse
 
 with_fx :pitch_shift do
 with_fx :slicer, phase: 1/128.0 do
-play :A4, release: 4
+play degree(1, :Cs4, :major), release: 4
 end
 end

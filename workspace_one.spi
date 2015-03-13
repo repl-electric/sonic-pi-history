@@ -89,10 +89,26 @@ live_loop :synth do
   with_fx :lpf, cutoff: 70 do
   sync :hit
   play degree(1, :A1, :major)
-   
-  play_pattern_timed chord_seq(21141111, :A1), 
-                     [beat/4, beat/2, beat/4, beat/4,
-                      beat/4, beat/2, beat/2, beat/4]
+ 
+
+
+play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
+                   [beat, beat, beat, beat, beat, beat]
+
+play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
+                   [beat, beat, beat, beat, beat, beat]
+
+
+play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
+                   [beat, beat, beat, beat, beat, beat]
+
+
+
+
+ 
+#  play_pattern_timed chord_seq(21141111, :A1), 
+##                     [beat/4, beat/2, beat/4, beat/4,
+#                      beat/4, beat/2, beat/2, beat/4]
               end
   z+=1
 end 

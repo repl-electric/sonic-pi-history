@@ -1,5 +1,7 @@
 use_synth :pulse
 
+with_fx :pitch_shift do
 with_fx :slicer, phase: 1/128.0 do
 play 60, release: 4
+end
 end

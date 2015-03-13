@@ -143,7 +143,7 @@ with_fx :level, amp: 1.0 do
       sync :hit
       control my, note: degrees_seq(1, :Cs3)[0]
 
-      play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
+      play_pattern_timed degrees_seq(1111111111111111111, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit
 

@@ -81,21 +81,13 @@ live_loop :synth do
  # sync :beat
   use_synth :dsaw
   use_synth_defaults detune: 0.1, amp: 1.0, attack: 0.001, release: 0.25, 
-   with_fx :lpf, cutoff: 70 do
+  with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
    play_pattern_timed degrees_seq(1331, :A1), 
                       [beat/2, beat/2, beat/2, beat/2]
- #                     end
-#                      sync :start
-
-#  4.times do
- #  play_pattern_timed [degree(3,root,:major),degree(3,root,:major),degree(3,root,:major),degree(3,root,:major)], 
-  #                    [beat/4, beat/2, beat/4, beat/2]
-   #                  end
-                    
                   
-                  end
+              end
 #  sleep beat*2
   z+=1
 end 

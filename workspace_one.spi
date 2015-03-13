@@ -51,7 +51,7 @@ end
 n=0
 live_loop :drums do
   cue :hit
-  with_fx(:lpf, cutoff: 40){
+  with_fx(:lpf, cutoff: 90){
   sample :drum_heavy_kick, amp: 2}
   sleep beat
   case n%6
@@ -84,7 +84,7 @@ live_loop :synth do
   with_fx :lpf, cutoff: 70 do
   sync :beat
 #  2.times do
-   play_pattern_timed degrees_seq(1111, :E3), 
+   play_pattern_timed degrees_seq(4444, :E3), 
                       [beat/4, beat, beat/4, beat/4]
                   
               end

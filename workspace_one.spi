@@ -74,7 +74,7 @@ live_loop :synth do
     play_pattern_timed [degree(1, :C1, :minor), degree(1, :C1, :minor),
                         degree(1, :C1, :minor), degree(1, :C1, :minor)], 
                         [beat/2, beat/4,
-                         beat/4, beat/2]
+                         beat/4, beat/4]
   end
 #  sleep beat*2
   z+=1

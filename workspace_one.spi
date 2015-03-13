@@ -1,6 +1,11 @@
 beat = 1/2.0
 shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictrancer__shaker-hi-hat.wav"
 
+live_loop :clapper do
+ sample "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
+ sleep 100
+end
+
 def degrees_seq(pattern, root, scale=nil)
   if !scale
     scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
@@ -80,6 +85,7 @@ end
 def degree_seq(pattern, root, scale)
   pattern.to_s.split.map(&:to_i)
 end
+
 
 z=0
 live_loop :synth do

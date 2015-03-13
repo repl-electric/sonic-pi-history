@@ -85,7 +85,7 @@ z=0
 live_loop :synth do
  # sync :beat
   use_synth :dsaw
-  use_synth_defaults detune: 0.01, amp: 1.0, attack: 0.01, release: 0.25, note_slide: 2.0
+  use_synth_defaults detune: 0.1, amp: 1.0, attack: 0.01, release: 0.25, note_slide: 2.0
   with_fx :lpf, cutoff: 70 do
   sync :hit
 
@@ -97,7 +97,6 @@ play_pattern_timed degrees_seq(1111111, :Cs5),
 play_pattern_timed degrees_seq(2222222, :Cs5), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
                      sync :hit
-
                    
 play_pattern_timed degrees_seq(7777777, :Cs4), 
                    [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]

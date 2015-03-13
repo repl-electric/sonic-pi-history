@@ -50,7 +50,9 @@ live_loop :clapper do
     sync :hit
     sample clap_s, start: 0.09, amp: 0.4
     sync :hit
-    sample clap_s, amp: 0.4, rate: -1.0
+    sample clap_s, start: 0.04, amp: 0.4
+
+#    sample clap_s, amp: 0.4, rate: -1.0
   end
 end
 

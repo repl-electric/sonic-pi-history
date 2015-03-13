@@ -6,7 +6,7 @@ def degree_seq(pattern, root, scale=nil)
 end
 
 
-beat = 1/4.0
+beat = 1/8.0
 
 :G3
 

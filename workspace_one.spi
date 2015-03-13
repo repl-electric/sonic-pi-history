@@ -36,7 +36,7 @@ live_loop :ride do
   sample shaker_s,amp: 0.4, start: start
   end
   sleep beat/2
-   #sample shaker_s, amp: 0.2, start: 0.3
+  #sample shaker_s, amp: 0.2, start: 0.3
   r+=1
   end
 end
@@ -83,7 +83,7 @@ live_loop :synth do
   sync :beat
 #  2.times do
    play_pattern_timed degrees_seq(4444, :E3), 
-                      [beat/4, beat, beat/4, beat/4]
+                      [beat/4, beat/2, beat/4, beat/4]
                   
               end
 #  sleep beat*2

@@ -98,7 +98,8 @@ live_loop :drums do
   cue :hit
 #  sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 40){
-#  sample :drum_heavy_kick, amp: 2, rate: 1.0} #0.7}
+  sample :drum_heavy_kick, amp: 2, rate: 1.0 #0.7
+  }
   sleep beat
 
   with_fx :level, amp: 0.4 do

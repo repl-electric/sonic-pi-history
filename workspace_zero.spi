@@ -197,5 +197,5 @@ end
 
 live_loop :hollowed do
   sync :start
-#  hollowed_synth degree(7, :Cs2, :major)
+  hollowed_synth degree(7, :Cs2, :major)
 end

@@ -5,7 +5,6 @@ def degree_seq(pattern, root, scale=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
 end
 
-
 beat = 1/2.0
 
 :G3

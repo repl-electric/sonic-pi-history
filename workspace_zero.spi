@@ -42,7 +42,7 @@ live_loop :clock do
 end
 
 live_loop :clapper do
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 0.0 do
     32.times{sync :hit}
     sample clap_s, start: 0.2, amp: 0.25
     sync :hit

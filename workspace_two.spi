@@ -18,12 +18,4 @@ use_synth :dsaw
 play_pattern_timed degree_seq(1111, :C4), 
                    [beat, beat, beat, beat, beat, beat]
 
-                   
-play_pattern_timed [:F4, :F4, :F4, :F4, :F4, :F4], 
-                   [beat, beat, beat, beat, beat, beat]
-                   
-
-play_pattern_timed [:E4, :E4, :E4, :E4, :E4, :E4], 
-                   [beat, beat, beat, beat, beat, beat]
-                                      
-                   
+                  

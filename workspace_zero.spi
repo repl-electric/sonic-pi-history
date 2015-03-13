@@ -5,6 +5,7 @@ high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK
 high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_2.wav"
 #snare2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_Clap_\&_Snare_2.wav"
 snare2_s = :drum_snare_soft
+voice_s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Ah p/vor_sopr_sustain_ah_p_01.wav"
 
 live_loop :clapper do
   32.times{sync :hit}
@@ -15,6 +16,11 @@ live_loop :clapper do
   sample clap_s, start: 0.09, amp: 0.4
   sync :hit
   sample clap_s, amp: 0.4, rate: -1.0
+end
+
+live_loop :voices do
+  sync :atmosphere
+  with_fx(:reverb){sample voice_s}
 end
 
 def degrees_seq(pattern, root, s=nil)
@@ -81,7 +87,7 @@ live_loop :drums do
   case n%6
   when 0
     with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
-      sample snare2_s, amp: 1.2}}}
+    sample snare2_s, amp: 1.2}}}
   when 3
     with_fx(:bitcrusher, bits: 8){
     sample snare2_s, amp: 1.2, start: 0.15}
@@ -142,6 +148,7 @@ live_loop :pulse do
 end
 
 live_loop :atmos do
+  cue :atmosphere
   use_synth :dark_ambience
   sync :hit
   play degree(3, :Cs3, :major), attack: 4, release: beat*32, amp: 0.8

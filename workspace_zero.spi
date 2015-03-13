@@ -67,7 +67,7 @@ r2=0
 live_loop :ride do
 with_fx :level, amp: 0.1 do
   sync :half_beat
-  sample (ring high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.3, start: 0.01
+  #sample (ring high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.3, start: 0.01
   #sleep beat
   2.times do
     start = case r%6

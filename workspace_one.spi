@@ -85,7 +85,7 @@ z=0
 live_loop :synth do
  # sync :beat
   use_synth :pulse
-  use_synth_defaults detune: 0.01, amp: 1.0, attack: 0.001, release: 0.25, note_slide: 2.0
+  use_synth_defaults detune: 0.01, amp: 0.5, attack: 0.001, release: 0.25, note_slide: 2.0
   with_fx :lpf, cutoff: 70 do
   sync :hit
 

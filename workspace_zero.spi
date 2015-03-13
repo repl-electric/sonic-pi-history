@@ -15,11 +15,11 @@ sync :hit
 sample clap_s, amp: 0.4, rate: -1.0
 end
 
-def degrees_seq(pattern, root, scale=nil)
-if !scale
-  scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+def degrees_seq(pattern, root, s=nil)
+if !s
+  s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
 end
-pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
+pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
 end
 
 def chord_seq(pattern, root, scale=nil)

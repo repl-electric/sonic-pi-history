@@ -72,15 +72,17 @@ live_loop :synth do
   use_synth_defaults amp: 0.5, attack: 0.1, release: 0.2
    with_fx :lpf, cutoff: 70 do
 
+  root = :C1
+   
   sync :start
   4.times do
-   play_pattern_timed [degree(1,:D1,:major),degree(1,:C1,:major),degree(1,:C1,:major),degree(1,:C1,:major)], 
+   play_pattern_timed [degree(1,root,:major),degree(1,root,:major),degree(1,root,:major),degree(1,root,:major)], 
                       [beat/4, beat/2, beat/4, beat/2]
                       end
                       sync :start
 
   4.times do
-   play_pattern_timed [degree(3,:C1,:major),degree(3,:C1,:major),degree(3,:C1,:major),degree(3,:C1,:major)], 
+   play_pattern_timed [degree(3,root,:major),degree(3,root,:major),degree(3,root,:major),degree(3,root,:major)], 
                       [beat/4, beat/2, beat/4, beat/2]
                      end
                     

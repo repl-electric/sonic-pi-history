@@ -43,24 +43,22 @@ end
 r=0
 live_loop :ride do
 sync :half_beat   
-sample (ring high_hat_s, high_hat2_s)[r], amp: 10.2
+sample (ring high_hat_s, high_hat2_s)[r], amp: 0.2
 #sleep beat
-
-  2.times do
-  start = case r%6
-    when 0
-    0.3  
-    else
-    0.45
-  end
-  with_fx :reverb do
-  sample shaker_s,amp: 0.4, start: start
-  end
-  sleep beat/2
-  sample shaker_s, amp: 0.2, start: 0.3
-  r+=1
-  end
+2.times do
+start = case r%6
+  when 0
+  0.3  
+  else
+  0.45
 end
+with_fx :reverb do
+sample shaker_s,amp: 0.4, start: start
+end
+sleep beat/2
+sample shaker_s, amp: 0.2, start: 0.3
+r+=1
+end end
 
 live_loop :heart do
   sync :hit

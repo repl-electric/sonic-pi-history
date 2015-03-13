@@ -8,4 +8,4 @@ play n, release: 8, amp: 10
 end
 end
 
-hollowed_synth degree(4, :Cs4, :major)
+hollowed_synth degree(1, :Cs4, :major)

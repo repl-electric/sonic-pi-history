@@ -72,7 +72,7 @@ live_loop :synth do
   use_synth_defaults amp: 0.5, attack: 0.09, release: 0.15
    with_fx :lpf, cutoff: 70 do
 
-  root = :E1
+  root = :B1
    
   sync :start
   4.times do

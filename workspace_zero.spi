@@ -127,8 +127,6 @@ live_loop :synth do
   use_synth :dsaw
   use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
 
-  hollowed_synth degree(1, :Cs4, :major)
-
   with_fx :lpf, cutoff: 70 do
     sync :hit
     my = play degrees_seq(222222222222222, :Cs4), release: beat/2*16*3, attack: 1
@@ -185,4 +183,9 @@ live_loop :atmos do
   sync :hit
   play degree(7, :Cs2, :major), attack: 4, release: beat*32, amp: 0.8
   sleep beat*32
+end
+
+live_loop :hollowed do
+  sync :atomsphere
+  hollowed_synth degree(1, :Cs4, :major)
 end

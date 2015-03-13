@@ -85,7 +85,7 @@ live_loop :synth do
   sync :beat
 #  2.times do
    play_pattern_timed degrees_seq(2222, :E1), 
-                      [beat/2, beat/2, beat/2, beat/2]
+                      [beat/4, beat/4, beat/4, beat/4]
                   
               end
 #  sleep beat*2

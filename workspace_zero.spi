@@ -186,6 +186,6 @@ live_loop :atmos do
 end
 
 live_loop :hollowed do
-  sync :hit
-  hollowed_synth degree(1, :Cs5, :major)
+  sync :start
+  hollowed_synth degree(1, :Cs4, :major)
 end

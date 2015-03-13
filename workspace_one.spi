@@ -74,9 +74,13 @@ live_loop :synth do
 
   root = :A1
    
+def degree_seq(pattern, root, scale)
+  pattern.to_s.split
+end
+   
   sync :beat
 #  2.times do
-   play_pattern_timed [degree(1,root,:major),degree(1,root,:major),degree(1,root,:major),degree(1,root,:major)], 
+   play_pattern_timed degree_seq(1111, root :major), 
                       [beat/4, beat/2, beat/4, beat/2, beat/4, beat/4]
  #                     end
 #                      sync :start

@@ -174,7 +174,7 @@ end
 end
 
 live_loop :atmos do
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
   cue :atmosphere
   use_synth :dark_ambience
   sync :hit

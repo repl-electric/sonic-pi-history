@@ -174,7 +174,7 @@ end
 end
 
 live_loop :atmos do
-with_fx :level, amp: 1.0 do
+with_fx :level, amp: 0.0 do
   cue :atmosphere
   use_synth :dark_ambience
   sync :hit
@@ -193,7 +193,7 @@ end
 
 live_loop :hollowed do
   sync :start
-  hollowed_synth degree(1, :Cs4, :major)
+  #hollowed_synth degree(1, :Cs4, :major)
 end
 
 set_volume! 1.0

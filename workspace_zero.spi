@@ -100,9 +100,10 @@ live_loop :drums do
   #sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 40){
     if n%3 ==0
-else
-    sample :drum_heavy_kick, amp: 1.5, rate: 1.0 #0.7
-end
+    sample :drum_heavy_kick, amp: 1.5, rate: 0.7
+    else
+      sample :drum_heavy_kick, amp: 1.5, rate: 1.0 #0.7
+    end
   }
   sleep beat
 

@@ -66,7 +66,7 @@ end
 
 live_loop :heart do
   sample kick_s, amp: 10
-  sleep beat/2.0
+  sleep beat/4.0
 end
 
 r2=0

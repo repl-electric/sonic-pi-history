@@ -155,7 +155,7 @@ live_loop :synth do
       end
 
       rate = 0.8
-      kick_start = 0.0
+      kick_start = 0.01
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 

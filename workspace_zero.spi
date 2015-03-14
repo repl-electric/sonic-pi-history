@@ -152,7 +152,7 @@ live_loop :synth do
       if(dice(6) >= 85)
         control my, note: degrees_seq(7, :Cs4)[0]
       else
-        control my, note: degrees_seq(7, :Cs3)[0]
+        control my, note: degrees_seq(7, :Cs2)[0]
       end
 
       rate = 1.0

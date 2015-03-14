@@ -94,9 +94,9 @@ live_loop :ride do |r|
 end
 
 live_loop :heart do
-  sync :start
-  sample :elec_hollow_kick, start: 0.2, amp: 2.0
-  sleep beat/4
+  sync :hit
+  #  sleep beat/8
+  sample :elec_hollow_kick, start: 0.2
 end
 
 rate = 1.0
@@ -118,7 +118,7 @@ live_loop :drums do |n|
       sample snare2_s, amp: 1.15, start: 0.15,  finish: 0.8}
     when 5
       with_fx(:bitcrusher, bits: 7){
-      sample snare2_s, amp: 1.18, start: 0.15, finish: 0.9}
+      sample snare2_s, amp: 1.1, start: 0.15, finish: 0.9}
     else
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end

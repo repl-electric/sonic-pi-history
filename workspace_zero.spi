@@ -101,12 +101,6 @@ live_loop :drums do
   cue :hit
   #sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 40){
-    if n%9 ==0
-      rate = 0.7
-    elsif n%9 == 4
-      rate = 1.0
-    end
-
     sample kick, amp: 1.5, rate: rate  }
   sleep beat
 

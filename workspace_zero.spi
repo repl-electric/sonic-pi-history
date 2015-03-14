@@ -6,7 +6,7 @@ high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PAC
 snare2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_Clap_\&_Snare_2.wav"
 #snare2_s = :drum_snare_soft
 voice_s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Ah p/vor_sopr_sustain_ah_p_01.wav"
-kick_s = "/Users/josephwilk/Workspace/music/samples/salamanderDrumkit/OH/kick_OH_P_2.wav"
+kick_s = "/Users/josephwilk/Workspace/music/samples/salamanderDrumkit/OH/kick_OH_P_3.wav"
 
 def hollowed_synth(n)
   use_synth :hollow

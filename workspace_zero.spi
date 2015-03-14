@@ -96,7 +96,7 @@ end
 
 n=0
 rate = 1.0
-kick_start = 0.05
+kick_start = 0.08
 kick=:drum_heavy_kick
 live_loop :drums do
   cue :hit
@@ -133,7 +133,7 @@ live_loop :synth do
 
     with_fx :lpf, cutoff: 70 do
       rate = 1.0
-      kick_start = 0.05
+      kick_start = 0.08
       sync :hit
       my = play degrees_seq(222222222222222, :Cs4), release: (beat/2)*18*3, attack: 1
       control my, note: degrees_seq(2, :Cs4)[0]

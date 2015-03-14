@@ -64,8 +64,8 @@ live_loop :voices do
   end
 end
 
-live_loop :heart do
-  sample :elec_hollow_kick, amp: 8 
+live_loop :heartz do
+  sample :elec_hollow_kick, amp:2 
   sleep beat/4.0
 end
 

@@ -100,7 +100,7 @@ kick=:drum_heavy_kick
 live_loop :drums do
   cue :hit
   #sample clap_s, rate: 0.1, amp: 0.25
-  with_fx(:lpf, cutoff: 90){
+  with_fx(:lpf, cutoff: 40){
     sample kick, amp: 1.5, rate: rate  }
   sleep beat
 

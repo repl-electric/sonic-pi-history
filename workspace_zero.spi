@@ -65,7 +65,7 @@ live_loop :voices do
 end
 
 live_loop :heartz do
-  #sample :elec_hollow_kick, amp: 1, start: 0.1, finish: 0.2, rate: 0.6 
+  #sample :elec_hollow_kick, amp: 1, start: 0.1, finish: 0.2, rate: 0.6
   sleep beat/2.0
 end
 
@@ -140,27 +140,29 @@ live_loop :synth do |z|
       #my = play degrees_seq(112222222222222, :Cs4), release: (beat/2)*18*3, attack: 1
       #control my, note: degrees_seq(2, :Cs4)[0]
 
+      octave = 4
+
       x = with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do
-        play_pattern_timed degrees_seq(222222222222222222, :Cs4),
+        play_pattern_timed degrees_seq(222222222222222222, :"Cs#{octave}"),
           [beat/4, beat/4, beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
         sync :hit
         #control my, detune: 0.1
         #control my, note: degrees_seq(1, :Cs4)[0]
 
-        play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
+        play_pattern_timed degrees_seq(1111111111111111111, :"Cs#{octave}"),
           [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
         sync :hit
 
         if(dice(6) >= 85)
-        #  control my, note: degrees_seq(7, :Cs4)[0]
+          #  control my, note: degrees_seq(7, :Cs4)[0]
         else
-        #  control my, note: degrees_seq(7, :Cs3)[0]
+          #  control my, note: degrees_seq(7, :Cs3)[0]
         end
 
         rate = 1.0
         kick_start = 0.0
         #control my, detune: 0.0
-        play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
+        play_pattern_timed degrees_seq(77777777777777777777, :"Cs#{octave-1}"),
           [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
 
         #  play_pattern_timed chord_seq(21141111, :A1),

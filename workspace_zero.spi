@@ -152,13 +152,13 @@ live_loop :synth do
       if(dice(6) >= 85)
         control my, note: degrees_seq(7, :Cs4)[0]
       else
-        control my, note: degrees_seq(7, :Cs2)[0]
+        control my, note: degrees_seq(7, :Cs3)[0]
       end
 
       rate = 1.0
       kick_start = 0.0
       #control my, detune: 0.0 
-      play_pattern_timed degrees_seq(77777777777777777777, :Cs2),
+      play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
 
       #  play_pattern_timed chord_seq(21141111, :A1),

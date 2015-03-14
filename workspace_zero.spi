@@ -64,6 +64,11 @@ live_loop :voices do
   end
 end
 
+live_loop :heart do
+  sample kick_s
+  sleep beat/2
+end
+
 r2=0
 live_loop :ride do |r|
   with_fx :level, amp: 0.2 do
@@ -122,8 +127,7 @@ live_loop :drums do |n|
   n+=1
 end
 
-z=0
-live_loop :synth do
+live_loop :synth do |z|
   with_fx :level, amp: 1.0 do
     # sync :beat
     use_synth :dsaw
@@ -135,33 +139,33 @@ live_loop :synth do
       sync :hit
       my = play degrees_seq(112222222222222, :Cs4), release: (beat/2)*18*3, attack: 1
       control my, note: degrees_seq(2, :Cs4)[0]
-   
+
       x = with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do
-      play_pattern_timed degrees_seq(222222222222222222, :Cs4),
-        [beat/4, beat/4, beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
-      sync :hit
-      #control my, detune: 0.1 
-      control my, note: degrees_seq(1, :Cs4)[0]
+        play_pattern_timed degrees_seq(222222222222222222, :Cs4),
+          [beat/4, beat/4, beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+        sync :hit
+        #control my, detune: 0.1
+        control my, note: degrees_seq(1, :Cs4)[0]
 
-      play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
-        [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
-      sync :hit
+        play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
+          [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
+        sync :hit
 
-      if(dice(6) >= 85)
-        control my, note: degrees_seq(7, :Cs4)[0]
-      else
-        control my, note: degrees_seq(7, :Cs3)[0]
-      end
+        if(dice(6) >= 85)
+          control my, note: degrees_seq(7, :Cs4)[0]
+        else
+          control my, note: degrees_seq(7, :Cs3)[0]
+        end
 
-      rate = 1.0
-      kick_start = 0.0
-      #control my, detune: 0.0 
-      play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
-        [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
+        rate = 1.0
+        kick_start = 0.0
+        #control my, detune: 0.0
+        play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
+          [beat/4, beat/2, beat/2, beat/2, beat/2, beat/2]
 
-      #  play_pattern_timed chord_seq(21141111, :A1),
-      ##                     [beat/4, beat/2, beat/4, beat/4,
-      #                      beat/4, beat/2, beat/2, beat/4]
+        #  play_pattern_timed chord_seq(21141111, :A1),
+        ##                     [beat/4, beat/2, beat/4, beat/4,
+        #                      beat/4, beat/2, beat/2, beat/4]
       end
     end
     z+=1

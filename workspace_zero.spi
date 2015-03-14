@@ -115,10 +115,10 @@ live_loop :drums do |n|
       sample snare2_s, amp: 1.1, finish: 1.0}}}
     when 3
       with_fx(:bitcrusher, bits: 8){
-      sample snare2_s, amp: 1.2, start: 0.15,  finish: 0.8}
+      sample snare2_s, amp: 1.15, start: 0.15,  finish: 0.8}
     when 5
       with_fx(:bitcrusher, bits: 7){
-      sample snare2_s, amp: 1.3, start: 0.15, finish: 0.9}
+      sample snare2_s, amp: 1.18, start: 0.15, finish: 0.9}
     else
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end

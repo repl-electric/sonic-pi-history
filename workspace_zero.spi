@@ -158,13 +158,14 @@ live_loop :synth do |z|
         sync :hit
 
         if(dice(6) >= 85)
-          #  control my, note: degrees_seq(7, :Cs4)[0]
+          #  control my, note: degrees_seq(7, :"Cs#{octave}")[0]
         else
-          #  control my, note: degrees_seq(7, :Cs3)[0]
+          #  control my, note: degrees_seq(7, :"Cs#{octave-1}")[0]
         end
 
         rate = 1.0
         kick_start = 0.0
+        control bit, bits: 12
         control my, detune: 0.0
         play_pattern_timed degrees_seq(77777777777777777777, :"Cs#{octave-1}"),
           [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2,beat/2,beat/2]

@@ -142,7 +142,6 @@ live_loop :synth do
       sync :hit
       control my, note: degrees_seq(1, :Cs4)[0]
 
-      rate = 0.8
       play_pattern_timed degrees_seq(1111111111111111111, :Cs4),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit
@@ -153,6 +152,7 @@ live_loop :synth do
         control my, note: degrees_seq(7, :Cs3)[0]
       end
 
+      rate = 0.8
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
 

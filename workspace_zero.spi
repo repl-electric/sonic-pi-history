@@ -154,7 +154,7 @@ live_loop :synth do
         control my, note: degrees_seq(7, :Cs3)[0]
       end
 
-      rate = 0.8
+      rate = 1.0
       kick_start = 0.01
       play_pattern_timed degrees_seq(77777777777777777777, :Cs3),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]

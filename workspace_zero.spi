@@ -90,7 +90,7 @@ end
 
 live_loop :heart do
   sync :hit
-  sample :elec_hollow_kick, start: 0.25, amp: 0.0
+  sample :elec_hollow_kick, start: 0.25, amp: 0.40
 end
 
 n=0

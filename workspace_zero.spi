@@ -143,6 +143,7 @@ live_loop :synth do
       play_pattern_timed degrees_seq(222222222222222222, :Cs4),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit
+      control my, detune: 0.1 
       control my, note: degrees_seq(1, :Cs4)[0]
 
       play_pattern_timed degrees_seq(1111111111111111111, :Cs4),

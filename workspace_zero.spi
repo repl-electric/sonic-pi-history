@@ -95,10 +95,9 @@ live_loop :heart do
   sample :elec_hollow_kick, start: 0.2
 end
 
-n=0
 rate = 1.0
 kick_start = 0.05
-live_loop :drums do
+live_loop :drums do |n|
   cue :hit
   #sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 40){

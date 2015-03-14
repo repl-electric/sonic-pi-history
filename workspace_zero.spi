@@ -123,7 +123,7 @@ end
 
 z=0
 live_loop :synth do
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
   # sync :beat
   use_synth :dsaw
   use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
@@ -133,7 +133,7 @@ with_fx :level, amp: 0.0 do
     my = play degrees_seq(222222222222222, :Cs4), release: beat/2*16*3, attack: 1
     control my, note: degrees_seq(2, :Cs4)[0]
 
-    with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01 do
+    #with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01 do
       play_pattern_timed degrees_seq(222222222222222222, :Cs4),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit
@@ -155,7 +155,7 @@ with_fx :level, amp: 0.0 do
       #  play_pattern_timed chord_seq(21141111, :A1),
       ##                     [beat/4, beat/2, beat/4, beat/4,
       #                      beat/4, beat/2, beat/2, beat/4]
-    end
+    #end
   end
   z+=1
 end

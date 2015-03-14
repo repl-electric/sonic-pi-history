@@ -95,7 +95,7 @@ end
 
 live_loop :heart do
    sample :elec_hollow_kick, start: 0.2
-  sleep beat/8
+  sleep beat/4
  
 end
 

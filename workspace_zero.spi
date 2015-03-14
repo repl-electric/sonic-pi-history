@@ -138,7 +138,7 @@ live_loop :synth do
       #my = play degrees_seq(222222222222222, :Cs4), release: (beat/2)*18*3, attack: 1
       #control my, note: degrees_seq(2, :Cs4)[0]
    
-      x = with_fx :distortion, distort: 0.01, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do
+      x = with_fx :distortion, distort: 2.01, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do
       play_pattern_timed degrees_seq(222222222222222222, :Cs4),
         [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
       sync :hit

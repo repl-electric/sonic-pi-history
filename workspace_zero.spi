@@ -128,7 +128,7 @@ live_loop :drums do |n|
 end
 
 live_loop :synth do |z|
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 0.0 do
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.1, note_slide: 0.5

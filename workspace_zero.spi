@@ -98,7 +98,7 @@ end
 n=0
 rate = 1.0
 kick_start = 0.08
-kick=:kick_s
+kick=kick_s
 live_loop :drums do
   cue :hit
   #sample clap_s, rate: 0.1, amp: 0.25

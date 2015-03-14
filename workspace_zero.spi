@@ -138,7 +138,7 @@ live_loop :synth do |z|
       kick_start = 0.01
       sync :hit
 
-      octave = 4
+      octave = 1
 
       my = play degrees_seq(112222222222222, :"Cs#{octave}"), release: (beat/2)*18*3, attack: 2
       control bit, bits: 12

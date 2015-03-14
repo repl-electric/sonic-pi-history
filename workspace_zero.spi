@@ -96,7 +96,7 @@ end
 
 n=0
 rate = 1.0
-kick_start = 0.1
+kick_start = 0.01
 kick=:drum_heavy_kick
 live_loop :drums do
   cue :hit

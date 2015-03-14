@@ -95,7 +95,7 @@ end
 
 live_loop :heart do
   sync :start
-  sample :elec_hollow_kick, start: 0.2
+  sample :elec_hollow_kick, start: 0.2, amp: 2.0
   sleep beat/4
 end
 

@@ -132,7 +132,7 @@ live_loop :synth do |z|
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
-    with_fx :bitcrusher, bits: 12 do
+    with_fx :bitcrusher, bits: 12 do |bit|
     with_fx :lpf, cutoff: 70 do
       rate = 1.0
       kick_start = 0.01
@@ -146,6 +146,8 @@ live_loop :synth do |z|
       x = with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do
         play_pattern_timed degrees_seq(222222222222222222, :"Cs#{octave}"),
           [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+
+         control bit, bits: 8
         sync :hit
         #control my, detune: 0.1
         control my, note: degrees_seq(1, :"Cs#{octave}")[0]

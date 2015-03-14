@@ -90,6 +90,7 @@ end
 
 live_loop :heart do
   sync :hit
+sleep bar/8
   sample :elec_hollow_kick, start: 0.2
 end
 

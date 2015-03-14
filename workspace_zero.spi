@@ -165,7 +165,7 @@ live_loop :synth do |z|
 
         rate = 1.0
         kick_start = 0.0
-        control bit, bits: 5
+        control bit, bits: 8
         control my, detune: 0.0
         play_pattern_timed degrees_seq(77777777777777777777, :"Cs#{octave-1}"),
           [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2,beat/2,beat/2]

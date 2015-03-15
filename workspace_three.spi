@@ -18,7 +18,7 @@ def live(name, opts={}, &block)
   end
 end
 
-live :test, amp: 0.9 do |x|
+live :test, amp: 0.1 do |x|
   puts x
   play 60
 sleep beat

@@ -231,7 +231,7 @@ live_loop :pulse do |p_idx|
 
       (32/4).times{
         sleep beat*2
-        control reverb_fx, room: (ring 0.1, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
+        control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
         p_idx +=1
       }
 

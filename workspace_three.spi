@@ -8,7 +8,7 @@ def live(name, amp, &block)
       block.(@idx)
     end}
   live_loop name do
-    x.()
+    x.(idx)
   end
 end
 

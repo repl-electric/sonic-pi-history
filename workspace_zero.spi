@@ -152,7 +152,6 @@ live_loop :synth do |z|
         #control my, detune: 0.1
         control bit, bits: 10
         control my, note: degrees_seq(1, :"Cs#{octave}")[0]
-        control p_fx, pitch_dis: 2.1
 
         play_pattern_timed degrees_seq(1111111111111111111, :"Cs#{octave}"),
           [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2,beat/2,beat/2]

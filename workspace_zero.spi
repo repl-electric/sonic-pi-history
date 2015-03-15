@@ -178,8 +178,8 @@ live_loop :synth do |z|
           kick_start = 0.0
           control bit, bits: 8
           control my, detune: 0.0
-#          play_pattern_timed degrees_seq(77777777777777777777, :"Cs#{octave-1}"),
-#            [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2,beat/2,beat/2]
+
+          swishing_saw degrees_seq(77777777777777777777, :"Cs#{octave-1}"), lpf_fx, beat  
 
           #  play_pattern_timed chord_seq(21141111, :A1),
           ##                     [beat/4, beat/2, beat/4, beat/4,

@@ -15,4 +15,5 @@ end
 live :test, 0.1 do |x|
   puts x
 sleep beat
+  x+=1
 end

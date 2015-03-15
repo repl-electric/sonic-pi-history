@@ -32,20 +32,20 @@ def chord_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
 end
 
-def live(name, amp, &block)
-  @idx = 0
-  x = lambda{
+def live(name, opts={}, &block)
+  idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end 
+  x = lambda{|idx|
     with_fx :level, amp: amp do
-      block.(@idx)
+      block.(idx)
     end}
-  live_loop name do
-    x.()
+  live_loop name do |idx|
+    x.(idx)
   end
-end
-
-live :test, 0.1 do |x|
-  puts x
-sleep beat
 end
 
 live_loop :clock do

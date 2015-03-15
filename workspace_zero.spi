@@ -145,8 +145,8 @@ notes.each_with_index do |n, idx|
 
   #control my, detune: rand()
   #control p_fx, pitch_dis: rand(0.1) 
-  control lpf_fx, cutoff: (ring 70, 75, 70 ,80, 80, 80,
-                                70, 80, 70 ,85, 85, 85)[idx]
+  control lpf_fx, cutoff: (ring 70, 75, 70 ,80, 80, 90,
+                                70, 80, 70 ,85, 85, 95)[idx]
 #  sleep (ring beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
 end
 end

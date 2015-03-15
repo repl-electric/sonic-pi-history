@@ -148,8 +148,9 @@ live_loop :synth do |z|
 
         degrees_seq(222222222222222222, :"Cs#{octave}").each do |n|
           play n
+          #control my, detune: rand()
+          control p_fx, pitch_dis: rand() 
           sleep beat/2
-          control my, detune: rand()
           end
 
           sync :hit

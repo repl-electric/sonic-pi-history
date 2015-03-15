@@ -128,13 +128,13 @@ live_loop :drums do |n|
 end
 
 def swishing_saw(notes, lpf_fx, beat)
- notes.each do |n|
-          play n
-          #control my, detune: rand()
-          #control p_fx, pitch_dis: rand(0.1) 
-          control lpf_fx, cutoff: rand(70..80)          
-          sleep beat/2
-          end
+notes.each do |n|
+  play n
+  #control my, detune: rand()
+  #control p_fx, pitch_dis: rand(0.1) 
+  control lpf_fx, cutoff: rand(70..80)          
+  sleep beat/2
+end
 end
 
 live_loop :synth do |z|
@@ -165,9 +165,8 @@ live_loop :synth do |z|
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
           
 
-#          play_pattern_timed degrees_seq(1111111111111111111, :"Cs#{octave}"),
-#            [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2,beat/2,beat/2]
-#          sync :hit
+          swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
+          sync :hit
 
           if(dice(6) >= 85)
             #  control my, note: degrees_seq(7, :"Cs#{octave}")[0]

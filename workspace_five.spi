@@ -1,4 +1,4 @@
 
 5.times do
-print rand(0.1..0.9)
+print range(0.1..0.9)
 end

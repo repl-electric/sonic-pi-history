@@ -1,8 +1,14 @@
 beat = 1
 
 
-def live(name, amp, &block)
+def live(name, opts={}, &block)
   idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end 
+
   x = lambda{|idx|
     with_fx :level, amp: amp do
       block.(idx)
@@ -12,7 +18,7 @@ def live(name, amp, &block)
   end
 end
 
-live :test, 0.9 do |x|
+live :test, amp: 0.9 do |x|
   puts x
   play 60
 sleep beat

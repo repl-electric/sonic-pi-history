@@ -131,7 +131,7 @@ end
 def swishing_saw(notes, lpf_fx, beat)
 notes.each_with_index do |n, idx|
   play n
-  sync :hit, :half_hit
+  sync :half_hit
 
   #control my, detune: rand()
   #control p_fx, pitch_dis: rand(0.1) 

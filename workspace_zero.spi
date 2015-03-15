@@ -157,7 +157,7 @@ live_loop :synth do |z|
         with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001, pitch_slide: 1.0  do |p_fx|
 
      
-        swish_saw degrees_seq(222222222222222222, :"Cs#{octave}"), lpf_fx
+        swishing_saw degrees_seq(222222222222222222, :"Cs#{octave}"), lpf_fx
 
           sync :hit
           #control my, detune: 0.1

@@ -130,6 +130,8 @@ end
 def swishing_saw(notes, lpf_fx, beat)
 notes.each_with_index do |n, idx|
   play n
+  sync :hit
+
   #control my, detune: rand()
   #control p_fx, pitch_dis: rand(0.1) 
   control lpf_fx, cutoff: (ring 70, 75, 75 ,80, 80, 80, 80, 95,

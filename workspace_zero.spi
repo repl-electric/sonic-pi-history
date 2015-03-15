@@ -128,8 +128,12 @@ live_loop :drums do |n|
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
   end
-  sleep beat/2
+  sleep beat/4
   cue :half_hit
+
+  sleep beat/4
+  cue :half_hit
+
   sleep beat/2
   n+=1
 end

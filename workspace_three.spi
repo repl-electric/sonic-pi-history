@@ -2,7 +2,7 @@ beat = 1
 
 
 def live(name, amp, &block)
-  @idx = 0
+  idx = 0
   x = lambda{
     with_fx :level, amp: amp do
       block.(@idx)

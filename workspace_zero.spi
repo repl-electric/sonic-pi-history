@@ -83,7 +83,7 @@ end
 
 live_loop :heartzz do
   with_fx :level, amp: 0.8 do
-    sample :elec_hollow_kick, amp: 2, start: 0.1, finish: 0.2, rate: 0.6
+    sample :elec_hollow_kick, amp: 2, start: 0.1, finish: 0.2, rate: 0.2
     sleep beat/0.5
   end
 end

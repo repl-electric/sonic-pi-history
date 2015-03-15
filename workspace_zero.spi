@@ -3,7 +3,7 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
 high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_1.wav"
 high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_2.wav"
-snare2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_Clap_\&_Snare_2.wav"
+#snare2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_Clap_\&_Snare_2.wav"
 #snare2_s = :drum_snare_soft
 voice_s = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Ah p/vor_sopr_sustain_ah_p_01.wav"
 #kick_s = :drum_heavy_kick
@@ -160,8 +160,8 @@ def swishing_saw(notes, lpf_fx, beat)
   notes.each_with_index do |n, idx|
     play n
     sync :half_hit
-    control lpf_fx, cutoff: (ring 120, 120, 120 ,120, 90, 120,
-                                  120, 120, 120 ,120, 95, 120)[idx]
+    control lpf_fx, cutoff: (ring 70, 60, 70 ,60, 80, 90,
+                                  70, 65, 70 ,65, 85, 95)[idx]
     #sleep (ring beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
   end
 end

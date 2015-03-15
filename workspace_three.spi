@@ -1,0 +1,16 @@
+
+def live(name, amp, &block)
+  @idx = 0
+  x = lambda{
+    with_fx :level, amp: amp do
+      block.(@idx)
+    end}
+  live_loop name do
+    x.()
+  end
+end
+
+live :test, 0.1 do |x|
+  puts x
+sleep beat
+end

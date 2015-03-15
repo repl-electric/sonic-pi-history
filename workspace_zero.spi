@@ -133,7 +133,7 @@ def swishing_saw(notes, lpf_fx)
           #control my, detune: rand()
           #control p_fx, pitch_dis: rand(0.1) 
           control lpf_fx, cutoff: rand(70..80)          
-sleep beat/2
+          sleep beat/2
           end
 end
 

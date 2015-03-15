@@ -1,3 +1,5 @@
+beat = 0
+
 
 def live(name, amp, &block)
   @idx = 0

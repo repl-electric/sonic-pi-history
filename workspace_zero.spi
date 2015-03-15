@@ -33,6 +33,7 @@ def chord_seq(pattern, root, s=nil)
 end
 
 def live(name, amp, &block)
+  @idx = 0
   x = lambda{
     with_fx :level, amp: amp do
       block(idx)

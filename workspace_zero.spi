@@ -215,11 +215,11 @@ live_loop :pulse do
 end
 
 live_loop :pulse2 do
-  with_fx :level, amp: 1.5 do
+  with_fx :level, amp: 1.0 do
     sync :deep_notes
     with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do
       with_synth :growl  do
-        play degree(7, :Cs3,:major), attack: 2, release: beat*32, amp: 0.25
+        play degree(7, :Cs3,:major), attack: 2, release: beat*32, amp: 0.50
       end
     end
     sleep beat*32

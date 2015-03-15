@@ -148,7 +148,7 @@ live_loop :synth do |z|
 
         degrees_seq(222222222222222222, :"Cs#{octave}").each do |n|
           play n
-          sleep beat
+          sleep beat/2
           control my, detune: rand()
           end
 

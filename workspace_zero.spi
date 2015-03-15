@@ -42,6 +42,11 @@ def live(name, amp, block)
   end
 end
 
+live :test, 0.1 do |x|
+  puts x
+sleep bar
+end
+
 live_loop :clock do
   cue :start; cue :beat; cue :half_beat
   sleep beat/2

@@ -32,7 +32,7 @@ def chord_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
 end
 
-def live(name, amp, block)
+def live(name, amp, &block)
   x = lambda{
     with_fx :level, amp: amp do
       block(idx)

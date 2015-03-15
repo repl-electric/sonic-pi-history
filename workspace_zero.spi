@@ -45,7 +45,7 @@ end
 
 live :test, 0.1 do |x|
   puts x
-sleep bar
+sleep beat
 end
 
 live_loop :clock do

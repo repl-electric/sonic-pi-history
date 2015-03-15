@@ -1,4 +1,4 @@
-beat = 0
+beat = 1
 
 
 def live(name, amp, &block)

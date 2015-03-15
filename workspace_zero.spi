@@ -107,7 +107,10 @@ live_loop :drums do |n|
   #sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 60){
   sample kick_s, amp: 2.5, rate: 1, start: kick_start}
-  sleep beat
+  
+  sleep beat/2
+  cue :half_hit
+  sleep beat/2
 
   cue :half_hit
   with_fx :level, amp: 0.9 do
@@ -125,7 +128,9 @@ live_loop :drums do |n|
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
   end
-  sleep beat
+  sleep beat/2
+  cue :half_hit
+  sleep beat/2
   n+=1
 end
 

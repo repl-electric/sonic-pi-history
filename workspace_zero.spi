@@ -145,7 +145,7 @@ notes.each_with_index do |n, idx|
 
   #control my, detune: rand()
   #control p_fx, pitch_dis: rand(0.1) 
-  control lpf_fx, cutoff: (ring 70, 75, 70 ,80, 80, 90,
+  control lpf_fx, cutoff: (ring 70, 60, 70 ,80, 80, 90,
                                 70, 80, 70 ,85, 85, 65)[idx]
 #  sleep (ring beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
 end
@@ -214,11 +214,9 @@ live_loop :pulse do |p_idx|
      control reverb_fx, room: (ring 0.1, 1.0)[p_idx], mix: ring(0.4, 0.9)[p_idx]
      p_idx +=1
     }
-#   sleep beat*32
-     
+    #sleep beat*32
     end
   end
-  
 end
 
 live_loop :pulse2 do
@@ -229,7 +227,6 @@ live_loop :pulse2 do
         play degree(7, :Cs3,:major), attack: 0.1, release: (beat/2)*18, amp: 0.50
       end
     end
-    
   end
 end
 

@@ -223,7 +223,7 @@ live_loop :pulse2 do
         play degree(7, :Cs3,:major), attack: 0.1, release: (beat/2)*18, amp: 0.50
       end
     end
-    sleep beat*32
+    
   end
 end
 

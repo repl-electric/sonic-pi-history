@@ -83,7 +83,7 @@ end
 
 live_loop :heartzz do |k_idx|
   with_fx :level, amp: 1.8 do
-    sample :elec_hollow_kick, amp: 2, start: 0.1, finish: 0.2, rate: 0.9
+    sample :elec_hollow_kick, amp: 5, start: 0.1, finish: 0.2, rate: 0.9
    if(k_idx%32 > 24)
     sleep beat/0.5
 

@@ -36,7 +36,7 @@ def live(name, amp, &block)
   @idx = 0
   x = lambda{
     with_fx :level, amp: amp do
-      block(idx)
+      block.(@idx)
     end}
   live_loop name do
     x.()

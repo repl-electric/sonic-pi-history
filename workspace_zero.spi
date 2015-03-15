@@ -145,8 +145,11 @@ live_loop :synth do |z|
         control my, note: degrees_seq(2, :"Cs#{octave}")[0]
 
         with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001 do |p_fx|
-          play_pattern_timed degrees_seq(222222222222222222, :"Cs#{octave}"),
-            [beat/2, beat/2, beat/2, beat/4, beat/2, beat/2, beat/2, beat/4]
+
+        degrees_seq(222222222222222222, :"Cs#{octave}").echo do |n|
+          play n,
+          sleep beat/2
+          end
 
           sync :hit
           #control my, detune: 0.1

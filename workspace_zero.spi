@@ -154,7 +154,7 @@ live_loop :synth do |z|
     use_synth :dsaw
     use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
     with_fx :bitcrusher, bits: 12 do |bit_fx|
-      with_fx :lpf, cutoff: 120 do |lpf_fx|
+      with_fx :lpf, cutoff: 70 do |lpf_fx|
         rate = 1.0
         kick_start = 0.01
         sync :hit

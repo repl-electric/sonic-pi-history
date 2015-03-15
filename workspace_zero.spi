@@ -104,7 +104,7 @@ kick_start = 0.05
 live_loop :drums do |n|
   cue :hit
   #sample clap_s, rate: 0.1, amp: 0.25
-  with_fx(:lpf, cutoff: 40){
+  with_fx(:lpf, cutoff: 60){
   sample kick_s, amp: 2.5, rate: 1, start: kick_start}
   sleep beat
 

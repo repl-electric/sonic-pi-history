@@ -3,11 +3,11 @@ beat = 1
 
 def live(name, amp, &block)
   idx = 0
-  x = lambda{
+  x = lambda{|idx|
     with_fx :level, amp: amp do
-      block.(@idx)
+      block.(idx)
     end}
-  live_loop name do
+  live_loop name do |idx|
     x.(idx)
   end
 end

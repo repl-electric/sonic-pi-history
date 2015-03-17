@@ -239,7 +239,7 @@ live_loop :pulse do |p_idx|
 
       (32/4).times{
         sleep beat*2
-        control x, note:  degree(2, :Cs4,:major)
+        control x, note:  degree(3, :Cs4,:major)
         control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
         p_idx +=1
       }

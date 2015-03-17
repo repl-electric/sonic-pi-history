@@ -232,15 +232,22 @@ x = nil
       with_synth :growl  do
         x = play degree(1, :Cs4,:major), attack: 2, release: beat*32, amp: 0.25
       end
-      (32/4).times{
+      (32/8).times{
         sleep beat*2
         control reverb_fx, room: (ring 0.1, 1.0)[p_idx], mix: ring(0.4, 0.9)[p_idx]
         p_idx +=1
       }
 
-      (32/4).times{
+      (32/8).times{
         sleep beat*2
         control x, note:  degree(2, :Cs4,:major)
+        control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
+        p_idx +=1
+      }
+
+        (32/8).times{
+        sleep beat*2
+        control x, note:  degree(3, :Cs4,:major)
         control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
         p_idx +=1
       }

@@ -227,6 +227,7 @@ live_loop :pulse do |p_idx|
   with_fx :level, amp: 0.9 do
     sync :start
     with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do |reverb_fx|
+        with_fx :slicer, phase: beat/4.0 do
       with_synth :growl  do
         play degree(1, :Cs4,:major), attack: 2, release: beat*32, amp: 0.25
       end
@@ -241,6 +242,7 @@ live_loop :pulse do |p_idx|
         control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
         p_idx +=1
       }
+end
 
 
       #sleep beat*32

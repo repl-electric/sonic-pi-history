@@ -228,7 +228,7 @@ x = nil
   with_fx :level, amp: 0.9 do
     sync :start
     with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do |reverb_fx|
-        with_fx :slicer, phase: beat do
+        with_fx :slicer, phase: beat do |s_fx|
       with_synth :growl  do
         x = play degree(1, :Cs4,:major), attack: 2, release: beat*32, amp: 0.25
       end
@@ -239,6 +239,7 @@ x = nil
       }
 
       (32/8).times{
+        control s_fx, phase: beat/2
         sleep beat
         control x, note:  degree(2, :Cs4,:major)
         control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]

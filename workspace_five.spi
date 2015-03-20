@@ -22,7 +22,7 @@ end
 
 
 live :hollowed, amp: 0.5 do
-  hollowed_synth degree(3, :Cs3, :major)
+  hollowed_synth degree(1, :Cs3, :major)
   sleep beat
 end
 

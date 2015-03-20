@@ -1,5 +1,12 @@
 beat = 1/2.0
 
+def degrees_seq(pattern, root, s=nil)
+  if !s
+    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  end
+  pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
+end
+
 live_loop :hollowed do
   hollowed_synth degree(3, :Cs3, :major)
   sleep beat

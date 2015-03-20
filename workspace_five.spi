@@ -39,7 +39,7 @@ end
 
 z_inc = 0
 live_loop :hollowed do
-  hollowed_synth (ring *degree(111111111111114, :Cs3, :major))[z_inc]
+  hollowed_synth (ring *degree(111111111114, :Cs3, :major))[z_inc]
   sleep beat
   z_inc+=1
 end

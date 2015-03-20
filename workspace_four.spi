@@ -264,7 +264,7 @@ end
 
 live_loop :hollowed do
   sync :start
-  #hollowed_synth degree(1, :Cs4, :major)
+  hollowed_synth degree(1, :Cs4, :major)
 end
 
 set_volume! 1.0

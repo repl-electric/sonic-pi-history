@@ -69,7 +69,7 @@ end
 r2=0
 live :bump do
  sync :half_hit
- sample wood_s, amp: 0.02
+ sample wood_s, amp: 0.05
 end
 live :ride, amp: 0.1 do |r|
     sync :half_beat

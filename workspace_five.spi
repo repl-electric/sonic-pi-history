@@ -11,6 +11,7 @@ wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Cl
 
 live :drums do |n|
  # with_fx(:lpf, cutoff: 100){sample :drum_heavy_kick}
+  cue :start
   cue :half_hit
   sleep beat/2
   cue :half_hit
@@ -39,10 +40,10 @@ live :pulse3, amp: 1.0 do |p_inc|
 end
 
 live_loop :deep do |d_inc|
+  sync :start
   with_synth :beep do
-  play (ring degrees_seq(13, :Cs2))[d_inc], release: 8
-end
-  sleep 8
+    play (ring degrees_seq(13, :Cs2))[d_inc], release: 8
+  end
 end
 
 live_loop :holloweded do |z_inc|

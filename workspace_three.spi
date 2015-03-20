@@ -67,9 +67,9 @@ live :heartz, amp: 0.0 do
   sleep beat/2.0
 end
 r2=0
-live :bump do
+live :bump, amp: 0 do
  sync :half_hit
- sample wood_s, amp: 0.05
+ sample wood_s, amp: 0.00
 end
 live :ride, amp: 0.1 do |r|
     sync :half_beat

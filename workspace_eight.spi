@@ -257,7 +257,7 @@ end
 end
 
 live_loop :beep2 do
-notes = [degree(5, :A3, :major), degree(6, :A3, :major)].shuffle
+notes = [degree(5, :Cs3, :major), degree(6, :A3, :major)].shuffle
 with_fx :level, amp: 1.0 do
   4.times do |i|
     n = notes[i % 2]

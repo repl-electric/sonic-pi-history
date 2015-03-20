@@ -109,9 +109,11 @@ live :deep, amp: 1.0 do |d_inc|
 
    control r_fx, room: rand 
 }
+  with_fx :lpf do
   with_synth :dsaw do
      play (ring *degrees_seq(1112111211121113, :Cs2))[d_inc], release: beat*6, attack: beat
   end
+end
   end
   d_inc+=1
 end

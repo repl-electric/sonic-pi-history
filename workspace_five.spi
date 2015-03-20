@@ -28,7 +28,7 @@ end
 live :pulse3, amp: 1.0 do |p_inc|
  sync :half_hit
  with_synth :hollow do
-   with_fx :reverb, room: 0.1, mix: 0.2 do
+   with_fx :reverb, room: 0.1, mix: 0.3 do
      sample wood_s, amp: 0.2
    end
    play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00

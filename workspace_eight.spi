@@ -23,7 +23,7 @@ live_loop :metro do
 end
 high_n = 0
 live_loop :highlights do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
  sync :high
  use_synth :sine
  play high_n % 2 == 0 ? degree(1, :A4, :major) : degree(1, :A3, :major)
@@ -31,7 +31,7 @@ with_fx :level, amp: 0 do
 end
 end
 live_loop :drum do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 0.2 do
   sync :quart
   with_fx :lpf do
     sample :elec_triangle, amp: 0.2
@@ -41,31 +41,37 @@ end
 
 vio_pan = -1
 live_loop :vio do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
     a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
-    b4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_B5_phrase_mezzo-piano_arco-major-trill.wav"
-#    with_fx :slicer, phase: bar/8 do
-     sample [b4_s].choose, amp: 1, pan: Math.sin((vio_pan))
-#    end 
+    a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
+
+    with_fx :slicer, phase: bar/8 do
+     sample [a4_s, a5_s].choose, amp: 2.5, pan: Math.sin((vio_pan))
+    end 
 #    sample v_s, amp: 90
   end
 end
 vio_pan += 1
 end
 live_loop :piano do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
+    sample pa_s, amp: 2, rate: -1
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sample pa_s, amp: 2
+    sleep bar/2
+   # play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    sleep bar/4
+   # play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
   end
 end
 end
 live_loop :chords do
+with_fx :level, amp: 1 do
  sync :start
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do
@@ -78,18 +84,23 @@ live_loop :chords do
  #end
  end
 end
+end
 live_loop :peeep do
 with_fx :level, amp: 1 do
   3.times {sync :quart}
   use_synth :beep    #:mod_pulse #:mod_beep
-  use_synth_defaults cutoff: 100, res: 1.0, amp: 0.8
+  use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
   with_fx :reverb do
 
+    with_fx :echo, phase: bar/2 do |e|
     #with_fx :pan, pan: 0.25 do
+    control e, phase: bar/2 + 0.1
     play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
     sleep bar
+    control e, phase: bar/2  + 0.2
     play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
+    control e, phase: bar/2 +  0.4
     play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
 
@@ -100,12 +111,16 @@ with_fx :level, amp: 1 do
     end
 
     sleep bar
+    control e, phase: bar/2 +  0.1
     play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
+    control e, phase: bar/2 +  0.03
     play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
+    control e, phase: bar/2 +  0.05
     play degree(5, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
-
+    end
+    
     sleep bar*2
 
     sleep bar/2
@@ -131,27 +146,25 @@ end
 end
 
 live_loop :piano2 do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   use_synth :tri
   sync :start
 
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
       with_fx :distortion, mix: 0.5 do
-        #play chord_degree(1, :A2, :major)[0], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
-        #with_synth(:tri){ play chord_degree(1, :A2, :major)[1], amp: 1.0, attack: 0.01, release: 0.5, decay: 2.0, sustain: 1.5}
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
 
       4.times{sync :start;  cue :high}
 
       control(r, room: 0.5)
       with_fx :distortion, mix: 0.2 do
-        #sample Piano.note(:c2)
-
-        #play chord_degree(1, :A2, :major)[0], amp: 1.1, attack: 0.01, release: 0.5, decay: 1.5, sustain: 1.0
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
-        #with_synth(:tri){play chord_degree(1, :A2, :major)[2], amp: 1.1, attack: 0.01, release: 0.5, decay: 1.5, sustain: 1.0}
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
 
       2.times{sync :start}
@@ -176,12 +189,12 @@ with_fx :level, amp: 0 do
   play degree(:i, :A1, :major), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
   use_synth :noise
   play degree(:i, :A1, :major), release: bar*4, amp: 0.1
-  32.times{ sync :start }
+  #32.times{ sync :start }
 end
 end
 
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
-  use_synth :mod_dsaw #:mod_fm # sample v_s, amp: 90
+  use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
@@ -223,13 +236,13 @@ end
 room_size = 0
 
 live_loop :beep do
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1 do
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
 
-  n = [degree(4, :A3, :major)].choose
-  #n =  [degree(6, :A3, :major)].choose #fm
+  #n = [degree(4, :A3, :major)].choose
+  n =  [degree(4, :A3, :major)].choose #fm
 
   #sync :start
 
@@ -237,42 +250,48 @@ with_fx :level, amp: 0 do
     @direction = rand_i(-1..1)
 
     sync :bar
-    beeper n, @direction, 1, 80, 0, 0.001
+    beeper n, @direction, 1, 100, 0, 0.001
     room_size += 1
   end
 end
 end
 
 live_loop :beep2 do
-with_fx :level, amp: 0 do
-
-  #  sync :bar
-  #-10.0, -5.0
-  # degree(6, :A2, :major)
-
-  n =  [degree(6, :A3, :major)].choose
-  #n =  [degree(1, :A4, :major)].choose fm
-
-  #sync :start
-
-  4.times do
+notes = [degree(5, :A3, :major), degree(6, :A3, :major)].shuffle
+with_fx :level, amp: 1.0 do
+  4.times do |i|
+    n = notes[i % 2]
     sync :bar
-    beeper n, @direction == -1 ? 0 : -1, 1, 100, 0, 0.01
+    beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
     room_size += 1
   end
 end
 end
 
 live_loop :vio_dark do
+with_fx :level, amp: 1.0 do
 sync :start
 with_fx :echo do
 with_fx :reverb do
 a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
-sample a4_long_s, amp: 40, rate: 1.0
-#sample a4_long_s, amp: 40, rate: 0.4
-#sample a4_long_s, amp: 40, rate: 0.8
-#sample a4_long_s, amp: 40, rate: 1.0
+#sample a4_long_s, amp: 1, rate: 1.0
+sample a4_long_s, amp: 1, rate: 1.0
 sleep sample_duration(a4_long_s)
 end
 end
 end
+end
+
+live_loop :across_the_night do
+with_fx :level, amp: 1.0 do
+use_synth :dark_sea_horn
+use_synth_defaults amp: 1, release: 8
+play degree(4, :A2, :major)
+16.times{sync :bar}
+play degree(6, :A2, :major)
+16.times{sync :bar}
+play degree(5, :A2, :major)
+16.times{sync :bar}
+end
+end
+set_volume! 0.0

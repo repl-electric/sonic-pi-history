@@ -242,7 +242,7 @@ with_fx :level, amp: 1 do
   # degree(6, :A2, :major)
 
   #n = [degree(4, :A3, :major)].choose
-  n =  [degree(4, :A3, :major)].choose #fm
+  n =  [degree(6, :A2, :major)].choose #fm
 
   #sync :start
 

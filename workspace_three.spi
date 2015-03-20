@@ -266,7 +266,7 @@ live :pulse3, amp: 1.0 do |p_inc|
    sample wood_s, amp: 0.02
    play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do
-     play (ring *degrees_seq(1113111311131114, :Cs5))[p_inc+2], attack: 0.001, release: beat/2, amp: 4.00
+     play (ring *degrees_seq(1113111311131114, :Cs5))[p_inc+3], attack: 0.001, release: beat/2, amp: 4.00
    end
    sleep beat/4
  end

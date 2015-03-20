@@ -1,28 +1,6 @@
-use_bpm 90
- 
-live_loop :m1 do
-  sleep 1
+live_loop :hollowed do
+  sync :start
+  hollowed_synth degree(1, :Cs3, :major)
 end
- 
-live_loop :m do
-  sync :m1
-  use_synth :fm
-  play [48, 50, 53, 45, 48, 48].choose, release: 2, amp: 2
-  sample :ambi_drone
-  (spread 3, 8).each do |b|
-    sample :drum_bass_hard if b
-    sample :drum_cymbal_closed, rate: rrand(0.95, 1.05),
-      pan: rrand(-0.1, 0.1) unless b
-    sleep 0.25
-  end
-end
- 
-live_loop :mel do
-  sync :m1
-  with_fx :echo, phase: [0.25, 0.75].choose do
-    play 72
-    play 64
-    play 67, amp: 2, pan: -0.5 if one_in 12
-    play 69, amp: 1.5, pan: 0.5 if one_in 14
-  end
-end
+
+set_volume! 1.0

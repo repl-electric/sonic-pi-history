@@ -42,7 +42,7 @@ end
 live :deep, amp: 1.0 do |d_inc|
   sync :start
   with_synth :beep do
-    play (ring *degrees_seq(213, :Cs2))[d_inc], release: beat
+    play (ring *degrees_seq(22, :Cs2))[d_inc], release: beat
   end
   d_inc+=1
 end

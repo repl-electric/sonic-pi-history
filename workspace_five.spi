@@ -7,6 +7,13 @@ def degrees_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
 end
 
+def chord_seq(pattern, root, s=nil)
+  if !s
+    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  end
+  pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
+end
+
 wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/17\ \ EMT140\ \(1\).wav"
 
 live :drums do |n|
@@ -42,7 +49,7 @@ end
 live :deep, amp: 1.0 do |d_inc|
   2.times{sync :start}
   with_synth :beep do
-    play_chord (ring *degrees_seq(132, :Cs2))[d_inc], release: beat*4
+    play_chord (ring *chord_seq(132, :Cs2))[d_inc], release: beat*4
   end
   d_inc+=1
 end

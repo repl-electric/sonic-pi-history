@@ -67,12 +67,12 @@ live :heartz, amp: 0.0 do
   sleep beat/2.0
 end
 r2=0
-live :bump, amp: 0 do
+live :bump do
  sync :half_hit
  sample wood_s, amp: 0.02
 end
-live :ride, amp: 0.5 do |r|
-    sync :half_hit
+live :ride, amp: 0.1 do |r|
+    sync :half_beat
     sample ring( high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.5, start: 0.01, finish: 0.1
     #sleep beat
     2.times do
@@ -153,7 +153,7 @@ live :synthers, amp: 4.0 do |z|
         kick_start = 0.01
         sync :hit
 
-        octave = 1
+        octave = 2
 
         my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12
@@ -243,7 +243,7 @@ live :pulse, amp: 3.0 do |p_idx|
     end
   end
 end
-live :pulse2, amp: 0.4 do
+live :pulse2, amp: 0.2 do
     with_fx :reverb, room: 1, mix: 0.9, dry: 0.1 do
       with_synth :growl do
         sync :deep_notes
@@ -252,13 +252,11 @@ live :pulse2, amp: 0.4 do
     end
 end
 
-beat = beat
-
-live :pulse3, amp: 0.0 do |p_inc|
+live :pulse3, amp: 1.0 do |p_inc|
  sync :half_hit
  with_synth :hollow do
    sample wood_s, amp: 0.02
-   play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
+   play (ring *degrees_seq(1223111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do
      play (ring *degrees_seq(1223111311131114, :Cs5))[p_inc], attack: 0.001, release: beat/2, amp: 4.00
    end
@@ -284,7 +282,7 @@ live :atmos, amp: 1.0 do
 end
 live_loop :hollowed do
   sync :start
-  hollowed_synth degree(1, :Cs3, :major)
+  #hollowed_synth degree(1, :Cs3, :major)
 end
 
 set_volume! 1.0

@@ -40,6 +40,7 @@ live :drums do |n|
     else
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
+end
 
 
   sleep beat/4

@@ -202,6 +202,7 @@ live :synthers, amp: 4.0 do |z|
           swishing_saw degrees_seq(77777777777777777777, :"Cs#{octave-1}"), lpf_fx, beat
         end
       end
+end
     z+=1
 end
 live :pulse, amp: 3.0 do |p_idx|

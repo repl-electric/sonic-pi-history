@@ -194,7 +194,7 @@ live :synthers, amp: 4.0 do |z|
 
           rate = 1.0
           kick_start = 0.0
-          control bit_fx, bits: 8
+          #control bit_fx, bits: 8
           control my, detune: 0.0
 
           cue :swish3

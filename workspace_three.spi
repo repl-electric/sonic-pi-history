@@ -45,16 +45,7 @@ def live(name, opts={}, &block)
     x.(idx)
   end
 end
-live_loop :clock do
-  cue :start; cue :beat; cue :half_beat
-  sleep beat/2
-  cue :half_beat
-  sleep beat/2
-  cue :half_beat; cue :beat
-  sleep beat/2
-  cue :half_beat
-  sleep beat/2
-end
+
 live :clapper, amp: 0.0 do
     32.times{sync :hit}
     sample clap_s, start: 0.2, amp: 0.25

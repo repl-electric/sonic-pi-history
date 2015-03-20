@@ -8,7 +8,7 @@ def degrees_seq(pattern, root, s=nil)
 end
 
 live :pulse3, amp: 0.0 do |p_inc|
- sync :half_hit
+ sleep beat/2.0
  with_synth :hollow do
    sample wood_s, amp: 0.02
    play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00

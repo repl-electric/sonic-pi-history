@@ -1,6 +1,6 @@
 live_loop :hollowed do
-  sync :start
   hollowed_synth degree(3, :Cs3, :major)
+sleep 1
 end
 
 set_volume! 1.0

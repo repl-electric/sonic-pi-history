@@ -57,7 +57,7 @@ live :clapper, amp: 0.0 do
     sample clap_s, start: 0.04, amp: 0.4
     #    sample clap_s, amp: 0.4, rate: -1.0
 end
-live :voices, amp: 0.4 do
+live :voices, amp: 0.0 do
   sync :atmosphere
   with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
   sample voice_s, attack: 1.0, amp: 0.5}}}}}

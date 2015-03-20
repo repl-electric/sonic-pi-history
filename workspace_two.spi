@@ -1,0 +1,45 @@
+def degree_seq(pattern, root, scale=nil)
+  if !scale
+    scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  end
+  pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
+end
+
+beat = 1/4.0
+
+:G3
+
+:F3
+
+:E3
+
+use_synth :dsaw
+
+
+play :Ds5
+play degree(2, :Cs5, :major)
+
+play :Cs5
+play degree(1, :Cs5, :major)
+
+play :C5
+play degree(7, :Cs4, :major)
+
+
+#play_pattern_timed [:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5,:Ds5], 
+#                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+
+                    #
+
+                   
+#play_pattern_timed [:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5,:Cs5], 
+ #                  [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+
+                    #
+
+                   
+#play_pattern_timed [:C5,:C5,:C5,:C5,:C5,:C5,:C5], 
+#                   [beat/2, beat/2, beat/2, beat/2, beat/2, beat/2]
+                  
+                  
+ 

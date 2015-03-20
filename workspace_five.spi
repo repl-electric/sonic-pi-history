@@ -40,6 +40,7 @@ end
 live :hollowed, amp: 1.0 do |x|
   hollowed_synth (ring *degree(111111111111114, :Cs3, :major))[x]
   sleep beat
+  x+=1
 end
 
 set_volume! 1.0

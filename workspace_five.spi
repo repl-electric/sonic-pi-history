@@ -29,7 +29,7 @@ live :pulse3, amp: 1.0 do |p_inc|
  sync :half_hit
  with_synth :hollow do
 #   with_fx :echo, phase: beat/8 do
-     sample wood_s, amp: 0.2
+     sample wood_s, amp: 0.02
  #  end
    play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do

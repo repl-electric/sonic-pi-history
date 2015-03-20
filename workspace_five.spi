@@ -44,7 +44,7 @@ live :deep, amp: 1.0 do |d_inc|
   with_synth :beep do
     play (ring *degrees_seq(13, :Cs2))[d_inc], release: beat
   end
-  s_inc+=1
+  d_inc+=1
 end
 
 live_loop :holloweded do |z_inc|

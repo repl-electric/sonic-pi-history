@@ -251,7 +251,7 @@ live :pulse, amp: 3.0 do |p_idx|
     end
   end
 end
-live :pulse2, amp: 0.2 do
+live :pulse2, amp: 7.2 do
     with_fx :reverb, room: 1, mix: 0.9, dry: 0.1 do
       with_synth :growl do
         sync :deep_notes

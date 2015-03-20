@@ -38,7 +38,7 @@ live :pulse3, amp: 1.0 do |p_inc|
 end
 
 live :hollowed, amp: 1.0 do |x|
-  hollowed_synth (ring *degree(11111111111111111114, :Cs3, :major))[x]
+  hollowed_synth (ring *degree(111111111111114, :Cs3, :major))[x]
   sleep beat
 end
 

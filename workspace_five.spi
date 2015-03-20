@@ -1,6 +1,8 @@
+beat = 1/2.0
+
 live_loop :hollowed do
   hollowed_synth degree(3, :Cs3, :major)
-sleep 1
+  sleep beat
 end
 
 set_volume! 1.0

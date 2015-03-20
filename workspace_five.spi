@@ -10,7 +10,7 @@ end
 wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/17\ \ EMT140\ \(1\).wav"
 
 live :drums do |n|
-  with_fx(:lpf, cutoff: 60){sample :drum_heavy_kick}
+  with_fx(:lpf, cutoff: 100){sample :drum_heavy_kick}
   cue :hit
   cue :half_hit
   sleep beat/2

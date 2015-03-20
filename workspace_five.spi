@@ -7,6 +7,9 @@ def degrees_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
 end
 
+wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/17\ \ EMT140\ \(1\).wav"
+
+
 live :pulse3, amp: 1.0 do |p_inc|
  sleep beat/2.0
  with_synth :hollow do

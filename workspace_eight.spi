@@ -101,7 +101,7 @@ with_fx :level, amp: 1 do
     play degree(1, :Cs5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
     control e, phase: bar/2 +  0.4
-    play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
+    play degree(1, :Cs5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2
     sleep bar/2
 
     with_synth :mod_pulse do

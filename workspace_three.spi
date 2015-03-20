@@ -156,7 +156,7 @@ live :synthers, amp: 4.0 do |z|
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.0, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
-    #with_fx :bitcrusher, bits: 12 do |bit_fx|
+    with_fx :bitcrusher, bits: 12 do |bit_fx|
       with_fx :lpf, cutoff: 60, cutoff_slide: 0.2 do |lpf_fx|
         rate = 1.0
         kick_start = 0.01
@@ -165,7 +165,7 @@ live :synthers, amp: 4.0 do |z|
         octave = 1
 
         my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
-        #control bit_fx, bits: 12
+        control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
 
@@ -177,7 +177,7 @@ live :synthers, amp: 4.0 do |z|
 
           sync :hit
           #control my, detune: 0.1
-          #control bit_fx, bits: 10
+          control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
           cue :swish2
@@ -194,7 +194,7 @@ live :synthers, amp: 4.0 do |z|
 
           rate = 1.0
           kick_start = 0.0
-          #control bit_fx, bits: 8
+          control bit_fx, bits: 8
           control my, detune: 0.0
 
           cue :swish3

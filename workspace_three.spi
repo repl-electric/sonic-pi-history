@@ -71,7 +71,7 @@ live :bump, amp: 0 do
  sync :half_hit
  sample wood_s, amp: 0.02
 end
-live :ride, amp: 0.5 do |r|
+live :ride, amp: 1.5 do |r|
     sync :half_beat
     sample ring( high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.5, start: 0.01, finish: 0.1
     #sleep beat

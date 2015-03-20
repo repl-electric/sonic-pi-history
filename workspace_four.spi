@@ -180,7 +180,7 @@ live_loop :synth do |z|
         octave = 1
 
         my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
-        control bit_fx, bits: 12
+        #control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
 
@@ -190,7 +190,7 @@ live_loop :synth do |z|
 
           sync :hit
           #control my, detune: 0.1
-          control bit_fx, bits: 10
+          #control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
           swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
@@ -205,7 +205,7 @@ live_loop :synth do |z|
 
           rate = 1.0
           kick_start = 0.0
-          control bit_fx, bits: 8
+         # control bit_fx, bits: 8
           control my, detune: 0.0
 
           swishing_saw degrees_seq(77777777777777777777, :"Cs#{octave-1}"), lpf_fx, beat

@@ -20,11 +20,7 @@ live :drums do |n|
   sleep beat/2
   cue :half_hit
   sleep beat/2
-
   cue :half_hit
-  with_fx :level, amp: 0.4 do
-  
-  end
   sleep beat/4
   cue :half_hit
 
@@ -33,6 +29,7 @@ live :drums do |n|
 
   sleep beat/2
   n+=1
+end
 end
 
 live :pulse3, amp: 1.0 do |p_inc|

@@ -112,7 +112,7 @@ with_fx :level, amp: 1 do
 
     sleep bar
     control e, phase: bar/2 +  0.1
-    play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
+    play degree(5, :Cs4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4
     sleep bar/2
     control e, phase: bar/2 +  0.03
     play degree(5, :A4, :major), amp: 1.0, attack: 0.01, release: 0.09, decay: bar/4

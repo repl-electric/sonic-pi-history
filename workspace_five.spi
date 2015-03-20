@@ -43,4 +43,4 @@ live_loop :holloweded do |z_inc|
   z_inc+=1
 end
 
-set_volume! 1.0
+set_volume! 2.0

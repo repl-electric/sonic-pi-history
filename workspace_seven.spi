@@ -15,7 +15,7 @@ end
 
 def say(words)
   sync :bar
-  with_fx :reverb, room: 100 do
+  with_fx :reverb, room: 1 do
   with_fx :lpf do
   use_synth :dark_sea_horn
   t = scale(:a1, :major_pentatonic, num_octaves: 2).shuffle

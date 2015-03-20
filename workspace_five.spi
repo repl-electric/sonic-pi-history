@@ -14,8 +14,8 @@ live :drums do |n|
   cue :half_hit
   #sample clap_s, rate: 0.1, amp: 0.25
   with_fx(:lpf, cutoff: 40){
-  sample kick_s, amp: ((n%4==0) ? 2.7 : 2.5), rate: ((n%4==0) ? 0.7 : 1.0),
-                 start: ((n%4==0) ? 0 : 0.05)}
+ # sample kick_s, amp: ((n%4==0) ? 2.7 : 2.5), rate: ((n%4==0) ? 0.7 : 1.0),
+  #               start: ((n%4==0) ? 0 : 0.05)}
 
   sleep beat/2
   cue :half_hit
@@ -26,15 +26,15 @@ live :drums do |n|
     case n%6
     when 0
       with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
-      sample snare2_s, amp: 0.8, finish: 1.0}}}
+  #    sample snare2_s, amp: 0.8, finish: 1.0}}}
     when 3
       with_fx(:bitcrusher, bits: 8){
-      sample snare2_s, amp: 1.15, start: 0.15,  finish: 0.8}
+  #    sample snare2_s, amp: 1.15, start: 0.15,  finish: 0.8}
     when 5
       with_fx(:bitcrusher, bits: 7){
-      sample snare2_s, amp: 1.1, start: 0.15, finish: 0.9}
+   #   sample snare2_s, amp: 1.1, start: 0.15, finish: 0.9}
     else
-      sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
+   #   sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
   end
   sleep beat/4

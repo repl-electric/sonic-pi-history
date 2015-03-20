@@ -17,6 +17,31 @@ end
 
 wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/17\ \ EMT140\ \(1\).wav"
 
+r2=0
+live_loop :ride do |r|
+  with_fx :level, amp: 0.0 do
+    sync :half_beat
+    sample (ring high_hat_s, high_hat_s,high_hat_s, high_hat2_s)[r2], amp: 0.5, start: 0.01, finish: rand(0.9..1.0)
+    #sleep beat
+    2.times do
+      start = case r%6
+      when 0
+        0.3
+      else
+        0.45
+      end
+      with_fx :reverb do
+        sample shaker_s,amp: 0.4, start: start
+      end
+      sleep beat/2
+      sample shaker_s, amp: 0.2, start: 0.3
+      r+=1
+    end
+    r2+=1
+  end
+end
+
+
 live :drums do |n|
   with_fx(:lpf, cutoff: 40){sample :drum_heavy_kick}
   cue :start

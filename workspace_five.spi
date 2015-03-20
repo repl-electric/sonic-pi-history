@@ -7,9 +7,23 @@ def degrees_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
 end
 
+live :pulse3, amp: 0.0 do |p_inc|
+ sync :half_hit
+ with_synth :hollow do
+   sample wood_s, amp: 0.02
+   play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
+   with_synth :growl do
+     play (ring *degrees_seq(1113111311131114, :Cs5))[p_inc], attack: 0.001, release: beat/2, amp: 4.00
+   end
+   sleep beat/4
+ end
+ p_inc+=1
+end
+
+
 live_loop :hollowed do
   hollowed_synth degree(3, :Cs3, :major)
   sleep beat
 end
 
-set_volume! 1.0
+set_volume! 0.0

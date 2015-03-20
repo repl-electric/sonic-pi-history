@@ -136,7 +136,7 @@ with_fx :level, amp: 1 do
     with_fx :echo, phase: bar/8 do
       play degree(4, :Cs5, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05
       with_fx :distortion, mix: 0.01 do
-        play chord_degree(6, :A3, :major)
+        play chord_degree(6, :Cs3, :major)
       end
 
     end

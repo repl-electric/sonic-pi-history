@@ -1,0 +1,38 @@
+
+# random == jazz?
+
+define :random_notes do |synth|
+  in_thread do
+    use_synth synth
+    loop do
+      [1, 2, 3].choose.times do
+        play rrand_i(36, 72), pan: rrand(-1, 1), release: rrand(0.1, 0.7)
+      end
+      sleep rrand(0.125, 0.75)
+    end
+  end
+end
+
+define :drums do
+  in_thread do
+    loop do
+      sample :drum_snare_hard if one_in 4
+      sample :drum_cymbal_open, amp: rrand(0.8, 1)
+      sleep 0.3
+      sample :drum_snare_hard if one_in 12
+      sample :drum_cymbal_open, amp: 0.5
+      sleep 0.2
+      sample :drum_cymbal_pedal
+      sleep 0.5
+    end
+  end
+end
+
+drums
+
+sleep 4
+
+[:sine, :fm, :pretty_bell].each do |s|
+  random_notes s
+  sleep 8
+end

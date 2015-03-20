@@ -95,7 +95,7 @@ with_fx :level, amp: 1 do
     with_fx :echo, phase: bar/2 do |e|
     #with_fx :pan, pan: 0.25 do
     control e, phase: bar/2 + 0.1
-    play degree(4, :A4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
+    play degree(4, :Cs4, :major), amp: 1.0, attack: 0.05, release: 0.5, decay: bar
     sleep bar
     control e, phase: bar/2  + 0.2
     play degree(1, :A5, :major), amp: 0.9, attack: 0.01, release: 0.1, decay: bar/2

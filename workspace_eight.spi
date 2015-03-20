@@ -76,7 +76,7 @@ with_fx :level, amp: 1 do
  with_fx :reverb, room: 0.8, mix: 0.5 do
  #with_fx :slicer, phase: bar/2 do
  use_synth :tri #:dsaw
- play chord_degree(4, :A2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
+ play chord_degree(4, :Cs2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
  sleep bar/2
  play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
  sync :start

@@ -26,8 +26,7 @@ live :drums do |n|
   sleep beat/2
   cue :half_hit
 
-
- with_fx :level, amp: 0.4 do
+ with_fx :level, amp: 0.2 do
     case n%6
     when 0
       with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
@@ -42,7 +41,6 @@ live :drums do |n|
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
 end
-
 
   sleep beat/4
   cue :quarter_hit

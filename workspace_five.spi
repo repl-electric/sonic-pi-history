@@ -12,21 +12,14 @@ wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Cl
 live :drums do |n|
   cue :hit
   cue :half_hit
-  #sample clap_s, rate: 0.1, amp: 0.25
-#  with_fx(:lpf, cutoff: 40){
- # sample kick_s, amp: ((n%4==0) ? 2.7 : 2.5), rate: ((n%4==0) ? 0.7 : 1.0),
-  #               start: ((n%4==0) ? 0 : 0.05)}
-
   sleep beat/2
   cue :half_hit
   sleep beat/2
   cue :half_hit
   sleep beat/4
   cue :half_hit
-
   sleep beat/4
   cue :half_hit
-
   sleep beat/2
   n+=1
 end

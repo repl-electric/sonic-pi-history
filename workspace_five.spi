@@ -23,9 +23,9 @@ live :pulse3, amp: 1.0 do |p_inc|
 end
 
 
-live :hollowed, amp: 3.0 do
+live :hollowed, amp: 1.0 do
   hollowed_synth degree(1, :Cs3, :major)
   sleep beat
 end
 
-set_volume! 0.0
+set_volume! 1.0

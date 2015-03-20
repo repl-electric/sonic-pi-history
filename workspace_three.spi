@@ -177,7 +177,7 @@ live :synthers, amp: 4.0 do |z|
 
           sync :hit
           #control my, detune: 0.1
-          control bit_fx, bits: 10
+          #control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
           cue :swish2

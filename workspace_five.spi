@@ -106,7 +106,7 @@ end
 live :deep, amp: 1.0 do |d_inc|
   3.times{sync :start}
   with_synth :beep do
-    play (ring *degrees_seq(1112111211121113, :Cs2))[d_inc], release: beat*6, attack: beat
+    play (ring *degrees_seq(1112111211121113, :Cs3))[d_inc], release: beat*6, attack: beat
   end
   d_inc+=1
 end

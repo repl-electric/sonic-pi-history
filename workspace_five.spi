@@ -45,7 +45,16 @@ live_loop :ride do |r|
     r2+=1
   end
 end
-
+live_loop :clock do
+  cue :start; cue :beat; cue :half_beat
+  sleep beat/2
+  cue :half_beat
+  sleep beat/2
+  cue :half_beat; cue :beat
+  sleep beat/2
+  cue :half_beat
+  sleep beat/2
+end
 
 live :drums do |n|
   with_fx(:lpf, cutoff: 40){sample :drum_heavy_kick}

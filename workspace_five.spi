@@ -38,6 +38,11 @@ live :pulse3, amp: 1.0 do |p_inc|
  p_inc+=1
 end
 
+live_loop :deep do |d_inc|
+  play (ring degrees_seq(1 3)[d_inc], release: 8
+  sleep 8
+end
+
 live_loop :holloweded do |z_inc|
   hollowed_synth (ring *degrees_seq(1, :Cs3, :major))[z_inc]
   sleep beat

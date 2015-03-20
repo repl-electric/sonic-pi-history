@@ -38,7 +38,7 @@ live :pulse3, amp: 1.0 do |p_inc|
 end
 
 z_inc = 0
-live_loop :hollowed do
+live_loop :holloweded do
   hollowed_synth (ring *degree(111111111114, :Cs3, :major))[z_inc]
   sleep beat
   z_inc+=1

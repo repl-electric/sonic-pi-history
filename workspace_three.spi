@@ -45,7 +45,16 @@ def live(name, opts={}, &block)
     x.(idx)
   end
 end
-
+live_loop :clock do
+  cue :start; cue :beat; cue :half_beat
+  sleep beat/2
+  cue :half_beat
+  sleep beat/2
+  cue :half_beat; cue :beat
+  sleep beat/2
+  cue :half_beat
+  sleep beat/2
+end
 live :clapper, amp: 0.0 do
     32.times{sync :hit}
     sample clap_s, start: 0.2, amp: 0.25
@@ -57,7 +66,7 @@ live :clapper, amp: 0.0 do
     sample clap_s, start: 0.04, amp: 0.4
     #    sample clap_s, amp: 0.4, rate: -1.0
 end
-live :voices, amp: 0.0 do
+live :voices, amp: 0.4 do
   sync :atmosphere
   with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
   sample voice_s, attack: 1.0, amp: 0.5}}}}}
@@ -147,7 +156,7 @@ live :synthers, amp: 4.0 do |z|
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.0, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
-    with_fx :bitcrusher, bits: 12 do |bit_fx|
+    #with_fx :bitcrusher, bits: 12 do |bit_fx|
       with_fx :lpf, cutoff: 60, cutoff_slide: 0.2 do |lpf_fx|
         rate = 1.0
         kick_start = 0.01
@@ -156,7 +165,7 @@ live :synthers, amp: 4.0 do |z|
         octave = 2
 
         my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
-        control bit_fx, bits: 12
+        #control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
 
@@ -193,7 +202,6 @@ live :synthers, amp: 4.0 do |z|
           swishing_saw degrees_seq(77777777777777777777, :"Cs#{octave-1}"), lpf_fx, beat
         end
       end
-end
     z+=1
 end
 live :pulse, amp: 3.0 do |p_idx|
@@ -256,16 +264,16 @@ live :pulse3, amp: 0.0 do |p_inc|
  sync :half_hit
  with_synth :hollow do
    sample wood_s, amp: 0.02
-   play (ring *degrees_seq(1223111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
+   play (ring *degrees_seq(1113111311131114, :Cs3))[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do
-     play (ring *degrees_seq(1223111311131114, :Cs5))[p_inc], attack: 0.001, release: beat/2, amp: 4.00
+     play (ring *degrees_seq(1113111311131114, :Cs5))[p_inc], attack: 0.001, release: beat/2, amp: 4.00
    end
    sleep beat/4
  end
  p_inc+=1
 end
 
-live :atmos, amp: 1.0 do
+live :atmos, amp: 0.0 do
     cue :atmosphere
     use_synth :dark_ambience
     sync :hit

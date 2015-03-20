@@ -260,7 +260,7 @@ live :pulse2, amp: 0.2 do
     end
 end
 
-live :pulse3, amp: 1.0 do |p_inc|
+live :pulse3, amp: 0.0 do |p_inc|
  sync :half_hit
  with_synth :hollow do
    sample wood_s, amp: 0.02

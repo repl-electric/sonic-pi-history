@@ -171,7 +171,7 @@ live :highlights3, amp: 0.0 do |h_inc|
   h_inc+=1
 end
 
-live :highlights, amp: 0.0 do |h_inc|
+live :highlights, amp: 0.6 do |h_inc|
   sync :half_hit
   play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc]
   sleep beat

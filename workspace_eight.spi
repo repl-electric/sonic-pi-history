@@ -1,7 +1,7 @@
 puts [:A2, 121212, 1212121, :A4, 123123123, 12312312].reduce([]){|accu, id| 
   puts accu
   if(!accu[-1].kind_of?(Symbol) && id.kind_of?(Integer))
-    accu[0..-2] + "#{accu[-1]}#{[id]}"
+    accu[0..-2] + ["#{accu[-1]}#{[id]}"]
   else
     accu.concat([id])
   end

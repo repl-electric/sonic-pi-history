@@ -151,7 +151,7 @@ live :highlights3, amp: 1.0 do |h_inc|
   with_synth :mod_fm do 
     play degrees_seq(:Cs2, 1010101010101010,
                            1000100010001000,
-                           1000000010000000)[h_inc], release: beat*4+(0.1*rand)
+                           4000000040000000)[h_inc], release: beat*4+(0.1*rand)
   end
   sleep beat
   h_inc+=1

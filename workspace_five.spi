@@ -126,7 +126,7 @@ end
 live :pulse3, amp: 0.4 do |p_inc|
  sync :half_hit, :quarter_hit
  with_synth :hollow do
-   sample wood_s, amp: 0.4, start: 0.1
+   #sample wood_s, amp: 0.4, start: 0.1
    play degrees_seq(:Cs3, 1113111311131114)[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do
    play degrees_seq(:Cs5, 1113111311131114)[p_inc], attack: 0.001, release: beat/2, amp: 4.00

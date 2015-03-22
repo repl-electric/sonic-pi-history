@@ -1,8 +1,0 @@
-puts [:Cs2, 101010101010101,
-                           101010101010101].reduce([]){|accu, id| 
-  if(!accu[-1].kind_of?(Symbol) && id.kind_of?(Integer))
-    accu[0..-2] << "#{accu[-1]}#{id}"
-  else
-    accu << id
-  end
-}

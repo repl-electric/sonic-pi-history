@@ -133,6 +133,13 @@ end
 
 live :highlights do |h_inc|
   sync :half_hit
+  play degrees_seq(10, :Cs2)[h_inc]
+  sleep beat
+  h_inc+=1
+end
+
+live :highlights do |h_inc|
+  sync :half_hit
   play degrees_seq(333322221111106000, :Cs3, 6655544444, :Cs3)[h_inc]
   sleep beat
   h_inc+=1

@@ -142,7 +142,7 @@ end
   d_inc+=1
 end
 
-live_loop :holloweded do |z_inc|
+live :holloweded, amp: 0.0 do |z_inc|
   hollowed_synth (ring *degrees_seq(1, :Cs3, :major))[z_inc]
   sleep beat
   z_inc+=1

@@ -173,7 +173,7 @@ end
 
 live :highlights, amp: 0.2 do |h_inc|
   sync :half_hit
-  play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc], attack: 0.001, release: 0.01
+  play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc], attack: 0.01, release: 0.01
   sleep beat
   h_inc+=1
 end

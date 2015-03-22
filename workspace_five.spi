@@ -50,7 +50,7 @@ def chords_seq(root,pattern, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end
-  pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
+  (ring *pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)})
 end
 
 wood_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/17\ \ EMT140\ \(1\).wav"

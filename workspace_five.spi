@@ -160,9 +160,7 @@ live :pulse5, amp: 1.0 do |d_inc|
    #sample wood_s, amp: 0.4, start: 0.1
    case d_inc % 16
    when 15
-    with_fx :slicer, phase: beat/2 do
     play chords_seq(:Cs2, 77)[d2_inc], attack: 0.01, release: beat*16, amp: 1.00
-    end
     #play degrees_seq(:Cs4, 1), attack: 0.01, release: 0.2, amp: 1.00
    #else
     #play degrees_seq(:Cs3, 1), attack: 0.01, release: 0.2, amp: 1.00

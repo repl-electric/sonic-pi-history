@@ -151,7 +151,7 @@ live :highlights3, amp: 7.5 do |h_inc|
   with_synth :beep do 
     play degrees_seq(:Cs4, 1111111111111)[h_inc], release: beat*4+(0.1*rand)
   end
-  sleep beat
+  sleep beat*4
   h_inc+=1
 end
 

@@ -127,7 +127,7 @@ live :pulse3, amp: 0.4 do |p_inc|
  sync :half_hit, :quarter_hit
  with_synth :hollow do
    sample wood_s, amp: 0.4, start: 0.1
-   play degrees_seq(:Cs3,1113111311131114)[p_inc], attack: 0.01, release: beat/2, amp: 4.00
+   play degrees_seq(:Cs3, 1113111311131114)[p_inc], attack: 0.01, release: beat/2, amp: 4.00
    with_synth :growl do
    play degrees_seq(:Cs5, 1113111311131114)[p_inc], attack: 0.001, release: beat/2, amp: 4.00
    end
@@ -137,7 +137,7 @@ live :pulse3, amp: 0.4 do |p_inc|
  p_inc+=1
 end
 
-live :highlights2, amp: 0.3 do |h_inc|
+live :highlights2, amp: 0.0 do |h_inc|
   with_synth :dark_ambience do 
   sync :half_hit
   play degrees_seq(:Cs3, 101010101010101, :Cs4, 0000)[h_inc], release: beat*4+(0.1*rand)
@@ -146,7 +146,7 @@ live :highlights2, amp: 0.3 do |h_inc|
   h_inc+=1
 end
 
-live :highlights3, amp: 0.2 do |h_inc|
+live :highlights3, amp: 0.0 do |h_inc|
   sync :half_hit
   with_synth :mod_fm do 
     play degrees_seq(:Cs2, 1314)[h_inc], release: beat*8+(0.1*rand)

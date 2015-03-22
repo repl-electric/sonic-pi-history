@@ -46,7 +46,7 @@ def degrees_seq(*pattern_and_roots)
  (ring *notes)
 end
 
-def chords_seq(pattern, root, s=nil)
+def chords_seq(root,pattern, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end
@@ -159,7 +159,7 @@ live :pulse5, amp: 1.0 do |p_inc|
    #sample wood_s, amp: 0.4, start: 0.1
    case p_inc % 16
    when 0
-    play chords_seq(4, :Cs3), attack: 0.01, release: beat*6, amp: 1.00
+    play chords_seq(:Cs3, 4), attack: 0.01, release: beat*6, amp: 1.00
     
     #play degrees_seq(:Cs4, 1), attack: 0.01, release: 0.2, amp: 1.00
    #else

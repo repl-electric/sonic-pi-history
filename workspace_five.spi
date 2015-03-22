@@ -147,7 +147,7 @@ live :pulse4, amp: 1.0 do |p_inc|
     sleep beat/2
     play degrees_seq(:Cs4, 1), attack: 0.01, release: 0.2, amp: 1.00
    else
-    play degrees_seq(:Cs1, 1), attack: 0.01, release: 0.2, amp: 1.00
+    play degrees_seq(:Cs3, 1), attack: 0.01, release: 0.2, amp: 1.00
    end
  end
  p_inc+=1

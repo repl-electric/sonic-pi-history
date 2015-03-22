@@ -5,6 +5,21 @@ shaker_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/250531__oceanictr
 clap_s = "/Users/josephwilk/Dropbox/repl-electric/samples/Analog\ Snares\ \&\ Claps/13\ \ EMT140\ \(3\).wav"
 high_hat_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_1.wav"
 high_hat2_s = "/Users/josephwilk/Workspace/music/samples/LOOPMASTERS\ EXCITE_PACK2014/ESSENTIAL_EDM_2/EDM2_SOUNDS_AND_FX/EDM2_Kit_1_HiHat_2.wav"
+def live(name, opts={}, &block)
+  idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end 
+  x = lambda{|idx|
+    with_fx :level, amp: amp do
+      block.(idx)
+    end}
+  live_loop name do |idx|
+    x.(idx)
+  end
+end
 
 def degrees_seq(pattern, root, s=nil)
   if !s

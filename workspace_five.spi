@@ -137,7 +137,7 @@ live :pulse3, amp: 0.4 do |p_inc|
  p_inc+=1
 end
 
-live :pulse4, amp: 0.8 do |p_inc|
+live :pulse4, amp: 1.0 do |p_inc|
  sync :half_hit #,:quarter_hit
  with_synth :hollow do
    #sample wood_s, amp: 0.4, start: 0.1

@@ -148,7 +148,7 @@ end
 
 live :highlights3, amp: 2.5 do |h_inc|
   sync :half_hit
-  with_synth :pulse do 
+  with_synth :tb303 do 
     play degrees_seq(:Cs1, 1111111111111)[h_inc], release: beat*4+(0.1*rand)
   end
   sleep beat

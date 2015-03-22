@@ -89,7 +89,7 @@ live_loop :clock do
   sleep beat/2
 end
 
-live :drums, amp: 0 do |n|
+live :drums, amp: 0.2 do |n|
   with_fx(:lpf, cutoff: 40){sample :drum_heavy_kick}
   cue :start
   cue :half_hit

@@ -134,7 +134,7 @@ live :deep, amp: 2.0 do |d_inc|
   }
   with_fx :lpf, cutoff: 130 do
   with_synth :tri do
-     play (ring *chords_seq(11334411, :Cs2))[d_inc], release: beat*6, attack: beat
+     play (ring *chords_seq(11335511, :Cs2))[d_inc], release: beat*6, attack: beat
   end
 end
   end

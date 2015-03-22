@@ -127,7 +127,7 @@ live :pulse3, amp: 1.0 do |p_inc|
  p_inc+=1
 end
 
-live :deep, amp: 1.0 do |d_inc|
+live :deep, amp: 2.0 do |d_inc|
   with_fx :reverb do |r_fx|
   3.times{sync :start
 

@@ -30,7 +30,7 @@ def hollowed_synth(n)
 end
 
 
-def degrees_seq(*pattern_and_roots, s=nil)
+def degrees_seq(*pattern_and_roots)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end

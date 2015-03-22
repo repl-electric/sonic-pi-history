@@ -109,6 +109,7 @@ end
   cue :quarter_hit
   sleep beat/4
   cue :quarter_hit
+  cue half_hit
   sleep beat/2
   n+=1
 end

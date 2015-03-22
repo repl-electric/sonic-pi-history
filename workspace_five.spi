@@ -34,6 +34,8 @@ def degrees_seq(*pattern_and_roots)
  patterns = pattern_and_roots.select{|a| a.kind_of? Fixnum} 
  scales = pattern_and_roots.select{|a| a.kind_of? Symbol}
 
+ puts patterns
+
  patterns.each_with_index.map do |pattern, idx|
   s = scales[idx]
   if !s

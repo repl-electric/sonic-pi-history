@@ -127,7 +127,13 @@ live :pulse3, amp: 0.4 do |p_inc|
  p_inc+=1
 end
 
-live :deep, amp: 2.0 do |d_inc|
+live :highlights do
+sync :half_hit, :quarter_hit
+  play degrees_seq(1, :Cs4)
+  sleep beat
+end
+
+live :deep, amp: 0.0 do |d_inc|
   with_fx :reverb do |r_fx|
   3.times{sync :start
    control r_fx, room: rand, mix: rand 

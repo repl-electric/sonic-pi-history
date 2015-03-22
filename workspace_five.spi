@@ -165,7 +165,7 @@ live :pulse5, amp: 2.0 do |d_inc|
    #else
     #play degrees_seq(:Cs3, 1), attack: 0.01, release: 0.2, amp: 1.00
    end
-sleep beat/4
+ sleep beat/4
  end
  d_inc+=1
 end

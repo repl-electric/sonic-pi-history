@@ -134,7 +134,7 @@ end
 live :highlights2, amp: 0.3 do |h_inc|
   with_synth :dark_ambience do 
   sync :half_hit
-  play degrees_seq(101010101010101, :Cs2, 0000, :Cs3)[h_inc], release: beat*4+(0.1*rand)
+  play degrees_seq(101010101010101, :Cs3, 0000, :Cs4)[h_inc], release: beat*4+(0.1*rand)
   end
   sleep beat
   h_inc+=1

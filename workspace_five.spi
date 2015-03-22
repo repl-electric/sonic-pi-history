@@ -130,7 +130,7 @@ end
 
 live :highlights do |h_inc|
   sync :half_hit
-  play (ring *degrees_seq(333333222221111100000, :Cs3))[h_inc]
+  play (ring *degrees_seq(3333332222211111, :Cs3))[h_inc]
   sleep beat
   h_inc+=1
 end

@@ -182,4 +182,4 @@ live :holloweded, amp: 0.0 do |z_inc|
   z_inc+=1
 end
 
-set_volume! 4.0
+set_volume! 2.0

@@ -179,7 +179,7 @@ live :deep, amp: 0.0 do |d_inc|
   d_inc+=1
 end
 
-live :holloweded, amp: 0.5 do |z_inc|
+live :holloweded, amp: 0.8 do |z_inc|
   hollowed_synth (ring *degrees_seq(1, :Cs3, :major))[z_inc]
   sleep beat
   z_inc+=1

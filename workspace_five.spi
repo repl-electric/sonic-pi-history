@@ -36,6 +36,7 @@ def degrees_seq(*pattern_and_roots)
   else
     accu << id
   end}
+ puts :pattern
  puts pattern_and_roots
  patterns = pattern_and_roots.select{|a| a.kind_of? Fixnum} 
  roots   = pattern_and_roots.select{|a| a.kind_of? Symbol}

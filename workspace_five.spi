@@ -153,13 +153,13 @@ live :pulse4, amp: 1.0 do |p_inc|
  p_inc+=1
 end
 
-live :pulse5, amp: 2.0 do |p_inc|
+live :pulse5, amp: 2.0 do |d_inc|
  sync :half_hit #,:quarter_hit
  with_synth :beep do
    #sample wood_s, amp: 0.4, start: 0.1
    case p_inc % 16
    when 0
-    play chords_seq(:Cs5, 4), attack: 0.01, release: beat*6, amp: 1.00
+    play chords_seq(:Cs5, 4)[d_inc], attack: 0.01, release: beat*6, amp: 1.00
     
     #play degrees_seq(:Cs4, 1), attack: 0.01, release: 0.2, amp: 1.00
    #else
@@ -167,7 +167,7 @@ live :pulse5, amp: 2.0 do |p_inc|
    end
 sleep beat/4
  end
- p_inc+=1
+ d_inc+=1
 end
 
 live :highlights2, amp: 0.3 do |h_inc|

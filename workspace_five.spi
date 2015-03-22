@@ -129,8 +129,8 @@ live :pulse3, amp: 0.4 do |p_inc|
 end
 
 live :highlights do
-sync :half_hit
-  play degrees_seq(12, :Cs3)
+  sync :half_hit
+  play degrees_seq(12, :Cs4)
   sleep beat
 end
 

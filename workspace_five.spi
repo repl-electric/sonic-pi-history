@@ -164,7 +164,7 @@ live :highlights do |h_inc|
   h_inc+=1
 end
 
-live :deep, amp: 1.0 do |d_inc|
+live :deep, amp: 0.0 do |d_inc|
   with_fx :reverb do |r_fx|
   3.times{sync :start
    control r_fx, room: rand, mix: rand 

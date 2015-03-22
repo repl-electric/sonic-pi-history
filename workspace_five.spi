@@ -32,7 +32,7 @@ end
 
 def degrees_seq(*pattern_and_roots)
  patterns = pattern_and_roots.select{|a| a.kind_of? Fixnum} 
- scales = pattern_and_roots.select{|a| a.kind_of? Symbol}
+ scales   = pattern_and_roots.select{|a| a.kind_of? Symbol}
 
  puts patterns
  puts scales

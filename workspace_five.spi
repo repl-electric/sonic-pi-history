@@ -113,7 +113,7 @@ live :drums do |n|
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
 end
- with_fx(:lpf, cutoff: 50){sample :drum_heavy_kick}
+  with_fx(:lpf, cutoff: 50){sample :drum_heavy_kick}
   sleep beat/4
   cue :quarter_hit
   sleep beat/4
@@ -155,7 +155,7 @@ live :highlights3, amp: 0.0 do |h_inc|
   h_inc+=1
 end
 
-live :highlights do |h_inc|
+live :highlights, amp: 0.0 do |h_inc|
   sync :half_hit
   play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc]
   sleep beat

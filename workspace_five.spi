@@ -130,7 +130,7 @@ end
 
 live :highlights do
   sync :half_hit
-  play degrees_seq(2, :Cs3)
+  play degrees_seq(1, :Cs3)
   sleep beat
 end
 

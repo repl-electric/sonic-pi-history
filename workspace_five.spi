@@ -145,13 +145,8 @@ live :pulse4, amp: 0.4 do |p_inc|
    case p_inc % 16
 
    when 0
-    play degrees_seq(:Cs5, 4)[p_inc], attack: 0.01, release: beat/2, amp: 4.00
+    play degrees_seq(:Cs5, 4), attack: 0.01, release: beat/2, amp: 4.00
    end
-   #play degrees_seq(:Cs3, 1113111311131114)[p_inc], attack: 0.01, release: beat/2, amp: 4.00
-   with_synth :growl do
-   #play degrees_seq(:Cs5, 1113111311131114)[p_inc], attack: 0.001, release: beat/2, amp: 4.00
-   end
-   #sleep (ring beat/2, beat/2, beat/4, beat/4)[p_inc]
    sleep beat/4
  end
  p_inc+=1

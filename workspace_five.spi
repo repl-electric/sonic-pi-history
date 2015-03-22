@@ -150,7 +150,7 @@ live :highlights3, amp: 0.2 do |h_inc|
   sync :half_hit
   with_synth :mod_fm do 
     play degrees_seq(:Cs2, 101010101010101,
-                           202020202020202)[h_inc], release: beat*4+(0.1*rand)
+                           402020202020202)[h_inc], release: beat*4+(0.1*rand)
   end
   sleep beat
   h_inc+=1

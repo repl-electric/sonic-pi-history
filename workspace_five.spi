@@ -135,7 +135,7 @@ end
 
 live :highlights do |h_inc|
   sync :half_hit
-  play degrees_seq(33332222111110000, :Cs3, 1111, :Cs3)[h_inc]
+  play degrees_seq(33332222111110000, :Cs3, 3333, :Cs2)[h_inc]
   sleep beat
   h_inc+=1
 end

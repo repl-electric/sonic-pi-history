@@ -113,7 +113,7 @@ live :drums do |n|
       sample snare2_s, start: 0.20, amp: 1.1, rate: 1.0, finish: 0.45
     end
 end
- with_fx(:lpf, cutoff: 30){sample :drum_heavy_kick}
+ with_fx(:lpf, cutoff: 45){sample :drum_heavy_kick}
   sleep beat/4
   cue :quarter_hit
   sleep beat/4

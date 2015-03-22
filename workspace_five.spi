@@ -155,7 +155,7 @@ end
 
 live :pulse5, amp: 1.0 do |p_inc|
  sync :half_hit #,:quarter_hit
- with_synth :hollow do
+ with_synth :beep do
    #sample wood_s, amp: 0.4, start: 0.1
    case p_inc % 16
    when 0

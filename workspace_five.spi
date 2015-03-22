@@ -146,7 +146,7 @@ live :highlights2, amp: 0.3 do |h_inc|
   h_inc+=1
 end
 
-live :highlights3, amp: 1.5 do |h_inc|
+live :highlights3, amp: 2.5 do |h_inc|
   sync :half_hit
   with_synth :beep do 
     play degrees_seq(:Cs2, 1111111111111)[h_inc], release: beat*4+(0.1*rand)

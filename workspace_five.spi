@@ -128,10 +128,11 @@ live :pulse3, amp: 0.4 do |p_inc|
  p_inc+=1
 end
 
-live :highlights do
+live :highlights do |h_inc|
   sync :half_hit
-  play degrees_seq(77776666555544443333, :Cs3)
+  play degrees_seq(77776666555544443333, :Cs3)[h_inc]
   sleep beat
+  h_inc+=1
 end
 
 live :deep, amp: 0.0 do |d_inc|

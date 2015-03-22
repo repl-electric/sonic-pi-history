@@ -29,13 +29,9 @@ def hollowed_synth(n)
   end
 end
 
-
 def degrees_seq(*pattern_and_roots)
  patterns = pattern_and_roots.select{|a| a.kind_of? Fixnum} 
  scales   = pattern_and_roots.select{|a| a.kind_of? Symbol}
-
- puts patterns
- puts scales
 
  patterns.each_with_index.map do |pattern, idx|
   root = scales[idx]
@@ -137,7 +133,7 @@ end
 
 live :highlights do |h_inc|
   sync :half_hit
-  play (ring *degrees_seq(33332222111110000, :Cs3))[h_inc]
+  play (ring *degrees_seq(33332222111110000, :Cs3, 7777, :Cs2))[h_inc]
   sleep beat
   h_inc+=1
 end

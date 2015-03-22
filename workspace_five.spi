@@ -133,7 +133,7 @@ end
 
 live :highlights2, amp: 2 do |h_inc|
   sync :half_hit
-  play degrees_seq(1010101014, :Cs2)[h_inc], release: beat*2+(0.1*rand)
+  play degrees_seq(1010101014, :Cs2)[h_inc], release: beat*4+(0.1*rand)
   sleep beat
   h_inc+=1
 end

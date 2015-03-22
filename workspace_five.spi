@@ -37,7 +37,7 @@ def degrees_seq(pattern, root, s=nil)
   pattern.to_s.split("").map{|d| degree(d.to_i, root, s)}
 end
 
-def chord_seq(pattern, root, s=nil)
+def chords_seq(pattern, root, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end

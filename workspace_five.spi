@@ -133,7 +133,7 @@ live :deep, amp: 2.0 do |d_inc|
 
    control r_fx, room: rand 
 }
-  with_fx :lpf, cutoff: 70 do
+  with_fx :lpf, cutoff: 400 do
   with_synth :tri do
      play (ring *chords_seq(11334411, :Cs2))[d_inc], release: beat*6, attack: beat
   end

@@ -143,7 +143,7 @@ live :pulse4, amp: 2.5 do |p_inc|
    #sample wood_s, amp: 0.4, start: 0.1
    case p_inc % 16
    when 0
-    play degrees_seq(:Cs2, 0), attack: 0.01, release: beat/2, amp: 1.00
+    play degrees_seq(:Cs2, 7), attack: 0.01, release: beat/2, amp: 1.00
     sleep beat/2
     play degrees_seq(:Cs2, 1), attack: 0.01, release: 0.2, amp: 1.00
    else

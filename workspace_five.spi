@@ -30,12 +30,13 @@ def hollowed_synth(n)
 end
 
 def degrees_seq(*pattern_and_roots)
- pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(!accu[-1].kind_of?(Symbol) && id.kind_of?(Integer))
     accu[0..-2] << "#{accu[-1]}#{id}"
   else
     accu << id
   end}
+ puts pattern_and_roots
  patterns = pattern_and_roots.select{|a| a.kind_of? Fixnum} 
  roots   = pattern_and_roots.select{|a| a.kind_of? Symbol}
  notes = patterns.each_with_index.map do |pattern, idx|

@@ -130,9 +130,8 @@ end
 live :deep, amp: 2.0 do |d_inc|
   with_fx :reverb do |r_fx|
   3.times{sync :start
-
-   control r_fx, room: rand 
-}
+   control r_fx, room: rand, mix: rand 
+  }
   with_fx :lpf, cutoff: 130 do
   with_synth :tri do
      play (ring *chords_seq(11334411, :Cs2))[d_inc], release: beat*6, attack: beat

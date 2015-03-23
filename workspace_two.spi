@@ -1,1 +1,2 @@
-play degree(8, :A3,:major)
+ play degrees_seq(:Cs3, 333322221111865, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
+                                                                                                    beat*2, beat*2)[h_inc]

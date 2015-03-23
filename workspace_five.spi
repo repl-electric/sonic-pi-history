@@ -192,8 +192,12 @@ end
 
 live :highlights, amp: 0.3 do |h_inc|
   sync :half_hit
-  play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
+  #play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
+  #                                                                                                  beat*2, beat*2)[h_inc]
+  play degrees_seq(:Cs3, 333322221111765, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
                                                                                                     beat*2, beat*2)[h_inc]
+
+
   sleep beat
   h_inc+=1
 end

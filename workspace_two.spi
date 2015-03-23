@@ -1,6 +1,6 @@
 beat = 1.0/2.0
 live_loop :test do |h_inc|
- play degrees_seq(:Cs3, 8688844443333333322231111)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
+ play degrees_seq(:Cs3, 868884444333322231111)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
                                                                                                     beat*2, beat*2)[h_inc]
 sleep beat
 

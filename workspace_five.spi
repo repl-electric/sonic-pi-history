@@ -137,7 +137,7 @@ live :pulse3, amp: 0.4 do |p_inc|
  p_inc+=1
 end
 
-live :pulse4, amp: 1.0 do |p_inc|
+live :pulse4, amp: 0.0 do |p_inc|
  sync :half_hit #,:quarter_hit
  with_synth :hollow do
    #sample wood_s, amp: 0.4, start: 0.1
@@ -192,7 +192,7 @@ end
 
 live :highlights, amp: 0.5 do |h_inc|
   sync :half_hit
-  play degrees_seq(:Cs3, 333322221111106600, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
+  play degrees_seq(:Cs3, 333322221111106000, :Cs3, 6655544444)[h_inc], attack: 0.01, release: (ring beat, beat, beat, 
                                                                                                     beat*2, beat*2)[h_inc]
   sleep beat
   h_inc+=1

@@ -42,7 +42,6 @@ live_loop :test3 do |h_inc|
 end
 
 live_loop :test4 do
-  sample :drum_heavy_kick
+  sample :drum_tom_mid_soft
   sleep beat*8
-
 end

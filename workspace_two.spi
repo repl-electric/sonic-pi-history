@@ -52,5 +52,5 @@ end
 
 live_loop :test4 do |h_inc|
   4.times{sync :test}
-  sample :ambi_glass_hum, amp: 0.01, start: rand(0.1)
+  sample :ambi_glass_hum, amp: 0.1, start: rand(0.1)
 end

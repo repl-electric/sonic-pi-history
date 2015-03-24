@@ -1,6 +1,6 @@
 beat = 1.0/4.0
 live_loop :test do |h_inc|
-with_fx :level, amp: 0.1 do
+with_fx :level, amp: 1.0 do
   play degrees_seq(:Cs3, "86888555544443
                           333554444111", 
                    :Cs2,  88818181818181,

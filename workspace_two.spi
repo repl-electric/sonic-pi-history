@@ -53,5 +53,5 @@ end
 
 live_loop :test4 do |h_inc|
   4.times{sync :test}
-  sample :perc_bell
+  sample :perc_snap
 end

@@ -30,7 +30,7 @@ live_loop :test2 do |h_inc|
   h_inc+=1
 end
 
-live_loop :test2 do |h_inc|
+live_loop :test3 do |h_inc|
   sync :test
   case h_inc % 32 
   when 0..16

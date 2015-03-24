@@ -41,10 +41,10 @@ live_loop :test3 do |h_inc|
   with_fx :lpf, cutoff: 60 do
   with_synth :saw do
     play degrees_seq(:Cs2, 222222233333333,
-                           111111222223333,
+                           111111122222333,
                            111111222224444,
                            111111222225555,
-                           111111222224444,
+                           111111222225555,
                            111111222224444)[h_inc], attack: 0.2, release: beat, note_slide: 1.0
     sleep beat
   end

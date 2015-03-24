@@ -44,7 +44,7 @@ end
 live_loop :test4 do |h_inc|
   sync :test
   with_fx(:reverb, room: 1, mix: 0.6, dry: 0.1){
-    sample (ring :drum_tom_lo_soft, :drum_tom_mid_soft, :drum_tom_hi_soft)[h_inc], rate: 0.6, amp: 0.8, start: 0.05
+    sample (ring :drum_tom_lo_soft, :drum_tom_mid_soft, :drum_tom_hi_soft)[h_inc], rate: 0.6, amp: 1.0, start: 0.05
   }
   sleep beat*14
   h_inc+=1

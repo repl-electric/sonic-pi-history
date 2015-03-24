@@ -35,6 +35,7 @@ live_loop :test3 do |h_inc|
   with_fx :lpf, cutoff: 70 do
   with_synth :saw do
     play degrees_seq(:Cs1, 11111, :Cs1, 22222)[h_inc], attack: 0.01, release: beat*4
+    sleep beat*4
   end
   end
   h_inc+=1

@@ -4,7 +4,7 @@ live_loop :test do |h_inc|
                    :Cs2, 81818181818181,
                    :Cs2, 83838383838383, 
                    :Cs2, 85858585858585,
-                   :Cs2, 88888888888787,  
+                   :Cs2, 88888888888887,  
                    :Cs3, 11)[h_inc], 
                   attack: 0.01, release: (ring beat, beat, beat*4, beat*4)[h_inc]
   sleep beat

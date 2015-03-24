@@ -45,5 +45,5 @@ live_loop :test4 do
   with_fx(:reverb, room: 1, mix: 0.5, dry: 0.1){
     sample :drum_tom_lo_soft
   }
-  sleep beat*8
+  sleep beat*14
 end

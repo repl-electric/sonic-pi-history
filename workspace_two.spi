@@ -34,7 +34,6 @@ with_fx :level, amp: 0.0 do
   end
 end
   h_inc+=1
-
 end
 
 live_loop :test3 do |h_inc|

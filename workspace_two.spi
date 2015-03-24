@@ -52,6 +52,6 @@ end
 
 
 live_loop :test4 do |h_inc|
-  sync :test
+  2.times{sync :test}
   sample :elec_bong
 end

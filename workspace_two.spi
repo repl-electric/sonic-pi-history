@@ -20,7 +20,7 @@ with_fx :level, amp: 1.0 do
   sync :test
   case h_inc % 32 
   when 16..32
-    sync :high
+    cue :high
   play degrees_seq(:Cs3, 8)[h_inc], attack: 0.01, release: beat*4
   sleep beat
   play degrees_seq(:Cs3, 1)[h_inc], attack: 0.01, release: beat*4

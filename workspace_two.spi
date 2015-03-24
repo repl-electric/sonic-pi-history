@@ -57,7 +57,7 @@ live_loop :test99 do |h_inc|
   sync :high
   with_fx :lpf, cutoff: 60 do
   with_synth :saw do
-    play degrees_seq(:Cs3, 000)[h_inc], attack: 0.01, release: (ring beat*2)[h_inc], note_slide: 1.0
+    play degrees_seq(:Cs3, 000)[h_inc], attack: 0.3, release: (ring beat*2)[h_inc], note_slide: 1.0
     sleep beat*2
   end
   end

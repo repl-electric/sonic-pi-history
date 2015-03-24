@@ -13,11 +13,15 @@ end
 
 live_loop :test2 do |h_inc|
   sync :test
-
   case h_inc % 32 
-
   when 0
+  play degrees_seq(:Cs3, 8)[h_inc], attack: 0.01, release: beat*4
+  sleep beat
+  play degrees_seq(:Cs3, 1)[h_inc], attack: 0.01, release: beat*4
+  sleep beat
+  play degrees_seq(:Cs2, 1)[h_inc], attack: 0.01, release: beat*4
 
+  else
   play degrees_seq(:Cs3, 8)[h_inc], attack: 0.01, release: beat*4
   sleep beat
   play degrees_seq(:Cs3, 1)[h_inc], attack: 0.01, release: beat*4
@@ -25,6 +29,5 @@ live_loop :test2 do |h_inc|
   play degrees_seq(:Cs2, 1)[h_inc], attack: 0.01, release: beat*4
 
   end
-
   h_inc+=1
 end

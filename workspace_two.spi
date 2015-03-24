@@ -20,6 +20,7 @@ with_fx :level, amp: 1.0 do
   sync :test
   case h_inc % 32 
   when 16..32
+    sync :high
   play degrees_seq(:Cs3, 8)[h_inc], attack: 0.01, release: beat*4
   sleep beat
   play degrees_seq(:Cs3, 1)[h_inc], attack: 0.01, release: beat*4
@@ -51,6 +52,18 @@ live_loop :test3 do |h_inc|
   end
   h_inc+=1
 end
+
+live_loop :test99 do |h_inc|
+  sync :high
+  with_fx :lpf, cutoff: 60 do
+  with_synth :saw do
+    play degrees_seq(:Cs3, 0)[h_inc], attack: 0.01, release: (ring beat*2)[h_inc], note_slide: 1.0
+    sleep beat*2
+  end
+  end
+  h_inc+=1
+end
+
 
 live_loop :test4 do |h_inc|
   sync :test

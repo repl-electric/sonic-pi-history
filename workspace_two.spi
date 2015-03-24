@@ -44,8 +44,8 @@ live_loop :test3 do |h_inc|
                            2222333,   
                            1112222,
                            1122444,
-                           11111122222555,
-                           11111144444555)[h_inc], attack: 0.5, release: beat*2, note_slide: 1.0
+                           1122225,
+                           1144555)[h_inc], attack: 0.5, release: beat*2, note_slide: 1.0
     sleep beat*2
   end
   end

@@ -16,7 +16,6 @@ end
 
 live_loop :test2 do |h_inc|
 with_fx :level, amp: 1.0 do
-
   sync :test
   case h_inc % 32 
   when 16..32
@@ -41,10 +40,11 @@ live_loop :test3 do |h_inc|
   sync :test
   with_fx :lpf, cutoff: 60 do
   with_synth :saw do
-    play degrees_seq(:Cs2, 5556666,
+    play degrees_seq(:Cs2, ,
                            2222222,   
-                           3333333,
-                           1111111,
+                           33 33333,
+5556666,                           
+1111111,
                            2222222,
                            1144555)[h_inc], attack: 0.3, release: (ring beat*4)[h_inc], note_slide: 1.0
     sleep beat*2

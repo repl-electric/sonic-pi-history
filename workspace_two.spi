@@ -83,4 +83,4 @@ live_loop :test4 do |h_inc|
   #sample :elec_lo_snare, amp: 0.01, start: rand(0.1)
 end
 
-set_volume! 4
+set_volume! 7

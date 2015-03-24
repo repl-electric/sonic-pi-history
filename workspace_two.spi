@@ -41,7 +41,7 @@ live_loop :test3 do |h_inc|
   with_fx :lpf, cutoff: 60 do
   with_synth :saw do
     play degrees_seq(:Cs2, 222222233333333,
-                           111111222224444,
+                           111111222223333,
                            111111222224444,
                            111111222224444,
                            111111222224444,

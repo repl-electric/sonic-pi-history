@@ -41,12 +41,12 @@ live_loop :test3 do |h_inc|
   with_fx :lpf, cutoff: 60 do
   with_synth :saw do
     play degrees_seq(:Cs2, 
-                           2222222,   
-                           3333333,
+2222222,   
+3333333,
 5556666,                           
 1111111,
-                           2222222,
-                           1144555)[h_inc], attack: 0.3, release: (ring beat*4)[h_inc], note_slide: 1.0
+2222222,
+1144555)[h_inc], attack: 0.3, release: (ring beat*4)[h_inc], note_slide: 1.0
     sleep beat*2
   end
   end
@@ -59,11 +59,11 @@ live_loop :test99 do |h_inc|
   with_synth :saw do
   case h_inc % 32 
   when 16..32
-    play degrees_seq(:Cs3, 1)[h_inc], attack: 0.3, release: (ring beat*2)[h_inc], note_slide: 1.0
+    play degrees_seq(:Cs3, 1)[h_inc], attack: 0.3, release: (ring beat*1)[h_inc], note_slide: 1.0
   else
-    play degrees_seq(:Cs2, 1)[h_inc], attack: 0.3, release: (ring beat*2)[h_inc], note_slide: 1.0
+    play degrees_seq(:Cs2, 1)[h_inc], attack: 0.3, release: (ring beat*1)[h_inc], note_slide: 1.0
 end
-    sleep beat*2
+    #sleep beat*2
   end
   end
   h_inc+=1

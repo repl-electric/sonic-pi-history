@@ -47,4 +47,5 @@ live_loop :test4 do |h_inc|
     sample (ring :drum_tom_lo_soft, :drum_tom_mid_soft)[h_inc], rate: 0.6, amp: 0.6, start: 0.05
   }
   sleep beat*14
+  h_inc+=1
 end

@@ -52,5 +52,5 @@ end
 
 live_loop :test4 do |h_inc|
   4.times{sync :test}
-  sample :bass_woodsy_c, amp: 0.2, start: rand(0.1)
+  sample :drum_snare_soft, amp: 0.2, start: rand(0.1)
 end

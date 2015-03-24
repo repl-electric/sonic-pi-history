@@ -53,5 +53,5 @@ end
 
 live_loop :test4 do |h_inc|
   sync :test
-  sample :elec_fuzz_tom
+  sample :elec_chime
 end

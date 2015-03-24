@@ -53,5 +53,5 @@ end
 
 live_loop :test4 do |h_inc|
   4.times{sync :test}
-  sample :elec_bong
+  sample :elec_bell
 end

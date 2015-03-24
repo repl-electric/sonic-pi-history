@@ -1,4 +1,4 @@
-beat = 1.0/2.0
+beat = 1.0/4.0
 live_loop :test do |h_inc|
   play degrees_seq(:Cs3, "868885555444433335544441111", 
                    :Cs2, 8181)[h_inc], 

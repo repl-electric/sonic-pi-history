@@ -43,6 +43,6 @@ end
 
 live_loop :test4 do
   sample :drum_heavy_kick
-  sleep beat
+  sleep beat*8
 
 end

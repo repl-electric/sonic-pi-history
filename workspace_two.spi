@@ -42,7 +42,7 @@ live_loop :test3 do |h_inc|
 end
 
 live_loop :test4 do
-  with_fx(:reverb, room: 1, mix: 0.9, dry: 0.1){
+  with_fx(:reverb, room: 1, mix: 0.8, dry: 0.1){
     sample :drum_tom_lo_soft
   }
   sleep beat*8

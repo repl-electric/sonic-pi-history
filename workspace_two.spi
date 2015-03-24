@@ -61,7 +61,7 @@ live_loop :test99 do |h_inc|
   when 16..32
     play degrees_seq(:Cs3, 1)[h_inc], attack: 0.3, release: (ring beat*1)[h_inc], note_slide: 1.0
   else
-    play degrees_seq(:Cs2, 1)[h_inc], attack: 0.3, release: (ring beat*1)[h_inc], note_slide: 1.0
+    play degrees_seq(:Cs2, 1)[h_inc], attack: 0.1, release: (ring beat*1)[h_inc], note_slide: 1.0
 end
     #sleep beat*2
   end

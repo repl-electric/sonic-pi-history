@@ -15,7 +15,7 @@ live_loop :test2 do |h_inc|
   sync :test
   play degrees_seq(:Cs3, 8)[h_inc], attack: 0.01, release: beat*4
   sleep beat
-  play degrees_seq(:Cs2, 1)[h_inc], attack: 0.01, release: beat*4
+  play degrees_seq(:Cs3, 1)[h_inc], attack: 0.01, release: beat*4
   sleep beat
   play degrees_seq(:Cs2, 1)[h_inc], attack: 0.01, release: beat*4
 

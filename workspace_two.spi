@@ -40,7 +40,7 @@ live_loop :test3 do |h_inc|
   with_fx :level, amp: 4 do
   #sync :test
   with_fx :lpf, cutoff: 70 do
-    with_synth :mod_fm do
+    with_synth :fm do
       play degrees_seq(:Cs2,
                        2222222,
                        3333333,

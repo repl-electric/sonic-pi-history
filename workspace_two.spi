@@ -75,7 +75,7 @@ live_loop :test3 do |h_inc|
 end
 
 live_loop :test96 do |h_inc|
-  with_fx :level, amp: 6 do
+  with_fx :level, amp: 0 do
   sync :test
   #with_fx :lpf, cutoff: 100 do
     with_synth :dark_ambience do

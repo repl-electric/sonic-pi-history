@@ -68,10 +68,9 @@ live_loop :test3 do |h_inc|
   sync :test
   with_fx :lpf, cutoff: 70 do
     with_synth :tri do
-        use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 3.9
-
-   play chord_seq(:Cs2, "222222233333331111111222222244444444444555")[h_inc].choose, attack: (ring 0.1)[h_inc], release: (ring beat,beat,beat,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
-      sleep beat*2
+    use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 3.9
+    play chord_seq(:Cs2, "222222233333331111111222222244444444444555")[h_inc][0..1], attack: (ring 0.1)[h_inc], release: (ring beat,beat,beat,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
+    sleep beat*2
     end
   end
   h_inc+=1

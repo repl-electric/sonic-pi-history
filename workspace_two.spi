@@ -64,7 +64,7 @@ end
 
 
 live_loop :test3 do |h_inc|
-  with_fx :level, amp: 1 do
+  with_fx :level, amp: 5 do
   sync :test
   with_fx :lpf, cutoff: 70 do
     with_synth :saw do

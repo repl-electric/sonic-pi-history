@@ -58,7 +58,7 @@ end
 live_loop :test3 do |h_inc|
   with_fx :level, amp: 3 do
   sync :test
-  with_fx :lpf, cutoff: 80 do
+  #with_fx :lpf, cutoff: 80 do
     with_synth :tri do
         use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 0.2
 
@@ -71,7 +71,7 @@ live_loop :test3 do |h_inc|
                        4444555)[h_inc], attack: (ring 0.1)[h_inc], release: (ring beat,beat,beat,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
       sleep beat*2
     end
-  end
+  #end
   h_inc+=1
   end
 end

@@ -1,4 +1,23 @@
 beat = 1.0/4.0
+
+def live(name, opts={}, &block)
+  idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end 
+  x = lambda{|idx|
+    with_fx :level, amp: amp do
+      block.(idx)
+      idx+=1
+    end}
+  live_loop name do |idx|
+    x.(idx)
+  end
+end
+
+
 live_loop :test do |h_inc|
   with_fx :level, amp: 1.0 do
     play degrees_seq(:Cs3, "86888555544443",
@@ -40,7 +59,7 @@ live_loop :test3 do |h_inc|
   with_fx :level, amp: 1 do
   #sync :test
   with_fx :lpf, cutoff: 70 do
-    with_synth :fm do
+    with_synth :dark_ambience do
       play degrees_seq(:Cs2,
                        2222222,
                        3333333,

@@ -60,7 +60,7 @@ live_loop :test3 do |h_inc|
   sync :test
   with_fx :lpf, cutoff: 80 do
     with_synth :dsaw do
-        use_synth_defaults decay: bar*2, release: 1, attack: 0.2, amp: 0.2
+        use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 0.2
 
    play degrees_seq(:Cs2,
                        2222222,

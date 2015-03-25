@@ -67,7 +67,7 @@ live_loop :test3 do |h_inc|
   with_fx :level, amp: 1 do
   sync :test
   #with_fx :lpf, cutoff: 80 do
-    with_synth :pulse do
+    with_synth :tb303 do
         use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 3.9
 
    play chord_seq(:Cs3,

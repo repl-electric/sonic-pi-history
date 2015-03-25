@@ -99,7 +99,7 @@ end
 
 live_loop :test99 do |h_inc|
   sync :time
-  with_fx :lpf, cutoff: 1 do
+  with_fx :lpf, cutoff: 3 do
     with_synth :saw do
       case h_inc % 32
       when 16..32

@@ -55,6 +55,14 @@ live_loop :test2 do |h_inc|
   h_inc+=1
 end
 
+def chord_seq(pattern, root, s=nil)
+  if !s
+    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  end
+  pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
+end
+
+
 live_loop :test3 do |h_inc|
   with_fx :level, amp: 1 do
   sync :test

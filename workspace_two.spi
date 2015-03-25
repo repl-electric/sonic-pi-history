@@ -39,7 +39,7 @@ end
 live_loop :test3 do |h_inc|
   #sync :test
   #with_fx :lpf, cutoff: 70 do
-    with_synth :gnoise do
+    with_synth :growl do
       play degrees_seq(:Cs2,
                        2222222,
                        3333333,

@@ -82,7 +82,7 @@ end
 
 live_loop :test4 do |h_inc|
   8.times{sync :test}
-  sample :elec_lo_snare, amp: 0.01, start: rand(0.1)
+  #sample :elec_lo_snare, amp: 0.01, start: rand(0.1)
 end
 
 set_volume! 1

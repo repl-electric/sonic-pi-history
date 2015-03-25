@@ -80,7 +80,8 @@ live_loop :test96 do |h_inc|
   with_fx :lpf, cutoff: 80 do
     with_synth :saw do
       play degrees_seq(:Cs2,
-                       2222222,
+                       1111111,
+2222222,
                        3333333,
                        1111111,
                        2222222,

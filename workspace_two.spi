@@ -57,11 +57,11 @@ end
 
 live_loop :test3 do |h_inc|
   with_fx :level, amp: 1 do
-  #sync :testw2`W`
+  sync :test
   with_fx :lpf, cutoff: 70 do
     with_synth :dark_ambienceΩ do
       play degrees_seq(:Cs2,
-                     w  2222222,
+                       2222222,
                        3333333,
                        1111111,
                        2222222,

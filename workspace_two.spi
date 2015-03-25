@@ -19,7 +19,7 @@ end
 
 
 live_loop :test do |h_inc|
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 2.0 do
     play degrees_seq(:Cs3, "86888555544443",
                      :Cs3, "333554444111",
                      :Cs2,  88818181818181,

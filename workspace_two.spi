@@ -60,7 +60,7 @@ live_loop :test3 do |h_inc|
   sync :test
   #with_fx :lpf, cutoff: 100 do
     with_synth :dark_ambience do
-      play degrees_seq(:Cs2,
+      play degrees_seq(:Cs3,
                        2222222,
                        3333333,
                        1111111,

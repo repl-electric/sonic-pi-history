@@ -56,10 +56,10 @@ live_loop :test2 do |h_inc|
 end
 
 live_loop :test3 do |h_inc|
-  with_fx :level, amp: 10 do
+  with_fx :level, amp: 11 do
   sync :test
-  #with_fx :lpf, cutoff: 100 do
-    with_synth :dark_ambience do
+  with_fx :lpf, cutoff: 100 do
+    with_synth :saw do
       play degrees_seq(:Cs3,
                        2222222,
                        3333333,
@@ -69,7 +69,7 @@ live_loop :test3 do |h_inc|
                        4444555)[h_inc], attack: (ring 0.1)[h_inc], release: (ring beat,beat,beat,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
       sleep beat*2
     end
-  #end
+  end
   h_inc+=1
   end
 end

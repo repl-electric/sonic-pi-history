@@ -77,7 +77,7 @@ end
 live_loop :test96 do |h_inc|
   with_fx :level, amp: 4 do
   sync :test
-  with_fx :lpf, cutoff: 80 do
+  with_fx :lpf, cutoff: 100 do
     with_synth :dark_ambience do
       play degrees_seq(:Cs3,
 1,

@@ -62,7 +62,7 @@ live_loop :test3 do |h_inc|
     with_synth :tri do
         use_synth_defaults decay: beat*2, release: 1, attack: 0.2, amp: 3.9
 
-   play degrees_seq(:Cs4,
+   play degrees_seq(:Cs3,
                        2222222,
                        3333333,
                        1111111,

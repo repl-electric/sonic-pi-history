@@ -59,7 +59,7 @@ def chord_seq(root, pattern, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end
-  pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)}
+  (ring *pattern.to_s.split("").map{|d| chord_degree(d.to_i, root, s)})
 end
 
 

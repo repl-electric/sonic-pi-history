@@ -86,7 +86,7 @@ live_loop :test96 do |h_inc|
 1,
 2,
 4,
-5)[h_inc], attack: (ring 0.01)[h_inc], release: (ring beat*7,beat*7,beat*7,beat*7,beat*7,beat*7,beat*7)[h_inc], note_slide: 1.0
+5)[h_inc], attack: (ring 0.01)[h_inc], release: (ring beat*15,beat*15,beat*15,beat*7,beat*7,beat*7,beat*7)[h_inc], note_slide: 1.0
       sleep beat*7
     end
  # end

@@ -55,7 +55,7 @@ live_loop :test2 do |h_inc|
   h_inc+=1
 end
 
-def chord_seq(pattern, root, s=nil)
+def chord_seq(root, pattern, s=nil)
   if !s
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
   end

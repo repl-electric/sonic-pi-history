@@ -80,13 +80,13 @@ live_loop :test96 do |h_inc|
   with_fx :lpf, cutoff: 80 do
     with_synth :saw do
       play degrees_seq(:Cs2,
-                       1111111,
+1111111,
 2222222,
-                       3333333,
-                       1111111,
-                       2222222,
-                       4444444,
-                       4444555)[h_inc], attack: (ring 0.1)[h_inc], release: (ring beat,beat,beat,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
+3333333,
+1111111,
+2222222,
+4444444,
+4444555)[h_inc], attack: (ring 0.1)[h_inc], release: (ring beat*7,beat*7,beat*7,beat*4,beat*4,beat*4,beat*4)[h_inc], note_slide: 1.0
       sleep beat*2
     end
   end

@@ -2,12 +2,12 @@ beat = 1.0/4.0
 live_loop :test do |h_inc|
   with_fx :level, amp: 1.0 do
     play degrees_seq(:Cs3, "86888555544443",
-                     :Cs3,  "333554444111",
+                     :Cs3, "333554444111",
                      :Cs2,  88818181818181,
                      :Cs2,  88838383838383,
                      :Cs2,  88858585858585,
                      :Cs2,  86888888888888,
-    :Cs3,  11)[h_inc],
+                     :Cs3,  11)[h_inc],
       attack: 0.01, release: (ring beat, beat, beat*4, beat*4)[h_inc]
     sleep beat
     h_inc+=1
@@ -38,7 +38,7 @@ end
 
 live_loop :test3 do |h_inc|
   sync :test
-  with_fx :lpf, cutoff: 60 do
+  with_fx :lpf, cutoff: 0 do
     with_synth :saw do
       play degrees_seq(:Cs2,
                        2222222,

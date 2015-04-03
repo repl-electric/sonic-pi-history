@@ -58,7 +58,7 @@ with_fx :level, amp: 1.0 do
   sync :quart
   use_synth :beep
   with_fx :reverb do
-    sample pa_s, amp: 2, rate: -2
+    sample pa_s, amp: 2, rate: -4
     play degree(1, :A2, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     #play degree(1, :A5, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

@@ -290,8 +290,10 @@ live_loop :atmos do
 end
 
 live_loop :hollowed do
+with_fx amp: 0 do 
   sync :start
   hollowed_synth degree(1, :Cs3, :major)
+end
 end
 
 set_volume! 1.0

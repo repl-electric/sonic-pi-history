@@ -201,7 +201,7 @@ live_loop :synth do |z|
           control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
-          swishing_saw degrees_seq(1112111211121112114, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
           sync :hit
           cue :deep_notes
 

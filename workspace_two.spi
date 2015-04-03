@@ -20,7 +20,7 @@ live_loop :metro do
   sleep bar
 end
 live_loop :highlights do |high_n|
-with_fx :level, amp: 0.5 do
+with_fx :level, amp: 0.0 do
  sync :high
  use_synth :sine
  play (ring degree(1, :A4, :major), degree(1, :A3, :major))[high_n]

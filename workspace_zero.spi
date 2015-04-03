@@ -175,7 +175,7 @@ def swishing_saw(notes, lpf_fx, beat)
 end
 
 live_loop :synth do |z|
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
@@ -185,7 +185,7 @@ live_loop :synth do |z|
         kick_start = 0.01
         sync :hit
 
-        octave = 4
+        octave = 1
 
         my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12

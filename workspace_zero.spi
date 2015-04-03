@@ -294,7 +294,7 @@ end
 live_loop :hollowed do
 with_fx :level, amp: 1 do 
   sync :start
-  hollowed_synth degree(7, :Cs3, :major)
+  hollowed_synth degree(1, :Cs4, :major)
 end
 end
 

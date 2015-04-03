@@ -266,13 +266,13 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :beep do
+live_loop :beep do |b_idx|
 with_fx :level, amp: 1 do
   #  sync :bar
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
-  n =  [degree(4, :A3, :major),degree(1, :A3, :major)].choose #fm
+  n =  (ring degree(4, :A3, :major),degree(1, :A3, :major))[b_idx] #fm
 
   #sync :start
 
@@ -284,6 +284,7 @@ with_fx :level, amp: 1 do
     room_size += 1
   end
 end
+b_idx+=1
 end
 
 live_loop :beep2 do |n|

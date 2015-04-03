@@ -299,7 +299,7 @@ end
 
 live_loop :vio_dark do
 with_fx :level, amp: 1.0 do
-sync :start
+#sync :start
 with_fx :echo do
 with_fx :reverb do
 a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"

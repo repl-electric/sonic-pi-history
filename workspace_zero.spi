@@ -165,7 +165,7 @@ live_loop :drums do |n|
 end
 
 def swishing_saw(notes, lpf_fx, beat)
-  fuzz = 40
+  fuzz = 10
   notes.each_with_index do |n, idx|
     play n
     sync :half_hit

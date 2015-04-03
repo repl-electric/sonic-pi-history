@@ -128,7 +128,7 @@ with_fx :level, amp: 0.4 do
     sleep bar/2
    
     sleep bar*2
-    play degree(4, :A3, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
+    play degree(1, :A4, :major), amp: 1.1, attack: 0.001, release: 0.1, decay: bar/2 + 0.05
     sleep bar/4
     with_fx :echo, phase: bar/8 do
       play degree(1, :A4, :major), amp: 1.0, attack: 0.01, release: 1.0, decay: dice(6) > 3 ? bar*4 : bar/2 + 0.05

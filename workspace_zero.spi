@@ -226,7 +226,7 @@ end
 
 live_loop :pulse do |p_idx|
   x = nil
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     sync :start
     with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do |reverb_fx|
       with_fx :slicer, phase: beat*2 do |s_fx|

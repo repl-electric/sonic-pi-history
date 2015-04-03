@@ -298,7 +298,7 @@ n+=1
 end
 
 live_loop :vio_dark do
-with_fx :level, amp: 3.0 do
+with_fx :level, amp: 1.0 do
 #sync :start
 with_fx :echo do
 with_fx :reverb do

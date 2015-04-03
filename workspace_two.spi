@@ -304,7 +304,7 @@ with_fx :echo do
 with_fx :reverb do
 a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
 #sample a4_long_s, amp: 1, rate: 1.0
-sample a4_long_s, amp: 1, rate: 0.8
+sample a4_long_s, amp: 1, rate: 1.0
 sleep sample_duration(a4_long_s)
 end
 end

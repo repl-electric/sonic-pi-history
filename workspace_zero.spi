@@ -187,14 +187,14 @@ live_loop :synth do |z|
 
         octave = 1
 
-        my = play degrees_seq(1010101010101010101010, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
+        my = play      degrees_seq(101010101010101010, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
 
         with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001, pitch_slide: 1.0  do |p_fx|
 
-          swishing_saw degrees_seq(333333333333333333, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(2222222222222222222, :"Cs#{octave}"), lpf_fx, beat
 
           sync :hit
           #control my, detune: 0.1

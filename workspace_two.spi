@@ -261,7 +261,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   end
 end
 
-@cutoff = 100
+@cutoff = 10
 @direction = 1
 room_size = 0
 

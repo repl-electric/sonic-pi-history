@@ -149,7 +149,7 @@ live_loop :new_bass do |n_idx|
 with_fx :level, amp: 10.0 do
 with_synth :dark_ambience do
 with_fx :lpf, cutoff: 100 do
-with_fx :reverb, room: 0.0 do
+with_fx :reverb, room: 0.5 do
 sync :start
 play (ring 
 chord_degree(5, :A1)[0],

@@ -119,8 +119,10 @@ live_loop :ride do |r|
 end
 
 live_loop :heart do
+with_fx :level amp: 0 do
   sync :hit
   sample :elec_hollow_kick, start: 0.2, finish: 0.5
+end
 end
 
 rate = 1.0

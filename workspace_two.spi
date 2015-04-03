@@ -55,7 +55,7 @@ vio_idx += 1
 end
 live_loop :piano do |p_idx|
 with_fx :level, amp: 1.0 do
-  sync :quart
+  sync :bar
   use_synth :beep
   with_fx :reverb do
     sample pa_s, amp: 2, rate: (ring -1, 1)[p_idx]

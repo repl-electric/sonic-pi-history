@@ -168,18 +168,17 @@ def swishing_saw(notes, lpf_fx, beat)
   notes.each_with_index do |n, idx|
     play n
     sync :half_hit
-    control lpf_fx, cutoff: (ring 60, 61, 51 ,50, 50, 65,
-                                  60, 61, 51 ,50, 55, 65)[idx]
+    control lpf_fx, cutoff: (ring 70, 60, 70 ,60, 80, 90,
+                             70, 65, 70 ,65, 85, 95)[idx]
     #sleep (ring beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
   end
 end
 
 live_loop :synth do |z|
-  sync :pulse
   with_fx :level, amp: 1.0 do
     # sync :beat
     use_synth :dsaw
-    use_synth_defaults detune: 0.01, amp: 1.25, attack: 0.001, release: 0.25, note_slide: 1.0
+    use_synth_defaults detune: 0.1, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0
     with_fx :bitcrusher, bits: 12 do |bit_fx|
       with_fx :lpf, cutoff: 70 do |lpf_fx|
         rate = 1.0
@@ -188,7 +187,7 @@ live_loop :synth do |z|
 
         octave = 1
 
-        my = play      degrees_seq(111111111111111111, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
+        my = play      degrees_seq(101010101010101010, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
@@ -202,7 +201,7 @@ live_loop :synth do |z|
           control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
-          swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(1, :"Cs#{octave}"), lpf_fx, beat
           sync :hit
           cue :deep_notes
 
@@ -227,7 +226,7 @@ end
 
 live_loop :pulse do |p_idx|
   x = nil
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 0.0 do
     sync :start
     with_fx :reverb, room: 100, mix: 0.9, dry: 0.1 do |reverb_fx|
       with_fx :slicer, phase: beat*2 do |s_fx|

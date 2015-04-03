@@ -67,6 +67,8 @@ with_fx :level, amp: 1.0 do
     sleep bar/4
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
+      sync :bar
+
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

@@ -298,4 +298,4 @@ with_fx :level, amp: 0.0 do
 end
 end
 
-set_volume! 0.0
+set_volume! 1.0

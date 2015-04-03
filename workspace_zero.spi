@@ -60,7 +60,7 @@ live_loop :clock do
 end
 
 live_loop :clapper do
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     32.times{sync :hit}
     sample clap_s, start: 0.2, amp: 0.25
     sync :hit
@@ -74,7 +74,7 @@ live_loop :clapper do
 end
 
 live_loop :voices do
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 2.0 do
     sync :atmosphere
     with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){with_fx(:reverb, room: 1.0, damp: 1){
     sample voice_s, attack: 1.0, amp: 0.5}}}}}
@@ -185,23 +185,23 @@ live_loop :synth do |z|
         kick_start = 0.01
         sync :hit
 
-        octave = 1
+        octave = 4
 
-        my = play      degrees_seq(101010101010101010, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
+        my = play degrees_seq(112222222222222, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1
 
         with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.01, res: 0.001, pitch_slide: 1.0  do |p_fx|
 
-          swishing_saw degrees_seq(2222222222222222222, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(222222222222222222, :"Cs#{octave}"), lpf_fx, beat
 
           sync :hit
           #control my, detune: 0.1
           control bit_fx, bits: 10
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
-          swishing_saw degrees_seq(1, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
           sync :hit
           cue :deep_notes
 
@@ -294,7 +294,7 @@ end
 live_loop :hollowed do
 with_fx :level, amp: 0.0 do 
   sync :start
-  hollowed_synth degree(7, :Cs2, :major)
+  hollowed_synth degree(3, :Cs4, :major)
 end
 end
 

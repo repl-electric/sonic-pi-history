@@ -188,7 +188,7 @@ live_loop :synth do |z|
 
         octave = 1
 
-        my = play      degrees_seq(141414131313131414, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
+        my = play      degrees_seq(141414141313131414, :"Cs#{octave}"), amp: 0.1, release: (beat/2)*18*3, attack: 2
         control bit_fx, bits: 12
         control lpf_fx, cutoff: 70
         control my, note: degrees_seq(2, :"Cs#{octave}")[0], detune: 0.1

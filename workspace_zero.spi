@@ -139,11 +139,11 @@ live_loop :drums do |n|
   sleep beat/2
 
   cue :half_hit
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     case n%6
     when 0
-      with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
-      sample snare2_s, amp: 0.8, finish: 1.0}}}
+     # with_fx(:slicer, phase: 1.0){with_fx(:echo, phase: beat/4, decay: 0.09){with_fx(:bitcrusher, bits: 6){
+     # sample snare2_s, amp: 0.8, finish: 1.0}}}
     when 3
       with_fx(:bitcrusher, bits: 8){
       sample snare2_s, amp: 1.15, start: 0.15,  finish: 0.8}

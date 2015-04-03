@@ -168,8 +168,8 @@ def swishing_saw(notes, lpf_fx, beat)
   notes.each_with_index do |n, idx|
     play n
     sync :half_hit
-    control lpf_fx, cutoff: (ring 50, 50, 50 ,40, 40, 40,
-                                  50, 50, 50 ,45, 45, 45)[idx]
+    control lpf_fx, cutoff: (ring 50, 50, 50 ,50, 40, 40,
+                                  50, 50, 50 ,50, 45, 45)[idx]
     #sleep (ring beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
   end
 end

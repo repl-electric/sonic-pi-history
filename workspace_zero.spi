@@ -175,6 +175,7 @@ def swishing_saw(notes, lpf_fx, beat)
 end
 
 live_loop :synth do |z|
+sync :start
   with_fx :level, amp: 1.0 do
     # sync :beat
     use_synth :dsaw

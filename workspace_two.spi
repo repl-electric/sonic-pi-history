@@ -54,11 +54,11 @@ vio_pan += 1
 vio_idx += 1
 end
 live_loop :piano do |p_idx|
-with_fx :level, amp: 5.0 do
+with_fx :level, amp: 0.6 do
   sync :bar
-  use_synth :hollow
+  use_synth :beep
   with_fx :reverb do
-    #sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
+    sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
 
 
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
@@ -83,7 +83,7 @@ with_fx :level, amp: 5.0 do
 
     play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
-    play degree(2, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
     sleep bar/4
@@ -308,7 +308,7 @@ with_fx :level, amp: 1 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
-  n =  (ring degree(1, :A3, :major), degree(4, :A3, :major))[b_idx] #fm
+  n =  (ring degree(1, :A3, :major),degree(4, :A3, :major))[b_idx] #fm
 
   #sync :start
 

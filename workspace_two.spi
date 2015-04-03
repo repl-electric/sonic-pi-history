@@ -54,7 +54,7 @@ vio_pan += 1
 vio_idx += 1
 end
 live_loop :piano do |p_idx|
-with_fx :level, amp: 2.0 do
+with_fx :level, amp: 4.0 do
   sync :bar
   use_synth :hollow
   with_fx :reverb do

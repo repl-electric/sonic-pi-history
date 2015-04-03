@@ -268,7 +268,7 @@ room_size = 0
 
 live_loop :beep do |b_idx|
 with_fx :level, amp: 1 do
-  #  sync :bar
+  sync :beep2
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
@@ -287,8 +287,8 @@ end
 b_idx+=1
 end
 
-live_loop :beep2 do |n|
-notes = (ring degree(5, :A3, :major), degree(6, :A3, :major))[n]
+live_loop :beep2 do |n_idx|
+notes = (ring degree(5, :A3, :major), degree(6, :A3, :major))[n_idx]
 with_fx :level, amp: 1.0 do
   4.times do |i|
     n = notes[i % 2]
@@ -297,7 +297,7 @@ with_fx :level, amp: 1.0 do
     room_size += 1
   end
 end
-n+=1
+n_idx+=1
 end
 
 live_loop :vio_dark do

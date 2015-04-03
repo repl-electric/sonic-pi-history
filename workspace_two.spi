@@ -2,7 +2,6 @@
 bar = 1/2.0
 quart = 2*bar
 set_volume! 1.0
-
 pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
 p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
@@ -36,7 +35,6 @@ with_fx :level, amp: 0.1 do
   end
 end
 end
-
 vio_pan = -1
 live_loop :vio do |vio_idx|
 with_fx :level, amp: 1 do
@@ -161,7 +159,6 @@ chord_degree(3, :A1)[1],
 chord_degree(4, :A1)[0],
 chord_degree(3, :A1)[0],
 chord_degree(1, :A2)[0],
-
 
 #chord_degree(1, :A1)[0],
 

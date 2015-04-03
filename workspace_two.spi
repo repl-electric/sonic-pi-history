@@ -11,6 +11,13 @@ p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__pi
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
+def degrees_seq(pattern, root, scale=nil)
+if !scale
+  scale = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+end
+pattern.to_s.split("").map{|d| degree(d.to_i, root, scale)}
+end
+
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
   sleep bar

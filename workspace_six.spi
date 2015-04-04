@@ -8,6 +8,6 @@ play degree(2, :A3, :major)
 sleep 1
 play degree(1, :A3, :major)
 sleep 1
-play degree(7, :A3, :major)
+play degree(7, :A2, :major)
 sleep 1
 play degree(1, :A3, :major)

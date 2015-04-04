@@ -1,5 +1,5 @@
 bar = 1/8.0
-
+loop do
 play degree(1, :A2, :major), release: bar*8, attack: 0.1, amp: 0.4
 
 play degree(5, :A3, :major)
@@ -15,3 +15,4 @@ sleep bar
 play degree(7, :A2, :major)
 sleep bar
 play degree(1, :A3, :major)
+end

@@ -192,9 +192,9 @@ chord_degree(3, :A1)[1],
 chord_degree(1, :A1)[1],
 
 chord_degree(3, :A1)[1],
-chord_degree(4, :A1)[0],
-chord_degree(3, :A1)[0],
-chord_degree(1, :A2)[0],
+chord_degree(4, :A1)[1],
+chord_degree(3, :A1)[1],
+chord_degree(1, :A2)[1],
 
 #chord_degree(1, :A1)[0],
 

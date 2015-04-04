@@ -1,6 +1,6 @@
 bar = 1/2.0
 
-play degree(1, :A2, :major), release: bar*7
+play degree(1, :A2, :major), release: bar*8
 
 play degree(5, :A3, :major)
 sleep bar

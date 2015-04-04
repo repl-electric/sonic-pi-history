@@ -15,4 +15,5 @@ sleep bar
 play degree(7, :A2, :major)
 sleep bar
 play degree(1, :A3, :major)
+sleep bar
 end

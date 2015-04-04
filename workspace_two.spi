@@ -201,7 +201,7 @@ chord_degree(1, :A2)[0],
 #chord_degree(1, :A2)[0]
 #chord_degree(1, :A2)[0],
 #chord_degree(1, :A2)[0]
-)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*5)[n_idx], attack: 0.1
+)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*8)[n_idx], attack: 0.1
 end
 end
 end

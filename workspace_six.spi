@@ -1,13 +1,13 @@
 play degree(5, :A3, :major)
-sleep 1
+sleep 1/2.0
 play degree(4, :A3, :major)
-sleep 1
+sleep 1/2.0
 play degree(3, :A3, :major)
-sleep 1
+sleep 1/2.0
 play degree(2, :A3, :major)
-sleep 1
+sleep 1/2.0
 play degree(1, :A3, :major)
-sleep 1
+sleep 1/2.0
 play degree(7, :A2, :major)
-sleep 1
+sleep 1/2.0
 play degree(1, :A3, :major)

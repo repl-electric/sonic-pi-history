@@ -81,7 +81,7 @@ with_fx :level, amp: 0.6 do
     play_pattern_timed(degrees_seq(:A3, 1, :A4, 1211, 
                                    :A3, 1, :A4, 1311,
                                    :A3, 1, :A4, 1111,
-                                   :A3, 1, :A4, 1311),
+                                   :A3, 1, :A4, 1311)] ,
                        bar/2, bar/4, bar/4, bar/4)
 
   

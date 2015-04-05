@@ -81,8 +81,8 @@ with_fx :level, amp: 0.6 do
     play degrees_seq(:A3, 1, :A4, 1211, 
                      :A3, 1, :A4, 1311,
                      :A3, 1, :A4, 1111,
-                     :A3, 1, :A4, 1311)[p_idx] ,
-                       bar/2, bar/4, bar/4, bar/4)
+                     :A3, 1, :A4, 1311)[p_idx]
+    sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
 
   
 

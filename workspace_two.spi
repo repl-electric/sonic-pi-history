@@ -78,11 +78,11 @@ with_fx :level, amp: 0.6 do
   with_fx :reverb do
     sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
 
-    play_pattern_timed([degrees_seq(:A3, 1, :A4, 1211, 
-                                   :A3, 1, :A4, 1311,
-                                   :A3, 1, :A4, 1111,
-                                   :A3, 1, :A4, 1311)[p_idx]] ,
-                       [bar/2, bar/4, bar/4, bar/4])
+    play degrees_seq(:A3, 1, :A4, 1211, 
+                     :A3, 1, :A4, 1311,
+                     :A3, 1, :A4, 1111,
+                     :A3, 1, :A4, 1311)[p_idx] ,
+                       bar/2, bar/4, bar/4, bar/4)
 
   
 

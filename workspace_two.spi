@@ -67,7 +67,7 @@ with_fx :level, amp: 0.6 do
                      amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
 
-   if p_idx % 4 == 0 sync :bar 
+   if (p_idx % 4 == 0) sync :bar 
 
 #    play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 #    sleep bar/2

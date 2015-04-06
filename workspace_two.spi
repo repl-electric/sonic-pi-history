@@ -74,7 +74,7 @@ with_fx :level, amp: 0.6 do
 
      if(p_idx %2 == 0)
     with_synth :prophet do
-      play degree(1, :A1, :minor), cutoff: 83, release: bar, decay: bar*8
+      play degree(1, :A3, :minor), cutoff: 83, release: bar, decay: bar*8
     end
 end
 

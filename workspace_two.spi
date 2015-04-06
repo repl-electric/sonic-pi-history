@@ -109,9 +109,9 @@ with_fx :level, amp: 0.6 do
     play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
     
       sleep bar/4
-    play degree(3, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
     sleep bar/4
-    play degree(3, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
+    play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
 
 
   end

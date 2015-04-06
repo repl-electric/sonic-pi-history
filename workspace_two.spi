@@ -73,7 +73,7 @@ with_fx :level, amp: 0.6 do
     #sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
 
     with_synth :prophet do
- play degree(1, :A2, :minor), cutoff: 100
+ play degree(1, :A2, :minor), cutoff: 80
 end
 
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1

@@ -107,7 +107,7 @@ with_fx :level, amp: 0.6 do
     sleep bar/2
     
     if(p_idx % 4 == 0)
-with_fx :echo, phase: bar/2
+with_fx :echo, phase: bar/2 do
     play degree(4, :A3, :minor), amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
 end
 else

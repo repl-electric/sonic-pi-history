@@ -98,7 +98,6 @@ end
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(3, :A2, :minor)
 
     play degree(1, :A3, :minor), amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -114,6 +113,8 @@ end
     sleep bar/2
     
     if(p_idx % 2 == 0)
+    control x, note: degree(3, :A2, :minor)
+
 with_fx :echo, phase: bar do
     play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
 end

@@ -97,7 +97,6 @@ end
 
     pat = degrees_seq(*%w(:a3 4 :a4 411 :a3 2 :a4 411 :a3 2 :a4 111 :a3 2 :a4 411))
 
-
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     play pat[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

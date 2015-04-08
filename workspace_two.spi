@@ -79,6 +79,8 @@ with_fx :level, amp: 0.6 do
     end
 end
 
+    pat = degree(1211, 1311, 1111, 1311, :A3, :minor)
+
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     play degree(2, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1

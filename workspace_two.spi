@@ -258,7 +258,7 @@ n_idx+=1
 end
 
 live_loop :thebass do
-with_fx :level, amp: 0.4 do
+with_fx :level, amp: 0.6 do
   use_synth :tri
   sync :start
 

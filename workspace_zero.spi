@@ -198,7 +198,7 @@ live_loop :synth do |z|
 
           #4halfs = 2 beats
 
-          swishing_saw degrees_seq(2222222222222222, :"Cs#{octave}"), lpf_fx, beat
+          swishing_saw degrees_seq(2121212121212121, :"Cs#{octave}"), lpf_fx, beat
 
           sync :trans
           #control my, detune: 0.1

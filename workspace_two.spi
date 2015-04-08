@@ -139,7 +139,7 @@ with_fx :echo, phase: bar do
     play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
 end
 else
-    play bar[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
+    play pat[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
 
 end
    

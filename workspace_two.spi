@@ -110,29 +110,29 @@ with_fx :level, amp: 0.6 do
  
 
     play pat[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/2
+    sleep sleep_pat[0]
     play pat[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/4
+    sleep sleep_pat[1]
     play pat[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
-    sleep bar/4
+    sleep sleep_pat[2]
     play pat[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
  
 
     play pat[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/2
+    sleep sleep_pat[0]
     play pat[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/4
+    sleep sleep_pat[1]
     play pat[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
-    sleep bar/4
+    sleep sleep_pat[2]
     play pat[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
  
 
     play pat[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/2
+    sleep sleep_pat[0]
     
     if(p_idx % 2 == 0)
 
@@ -144,9 +144,9 @@ else
 
 end
    
-    sleep bar/4
+    sleep sleep_pat[1]
     play pat[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
-    sleep bar/4
+    sleep sleep_pat[2]
     play pat[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
   end
 end

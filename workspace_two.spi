@@ -74,11 +74,10 @@ with_fx :level, amp: 0.6 do
 
    x = nil
      if(p_idx %2 == 0)
-with_fx :reverb do |p_fx|
     with_synth :prophet do
       x = play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 85, release: bar, decay: bar*8
     end
-
+end
 
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -90,7 +89,7 @@ with_fx :reverb do |p_fx|
 
     sync :bar
     control x, note: degree(3, :A2, :minor)
-    control p_fx, mix: 0.0
+
 
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -101,8 +100,7 @@ with_fx :reverb do |p_fx|
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(1, :A2, :minor)
-    control p_fx, mix: 1.0
+    control x, note: degree(3, :A2, :minor)
 
 
     play degree(1, :A3, :minor), amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
@@ -114,8 +112,8 @@ with_fx :reverb do |p_fx|
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(1, :A2, :minor)
-    control p_fx, mix: 0.0
+    control x, note: degree(3, :A2, :minor)
+
 
     play degree(1, :A3, :minor), amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -134,12 +132,12 @@ end
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
     sleep bar/4
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
-end
+
 
   end
 end
 p_idx+=1
-end end
+end
 live_loop :chords do
 with_fx :level, amp: 1 do
  sync :start

@@ -16,7 +16,7 @@ def degrees_seq(*pattern_and_roots)
     accu << id
   end}
  patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
- roots   = pattern_and_roots.select{|a| a.kind_of? Symbol}
+ roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
  notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
   s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor

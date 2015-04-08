@@ -17,7 +17,6 @@ def degrees_seq(*pattern_and_roots)
   end}
  patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
  roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
-
  notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
   if(root[0] == ":")
@@ -101,7 +100,6 @@ end
 
     pat = degrees_seq(*%w(:a4 5 :a4 585 :a4 5 :a4 411 :a4 5 :a4 111 :a4 2 :a4 411))
 
-
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     play pat[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
@@ -116,9 +114,9 @@ end
 
     play pat[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
-    play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play pat[5]), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
+    play pat[6]), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
     sleep bar/4
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 

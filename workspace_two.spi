@@ -135,7 +135,7 @@ end
     play pat[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(1, :A2, :minor)
+    control x, note: degree(1, :A1, :minor)
 
 
     play pat[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1

@@ -186,7 +186,7 @@ live_loop :synth do |z|
         kick_start = 0.01
         sync :trans
 
-        octave = 2
+        octave = 3
 
         #24
 #4halfs = 2 beats

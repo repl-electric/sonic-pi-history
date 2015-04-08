@@ -220,7 +220,7 @@ live_loop :synth do |z|
           kick_start = 0.0
           control bit_fx, bits: 8
           control my, detune: 0.0
-
+          
           swishing_saw degrees_seq(7777777777777777, :"Cs#{octave-1}"), lpf_fx, beat
         end
       end

@@ -249,7 +249,7 @@ live_loop :pulse do |p_idx|
           control s_fx, phase: beat
 
           sleep beat
-          #control x, note:  degree(1, :Cs4,:major)
+          control x, note:  degree(1, :Cs4,:major)
           control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]
           p_idx +=1
           control s_fx, phase: beat/2

@@ -99,11 +99,11 @@ with_fx :level, amp: 0.6 do
    #end
 
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
-    sleep sleep_pat[p_idx]
+    sleep sleep_pat[0]
     play pat[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    sleep bar/2
+    sleep sleep_pat[1]
     play pat[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
-    sleep bar/2
+    sleep sleep_pat[2]
     play pat[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar

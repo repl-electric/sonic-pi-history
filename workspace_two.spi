@@ -118,7 +118,7 @@ end
     sleep bar/4
     play pat[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
     sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
+    play pat[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
     control x, note: degree(3, :A2, :minor)

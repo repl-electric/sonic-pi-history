@@ -78,7 +78,7 @@ with_fx :reverb do |p_fx|
     with_synth :prophet do
       x = play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 85, release: bar, decay: bar*8
     end
-end
+
 
 
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1

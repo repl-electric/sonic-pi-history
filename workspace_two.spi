@@ -74,7 +74,7 @@ with_fx :level, amp: 0.6 do
 
    x = nil
      if(p_idx %2 == 0)
-    with_synth :prophet do
+    with_synth :saw do
       x = play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 81, release: bar, decay: bar*8
     end
 end

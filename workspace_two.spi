@@ -74,7 +74,7 @@ with_fx :level, amp: 0.6 do
 
    x = nil
      if(p_idx %2 == 0)
-with_fx :reverb do
+with_fx :reverb do |p_fx|
     with_synth :prophet do
       x = play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 85, release: bar, decay: bar*8
     end
@@ -91,7 +91,7 @@ end
 
     sync :bar
     control x, note: degree(4, :A2, :minor)
-
+    control p_fx, mix: 0.0
 
     play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2

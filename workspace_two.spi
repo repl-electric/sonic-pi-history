@@ -72,9 +72,10 @@ with_fx :level, amp: 0.6 do
     #                 amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     #sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
 
+   x = nil
      if(p_idx %2 == 0)
     with_synth :prophet do
-      play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 85, release: bar, decay: bar*8
+      x = play degree((ring 1,2)[p_idx], :A2, :minor), cutoff: 85, release: bar, decay: bar*8
     end
 end
 
@@ -97,6 +98,7 @@ end
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
+conteol x, note: degree((ring 2)[p_idx], :A2, :minor)
 
     play degree(1, :A3, :minor), amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2

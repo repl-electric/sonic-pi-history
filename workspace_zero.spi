@@ -265,11 +265,14 @@ live_loop :pulse do |p_idx|
         4.times{ # 8 beats
           control s_fx, phase: beat
 
-      cue :hitxa
-          sleep beat/2
-      cue :hitxa
-          sleep beat/2
-
+       cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
+ cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
 
           #control x, note:  degree(1, :Cs4,:major)
           control reverb_fx, room: (ring 0.9, 1.0)[p_idx], mix: ring(0.1, 0.9)[p_idx]

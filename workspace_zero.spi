@@ -272,7 +272,12 @@ live_loop :pulse do |p_idx|
         4.times{ # 8 beats
 cue :hitxa
 
-          sleep beat
+          sleep beat/2
+cue :hitxa
+
+          sleep beat/2
+
+
 cue :hitxa
 
 sleep beat

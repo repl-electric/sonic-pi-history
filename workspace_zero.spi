@@ -205,7 +205,7 @@ live_loop :synth do |z|
           control my, note: degrees_seq(1, :"Cs#{octave}")[0]
 
           swishing_saw degrees_seq(1111111111111111111, :"Cs#{octave}"), lpf_fx, beat
-          sync :hit
+          sync :trans
           cue :deep_notes
 
           if(dice(6) >= 85)

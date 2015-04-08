@@ -152,7 +152,7 @@ def swishing_saw(notes, lpf_fx, beat)
     #sleep ring( beat/2, beat/2, beat/2, beat/2, beat/4, beat/4)[idx]
   end
 end
-live :synthers, amp: 4.0 do |z|
+live :synthers, amp: 0.0 do |z|
     # sync :beat
     use_synth :dsaw
     use_synth_defaults detune: 0.0, amp: 0.25, attack: 0.001, release: 0.25, note_slide: 1.0

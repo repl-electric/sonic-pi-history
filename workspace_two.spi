@@ -91,14 +91,7 @@ with_fx :level, amp: 0.6 do
     #                 amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     #sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
 
-   x = nil
-     if(p_idx %2 == 0)
-    with_synth :saw do
-      x = play degree((ring 1,2)[p_idx], :A1, :minor), cutoff: 81, release: bar, decay: bar*8
-    end
-end
-
-    pat = degrees_seq(*%w(:A3 5 :A3 585 :A3 5 :A3 444 :A3 5 :A3 222 :A3 2 :A3 511))
+     pat = degrees_seq(*%w(:A3 5 :A3 585 :A3 5 :A3 444 :A3 5 :A3 222 :A3 2 :A3 511))
 #    pat = degrees_seq(*%w(:a3 1 :a4 585 :a3 5 :a3 444 :a3 5 :a3 222 :a3 2 :a3 511))
 
 
@@ -111,8 +104,7 @@ end
     play pat[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(3, :A1, :minor)
-
+ 
 
     play pat[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -123,8 +115,7 @@ end
     play pat[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(3, :A1, :minor)
-
+ 
 
     play pat[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
@@ -135,8 +126,7 @@ end
     play pat[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(1, :A1, :minor)
-
+ 
 
     play pat[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2

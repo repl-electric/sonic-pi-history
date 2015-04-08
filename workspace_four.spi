@@ -1,1 +1,1 @@
-    pat = degrees_seq(%w(:a3 4 :a4 411 :a3 2 :a4 411 :a3 2 :a4 111 :a3 2 :a4 411))
+puts = degrees_seq(%w(:a3 4 :a4 411 :a3 2 :a4 411 :a3 2 :a4 111 :a3 2 :a4 411))

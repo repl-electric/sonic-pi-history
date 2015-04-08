@@ -99,7 +99,7 @@ with_fx :level, amp: 0.6 do
 end
 
 #    pat = degrees_seq(*%w(:A3 5 :A3 585 :A3 5 :A3 444 :A3 5 :A3 222 :A3 2 :A3 511))
-    pat = degrees_seq(*%w(:a3 5 :a3 585 :a3 5 :a3 444 :a3 5 :a3 222 :a3 2 :a3 511))
+    pat = degrees_seq(*%w(:a3 1 :a3 585 :a3 5 :a3 444 :a3 5 :a3 222 :a3 2 :a3 511))
 
 
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1

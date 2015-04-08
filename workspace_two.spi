@@ -126,7 +126,7 @@ end
 
     play pat[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
-    play pat[9]), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play pat[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
     play pat[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
     sleep bar/4

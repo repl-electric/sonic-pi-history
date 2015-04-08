@@ -297,12 +297,22 @@ live_loop :pulse do |p_idx|
         }
         control s_fx, phase: beat
         4.times{ # 8 beats
-cue :hitxa
-
-          sleep beat/2
-cue :hitxa
-
-          sleep beat/2
+ cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
+ cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
+ cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
+ cue :hitxa
+          sleep beat/4
+          cue :hitxa
+          sleep beat/4
 
 
 cue :hitxa

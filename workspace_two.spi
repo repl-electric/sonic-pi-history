@@ -101,7 +101,7 @@ with_fx :reverb do |p_fx|
     play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
-    control x, note: degree(5, :A2, :minor)
+    control x, note: degree(1, :A2, :minor)
     control p_fx, mix: 1.0
 
 

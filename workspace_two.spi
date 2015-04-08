@@ -81,19 +81,19 @@ end
 
     pat = degree(1211131111111311, :A3, :minor)
 
-    play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
+    play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
-    play degree(2, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+    play pat[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
+    play pat[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
     sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
+    play pat[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1   
 
     sync :bar
     control x, note: degree(3, :A2, :minor)
 
 
-    play degree(1, :A3, :minor), amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
+    play pat[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2
     play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/4

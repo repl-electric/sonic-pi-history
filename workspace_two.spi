@@ -95,7 +95,7 @@ with_fx :level, amp: 0.6 do
    # pat = degrees_seq(*%w(:A3 1 :A4 311 :A3 1 :A4 211 :A3 1 :A4 111 :A3 1 :A4 611))
    #else
     pat = degrees_seq(*%w(:a3 1 :a4 311 :a3 1 :a4 211 :a3 1 :a4 111 :a3 1 :a4 311))
-    sleep_pat = (ring bar/4, bar/4, bar/4)
+    sleep_pat = (ring bar/8, bar/4, bar/4)
    #end
 
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1

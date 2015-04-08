@@ -15,7 +15,7 @@ def degrees_seq(*pattern_and_roots)
   else
     accu << id
   end}
- patterns = pattern_and_roots.select{|a| (a.kind_of?(Fixnum) || a.kind_of?(String))} 
+ patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
  roots   = pattern_and_roots.select{|a| a.kind_of? Symbol}
  notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
@@ -96,6 +96,7 @@ with_fx :level, amp: 0.6 do
 end
 
     pat = degrees_seq(*%w(:a3 4 :a4 411 :a3 2 :a4 411 :a3 2 :a4 111 :a3 2 :a4 411))
+
 
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2

@@ -79,7 +79,7 @@ with_fx :level, amp: 0.6 do
     end
 end
 
-    pat = degree(1211131111111311, :A3, :minor)
+    pat = degrees_seq(1211131111111311, :A3, :minor)
 
     play pat[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
     sleep bar/2

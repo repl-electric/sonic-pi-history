@@ -326,7 +326,7 @@ with_fx :level, amp: 1.0 do
   notes = deg_seq(*%w[:A2 145]) #fm
   2.times do
     @direction = rand_i(-1..1)
-    play_rolling notes[b_idx], dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
+    play_rolling notes[b_idx], dir=@direction, room=1, cut=90, detune1=0, detune2=0.0
     room_size += 1
   end
 end

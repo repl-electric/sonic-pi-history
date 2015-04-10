@@ -253,7 +253,7 @@ end
 
 live_loop :dark_hum_high do |n_idx|
 #sync :start
-with_fx :level, amp: 20.0 do
+with_fx :level, amp: 10.0 do
 with_synth :dark_ambience do
 #with_fx :lpf, cutoff: 100 do
 with_fx :reverb, room: 0.0 do
@@ -390,7 +390,6 @@ notes = deg_seq(*%w[:A2 561
 #notes = deg_seq(*%w[ 
 #                    :A3 561    
 #                   ])
-
 
 with_fx :level, amp: 1.0 do
   2.times do |i|

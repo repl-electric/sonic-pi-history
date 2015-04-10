@@ -89,7 +89,7 @@ end
 vio_pan += 1
 vio_idx += 1
 end
-live :piano, amp: 2.0 do |p_idx|
+live :piano, amp: 1.0 do |p_idx|
   use_synth :beep; use_synth_defaults amp: 0.2, attack: 0.001, release: 0.01, decay: 0.1
   with_fx :reverb do
   sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]

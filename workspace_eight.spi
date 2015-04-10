@@ -46,7 +46,7 @@ end
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
-  with_synth(:beep){play :A1, attack: 0.01, release: 0.1}
+  with_synth(:beep){play :B1, attack: 0.01, release: 0.1}
   sleep bar
   cue :bar
   with_synth(:beep){play :B1, attack: 0.01, release: 0.1}

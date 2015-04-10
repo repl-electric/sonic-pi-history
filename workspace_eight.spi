@@ -215,7 +215,6 @@ nil, #chord_degree(1, :a1, :major)[1..2],
 chord_degree(4, :a2, :major)[0],
 
 #
-
 chord_degree(5, :a3, :major)[0],
 nil,#chord_degree(4, :a2, :major)[1],
 nil,#chord_degree(3, :a2, :major)[0],
@@ -252,7 +251,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
-  with_fx :reverb, mix_slide: 2 do |r|
+  with_fx :reverb, mix_slide: 1 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         n_cut = rrand(30,cutoff);

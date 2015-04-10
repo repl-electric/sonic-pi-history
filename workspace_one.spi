@@ -401,7 +401,7 @@ live_loop :thebass do
         with_synth :prophet do
           play degree(1, :A2, :major), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
           sleep bar/2
-          play degree(2, :A2, :major)
+          with_synth(:beep){play degree(2, :A2, :major)}
         end
 
         end

@@ -140,14 +140,14 @@ with_fx :echo, phase: bar do
     play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
 end
 else
-    play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
+    play degree(3, :A3, :minor), amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
 
 end
     
       sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
+    play degree(1, :A3, :minor), amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01   
     sleep bar/4
-    play degree(1, :A4, :minor), amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
+    play degree(1, :A3, :minor), amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01   
 
 end
     #  if (p_idx % 4 == 0)

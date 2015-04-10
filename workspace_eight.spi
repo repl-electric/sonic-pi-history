@@ -104,7 +104,7 @@ live :piano, amp: 1.0 do |p_idx|
 p_idx+=1
 end
 live_loop :chords do
-with_fx :level, amp: 0.2 do
+with_fx :level, amp: 1.2 do
  sync :start
  with_fx :reverb, room: 0.8, mix: 0.5 do
 # with_fx :slicer, phase: bar/4 do

@@ -300,7 +300,7 @@ end
 n_idx+=1
 end
 
-define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
+define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
@@ -358,7 +358,7 @@ with_fx :level, amp: 1.0 do
   notes = deg_seq(*%w[:A3 145]) #fm
   2.times do
     @direction = rand_i(-1..1)
-    beeper notes[b_idx], dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
+    play_rolling notes[b_idx], dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end
 end
@@ -369,7 +369,7 @@ live_loop :rolling_right do |n_idx|
 notes = deg_seq(*%w[:A3 561])
 with_fx :level, amp: 1.0 do
   2.times do |i|
-    beeper notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=110, detune1=0, detune2=0.0
+    play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end
 end

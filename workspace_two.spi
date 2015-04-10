@@ -97,7 +97,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-      with_fx :bitcrusher  do
+      with_fx :echo  do
         if p_idx % 4 <= 2
           notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         else

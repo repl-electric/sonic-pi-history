@@ -1,7 +1,7 @@
 
 def degrees_seq(*pattern_and_roots)
+  puts pattern_and_roots
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
-  puts id
   if(!accu[-1].kind_of?(Symbol) && id.kind_of?(Integer))
     accu[0..-2] << "#{accu[-1]}#{id}"
   else

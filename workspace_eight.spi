@@ -293,7 +293,7 @@ nil,#chord_degree(3, :a2, :major)[0],
 nil,#chord_degree(1, :a0, :major)[1..2],
 chord_degree(4, :a3, :major)[0],
 
-)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.2,
+)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.25,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
          
 #end

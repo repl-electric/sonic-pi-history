@@ -93,7 +93,7 @@ live :piano, amp: 2.0 do |p_idx|
   use_synth :beep; use_synth_defaults amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
   with_fx :reverb do
   sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
-  sync :bar
+  sync :start
 
     #  if (p_idx % 4 == 0)
     #    sync :bar
@@ -123,8 +123,6 @@ live :piano, amp: 2.0 do |p_idx|
                      :a3 1,:a4 111,
                      :a3 1,:a4 311})[p_idx+3]
     sleep (ring bar, bar/2, bar/2, bar/2)[p_idx+3]
-
-
 
     #play degrees_seq(:A3, 1, :A4, 211,
     #                 :A3, 1, :A4, 311,

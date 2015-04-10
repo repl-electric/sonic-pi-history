@@ -384,15 +384,15 @@ end
 live_loop :across_the_night do
 with_fx :level, amp: 0.3 do
 use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
-play degree(4, :A1, :major);16.times{sync :bar}
-play degree(6, :A1, :major);16.times{sync :bar}
-play degree(5, :A1, :major);16.times{sync :bar}
-play degree(1, :A1, :major);16.times{sync :bar}
+play degree(4, :A2, :major);16.times{sync :bar}
+play degree(6, :A2, :major);16.times{sync :bar}
+play degree(5, :A2, :major);16.times{sync :bar}
+play degree(1, :A2, :major);16.times{sync :bar}
 end
 end
 
 live_loop :thebass do
-with_fx :level, amp: 0.5 do
+with_fx :level, amp: 1.0 do
   use_synth :tri
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|

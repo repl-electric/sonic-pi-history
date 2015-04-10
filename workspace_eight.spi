@@ -361,23 +361,24 @@ end
 #end
 #end
 
-live_loop :bass_line do
-with_fx :level, amp: 0.3 do
+live_loop :thebass do
+with_fx :level, amp: 0.4 do
   use_synth :tri
+  sync :start
+
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
-      with_fx :distortion, mix: 0.8 do |d_fx|
-        sync :start
-        play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+      with_fx :distortion, mix: 0.5 do
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
-        play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
 
-      3.times{sync :start;  cue :high}
+      4.times{sync :start;  cue :high}
 
       control(r, room: 0.5)
       with_fx :distortion, mix: 0.2 do
-        play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
         with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
@@ -385,11 +386,12 @@ with_fx :level, amp: 0.3 do
       2.times{sync :start}
       control(r, room: 0.3)
       with_fx :distortion, mix: 0.2 do
-        play chord_degree(1, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
+        play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
         with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
     end
   end
+
   2.times{sync :start; cue :otherhigh}
 end
 end

@@ -429,9 +429,9 @@ notes = deg_seq(*%w[:A2 561
                     :A3 561    
                    ])
 
-notes = deg_seq(*%w[ 
-                    :A3 561    
-                   ])
+#notes = deg_seq(*%w[ 
+#                    :A3 561    
+#                   ])
 
 
 with_fx :level, amp: 1.0 do

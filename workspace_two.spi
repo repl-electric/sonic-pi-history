@@ -106,40 +106,40 @@ end
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+  rrand(0.0,0.1)
+        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+  rrand(0.0,0.1)
+        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+  rrand(0.0,0.1)
+        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
 
         sync :bar
 
-        play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.0,0.1)
+        play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.0,0.1)
+        play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.0,0.1)
+        play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.0,0.1)
+        play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
 
         sync :bar
 
-        play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
-        play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
 
         sync :bar
 
-        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
 
         if(p_idx % 2 == 0)
           with_fx :echo, phase: bar do
-            play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
+            play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar 
           end
         else
           play notes[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
@@ -147,9 +147,9 @@ end
         end
 
         sleep bar/4
-        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01
+        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01 + rrand(0.0,0.1)
         sleep bar/4
-        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01
+        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01 + rrand(0.0,0.1)
       end
     end
     #  if (p_idx % 4 == 0)

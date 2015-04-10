@@ -284,7 +284,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           sample :elec_soft_kick, rate: 1, start: 0.1
 
 #          if n%2 == 0
-            sleep bar/2
+           # sleep bar/2
  #         end
 
           n_mix-0.05 unless n_mix < 0.2

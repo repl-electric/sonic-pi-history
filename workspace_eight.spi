@@ -327,8 +327,8 @@ with_fx :level, amp: 1.0 do
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
   n =  deg_seq(*%w[:A2 1     45
-                       :A2 6 :A3 11
-                       :A3 1     45])[b_idx] #fm
+                   :A2 6 :A3 11
+                   :A3 1     45])[b_idx] #fm
 
 #  sync :start
   4.times do
@@ -344,7 +344,7 @@ end
 
 live_loop :beep2 do |n_idx|
 #sync :start
-notes = (ring degree(5, :A2, :major), degree(6, :A2, :major), degree(1, :A2, :major))[n_idx]
+notes = deg_seq(*%w[:A2, 561])[n_idx]
 with_fx :level, amp: 0.0 do
   4.times do |i|
     n = notes[i % 2]

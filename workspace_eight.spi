@@ -23,7 +23,7 @@ live_loop :highlights do |high_n|
 with_fx :level, amp: 0.0 do
  sync :high
  use_synth :sine
- play (ring degree(1, :A4, :major), degree(1, :A3, :major))[high_n]
+ play ring( degree(1, :A4, :major), degree(1, :A3, :major))[high_n]
  high_n += 1
 end
 end
@@ -45,7 +45,7 @@ with_fx :level, amp: 0.5 do
     a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
 
     with_fx :slicer, phase: bar/8 do
-     sample (ring a4_s, a5_s)[vio_idx], amp: 2.5, pan: Math.sin((vio_pan))
+     sample ring( a4_s, a5_s)[vio_idx], amp: 2.5, pan: Math.sin((vio_pan))
     end 
 #    sample v_s, amp: 90
   end
@@ -57,7 +57,7 @@ live_loop :piano do |p_idx|
 with_fx :level, amp: 0.1 do
   use_synth :beep
   with_fx :reverb do
-  sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
+  sample pa_s, amp: 1, rate: ring( -1, 1)[p_idx]
   sync :bar
 
     #  if (p_idx % 4 == 0)
@@ -70,7 +70,7 @@ with_fx :level, amp: 0.1 do
     ##                 :A3, 1, :A4, 111,
     #                 :A3, 1, :A4, 311)[p_idx], 
     #                 amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-    #sleep (ring bar/2, bar/4, bar/4, bar/4)[p_idx]
+    #sleep ring( bar/2, bar/4, bar/4, bar/4)[p_idx]
 
 
     #if(p_idx %2 == 0)
@@ -171,7 +171,7 @@ with_synth :dark_ambience do
 #with_fx :lpf, cutoff: 100 do
 with_fx :reverb, room: 0.0 do
 sync :start
-play (ring 
+play ring( 
 nil, #chord_degree(1, :a1, :major)[0],
 nil, #chord_degree(4, :a1, :major)[0],
 nil, #chord_degree(3, :a1, :major)[0],
@@ -222,8 +222,8 @@ nil,#chord_degree(1, :a0, :major)[1..2],
 
 
 
-)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.2,
-          amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
+)[n_idx], release: ring( bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.2,
+          amp: ring( 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
          
 #end
 end
@@ -330,7 +330,7 @@ with_fx :level, amp: 4.0 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
-  n =  (ring degree(1, :A3, :major),degree(4, :A3, :major), degree(5, :A3, :major))[b_idx] #fm
+  n =  ring( degree(1, :A3, :major),degree(4, :A3, :major), degree(5, :A3, :major))[b_idx] #fm
 
   4.times do
     @direction = rand_i(-1..1)
@@ -345,7 +345,7 @@ end
 
 live_loop :beep2 do |n_idx|
 sync :start
-notes = (ring degree(5, :A3, :major), degree(6, :A3, :major), degree(1, :A3, :major))[n_idx]
+notes = ring( degree(5, :A3, :major), degree(6, :A3, :major), degree(1, :A3, :major))[n_idx]
 with_fx :level, amp: 4.0 do
   4.times do |i|
     n = notes[i % 2]

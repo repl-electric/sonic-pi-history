@@ -348,7 +348,7 @@ notes = deg_seq(*%w[:A2 561
                     :A2 7 :A3 22
                     :A3 561    
                    ])[n_idx]
-with_fx :level, amp: 0.5 do
+with_fx :level, amp: 1.0 do
   2.times do |i|
     n = notes[i % 2]
     #sync :start

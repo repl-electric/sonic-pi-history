@@ -19,4 +19,4 @@ def degreez_seq(*pattern_and_roots)
  (ring *notes)
 end
 
-degreez_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])
+play degreez_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])

@@ -93,7 +93,7 @@ live :piano, amp: 2.0 do |p_idx|
   use_synth :beep; use_synth_defaults amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
   with_fx :reverb do
   sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
-  #sync :bar
+  sync :bar
 
     #  if (p_idx % 4 == 0)
     #    sync :bar

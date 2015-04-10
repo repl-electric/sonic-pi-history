@@ -175,7 +175,7 @@ play (ring
 nil, #chord_degree(1, :a1, :major)[0],
 nil, #chord_degree(4, :a1, :major)[0],
 nil, #chord_degree(3, :a1, :major)[0],
-chord_degree(4, :a1, :major)[0],
+chord_degree(1, :a1, :major)[0],
 
 nil, #chord_degree(1, :a1, :major)[0],
 nil, #chord_degree(1, :a0, :major)[1..2],
@@ -236,9 +236,6 @@ nil,#chord_degree(4, :a2, :major)[0..2],
 nil,#chord_degree(4, :a2, :major)[1],
 nil,#chord_degree(3, :a2, :major)[0],
 nil,#chord_degree(1, :a0, :major)[1..2],
-
-
-
 
 )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.2,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]

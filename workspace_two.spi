@@ -104,13 +104,13 @@ else
         notes = deg_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
 end
 
-        play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.1)
         sleep bar/2
-        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.1)
         sleep bar/2
-        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.1)
         sleep bar/2
-        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1+ rrand(0.1)
 
         sync :bar
 

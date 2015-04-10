@@ -353,7 +353,7 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :beep do |b_idx|
+live_loop :rolling_left do |b_idx|
 with_fx :level, amp: 1.0 do
   notes = deg_seq(*%w[:A3 145]) #fm
   2.times do
@@ -365,7 +365,7 @@ end
 b_idx+=1
 end
 
-live_loop :beep2 do |n_idx|
+live_loop :rolling_right do |n_idx|
 notes = deg_seq(*%w[:A3 561])
 with_fx :level, amp: 1.0 do
   2.times do |i|

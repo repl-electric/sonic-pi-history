@@ -1,7 +1,7 @@
 live_loop :across_the_night do
 use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
-play degree(4, :A3, :major);16.times{sleep 1}
-play degree(6, :A3, :major);16.times{sleep 1}
-play degree(5, :A3, :major);16.times{sleep 1}
-play degree(1, :A3, :major);16.times{sleep 1}
+play degree(4, :A2, :major);16.times{sleep 1}
+play degree(6, :A2, :major);16.times{sleep 1}
+play degree(5, :A2, :major);16.times{sleep 1}
+play degree(1, :A2, :major);16.times{sleep 1}
 end

@@ -307,7 +307,7 @@ with_fx :level, amp: 4.0 do
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
   n =  (ring degree(1, :A2, :major),degree(4, :A2, :major), degree(5, :A2, :major),
-             degree(7, :A2, :major),degree(1, :A3, :major), degree(5, :A3, :major))[b_idx] #fm
+             degree(7, :A2, :major),degree(1, :A3, :major), degree(1, :A3, :major))[b_idx] #fm
 
   sync :start
   4.times do

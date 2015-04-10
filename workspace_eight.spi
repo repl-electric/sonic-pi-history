@@ -342,6 +342,10 @@ with_fx :level, amp: 1.0 do
                    :A2 5 :A3 11
                    :A3 1     45])[b_idx] #fm
 
+  n =  deg_seq(*%w[
+                   :A3 1     45])[b_idx] #fm
+
+
 #  sync :start
   2.times do
     @direction = rand_i(-1..1)

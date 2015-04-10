@@ -6,12 +6,9 @@ def degreez_seq(*pattern_and_roots)
   else
     accu << id
   end}
- patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
- roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
-
-puts patterns
-puts roots
- notes = patterns.each_with_index.map do |pattern, idx|
+  patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
+  roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
+  notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
   if(root[0] == ":")
     root = root[1..-1]
@@ -22,6 +19,4 @@ puts roots
  (ring *notes)
 end
 
-
-puts %w[:A2 1     45   :A2 7 :A3 11      :A3 1     45]
 degreez_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])

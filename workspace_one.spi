@@ -398,7 +398,7 @@ live_loop :thebass do
     with_fx :echo, mix: 0.2 do
       with_fx :reverb, room: 0.9, room_slide: 2 do |r|
         with_fx :distortion, mix: 0.5 do
-        with_synth :prophet do
+        with_synth :zawa do
           play degree(1, :A2, :major), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.9
         end
 

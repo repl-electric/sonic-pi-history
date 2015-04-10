@@ -1,7 +1,7 @@
 
 def degreez_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
-  if(/^[\d]+$/ !~ accu[-1] && /^[\d]+$/ =~ id)
+  if(/^[\d]+$/ =~ accu[-1] && /^[\d]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"
   else
     accu << id

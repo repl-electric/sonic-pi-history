@@ -404,7 +404,6 @@ play degree(4, :A1 :major);16.times{sync :bar}
 play degree(6, :A1, :major);16.times{sync :bar}
 play degree(5, :A1, :major);16.times{sync :bar}
 play degree(1, :A1, :major);16.times{sync :bar}
-#sleep bar*32
 end
 end
 

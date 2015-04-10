@@ -65,7 +65,7 @@ end
 live_loop :drum do;with_fx :level, amp: 0.9 do
     sync :quart
     with_fx :lpf do
-      sample :elec_triangle, amp: 0.2, rate: 0.8
+      sample :elec_triangle, amp: 0.2, rate: (ring 0.8, 0.9).tick
     end
   end
 end

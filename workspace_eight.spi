@@ -306,24 +306,26 @@ with_fx :level, amp: 1.0 do
     @direction = rand_i(-1..1)
     #sync :start
 
-    beeper n, @direction, 1, 100, 0, 0.001
+    beeper note=n, dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
     room_size += 1
   end
 end
 b_idx+=1
 end
 
+#note, direction, room_size, cutoff, detune_factor1, detune_factor2
+
 live_loop :beep2 do |n_idx|
 #sync :start
 notes = deg_seq(*%w[:A2 561 
                     :A2 7 :A3 22
                     :A3 561    
-                   ])[n_idx]
+                   ])
 with_fx :level, amp: 1.0 do
   2.times do |i|
     n = notes[i % 2]
     #sync :start
-    beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
+    beeper notes[n_idx], @direction == -1 ? 0 : 1, room=1, cut=90, detune1=0, detune2=0.01
     room_size += 1
   end
 end

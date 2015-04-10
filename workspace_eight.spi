@@ -327,7 +327,7 @@ with_fx :level, amp: 1.0 do
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
   n =  degreez_seq(*%w[:A2 1     45
-                       :A2 7 :A3 11
+                       :A2 6 :A3 11
                        :A3 1     45])[b_idx] #fm
 
 #  sync :start

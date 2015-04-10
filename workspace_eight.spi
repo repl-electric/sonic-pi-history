@@ -85,7 +85,7 @@ with_fx :level, amp: 1.0 do
     #    sync :bar
     #  end
   
-     play_deg_seq(%w{:A3 1})
+     play deg_seq(%w{:A3 1})
 
     #play degrees_seq(:A3, 1, :A4, 211,
     #                 :A3, 1, :A4, 311,

@@ -403,7 +403,7 @@ use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
 #play degree(4, :A3, :major);16.times{sync :bar}
 #play degree(6, :A3, :major);16.times{sync :bar}
 #play degree(5, :A3, :major);16.times{sync :bar}
-play degree(1, :A0, :major), release: 32;   32.times{sync :bar}
+play degree(1, :A0, :major), release: 32;  32.times{sync :bar}
 end
 end
 

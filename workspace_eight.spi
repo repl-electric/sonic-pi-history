@@ -227,7 +227,7 @@ end
 
 vio_pan = -1
 live_loop :vio do |vio_idx|
-with_fx :level, amp: 0.5 do
+with_fx :level, amp: 0.0 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
@@ -352,7 +352,7 @@ end
 room_size = 0
 
 live_loop :beep do |b_idx|
-with_fx :level, amp: 2.0 do
+with_fx :level, amp: 0.0 do
   #sync :beep2
   #-10.0, -5.0
   # degree(6, :A2, :major)
@@ -386,7 +386,7 @@ notes = deg_seq(*%w[:A2 56
 #                   ])
 
 
-with_fx :level, amp: 2.0 do
+with_fx :level, amp: 0.0 do
   2.times do |i|
     n = notes[i % 2]
     #sync :start

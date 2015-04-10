@@ -102,7 +102,7 @@ live_loop :piano do |p_idx|
         end
       end
 
-      notes = deg_seq(*%w{:A3 1211 :A3 1411})
+      notes = deg_seq(*%w{:A3 1211 :A3 1411 :A3 1111})
       play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
       sleep bar/2
       play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
@@ -123,13 +123,13 @@ live_loop :piano do |p_idx|
 
       sync :bar
 
-      play degree(1, :A3, :minor), amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
+      play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
       sleep bar/2
-      play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+      play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
       sleep bar/2
-      play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+      play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
       sleep bar/2
-      play degree(1, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+      play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
       sync :bar
 

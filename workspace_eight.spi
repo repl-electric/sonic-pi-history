@@ -270,6 +270,25 @@ end
 end
 end
 
+vio_pan = -1
+live_loop :vio do |vio_idx|
+with_fx :level, amp: 0.5 do
+  #4.times{sync :start}
+  sync :otherhigh
+  with_fx :reverb, room: 1.0, mix: 1.0 do
+    a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
+    a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
+
+    with_fx :slicer, phase: bar/8 do
+     sample (ring a4_s, a5_s)[vio_idx], amp: 2.5, pan: Math.sin((vio_pan))
+    end 
+#    sample v_s, amp: 90
+  end
+end
+vio_pan += 1
+vio_idx += 1
+end
+
 live_loop :dark_hum_high do |n_idx|
 #sync :start
 with_fx :level, amp: 0.0 do

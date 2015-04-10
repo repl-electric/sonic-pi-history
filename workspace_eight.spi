@@ -347,7 +347,7 @@ with_fx :level, amp: 1.0 do
     @direction = rand_i(-1..1)
     #sync :start
 
-    beeper note=n, dir=@direction, room=1, cut=10, detune1=0, detune2=0.001
+    beeper note=n, dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
     room_size += 1
   end
 end

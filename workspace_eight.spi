@@ -384,7 +384,7 @@ end
 
 live_loop :beep2 do |n_idx|
 #sync :start
-notes = deg_seq(*%w[:A2 56 
+notes = deg_seq(*%w[:A2 561
                    ])
 
 #notes = deg_seq(*%w[ 

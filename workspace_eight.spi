@@ -101,7 +101,7 @@ live_loop :piano do |p_idx|
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-
+with_fx :level, amp: 0 do
       notes = deg_seq(*%w{:A3 1211 :A3 1411 :A3 1111 :A3 1311})
       play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
       sleep bar/2
@@ -149,7 +149,7 @@ live_loop :piano do |p_idx|
       play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01
       sleep bar/4
       play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01
-
+end
     end
     #  if (p_idx % 4 == 0)
     #    sync :bar

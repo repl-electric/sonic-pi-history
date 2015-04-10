@@ -229,7 +229,7 @@ end
 live_loop :startzse do
 sync :start
         with_synth :prophet do
-          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.1
+          play degree(1, :A1, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.1
         end
 
 end

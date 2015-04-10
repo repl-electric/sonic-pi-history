@@ -23,4 +23,4 @@ puts roots
  (ring *notes)
 end
 
-puts degrees_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])
+degrees_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])

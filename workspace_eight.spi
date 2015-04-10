@@ -289,7 +289,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c, cutoff: n_cut);
-        7.times do |n|
+        8.times do |n|
           if n%2 ==0
             sync :start
           end

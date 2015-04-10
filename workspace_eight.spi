@@ -335,7 +335,7 @@ with_fx :level, amp: 4.0 do
 
   4.times do
     @direction = rand_i(-1..1)
-    sync :start
+    #sync :start
 
     beeper n, @direction, 1, 100, 0, 0.001
     room_size += 1

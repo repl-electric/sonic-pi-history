@@ -39,6 +39,7 @@ live_loop :metro do
   cue :bar
   sleep bar
 end
+
 live_loop :highlights do |high_n|
 with_fx :level, amp: 0.0 do
  sync :high

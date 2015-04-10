@@ -369,7 +369,7 @@ with_fx :level, amp: 1.0 do
       with_fx :distortion, mix: 0.8 do
         sync :start
 
-        x = play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      , 
+        x = play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         control x, amp: 0.1
         sleep bar/2
         with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              

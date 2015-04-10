@@ -309,7 +309,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
           if n%2 ==0
             sync :start
           else
-            sync :quart
+           # sync :quart
           end
 
           control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1

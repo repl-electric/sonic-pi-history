@@ -100,7 +100,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
       with_fx :level, amp: 1 do
         notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
 
-        notes = deg_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
+        #notes = deg_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1

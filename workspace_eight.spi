@@ -376,31 +376,3 @@ with_fx :level, amp: 4.0 do
 end
 n_idx+=1
 end
-
-live_loop :vio_dark do
-with_fx :level, amp: 1.0 do
-sync :start
-with_fx :echo do
-with_fx :reverb do
-a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
-#sample a4_long_s, amp: 1, rate: 1.0
-sample a4_long_s, amp: 1, rate: 1.0
-sleep sample_duration(a4_long_s)
-end
-end
-end
-end
-
-live_loop :across_the_night do
-with_fx :level, amp: 0.0 do
-use_synth :dark_sea_horn
-use_synth_defaults amp: 1, release: 8
-play degree(4, :A1, :major)
-16.times{sync :bar}
-play degree(6, :A1, :major)
-16.times{sync :bar}
-play degree(5, :A2, :major)
-16.times{sync :bar}
-end
-end
-#set_volume! 0.0

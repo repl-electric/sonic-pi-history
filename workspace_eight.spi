@@ -99,7 +99,8 @@ live :piano, amp: 2.0 do |p_idx|
     #    sync :bar
     #  end
   
-    play deg_seq(*%w{:A3 1 :A4 211})[p_idx]
+    play deg_seq(*%w{:A3 1})[p_idx]
+
 
     #play degrees_seq(:A3, 1, :A4, 211,
     #                 :A3, 1, :A4, 311,

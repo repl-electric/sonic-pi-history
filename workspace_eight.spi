@@ -110,7 +110,7 @@ end
     #    sync :bar
     #  end 
 end
-p_idx+=2
+p_idx+=3
 end
 live_loop :chords do
 with_fx :level, amp: 1.0 do

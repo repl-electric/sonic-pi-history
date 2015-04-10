@@ -252,48 +252,22 @@ live_loop :dark_hum_high do |n_idx|
 #sync :start
 with_fx :level, amp: 10.0 do
 with_synth :dark_ambience do
-#with_fx :lpf, cutoff: 100 do
+with_fx :lpf, cutoff: 100 do
 with_fx :reverb, room: 0.0 do
 sync :start
 play (ring 
-
-chord_degree(1, :a3, :major)[0],
-nil, 
-nil, 
-nil,
-
-nil, 
-nil,
-nil,
-chord_degree(4, :a2, :major)[0],
-
+chord_degree(1, :a3, :major)[0],nil,nil,nil,
+nil,nil,nil,chord_degree(4, :a2, :major)[0],
 #
-
-chord_degree(1, :a4, :major)[0],
-chord_degree(1, :a3, :major)[0],
-nil, #chord_degree(3, :a1, :major)[0],
-chord_degree(4, :a2, :major)[0],
-
-nil, #chord_degree(1, :a1, :major)[0],
-nil, #chord_degree(1, :a0, :major)[1..2],
-nil, #chord_degree(1, :a1, :major)[1..2],
-chord_degree(4, :a2, :major)[0],
-
+chord_degree(1, :a4, :major)[0],chord_degree(1, :a3, :major)[0],nil, chord_degree(4, :a2, :major)[0],
+nil,nil,nil,chord_degree(4, :a2, :major)[0],
 #
-chord_degree(5, :a3, :major)[0],
-nil,#chord_degree(4, :a2, :major)[1],
-nil,#chord_degree(3, :a2, :major)[0],
-nil,#chord_degree(1, :a0, :major)[1..2],
-
-nil,#chord_degree(4, :a2, :major)[1],
-nil,#chord_degree(3, :a2, :major)[0],
-nil,#chord_degree(1, :a0, :major)[1..2],
-chord_degree(4, :a3, :major)[0],
-
+chord_degree(5, :a3, :major)[0],nil,nil,nil,
+nil,nil,nil,chord_degree(4, :a3, :major)[0],
 )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.25,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
          
-#end
+end
 end
 end
 end

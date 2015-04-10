@@ -1,7 +1,7 @@
 ["piano"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 bar = 1/2.0
 quart = 2*bar
-set_volume! 1.0
+set_volume! 1.
 pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
 p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
@@ -101,55 +101,55 @@ live_loop :piano do |p_idx|
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-with_fx :level, amp: 0 do
-      notes = deg_seq(*%w{:A3 1211 :A3 1411 :A3 1111 :A3 1311})
-      play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+      with_fx :level, amp: 0 do
+        notes = deg_seq(*%w{:A3 1211 :A3 1411 :A3 1111 :A3 1311})
+        play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
-      sync :bar
+        sync :bar
 
-      play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
-      sync :bar
+        sync :bar
 
-      play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
-      play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
+        play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
 
-      sync :bar
+        sync :bar
 
-      play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
-      sleep bar/2
+        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1
+        sleep bar/2
 
-      if(p_idx % 2 == 0)
-        with_fx :echo, phase: bar do
-          play degree(7, :A2, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
+        if(p_idx % 2 == 0)
+          with_fx :echo, phase: bar do
+            play degree(7, :A2, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
+          end
+        else
+          play notes[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
+
         end
-      else
-        play notes[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
 
+        sleep bar/4
+        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01
+        sleep bar/4
+        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01
       end
-
-      sleep bar/4
-      play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01
-      sleep bar/4
-      play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01
-end
     end
     #  if (p_idx % 4 == 0)
     #    sync :bar
@@ -293,20 +293,20 @@ live_loop :dark_highlight do |n_idx|
     with_synth :dark_ambience do
       #with_fx :lpf, cutoff: 100 do
       with_fx :reverb, room: 0.0 do
-      sync :start
-      play (ring
-            chord_degree(1, :a3, :major)[0],nil,nil,nil,
-            nil,nil,nil,chord_degree(4, :a2, :major)[0],
-            #
-            chord_degree(1, :a4, :major)[0],chord_degree(1, :a3, :major)[0],nil, chord_degree(4, :a2, :major)[0],
-            nil,nil,nil,chord_degree(4, :a2, :major)[0],
-            #
-            chord_degree(5, :a3, :major)[0],nil,nil,nil,
-            nil,nil,nil,chord_degree(4, :a3, :major)[0],
-      )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
-        amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
+        sync :start
+        play (ring
+              chord_degree(1, :a3, :major)[0],nil,nil,nil,
+              nil,nil,nil,chord_degree(4, :a2, :major)[0],
+              #
+              chord_degree(1, :a4, :major)[0],chord_degree(1, :a3, :major)[0],nil, chord_degree(4, :a2, :major)[0],
+              nil,nil,nil,chord_degree(4, :a2, :major)[0],
+              #
+              chord_degree(5, :a3, :major)[0],nil,nil,nil,
+              nil,nil,nil,chord_degree(4, :a3, :major)[0],
+        )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
+          amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 
-    end
+      end
     end
     #end
   end

@@ -135,7 +135,7 @@ live :piano, amp: 2.0 do |p_idx|
     if(p_idx %2 == 0)
     play degree(3, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: bar
     else
-    play degree(7, :A4, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: bar
+    play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: 0.01, decay: bar
     end
 
     sleep bar/4

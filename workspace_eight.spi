@@ -9,16 +9,16 @@ p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__pi
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
-def degrees_seq(*pattern_and_roots)
+def degreez_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
-  if(!accu[-1].kind_of?(Symbol) && id.kind_of?(Integer))
+  if(/^[\d]+$/ =~ accu[-1] && /^[\d]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"
   else
     accu << id
   end}
- patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
- roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
- notes = patterns.each_with_index.map do |pattern, idx|
+  patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
+  roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
+  notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
   if(root[0] == ":")
     root = root[1..-1]

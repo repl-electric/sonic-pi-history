@@ -341,7 +341,7 @@ end
 
 live_loop :rolling_right do |n_idx|
 notes = deg_seq(*%w[:A3 561])
-with_fx :level, amp: 1.0 do
+with_fx :level, amp: 0.0 do
   2.times do |i|
     play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1

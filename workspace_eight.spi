@@ -94,7 +94,7 @@ live :piano, amp: 1.0 do |p_idx|
   with_fx :reverb do
   sample pa_s, amp: 1, rate: (ring -1, 1)[p_idx]
   sync :bar
-  play degree(1, :A3, :minor)
+  play degs_seq(1, :A2, :minor)
 
   end
     #  if (p_idx % 4 == 0)

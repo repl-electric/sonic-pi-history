@@ -264,7 +264,7 @@ nil,nil,nil,chord_degree(4, :a2, :major)[0],
 #
 chord_degree(5, :a3, :major)[0],nil,nil,nil,
 nil,nil,nil,chord_degree(4, :a3, :major)[0],
-)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.25,
+)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
          
 end
@@ -365,7 +365,6 @@ live_loop :thebass do
 with_fx :level, amp: 0.4 do
   use_synth :tri
   sync :start
-
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
       with_fx :distortion, mix: 0.5 do

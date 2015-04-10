@@ -328,7 +328,7 @@ notes = (ring degree(5, :A2, :major), degree(6, :A2, :major), degree(1, :A2, :ma
 with_fx :level, amp: 4.0 do
   4.times do |i|
     n = notes[i % 2]
-    sync :start
+    #sync :start
     beeper n, @direction == -1 ? 0 : 1, 1, 90, 0, 0.01
     room_size += 1
   end

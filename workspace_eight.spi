@@ -365,7 +365,7 @@ with_fx :level, amp: 1.0 do
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
   n =  deg_seq(*%w[:A2 145 
-                   :A2 77])[b_idx] #fm
+                   :A2 77 :A3 1])[b_idx] #fm
 
 #  n =  deg_seq(*%w[
  #                  :A3 1     45])[b_idx] #fm

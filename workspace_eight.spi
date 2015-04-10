@@ -102,7 +102,7 @@ live_loop :piano do |p_idx|
         end
       end
       with_fx :level, amp: 1 do
-        notes = deg_seq(*%w{:a3 1211 :a3 1311 :a3 1111 :a3 1311})
+        notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1311 :a3 1111 :a3 1311})
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1
         sleep bar/2
         play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
@@ -363,7 +363,7 @@ room_size = 0
 
 live_loop :rolling_left do |b_idx|
   with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 145]) #fm
+    notes = deg_seq(*%w[:A3 145]) #fm
     2.times do
       @direction = rand_i(-1..1)
       play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
@@ -374,7 +374,7 @@ live_loop :rolling_left do |b_idx|
 end
 
 live_loop :rolling_right do |n_idx|
-  notes = deg_seq(*%w[:A2 561])
+  notes = deg_seq(*%w[:A3 561])
   with_fx :level, amp: 1.0 do
     2.times do |i|
       play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=90, detune1=0, detune2=0.01

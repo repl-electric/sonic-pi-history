@@ -328,7 +328,7 @@ end
 room_size = 0
 
 live_loop :rolling_left do |b_idx|
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
   notes = deg_seq(*%w[:A3 145]) #fm
   2.times do
     @direction = rand_i(-1..1)
@@ -363,34 +363,34 @@ end
 
 live_loop :bass_line do
 with_fx :level, amp: 4.0 do
-  use_synth :hollow
+  use_synth :tri
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|
-      with_fx :distortion, mix: 0.5 do
+      with_fx :distortion, mix: 0.8 do
         sync :start
 
-        play chord_degree(1, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+        play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
         with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
 
-      1.times{sync :start;  cue :high}
+      3.times{sync :start;  cue :high}
 
       control(r, room: 0.5)
       with_fx :distortion, mix: 0.2 do
-        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+        play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
         sleep bar/2
-        with_synth(:tri){play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
 
-      1.times{sync :start}
+      2.times{sync :start}
       control(r, room: 0.3)
       with_fx :distortion, mix: 0.2 do
-        play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
-        with_synth(:tri){play chord_degree(2, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
+        play chord_degree(1, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
       end
     end
   end
-  1.times{sync :start; cue :otherhigh}
+  2.times{sync :start; cue :otherhigh}
 end
 end

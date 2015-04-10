@@ -310,7 +310,7 @@ with_fx :level, amp: 4.0 do
              degree(7, :A2, :major),degree(1, :A3, :major), degree(1, :A3, :major),
              degree(1, :A3, :major),degree(4, :A3, :major), degree(5, :A3, :major)[b_idx] #fm
 
-  sync :start
+#  sync :start
   4.times do
     @direction = rand_i(-1..1)
     #sync :start

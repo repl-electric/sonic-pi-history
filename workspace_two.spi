@@ -228,7 +228,7 @@ end
 
 live_loop :startzse do |s_idx|
 sync :start
-with_fx :pitch_shift do
+with_fx :pitch_shift, pitch_dis: 0.001 do
 with_fx :reverb do
         with_synth :prophet do
           play degree((ring 4,4)[s_idx], :A1, :major), cutoff: 80, release: bar, decay: bar*8, env_curve: 6, res: 0.2

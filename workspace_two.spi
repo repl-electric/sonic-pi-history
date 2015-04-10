@@ -226,12 +226,12 @@ live_loop :bright_light do
   end
 end
 
-live_loop :startzse do
+live_loop :startzse do |s_idx|
 sync :start
         with_synth :prophet do
-          play degree((ring 1,2,3,4,5), :A1, :major), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.1
+          play degree((ring 1,2,3,4,5)[s_idx], :A1, :major), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.1
         end
-
+s_idx+=1
 end
 
 live_loop :dark_humming do |n_idx|

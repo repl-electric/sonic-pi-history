@@ -425,6 +425,6 @@ live_loop :thebass do
       end
     end
 
-    2.times{sync :start; cue :otherhigh}
+    1.times{sync :start; cue :otherhigh}
   end
 end

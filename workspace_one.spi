@@ -400,8 +400,6 @@ live_loop :thebass do
         with_fx :distortion, mix: 0.5 do
         with_synth :prophet do
           play degree(1, :A2, :major), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.5
-          sleep bar/2
-          with_synth(:beep){play degree(2, :A2, :major), release: bar}
         end
 
         end

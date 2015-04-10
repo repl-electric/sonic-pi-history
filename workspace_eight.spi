@@ -344,7 +344,7 @@ end
 
 live_loop :beep2 do |n_idx|
 #sync :start
-notes = deg_seq(*%w[:A2, 561])[n_idx]
+notes = deg_seq(*%w[:A2 561])[n_idx]
 with_fx :level, amp: 0.0 do
   2.times do |i|
     n = notes[i % 2]

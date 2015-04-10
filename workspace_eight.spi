@@ -9,7 +9,7 @@ p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__pi
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
-def degreez_seq(*pattern_and_roots)
+def deg_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(/^[\d]+$/ =~ accu[-1] && /^[\d]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"
@@ -326,7 +326,7 @@ with_fx :level, amp: 1.0 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
-  n =  degrees_seq(*%w[:A2 1     45
+  n =  deg_seq(*%w[:A2 1     45
                        :A2 6 :A3 11
                        :A3 1     45])[b_idx] #fm
 

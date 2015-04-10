@@ -229,7 +229,7 @@ end
 live_loop :startzse do |s_idx|
 sync :start
         with_synth :prophet do
-          play degree((ring 1,4,5)[s_idx], :A2, :major), cutoff: 80, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+          play degree((ring 1,4,5)[s_idx], :A2, :major), cutoff: 80, release: bar, decay: bar*8, env_curve: 6, res: 0.1
         end
 s_idx+=1
 end

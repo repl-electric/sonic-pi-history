@@ -1,10 +1,19 @@
-live_loop :across_the_night do
-use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
-play degree(4, :A2, :major);16.times{sleep 1}
-play degree(6, :A2, :major);16.times{sleep 1}
-play degree(5, :A2, :major);16.times{sleep 1}
-play degree(1, :A2, :major);16.times{sleep 1}
+def deg_seq(*pattern_and_roots)
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
+  if(/^[\d]+$/ =~ accu[-1] && /^[\d]+$/ =~ id)
+    accu[0..-2] << "#{accu[-1]}#{id}"
+  else
+    accu << id
+  end}
+  patterns = pattern_and_roots.select{|a| /^[\d]+$/ =~ a.to_s } 
+  roots   = pattern_and_roots.select{|a| /^[\d]+$/ !~ a.to_s}
+  notes = patterns.each_with_index.map do |pattern, idx|
+  root = roots[idx]
+  if(root[0] == ":")
+    root = root[1..-1]
+  end
+  s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+ end.flat_map{|x| x}
+ (ring *notes)
 end
-
-
-puts degree(4, :A2, :major)

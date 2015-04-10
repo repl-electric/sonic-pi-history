@@ -115,8 +115,8 @@ live :piano, amp: 2.0 do |p_idx|
     play deg_seq(*%w{:a3 1 :a4 211
                      :a3 1,:a4 311,
                      :a3 1,:a4 111,
-                     :a3 1,:a4 311})[p_idx]
-    sleep (ring bar, bar/2, bar/2, bar/2)[p_idx]
+                     :a3 1,:a4 311})[p_idx+2]
+    sleep (ring bar, bar/2, bar/2, bar/2)[p_idx+2]
 
 
 

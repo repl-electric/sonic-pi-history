@@ -417,9 +417,8 @@ live_loop :thebass do
         control(r, room: 0.3)
         with_fx :distortion, mix: 0.2 do
         with_synth :prophet do
-          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+          play degree(1, :A1, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
-
         end
       end
     end

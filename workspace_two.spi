@@ -226,6 +226,14 @@ live_loop :bright_light do
   end
 end
 
+live_loop :startzse do
+sync :start
+        with_synth :prophet do
+          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+        end
+
+end
+
 live_loop :dark_humming do |n_idx|
   #sync :start
   with_fx :level, amp: 0.0 do

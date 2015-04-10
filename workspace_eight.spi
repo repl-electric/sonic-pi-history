@@ -253,7 +253,7 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
 
   with_fx :reverb, mix_slide: 0.0 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 0 do |c|
-      with_fx :distortion, distort: 0.4, cutoff: 90 do |d|
+      with_fx :distortion, distort: 0.5, cutoff: 90 do |d|
         n_cut = 110#rrand(80,cutoff);
         n_mix = rrand(0.0, 0.5)
         control(c, cutoff: n_cut);

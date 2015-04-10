@@ -98,11 +98,11 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         end
       end
       with_fx :level, amp: 1 do
-        if p_idx % 8 <= 4 
-        notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
-else
-        notes = deg_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
-end
+        if p_idx % 4 <= 2
+          notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
+        else
+          notes = deg_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
+        end
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
         sleep bar/2
@@ -139,7 +139,7 @@ end
 
         if(p_idx % 2 == 0)
           with_fx :echo, phase: bar do
-            play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar 
+            play degree(7, :A3, :minor), amp: 1.0, attack: 0.001, release: bar/2.0, decay: bar
           end
         else
           play notes[13], amp: 1.0, attack: 0.001, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1
@@ -164,8 +164,8 @@ live_loop :chords do; with_fx :level, amp: 0.0 do
       # with_fx :slicer, phase: bar/4 do
       use_synth :tri #:dsaw
       play chord_degree(1, :A2, :major)[0], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
-       sleep bar/2
-       play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
+      sleep bar/2
+      play chord_degree(4, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
       sync :start
       play chord_degree(1, :A2, :major)[1..2], decay: bar*2, release: 1, attack: 0.2, amp: 0.2
     end
@@ -232,15 +232,15 @@ live_loop :bright_light do
 end
 
 live_loop :startzse do |s_idx|
-sync :start
-with_fx :pitch_shift, pitch_dis: 0.001 do
-with_fx :reverb do
-        with_synth :prophet do
-          play degree((ring 4,4)[s_idx], :A2, :major), cutoff: 60, release: bar, decay: bar*8, env_curve: 6, res: 0.2
-        end
-end
-end
-s_idx+=1
+  sync :start
+  with_fx :pitch_shift, pitch_dis: 0.001 do
+    with_fx :reverb do
+      with_synth :prophet do
+        play degree((ring 4,4)[s_idx], :A2, :major), cutoff: 60, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+      end
+    end
+  end
+  s_idx+=1
 end
 
 live_loop :dark_humming do |n_idx|
@@ -330,7 +330,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
-  
+
   with_fx :reverb, mix_slide: 0.2 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|

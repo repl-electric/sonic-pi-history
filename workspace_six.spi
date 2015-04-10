@@ -18,4 +18,4 @@ def deg_seq(*pattern_and_roots)
  (ring *notes)
 end
 
-puts deg_seq(*%w{:A3 _ 123})
+play deg_seq(*%w{:A3 _ 123})[0]

@@ -1,0 +1,74 @@
+live_loop :vio_dark do
+with_fx :level, amp: 1.0 do
+sync :start
+with_fx :echo do
+with_fx :reverb do
+a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
+#sample a4_long_s, amp: 1, rate: 1.0
+sample a4_long_s, amp: 1, rate: 1.0
+sleep sample_duration(a4_long_s)
+end
+end
+end
+end
+
+live_loop :across_the_night do
+with_fx :level, amp: 0.0 do
+use_synth :dark_sea_horn
+use_synth_defaults amp: 1, release: 8
+play degree(4, :A1, :major)
+16.times{sync :bar}
+play degree(6, :A1, :major)
+16.times{sync :bar}
+play degree(5, :A2, :major)
+16.times{sync :bar}
+end
+end
+#set_volume! 0.0
+
+live_loop :dark do
+with_fx :level, amp: 0 do
+  use_synth :beep
+  sync :start
+  with_fx(:reverb, room: 1, mix: 1){sample p_a2_s, amp: 2, rate: 0.99}
+  sample :ambi_lunar_land, rate: 0.25, amp: 0.9
+  play degree(:i, :A1, :major), attack: 0.1, release: bar*4, decay: bar*4, amp: 8
+  use_synth :noise
+  play degree(:i, :A1, :major), release: bar*4, amp: 0.1
+  #32.times{ sync :start }
+end
+end
+
+live_loop :thebass do
+with_fx :level, amp: 1.0 do
+  use_synth :tri
+  with_fx :echo, mix: 0.2 do
+    with_fx :reverb, room: 0.9, room_slide: 2 do |r|
+      with_fx :distortion, mix: 0.5 do
+        sync :start
+
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+        sleep bar/2
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
+      end
+
+      3.times{sync :start;  cue :high}
+
+      control(r, room: 0.5)
+      with_fx :distortion, mix: 0.2 do
+        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
+        sleep bar/2
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
+      end
+
+      2.times{sync :start}
+      control(r, room: 0.3)
+      with_fx :distortion, mix: 0.2 do
+        play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
+        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
+      end
+    end
+  end
+  2.times{sync :start; cue :otherhigh}
+end
+end

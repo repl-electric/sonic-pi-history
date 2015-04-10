@@ -23,4 +23,6 @@ puts roots
  (ring *notes)
 end
 
+
+puts %w[:A2 1     45   :A2 7 :A3 11      :A3 1     45]
 degreez_seq(*%w[:A2 1     45   :A2 7 :A3 11      :A3 1     45])

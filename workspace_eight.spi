@@ -353,7 +353,7 @@ end
 room_size = 0
 
 live_loop :beep do |b_idx|
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
   #sync :beep2
   #-10.0, -5.0
   # degree(6, :A2, :major)

@@ -370,7 +370,7 @@ end
 end
 
 live_loop :thebass do
-with_fx :level, amp: 1.0 do
+with_fx :level, amp: 0.0 do
   use_synth :tri
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|

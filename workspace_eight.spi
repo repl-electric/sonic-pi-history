@@ -229,6 +229,38 @@ live_loop :dark_humming do |n_idx|
 #sync :start
 with_fx :level, amp: 10.0 do
 with_synth :dark_ambience do
+with_fx :lpf, cutoff: 65 do
+with_fx :reverb, room: 0.0 do
+sync :start
+play (ring 
+chord_degree(5, :A1)[0],
+chord_degree(4, :A1)[0],
+chord_degree(3, :A1)[0],
+chord_degree(1, :A1)[0],
+
+chord_degree(3, :A1)[1],
+chord_degree(4, :A1)[0],
+chord_degree(3, :A1)[0],
+chord_degree(1, :A2)[0],
+
+#chord_degree(1, :A1)[0],
+
+#chord_degree(1, :A2)[0]
+#chord_degree(1, :A2)[0],
+#chord_degree(1, :A2)[0]
+)[n_idx], release: (ring bar*4, bar*4, bar*4, bar*8)[n_idx], attack: 0.1
+end
+end
+end
+end
+n_idx+=1
+end
+
+
+live_loop :dark_hum_high do |n_idx|
+#sync :start
+with_fx :level, amp: 10.0 do
+with_synth :dark_ambience do
 #with_fx :lpf, cutoff: 100 do
 with_fx :reverb, room: 0.0 do
 sync :start

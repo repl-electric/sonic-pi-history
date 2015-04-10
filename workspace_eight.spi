@@ -362,7 +362,7 @@ end
 #end
 
 live_loop :bass_line do
-with_fx :level, amp: 4.0 do
+with_fx :level, amp: 1.0 do
   use_synth :tri
   with_fx :echo, mix: 0.2 do
     with_fx :reverb, room: 0.9, room_slide: 2 do |r|

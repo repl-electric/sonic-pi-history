@@ -246,39 +246,6 @@ end
 n_idx+=1
 end
 
-live_loop :thebass do
-with_fx :level, amp: 0.0 do
-  use_synth :tri
-  with_fx :echo, mix: 0.2 do
-    with_fx :reverb, room: 0.9, room_slide: 2 do |r|
-      with_fx :distortion, mix: 0.5 do
-        sync :start
-
-        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
-        sleep bar/2
-        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
-      end
-
-      3.times{sync :start;  cue :high}
-
-      control(r, room: 0.5)
-      with_fx :distortion, mix: 0.2 do
-        play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5      
-        sleep bar/2
-        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
-      end
-
-      2.times{sync :start}
-      control(r, room: 0.3)
-      with_fx :distortion, mix: 0.2 do
-        play chord_degree(4, :A1, :major).first, amp: 1.15, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5
-        with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 1.2, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}              
-      end
-    end
-  end
-  2.times{sync :start; cue :otherhigh}
-end
-end
 
 define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90

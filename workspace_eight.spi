@@ -435,7 +435,7 @@ with_fx :level, amp: 2.0 do
   2.times do |i|
     n = notes[i % 2]
     #sync :start
-    beeper notes[n_idx], @direction == -1 ? 0 : 1, room=1, cut=90, detune1=0, detune2=0.0
+    beeper notes[n_idx], @direction == -1 ? 0 : 1, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end
 end

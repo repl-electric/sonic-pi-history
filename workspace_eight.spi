@@ -364,7 +364,7 @@ with_fx :level, amp: 1.0 do
   #-10.0, -5.0
   # degree(6, :A2, :major)
   #n = [degree(4, :A3, :major)].choose
-  n =  deg_seq(*%w[:A3 45])[b_idx] #fm
+  n =  deg_seq(*%w[:A3 451])[b_idx] #fm
 
 #  n =  deg_seq(*%w[
  #                  :A3 1     45])[b_idx] #fm
@@ -385,7 +385,7 @@ end
 live_loop :beep2 do |n_idx|
 #sync :start
 notes = deg_seq(*%w[
-                    :A3 56
+                    :A3 561
                    ])
 
 #notes = deg_seq(*%w[ 

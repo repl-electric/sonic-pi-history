@@ -228,7 +228,7 @@ end
 
 live_loop :startzse do |s_idx|
 sync :start
-        with_synth :pulse do
+        with_synth :tb303 do
           play degree((ring 4,6)[s_idx], :A1, :major), cutoff: 80, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
 s_idx+=1

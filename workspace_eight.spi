@@ -360,10 +360,10 @@ room_size = 0
 
 live_loop :beep do |b_idx|
 with_fx :level, amp: 1.0 do
-  notes =  deg_seq(*%w[:A3 145]) #fm
+  notes = deg_seq(*%w[:A3 145]) #fm
   2.times do
     @direction = rand_i(-1..1)
-    beeper note=n, dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
+    beeper notes[b_idx], dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end
 end

@@ -98,7 +98,7 @@ with_fx :level, amp: 1.0 do
 
     if(p_idx %2 == 0)
     with_synth :prophet do
-      play degree(1, :A2, :minor), cutoff: 85, release: bar, decay: bar*8, env_curve: 6, res: 0.1
+      play degree(1, :A2, :minor), cutoff: 85, release: bar, decay: bar*8, env_curve: 6, res: 0.01
     end
     end
 

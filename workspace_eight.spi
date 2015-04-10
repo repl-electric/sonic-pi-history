@@ -291,7 +291,9 @@ define :beeper do |note, direction, room_size, cutoff, detune_factor1, detune_fa
         n_mix = 0.4
         control(c, cutoff: n_cut);
         7.times do |n|
-          sync :quart, :start
+          if n%2 ==0
+            sync :start
+          end
 
           control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: 0.1
@@ -335,7 +337,7 @@ with_fx :level, amp: 4.0 do
 
   4.times do
     @direction = rand_i(-1..1)
-    sync :start
+    #sync :start
 
     beeper n, @direction, 1, 100, 0, 0.001
     room_size += 1

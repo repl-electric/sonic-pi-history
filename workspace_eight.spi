@@ -9,6 +9,21 @@ p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__pi
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 
+def live(name, opts={}, &block)
+  idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end
+  x = lambda{|idx|
+    with_fx :level, amp: amp do
+      block.(idx)
+  end}
+  live_loop name do |idx|
+    x.(idx)
+  end
+end
 def deg_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(/^[\d]+$/ =~ accu[-1] && /^[\d]+$/ =~ id)

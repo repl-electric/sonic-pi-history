@@ -147,9 +147,9 @@ end
         end
 
         sleep bar/4
-        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01 + rrand(0.0,0.1)
+        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01
         sleep bar/4
-        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01 + rrand(0.0,0.1)
+        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01
       end
     end
     #  if (p_idx % 4 == 0)

@@ -231,7 +231,7 @@ end
 
 vio_pan = -1
 live_loop :vio do |vio_idx|
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
   #4.times{sync :start}
   sync :otherhigh
   with_fx :reverb, room: 1.0, mix: 1.0 do
@@ -248,7 +248,7 @@ vio_pan += 1
 vio_idx += 1
 end
 
-live_loop :dark_hum_high do |n_idx|
+live_loop :dark_highlight do |n_idx|
 #sync :start
 with_fx :level, amp: 10.0 do
 with_synth :dark_ambience do

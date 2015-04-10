@@ -360,21 +360,9 @@ room_size = 0
 
 live_loop :beep do |b_idx|
 with_fx :level, amp: 1.0 do
-  #sync :beep2
-  #-10.0, -5.0
-  # degree(6, :A2, :major)
-  #n = [degree(4, :A3, :major)].choose
-  n =  deg_seq(*%w[:A3 145])[b_idx] #fm
-
-#  n =  deg_seq(*%w[
- #                  :A3 1     45])[b_idx] #fm
-
-
-#  sync :start
+  notes =  deg_seq(*%w[:A3 145]) #fm
   2.times do
     @direction = rand_i(-1..1)
-    #sync :start
-
     beeper note=n, dir=@direction, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end
@@ -383,19 +371,9 @@ b_idx+=1
 end
 
 live_loop :beep2 do |n_idx|
-#sync :start
-notes = deg_seq(*%w[
-                    :A3 561
-                   ])
-
-#notes = deg_seq(*%w[ 
-#                    :A3 561    
-#                   ])
-
+notes = deg_seq(*%w[:A3 561])
 with_fx :level, amp: 1.0 do
   2.times do |i|
-    n = notes[i % 2]
-    #sync :start
     beeper notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=110, detune1=0, detune2=0.0
     room_size += 1
   end

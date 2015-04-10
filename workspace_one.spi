@@ -399,7 +399,7 @@ live_loop :thebass do
       with_fx :reverb, room: 0.9, room_slide: 2 do |r|
         with_fx :distortion, mix: 0.5 do
         with_synth :zawa do
-          play degree(4, :A1, :major), wave: 1, phase: bar*2, invert_wave: 1,  cutoff: 70, release: bar, decay: bar*12, env_curve: 6, res: 0.9
+          play degree(4, :A1, :major), wave: 1, phase: bar*2, invert_wave: 0,  cutoff: 70, release: bar, decay: bar*12, env_curve: 6, res: 0.9
         end
 
         end

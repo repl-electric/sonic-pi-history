@@ -4,6 +4,4 @@ play degree(4, :A3, :major);16.times{sleep 1}
 play degree(6, :A3, :major);16.times{sleep 1}
 play degree(5, :A3, :major);16.times{sleep 1}
 play degree(1, :A3, :major);16.times{sleep 1}
-
-end
 end

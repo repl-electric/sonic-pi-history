@@ -102,6 +102,7 @@ with_fx :level, amp: 1.0 do
   sleep bar/4.0
   play deg_seq(*%w{:a3 1 :a4 311 :a3 1 :a4 211 :a3 1 :a4 111 :a3 1 :a4 411})[p_idx+2]
   sleep bar/4.0
+  play deg_seq(*%w{:a3 1 :a4 311 :a3 1 :a4 211 :a3 1 :a4 111 :a3 1 :a4 411})[p_idx+3]
 
 
   

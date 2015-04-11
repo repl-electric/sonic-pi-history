@@ -333,7 +333,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
   with_fx :reverb, mix_slide: 0.2 do |r|
-    with_fx :lpf, cutoff: 70, cutoff_slide: 20 do |c|
+    with_fx :lpf, cutoff: 60, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         n_cut = rrand(30,cutoff);
         n_mix = 0.4

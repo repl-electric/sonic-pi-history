@@ -392,7 +392,7 @@ live_loop :rolling_right do |n_idx|
 end
 
 live_loop :across_the_night do
-with_fx :level, amp: 0.0 do
+with_fx :level, amp: 1.0 do
 use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
 sync :start
 play degree(4, :A3, :major);16.times{sync :bar}

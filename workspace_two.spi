@@ -420,9 +420,9 @@ live_loop :thebass do
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
           sync :start
 
-          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 1.0, release: 0.5, decay: 0.5, sustain: 0.5
+          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.5, release: 0.5, decay: 0.5, sustain: 0.5
           sleep bar/2
-          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 1.0, release: 0.5, decay: 0.5, sustain: 0.5
+          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.5, release: 0.5, decay: 0.5, sustain: 0.5
 
           sleep bar/2
 

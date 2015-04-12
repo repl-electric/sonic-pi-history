@@ -375,7 +375,7 @@ live_loop :rolling_left do |b_idx|
                          :A3 145 ]) #fm
     2.times do
       @direction = rand_i(-1..1)
-      play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
+      play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.00
       room_size += 1
     end
   end

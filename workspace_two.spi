@@ -372,7 +372,7 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :rolling_left do |b_idx|;with_fx :level, amp: 1.0 do
+live_loop :rolling_left do |b_idx|;with_fx :level, amp: 0.0 do
     notes = deg_seq(*%w[:A2 145 661 :A3 145])
     2.times do
       @direction = rand_i(-1..1)
@@ -397,10 +397,7 @@ live_loop :across_the_night do
 with_fx :level, amp: 1.0 do
 use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
 sync :start
-play degree(4, :A2, :major);16.times{sync :bar}
-play degree(6, :A2, :major);16.times{sync :bar}
-play degree(5, :A2, :major);16.times{sync :bar}
-play degree(1, :A2, :major);16.times{sync :bar}
+play degree(1, :A2, :major);4.times{sync :bar}
 end
 end
 

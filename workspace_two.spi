@@ -237,18 +237,6 @@ live_loop :bright_light do; with_fx :level, amp: 0.0 do
   end
 end
 
-live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
-    sync :start
-    with_fx :pitch_shift, pitch_dis: 0.001 do
-      with_fx :reverb do
-        with_synth :prophet do
-          play degree((ring 4,4)[s_idx], :A2, :major), cutoff: 60, release: bar, decay: bar*8, env_curve: 6, res: 0.2
-        end
-      end
-    end
-    s_idx+=1
-end; end
-
 live_loop :dark_humming do |n_idx|
   #sync :start
   with_fx :level, amp: 0.0 do
@@ -417,6 +405,26 @@ end
 def comment(&_)
 end
 
+def with_fxs(*args, &body)
+  args.each do |type, options|
+    with_fx type, options do
+      yield body
+    end
+  end
+end
+
+live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
+    sync :start
+    with_fx :pitch_shift, pitch_dis: 0.001 do
+      with_fx :reverb do
+        with_synth :prophet do
+          play degree((ring 4,4)[s_idx], :A2, :major), cutoff: 60, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+        end
+      end
+    end
+    s_idx+=1
+end; end
+
 live_loop :thebass do
   with_fx :level, amp: 1.0 do
     use_synth :tri
@@ -430,9 +438,9 @@ live_loop :thebass do
         end
 
         1.times{sync :start;  cue :high}
-   
 
-      control(r, room: 0.5)
+
+        control(r, room: 0.5)
         with_fx :distortion, mix: 0.2 do
           play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 1.0, release: 0.5, decay: 1.5, sustain: 1.5
           sleep bar/2
@@ -440,7 +448,7 @@ live_loop :thebass do
         end
 
         1.times{sync :start;}
-        
+
 
         control(r, room: 0.45)
         with_fx :distortion, mix: 0.2 do

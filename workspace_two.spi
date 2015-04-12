@@ -413,7 +413,7 @@ def with_fxs(*args, &body)
   end
 end
 
-live_loop :fizzly_bass_line do |s_idx|; with_fx :level, amp: 1 do
+live_loop :fizzly_bass_line do |s_idx|; with_fx :level, amp: 0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do

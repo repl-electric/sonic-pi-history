@@ -237,7 +237,7 @@ live_loop :bright_light do; with_fx :level, amp: 0.0 do
   end
 end
 
-live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
+live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do

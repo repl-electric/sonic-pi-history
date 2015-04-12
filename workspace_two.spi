@@ -467,3 +467,5 @@ live_loop :thebass do
     3.times{sync :start; cue :otherhigh}
   end
 end
+
+fadeout()

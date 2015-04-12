@@ -179,8 +179,7 @@ live_loop :chords do; with_fx :level, amp: 0.0 do
   end
   #end
 end
-live_loop :bright_light do
-  with_fx :level, amp: 0.0 do
+live_loop :bright_light do; with_fx :level, amp: 0.0 do
     3.times {sync :quart}
     use_synth :beep    #:mod_pulse #:mod_beep
     use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
@@ -238,7 +237,7 @@ live_loop :bright_light do
   end
 end
 
-live_loop :startzse do |s_idx|
+live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
   sync :start
   with_fx :pitch_shift, pitch_dis: 0.001 do
     with_fx :reverb do
@@ -248,8 +247,7 @@ live_loop :startzse do |s_idx|
     end
   end
   s_idx+=1
-end
-
+end; end
 live_loop :dark_humming do |n_idx|
   #sync :start
   with_fx :level, amp: 0.0 do

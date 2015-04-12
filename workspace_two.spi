@@ -62,7 +62,7 @@ live_loop :highlights do |high_n|;with_fx :level, amp: 0.0 do
     high_n += 1
   end
 end
-live_loop :drum do |d_idx|;with_fx :level, amp: 0.9 do
+live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
     sync :quart
     with_fx :lpf do
       sample :elec_triangle, amp: 0.2
@@ -87,7 +87,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
   vio_pan += 1
   vio_idx += 1
 end
-live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
+live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
     with_fx :reverb do
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
@@ -98,7 +98,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-      with_fx :level, amp: 1.0  do
+      with_fx :level, amp: 0.0  do
         if p_idx % 4 <= 2
           notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         else
@@ -405,7 +405,7 @@ end
 def comment(&_)
 end
 
-live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
+live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
@@ -418,7 +418,7 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
 end; end
 
 live_loop :thebass do
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 0.0 do
     use_synth :tri
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
           sync :start

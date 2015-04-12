@@ -368,7 +368,7 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :rolling_left do |b_idx|;with_fx :level, amp: 1.0 do
+live_loop :rolling_left do |b_idx|;with_fx :level, amp: 0.0 do
     notes = deg_seq(*%w[:A2 4])
     2.times do
       @direction = rand_i(-1..1)

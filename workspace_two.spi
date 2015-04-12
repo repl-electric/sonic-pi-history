@@ -368,9 +368,8 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :rolling_left do |b_idx|
-  with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 4]) #fm
+live_loop :rolling_left do |b_idx|;with_fx :level, amp: 1.0 do
+    notes = deg_seq(*%w[:A2 4])
     2.times do
       @direction = rand_i(-1..1)
       play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
@@ -380,9 +379,8 @@ live_loop :rolling_left do |b_idx|
   b_idx+=1
 end
 
-live_loop :rolling_right do |n_idx|
+live_loop :rolling_right do |n_idx|;with_fx :level, amp: 0.0 do
   notes = deg_seq(*%w[:A2 56])
-  with_fx :level, amp: 0.0 do
     2.times do |i|
       play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=90, detune1=0, detune2=0.01
       room_size += 1
@@ -405,7 +403,7 @@ end
 def comment(&_)
 end
 
-live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
+live_loop :startzse do |s_idx|; with_fx :level, amp: 0.0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
@@ -418,7 +416,7 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 1 do
 end; end
 
 live_loop :thebass do
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: 0.0 do
     use_synth :tri
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
           sync :start

@@ -414,6 +414,9 @@ end
 #end
 #end
 
+def comment(&_)
+end
+
 live_loop :thebass do
   with_fx :level, amp: 1.0 do
     use_synth :tri
@@ -431,7 +434,9 @@ live_loop :thebass do
 
         1.times{sync :start;  cue :high}
 
-        control(r, room: 0.5)
+   
+comment do
+      control(r, room: 0.5)
         with_fx :distortion, mix: 0.2 do
           play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 1.0, release: 0.5, decay: 1.5, sustain: 1.5
           sleep bar/2
@@ -458,5 +463,6 @@ live_loop :thebass do
     end
 
     3.times{sync :start; cue :otherhigh}
+end
   end
 end

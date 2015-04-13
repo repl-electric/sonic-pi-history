@@ -418,7 +418,7 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 1.0 do
 end;end
 
 live_loop :swirl do |s_idx|
-sync :start
+4.times{sync :start}
         with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
         with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
         with_fx :echo, phase: bar/8, decay: bar do

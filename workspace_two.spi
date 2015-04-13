@@ -485,7 +485,7 @@ comment do
           sleep bar
           with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.3, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5}
         end
-      end
+     # end
     #end
 
     3.times{sync :start; cue :otherhigh}

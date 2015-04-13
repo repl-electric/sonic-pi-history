@@ -419,7 +419,7 @@ end;end
 
 live_loop :swirl do |s_idx|
 4.times{sync :start}
-  with_fx :reverb, room: 1.0, damp: 1.0, mix: 1.0 do
+  with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.5 do
     with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
       with_fx :echo, phase: bar/8, decay: bar do
         with_fx :hpf, cutoff: 120 do

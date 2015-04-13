@@ -430,7 +430,7 @@ s_idx+=1
 end
 
 live_loop :thebass do
-  with_fx :level, amp: 2.0 do
+  with_fx :level, amp: 1.0 do
     use_synth :tri
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
           sync :start

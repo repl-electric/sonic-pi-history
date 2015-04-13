@@ -432,7 +432,7 @@ end
 live_loop :thebass do
   with_fx :level, amp: 1.0 do
     use_synth :tri
-    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
+#    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
           sync :start
 
           play chord_degree(1, :Fs2, :harmonic_minor)[0], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
@@ -490,5 +490,5 @@ comment do
 
     3.times{sync :start; cue :otherhigh}
 end
-  end
+ # end
 end

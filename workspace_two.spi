@@ -424,7 +424,7 @@ live_loop :swirl do |s_idx|
       with_fx :echo, phase: bar/8, decay: bar do
         with_fx :hpf, cutoff: 100 do
           with_synth :pnoise do
-            play degree((ring 4,1)[s_idx], :A1, :major), release: bar, decay: bar*2, env_curve: 6, res: 0.2, attack: 0.01
+            play degree((ring 4,1)[s_idx], :A1, :major), release: 0.01, decay: bar*2, env_curve: 6, res: 0.2, attack: 0.01
   end;end;end;end;end
 s_idx+=1
 end

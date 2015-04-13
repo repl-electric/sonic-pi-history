@@ -490,5 +490,5 @@ comment do
 
     3.times{sync :start; cue :otherhigh}
 end
- # end
+  end
 end

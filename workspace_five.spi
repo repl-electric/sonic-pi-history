@@ -15,8 +15,6 @@ puts chord_degree(5, :A2, :major) #[52, 56, 59, 62]               *
 puts chord_degree(6, :A2, :major) #[54, 57, 61, 64]               *
 puts chord_degree(7, :A2, :major) #[56, 59, 62, 66]
 
-
-
 #47...
 
 live_loop :melo do
@@ -41,15 +39,9 @@ end
 
 live_loop :bass do |x_idx|
 use_synth :tri
-#play degree(1, :A1, :minor), decay: bar*4
-#sleep bar*4
-#play degree(4, :A1, :minor), decay: bar*4
-#ring 33 *35* 40 *43*
-x = (ring *chord(:a1, 'sus4')[0..3])
-puts  x
-play x[x_idx], decay: (ring bar*4,bar*4,bar*4)[x_idx]
-sleep (ring bar*4,bar*4,bar*4)[x_idx]
-x_idx+=1
+
+
+
 end
 
 #play chord_degree(2, :A2)[0]

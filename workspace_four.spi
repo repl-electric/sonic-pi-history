@@ -9,6 +9,8 @@ bar = 1
 #47...
 use_synth :tri
 
+
+
 live_loop :melo do
   play degree(4, :A2, :major)
   sleep bar
@@ -21,6 +23,8 @@ live_loop :melo do
 end
 
 live_loop :bass do
+play chord_degree(2, :A2)[0], decay: bar*4
+sleep bar*4
 play chord_degree(2, :A2)[0], decay: bar*4
 sleep bar*4
 end

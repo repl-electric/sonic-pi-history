@@ -442,15 +442,15 @@ sync :high_to_low
 idx+=1
 end
 
-live_loop :lh do
+live_loop :lh do |idx|
 sync :low_to_high
 use_synth :tri
-puts (ring 47,50,57,61,64)[x_idx]
-play (ring 47,50,57,61,64)[x_idx], release: bar*4
+puts (ring 47,50,57,61,64)[idx]
+play (ring 47,50,57,61,64)[idx], release: bar*4
 
         #x = chord(:a2,:diminished)
         #play x[0],  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-
+idx+=1
 end
 
 live_loop :thebass do |idx|

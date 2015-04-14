@@ -4,6 +4,6 @@
 #puts degree(6, :A2, :major) # 54
 #puts degree(1, :A2, :major) # 45
 
-x = chord(:A2, 'm+7')
+x = chord(:A2, 'm+5')
 puts x
 play x

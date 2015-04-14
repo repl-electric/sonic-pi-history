@@ -11,7 +11,7 @@ bar = 1
 live_loop :melo do
   use_synth :beep
   play degree(4, :A2, :major), attack: 0.01, release: bar
-  sleep bar
+  sleep bar/2
 #  play degree(5, :A2, :major)
  # sleep bar
  # play degree(6, :A2, :major)
@@ -24,7 +24,7 @@ live_loop :bass do
 use_synth :tri
 play degree(1, :A2, :major), decay: bar*4
 sleep bar*4
-play degree(7, :A1, :major), decay: bar*4
+play degree(5, :A1, :major), decay: bar*4
 sleep bar*4
 
 #play chord_degree(4, :A2)[0], decay: bar*4

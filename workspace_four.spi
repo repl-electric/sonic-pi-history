@@ -8,7 +8,9 @@ bar = 1
 
 
 puts chord_degree(1, :A2, :major) #45,49,52,56
-puts chord_degree(2, :A2, :major) #45,49,52,56
+puts chord_degree(2, :A2, :major) #47,50,54,57
+puts chord_degree(3, :A2, :major) #47,50,54,57
+
 
 
 #47...

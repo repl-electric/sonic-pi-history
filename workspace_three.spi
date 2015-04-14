@@ -427,6 +427,18 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
     s_idx+=1
 end;end
 
+
+live_loop :hl do
+sync :high_to_low
+play :B1
+end
+
+live_loop :hl do
+sync :low_to_high
+play :B2
+end
+
+
 live_loop :thebass do |idx|
   with_fx :level, amp: 0.0 do
     use_synth :tri

@@ -428,19 +428,17 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
 end;end
 
 live_loop :hl do |idx|
-  sync :high_to_low
-  use_synth :tri
-  notes = (ring degree(1, :A2, :minor), :Cs3)
-  play notes[idx],  amp: 0.2, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
-  with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-  idx+=1
+sync :high_to_low
+notes = (ring degree(1, :A2, :minor), :Cs3)
+with_synth(:tri){play notes[idx],  amp: 0.2, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2}
+with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+idx+=1
 end
 
 live_loop :lh do |idx|
 sync :low_to_high
-use_synth :tri
 notes = (ring degree(2, :A2, :minor), :D3)
-play notes[idx],  amp: 0.2, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
+with_synth(:tri){play notes[idx],  amp: 0.2, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2}
 with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
 idx+=1
 end

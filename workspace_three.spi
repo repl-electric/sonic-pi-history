@@ -430,7 +430,7 @@ end;end
 
 live_loop :hl do
 sync :high_to_low
-play :B1
+play :B1, amp: 2
 end
 
 live_loop :hl do

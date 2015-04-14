@@ -50,13 +50,7 @@ sleep bar*4
 
 play (ring 47,50,57,61, 64)[x_idx], release: bar*4
 sleep bar*4
-
 #
-
-
-
-
-
 
 x_idx+=1
 end

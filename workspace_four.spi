@@ -431,8 +431,8 @@ live_loop :hl do |idx|
 sync :high_to_low
   use_synth :tri
 
-  puts (ring 45,49,56,59,62)[idx]
-  play (ring 45,49,56,59,62)[idx], release: bar*4
+  puts (ring 45,49,56)[idx]
+  play (ring 45,49,56)[idx], release: bar*4
  
 #        x = chord_degree(7, :a1, :major)
 #puts x
@@ -445,8 +445,8 @@ end
 live_loop :lh do |idx|
 sync :low_to_high
 use_synth :tri
-puts (ring 47,50,57,61,64)[idx]
-play (ring 47,50,57,61,64)[idx], release: bar*4
+puts (ring 47,50,57)[idx]
+play (ring 47,50,57)[idx], release: bar*4
 
         #x = chord(:a2,:diminished)
         #play x[0],  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2

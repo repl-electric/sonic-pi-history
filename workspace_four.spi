@@ -40,7 +40,7 @@ use_synth :tri
 #ring 33 *35* 40 *43*
 x = (ring *chord(:a2, 'sus4')[0])
 puts  x
-play x[x_idx], decay: (ring bar*4,bar*4,bar*4)[x_idx]
+#play x[x_idx], decay: (ring bar*4,bar*4,bar*4)[x_idx]
 sleep (ring bar*4,bar*4,bar*4)[x_idx]
 x_idx+=1
 end

@@ -19,13 +19,14 @@ live_loop :melo do
  # play degree(1, :A3, :major)
  # sleep bar
 end
+puts note(:B)
 
 live_loop :bass do |x_idx|
 use_synth :tri
 #play degree(1, :A1, :minor), decay: bar*4
 #sleep bar*4
 #play degree(4, :A1, :minor), decay: bar*4
-#ring 33 35 40 43
+#ring 33 *35* 40 *43*
 x = (ring *chord(:A1, '7sus2')[0..3])
 puts  x
 play x[x_idx], decay: bar*4

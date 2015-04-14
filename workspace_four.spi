@@ -13,11 +13,11 @@ live_loop :melo do
   play degree(4, :A2, :major)
   sleep bar
 #  play degree(5, :A2, :major)
-  sleep bar
+ # sleep bar
  # play degree(6, :A2, :major)
-  sleep bar
+ # sleep bar
  # play degree(1, :A3, :major)
-  sleep bar
+ # sleep bar
 end
 
 live_loop :bass do

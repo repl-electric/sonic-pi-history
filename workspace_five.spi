@@ -1,9 +1,69 @@
+bar = 1
+
 #A2 456
 #puts degree(4, :A2, :major) 50
 #puts degree(5, :A2, :major) #52
 #puts degree(6, :A2, :major) # 54
 #puts degree(1, :A2, :major) # 45
 
-x = chord(:A2, '1')
-puts x
-play x
+
+puts chord_degree(1, :A2, :major) #45,49,52,56                    *
+puts chord_degree(2, :A2, :major) #47,50,54,57                    *
+puts chord_degree(3, :A2, :major) #49,52,56,59                    *
+puts chord_degree(4, :A2, :major) #50,54,57,61                    *
+puts chord_degree(5, :A2, :major) #[52, 56, 59, 62]               *
+puts chord_degree(6, :A2, :major) #[54, 57, 61, 64]               *
+puts chord_degree(7, :A2, :major) #[56, 59, 62, 66]
+
+
+
+#47...
+
+live_loop :melo do
+  use_synth :beep
+8.times{
+  play degree(5, :A2, :major), attack: 0.01, release: bar
+  sleep bar
+}
+8.times{
+  play degree(6, :A2, :major), attack: 0.01, release: bar
+  sleep bar
+}
+
+ # sleep bar/2.0
+  #play degree(5, :A2, :melodic_minor)
+ # sleep bar/2.0
+
+ # sleep bar
+ # play degree(1, :A3, :major)
+ # sleep bar
+end
+
+puts note(:B1)
+
+live_loop :bass do |x_idx|
+use_synth :tri
+#play degree(1, :A1, :minor), decay: bar*4
+#sleep bar*4
+#play degree(4, :A1, :minor), decay: bar*4
+#ring 33 *35* 40 *43*
+x = (ring *chord(:a1, 'sus4')[0..3])
+puts  x
+play x[x_idx], decay: (ring bar*4,bar*4,bar*4)[x_idx]
+sleep (ring bar*4,bar*4,bar*4)[x_idx]
+x_idx+=1
+end
+
+#play chord_degree(2, :A2)[0]
+
+
+
+#play chord_degree(1, :A2, :harmonic_minor)[0], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#4.times{sleep bar}
+
+#play chord_degree(1, :A2, :harmonic_minor)[1], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#2.times{sleep bar}
+
+#play chord_degree(5, :A2, :harmonic_minor)[0], amp: 0.4, attack: 0.01, release: bar, decay: bar*8, sustain: bar/2
+#sleep bar
+#with_synth(:tri){play chord_degree(1, :Fs1, :harmonic_minor).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}

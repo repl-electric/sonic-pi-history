@@ -30,7 +30,7 @@ use_synth :tri
 #sleep bar*4
 #play degree(4, :A1, :minor), decay: bar*4
 #ring 33 *35* 40 *43*
-x = (ring *chord(:A1, 'sus4')[0..3])
+x = (ring *chord(:a1, 'sus4')[0..3])
 puts  x
 play x[x_idx], decay: (ring bar*4,bar*1.5,bar*4)[x_idx]
 sleep (ring bar*4,bar*2,bar*4)[x_idx]

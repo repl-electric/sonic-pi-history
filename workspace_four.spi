@@ -14,7 +14,7 @@ live_loop :melo do
   sleep bar/4.0
   play degree(5, :A2, :minor)
   sleep bar/4.0
-#  play degree(6, :A2, :major)
+  play degree(6, :A2, :major)
   sleep bar/4.0
 
  # sleep bar

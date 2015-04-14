@@ -22,11 +22,14 @@ end
 
 live_loop :bass do
 use_synth :tri
-play degree(1, :A1, :minor), decay: bar*4
+#play degree(1, :A1, :minor), decay: bar*4
+#sleep bar*4
+#play degree(4, :A1, :minor), decay: bar*4
+
+play chord(:A2, '+5'), decay: bar*4
+
 sleep bar*4
-play degree(4, :A1, :minor), decay: bar*4
-sleep bar*4
-play degree(5, :A1, :minor), decay: bar*4
+#play degree(5, :A1, :minor), decay: bar*4
 
 #play chord_degree(4, :A2)[0], decay: bar*4
 end

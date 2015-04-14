@@ -30,7 +30,7 @@ use_synth :tri
 x = (ring *chord(:A1, '7sus2')[1..3])
 puts  x
 play x[x_idx], decay: bar*4
-sleep (ring bar*4,bar*2,bar*4)
+sleep (ring bar*4,bar*2,bar*4)[x_idx]
 x_idx+=1
 end
 

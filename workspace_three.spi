@@ -444,11 +444,11 @@ live_loop :thebass do |idx|
         x = (ring *chord(:a1, '7sus2')[1..3])
         play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 
-        4.times{sync :start}
+        3.times{sync :start}
         play x[1], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         2.times{sync :start}
         play x[2], amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        1.times{sync :start}
+        2.times{sync :start}
         play chord(:a1, '7sus2')[0], amp: 1.0, attack: 0.1, release: bar*8, decay: bar*8, sustain: bar
 
         end

@@ -452,6 +452,7 @@ live_loop :thebass do |idx|
 
         2.times{sync :start}
 
+        1.times{sync :start}
 
 
         end

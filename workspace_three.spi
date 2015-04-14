@@ -430,8 +430,8 @@ end;end
 live_loop :hl do
 sync :high_to_low
   use_synth :tri
-  puts chord(:a2, :minor7)
         x = chord(:a2, :minor7)
+puts x
         play x[0..1],  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 #        2.times{sync :start}
 

@@ -369,7 +369,7 @@ end
 room_size = 0
 
 live_loop :rolling_left do |b_idx|
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A2 4]) #fm
     1.times do
       @direction = rand_i(-1..1)
@@ -441,12 +441,7 @@ sync :low_to_high
 use_synth :tri
 notes = (ring :B2, :D3)
 play notes[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
-  #if idx % 2 == 1
 with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-#end
-
-        #x = chord(:a2,:diminished)
-        #play x[0],  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 idx+=1
 end
 

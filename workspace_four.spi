@@ -20,13 +20,13 @@ live_loop :melo do
  # sleep bar
 end
 
-live_loop :bass do
+live_loop :bass do |x_idx|
 use_synth :tri
 #play degree(1, :A1, :minor), decay: bar*4
 #sleep bar*4
 #play degree(4, :A1, :minor), decay: bar*4
 puts  chord(:A2, '6*9')
-play chord(:A2, '6*9'), decay: bar*4
+play chord(:A2, '6*9')[x_idx], decay: bar*4
 sleep bar*4
 play chord(:A2,'1'), decay: bar*4
 sleep bar*4
@@ -35,6 +35,7 @@ sleep bar*4
 #play degree(5, :A1, :minor), decay: bar*4
 
 #play chord_degree(4, :A2)[0], decay: bar*4
+x_idx+=1
 end
 
 #play chord_degree(2, :A2)[0]

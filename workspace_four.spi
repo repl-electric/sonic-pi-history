@@ -434,7 +434,7 @@ sync :high_to_low
   puts (ring 45,49)[idx]
   play (ring 45,49)[idx],  amp: 1.0, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
   if idx % 2 == 1
-  with_synth(:prophet){ play 49, cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+  with_synth(:prophet){ play (ring 45,49)[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
  end
 #        x = chord_degree(7, :a1, :major)
 #puts x
@@ -451,7 +451,7 @@ puts (ring 47,50)[idx]
 play (ring 47,50)[idx],  amp: 1.0, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
 
   if idx % 2 == 1
-with_synth(:prophet){ play 50, cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+with_synth(:prophet){ play (ring 47,50)[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
 end
 
         #x = chord(:a2,:diminished)

@@ -432,7 +432,7 @@ sync :high_to_low
   use_synth :tri
 
   puts (ring 45,49)[idx]
- # play (ring 45,49)[idx],  amp: 1.0, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
+  play (ring 45,49)[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
  # if idx % 2 == 1
   with_synth(:prophet){ play (ring 45,49)[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
  #end

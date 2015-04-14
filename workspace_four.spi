@@ -428,32 +428,21 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
 end;end
 
 live_loop :hl do |idx|
-sync :high_to_low
+  sync :high_to_low
   use_synth :tri
-
-  puts (ring 45,49)[idx]
-  play (ring 45,49)[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
- # if idx % 2 == 1
-  with_synth(:prophet){ play (ring 45,49)[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
- #end
-#        x = chord_degree(7, :a1, :major)
-#puts x
- #       play x,  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-#        2.times{sync :start}
-
-idx+=1
+  notes = (ring :A2, :Cs3)
+  play notes[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
+  with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+  idx+=1
 end
 
 live_loop :lh do |idx|
 sync :low_to_high
 use_synth :tri
-puts (ring 47,50)[idx]
-#play (ring 47,50)[idx],  amp: 1.0, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
-play (ring 47,50)[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
-
-
+notes = (ring :B2, :D3)
+play notes[idx],  amp: 0.3, attack: 0.1, release: bar*2, decay: bar*4, sustain: bar/2
   #if idx % 2 == 1
-with_synth(:prophet){ play (ring 47,50)[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
 #end
 
         #x = chord(:a2,:diminished)

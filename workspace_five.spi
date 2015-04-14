@@ -44,7 +44,7 @@ puts chord_degree(1, :A2, :major) #45,49,52,56                    *
 puts chord_degree(3, :A2, :major) #49,52,56,59                    *
 puts chord_degree(5, :A2, :major) #[52, 56, 59, 62]               *
 
-play (ring 45,)[x_idx], release: bar*4
+play (ring 4,)[x_idx], release: bar*4
 sleep bar*4
 
 x_idx+=1

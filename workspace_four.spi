@@ -19,7 +19,7 @@ live_loop :melo do
  # play degree(1, :A3, :major)
  # sleep bar
 end
-puts note(:B)
+puts note(:B1)
 
 live_loop :bass do |x_idx|
 use_synth :tri

@@ -1,0 +1,7 @@
+#A2 456
+#puts degree(4, :A2, :major) 50
+#puts degree(5, :A2, :major) #52
+#puts degree(6, :A2, :major) # 54
+#puts degree(1, :A2, :major) # 45
+
+puts chord("1",'+5')

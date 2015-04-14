@@ -21,11 +21,11 @@ live_loop :melo do
   use_synth :beep
 8.times{
   play degree(5, :A2, :major), attack: 0.01, release: bar-0.2
-  sleep bar
+  sleep bar/2
 }
 8.times{
   play degree(6, :A2, :major), attack: 0.01, release: bar-0.2
-  sleep bar
+  sleep bar/2
 }
 
  # sleep bar/2.0
@@ -39,7 +39,6 @@ end
 
 live_loop :bass do |x_idx|
 use_synth :tri
-
 
 play 49, release: bar*4
 sleep bar*4

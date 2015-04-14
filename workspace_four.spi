@@ -7,9 +7,11 @@ bar = 1
 #puts degree(1, :A2, :major) # 45
 
 #47...
-play chord_degree(2, :A2)[0]
+use_synth :tri
 
 play chord_degree(2, :A2)[0]
+
+#play chord_degree(2, :A2)[0]
 
 
 

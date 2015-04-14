@@ -373,7 +373,7 @@ live_loop :rolling_left do |b_idx|
     notes = deg_seq(*%w[:A3 12458]) #fm
     1.times do
       @direction = rand_i(-1..1)
-      play_rolling notes[b_idx], dir=@direction, room=1, cut=120, detune1=0.2, detune2=0.101
+      play_rolling notes[b_idx], dir=@direction, room=1, cut=120, detune1=0.2, detune2=0.801
       room_size += 1
     end
   end
@@ -386,7 +386,7 @@ live_loop :rolling_right do |n_idx|
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     1.times do |i|
-      play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=120, detune1=0.1, detune2=0.41
+      play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=120, detune1=0.1, detune2=0.81
       room_size += 1
     end
   end

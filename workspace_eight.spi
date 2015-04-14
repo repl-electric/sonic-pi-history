@@ -10,4 +10,6 @@ puts scale(:A2, :major)
 puts note(:A2)
 puts note(:Cs3)
 
+
+degrees(1, :A3, :minor)
 #:A2, :Cs3

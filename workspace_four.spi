@@ -14,7 +14,7 @@ live_loop :melo do
   sleep bar/2.0
   play degree(4, :A2, :melodic_minor), attack: 0.01, release: bar
   sleep bar/2.0
-  play degree(5, :A2, :melodic_minor)
+  play degree(6, :A2, :melodic_minor)
   sleep bar/2.0
 
  # sleep bar

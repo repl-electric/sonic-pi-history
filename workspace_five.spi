@@ -39,7 +39,7 @@ end
 
 live_loop :bass do |x_idx|
 use_synth :tri
-play 45
+play 49
 sleep bar*4
 
 

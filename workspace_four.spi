@@ -25,9 +25,9 @@ use_synth :tri
 play chord_degree(1, :A2)[0], decay: bar*4
 sleep bar*4
 play chord_degree(4, :A2)[0], decay: bar*4
+sleep bar*4
 
 #play chord_degree(4, :A2)[0], decay: bar*4
-#sleep bar*4
 end
 
 #play chord_degree(2, :A2)[0]

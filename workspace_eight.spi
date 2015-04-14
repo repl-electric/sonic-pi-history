@@ -9,4 +9,4 @@ puts scale(:A2, :major)
 
 puts note(:A2)
 
-puts note(:C3)
+puts note(:C#3)

@@ -11,5 +11,5 @@ puts note(:A2)
 puts note(:Cs3)
 
 
-puts degrees(1, :A3, :minor)
+puts degree(1, :A3, :minor)
 #:A2, :Cs3

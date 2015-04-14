@@ -430,7 +430,7 @@ end;end
 live_loop :hl do
 sync :high_to_low
   use_synth :tri
-        x = chord_degree(5, :a1, :harmonic_minor)
+        x = chord_degree(5, :a1, :major)
 puts x
         play x,  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 #        2.times{sync :start}

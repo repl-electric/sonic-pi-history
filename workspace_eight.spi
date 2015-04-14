@@ -8,5 +8,6 @@ puts scale(:A2, :major)
 #45,49
 
 puts note(:A2)
-
 puts note(:Cs3)
+
+:A2, :Cs3

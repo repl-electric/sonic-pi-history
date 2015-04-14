@@ -8,5 +8,5 @@
 
 
 
-puts degree(2, :A2, :major)
+puts degree(1, :A2, :major)
 #:A2, :Cs3

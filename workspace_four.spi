@@ -370,7 +370,7 @@ room_size = 0
 
 live_loop :rolling_left do |b_idx|
   with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A3 88888 :A4 22222222]) #fm
+    notes = deg_seq(*%w[:A2 111111111 :A4 22222222]) #fm
     1.times do
       @direction = rand_i(-1..1)
       play_rolling notes[b_idx], dir=@direction, room=1, cut=120, detune1=0.9, detune2=0.901

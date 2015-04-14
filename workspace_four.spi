@@ -386,7 +386,7 @@ live_loop :rolling_right do |n_idx|
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     1.times do |i|
-      play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=120, detune1=0.1, detune2=0.01
+      play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=120, detune1=0.1, detune2=0.41
       room_size += 1
     end
   end

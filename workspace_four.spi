@@ -10,7 +10,7 @@ bar = 1
 use_synth :tri
 
 live_loop :melo do
-  play degree(4, :A2, :major)
+  play degree(4, :A3, :major)
   sleep bar
 end
 

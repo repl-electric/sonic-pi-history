@@ -22,11 +22,11 @@ puts chord_degree(7, :A2, :major) #[56, 59, 62, 66]
 live_loop :melo do
   use_synth :beep
 8.times{
-  play degree(5, :A2, :major), attack: 0.01, release: bar
+  play degree(5, :A2, :major), attack: 0.01, release: bar/2
   sleep bar
 }
 8.times{
-  play degree(6, :A2, :major), attack: 0.01, release: bar
+  play degree(6, :A2, :major), attack: 0.01, release: bar/2
   sleep bar
 }
 
@@ -38,8 +38,6 @@ live_loop :melo do
  # play degree(1, :A3, :major)
  # sleep bar
 end
-
-puts note(:B1)
 
 live_loop :bass do |x_idx|
 use_synth :tri

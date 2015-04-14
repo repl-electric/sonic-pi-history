@@ -427,19 +427,19 @@ live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
     s_idx+=1
 end;end
 
-live_loop :hl do
+live_loop :hl do |idx|
 sync :high_to_low
   use_synth :tri
 
-  puts (ring 45,49,56,59,62)[x_idx]
-  play (ring 45,49,56,59,62)[x_idx], release: bar*4
+  puts (ring 45,49,56,59,62)[idx]
+  play (ring 45,49,56,59,62)[idx], release: bar*4
  
 #        x = chord_degree(7, :a1, :major)
 #puts x
  #       play x,  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 #        2.times{sync :start}
 
-
+idx+=1
 end
 
 live_loop :lh do

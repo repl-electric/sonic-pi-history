@@ -2,7 +2,7 @@
 
 #:B2, :D3
 
-scale(:A3, :major).each{|c puts c|} 
+scale(:A2, :major).each{|c puts c|} 
 
 
 #45,49

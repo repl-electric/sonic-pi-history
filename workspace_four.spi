@@ -26,7 +26,7 @@ use_synth :tri
 #sleep bar*4
 #play degree(4, :A1, :minor), decay: bar*4
 
-play chord(:A2, '+4'), decay: bar*4
+play chord(:A2,'6'), decay: bar*4
 
 sleep bar*4
 #play degree(5, :A1, :minor), decay: bar*4

@@ -11,11 +11,11 @@ bar = 1
 live_loop :melo do
   use_synth :beep
   play degree(4, :A2, :minor), attack: 0.01, release: bar
-  sleep bar/4.0
+  sleep bar/2.0
   play degree(5, :A2, :minor)
-  sleep bar/4.0
+  sleep bar/2.0
   play degree(7, :A2, :minor)
-  sleep bar/4.0
+  sleep bar/2.0
 
  # sleep bar
  # play degree(1, :A3, :major)

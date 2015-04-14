@@ -7,7 +7,7 @@ bar = 1
 #puts degree(1, :A2, :major) # 45
 
 #47...
-puts chord_degree(3, :A2)
+puts chord_degree(4, :A2)
 
 play chord_degree(1, :A2, :harmonic_minor)[0], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
 4.times{sleep bar}

@@ -11,4 +11,4 @@
 puts degree(4, :A2, :major)
 #:A2, :Cs3
 
-puts note(:S3)
+puts note(:D3)

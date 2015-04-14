@@ -2,13 +2,10 @@
 
 #:B2, :D3
 
-puts scale(:A2, :major)
 
 
 #45,49
 
-puts note(:A2)
-puts note(:Cs3)
 
 
 puts degree(1, :A3, :minor)

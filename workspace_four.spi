@@ -12,11 +12,11 @@ live_loop :melo do
   use_synth :beep
   #play degree(1, :A2, :melodic_minor)
 
-4.times{
+8.times{
   play degree(6, :A2, :melodic_minor), attack: 0.1, release: bar
   sleep bar/2.0
 }
-4.times{
+8.times{
   play degree(5, :A2, :melodic_minor), attack: 0.1, release: bar
   sleep bar/2.0
 }

@@ -434,7 +434,19 @@ end
 
 live_loop :lh do
 sync :low_to_high
-play :b, amp: 2
+
+        x = (ring *chord(:a1, '7sus2')[1..3])
+        play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+        2.times{sync :start}
+        play x[1], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+        2.times{sync :start}
+        play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+        2.times{sync :start}     
+        play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
+        1.times{sync :start}
+
 end
 
 live_loop :thebass do |idx|

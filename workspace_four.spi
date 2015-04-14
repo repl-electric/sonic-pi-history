@@ -12,13 +12,14 @@ live_loop :melo do
   use_synth :beep
   play degree(4, :A2, :minor), attack: 0.01, release: bar
   sleep bar/4.0
-#  play degree(5, :A2, :major)
+  play degree(5, :A2, :major)
  # sleep bar
  # play degree(6, :A2, :major)
  # sleep bar
  # play degree(1, :A3, :major)
  # sleep bar
 end
+
 puts note(:B1)
 
 live_loop :bass do |x_idx|

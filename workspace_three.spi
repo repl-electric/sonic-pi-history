@@ -429,12 +429,12 @@ end;end
 
 live_loop :hl do
 sync :high_to_low
-play :B1, amp: 2
+play :b1, amp: 2
 end
 
 live_loop :lh do
 sync :low_to_high
-play :B2, amp: 2
+play :b2, amp: 2
 end
 
 live_loop :thebass do |idx|

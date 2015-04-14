@@ -14,11 +14,11 @@ live_loop :melo do
 
 8.times{
   play degree(6, :A2, :melodic_minor), attack: 0.1, release: bar
-  sleep bar/2.0
+  sleep bar
 }
 8.times{
   play degree(5, :A2, :melodic_minor), attack: 0.1, release: bar
-  sleep bar/2.0
+  sleep bar
 }
 
  # sleep bar/2.0

@@ -28,4 +28,4 @@ def dez_seq(*pattern_and_roots)
 end
 
 
-puts dez_seq(*%w{:ah3 1243})
+puts dez_seq(*%w{:ah3 1})

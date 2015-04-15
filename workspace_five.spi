@@ -432,7 +432,7 @@ end
 
 #end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 2 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do

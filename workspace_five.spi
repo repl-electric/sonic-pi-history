@@ -117,7 +117,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
 
 
         sleeps = (ring bar/2.0, bar/2.0, bar/4.0, 
-                       bar/2.0, bar/2.0, bar/2.0,
+                       bar/2.0, bar/2.0, bar/4.0,
                        bar/4,   bar/4 , bar/2.0,  bar/2.0, 
                        bar/4, bar/4)
 

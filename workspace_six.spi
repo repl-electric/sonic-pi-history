@@ -24,7 +24,7 @@ def live(name, opts={}, &block)
     x.(idx)
   end
 end
-def dez_seq(*pattern_and_roots)
+def deg_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"

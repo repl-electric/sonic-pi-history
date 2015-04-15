@@ -25,32 +25,32 @@ def live(name, opts={}, &block)
   end
 end
 def dez_seq(*pattern_and_roots)
-  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
-    if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
-      accu[0..-2] << "#{accu[-1]}#{id}"
-    else
-      accu << id
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
+  if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
+    accu[0..-2] << "#{accu[-1]}#{id}"
+  else
+    accu << id
   end}
-  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
+  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s } 
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
   notes = patterns.each_with_index.map do |pattern, idx|
-    root = roots[idx]
-    if(root[0] == ":")
-      root = root[1..-1]
-    end
-    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-    if(s == :minor)
-      s = if    root.to_s[1] == "h"
+  root = roots[idx]
+  if(root[0] == ":")
+    root = root[1..-1]
+  end
+  s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  if(s == :minor)
+    s = if    root.to_s[1] == "h"
         :harmonic_minor
-      elsif root.to_s[1] == "m"
+        elsif root.to_s[1] == "m"
         :melodic_minor
-      else :minor
+        else :minor
       end
-    end
-    root = root[0] + root[2..-1] if s.length > 2
-    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
-  end.flat_map{|x| x}
-  (ring *notes)
+  end
+  root = root[0] + root[2..-1] if s.length > 2
+  pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+ end.flat_map{|x| x}
+ (ring *notes)
 end
 def comment(&_)
 end
@@ -106,20 +106,20 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
 
       if(p_idx %2 == 0)
         with_synth :prophet do
-          #          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+#          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
       with_fx :level, amp: 1.0  do
         if p_idx % 4 <= 2
           notes = dez_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         else
-          notes = dez_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
+                    notes = dez_seq(*%w{:a3 2 :a4 222 :a3 2 a4 322 :a3 2 :a4 222 :a3 2 :a4 322})
         end
         notes = dez_seq(*%w{:a3 6666 7777 6666 7777})
         if p_idx % 4 <= 2
-          notes = dez_seq(*%w{:a3 5 5 5 5 7 7 7 7 6 6 6 6 7 7 7 7})
+       notes = dez_seq(*%w{:a3 5 5 5 5 7 7 7 7 6 6 6 6 7 7 7 7})
         else
-          notes = dez_seq(*%w{:a3 5 5 5 5 :a4 1 :a3 7 7 6 6 6 6 7 7 7 7})
+        notes = dez_seq(*%w{:a3 5 5 5 5 :a4 1 :a3 7 7 6 6 6 6 7 7 7 7})
         end
 
         if p_idx % 4 <= 2
@@ -130,10 +130,10 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
 
         bonus_note = (ring degree(1, :a3, :harmonic_minor))
 
-        sleeps = (ring bar/2.0, bar/2.0, bar/4.0,
-                  bar/2.0, bar/2.0, bar/4.0,
-                  bar/2.0, bar/2.0, bar/4.0,
-                  bar/2.0, bar/2.0, bar/4.0)
+        sleeps = (ring bar/2.0, bar/2.0, bar/4.0, 
+                       bar/2.0, bar/2.0, bar/4.0,
+                       bar/2.0, bar/2.0, bar/4.0,
+                       bar/2.0, bar/2.0, bar/4.0)
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
@@ -351,7 +351,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
   #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
   with_fx :reverb, mix_slide: 0.2 do |r|
-    with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
+    with_fx :lpf, cutoff: 40, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
@@ -405,7 +405,7 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
 end
 
 live_loop :rolling_right do |n_idx|;with_fx :level, amp: 0.0 do
-    notes = deg_seq(*%w[:A2 56])
+  notes = deg_seq(*%w[:A2 56])
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     2.times do |i|
@@ -432,118 +432,132 @@ end
 
 #end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
         with_synth :prophet do
-          play (ring *chord(:a2, '7sus2')[1])[s_idx], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
+          play (ring *chord(:a2, 'sus2')[0])[s_idx], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
         end
 
-        #        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
-        #        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
-        #        with_fx :echo, phase: bar/8, decay: bar do
-        #        with_fx :hpf, cutoff: 100 do
-        #        with_synth :pnoise do
-        #play degree((ring 4,1)[s_idx], :A0, :minor), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
-        #        end;end;end;end;end
+#        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
+#        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
+#        with_fx :echo, phase: bar/8, decay: bar do
+#        with_fx :hpf, cutoff: 100 do
+#        with_synth :pnoise do
+          #play degree((ring 4,1)[s_idx], :A0, :minor), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
+#        end;end;end;end;end
       end
     end
     s_idx+=1
 end;end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
-    sync :high_to_low
-    notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
-    with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
-    with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-    idx+=1
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
+sync :high_to_low
+notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
+with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
+with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+idx+=1
 end;end
 
-live_loop :lh do |idx|;with_fx :level, amp: 1.0 do
-    sync :low_to_high
-    notes = (ring degree(2, :A2, :minor), degree(5, :A2, :minor))#majorme
-    with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
-    with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-    idx+=1
+live_loop :lh do |idx|;with_fx :level, amp: 0.0 do
+sync :low_to_high
+notes = (ring degree(2, :A2, :minor), degree(5, :A2, :minor))#majorme
+with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
+with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
+idx+=1
 end;end
 
 live_loop :siney do |idx|; with_fx :level, amp: 0.0 do
-    sync :start
-    with_synth :sine do
-      play :B3, release: bar*3, attack: 2.0
-    end
-    with_synth :prophet do
-      play :B2, release: bar*3, attack: 1.0, cutoff: 60
+sync :start
+with_synth :sine do
+    play :B3, release: bar*3, attack: 2.0
+end
+with_synth :prophet do
+    play :B2, release: bar*3, attack: 1.0, cutoff: 60
 end;end;end
 
 live_loop :thebass do |idx|
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     use_synth :tri
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
-          1.times{sync :start}
-          x = (ring *chord(:a1, '7sus2')[1..3])
-          play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-          #        with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-          2.times{sync :start}
-          play x[1], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-          with_synth(:prophet){ play x[1], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-          2.times{sync :start}
-          play x[(ring 2,1)[idx]], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-          with_synth(:prophet){ play x[(ring 2,1)[idx]], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-          2.times{sync :start}
-          if idx % 2 == 0
-            play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*6, sustain: bar/2
-            with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*8, sustain: bar/2}
-          else
-            play degree(1, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar, decay: bar, sustain: bar/2
-            with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
-          end
-          1.times{sync :start}
+        1.times{sync :start}
 
+#          play chord_degree(4, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#          4.times{sync :start}
+
+#          play chord_degree(2, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#          2.times{sync :start}
+
+#          play chord_degree(1, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.01, release: bar, decay: bar*8, sustain: bar/2
+#          sleep bar
+#          with_synth(:tri){play chord_degree(1, :A1, :harmonic_minor).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
+
+        x = (ring *chord(:a1, '7sus2')[1..3])
+        play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#        with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+        2.times{sync :start}
+        play x[1], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play x[1], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+        2.times{sync :start}
+        play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+        2.times{sync :start}     
+        
+if idx % 2 == 0
+        play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
+        1.times{sync :start}
+
+else
+        play degree(1, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar, decay: bar, sustain: bar/2
+        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
+        1.times{sync :start}
+
+end
         end
 
-        comment do
+comment do
 
-          1.times{sync :start;  cue :high}
+        1.times{sync :start;  cue :high}
 
-          control(r, room: 0.5)
-          with_fx :distortion, mix: 0.2 do
-            sync :start
-            play chord_degree(1, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-            sync :start
-            play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-            sync :start
-            with_synth(:tri){play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
-            sync :start
-            play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
-          end
+        control(r, room: 0.5)
+        with_fx :distortion, mix: 0.2 do
+          sync :start
+          play chord_degree(1, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
+          sync :start
+          play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
+          sync :start
+          with_synth(:tri){play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
+          sync :start
+          play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
+        end
 
-          1.times{sync :start;}
+        1.times{sync :start;}
 
-          control(r, room: 0.45)
-          with_fx :distortion, mix: 0.2 do
-            sync :start
-            play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-            sleep bar/2
-            play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-            sleep bar
-            with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
-            sleep bar
-            play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
-          end
+        control(r, room: 0.45)
+        with_fx :distortion, mix: 0.2 do
+          sync :start
+          play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
+          sleep bar/2
+          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
+          sleep bar
+          with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
+          sleep bar
+          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
+        end
 
-          2.times{sync :start}
-          control(r, room: 0.3)
-          with_fx :distortion, mix: 0.1 do
-            play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5
-            sleep bar
-            with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.3, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5}
-          end
+        2.times{sync :start}
+        control(r, room: 0.3)
+        with_fx :distortion, mix: 0.1 do
+          play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5
+          sleep bar
+          with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.3, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5}
         end
       end
-
-      3.times{sync :start; cue :otherhigh}
     end
+
+    3.times{sync :start; cue :otherhigh}
+end
   end
 end

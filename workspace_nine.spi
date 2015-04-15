@@ -29,6 +29,8 @@ notes = patterns.each_with_index.map do |pattern, idx|
 #    puts root
 #    puts pattern[0].to_i
 #puts s
+
+puts pattern.to_s.split("")
     root = root[0] + root[2..-1] if s.length > 2
     pattern.to_s.split("").map{|d|
 puts d

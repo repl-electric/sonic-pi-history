@@ -446,7 +446,7 @@ end;end
 live_loop :siney do |idx|
 sync :start
 with_synth :sine do
-play :B2, release: 4*bar
+play :B2, release: 4*bar, attack: 2.0
 end
 end
 

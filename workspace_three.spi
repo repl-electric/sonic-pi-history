@@ -43,8 +43,6 @@ def deg_seq(*pattern_and_roots)
   end.flat_map{|x| x}
   (ring *notes)
 end
-def comment(&_)
-end
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
@@ -100,7 +98,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-      with_fx :level, amp: 1.0  do
+      with_fx :level, amp: 0.0  do
         if p_idx % 4 <= 2
           notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         else
@@ -333,7 +331,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c, cutoff: n_cut);
-        8.times do |n|
+        2.times do |n|
 
           if n%2 ==0
             sync :start
@@ -370,9 +368,10 @@ end
 @direction = 1
 room_size = 0
 
-live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
+live_loop :rolling_left do |b_idx|
+  with_fx :level, amp: 0.0 do
     notes = deg_seq(*%w[:A2 4]) #fm
-    2.times do
+    1.times do
       @direction = rand_i(-1..1)
       play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
       room_size += 1
@@ -381,8 +380,9 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
   b_idx+=1
 end
 
-live_loop :rolling_right do |n_idx|;with_fx :level, amp: 1.0 do
+live_loop :rolling_right do |n_idx|
   notes = deg_seq(*%w[:A2 56])
+  with_fx :level, amp: 0.5 do
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     2.times do |i|
@@ -404,55 +404,47 @@ end
 #end
 #end
 
-live_loop :drums do
-sync :quart
-sample :drum_lo_snare
+def comment(&_)
 end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
+live_loop :startzse do |s_idx|; with_fx :level, amp: 0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
         with_synth :prophet do
-          play (ring *chord(:a2, 'sus2')[0])[s_idx], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
+          play degree((ring 4,4,4,4,2,2,2,1,1,1,1)[s_idx], :A2, :harmonic_minor), cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
         end
 
-#        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
-#        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
-#        with_fx :echo, phase: bar/8, decay: bar do
-#        with_fx :hpf, cutoff: 100 do
-#        with_synth :pnoise do
-          #play degree((ring 4,1)[s_idx], :A0, :minor), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
-#        end;end;end;end;end
+        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
+        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
+        with_fx :echo, phase: bar/8, decay: bar do
+        with_fx :hpf, cutoff: 100 do
+        with_synth :pnoise do
+#          play degree((ring 4,1)[s_idx], :A1, :major), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
+        end;end;end;end;end
       end
     end
     s_idx+=1
 end;end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
+live_loop :hl do
 sync :high_to_low
-notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
-with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
-with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-idx+=1
-end;end
+  use_synth :tri
+        x = chord_degree(7, :a1, :major)
+puts x
+        play x,  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#        2.times{sync :start}
 
-live_loop :lh do |idx|;with_fx :level, amp: 1.0 do
-sync :low_to_high
-notes = (ring degree(2, :A2, :minor), degree(5, :A2, :minor))#majorme
-with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
-with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*6, sustain: bar/2}
-idx+=1
-end;end
 
-live_loop :siney do |idx|; with_fx :level, amp: 0.0 do
-sync :start
-with_synth :sine do
-    play :B3, release: bar*3, attack: 2.0
 end
-with_synth :prophet do
-    play :B2, release: bar*3, attack: 1.0, cutoff: 60
-end;end;end
+
+live_loop :lh do
+sync :low_to_high
+use_synth :tri
+        #x = chord(:a2,:diminished)
+        #play x[0],  amp: 1.0, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+
+end
 
 live_loop :thebass do |idx|
   with_fx :level, amp: 0.0 do
@@ -472,26 +464,15 @@ live_loop :thebass do |idx|
 
         x = (ring *chord(:a1, '7sus2')[1..3])
         play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-#        with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
         play x[1], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play x[1], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
         play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}     
-        
-if idx % 2 == 0
         play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
-        1.times{sync :start}
-
-else
-        play degree(1, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar, decay: bar, sustain: bar/2
         with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
         1.times{sync :start}
-
-end
         end
 
 comment do

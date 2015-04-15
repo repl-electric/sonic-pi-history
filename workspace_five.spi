@@ -106,7 +106,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
 
       if(p_idx %2 == 0)
         with_synth :prophet do
-          play degree(2, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
+          play degree(5, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
       with_fx :level, amp: 1.0  do

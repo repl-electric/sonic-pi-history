@@ -123,10 +123,9 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         end
 
         if p_idx % 4 == 0
-     #   notes = deg_seq(*%w{:a3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})
+        notes = deg_seq(*%w{:a3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})
         else
         end
-   notes = []
 
         bonus_note = (ring degree(1, :a3, :harmonic_minor))
 

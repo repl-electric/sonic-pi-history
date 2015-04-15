@@ -406,7 +406,7 @@ end
 
 live_loop :drums do
 sync :quart
-sample :drum_lo_snare
+sample :drum_snare_lo
 end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do

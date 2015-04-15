@@ -443,15 +443,14 @@ with_synth(:prophet){ play notes[idx], cutoff: 58, amp: 1.0,  attack: 0.3, relea
 idx+=1
 end;end
 
-live_loop :siney do |idx|
+live_loop :siney do |idx|; with_fx :level, amp: 0.0 do
 sync :start
 with_synth :sine do
     play :B3, release: bar*3, attack: 2.0
 end
 with_synth :prophet do
     play :B2, release: bar*3, attack: 1.0, cutoff: 60
-end
-end
+end;end;end
 
 live_loop :thebass do |idx|
   with_fx :level, amp: 0.1 do

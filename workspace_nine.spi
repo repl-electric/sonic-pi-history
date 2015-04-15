@@ -1,4 +1,4 @@
 puts (ring 1,2,3,4,5).tick(1)
 puts (ring 1,2,3,4,5).tick(1)
-puts (ring 1,2,3,4,5).tick(2)
+puts (ring 1,2,3,4,5).tick(1)
 puts (ring 1,2,3,4,5).tick(1)

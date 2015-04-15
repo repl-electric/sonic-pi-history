@@ -43,6 +43,8 @@ def deg_seq(*pattern_and_roots)
   end.flat_map{|x| x}
   (ring *notes)
 end
+def comment(&_)
+end
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
@@ -98,7 +100,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           #play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
         end
       end
-      with_fx :level, amp: 0.0  do
+      with_fx :level, amp: 1.0  do
         if p_idx % 4 <= 2
           notes = deg_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         else
@@ -407,9 +409,6 @@ end
 live_loop :drums do
 sync :start
 sample :drum_heavy_kick
-end
-
-def comment(&_)
 end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do

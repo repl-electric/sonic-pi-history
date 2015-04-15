@@ -447,7 +447,9 @@ live_loop :siney do |idx|
 sync :start
 with_synth :sine do
     play :B2, release: 2*bar, attack: 1.0
-    play :A1, release: 2*bar, attack: 1.0
+end
+with_synth :prophet do
+    play :B2, release: 2*bar, attack: 1.0, cutoff: 50
 end
 end
 

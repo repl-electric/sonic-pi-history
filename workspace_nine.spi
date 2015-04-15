@@ -16,7 +16,7 @@ notes = patterns.each_with_index.map do |pattern, idx|
     if(root[0] == ":")
       root = root[1..-1]
     end
-puts root
+#puts root
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
     if(s == :minor)
       s = if    root.to_s[1] == "h"
@@ -26,9 +26,9 @@ puts root
       else :minor
       end
     end
-    puts root
-    puts pattern[0].to_i
-puts s
+#    puts root
+#    puts pattern[0].to_i
+#puts s
     root = root[0] + root[2..-1] if s.length > 2
     pattern.to_s.split("").map{|d|
 puts d

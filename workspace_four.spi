@@ -420,13 +420,13 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
           play chord(:a2, '7sus2')[0], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
         end
 
-        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
-        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
-        with_fx :echo, phase: bar/8, decay: bar do
-        with_fx :hpf, cutoff: 100 do
-        with_synth :pnoise do
+#        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
+#        with_fx :pitch_shift, pitch_dis: 0.1, time_dis: 0.1 do
+#        with_fx :echo, phase: bar/8, decay: bar do
+#        with_fx :hpf, cutoff: 100 do
+#        with_synth :pnoise do
           #play degree((ring 4,1)[s_idx], :A0, :minor), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
-        end;end;end;end;end
+#        end;end;end;end;end
       end
     end
     s_idx+=1

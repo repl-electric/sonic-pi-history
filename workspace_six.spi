@@ -502,17 +502,17 @@ live_loop :thebass do |idx|
         2.times{sync :start}
         play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-        2.times{sync :start}     
+        3.times{sync :start}     
         
 if idx % 2 == 0
         play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
-        1.times{sync :start}
+        #1.times{sync :start}
 
 else
         play degree(1, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar, decay: bar, sustain: bar/2
         with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
-        1.times{sync :start}
+        #1.times{sync :start}
 
 end
         end

@@ -406,7 +406,7 @@ end
 
 live_loop :drums do
 sync :start
-sample :drums_heavy_kick
+sample :drum_heavy_kick
 end
 
 def comment(&_)

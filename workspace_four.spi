@@ -110,7 +110,8 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
 
         notes = deg_seq(*%w{:a3 6 _ 6 _  7 _ _ _ 6 _ _ _ 7 _ _ _})
 
-        sleeps = (ring bar/4.0, bar/2.0, bar/2.0, bar/2.0, bar/2.0, bar/2.0)
+        sleeps = (ring bar/4.0, bar/2.0, bar/2.0, bar/2.0, bar/2.0, bar/2.0,
+                       bar/2,    bar/2 , bar/2)
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
@@ -134,11 +135,11 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         sync :bar
 
         play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
-        sleep bar/2
+        sleep sleeps[6]
         play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
-        sleep bar/2
+        sleep sleeps[7]
         play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
-        sleep bar/2
+        sleep sleeps[8]
         play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
 
         sync :bar

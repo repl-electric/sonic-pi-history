@@ -501,7 +501,7 @@ live_loop :thebass do |idx|
         with_synth(:prophet){ play x[1], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
         play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play x[(ring 2,1)[idx]], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+        with_synth(:prophet){ play x[(ring 2,1).tick(1)], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}     
         
 if idx % 2 == 0

@@ -404,6 +404,11 @@ end
 #end
 #end
 
+live_loop :drums do
+sync :start
+sample :drums_heavy_kick
+end
+
 def comment(&_)
 end
 

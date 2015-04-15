@@ -1,4 +1,4 @@
-def dez_seq(*pattern_and_roots)
+def dex_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"
@@ -28,4 +28,4 @@ def dez_seq(*pattern_and_roots)
 end
 
 
-puts dez_seq(*%w{:ah3 1})
+puts dex_seq(*%w{:ah3 1})

@@ -29,7 +29,7 @@ def deq_seq(*pattern_and_roots)
 end
 
 
-          notes = dex_seq(*%w{:a3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
+          notes = dex_seq(*%w{:ah3 1 :a4 211 :a3 1 a4 311 :a3 1 :a4 111 :a3 1 :a4 311})
         notes = dex_seq(*%w{:a3 5 5 5 5 7 7 7 7 6 6 6 6 7 7 7 7})
         notes = dex_seq(*%w{:a3 5 5 5 5 :a4 1 :a3 7 7 6 6 6 6 7 7 7 7})
         notes = dex_seq(*%w{:a3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})

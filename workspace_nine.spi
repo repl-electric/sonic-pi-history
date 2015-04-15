@@ -36,4 +36,4 @@ puts s
 end
 
 puts dex_seq(*%w[:A2 4])
-puts degree(4, :A2, :majo)
+puts degree(4, :A2, :major)

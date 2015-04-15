@@ -321,7 +321,7 @@ live_loop :vio do |vio_idx|
 end
 
 live_loop :dark_highlight do |n_idx|
-  with_fx :level, amp: 4.0 do
+  with_fx :level, amp: 5.0 do
     with_synth :dark_ambience do
       #with_fx :lpf, cutoff: 100 do
       with_fx :reverb, room: 0.0 do

@@ -454,7 +454,7 @@ end;end
 
 live_loop :hl do |idx| with_fx :level, amp: 1.0 do
 sync :high_to_low
-notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
+notes = (ring degree(1, :A2, :minor), degree(3, :A2, :major))#majorme
 with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
 with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*12, sustain: bar/2}
 idx+=1
@@ -462,7 +462,7 @@ end;end
 
 live_loop :lh do |idx|;with_fx :level, amp: 1.0 do
 sync :low_to_high
-notes = (ring degree(2, :A2, :minor), degree(5, :A2, :minor))#majorme
+notes = (ring degree(2, :A2, :minor), degree(5, :A2, :major))#majorme
 with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar*2, decay: bar*4, sustain: bar/2}
 with_synth(:prophet){ play notes[idx], cutoff: rrand(40,60), amp: 1.0,  attack: 0.3, release: bar*6, decay: bar*12, sustain: bar/2}
 idx+=1

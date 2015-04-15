@@ -10,8 +10,8 @@ def dez_seq(*pattern_and_roots)
   notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
 
-puts roots
-puts notes
+    puts roots
+    puts notes
   if(root[0] == ":")
     root = root[1..-1]
   end
@@ -27,7 +27,7 @@ puts notes
   end
   pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
  end.flat_map{|x| x}
- (ring *notes)
+ ring( *notes)
 end
 
 

@@ -1,34 +1,33 @@
 def dex_seq(*pattern_and_roots)
-  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
-  if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
-    accu[0..-2] << "#{accu[-1]}#{id}"
-  else
-    accu << id
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
+    if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
+      accu[0..-2] << "#{accu[-1]}#{id}"
+    else
+      accu << id
   end}
-  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s } 
+puts pattern_and_roots
+  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
   notes = patterns.each_with_index.map do |pattern, idx|
-puts "notes"
-puts  notes  
-root = roots[idx]
-  if(root[0] == ":")
-    root = root[1..-1]
-  end
-  s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-  if(s == :minor)
-    s = if    root.to_s[1] == "h"
+    root = roots[idx]
+    if(root[0] == ":")
+      root = root[1..-1]
+    end
+    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+    if(s == :minor)
+      s = if    root.to_s[1] == "h"
         :harmonic_minor
-        elsif root.to_s[1] == "m"
+      elsif root.to_s[1] == "m"
         :melodic_minor
-        else :minor
+      else :minor
       end
-  end
-puts root
-puts notes
-  root = root[0] + root[2..-1] if s.length > 2
-  pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
- end.flat_map{|x| x}
- (ring *notes)
+    end
+    puts root
+    puts notes
+    root = root[0] + root[2..-1] if s.length > 2
+    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+  end.flat_map{|x| x}
+  (ring *notes)
 end
 
 puts dex_seq(*%w[:A2 4])

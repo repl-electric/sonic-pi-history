@@ -25,23 +25,23 @@ def live(name, opts={}, &block)
   end
 end
 def deg_seq(*pattern_and_roots)
-  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
-    if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
-      accu[0..-2] << "#{accu[-1]}#{id}"
-    else
-      accu << id
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
+  if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
+    accu[0..-2] << "#{accu[-1]}#{id}"
+  else
+    accu << id
   end}
-  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
+  patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s } 
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
   notes = patterns.each_with_index.map do |pattern, idx|
-    root = roots[idx]
-    if(root[0] == ":")
-      root = root[1..-1]
-    end
-    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
-  end.flat_map{|x| x}
-  (ring *notes)
+  root = roots[idx]
+  if(root[0] == ":")
+    root = root[1..-1]
+  end
+  s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+  pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+ end.flat_map{|x| x}
+ (ring *notes)
 end
 def comment(&_)
 end
@@ -91,7 +91,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
-    with_fx :reverb, room: 0.8, dry: 1.0, mix: 0.5 do
+    with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.5 do
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 

@@ -394,7 +394,7 @@ end
 room_size = 0
 
 live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 4]) #fm
+    notes = deg_seq(*%w[:A2 541]) #fm
     2.times do
       @direction = rand_i(-1..1)
       play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
@@ -405,7 +405,7 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
 end
 
 live_loop :rolling_right do |n_idx|;with_fx :level, amp: 1.0 do
-  notes = deg_seq(*%w[:A2 56])
+  notes = deg_seq(*%w[:A2 165])
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     2.times do |i|

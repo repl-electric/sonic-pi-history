@@ -31,4 +31,4 @@ puts notes
 end
 
 
-puts dez_seq(*w%{:a3 1243})
+puts dez_seq(*%w{:a3 1243})

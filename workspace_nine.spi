@@ -30,7 +30,7 @@ puts root
     puts pattern[0].to_i
 puts s
     root = root[0] + root[2..-1] if s.length > 2
-    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d, root, s)}
+    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
   end.flat_map{|x| x}
   (ring *notes)
 end

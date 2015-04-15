@@ -1,4 +1,4 @@
-def deg_seq(*pattern_and_roots)
+def dez_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 
   if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
     accu[0..-2] << "#{accu[-1]}#{id}"
@@ -9,7 +9,6 @@ def deg_seq(*pattern_and_roots)
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
   notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
-  puts root
   if(root[0] == ":")
     root = root[1..-1]
   end
@@ -29,4 +28,4 @@ def deg_seq(*pattern_and_roots)
 end
 
 
-puts deg_seq(*%{:ah3})
+puts dez_seq(*%{:ah3})

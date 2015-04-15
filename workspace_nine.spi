@@ -26,3 +26,6 @@ def deg_seq(*pattern_and_roots)
  end.flat_map{|x| x}
  (ring *notes)
 end
+
+
+puts deg_seq(*%{:ah3})

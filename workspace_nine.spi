@@ -22,7 +22,7 @@ puts notes
         :harmonic_minor
         elsif root.to_s[1] == "m"
         :melodic_minor
-        else minor
+        else :minor
       end
   end
   pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}

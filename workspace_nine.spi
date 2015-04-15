@@ -1,1 +1,1 @@
-puts deg_seq(*%w[:A2 4])
+puts dez_seq(*%w[:A2 4])

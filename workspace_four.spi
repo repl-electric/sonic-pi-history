@@ -405,7 +405,7 @@ end
 #end
 
 live_loop :drums do
-sync :start
+sync :bar
 sample :drum_heavy_kick
 end
 

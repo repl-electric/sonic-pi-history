@@ -9,9 +9,6 @@ def dez_seq(*pattern_and_roots)
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
   notes = patterns.each_with_index.map do |pattern, idx|
   root = roots[idx]
-
-    puts roots
-    puts notes
   if(root[0] == ":")
     root = root[1..-1]
   end

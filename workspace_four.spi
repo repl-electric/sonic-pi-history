@@ -449,7 +449,7 @@ with_synth :sine do
     play :B3, release: bar*3, attack: 2.0
 end
 with_synth :prophet do
-    play :B3, release: bar*3, attack: 2.0, cutoff: 50
+    play :B3, release: bar*3, attack: 2.0, cutoff: 60
 end
 end
 

@@ -406,7 +406,7 @@ end
 
 live_loop :drums do
 sync :quart
-sample :drum_bass_soft, rate: 0.2
+sample :drum_bass_soft, rate: 0.3
 end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do

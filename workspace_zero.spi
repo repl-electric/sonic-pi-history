@@ -463,7 +463,7 @@ end;end
 
 def play_darkness(n)
   with_synth(:tri){play n,  amp: 0.2, attack: 1.0, release: bar, decay: bar*4, sustain: bar/2}
-  with_fx(:distortion, mix: 0.7){with_synth(:prophet){ play n, cutoff: 56, amp: 1.0,  attack: 0.3, release: bar, decay: bar, sustain: bar/2}}
+  with_fx(:distortion, mix: 0.3){with_synth(:prophet){ play n, cutoff: 56, amp: 1.0,  attack: 0.3, release: bar, decay: bar, sustain: bar/2}}
 end
 
 live_loop :hl do |idx| with_fx :level, amp: 1.0 do

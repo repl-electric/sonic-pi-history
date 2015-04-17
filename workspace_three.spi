@@ -318,7 +318,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c, cutoff: n_cut);
-        2.times do |n|
+        1.times do |n|
 
           if n%2 ==0
             sync :start

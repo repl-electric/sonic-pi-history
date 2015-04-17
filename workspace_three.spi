@@ -316,7 +316,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.0, cutoff: 90 do |d|
         n_cut = rrand(30,cutoff);
-        n_mix = 0.4
+        n_mix = 0.0
         control(c, cutoff: n_cut);
         8.times do |n|
 

@@ -421,13 +421,13 @@ def play_darkness(n, bar)
 end
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :high_to_low
-    notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
+    notes = (ring degree(1, :A2, :major), degree(3, :A2, :major))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end
 live_loop :lh do |idx|;with_fx :level, amp: 0.0 do
     sync :low_to_high
-    notes = (ring degree(5, :A2, :major), degree(2, :A2, :minor))#majorme
+    notes = (ring degree(5, :A2, :major), degree(2, :A2, :major))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end

@@ -147,37 +147,37 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
 
         end
 
-        play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[0]
-        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.14)
         sleep sleeps[1]
-        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[2], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[2]
-        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[3], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
 
         sync :bar
 
-        play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[4], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[3]
-        play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[5], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[4]
-        play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[6], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[5]
-        play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[7], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
 
         sync :bar
 
-        play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[8], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[6]
-        play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[9], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[7]
-        play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[10], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[8]
-        play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[11], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
 
         sync :bar
 
-        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.1)
+        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[9]
 
         if(p_idx % 2 == 0)

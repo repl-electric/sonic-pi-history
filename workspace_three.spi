@@ -330,7 +330,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
 play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
   #        sample :elec_soft_kick, rate: 1, start: 0.1
 
-          sleep bar/2
+          sleep bar
 #          control(r, room: 0.3, mix:  n_mix); control(d, distort: 0.25); 
 play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
  #         sample :elec_soft_kick, rate: 1, start: 0.1

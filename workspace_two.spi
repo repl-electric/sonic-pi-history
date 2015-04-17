@@ -347,10 +347,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
           n_mix-0.05 unless n_mix < 0.2
         end
         sample :elec_soft_kick, rate: 1, start: 0.1
-      end
-    end
-  end
-end; end
+      end;end;end;end;end
 
 @cutoff = 10
 @direction = 1

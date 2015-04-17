@@ -379,22 +379,22 @@ live_loop :rolling_right do |n_idx|;with_fx :level, amp: 1.0 do
   n_idx+=1
 end
 
-#live_loop :across_the_night do
-#with_fx :level, amp: 0.0 do
-#sync :start
-#play degree(4, :A3, :major);16.times{sync :bar}
-#play degree(6, :A3, :major);16.times{sync :bar}
-#play degree(5, :A3, :major);16.times{sync :bar}
-#play degree(1, :A3, :major);16.times{sync :bar}
-#end
-#end
+live_loop :across_the_night do
+with_fx :level, amp: 0.0 do
+sync :start
+play degree(4, :A3, :major);16.times{sync :bar}
+play degree(6, :A3, :major);16.times{sync :bar}
+play degree(5, :A3, :major);16.times{sync :bar}
+play degree(1, :A3, :major);16.times{sync :bar}
+end
+end
 
 #live_loop :drums do
 #sync :quart
 
 #end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 2.5  do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.5  do
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb, room: 0.0, mix: 0.0 do
         with_synth :prophet do

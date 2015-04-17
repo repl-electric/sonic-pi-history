@@ -364,7 +364,7 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
 end
 
 live_loop :rolling_right do |n_idx|;with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A3 165116278])
+    notes = deg_seq(*%w[:A3 165116271])
     cue :high_to_low if notes[n_idx] == degree(5, :A2, :major)
     cue :low_to_high if notes[n_idx] ==  degree(6, :A2, :major)
     1.times do |i|

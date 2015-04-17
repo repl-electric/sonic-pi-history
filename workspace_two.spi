@@ -441,7 +441,7 @@ def play_darkness(n, bar)
   with_fx(:distortion, mix: 0.3){with_synth(:prophet){ play n, cutoff: 56, amp: 1.0,  attack: 0.3, release: bar, decay: bar*8, sustain: bar/2}}
 end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
 sync :high_to_low
 notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
 play_darkness notes[idx],bar

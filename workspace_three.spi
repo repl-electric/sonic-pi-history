@@ -429,7 +429,7 @@ end;end
 
 live_loop :lh do |idx|;with_fx :level, amp: 3.0 do
     sync :low_to_high
-    notes = (ring degree(2, :A2, :minor), degree(5, :A2, :minor))#majorme
+    notes = (ring degree(5, :A2, :minor), degree(2, :A2, :minor))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end

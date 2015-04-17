@@ -542,7 +542,6 @@ else
         with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
 #        1.times{sync :start}
 
-end
         end
 
   end

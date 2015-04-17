@@ -392,14 +392,14 @@ end
 #end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 3 do
-    with_fx :pitch_shift, pitch_dis: 0.001 do
+    with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do
           2.times{sync :start}
           notes = (ring chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1], chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1],
-                   chord(:a1, '7sus2')[2],chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2],
-                   chord(:a1, '7sus2')[3],chord(:a1, '7sus2')[3], chord(:a1, '7sus2')[1], chord(:a1, '7sus2')[1],
-                   chord(:a1, '7sus2')[2],chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1])
+                        chord(:a1, '7sus2')[2],chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2],
+                        chord(:a1, '7sus2')[3],chord(:a1, '7sus2')[3], chord(:a1, '7sus2')[1], chord(:a1, '7sus2')[1],
+                        chord(:a1, '7sus2')[2],chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1])
 
           play notes[s_idx], cutoff: 60, attack: 1.0, release: bar*2, decay: bar*8, env_curve: 6, res: 0.2, amp: 1.0
           #with_synth(:sine){ play notes[s_idx],  attack: 1.0, release: bar, decay: bar*8, env_curve: 6, res: 0.2, amp: 1.0  }

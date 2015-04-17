@@ -423,6 +423,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 8 do
         #        end;end;end;end;end
       end
     end
+    1.times{sync :start}
+        
     s_idx+=1
 end;end
 

@@ -337,7 +337,7 @@ play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
 
           n_cut += cutoff/(4*7); control(c, cutoff: n_cut);
 
-          sleep bar/2
+          sleep bar
 #          control(r, room: 0.8, mix:  n_mix); 
 play note, attack: 0.005, pan: 0.6*direction, detune: detune_factor2
 #          sample :elec_soft_kick, rate: 1, start: 0.1

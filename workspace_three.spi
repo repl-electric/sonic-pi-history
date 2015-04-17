@@ -428,7 +428,7 @@ control d, decay: bar*8
     end
     1.times{sync :start}
         
-    s_idx+=2
+    s_idx+=1
 end;end
 
 def play_darkness(n, bar)

@@ -459,7 +459,9 @@ play (ring chord_degree(4, :a2, :minor),
           #chord_degree(2, :a3, :minor),
            chord_degree(1, :a2, :minor),
            chord(:a1, '7sus2')[1],
-           chord(:a1, '7sus2')[2]
+           chord(:a1, '7sus2')[2],
+           chord(:a1, '7sus2')[3]
+
 
 
 

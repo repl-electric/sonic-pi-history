@@ -100,7 +100,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
-    with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.4 do
+    with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.4 do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 
@@ -128,6 +128,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
                        bar/2.0, bar/2.0, bar/4.0,
                        bar/2.0, bar/2.0, bar/4.0)
 
+        control r_fx, mix: rand(1.0)
 
         if p_idx % 32 == 0
           notes = dez_seq(*%w{:ah3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})
@@ -144,7 +145,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
 
         else
           notes = dez_seq(*%w{:ah3 _ _ 5 5 _ _ 4 4 _ _ 1 1 _ _ 4 4})
-        bonus_note = (ring degree(2, :a3, :harmonic_minor))
+          bonus_note = (ring degree(2, :a3, :harmonic_minor))
 
         end
 

@@ -480,7 +480,7 @@ end;end;end
 live_loop :thebass do |idx|
   with_fx :level, amp: 2.0 do
     use_synth :tri
-    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.2 do
+    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.4 do
         1.times{sync :start}
 
         x = (ring *chord(:a1, '7sus2')[1..3])

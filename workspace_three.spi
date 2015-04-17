@@ -399,11 +399,11 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 8 do
           notes = (ring 
 #chord(:a2, '7sus2')[0], chord(:a1, '7sus2')[2],
 
-                        chord_degree(1, :a2, :minor),
-                        chord_degree(2, :a2, :minor),
-                        chord_degree(4, :a2, :minor),
-                        chord_degree(1, :a2, :minor),
-                        chord_degree(5, :a2, :minor)
+                        #chord_degree(1, :a2, :minor),
+                        #chord_degree(2, :a2, :minor),
+                        #chord_degree(4, :a2, :minor),
+                        #chord_degree(1, :a2, :minor),
+                        #chord_degree(5, :a2, :minor)
 
 
 

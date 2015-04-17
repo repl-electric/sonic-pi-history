@@ -405,7 +405,7 @@ end
 def comment(&_)
 end
 
-live_loop :startzse do |s_idx|; with_fx :level, amp: 0.0 do
+live_loop :startzse do |s_idx|; with_fx :level, amp: 1.0 do
     sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do

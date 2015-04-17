@@ -461,11 +461,15 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
     s_idx+=1
 end;end
 
+def play_darkness(n)
+  with_synth(:tri){play n,  amp: 0.2, attack: 1.0, release: bar, decay: bar*4, sustain: bar/2}
+  with_fx(:distortion, mix: 0.7){with_synth(:prophet){ play n, cutoff: 56, amp: 1.0,  attack: 0.3, release: bar, decay: bar, sustain: bar/2}}
+end
+
 live_loop :hl do |idx| with_fx :level, amp: 1.0 do
 sync :high_to_low
 notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
-with_synth(:tri){play notes[idx],  amp: 0.2, attack: 1.0, release: bar, decay: bar*4, sustain: bar/2}
-with_fx(:distortion, mix: 0.7){with_synth(:prophet){ play notes[idx], cutoff: 56, amp: 1.0,  attack: 0.3, release: bar, decay: bar, sustain: bar/2}}
+play_darkness notes[idx]
 idx+=1
 end;end
 

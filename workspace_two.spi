@@ -396,7 +396,7 @@ use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
 
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
-     #   with_synth :prophet do
+        with_synth :prophet do
           2.times{sync :start}
           notes = (ring chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1], chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1],
                    chord(:a1, '7sus2')[2],chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2],
@@ -415,7 +415,7 @@ use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
         #play degree((ring 4,1)[s_idx], :A0, :minor), release: bar/2, decay: bar/2, env_curve: 6, res: 0.2, attack: 2.0
         #        end;end;end;end;end
       end
-    #end
+    end
     s_idx+=1
 end;end
 

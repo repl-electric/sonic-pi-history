@@ -480,7 +480,7 @@ end;end;end
 live_loop :thebass do |idx|
   with_fx :level, amp: 2.0 do
     use_synth :tri
-    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
+    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do |d_fx|
         1.times{sync :start}
 x = if idx  %2 == 0
    (ring *chord(:a1, '7sus2')[1..3])
@@ -488,13 +488,22 @@ else
    (ring *chord(:a2, '7sus2')[0..2])
 end
 
+control d_dx, mix: 0.1
+
 if idx % 2 == 0
         play x[2],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play x[2], cutoff: 30, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
+
+            control d_dx, mix: 0.3
+
         play x[0], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
+
+control d_dx, mix: 0.4
+
+
         play x[1], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ z = play x[1], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}     
         1.times{sync :start}     

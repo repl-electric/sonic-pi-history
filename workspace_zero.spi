@@ -504,7 +504,7 @@ live_loop :thebass do |idx|
         z = nil
         
 if idx % 2 == 0
-        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*12, sustain: bar/2}
+        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}
         3.times{sync :start}     
 
         control z, note: degree(3, :a1, :harmonic_minor)
@@ -513,9 +513,8 @@ if idx % 2 == 0
        # 1.times{sync :start}
 
 else
-        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*12, sustain: bar/2}
+        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}
         3.times{sync :start}     
-
         control z, note: degree(3, :a1, :harmonic_minor), release: 0.1
         #1.times{sync :start}     
 

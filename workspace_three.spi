@@ -98,7 +98,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
   vio_pan += 1
   vio_idx += 1
 end
-live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
+live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
     with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.6 do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
@@ -419,30 +419,18 @@ def play_darkness(n, bar)
   #with_synth(:tri){play n,  amp: 0.0, attack: 1.0, release: bar, decay: bar, sustain: bar/2}
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 1.0, release: bar*2, decay: bar*12, sustain: bar}}}
 end
-
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :high_to_low
     notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end
-
 live_loop :lh do |idx|;with_fx :level, amp: 0.0 do
     sync :low_to_high
     notes = (ring degree(5, :A2, :minor), degree(2, :A2, :minor))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end
-
-live_loop :siney do |idx|; with_fx :level, amp: 0.0 do
-    sync :start
-    with_synth :sine do
-      play :B3, release: bar*3, attack: 2.0
-    end
-    with_synth :prophet do
-      play :B2, release: bar*3, attack: 1.0, cutoff: 60
-end;end;end
-
 live_loop :thebass do |idx|
   with_fx :level, amp: 0.0 do
     use_synth :tri

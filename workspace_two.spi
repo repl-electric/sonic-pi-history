@@ -545,47 +545,5 @@ else
 end
         end
 
-comment do
-
-        1.times{sync :start;  cue :high}
-
-        control(r, room: 0.5)
-        with_fx :distortion, mix: 0.2 do
-          sync :start
-          play chord_degree(1, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-          sync :start
-          play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-          sync :start
-          with_synth(:tri){play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
-          sync :start
-          play chord_degree(5, :A1, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
-        end
-
-        1.times{sync :start;}
-
-        control(r, room: 0.45)
-        with_fx :distortion, mix: 0.2 do
-          sync :start
-          play chord_degree(1, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-          sleep bar/2
-          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.2, release: 0.2, decay: 0.2, sustain: 0.2
-          sleep bar
-          with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
-          sleep bar
-          play chord_degree(4, :A2, :major).first, amp: 0.4, attack: 0.05, release: 0.1, decay: 0.1, sustain: 0.1
-        end
-
-        2.times{sync :start}
-        control(r, room: 0.3)
-        with_fx :distortion, mix: 0.1 do
-          play chord_degree(4, :A1, :major).first, amp: 0.4, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5
-          sleep bar
-          with_synth(:tri){play chord_degree(4, :A1, :major).first, amp: 0.3, attack: 0.8, release: 0.5, decay: 1.5, sustain: 1.5}
-        end
-      end
-    end
-
-    3.times{sync :start; cue :otherhigh}
-end
   end
 end

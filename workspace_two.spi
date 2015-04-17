@@ -283,40 +283,6 @@ live_loop :dark_humming do |n_idx|
   end
   n_idx+=1
 end
-
-live_loop :vio_dark do
-  with_fx :level, amp: 0.0 do
-    sync :start
-    with_fx :echo do
-      with_fx :reverb do
-        a4_long_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_very-long_decrescendo_arco-normal.wav"
-        #sample a4_long_s, amp: 1, rate: 1.0
-        sample a4_long_s, amp: 1, rate: 1.0
-        sleep sample_duration(a4_long_s)
-      end
-    end
-  end
-end
-
-vio_pan = -1
-live_loop :vio do |vio_idx|
-  with_fx :level, amp: 0.0 do
-    #4.times{sync :start}
-    sync :otherhigh
-    with_fx :reverb, room: 1.0, mix: 1.0 do
-      a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
-      a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
-
-      with_fx :slicer, phase: bar/8 do
-        sample (ring a4_s, a5_s)[vio_idx], amp: 2.5, pan: Math.sin((vio_pan))
-      end
-      #    sample v_s, amp: 90
-    end
-  end
-  vio_pan += 1
-  vio_idx += 1
-end
-
 live_loop :dark_highlight do |n_idx|
   with_fx :level, amp: 0.0 do
     with_synth :dark_ambience do
@@ -345,7 +311,7 @@ end
 define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
-  #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
+  with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
 
   with_fx :reverb, mix_slide: 0.2 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
@@ -384,7 +350,7 @@ define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, det
       end
     end
   end
-end
+end; end
 
 @cutoff = 10
 @direction = 1

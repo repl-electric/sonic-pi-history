@@ -471,8 +471,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 10 do
 
     2.times{sync :start}
 
-          play (ring chord(:a2, '7sus2')[0],
-                     chord(:a2, '7sus2')[1]
+          play (ring chord(:a1, '7sus2')[0],
+                     chord(:a1, '7sus2')[1]
  
 #                     chord(:a1, '7sus2')[1], chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1],chord(:a1, '7sus2')[1],
  #                    chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2], chord(:a1, '7sus2')[2] ,

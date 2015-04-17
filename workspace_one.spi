@@ -136,10 +136,10 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
           notes = dez_seq(*%w{:ah3 1 5 1 5 1 5 1 5 1 6 1 6 1 6 1 6})
           bonus_note = (ring degree(5, :a3, :harmonic_minor))
 
-          sleeps = (ring bar, bar/2.0, bar/2.0,
-                         bar, bar/2.0, bar/2.0,
-                         bar, bar/2.0, bar/2.0,
-                         bar, bar/2.0, bar/2.0)
+          sleeps = (ring bar, bar, bar/2.0,
+                         bar, bar, bar/2.0,
+                         bar, bar, bar/2.0,
+                         bar, bar, bar/2.0)
 
         else
           notes = dez_seq(*%w{:ah3 _ _ 5 5 _ _ 4 4 _ _ 1 1 _ _ 4 4})

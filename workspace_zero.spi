@@ -508,6 +508,9 @@ control d_dx, mix: 0.4
         with_synth(:prophet){ z = play x[1], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}     
         1.times{sync :start}     
 
+control d_dx, mix: 0.6
+
+
         play degree(4, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play degree(4, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
 #        1.times{sync :start}

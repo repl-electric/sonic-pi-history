@@ -420,14 +420,14 @@ def play_darkness(n, bar)
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 1.0, release: bar*2, decay: bar*12, sustain: bar}}}
 end
 
-live_loop :hl do |idx| with_fx :level, amp: 3.0 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :high_to_low
     notes = (ring degree(1, :A2, :minor), degree(3, :A2, :minor))#majorme
     play_darkness notes[idx],bar
     idx+=1
 end;end
 
-live_loop :lh do |idx|;with_fx :level, amp: 3.0 do
+live_loop :lh do |idx|;with_fx :level, amp: 0.0 do
     sync :low_to_high
     notes = (ring degree(5, :A2, :minor), degree(2, :A2, :minor))#majorme
     play_darkness notes[idx],bar

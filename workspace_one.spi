@@ -315,7 +315,7 @@ end
 
 vio_pan = -1
 live_loop :vio do |vio_idx|
-  with_fx :level, amp: 0.0 do
+  with_fx :level, amp: 1.0 do
     #4.times{sync :start}
     sync :otherhigh
     with_fx :reverb, room: 1.0, mix: 1.0 do

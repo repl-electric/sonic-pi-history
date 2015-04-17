@@ -392,7 +392,7 @@ end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
-      with_fx :reverb, room: 0.5 do
+      with_fx :reverb, room: 0.7 do
         with_synth :prophet do
           4.times{sync :start}
           notes = (ring chord(:a1, '7sus4')[0],

@@ -342,7 +342,7 @@ play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
 play note, attack: 0.005, pan: 0.6*direction, detune: detune_factor2
 #          sample :elec_soft_kick, rate: 1, start: 0.1
 
-          sleep bar
+          sleep bar/4
 #          control(r, room: 1.0, mix:  n_mix); control(d, distort: 0.0); 
 play note, attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.01))
    #       sample :elec_soft_kick, rate: 1, start: 0.1

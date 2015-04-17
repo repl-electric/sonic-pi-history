@@ -483,9 +483,9 @@ live_loop :thebass do |idx|
     with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
         1.times{sync :start}
 x = if idx  %2 == 0
-   x = (ring *chord(:a1, '7sus2')[1..3])
+   (ring *chord(:a1, '7sus2')[1..3])
 else
-   x = (ring *chord(:a2, '7sus2')[0..2])
+   (ring *chord(:a2, '7sus2')[0..2])
 end
 
 if idx % 2 == 0

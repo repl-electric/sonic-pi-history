@@ -397,7 +397,7 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A2 4]) #fm
     2.times do
       @direction = rand_i(-1..1)
-      play_rolling notes[b_idx], dir=@direction, room=1, cut=100, detune1=0, detune2=0.001
+      play_rolling notes[b_idx], dir=@direction, room=1, cut=40, detune1=0, detune2=0.001
       room_size += 1
     end
   end
@@ -437,7 +437,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
         with_synth :prophet do
-          play (ring *chord(:a1, '7sus2')[0])[s_idx], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
+          play (ring *chord(:a2, '7sus2')[0])[s_idx], cutoff: 60, release: bar, decay: bar*4, env_curve: 6, res: 0.2
         end
 
 #        with_fx :reverb, room: 1.0, damp: 1.0, mix: 0.0 do
@@ -478,71 +478,46 @@ with_synth :prophet do
 end;end;end
 
 live_loop :thebass do |idx|
-  with_fx :level, amp: 2.0 do
+  with_fx :level, amp: 1.0 do
     use_synth :tri
-    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.8, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do |d_fx|
+    with_fx :echo, mix: 0.2 do; with_fx :reverb, room: 0.9, room_slide: 2 do |r|; with_fx :distortion, mix: 0.8 do
         1.times{sync :start}
-x = if idx  %2 == 0
-   (ring *chord(:a1, '7sus2')[1..3])
-else
-   (ring *chord(:a2, '7sus2')[1..3])
-end
 
-control d_fx, mix: 0.1
+#          play chord_degree(4, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#          4.times{sync :start}
 
-if idx % 2 == 0
-        play x[2],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play x[2], cutoff: 30, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-        2.times{sync :start}
+#          play chord_degree(2, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
+#          2.times{sync :start}
 
-            control d_fx, mix: 0.3
+#          play chord_degree(1, :A2, :harmonic_minor)[0..2], amp: 0.4, attack: 0.01, release: bar, decay: bar*8, sustain: bar/2
+#          sleep bar
+#          with_synth(:tri){play chord_degree(1, :A1, :harmonic_minor).first, amp: 0.4, attack: 0.001, release: 0.5, decay: 1.5, sustain: 1.5}
 
-        play x[0], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
-        2.times{sync :start}
-
-control d_fx, mix: 0.4
-
-
-        play x[1], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ z = play x[1], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}     
-        1.times{sync :start}     
-
-control d_fx, mix: 0.6
-
-
-        play degree(4, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play degree(4, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
-#        1.times{sync :start}
-
-else
-       control d_fx, mix: 0.1
-
-
+        x = (ring *chord(:a1, '7sus2')[1..3])
         play x[0],  amp: 0.4, attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ play x[0], cutoff: 30, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
+#        with_synth(:prophet){ play x[0], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
-
-       control d_fx, mix: 0.4
-
-
         play x[1], amp: 0.4,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
         with_synth(:prophet){ play x[1], cutoff: 40, amp: 1.0,  attack: 0.3, release: bar*4, decay: bar*4, sustain: bar/2}
         2.times{sync :start}
-
-       control d_fx, mix: 0.7
-
-
         play x[2], amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2
-        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}     
-        1.times{sync :start}     
+       
+if idx % 2 == 0
+        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}
+        2.times{sync :start}     
 
-       control d_fx, mix: 0.8
+        play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar*4, decay: bar*4, sustain: bar/2
+        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 60, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
+        1.times{sync :start}
 
+else
+        with_synth(:prophet){ z = play x[2], cutoff: 58, amp: 1.0,  attack: 0.3, release: bar*8, decay: bar*8, sustain: bar/2}
+        2.times{sync :start}     
+        #1.times{sync :start}     
 
-        play degree(3, :a2, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar/2, decay: bar/2, sustain: bar/2
-        with_synth(:prophet){ play degree(3, :a2, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar*2, decay: bar*4, sustain: bar/2}
- #       1.times{sync :start}
+        play degree(3, :a1, :harmonic_minor), amp: 1.0, attack: 1.0, release: bar/2, decay: bar/2, sustain: bar/2
+        with_synth(:prophet){ play degree(3, :a1, :harmonic_minor), cutoff: 55, amp: 1.0,  attack: 0.09, release: bar/2, decay: bar/2, sustain: bar/2}
+        1.times{sync :start}
 
 end
         end

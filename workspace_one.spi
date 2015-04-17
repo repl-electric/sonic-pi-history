@@ -445,7 +445,6 @@ end
 #end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 10 do
-    sync :start
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
         with_synth :prophet do
@@ -469,6 +468,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 10 do
 #ring chord(:a2, :minor)[0..2], chord(:b2, :minor)[0..2]
 
 #chord(:a2,:augmented)[3], chord(:a2,:augmented)[2], chord(:a2,:augmented)[1], chord(:a2,:augmented)[0]
+
+    2.times{sync :start}
 
 
           play (ring chord(:a1, '7sus2')[0], chord(:a1, '7sus2')[0], 

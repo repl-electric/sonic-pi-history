@@ -392,7 +392,7 @@ end
 #end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 3 do
-use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
+#use_synth :dark_sea_horn; use_synth_defaults amp: 1, release: 8
     with_fx :pitch_shift, pitch_dis: 0.001 do
       with_fx :reverb do
         with_synth :prophet do

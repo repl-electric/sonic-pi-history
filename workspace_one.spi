@@ -455,8 +455,10 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 10 do
 #play deg_seq(*%w{:a1 66 55 44 55 44}
 #play (ring)[idx]
 
-play (ring chord_degree(1, :a2, :minor),
-           chord_degree(2, :a2, :minor)
+play (ring chord_degree(5, :a2, :minor),
+           chord_degree(2, :a2, :minor),
+           chord_degree(1, :a2, :minor)
+
 
 
 #ring chord(:a2, :minor)[0..2], chord(:b2, :minor)[0..2]

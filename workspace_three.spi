@@ -132,7 +132,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 4.0 do
           notes = deg_seq(*%w{:ah3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})
           bonus_note = (ring degree(3, :a3, :minor))
         elsif p_idx % 4 != 0 
-          notes = deg_seq(*%w{:am3 _ _ 5 5 _ _ 4 4 4 _ 6 6 _ _ 8 8})
+          notes = deg_seq(*%w{:am3 _ _ 5 5 _ _ 4 4 4 _ 6 6 _ _ 1 1})
           sleeps = (ring bar/2, bar/2, bar/2,
                     bar/2, bar/2, bar/2,
                     bar/4, bar/4, bar/2,

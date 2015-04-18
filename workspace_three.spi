@@ -136,7 +136,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 4.0 do
           sleeps = (ring bar/2, bar/2, bar/2,
                     bar/2, bar/2, bar/2,
                     bar/4, bar/4, bar/2,
-                    bar, bar, bar/2)
+                    bar/2, bar/2, bar/2)
 
        # elsif p_idx % 32 >= 16
        #   notes = deg_seq(*%w{:ah3 1 1 1 6 1 1 1 5 1 1 1 6 1 1 1 7})

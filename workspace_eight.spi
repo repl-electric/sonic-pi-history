@@ -114,9 +114,9 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           bonus_note = (ring degree(5, :a3, :minor))
 
           sleeps = (ring bar/2, bar/2, bar/2,
-                   bar, bar, bar/2,
-                    bar, bar, bar/2,
-                    bar, bar, bar/2)
+                   bar/2, bar/2, bar/2,
+                    bar/2, bar/2, bar/2,
+                    bar/2, bar/2, bar/2)
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)

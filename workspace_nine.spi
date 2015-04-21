@@ -55,7 +55,7 @@ bar = 1
 #play ring( chord_degree(1,:a2, s)[0..3],chord_degree(2,:a2, s)[0..3],chord_degree(3,:a2, s)[0..3],chord_degree(5,:a2, s)[0..3])[idx], release: 2
 def play_darkness(n, bar)
   with_synth(:tri){play n,  amp: 0.2, attack: 0.0, release: bar, decay: bar, sustain: bar/2}
-  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 70, amp: 3.0,  attack: 0.0, release: bar*4}}}
+  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 3.0,  attack: 0.0, release: bar*4}}}
 end
 
 live_loop :a do |idx|       play_darkness deg_seq(*%w{:a2 1    2    3    5    1    2    1    5   })[idx],bar;sleep bar*2;idx+=1;end

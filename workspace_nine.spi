@@ -65,7 +65,7 @@ end
 end
 def play_roll(note, *args)
   with_synth :mod_fm do  #:mod_fm # sample v_s, amp: 90
-  with_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2 do
+  with_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 0.5, release: 0.5, attack_level: 0.8, mod_phase: 2 do
       play note
     end
   end

@@ -67,7 +67,7 @@ end
 #live_loop :a do|idx|play_darkness deg_seq(*%w{:a2 1    2    3    5    1    2    1    5   })[idx],bar;sleep bar*2;idx+=1;end
 #live_loop :melody do |idx| play_light deg_seq(*%w{:a3 11   61   51   41   31   71   31   42  })[idx],amp: (ring 1.1,1.0,1.05,1.0)[idx];sleep bar;idx+=1;end
 live_loop :beat do   |idx|   play deg_seq(*%w{:a2 5555 4444 1111 1111 5555 4444 7777 1111})[idx], attack:(ring 0.01,0.1,0.01,0.1)[idx];sleep bar/2.0;idx+=1;end
-#live_loop :beat2 do  |idx|  play deg_seq(*%w{:a2 1111 6666 5555 5555 1111 6666 5555 7777})[idx];sleep bar/2.0;idx+=1;end
+live_loop :beat2 do  |idx|  play deg_seq(*%w{:a2 1111 6666 5555 5555 1111 6666 5555 7777})[idx];sleep bar/2.0;idx+=1;end
 
 #play deg_seq(*%w{:a2 541})
 #play deg_seq(*%w{:a2 165})

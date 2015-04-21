@@ -58,7 +58,7 @@ def play_darkness(n, bar)
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 3.0,  attack: 0.0, release: bar*4}}}
 end
 def play_light(note, *args)
-  use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
+  use_synth :beep; use_synth_defaults amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1
     with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.0 do |r_fx|
 play note    
 end

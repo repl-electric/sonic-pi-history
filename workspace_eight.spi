@@ -410,7 +410,7 @@ live_loop :hl do |idx| with_fx :level, amp: 1.0 do
     idx+=1
 end;end
 
-live_loop :lh do |idx|;with_fx :level, amp: 0.0 do
+live_loop :lh do |idx|;with_fx :level, amp: 1.0 do
     sync :low_to_high
     play_darkness deg_seq(*%w{:a2 25})[idx],bar
     idx+=1

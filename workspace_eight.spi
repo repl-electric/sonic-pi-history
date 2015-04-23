@@ -119,7 +119,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         if p_idx % 4 <= 2
           notes = deg_seq(*%w{:a4 1 :a3 7552211 :a2 75 :a3 222})
         else
-          notes = deg_seq(*%w{:a4 1 :a3 7 :a4 1 :a3 51111 :a2 75 :a3 62})
+          notes = deg_seq(*%w{:a4 1 :a3 7 :a4 1 :a3 51111 :a2 75 :a3 11})
         end
 
 

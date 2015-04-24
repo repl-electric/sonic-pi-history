@@ -311,7 +311,7 @@ end;end
 live_loop :melo do |idx|
 sync :start
 play deg_seq(*%w{:A3 31   61   51   41   31   31   31   41})[idx]
-idx==1
+idx=+1
 end
 
 live_loop :hl do |idx| with_fx :level, amp: 2.0 do

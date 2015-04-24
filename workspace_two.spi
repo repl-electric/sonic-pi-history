@@ -269,7 +269,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.0 do
   end
   idx+=1
 end
-live_loop :rolling_right do |idx|;with_fx :level, amp: 0.0 do
+live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A3 651])
     cue :flow
     1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0000}

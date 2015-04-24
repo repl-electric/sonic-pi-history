@@ -172,7 +172,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
   p_idx+=1
 end
 end
-live_loop :bright_light do; with_fx :level, amp: 1.0 do
+live_loop :bright_light do; with_fx :level, amp: 0.0 do
     3.times {sync :quart}
     use_synth :beep    #:mod_pulse #:mod_beep
     use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8

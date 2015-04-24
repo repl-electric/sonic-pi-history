@@ -76,7 +76,7 @@ live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
   end
   d_idx+=1
 end
-live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
+live_loop :piano do |p_idx|;with_fx :level, amp: 8.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.0, release: 0.1, decay: 0.1
 #    with_fx :reverb, room: 1.0, mix: 0.1  do
     with_fx :echo, phase: bar/2.0  do |r_fx|
@@ -87,8 +87,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         notes = deg_seq(*%w{:A3 1 _ _ _ })
         sleeps = (ring bar)
         bonus_note = deg_seq(*%w{:A3 1})[0]
-
-  puts notes
 
 
         play notes[0], amp: 1.2, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[0]
@@ -130,7 +128,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
           end
         else
           play notes[13], amp: 1.0, attack: 0.1, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1 if notes[13]
-
         end
 
         sleep sleeps[10]

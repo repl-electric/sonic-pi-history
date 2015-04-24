@@ -105,12 +105,13 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
+    with_fx :reverb do
     with_fx :echo, phase: bar/2.0  do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 
       with_fx :level, amp: 1.0  do
-       notes = deg_seq(*%w{:A3 4114   _ _ _ _   :A3 2112 _ _ _ _  :A3 2112 _ _ _ _})
+        notes = deg_seq(*%w{:A3 4114  _ _ _ _   :A3 2112 _ _ _ _  :A3 2112 _ _ _ _})
 
         sleeps = (ring bar/2, bar/2, bar/4, bar/4)
         bonus_note = deg_seq(*%w{:A3 5})[0]
@@ -169,6 +170,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     #  end
   end
   p_idx+=1
+end
 end
 live_loop :bright_light do; with_fx :level, amp: 0.0 do
     3.times {sync :quart}

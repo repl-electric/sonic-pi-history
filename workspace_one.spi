@@ -353,7 +353,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     notes = deg_seq(*%w[:A3 165])
     cue :flow
     direction = (ring 1,-1)[idx]
-    1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0}
+    1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=120, detune1=0, detune2=0.0}
   end
   idx+=1
 end

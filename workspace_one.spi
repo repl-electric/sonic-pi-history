@@ -54,6 +54,11 @@ def deg_seq(*pattern_and_roots)
 end
 def comment(&_)
 end
+def play_darkness(n, bar)
+  with_synth(:tri){play n,  amp: 0.1, attack: 1.0, release: bar, decay: bar, sustain: bar/2}
+  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 0.5, release: bar*6, decay: bar*8, sustain: bar*2}}}
+end
+
 
 live_loop :metro do
   cue :start; cue :quart;  cue :bar
@@ -98,7 +103,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
   vio_pan += 1
   vio_idx += 1
 end
-live_loop :piano do |p_idx|;with_fx :level, amp: 2.0 do
+live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
     with_fx :reverb, room: 1.0, dry: 0.0, mix: 0.6 do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
@@ -386,11 +391,6 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
     end
     s_idx+=1
 end;end
-
-def play_darkness(n, bar)
-  with_synth(:tri){play n,  amp: 0.1, attack: 1.0, release: bar, decay: bar, sustain: bar/2}
-  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 0.5, release: bar*6, decay: bar*8, sustain: bar*2}}}
-end
 
 live_loop :hl do |idx| with_fx :level, amp: 2.0 do
     sync :flow 

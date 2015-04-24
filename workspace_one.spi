@@ -335,7 +335,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 8 do
       with_fx :reverb do
         with_synth :prophet do
           1.times{sync :start}
-          notes = (ring chord(:a4, '7sus4')[2])
+          notes = (ring chord(:a4, '7sus4')[1])
 #                        chord(:a4, '7sus4')[rand_i(1)],
  #                       chord(:a4, '7sus4')[0],
   #                      chord(:a4, '7sus4')[1])

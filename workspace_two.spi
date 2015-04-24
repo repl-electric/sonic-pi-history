@@ -224,7 +224,7 @@ live_loop :dark_highlight do |n_idx|
   n_idx+=1
 end
 define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2|
-  hit_start_min=0.1
+  hit_start_min=0.8
   hit_start_max=0.8
   distort_off = true
   use_synth :mod_fm  

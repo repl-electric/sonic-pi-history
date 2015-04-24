@@ -316,8 +316,6 @@ end
 define :play_rolling do |note, direction, room_size, cutoff, detune_factor1, detune_factor2|
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
-  #with_fx :reverb, room: 0.5+0.5*Math.sin(note), mix: 0.5 do
-
   with_fx :reverb, mix_slide: 0.2 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
@@ -362,8 +360,8 @@ live_loop :rolling_left do |b_idx|; with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A2 5411 5471]) #fm
     1.times do
       @direction = rand_i(-1..1)
-      play_rolling notes[b_idx], dir=@direction, room=1, cut=120, detune1=0, detune2=0.001
-      room_size += 1
+      play_rolling notes[b_idx], dir=@direction, room=0.5, cut=120, detune1=0, detune2=0.001
+      room_size += 0.2
     end
   end
   b_idx+=1

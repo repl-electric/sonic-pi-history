@@ -232,7 +232,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
   use_synth :mod_fm  
   use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
   with_fx :reverb, mix_slide: 0.2 do |r|
-#  with_fx :echo, phase: bar/1.0 do
+  with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         #sample v_s, amp: 1, rate: 0.6
@@ -263,7 +263,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
-#end
+end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A3 145])
     1.times {

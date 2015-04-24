@@ -133,7 +133,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 8.0 do
         sleep sleeps[10]
      #   play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01  if notes[14]
         sleep sleeps[11]
-        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01  if notes[15]
+    #    play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01  if notes[15]
       end
     end
     #  if (p_idx % 4 == 0)

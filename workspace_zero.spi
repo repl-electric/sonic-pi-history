@@ -349,14 +349,12 @@ end;end;end;end
 
 @cutoff = 10
 @direction = 1
-room_size = 0
 
 live_loop :rolling_left do |b_idx|; with_fx :level, amp: 2.0 do
     notes = deg_seq(*%w[:A2 5411 5471]) #fm
     1.times do
       @direction = rand_i(-1..1)
-      play_rolling notes[b_idx], dir=@direction, room=0.5, cut=120, detune1=0, detune2=0.001
-      room_size += 0.1
+      play_rolling notes[b_idx], dir=@direction, cut=120, detune1=0, detune2=0.001
     end
   end
   b_idx+=1
@@ -367,7 +365,6 @@ live_loop :rolling_right do |n_idx|;with_fx :level, amp: 1.0 do
     cue :flow
     1.times do |i|
       play_rolling notes[n_idx], @direction == -1 ? 1 : 0, room=1, cut=100, detune1=0, detune2=0.01
-      room_size += 1
     end
   end
   n_idx+=1

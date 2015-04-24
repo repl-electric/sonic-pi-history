@@ -255,7 +255,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
   #        sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 
           sleep bar/2
-          control(r, room: 1.0, mix:  n_mix); control(d, distort: 0.0); 
+          control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0); 
            play note, attack: 0.5,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
    #       sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)
 

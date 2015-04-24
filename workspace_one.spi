@@ -291,7 +291,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c, cutoff: n_cut);
-        8.times do |n|
+        4.times do |n|
           n%2==0 ? sync(:start) : sync(:quart)
 
           control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1

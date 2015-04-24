@@ -275,7 +275,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
 end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 1531 4666 :A3 1111])
+    notes = deg_seq(*%w[:A2 1531 4333 :A3 1111])
     1.times {
       play_rolling notes[idx], (ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
     }

@@ -238,7 +238,7 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
         control(c_fx, cutoff: n_cut);
         8.times do |n|        
           n%2==0 ? sync(:start) : sync(:quart)
-        if cutoff > 20
+        if cutoff > 80
           control(r_fx, room: 0.1, mix: n_mix) ; control(d_fx, distort: 0.5); 
           end
           play note, attack: 0.1,  pan: 0.8*direction, detune: detune_factor1

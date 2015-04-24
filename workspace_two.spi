@@ -313,7 +313,7 @@ sync :start
 #with_fx :reverb, room: 1, mix: 0.3 do
 #with_fx :echo, phase: bar/2 do
 #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do 
-notes = deg_seq(*%w{:A3 88888})
+notes = deg_seq(*%w{:A3 77777777})
 play notes[m_idx], amp: 1
 #end;end
 #end

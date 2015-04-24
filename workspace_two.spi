@@ -93,9 +93,9 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         sleep sleeps[0]
         play notes[1], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.14) if notes[1]
         sleep sleeps[1]
-        play notes[2], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
+        play notes[2], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[2]
         sleep sleeps[2]
-        play notes[3], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
+        play notes[3], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[3]
 
         sync :bar
 

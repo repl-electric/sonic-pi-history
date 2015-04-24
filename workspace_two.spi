@@ -139,7 +139,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
 
         end
 
-        notes = deg_seq(*%w{:A3 2 _ _ _})
+        notes = deg_seq(*%w{:A3 1 _ _ _})
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)

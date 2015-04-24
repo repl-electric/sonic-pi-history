@@ -68,14 +68,6 @@ live_loop :metro do
   cue :bar
   sleep bar
 end
-
-live_loop :highlights do |high_n|;with_fx :level, amp: 0.0 do
-    sync :high
-    use_synth :sine
-    play (ring degree(1, :A4, :major), degree(1, :A3, :major))[high_n]
-    high_n += 1
-  end
-end
 live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
     sync :quart
     with_fx :lpf do
@@ -83,23 +75,6 @@ live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
     end
   end
   d_idx+=1
-end
-vio_pan = -1
-live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
-    #4.times{sync :start}
-    sync :otherhigh
-    with_fx :reverb, room: 1.0, mix: 1.0 do
-      a5_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A5_phrase_mezzo-forte_arco-legato.wav"
-      a4_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A4_phrase_mezzo-forte_arco-legato.wav"
-
-      with_fx :slicer, phase: bar/8 do
-        sample (ring a4_s, a5_s)[vio_idx], amp: 2.5, pan: Math.sin((vio_pan))
-      end
-      #    sample v_s, amp: 90
-    end
-  end
-  vio_pan += 1
-  vio_idx += 1
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 1.0, release: 0.1, decay: 0.1
@@ -228,31 +203,6 @@ live_loop :bright_light do; with_fx :level, amp: 0.0 do
     end
   end
 end
-
-live_loop :dark_humming do |n_idx|
-  #sync :start
-  with_fx :level, amp: 0.0 do
-    with_synth :dark_ambience do
-      with_fx :lpf, cutoff: 65 do
-        with_fx :reverb, room: 0.0 do
-          sync :start
-          play (ring
-                chord_degree(5, :A1)[0],
-                chord_degree(4, :A1)[0],
-                chord_degree(3, :A1)[0],
-                chord_degree(1, :A1)[0],
-
-                chord_degree(3, :A1)[1],
-                chord_degree(4, :A1)[0],
-                chord_degree(3, :A1)[0],
-                chord_degree(1, :A2)[0],
-                )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*8)[n_idx], attack: 0.1
-        end
-      end
-    end
-  end
-  n_idx+=1
-end
 live_loop :dark_highlight do |n_idx|
   with_fx :level, amp: 1.0 do
     with_synth :dark_ambience do
@@ -334,7 +284,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 1 do
       with_fx :reverb do
         with_synth :prophet do
           1.times{sync :start}
-          notes = (ring chord(:a2, '7sus4')[1])
+          notes = (ring chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1])
 #                        chord(:a4, '7sus4')[rand_i(1)],
  #                       chord(:a4, '7sus4')[0],
   #                      chord(:a4, '7sus4')[1])

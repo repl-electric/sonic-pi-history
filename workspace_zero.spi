@@ -157,7 +157,7 @@ comment do
 
 end
 
-       notes = deg_seq(*%w{:A3 1 _ _ _         _ _ _ 3})
+       notes = deg_seq(*%w{:a3 1 _ _ _         _ _ _ 3})
        sleeps = (ring bar/2)
        bonus_note = deg_seq(*%w{:a3 1})[0]
 

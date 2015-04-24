@@ -267,7 +267,7 @@ end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
     notes = deg_seq(*%w[:A2 4])
     1.times {
-      play_rolling notes[idx], (ring -1,1)[idx], cut=40, detune1=0, detune2=0.0001
+      play_rolling notes[idx], (ring -1,1)[idx], cut=0, detune1=0, detune2=0.0001
     }
   end
   idx+=1

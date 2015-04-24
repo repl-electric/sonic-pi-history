@@ -115,6 +115,37 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         bonus_note = deg_seq(*%w{:a3 1})[0]
 
 
+
+
+      if p_idx % 16 <= 3
+          notes = deg_seq(*%w{:A3 _ _ 5 5 _ _ 4 4 _ _ 6 6 _ _ 4 4})
+          bonus_note = deg_seq(*%w{:a3 3})
+        elsif p_idx % 16 == 15 
+          notes = deg_seq(*%w{:A3 _ _ 5 5 _ _ 4 4 4 _ 6 6 _ _ 1 1})
+          sleeps = (ring bar/2, bar/2, bar/2,
+                    bar/2, bar/2, bar/2,
+                    bar/4, bar/4, bar/2,
+                    bar/2, bar/2, bar/2)
+
+        elsif p_idx % 32 >= 16
+          notes = deg_seq(*%w{:A3 3 1 1 1 6 1 1 1 5 1 1 1 6 1 1 1 7})
+          bonus_note = (ring degree(5, :a3, :minor))
+
+          sleeps = (ring bar, bar, bar/2,
+                   bar, bar, bar/2,
+                    bar, bar, bar/2,
+                    bar, bar, bar/2)
+
+        else
+          notes = deg_seq(*%w{:A3 _ _ 5 5 _ _ 4 4 _ _ 1 1 _ _ 4 4})
+          bonus_note = deg_seq(*%w{:a3 2})
+
+        end
+
+
+
+
+
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[0]
         play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.14)

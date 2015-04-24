@@ -310,6 +310,7 @@ end;end
 
 live_loop :melo do |m_idx|
 sync :start
+puts m_idx
 #with_fx :reverb, room: 1, mix: 0.3 do
 #with_fx :echo, phase: bar/2 do
 #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do 

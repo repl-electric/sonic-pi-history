@@ -105,7 +105,7 @@ live_loop :vio do |vio_idx|;with_fx :level, amp: 0.0 do
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 0.001, release: 0.01, decay: 0.1
-    with_fx :echo, phase: bar/4.0  do |r_fx|
+    with_fx :echo, phase: bar/2.0  do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 

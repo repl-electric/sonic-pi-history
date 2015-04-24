@@ -308,7 +308,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
-live_loop :melo do |m_idx|
+live_loop :melo do |m_idx|lwith_fx :level, amp: 0.0 do
 sync :start
 with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.5 do
 #with_fx :echo, phase: bar do
@@ -319,9 +319,9 @@ play notes[m_idx], amp: 1
 end
 #end
 m_idx+= 1
-end
+end;end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :flow 
     play_darkness deg_seq(*%w{:A2 1235 1215})[idx], bar
     idx+=1

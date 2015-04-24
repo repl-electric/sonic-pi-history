@@ -64,7 +64,8 @@ def play_rollinz(n)
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 0
   with_fx :reverb, mix_slide: 0.2 do |r|
   with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
-       control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
+  n_mix=0.5 
+      control(r, room: 0.1, mix: n_mix) ; control(d, distort: 0.5); play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
 
 
 #    play n

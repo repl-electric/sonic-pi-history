@@ -241,14 +241,14 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
         4.times do |n|        
           n%2==0 ? sync(:start) : sync(:quart)
         if cutoff > 80 && !distort_off 
-          control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);
+         # control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);
         end
           play note, attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 
           sleep bar/2
         if cutoff > 80 && !distort_off
-          control(r_fx, room: 0.8, mix:  n_mix); control(d_fx, distort: 0.25)
+        #  control(r_fx, room: 0.8, mix:  n_mix); control(d_fx, distort: 0.25)
         end
           play note, attack: 0.001, pan: 0.7*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)
@@ -257,14 +257,14 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
 
           sleep bar/2
         if cutoff > 80 && !distort_off
-          control(r_fx, room: 0.8, mix:  n_mix)
+        #  control(r_fx, room: 0.8, mix:  n_mix)
           end
           play note, attack: 0.005, pan: 0.6*direction, detune: detune_factor2
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 
           sleep bar/2
           if cutoff > 80 && !distort_off
-          control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
+        #  control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
           play note, attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)

@@ -56,7 +56,7 @@ bar = 2
 
 def play_darkness(n, bar)
  # with_synth(:tri){play n,  amp: 0.2, attack: 0.0, release: bar, decay: bar, sustain: bar/2}
-  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 70, amp: 3.0,  attack: 0.0, release: bar*4}}}
+  with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 3.0,  attack: 0.0, release: bar*4}}}
 end
 
 def play_rollinz(n, dir)

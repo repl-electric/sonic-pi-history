@@ -111,6 +111,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
       with_fx :level, amp: 0.5  do
 
         notes = deg_seq(*%w{:A3 1})
+        sleeps = (ring bar)
 
 
 

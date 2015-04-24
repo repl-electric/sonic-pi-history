@@ -232,7 +232,7 @@ end
 
 live_loop :dark_humming do |n_idx|
   #sync :start
-  with_fx :level, amp: 20.0 do
+  with_fx :level, amp: 50.0 do
     with_synth :dark_ambience do
       with_fx :lpf, cutoff: 65 do
         with_fx :reverb, room: 0.0 do

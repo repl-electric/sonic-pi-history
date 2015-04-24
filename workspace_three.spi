@@ -326,7 +326,7 @@ end
 m_idx+= 1
 end;end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :flow 
     play_darkness deg_seq(*%w{:A2 1235 1215})[idx], bar
     idx+=1

@@ -261,14 +261,14 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
         #  control(r_fx, room: 0.8, mix:  n_mix)
           end
           play note, attack: 0.005, pan: 0.6*direction, detune: detune_factor2
-          sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
+          sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)  if drums_on
 
           sleep bar/2
           if cutoff > 80 && !distort_off
         #  control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
           play note, attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
-        #  sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)
+          sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2
         end
@@ -276,7 +276,9 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
 end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 1531 4333 :A3 1511 :A2 7])
+#    notes = deg_seq(*%w[:A2 1531 4333 :A3 1511 :A2 7])
+    notes = deg_seq(*%w[:A2 4])
+
     1.times {
       play_rolling notes[idx], (ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
     }
@@ -284,13 +286,15 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
   idx+=1
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
+ #   notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
+    notes = deg_seq(*%w[:A2 56])
+
     cue :flow
     1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001}
   end
   idx+=1
 end
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.5 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do

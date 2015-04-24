@@ -109,16 +109,11 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 
-      if(p_idx %2 == 0)
-        with_synth :prophet do
-          #          play degree(1, :A2, :minor), cutoff: 70, release: bar, decay: bar*8, env_curve: 6, res: 0.2
-        end
-      end
       with_fx :level, amp: 1.0  do
        notes = deg_seq(*%w{:A3 1 1 1 1   _ _ _ _   :A4    1 1 1 2   _ _ _ _})
 
        sleeps = (ring bar/2)
-       bonus_note = deg_seq(*%w{:A3 1})[0]
+       bonus_note = deg_seq(*%w{:A3 5})[0]
 
 
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)

@@ -310,8 +310,10 @@ end;end
 
 live_loop :melo do |idx|
 sync :start
+with_fx :reverb do
 with_fx :echo, phase: bar/8 do
 play deg_seq(*%w{:A3 31   61   51   41   31   31   31   41})[idx]
+end
 end
 idx=+1
 end

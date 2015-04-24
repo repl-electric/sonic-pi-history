@@ -325,11 +325,12 @@ end
 define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2|
   hit_start_min=1.0
   hit_start_max=1.0
-  use_synth :mod_fm  ; sample v_s, amp: 90, rate: 0.6
+  use_synth :mod_fm  
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 0
   with_fx :reverb, mix_slide: 0.2 do |r|
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
+; sample v_s, amp: 90, rate: 0.6
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c, cutoff: n_cut);

@@ -412,7 +412,7 @@ def play_darkness(n, bar)
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 0.5, release: bar*6, decay: bar*8, sustain: bar*2}}}
 end
 
-live_loop :hl do |idx| with_fx :level, amp: 2.0 do
+live_loop :hl do |idx| with_fx :level, amp: 3.0 do
     sync :flow
     
     play_darkness deg_seq(*%w{:a2 1235})[idx],bar

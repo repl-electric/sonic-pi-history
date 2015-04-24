@@ -313,7 +313,7 @@ sync :start
 #with_fx :reverb, room: 1, mix: 0.3 do
 #with_fx :echo, phase: bar/2 do
 #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do 
-  play deg_seq(*%w{:A3 31   61   51   41   31   31   31   41})[idx], amp: 1
+play deg_seq(*%w{:A3 3161514131313141})[idx], amp: 1
 #end;end
 #end
 idx=+1

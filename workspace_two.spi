@@ -79,13 +79,13 @@ end
 live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
     use_synth :beep; use_synth_defaults amp: 0.3, attack: 1.0, release: 0.1, decay: 0.1
 #    with_fx :reverb, room: 1.0, mix: 0.1  do
-    with_fx :echo, phase: bar/4.0  do |r_fx|
+    with_fx :echo, phase: bar/2.0  do |r_fx|
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 
       with_fx :level, amp: 0.5  do
 
-        notes = deg_seq(*%w{:A3 1 4 4 1 _ _ _ _ })
+        notes = deg_seq(*%w{:A3 1 _ _ _ })
         sleeps = (ring bar)
         bonus_note = deg_seq(*%w{:A3 1})[0]
 
@@ -204,7 +204,7 @@ live_loop :bright_light do; with_fx :level, amp: 0.0 do
   end
 end
 live_loop :dark_highlight do |n_idx|
-  with_fx :level, amp: 0.5 do
+  with_fx :level, amp: 0.0 do
     with_synth :dark_ambience do
       #with_fx :lpf, cutoff: 100 do
       with_fx :reverb, room: 0.0 do
@@ -227,14 +227,14 @@ live_loop :dark_highlight do |n_idx|
   n_idx+=1
 end
 define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2|
-  hit_start_min=0.6
+  hit_start_min=0.4
   hit_start_max=0.7
   use_synth :mod_fm  
-  use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
-#  with_fx :reverb, mix_slide: 0.2, mix: 0.0 do |r|
+  use_synth_defaults detune: 0.005, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 0
+  with_fx :reverb, mix_slide: 0.2 do |r|
 #  with_fx :echo, phase: bar/1.0 do
-    with_fx :lpf, cutoff: 70, cutoff_slide: 20 do |c|
-      with_fx :distortion, distort: 0.0, cutoff: 90, mix: 0.0 do |d|
+    with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c|
+      with_fx :distortion, distort: 0.1, cutoff: 90 do |d|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
@@ -262,21 +262,20 @@ define :play_rolling do |note, direction, cutoff, detune_factor1, detune_factor2
           n_mix-0.09 unless n_mix < 0.2
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
-end;end;end;
-#end;
+end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A3 145])
+    notes = deg_seq(*%w[:A2 4])
     1.times {
-      play_rolling notes[idx], (ring -1,1)[idx], cut=120, detune1=0, detune2=0.0001
+      play_rolling notes[idx], (ring -1,1)[idx], cut=40, detune1=0, detune2=0.0001
     }
   end
   idx+=1
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
-    notes = deg_seq(*%w[:A3 165])
+    notes = deg_seq(*%w[:A2 65])
     cue :flow
-    1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=120, detune1=0, detune2=0.00001}
+    1.times{play_rolling notes[idx],(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.00001}
   end
   idx+=1
 end
@@ -285,12 +284,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
       with_fx :reverb do
         with_synth :prophet do
           1.times{sync :start}
-#          notes = (ring chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1],
- #                       chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2])
-
-          notes = (ring chord(:a4, '7sus4')[1])
-
-
+          notes = (ring chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1], chord(:a2, '7sus4')[1],
+                        chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2], chord(:a2, '7sus4')[2])
         play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
         end
       end
@@ -298,7 +293,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0 do
     s_idx+=1
 end;end
 
-live_loop :hl do |idx| with_fx :level, amp: 1.0 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :flow 
     play_darkness deg_seq(*%w{:A2 1235})[idx], bar
     idx+=1

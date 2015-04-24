@@ -177,7 +177,7 @@ live_loop :bright_light do; with_fx :level, amp: 1.0 do
     use_synth :beep    #:mod_pulse #:mod_beep
     use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
     with_fx :reverb do
-      notes = deg_seq(*%w{:A1 3 :A3 1 1 :A3 1 1 1 :A3 1 :A2 _ :A2 _})
+      notes = deg_seq(*%w{:A1 3 :A1 1 1 :A3 1 1 1 :A3 1 :A2 _ :A2 _})
       with_fx :echo, phase: bar/2 do |e|
         #with_fx :pan, pan: 0.25 do
         control e, phase: bar/2 + 0.1

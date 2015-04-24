@@ -143,9 +143,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         end
 
 
-
-
-
         play notes[0], amp: 1.2, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep sleeps[0]
         play notes[1], amp: 1.0, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.14)

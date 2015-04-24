@@ -83,58 +83,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 8.0 do
       sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
 
-      with_fx :level, amp: 0.0  do
-        notes = deg_seq(*%w{:A3 1 _ _ _ })
-        sleeps = (ring bar)
-        bonus_note = deg_seq(*%w{:A3 1})[0]
-
-
-        play notes[0], amp: 1.2, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[0]
-        sleep sleeps[0]
-        play notes[1], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.14) if notes[1]
-        sleep sleeps[1]
-        play notes[2], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[2]
-        sleep sleeps[2]
-        play notes[3], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[3]
-
-        sync :bar
-
-        play notes[4], amp: 1.2, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[4]
-        sleep sleeps[3]
-        play notes[5], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[5]
-        sleep sleeps[4]
-        play notes[6], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[6]
-        sleep sleeps[5]
-        play notes[7], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[7]
-
-        sync :bar
- 
-        play notes[8], amp: 1.1, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[8]
-        sleep sleeps[6]
-        play notes[9], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[9]
-        sleep sleeps[7]
-        play notes[10], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[10]
-        sleep sleeps[8]
-        play notes[11], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[11]
-
-        sync :bar
-
-        play notes[12], amp: 1.1, attack: 0.001, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[12]
-        sleep sleeps[9]
-
-        if(p_idx % 2 == 0)
-          with_fx :echo, phase: bar do
-            play bonus_note[p_idx], amp: 1.0, attack: 0.1, release: bar/2.0, decay: (bar/4)*2 if bonus_note[p_idx]
-          end
-        else
-          play notes[13], amp: 1.0, attack: 0.1, release: (p_idx % 4) == 0 ? bar/2.0 : 0.01, decay: (p_idx % 4) == 0 ? bar : 0.1 if notes[13]
-        end
-
-        sleep sleeps[10]
-        play notes[14], amp: 1.0, attack: 0.00001, release: 0.01, decay: 0.01  if notes[14]
-        sleep sleeps[11]
-        play notes[15], amp: 1.0, attack: 0.00001, release: 0.0001, decay: 0.01  if notes[15]
-      end
     end
     #  if (p_idx % 4 == 0)
     #    sync :bar

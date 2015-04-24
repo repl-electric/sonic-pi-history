@@ -308,8 +308,13 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
+live_loop :melo do |idx|
+sync :start
+play (deg_seq*%w{31   61   51   41   31   31   31   41})[idx]
+end
+
 live_loop :hl do |idx| with_fx :level, amp: 2.0 do
     sync :flow 
-    play_darkness deg_seq(*%w{:A2 1    2    3    5    1    2    1    5})[idx], bar
+    play_darkness deg_seq(*%w{:A2 12351215})[idx], bar
     idx+=1
 end;end

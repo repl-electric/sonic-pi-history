@@ -319,7 +319,7 @@ play deg_seq(*%w{:A3 3161 5141 3131 3141})[idx], amp: 1
 idx=+1
 end
 
-live_loop :hl do |idx| with_fx :level, amp: 0.0 do
+live_loop :hl do |idx| with_fx :level, amp: 1.0 do
     sync :flow 
     play_darkness deg_seq(*%w{:A2 12351215})[idx], bar
     idx+=1

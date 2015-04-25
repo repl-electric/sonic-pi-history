@@ -202,7 +202,7 @@ end
 live_loop :dark_highlight do |n_idx|
   with_fx :level, amp: 0.5 do
     with_synth :dark_ambience do
-      with_fx :lpf, cutoff: 50 do
+      with_fx :lpf, cutoff: 60 do
       _ = nil
       with_fx :reverb, room: 0.5 do
         sync :start

@@ -1,1 +1,1 @@
-puts knit(1,4)[100000]
+knit *chord(:a2, '7sus4'), 8

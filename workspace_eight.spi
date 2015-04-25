@@ -1,1 +1,1 @@
-knit *chord(:a2, '7sus4'), 8
+knit(chord(:a2, '7sus4'), 8)

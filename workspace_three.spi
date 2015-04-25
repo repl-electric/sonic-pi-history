@@ -316,7 +316,7 @@ end;end
 live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
     sync :start
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.5 do
-      #with_fx :echo, phase: bar do
+      with_fx (ring :echo,:none)[idx], phase: bar do
       #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do
       notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
       play notes[m_idx], amp: 1

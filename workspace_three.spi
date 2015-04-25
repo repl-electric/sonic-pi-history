@@ -68,7 +68,7 @@ live_loop :metro do
   cue :bar
   sleep bar
 end
-live_loop :drum do |d_idx|;with_fx :level, amp: 1.0 do
+live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
     sync :quart
     with_fx :lpf do
       sample :elec_triangle, amp: 0.5

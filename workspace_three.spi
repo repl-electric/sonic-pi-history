@@ -272,7 +272,7 @@ define :play_rolling do |notes, direction, cutoff, detune_factor1, detune_factor
 
           n_mix-0.09 unless n_mix < 0.2
         end
-        # sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
+        sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do

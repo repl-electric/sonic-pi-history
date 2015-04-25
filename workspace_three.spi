@@ -203,7 +203,7 @@ end
 live_loop :dark_highlight do |n_idx|
   with_fx :level, amp: 4.0 do
     with_synth :dark_ambience do
-      #with_fx :lpf, cutoff: 100 do
+      with_fx :lpf, cutoff: 100 do
       _ = nil
       with_fx :reverb, room: 0.0 do
         sync :start
@@ -220,7 +220,7 @@ live_loop :dark_highlight do |n_idx|
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
       end
     end
-    #end
+    end
   end
   n_idx+=1
 end

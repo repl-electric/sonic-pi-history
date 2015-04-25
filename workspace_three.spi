@@ -78,7 +78,7 @@ live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
 end
 live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
     use_synth :beep; use_synth_defaults amp: 0.2, attack: 0.0, release: 0.1, decay: 0.1
-#    with_fx :reverb, room: 1.0, mix: 0.1  do
+    #    with_fx :reverb, room: 1.0, mix: 0.1  do
     with_fx :echo, phase: bar/2.0  do |r_fx|
       #sample pa_s, amp: 0.1, rate: (ring -1, 1)[p_idx]
       sync :bar
@@ -108,7 +108,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 1.0 do
         play notes[7], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[7]
 
         sync :bar
- 
+
         play notes[8], amp: 1.1, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[8]
         sleep sleeps[6]
         play notes[9], amp: 1.0, attack: 0.1, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[9]
@@ -226,53 +226,53 @@ end
 define :play_rolling do |notes, direction, cutoff, detune_factor1, detune_factor2|
   hit_start_min=0.1
   hit_start_max=0.2
-  distort_off = true
+  distort_off = false
   drums_on = true
-  use_synth :mod_fm  
-  use_synth_defaults detune: 0.00, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, 
-                     mod_phase: 0
+  use_synth :mod_fm
+  use_synth_defaults detune: 0.00, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
+    mod_phase: 0
   with_fx :reverb, mix_slide: 0.2 do |r_fx|
-#  with_fx :echo, phase: bar/1.0 do
+    #  with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20 do |c_fx|
       with_fx :distortion, distort: 0.1, cutoff: 90 do |d_fx|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c_fx, cutoff: n_cut);
-        8.times do |n|        
+        8.times do |n|
           n%2==0 ? sync(:start) : sync(:quart)
-        if cutoff > 80 && !distort_off 
-          control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);
-        end
+          if cutoff > 80 && !distort_off
+            control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);
+          end
           play notes[n], attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max) if drums_on
 
           sleep bar/2
-        if cutoff > 80 && !distort_off
-          control(r_fx, room: 0.8, mix:  n_mix); control(d_fx, distort: 0.25)
-        end
+          if cutoff > 80 && !distort_off
+            control(r_fx, room: 0.8, mix:  n_mix); control(d_fx, distort: 0.25)
+          end
           play notes[n], attack: 0.001, pan: 0.7*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_cut += cutoff/(4*7); control(c_fx, cutoff: n_cut);
 
           sleep bar/2
-        if cutoff > 80 && !distort_off
-         control(r_fx, room: 0.8, mix:  n_mix)
+          if cutoff > 80 && !distort_off
+            control(r_fx, room: 0.8, mix:  n_mix)
           end
           play notes[n], attack: 0.005, pan: 0.6*direction, detune: detune_factor2
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)  if drums_on
 
           sleep bar/2
           if cutoff > 80 && !distort_off
-          control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
+            control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
           play notes[n], attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2
         end
-       # sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
+        # sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
@@ -283,7 +283,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
   idx+=1
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
-#    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
+    #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
     notes = deg_seq(*%w[:A2 156])
     cue :flow
     1.times{play_rolling (ring notes[idx]),(ring 1,-1)[idx], cut=10, detune1=0, detune2=0.0001}
@@ -297,12 +297,12 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
           1.times{sync :start}
           chord_name = '7sus4'
           notes = (ring chord(:a2, chord_name)[0], chord(:a2, chord_name)[0], chord(:a2, chord_name)[0], chord(:a2, chord_name)[0],
-                        chord(:a2, chord_name)[1], chord(:a2, chord_name)[1], chord(:a2, chord_name)[1], chord(:a2, chord_name)[1],
-                        chord(:a2, chord_name)[2], chord(:a2, chord_name)[2], chord(:a2, chord_name)[2], chord(:a2, chord_name)[2])
+                   chord(:a2, chord_name)[1], chord(:a2, chord_name)[1], chord(:a2, chord_name)[1], chord(:a2, chord_name)[1],
+                   chord(:a2, chord_name)[2], chord(:a2, chord_name)[2], chord(:a2, chord_name)[2], chord(:a2, chord_name)[2])
 
-           notes = (ring chord(:a4, '7sus4')[0])
+          notes = (ring chord(:a4, '7sus4')[0])
 
-        play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
+          play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
         end
       end
     end
@@ -310,20 +310,20 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
 end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do
-sync :start
-with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.5 do
-#with_fx :echo, phase: bar do
-#with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do 
-notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
-play notes[m_idx], amp: 1
-#end
-end
-#end
-m_idx+= 1
+    sync :start
+    with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.5 do
+      #with_fx :echo, phase: bar do
+      #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do
+      notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
+      play notes[m_idx], amp: 1
+      #end
+    end
+    #end
+    m_idx+= 1
 end;end
 
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do
-    sync :flow 
+    sync :flow
     play_darkness deg_seq(*%w{:A2 1235 1215})[idx], bar
     idx+=1
 end;end

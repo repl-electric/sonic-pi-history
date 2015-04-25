@@ -297,7 +297,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.5 do
         with_synth :prophet do
           1.times{sync :start}
           chord_name = '7sus4'
-          root = :a2         
+          root = :a1         
           notes = (ring chord(root, chord_name)[0], chord(root, chord_name)[0], chord(root, chord_name)[0], chord(root, chord_name)[0],
                         chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1],
                         chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2])

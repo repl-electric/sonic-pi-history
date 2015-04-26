@@ -1,1 +1,9 @@
 all_chords = SonicPi::Chord::CHORD.keys
+
+
+live_loop do |i|
+sleep 2
+
+play chord(:a2, all_chords[i])
+i+=1
+end

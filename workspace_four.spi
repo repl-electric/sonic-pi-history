@@ -333,9 +333,9 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
 
         if m_idx % 16 == 8
           back_notes = (ring *chord(:A2, "9+5"))
-          play back_notes[0], attack: 0.5, amp: 0.5,  release: 1,  decay: 6 + rrand(0,2)
-          play back_notes[1], attack: 0.25, amp: 0.5, release: 1, decay: 6 + rrand(0,2)
-          play back_notes[2], attack: 1.0, amp: 0.5,  release: 1,  decay: 6 + rrand(0,2)
+          play back_notes[0], attack: 0.5, amp: 0.5,  release: 1,  decay: 4 + rrand(0,2)
+          play back_notes[1], attack: 0.25, amp: 0.5, release: 1, decay: 4 + rrand(0,2)
+          play back_notes[2], attack: 1.0, amp: 0.5,  release: 1,  decay:  + rrand(0,2)
  
         elsif m_idx % 16 == 14
           back_notes = (ring *chord(:A2, :diminished))

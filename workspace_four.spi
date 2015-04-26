@@ -322,7 +322,7 @@ end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
     sync :whole, :half
-    #with_fx :reverb, room: 0.7, dry: 1.0, mix: 1.0 do
+    with_fx :reverb, room: 0.7, dry: 1.0, mix: 1.0 do
       with_fx (ring :echo,:none)[m_idx], phase: bar do
       #with_synth_defaults attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) do
       notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
@@ -340,7 +340,7 @@ end
       play notes[m_idx], amp: 1
 
       end;end;
-#end;
+end;
 m_idx+= 1
 end
 def play_rollinz(n, dir)
@@ -349,6 +349,7 @@ def play_rollinz(n, dir)
   with_fx :reverb, mix_slide: 0.2 do |r|; with_fx :distortion, distort: 0.1, cutoff: 90 do
       play n, attack: 0.001,  pan: 0.8*dir, detune: 0.001
 end;end;end
+
 live_loop :melo_2 do |lm_idx|;with_fx :level, amp: 1.0 do
 sync :quart
 play_rollinz deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx], 1

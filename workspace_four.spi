@@ -323,7 +323,7 @@ end;end
 
 #bar = 1/4.0
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.4 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.3 do
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do

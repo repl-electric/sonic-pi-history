@@ -324,6 +324,7 @@ end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
     sync :whole
+    with_synth :dull_bell do
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 1.0 do
       with_fx (ring :echo,:none)[m_idx], phase: bar do
         with_synth_defaults attack: 0.01, release: 0.8, decay: 0.1 + rrand(0.0,0.15) do
@@ -350,6 +351,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;end;
   end;
+end
   m_idx+= 1
 end
 def play_rollinz(n, dir)

@@ -347,8 +347,8 @@ end;end
 end
 live_loop :melo_2 do |lm_idx|;with_fx :level, amp: 1.0 do
 sync :start
-play_rollingz deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111},-1)[lm_idx], 1
-play_rollingz deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777},1)[lm_idx], -1
+play_rollingz deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx], 1
+play_rollingz deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx], -1
 sync :quart
 play_rollingz deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx+1], -1
 play_rollingz deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx+1], 1

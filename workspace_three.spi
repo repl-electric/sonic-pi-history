@@ -332,6 +332,9 @@ play deg_seq(*%w{:A3 3})[0], attack: 0.1
 play deg_seq(*%w{:A3 5})[0], attack: 0.5
 end
       play notes[m_idx], amp: 1
+
+play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[m_idx]
+play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[m_idx]
       end;end;end;
 m_idx+= 1
 end

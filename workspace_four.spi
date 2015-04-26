@@ -58,7 +58,7 @@ def play_darkness(n, bar)
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 60, amp: 1.0,  attack: 0.5, release: bar*6, decay: bar*8, sustain: bar*2}}}
 end
 live_loop :metro do
-  cue :whole; cue :half;  cue :quart, cue :eighth
+  cue :whole; cue :half;  cue :quart; cue :eighth
   sleep bar/2.0
   cue :eighth
   sleep bar/2.0

@@ -277,7 +277,8 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2
-    with_synth(:fm){play :A3, decay: 1.0}
+with_synth(:fm){play :A3, decay: 1.0} if           n%2==0 
+
 
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)

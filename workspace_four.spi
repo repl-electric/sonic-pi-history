@@ -283,7 +283,7 @@ end;end;end;end;
 #end
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.5 do
     #notes = deg_seq(*%w[:a2 1531 4333 :a3 1511 :A2 7])
-  #  notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
+    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
     notes = (ring deg_seq(*%w[:A2 541])[idx])
     sleeps = (ring bar/2.0)
     1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=30, detune1=0, detune2=0.001}
@@ -292,7 +292,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.5 do
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
-   # notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
+    notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     notes = (ring deg_seq(*%w[:A2 165])[idx])
 
     sleeps = (ring bar/2.0)
@@ -312,7 +312,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.5 do
                    chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1],
                    chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2])
 
-          #notes = (ring chord(:a3, '7sus4')[0])
+          notes = (ring chord(:a3, '7sus4')[0])
 
           play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
         end

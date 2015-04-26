@@ -330,7 +330,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
         notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
 
         if m_idx % 16 == 8
-          back_notes = deg_seq(*%w{:A2 614})
+          back_notes = (ring * chord(:A2, 9+5)
           play back_notes[0], attack: 0.5, amp: 0.5,  release: 2,  decay: 6 + rrand(0,2)
           play back_notes[1], attack: 0.25, amp: 0.5, release: 2, decay: 6 + rrand(0,2)
           play back_notes[2], attack: 1.0, amp: 0.5,  release: 2,  decay: 6 + rrand(0,2)
@@ -342,7 +342,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
           play back_notes[2], attack: 0.5,  amp: 0.5, release: 1.0, decay: 0.5
 
         elsif m_idx % 16 == 15
-          back_notes = (ring *chord(:A2, :augumented))
+          back_notes = (ring *chord(:A2, :augmented))
           play back_notes[0], attack: 1.0,  amp: 0.5, decay: 0.5
           play back_notes[1], attack: 0.25, amp: 0.5, decay: 0.5
           play back_notes[2], attack: 0.5,  amp: 0.5, release: 1.0, decay: 0.5

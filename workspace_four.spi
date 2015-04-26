@@ -344,7 +344,6 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
         end
 
 
-        end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;end;
   end;

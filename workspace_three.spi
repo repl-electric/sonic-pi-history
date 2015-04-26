@@ -341,13 +341,13 @@ live_loop :melo_2 do |idx|
 sync :melo
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx]
-sleep bar/2
+sync :bar
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx+1]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx+1]
-sleep bar/2
+sync :bar
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx+2]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx+2]
-sleep bar/2
+sync :bar
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx+3]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx+3]
 

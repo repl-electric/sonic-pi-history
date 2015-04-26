@@ -325,7 +325,7 @@ end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
     sync :whole
-    use_synth :hollow
+    use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 1.0 do
       with_fx (ring :echo,:none)[m_idx], phase: bar do
         with_synth_defaults attack: 0.5, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do

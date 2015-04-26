@@ -337,7 +337,7 @@ end
 m_idx+= 1
 end
 
-live_loop :melo_2 do |lm_idx|
+live_loop :melo_2 do |lm_idx|;with_fx :level, amp: 2.0 do
 sync :melo
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx]
@@ -352,7 +352,7 @@ play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx+3]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx+3]
 
 lm_idx+=4
-end
+end;end
 
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :flow

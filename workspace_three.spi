@@ -341,17 +341,11 @@ live_loop :melo_2 do |lm_idx|;with_fx :level, amp: 1.0 do
 sync :melo
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx]
-sync :bar
+sync :quart
 play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx+1]
 play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx+1]
-sync :bar
-play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx+2]
-play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx+2]
-sync :bar
-play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[lm_idx+3]
-play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[lm_idx+3]
 
-lm_idx+=4
+lm_idx+=2
 end;end
 
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do

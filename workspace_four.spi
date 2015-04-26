@@ -324,36 +324,32 @@ end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
     sync :whole
-    with_synth :beep do
-#    with_synth_defaults cutoff: 50  do
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 1.0 do
       with_fx (ring :echo,:none)[m_idx], phase: bar do
         with_synth_defaults attack: 0.01, release: 0.8, decay: 0.1 + rrand(0.0,0.15) do
         notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
 
         if m_idx % 16 == 8
-          back_notes = (ring *chord(:A2, "9+5"))
-          play back_notes[0], attack: 0.5, amp: 0.5,  release: 1,  decay: 4 + rrand(0,2)
-          play back_notes[1], attack: 0.25, amp: 0.5, release: 1, decay: 4 + rrand(0,2)
-          play back_notes[2], attack: 1.0, amp: 0.5,  release: 1,  decay: 4 + rrand(0,2)
+          back_notes = deg_seq(*%w{:A2 614})
+          play back_notes[0], attack: 0.5, amp: 0.5,  release: 2,  decay: 6 + rrand(0,2)
+          play back_notes[1], attack: 0.25, amp: 0.5, release: 2, decay: 6 + rrand(0,2)
+          play back_notes[2], attack: 1.0, amp: 0.5,  release: 2,  decay: 6 + rrand(0,2)
  
         elsif m_idx % 16 == 14
-          back_notes = (ring *chord(:A2, :diminished))
+          back_notes = deg_seq(*%w{:A2 735})
           play back_notes[0], attack: 1.0,  amp: 0.5, decay: 0.5
           play back_notes[1], attack: 0.25, amp: 0.5, decay: 0.5
           play back_notes[2], attack: 0.5,  amp: 0.5, release: 1.0, decay: 0.5
 
         elsif m_idx % 16 == 15
-          back_notes = (ring *chord(:A2, :augmented))
+          back_notes = deg_seq(*%w{:A2 135})
           play back_notes[0], attack: 1.0,  amp: 0.5, decay: 0.5
           play back_notes[1], attack: 0.25, amp: 0.5, decay: 0.5
           play back_notes[2], attack: 0.5,  amp: 0.5, release: 1.0, decay: 0.5
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;end;
-#end;
   end;
-  end
   m_idx+= 1
 end
 def play_rollinz(n, dir)

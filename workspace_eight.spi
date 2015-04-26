@@ -1,1 +1,1 @@
-puts SonicPi::Chord::CHORD.keys
+all_chords = SonicPi::Chord::CHORD.keys

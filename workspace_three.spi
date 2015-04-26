@@ -328,7 +328,7 @@ play deg_seq(*%w{:A3 5})[0], attack: 0.5
 
 elsif m_idx % 16 == 15
 play deg_seq(*%w{:A3 7})[0], attack: 1.0, release: 1.0
-play deg_seq(*%w{:A3 1})[0], attack: 0.1
+play deg_seq(*%w{:A3 3})[0], attack: 0.1
 play deg_seq(*%w{:A3 5})[0], attack: 0.5
 end
       play notes[m_idx], amp: 1

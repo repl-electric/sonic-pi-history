@@ -1,1 +1,0 @@
-puts knit(*chord(:a2, '7sus4').map{|a| [a, 5]}.flatten)

@@ -329,9 +329,9 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
 
         if m_idx % 16 == 8
           back_notes = deg_seq(*%w{:A2 614})
-          play back_notes[0], attack: 0.5, amp: 0.5, release: 4, decay: 4 + rand(0,2)
-          play back_notes[1], attack: 0.25, amp: 0.5, release: 4, decay: 4 + rand(0,2)
-          play back_notes[2], attack: 1.0, amp: 0.5, release: 4, decay: 4 + rand(0,2)
+          play back_notes[0], attack: 0.5, amp: 0.5, release: 4, decay: 8 + rand(0,2)
+          play back_notes[1], attack: 0.25, amp: 0.5, release: 4, decay: 8 + rand(0,2)
+          play back_notes[2], attack: 1.0, amp: 0.5, release: 4, decay: 8 + rand(0,2)
 
         elsif m_idx % 16 == 14
           back_notes = deg_seq(*%w{:A2 735})

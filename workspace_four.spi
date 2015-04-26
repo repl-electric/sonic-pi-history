@@ -277,6 +277,8 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2
+    with_synth(:fm){play :A3, decay: 1.0}
+
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
@@ -287,7 +289,6 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 1.0 do
     notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2.0)
     1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=100, detune1=0, detune2=0.001}
-    with_synth(:fm){play :A3, decay: 1.0}
   end
   idx+=1
 end

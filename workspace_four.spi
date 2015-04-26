@@ -333,9 +333,9 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
           play deg_seq(*%w{:A2 4})[0], attack: 0.5, amp: 0.5
 
         elsif m_idx % 16 == 15
-          play deg_seq(*%w{:A2 7})[0], attack: 1.0, release: 1.0, amp: 0.5
+          play deg_seq(*%w{:A2 7})[0], attack: 1.0, amp: 0.5
           play deg_seq(*%w{:A3 3})[0], attack: 0.1, amp: 0.5
-          play deg_seq(*%w{:A2 5})[0], attack: 0.5, amp: 0.5
+          play deg_seq(*%w{:A2 5})[0], attack: 0.5, amp: 0.5, release: 1.0
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;end;

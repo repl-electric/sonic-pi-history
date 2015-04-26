@@ -2,9 +2,9 @@ all_chords = SonicPi::Chord::CHORD.keys
 
 
 live_loop :a do |i|
-sleep 1
+sleep 2
 puts all_chords[i]
-play chord(:a3, all_chords[i])
+play chord(:a2, all_chords[i])
 i+=1
 end
 

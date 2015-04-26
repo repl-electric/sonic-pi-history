@@ -208,7 +208,7 @@ end
 live_loop :dark_highlight do |n_idx|
   with_fx :level, amp: 0.5 do
     with_synth :dark_ambience do
-      # with_fx :lpf, cutoff: 100 do
+       with_fx :lpf, cutoff: 100 do
       _ = nil
       #with_fx :reverb, room: 0.5 do
         sync :whole
@@ -224,7 +224,7 @@ live_loop :dark_highlight do |n_idx|
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
       #end
-      # end
+       end
     end
   end
   n_idx+=1

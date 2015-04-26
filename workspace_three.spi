@@ -333,10 +333,15 @@ play deg_seq(*%w{:A3 5})[0], attack: 0.5
 end
       play notes[m_idx], amp: 1
 
-play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[m_idx]
-play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[m_idx]
       end;end;end;
 m_idx+= 1
+end
+
+live_loop :melo_2 do |idx|
+sync :melo
+play deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx]
+play deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx]
+idx+=1
 end
 
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do

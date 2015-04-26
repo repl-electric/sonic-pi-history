@@ -1,1 +1,1 @@
-puts SonicPi::Chord::CHORD
+puts SonicPi::Chord::CHORD.keys

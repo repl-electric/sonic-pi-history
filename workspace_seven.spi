@@ -20,7 +20,7 @@ module Chimes
 end
 
 live_loop :b do |idx|
-  with_fx :echo, phase: (ring 0.5, 0.25)[idx] do
+  with_fx :echo, phase: (ring 0.5, 1.0)[idx] do
   sample Chimes.note((ring "b3", "b3", 
                            "a3", "a3")[idx]), amp: 1
   end

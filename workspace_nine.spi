@@ -72,7 +72,7 @@ end
 
 live_loop :perc do |idx|
 #  if idx % 2 == 0
-  with_fx :reverb do
+#  with_fx :reverb do
   with_fx :echo, phase: bar/8.0 do
   with_synth :pretty_bell do
   with_fx :pan, pan: (ring -0.25,0.25)[idx] do
@@ -82,7 +82,7 @@ live_loop :perc do |idx|
                  release: (ring 0.1,0.09,0.09,0.1)[idx], 
                  decay:   (ring bar/2.0, bar/1.0)[idx], env_curv: 4, 
                  sustain_level: 0.5
-  end
+#  end
 end
  # end
   end

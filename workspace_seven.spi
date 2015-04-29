@@ -15,7 +15,7 @@ module Chimes
   end
 
   def self.note(n)
-    self.notes[n.downcase]
+    self.notes[n]
   end
 end
 

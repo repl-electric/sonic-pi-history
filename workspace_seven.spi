@@ -21,5 +21,5 @@ end
 
 live_loop :b do
   sample Chimes.note("b3"), amp: 1
-  sleep 2
+  sleep 0.5
 end

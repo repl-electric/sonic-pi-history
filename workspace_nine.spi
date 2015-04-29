@@ -69,7 +69,12 @@ end;end
 end
 
 #live_loop :a do     |idx|play_darkness deg_seq(*%w{:A2 1    2    3    5    1    2    1    5   })[idx],bar;sleep bar*2;idx+=1;end
-live_loop :melody do|idx|play deg_seq(         *%w{:A3 31   61   51   41   31   31   31   41})[idx];sleep bar/2.0;idx+=1;end
+live_loop :melody do|idx|
+  with_synth :pretty_bell do
+    play :A3, amp: 0.2, release: 0.5, decay: 0.5, env_curv: 4, sustain_level: 0.5
+  end
+
+play deg_seq(         *%w{:A3 31   61   51   41   31   31   31   41})[idx];sleep bar/2.0;idx+=1;end
 live_loop :beat do  |idx|play_rollinz(deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx],-1);sleep bar/4.0;idx+=1;end
 live_loop :beat2 do |idx|play_rollinz(deg_seq( *%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx],1);sleep bar/4.0;idx+=1;end
 

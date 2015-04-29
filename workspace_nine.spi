@@ -73,7 +73,7 @@ end
 live_loop :perc do |idx|
 sync :beat
 with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[idx] do
-with_fx :pitch_shift, pitch_dis: 0.001, window_size: 0.1 do #mix: 0.5, distort: 0.01 do
+with_fx :pitch_shift window_size: 0.1 do #mix: 0.5, distort: 0.01 do
 with_synth :pretty_bell do
 play deg_seq(*%w{:A3 6 :A4 13_ 6___ 5___  4___  341_  2___  3___  4_1_ })[idx], 
                  amp: (ring 0.09, 0.02, 0.07, 0.02,  

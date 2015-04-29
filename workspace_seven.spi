@@ -20,6 +20,6 @@ module Chimes
 end
 
 live_loop :b do
-  sample Chimes.note("g3"), amp: 3
+  sample Chimes.note("h3"), amp: 3
   sleep 2
 end

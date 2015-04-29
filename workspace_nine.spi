@@ -76,7 +76,7 @@ live_loop :perc do |idx|
   with_fx :echo, phase: bar/8.0 do
   with_synth :pretty_bell do
   with_fx :pan, pan: (ring -0.25,0.25)[idx] do
-    play deg_seq(*%w{:A4 3___ 6___ 5___  4___  3___  3___  3___  4___ })[idx], 
+    play deg_seq(*%w{:A3 3___ 6___ 5___  4___  3___  3___  3___  4___ })[idx], 
 #                 amp:     (ring 0.09, 0.02, 0.07, 0.02)[idx],
 #                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
                  release: (ring 0.1,0.09,0.09,0.1)[idx], 

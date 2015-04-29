@@ -20,7 +20,7 @@ module Chimes
 end
 
 live_loop :b do |idx|
-  with_fx :bitcrusher do
+  with_fx :echo do
   with_synth :pretty_bell do
     play :A4
   end

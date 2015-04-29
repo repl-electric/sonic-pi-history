@@ -3,11 +3,11 @@ module Chimes
     Dir["/Users/josephwilk/Dropbox/repl-electric/samples/12231__samulis__orchestral-chimes-samples/*"]
   end
 
-  def self.notes
+  def self.notes(arg)
     self.samples.map{|note| 
       notes = note.match(/\d*__samulis__chimes-(.*)-(.*)-1.wav$/)
       if notes
-        notes[1].gsub(/-/,"")
+        notes[1].gsub(/-/,"") => note
       end
     }
   end

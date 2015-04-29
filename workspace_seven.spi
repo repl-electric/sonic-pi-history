@@ -4,7 +4,12 @@ module Chimes
   end
 
   def self.notes
-    self.samples.map{|note| note.match(/\d*__samulis__chimes-(.*)-(.*)-1.wav$/)[1]}
+    self.samples.map{|note| 
+      notes = note.match(/\d*__samulis__chimes-(.*)-(.*)-1.wav$/)
+      if notes
+        notes[1]
+      end
+}
   end
 
   def self.note(n)

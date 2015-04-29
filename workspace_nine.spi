@@ -71,7 +71,7 @@ end
 #live_loop :a do     |idx|play_darkness deg_seq(*%w{:A2 1    2    3    5    1    2    1    5   })[idx],bar;sleep bar*2;idx+=1;end
 live_loop :melody do|idx|
   if idx %2 == 0
-  with_fx :echo, phase: bar/2.0 do
+  with_fx :echo, phase: bar/4.0 do
   with_synth :pretty_bell do
     play deg_seq(*%w{:A3 31   61   51   41   31   31   31   41})[idx], amp: 0.1, release: 1.0, decay: 0.5, env_curv: 4, sustain_level: 0.5
   end

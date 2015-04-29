@@ -20,9 +20,11 @@ module Chimes
 end
 
 live_loop :b do |idx|
+  with_fx :bitcrusher do
   with_synth :pretty_bell do
     play :A4
   end
+end
 #  with_fx :echo, phase: (ring 0.1, 1.0)[idx] do
 #  sample Chimes.note((ring "a3", "a3", "b3", "c3", "d3")[idx]), amp: 1
  # end

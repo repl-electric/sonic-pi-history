@@ -76,7 +76,8 @@ live_loop :perc do |idx|
   with_fx :echo, phase: bar/8.0 do
   with_synth :pretty_bell do
   with_fx :pan, pan: (ring -0.25,0.25)[idx] do
-    play deg_seq(*%w{:A4 1111 6666 5555 4444 3333 3333 4444 44__})[idx], attack: (knit 0.1, 16, 0.01, 16)[idx], amp: 0.09, release: 0.1, decay: bar/2.0, env_curv: 4, sustain_level: 0.5
+    play deg_seq(*%w{:A4 1111 6666 5555 4444 3333 3333 4444 44__})[idx], 
+                 attack: (knit 0.1, 16, 0.01, 16)[idx], amp: 0.09, release: rrand(0.1,0.2), decay: bar/2.0, env_curv: 4, sustain_level: 0.5
   end
 end
  # end

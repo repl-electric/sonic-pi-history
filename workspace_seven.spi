@@ -19,7 +19,4 @@ module Chimes
   end
 end
 
-puts Chimes.samples
-puts Chimes.notes
-puts Chimes.note("a3")
 sample Chimes.note("b3")

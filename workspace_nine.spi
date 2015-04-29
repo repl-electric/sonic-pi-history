@@ -73,7 +73,7 @@ end
 live_loop :perc do |idx|
 sync :beat
 with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[idx] do
-with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch: 0.001, pitch_dis: 0.01 do
+with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch: 0.001, pitch_dis: (ring 0.01,0.1)[idx] do
 with_synth :pretty_bell do
 play deg_seq(*%w{:A3 6 :A4 13_ 6___ 5___  4___  341_  2___  3___  4_1_ })[idx], 
                  amp: (ring 0.09, 0.02, 0.07, 0.02,  
@@ -84,13 +84,7 @@ play deg_seq(*%w{:A3 6 :A4 13_ 6___ 5___  4___  341_  2___  3___  4_1_ })[idx],
                  release: (ring 0.1,0.09,0.09,0.1)[idx], 
                  decay:   (ring bar/2.0, bar/1.0)[idx], env_curv: 4, 
                  sustain_level: 0.5
-  end
-end
-end
- # end
-  end
-  end
-#  sleep bar/4.0
+  end;end;end;end;end
   idx+=1
 end
 live_loop :melody do|idx|play deg_seq(         *%w{:A3 31   61   51   41   31   31   31   41})[idx];sleep bar/2.0;idx+=1;end

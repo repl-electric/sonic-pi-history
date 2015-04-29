@@ -11,5 +11,5 @@ module Chimes
   end
 end
 
-puts Chimes.sample
+puts Chimes.samples
 puts Chimes.notes

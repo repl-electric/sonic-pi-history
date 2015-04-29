@@ -4,10 +4,11 @@ module Chimes
   end
 
   def self.notes
-    self.samples.map{|note| 
+    n = {}
+    self.samples.each{|note| 
       notes = note.match(/\d*__samulis__chimes-(.*)-(.*)-1.wav$/)
       if notes
-        {notes[1].gsub(/-/,"") => note}
+        n[notes[1].gsub(/-/,"")] = note
       end
     }
   end

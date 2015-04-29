@@ -4,7 +4,7 @@ module Chimes
   end
 
   def self.notes
-    self.samples.map{|note| note.match(/192619__samulis__chimes-(.*)-(.*)-1.wav/)}
+    self.samples.map{|note| note.match(/192619__samulis__chimes-(.*)-(.*)-1.wav$/)}
   end
 
   def self.note(n)

@@ -7,7 +7,7 @@ module Chimes
     self.samples.map{|note| 
       notes = note.match(/\d*__samulis__chimes-(.*)-(.*)-1.wav$/)
       if notes
-        {:1 => note}
+        {1 => note}
       end
     }
   end

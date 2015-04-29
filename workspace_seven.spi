@@ -9,7 +9,7 @@ module Chimes
       if notes
         notes[1].gsub(/-/,"")
       end
-}
+    }
   end
 
   def self.note(n)

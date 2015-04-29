@@ -302,7 +302,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
     notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2.0)
     cue :flow
-    1.times{play_rolling notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001}
+    1.times{play_rolling notes, sleeps, direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.0001}
   end
   idx+=1
 end

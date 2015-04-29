@@ -72,18 +72,13 @@ end
 
 live_loop :perc do |idx|
 sync :beat
-#  if idx % 2 == 0
-  with_fx :reverb do
-  with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do
-  with_synth :pretty_bell do
-  with_fx :pan, pan: (ring -0.25,0.25)[idx] do
-    play deg_seq(*%w{:A3 6 :A4 13_ 6___ 5___  4___  341_  2___  3___  4___ })[idx], 
-                 amp:     (ring 0.09, 0.02, 0.07, 0.02,  
-                                0.05, 0.02, 0.07, 0.02,
-                                0.08, 0.02, 0.07, 0.02,
-                                0.05, 0.02, 0.07, 0.02,
-
-)[idx],
+with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[idx] do
+with_synth :pretty_bell do
+play deg_seq(*%w{:A3 6 :A4 13_ 6___ 5___  4___  341_  2___  3___  4___ })[idx], 
+                 amp: (ring 0.09, 0.02, 0.07, 0.02,  
+                            0.05, 0.02, 0.07, 0.02,
+                            0.08, 0.02, 0.07, 0.02,
+                            0.05, 0.02, 0.07, 0.02)[idx],
 #                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
                  release: (ring 0.1,0.09,0.09,0.1)[idx], 
                  decay:   (ring bar/2.0, bar/1.0)[idx], env_curv: 4, 

@@ -64,14 +64,14 @@ live_loop :foo do
 end
 
 live_loop :bar do
-    sync :foo
+  sync :foo
   sample arovane_beat(24), rate: 60.0 / 62.5, amp: 3
   sleep 16
 end
 
 
 live_loop :machine do
-  # sync :foo
+   sync :foo
   sample :bd_haus, amp: 5
   sleep 0.5
 end

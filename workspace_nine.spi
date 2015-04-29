@@ -75,7 +75,7 @@ live_loop :perc do |idx|
   with_fx :reverb do
   with_fx :echo, phase: bar/8.0 do
   with_synth :pretty_bell do
-    play deg_seq(*%w{:A4 1111 6666 5555 4444 3333 6666 5555 7777})[idx], amp: 0.1, release: 1.0, decay: bar/2.0, env_curv: 4, sustain_level: 0.5
+    play deg_seq(*%w{:A4 1111 6666 5555 4444 3333 3333 3333 4444})[idx], amp: 0.1, release: 1.0, decay: bar/2.0, env_curv: 4, sustain_level: 0.5
   end
  # end
   end

@@ -22,7 +22,7 @@ end
 live_loop :b do |idx|
   with_fx :echo, phase: 0.5, decay: 0.0 do
   with_synth :pretty_bell do
-    play :A4, amp: 0.5, release: 1
+    play :A4, amp: 0.5, release: 0.1
   end
 end
 #  with_fx :echo, phase: (ring 0.1, 1.0)[idx] do

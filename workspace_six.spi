@@ -71,7 +71,7 @@ end
 
 
 live_loop :machine do
-  # sync :foo
+   sync :foo
   sample :bd_haus, amp: 5
   sleep 0.5
 end

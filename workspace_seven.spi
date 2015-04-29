@@ -3,8 +3,12 @@ module Chimes
     Dir["/Users/josephwilk/Dropbox/repl-electric/samples/12231__samulis__orchestral-chimes-samples/*"]
   end
 
+  def self.notes
+    self.samples.map{|note| note =~ /192619__samulis__chimes-d4-ff-1.wav/}
+  end
+
   def self.note(n)
   end
 end
 
-puts Chimes.samples
+puts Chimes.notes

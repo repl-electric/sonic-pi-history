@@ -81,6 +81,7 @@ live_loop :perc do |idx|
   end
   end
   sleep bar/4.0
+idx+=1
 end
 live_loop :melody do|idx|play deg_seq(         *%w{:A3 31   61   51   41   31   31   31   41})[idx];sleep bar/2.0;idx+=1;end
 live_loop :beat do  |idx|play_rollinz(deg_seq( *%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx],-1);sleep bar/4.0;idx+=1;end

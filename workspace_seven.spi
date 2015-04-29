@@ -13,7 +13,7 @@ module Chimes
   end
 
   def self.note(note)
-    self.notes(note)
+    self.notes(note.downcase)
   end
 end
 

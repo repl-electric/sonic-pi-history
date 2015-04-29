@@ -73,7 +73,7 @@ live_loop :metro do
   cue :quarter; cue :eighth
   sleep bar/2.0
   cue :eighth
-sleep bar/2.0
+  sleep bar/2.0
 end
 live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
     sync :half

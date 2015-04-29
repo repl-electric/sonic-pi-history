@@ -18,7 +18,7 @@ module Chimes
     self.notes[n]
   end
 end
-play 60
+
 puts Chimes.samples
 puts Chimes.notes
 puts Chimes.note("a3")

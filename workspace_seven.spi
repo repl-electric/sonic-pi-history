@@ -20,12 +20,12 @@ module Chimes
 end
 
 live_loop :b do |idx|
-  with_fx :reverb do
+  with_fx :reverb, room 0.0, damp: 1.0 do
   with_fx :echo, phase: 0.2, decay: 1.0,max_phase: 0.1, mix: 1.0 do
   with_synth :pretty_bell do
     play :A4, amp: 0.5, release: 0.5
   end
-end
+  end
 end
 #  with_fx :echo, phase: (ring 0.1, 1.0)[idx] do
 #  sample Chimes.note((ring "a3", "a3", "b3", "c3", "d3")[idx]), amp: 1

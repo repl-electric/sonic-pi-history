@@ -12,7 +12,8 @@ module Chimes
     }
   end
 
-  def self.note(n)
+  def self.note(note)
+    self.notes(note)
   end
 end
 

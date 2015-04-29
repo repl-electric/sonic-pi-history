@@ -64,7 +64,7 @@ live_loop :foo do
 end
 
 live_loop :bar do
-  sync :foo
+  #  sync :foo
   sample arovane_beat(24), rate: 60.0 / 62.5, amp: 3
   sleep 16
 end

@@ -1,0 +1,10 @@
+module Chimes
+  def samples
+    Dir["/Users/josephwilk/Dropbox/repl-electric/samples/12231__samulis__orchestral-chimes-samples/*"]
+  end
+
+  def note(n)
+  end
+end
+
+puts Chimes.samples

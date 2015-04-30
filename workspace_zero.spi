@@ -307,8 +307,7 @@ play deg_seq(*%w{:A3 6 :A3 6 :A4 3_ 6___ 5___  4___  341_  2___  3___  4_1_ })[i
                  release: (ring 0.1,0.09,0.09,0.1)[idx], 
                  decay:   (ring bar/2.0, bar/1.0)[idx], env_curv: 4, 
                  sustain_level: 0.5
-  end;end;end;end;end;end
-  p_idx+=1
+  end;end;end;end;end
 
 
     end

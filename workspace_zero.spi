@@ -327,7 +327,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
   end
   idx+=1
 end
-with_fx :reverb, room: 1.0,  do
+with_fx :reverb, room: 1.0  do
 live_loop :bono do |n|; with_fx :level, amp: 1 do
 sync :bonus
     with_fx :lpf, cutoff: 120, cutoff_slide: 20, mix: 1.0  do |c_fx|

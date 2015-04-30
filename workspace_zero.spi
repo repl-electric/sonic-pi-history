@@ -228,14 +228,8 @@ live_loop :dark_highlight do |n_idx|
 
 
         play (ring
-              chord_degree(1, :a4, :major)[0..2],_,_,_,
-              _,_,_,chord_degree(4, :a2, :major)[0],
-              #
-              chord_degree(1, :a4, :major)[0],chord_degree(1, :a3, :major)[0],_, chord_degree(4, :a2, :major)[0],
-              _,_,_,chord_degree(4, :a2, :major)[0],
-              #
-              chord_degree(5, :a4, :major)[0],_,_,_,
-              _,_,_,chord_degree(4, :a3, :major)[0],
+                         
+              chord_degree(1, :a4, :major)[0])[0],
         )[n_idx], release: (ring bar*6, bar*6, bar*6, bar*8)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 

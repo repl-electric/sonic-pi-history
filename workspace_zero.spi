@@ -333,9 +333,23 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
-#live_loop :percussion do |p_idx|; with_fx :level, amp: 5.0 do
-#sync :half
-#end
+live_loop :percussion do |p_idx|; with_fx :level, amp: 5.0 do
+sync :half
+with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[p_idx] do
+with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.01,0.02)[p_idx] do
+with_synth :pretty_bell do
+play deg_seq(*%w{:A3 6 :A3 1 :A4 3_ 6___ 5___  4___  341_  2___  3___  4_1_ })[p_idx], 
+                 amp: (ring 0.19, 0.12, 0.17, 0.12,  
+                            0.15, 0.12, 0.17, 0.12,
+                            0.18, 0.12, 0.17, 0.12,
+                            0.15, 0.12, 0.17, 0.12)[p_idx],
+#                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
+                 release: (ring 0.1,0.09,0.09,0.1)[p_idx], 
+                 decay:   (ring bar/2.0, bar/1.0)[p_idx], env_curv: 4, 
+                 sustain_level: 0.5
+  end;end;end;end;end;end
+  p_idx+=1
+end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
     sync :whole
@@ -372,24 +386,7 @@ end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;end;
-
   end;
-
-
-with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[m_idx] do
-with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.01,0.02)[m_idx] do
-with_synth :pretty_bell do
-play deg_seq(*%w{:A3 6 :A3 1 :A4 3_ 6___ 5___  4___  341_  2___  3___  4_1_ })[m_idx], 
-                 amp: (ring 0.39, 0.32, 0.37, 0.32,  
-                            0.35, 0.32, 0.37, 0.31,
-                            0.38, 0.32, 0.37, 0.32,
-                            0.35, 0.32, 0.37, 0.32)[m_idx],
-#                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
-                 release: (ring 0.1,0.09,0.09,0.1)[m_idx], 
-                 decay:   (ring bar/2.0, bar/1.0)[m_idx], env_curv: 4, 
-                 sustain_level: 0.5
-  end;end;end;end;end
-
   m_idx+= 1
 end
 def play_rollinz(n, dir)

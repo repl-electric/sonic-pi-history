@@ -383,14 +383,12 @@ play deg_seq(*%w{:A3 6 :A3 1 :A4 3_ 6___ 5___  4___  341_  2___  3___  4_1_ })[p
                  amp: (ring 0.19, 0.12, 0.17, 0.12,  
                             0.15, 0.12, 0.17, 0.12,
                             0.18, 0.12, 0.17, 0.12,
-                            0.15, 0.12, 0.17, 0.12)[p_idx],
+                            0.15, 0.12, 0.17, 0.12)[m_idx],
 #                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
-                 release: (ring 0.1,0.09,0.09,0.1)[p_idx], 
-                 decay:   (ring bar/2.0, bar/1.0)[p_idx], env_curv: 4, 
+                 release: (ring 0.1,0.09,0.09,0.1)[m_idx], 
+                 decay:   (ring bar/2.0, bar/1.0)[m_idx], env_curv: 4, 
                  sustain_level: 0.5
   end;end;end;end;end
-  p_idx+=1
-
 
   m_idx+= 1
 end

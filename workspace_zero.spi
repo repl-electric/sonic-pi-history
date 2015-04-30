@@ -231,7 +231,7 @@ live_loop :dark_highlight do |n_idx|
   end
   n_idx+=1
 end
-define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detune_factor2, &bonus_block|
+define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detune_factor2, bonus_block|
   hit_start_min=0.5
   hit_start_max=0.6
   distort_off = true
@@ -303,10 +303,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
     sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001) do |n|
-
-    with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}}
-
-
+              with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}}
     end}
   end
   idx+=1

@@ -334,7 +334,7 @@ end;end
 
 #bar = 1/4.0
 
-live_loop :percussion do |p_idx|; with_fx :level, amp: 0.0 do
+live_loop :percussion do |p_idx|; with_fx :level, amp: 0.5 do
 sync :half
 with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[p_idx] do
 with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.01,0.02)[p_idx] do
@@ -358,7 +358,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
-        notes = deg_seq(*%w{:a3 3161 5141 3131 3141})
+        notes = deg_seq(*%w{:A3 3161 5141 3131 3141})
 
         if m_idx % 16 == 8
           back_notes = deg_seq(*%w{:A2 614})

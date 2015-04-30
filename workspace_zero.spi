@@ -334,7 +334,7 @@ sync :bonus
  with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.1 do |d_fx|
 with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
 end;end
-n+=1
+n= (n+1) % 8
 end;end;end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do

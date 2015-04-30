@@ -306,7 +306,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 1.0 do
     sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001) do |n|
-      with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(2)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}}
+      with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(2)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==1}}
 
 end
 }

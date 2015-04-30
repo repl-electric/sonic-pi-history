@@ -334,7 +334,7 @@ end;end
 
 #bar = 1/4.0
 
-live_loop :percussion do |p_idx|; with_fx :level, amp: 0.5 do
+live_loop :percussion do |p_idx|; with_fx :level, amp: 0.0 do
 sync :half
 with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[p_idx] do
 with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.01,0.02)[p_idx] do

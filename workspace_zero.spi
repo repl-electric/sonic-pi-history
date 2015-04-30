@@ -83,7 +83,7 @@ live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
   end
   d_idx+=1
 end
-live_loop :piano do |p_idx|;with_fx :level, amp: 0.5 do
+live_loop :piano do |p_idx|;with_fx :level, amp: 0.0 do
     use_synth :beep; use_synth_defaults amp: 0.2, attack: 0.0, release: 0.1, decay: 0.1
     #    with_fx :reverb, room: 1.0, mix: 0.1  do
     with_fx :echo, phase: bar/2.0  do |r_fx|

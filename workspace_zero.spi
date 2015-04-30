@@ -327,11 +327,11 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
   end
   idx+=1
 end
-live_loop :bono do
+live_loop :bono do |n|; with_fx :level, amp: 2 do
 sync :bonus
  with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
 
-end
+end;end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do

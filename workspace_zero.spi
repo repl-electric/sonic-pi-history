@@ -333,9 +333,9 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
-live_loop :percussion do |p_idx|; with_fx :level, amp: 5.0 do
-sync :half
-end
+#live_loop :percussion do |p_idx|; with_fx :level, amp: 5.0 do
+#sync :half
+#end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
     sync :whole

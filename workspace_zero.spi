@@ -330,7 +330,7 @@ end
 with_fx :reverb do
 live_loop :bono do |n|; with_fx :level, amp: 2 do
 sync :bonus
-with_fx :distortion, distort: 0.1 do
+ with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.1 do |d_fx|
 with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
 end
 n+=1

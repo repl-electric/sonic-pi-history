@@ -234,7 +234,7 @@ end
 define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detune_factor2, &bonus_block|
   hit_start_min=0.5
   hit_start_max=0.6
-  distort_off = true
+  distort_on = true
   drums_on = false
   use_synth :mod_fm
   use_synth_defaults detune: 0.00, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
@@ -250,14 +250,14 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         8.times do |n|
           n%2==0 ? sync(:whole) : sync(:half)
 
-          if cutoff > 80 && !distort_off
+          if cutoff > 80 && distort_on
             control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);
           end
           play notes[n], attack: 0.001,  pan: 0.8*direction, detune: detune_factor1
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max) if drums_on
 
           sleep sleeps[n*3 + 0]
-          if cutoff > 80 && !distort_off
+          if cutoff > 80 && distort_on
             control(r_fx, room: 0.8, mix:  n_mix); control(d_fx, distort: 0.25)
           end
           play notes[n], attack: 0.001, pan: 0.7*direction, detune: detune_factor1
@@ -266,14 +266,14 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n_cut += cutoff/(4*7); control(c_fx, cutoff: n_cut);
 
           sleep sleeps[n*3 + 1]
-          if cutoff > 80 && !distort_off
+          if cutoff > 80 && distort_on
             control(r_fx, room: 0.8, mix:  n_mix)
           end
           play notes[n], attack: 0.005, pan: 0.6*direction, detune: detune_factor2
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)  if drums_on
 
           sleep sleeps[n*3 + 2]
-          if cutoff > 80 && !distort_off
+          if cutoff > 80 && distort_on
             control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
           play notes[n], attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))

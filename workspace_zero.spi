@@ -319,10 +319,10 @@ end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
-#    notes = (ring deg_seq(*%w[:A1 1])[idx])
+    notes = (ring deg_seq(*%w[:A1 1])[idx])
     sleeps = (ring bar/2)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001) #do |n|
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=120, detune1=0, detune2=0.0001) #do |n|
      # with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], amp: 1.0} if  n%2==0}};
     #end
     }

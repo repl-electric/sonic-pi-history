@@ -281,6 +281,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 
           n_mix-0.09 unless n_mix < 0.2
 
+puts bonus_block
           #bonus
           yield(bonus_block, n) if bonus_block
         end

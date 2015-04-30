@@ -241,7 +241,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
     mod_phase: 2
   with_fx :reverb, mix_slide: 0.2, mix: 0.1 do |r_fx|
     #   with_fx :echo, phase: bar/1.0 do
-    with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 0.6  do |c_fx|
+    with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 0.7  do |c_fx|
       with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.0 do |d_fx|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(30,cutoff);

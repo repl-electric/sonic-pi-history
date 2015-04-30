@@ -380,10 +380,10 @@ with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_f
 with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.01,0.02)[m_idx] do
 with_synth :pretty_bell do
 play deg_seq(*%w{:A3 6 :A3 1 :A4 3_ 6___ 5___  4___  341_  2___  3___  4_1_ })[m_idx], 
-                 amp: (ring 0.19, 0.12, 0.17, 0.12,  
-                            0.15, 0.12, 0.17, 0.12,
-                            0.18, 0.12, 0.17, 0.12,
-                            0.15, 0.12, 0.17, 0.12)[m_idx],
+                 amp: (ring 0.39, 0.12, 0.17, 0.12,  
+                            0.35, 0.12, 0.17, 0.12,
+                            0.38, 0.12, 0.17, 0.12,
+                            0.35, 0.12, 0.17, 0.12)[m_idx],
 #                 attack:  (knit 0.1, 2, 0.09, 2)[idx], 
                  release: (ring 0.1,0.09,0.09,0.1)[m_idx], 
                  decay:   (ring bar/2.0, bar/1.0)[m_idx], env_curv: 4, 

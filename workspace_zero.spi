@@ -214,6 +214,19 @@ live_loop :dark_highlight do |n_idx|
       _ = nil
       with_fx :reverb, room: 0.5 do
         sync :whole
+#        play (ring
+ #             chord_degree(1, :a3, :major)[0..2],_,_,_,
+  ##            _,_,_,chord_degree(4, :a2, :major)[0],
+    #          #
+     #         chord_degree(1, :a4, :major)[0],chord_degree(1, :a3, :major)[0],_, chord_degree(4, :a2, :major)[0],
+      #        _,_,_,chord_degree(4, :a2, :major)[0],
+       ###       #
+          #    chord_degree(5, :a3, :major)[0],_,_,_,
+           #   _,_,_,chord_degree(4, :a3, :major)[0],
+     #   )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
+      #    amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
+
+
         play (ring
               chord_degree(1, :a3, :major)[0..2],_,_,_,
               _,_,_,chord_degree(4, :a2, :major)[0],
@@ -225,6 +238,8 @@ live_loop :dark_highlight do |n_idx|
               _,_,_,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
+
+
       end
       # end
     end
@@ -303,7 +318,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
 #    notes = (ring deg_seq(*%w[:A1 1])[idx])
-    sleeps = (ring bar/2)
+    sleeps = (ring bar)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001) do |n|
      # with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], amp: 1.0} if  n%2==0}};

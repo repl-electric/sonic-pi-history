@@ -231,7 +231,7 @@ live_loop :dark_highlight do |n_idx|
   end
   n_idx+=1
 end
-define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detune_factor2|
+define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detune_factor2, &bonus_block|
   hit_start_min=0.5
   hit_start_max=0.6
   distort_off = true
@@ -282,7 +282,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n_mix-0.09 unless n_mix < 0.2
 
           #bonus
-          with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}}
+          yield(bonus_block, n) if bonus_block
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;

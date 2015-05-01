@@ -339,7 +339,7 @@ end;end;end;end;end
   p_idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.1 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
     sync :whole
     use_synth :beep
     with_fx :lpf, cutoff: 80, mix: 0.0 do

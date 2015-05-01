@@ -231,7 +231,7 @@ end
 
         play (ring                  
               chord_degree(1, :a4, :major)[0], chord_degree(1, :a3, :major)[1], chord_degree(1, :a3, :major)[1], _,
-              chord_degree(1, :a4, :major)[0], chord_degree(1, :a3, :major)[3], chord_degree(1, :a3, :major)[3], _,
+              chord_degree(1, :a4, :major)[0], chord_degree(1, :a3, :major)[3], chord_degree(1, :a3, :major)[2], _,
 #              chord_degree(7, :a2, :major)[0], chord_degree(7, :a2, :major)[1], chord_degree(7, :a2, :major)[2], _
 )[n_idx], release: (ring bar/2,bar/2, bar/2)[n_idx], attack: 1.0,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]

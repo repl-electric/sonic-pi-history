@@ -370,7 +370,8 @@ end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;
-      with_fx :pitch_shift do
+      with_fx :reverb do
+        
         with_synth :dark_ambience do
           if m_idx % 4 == 0
             play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.2

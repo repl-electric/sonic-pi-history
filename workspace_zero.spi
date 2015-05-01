@@ -375,7 +375,7 @@ end
           if m_idx % 2 == 0
             play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.5
           else
-            play chord(:a4, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.5
+            play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.5
           end
           #x = play chord(:A3, :sus2)[0], release:(bar/2.0)*8, attack: 0.1, amp: 5.0, note_slide: 1 if m_idx % 4
           #sleep bar/2.0

@@ -352,7 +352,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
 
 puts notes[m_idx]
       if notes[m_idx] == note(:Fs3)
-sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_025_mezzo-forte_arco-col-legno-battuto.wav", amp: 5.0
+sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_15_pianissimo_arco-normal.wav", amp: 5.0
 
             end
 

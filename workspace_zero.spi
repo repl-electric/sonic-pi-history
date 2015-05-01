@@ -213,7 +213,7 @@ live_loop :dark_highlight do |n_idx|
     with_synth :dark_ambience do
       with_fx :lpf, cutoff: 100, mix: 1.0 do
       with_fx :reverb, room: 0.5 do
-        1.times{sync :start, :half}
+        1.times{sync :half}
 comment do
         play (ring
               chord_degree(1, :a3, :major)[0..2],_,_,_,

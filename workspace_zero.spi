@@ -441,5 +441,5 @@ end
   n_idx+=1
 end
 
-@brightlight_amp = 0.5
+@brightlight_amp = 0.0
 @piano_amp = 0.0

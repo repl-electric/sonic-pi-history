@@ -371,7 +371,7 @@ end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;
       with_fx :reverb, room: 1.0 do        
-        with_fx :slicer, phase: bar/2.0 do
+        with_fx :slicer, phase: bar/4.0 do
         with_synth :dark_ambience do
           if m_idx % 4 == 0
             play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, decay: bar*2, attack: 1.0

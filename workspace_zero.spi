@@ -226,6 +226,7 @@ comment do
               _,_,_,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
+end
 
 
         play (ring                  

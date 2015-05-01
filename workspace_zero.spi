@@ -351,15 +351,16 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
 
 puts "#{notes[m_idx]} == #{note(:Fs4)}"
+            with_fx :bitcrusher
       case notes[m_idx]
       when note(:Fs4)
       sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_15_pianissimo_arco-normal.wav", amp: 0.8
       when note(:Cs4)
       sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs3_15_pianissimo_arco-normal.wav", amp: 0.8           
-              when note(note(:E4))
+      when note(note(:E4))
       sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_E3_15_pianissimo_arco-normal.wav", amp: 0.8           
-
       end
+end
 
         if m_idx % 16 == 8
           back_notes = deg_seq(*%w{:A2 614})

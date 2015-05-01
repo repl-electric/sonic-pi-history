@@ -370,8 +370,11 @@ with_synth :beep do
 end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
-    end;end;end;
+    end;end;
+
     play deg_seq(*%w{:A4 1})
+
+end
   end;
   m_idx+= 1
 end

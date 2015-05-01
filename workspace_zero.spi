@@ -355,9 +355,10 @@ puts "#{notes[m_idx]} == #{note(:Fs4)}"
       when note(:Fs4)
       sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_15_pianissimo_arco-normal.wav", amp: 0.8
       when note(:Cs4)
-      sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs3_15_pianissimo_arco-normal.wav", amp: 0.8
+      sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs3_15_pianissimo_arco-normal.wav", amp: 0.8           
+              when note(note(:E4))
+      sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_E3_15_pianissimo_arco-normal.wav", amp: 0.8           
 
-              
       end
 
         if m_idx % 16 == 8

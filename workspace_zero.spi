@@ -394,7 +394,7 @@ end
       with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            #play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
 end
         end
       end

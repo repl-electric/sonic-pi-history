@@ -413,7 +413,7 @@ live_loop :dark_highlight do |n_idx|
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 #end
 
-#comment do
+comment do
         1.times{sync :quarter}
       with_fx :lpf, cutoff: 100, mix: 1.0 do
 
@@ -432,7 +432,7 @@ live_loop :dark_highlight do |n_idx|
           amp: (ring 1.2, 1.0, 1.1, 0.9)[n_idx]
 end
 end
-   #   end
+      end
     end
   end
   n_idx+=1

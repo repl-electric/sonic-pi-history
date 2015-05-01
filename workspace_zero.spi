@@ -234,7 +234,7 @@ end
  #             chord_degree(3, :a4, :major)[0], chord_degree(3, :a3, :major)[1], chord_degree(3, :a3, :major)[2], chord_degree(1, :a3, :major)[0],
               chord_degree(5, :a4, :major)[0], chord_degree(5, :a3, :major)[1], chord_degree(5, :a3, :major)[2], chord(:a3, :sus2),
 
-              chord_degree(5, :a4, :major)[0], chord_degree(5, :a3, :major)[1], chord(:a3, :diminished), 
+              chord_degree(5, :a4, :major)[0], chord_degree(5, :a3, :major)[1], chord(:a3, :diminished), chord(:a3, :sus2)
 
 
 

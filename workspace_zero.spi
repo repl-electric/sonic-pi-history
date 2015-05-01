@@ -350,6 +350,11 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
         #notes = deg_seq(*%w{:A3 21})
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
 
+      if notes[m_idx] == note(:Fs3)
+sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_025_mezzo-forte_arco-col-legno-battuto.wav", amp: 1.0
+
+            end
+
         if m_idx % 16 == 8
           back_notes = deg_seq(*%w{:A2 614})
 with_synth :beep do
@@ -382,8 +387,6 @@ end
           if m_idx % 4 == 0
 sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_A3_025_mezzo-forte_arco-col-legno-battuto.wav",amp: 1.0
             play chord(:a3, "7sus2")[0], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
-          else
-sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs3_025_mezzo-forte_arco-col-legno-battuto.wav", amp: 1.0
 end
         end
       end

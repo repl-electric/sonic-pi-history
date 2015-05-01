@@ -376,7 +376,7 @@ end
           sleep bar/4.0
           control x, note: chord(:A3, :sus2)[1]
           sleep bar/4.0
-          control x, note: chord(:A3, :sus2)[1]
+          control x, note: chord(:A3, :sus2)[2]
         end
       end
 end

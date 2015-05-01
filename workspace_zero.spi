@@ -441,3 +441,5 @@ end
   end
   n_idx+=1
 end
+
+@piano_amp = 1.0

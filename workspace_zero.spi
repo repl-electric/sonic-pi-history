@@ -370,19 +370,11 @@ end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;
-      with_fx :reverb, room: 1.0 do
-        
+      with_fx :reverb, room: 1.0 do        
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.2
-          else
-#            play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*2, attack: 0.5
+            play chord(:a3, :sus2)[0..3], amp: 2.0, release: bar*8, attack: 0.2
           end
-          #x = play chord(:A3, :sus2)[0], release:(bar/2.0)*8, attack: 0.1, amp: 5.0, note_slide: 1 if m_idx % 4
-          #sleep bar/2.0
-#          control x, note: chord(:A3, :sus2)[1]
- #         sleep bar/2.0
-          #control x, note: chord(:A3, :sus2)[3]
         end
       end
 end

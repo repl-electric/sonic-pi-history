@@ -213,7 +213,7 @@ live_loop :dark_highlight do |n_idx|
     with_synth :dark_ambience do
       with_fx :lpf, cutoff: 100, mix: 1.0 do
       with_fx :reverb, room: 0.5 do
-        1.times{sync :half}
+        1.times{sync :start, :quarter}
 comment do
         play (ring
               chord_degree(1, :a3, :major)[0..2],_,_,_,
@@ -229,13 +229,10 @@ comment do
 end
 
 
-        play (knit                  
+        play (ring                  
 #              chord_degree(1, :a4, :major)[0], chord_degree(1, :a3, :major)[1], chord_degree(1, :a3, :major)[1], chord_degree(1, :a3, :major)[0],
  #             chord_degree(3, :a4, :major)[0], chord_degree(3, :a3, :major)[1], chord_degree(3, :a3, :major)[2], chord_degree(1, :a3, :major)[0],
-              chord_degree(5, :a4, :major)[0], 4,
-              chord_degree(5, :a3, :major)[1], 4, chord_degree(5, :a3, :major)[2], 4, chord(:a3, :sus2), 4,
-
-
+              chord_degree(5, :a4, :major)[0], chord_degree(5, :a3, :major)[1], chord_degree(5, :a3, :major)[2], chord(:a3, :sus2),
               chord_degree(5, :a4, :major)[0], chord_degree(5, :a3, :major)[1], chord_degree(5, :a3, :major)[2], chord(:a3, :sus2)[0],
 
               chord_degree(5, :a3, :major)[2], chord_degree(5, :a3, :major)[1], chord_degree(4, :a4, :major)[0], degree(3, :a3, :major),
@@ -377,7 +374,7 @@ end;end;end;end;end
   p_idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 5.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 1.0 do
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do

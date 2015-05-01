@@ -158,7 +158,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
   p_idx+=1
 end
 #end
-@brightlight_amp = 0.0
 live_loop :bright_light do; with_fx :level, amp: @brightlight_amp do
     3.times {sync :half}
     use_synth :beep    #:mod_pulse #:mod_beep
@@ -442,4 +441,5 @@ end
   n_idx+=1
 end
 
+@brightlight_amp = 0.5
 @piano_amp = 0.5

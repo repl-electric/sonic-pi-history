@@ -273,25 +273,25 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
 #end
-live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
+live_loop :rolling_left do |idx|; with_fx :level, amp: 0.5 do
     #notes = deg_seq(*%w[:a2 1531 4333 :a3 1511 :A2 7])
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring deg_seq(*%w[:A2 145])[idx])
+    notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2)
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=10, detune1=0, detune2=0.001# do |n|
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001# do |n|
      # with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
     #end
   } 
   end
   idx+=1
 end
-live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
+live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=10, detune1=0, detune2=0.0001) #do |n|
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001) #do |n|
      # with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], amp: 1.0} if  n%2==0}};
     #end
     }
@@ -299,7 +299,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
   idx+=1
 end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.1 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do 
@@ -310,8 +310,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.1 do
                    chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1],
                    chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2])
 
-          notes = (knit chord(:a3, '7sus4')[2], 8, chord(:a4, '7sus4')[1], 8,
-                        chord(:a3, '7sus4')[2], 16)
+          #notes = (knit chord(:a3, '7sus4')[2], 8, chord(:a4, '7sus4')[1], 8,
+          #              chord(:a3, '7sus4')[2], 16)
 
           play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
         end
@@ -320,7 +320,7 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.1 do
     s_idx+=1
 end;end
 
-live_loop :percussion do |p_idx|; with_fx :level, amp: 0.01 do
+live_loop :percussion do |p_idx|; with_fx :level, amp: 0.00 do
 sync :half
 with_fx :reverb do;with_fx :echo, phase: (bar/8.0)+rrand(0.01, 0.02) do;  with_fx :pan, pan: (ring -0.25,0.25)[p_idx] do
 with_fx :pitch_shift, window_size: 0.1, time_dis: 0.1, pitch_dis: (ring 0.005,0.02)[p_idx] do

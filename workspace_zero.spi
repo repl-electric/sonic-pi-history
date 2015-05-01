@@ -375,7 +375,7 @@ def play_rollinz(n, dir)
   with_fx :reverb, mix_slide: 0.2 do |r|; with_fx :distortion, distort: 0.1, cutoff: 90 do
       play n, attack: 0.001,  pan: 0.8*dir, detune: 0.001
 end;end;end
-live_loop :hl do |idx| with_fx :level, amp: 0.1 do
+live_loop :hl do |idx| with_fx :level, amp: 0.2 do
     sync :flow
     play_darkness deg_seq(*%w{:A1 1235 1215})[idx], bar
     idx+=1

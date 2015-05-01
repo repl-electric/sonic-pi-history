@@ -339,7 +339,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.5 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
         notes = deg_seq(*%w{:A2 3161 5131 3131 3131})
         #notes = deg_seq(*%w{:A3 21})
-#        notes = deg_seq(*%w{:A2 4363 5333 3331 3131})
+        #notes = deg_seq(*%w{:A2 4363 5333 3331 3131})
 
 
 
@@ -368,7 +368,7 @@ with_synth :beep do
          # play back_notes[2], attack: 0.5,  amp: 0.5, release: 1.0, decay: 0.5
 end
         end
-        play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
+        play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15), cutoff: 100
     end;end;
       with_fx :reverb, room: 1.0 do        
         

@@ -150,7 +150,7 @@ live_loop :piano do |p_idx|;with_fx :level, amp: 0.2 do
   p_idx+=1
 end
 #end
-live_loop :bright_light do; with_fx :level, amp: 0.0 do
+live_loop :bright_light do; with_fx :level, amp: 0.2 do
     3.times {sync :half}
     use_synth :beep    #:mod_pulse #:mod_beep
     use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8
@@ -258,7 +258,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n_mix-0.09 unless n_mix < 0.2
 
           #bonus
-          #with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
+          with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
 
           #cue :bonus
         end

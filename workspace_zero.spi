@@ -91,7 +91,6 @@ def play_rollinz(n, dir)
 end;end;end
 
 @piano_amp = 0.0
-
 live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
     use_synth :beep; use_synth_defaults amp: 0.2, attack: 0.0, release: 0.1, decay: 0.1
     #    with_fx :reverb, room: 1.0, mix: 0.1  do
@@ -159,7 +158,8 @@ live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
   p_idx+=1
 end
 #end
-live_loop :bright_light do; with_fx :level, amp: 0.0 do
+@brightlight_amp = 0.0
+live_loop :bright_light do; with_fx :level, amp: @brightlight_amp do
     3.times {sync :half}
     use_synth :beep    #:mod_pulse #:mod_beep
     use_synth_defaults cutoff: 100, res: 1.001, amp: 0.8

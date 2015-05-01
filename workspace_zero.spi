@@ -374,8 +374,8 @@ end
         with_synth :dark_ambience do
           x = play chord(:A3, :sus2)[0], release:(bar/2.0)*8, attack: 0.1, amp: 5.0, note_slide: 1 if m_idx % 4
           sleep bar/2.0
-          control x, note: chord(:A3, :sus2)[1]
-          sleep bar/2.0
+#          control x, note: chord(:A3, :sus2)[1]
+ #         sleep bar/2.0
           control x, note: chord(:A3, :sus2)[2]
         end
       end

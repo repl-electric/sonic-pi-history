@@ -409,7 +409,7 @@ live_loop :hl do |idx| with_fx :level, amp: 0.2 do
 end;end
 live_loop :dark_highlight do |n_idx|
   _ = nil
-  with_fx :level, amp: 0.5 do
+  with_fx :level, amp: 0.6 do
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do
 #comment do

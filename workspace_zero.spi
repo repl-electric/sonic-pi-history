@@ -257,7 +257,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
   drums_on = false
   use_synth :mod_fm
   use_synth_defaults detune: 0.0005, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
-    mod_phase: 0
+    mod_phase: 2
   with_fx :reverb, mix_slide: 0.2, mix: 0.1 do |r_fx|
     #   with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 1.0  do |c_fx|
@@ -374,7 +374,7 @@ end;end;end;end;end
   p_idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.2 do
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do

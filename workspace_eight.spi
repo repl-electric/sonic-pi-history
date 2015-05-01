@@ -1,4 +1,4 @@
 
 puts  deg_seq(*%w{:A3 3161 5131 3131 3131})
 
-puts note(:Cs4)
+puts note(:Ds4)

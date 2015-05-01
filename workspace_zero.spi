@@ -237,7 +237,7 @@ end
 
 #              chord_degree(7, :a2, :major)[0], chord_degree(7, :a2, :major)[1], chord_degree(7, :a2, :major)[2], _
 )[n_idx], release: (ring bar*2, bar, bar)[n_idx], attack: 1.0,
-          amp: (ring 1.1, 1.0, 1.1, 1.0)[n_idx]
+          amp: (ring 1.1, 1.0, 1.1, 0.9)[n_idx]
 
       end
       end

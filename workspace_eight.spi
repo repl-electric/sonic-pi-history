@@ -1,4 +1,4 @@
 play chord(:a3, '7+5-9')
 sleep 1
 
-play chord(:a3, '11+')
+play chord(:a3,'6*9')

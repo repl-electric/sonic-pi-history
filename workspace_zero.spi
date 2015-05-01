@@ -372,7 +372,7 @@ end
     end;end;
       with_fx :pitch_shift do
         with_synth :dark_ambience do
-          play deg_seq(*%w{:A4 1133}), attack: 0.1, amp: 1.0 if m_idx % 2
+          play deg_seq(*%w{:A4 133}), attack: 0.1, amp: 1.0 if m_idx % 2
         end
       end
 end

@@ -372,12 +372,11 @@ end
     end;end;
       with_fx :pitch_shift do
         with_synth :dark_ambience do
-          play chord(:A3, :sus2)[0], attack: 0.1, amp: 1.0 if m_idx % 2
+          play chord(:A3, :sus2)[0], attack: 0.1, amp: 1.0 if m_idx % 4
           sleep bar/2.0
-          play chord(:A3, :sus2)[1], attack: 0.1, amp: 1.0 if m_idx % 2
+          play chord(:A3, :sus2)[1], attack: 0.1, amp: 1.0 if m_idx % 4
           sleep bar/2.0
-          play chord(:A3, :sus2)[2], attack: 0.1, amp: 1.0 if m_idx % 2
-
+          play chord(:A3, :sus2)[2], attack: 0.1, amp: 1.0 if m_idx % 4
         end
       end
 end

@@ -233,7 +233,7 @@ live_loop :dark_highlight do |n_idx|
 
 
               chord_degree(7, :a2, :major)[0], chord_degree(7, :a2, :major)[1], chord_degree(7, :a2, :major)[2], _
-)[n_idx], release: (ring bar*16,bar*8,bar*8)[n_idx], attack: 1.0,
+)[n_idx], release: (ring bar*32,bar*8,bar*8)[n_idx], attack: 1.0,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 
 

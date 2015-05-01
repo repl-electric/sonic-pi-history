@@ -276,9 +276,9 @@ end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.5 do
     #notes = deg_seq(*%w[:a2 1531 4333 :a3 1511 :A2 7])
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring deg_seq(*%w[:A2 4])[idx])
+    notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2)
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=120, detune2=0.001# do |n|
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001# do |n|
      # with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
     #end
   } 
@@ -291,7 +291,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=100, detune2=0.0001) #do |n|
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001) #do |n|
      # with_synth(:beep){with_fx(:reverb){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], amp: 1.0} if  n%2==0}};
     #end
     }
@@ -299,7 +299,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
   idx+=1
 end
 
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.2 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do 
@@ -347,7 +347,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
         notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
-        notes = deg_seq(*%w{:A3 21})
+        #notes = deg_seq(*%w{:A3 21})
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
 
 puts "#{notes[m_idx]} == #{note(:Fs4)}"
@@ -402,14 +402,14 @@ end
   end;
   m_idx+= 1
 end
-live_loop :hl do |idx| with_fx :level, amp: 0.2 do
+live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     sync :flow
     play_darkness deg_seq(*%w{:A1 1235 1215})[idx], bar
     idx+=1
 end;end
 live_loop :dark_highlight do |n_idx|
   _ = nil
-  with_fx :level, amp: 0.5 do
+  with_fx :level, amp: 0.0 do
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do
 #comment do
@@ -454,4 +454,4 @@ end
 end
 
 @brightlight_amp = 0.0
-@piano_amp = 0.2
+@piano_amp = 0.0

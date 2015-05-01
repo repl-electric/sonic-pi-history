@@ -373,9 +373,9 @@ end
       with_fx :pitch_shift do
         with_synth :dark_ambience do
           x = play chord(:A3, :sus2)[0], release:(bar/2.0)*2, attack: 0.1, amp: 1.0, note_slide: 2 if m_idx % 4
-          sleep bar/4.0
+          sleep bar/2.0
           control x, note: chord(:A3, :sus2)[1]
-          sleep bar/4.0
+          sleep bar/2.0
           control x, note: chord(:A3, :sus2)[2]
         end
       end

@@ -310,8 +310,8 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.1 do
                    chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1], chord(root, chord_name)[1],
                    chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2], chord(root, chord_name)[2])
 
-          #notes = (knit chord(:a4, '7sus4')[2], 8, chord(:a4, '7sus4')[1], 8,
-          #              chord(:a3, '7sus4')[2], 16)
+          notes = (knit chord(:a4, '7sus4')[2], 8, chord(:a4, '7sus4')[1], 8,
+                        chord(:a3, '7sus4')[2], 16)
 
           play notes[s_idx], cutoff: 60, attack: 1.0, release: (ring bar*4, bar*3)[s_idx], decay: (ring bar*4, bar*4)[s_idx], env_curve: 6, res: 0.2, amp: 1.0
         end

@@ -208,10 +208,10 @@ live_loop :bright_light do; with_fx :level, amp: 0.0 do
   end
 end
 live_loop :dark_highlight do |n_idx|
+  _ = nil
   with_fx :level, amp: 4.0 do
     with_synth :dark_ambience do
       with_fx :lpf, cutoff: 100 do
-      _ = nil
       with_fx :reverb, room: 0.0 do
         1.times{sync :whole}
 #        play (ring

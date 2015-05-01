@@ -337,7 +337,10 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 1.5 do
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
-        notes = deg_seq(*%w{:A3 3 :A4 1 :A3 61 5131 3131 3131})
+#        notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
+
+        notes = deg_seq(*%w{:A3 4161 5131 3131 3131})
+
 
         if m_idx % 16 == 8
           back_notes = deg_seq(*%w{:A2 614})

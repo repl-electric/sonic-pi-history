@@ -373,7 +373,7 @@ end
       with_fx :pitch_shift do
         with_synth :dark_ambience do
           if m_idx % 2 == 0
-            play chord(:a3, :sus2), amp: 2.0, release: bar*2, attack: 0.1
+            play chord(:a3, :sus2), amp: 2.0, release: bar*2, attack: 0.5
           else
             play chord(:b3, :sus2), amp: 2.0, release: bar*2
           end

@@ -228,7 +228,7 @@ comment do
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 end
 
-
+comment do
         play (ring                  
 #              chord_degree(1, :a4, :major)[0], chord_degree(1, :a3, :major)[1], chord_degree(1, :a3, :major)[1], chord_degree(1, :a3, :major)[0],
  #             chord_degree(3, :a4, :major)[0], chord_degree(3, :a3, :major)[1], chord_degree(3, :a3, :major)[2], chord_degree(1, :a3, :major)[0],
@@ -242,6 +242,7 @@ end
 #              chord_degree(7, :a2, :major)[0], chord_degree(7, :a2, :major)[1], chord_degree(7, :a2, :major)[2], _
 )[n_idx], release: (ring bar*2, bar, bar, bar*2)[n_idx], attack: (ring 1.0, 0.5, 0.5, 0.5)[n_idx],
           amp: (ring 1.2, 1.0, 1.1, 0.9)[n_idx]
+end
 
       end
       end

@@ -339,7 +339,7 @@ end;end;end;end;end
   p_idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.2 do
     sync :whole
     use_synth :beep
     with_fx :lpf, cutoff: 80, mix: 0.0 do
@@ -354,7 +354,7 @@ puts "#{notes[m_idx]} == #{note(:Fs4)}"
             with_fx :slicer, phase: bar do
       case notes[m_idx]
       when note(:Fs4)
-     # sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs2_15_pianissimo_arco-normal.wav", amp: 0.8
+      sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs2_15_pianissimo_arco-normal.wav", amp: 0.8
       when note(:Cs4)
       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs2_15_pianissimo_arco-normal.wav", amp: 0.4           
       when note(note(:E4))

@@ -371,7 +371,7 @@ end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
     end;end;
       with_fx :pitch_shift do
-        play deg_seq(*%w{:A4 1}), attack: 0.1, amp: 0.1
+        play deg_seq(*%w{:A4 1}), attack: 0.1, amp: 0.2
       end
 end
   end;

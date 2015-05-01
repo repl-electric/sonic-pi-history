@@ -383,7 +383,7 @@ end
 sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_A3_025_mezzo-forte_arco-col-legno-battuto.wav",amp: 5.0
             play chord(:a3, "7sus2")[0], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
           else
-sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs2_025_mezzo-forte_arco-col-legno-battuto.wav"
+sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs2_025_mezzo-forte_arco-col-legno-battuto.wav", amp: 2.0
 end
         end
       end

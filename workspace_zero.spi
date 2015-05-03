@@ -488,10 +488,10 @@ end
 
 dur = sleep sample_duration(ambi_s(:crackling))
 live_loop :crackler do
-amp = 0.5
+a = 0.5
 sync :whole
-s = sample ambi_s(:crackling), amp: amp, rate: 0.4
-4.times{|n| sleep dur/4.0; ctl s, amp: amp - (n*0.1)}
+s = sample ambi_s(:crackling), a: amp, rate: 0.4
+4.times{|n| sleep dur/4.0; ctl s, amp: a - (n*0.1)}
 end
 
 @brightlight_amp = 0.0

@@ -402,9 +402,9 @@ end
         #notes = deg_seq(*%w{:A3           3161 5131 3131 3131})
         if m_idx % 4 == 0 
                     with_synth :dsaw do
-                      play deg_seq(*%w{:A1 1 _ _ _ 
-                                           3 _ _ _
+                      play deg_seq(*%w{:A1 4 _ _ _ 
                                            1 _ _ _
+                                           5 _ _ _
                                            5 _ _ _
                                            })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar*4
                     end
@@ -412,7 +412,7 @@ end
 
         if m_idx % 4 == 0 
                     with_synth :beep do
-                      play deg_seq(*%w{:A1 5 _ _ _ 
+                      play deg_seq(*%w{:A1 2 _ _ _ 
                                        :A2 _ _ _ _
                                            _ _ _ _
                                            7 _ _ _

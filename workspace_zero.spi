@@ -399,8 +399,8 @@ end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
 
 
-        notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
-        play deg_seq(*%w{:A2 1235 1215})[idx], bar
+        #notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
+        play deg_seq(*%w{:A2 1235 1215})[m_idx], bar
 
 
 

@@ -10,6 +10,7 @@ v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-norma
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
 def ambience(no)
   s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
+  s.sort!
   s[no]
 end
 def live(name, opts={}, &block)

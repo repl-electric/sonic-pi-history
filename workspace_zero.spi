@@ -410,6 +410,16 @@ end
                     end
                   end
 
+        if m_idx % 4 == 0 
+                    with_synth :beep do
+                      play deg_seq(*%w{:A2 _ _ _ _ 
+                                           _ _ _ _
+                                           _ _ _ _
+                                           7 _ _ _
+                                           })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar*4
+                    end
+                  end
+
 
 
     end;end;end

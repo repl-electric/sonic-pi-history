@@ -412,7 +412,8 @@ end
 
         if m_idx % 4 == 0 
                     with_synth :beep do
-                      play deg_seq(*%w{:A2 2 _ _ _ 
+                      play deg_seq(*%w{:A1 7 _ _ _ 
+                                       :A2
                                            _ _ _ _
                                            _ _ _ _
                                            7 _ _ _

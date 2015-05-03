@@ -402,6 +402,8 @@ end
 
                   if notes[m_idx] == note(:A3)
                   sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_noir_A.wav"
+else if notes[m_idx] == note(:Cs4)
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/92_C\#_PostRockChords_01_SP.wav"
 end
 
 

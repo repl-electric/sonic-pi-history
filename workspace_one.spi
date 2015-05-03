@@ -269,7 +269,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           if cutoff > 80 && distort_on
             control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
-          play notes[n+3], attack: 0.002,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
+          play notes[n+3], attack: 0.001,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2

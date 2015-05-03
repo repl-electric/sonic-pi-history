@@ -438,7 +438,7 @@ end
                   #5 7 2 4
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    with_synth :beep do
+                    with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _
                                        :A2 6 _ _ _

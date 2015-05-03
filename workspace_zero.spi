@@ -460,7 +460,7 @@ end
 
 live_loop :crackler do
 sync :whole
-sample ambi_s(14)
+sample ambi_s(15)
 sleep sample_duration(ambi_s(11))
 end
 

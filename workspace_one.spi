@@ -230,12 +230,12 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
   distort_on = true
   drums_on = false
   use_synth :mod_fm
-  use_synth_defaults detune: 0.5, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
+  use_synth_defaults detune: 0.0005, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
     mod_phase: 2
   with_fx :reverb, mix_slide: 0.2, mix: 0.1 do |r_fx|
     #   with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 1.0  do |c_fx|
-      with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.5 do |d_fx|
+      with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.1 do |d_fx|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
@@ -269,7 +269,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           if cutoff > 80 && distort_on
             control(r_fx, room: 1.0, mix:  n_mix); control(d_fx, distort: 0.0)
           end
-          play notes[n+3], attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
+          play notes[n], attack: 0.005,  pan: 0.5*direction, detune: (detune_factor2+(n*0.005))
           sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max+0.2)  if drums_on
 
           n_mix-0.09 unless n_mix < 0.2

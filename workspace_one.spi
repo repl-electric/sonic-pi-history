@@ -415,7 +415,7 @@ end
                       play deg_seq(*%w{:A1 2 _ _ _ 
                                        :A2 _ _ _ _
                                            _ _ _ _
-                                           7 _ _ _
+                                       :A2 7 _ _ _
                                            })[m_idx], decay: bar*2, amp: 0.5, cutoff: 85, sustain: bar*2
                     end
                   end

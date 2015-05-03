@@ -463,7 +463,7 @@ end
 
 live_loop :crackler do
 sync :whole
-sample ambi_s(:crackling)
+sample ambi_s(:crackling), amp: 0.5, rate: 0.8
 sleep sample_duration(ambi_s(:crackling))
 end
 

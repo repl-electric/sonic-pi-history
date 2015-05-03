@@ -57,8 +57,8 @@ def play_darkness(n, bar)
   with_fx(:pitch_shift, pitch_dis: 0.01){with_fx(:reverb, mix: 0.5){with_synth(:prophet){ play n, cutoff: 70, amp: 3.0,  attack: 0.0, release: bar*4}}}
 end
 
-live_loop :a do |idx|play_darkness deg_seq(*%w{:a2 1    6    6    4    4    4    6    6   })[idx],bar;sleep bar*2;idx+=1;end
-live_loop :melody do |idx|    play deg_seq(*%w{:a3 3111 6111 5111 4111 3111 3111 3111 4112})[idx],amp: ring(1.2,0.9,1.1,0.9)[idx];sleep bar/4.0;idx+=1;end
+live_loop :a do |idx|play_darkness deg_seq(*%w{:A2 1    6    6    4    4    4    6    6   })[idx],bar;sleep bar*2;idx+=1;end
+live_loop :melody do |idx|    play deg_seq(*%w{:A3 3111 6111 5111 4111 3111 3111 3111 4112})[idx],amp: ring(1.2,0.9,1.1,0.9)[idx];sleep bar/4.0;idx+=1;end
 #live_loop :beat do   |idx|   play deg_seq(*%w{:A2 5555 4444 1111 1111 5555 4444 7777 1111})[idx], attack:ring( 0.01,0.1,0.01,0.1)[idx];sleep bar/2.0;idx+=1;end
 #live_loop :beat2 do  |idx|   play deg_seq(*%w{:A2 1111 6666 5555 5555 1111 6666 5555 7777})[idx];sleep bar/2.0;idx+=1;end
 live_loop :beat3 do  |idx|    play deg_seq(*%w{:A1 1 _ _ _  _ _ _ _  _ _ _ _  _ _ _ _})[idx],release:2;sleep bar/4.0;idx+=1;end

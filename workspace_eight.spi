@@ -4,4 +4,4 @@ def ambience(no)
   return s[no]
 end
 
-puts ambience(1)
+sample puts ambience(1)

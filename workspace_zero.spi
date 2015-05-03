@@ -402,7 +402,7 @@ end
         #notes = deg_seq(*%w{:A3           3161 5131 3131 3131})
         if m_idx % 4 == 0 
                     with_synth :dsaw do
-                      play deg_seq(*%w{:A2 1 _ _ _ 
+                      play deg_seq(*%w{:A1 1 _ _ _ 
                                            3 _ _ _
                                            1 _ _ _
                                            5 _ _ _

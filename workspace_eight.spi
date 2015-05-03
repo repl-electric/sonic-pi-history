@@ -1,8 +1,8 @@
-play :A 
-play :Cs
-play :E
-play :G
+play :E 
+play :Gs
+play :B
+play :D
 
-sleep 1
+sleep 1# E - G# - B - D
 
 play chord_degree(1, :A3, :major)

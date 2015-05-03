@@ -403,7 +403,7 @@ end
         if m_idx % 4 == 0 
                     with_synth :dsaw do
                       play deg_seq(*%w{:A2 1 _ _ _ 
-                                           1 _ _ _
+                                           3 _ _ _
                                            1 _ _ _
                                            1 _ _ _
                                            })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80

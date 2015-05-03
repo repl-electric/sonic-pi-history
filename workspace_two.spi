@@ -518,6 +518,7 @@ end
 
 live_loop :crackler do;with_fx :level, amp: 0.2 do
 crack_dur = sample_duration(ambi_s(:crackling))
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Textures/Crackle_01_SP.wav"
 a = 0.5
 sync :whole
 s = sample ambi_s(:crackling), amp: a, rate: 0.1

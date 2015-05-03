@@ -459,7 +459,7 @@ end
 
 live_loop :crackler do
 sync :start
-sample ambience(1) 
+sample ambience(1), amp: 10
 sleep sample_duration(ambience(9))
 end
 

@@ -1,1 +1,1 @@
-puts chord(:A3, :M7)
+play chord(:A3, :M7)

@@ -1,7 +1,4 @@
-play :E3 
-play :Gs3
-play :B4
-play :D4
+play :E3, :Gs3, :B4, :D4
 
 sleep 1# E - G# - B - D
 

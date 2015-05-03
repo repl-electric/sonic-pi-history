@@ -429,7 +429,7 @@ end
                     with_synth :beep do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _
-                                       :A1 _ _ _ _
+                                       :A1 1 _ _ _
                                            1 _ _ _
                                           })[m_idx], decay: bar*4, amp: 0.7, sustain: bar/2.0
                     end

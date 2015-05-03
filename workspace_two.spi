@@ -365,7 +365,7 @@ puts "#{notes[m_idx]} == #{note(:Fs4)}"
             with_fx :slicer, phase: bar do
       case notes[m_idx]
                     when note(:A3)
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2
+#sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2
                       sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/108_A_PostRockChords_01_SP.wav"
                     when note(:Fs4)
 #sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Sampler\ Formats/Battery/Chords\ 80BPM\ Samples/am_chrd80_flights_F\#m9.wav"

@@ -6,4 +6,4 @@ play chord_degree(4,:a2, :major)[0..3], release: 2
 sleep 1
 play chord_degree(5,:a2, :major)[0..3], release: 2
 sleep 1
-play chord_degree(1,:a2, :major)[0..3], release: 2
+#zplay chord_degree(1,:a2, :major)[0..3], release: 2

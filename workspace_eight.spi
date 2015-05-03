@@ -1,3 +1,9 @@
-play [:E3, :Gs3, :B4, :D4]
-sleep 1# E - G# - B - D
-play chord_degree(1, :A3, :major)
+def ambi_s(name)
+  s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
+  s.sort!
+  if name.is_a? Integer
+    s[name]
+  else
+    s.select{|s| s =~ /#{name}/}[0]
+      end
+      end

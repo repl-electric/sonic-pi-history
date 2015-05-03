@@ -406,7 +406,7 @@ end
                                            3 _ _ _
                                            1 _ _ _
                                            5 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar/2.0
+                                           })[m_idx], decay: bar*8, amp: 0.4,  sustain: bar/2.0
                     end
                   end
 

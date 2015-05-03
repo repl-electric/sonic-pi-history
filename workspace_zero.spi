@@ -349,7 +349,7 @@ end;end;end;end;end
 end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
-    m_idx = (m_idx % 16) + 16
+    #m_idx = (m_idx % 16) + 16
     sync :whole
     use_synth :beep
     with_fx :lpf, cutoff: 80, mix: 0.0 do

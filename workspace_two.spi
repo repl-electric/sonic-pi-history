@@ -399,7 +399,10 @@ with_synth :beep do
 end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
+
+                  if notes[m_idx] == note(:A3)
                   sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_noir_A.wav"
+end
 
 
         #notes = deg_seq(*%w{:A3           3161 5131 3131 3131})

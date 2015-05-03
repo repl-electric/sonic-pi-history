@@ -8,7 +8,7 @@ p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__pi
 p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
-def ambience(no)
+def ambi_s(no)
   s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
   s.sort!
   s[no]
@@ -459,8 +459,8 @@ end
 
 live_loop :crackler do
 sync :start
-sample ambience(2), amp: 10
-sleep sample_duration(ambience(10))
+sample amb_s(9), amp: 10
+sleep sample_duration(ambi_s(9))
 end
 
 @brightlight_amp = 0.0

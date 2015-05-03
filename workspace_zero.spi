@@ -403,7 +403,7 @@ end
         if m_idx % 4 == 0 
                     with_synth :fm do
                       use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
-                      play deg_seq(*%w{:A1 1 _ _ _ 
+                      play deg_seq(*%w{:A1 3 _ _ _ 
                                            3 _ _ _
                                            5 _ _ _
                                            5 _ _ _

@@ -399,10 +399,14 @@ end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
 
 
-        #notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
+        #notes = deg_seq(*%w{:A3           3161 5131 3131 3131})
         if m_idx % 4 == 0 
                     with_synth :dsaw do
-                      play deg_seq(*%w{:A2 1 _ _ _ 1 _ _ _})[m_idx], decay: bar*8, amp: 0.4, cutoff: 80
+                      play deg_seq(*%w{:A2 1 _ _ _ 
+                                           1 _ _ _}
+                                           1 _ _ _
+                                           1 _ _ _
+                                           )[m_idx], decay: bar*8, amp: 0.4, cutoff: 80
                     end
                   end
 

@@ -401,7 +401,7 @@ end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
 
                   if notes[m_idx] == note(:A3)
-                  sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_noir_A.wav"
+                  #sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_noir_A.wav"
 elsif notes[m_idx] == note(:Cs4)
 sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/92_C\#_PostRockChords_01_SP.wav"
 end

@@ -406,7 +406,7 @@ end
                                            3 _ _ _
                                            1 _ _ _
                                            5 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar
+                                           })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar/2.0
                     end
                   end
 
@@ -416,7 +416,7 @@ end
                                        :A2 _ _ _ _
                                            _ _ _ _
                                            7 _ _ _
-                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar
+                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar/2.0
                     end
                   end
 

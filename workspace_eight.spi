@@ -1,6 +1,7 @@
 def ambience(no)
   s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
   s.sort!
+puts s
   s[no]
 end
 

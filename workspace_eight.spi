@@ -1,6 +1,9 @@
 play chord_degree(5, :A3, :major), release: 2
-play degree(7, :A3, :major), release: 1
+#play degree(7, :A3, :major), release: 1
 
 sleep 2
 
 play chord_degree(1, :A3, :major), release: 2
+
+
+5 7 9

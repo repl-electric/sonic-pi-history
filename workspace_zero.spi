@@ -487,7 +487,7 @@ end
   n_idx+=1
 end
 
-live_loop :crackler do
+live_loop :crackler do;with_fx :level, amp: 0.2
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole
@@ -495,7 +495,7 @@ s = sample ambi_s(:crackling), amp: a, rate: 0.4
 4.times{|n| sleep crack_dur/4.0;
 s = sample ambi_s(:crackling), amp: a, rate: (n*0.1) 
 }
-end
+end;end
 
 @brightlight_amp = 0.0
 @piano_amp = 0.0

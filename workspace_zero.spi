@@ -400,7 +400,7 @@ end
 
 
         #notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
-        play deg_seq(*%w{:A2 1235 1215})[m_idx], bar
+        play deg_seq(*%w{:A2 1235 1215})[m_idx]
 
 
 

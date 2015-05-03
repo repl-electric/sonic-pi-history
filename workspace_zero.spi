@@ -408,6 +408,11 @@ end
                                        :A1 8 _ _ _
                                            5 _ _ _
                                        :A1 5 _ _ _
+
+                                       :A1 1 _ _ _
+                                       :A1 8 _ _ _
+                                           5 _ _ _
+                                       :A1 2_ _ _
                                            })[m_idx], decay: bar*8, amp: 0.8,  sustain: bar/2.0
                     end
                   end
@@ -419,6 +424,11 @@ end
                                        :A3 3 _ _ _
                                        :A2 1 _ _ _
                                        :A2 1 _ _ _
+
+                                       :A2 5 _ _ _
+                                       :A3 3 _ _ _
+                                       :A2 1 _ _ _
+                                       :A2 6 _ _ _
                                            })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar/2.0
                     end
                     end
@@ -429,6 +439,11 @@ end
 #                    with_fx :slicer, phase: bar do
                     with_synth :beep do
                       play deg_seq(*%w{:A2 _ _ _ _ 
+                                       :A3 _ _ _ _
+                                       :A2 7 _ _ _
+                                           _ _ _ _
+
+                                       :A2 _ _ _ _
                                        :A3 _ _ _ _
                                        :A2 7 _ _ _
                                            _ _ _ _

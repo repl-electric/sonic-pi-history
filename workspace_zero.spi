@@ -419,7 +419,7 @@ end
                   end
 
         if m_idx % 4 == 0 
-                    with_fx :slicer, phase: (knit bar*4, 4 bar*6, 4) do
+                    with_fx :slicer, phase: (knit bar*4, 4, bar*6, 4) do
                     with_synth :beep do
                       play deg_seq(*%w{:A2 5 _ _ _ 
                                        :A3 3 _ _ _

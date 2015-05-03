@@ -487,8 +487,8 @@ end
   n_idx+=1
 end
 
-dur = sleep sample_duration(ambi_s(:crackling))
 live_loop :crackler do
+dur = sleep sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole
 s = sample ambi_s(:crackling), amp: a, rate: 0.4

@@ -459,7 +459,7 @@ end
 end
 
 live_loop :crackler do
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/am_amb70_crackling.wav" 
+ambience(9)
 sleep 
 end
 

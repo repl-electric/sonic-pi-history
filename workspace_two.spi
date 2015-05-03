@@ -441,7 +441,7 @@ end
                     with_synth :beep do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _
-                                       :A3 7 _ _ _
+                                       :A2 7 _ _ _
                                            _ _ _ _
 
                                        :A2 _ _ _ _

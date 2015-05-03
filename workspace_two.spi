@@ -361,7 +361,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
         # notes = deg_seq(*%w{:A3 21})
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
 
-      with_fx :slicer, phase: bar/8 do
+      with_fx :slicer, phase: bar/4 do
       case notes[m_idx]
                     when note(:A3)
 #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2

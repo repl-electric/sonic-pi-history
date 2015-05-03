@@ -365,7 +365,7 @@ puts "#{notes[m_idx]} == #{note(:Fs4)}"
             with_fx :slicer, phase: bar do
       case notes[m_idx]
                     when note(:A3)
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/A_BowedGuitarNote_01_SP.wav"
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.1
 #                      sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/108_A_PostRockChords_01_SP.wav"
                     when note(:Fs4)
 #sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Sampler\ Formats/Battery/Chords\ 80BPM\ Samples/am_chrd80_flights_F\#m9.wav"
@@ -373,11 +373,11 @@ sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Fs2_15_pianissimo_arco-normal.wav", amp: 0.8
                     when note(:Cs4)
 #                      sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/92_C\#_PostRockChords_01_SP.wav"
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.1
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs2_15_pianissimo_arco-normal.wav", amp: 0.4
                     when note(:E4)
 #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/E_BowedGuitarHarm_01_SP.wav"
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/E_BowedGuitarNote_01_SP.wav"
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Bowed\ Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.1
 #                      sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/92_E_PostRockChords_01_SP.wav"
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_E2_15_pianissimo_arco-normal.wav", amp: 0.5
                     end

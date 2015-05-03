@@ -460,7 +460,7 @@ end
 live_loop :crackler do
 sync :start
 sample ambience(2), amp: 10
-sleep sample_duration(ambience(2))
+sleep sample_duration(ambience(10))
 end
 
 @brightlight_amp = 0.0

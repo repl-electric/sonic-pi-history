@@ -441,12 +441,12 @@ end
                     with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _
-                                       :A2 6 _ _ _
+                                       :A4 6 _ _ _
                                            _ _ _ _
 
                                        :A2 _ _ _ _
                                        :A3 _ _ _ _
-                                       :A2 7 _ _ _
+                                       :A4 7 _ _ _
                                            _ _ _ _
                                           })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0, cutoff: 80
                     end

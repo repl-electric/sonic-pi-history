@@ -1,5 +1,3 @@
 play [:E3, :Gs3, :B4, :D4]
-
 sleep 1# E - G# - B - D
-
 play chord_degree(1, :A3, :major)

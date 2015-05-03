@@ -492,7 +492,9 @@ crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole
 s = sample ambi_s(:crackling), amp: a, rate: 0.4
-4.times{|n| sleep crack_dur/4.0; ctl s, amp: a - (n*0.1)}
+4.times{|n| sleep crack_dur/4.0;
+s = sample ambi_s(:crackling), amp: a, rate: (n*0.1) 
+}
 end
 
 @brightlight_amp = 0.0

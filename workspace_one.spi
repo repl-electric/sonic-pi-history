@@ -275,26 +275,26 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n_mix-0.09 unless n_mix < 0.2
 
           #bonus
-          with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
+          #with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
 
           #cue :bonus
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
 #end
-live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
+live_loop :rolling_left do |idx|; with_fx :level, amp: 0.5 do
     #notes = deg_seq(*%w[:a2 1531 4333 :a3 1511 :A2 7])
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    #notes = (ring deg_seq(*%w[:A2 1])[idx])
+    notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar/2)
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001# do |n|
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=80, detune1=0, detune2=0.001# do |n|
      # with_synth(:beep){with_fx(:slicer, phase: bar){play deg_seq(*%w{:A3 3161 5141 3131 3141})[n*1+rand_i(1)], attack: 0.01, release: 0.01, decay: 1.0} if  n%2==0}
     #end
   } 
   end
   idx+=1
 end
-live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
+live_loop :rolling_right do |idx|;with_fx :level, amp: 0.5 do
     #    notes = deg_seq(*%w[:A2 3753 7511 :A3 353 :A2 1])
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
 #    notes = (ring deg_seq(*%w[:A2 561])[idx])
@@ -349,13 +349,15 @@ end;end;end;end;end
 end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do
+    #m_idx = (m_idx % 16) + 16
     sync :whole
     use_synth :beep
     with_fx :lpf, cutoff: 80, mix: 0.0 do
-    with_fx :reverb, room: 1.0, dry: 1.0, mix: 0.4 do
+    with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.4 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
-        notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
+        notes = deg_seq(*%w{:A3 3161 5131 3131 3131
+                                3163 5131 3131 4121})
         # notes = deg_seq(*%w{:A3 21})
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
 
@@ -401,24 +403,56 @@ end
 
         #notes = deg_seq(*%w{:A3           3161 5131 3131 3131})
         if m_idx % 4 == 0 
-                    with_synth :dsaw do
-                      play deg_seq(*%w{:A1 4 _ _ _ 
-                                           1 _ _ _
+                    with_synth :fm do
+                      use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2
+                      play deg_seq(*%w{:A1 1 _ _ _ 
+                                       :A1 8 _ _ _
                                            5 _ _ _
+                                       :A1 5 _ _ _
+
+                                       :A1 1 _ _ _
+                                       :A1 6 _ _ _
                                            5 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.4, cutoff: 80, sustain: bar*4
+                                       :A2 2 _ _ _
+                                           })[m_idx], decay: bar*8, amp: 0.8,  sustain: bar/2.0
                     end
                   end
 
         if m_idx % 4 == 0 
+                    with_fx :slicer, phase: (knit bar*4, 4, bar*6, 4)[m_idx] do
                     with_synth :beep do
-                      play deg_seq(*%w{:A1 2 _ _ _ 
-                                       :A2 _ _ _ _
-                                           6 _ _ _
-                                       :a2 7 _ _ _
-                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 85, sustain: bar*4
+                      play deg_seq(*%w{:A2 5 _ _ _ 
+                                       :A3 3 _ _ _
+                                       :A2 1 _ _ _
+                                       :A2 1 _ _ _
+
+                                       :A2 5 _ _ _
+                                       :A3 3 _ _ _
+                                       :A2 1 _ _ _
+                                       :A2 6 _ _ _
+                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar/2.0
+                    end
                     end
                   end
+
+
+        if m_idx % 4 == 0 
+#                    with_fx :slicer, phase: bar do
+                    with_synth :beep do
+                      play deg_seq(*%w{:A2 _ _ _ _ 
+                                       :A3 _ _ _ _
+                                       :A2 7 _ _ _
+                                           _ _ _ _
+
+                                       :A2 _ _ _ _
+                                       :A3 _ _ _ _
+                                       :A2 7 _ _ _
+                                           _ _ _ _
+                                          })[m_idx], decay: bar*2, amp: 0.7, sustain: bar/2.0, cutoff: 80
+                    end
+ #                   end
+                  end
+
 
 
 
@@ -486,11 +520,15 @@ end
   n_idx+=1
 end
 
-live_loop :crackler do
+live_loop :crackler do;with_fx :level, amp: 0.2 do
+crack_dur = sample_duration(ambi_s(:crackling))
+a = 0.5
 sync :whole
-sample ambi_s(:crackling), amp: 0.5, rate: 0.4
-sleep sample_duration(ambi_s(:crackling))
-end
+s = sample ambi_s(:crackling), amp: a, rate: 0.1
+4.times{|n| sleep crack_dur/4.0;
+s = sample ambi_s(:crackling), amp: a, rate: (n*0.2) 
+}
+end;end;
 
 @brightlight_amp = 0.0
 @piano_amp = 0.0

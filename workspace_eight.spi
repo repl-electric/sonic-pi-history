@@ -1,1 +1,3 @@
 play chord(:A3, :M7)
+sleep 1
+play chord_degree(1, :A3, :major)

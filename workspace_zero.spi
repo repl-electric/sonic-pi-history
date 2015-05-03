@@ -397,13 +397,20 @@ with_synth :beep do
 end
         end
         play notes[m_idx], amp: 1, decay: 0.1 + rrand(0.0,0.15)
+
+
+        notes = deg_seq(*%w{:A3 3161 5131 3131 3131})
+        play deg_seq(*%w{:A2 1235 1215})[idx], bar
+
+
+
     end;end;end
 
 #      3161 5131 3131 3131
       with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+#            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
 end
         end
       end

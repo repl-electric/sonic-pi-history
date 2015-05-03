@@ -1,1 +1,1 @@
-play chord(:A3, '7')
+play chord_degree(5, :A3, :major)

@@ -8,6 +8,10 @@ p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__pi
 p_c4_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148603__neatonk__piano-med-c4.wav"
 v_s = "/Users/josephwilk/.overtone/orchestra/violin/violin_A3_1_piano_arco-normal.wav"
 radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus__radio.wav"
+def ambience(no)
+  s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
+  s[no]
+end
 def live(name, opts={}, &block)
   idx = 0
   amp = if(opts[:amp])
@@ -453,7 +457,10 @@ end
   n_idx+=1
 end
 
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/am_amb70_crackling.wav"
+live_loop :crackler do
+sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/am_amb70_crackling.wav" 
+sleep 
+end
 
 @brightlight_amp = 0.0
 @piano_amp = 0.0

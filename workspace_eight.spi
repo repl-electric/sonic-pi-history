@@ -1,4 +1,4 @@
-define :ambi_s do name
+define :ambisample_s do name
   s = Dir["s/*.wav"]
   s.sort!
   if name.is_a? Integer

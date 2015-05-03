@@ -431,7 +431,7 @@ end
                                        :A3 _ _ _ _
                                        :A2 _ _ _ _
                                           1 _ _ _
-                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar/2.0
+                                           })[m_idx], decay: bar*4, amp: 0.7, sustain: bar/2.0
                     end
                     end
                   end

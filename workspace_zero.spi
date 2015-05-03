@@ -490,7 +490,7 @@ dur = sleep sample_duration(ambi_s(:crackling))
 live_loop :crackler do
 a = 0.5
 sync :whole
-s = sample ambi_s(:crackling), a: amp, rate: 0.4
+s = sample ambi_s(:crackling), amp: a, rate: 0.4
 4.times{|n| sleep dur/4.0; ctl s, amp: a - (n*0.1)}
 end
 

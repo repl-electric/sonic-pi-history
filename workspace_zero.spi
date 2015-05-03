@@ -11,7 +11,7 @@ radio_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/32266__paracelsus_
 def ambi_s(name)
   s = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/ambience\ \&\ found\ sound/*.wav"]
   s.sort!
-  s[no].select{|s| s =~ /name/}
+  s.select{|s| s =~ /name/}
 end
 def live(name, opts={}, &block)
   idx = 0

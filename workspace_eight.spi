@@ -1,9 +1,0 @@
-define :ambi_sample do name
-  s = Dir["s/*.wav"]
-  s.sort!
-  if name.is_a? Integer
-    s[name]
-  else
-    s.select{|s| s =~ /#{name}/}[0]
-      end
-      end

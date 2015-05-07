@@ -342,7 +342,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :hpf, cutoff: 0,
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
 
-        notes = deg_seq(*%w{:A3 3161 5131 3131 3131
+        notes = deg_seq(*%w{:A3 3161 5131 1131 3131
                                 3163 5131 3131 4121})
 
         #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
@@ -446,7 +446,13 @@ live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do
+
 #comment do
+        1.times{sync :whole}
+#end
+
+
+comment do
         1.times{sync :whole}
 
         play (ring
@@ -460,7 +466,7 @@ live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
               _,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-#end
+end
 
 comment do
         1.times{sync :quarter}

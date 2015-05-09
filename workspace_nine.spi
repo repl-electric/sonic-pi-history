@@ -1,4 +1,4 @@
-with_fx :rhpf do
+with_fx :nhpf do
 
 notes = degree(3, :A3, :major)
 

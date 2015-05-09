@@ -1,4 +1,4 @@
-with_fx :pitch_shift, pitch_dis: 0.01 do
+with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1 do
 
 notes = degree(3, :A3, :major)
 

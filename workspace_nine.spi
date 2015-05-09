@@ -1,13 +1,11 @@
-with_fx :rhpf do #:pitch_shift, pitch_dis: 0.01, time_dis: 0.5 do
+ with_synth :dark_ambience do
+                      play deg_seq(*%w{:A2 _ _ _ _ 
+                                       :A3 _ _ _ _
+                                       :A4 6 _ _ _
+                                           _ _ _ _
 
-notes = degree(3, :A3, :major)
-
-case notes
-when degree(3, :A3, :major)
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1
-when degree(2, :A3, :major)
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/B_BowedGuitarHarm_01_SP.wav", amp: 0.1
-when degree(7, :A2, :major)
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", amp: 0.1
-end
-end
+                                       :A2 _ _ _ _
+                                       :A3 _ _ _ _
+                                       :A4 7 _ _ _
+                                           _ _ _ _
+                                          })[m_idx], decay: bar*2, amp: 0.7, sustain: bar/2.0, cutoff: 80

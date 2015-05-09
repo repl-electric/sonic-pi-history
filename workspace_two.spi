@@ -84,14 +84,6 @@ live_loop :metro do
   cue :eighth
   sleep bar/2.0
 end
-live_loop :drum do |d_idx|;with_fx :level, amp: 0.0 do
-    sync :half
-    with_fx :lpf do
-      sample :elec_triangle, amp: 0.5
-    end
-  end
-  d_idx+=1
-end
 def play_rollinz(n, dir)
   use_synth :mod_fm  #:mod_fm # sample v_s, amp: 90
   use_synth_defaults detune: 0.05, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 0

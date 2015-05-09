@@ -419,7 +419,7 @@ comment do
 end
 
 
-#comment do
+comment do
         1.times{sync :whole}
 
         play (ring
@@ -433,9 +433,9 @@ end
               _,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-#end
+end
 
-comment do
+#comment do
         1.times{sync :quarter}
       with_fx :lpf, cutoff: 100, mix: 1.0 do
 
@@ -452,7 +452,7 @@ comment do
 )[n_idx], release: (ring bar*2, bar, bar, bar*2)[n_idx], attack: (ring 1.0, 0.5, 0.5, 0.5)[n_idx],
           amp: (ring 1.2, 1.0, 1.1, 0.9)[n_idx]
 end
-end
+#end
       end
     end
   end
@@ -469,5 +469,5 @@ s = sample ambi_s(:crackling), amp: a, rate: (n*0.2)
 }
 end;end;
 
-@brightlight_amp = 0.0
+@brightlight_amp = 0.01
 @piano_amp = 0.0

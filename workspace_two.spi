@@ -331,6 +331,7 @@ sync :roller
 
 case notes[idx]
 when degree(3, :A3, :major)
+puts "hit"
      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 2
 end
 

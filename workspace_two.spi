@@ -342,6 +342,8 @@ end
 when degree(2, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/B_BowedGuitarHarm_01_SP.wav", amp: 0.05
 when degree(7, :A2, :major)
+
+sample "/Users/josephwilk/Workspace/music/samples/Sample Magic - Ambient and Chill - Wav/chords/80bpm/am_chrd80_flights_F#m9.wav"
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", amp: 0.05
 end
 end

@@ -275,7 +275,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (deg_seq(*%w[:A2 1457  6543]))
+    notes = (deg_seq(*%w[:A2 1457 6543]))
     sleeps = (ring bar/2.0)
     cue :roller
     1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
@@ -285,7 +285,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
-    notes = (deg_seq(*%w[:A2 5613  4361 ]))
+    notes = (deg_seq(*%w[:A2 5613 4361]))
     sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
@@ -320,7 +320,7 @@ sync :roller
       #if idx % 4 == 0
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
-        play (ring degree(3, :A3, :major),
+        play notes=(ring degree(3, :A3, :major),
                   [degree(2, :A3, :major), degree(7, :A2, :major)],
                   [degree(7, :A2, :major), degree(3, :A2, :major)],
                   chord(:A2, :major7)
@@ -328,6 +328,10 @@ sync :roller
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1
 #       sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
+
+cond 
+sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
+
 end;end;end
 idx+=1
 end

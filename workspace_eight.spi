@@ -9,8 +9,12 @@ end
 
 
 live_loop :demo2 do |idx|
-play (ring chord(:D3, :major7), 
-           chord_degree(1, :A3, :major))[idx], release: 1, decay: 1
+play (ring 
+
+chord_degree(1, :A3, :major)
+chord_degree(4, :A3, :major)
+chord(:D3, :major7),
+           )[idx], release: 1, decay: 1
 sleep 4
 
 idx+=1

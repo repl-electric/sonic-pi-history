@@ -280,7 +280,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -293,7 +293,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
 
     sleeps = (ring bar)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001)}
   end
   idx+=1
 end
@@ -318,7 +318,7 @@ end;end
 
 #145
 #561
-live_loop :floating do |idx|
+live_loop :floating do |idx|; with_fx :level, amp: 0.0 do
 sync :roller
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 1.0 do
       #if idx % 4 == 0
@@ -348,7 +348,7 @@ when degree(7, :A2, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/F#_BowedGuitarNote_01_SP.wav", amp: 0.05
 end
 end
-end;end;end;end
+end;end;end;end;end
 
 idx+=1
 end

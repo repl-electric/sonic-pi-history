@@ -328,7 +328,7 @@ sync :roller
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1
 #       sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
-
+puts notes
 case notes[idx]
 when degree(3, :A3, :major)
 puts "hit"

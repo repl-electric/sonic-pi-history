@@ -330,8 +330,8 @@ sync :roller
 #end
 
 case notes[idx]
-when note(:Fs4)
-     sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
+when degree(3, :A3, :major)
+     sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 2
 end
 
 end;end;end

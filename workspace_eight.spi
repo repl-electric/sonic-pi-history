@@ -2,7 +2,7 @@
 
 
 live_loop :demop do |idx|
-play deg_seq(*%w[:A2 451])[idx]
+play deg_seq(*%w[:A2 4444 5555 11111])[idx]
 sleep 1
 idx+=1
 end

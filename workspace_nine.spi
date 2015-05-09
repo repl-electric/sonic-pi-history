@@ -12,6 +12,7 @@ live_loop :poo do |m_idx|
                                        :A4 7 _ _ _
                                            _ _ _ _
                                           })[m_idx], decay: bar*2, amp: 0.7, sustain: bar/2.0, cutoff: 80
+sleep 1
 m_idx+=1
 end
 end

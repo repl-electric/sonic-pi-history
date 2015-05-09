@@ -416,21 +416,21 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
                     with_synth :dark_ambience do
-                      play deg_seq(*%w{:A4 6 _ _ _ 
+                      play deg_seq(*%w{:A2 _ _ _ _ 
+                                       :A3 _ _ _ _
                                        :A4 6 _ _ _
-                                       :A4 6 _ _ _
-                                       :A4 6 _ _ _
+                                           _ _ _ _
 
-                                       :A4 6 _ _ _
-                                       :A4 6 _ _ _
+                                       :A2 _ _ _ _
+                                       :A3 _ _ _ _
                                        :A4 7 _ _ _
                                            _ _ _ _
-                                          })[m_idx], decay: bar*2, amp: 0.0, sustain: bar/2.0, cutoff: 80
+                                          })[m_idx], decay: bar*2, amp: 0.7, sustain: bar/2.0, cutoff: 80
                     end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            #play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
 end;end;end;end;
   m_idx+= 1
 end

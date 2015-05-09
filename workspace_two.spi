@@ -361,7 +361,8 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
 
-        notes = deg_seq(*%w{:A3 3131 :A2 7 :A3 1})
+        notes = deg_seq(*%w{:A3 3161 5131 3 1 :A2 7 :A3 1 :A3 3131
+                                3163 5131 3131 4121})
         #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
         #notes = deg_seq(*%w{:A3 21})
@@ -369,8 +370,8 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
       with_fx :slicer, phase: bar do
       case notes[m_idx]
                     when note(:A3)
-                      #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2
-                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar Tails/108_A_PostRockChords_01_SP.wav", amp: 1.0
+                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/A_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2
+                     # sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar Tails/108_A_PostRockChords_01_SP.wav", amp: 1.0
                     when note(:Fs4)
 #                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Battery/Chords 80BPM Samples/am_chrd80_flights_F#m9.wav"
                       sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/F#_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.2
@@ -416,7 +417,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
                     end;end;end;end
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-with_fx :lpf, cutoff: 80, mix: 0.0 do
+with_fx :lpf, cutoff: 80 do
                     with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _

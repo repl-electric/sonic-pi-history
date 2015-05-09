@@ -319,7 +319,7 @@ sync :roller
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
         play (ring chord_degree(1, :A2, :major)[0],
                   chord_degree(2, :A2, :major)[0],
-                  chord(:A2, :major7)))[idx],
+                  chord(:A2, :major7))[idx],
         amp: (ring 0.5, 0.6, 0.6, 0.5)[idx],
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1
 #        sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]

@@ -1,4 +1,4 @@
-with_fx :nhpf do
+with_fx :pitch_shift do
 
 notes = degree(3, :A3, :major)
 

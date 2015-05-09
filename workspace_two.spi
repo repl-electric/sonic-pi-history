@@ -427,12 +427,12 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0,
                                        :A4 7 _ _ _
                                            _ _ _ _
                                           })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0
-                     end;end;end;end;end;end;end
+                     end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            #play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
-end;end;end;end;
+            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+end;end;end;end;end
   m_idx+= 1
 end
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do

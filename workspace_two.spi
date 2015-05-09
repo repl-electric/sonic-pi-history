@@ -317,7 +317,7 @@ sync :whole
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
         play (ring chord_degree(1, :A3, :major)[0..3],
-                  chord_degree(3, :A3, :major)[0..3],
+                  chord_degree(3, :A2, :major)[0..3],
                   chord(:A2, :major7))[idx],
         amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
         release: (ring bar*3, bar*3 ,bar*3 ,bar*4)[idx], decay: bar*2, attack: 1.0

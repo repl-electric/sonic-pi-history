@@ -501,7 +501,7 @@ end
   n_idx+=1
 end
 
-live_loop :crackler do;with_fx :level, amp: 0.2 do
+live_loop :crackler do;with_fx :level, amp: 0.3 do
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole

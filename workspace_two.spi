@@ -384,6 +384,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_E2_15_pianissimo_arco-normal.wav", amp: 0.5
                     end
                   end
+end
         play notes[m_idx], amp: (notes[m_idx] == note(:Fs4)) ? 0.4 : 1, decay: 0.1 + rrand(0.0,0.15)
         if m_idx % 4 == 0 
                     with_synth :fm do

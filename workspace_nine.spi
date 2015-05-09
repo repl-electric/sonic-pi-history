@@ -1,4 +1,6 @@
 with_fx :flanger do
+
+notes =  :A3
 case notes
 when degree(3, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1

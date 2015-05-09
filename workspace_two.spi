@@ -320,8 +320,8 @@ sync :whole
                   chord_degree(3, :A2, :major)[0..3],
                   chord(:A2, :major7))[idx],
         amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
-        release: (ring bar*3, bar*3 ,bar*3 ,bar*4)[idx], decay: bar*2, attack: 1.0
-        sleep (ring bar*4, bar*4, bar*4, bar*8)[idx]
+        release: (ring bar*4, bar*3 ,bar*3 ,bar*4)[idx], decay: bar*2, attack: 1.0
+        sleep (ring bar*8, bar*4, bar*4, bar*8)[idx]
 #end
 end;end;end
 idx+=1

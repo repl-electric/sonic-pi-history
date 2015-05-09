@@ -280,7 +280,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=100, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
   } 
   end
   idx+=1

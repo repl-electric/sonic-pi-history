@@ -1,6 +1,6 @@
 with_fx :flanger do
 
-notes = (note :A3)
+notes = (note :A2)
 
 case notes
 when degree(3, :A3, :major)

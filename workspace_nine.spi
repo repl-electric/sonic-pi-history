@@ -1,4 +1,4 @@
-with_fx :rhpfdo #:pitch_shift, pitch_dis: 0.01, time_dis: 0.5 do
+with_fx :rhpf do #:pitch_shift, pitch_dis: 0.01, time_dis: 0.5 do
 
 notes = degree(3, :A3, :major)
 

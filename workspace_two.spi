@@ -428,7 +428,7 @@ with_fx :lpf, cutoff: 80, mix: 0.0 do
                                        :A3 6 _ _ _
                                        :A4 7 _ _ _
                                            6 _ _ _
-                                          })[m_idx], decay: bar*2, amp: 4.7, sustain: bar/2.0
+                                          })[m_idx], decay: bar*2, amp: 7.7, sustain: bar/2.0
                     end;end;end;end;end;end;
 #end
     with_fx :reverb, room: 1.0 do                

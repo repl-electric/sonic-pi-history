@@ -272,7 +272,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 
     sleeps = (ring bar*2)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=40, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -311,7 +311,7 @@ end;end
 #145
 #561
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 1.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 0.0 do
     #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep

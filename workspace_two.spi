@@ -321,7 +321,7 @@ sync :roller
                   chord_degree(3, :A2, :major)[0..3],
                   chord(:A2, :major7))[idx],
         amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
-        release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*4, attack: 1.0
+        release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 1.0
 #        sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
 end;end;end

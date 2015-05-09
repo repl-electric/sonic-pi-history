@@ -337,7 +337,7 @@ end
 case notes
 when degree(3, :A3, :major)
 with_fx :bitcrusher, pre_amp: 0.2, mix: 0.2 do
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1
+sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.3
 end
 when degree(2, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/B_BowedGuitarHarm_01_SP.wav", amp: 0.05

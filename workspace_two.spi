@@ -226,7 +226,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         n_cut = rrand(30,cutoff);
         n_mix = 0.4
         control(c_fx, cutoff: n_cut);
-        8.times do |n|
+        2.times do |n|
           n%2==0 ? sync(:whole) : sync(:half)
 
           if cutoff > 80 && distort_on
@@ -268,11 +268,11 @@ end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
     #notes = (ring (deg_seq(*%w[:A2 1457 6541])[idx]))
-    notes = (ring (deg_seq(*%w[:A2 4])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -281,15 +281,15 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
-    notes = (ring (deg_seq(*%w[:A2 56])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001)}
   end
   idx+=1
 end
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.01 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do 
@@ -398,7 +398,7 @@ with_fx :lpf, cutoff: 80 do
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

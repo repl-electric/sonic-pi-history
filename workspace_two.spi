@@ -318,7 +318,7 @@ sync :whole
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 5.0 do
       if idx % 4 == 0
         play chord(
-              (ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
+              (ring :B2)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
         amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
         release: (ring bar*2, bar*2 ,bar*2 ,bar*16)[idx], decay: bar*2, attack: 1.0

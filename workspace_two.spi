@@ -225,7 +225,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
   drums_on = false
   use_synth :mod_fm
   use_synth_defaults detune: 0.00, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8,
-    mod_phase: 2
+    mod_phase: 0
   with_fx :reverb, mix_slide: 0.2, mix: 0.1 do |r_fx|
     #   with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 1.0  do |c_fx|
@@ -275,8 +275,8 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-   # notes = (ring (deg_seq(*%w[:A2 1])[idx]))
- #   notes = (ring (deg_seq(*%w[:A2 145])[idx]))
+    #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :roller
@@ -288,10 +288,10 @@ end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
-   # notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
-#    notes = (ring (deg_seq(*%w[:A2 561])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
-    sleeps = (ring bar/2.0)
+    sleeps = (ring bar)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001)}
   end
@@ -353,19 +353,19 @@ end;end;end;end;end
 idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.0 do; with_fx :lpf, cutoff: 80, mix: 1.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0, mix: 1.0 do
     #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
-    with_fx :reverb, room: 1.0, dry: 1.0, mix: 1.0 do
+    with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.2 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
 
         notes = deg_seq(*%w{:A3 3161 5131 3 1 :A2 7 :A3 1 :A3 3131
                                 3163 5131 3131 4121})
-        #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
-        #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
-        #notes = deg_seq(*%w{:A3 31})
+        notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
+        notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
+        notes = deg_seq(*%w{:A3 21})
 
       with_fx :slicer, phase: bar do
       case notes[m_idx]
@@ -441,12 +441,12 @@ live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     play_darkness deg_seq(*%w{:A1 1235 1215})[idx], bar
     idx+=1
 end;end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.2 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.1 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do
 
-comment do
+#comment do
         1.times{sync :whole}
   play (ring
               chord_degree(1, :a3, :major)[0..2],_,_,_,
@@ -459,7 +459,7 @@ comment do
               _,_,_,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-end
+#end
 
 
 comment do
@@ -478,7 +478,7 @@ comment do
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
 end
 
-#comment do
+comment do
         1.times{sync :quarter}
       with_fx :lpf, cutoff: 100, mix: 1.0 do
 
@@ -494,7 +494,7 @@ end
 #              chord_degree(7, :a2, :major)[0], chord_degree(7, :a2, :major)[1], chord_degree(7, :a2, :major)[2], _
 )[n_idx], release: (ring bar*2, bar, bar, bar*2)[n_idx], attack: (ring 1.0, 0.5, 0.5, 0.5)[n_idx],
           amp: (ring 1.2, 1.0, 1.1, 0.9)[n_idx]
-#end
+end
 end
       end
     end
@@ -502,7 +502,7 @@ end
   n_idx+=1
 end
 
-live_loop :crackler do;with_fx :level, amp: 1.0 do
+live_loop :crackler do;with_fx :level, amp: 0.25 do
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole
@@ -512,5 +512,5 @@ s = sample ambi_s(:crackling), amp: a, rate: (n*0.2)
 }
 end;end;
 
-@brightlight_amp = 0.01
+@brightlight_amp = 0.0
 @piano_amp = 0.0

@@ -415,7 +415,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80
                     end;end;end
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-with_fx :lpf, cutoff: 80
+with_fx :lpf, cutoff: 80 do
                     with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _

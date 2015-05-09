@@ -1,4 +1,4 @@
-with_fx :flanger do
+with_fx :compressor do
 
 notes = degree(3, :A3, :major)
 

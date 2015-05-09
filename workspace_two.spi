@@ -311,19 +311,21 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
+
+#145
+#561
 live_loop :floating do |idx|
 sync :roller
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 1.0 do
       #if idx % 4 == 0
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
-        play (ring chord_degree(1, :A2, :major)[0],
-                  chord_degree(2, :A2, :major)[0],
+        play (ring degree(1, :A2, :major)[0],
+                  degree(2, :A2, :major)[0],
                   chord(:A2, :major7)
-)[idx],
-        amp: (ring 0.5, 0.6, 0.6, 0.5)[idx],
+)[idx], amp: (ring 0.5, 0.6, 0.6, 0.5)[idx],
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1
-#        sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
+#       sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
 end;end;end
 idx+=1

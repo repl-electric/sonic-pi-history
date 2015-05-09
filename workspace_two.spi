@@ -512,5 +512,5 @@ s = sample ambi_s(:crackling), amp: a, rate: (n*0.2)
 }
 end;end;
 
-@brightlight_amp = 0.0
+@brightlight_amp = 0.1
 @piano_amp = 0.0

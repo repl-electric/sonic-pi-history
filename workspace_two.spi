@@ -316,7 +316,7 @@ end;end
 #561
 live_loop :floating do |idx|
 sync :roller
-    with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 2.0 do
+    with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 1.0 do
       #if idx % 4 == 0
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 

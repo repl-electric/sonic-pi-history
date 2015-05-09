@@ -317,7 +317,7 @@ live_loop :floating do |idx|
 sync :whole
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 5.0 do
 #      if idx % 1+rand_i(4) == 0
-        play chord((ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
+        play chord((ring :Cs4, :E3, :Cs3, :B3)[idx], "7sus2"), amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
         release: (ring bar*2, bar*2 ,bar*2 ,bar*4)[idx], decay: bar*2, attack: 1.0
         sleep (ring 0, 0, 0, bar*4)[idx]
 #end

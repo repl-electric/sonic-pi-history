@@ -329,8 +329,10 @@ sync :roller
 #       sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
 
-cond 
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
+case notes[idx]
+when note(:Fs3)
+     sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
+end
 
 end;end;end
 idx+=1

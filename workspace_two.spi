@@ -333,6 +333,7 @@ notes = notes[idx]
 if notes.class == Array
   notes = notes.first
 end
+with_fx :bitcrusher do
 case notes
 when degree(3, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1
@@ -340,6 +341,7 @@ when degree(2, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/B_BowedGuitarHarm_01_SP.wav", amp: 0.1
 when degree(7, :A2, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", amp: 0.1
+end
 end
 
 end;end;end

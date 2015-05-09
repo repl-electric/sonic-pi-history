@@ -285,7 +285,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
-    notes = (deg_seq(*%w[:A2 3535 3535 2626  ]))
+    notes = (deg_seq(*%w[:A2 3535 3535 2626 2626]))
 #    notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
     sleeps = (ring bar/2.0)
     cue :flow

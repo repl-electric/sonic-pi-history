@@ -321,7 +321,7 @@ sync :roller
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
         play (ring degree(3, :A3, :major),
-                  degree(2, :A3, :major),
+                  [degree(2, :A3, :major), degree(1, :A3, :major)]
                   [degree(7, :A3, :major),degree(3, :A2, :major)],
                  # chord(:A2, :major7)
 )[idx], amp: (ring 0.5, 0.6, 0.6, 0.5)[idx],

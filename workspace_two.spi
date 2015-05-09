@@ -318,7 +318,7 @@ end;end
 
 #145
 #561
-live_loop :floating do |idx|; with_fx :level, amp: 0.02 do
+live_loop :floating do |idx|; with_fx :level, amp: 0.5 do
 sync :roller
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 1.0 do
       #if idx % 4 == 0
@@ -441,7 +441,7 @@ live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     play_darkness deg_seq(*%w{:A1 1235 1215})[idx], bar
     idx+=1
 end;end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.4 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

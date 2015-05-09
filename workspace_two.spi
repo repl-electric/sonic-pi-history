@@ -321,7 +321,7 @@ sync :whole
                   chord(:A3, :major7))[idx],
         amp: (ring 0.5, 0.4, 0.6, 0.5)[idx],
         release: (ring bar*2, bar*2 ,bar*2 ,bar*16)[idx], decay: bar*2, attack: 1.0
-        sleep (ring 0, 0, 0, bar*8)[idx]
+        sleep (ring bar*4, bar*4, bar*4, bar*8)[idx]
 #end
 end;end;end
 idx+=1

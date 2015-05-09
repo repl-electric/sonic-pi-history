@@ -336,7 +336,7 @@ end
 with_fx :rhpf do
 case notes
 when degree(3, :A3, :major)
-with_fx :bitcrusher do
+with_fx :bitcrusher, pre_amp: 0.1 do
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1
 end
 when degree(2, :A3, :major)

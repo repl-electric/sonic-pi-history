@@ -316,7 +316,7 @@ end;end
 live_loop :floating do |idx|
 sync :whole
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 5.0 do
-      if idx % 1+rand_i(4) == 0
+      if idx % 4 == 0
         play chord(
               (ring :Cs3)[idx], "7sus2")[0], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 

@@ -354,7 +354,7 @@ idx+=1
 end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 80, mix: 1.0 do
-    #m_idx = (m_idx % 16) #+ 16
+    m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.2 do

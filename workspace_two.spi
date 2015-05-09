@@ -329,7 +329,7 @@ sync :roller
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1
 #       sleep (ring bar*8, bar*4, bar*4, bar*4)[idx]
 #end
-case notes
+case [notes]
 when degree(3, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.1
 when degree(2, :A3, :major)

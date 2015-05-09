@@ -1,4 +1,4 @@
-with_fx :distortion do
+with_fx :echo do
 
 notes = degree(3, :A3, :major)
 

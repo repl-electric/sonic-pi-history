@@ -1,7 +1,8 @@
 #play chord(:B3, "m+5"), release: 8, decay: 8
 
 
-live_loop :demop do
+live_loop :demop do |idx|
 play deg_seq(*%w[:A2 451])
 sleep 1
+idx+=1
 end

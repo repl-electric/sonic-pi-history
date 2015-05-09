@@ -275,7 +275,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring deg_seq(*%w[:A2 1])[idx])
+    notes = (ring deg_seq(*%w[:A2 4])[idx])
     sleeps = (ring bar/2.0)
     1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
   } 
@@ -284,7 +284,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
-    notes = (ring deg_seq(*%w[:A2 4])[idx])
+    notes = (ring deg_seq(*%w[:A2 1])[idx])
     sleeps = (ring bar)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001) #do |n|

@@ -14,3 +14,4 @@ live_loop :poo do |m_idx|
                                           })[m_idx], decay: bar*2, amp: 0.7, sustain: bar/2.0, cutoff: 80
 m+idx+=1
 end
+end

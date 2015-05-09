@@ -312,7 +312,6 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     s_idx+=1
 end;end
 
-
 #145
 #561
 live_loop :floating do |idx|
@@ -331,7 +330,7 @@ sync :roller
 #end
 
 case notes[idx]
-when note(:Fs3)
+when note(:Fs4)
      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav"
 end
 

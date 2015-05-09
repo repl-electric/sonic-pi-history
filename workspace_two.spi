@@ -312,13 +312,14 @@ live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     end
     s_idx+=1
 end;end
+
 live_loop :floating do |idx|
 sync :whole
-    with_fx :reverb, room: 1.0 do                
-        with_synth :dark_ambience do
-          if idx % 1+rand_i(4) == 0
-            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[idx], "7sus2")[(ring 0)[idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
-end;end;end;
+    with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do
+#      if idx % 1+rand_i(4) == 0
+        play chord((ring :Cs4, :E4, :Cs4, :Cs4)[idx], "7sus2")[(ring 0)[idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+#end
+end;end;
 idx+=1
 end
 

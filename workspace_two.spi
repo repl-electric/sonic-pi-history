@@ -317,7 +317,7 @@ sync :roller
       #if idx % 4 == 0
 #        play chord((ring :B3)[idx], "7sus2")[(knit 0, 4, 1, 4)[idx]], 
               #(ring :Cs4, :E3, :Cs4, :B3)[idx], "7sus2"), 
-        play (ring chord_degree(1, :A2, :major)[0..3],
+        play (ring chord_degree(1, :A2, :major)[0],
                   chord_degree(2, :A2, :major)[0],
                   chord(:A2, :major7),
                   chord(:A2, "7sus2"))[idx],

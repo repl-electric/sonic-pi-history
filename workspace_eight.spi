@@ -9,7 +9,7 @@ end
 
 
 live_loop :demo2 do |idx|
-play chord(:B3, "m7+5"), release: 1, decay: 1
+play chord(:B2, "m7+5"), release: 1, decay: 1
 sleep 4
 
 idx+=1

@@ -275,7 +275,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
+    #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
     sleeps = (ring bar/2.0)
@@ -291,7 +291,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
     notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
-    sleeps = (ring bar)
+    sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001)}
   end
@@ -318,7 +318,7 @@ end;end
 
 #145
 #561
-live_loop :floating do |idx|; with_fx :level, amp: 0.0 do
+live_loop :floating do |idx|; with_fx :level, amp: 0.01 do
 sync :roller
     with_fx :reverb, room: 1.0 do;with_synth :dark_ambience do; with_fx :level, amp: 1.0 do
       #if idx % 4 == 0
@@ -349,11 +349,12 @@ sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/F#_BowedGuit
 end
 end
 end;end;end;end;end
+
 idx+=1
 end
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0, mix: 1.0 do
-    m_idx = (m_idx % 16) #+ 16
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 4, mix: 1.0 do
+    #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.2 do
@@ -362,9 +363,9 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0,
 
         notes = deg_seq(*%w{:A3 3161 5131 3 1 :A2 7 :A3 1 :A3 3131
                                 3163 5131 3131 4121})
-        #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
-        #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
-       # notes = deg_seq(*%w{:A3 21})
+        notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
+        notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
+        notes = deg_seq(*%w{:A3 21})
 
       with_fx :slicer, phase: bar do
       case notes[m_idx]
@@ -397,7 +398,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0,
                                        :A1 6 _ _ _
                                            5 _ _ _
                                        :A2 2 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.85,  sustain: bar/2.0
+                                           })[m_idx], decay: bar*8, amp: 0.8,  sustain: bar/2.0
                     end;end
         if m_idx % 4 == 0 
                     with_fx :slicer, phase: (knit bar*4, 4, bar*6, 4)[m_idx] do
@@ -411,11 +412,10 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0,
                                        :A3 3 _ _ _
                                        :A2 1 _ _ _
                                        :A2 6 _ _ _
-                                           })[m_idx], decay: bar*4, amp: 0.55, cutoff: 80, sustain: bar/2.0
+                                           })[m_idx], decay: bar*4, amp: 0.5, cutoff: 80, sustain: bar/2.0
                     end;end;end
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    with_fx :lpf, cutoff: 80 do
                     with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 _ _ _ _ 
                                        :A3 _ _ _ _
@@ -426,13 +426,13 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.5 do; with_fx :lpf, cutoff: 0,
                                        :A3 _ _ _ _
                                        :A4 7 _ _ _
                                            _ _ _ _
-                                          })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0
-                     end;end;end;end;end;end
+                                          })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0, cutoff: 80
+                    end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do
           if m_idx % 4 == 0
-            play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
-end;end;end;end;end
+            #play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
+end;end;end;end;
   m_idx+= 1
 end
 live_loop :hl do |idx| with_fx :level, amp: 0.0 do
@@ -440,7 +440,7 @@ live_loop :hl do |idx| with_fx :level, amp: 0.0 do
     play_darkness deg_seq(*%w{:A1 1235 1215})[idx], bar
     idx+=1
 end;end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.01 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

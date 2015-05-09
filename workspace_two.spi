@@ -320,7 +320,7 @@ sync :roller
         play (ring chord_degree(1, :A2, :major)[0..3],
                   chord_degree(2, :A2, :major)[0],
                   chord(:A2, :major7),
-                  chord(:A2, :7sus2)[0]
+                  chord(:A2, :7sus2),
 )[idx],
         amp: (ring 0.5, 1.0, 1.0, 0.5)[idx],
         release: (ring bar*8, bar*7 ,bar*7 ,bar*7)[idx], decay: bar*8, attack: 0.1

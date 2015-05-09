@@ -285,8 +285,10 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
-    notes = (deg_seq(*%w[:A2 3535 1616]))
-#    notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
+    #notes = (deg_seq(*%w[:A2 3535 1616]))
+    #notes = (ring (deg_seq(*%w[:A2 5613 4361])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
+
     sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
@@ -335,7 +337,6 @@ if notes.class == Array
 end
 with_fx :rhpf do
 with_fx :bitcrusher, pre_amp: 0.2, mix: 0.2 do
-
 case notes
 when degree(3, :A3, :major)
 sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/C\#_BowedGuitarNote_01_SP.wav", amp: 0.3

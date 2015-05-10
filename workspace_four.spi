@@ -280,7 +280,7 @@ end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
-    notes = (deg_seq(*%w[:A2 1515 5656 ]))
+    notes = (deg_seq(*%w[:A2 1515 5656]))
     #notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
     #notes = (ring (deg_seq(*%w[:A2 561])[idx]))
 

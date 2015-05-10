@@ -351,7 +351,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
                   end
                   #3161 5131 2121 3132
 
-        play notes[m_idx], amp: (notes[m_idx] == note(:Fs4)) ? 0.45 : 1, decay: 0.1 + rrand(0.0,0.15)
+        play notes[m_idx], amp: 0.0*(notes[m_idx] == note(:Fs4)) ? 0.45 : 1, decay: 0.1 + rrand(0.0,0.15)
         if m_idx % 4 == 0 
                     with_synth :fm do
                       use_synth_defaults detune: 0.0, sustain_level: 0.20, res: 1, env_curve: 7 ,sustain: 1.0, attack: 0.01, decay: 0.15, amp: 1.0, release: 0.5, attack_level: 0.8, mod_phase: 2

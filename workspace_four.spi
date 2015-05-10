@@ -399,7 +399,7 @@ puts notes[m_idx]
                                        :A3 _ _ _ _
                                        :A4 7 _ _ _
                                            _ _ _ _
-                                          })[m_idx],detune2: 12, decay: bar*2, amp: 1.0, sustain: bar/2.0, attack: 0.5
+                                          })[m_idx], detune2: 12, decay: bar*2, amp: 1.0, sustain: bar/2.0, attack: 0.5
                     end
 end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                

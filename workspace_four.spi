@@ -312,7 +312,7 @@ end;end
 #145
 #561
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 1.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 10, mix: 1.0 do
     #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
@@ -332,7 +332,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
 #        notes = deg_seq(*%w{:A3 1316 1513 1315 1312})
         #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
-        #notes = deg_seq(*%w{:A3 21})
+        notes = deg_seq(*%w{:A3 21})
 
       with_fx :slicer, phase: bar do
       case notes[m_idx]

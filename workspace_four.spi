@@ -348,7 +348,9 @@ puts notes[m_idx]
                     end
                   end
 
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
+
+                  
+                  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
 
 
                   #3161 5131 2121 3132
@@ -403,7 +405,7 @@ sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuita
                                        :A3 _ _ _ _
                                        :A3 _ _ _ _
                                        :A4 7 _ _ _
-                                           _ _ _ _
+                                           1 _ _ _
                                           })[m_idx],detune2: 12, decay: bar*2, amp: 1.0, sustain: bar/2.0, attack: 0.5
                     end
 end;end;end;end;end;end

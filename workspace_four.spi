@@ -265,12 +265,12 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
-live_loop :rolling_left do |idx|; with_fx :level, amp: 0.1 do
+live_loop :rolling_left do |idx|; with_fx :level, amp: 0.35 do
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
     #notes = (ring (deg_seq(*%w[:A2 1])[idx]))
     #notes = (ring (deg_seq(*%w[:A2 145])[idx]))
 
-    sleeps = (ring bar*2)
+    sleeps = (ring bar/2.0)
     cue :roller
     1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
   } 
@@ -392,7 +392,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
                     end;end;end;end
         #if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    with_fx :lpf, cutoff: 80 do
+                    with_fx :lpf, cutoff: 70 do
                     with_synth :dark_ambience do
                       use_synth_defaults release: bar*2
                       play deg_seq(*%w{:A3 _ _ _ _ 

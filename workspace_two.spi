@@ -328,7 +328,8 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
         #notes = deg_seq(*%w{:A3 21})
 
 puts notes[m_idx]
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/108_A_ThePast_01_SP.wav"
+
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Guitar\ Tails/108_A_ThePast_01_SP.wav" if m_isx % 4 == 0
       with_fx :slicer, phase: bar do
       case notes[m_idx]
                     when note(:A3)

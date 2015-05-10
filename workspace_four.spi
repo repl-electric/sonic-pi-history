@@ -348,14 +348,6 @@ puts notes[m_idx]
                     end
                   end
 
-
-      
-                  
-            
-      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.0, amp: 0.0, 
-             rate: pitch_ratio(note(:A4) - note(:e3))
-
-
                   #3161 5131 2121 3132
 
         play notes[m_idx], amp: (notes[m_idx] == note(:Fs4)) ? 0.45 : 1, decay: 0.1 + rrand(0.0,0.15)

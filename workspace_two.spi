@@ -386,10 +386,10 @@ puts notes[m_idx]
 #                    with_fx :slicer, phase: bar do
                     with_fx :lpf, cutoff: 80 do
                     with_synth :dark_ambience do
-                      play deg_seq(*%w{:A2 6 _ _ _ 
-                                       :A3 6 _ _ _
-                                       :A3 6 _ _ _
-                                           6 _ _ _
+                      play deg_seq(*%w{:A2 6 6 6 6 
+                                       :A3 6 6 6 6
+                                       :A3 6 6 6 6
+                                           6 6 6 6
 
                                        :A2 _ _ _ _
                                        :A3 _ _ _ _

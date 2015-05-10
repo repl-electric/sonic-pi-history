@@ -391,10 +391,10 @@ puts notes[m_idx]
                                        :A3 6 6 6 6
                                            6 6 6 6
 
-                                       :A2 _ _ _ _
-                                       :A3 _ _ _ _
-                                       :A3 7 _ _ _
-                                           _ _ _ _
+                                       :A2 7 7 7 7
+                                       :A3 7 7 7 7
+                                       :A3 7 7 7 7
+                                           7 7 7 7
                                           })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0
                     end;end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                

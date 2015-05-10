@@ -389,10 +389,10 @@ puts notes[m_idx]
                                        :A4 6 _ _ _
                                            6 _ _ _
 
-                                       :A1 _ _ _ _
-                                       :A1 _ _ _ _
+                                       :A1 7 _ _ _
+                                       :A1 7 _ _ _
                                        :A4 7 _ _ _
-                                           _ _ _ _
+                                           7 _ _ _
                                           })[m_idx], decay: bar*2, amp: 0.1, sustain: bar/2.0, attack: 0.1
                     end
 end;end;end;end;end;end

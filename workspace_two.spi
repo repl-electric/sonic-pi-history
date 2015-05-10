@@ -312,7 +312,7 @@ end;end
 #561
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 0.0 do
-    m_idx = (m_idx % 16) #+ 16
+    #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.2 do
@@ -362,6 +362,8 @@ puts notes[m_idx]
                                        :A2 2 _ _ _
                                            })[m_idx], decay: bar*8, amp: 0.0,  sustain: bar/2.0
                     end;end
+
+        #3161 5131 3131 3121
         if m_idx % 4 == 0 
                     with_fx :slicer, phase: (knit bar*4, 4, bar*6, 4)[m_idx] do
                     with_fx :lpf, cutoff: 80 do

@@ -390,7 +390,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
                     end;end;end;end
         #if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    with_fx :lpf, cutoff: 80 do
+                    with_fx :lpf, cutoff: 50 do
                     with_synth :dark_ambience do
                       use_synth_defaults release: bar*2
                       play deg_seq(*%w{:A3 _ _ _ _ 
@@ -412,7 +412,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

@@ -272,12 +272,12 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 do
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
   } 
   end
   idx+=1
 end
-live_loop :rolling_right do |idx|;with_fx :level, amp: 0.0 do
+live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
@@ -286,7 +286,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.0 do
 
     sleeps = (ring bar/2.0)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.0001)}
   end
   idx+=1
 end
@@ -294,7 +294,7 @@ end
 #sync :start
 #    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=0, detune1=0, detune2=0.001)}
 #end
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.05 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.02 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do 
@@ -416,7 +416,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

@@ -268,7 +268,7 @@ end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
      notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
-     notes = (ring (deg_seq(*%w[:A2 4 ])[idx]))
+     notes = (ring (deg_seq(*%w[:A2 541 ])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :roller
@@ -282,9 +282,9 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
     otes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
-    notes = (ring (deg_seq(*%w[:A2 56])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 561])[idx]))
 
-    sleeps = (ring bar)
+    sleeps = (ring bar/2.0)
     cue :flow
     1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0, detune2=0.0001)}
   end
@@ -470,7 +470,7 @@ end
   n_idx+=1
 end
 
-live_loop :crackler do;with_fx :level, amp: 0.2 do
+live_loop :crackler do;with_fx :level, amp: 0.15 do
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole

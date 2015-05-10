@@ -311,10 +311,13 @@ end;end
 #145
 #561
 
+
+with_fx :bitcrusher do
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 0.0 do
 #    m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep
+
     with_fx :reverb, room: 0.7, dry: 1.0, mix: 0.2 do
       with_fx (ring :echo, :none)[m_idx], phase: bar/8 do
         with_synth_defaults attack: 0.1, release: 1.0, decay: 0.1 + rrand(0.0,0.15) do
@@ -408,7 +411,7 @@ end;end;end;end;end;end
             #play chord((ring :Cs4, :E4, :Cs4, :Cs4)[m_idx], "7sus2")[(ring 0)[m_idx]], amp: 0.5, release: bar*2, decay: bar*2, attack: 1.0
 end;end;end;end;
   m_idx+= 1
-end
+end;end
 live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do

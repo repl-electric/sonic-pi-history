@@ -363,7 +363,7 @@ puts notes[m_idx]
                                            })[m_idx], decay: bar*8, amp: (ring 0.9, 0, 0, 0,
                                                                                0.9, 0, 0, 0,
                                                                                0.9, 0, 0, 0,
-                                                                               0.9, 0, 0, 0),  sustain: bar/2.0 + rrand(0.0,0.1)
+                                                                               0.9, 0, 0, 0)[idx],  sustain: bar/2.0 + rrand(0.0,0.1)
                     end;end
 
         #3161 5131 3131 3121

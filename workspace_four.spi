@@ -312,7 +312,7 @@ end;end
 #561
 
 
-with_fx :distortion,distort: 0.9, pre_amp: 0.5,  sample_rate: 8000 do
+with_fx :distortion,distort: 0.9, pre_amp: 0.5, mix: 0.0,  sample_rate: 8000 do
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 0.0 do
 #    m_idx = (m_idx % 16) #+ 16
     sync :whole

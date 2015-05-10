@@ -395,7 +395,7 @@ puts notes[m_idx]
                                        :A1 _ _ _ _
                                        :A1 7 _ _ _
                                            _ _ _ _
-                                          })[m_idx], decay: bar*2, amp: 8.7, sustain: bar/2.0
+                                          })[m_idx], decay: bar*2, amp: 8.7, sustain: bar/2.0, attack: 0.1
 #                    end
 end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                

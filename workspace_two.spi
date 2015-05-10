@@ -382,7 +382,7 @@ puts notes[m_idx]
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
                     with_fx :lpf, cutoff: 120 do
-                    with_synth :dark_sea_horn do
+                    with_synth :pretty_bell do
                       use_synth_defaults release: bar*2
                       play deg_seq(*%w{:A3 _ _ _ _ 
                                        :A3 _ _ _ _

@@ -352,7 +352,8 @@ puts notes[m_idx]
       
                   
             
-      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5, rate: pitch_ratio(note(:a3) - note(:e3))
+      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5, 
+             rate: pitch_ratio(note(:fs3) - note(:e3))
 
 
                   #3161 5131 2121 3132

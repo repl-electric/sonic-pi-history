@@ -340,8 +340,8 @@ puts notes[m_idx]
                     when note(:Cs4)
                       sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar Tails/92_C#_PostRockChords_01_SP.wav", amp: 0.5
                     when note(:E4)
-#                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
-                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_E_PostRockChords_01_SP.wav"
+                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
+#                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_E_PostRockChords_01_SP.wav"
                     end
                   end
         play notes[m_idx], amp: (notes[m_idx] == note(:Fs4)) ? 0.45 : 1, decay: 0.1 + rrand(0.0,0.15)

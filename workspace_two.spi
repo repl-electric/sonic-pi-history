@@ -342,8 +342,8 @@ puts notes[m_idx]
                       sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar Tails/92_C#_PostRockChords_01_SP.wav", amp: 0.5
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_Cs2_15_pianissimo_arco-normal.wav", amp: 0.4
                     when note(:E4)
-                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
-#                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_E_PostRockChords_01_SP.wav"
+#                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/E_BowedGuitarNote_01_SP.wav", start: 0.2, amp: 0.5
+                      sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_E_PostRockChords_01_SP.wav"
                       #sample "/Users/josephwilk/Workspace/music/samples/instruments/cello/wavs/cello_E2_15_pianissimo_arco-normal.wav", amp: 0.5
                     end
                   end

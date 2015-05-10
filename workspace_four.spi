@@ -272,7 +272,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 do
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=40, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -416,7 +416,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

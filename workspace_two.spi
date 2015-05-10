@@ -328,6 +328,8 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
         #notes = deg_seq(*%w{:A3 21})
 
+puts notes[m_idx]
+
       with_fx :slicer, phase: bar do
       case notes[m_idx]
                     when note(:A3)

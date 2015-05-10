@@ -361,7 +361,7 @@ puts notes[m_idx]
                                        :A1 6 _ _ _
                                            5 _ _ _
                                        :A2 2 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.8,  sustain: bar/2.0
+                                           })[m_idx], decay: bar*8, amp: 0.9,  sustain: bar/2.0
                     end;end
         if m_idx % 4 == 0 
                     with_fx :slicer, phase: (knit bar*4, 4, bar*6, 4)[m_idx] do

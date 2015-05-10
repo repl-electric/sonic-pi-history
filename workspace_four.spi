@@ -290,7 +290,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
   end
   idx+=1
 end
-live_loop :hit_it do |idx|;with_fx :level, amp: 0.3 do
+live_loop :hit_it do |idx|;with_fx :level, amp: 0.0 do
     1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=120, detune1=0, detune2=0.001)}
     idx+=1
 end;end

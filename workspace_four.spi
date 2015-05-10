@@ -324,7 +324,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
 #3161 5131 3131 2131
 #3161 5131 3131 3211
 
-        notes = deg_seq(*%w{:A3 3161 5131 2121 1312
+        notes = deg_seq(*%w{:A3 3161 5131 2121 3132
                                 3163 5131 3131 4131})
                   
 #        notes = deg_seq(*%w{:A3 1316 1513 1315 1312})

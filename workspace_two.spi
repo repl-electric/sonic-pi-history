@@ -384,7 +384,7 @@ puts notes[m_idx]
                     end;end;end;end
         if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    #with_fx :lpf, cutoff: 120 do
+                    with_fx :lpf, cutoff: 120 do
                     with_synth :dark_ambience do
                       use_synth_defaults room: 90, detune1: 0, detune2: 0, cutoff: 120, noise: 0.1
                       play deg_seq(*%w{:A1 _ _ _ _ 
@@ -397,7 +397,7 @@ puts notes[m_idx]
                                        :A5 7 _ _ _
                                            _ _ _ _
                                           })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0, attack: 0.5
-#                    end
+                    end
 end;end;end;end;end;end
     with_fx :reverb, room: 1.0 do                
         with_synth :dark_ambience do

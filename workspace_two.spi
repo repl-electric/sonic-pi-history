@@ -357,7 +357,10 @@ puts notes[m_idx]
                                        :A1 6 _ _ _
                                            5 _ _ _ 
                                        :A2 2 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 1.0*(ring 0.9, 0, 0, 0,
+                                           })[m_idx], decay: (ring bar*8, 0, 0, 0, 
+                                                                   bar*10, 0, 0, 0
+) [m_idx]
+                        amp: 1.0*(ring 0.9, 0, 0, 0,
                                                                                    1.0, 0, 0, 0,
                                                                                    0.9, 0, 0, 0,
                                                                                    1.0, 0, 0, 0)[m_idx],  sustain: (bar/2.0) + rrand(0.0,0.1)

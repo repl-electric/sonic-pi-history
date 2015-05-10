@@ -281,7 +281,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.4 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
-    #notes = (ring (deg_seq(*%w[:A2 561])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :flow
@@ -410,7 +410,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

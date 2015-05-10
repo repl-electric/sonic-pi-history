@@ -314,7 +314,7 @@ end;end
 
 live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 80, mix: 0.0 do
 #    m_idx = (m_idx % 16) #+ 16
-with_fx :pitch_shift, pitch_dis: 0.4 do
+with_fx :pitch_shift, pitch_dis: 0.3 do
 
 
     sync :whole

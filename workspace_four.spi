@@ -265,14 +265,14 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
-live_loop :rolling_left do |idx|; with_fx :level, amp: 0.35 do
+live_loop :rolling_left do |idx|; with_fx :level, amp: 0.1 do
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
+    #notes = (ring (deg_seq(*%w[:A2 1])[idx]))
     #notes = (ring (deg_seq(*%w[:A2 145])[idx]))
 
     sleeps = (ring bar*2)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=40, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -334,7 +334,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
 #        notes = deg_seq(*%w{:A3 1316 1513 1315 1312})
         #notes = deg_seq(*%w{:A3 4 :A2 7  :A3 1 :A2 7 })
         #notes = deg_seq(*%w{:A3 4363 5333 3331 3131})
-        notes = deg_seq(*%w{:A3 21})
+        #notes = deg_seq(*%w{:A3 21})
 
       with_fx :slicer, phase: bar do
       case notes[m_idx]

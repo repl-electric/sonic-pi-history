@@ -360,7 +360,7 @@ puts notes[m_idx]
                                        :A1 6 _ _ _
                                            5 _ _ _
                                        :A2 2 _ _ _
-                                           })[m_idx], decay: bar*8, amp: 0.0,  sustain: bar/2.0
+                                           })[m_idx], decay: bar*8, amp: 1.0,  sustain: bar/2.0
                     end;end
 
         #3161 5131 3131 3121

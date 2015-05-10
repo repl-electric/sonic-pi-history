@@ -272,7 +272,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.4 do
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=100, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -323,8 +323,8 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
 #3161 5131 3131 2131
 #3161 5131 3131 3211
 
-        notes = deg_seq(*%w{:A3 3161 5141 4141 4141
-                                3164 5141 4141 4141})
+        notes = deg_seq(*%w{:A3 3161 5131 3131 3131
+                                3163 5131 3131 4121})
                   
 #        notes = deg_seq(*%w{:A3 3161 5131 3 1 :A2 7 :A3 1 :A3 3131
 #                                3163 5131 3131 4121})

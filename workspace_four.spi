@@ -392,7 +392,7 @@ puts notes[m_idx]
                                        :A2 6 _ _ _
                                            })[m_idx], decay: bar*4, amp: 1.0, sustain: bar/2.0
                     end;end;end;end
-        i€f m_idx % 4 == 0 
+        #if m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
                     with_fx :lpf, cutoff: 80 do
                     with_synth :dark_ambience do

@@ -389,12 +389,12 @@ puts notes[m_idx]
                       use_synth_defaults detune1: 0, detune2: 0
                       play deg_seq(*%w{:A1 _ _ _ _ 
                                        :A1 _ _ _ _
-                                       :A3 6 _ _ _
+                                       :A4 6 _ _ _
                                            _ _ _ _
 
                                        :A1 _ _ _ _
                                        :A1 _ _ _ _
-                                       :A3 7 _ _ _
+                                       :A4 7 _ _ _
                                            _ _ _ _
                                           })[m_idx], decay: bar*2, amp: 2.7, sustain: bar/2.0, attack: 0.1
 #                    end

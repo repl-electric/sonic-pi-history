@@ -384,7 +384,7 @@ puts notes[m_idx]
                     end;end;end;end
         if true #m_idx % 4 == 0 
 #                    with_fx :slicer, phase: bar do
-                    with_fx :lpf, cutoff: 80 do
+                    with_fx :lpf, cutoff: 120 do
                     with_synth :dark_ambience do
                       play deg_seq(*%w{:A2 6 6 6 6 
                                        :A3 6 6 6 6

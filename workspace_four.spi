@@ -366,7 +366,7 @@ live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 8
                                        :A2 2 _ _ _
                                            })[m_idx], decay: (ring bar*8, 0, 0, 0, 
                                                                    bar*8, 0, 0, 0)[m_idx],
-                        amp: 1.0*(ring 0.8, 0, 0, 0,
+                        amp: 0.0*(ring 0.8, 0, 0, 0,
                                        0.85, 0, 0, 0,
                                        0.8, 0, 0, 0,
                                        0.85, 0, 0, 0)[m_idx],  sustain: (bar/2.0) + rrand(0.0,0.1)

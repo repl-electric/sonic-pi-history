@@ -303,7 +303,7 @@ sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and
 #play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.1
 end
 end
-nd
+end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do

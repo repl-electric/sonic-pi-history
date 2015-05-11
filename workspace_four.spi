@@ -310,7 +310,7 @@ play (ring chord_degree(1, :A2, :major),
            chord_degree(3, :A2, :major),
            chord_degree(4, :A2, :major),
            chord_degree(3, :A2, :major)
-)[idx], decay: bar*6, attack: 0.5, amp: (ring 0.9, 0.8, 0.9, 0.8)[idx]
+)[idx], decay: bar*6, attack: 0.6, amp: (ring 0.9, 0.8, 0.9, 0.8)[idx]
 end;end;end
 idx+=1
 end

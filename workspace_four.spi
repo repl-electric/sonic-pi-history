@@ -295,9 +295,9 @@ end
 #    idx+=1
 #end;end
 live_loop :bass do
-       sync :whole
+       2.times{sync :whole}
 with_synth :tri do
-play degree(1, :A2, :major), release: bar*4, attack: 0.2, amp: 0.5
+play degree(1, :A2, :major), release: bar*8, attack: 0.2, amp: 0.5
 end
 end
 

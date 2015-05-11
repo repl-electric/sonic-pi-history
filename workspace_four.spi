@@ -296,7 +296,7 @@ end
 #end;end
 live_loop :bass do |idx|
        1.times{sync :whole}
-with_synth :dull_bell do
+with_synth :growl do
 #with_fx :reverb do
 
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do

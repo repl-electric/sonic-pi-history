@@ -25,28 +25,18 @@ live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
     #with_fx :reverb, room: 1.0, mix: 0.1  do
     with_fx :echo, phase: bar/2.0  do |r_fx|
       #sample pa_s, amp: 0.5, rate: (ring -1, 1)[p_idx]
-      sync :quarter
       with_fx :level, amp: 0.3  do
         notes = deg_seq(*%w{:A3 1 :A4 1}) #4 1 1 4  _ _ _ _ 1112 _ _ _ _
         sleeps = (ring bar)
         bonus_note = deg_seq(*%w{:A3 1})[0]
 
-        play(notes[0], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15))
+        sync :quarter
+        
+        play(notes[p_idx], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15))
         sleep bar*3
 
-        sync :quarter
 
-        play notes[1], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
-        sleep bar*3
-
-        sync :quarter
-
-        play notes[0], amp: 1.1, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
-        sleep bar*3
-
-        sync :quarter
-
-        play notes[1], amp: 1.1, attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[12]
+        play notes[1], amp: 1.1, attack: 0.01, release: 0.01, decay: 0.1 + rrand(0.0,0.15)
         sleep bar
 
         if(p_idx % 2 == 0)

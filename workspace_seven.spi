@@ -1,7 +1,7 @@
-bar 0.5
+bar = 0.5
 
 live_loop :bass do |idx|
-       2.times{sync :whole}
+      # 2.times{sync :whole}
 with_synth :beep do
 #with_fx :reverb do
 
@@ -14,5 +14,6 @@ play (ring chord_degree(1, :A2, :major),
 #end
 end
 end
+sleep bar
 idx+=1
 end

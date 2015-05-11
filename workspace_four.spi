@@ -298,7 +298,7 @@ live_loop :bass do
        2.times{sync :whole}
 with_synth :tri do
 sample "/Users/josephwilk/Workspace/music/samples/musicradar-ambient-samples/80bpm\ Loops\ n\ Lines/Pads/AM_MellonPump80A-01.wav"
-play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 1.0
+play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.2
 end
 end
 

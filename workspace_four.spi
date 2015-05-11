@@ -265,7 +265,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         end
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
-live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.02,0.01)[idx] do
+live_loop :rolling_left do |idx|; with_fx :level, amp: 0.0 + (ring 0.02,0.01,0.02,0.01)[idx] do
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
     notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1113 1114]))
@@ -273,7 +273,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.0
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -291,14 +291,14 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
   end
   idx+=1
 end
-#live_loop :hit_it do |idx|;with_fx :level, amp: 0.3 do
-#    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
-#    idx+=1
-#end;end
+live_loop :hit_it do |idx|;with_fx :level, amp: 0.3 do
+    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
+    idx+=1
+end;end
 
 #1457 6543
 #5613 4365
-live_loop :bass do |idx|;with_fx :level, amp: 0.1 do
+live_loop :bass do |idx|;with_fx :level, amp: 0.0 do
 1.times{sync :flow}
 with_synth :dark_sea_horn do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
@@ -339,7 +339,7 @@ end;end
 #145
 #561
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 10, mix: 1.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 40, mix: 1.0 do
     #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep

@@ -297,7 +297,7 @@ end
 live_loop :bass do
        2.times{sync :whole}
 with_synth :tri do
-play degree(1, :A2, :major), decay: bar*4, attack: 0.1, amp: 1.0
+play degree(1, :A1, :major), decay: bar*4, attack: 0.1, amp: 1.0
 end
 end
 

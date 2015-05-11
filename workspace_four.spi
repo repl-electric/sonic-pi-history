@@ -295,7 +295,7 @@ end
 #    idx+=1
 #end;end
 live_loop :bass do |idx|
-       4.times{sync :whole}
+       1.times{sync :flow}
 with_synth :dark_sea_horn do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
 play (ring chord_degree(1, :A2, :major),

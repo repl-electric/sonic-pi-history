@@ -299,7 +299,7 @@ end;end
 #1457 6543
 #5613 4365
 live_loop :bass do |idx|;with_fx :lpf, cutoff: 120 do
-1.times{sync :quarter}
+1.times{sync :half}
 with_synth :dark_ambience do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
 play (ring chord_degree(1, :A3, :major),

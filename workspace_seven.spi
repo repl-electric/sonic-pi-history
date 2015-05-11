@@ -22,6 +22,6 @@ idx+=1
 end
 
 live_loop :bass2 do
-  play :A1, release: 4.0
+  play :A1, release: bar*2
   sleep bar*2 
 end

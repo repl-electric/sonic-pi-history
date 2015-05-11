@@ -1,4 +1,4 @@
-bar = 0.5
+bar = 1.
 
 live_loop :bass do |idx|
       # 2.times{sync :whole}

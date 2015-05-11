@@ -223,7 +223,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
       with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.1 do |d_fx|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(30,cutoff);
-        n_mix = 0.7
+        n_mix = 0.9
         control(c_fx, cutoff: n_cut);
         8.times do |n|
           n%2==0 ? sync(:whole) : sync(:half)

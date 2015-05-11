@@ -461,7 +461,7 @@ notes = (ring
 #end
 
 with_synth :dark_sea_horn do
-play notes[n_idx], amp: 0.2, release: bar*2, attack: 0.1
+play notes[n_idx], amp: 0.1, release: bar*2, attack: 0.1
 end
 
 comment do

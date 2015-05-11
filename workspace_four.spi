@@ -265,7 +265,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         sample :elec_soft_kick, rate: 1, start: rrand(hit_start_min,hit_start_max)
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.02,0.01)[idx] do
-   notes = knit(*chord(:a2, '7sus4')[0..4].reverse.map{|a| [a, 1]}.flatten)
+   notes = knit(*chord(:e3, '7sus4')[0..4].reverse.map{|a| [a, 1]}.flatten)
     #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1113 1114]))
     #notes = (ring deg_seq(*%w[:A2 145])[idx])

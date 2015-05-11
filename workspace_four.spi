@@ -294,7 +294,7 @@ end
 #    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
 #    idx+=1
 #end;end
-live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.02 do
+live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.9 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
       with_fx :reverb do
         with_synth :prophet do 

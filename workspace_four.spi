@@ -299,8 +299,7 @@ live_loop :bass do
 with_synth :tri do
 sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_depth_Abm7.wav"
 
-
-play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.1
+#play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.1
 end
 end
 

@@ -303,6 +303,11 @@ with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
 play (ring chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
            chord(:E3, :major7),
+           chord(:E3, :major7),
+
+           chord_degree(1, :A2, :major),
+           chord_degree(3, :A2, :major),
+           chord(:E3, :major7),
            chord(:E3, :major7)
 
 

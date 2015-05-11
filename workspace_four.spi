@@ -269,7 +269,7 @@ live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.0
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
     notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1113 1114]))
-    notes = (ring deg_seq(*%w[:A2 4])[idx])
+    notes = (ring deg_seq(*%w[:A2 145])[idx])
 
     sleeps = (ring bar/2.0)
     cue :roller
@@ -283,7 +283,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
     notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
-    notes = (ring (deg_seq(*%w[:A2 1])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 561])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :flow

@@ -298,7 +298,7 @@ end
 #1457 6543
 #5613 4365
 live_loop :bass do |idx|;with_fx :level, amp: 0.1 do
-       1.times{sync :flow}
+1.times{sync :flow}
 with_synth :dark_sea_horn do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
 play (ring chord_degree(1, :A2, :major),
@@ -311,10 +311,9 @@ play (ring chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
            chord_degree(3, :A2, :major)
 )[idx], decay: bar*6, attack: 0.5, amp: (ring 0.9, 0.8, 0.9, 0.8)[idx]
-end
-end
+end;end;end
 idx+=1
-end;end
+end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do
     with_fx :pitch_shift, pitch_dis: 0.01 do
@@ -438,7 +437,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 1.0 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do

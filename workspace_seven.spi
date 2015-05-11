@@ -17,6 +17,6 @@ bar*2
 #end
 #end
 end
-sleep (ring bar, bar, bar*2)[idx]
+sleep (ring bar*2, bar*2, bar*2)[idx]
 idx+=1
 end

@@ -302,7 +302,7 @@ live_loop :bass do |idx|;with_fx :lpf, cutoff: 100 do
 1.times{sync :whole}
 use_synth :tb303
 use_synth_defaults amp: 1, mod_range: 15, cutoff: 60, pulse_width: 0.2, attack: 0.03, release: 0.6, mod_phase: 0.25
-play_pattern_timed chord(:C, :m7), 1, amp: rrand(0.1, 0.8)
+#play_pattern_timed chord(:C, :m7), 1, amp: rrand(0.1, 0.8)
 
 #with_synth :dark_ambience do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do

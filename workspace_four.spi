@@ -299,12 +299,12 @@ live_loop :bass do |idx|
 with_synth :tri do
 with_fx :reverb do
 
+with_fx :slicer do
 if idx%2 == 0 
 play chord_degree(1, :A2, :major), decay: bar*4, attack: 0.1, amp: 0.1
-
 else
 play chord_degree(5, :A2, :major), decay: bar*4, attack: 0.1, amp: 0.1
-
+end
 end
 end
 end

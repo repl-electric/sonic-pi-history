@@ -295,7 +295,7 @@ end
 #    idx+=1
 #end;end
 live_loop :bass do |idx|
-       4.times{sync :whole}
+       8.times{sync :whole}
 with_synth :tri do
 with_fx :reverb do
 

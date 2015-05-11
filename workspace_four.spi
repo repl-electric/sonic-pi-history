@@ -267,13 +267,13 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.0 + (ring 0.02,0.01,0.02,0.01)[idx] do
    notes = knit(*chord(:a3, 'sus4')[0..3].reverse.map{|a| [a, 8]}.flatten)
-    notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
+    #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1113 1114]))
     #notes = (ring deg_seq(*%w[:A2 145])[idx])
 
     sleeps = (ring bar/2.0)
     cue :roller
-    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=0, detune1=0, detune2=0.001
+    1.times {play_rolling notes, sleeps, direction=(ring -1,1)[idx], cut=120, detune1=0, detune2=0.001
   } 
   end
   idx+=1
@@ -281,8 +281,8 @@ end
 live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
     notes = knit(*chord(:a3, 'sus4')[0..3].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
-    notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
-    notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
+    #notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
+    #notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
     #notes = (ring (deg_seq(*%w[:A2 561])[idx]))
 
     sleeps = (ring bar/2.0)
@@ -439,7 +439,7 @@ end;end;end;end;end;end
 end;end;end;end;
   m_idx+= 1
 end
-live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.0 do
+live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 0.3 do
   _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 0.8 do
@@ -454,13 +454,13 @@ notes = (ring
               chord_degree(5, :a3, :major)[0],_,_,_,
               _,_,_,chord_degree(4, :a3, :major)[0],
         )
-#comment do
+comment do
         1.times{sync :whole}
   play notes[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.50,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-#end
+end
 
-comment do
+#comment do
         1.times{sync :whole}
 
         play (ring
@@ -474,7 +474,7 @@ comment do
               _,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-end
+#end
 
 comment do
         1.times{sync :quarter}

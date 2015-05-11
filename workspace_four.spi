@@ -300,11 +300,12 @@ with_synth :tri do
 with_fx :reverb do
 
 if idx%2 == 0 
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_jitter_Am.wav"
+play chord_degree(1, :A2, :major), decay: bar*4, attack: 0.1, amp: 0.1
+
 else
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_jitter_Em.wav"
+play chord_degree(5, :A2, :major), decay: bar*4, attack: 0.1, amp: 0.1
+
 end
-#play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.1
 end
 end
 idx+=1

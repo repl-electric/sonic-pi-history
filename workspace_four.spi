@@ -298,7 +298,7 @@ end;end
 
 #1457 6543
 #5613 4365
-live_loop :bass do |idx|;with_fx :lpf, cutoff: 40 do
+live_loop :bass do |idx|;with_fx :lpf, cutoff: 60 do
 1.times{sync :flow}
 with_synth :dark_sea_horn do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do

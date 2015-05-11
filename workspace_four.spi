@@ -297,7 +297,7 @@ end
 live_loop :bass do
        2.times{sync :whole}
 with_synth :tri do
-play degree(1, :A2, :major), release: bar*8, attack: 0.2, amp: 0.5
+play degree(1, :A2, :major), release: bar*8, attack: 0.2, amp: 1.
 end
 end
 

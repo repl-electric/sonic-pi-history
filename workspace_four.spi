@@ -102,11 +102,11 @@ live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
         sleeps = (ring bar)
         bonus_note = deg_seq(*%w{:A3 1})[0]
 
-        play(notes[0], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15)) if notes[0]
+        play(notes[0], amp: 1.2, attack: 0.19, release: 0.01, decay: 0.1 + rrand(0.0,0.15)) if notes[0]
 
         sync :quarter
 
-        play notes[4], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[4]
+        play notes[4], amp: 1.2, attack: 0.9, release: 0.01, decay: 0.1 + rrand(0.0,0.15) if notes[4]
 
         sync :quarter
 

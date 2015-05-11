@@ -296,7 +296,7 @@ end
 #end;end
 live_loop :bass do |idx|
        8.times{sync :whole}
-with_synth :tri do
+with_synth :beep do
 with_fx :reverb do
 
 with_fx :slicer do

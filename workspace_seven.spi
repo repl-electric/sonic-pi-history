@@ -6,17 +6,22 @@ with_synth :beep do
 #with_fx :reverb do
 
 #with_fx :slicer, phase: bar do
-play (ring chord_degree(1, :A2, :major),
+play ring( chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
            chord(:E3, :major7),
 
-)[idx], decay: (ring bar/2.0, 
+)[idx], decay: ring( bar/2.0, 
 bar,
 bar*2
 )[idx], attack: 0.01, amp: 1.0, release: 1.0
 #end
 #end
 end
-sleep (ring bar*2, bar*2, bar*3)[idx]
+sleep ring( bar*2, bar*2, bar*3)[idx]
 idx+=1
+end
+
+live_loop :bass do
+  play :A2
+ sleep bar*2 
 end

@@ -294,13 +294,18 @@ end
 #    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
 #    idx+=1
 #end;end
+
+#1457 6543
 live_loop :bass do |idx|
        1.times{sync :flow}
 with_synth :dark_sea_horn do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
 play (ring chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
+           chord(:E3, :major7),
            chord(:E3, :major7)
+
+
 )[idx], decay: bar*4, attack: 0.5, amp: 2.0
 end
 end

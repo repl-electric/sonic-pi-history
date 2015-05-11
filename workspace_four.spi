@@ -266,6 +266,9 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.02,0.01)[idx] do
    notes = knit(*chord(:e3,"M7").reverse.map{|a| [a, 8]}.flatten)
+   notes = knit(*chord(:a3,"M7").reverse.map{|a| [a, 8]}.flatten)
+
+
     #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1113 1114]))
     #notes = (ring deg_seq(*%w[:A2 145])[idx])

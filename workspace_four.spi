@@ -298,7 +298,7 @@ end;end
 
 #1457 6543
 #5613 4365
-live_loop :bass do |idx|;with_fx :lpf, cutoff: 100 do
+live_loop :bass do |idx|;with_fx :lpf, cutoff: 100, mix: 0.0 do
 1.times{sync :whole}
 use_synth :tb303
 use_synth_defaults amp: 1, mod_range: 15, cutoff: 60, pulse_width: 0.2, attack: 0.03, release: 0.6, mod_phase: 0.25

@@ -461,7 +461,9 @@ notes = (ring
 #end
 
 with_synth :dark_sea_horn do
+if notes[n_idx] == chord_degree(1, :a4, :major)[0]
 play notes[n_idx], amp: 0.15, release: bar*4, attack: 0.1
+end
 end
 
 comment do

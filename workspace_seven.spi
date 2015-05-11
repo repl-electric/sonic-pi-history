@@ -1,3 +1,5 @@
+bar 0.5
+
 live_loop :bass do |idx|
        2.times{sync :whole}
 with_synth :beep do

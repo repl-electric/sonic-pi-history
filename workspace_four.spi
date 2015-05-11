@@ -297,7 +297,7 @@ end
 live_loop :bass do
        2.times{sync :whole}
 with_synth :tri do
-play deg_seq(*%w{:A1 4})[0], decay: bar*4, attack: 0.1, amp: 1.0
+play deg_seq(*%w{:A1 5})[0], decay: bar*4, attack: 0.1, amp: 1.0
 end
 end
 

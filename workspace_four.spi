@@ -291,10 +291,10 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
   end
   idx+=1
 end
-#live_loop :hit_it do |idx|;with_fx :level, amp: 0.3 do
-#    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
-#    idx+=1
-#end;end
+live_loop :hit_it do |idx|;with_fx :level, amp: 0.3 do
+    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
+    idx+=1
+end;end
 
 #1457 6543
 #5613 4365
@@ -339,7 +339,7 @@ end;end
 #145
 #561
 
-live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 10, mix: 1.0 do
+live_loop :melo do |m_idx|;with_fx :level, amp: 0.45 do; with_fx :lpf, cutoff: 40, mix: 1.0 do
     #m_idx = (m_idx % 16) #+ 16
     sync :whole
     use_synth :beep

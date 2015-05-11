@@ -302,7 +302,7 @@ with_synth :beep do
 with_fx :slicer, phase: bar do
 play (ring chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
-           chord(:E3, :M7)
+           chord(:E2, :M7)
 
 )[idx], decay: bar*4, attack: 0.1, amp: 10.0
 #end

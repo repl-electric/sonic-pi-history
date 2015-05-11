@@ -14,6 +14,6 @@ play (ring chord_degree(1, :A2, :major),
 #end
 #end
 end
-sleep (ring bar, bar, bar*2)
+sleep (ring bar, bar, bar*2)[idx]
 idx+=1
 end

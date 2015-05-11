@@ -294,15 +294,20 @@ end
 #    1.times{play_rolling(ring(deg_seq(*%w[:A2 1])), (ring bar*2.0), direction=(ring 1,-1)[idx], cut=40, detune1=0, detune2=0.001)}
 #    idx+=1
 #end;end
-live_loop :bass do
-       2.times{sync :whole}
+live_loop :bass do |idx|
+       4.times{sync :whole}
 with_synth :tri do
 with_fx :reverb do
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_jitter_Am.wav"
 
+if idx%2 == 0 
+sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_jitter_Am.wav"
+else
+sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/chords/70bpm/am_chrd70_jitter_Em.wav"
+end
 #play deg_seq(*%w{:A2 1})[0], decay: bar*4, attack: 0.1, amp: 0.1
 end
 end
+idx+=1
 end
 
 live_loop :continuous_flow do |s_idx|; with_fx :level, amp: 0.0 do

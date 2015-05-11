@@ -1,7 +1,7 @@
 ["piano"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 bar = 1/2.0
 quart = 2*bar
-set_volume! 3.0
+set_volume! 2.0
 pa_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/piano_a.wav"
 p_c3_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148600__neatonk__piano-med-c3.wav"
 p_a2_s = "/Users/josephwilk/Dropbox/repl-electric/samples/pi/148533__neatonk__piano-med-a2.wav"
@@ -101,7 +101,6 @@ live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
         notes = deg_seq(*%w{:A3 1 _ _ _   :A4 1 _ _ _}) #4 1 1 4  _ _ _ _ 1112 _ _ _ _
         sleeps = (ring bar)
         bonus_note = deg_seq(*%w{:A3 1})[0]
-
 
         play(notes[0], amp: 1.2, attack: 0.09, release: 0.01, decay: 0.1 + rrand(0.0,0.15)) if notes[0]
         sleep sleeps[0]

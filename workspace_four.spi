@@ -297,7 +297,7 @@ end
 live_loop :bass do
        sync :whole
 with_synth :tri do
-          play degrees(1, :A2, :major)
+          play degree(1, :A2, :major)
 end
 end
 

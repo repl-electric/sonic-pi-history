@@ -441,6 +441,7 @@ end
 live_loop :dark_highlight do |n_idx|; with_fx :level, amp: 1.0 do
   _ = nil
     with_synth :dark_sea_horn do
+            use_synth_defaults amp: 0.1
       with_fx :reverb, room: 0.8 do
 
 #comment do

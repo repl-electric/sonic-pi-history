@@ -1,4 +1,25 @@
 bar= 1.0
+
+live_loop :metro do
+  cue :whole; cue :half;  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :half; cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+end
+
+
 live_loop :piano do |p_idx|;with_fx :level, amp: @piano_amp do
     use_synth :beep; use_synth_defaults amp: 0.2, attack: 0.0, release: 0.1, decay: 0.1
     #with_fx :reverb, room: 1.0, mix: 0.1  do

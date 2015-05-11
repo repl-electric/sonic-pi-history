@@ -287,7 +287,7 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
 
     sleeps = (ring bar/2.0)
     cue :flow
-    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=100, detune1=0.0, detune2=0.0001)}
+    1.times{play_rolling(notes, sleeps, direction=(ring 1,-1)[idx], cut=0, detune1=0.0, detune2=0.0001)}
   end
   idx+=1
 end
@@ -312,7 +312,7 @@ play (ring chord_degree(1, :A1, :major),
            chord_degree(3, :A2, :major),
            chord_degree(4, :A2, :major),
            chord_degree(3, :A2, :major)
-)[idx], decay: bar*6, attack: 0.5, amp: (ring 0.85, 0.7, 0.8, 0.7)[idx]
+)[idx], decay: bar*6, attack: 0.6, amp: (ring 0.85, 0.7, 0.8, 0.7)[idx]
 end;end;end
 idx+=1
 end

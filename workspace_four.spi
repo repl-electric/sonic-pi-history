@@ -454,19 +454,19 @@ notes = (ring
               chord_degree(5, :a3, :major)[0],_,_,_,
               _,_,_,chord_degree(4, :a3, :major)[0],
         )
-#comment do
+comment do
         1.times{sync :whole}
   play notes[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.50,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-#end
+end
 
 with_synth :dark_sea_horn do
 if notes[n_idx] == chord_degree(1, :a4, :major)[0]
-play notes[n_idx], amp: 0.2, release: bar*4, attack: 0.1
+#play notes[n_idx], amp: 0.2, release: bar*4, attack: 0.1
 end
 end
 
-comment do
+#comment do
         1.times{sync :whole}
 
         play (ring
@@ -480,7 +480,7 @@ comment do
               _,chord_degree(4, :a3, :major)[0],
         )[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.28,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]
-end
+#end
 
 comment do
         1.times{sync :quarter}

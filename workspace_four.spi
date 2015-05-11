@@ -302,7 +302,7 @@ live_loop :bass do |idx|;with_fx :lpf, cutoff: 100 do
 1.times{sync :whole}
 with_synth :dark_ambience do
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
-notes = knit(*[chord(:a3,"sus2")[-2]].map{|a| [a, 1]}.flatten)
+notes = knit(*chord_degree(1, :a3, :major).map{|a| [a, 1]}.flatten)
 play notes[idx], decay: bar*6, sustain: bar*2, release: bar*4, attack: 0.6, amp: 2.0*(ring 0.85, 0.7, 0.8, 0.7)[idx]
 end;end;end
 idx+=1

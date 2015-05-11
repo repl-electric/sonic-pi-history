@@ -1,0 +1,39 @@
+define :metro do
+use_bpm 30
+cue :tick
+sleep 0.5
+end
+
+define :drums do
+with_fx :slicer do
+sync :tick
+sample :drum_heavy_kick, rate: 0.75
+sleep 0.5
+sample :drum_bass_hard, rate: 0.3
+sleep 0.5
+sample :drum_cymbal_closed, rate: 0.3, attack: 0.3, release: 0.2
+end
+end
+
+define :synths do
+with_fx :ixi_techno do
+sync :tick
+use_synth :tb303
+use_synth_defaults amp: 1, mod_range: 15, cutoff: 60, pulse_width: 0.2, attack: 0.03, release: 0.6, mod_phase: 0.25
+play_pattern_timed chord(:C, :m7), 1, amp: rrand(0.1, 0.8)
+sleep 0.25
+play 38
+end
+end
+
+define :bassline do
+with_fx :slicer do
+sync :tick
+sample :bass_thick_c, rate: 0.6, decay: 0.75, amp: 0.75
+end
+end
+
+in_thread(name: :drums){loop{drums}}
+in_thread(name: :synths){loop{synths}}
+in_thread(name: :metro){loop{metro}}
+in_thread(name: :bassline){loop{bassline}}

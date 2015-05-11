@@ -296,7 +296,7 @@ end
 #end;end
 live_loop :bass do |idx|
        1.times{sync :whole}
-with_synth :beep do
+with_synth :saw do
 #with_fx :reverb do
 
 with_fx (ring :echo, :none)[idx], phase: (ring bar/2.0)[idx] do
@@ -304,7 +304,6 @@ play (ring chord_degree(1, :A2, :major),
            chord_degree(4, :A2, :major),
            chord(:E3, :major7)
 )[idx], decay: bar, attack: 0.1, amp: 10.0
-#end
 end
 end
 idx+=1

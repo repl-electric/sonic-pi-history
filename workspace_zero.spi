@@ -1,3 +1,22 @@
+live_loop :metro do
+  cue :whole; cue :half;  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :half; cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+  cue :quarter; cue :eighth
+  sleep bar/2.0
+  cue :eighth
+  sleep bar/2.0
+end
+
 live_loop :crackler do;with_fx :level, amp: 0.2 do
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5

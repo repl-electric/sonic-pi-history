@@ -57,7 +57,7 @@ live_loop :high do; sync :quart; use_synth_defaults release: quart
 end
 
 live_loop :drums do; use_synth :growl; sync :bar
-  play degree(1, :A2, :major), release: bar
+  #play degree(1, :A2, :major), release: bar
   sleep bar
 end
 

@@ -31,7 +31,7 @@ end;end;
 
 live_loop :dark_highlight do |n_idx|
   
-  with_fx :level, amp: 2.0 do
+  with_fx :level, amp: 4.0 do
     _ = nil
     with_synth :dark_ambience do
       with_fx :reverb, room: 1.0 do

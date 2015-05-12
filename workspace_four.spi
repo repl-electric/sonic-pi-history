@@ -220,7 +220,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
   with_fx :reverb, mix_slide: 0.2, mix: 1.0 do |r_fx|
     #   with_fx :echo, phase: bar/1.0 do
     with_fx :lpf, cutoff: cutoff, cutoff_slide: 20, mix: 1.0  do |c_fx|
-      with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.0 do |d_fx|
+      with_fx :distortion, distort: 0.1, cutoff: 90, mix: 0.2 do |d_fx|
         #sample v_s, amp: 1, rate: 0.6
         n_cut = rrand(20,cutoff);
         n_mix = 0.4
@@ -266,9 +266,9 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 end;end;end;end;
 live_loop :rolling_left do |idx|; with_fx :level, amp: 0.3 + (ring 0.02,0.01,0.02,0.01)[idx] do
    #notes = knit(*chord(:a3,"sus4").reverse.map{|a| [a, 8]}.flatten)
-    #notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 1457 6543])[idx]))
     #notes = (deg_seq(*%w[:A2 1 _ _ _]))
-    notes = (ring deg_seq(*%w[:A2 145])[idx])
+    #notes = (ring deg_seq(*%w[:A2 145])[idx])
 
     sleeps = (ring bar/2.0)
     cue :roller
@@ -281,8 +281,8 @@ live_loop :rolling_right do |idx|;with_fx :level, amp: 0.3 do
     #notes = knit(*chord(:a3, 'sus4')[0..4].map{|a| [a, 8]}.flatten)
     #notes = (deg_seq(*%w[:A2 3535 1616]))
     #notes = (deg_seq(*%w[:A2 1515 5656 :A3 1 :A2 5 :A3 1 :A2 5]))
-    #notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
-    notes = (ring (deg_seq(*%w[:A2 561])[idx]))
+    notes = (ring (deg_seq(*%w[:A2 5613 4365])[idx]))
+    #notes = (ring (deg_seq(*%w[:A2 561])[idx]))
 
     sleeps = (ring bar/2.0)
     cue :flow

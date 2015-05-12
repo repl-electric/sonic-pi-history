@@ -19,7 +19,7 @@ live_loop :metro do
   sleep bar/2.0
 end
 
-live_loop :crackler do;with_fx :level, amp: 0.5 do
+live_loop :crackler do;with_fx :level, amp: 0.2 do
 crack_dur = sample_duration(ambi_s(:crackling))
 a = 0.5
 sync :whole

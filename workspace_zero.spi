@@ -36,7 +36,7 @@ live_loop :dark_highlight do |n_idx|
     with_synth :dark_ambience do
       with_fx :reverb, room: 1.0 do
 
-        notes = (ring chord_degree(5, :a1, :major)[0])
+        notes = (ring chord_degree(5, :a1, :major))
         1.times{sync :whole}
         play notes[n_idx], release: (ring bar*4, bar*4, bar*4, bar*6)[n_idx], attack: 0.50,
           amp: (ring 1.0, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5,1.5)[n_idx]

@@ -20,7 +20,7 @@ live_loop :metro do
 end
 
 live_loop :crackler do;with_fx :level, amp: 2.0 do
-crack_dur = sample_duration(ambi_s(:crackling))
+crack_dur = sample_duration(ambi_s(:traffic))
 a = 0.5
 sync :whole
 s = sample ambi_s(:crackling), amp: a, rate: 0.1

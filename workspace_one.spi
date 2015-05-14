@@ -1,6 +1,6 @@
 _ = nil
 bar = 1.0
-def perc_s(name,args*)
+def perc_s(name,*args)
   s = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_*_SP.wav"]
   s.sort!
   sample (if name.is_a? Integer

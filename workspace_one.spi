@@ -1,3 +1,4 @@
+_=nil
 @polyrhythm = [3,2]
 
 live_loop :foo do

@@ -228,7 +228,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         8.times do |n|
           n%2==0 ? sync(:whole) : sync(:half)
 
-                with_synth :dark_ambience do
+                with_synth :dull_bell do
                   play deg_seq(*%w{:A2 1})[0], release: bar*2, amp: 2
                 end
 

@@ -35,7 +35,7 @@ live_loop :bass do
 end
 
 live_loop :a do
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Perc/DisortedSnare_02_SP.wav"
+sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Perc/DisortedSnare_02_SP.wav", amp: 0.2
 sleep bar/2.0
 end
 

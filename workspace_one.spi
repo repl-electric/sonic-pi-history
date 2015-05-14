@@ -3,7 +3,7 @@ _ = nil
 
 live_loop :bass do
   sync :foo
-  sample :bd_tek
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav"
 end
 
 

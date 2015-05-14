@@ -231,7 +231,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 
                 with_fx :none do
                   if n % 2 == 0
-          with_synth :mod_fm  do
+          with_synth :mod_tri  do
             play notes[0], amp: 1.2, attack: bar, release: bar*2, phase: bar/2.0
           end
 end

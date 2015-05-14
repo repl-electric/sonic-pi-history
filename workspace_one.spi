@@ -34,7 +34,7 @@ live_loop :bass do
 end
 
 live_loop :foo do
-  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs3) - note(:Eb3))
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs2) - note(:Eb2))
   density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }
 end
 

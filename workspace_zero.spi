@@ -229,7 +229,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n%2==0 ? sync(:whole) : sync(:half)
 
           with_synth :growl do
-            play notes[0], amp: 10, attack: 0.01, release: bar*2
+            play notes[0], amp: 0.2, attack: 0.01, release: bar*2
           end
 
           if cutoff > 80 && distort_on

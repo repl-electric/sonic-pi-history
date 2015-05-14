@@ -6,14 +6,14 @@ live_loop :bass do
   bowed_s "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav"
 end
 
-def bowed_s(name)
+def bowed_s(name, *args)
   s = Dir["/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/*.wav"]
   s.sort!
   sample (if name.is_a? Integer
     s[name]
   else
   s.select{|s| s =~ /#{name}/}[0]
-  end)
+  end), *args
 end
 def live(name, opts={}, &block)
   idx = 0

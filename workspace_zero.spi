@@ -232,7 +232,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
                 with_fx :none do
                   if n % 2 == 0
           with_synth :mod_sine  do
-            play (ring :A3, :B3), amp: 20.0, attack: bar, release: bar*2, phase: bar/2.0
+            play (ring :A4, :B3), amp: 20.0, attack: bar, release: bar*2, phase: bar/2.0
           end
 end
                 end

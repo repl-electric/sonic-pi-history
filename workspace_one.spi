@@ -26,7 +26,7 @@ def live(name, opts={}, &block)
   end
 end
 
-@polyrhythm = [3,1]
+@polyrhythm = [4,1]
 
 live_loop :bass do
   sync :foo

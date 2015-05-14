@@ -38,7 +38,9 @@ live_loop :foo do
   density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }
 end
 
-live_loop :bar, autocue: false do
+live_loop :bar, autocue: false do |idx|
   sync :foo
+  with_fx (kint :none,3, :echo, 1)[idx]
   density(@polyrhythm.sort.last) { play degree(3, :FS3, :major); sleep 1 }
+idx+=1
 end

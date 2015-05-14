@@ -32,7 +32,7 @@ live_loop :bass do
   sync :foo
   sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
   bowed_s "F#", rate: 0.5, amp: 0.1
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Drones/D_ArpDrone_01_SP.wav", rate:  pitch_ratio(note(:Fs3) - note(:D3))
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Drones/D_ArpDrone_01_SP.wav", rate:  pitch_ratio(note(:Fs3) - note(:D3)), amp: 0.1
 end
 
 

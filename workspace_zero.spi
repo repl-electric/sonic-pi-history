@@ -228,7 +228,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
         8.times do |n|
           n%2==0 ? sync(:whole) : sync(:half)
 
-          with_synth :growl do
+          with_synth :hollow do
             play notes[0], amp: 4.0, attack: 0.01, release: bar*2
           end
 

@@ -232,12 +232,10 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
                 with_fx :none do
                   if n % 2 == 0
           with_synth :mod_tri  do
-            play notes[0], amp: 0.1, attack: bar, release: bar*2, phase: bar/2.0
+            play notes[0], amp: 0.2, attack: bar, release: bar*2, phase: bar/2.0
           end
 end
                 end
-
-
 
           if cutoff > 80 && distort_on
             control(r_fx, room: 0.8, mix: n_mix) ; control(d_fx, distort: 0.5);

@@ -42,7 +42,7 @@ end
 live_loop :bar, autocue: false do |idx|
   sync :foo
   density(@polyrhythm.sort.last) do
-  with_fx (knit :none,3, :echo, 1)[idx], mix: 0.5, phase: bar/2.0  do
+  with_fx (knit :none,2, :echo, 1)[idx], mix: 0.5, phase: bar/2.0  do
     play degree(3, :FS3, :major); sleep 1 
 end
 

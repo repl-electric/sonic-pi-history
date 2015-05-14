@@ -13,7 +13,7 @@ def bowed_s(name)
     s[name]
   else
   s.select{|s| s =~ /#{name}/}[0]
-  end_
+  end)
 end
 def live(name, opts={}, &block)
   idx = 0

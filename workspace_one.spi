@@ -1,7 +1,7 @@
 _ = nil
 bar = 1.0
-def perc_s(name, *args)
-  s = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Perc/MicroPerc_*_SP.wav"]
+def perc_s(name,args*)
+  s = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_*_SP.wav"]
   s.sort!
   sample (if name.is_a? Integer
     s[name]
@@ -65,7 +65,7 @@ end
 
 live_loop :high do
  2.times{sync :start}
- sample (knit perc_s("06"),3,
-              perc_s("07"),1).tick(:s)
+ sample (knit "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_06_SP.wav",3,
+              "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_07_SP.wav",1).tick(:s)
 
 end

@@ -229,7 +229,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n%2==0 ? sync(:whole) : sync(:half)
 
                 with_synth :dark_ambience do
-                  play deg_seq(*%w{:A4 1}), release: bar*2, amp: 2
+                  play deg_seq(*%w{:A5 1}), release: bar*2, amp: 2
                 end
 
           if cutoff > 80 && distort_on

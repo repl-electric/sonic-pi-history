@@ -229,7 +229,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n%2==0 ? sync(:whole) : sync(:half)
 
 
-           with_fx (ring :none, :none, :echo)[n], phase: bar/2.0 do
+           with_fx (ring :none, :none, :echo)[n], phase: bar do
                   if n % 2 == 0
           with_synth :mod_fm  do
             play (ring :A3, :B3)[0], amp: 1.0, attack: bar, release: bar*2, phase: bar/2.0, divsor: 2

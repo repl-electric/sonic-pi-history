@@ -1,6 +1,12 @@
 _ = nil
 @polyrhythm = [3,2]
 
+live_loop :bass do
+  sync :foo
+  sample :drums_kick
+end
+
+
 live_loop :foo do
   density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }
 end

@@ -46,6 +46,8 @@ live_loop :bar, autocue: false do |idx|
 
    play degree(3, :FS3, :major); sleep 1 
 end
+
+end
 idx+=1
 end
 end

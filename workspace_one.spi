@@ -50,7 +50,7 @@ end
 end
 
 live_loop :high do
- 8.times{sync :foo}
+ 18.times{sync :foo}
  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/Casette_01_SP.wav"
 
 end

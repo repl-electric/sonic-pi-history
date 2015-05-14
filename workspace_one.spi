@@ -1,11 +1,4 @@
 _ = nil
-@polyrhythm = [3,2]
-
-live_loop :bass do
-  sync :foo
-  bowed_s "F#", rate: 0.5
-end
-
 def bowed_s(name, *args)
   s = Dir["/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/*_BowedGuitarNote_01_SP.wav"]
 puts s
@@ -32,7 +25,12 @@ def live(name, opts={}, &block)
   end
 end
 
+@polyrhythm = [3,2]
 
+live_loop :bass do
+  sync :foo
+  bowed_s "F#", rate: 0.5
+end
 
 live_loop :foo do
   density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }
@@ -40,5 +38,5 @@ end
 
 live_loop :bar, autocue: false do
   sync :foo
-  density(@polyrhythm.sort.last) { play degree(3, :FS3, :major); sleep 1 }
+  density(@polyrhythm.sort.last) { play degree(4, :FS3, :major); sleep 1 }
 end

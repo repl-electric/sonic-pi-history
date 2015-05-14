@@ -29,6 +29,8 @@ end
 
 live_loop :bass do
   sync :foo
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Kick/SubKick_01_SP.wav"
+
   bowed_s "F#", rate: 0.5
 end
 
@@ -38,7 +40,6 @@ live_loop :foo do
 end
 
 live_loop :bar, autocue: false do
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Kick/SubKick_01_SP.wav"
   sync :foo
   density(@polyrhythm.sort.last) { play degree(3, :FS3, :major); sleep 1 }
 end

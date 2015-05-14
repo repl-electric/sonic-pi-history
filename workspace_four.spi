@@ -229,7 +229,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
           n%2==0 ? sync(:whole) : sync(:half)
 
                 with_synth :dark_ambience do
-                  play notes[n], attack: 0.01,  pan: 0.8*direction, detune: detune_factor1
+                  play notes[n]
           
                 end
 

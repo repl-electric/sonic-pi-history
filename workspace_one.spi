@@ -3,7 +3,7 @@ _ = nil
 
 live_loop :bass do
   sync :foo
-  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav"
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", rate: 0.5
 end
 
 

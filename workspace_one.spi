@@ -30,7 +30,7 @@ end
 
 live_loop :bass do
   sync :foo
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav", amp: 3.0,  rate: pitch_ratio(note(:Fs3) - note(:C3))
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav", amp: 3.0,  rate: pitch_ratio(note(:Fs3) - note(:C3)), amp: 0.1
   bowed_s "F#", rate: 0.5, amp: 0.1
 end
 

@@ -6,5 +6,5 @@ end
 
 live_loop :bar, autocue: false do
   sync :foo
-  density(@polyrhythm.sort.last) { play degree(1, :FS3, :major); sleep 1 }
+  density(@polyrhythm.sort.last) { play _; sleep 1 }
 end

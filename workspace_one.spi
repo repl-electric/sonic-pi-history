@@ -1,0 +1,10 @@
+@polyrhythm = [2,3]
+
+live_loop :foo do
+  density(@polyrhythm.sort.first) { play :g; sleep 1 }
+end
+
+live_loop :bar, autocue: false do
+  sync :foo
+  density(@polyrhythm.sort.last) { play :c; sleep 1 }
+end

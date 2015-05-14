@@ -233,7 +233,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
            with_fx (ring :none, :none, :echo)[n], phase: bar/n, decay: bar*2 do
                   if n % 2 == 0
           with_synth :mod_fm  do
-            play scale(:A3,:major_pentatonic)[n], amp: 1.0, attack: bar, release: bar*2, phase: bar/2.0, divsor: 2, pan: n
+            play scale(:A3,:major_pentatonic).shuffle[n], amp: 1.0, attack: bar, release: bar*2, phase: bar/2.0, divsor: 2, pan: n
           end
 end
                 end

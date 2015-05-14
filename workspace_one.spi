@@ -3,8 +3,34 @@ _ = nil
 
 live_loop :bass do
   sync :foo
-  sample "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", rate: 0.5
+  sample bowed_s "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/F\#_BowedGuitarNote_01_SP.wav", rate: 0.5
 end
+
+def bowed_s(name)
+  s = Dir["/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/*.wav"]
+  s.sort!
+  if name.is_a? Integer
+    s[name]
+  else
+  s.select{|s| s =~ /#{name}/}[0]
+  end
+end
+def live(name, opts={}, &block)
+  idx = 0
+  amp = if(opts[:amp])
+    opts[:amp]
+  else
+    1
+  end
+  x = lambda{|idx|
+    with_fx :level, amp: amp do
+      block.(idx)
+  end}
+  live_loop name do |idx|
+    x.(idx)
+  end
+end
+
 
 
 live_loop :foo do

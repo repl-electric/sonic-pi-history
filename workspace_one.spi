@@ -34,10 +34,6 @@ live_loop :bass do
   bowed_s "F#", rate: 0.5, amp: 0.1
 end
 
-live_loop :a do
-sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Perc/DisortedSnare_02_SP.wav", amp: 0.2
-sleep bar/2.0
-end
 
 live_loop :foo do
   #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs2) - note(:Eb3))

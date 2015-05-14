@@ -3,7 +3,7 @@ _ = nil
 
 live_loop :bass do
   sync :foo
-  bowed_s "G#", rate: 1
+  bowed_s "E#", rate: 1
 end
 
 def bowed_s(name, *args)

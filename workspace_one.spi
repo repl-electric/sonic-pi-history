@@ -36,14 +36,14 @@ end
 
 live_loop :foo do
   #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs2) - note(:Eb3))
-  density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }
+  density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep bar }
 end
 
 live_loop :bar, autocue: false do |idx|
   sync :foo
   density(@polyrhythm.sort.last) do
   with_fx (knit :none,7, :echo, 1)[idx], mix: 0.8, phase: bar/2.0  do
-    play degree((knit 3,8,4,6, 6,1, 4,4).tick(:r1), :FS3, :major); sleep 1 
+    play degree((knit 3,8,4,6, 6,1, 4,4).tick(:r1), :FS3, :major); sleep bar 
 end
 
 end

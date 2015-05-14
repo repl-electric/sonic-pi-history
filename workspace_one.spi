@@ -30,7 +30,7 @@ end
 
 live_loop :bass do
   sync :foo
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 1
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 0.0
   bowed_s "F#", rate: 0.5, amp: 0.1
 end
 

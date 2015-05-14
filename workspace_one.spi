@@ -1,4 +1,4 @@
-@polyrhythm = [2,6]
+@polyrhythm = [6,2]
 
 live_loop :foo do
   density(@polyrhythm.sort.first) { play :g; sleep 1 }

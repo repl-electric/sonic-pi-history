@@ -43,7 +43,9 @@ live_loop :bar, autocue: false do
   sync :foo
   density(@polyrhythm.sort.last) do
   with_fx (knit :none,7, :echo, 1).tick(:r2), mix: 0.8, phase: bar/2.0  do
-    play degree((knit 3,8,4,8,5,2).tick(:r1), :FS3, :major); sleep bar 
+      n = degree((knit 3,8,4,8,5,2).tick(:r1)
+    play n, :FS3, :major); sleep bar 
+    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/Casette_01_SP.wav" if n == degree(3, :FS3, :major)
 end
 
 end
@@ -51,6 +53,5 @@ end
 
 live_loop :high do
  9.times{sync :foo}
- sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/Casette_01_SP.wav"
 
 end

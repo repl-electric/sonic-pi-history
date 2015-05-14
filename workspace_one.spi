@@ -56,6 +56,6 @@ end
 live_loop :high do
  sync :start
  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/Casette_01_SP.wav"
- 7.times{sync :start}
+ 1.times{sync :start}
 
 end

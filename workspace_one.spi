@@ -3,7 +3,7 @@ _ = nil
 
 live_loop :bass do
   sync :foo
-  sample :bd_ada
+  sample :bd_tek
 end
 
 

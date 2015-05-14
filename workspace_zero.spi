@@ -230,7 +230,7 @@ define :play_rolling do |notes, sleeps, direction, cutoff, detune_factor1, detun
 
 
                 with_fx :none do
-          with_synth :pulse do
+          with_synth :hoover do
             play notes[0], amp: 0.2, attack: 0.01, release: bar*2
           end
 end

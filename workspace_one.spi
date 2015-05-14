@@ -1,5 +1,5 @@
-_=nil
-@polyrhythm = [3,2]
+_ = nil
+@polyrhythm = [1,2]
 
 live_loop :foo do
   density(@polyrhythm.sort.first) { play degree(1, :FS3, :major); sleep 1 }

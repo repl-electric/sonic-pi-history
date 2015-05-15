@@ -92,7 +92,7 @@ end
 
 live_loop :bassz do
   with_fx :reverb do
-  play chord(:Fs2, "m7"), release: bar*8, amp: 1
+  play chord(:Fs3, "m7"), release: bar*8, amp: 1
 end
   sleep bar*8
 end

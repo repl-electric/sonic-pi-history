@@ -39,7 +39,6 @@ def deg_seq(*pattern_and_roots)
 end
 def bowed_s(name, *args)
   s = Dir["/Users/josephwilk/Dropbox/repl-electric/samples/Bowed\ Notes/*_BowedGuitarNote_01_SP.wav"]
-puts s
   s.sort!
   sample (if name.is_a? Integer
     s[name]

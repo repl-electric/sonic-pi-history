@@ -3,7 +3,7 @@ use_synth_defaults release: 0.3
 
 live_loop :phase, auto_cue: false do |c|
   # start the second loop as if 10k notes had elapsed
-  #c = 10000 if c == 0
+  c = 10000 if c == 0
 
   n = ring(62,64,69,71,72,64,62,71,69,64,72,71)[c]
 

@@ -8,5 +8,5 @@ live_loop :baszzel do
           chord(:Fs2,'maj11').to_a,2,
           chord(:Fs2,'13').to_a,2).tick(:b), amp: 2, release: 1, attack: 0.01
 #  end
-  sleep bar
+  sleep bar/2.0
 end

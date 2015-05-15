@@ -64,7 +64,7 @@ end
 end
 
 live_loop :bassz do
-  play :FS3, release: bar, amp: 3
+  play :FS2, release: bar, amp: 3
   sleep bar 
 end
 

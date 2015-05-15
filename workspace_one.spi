@@ -92,7 +92,7 @@ end
 live_loop :baszzel do
 #  with_fx :reverb do
     play (ring chord(:Fs2,'13').to_a, 
-          chord_degree(3, :Fs3, :major).to_a).tick(:b), amp: 1, release: 2, attack: 1.0
+          chord_degree(1, :Fs3, :major).to_a).tick(:b), amp: 1, release: 2, attack: 1.0
 #  end
   sleep bar*2
 end

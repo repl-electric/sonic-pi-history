@@ -91,7 +91,9 @@ end
 end
 
 live_loop :bassz do
+  with_fx :reverb do
   play deg_seq(*%w{:FS3 13}).tick(:a), release: bar*8, amp: 1
+end
   sleep bar*8
 end
 

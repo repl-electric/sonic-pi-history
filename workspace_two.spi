@@ -1,4 +1,11 @@
 bar = 1.0
-puts chord("A3", '+5')
-
-play chord("A4", '+5').to_a
+live_loop :baszzel do
+#  with_fx :reverb do
+    play (ring 
+          chord_degree(1, :Fs3, :major).to_a,
+          chord(:Fs3,'maj9').to_a,
+          chord(:Fs3,'maj11').to_a,
+          chord(:Fs3,'13').to_a).tick(:b), amp: 2, release: 2, attack: 0.01
+#  end
+  sleep bar*2
+end

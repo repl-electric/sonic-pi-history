@@ -1,2 +1,2 @@
 bar = 1.0
-play chord("A3", '+5')
+puts chord("A3", '+5')

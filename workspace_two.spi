@@ -1,7 +1,2 @@
 bar = 1.0
-live_loop :gogogogog do
-#  with_fx :reverb do
-    play chord("A", '+5'), amp: 1
-#  end
-  sleep bar*1
-end
+play chord("A3", '+5')

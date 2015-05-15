@@ -63,7 +63,7 @@ end
 end
 end
 
-live_loop :bass do
+live_loop :bassz do
   play :FS2, release: bar
   sleep bar 
 end

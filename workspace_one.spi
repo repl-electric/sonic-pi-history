@@ -91,7 +91,7 @@ end
 end
 
 live_loop :bassz do
-  play deg_seq(*%w{:FS2 13}).tick(:a), release: bar*8, amp: 3
+  play deg_seq(*%w{:FS2 13}).tick(:a), release: bar*8, amp: 8
   sleep bar*8
 end
 

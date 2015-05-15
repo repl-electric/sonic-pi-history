@@ -91,7 +91,7 @@ end
 
 live_loop :baszzel do
 #  with_fx :reverb do
-    play chord(:Fs3,'7+5').to_a, amp: 5
+    play chord(:Fs3,:M7).to_a, amp: 5
 #  end
   sleep bar*2
 end

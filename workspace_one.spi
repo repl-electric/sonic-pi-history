@@ -92,7 +92,7 @@ end
 
 live_loop :bassz do
   with_fx :reverb do
-  play chord(:Fs4,'m7+9'), release: bar*8, amp: 3
+  play chord(:Fs4,'m7+9'), release: bar*8, amp: 3, decay: bar*8
   end
   sleep bar*8
 end

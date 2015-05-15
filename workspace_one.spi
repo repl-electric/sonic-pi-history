@@ -64,8 +64,8 @@ end
 end
 
 live_loop :bassz do
-  play :FS2, release: bar*4, amp: 3
-  sleep bar*4 
+  play degree(1, :FS2, :major), release: bar*8, amp: 3
+  sleep bar*8
 end
 
 live_loop :high do

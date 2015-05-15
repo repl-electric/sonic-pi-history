@@ -92,7 +92,7 @@ end
 
 live_loop :bassz do
   with_fx :reverb do
-  play deg_seq(*%w{:FS2 13}).tick(:a), release: bar*8, amp: 1
+  play chord_degree(:Fs3, "m7"), release: bar*8, amp: 1
 end
   sleep bar*8
 end

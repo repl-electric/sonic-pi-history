@@ -63,6 +63,11 @@ end
 end
 end
 
+live_loop :bass do
+  play :FS2, release: bar
+  sleep bar 
+end
+
 live_loop :high do
  2.times{sync :start}
  sample (knit "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_06_SP.wav",3,

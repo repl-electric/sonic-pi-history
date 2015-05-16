@@ -131,7 +131,7 @@ with_synth :hollow do
 2.times{sync :foo}
   n = chord("CS3", "7")
 
-  play n[0]),  attack: 0.5, amp: 0.5
+  play n[0],  attack: 0.5, amp: 0.5
 1.times{sync :foo}
   play degree((ring 5,  5,  10).tick(:r2), :FS4, :major), attack: 0.01, amp: 0.2, release: ring(2.0,0.5).tick(:r3)
 1.times{sync :foo}

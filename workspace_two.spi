@@ -44,7 +44,7 @@ end;end;end
 
 live_loop :hat do
   density(2) do
-    sample Ambi["Perc"]
+    sample Ambi["Kick"]
     sleep bar
   end
 end

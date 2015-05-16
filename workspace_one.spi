@@ -113,7 +113,7 @@ end
 
 live_loop :high do
  2.times{sync :start}
- sample (knit Ambi["MicroPerc_06_SP"],3,
+ sample (knit Ambi["MicroPerc_06"],3,
               Ambi["MicroPerc_07"],1).tick(:s)
 
 end

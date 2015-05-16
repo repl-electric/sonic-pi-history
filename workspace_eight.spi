@@ -35,7 +35,9 @@ live_loop :smooth_chords do
     #chord(:g, '7sus4'),
     #chord(:g, '7')
   
-    chord_degree(1, :FS2, :major)
+    chord_degree(1, :FS2, :major),
+    chord_degree(3, :FS2, :major)
+
 
   ].each_cons(2) do |a,b|
     if @last_c.nil?

@@ -25,29 +25,30 @@ use_synth :beep
 
 live_loop :smooth_chords do
   [
-    #chord(:c, :major7),
-    #chord(:b3, 'm7-5'),
-    #chord(:f, :major7),
-    #chord(:e, 'm7-5'),
-    #chord(:a, '7+5-9'),
-    #chord(:d, :minor7),
-    #chord(:d, :minor7),
-    #chord(:g, '7sus4'),
-    #chord(:g, '7')
+    chord(:cs, :major7),
+    chord(:b3, 'm7-5'),
+    chord(:fs, :major7),
+    chord(:es, 'm7-5'),
+    chord(:as, '7+5-9'),
+    chord(:ds, :minor7),
+    chord(:ds, :minor7),
+    chord(:gs, '7sus4'),
+    chord(:gs, '7')
+
   # 3,8,4,8,5,2
-  chord(:FS3, :major7),
-  chord(:GS3, "m7-5"),
-  chord(:AS3, "m7-5"),
-  chord(:B3,  :M7),
-  chord(:CS4, :M7),
-  chord(:DS4, "7+5-9"),
+  #chord(:FS3, :major7),
+  #chord(:GS3, "m7-5"),
+  ##chord(:AS3, "m7-5"),
+  #chord(:B3,  :M7),
+  #chord(:CS4, :M7),
+  #chord(:DS4, "7+5-9"),
   #chord(:ES4, :dim),
   
   #chord(:GS3, :m),
     #chord_degree(5, :FS3, :major),
     #chord_degree(5, :FS3, :major),
-    chord(:AS4, "7sus4"),
-    chord(:AS4, :m7)
+   # chord(:AS4, "7sus4"),
+   # chord(:AS4, :m7)
 
 
     #chord(:FS, '7sus4'),

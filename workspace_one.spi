@@ -65,8 +65,8 @@ end
 
 @polyrhythm = [2,3]
 
-define :ambi_s do |args|
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{args}"
+define :ambi_s do |s, *args|
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}",args
 end
 
 live_loop :bass do |m_idx|

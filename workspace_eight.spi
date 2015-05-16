@@ -43,7 +43,7 @@ live_loop :smooth_chords do
 
     @last_c ||= Array(a)[1..-1]
 
-    puts "orig #{@last_c.map{|c| note_info(c).methods}}"
+    puts "orig #{@last_c.map{|c| note_info(c).midi_string}}"
     @last_c = voice_lead(@last_c,Array(b)[1..-1])
 
     # bass note

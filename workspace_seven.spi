@@ -22,4 +22,4 @@ play chord(:AS3, :M).to_a
 sleep 1
 play chord(:CS3, :M7).to_a
 sleep 1
-play chord(:FS3,'m7-9').to_a
+play chord(:FS3,'9+5').to_a

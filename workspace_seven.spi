@@ -2,10 +2,14 @@ puts  chord_degree(1, :FS3, :major)[0..2]
 puts  chord_degree(2, :FS3, :major)[0..2]
 puts  chord_degree(3, :FS3, :major)[0..2]
 puts  chord_degree(4, :FS3, :major)[0..2]
+puts  chord_degree(5, :FS3, :major)[0..2]
+puts  chord_degree(6, :FS3, :major)[0..2]
+puts  chord_degree(7, :FS3, :major)[0..2]
 
 
 
 puts  chord(:FS3, :M)
 puts  chord(:GS3, :m)
 puts  chord(:AS3, :m) 
+puts  chord(:B3, :M) 
 puts  chord(:B3, :M) 

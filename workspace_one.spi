@@ -64,13 +64,13 @@ end
 
 live_loop :bass do |m_idx|
   sync :foo
+sample Ambi["120_ChoppyPerc_01"]
  case (m_idx%8)
   when 0
     sample Ambi["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
   when 4
     sample Ambi["Impact_0#{(stretch (1..5).to_a, 8).tick(:b)}"], amp: 0.2
   end
-
   m_idx+=1
 end
 

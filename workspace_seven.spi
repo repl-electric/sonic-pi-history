@@ -6,7 +6,7 @@ puts  chord_degree(5, :FS3, :major)[0..2]
 puts  chord_degree(6, :FS3, :major)[0..2]
 puts  chord_degree(7, :FS3, :major)[0..2]
 
-puts
+puts ""
 
 puts  chord(:FS3, :M)
 puts  chord(:GS3, :m)

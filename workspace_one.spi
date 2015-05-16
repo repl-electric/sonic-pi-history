@@ -1,5 +1,6 @@
 _ = nil
 bar = 1.0
+use_bpm 60 
 def perc_s(name,*args)
   s = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_*_SP.wav"]
   s.sort!
@@ -106,3 +107,7 @@ live_loop :high do
               "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_07_SP.wav",1).tick(:s)
 
 end
+
+
+#33333333 44      55
+#11111111     111111111      11

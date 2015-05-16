@@ -35,9 +35,9 @@ live_loop :smooth_chords do
     #chord(:g, '7sus4'),
     #chord(:g, '7')
   # 3,8,4,8,5,2
-    chord_degree(1, :FS3, :major)[0..3],
-    chord_degree(3, :FS3, :major)[0..3],
-    chord_degree(4, :FS3, :major)[0..3],
+    chord_degree(1, :FS3, :major)[0..2],
+    chord_degree(3, :FS3, :major)[0..2],
+    chord_degree(4, :FS3, :major)[0..2],
     #chord_degree(5, :FS3, :major),
     #chord_degree(5, :FS3, :major),
     

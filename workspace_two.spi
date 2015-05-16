@@ -60,7 +60,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.0 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
     2.times{sync :foo}
     with_synth :saw do
-      play (knit "Cs2",3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
+      play (knit _,3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     #play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 if idx % 4 ==0
     idx+=1

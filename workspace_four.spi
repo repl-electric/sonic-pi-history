@@ -2,7 +2,7 @@ def invert_chord(notes, shift)
 if(shift > 0) 
   invert_chord(notes[1..-2] + [notes.first+12], shift-1)
 elsif(shift < 0)
-  invert_chord(notes[1..-2] + [notes.first-12]), shift+1)
+  invert_chord(notes[1..-2] + [notes.first-12], shift+1)
 else
   notes
 end

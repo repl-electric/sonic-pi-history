@@ -7,6 +7,12 @@ module Ambi
   samples.select{|s| s=~ /#{a}/}[0]
  end
 end
+module Chill
+ def self.[](a)
+  samples = Dir["/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/**/*.wav"]
+  samples.select{|s| s=~ /#{a}/}[0]
+ end
+end
 define :deg_seq do |*pattern_and_roots|
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
     if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
@@ -81,7 +87,7 @@ live_loop :beats do
 end
 
 live_loop :texture do
-sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav",
+sample Chill["am_pad80_warmth_B.wav"],
        amp: 0.3
 sleep sample_duration "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav"
 end

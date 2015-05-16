@@ -39,7 +39,7 @@ live_loop :foo do
   density(@polyrhythm.sort.first) { play degree(5,:FS3, :major); sleep bar }
 end
 
-live_loop :bar, autocue: false do
+live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
   sync :foo
   density(@polyrhythm.sort.last) do
     with_fx (knit :none,7, :echo, 1).tick(:r2), mix: 0.8, phase: bar/2.0  do
@@ -51,9 +51,9 @@ live_loop :bar, autocue: false do
       end
     end
   end
-end
+end;end
 
-live_loop :bassline do |idx|
+live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do
   play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
   2.times{sync :foo}
   with_synth :fm do
@@ -61,7 +61,7 @@ live_loop :bassline do |idx|
   end
   #play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 if idx % 4 ==0
   idx+=1
-end
+end;end
 
 live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
   n = chord_seq(*%w{Cs4 7  Fs4 M  B3 M7})
@@ -76,7 +76,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
   end
 end;end
 
-live_loop :high do
+live_loop :high do;with_fx :level, amp: 0.0 do
   2.times{sync :start}
   sample (knit Ambi["MicroPerc_06"],3,Ambi["MicroPerc_07"],1).tick(:s)
-end
+end;end

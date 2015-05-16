@@ -63,7 +63,7 @@ def live(name, opts={}, &block)
   end
 end
 
-@polyrhythm = [3,4]
+@polyrhythm = [2,4]
 
 live_loop :bass do |m_idx|
   sync :foo

@@ -1,6 +1,6 @@
 live_loop :melody do
 
 play scale(:Ab3, :major).shuffle.tick(:a)
-sleep 1
+sleep 0.25
 
 end

@@ -83,7 +83,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
     n = chord_seq(*%w{Cs4 7  Fs4 M  B4 M7})
         2.times{sync :foo}
 
-with_synth :pretty_bell
+with_synth :pretty_bell do
 with_fx :bitcrusher, bits:7, mix: 0.3 do
       play :Fs1
 end

@@ -81,7 +81,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
     end
 end;end
 
-live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
+live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
     n = chord_seq(*%w{Cs4 7  Fs4 M  B4 M7})
         #2.times{sync :foo}
 

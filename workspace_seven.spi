@@ -16,9 +16,9 @@ puts  chord(:CS4, :M)
 puts  chord(:DS4, :m) 
 puts  chord(:ES4, :dim) 
 
-play chord(:FS3, :M).to_a
+play chord(:FS3, :M)
 sleep 1
-play chord(:AS3, :M).to_a
+play chord(:AS3, :M)
 sleep 1
 play chord(:CS3, :M7).to_a
 sleep 1

@@ -1,1 +1,1 @@
-puts  chord_degree(1, :FS3, :major)[0..3]
+puts  chord_degree(1, :FS3, :major)[0..2]

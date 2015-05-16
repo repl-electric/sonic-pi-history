@@ -20,7 +20,7 @@ play chord_degree(1, :FS3, :major,3)
 play chord_degree(1, :FS3, :major,3)[0]-12
 sleep 1
 play chord_degree(4, :FS3, :major,3)
-play chord_degree(1, :FS3, :major,3)[0]-12
+play chord_degree(4, :FS3, :major,3)[0]-12
 
 sleep 1
 play chord(:CS3, "7")

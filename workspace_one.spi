@@ -88,7 +88,7 @@ end
 
 live_loop :texture do
 sync :foo
-with_fx :slicer do
+with_fx :bitcrusher do
 sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
        amp: 0.2
 end

@@ -2,7 +2,7 @@ _ = nil
 bar = 1.0
 use_bpm 60 
 def chord_seq(*args)
-  args.split(" ").each_slice(2).reduce([]){|acc, notes| acc += chord(notes[0],notes[1])}
+  args.each_slice(2).reduce([]){|acc, notes| acc += chord(notes[0],notes[1])}
 end
 module Ambi
  def self.[](a)

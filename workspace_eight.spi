@@ -54,6 +54,9 @@ live_loop :smooth_chords do
     puts "orig #{@last_c.map{|c| note_info(c).midi_string}}"
     @last_c = voice_lead(@last_c,Array(b)[1..-1])
 
+    puts "new #{@last_c.map{|c| note_info(c).midi_string}}"
+
+
     # bass note
     play (b.first - 24), amp: 0.6
 

@@ -40,6 +40,7 @@ live_loop :smooth_chords do
     chord_degree(4, :FS3, :major),
     #chord_degree(5, :FS3, :major),
     
+    chord(:g, '7sus4'),
     chord(:GS, '7')
 
     #chord(:C, '13')

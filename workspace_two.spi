@@ -84,7 +84,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
         2.times{sync :foo}
 
 with_fx :bitcrusher, bits:7, mix: 0.3 do
-      play :Fs2
+      play :Fs1
 end
 
 end;end

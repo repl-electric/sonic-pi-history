@@ -8,4 +8,4 @@ puts  chord_degree(4, :FS3, :major)[0..2]
 puts  chord(:FS3, :M)
 puts  chord(:GS3, :m)
 puts  chord(:AS3, :m) 
-puts  chord(:BS3, :m) 
+puts  chord(:B3, :m) 

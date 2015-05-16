@@ -123,13 +123,16 @@ live_loop :bassline do |idx|
 idx+=1
 end
 
+def chord_seq(*args)
+  args.each_cons(2).reduce{|acc, notes| acc += chord(notes.first,notes,second)} 
+end
+
 live_loop :highlight do |idx|
-n = chord("CS4", "7")+ chord("FS4", "M")  + chord("B3", "M7")
+n = chord_seq("CS4", "7", "FS4", "M", "B3", "M7")
 with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
 with_synth :hollow do
 2.times{sync :foo}
   play n.tick(:f),  attack: 0.5, amp: 0.7
-
 end
 1.times{sync :foo}
   play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)

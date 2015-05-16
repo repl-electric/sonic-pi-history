@@ -4,6 +4,6 @@ live_loop :melody do
 #end
 with_synth :dsaw do
 play scale(:FS1, :melodic_minor).shuffle.tick(:a), decay: 2
-sleep 2
+sleep 4
 end
 end

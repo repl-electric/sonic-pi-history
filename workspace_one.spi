@@ -102,8 +102,10 @@ end
 
 live_loop :higher do |idx|
 4.times{sync :foo}
+with_fx :reverb do
 with_synth :hollow do
   play degree((knit 3,1,4,1,5,1).tick(:r1), :FS4, :major), attack: 0.5, amp: 0.2
+end
 end
 end
 

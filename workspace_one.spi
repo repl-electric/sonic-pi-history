@@ -70,7 +70,7 @@ end
 
 live_loop :bass do |m_idx|
   sync :foo
-  ambi_s "One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0), start: rrand(0.0, 0.09) 
+  ambi_s "One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
   
  case (m_idx%8)
   when 0

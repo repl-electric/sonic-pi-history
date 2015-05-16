@@ -37,7 +37,7 @@ end;end
 
 live_loop :foo do;with_fx :level, amp: 1.0 do
   density(@polyrhythm.sort.first) { 
-with_synth :bnoise do
+with_synth :cnoise do
 play (knit "Fs1",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
 end
 play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01

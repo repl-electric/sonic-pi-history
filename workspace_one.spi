@@ -92,7 +92,7 @@ with_fx :bitcrusher do
 sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
        amp: 0.01
 end
-sleep sample_duration "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav", rate: pitch_ratio(note(:B2) - note(:FS2))
+sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
 end
 
 live_loop :foo do

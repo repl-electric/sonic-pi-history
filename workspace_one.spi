@@ -68,7 +68,10 @@ end
 live_loop :bass do |m_idx|
   sync :foo
 
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
+  case m_idx%8
+  when 4
+    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
+  end
 
 
   #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav",  rate: pitch_ratio(note(:Cs3) - note(:C3)), amp: 0.1

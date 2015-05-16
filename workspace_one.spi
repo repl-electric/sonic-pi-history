@@ -65,11 +65,15 @@ end
 
 @polyrhythm = [2,3]
 
-live_loop :bass do
+live_loop :bass do |idx|
   sync :foo
+
   sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
+
+
   #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav",  rate: pitch_ratio(note(:Cs3) - note(:C3)), amp: 0.1
   #bowed_s "F#", rate: 0.5, amp: 0.2
+idx+=1
 end
 
 live_loop :foo do
@@ -91,7 +95,7 @@ end
 end
 end
 
-live_loop :baszzel do |idx|
+live_loop :bassline do |idx|
   #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
   2.times{sync :foo}
   with_synth :fm do
@@ -101,7 +105,7 @@ live_loop :baszzel do |idx|
 idx+=1
 end
 
-live_loop :higher do |idx|
+live_loop :highlight do |idx|
 4.times{sync :foo}
 with_fx (ring :none, :echo).tick(:a), phase: bar/4.0 do
 with_synth :hollow do

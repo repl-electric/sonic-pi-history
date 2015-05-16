@@ -124,7 +124,7 @@ idx+=1
 end
 
 def chord_seq(*args)
-  args.steps(2).reduce{|acc, notes| acc += chord(notes.first,notes.second)} 
+  args.each_slice(2).reduce{|acc, notes| acc += chord(notes.first,notes.second)} 
 end
 
 live_loop :highlight do |idx|

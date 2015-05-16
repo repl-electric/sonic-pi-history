@@ -93,7 +93,7 @@ end
 
 live_loop :baszzel do
 2.times{sync :foo}
-play  degree((knit 5,4,2,4,7,1).tick(:r1), :FS2, :major), amp: 1.0, release: 2*bar, attack: 1.0
+play  degree((knit 5,4,2,4,7,1).tick(:r1), :FS2, :major), amp: 2.0, release: 2*bar, attack: 1.0
   
 end
 

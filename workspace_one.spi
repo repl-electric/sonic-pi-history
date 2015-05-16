@@ -93,7 +93,7 @@ end
 
 live_loop :baszzel do |idx|
 2.times{sync :foo}
-play (knit "Cs3",4), amp: 2.0, release: 2*bar, attack: 0.01
+play (knit "Cs3",4, "B3", 4), amp: 2.0, release: 2*bar, attack: 0.01
 #play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 if idx % 4 ==0
 idx+=1
 end

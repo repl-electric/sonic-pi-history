@@ -119,8 +119,8 @@ end
 
 live_loop :high do
  2.times{sync :start}
- sample (knit ambi_s "One Shots/Perc/MicroPerc_06_SP",3,
-              ambi_s "One Shots/Perc/MicroPerc_07_SP",1).tick(:s)
+ sample (knit ambi_s("One Shots/Perc/MicroPerc_06_SP"),3,
+              ambi_s("One Shots/Perc/MicroPerc_07_SP"),1).tick(:s)
 
 end
 

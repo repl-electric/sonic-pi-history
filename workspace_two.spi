@@ -26,14 +26,14 @@ live_loop :beats do
   sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
 end
 
-live_loop :texture do
+live_loop :texture do;with_fx :level, amp: 0.0 do
   sync :foo
   with_fx :bitcrusher do
     sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
       amp: 0.01
   end
   sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
-end
+end;end
 
 live_loop :foo do;with_fx :level, amp: 0.0 do
   density(@polyrhythm.sort.first) { play degree(5,:FS3, :major); sleep bar }

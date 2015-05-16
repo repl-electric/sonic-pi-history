@@ -82,7 +82,7 @@ end
 
 live_loop :texture do
 sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav",
-       amp: 0.2
+       amp: 0.3
 sleep sample_duration "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav"
 end
 

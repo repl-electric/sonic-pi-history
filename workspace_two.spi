@@ -102,7 +102,7 @@ sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2
 end
 
 live_loop :foo do
-  density(@polyrhythm.sort.first) { play :F3; sleep bar }
+  density(@polyrhythm.sort.first) { play :FS3; sleep bar }
 end
 
 live_loop :bar, autocue: false do

@@ -75,7 +75,7 @@ end
 
 live_loop :beats do
   sync :foo
-  sample Ambi["120_MechanicalBeat_0#{(ring 1,2).tick(:f)}_SP.wav"]
+  sample Ambi["120_MechanicalBeat_0#{(ring 1,1,1,2).tick(:f)}_SP.wav"]
   sample Ambi["Cracklin_01"], rate: 0.95, amp: 0.2
   sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
 end

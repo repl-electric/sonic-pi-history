@@ -20,5 +20,5 @@ play chord(:FS3, :M).to_a
 sleep 1
 play chord(:AS3, :M).to_a
 sleep 1
-play chord(:AS3, :M).to_a
+play chord(:CS3, :M7).to_a
 sleep 1

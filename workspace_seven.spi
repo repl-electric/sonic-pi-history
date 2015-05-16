@@ -25,5 +25,5 @@ puts  chord(:ES4, :dim)
 #play chord(:FS3,:major7)
 #sleep 1
 
-rotate
+rotate()
 puts chord(:CS3, "7").map{|n| note_info(n).midi_string}

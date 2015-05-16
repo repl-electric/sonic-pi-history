@@ -134,11 +134,9 @@ with_synth :hollow do
 1.times{sync :foo}
 
   play @n.tick(:f),  attack: 0.01, amp: 1.0
-1.times{sync :foo}
+2.times{sync :foo}
   play @n.tick(:f),  attack: 0.01, amp: 1.0
 
-1.times{sync :foo}
-  play @n.tick(:f), attack: 0.01, amp: 1.2, release: ring(2.0,0.5).tick(:r3)
 1.times{sync :foo}
   play @n.tick(:f), attack: 0.01, amp: 1.2, release: ring(2.0,0.5).tick(:r3)
 

@@ -79,9 +79,9 @@ live_loop :bass do |m_idx|
 m_idx+=1
 end
 
-live_loop :foo do
+live_loop :pacemaker do
   #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs2) - note(:Eb3))
-  density(@polyrhythm.sort.first) { play :GS3; sleep bar }
+  density(@polyrhythm.sort.first) { play :FS3; sleep bar }
 end
 
 live_loop :bar, autocue: false do

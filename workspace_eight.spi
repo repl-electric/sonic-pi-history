@@ -59,8 +59,10 @@ live_loop :smooth_chords do
     puts "new #{@last_c.map{|c| note_info(c).midi_string}}"
 
 
+    with_synth :saw do
     # bass note
     play (b.first - 24), amp: 0.6
+    end
 
     with_fx :reverb, pre_amp: 2, mix: 0.2 do
       8.times do |i|

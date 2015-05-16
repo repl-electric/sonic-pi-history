@@ -65,11 +65,15 @@ end
 
 @polyrhythm = [2,3]
 
+define :ambi_sample do |args|
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{args}"
+end
+
 live_loop :bass do |m_idx|
   sync :foo
   case (m_idx%8)
   when 0
-    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2)
+    sample "One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2)
   when 4
    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Forest/Impact_05_SP.wav"
   end

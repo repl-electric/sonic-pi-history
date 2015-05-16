@@ -43,7 +43,7 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
 end;end;end
 
 live_loop :hat do
-  density(8) do
+  density(2) do
     sample Ambi["hat"], amp: 9
     sleep bar
   end

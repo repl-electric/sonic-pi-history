@@ -74,7 +74,7 @@ live_loop :bass do |m_idx|
 end
 
 live_loop :beats do
-  sample Ambi["92_DottedThud_01_SP.wav"],  rate: 60
+  sample Ambi["92_DottedThud_01_SP.wav"]
   sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
 end
 

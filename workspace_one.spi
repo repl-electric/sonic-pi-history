@@ -78,7 +78,7 @@ end
 
 live_loop :foo do
   #sample "/Users/josephwilk/Dropbox/repl-electric/samples/Guitar\ Tails/92_Eb_Plucked_01_SP.wav", rate: pitch_ratio(note(:Fs2) - note(:Eb3))
-  density(@polyrhythm.sort.first) { play degree((ring 1).tick(:a), :FS3, :major); sleep bar }
+  density(@polyrhythm.sort.first) { play degree((ring 5).tick(:a), :FS3, :major); sleep bar }
 end
 
 live_loop :bar, autocue: false do

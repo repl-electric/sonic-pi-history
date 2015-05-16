@@ -6,7 +6,7 @@ _ = nil
 bar = 1.0
 use_bpm 60
 
-@polyrhythm = [16,2]
+@polyrhythm = [2,3]
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
     sync :foo
@@ -39,15 +39,15 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do
       with_synth(:dark_ambience){play (knit "Fs2",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01}
       #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
-      play degree((ring 1,5).tick(:g2),:F3, :major); sleep bar/4.0
+      play degree(1,:FS3, :major); sleep bar
 end;end;end
 
-live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo
     density(@polyrhythm.sort.last) do
       with_fx (knit :none,7, :echo, 1).tick(:r2), mix: 0.8, phase: bar/2.0  do
-        n = degree((knit 1,1,2,1).tick(:r1), :Fs4, :major)
-        play n, pan: (Math.sin(vt*13)/1.5), attack: 0.01, release: 0.4 + rrand(0.1,0.2)
+        n = degree((knit 3,8,4,8,5,2).tick(:r1), :FS3, :major)
+        play n, pan: (Math.sin(vt*13)/1.5)
         sleep bar
         if n == degree(5, :FS3, :major)
           cue :start
@@ -57,7 +57,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
 end;end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 1.0 do
-    play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
+    #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
     2.times{sync :foo}
     with_synth :fm do
       play (knit "Cs2",3, "FS2" ,1, "B2", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01

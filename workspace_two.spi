@@ -35,7 +35,7 @@ live_loop :texture do;with_fx :level, amp: 0.0 do
 end;end
 
 live_loop :foo do;with_fx :level, amp: 1.0 do
-  density(@polyrhythm.sort.first) { play degree(1,:FS3, :major); sleep bar }
+  density(@polyrhythm.sort.first) { play degree(3,:FS3, :major); sleep bar }
 end;end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do

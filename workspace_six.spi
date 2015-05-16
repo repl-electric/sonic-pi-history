@@ -1,1 +1,1 @@
-puts chord("CS4", "7")+ chord("FS3", "7")
+(ring chord("CS4", "7")+ chord("FS3", "M"))

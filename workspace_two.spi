@@ -6,7 +6,7 @@ _ = nil
 bar = 1.0
 use_bpm 60
 
-@polyrhythm = [2,5]
+@polyrhythm = [2,7]
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
     sync :foo

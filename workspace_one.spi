@@ -92,6 +92,8 @@ end
 end
 
 live_loop :baszzel do |idx|
+  play (knit "Fs3",1).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01
+
 2.times{sync :foo}
 with_synth :fm do
   play (knit "Cs2",3, "FS2" ,1, "B2", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01

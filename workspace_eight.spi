@@ -61,7 +61,7 @@ live_loop :smooth_chords do
 
     with_synth :saw do
     # bass note
-    play (b.first - 24), amp: 1.6
+    play (b.first - 24), amp: 0.6
     end
 
     with_fx :reverb, pre_amp: 2, mix: 0.2 do

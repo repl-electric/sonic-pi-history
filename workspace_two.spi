@@ -42,13 +42,6 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
       play degree(1,:FS3, :major); sleep bar
 end;end;end
 
-live_loop :hat do
-  density(2) do
-    sample Ambi["Perc"], rate: 0.1
-    sleep bar
-  end
-end
-
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo
     density(@polyrhythm.sort.last) do

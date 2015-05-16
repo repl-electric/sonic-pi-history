@@ -11,7 +11,7 @@ use_bpm 60
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
   sync :foo
   case (m_idx%8)
-  when 0,4
+  when 0,4,2
     sample Ambi["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
   when 4
     sample Ambi["Impact_0#{(stretch (1..5).to_a, 8).tick(:b)}"], amp: 0.2

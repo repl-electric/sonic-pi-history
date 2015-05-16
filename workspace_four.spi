@@ -1,5 +1,5 @@
 live_loop :melody do
-at [0,2] do
+density(2) do
 sample Ambi["Kick"]
 end
 play scale(:FS3,:whole_tone).shuffle.tick(:a)

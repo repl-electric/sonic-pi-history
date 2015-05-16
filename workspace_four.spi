@@ -1,0 +1,22 @@
+def invert_chord(notes, shift)
+if(shift > 0) 
+  invert_chord(inc_first notes 12) (dec shift)
+elsif(shift < 0)
+  invert_chord(dec_first notes 12) (inc shift)
+else
+  notes
+end
+end
+
+#defn invert-chord
+#  "Move a chord voicing up or down.
+#    ;first inversion
+#    (invert-chord [60 64 67] 1) ;=> (64 67 72)
+#    ; second inversion
+#    (invert-chord [60 64 67] 2) ;=> (67 72 76)
+#  "
+#  [notes shift]
+#  (cond
+#    (pos? shift) (recur (inc-first notes 12) (dec shift))
+#    (neg? shift) (recur (dec-last notes 12) (inc shift))
+#    (zero? shift) notes))

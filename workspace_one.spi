@@ -1,7 +1,7 @@
 _ = nil
 bar = 1.0
 use_bpm 60 
-def perc_s(name,*args)
+define :perc_s do |name,*args|
   s = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Perc/MicroPerc_*_SP.wav"]
   s.sort!
   sample (if name.is_a? Integer
@@ -9,6 +9,9 @@ def perc_s(name,*args)
   else
   s.select{|s| s =~ /#{name}/}[0]
   end), *args
+end
+define :ambi_s do |s, *args|
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}",*args
 end
 def deg_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
@@ -64,10 +67,6 @@ def live(name, opts={}, &block)
 end
 
 @polyrhythm = [2,3]
-
-define :ambi_s do |s, *args|
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}",*args
-end
 
 live_loop :bass do |m_idx|
   sync :foo

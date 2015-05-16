@@ -19,18 +19,17 @@ live_loop :bass do |m_idx|
   m_idx+=1
 end
 
-live_loop :beats do
+live_loop :beats do;with_fx :level, amp: 0.0 do
   sync :foo
   #sample Ambi["B_BrokenCres_01_SP"]
   sample Ambi["Cracklin_01"], rate: 0.95, amp: 0.2
-  sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
-end
+end;end
 
 live_loop :texture do;with_fx :level, amp: 0.0 do
   sync :foo
   with_fx :bitcrusher do
     sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
-      amp: 0.01
+      amp: 0.1
   end
   sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
 end;end

@@ -15,3 +15,5 @@ puts  chord(:B3, :M)
 puts  chord(:CS4, :M) 
 puts  chord(:DS4, :m) 
 puts  chord(:ES4, :dim) 
+
+play chord(:FS3, :M)

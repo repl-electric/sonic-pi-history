@@ -75,7 +75,7 @@ live_loop :bass do |m_idx|
     ambi_s "One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
   when 4
   end
-    ambi_s "One Shots/Forest/Impact_0#{[1,2,3,4,5].choose}_SP.wav", amp: 1.0
+    ambi_s "One Shots/Forest/Impact_0#{[1,2,3,4,5].choose}_SP.wav", amp: 0.2
 
   m_idx+=1
 end

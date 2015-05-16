@@ -16,7 +16,7 @@ puts  chord(:CS4, :M)
 puts  chord(:DS4, :m) 
 puts  chord(:ES4, :dim) 
 
-play chord(:FS3, :M)
+play chord_degree(1, :FS3, :major,3)
 sleep 1
 play chord(:AS3, :M)
 sleep 1

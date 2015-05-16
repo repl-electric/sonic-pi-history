@@ -97,7 +97,7 @@ live_loop :baszzel do
           chord_degree(1, :Fs3, :major).to_a[0..2],
           chord(:Fs2,'13').to_a[0..2]).tick(:b), amp: 2, release: 2, attack: 0.5
 #  end
-  sleep bar/2
+  sleep bar/4
     play (ring 
           chord_degree(1, :Fs3, :major).to_a[3],
           chord(:Fs2,'13').to_a[3]).tick(:a), amp: 1, release: 2, attack: 0.01

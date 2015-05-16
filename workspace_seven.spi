@@ -17,6 +17,8 @@ puts  chord(:DS4, :m)
 puts  chord(:ES4, :dim) 
 
 play chord_degree(1, :FS3, :major,3)
+play chord_degree(1, :FS3, :major,3)[0]-12
+sleep 1
 sleep 1
 play chord_degree(4, :FS3, :major,3)
 sleep 1

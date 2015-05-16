@@ -11,7 +11,7 @@ define :perc_s do |name,*args|
   end), *args
 end
 define :ambi_s do |s, *args|
-  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}",*args
+  sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}.wav",*args
 end
 define :deg_seq do |*pattern_and_roots|
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
@@ -72,7 +72,7 @@ live_loop :bass do |m_idx|
   sync :foo
  case (m_idx%8)
   when 0
-    ambi_s "One Shots/Kick/SubKick_02_SP.wav", amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+    ambi_s "One Shots/Kick/DistortedVerbKick_01_SP", amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
   when 4
     ambi_s "One Shots/Forest/Impact_0#{(stretch (1..5).to_a, 8).tick(:b)}_SP.wav", amp: 0.2
   end

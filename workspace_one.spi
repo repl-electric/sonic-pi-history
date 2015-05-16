@@ -2,7 +2,7 @@ _ = nil
 bar = 1.0
 use_bpm 60 
 module Ambi
- def self.s(a)
+ def self.[](a)
   samples = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/**/*.wav"]
   samples.select{|s| s=~ /#{a}/}[0]
  end
@@ -125,8 +125,8 @@ end
 
 live_loop :high do
  2.times{sync :start}
- sample (knit ambi_s("One Shots/Perc/MicroPerc_06_SP"),3,
-              ambi_s("One Shots/Perc/MicroPerc_07_SP"),1).tick(:s)
+ sample (knit Ambi["MicroPerc_06_SP"],3,
+              Ambi["MicroPerc_07"],1).tick(:s)
 
 end
 

@@ -131,10 +131,9 @@ end
 live_loop :highlight do |idx|
 with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
 with_synth :hollow do
-1.times{sync :foo}
-
-  play @n.tick(:f),  attack: 0.01, amp: 1.0
 2.times{sync :foo}
+  play @n.tick(:f),  attack: 0.01, amp: 1.0
+1.times{sync :foo}
   play @n.tick(:f),  attack: 0.01, amp: 1.0
 
 1.times{sync :foo}

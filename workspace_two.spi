@@ -129,11 +129,12 @@ with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar
 with_synth :hollow do
 2.times{sync :foo}
   play n.tick(:f),  attack: 0.5, amp: 1.0
+
+end
 1.times{sync :foo}
   play n.tick(:f), attack: 0.01, amp: 1.2, release: ring(2.0,0.5).tick(:r3)
 1.times{sync :foo}
 
-end
 end
 end
 

@@ -40,7 +40,7 @@ live_loop :smooth_chords do
   chord(:AS3, :m7),
   chord(:B3,  :M7),
   chord(:CS4, :M7),
-  chord(:DS4, "9"),
+  chord(:DS4, "7+5-9"),
   #chord(:ES4, :dim),
   
   #chord(:GS3, :m),

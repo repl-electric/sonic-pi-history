@@ -1,5 +1,6 @@
 live_loop :melody do
 
-play scale(:Ab3, :major)
+play scale(:Ab3, :major).tick(:a)
+sleep 1
 
 end

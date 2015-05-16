@@ -67,7 +67,7 @@ live_loop :smooth_chords do
     with_fx :reverb, pre_amp: 2, mix: 0.2 do
       8.times do |i|
         play @last_c, release: 0.1, pan: (Math.sin(vt*13)/1.5) if spread(5,8)[i]
-        sleep 0.125
+        #sleep 0.125
       end
     end
 

@@ -7,7 +7,7 @@ def invert_chord(notes, shift)
     notes
   end
 end
-puts invert_chord([60,64,67],2)
+puts invert_chord([60,64,67],-2)
 
 #defn invert-chord
 #  "Move a chord voicing up or down.

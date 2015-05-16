@@ -1,13 +1,13 @@
 def invert_chord(notes, shift)
-if(shift > 0) 
-  invert_chord(notes[1..-1] + [notes[0]+12], shift-1)
-elsif(shift < 0)
-  invert_chord(notes[1..-1] + [notes[0]-12], shift+1)
-else
-  notes
+  if(shift > 0)
+    invert_chord(notes[1..-1] + [notes[0]+12], shift-1)
+  elsif(shift < 0)
+    invert_chord(notes[1..-1] + [notes[0]-12], shift+1)
+  else
+    notes
+  end
 end
-end
-puts invert_chord([60,64,67],1)
+puts invert_chord([60,64,67],2)
 
 #defn invert-chord
 #  "Move a chord voicing up or down.

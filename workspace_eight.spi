@@ -25,15 +25,15 @@ use_synth :beep
 
 live_loop :smooth_chords do
   [
-    chord(:cs, :major7),
+    chord(:cs3, :major7),
     chord(:b3, 'm7-5'),
-    chord(:fs, :major7),
-    chord(:es, 'm7-5'),
-    chord(:as, '7+5-9'),
-    chord(:ds, :minor7),
-    chord(:ds, :minor7),
-    chord(:gs, '7sus4'),
-    chord(:gs, '7')
+    chord(:fs3, :major7),
+    chord(:es3, 'm7-5'),
+    chord(:as3, '7+5-9'),
+    chord(:ds3, :minor7),
+    chord(:ds3, :minor7),
+    chord(:gs3, '7sus4'),
+    chord(:gs3, '7')
 
   # 3,8,4,8,5,2
   #chord(:FS3, :major7),

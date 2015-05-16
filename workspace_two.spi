@@ -87,7 +87,7 @@ with_synth :pretty_bell do
 with_fx :bitcrusher, bits:8, sample_rate: 20000, mix: 0.3 do
       with_synth(:tri){play :Fs1}
       play :Fs2, pan: (Math.sin(vt*13)) 
-sleep bar/8.0
+sleep bar/4.0
 end
 end
 

@@ -1,3 +1,7 @@
+# __         .        .      
+#/  ` _.._ _ |_ ._.* _| _  _ 
+#\__.(_][ | )[_)[  |(_](_](/,
+#                      ._|   
 _ = nil
 bar = 1.0
 use_bpm 60 
@@ -136,7 +140,6 @@ end
 1.times{sync :foo}
   play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)
 1.times{sync :foo}
-
 end
 end
 
@@ -146,7 +149,3 @@ live_loop :high do
               Ambi["MicroPerc_07"],1).tick(:s)
 
 end
-
-
-#33333333 44      55
-#11111111     111111111      11

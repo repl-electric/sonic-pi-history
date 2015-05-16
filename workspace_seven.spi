@@ -22,5 +22,5 @@ play chord(:AS3, :M)
 sleep 1
 play chord(:CS3, :M7)
 sleep 1
-puts chord(:FS3,:major7)
+play chord(:FS3,:major7)
 sleep 1

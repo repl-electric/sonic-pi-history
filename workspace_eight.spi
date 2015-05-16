@@ -25,20 +25,20 @@ use_synth :beep
 
 live_loop :smooth_chords do
   [
-    #chord(:c, :major7),
-    #chord(:b3, 'm7-5'),
-    #chord(:f, :major7),
-    #chord(:e, 'm7-5'),
-    #chord(:a, '7+5-9'),
-    #chord(:d, :minor7),
-    #chord(:d, :minor7),
-    #chord(:g, '7sus4'),
-    #chord(:g, '7')
+    chord(:c, :major7),
+    chord(:b3, 'm7-5'),
+    chord(:f, :major7),
+    chord(:e, 'm7-5'),
+    chord(:a, '7+5-9'),
+    chord(:d, :minor7),
+    chord(:d, :minor7),
+    chord(:g, '7sus4'),
+    chord(:g, '7')
   
-    chord_degree(1, :FS3, :major),
-    chord_degree(3, :FS3, :major),
-    chord_degree(5, :FS3, :major),
-    chord(:C, '13')
+    #chord_degree(1, :FS3, :major),
+    #chord_degree(3, :FS3, :major),
+    #chord_degree(5, :FS3, :major),
+    #chord(:C, '13')
     
   #chord_degree(5, :FS2, :major)
 

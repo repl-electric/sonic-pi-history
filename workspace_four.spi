@@ -2,6 +2,8 @@ live_loop :melody do
 #density(2) do
 #sample Ambi["Kick"]
 #end
+with_synth :dsaw do
 play scale(:FS3,:melodic_minor).shuffle.tick(:a)
 sleep 0.25
+ens
 end

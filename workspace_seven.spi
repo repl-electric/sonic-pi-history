@@ -1,6 +1,8 @@
 puts  chord_degree(1, :FS3, :major)[0..2]
 puts  chord_degree(2, :FS3, :major)[0..2]
 puts  chord_degree(3, :FS3, :major)[0..2]
+puts  chord_degree(4, :FS3, :major)[0..2]
+
 
 
 puts  chord(:FS3, :M)

@@ -73,11 +73,10 @@ live_loop :bass do |m_idx|
   sync :foo
   case (m_idx%8)
   when 0
-    ambi_s "One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2)
+    ambi_s "One Shots/Kick/SubKick_01_SP.wav", amp: 9.0+rrand(0.0,0.2)
   when 4
-   ambi_s "One Shots/Forest/Impact_05_SP.wav", amp: 0.2
+    ambi_s "One Shots/Forest/Impact_05_SP.wav", amp: 0.2
   end
-
 
   #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav",  rate: pitch_ratio(note(:Cs3) - note(:C3)), amp: 0.1
   #bowed_s "F#", rate: 0.5, amp: 0.2

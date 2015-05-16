@@ -25,4 +25,6 @@ puts  chord(:ES4, :dim)
 #play chord(:FS3,:major7)
 #sleep 1
 
+play (ring "Cs4", "F4", "Ab4", "B4")
+
 puts chord(:CS3, "7").map{|n| note_info(n).midi_string}

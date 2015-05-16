@@ -126,7 +126,7 @@ end
 
 
 
-@n = (ring chord("CS4", "7")+ chord("FS3", "M"))
+@n = chord("CS4", "7")+ chord("FS3", "M")
 
 live_loop :highlight do |idx|
 with_fx (ring :none, :none).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do

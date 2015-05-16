@@ -102,8 +102,9 @@ end
 
 live_loop :higher do |idx|
 4.times{sync :foo}
+with_synth :hollow do
 play  degree((knit 3,1,4,1,5,1).tick(:r1), :FS4, :major)
-
+end
 end
 
 live_loop :high do

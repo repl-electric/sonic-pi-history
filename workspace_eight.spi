@@ -41,7 +41,7 @@ live_loop :smooth_chords do
   chord(:B3,  :M7),
   chord(:CS4, :M7),
   chord(:DS4, :m7),
-  chord(:ES4, :dim),
+  #chord(:ES4, :dim),
   
   #chord(:GS3, :m),
     #chord_degree(5, :FS3, :major),

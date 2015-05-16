@@ -65,7 +65,7 @@ end
 
 @polyrhythm = [2,3]
 
-live_loop :bass do |idx|
+live_loop :bass do |m_idx|
   sync :foo
 
   sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
@@ -73,7 +73,7 @@ live_loop :bass do |idx|
 
   #sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/Bass/135_C_SwellBass_01_SP.wav",  rate: pitch_ratio(note(:Cs3) - note(:C3)), amp: 0.1
   #bowed_s "F#", rate: 0.5, amp: 0.2
-idx+=1
+m_idx+=1
 end
 
 live_loop :foo do

@@ -41,7 +41,7 @@ with_synth :dark_ambience {play (knit "Fs2",1).tick(:a), amp: 1.5, release: 2*ba
 #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
 
 play degree(1,:FS3, :major); sleep bar 
-end;end
+end;end;end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
   sync :foo

@@ -17,7 +17,7 @@ define :perc_s do |name,*args|
   end), *args
 end
 define :ambi_s do |s|
-   "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/#{s}.wav"
+   Ambi.s(s)
 end
 define :deg_seq do |*pattern_and_roots|
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|

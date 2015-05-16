@@ -91,11 +91,11 @@ end
 end
 end
 
-live_loop :baszzel do
+live_loop :baszzel do |idx|
 2.times{sync :foo}
 play degree((knit 5,4,6,4,7,1).tick(:r1), :FS2, :major), amp: 1.0, release: 2*bar, attack: 0.01 
-play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 
-
+play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 if idx % 2
+idx+=1
 end
 
 live_loop :high do

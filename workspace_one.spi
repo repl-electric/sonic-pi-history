@@ -73,8 +73,12 @@ live_loop :bass do |m_idx|
   m_idx+=1
 end
 
+live_loop :beats do
+  sample Ambi["92_DottedThud_01_SP.wav"]  rate: 60
+  sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
+end
+
 live_loop :foo do
-  sample Ambi["92_DottedThud_01_SP.wav"]
 
   density(@polyrhythm.sort.first) { play :FS3; sleep bar }
 end

@@ -124,7 +124,7 @@ idx+=1
 end
 
 live_loop :highlight do |idx|
-n = chord("CS4", "7")+ chord("FS4", "M")  + chord("B4", "M")
+n = chord("CS4", "7")+ chord("FS4", "M")  + chord("B3", "M7")
 with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
 with_synth :hollow do
 2.times{sync :foo}

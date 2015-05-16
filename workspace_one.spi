@@ -92,8 +92,8 @@ end
 end
 
 live_loop :baszzel do
-3.times{sync :foo}
-play chord(:FS3, :M7).sort[0] - 12
+1.times{sync :foo}
+play ring chord(:FS3, :M7).sort[0] - 12
   
 end
 

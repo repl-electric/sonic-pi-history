@@ -35,9 +35,9 @@ live_loop :texture do
   sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
 end
 
-live_loop :foo do
+live_loop :foo do;with_fx :level, amp: 0.0 do
   density(@polyrhythm.sort.first) { play degree(5,:FS3, :major); sleep bar }
-end
+end;end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
   sync :foo

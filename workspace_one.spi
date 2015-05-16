@@ -64,7 +64,6 @@ end
 
 live_loop :bass do |m_idx|
   sync :foo
-sample Ambi["120_ChoppyPerc_01"]
  case (m_idx%8)
   when 0
     sample Ambi["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
@@ -75,6 +74,8 @@ sample Ambi["120_ChoppyPerc_01"]
 end
 
 live_loop :foo do
+  sample Ambi["120_ChoppyPerc_01"]
+
   density(@polyrhythm.sort.first) { play :FS3; sleep bar }
 end
 

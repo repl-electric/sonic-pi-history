@@ -1,6 +1,6 @@
 _ = nil
 bar = 1.0
-use_bpm 60 
+use_bpm 120 
 module Ambi
  def self.[](a)
   samples = Dir["/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/**/*.wav"]

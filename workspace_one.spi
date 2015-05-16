@@ -69,8 +69,8 @@ live_loop :bass do |m_idx|
   sync :foo
 
   case (m_idx%8)
-  when 0
-    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 10.0
+  when 0,4
+    sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0
   end
 
 

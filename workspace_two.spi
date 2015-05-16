@@ -79,6 +79,16 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
     end
 end;end
 
+live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
+    n = chord_seq(*%w{Cs4 7  Fs4 M  B4 M7})
+        2.times{sync :foo}
+
+with_fx :bitcrusher do
+      play :Fs2
+end
+
+end;end
+
 live_loop :high do;with_fx :level, amp: 1.0 do
     2.times{sync :start}
     sample (knit Ambi["MicroPerc_06"],3,Ambi["MicroPerc_07"],1).tick(:s)

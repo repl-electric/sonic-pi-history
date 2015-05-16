@@ -80,6 +80,10 @@ live_loop :beats do
   sleep sample_duration(Ambi["92_DottedThud_01_SP.wav"])
 end
 
+live_loop :texture do
+sample "/Users/josephwilk/Workspace/music/samples/Sample\ Magic\ -\ Ambient\ and\ Chill\ -\ Wav/pads\ \&\ soundscapes/80bpm/am_pad80_warmth_B.wav"
+end
+
 live_loop :foo do
   density(@polyrhythm.sort.first) { play :FS3; sleep bar }
 end

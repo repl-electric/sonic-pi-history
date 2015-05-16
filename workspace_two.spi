@@ -1,7 +1,6 @@
-# __         .        .      
-#/  ` _.._ _ |_ ._.* _| _  _ 
-#\__.(_][ | )[_)[  |(_](_](/,
-#                      ._|   
+# ____ ____ _  _ ___  ____ _ ___  ____ ____ 
+# |    |__| |\/| |__] |__/ | |  \ | __ |___ 
+# |___ |  | |  | |__] |  \ | |__/ |__] |___                                           
 _ = nil
 bar = 1.0
 use_bpm 60 
@@ -103,7 +102,7 @@ sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2
 end
 
 live_loop :foo do
-  density(@polyrhythm.sort.first) { play :FS3; sleep bar }
+  density(@polyrhythm.sort.first) { play :F3; sleep bar }
 end
 
 live_loop :bar, autocue: false do

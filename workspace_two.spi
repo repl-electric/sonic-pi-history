@@ -1,7 +1,7 @@
+["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 # ____ ____ _  _ ___  ____ _ ___  ____ ____ 
 # |    |__| |\/| |__] |__/ | |  \ | __ |___ 
 # |___ |  | |  | |__] |  \ | |__/ |__] |___                                           
-["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/sonic-pi/lib/#{f}"}
 _ = nil
 bar = 1.0
 use_bpm 60 

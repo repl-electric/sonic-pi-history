@@ -8,7 +8,7 @@ use_bpm 60
 
 @polyrhythm = [2,3]
 
-live_loop :bass do |m_idx|;with_fx :level, amp: 0.0 do
+live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
   sync :foo
   case (m_idx%8)
   when 0

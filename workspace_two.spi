@@ -86,11 +86,9 @@ live_loop :highlight do |idx|;with_fx :level, amp: 1.0 do
 with_synth :pretty_bell do
 with_fx :bitcrusher, bits:9, sample_rate: 20000, mix: 0.3 do
       with_synth(:tri){play :Fs1}
-      play (chord(:FS3, "7")+chord(:FS3, :M)+chord(:AS3, :m7)).tick(:p), pan: (Math.sin(vt*13)), amp: 0.2
-sleep bar/4.0
-end
-end
-
+      play (chord(:FS3, "7") + chord(:FS3, :M) + chord(:AS3, :m7)).tick(:p), pan: (Math.sin(vt*13)), amp: 0.2
+      sleep bar/4.0
+end;end
 end;end
 
 live_loop :high do;with_fx :level, amp: 1.0 do

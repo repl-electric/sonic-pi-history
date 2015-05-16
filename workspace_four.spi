@@ -1,9 +1,0 @@
-live_loop :melody do
-#density(2) do
-#sample Ambi["Kick"]
-#end
-with_synth :dsaw do
-play scale(:Gb1, :melodic_minor).shuffle.tick(:a), decay: 2
-sleep 4
-end
-end

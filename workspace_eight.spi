@@ -25,15 +25,18 @@ use_synth :beep
 
 live_loop :smooth_chords do
   [
-    chord(:c, :major7),
-    chord(:b3, 'm7-5'),
-    chord(:f, :major7),
-    chord(:e, 'm7-5'),
-    chord(:a, '7+5-9'),
-    chord(:d, :minor7),
-    chord(:d, :minor7),
-    chord(:g, '7sus4'),
-    chord(:g, '7')
+    #chord(:c, :major7),
+    #chord(:b3, 'm7-5'),
+    #chord(:f, :major7),
+    #chord(:e, 'm7-5'),
+    #chord(:a, '7+5-9'),
+    #chord(:d, :minor7),
+    #chord(:d, :minor7),
+    #chord(:g, '7sus4'),
+    #chord(:g, '7')
+  
+    chord_degree(1, :FS2, :major)
+
   ].each_cons(2) do |a,b|
     if @last_c.nil?
       play (a.first - 24), amp: 0.6

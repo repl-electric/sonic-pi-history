@@ -71,7 +71,7 @@ live_loop :bass do |m_idx|
   when 0
     sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One Shots/Kick/SubKick_01_SP.wav", amp: 3.0+rrand(0.0,0.2)
   when 4
-   sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Forest/RyhythicGrating_01_SP.wav"
+   sample "/Users/josephwilk/Workspace/music/samples/AmbientElectronica_Main_SP/One\ Shots/Forest/Impact_05_SP.wav"
   end
 
 

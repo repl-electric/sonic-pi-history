@@ -1,4 +1,4 @@
-puts  chord_degree(1, :FS3, :major,3)
+puts  chord_degree(1, :FS3, :major,4)
 puts  chord_degree(2, :FS3, :major,3)
 puts  chord_degree(3, :FS3, :major,3)
 puts  chord_degree(4, :FS3, :major,3)

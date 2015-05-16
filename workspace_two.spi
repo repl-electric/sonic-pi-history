@@ -75,7 +75,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
   end
 end;end
 
-live_loop :high do;with_fx :level, amp: 0.0 do
+live_loop :high do;with_fx :level, amp: 1.0 do
   2.times{sync :start}
   sample (knit Ambi["MicroPerc_06"],3,Ambi["MicroPerc_07"],1).tick(:s)
 end;end

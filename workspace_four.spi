@@ -1,0 +1,5 @@
+live_loop :melody do
+
+play scale(:Ab3, :major)
+
+end

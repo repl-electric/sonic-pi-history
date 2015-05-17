@@ -83,13 +83,13 @@ end;end
 
 live_loop :highlight2 do |idx|;with_fx :level, amp: 1.0 do
     n = chord_seq(*%w{Cs4 7  Fs4 M  B4 M7})
-        4.times{sync :foo}
+        16.times{sync :foo}
 
 with_synth :pretty_bell do
       with_fx :echo, decay: 6*bar do
       with_fx :flanger, mix: 0.5, depth: 12, feedback: 0.1, phase_offset: bar/2.0 do
       with_synth(:tri){play :Fs1}
-      play (chord :Fs3, 'M7').tick(:p),
+      play (chord :Fs3, 'M').tick(:p),
             pan: (Math.sin(vt*13)), amp: 0.2, attack: 0.2
       sleep (ring bar).tick(:v)
 end

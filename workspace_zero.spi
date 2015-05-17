@@ -39,7 +39,7 @@ end;end
 
 live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do
-      sample Ambi["stick_03"], start: rrand(0.0,0.01), rate: 1.0
+      sample Ambi["stick_05"], start: rrand(0.0,0.01), rate: 1.0
 
       with_synth(:dark_ambience){play (knit "Fs3",1,"Fs2",1).tick(:a), cutoff: 80, amp: 1.5, release: 2*bar, attack: 0.01}
       play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01

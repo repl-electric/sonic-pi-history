@@ -89,7 +89,7 @@ with_synth :pretty_bell do
       with_fx :echo, decay: 6*bar do
       with_fx :slicer, phase: bar/4.0 do
       with_synth(:tri){play :Fs1}
-      play (ring :F).tick(:p),
+      play (ring :F, :As).tick(:p),
             pan: (Math.sin(vt*13)), amp: 0.2, attack: 0.2
       sleep (ring bar).tick(:v)
 end

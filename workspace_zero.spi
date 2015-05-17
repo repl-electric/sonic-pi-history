@@ -39,7 +39,7 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do
       with_synth(:dark_ambience){play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01}
       #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
-      play deg_seq(*%w{F2 1}); sleep bar
+      play deg_seq(*%w{F3 1}); sleep bar
 end;end;end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do

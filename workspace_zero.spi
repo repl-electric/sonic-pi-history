@@ -11,8 +11,8 @@ set_volume! 3.0
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
     sync :foo
     
-    #at [1, 2, 4] do
-   density(8) do 
+    at [0.2] do
+   #density(8) do 
      sample Ambi["HarshClash_01_SP"]
     end
 

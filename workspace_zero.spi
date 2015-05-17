@@ -14,7 +14,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
     when 0,4,2, 6
       sample Ambi["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 7
-      sample Ambi["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], amp: 0.2
+      sample Ambi["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], amp: 1.2
     end
     m_idx+=1
 end;end

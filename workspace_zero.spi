@@ -87,7 +87,7 @@ live_loop :highlight2 do |idx|;with_fx :level, amp: 1.0 do
 
 with_synth :pretty_bell do
       with_fx :echo, decay: 6*bar do
-      with_fx :pitch_shift, pitch_dis: 0.1, mix: 0.2, phase: bar/4.0 do
+      with_fx :krush, pitch_dis: 0.1, mix: 0.2, phase: bar/4.0 do
       with_synth(:tri){play :Fs1}
       play (ring :Fs4).tick(:p),
             pan: (Math.sin(vt*13)), amp: 0.2, attack: 0.2

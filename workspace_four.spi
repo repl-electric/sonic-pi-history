@@ -1,3 +1,6 @@
 
 
-play scale(:A, :mixolydian)
+
+live_loop :A do
+play scale(:A, :mixolydian).choose
+end

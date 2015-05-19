@@ -2,6 +2,6 @@
 
 
 live_loop :A do
-play scale(:F3, :mixolydian).choose
+play scale(:F3, :mixolydian).choose, release: 0.1
 sleep 1/2.0
 end

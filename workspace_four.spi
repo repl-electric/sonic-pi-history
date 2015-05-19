@@ -3,5 +3,5 @@
 
 live_loop :A do
 play scale(:F3, :mixolydian).choose
-sleep 1
+sleep 1/2.0
 end

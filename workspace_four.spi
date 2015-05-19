@@ -2,5 +2,6 @@
 
 
 live_loop :A do
-play scale(:A, :mixolydian).choose
+play scale(:A2, :mixolydian).choose
+sleep bar
 end

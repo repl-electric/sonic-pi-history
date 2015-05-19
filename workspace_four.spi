@@ -1,7 +1,6 @@
 load_snippets "/Users/josephwilk/.sonic-pi/snippets"
 
 
-
 live_loop :A do
 play scale(:F3, :mixolydian).choose, release: 0.5
 sleep 1/2.0

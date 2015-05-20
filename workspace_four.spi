@@ -1,7 +1,0 @@
-load_snippsssets "/Users/josephwilk/.sonic-pi/snippets"
-
-
-live_loop :A do
-play scale(:C3, :lydian).tick(:a), release: 1.5
-sleep 1/2.0
-end

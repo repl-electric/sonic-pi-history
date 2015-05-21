@@ -28,14 +28,14 @@ live_loop :beats do;with_fx :level, amp: 1.0 do
     sleep sample_duration(Ambi["Cracklin_01"], rate: 0.95)
 end;end
 
-live_loop :texture do;with_fx :level, amp: 0.0 do
-    sync :foo
-    with_fx :bitcrusher do
-      sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
-        amp: 0.2
-    end
-    sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
-end;end
+#live_loop :texture do;with_fx :level, amp: 0.0 do
+#    sync :foo
+#    with_fx :bitcrusher do
+#      sample Chill["am_pad80_warmth_B"], rate: pitch_ratio(note(:B2) - note((ring :FS2, :B2).tick(:d))),
+#        amp: 0.2
+##    end
+#    sleep sample_duration Chill["am_pad80_warmth_B.wav"], rate: pitch_ratio(note(:B2) - note(:FS2))
+#end;end
 
 live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do

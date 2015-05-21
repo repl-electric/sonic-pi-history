@@ -4,3 +4,8 @@ live_loop :back do
   play degree(5, :Fs3, :major),attack: 0.2, release: 1.0
   sleep 1
 end
+
+live_loop :back do
+sync :back
+  play degree(1, :Fs2, :major),attack: 0.5
+end

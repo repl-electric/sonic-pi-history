@@ -1,11 +1,11 @@
 live_loop :back do
-  play degree(1, :A3, :minor),attack: 0.5
+  play degree(1, :B3, :major),attack: 0.5
   sleep 1
-  play degree(3, :A3, :minor),attack: 0.2, release: 1.0
+  play degree(3, :B3, :major),attack: 0.2, release: 1.0
   sleep 1
 end
 
 live_loop :back2 do
 sync :back
-  play degree(1, :Fs2, :major), attack: 0.01, release: 2, decay: 2
+  #play degree(1, :Fs2, :major), attack: 0.01, release: 2, decay: 2
 end

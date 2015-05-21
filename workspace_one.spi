@@ -8,7 +8,7 @@ end
 
 live_loop :back2 do
 sync :back
-with_synth :dsaw do
+with_synth :tri do
   play degree(1, :G2, :major), attack: 0.1, release: 2, decay: 2, amp: 4.0
 end
 end

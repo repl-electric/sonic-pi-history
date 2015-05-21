@@ -1,4 +1,4 @@
-bar = 1.0
+bar = 0.5
 live_loop :back do
   play degree(1, :Gs3, :major),attack: 0.2
   sleep bar/2.0

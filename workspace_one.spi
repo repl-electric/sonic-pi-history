@@ -7,5 +7,5 @@ end
 
 live_loop :back2 do
 sync :back
-  play degree(1, :Fs2, :major), attack: 0.1
+  play degree(1, :Fs2, :major), attack: 0.01
 end

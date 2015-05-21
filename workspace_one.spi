@@ -1,6 +1,6 @@
 live_loop :back do
   play degree(3, :F3, :major),attack: 1.0
   sleep 1
-  play degree(5, :F3, :major),attack: 0.1
+  play degree(6, :F3, :major),attack: 0.1
   sleep 1
 end

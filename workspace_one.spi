@@ -1,8 +1,8 @@
 bar = 2.0
 live_loop :back do
-  play degree(5, :A2, :major),attack: 0.5
+  play degree(5, :B2, :major),attack: 0.5
   sleep bar/2.0
-  play degree(3, :A2, :major),attack: 0.1, release: 1.0
+  play degree(3, :B2, :major),attack: 0.1, release: 1.0
   sleep bar/2.0
 end
 

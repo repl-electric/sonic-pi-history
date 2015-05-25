@@ -10,11 +10,13 @@ end
 live_loop :back2 do
 #sync :back
 #with_synth :tri do
-4.times{
+8.times{
 play chord(:A3, 'sus4'), attack: 0.1, release: 0.1, decay: 0.1, amp: 0.5
 sleep bar/4.0
 }
+8.times{
 play chord_degree(1, :A3, :major)
 sleep bar/4.0
+}
 #end
 end

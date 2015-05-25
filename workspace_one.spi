@@ -23,7 +23,7 @@ end;end
 
 live_loop :basz do
 use_synth :dark_ambience
-1.times{sync :whole}
+3.times{sync :whole}
 play (knit chord(:D4, 'sus4').last,2,
            chord_degree(1, :D4, :major).last,1,
            _,1,

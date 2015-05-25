@@ -29,15 +29,10 @@ play (knit chord(:D4, 'sus4').last,2,
            chord(:A3, 'sus4').last,2,
            invert_chord(chord_degree(6, :A3, :major),-2).last,2,
 
-           #invert_chord(chord_degree(6, :A3, :major),-1),1,
-           #invert_chord(chord_degree(6, :A3, :major),0),1,
-           #invert_chord(chord_degree(5, :A3, :major),0),1,
-
-           #invert_chord(chord(:E4, 'M7'),0),1,
 )
 end
 
-live_loop :doo do |d_idx|; with_fx :level, amp: 0.5 do |l_fx|
+live_loop :doo do |d_idx|; with_fx :level, amp: 0.0 do |l_fx|
 3.times{sync :whole}
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do

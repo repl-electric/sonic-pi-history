@@ -85,7 +85,7 @@ sleep bar/2.0
 end
 density(3) do
 play :F4
-sleep bar/8.0
+sleep bar/2.0
 end
 
 end;end

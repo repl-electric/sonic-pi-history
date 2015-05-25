@@ -13,9 +13,8 @@ live_loop :back do; with_fx :level, amp: 0.5 do
   use_synth :tri
   sync :whole
   play degree(1, :A2, :major),attack: 0.21, amp: 0.7
-  sleep bar/2.0
+  sync :half
   play degree(5, :A2, :major),attack: 0.1, release: 1.0
-  sleep bar/2.0
 end;end
 
 live_loop :doo do
@@ -41,7 +40,6 @@ end;end;end;end
 live_loop :bass do with_fx :level, amp: 0.3 do
 sync :whole
 with_fx :reverb,room: 1.0, mix: 1.0 do
-  play (ring chord(:D3, 'sus4').last,
-             chord(:A3, 'M').last).tick(:G), release: bar*4, attack: bar, amp: 0.5
-end
-end;end
+play (ring chord(:D3, 'sus4').last,
+           chord(:A3, 'M').last).tick(:G), release: bar*4, attack: bar, amp: 0.5
+end;end;end

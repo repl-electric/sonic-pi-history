@@ -45,7 +45,7 @@ b_idx+=1
 end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 1.0 do |l_fx|
-3.times{sync :whole}
+1.times{sync :whole}
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do
 play (knit #chord(:D4, 'sus4'),3,

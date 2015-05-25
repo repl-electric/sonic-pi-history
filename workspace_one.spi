@@ -41,10 +41,11 @@ play (knit chord(:A3, 'sus4'),8,
 sleep bar/4.0
 end;end
 
-live_loop :back2 do with_fx :level, amp: 0.8 do; with_fx :pan do
+live_loop :back2 do with_fx :level, amp: 0.8 do
+with_fx :pan do
 with_fx :distortion do
 with_fx :echo, phase: 0.1, decay: 0.01 do
-sync :half
+sync :quarter
 play (knit :B4, 1, :D5, 1).tick(:G), attack: 0.01, release: 0.1
 
 end;end;end;end;end

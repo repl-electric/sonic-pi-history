@@ -49,7 +49,7 @@ sync :quarter
 play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.01, release: 0.1
 sleep bar/2.0
 play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.01, release: 0.1
-sleep bar/2.0
+sleep bar
 
 
 end;end;end;end;end

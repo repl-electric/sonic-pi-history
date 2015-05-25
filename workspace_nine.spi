@@ -1,0 +1,1 @@
+play (knit degree(7, :Fs4, :minor), 2, degree(6, :Fs4, :minor),2).tick(:G), attack: 0.001, release: 0.3

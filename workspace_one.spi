@@ -28,7 +28,7 @@ use_synth :fm
 play (knit chord(:D2, 'sus4').last,2,
            chord_degree(1, :D2, :major).last,1,
            _,1,
-           chord(:A3, 'sus4').last,2,
+           chord(:A2, 'sus4').last,2,
            invert_chord(chord_degree(6, :A2, :major),-2).last,1,
            _,1,
 

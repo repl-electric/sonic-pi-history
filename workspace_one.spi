@@ -84,7 +84,7 @@ end
 sleep bar/8.0
 end;end
 
-live_loop :apeg1 do; with_fx :level, amp: 0.4 do
+live_loop :apeg1 do; with_fx :level, amp: 0.5 do
 density(3) do
 sample Mountain["microperc_01"], start: rrand(0.05,0.1)
 with_fx :pan, pan: (Math.sin(vt*13)/1.5)+0.1 do

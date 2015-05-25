@@ -2,6 +2,7 @@
 use_bpm 60
 _=nil
 bar = 1.5
+
 live_loop :clock do
   cue :whole; cue :half; cue :quarter
   sleep bar/4.0; cue :quarter
@@ -40,7 +41,6 @@ play (knit chord(:A3, 'sus4'),8,
            chord_degree(1, :A3, :major),8).tick(:A) , attack: 0.1, release: 0.1, decay: 0.1, amp: 0.8
 sleep bar/4.0
 end;end
-
 live_loop :back2 do with_fx :level, amp: 0.0 do
 with_fx :pan do
 with_fx :distortion do
@@ -50,7 +50,6 @@ play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.001, release: 0.3
 sleep bar/2.0
 play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.001, release: 0.3
 sleep bar
-
 end;end;end;end;end
 
 live_loop :bass do with_fx :level, amp: 0.0 do

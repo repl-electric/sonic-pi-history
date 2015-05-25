@@ -30,7 +30,7 @@ if (d_idx % 4) == 3
   #control l_fx, amp: 1.0
   sync :whole
 else
-  control l_fx, amp: 0.8
+  #control l_fx, amp: 0.8
 end
 end;end;end
 d_idx +=1

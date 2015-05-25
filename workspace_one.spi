@@ -23,7 +23,7 @@ end;end
 
 live_loop :basz do |b_idx|
 use_synth :dark_ambience
-use_synth_defaults cutoff: 60
+use_synth_defaults cutoff: 80
 3.times{sync :whole}
 play (knit 
 _,1,

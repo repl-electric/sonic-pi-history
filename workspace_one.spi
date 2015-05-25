@@ -86,7 +86,7 @@ with_fx :echo, phase: 0.1, decay: 2.0 do
 sync :quarter
 #play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.001, release: 0.3
 
-play (knit degree(2, :Fs4, :minor), 2).tick(:G), attack: 0.001, release: 0.3
+play (knit degree(6, :Fs4, :minor), 2).tick(:G), attack: 0.001, release: 0.3
 
 
 sleep bar/2.0

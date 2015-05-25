@@ -90,6 +90,7 @@ play (knit degree(2, :Fs3, :minor), 2).tick(:G), attack: 0.001, release: 0.3
 
 
 sleep bar/2.0
+play (knit degree(2, :Fs3, :minor), 2).tick(:G), attack: 0.001, release: 0.3
 #play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.001, release: 0.3
 sleep bar
 end;end;end;end;end

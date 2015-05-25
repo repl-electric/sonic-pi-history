@@ -81,12 +81,12 @@ end;end
 live_loop :apeg1 do; with_fx :level, amp: 0.5 do
 density(3) do
 play :F4
-sleep bar/2.0
+sleep bar
 end;end;end
 
 live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 sync :apeg2
 density(2) do
 play :D4
-sleep bar/2.0
+sleep bar
 end;end;end

@@ -1,6 +1,11 @@
 use_bpm 60
 _=nil
 bar = 1.5
+live_loop :clock do
+  cue :whole
+  sleep bar
+end
+
 live_loop :back do
   play degree(1, :A2, :major),attack: 0.2, amp: 0.7
   sleep bar/2.0

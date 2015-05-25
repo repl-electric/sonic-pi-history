@@ -23,6 +23,7 @@ end;end
 
 live_loop :basz do |b_idx|
 use_synth :beep
+with_synth :fm
 3.times{sync :whole}
 play (knit chord(:D3, 'sus4').last,2,
            chord_degree(1, :D3, :major).last,1,

@@ -57,7 +57,7 @@ end;end;end
 live_loop :ghost do
 sync :whole
 8.times do
-sample Ambi["hat"], amp: 1.1
+sample Ambi["highhat"], amp: 1.1
 sleep bar/8.0
 end
 end

@@ -47,7 +47,11 @@ with_fx :distortion do
 with_fx :echo, phase: 0.1, decay: 0.01 do
 sync :quarter
 play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.01, release: 0.1
-sleep bar
+sleep bar/2.0
+play (knit :B4, 3, :D5, 2).tick(:G), attack: 0.01, release: 0.1
+sleep bar/2.0
+
+
 end;end;end;end;end
 
 live_loop :bass do with_fx :level, amp: 0.0 do

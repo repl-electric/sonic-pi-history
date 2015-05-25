@@ -56,6 +56,6 @@ end;end;end
 
 live_loop :ghost do
 sync :quarter
-sample Ambi["hat"], amp: 0.01
+sample Ambi["hat"], amp: 0.1
 sync :quarter
 end

@@ -13,7 +13,7 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do; with_fx :level, amp: 0.0 do
+live_loop :back do; with_fx :level, amp: 0.2 do
   use_synth :tri
   sync :whole
   play degree(1, :A3, :major),attack: 0.21, amp: 0.7
@@ -21,7 +21,7 @@ live_loop :back do; with_fx :level, amp: 0.0 do
   play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
-live_loop :doo do |d_idx|; with_fx :level, amp: 0.0 do |l_fx|
+live_loop :doo do |d_idx|; with_fx :level, amp: 0.5 do |l_fx|
 3.times{sync :whole}
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do
@@ -82,9 +82,9 @@ end;end
 
 live_loop :apeg1 do; with_fx :level, amp: 0.5 do
 density(3) do
-sample Mountain["microperc_01"], start: rrand(0.02,0.1)
+sample Mountain["microperc_01"], start: rrand(0.1,0.2)
 with_fx :pan, pan: (Math.sin(vt*13)/1.5)+0.1 do
-play (knit :Fs4, 3, :D4,2).tick :C
+play (knit :Fs4, 4, :D4,2).tick :C
 sleep bar/2
 end;end;end;end
 
@@ -93,6 +93,6 @@ sync :apeg1
 sample Mountain["microperc_07"]
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 density(2) do
-  play (knit :D4, 3, :E4, 1, :Fs4, 1).tick :B
+  play (knit :D4, 4, :E4, 3, :Fs4, 1).tick :B
 sleep bar/2
 end;end;end;end

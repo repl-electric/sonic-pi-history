@@ -39,9 +39,8 @@ invert_chord(chord_degree(6, :A2, :major),-1).last,1,
 invert_chord(chord_degree(6, :A2, :major),0).last,1,
 invert_chord(chord_degree(5, :A2, :major),1).last,1,
 ).tick(:bass), release: 8.0, attack: 0.2
-if (b_idx % 4) == 3
-  sync :whole
-end
+
+sync :whole if (b_idx % 4) == 3
 b_idx+=1
 end
 
@@ -58,7 +57,7 @@ play (knit chord(:D4, 'sus4'),3,
            invert_chord(chord_degree(6, :A3, :major),-1),1,
            invert_chord(chord_degree(6, :A3, :major),0),1,
            invert_chord(chord_degree(5, :A3, :major),1),1,
-           invert_chord(chord(:E4, '5'),0),1,
+           invert_chord(chord(:E4,'7+5'),0),1,
 ).tick(:B) , attack: 0.01, release: 0.5
 if (d_idx % 4) == 3
   control d_fx, mix: 0.5

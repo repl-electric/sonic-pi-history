@@ -13,7 +13,7 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do; with_fx :level, amp: 0.2 do
+live_loop :back do; with_fx :level, amp: 0.0 do
   use_synth :tri
   sync :whole
   play degree(1, :A3, :major),attack: 0.25, amp: 0.7
@@ -21,7 +21,7 @@ live_loop :back do; with_fx :level, amp: 0.2 do
   play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
-live_loop :basz do |b_idx|
+live_loop :basz do |b_idx|;with_fx :amp 0.0 do
 use_synth :dark_ambience
 use_synth_defaults cutoff: 80
 3.times{sync :whole}
@@ -42,9 +42,9 @@ invert_chord(chord_degree(5, :A2, :major),1).last,1,
 
 sync :whole if (b_idx % 4) == 3
 b_idx+=1
-end
+end;end
 
-live_loop :doo do |d_idx|; with_fx :level, amp: 1.0 do |l_fx|
+live_loop :doo do |d_idx|; with_fx :level, amp: 0.0 do |l_fx|
 3.times{sync :whole}
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do

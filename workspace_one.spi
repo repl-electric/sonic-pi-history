@@ -135,5 +135,6 @@ sleep bar/2
 end;end;end;end;end
 
 live_loop :texture do
+ sync :whole
   sample Mountain["C#"]
 end

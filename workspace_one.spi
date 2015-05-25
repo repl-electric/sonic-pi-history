@@ -24,6 +24,5 @@ end;end
 
 live_loop :back2 do with_fx :level, amp: 1.0 do
 play :A4, attack: 0.01, release: 0.2
-
-2.times{sync :back}
+1.times{sync :back}
 end;end

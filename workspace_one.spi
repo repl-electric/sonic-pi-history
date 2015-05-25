@@ -13,9 +13,9 @@ end
 live_loop :back do; with_fx :level, amp: 0.5 do
   use_synth :tri
   sync :whole
-  play degree(1, :A2, :major),attack: 0.21, amp: 0.7
+  play degree(1, :A3, :major),attack: 0.21, amp: 0.7
   sync :half
-  play degree(5, :A2, :major),attack: 0.1, release: 1.0
+  play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 0.8 do |l_fx|

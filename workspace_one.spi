@@ -43,5 +43,7 @@ end;end;end;end
 
 live_loop :bass do
 sync :whole
+with_fx :reverb do
 play :A2, release: bar*4, attack: bar, amp: 0.5
+end
 end

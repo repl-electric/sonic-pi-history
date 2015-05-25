@@ -96,7 +96,7 @@ end;end;end
 live_loop :ghost do
 sync :whole
 4.times do
-sample Mountain["microperc_01"], amp: 2.1, start: rrand(0.0, 0.01),beat_stretch: 2
+sample Mountain["microperc_01"], amp: 2.1, start: rrand(0.0, 0.01),beat_stretch: 4
 sleep bar/4.0
 end
 end

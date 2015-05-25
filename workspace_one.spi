@@ -42,8 +42,7 @@ sleep bar/4.0
 end;end
 
 live_loop :back2 do with_fx :level, amp: 0.8 do
-sync :whole
-
+sync :half
 with_fx :pan do
 with_fx :distortion do
 with_fx :echo, phase: 0.1, decay: 0.01 do

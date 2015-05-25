@@ -8,7 +8,8 @@ live_loop :back do
 end
 
 live_loop do
-sync
+sync :back
+play chord(:A4, '+5')
 end
 
 live_loop :back2 do with_fx :level, amp: 0.0 do

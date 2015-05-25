@@ -12,14 +12,14 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do
+live_loop :back do; with_fx :level, amp: 0.8 do
   use_synth :tri
   sync :whole
   play degree(1, :A2, :major),attack: 0.2, amp: 0.7
   sleep bar/2.0
   play degree(5, :A2, :major),attack: 0.1, release: 1.0
   sleep bar/2.0
-end
+end;end
 
 live_loop :doo do
 2.times{sync :whole}

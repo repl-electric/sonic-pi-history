@@ -23,6 +23,6 @@ sleep bar/4.0
 end;end
 
 live_loop :back2 do with_fx :level, amp: 1.0 do
-play :A5, attack: 0.01, release: 0.2
+play :Fs4, attack: 0.01, release: 0.2
 sleep bar
 end;end

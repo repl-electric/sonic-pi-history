@@ -101,7 +101,7 @@ sleep bar/4.0
 end
 end
 
-live_loop :apeg do; with_fx :level, amp: 0.0 do
+live_loop :apeg do; with_fx :level, amp: 0.5 do
 with_transpose(0) do
 play (ring :A3, :A3, :A3, :E3,
            :A3, :A3, :A3, :E3,

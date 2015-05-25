@@ -10,7 +10,7 @@ end
 
 live_loop :doo do
 2.times{sync :back}
-with_fx (ring :echo, :none).tick(:C), decay: 8 do
+with_fx (ring :echo, :reverb).tick(:C), decay: 8 do
 play (knit chord(:D4, 'sus4'),3,
            chord_degree(1, :D4, :major),1).tick(:B) , attack: 0.01, release: 0.5
 end

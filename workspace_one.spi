@@ -120,7 +120,7 @@ play (knit :Fs4, 4, :D4,2).tick :C
 sleep bar/2
 end;end;end;end
 
-live_loop :apeg2,autocue: false do; with_fx :level, amp: 1.0 do
+live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.2 do
 sync :apeg1
 with_fx (knit :none,3, :echo, 1).tick(:b), decay: 0.5  do
 sample Mountain["microperc_07"]

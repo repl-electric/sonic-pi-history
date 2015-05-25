@@ -50,7 +50,7 @@ sync :quarter
 play (knit :B4, 1, :D5, 1).tick(:G), attack: 0.01, release: 0.1
 end;end;end;end;end
 
-live_loop :bass do with_fx :level, amp: 0.3 do
+live_loop :bass do with_fx :level, amp: 0.0 do
 sync :whole
 with_fx :reverb,room: 1.0, mix: 1.0 do
 play (knit chord(:D3, 'sus4').last,4,

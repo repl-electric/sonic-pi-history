@@ -9,7 +9,7 @@ end
 
 live_loop :doo do
 sync :back
-play chord(:E4, 'sus4')
+play chord(:f4, 'sus4')
 end
 
 live_loop :back2 do with_fx :level, amp: 0.0 do

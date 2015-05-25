@@ -7,9 +7,9 @@ live_loop :clock do
   cue :quarter
   sleep bar/4.0
   cue :half; cue :quarter
-  sleep bar/2.0
+  sleep bar/4.0
   cue :quarter
-  sleep bar/2.0
+  sleep bar/4.0
 end
 
 live_loop :back do

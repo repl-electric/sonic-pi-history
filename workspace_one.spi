@@ -26,8 +26,8 @@ with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do
 play (knit chord(:D4, 'sus4'),3,
            chord_degree(1, :D4, :major),1).tick(:B) , attack: 0.01, release: 0.5
 if (d_idx % 4) == 3
-  control d_fx, mix: 0.5, amp: 1.0
-  control l_fx, amp: 1.0
+  control d_fx, mix: 0.5
+  #control l_fx, amp: 1.0
   sync :whole
 else
   control l_fx, amp: 0.8

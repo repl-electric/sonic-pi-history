@@ -7,7 +7,7 @@ live_loop :back do
   sleep bar/2.0
 end
 
-live_loop do
+live_loop :doo do
 sync :back
 play chord(:A4, '+5')
 end

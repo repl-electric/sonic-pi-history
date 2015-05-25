@@ -81,7 +81,7 @@ end;end
 live_loop :apeg do; with_fx :level, amp: 0.5 do
 density(2) do
 play :D4
-sleep bar/8.0
+sleep bar/2.0
 end
 density(3) do
 play :F4

@@ -133,3 +133,7 @@ density(2) do
   play (knit :D4, 4, :Fs4, 2).tick :B
 sleep bar/2
 end;end;end;end;end
+
+live_loop :texture do
+  sample Mountain["C#"]
+end

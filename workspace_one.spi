@@ -92,7 +92,7 @@ play (knit :Fs4, 4, :D4,2).tick :C
 sleep bar/2
 end;end;end;end
 
-live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.0 do
+live_loop :apeg2,autocue: false do; with_fx :level, amp: 1.0 do
 sync :apeg1
 sample Mountain["microperc_07"]
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do

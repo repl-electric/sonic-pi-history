@@ -13,7 +13,7 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do; with_fx :level, amp: 1.0 do;
+live_loop :back do; with_fx :level, amp: 0.0 do;
 with_fx :distortion, distort: 0.0, mix: 0.0 do
   use_synth :sine
   sync :whole

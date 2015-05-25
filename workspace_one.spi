@@ -57,7 +57,7 @@ end;end;end
 live_loop :ghost do
 sync :whole
 4.times do
-sample Ether["hat"], amp: 0.05
+sample Ether["hat"], amp: 0.05, attack: rrand(0.0, 1.0)
 sleep bar/4.0
 end
 end

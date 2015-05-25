@@ -87,6 +87,6 @@ end;end;end
 live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 sync :apeg2
 density(2) do
-play :D4
+play (knit :D4, 3, :F4, 2).tick :B
 sleep bar
 end;end;end

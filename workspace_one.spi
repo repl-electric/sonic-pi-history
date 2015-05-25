@@ -3,12 +3,9 @@ _=nil
 bar = 1.5
 live_loop :clock do
   cue :whole; cue :half; cue :quarter
-  sleep bar/4.0
-  cue :quarter
-  sleep bar/4.0
-  cue :half; cue :quarter
-  sleep bar/4.0
-  cue :quarter
+  sleep bar/4.0; cue :quarter
+  sleep bar/4.0; cue :half; cue :quarter
+  sleep bar/4.0; cue :quarter
   sleep bar/4.0
 end
 
@@ -47,4 +44,8 @@ with_fx :reverb do
   play (ring chord(:D2, 'sus4').last,
              chord(:A2, 'M').last).tick(:G), release: bar*4, attack: bar, amp: 0.5
 end
+end
+
+live_loop do
+sample Ambi['kick']
 end

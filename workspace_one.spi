@@ -64,7 +64,7 @@ end;end;end
 live_loop :ghost do
 sync :whole
 4.times do
-sample Dysto["microperc_08"], amp: 0.2, start: rrand(0.01, 0.1)
+sample Mountain["microperc_08"], amp: 0.2, start: rrand(0.01, 0.1)
 sleep bar/4.0
 end
 end

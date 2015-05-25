@@ -41,7 +41,7 @@ play (knit chord(:A3, 'sus4'),8,
 sleep bar/4.0
 end;end
 
-live_loop :back2 do with_fx :level, amp: 0.5 do
+live_loop :back2 do with_fx :level, amp: 0.0 do
 with_fx :pan do
 with_fx :distortion do
 with_fx :echo, phase: 0.1, decay: 0.01 do
@@ -66,4 +66,9 @@ sync :whole
 sample Ether["hat"], amp: 0.05, start: rrand(0.05, 0.1)
 sleep bar/4.0
 end
+end
+
+live_loop :apeg do
+play :A4
+sample bar/4.0
 end

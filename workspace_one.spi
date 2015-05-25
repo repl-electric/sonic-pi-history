@@ -91,7 +91,7 @@ end;end;end;end
 live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 sync :apeg1
 density(2) do
-  sample Mountain["microperc_02"]
+  sample Mountain["microperc_03"]
   play (knit :D4, 4, :E4, 3, :Fs4, 1).tick :B
 sleep bar/2
 end;end;end

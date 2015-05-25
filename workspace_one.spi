@@ -26,7 +26,11 @@ live_loop :doo do |d_idx|; with_fx :level, amp: 0.5 do |l_fx|
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do
 play (knit chord(:D4, 'sus4'),3,
-           chord_degree(1, :D4, :major),1).tick(:B) , attack: 0.01, release: 0.5
+           chord_degree(1, :D4, :major),1
+           chord(:A4, 'sus4'),3
+           chord_degree(6, :D4, :major),1
+
+).tick(:B) , attack: 0.01, release: 0.5
 if (d_idx % 4) == 3
   control d_fx, mix: 0.5
   #control l_fx, amp: 1.0

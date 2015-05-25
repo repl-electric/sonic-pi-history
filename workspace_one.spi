@@ -21,7 +21,7 @@ live_loop :back do; with_fx :level, amp: 0.2 do
   play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
-live_loop :basz do
+live_loop :basz do |b_idx|
 use_synth :beep
 3.times{sync :whole}
 play (knit chord(:D3, 'sus4').last,2,
@@ -36,6 +36,12 @@ play (knit chord(:D3, 'sus4').last,2,
            invert_chord(chord_degree(5, :A2, :major),1).last,1,
            _,1,
 ).tick(:bass), release: 2.0
+if (d_idx % 4) == 3
+  control d_fx, mix: 0.5
+  #control l_fx, amp: 1.0
+  sync :whole
+end
+idx+=1
 end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 1.0 do |l_fx|

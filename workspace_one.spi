@@ -41,7 +41,7 @@ if (d_idx % 4) == 3
   #control l_fx, amp: 1.0
   sync :whole
 end
-idx+=1
+b_idx+=1
 end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 1.0 do |l_fx|

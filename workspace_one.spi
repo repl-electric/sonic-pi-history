@@ -17,7 +17,7 @@ live_loop :back do; with_fx :level, amp: 0.2 do;
 with_fx :distortion, distort: 0.0, mix: 0.0 do
   use_synth :tri
   sync :whole
-  with_synth(:sine){play degree(1, :A3, :major), attack: 0.25, amp: 6.15}
+  with_synth(:sine){play degree(1, :A3, :major), attack: 0.25, amp: 2.15}
   play degree(1, :A3, :major),attack: 0.25, amp: 0.7
   sync :half
   with_synth(:sine){play degree(5, :A3, :major), attack: 0.1, amp: 2.0}

@@ -41,4 +41,5 @@ sync :half
 play (knit :B4, 8, :D5, 4).tick(:G), attack: 0.01, release: 0.1
 end;end;end;end
 
-live_loop :bass
+live_loop :bass do
+end

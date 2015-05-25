@@ -55,6 +55,9 @@ play (knit chord(:D3, 'sus4').last,4,
 end;end;end
 
 live_loop :ghost do
-sync :quarter
+sync :whole
+4.times do
+sleep bar/4.0
 sample Mountain["pebble_02"], amp: 0.08
+end
 end

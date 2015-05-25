@@ -70,5 +70,5 @@ end
 
 live_loop :apeg do
 play :A4
-sample bar/4.0
+sleep bar/4.0
 end

@@ -10,7 +10,7 @@ end
 live_loop :doo do
 2.times{sync :back}
 with_fx :echo, decay: 8 do
-play (ring chord(:A4, 'sus4'),chord_degree(1, :A4, :major).tick(:B) , attack: 0.01, release: 0.5
+play (ring chord(:A4, 'sus4'),chord_degree(1, :A4, :major)).tick(:B) , attack: 0.01, release: 0.5
 end
 end
 

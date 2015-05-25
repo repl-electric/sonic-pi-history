@@ -26,6 +26,8 @@ play (knit chord(:D4, 'sus4'),3,
 if (d_idx % 4) == 3
   control d_fx, mix: 0.5, amp: 1.0
   control l_fx, amp: 1.0
+else
+  control l_fx, amp: 0.8
 end
 end;end;end
 d_idx +=1

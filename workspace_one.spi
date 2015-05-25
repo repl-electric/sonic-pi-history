@@ -9,7 +9,8 @@ live_loop :clock do
 end
 
 live_loop :back do
-sync :whole
+  use_synth :tri
+  sync :whole
   play degree(1, :A2, :major),attack: 0.2, amp: 0.7
   sleep bar/2.0
   play degree(5, :A2, :major),attack: 0.1, release: 1.0

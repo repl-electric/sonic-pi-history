@@ -10,7 +10,7 @@ end
 live_loop :back2 do
 #sync :back
 #with_synth :tri do
-#play degree(5, :A4, :major), attack: 0.1, release: 0.1, decay: 0.1, amp: 0.5
+play degree(2, :A4, :major), attack: 0.1, release: 0.1, decay: 0.1, amp: 0.5
 sleep bar/4.0
 #end
 end

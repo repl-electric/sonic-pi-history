@@ -21,7 +21,20 @@ live_loop :back do; with_fx :level, amp: 0.2 do
   play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
+live_loop :bass do
+1.times{sync :whole}
+play (knit #chord(:D4, 'sus4'),3,
+           #chord_degree(1, :D4, :major),1,
 
+           #chord(:A3, 'sus4'),3,
+           #invert_chord(chord_degree(6, :A3, :major),-2),1,
+
+           invert_chord(chord_degree(6, :A3, :major),-1),1,
+           invert_chord(chord_degree(6, :A3, :major),0),1,
+           invert_chord(chord_degree(5, :A3, :major),0),1,
+
+           invert_chord(chord(:E4, 'M7'),0),1,)
+end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 0.5 do |l_fx|
 3.times{sync :whole}

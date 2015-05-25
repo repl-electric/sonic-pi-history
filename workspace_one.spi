@@ -69,6 +69,6 @@ end
 end
 
 live_loop :apeg do
-play :A3
+play :A3, :D3
 sleep bar/4.0
 end

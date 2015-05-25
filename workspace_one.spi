@@ -43,5 +43,5 @@ end;end;end;end
 
 live_loop :bass do
 sync :whole
-play :A2, release: bar*4
+play :A2, release: bar*4, attack: 1.0
 end

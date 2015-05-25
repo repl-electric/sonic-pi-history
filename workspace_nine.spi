@@ -1,3 +1,5 @@
 
 
 play (knit degree(7, :Fs5, :minor),3)
+sleep 1
+play (knit degree(7, :Fs5, :minor),3)

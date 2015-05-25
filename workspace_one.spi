@@ -46,6 +46,6 @@ with_fx :reverb do
 end
 end
 
-live_loop do
+live_loop :drums do
 sample Ambi['kick']
 end

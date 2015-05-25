@@ -127,10 +127,9 @@ end;end;end;end
 live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 sync :apeg1
 with_fx (knit :none,3, :echo, 1).tick(:b), decay: 0.5  do
-sample Mountain[rand_i(100)]
-
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 density(2) do
+sample Mountain["microperc_07"]
   play (knit :D4, 4, :Fs4, 2).tick :B
 sleep bar/2
 end;end;end;end;end

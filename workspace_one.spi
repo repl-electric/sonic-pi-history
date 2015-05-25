@@ -56,6 +56,6 @@ end;end;end
 
 live_loop :ghost do
 sync :quarter
-
+Ambi["kick"]
 sync :quarter
 end

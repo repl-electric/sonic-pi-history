@@ -70,7 +70,7 @@ end
 
 live_loop :apeg do
 with_transpose(0) do
-play (ring :A3, :A3, :A3, :D3).tick(:A)
+play (ring :A3, :A3, :A3, :E3).tick(:A)
 end
 sleep bar/8.0
 end

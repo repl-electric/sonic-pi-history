@@ -97,6 +97,6 @@ sync :apeg1
 sample Mountain["microperc_07"]
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 density(2) do
-  play (knit :D4, 4, :Fs4, 1).tick :B
+  play (knit :D4, 4, :Fs4, 2).tick :B
 sleep bar/2
 end;end;end;end

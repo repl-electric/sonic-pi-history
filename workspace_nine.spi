@@ -1,8 +1,0 @@
-
-
-play (knit degree(7, :Fs5, :minor),3), amp: 0.2
-sleep 1
-play (knit degree(7, :Fs5, :minor),3), amp: 0.3
-
-sleep 1
-play (knit degree(3, :Fs5, :minor),3), amp: 0.3

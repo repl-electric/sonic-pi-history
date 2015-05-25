@@ -38,7 +38,7 @@ end;end;end
 d_idx +=1
 end
 
-live_loop :back2 do with_fx :level, amp: 0.0 do
+live_loop :back2 do with_fx :level, amp: 0.5 do
 play (knit chord(:A3, 'sus4'),8,
            chord_degree(1, :A3, :major),8).tick(:A) , attack: 0.1, release: 0.1, decay: 0.1, amp: 0.8
 sleep bar/4.0

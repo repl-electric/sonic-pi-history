@@ -90,8 +90,8 @@ end;end;end;end
 
 live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
-sample Mountain["stick"]
 sync :apeg2
+sample Mountain["pebble"]
 density(2) do
 play (knit :D4, 4, :E4, 3, :Fs4, 1).tick :B
 sleep bar/2

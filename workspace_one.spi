@@ -38,7 +38,7 @@ sync :half
 play (knit :B4, 8, :D5, 4).tick(:G), attack: 0.01, release: 0.1
 end;end;end;end
 
-live_loop :bass do with_fx :level, :amp 0.1 do
+live_loop :bass do with_fx :level, amp: 0.1 do
 sync :whole
 with_fx :reverb,room: 1.0, mix: 1.0 do
   play (ring chord(:D3, 'sus4').last,

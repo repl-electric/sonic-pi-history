@@ -10,7 +10,7 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do; with_fx :level, amp: 0.5 do
+live_loop :back do; with_fx :level, amp: 0.0 do
   use_synth :tri
   sync :whole
   play degree(1, :A3, :major),attack: 0.21, amp: 0.7

@@ -38,5 +38,5 @@ end;end
 with_fx :reverb, room: 1.0, mix: 1.0 do
 live_loop :back2 do with_fx :level, amp: 1.0 do; with_fx :pan do
 sync :quarter
-play (knit :B5, 4, :D5, 2), attack: 0.01, release: 0.1
+play (knit :B5, 4, :D5, 2).tick(:G), attack: 0.01, release: 0.1
 end;end;end;end

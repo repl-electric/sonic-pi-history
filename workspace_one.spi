@@ -136,5 +136,7 @@ end;end;end;end;end
 
 live_loop :texture do
  4.times{sync :whole}
- sample Mountain[(stretch scale(:A3,:major_pentatonic),1).tick(:tock)]
+ s = Mountain[(stretch scale(:A3,:major_pentatonic),1).tick(:tock)]
+ sample s
+ sleep sample_duration(s)
 end

@@ -90,5 +90,5 @@ with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 sync :apeg2
 density(2) do
 play (knit :D4, 3, :F4, 2).tick :B
-sleep bar/1.5
+sleep bar/4
 end;end;end;end

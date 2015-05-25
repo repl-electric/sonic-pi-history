@@ -69,6 +69,6 @@ end
 end
 
 live_loop :apeg do
-play (ring :A3, :D3).tick(:A)
+play (ring :A3, :A3, :A3, :D3).tick(:A)
 sleep bar/4.0
 end

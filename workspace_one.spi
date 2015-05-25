@@ -18,7 +18,7 @@ live_loop :back do; with_fx :level, amp: 0.5 do
 end;end
 
 live_loop :doo do |d_idx|; with_fx :level, amp: 0.8 do |l_fx|
-2.times{sync :whole}
+3.times{sync :whole}
 with_fx :distortion do |d_fx|
 with_fx (ring :echo).tick(:C), decay: (knit 8,3, 10,1).tick(:A) do
 play (knit chord(:D4, 'sus4'),3,

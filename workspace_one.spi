@@ -2,8 +2,10 @@ use_bpm 60
 _=nil
 bar = 1.5
 live_loop :clock do
-  cue :whole
-  sleep bar
+  cue :whole, :half
+  sleep bar/2.0
+  cue :half
+  sleep bar/2.0
 end
 
 live_loop :back do

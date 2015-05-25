@@ -135,7 +135,7 @@ sleep bar/2
 end;end;end;end;end
 
 live_loop :texture do
- 4.times{sync :whole}
+ #4.times{sync :whole}
  s = Mountain[(stretch scale(:A3,:major_pentatonic).map{|a| "#{a[0]}_"},1).tick(:tock)]
  if s
   puts s

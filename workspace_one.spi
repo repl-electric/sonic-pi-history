@@ -83,7 +83,7 @@ end;end
 live_loop :apeg1 do; with_fx :level, amp: 0.5 do
 with_fx :pan, pan: (Math.sin(vt*13)/1.5)+0.1 do
 density(3) do
-sample Mountain["stone"]
+#sample Mountain["stone"]
 play (knit :Fs4, 4, :D4,2).tick :C
 sleep bar/2
 end;end;end;end

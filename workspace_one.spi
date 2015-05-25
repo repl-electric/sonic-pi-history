@@ -23,6 +23,6 @@ sleep bar/4.0
 end;end
 
 live_loop :back2 do with_fx :level, amp: 1.0 do; with_fx :pan do
-play (knit :B4, 4), attack: 0.01, release: 0.2
+play (knit :B4, 4, :D4), attack: 0.01, release: 0.2
 sleep bar/2.0
 end;end;end

@@ -24,5 +24,5 @@ end;end
 
 live_loop :back2 do with_fx :level, amp: 1.0 do
 play :Gs4, attack: 0.01, release: 0.2
-sleep bar
+sleep bar/2.0
 end;end

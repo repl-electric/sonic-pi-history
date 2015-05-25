@@ -1,7 +1,7 @@
 use_bpm 60
 bar = 2.0
 live_loop :back do
-  play degree(1, :A2, :major),attack: 0.4
+  play degree(1, :A2, :major),attack: 0.3
   sleep bar/2.0
   play degree(5, :A2, :major),attack: 0.1, release: 1.0
   sleep bar/2.0

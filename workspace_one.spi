@@ -136,5 +136,5 @@ end;end;end;end;end
 
 live_loop :texture do
  sync :whole
- sample Mountain[["A_Bo", "E#"].choose]
+ sample Mountain[["A_Bo", "E#_", "D_"].choose]
 end

@@ -129,7 +129,7 @@ sync :apeg1
 with_fx (knit :none,3, :echo, 1).tick(:b), decay: 0.5  do
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 density(2) do
-sample Mountain[0]
+sample Mountain[rand_int(100)]
   play (knit :D4, 4, :Fs4, 2).tick :B
 sleep bar/2
 end;end;end;end;end

@@ -14,7 +14,7 @@ live_loop :back do; with_fx :level, amp: 0.7 do
   sync :whole
   play degree(1, :A2, :major),attack: 0.2, amp: 0.7
   sleep bar/2.0
-  play degree(5, :A2, :major),attack: 0.1, release: 1.0
+  play degree(5, :A2, :major),attack: 0.08, release: 1.0
   sleep bar/2.0
 end;end
 
@@ -44,8 +44,4 @@ with_fx :reverb do
   play (ring chord(:D2, 'sus4').last,
              chord(:A2, 'M').last).tick(:G), release: bar*4, attack: bar, amp: 0.5
 end
-end
-
-live_loop :drums do
-sample Ambi['kick']
 end

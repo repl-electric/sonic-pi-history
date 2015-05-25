@@ -13,7 +13,8 @@ live_loop :clock do
   sleep bar/4.0
 end
 
-live_loop :back do; with_fx :level, amp: 0.01 do; with_fx :distortion, distort: 0.9, mix: 1.0 do
+live_loop :back do; with_fx :level, amp: 0.2 do; 
+with_fx :distortion, distort: 0.0, mix: 0.0 do
   use_synth :tri
   sync :whole
   play degree(1, :A3, :major),attack: 0.25, amp: 0.7
@@ -96,8 +97,8 @@ end;end;end
 live_loop :ghost do
 sync :whole
 4.times do
-sample Mountain["microperc_01"], amp: 0.5, start: rrand(0.0, 0.05), beat_stretch: 8
-sleep bar/4.0
+sample Mountain["microperc_01"], amp: 0.5, start: rrand(0.0, 0.1), beat_stretch: 8
+sleep bar/8.0
 end
 end
 

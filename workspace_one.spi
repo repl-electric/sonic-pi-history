@@ -77,3 +77,16 @@ play (ring :A3, :A3, :A3, :E3,
 end
 sleep bar/8.0
 end;end
+
+live_loop :apeg do; with_fx :level, amp: 0.0 do
+density(2) do
+play :D4
+sleep bar/8.0
+end
+
+density(3) do
+play :F4
+sleep bar/8.0
+end
+
+end;end

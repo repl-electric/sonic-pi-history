@@ -57,7 +57,7 @@ end;end;end
 live_loop :ghost do
 sync :whole
 8.times do
-sample Mountain["pebble"], amp: 0.01
+sample Mountain["pebble"], amp: 0.1
 sleep bar/8.0
 end
 end

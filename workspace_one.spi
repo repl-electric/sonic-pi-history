@@ -21,7 +21,7 @@ live_loop :back do; with_fx :level, amp: 0.2 do
   play degree(5, :A3, :major),attack: 0.1, release: 1.0
 end;end
 
-live_loop :bass do
+live_loop :basz do
 1.times{sync :whole}
 play (knit chord(:D4, 'sus4').last,2,
            chord_degree(1, :D4, :major).last,2,

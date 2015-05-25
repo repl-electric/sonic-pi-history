@@ -88,7 +88,7 @@ play (knit :Fs4, 4, :D4,2).tick :C
 sleep bar/2
 end;end;end;end
 
-live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
+live_loop :apeg2,autocue: false do; with_fx :level, amp: 2.5 do
 sync :apeg2
 density(2) do
   sample Mountain["Creak"]

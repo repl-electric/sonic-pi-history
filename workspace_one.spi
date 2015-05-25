@@ -1,3 +1,4 @@
+["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 use_bpm 60
 _=nil
 bar = 1.5
@@ -52,3 +53,9 @@ with_fx :reverb,room: 1.0, mix: 1.0 do
 play (knit chord(:D3, 'sus4').last,4,
            chord(:A3, 'M').last,4).tick(:G), release: bar*4, attack: bar, amp: 0.5
 end;end;end
+
+live_loop :ghost do
+sync :quarter
+
+sync :quarter
+end

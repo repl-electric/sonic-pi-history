@@ -36,7 +36,7 @@ play (knit chord(:D2, 'sus4').last,2,
            invert_chord(chord_degree(6, :A2, :major),0).last,1,
            invert_chord(chord_degree(5, :A2, :major),1).last,1,
            _,1,
-).tick(:bass), release: 4.0, attack: 0.2
+).tick(:bass), release: 8.0, attack: 0.2
 if (b_idx % 4) == 3
   sync :whole
 end

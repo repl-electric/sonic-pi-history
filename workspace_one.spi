@@ -1,4 +1,6 @@
 ["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+# A B Cs D E Fs Gs A
+
 use_bpm 60
 _=nil
 bar = 1.5
@@ -81,7 +83,7 @@ end;end
 live_loop :apeg1 do; with_fx :level, amp: 0.5 do
 with_fx :pan, pan: (Math.sin(vt*13)/1.5)+0.1 do
 density(3) do
-play (knit :F4, 3, :D4,2).tick :C
+play (knit :Fs4, 3, :D4,2).tick :C
 sleep bar/2
 end;end;end;end
 
@@ -89,6 +91,6 @@ live_loop :apeg2,autocue: false do; with_fx :level, amp: 0.5 do
 with_fx :pan, pan: -(Math.sin(vt*13)/1.5)-0.1 do
 sync :apeg2
 density(2) do
-play (knit :D4, 2, :F4, 3).tick :B
+play (knit :D4, 2, :Fs4, 3).tick :B
 sleep bar/2
 end;end;end;end

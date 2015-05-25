@@ -22,6 +22,7 @@ live_loop :back do; with_fx :level, amp: 0.2 do
 end;end
 
 live_loop :basz do
+use_synth :dark_ambience
 1.times{sync :whole}
 play (knit chord(:D4, 'sus4').last,2,
            chord_degree(1, :D4, :major).last,1,
@@ -34,7 +35,6 @@ play (knit chord(:D4, 'sus4').last,2,
            invert_chord(chord_degree(6, :A3, :major),0).last,1,
            invert_chord(chord_degree(5, :A3, :major),1).last,1,
            invert_chord(chord(:E4, 'm7'),0).last,1,
-
 ).tick(:bass)
 end
 

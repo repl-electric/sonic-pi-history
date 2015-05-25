@@ -7,8 +7,8 @@ live_loop :back do
   sleep bar/2.0
 end
 
-live_loop :back2 do
+live_loop :back2 do with_fx :amp 0.0 do
 play (knit chord(:A3, 'sus4'),8,
            chord_degree(1, :A3, :major),8).tick(:A) , attack: 0.1, release: 0.1, decay: 0.1, amp: 0.8
 sleep bar/4.0
-end
+end;end

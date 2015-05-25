@@ -24,7 +24,7 @@ end;end
 live_loop :bass do
 1.times{sync :whole}
 play (knit chord(:D4, 'sus4').last,3,
-           chord_degree(1, :D4, :major),1,
+           chord_degree(1, :D4, :major).last,1,
 
            chord(:A3, 'sus4'),3,
            invert_chord(chord_degree(6, :A3, :major),-2),1,

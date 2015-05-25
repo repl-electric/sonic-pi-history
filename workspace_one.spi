@@ -102,7 +102,7 @@ end
 end
 
 live_loop :apeg do; with_fx :level, amp: 1.5 do
-with_transpose(5) do
+with_transpose(-5) do
 play (ring :A3, :A3, :A3, :E3,
            :A3, :A3, :A3, :E3,
            :A3, :A3, :A3, :E3,

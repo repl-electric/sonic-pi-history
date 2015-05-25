@@ -37,7 +37,7 @@ play (knit #chord(:D4, 'sus4'),3,
            invert_chord(chord_degree(6, :A3, :major),0),1,
            invert_chord(chord_degree(5, :A3, :major),0),1,
 
-           invert_chord(chord(:E4, 'M7'),2),1,
+           invert_chord(chord(:E4, 'M7'),0),1,
 ).tick(:B) , attack: 0.01, release: 0.5
 if (d_idx % 4) == 3
   control d_fx, mix: 0.5

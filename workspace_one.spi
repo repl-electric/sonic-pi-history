@@ -1,4 +1,5 @@
 use_bpm 60
+_=nil
 bar = 1.5
 live_loop :back do
   play degree(1, :A2, :major),attack: 0.2

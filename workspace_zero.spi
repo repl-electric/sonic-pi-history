@@ -26,6 +26,9 @@ sleep bar/2.0
 sample Mountain["snare"], amp: 0.5
 sleep bar/2.0
 sample Mountain["snare"], amp: 0.5
+sleep bar/2.0
+sample Mountain["snare"], amp: 0.5
+
 end
 
 live_loop :beats do;with_fx :level, amp: 1.0 do

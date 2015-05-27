@@ -109,6 +109,7 @@ sync :whole
 4.times{
 sleep bar/8.0
 sample Mountain.all("stick")[4], amp: 1.0, start: rrand(0.0, 0.01)
+sleep bar/8.0
 }
 end;end
 

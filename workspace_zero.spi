@@ -46,9 +46,10 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do
       sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0
       with_synth(:dark_ambience){play (knit 
-       "Fs4",1,_,1,"Fs2",6,
-       "B4", 1, "Ds5",1, "Bs2",6,
-       "Ds5",1,_,1,"Ds2",6
+#       "Fs4",1,_,1,"Fs2",6,
+#       "B4", 1, "Ds5",1, "Bs2",6,
+#       "Ds5",1,_,1,"Ds2",6
+         "Fs2"
 ).tick(:a), cutoff: 80, amp: 1.5, release: 2*bar, attack: 0.01}
       #play (knit "Fs2",2).tick(:a), amp: 1.5, release: bar/6.0, attack: 0.1
       #with_fx (knit :echo,1,:none, 7).tick(:o), decay: bar*8 do 

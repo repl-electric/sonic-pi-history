@@ -104,6 +104,14 @@ sample Mountain["microperc_01"], amp: 0.5, start: rrand(0.0, 0.1), beat_stretch:
 sleep bar/8.0
 end;end;end
 
+live_loop :ghost2 do; with_fx :level, amp: 1.0 do
+sync :whole
+8.times do
+sample Mountain.all("stick")[04], amp: 0.5, start: rrand(0.0, 0.1), beat_stretch: 8
+sleep bar/8.0
+end;end;end
+
+
 live_loop :apeg do; with_fx :level, amp: 0.0 do
 with_transpose(0) do
 play (ring :A3, :A3, :A3, :E3,

@@ -130,9 +130,9 @@ live_loop :highlight do
  #   play chord("Ds3", "M7")[1..-1], amp: 8, release: 2.0
 #    play chord("Fs3", "M7")[1..-1], amp: 8, release: 2.0
 
-    #with_fx :slicer, phase: bar/2.0 do
+    with_fx :slicer, phase: bar/2.0 do
       play :Es4, release: 1
-    #end
+    end
     
 
   end

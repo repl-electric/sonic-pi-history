@@ -108,8 +108,11 @@ live_loop :ghost2 do; with_fx :level, amp: 1.0 do
 sync :whole
 8.times{
 sleep bar/8.0
+      with_fx :reverb do
 sample Ether.all("hat")[4], amp: 1.15, start: rrand(0.0, 0.001)
 sleep bar/8.0
+        
+      end
 }
 end;end
 

@@ -22,10 +22,10 @@ end;end
 
 live_loop :ghost do
 sync :foo
-s = Mountain.all("stick").choose
+s = .choose
 8.times{
 sleep bar/4.0
-sample s, amp: 0.05, attack: rrand(0.0,0.05)
+sample Mountain.all("stick")[1], amp: 0.05, attack: rrand(0.0,0.05)
 }
 end
 

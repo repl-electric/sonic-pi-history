@@ -104,7 +104,7 @@ sample Mountain["microperc_01"], amp: 0.5, start: rrand(0.0, 0.1), beat_stretch:
 sleep bar/8.0
 end;end;end
 
-live_loop :ghost2 do; with_fx :level, amp: 1.0 do
+live_loop :ghost2 do; with_fx :level, amp: 10.0 do
 sync :quarter
 sleep bar/8.0
 sample Mountain.all("stick")[5], amp: 0.1, start: rrand(0.002, 0.01)

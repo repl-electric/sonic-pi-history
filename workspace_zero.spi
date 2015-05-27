@@ -9,8 +9,7 @@ set_volume! 3.0
 @polyrhythm = [2,3]
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
-    
-    with_fx :distortion, mix: (ring 0.0,1.0).tick(:v) do
+    with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
       sample Mountain.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
     end
  

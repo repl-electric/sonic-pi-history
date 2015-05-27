@@ -59,9 +59,9 @@ end;end;end
 
 live_loop :sevens do
   sync :start
-  with_synth :hollow{
+  with_synth :hollow do
     play :Es4
-  }
+  end
 end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do

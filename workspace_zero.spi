@@ -22,7 +22,7 @@ end;end
 
 live_loop :ghost do
 sync :foo
-4.times{
+2.times{
 sleep bar/2.0
 sample Mountain["stick"], amp: 0.1
 }

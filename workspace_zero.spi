@@ -24,9 +24,8 @@ live_loop :ghost do
 sync :foo
 2.times{
 sleep bar/2.0
-sample Mountain["stick"], amp: 0.1
+sample Mountain["stick"], amp: 0.1, attack: rrand(0.0,0.1)
 }
-
 end
 
 live_loop :beats do;with_fx :level, amp: 1.0 do

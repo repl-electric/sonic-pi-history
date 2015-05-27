@@ -24,7 +24,7 @@ live_loop :ghost do
 sync :foo
 4.times{
 sleep bar/4.0
-sample Mountain["ice_03"], amp: 0.02
+sample Mountain["ice_03"], amp: 0.2
 }
 
 end

@@ -21,6 +21,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
 end;end
 
 live_loop :ghost do
+sync :foo
 sleep bar/2.0
 sample Mountain["snare"], amp: 0.1
 end

@@ -60,7 +60,11 @@ end;end;end
 live_loop :sevens do
   sync :start
   with_synth :hollow do
-    play :Es4
+    play chord("Es4", "M7")[1..-1]
+
+#    play :Es4
+    
+
   end
 end
 

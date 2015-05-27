@@ -15,7 +15,7 @@ set_volume! 3.0
 #end
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
-   sample Mountain["subkick"],amp: 2.0
+   #sample Mountain["subkick"],amp: 2.0
    sample Mountain.all("F#")[2], amp: 0.1
 
 

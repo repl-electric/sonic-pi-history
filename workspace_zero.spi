@@ -129,9 +129,9 @@ end;end
 
 live_loop :high do;with_fx :level, amp: 1.0 do
     2.times{sync :start}
-    #with_fx :echo, decay: 16 do  
+    with_fx :echo, decay: 16 do  
       sample (knit Mountain["microperc_04"],3,Mountain["MicroPerc_04"],1).tick(:s)
-    #end
+    end
 
 end;end
 

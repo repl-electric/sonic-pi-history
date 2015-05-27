@@ -109,7 +109,7 @@ sync :whole
 8.times{
 sleep bar/8.0
       with_fx :reverb do
-        sample Ether.all("hat")[8], amp: 2.15, start: rrand(0.0, 0.1)
+        sample Ether.all("hat")[9], amp: 2.15, start: rrand(0.0, 0.1)
         sleep bar/8.0
       end
 }

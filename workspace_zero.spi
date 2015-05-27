@@ -62,7 +62,7 @@ live_loop :sevens do
   with_synth :hollow do
     #play invert_chord(chord("Ds3", "major7"), -5), amp: 8, release: 2.0
     sync :start
-#    play chord("Fs3", "major7")[0..-1], amp: 8, release: 2.0
+    play chord("Fs3", "major7")[0..-1], amp: 8, release: 2.0
   end
 end
 

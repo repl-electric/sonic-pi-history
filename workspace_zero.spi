@@ -25,7 +25,7 @@ sync :foo
 
 4.times{
 sleep bar/4.0
-sample Mountain["ice"], amp: 0.01
+sample Mountain["ice"], amp: 0.04
 }
 
 end

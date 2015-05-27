@@ -21,9 +21,9 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
 end;end
 
 live_loop :ghost do
-sync :foo
+#sync :foo
 2.times{
-sleep bar/2.0
+sleep bar/4.0
 sample Mountain.all("stick")[4], amp: 0.5, attack: rrand(0.0,0.05)
 }
 end

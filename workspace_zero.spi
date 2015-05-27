@@ -8,7 +8,7 @@ use_bpm 60
 set_volume! 3.0
 @polyrhythm = [2,3]
 
-live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
+live_loop :bass do |m_idx|;with_fx :level, amp: 0.0 do
     sync :foo
     case (m_idx%8)
     when 0,4,2, 6
@@ -22,10 +22,7 @@ end;end
 
 live_loop :ghost do
 sync :foo
-2.times{
-sleep bar/2.0
-sample Mountain.all("stick")[4], amp: rrand(0.25,0.3), attack: rrand(0.0,0.05)
-}
+2.times{sleep bar/2.0;sample Mountain.all("stick")[4], amp: rrand(0.25,0.3), attack: rrand(0.0,0.05)}
 end
 
 live_loop :beats do;with_fx :level, amp: 0.0 do

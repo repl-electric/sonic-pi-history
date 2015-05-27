@@ -22,9 +22,8 @@ end;end
 
 live_loop :ghost do
 sync :foo
-s = .choose
-8.times{
-sleep bar/4.0
+2.times{
+sleep bar/2.0
 sample Mountain.all("stick")[1], amp: 0.05, attack: rrand(0.0,0.05)
 }
 end

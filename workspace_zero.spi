@@ -22,7 +22,7 @@ end;end
 
 live_loop :ghost do
 sync :foo
-2.times{sleep bar/2.0;sample Mountain.all("stick")[4], amp: rrand(0.25,0.3), attack: rrand(0.0,0.05)}
+2.times{sleep bar/2.0;sample Mountain.all("stick")[4], amp: rrand(0.2,0.25), attack: rrand(0.0,0.05)}
 end
 
 live_loop :beats do;with_fx :level, amp: 0.0 do

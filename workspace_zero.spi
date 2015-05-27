@@ -20,10 +20,10 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.0 do
     m_idx+=1
 end;end
 
-live_loop :ghost do
+live_loop :ghost do; with_fx :level, amp: 0.0
 sync :foo
 2.times{sleep bar/2.0;sample Mountain.all("stick")[4], amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
-end
+end;end
 
 live_loop :beats do;with_fx :level, amp: 2.0 do
     sync :foo

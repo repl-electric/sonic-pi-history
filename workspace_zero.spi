@@ -96,5 +96,4 @@ end;end
 live_loop :high do;with_fx :level, amp: 1.0 do
     2.times{sync :start}
     sample (knit Mountain["MicroPerc_06"],3,Mountain["MicroPerc_07"],1).tick(:s)
-    set_volume! 0.0
 end;end

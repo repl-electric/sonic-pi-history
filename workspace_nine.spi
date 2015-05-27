@@ -109,7 +109,7 @@ sync :whole
 #sleep bar/8.0
 8.times{
  sleep bar/8.0
- sample Ambi.all("snare")[14], amp: 0.1, start: rrand(0.0, 0.1)
+ sample Ambi.all("snare")[14], amp: 0.1, start: rrand(0.0, 0.01)
 }
 end;end
 

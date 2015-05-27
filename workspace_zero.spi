@@ -22,7 +22,7 @@ end;end
 
 live_loop :ghost do
 sleep bar/4.0
-sample Mountain["snare"], amp: 1.0
+sample Mountain["snare"], amp: 0.1
 end
 
 live_loop :beats do;with_fx :level, amp: 1.0 do

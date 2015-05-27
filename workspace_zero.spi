@@ -75,7 +75,6 @@ with_transpose(-5) do
 
 
         play n, pan: (Math.sin(vt*13)/1.5)
-end
         sleep bar
         if n == degree(5, :FS3, :major)
           cue :start
@@ -83,6 +82,8 @@ end
       end
     end
 end;end
+end
+
 
 live_loop :bassline do |idx|;with_fx :level, amp: 1.0 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01

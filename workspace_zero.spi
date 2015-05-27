@@ -68,6 +68,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.last) do
       sample Mountain["HarshClash"], start: rrand(0.0,0.01)
 
+      with_fx :distortion do
       with_fx (knit :none,7, :echo, 0).tick(:r2), mix: 0.8, phase: bar/2.0  do
         n = degree((knit 3,8, 
                          4,8, 
@@ -79,6 +80,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
                          4,8, 
 
 ).tick(:r1), :FS3, :major)
+end
 
 #        n = degree((knit 3,8, 3,8, 5,2,
 #                         6,8, 2,8, 5,2,

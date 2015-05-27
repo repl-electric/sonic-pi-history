@@ -24,7 +24,7 @@ live_loop :ghost do
 sync :foo
 2.times{
 sleep bar/2.0
-sample Mountain["stick"], amp: 0.1, attack: rrand(0.0,0.05)
+sample Mountain["stick", 1], amp: 0.1, attack: rrand(0.0,0.05)
 }
 end
 

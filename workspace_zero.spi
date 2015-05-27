@@ -48,10 +48,8 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
        "Fs4",1,_,1,"Fs2",6,
        "B4", 1, "Ds5",1, "Bs2",6,
        "Ds5",1,_,1,"Ds2",6
-
-
 ).tick(:a), cutoff: 80, amp: 1.5, release: 2*bar, attack: 0.01}
-      play (knit "Fs1",2).tick(:a), amp: 1.5, release: bar/6.0, attack: 0.1
+      play (knit "Fs",2).tick(:a), amp: 1.5, release: bar/6.0, attack: 0.1
       #with_fx (knit :echo,1,:none, 7).tick(:o), decay: bar*8 do 
       # play deg_seq(*%w{FS2 1}), release: bar*1.0; 
       #end

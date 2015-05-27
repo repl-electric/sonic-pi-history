@@ -20,10 +20,10 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.0 do
     m_idx+=1
 end;end
 
-live_loop :ghost do; with_fx :level, amp: 0.0 do
+live_loop :ghost do
 sync :foo
 2.times{sleep bar/2.0;sample Mountain.all("stick")[4], amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
-end;end
+end
 
 live_loop :beats do;with_fx :level, amp: 2.0 do
     sync :foo
@@ -52,13 +52,13 @@ live_loop :foo do;with_fx :level, amp: 0.0 do
 sleep bar
 end;end;end
 
-live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 0.2 do
     sync :foo
     density(@polyrhythm.sort.last) do
       #sample Mountain["HarshClash"], start: rrand(0.0,0.01)
 
       with_fx (knit :none,7, :echo, 7).tick(:r2), mix: 0.8, phase: bar/2.0  do
-        n = degree((knit 5,1,5,3).tick(:r1), :FS3, :major)
+        n = degree((knit 3,8,4,8,5,2).tick(:r1), :FS3, :major)
         play n, pan: (Math.sin(vt*13)/1.5)
         sleep bar
         if n == degree(5, :FS3, :major)
@@ -93,9 +93,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
     end
 end;end
 
-live_loop :high do;with_fx :level, amp: 1.0 do
+live_loop :high do;with_fx :level, amp: 0.0 do
     2.times{sync :start}
-    #with_fx :echo, decay: 10, phase: 1.0 do
-     sample (knit Mountain["MicroPerc_06"],3,Mountain["MicroPerc_07"],1).tick(:s)
-#end
+    sample (knit Mountain["MicroPerc_06"],3,Mountain["MicroPerc_07"],1).tick(:s)
 end;end

@@ -119,11 +119,9 @@ live_loop :highlight do
   sync :start
   with_synth :hollow do
  #   play chord("Ds3", "M7")[1..-1], amp: 8, release: 2.0
-
-
 #    play chord("Fs3", "M7")[1..-1], amp: 8, release: 2.0
 
-    with_fx :slicer, phase: bar*4 do
+    with_fx :slicer, phase: bar*2 do
       play :Es4, release: 10
     end
     

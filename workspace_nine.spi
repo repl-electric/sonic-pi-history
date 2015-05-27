@@ -111,7 +111,7 @@ sleep bar/8.0
 #  with_fx :reverb,room: 1.0 do
     sample Ambi.all("snare")[10], amp: 2.1, start: rrand(0.0, 0.1)
   sleep bar/4.0
-end
+
 }
 end;end
 

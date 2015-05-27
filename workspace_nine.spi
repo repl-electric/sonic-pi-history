@@ -106,13 +106,11 @@ end;end;end
 
 live_loop :ghost2 do; with_fx :level, amp: 1.0 do
 sync :whole
-sleep bar/8.0
-4.times{
-#  with_fx :reverb,room: 1.0 do
-  sample Ambi.all("snare")[14], amp: 0.1, start: rrand(0.0, 0.1)
-  sleep bar/8.0
-
-}
+#sleep bar/8.0
+8.times{
+ sleep bar/8.0
+ sample Ambi.all("snare")[14], amp: 0.1, start: rrand(0.0, 0.1)
+ }
 end;end
 
 

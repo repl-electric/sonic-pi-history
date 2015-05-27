@@ -67,7 +67,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
         n = degree((knit 3,8, 
                          4,8, 
                          7,1, 
-                         8,1).tick(:r1), :FS3, :major)
+                         9,1).tick(:r1), :FS3, :major)
 
 #        n = degree((knit 3,8, 3,8, 5,2,
 #                         6,8, 2,8, 5,2,

@@ -22,12 +22,12 @@ end;end
 
 live_loop :ghost do
 sync :foo
+
+4.times{
 sleep bar/4.0
 sample Mountain["snare"], amp: 0.5
-sleep bar/4.0
-sample Mountain["snare"], amp: 0.5
-sleep bar/4.0
-sample Mountain["snare"], amp: 0.5
+}
+
 end
 
 live_loop :beats do;with_fx :level, amp: 1.0 do

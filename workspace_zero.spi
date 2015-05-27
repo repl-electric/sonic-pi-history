@@ -80,7 +80,6 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
                          4,8, 
 
 ).tick(:r1), :FS3, :major)
-end
 
 #        n = degree((knit 3,8, 3,8, 5,2,
 #                         6,8, 2,8, 5,2,
@@ -97,6 +96,7 @@ end
       end
     end
 end;end
+end
 
 
 live_loop :bassline do |idx|;with_fx :level, amp: 1.0 do

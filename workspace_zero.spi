@@ -9,7 +9,7 @@ set_volume! 3.0
 @polyrhythm = [2,3]
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
-     sample Mountain["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: 1.0
+   sample Mountain["SubKick_01"], amp: 3.0+rrand(0.0,0.2), rate: 1.0
  
    sync :foo
     case (m_idx%8)
@@ -56,6 +56,13 @@ live_loop :foo do;with_fx :level, amp: 1.0 do
       #end
 sleep bar
 end;end;end
+
+live_loop :sevens do
+  sync :start
+  with_synth :hollow{
+    play :Es4
+  }
+end
 
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo

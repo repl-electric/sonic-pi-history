@@ -109,7 +109,7 @@ sync :whole
 4.times{
 sleep bar/8.0
   with_fx :reverb,room: 1.0 do
-    sample Ambi.all("hat")[4], amp: 0.5, start: rrand(0.0, 0.1)
+    sample Ambi.all("hat")[5], amp: 0.5, start: rrand(0.0, 0.1)
   sleep bar/8.0
 end
 }

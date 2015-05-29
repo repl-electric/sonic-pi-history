@@ -28,7 +28,7 @@ end
 
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
     
- def tack(k=:___sonic_pi_default_tick_key___)
+ def tacg(k=:___sonic_pi_default_tick_key___)
 puts k
     if k == :___sonic_pi_default_tick_key___
 puts :HERE
@@ -40,8 +40,8 @@ puts :HERE
 
 
 live_loop :foo do
-  puts (ring 0, 1, 2, 3, 4, 5).tack
-  puts (ring 0, 1, 2, 3, 4, 5).tack
+  puts (ring 0, 1, 2, 3, 4, 5).tacg
+  puts (ring 0, 1, 2, 3, 4, 5).tacg
  
  sleep 0.5
 end

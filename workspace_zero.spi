@@ -98,9 +98,9 @@ n = (knit
 
 ).tick(:r1)
 
-#        n = degree((knit 3,8, 
-#                         4,8, 
-#                         5,2).tick(:r1), :FS3, :major)
+        n = degree((knit 3,8, 
+                         4,8, 
+                         5,2).tick(:r1), :FS3, :major)
 
 
 #n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,

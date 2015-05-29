@@ -1,9 +1,7 @@
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
     
  def tacg(k=:___sonic_pi_default_tick_key___)
-puts k
     if k == :___sonic_pi_default_tick_key___
-puts :HERE
       k = rand(36**8).to_s(36)
     end
     tick(k)

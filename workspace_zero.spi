@@ -82,17 +82,17 @@ with_fx :distortion, mix: 0.5 do
 #3-notes   = 18
 
 n = (knit
-#:As3,8, :B3, 8, :Cs4,2,
-#:As3,8, :B3, 9, :Cs4,1,
-#:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
+:As3,8, :B3, 8, :Cs4,2,
+:As3,8, :B3, 9, :Cs4,1,
+:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
 
-:Fs3,8, :Es3, 8, :Cs4,2,
-:Fs3,8, :As3, 9, :Cs4,1,
-:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
+#:Fs3,8, :Es3, 8, :Cs4,2,
+#:Fs3,8, :As3, 9, :Cs4,1,
+#:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
 
-:Fs3,8, :Es3, 8, :Cs4,2,
-:Fs3,8, :As3, 9, :Cs4,1,
-:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
+#:Fs3,8, :Es3, 8, :Cs4,2,
+#:Fs3,8, :As3, 9, :Cs4,1,
+#:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
 
 #:Fs3,8, :Es3, 8, :Gs3,2,
 #:Fs3,8, :As3, 9, :Gs3,1,
@@ -106,9 +106,9 @@ n = (knit
 
 ).tick(:r1)
 
-        n = degree((knit 3,8, 
-                         4,8, 
-                         5,2).tick(:asd2), :FS3, :major)
+ #       n = degree((knit 3,8, 
+  #                       4,8, 
+   #                      5,2).tick(:asd2), :FS3, :major)
 
 #n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
 #             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5

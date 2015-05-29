@@ -6,7 +6,7 @@ sleep  bar/8.0
 end
 
 live_loop :kick do
-sample Ether.all("kick")[4]
+sample Ether.all("kick")[5]
 sleep  bar/2.0
 end
 

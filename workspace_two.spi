@@ -1,1 +1,1 @@
-puts chord(:As3, 'sus4').map{|a| note_info(a).midi_name}
+puts chord(:As3, 'sus4').map{|a| note_info(a).midi_note}

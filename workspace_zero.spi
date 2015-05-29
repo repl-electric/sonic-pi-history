@@ -135,7 +135,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
 ).tick(:a)
 
  play notes, amp: 0.5, release: (knit 1.9*bar,5, bar*2.1,1).tick(:lpo), attack: 0.01 
- with_synth(:beep){play notes, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60}
+ with_synth(:beep){play note_info(notes).midi_note+12, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60}
  
 
 

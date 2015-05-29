@@ -10,9 +10,9 @@ set_volume! 3.0
 
 live_loop :intro do
 sync :foo
-#with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
-#  sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
-#end
+with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
+  sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
+end
 end
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do

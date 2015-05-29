@@ -1,5 +1,6 @@
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
 def tacg
+puts self.object_id
   tick(self.object_id )
 end
 end

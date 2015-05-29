@@ -113,7 +113,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 #      play (knit "Cs2",3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     #play (knit "Fs1",3,  _ ,   1, "CS2", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
-    play (knit "Cs3",2, "FS2",2 ,"B2",2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
+    play (knit "Cs2",2, "FS2",2 ,"B2",2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
 #                5        1        4   
 #1   2   3   4  5   6       7
 #F♯, G♯, A♯, B, C♯, D♯, and E♯

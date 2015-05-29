@@ -17,7 +17,7 @@ end
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
    sync :foo
-     sample Mountain["SubKick_01"], amp: 3.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     sample Mountain["SubKick_01"], amp: 2.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
 
     case (m_idx%8)
     when 0,4,2,6

@@ -4,7 +4,7 @@ class Object
     self.to_a.ring
   end
 
-  def tick(k=:___sonic_pi_default_tick_key___)
+  def tack(k=:___sonic_pi_default_tick_key___)
     if k == :___sonic_pi_default_tick_key___
 puts :HERE
       k = rand(36**8).to_s(36)
@@ -27,8 +27,8 @@ puts :HERE
 end
 
 live_loop :foo do
-  puts (ring 0, 1, 2, 3, 4, 5).tick
-  puts (ring 0, 1, 2, 3, 4, 5).tick
+  puts (ring 0, 1, 2, 3, 4, 5).tack
+  puts (ring 0, 1, 2, 3, 4, 5).tack
  
  sleep 0.5
 end

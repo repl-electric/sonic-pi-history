@@ -112,7 +112,7 @@ n = (knit
         #with_synth(:prophet){play n, cutoff: 68, amp: 0.1, attack: 0.001, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
 puts n
-        if n == :Cs4#degree(5, :FS3, :major)
+        if n == :Cs4 #degree(5, :FS3, :major)
           cue :start
         end
       end
@@ -122,7 +122,7 @@ end;end;end
 live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
     2.times{sync :foo}
-    notes = (knit "Cs2",3, "FS1" ,1, "B1", 2)
+    notes = (knit "Cs2",3, "GS1" ,1, "B1", 2)
     n = notes.tick(:a)
     with_synth :beep do
       play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60

@@ -14,3 +14,8 @@ live_loop :snare do
 sample Ether.all("snare")[1..5].tick(:a), attack: rrand(0.0,0.1)
 sleep  bar/1.0
 end
+
+live_loop :synthers do
+play scale(:A3, :major_pentatonic).choose
+sleep bar/4.0
+end

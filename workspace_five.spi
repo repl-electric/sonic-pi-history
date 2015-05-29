@@ -26,6 +26,18 @@ puts :HERE
   end
 end
 
+class RingVector < SPVector
+      def map_index(idx)
+        idx = idx % size
+        return idx
+      end
+
+      def ___sp_vector_name
+        "ring"
+      end
+    end
+
+
 live_loop :foo do
   puts (ring 0, 1, 2, 3, 4, 5).tack
   puts (ring 0, 1, 2, 3, 4, 5).tack

@@ -147,7 +147,7 @@ notes = (knit
 ).tick(:a)
  play notes, amp: 0.5, release: (knit 1.9*bar,5, bar*2.1,1).tick(:lpo), attack: 0.01 
  with_transpose(-8) do
-   with_synth(:growl){play notes, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60}
+   with_synth(:growl){play notes, amp: 1.5, release: 2*bar, attack: 0.01, cutoff: 60}
  end
 #end 
 

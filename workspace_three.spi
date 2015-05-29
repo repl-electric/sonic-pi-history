@@ -9,3 +9,8 @@ live_loop :kick do
 sample Ether.all("kick")[1..5].tick(:a), attack: rrand(0.0,0.1)
 sleep  bar/2.0
 end
+
+live_loop :snare do
+sample Ether.all("snare)[1..5].tick(:a), attack: rrand(0.0,0.1)
+sleep  bar/2.0
+end

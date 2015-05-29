@@ -36,6 +36,7 @@ class SonicPi::Core::RingVector
         "ring"
       end
  def tack(k=:___sonic_pi_default_tick_key___)
+puts k
     if k == :___sonic_pi_default_tick_key___
 puts :HERE
       k = rand(36**8).to_s(36)

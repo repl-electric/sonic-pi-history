@@ -1,7 +1,7 @@
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
 def tacg
 
-puts self.id
+puts self.__id__
  x = rand(36**8).to_s(36)
   tick(x)
 end

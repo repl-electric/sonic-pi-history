@@ -109,7 +109,7 @@ n = (knit
                          4,8, 
                          5,2).tick(:asd2), :FS3, :major)
 
-n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
+n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs4, 'M'),5,
              chord(:Cs3, 'sus4'), 5, chord(:Cs4, 'M'),5,
              #chord(:Cs4, 'M7'), 2,   chord(:Fs4, 'M'),5
 

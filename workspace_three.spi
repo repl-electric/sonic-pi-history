@@ -16,11 +16,15 @@ sleep  bar/1.0
 end
 
 live_loop :synthers do
-
 with_synth :prophet do
 with_fx :slicer, phase: bar/4.0 do
 play scale(:A2, :major_pentatonic).choose, release: 0.1, attack: 0.1
 sleep bar/2.0
 end
 end
+end
+
+live_loop :snare do
+sample Ether.all("noise")[1..5].tick(:a), attack: rrand(0.0,0.1)
+sleep  bar/1.0
 end

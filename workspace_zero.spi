@@ -91,9 +91,9 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
 
 ).tick(:r1)
 
-n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
-             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
-).tick(:sfds)
+#n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
+#             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
+#).tick(:sfds)
 
 
         play n, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2)

@@ -1,6 +1,7 @@
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
 def tacg
-  tick(rand(36**8).to_s(36))
+@tacg ||= rand(36**8).to_s(36)
+  tick(@tacg)
 end
 end
 \

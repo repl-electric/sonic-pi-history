@@ -17,6 +17,8 @@ end
 
 live_loop :synthers do
 
+with_synth :prophet do
 play scale(:A3, :major_pentatonic).choose
 sleep bar/4.0
+end
 end

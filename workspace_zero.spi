@@ -111,6 +111,8 @@ n = (knit
 
 n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs4, 'M'),5,
              chord(:Cs3, 'sus4'), 5, chord(:Cs4, 'M'),5
+             chord(:Cs3, 'M7'), 5,   chord(:Fs4, 'M'),5
+
 )
 
         play n, pan: (Math.sin(vt*13)/1.5), decay: 0.01 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)

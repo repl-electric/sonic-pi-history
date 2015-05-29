@@ -1,1 +1,1 @@
-puts chord(:As3, 'sus4')
+puts chord(:As3, 'sus4').map{|a| Note.new(a)}

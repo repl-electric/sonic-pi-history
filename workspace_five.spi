@@ -26,15 +26,8 @@ puts :HERE
   end
 end
 
-class SonicPi::Core::RingVector
-      def map_index(idx)
-        idx = idx % size
-        return idx
-      end
-
-      def ___sp_vector_name
-        "ring"
-      end
+class SonicPi::Core::RingVector < SonicPi::Core::SPVector
+    
  def tack(k=:___sonic_pi_default_tick_key___)
 puts k
     if k == :___sonic_pi_default_tick_key___

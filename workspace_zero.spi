@@ -98,7 +98,7 @@ n = (knit
 #).tick(:sfds)
 
         play n, attack: 0.03, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
-        with_synth(:tb303){play n, cutoff: 65, amp: 0.1, attack: 0.001, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2)} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        with_synth(:tb303){play n, cutoff: 63, amp: 0.1, attack: 0.001, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2)} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
         if n == degree(5, :FS3, :major)
           cue :start

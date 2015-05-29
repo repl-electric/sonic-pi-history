@@ -69,7 +69,7 @@ end;end;end
 
 #with_fx :reverb do
 live_loop :bar, autocue: false do;with_fx :level, amp: 0.3 do
-with_fx :distortion, mix: 0.7 do
+with_fx :distortion, mix: 0.8 do
 
     sync :foo
     density(@polyrhythm.sort.last) do

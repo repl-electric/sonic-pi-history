@@ -4,3 +4,8 @@ live_loop :hats do
 sample Ether.all("high_hat").tick(:a)
 sleep  bar/8.0
 end
+
+live_loop :kick do
+sample Ether.all("kick").tick(:a)
+sleep  bar/8.0
+end

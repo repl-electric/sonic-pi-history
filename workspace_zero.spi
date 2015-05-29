@@ -115,7 +115,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
     with_synth :beep do
 #      play (knit "Cs2",3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
-   # play (knit "Fs2",3, "AS2" ,1, "CS3", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
+    play (knit "Fs1",3, "AS1" ,1, "CS2", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
     play (knit "Fs2",3, "AS2" ,1, "CS3", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
 
 #:As3,8, :B3, 8, :Cs4,2,

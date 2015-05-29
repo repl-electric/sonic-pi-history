@@ -22,7 +22,7 @@ end
 
 live_loop :snarez do
 #density(2) do
-sample Ether["noise"][0], amp: 9.0
+sample Ether["noise_"][0], amp: 9.0
 sleep  bar/8.0
 #rend
 end

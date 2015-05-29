@@ -47,7 +47,7 @@ end;end
 
 live_loop :foo do;with_fx :level, amp: 0.5 do
     density(@polyrhythm.sort.first) do
-      sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0
+      sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0, amp: 0.5
 
       with_synth(:dark_ambience){play (knit 
        "Fs4",1,_,1,"Fs2",6,
@@ -68,7 +68,7 @@ sleep bar
 end;end;end
 
 #with_fx :reverb do
-live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 0.0 do
     sync :foo
     density(@polyrhythm.sort.last) do
       sample Mountain["HarshClash"], start: rrand(0.0,0.01), amp: 0.55

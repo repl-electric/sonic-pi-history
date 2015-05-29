@@ -38,7 +38,7 @@ end
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end;end
 
-live_loop :beats do;with_fx :level, amp: 0.0 do
+live_loop :beats do;with_fx :level, amp: 1.0 do
     sync :foo
     #sample Mountain["B_BrokenCres_01_SP"]
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2

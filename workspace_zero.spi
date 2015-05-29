@@ -68,9 +68,8 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
 
 n = (knit
 :As3,8, :As3, 8, :As3,2,
-:As2,8, :B2, 8, :Cs4,2,
 
-
+:As2,8, :As2, 8, :As2,2,
 
 #:As3,8, :B3, 8, :Cs4,2,
 #:As3,8, :B3, 9, :Cs4,1,

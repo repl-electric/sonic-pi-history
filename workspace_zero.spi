@@ -225,14 +225,14 @@ live_loop :high do;with_fx :level, amp: 0.5 do
 
 end;end
 
-live_loop :highlightz do
+live_loop :highlight do
   sync :start
   with_synth :hollow do
  #   play chord("Ds3", "M7")[1..-1], amp: 8, release: 2.0
 #    play chord("Fs3", "M7")[1..-1], amp: 8, release: 2.0
 
     with_fx :slicer, phase: bar/2.0 do
-      #play :Es4, release: 1
+      play :Es4, release: 1
     end
     
 

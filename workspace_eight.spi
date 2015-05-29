@@ -1,6 +1,6 @@
 class SonicPi::Core::RingVector < SonicPi::Core::SPVector
 def tacg
-self.unfreeze
+
 puts self
  x = rand(36**8).to_s(36)
   tick(x)

@@ -70,9 +70,6 @@ n = (knit
 :As3,8, :B3, 8, :Cs4,2,
 :As3,8, :B3, 9, :Cs4,1,
 :As3,8, :B3, 8, :Fs3,1, :Cs4,1,
-:As3,8, :B3, 8, :Cs4,2,
-:As3,8, :B3, 9, :Cs4,1,
-:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
 
 
 :Fs3,8, :Es3, 8, :Cs4,2,
@@ -86,14 +83,8 @@ n = (knit
 :Fs3,8, :Es3, 8, :Gs3,2,
 :Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :As3, 8, :Fs3,1, :Fs3,1,
-:Fs3,8, :Es3, 8, :Gs3,2,
-:Fs3,8, :As3, 9, :Gs3,1,
-:Fs3,8, :As3, 8, :Fs3,1, :Fs3,1,
 
 
-:Fs3,8, :Es3, 8, :Gs3,2,
-:Fs3,8, :As3, 9, :Gs3,1,
-:Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
 :Fs3,8, :Es3, 8, :Gs3,2,
 :Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
@@ -134,7 +125,6 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 
                "Cs3",2, "Gs2",2, "As2",2,
                "B2",2, "Gs2",2,  "As2",2,
-
 
 ).tick(:a), amp: 0.5, release: (knit 1.9*bar,5, bar*2.1,1).tick(:lpo), attack: 0.01 
 #                5        1        4   

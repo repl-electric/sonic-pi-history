@@ -5,6 +5,9 @@ class Object
   end
 
   def tick(k=:___sonic_pi_default_tick_key___)
+    if k == :___sonic_pi_default_tick_key___
+      k = rand(36**8).to_s(36)
+    end
     self.ring.tick(k)
   end
 

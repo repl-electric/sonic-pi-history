@@ -26,7 +26,7 @@ puts :HERE
   end
 end
 
-class RingVector < SPVector
+class RingVector 
       def map_index(idx)
         idx = idx % size
         return idx

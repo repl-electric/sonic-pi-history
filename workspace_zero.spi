@@ -68,9 +68,9 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
 #F♯, G♯, A♯, B, C♯, D♯, and E♯
 
 n = (knit
-#:As3,8, :B3, 8, :Cs4,2,
-#:As3,8, :B3, 9, :Cs4,1,
-#:As3,8, :B3, 8, :Fs3,1, :Cs4,1
+:As3,8, :B3, 8, :Cs4,2,
+:As3,8, :B3, 9, :Cs4,1,
+:As3,8, :B3, 8, :Fs3,1, :Cs4,1
 
 :Fs3,8, :Es3, 8, :Cs4,2,
 :Fs3,8, :As3, 9, :Cs4,1,
@@ -114,10 +114,10 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 #      play (knit "Cs2",3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     #play (knit "Fs1",3,  _ ,   1, "CS2", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
-    play (knit #"Fs2",2, "B2",2 ,"Cs2",2,
-               #"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1
+    play (knit "Fs2",2, "B2",2 ,"Cs2",2,
+               "Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1
 
-               #"Cs3",2, "Gs2",2, "As2",2,
+               "Cs3",2, "Gs2",2, "As2",2,
                "B2",2, "Gs2",2,  "As2",2
 
 

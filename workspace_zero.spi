@@ -62,7 +62,7 @@ sleep bar
 end;end;end
 
 #with_fx :reverb do
-live_loop :bar, autocue: false do;with_fx :level, amp: 0.5 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo
     density(@polyrhythm.sort.last) do
       #sample Mountain["HarshClash"], start: rrand(0.0,0.01), amp: 0.25
@@ -101,7 +101,6 @@ n = (knit
         n = degree((knit 3,8, 
                          4,8, 
                          5,2).tick(:asd2), :FS3, :major)
-
 
 #n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
 #             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5

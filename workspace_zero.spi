@@ -113,7 +113,7 @@ n = (knit
 #)
 
         play n, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
-        with_synth(:prophet){play n, cutoff: 80, amp: 0.3, attack: 0.001, release: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        with_synth(:prophet){play n, cutoff: 85, amp: 0.3, attack: 0.001, release: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
 puts n
         if n == :Cs4#degree(5, :FS3, :major)

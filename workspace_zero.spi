@@ -97,7 +97,7 @@ n = (knit
 #             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
 #).tick(:sfds)
 
-        play n, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        play n, attack: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
         if n == degree(5, :FS3, :major)
           cue :start
@@ -126,6 +126,12 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 # iii
 #chord(:As3, "m")    #A#  -  C#  -   E#
 #chord(:As3, 'sus4')
+
+
+#:Fs3,8, :Es3, 8, :Cs4,2,
+#:Fs3,8, :As3, 9, :Cs4,1,
+#:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,
+
 
 # ├─ (ring :Fs, :B, :Cs)  sus4 F#  1 4 5
 # └─ (ring :Gs, :Cs, :Ds) sus4 Gs  2 5 6

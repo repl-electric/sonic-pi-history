@@ -16,6 +16,7 @@ sleep  bar/1.0
 end
 
 live_loop :synthers do
-play scale(:A2, :major_pentatonic).choose
+
+play scale(:A3, :major_pentatonic).choose
 sleep bar/4.0
 end

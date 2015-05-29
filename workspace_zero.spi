@@ -61,7 +61,7 @@ sleep bar
 end;end;end
 
 with_fx :reverb do
-live_loop :bar, autocue: false do;with_fx :level, amp: 0.2 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 0.3 do
     sync :foo
     density(@polyrhythm.sort.last) do
       sample Mountain["HarshClash"], start: rrand(0.0,0.01), amp: 0.25

@@ -1,12 +1,3 @@
-class SonicPi::Core::RingVector < SonicPi::Core::SPVector
-    
- def tacg(k=:___sonic_pi_default_tick_key___)
-    if k == :___sonic_pi_default_tick_key___
-      k = rand(36**8).to_s(36)
-    end
-    tick(k)
-  end
-    end
 
 
 live_loop :foo do

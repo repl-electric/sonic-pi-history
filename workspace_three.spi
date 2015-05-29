@@ -6,7 +6,7 @@ sleep  bar/8.0
 end
 
 live_loop :kick do
-sample Ether.all("kick")[12], amp: (ring 0.5, 0.3 ).tick(:s)
+sample Ether.all("kick")[12], amp: (ring 0.5, 0.3, 0.4, 0.2).tick(:s)
 sleep  bar/2.0
 end
 

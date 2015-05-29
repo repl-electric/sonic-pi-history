@@ -1,3 +1,26 @@
+class Object
+
+  def ring
+    self.to_a.ring
+  end
+
+  def tick(k=:___sonic_pi_default_tick_key___)
+    self.ring.tick(k)
+  end
+
+  # The hidden singleton lurks behind everyone
+  def metaclass; class << self; self; end; end
+
+  def meta_eval &blk; metaclass.instance_eval &blk; end
+  # Adds methods to a metaclass
+  def meta_def name, &blk
+    meta_eval { define_method name, &blk }
+  end
+  # Defines an instance method within a class
+  def class_def name, &blk
+    class_eval { define_method name, &blk }
+  end
+end
 
 live_loop :foo do
   puts (ring 0, 1, 2, 3, 4, 5).tick

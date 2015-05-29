@@ -6,6 +6,6 @@ sleep  bar/8.0
 end
 
 live_loop :kick do
-sample Ether.all("kick")[0], attack: rrand(0.0,0.2)
+sample Ether.all("kick")[0], attack: rrand(0.0,0.1)
 sleep  bar/2.0
 end

@@ -45,7 +45,7 @@ live_loop :beats do;with_fx :level, amp: 1.0 do
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end;end
 
-live_loop :foo do;with_fx :level, amp: 0.5 do
+live_loop :foo do;with_fx :level, amp: 0.7 do
     density(@polyrhythm.sort.first) do
       sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0
 
@@ -103,9 +103,9 @@ n = (knit
 
 ).tick(:r1)
 
-#        n = degree((knit 3,8, 
-#                         4,8, 
-#                         5,2).tick(:asd2), :FS3, :major)
+        n = degree((knit 3,8, 
+                         4,8, 
+                         5,2).tick(:asd2), :FS3, :major)
 
 #n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
 #             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5

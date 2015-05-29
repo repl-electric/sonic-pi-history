@@ -7,5 +7,5 @@ end
 
 live_loop :kick do
 sample Ether.all("kick").tick(:a)
-sleep  bar/8.0
+sleep  bar/2.0
 end

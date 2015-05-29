@@ -30,7 +30,7 @@ end;end
 
 live_loop :ghost do;with_fx :level, amp: 8.8 do
 sync :foo
-2.times{sleep bar/2.0;sample knit(Mountain.all("MICROPERC")[7],4, sample Mountain.all("snare")[0],1).tick(:asd), 
+2.times{sleep bar/2.0;sample knit(Mountain.all("MICROPERC")[7],4, Mountain.all("snare")[0],1).tick(:asd), 
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end;end
 

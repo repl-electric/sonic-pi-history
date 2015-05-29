@@ -2,5 +2,5 @@ bar = 1.0
 
 live_loop :hats do
 sample Ether.all("high_hat").choose
-sleep  bar/16.0
+sleep  bar/8.0
 end

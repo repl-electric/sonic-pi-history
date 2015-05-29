@@ -109,14 +109,14 @@ n = (knit
                          4,8, 
                          5,2).tick(:asd2), :FS3, :major)
 
-n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs4, 'M'),5,
-             chord(:Cs3, 'sus4'), 5, chord(:Cs4, 'M'),5,
+n = (stretch chord(:Fs3, 'sus4'), 1, chord(:Fs4, 'M'),1,
+             chord(:Cs3, 'sus4'), 1, chord(:Cs4, 'M'),1,
              #chord(:Cs4, 'M7'), 2,   chord(:Fs4, 'M'),5
 
 )
 
         play n, pan: (Math.sin(vt*13)/1.5), decay: 0.01 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
-        with_synth(:prophet){play n, cutoff: 80, amp: 0.3, attack: 0.001, release: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        #with_synth(:prophet){play n, cutoff: 80, amp: 0.3, attack: 0.001, release: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
 puts n
         if n == degree(5, :FS3, :major)

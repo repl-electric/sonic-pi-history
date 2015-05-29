@@ -42,7 +42,7 @@ end;end
 
 live_loop :foo do;with_fx :level, amp: 1.0 do
     density(@polyrhythm.sort.first) do
-#      sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0
+      sample Mountain["pebble"], start: rrand(0.0,0.01), rate: -1.0
 
 #      with_synth(:dark_ambience){play (knit 
 #       "Fs4",1,_,1,"Fs2",6,

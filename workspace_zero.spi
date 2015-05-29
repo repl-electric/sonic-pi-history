@@ -67,13 +67,18 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
 #F♯, G♯, A♯, B, C♯, D♯, and E♯
 
 n = (knit
-:As3,8, :B3, 8, :Cs4,2,
-:As3,8, :B3, 9, :Cs4,1,
-:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
+:As3,8, :As3, 8, :Cs4,2,
+:As2,8, :B2, 8, :Cs4,2,
 
-:Fs3,8, :Es3, 8, :Cs4,2,
-:Fs3,8, :As3, 9, :Cs4,1,
-:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
+
+
+#:As3,8, :B3, 8, :Cs4,2,
+#:As3,8, :B3, 9, :Cs4,1,
+#:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
+
+#:Fs3,8, :Es3, 8, :Cs4,2,
+#:Fs3,8, :As3, 9, :Cs4,1,
+#:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
 
 #:Fs3,8, :Es3, 8, :Cs4,2,
 #:Fs3,8, :As3, 9, :Cs4,1,

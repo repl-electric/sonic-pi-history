@@ -103,13 +103,13 @@ n = (knit
 
 ).tick(:r1)
 
-        n = degree((knit 3,8, 
-                         4,8, 
-                         5,2).tick(:asd2), :FS3, :major)
+#        n = degree((knit 3,8, 
+#                         4,8, 
+#                         5,2).tick(:asd2), :FS3, :major)
 
-n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
-             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
-)
+#n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs3, 'M'),5,
+#             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
+#)
 
         play n, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         with_synth(:prophet){play n, cutoff: 70, amp: 0.3, attack: 0.001, release: 0.1, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
@@ -129,13 +129,13 @@ live_loop :bassline do |idx|;with_fx :level, amp: 0.7 do
     notes = (knit "Cs2",3, "Fs1" ,1, "B1", 2)
     n = notes.tick(:a)
     with_synth :beep do
-  #    play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
+      play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     with_transpose(12) do
  #     play (knit _,1, _,2, "Fs1" ,1, "B1", 2).tick(:a), amp: 0.5, release: (knit 2.0*bar,5,2.0*bar,1).tick(:sd), attack: 0.01
     end
 
-#comment do
+comment do
 notes = (knit 
 #"Fs2",2, "B2",2 ,"Cs2",2,              
 #"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, 
@@ -147,7 +147,7 @@ notes = (knit
  with_transpose(-12) do
    with_synth(:beep){play notes, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60}
  end
-#end 
+end 
 
 #                5        1        4   
 #1   2   3   4  5   6       7

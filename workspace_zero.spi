@@ -128,7 +128,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
       play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     with_transpose(12) do
-      play (knit "Cs2",1, _,2, "FS1" ,1, "B1", 2).tick(:a), amp: 0.5, release: (knit 1.9*bar,5,2.0*bar,1).tick(:sd), attack: 0.01
+      play (knit "Cs2",1, _,2, "GS1" ,1, "B1", 2).tick(:a), amp: 0.5, release: (knit 1.9*bar,5,2.0*bar,1).tick(:sd), attack: 0.01
     end
 
 comment do

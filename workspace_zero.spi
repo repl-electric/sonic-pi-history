@@ -126,9 +126,9 @@ live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
     end
 
 #54 notes ------> 6 notes = 1        18
-    notes = (knit 
-"Fs2",2, "B2",2 ,"Cs2",2,              
-"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, 
+notes = (knit 
+#"Fs2",2, "B2",2 ,"Cs2",2,              
+#"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, 
 
 "Cs3",2, "Gs2",2, "As2",2,
 "Cs3",2, "Gs2",2, "As2",2,

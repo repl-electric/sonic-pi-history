@@ -30,7 +30,7 @@ end;end
 
 live_loop :ghost do;with_fx :level, amp: 0.2 do
 sync :foo
-s = Mountain.all("stick").tick
+s = Mountain.all("stick").tick(:s)
 2.times{sleep bar/2.0;sample s, amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end;end
 

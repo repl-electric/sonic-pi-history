@@ -1,0 +1,8 @@
+
+
+live_loop :foo do
+  puts (ring 0, 1, 2, 3, 4, 5).tacg
+  puts (ring 0, 1, 2, 3, 4, 5).tacg
+ 
+ sleep 0.5
+end

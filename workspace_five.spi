@@ -34,7 +34,7 @@ puts k
 puts :HERE
       k = rand(36**8).to_s(36)
     end
-    self.ring.tick(k)
+    tick(k)
   end
     end
 

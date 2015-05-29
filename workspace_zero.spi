@@ -71,24 +71,20 @@ n = (knit
 :As3,8, :B3, 9, :Cs4,1,
 :As3,8, :B3, 8, :Fs3,1, :Cs4,1,
 
-
 :Fs3,8, :Es3, 8, :Cs4,2,
 :Fs3,8, :As3, 9, :Cs4,1,
-:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,
+:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
 :Fs3,8, :Es3, 8, :Cs4,2,
 :Fs3,8, :As3, 9, :Cs4,1,
-:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,
-
+:Fs3,8, :B3,  8, :Fs3,1, :Cs4,1,
 
 :Fs3,8, :Es3, 8, :Gs3,2,
 :Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :As3, 8, :Fs3,1, :Fs3,1,
 
-
 :Fs3,8, :Es3, 8, :Gs3,2,
 :Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
-
 
 #:B3,2, :As3,1,  :Gs3,1, :Fs3,1, :Cs4,2, :Ds4, 2, :Cs4, 8, :Ds4, 2
 
@@ -120,8 +116,10 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 #      play (knit "Cs2",3, "FS1" ,1, "B1", 2).tick(:a), amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     #play (knit "Fs1",3,  _ ,   1, "CS2", 2).tick(:a), amp: 0.5, release: 2*bar, attack: 0.01
+
+#54 notes ------> 18
     play (knit "Fs2",2, "B2",2 ,"Cs2",2,
-               "Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1,
+               "Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, nil,6
 
                "Cs3",2, "Gs2",2, "As2",2,
                "B2",2, "Gs2",2,  "As2",2,

@@ -111,7 +111,7 @@ n = (knit
 
 n = (stretch chord(:Fs3, 'sus4'), 5, chord(:Fs4, 'M'),5,
              chord(:Cs3, 'sus4'), 5, chord(:Cs4, 'M'),5,
-             chord(:Cs3, 'M7'), 5,   chord(:Fs4, 'M'),5
+             chord(:Cs3, 'M7'), 2,   chord(:Fs4, 'M'),5
 
 )
 

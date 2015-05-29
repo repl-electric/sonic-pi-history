@@ -17,11 +17,9 @@ end
 
 live_loop :synthers do
 with_synth :prophet do
-
 density(3) do
-
 with_fx :slicer, phase: bar/4.0 do
-play scale(:A1, :major_pentatonic).choose, release: 0.1, attack: 0.1
+play scale(:A1, :major_pentatonic).choose, release: 0.01, attack: 0.1
 sleep bar/1.0
 end
 end

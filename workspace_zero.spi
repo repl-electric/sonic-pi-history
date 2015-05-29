@@ -129,13 +129,13 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.0 do
     notes = (knit "Cs2",3, "Fs1" ,1, "B1", 2)
     n = notes.tick(:a)
     with_synth :beep do
-  #    play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
+      play n, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60
     end
     with_transpose(12) do
  #     play (knit _,1, _,2, "Fs1" ,1, "B1", 2).tick(:a), amp: 0.5, release: (knit 2.0*bar,5,2.0*bar,1).tick(:sd), attack: 0.01
     end
 
-#comment do
+comment do
 notes = (knit 
 #"Fs2",2, "B2",2 ,"Cs2",2,              
 #"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, 
@@ -147,7 +147,7 @@ notes = (knit
  with_transpose(-12) do
    with_synth(:beep){play notes, amp: 2.5, release: 2*bar, attack: 0.01, cutoff: 60}
  end
-#end 
+end 
 
 #                5        1        4   
 #1   2   3   4  5   6       7
@@ -203,7 +203,7 @@ notes = (knit
     idx+=1
 end;end
 
-live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
+live_loop :highlight do |idx|;with_fx :level, amp: 0.5 do
     n = chord_seq(*%w{Cs3 7  Fs3 M  B3 M7})
     with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
       with_synth :hollow do

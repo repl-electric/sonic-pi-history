@@ -129,7 +129,7 @@ live_loop :bassline do |idx|;with_fx :level, amp: 1.5 do
 #chord(:As3, "m")    #A#  -  C#  -   E#
 #chord(:As3, 'sus4')
 
-1         7        5
+#1         7        5
 #:Fs3,8, :Es3, 8, :Cs4,2,
 ##:Fs3,8, :As3, 9, :Cs4,1,
 #:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,

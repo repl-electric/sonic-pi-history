@@ -1,7 +1,5 @@
 
 live_loop :foo do
-  puts tick
-  puts hook
-  puts (ring 0, 1, 2, 3, 4, 5).hook
+  puts (ring 0, 1, 2, 3, 4, 5).tick
   sleep 0.5
 end

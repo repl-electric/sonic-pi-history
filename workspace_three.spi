@@ -1,8 +1,6 @@
 bar = 1.0
 
 live_loop :hats do
-sample Ether.all("high_hat").tick(:a), amp: (ring 0.5, 0.4).tick(:s)
-sleep  bar/8.0
 end
 
 live_loop :kick do

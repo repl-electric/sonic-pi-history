@@ -225,7 +225,7 @@ live_loop :high do;with_fx :level, amp: 0.5 do
 
 end;end
 
-live_loop :highlight do
+live_loop :highlightz do
   sync :start
   with_synth :hollow do
  #   play chord("Ds3", "M7")[1..-1], amp: 8, release: 2.0

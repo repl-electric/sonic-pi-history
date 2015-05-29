@@ -31,12 +31,12 @@ end;end
 
 live_loop :ghost do;with_fx :level, amp: 0.2 do
 sync :foo
-comment do
+#comment do
 2.times{sleep bar/2.0;sample knit(Mountain.all("MICROPERC")[7],8, Mountain.all("stick")[5],2).tick(:asd), 
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
-end
-2.times{sleep bar/2.0;sample knit(Mountain.all("microperc")[6],2).tick(:asd), 
-        amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
+#end
+#2.times{sleep bar/2.0;sample knit(Mountain.all("microperc")[6],2).tick(:asd), 
+#        amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end;end
 
 live_loop :beats do;with_fx :level, amp: 1.0 do

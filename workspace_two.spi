@@ -1,2 +1,2 @@
-puts chord(:As3, 'sus4').map{|a| Note.resolve_note_name(a)}   :Bb :Eb :F
-puts chord(:B3, 'sus4').map{|a| Note.resolve_note_name(a)}   :Bb :Eb :F
+puts chord(:As3, 'sus4').map{|a| Note.resolve_note_name(a)}  #=> :Bb :Eb :F
+puts chord(:B3, 'sus4').map{|a| Note.resolve_note_name(a)}   #=> :Bb :Eb :F

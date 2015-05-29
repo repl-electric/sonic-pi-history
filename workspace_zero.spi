@@ -107,7 +107,7 @@ n = (knit
 #             chord(:Cs3, 'sus4'), 5, chord(:Cs3, 'M'),5
 #).tick(:sfds)
 
-        play n, attack: 0.03, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        play n, pan: (Math.sin(vt*13)/1.5), decay: 0.5 + rrand(0.1,0.2) #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         #with_synth(:prophet){play n, cutoff: 68, amp: 0.1, attack: 0.001, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
         sleep bar
 puts n
@@ -134,7 +134,6 @@ comment do
 notes = (knit 
 #"Fs2",2, "B2",2 ,"Cs2",2,              
 #"Fs2",2, "B2",1, "As2",1, "Gs2",1, "Cs2",1, 
-
 "Cs3",2, "Gs2",2, "As2",2,
 "Cs3",2, "Gs2",2, "As2",2,
 "B2",2,  "Gs2",2, "As2",2,

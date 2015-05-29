@@ -1,5 +1,9 @@
-
-
+class SonicPi::Core::RingVector < SonicPi::Core::SPVector
+def tacg
+  tick()
+end
+end
+\
 live_loop :foo do
   puts (ring 0, 1, 2, 3, 4, 5).tacg
   puts (ring 0, 1, 2, 3, 4, 5).tacg

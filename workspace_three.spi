@@ -25,6 +25,6 @@ end
 end
 
 live_loop :snare do
-sample Ether.all("noise")[0], attack: rrand(0.0,0.1)
+sample Ether.all("noise")[0]
 sleep  bar/1.0
 end

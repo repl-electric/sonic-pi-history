@@ -18,7 +18,7 @@ end
 live_loop :synthers do
 with_synth :prophet do
 density(3) do
-with_fx :slicer, phase: bar/4.0 do
+with_fx :slicer, phase: bar/2.0 do
 sample Ether[:a].tick(:s)
 sleep bar/1.0
 end

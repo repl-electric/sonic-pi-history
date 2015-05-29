@@ -28,7 +28,7 @@ end
 
 live_loop :snare do
 #density(2) do
-sample Ether.all("noise").tick(:d), amp: 1.0
+sample Ether.all("noise").tick(:d), amp: 2.0
 sleep  bar/16.0
 #rend
 end

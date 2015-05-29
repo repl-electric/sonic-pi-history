@@ -68,7 +68,7 @@ sleep bar
 end;end;end
 
 #with_fx :reverb do
-live_loop :bar, autocue: false do;with_fx :level, amp: 0.9 do
+live_loop :bar, autocue: false do;with_fx :level, amp: 0.8 do
 with_fx :distortion, mix: 0.2 do
 
     sync :foo

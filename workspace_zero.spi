@@ -62,7 +62,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 0.5 do
     density(@polyrhythm.sort.last) do
       sample Mountain["HarshClash"], start: rrand(0.0,0.01)
 
-      with_fx (knit :none,1, :echo, (ring 3, 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0  do
+      with_fx (knit :none,7, :echo, (ring 3, 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0  do
 
 
 #1   2   3   4  5   6       7

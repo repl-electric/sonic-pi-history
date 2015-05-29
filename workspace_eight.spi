@@ -3,7 +3,7 @@ def tacg
 
 puts self.__id__
  x = rand(36**8).to_s(36)
-  tick(x)
+  tick(self.__id__)
 end
 end
 \

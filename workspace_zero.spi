@@ -73,7 +73,7 @@ live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo
     density(@polyrhythm.sort.last) do
       sample Mountain["HarshClash"], start: rrand(0.0,0.01), amp: 0.55
-      with_fx (knit :none,4, :echo, (ring 3, 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0  do
+      with_fx (knit :none,4, :echo, (ring 1, 4).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0  do
 
 #1   2   3   4  5   6       7
 #F♯, G♯, A♯, B, C♯, D♯, and E♯

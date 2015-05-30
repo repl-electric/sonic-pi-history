@@ -162,7 +162,7 @@ notes = (knit
 
 #sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/,0],amp: 0.5
 if notes == "Fs2"
-sample Ether[/#{notes[0..-2].gsub(/s/,"#")}/,3] 
+sample Ether[/#{notes[0..-2].gsub(/s/,"#")}/,4] 
 end
 
 #                5        1        4   

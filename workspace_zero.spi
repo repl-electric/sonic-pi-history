@@ -162,7 +162,7 @@ notes = (knit
 
 #sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/,0],amp: 0.5
 puts "-------------------------"
-puts  Mountain[/bow/,/#{notes[0..-2].gsub(/s/,"#")}/,0] 
+puts  Mountain[/bow/,/G_/,0] 
 
 #                5        1        4   
 #1   2   3   4  5   6       7

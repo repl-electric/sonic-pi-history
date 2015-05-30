@@ -6,4 +6,4 @@
 
 
 notes = "B2"
-sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 5]
+sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 6]

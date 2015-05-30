@@ -5,5 +5,8 @@
 #"B2",2,  "Gs2",2, "As2",2,
 
 
-notes = "B2"
+#notes = "B2"
+#sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 11]
+
+notes = "Cs2"
 sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 11]

@@ -160,7 +160,7 @@ notes = (knit
  end
 #end 
 
-sample Ambi[/^#{notes}_/
+sample Ambi[/^#{notes}_/]
 
 #                5        1        4   
 #1   2   3   4  5   6       7

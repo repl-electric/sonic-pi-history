@@ -9,4 +9,4 @@
 #sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 11]
 
 notes = "Cs2"
-puts  Ambi[/#{notes[0..-2].gsub(/s/,"#")}/]
+sample  Ambi[/#{notes[0..-2].gsub(/s/,"#")}/]

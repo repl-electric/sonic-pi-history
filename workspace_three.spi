@@ -25,4 +25,4 @@ notes = "Gs2"
 #sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 3]
 
 
-sample Mountain[/B_/,2] 
+sample Mountain[/B_/,3] 

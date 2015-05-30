@@ -161,7 +161,10 @@ notes = (knit
 #end 
 
 puts "----------------------------------------------------"
-sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/][0]
+s = Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/]
+if s
+sample s
+end
 
 #                5        1        4   
 #1   2   3   4  5   6       7

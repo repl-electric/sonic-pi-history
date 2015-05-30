@@ -16,5 +16,5 @@
 #sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 6]
 
 
-notes = "Fb2"
+notes = "Gs2"
 sample Ambi["chords", /#{notes[0..-2].gsub(/s/,"#")}/, 0]

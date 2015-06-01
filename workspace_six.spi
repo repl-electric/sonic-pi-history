@@ -74,7 +74,7 @@ end;end;end
 #with_fx :reverb do
 #with_fx :distortion do
 #with_fx :slicer, phase: bar*8.0,smooth: 5.0, mix: 0.0 do
-with_fx :reverb, room: 1.0, mix: 0.9 do
+with_fx :reverb, room: 1.0, mix: 0.8 do
 live_loop :bar, autocue: false do;with_fx :level, amp: 1.0 do
     sync :foo
     density(@polyrhythm.sort.last) do

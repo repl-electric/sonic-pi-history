@@ -304,7 +304,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)+1
     when 1,5
-     sample Mountain["SubKick_01",0], amp: 3.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     sample Mountain["SubKick_01"], amp: 3.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 4,8
 #    when 7
       sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.2

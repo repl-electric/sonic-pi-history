@@ -24,8 +24,8 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
 #      sample Mountain.all("kick")[4], amp: 0.5
     when 4,8
 #    when 7
-       sample :drum_snare_soft, amp: 0.2, start: 0.01
-      #sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.2
+#       sample :drum_snare_soft, amp: 0.2, start: 0.01
+      sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.2
     end
     m_idx+=1
 end;end

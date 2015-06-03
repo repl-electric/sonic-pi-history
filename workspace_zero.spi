@@ -110,7 +110,7 @@ notes = (knit :Fs3,8, :Es3, 8, :Cs4, 2,
 #:Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
 )
-notes = notes.reverse
+notes = notes
 
 comment do
 (knit 1,18, 

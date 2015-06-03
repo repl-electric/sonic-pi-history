@@ -126,7 +126,7 @@ notes = (knit :Fs3,8, :Es3, 8, :Cs4, 2,
 #)
 
 with_transpose((ring 12).tick(:tock)){
-        with_synth(:dark_ambience){play n, pan: (Math.sin(vt*13)/1.5), amp: 1.8 ,decay: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+#        with_synth(:dark_ambience){play n, pan: (Math.sin(vt*13)/1.5), amp: 1.8 ,decay: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 }
         with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.20, 0.15,0.15, 0.15).tick(:sdf) ,decay: 0.0 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 

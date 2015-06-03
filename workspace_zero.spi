@@ -149,7 +149,6 @@ notes = (knit :Fs3,8, :Es3, 8, :Cs4, 2,
 #:Fs3,8, :As3, 9, :Gs3,1,
 :Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
 )
-notes = notes
 
 comment do
 (knit 1,18, 
@@ -162,10 +161,10 @@ comment do
 ).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 end
 
-#n = notes.tick(:Asdasdasdasd)
+n = notes.tick(:Asdasdasdasd)
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 
-n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)
+#n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)
 
 #n = (stretch chord(:Fs3, 'M'),8, chord(:Es3, 'm'),8,
 #             chord(:As3, 'sus4'),8, chord(:Cs4, 'M'),2).tick("asdasd")

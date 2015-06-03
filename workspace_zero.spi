@@ -19,7 +19,7 @@ end
 live_loop :bells do
 sync :foo
 with_synth :beep do
-with_fx (ring :echo).tick(:fx), decay: 8.0 do
+with_fx (ring :echo).tick(:fx), decay: 4.0 do
   n = play (ring :Fs4).tick, amp: 0.3
   sleep bar/4.0
   control n, note: :FS3

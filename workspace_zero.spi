@@ -177,7 +177,7 @@ n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)
 with_transpose((ring 12).tick(:tock)){
         #with_synth(:dark_ambience){play n, pan: (Math.sin(vt*13)/1.5), amp: 1.8 ,decay: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 }
-        with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.6).tick(:sdf) ,decay: 0.4 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+        with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.2).tick(:sdf) ,decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 
 with_transpose((ring 12).tick(:toack)){
 #       with_synth(:prophet){play n, cutoff: 70, amp: 1.0, attack: 0.1, release: 0.5, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)      

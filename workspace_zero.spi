@@ -113,12 +113,11 @@ notes = (knit :Fs3,8, :Es3, 8, :Cs4, 2,
 
 (knit 1,18, 
       2, 1,1, 17,
-      3, 1,1, 17,
-      4, 1,1, 17,
-      5, 1,1, 17,
-      6, 1,1, 17,
-      7, 1,1, 17,
-
+      2, 1,1, 17,
+      2, 1,1, 17,
+      2, 1,1, 17,
+      2, 1,1, 17,
+      2, 1,1, 17,
 ).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }

@@ -23,7 +23,9 @@ with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   n = play (knit :Fs4, 7, _, 1).tick, amp: 0.3
 
+        with_fx :bitcrusher, sample_rate: 8000 do
   sample Mountain[/bow/i, /f#/i, 0],amp: 0.4 if dice(32) == 1
+                          end
 
   sleep bar/4.0
   control n, note: (knit :As4, 4, :B4, 4,
@@ -36,9 +38,9 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     case (m_idx%8)
     when 0,4,2,6
      if m_idx%16 == 0
-       with_fx :echo, decay: 2, pre_amp: 0.5 do
-       sample Ether["noise",12], amp: 2.0+rrand(0.0,0.1), rate: (ring 0.8,1.0).tick
-       end
+       with_fx(:echo, decay: 2, pre_amp: 0.5){
+         sample Ether["noise",12], amp: 2.0+rrand(0.0,0.1), rate: (ring 0.8,1.0).tick
+       }
      else
        sample Mountain["subkick",0], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      end

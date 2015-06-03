@@ -151,7 +151,7 @@ notes = (knit :Fs3,8, :Es3, 8, :Cs4, 2,
 )
 notes = notes
 
-#comment do
+comment do
 (knit 1,18, 
       2,1, 1,17,
       2,1, 1,17,
@@ -160,7 +160,7 @@ notes = notes
       2,1, 1,17,
       2,1, 1,17,
 ).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
-#end\
+end\
 
 #n = notes.tick(:Asdasdasdasd)
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }

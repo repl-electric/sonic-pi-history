@@ -161,7 +161,7 @@ comment do
 ).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 end
 
-n = notes.tick(:Asdasdasdasd)
+n = notes.tick(:asdasdasdasd)
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 
 #n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)

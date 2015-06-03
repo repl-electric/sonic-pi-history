@@ -31,16 +31,11 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)
     when 0,4,2,6
-#    sample :drum_bass_soft, amp: 0.5, start: 0.01
-
      if m_idx%16 == 0
        sample Mountain["subkick",1], amp: 3.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      else
        sample Mountain["subkick",0], amp: 3.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      end
-
-#     sample Ether["kick",14], amp: 1.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
-#      sample Mountain.all("kick")[4], amp: 0.5
     when 1,3,4,5
 #     sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 7
@@ -61,7 +56,7 @@ sync :foo
 #        amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end; end
 
-live_loop :beats do;with_fx :level, amp: 0.4 do
+live_loop :beats do;with_fx :level, amp: 0.5 do
     sync :foo
     #sample Mountain["B_BrokenCres_01_SP"]
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2

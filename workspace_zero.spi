@@ -19,7 +19,7 @@ end
 live_loop :bells do
 sync :foo
 with_synth :beep do
-  play :Fs4
+  play :Fs4, :Fs3
 end
 end
 

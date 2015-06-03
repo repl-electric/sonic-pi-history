@@ -63,7 +63,7 @@ comment do
 2.times{sleep bar/2.0;sample knit(Mountain["MICROPERC",3],8, Mountain["MICROPERC",5],2).tick(:asd),
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end
-2.times{sleep bar/2.0;sample knit(Ether[/f#_/i,6],2).tick(:asd),
+2.times{sleep bar/2.0;sample knit(Ether[/f#_/i,7],2).tick(:asd),
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 end; end
 

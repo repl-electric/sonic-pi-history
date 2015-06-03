@@ -22,7 +22,7 @@ with_synth :beep do
 with_fx (ring :echo).tick(:fx), decay: 4.0 do
   n = play (ring :Fs4).tick, amp: 0.3
   sleep bar/4.0
-  control n, note: :As4
+  control n, note: (ring :As4, :Bs4).tick
   sleep bar/2.0
 end
 end

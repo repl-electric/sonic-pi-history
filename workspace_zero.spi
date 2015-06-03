@@ -190,8 +190,6 @@ with_transpose((ring 12).tick(:toack)){
     end
 
 end;end;end
-#end;
-#end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
@@ -221,61 +219,8 @@ notes = (knit
    with_synth(:beep){play notes, amp: 0.2, release: 4*bar, attack: 0.01, cutoff: 60}
  end;end;end
 end
-
-#                5        1        4  
-#1   2   3   4  5   6       7
-#F♯, G♯, A♯, B, C♯, D♯, and E♯
-
-#(I, ii, iii, IV, V, vi, viio)
-
-# iii
-#chord(:As3, "m")    #A#  -  C#  -   E#
-#chord(:As3, 'sus4')
-
-#1         7        5
-#:Fs3,8, :Es3, 8, :Cs4,2,
-##:Fs3,8, :As3, 9, :Cs4,1,
-#:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,
-
-
-# ├─ (ring :Fs, :B, :Cs)  sus4 F#  1 4 5
-# └─ (ring :Gs, :Cs, :Ds) sus4 Gs  2 5 6
-# ├─ (ring :As, :Cs, :F)
-# ├─ (ring :B, :E, :Fs)
-# ├─ (ring :Cs, :Fs, :Gs)
-# ├─ (ring :Ds, :Gs, :As)
-# ├─ (ring :F, :As, :C)
-
-#  3       4       5    
-#:As3,8, :B3, 8, :Cs4,2,
-#:As3,8, :B3, 9, :Cs4,1,
-#:As3,8, :B3, 8, :Fs3,1, :Cs4,1,
-
-# I
-
-#  1       -7       5    
-#:Fs3,8, :Es3, 8, :Cs4,2,
-#:Fs3,8, :As3, 9, :Cs4,1,
-#:Fs3,8, :B3, 8,  :Fs3,1, :Cs4,1,
-
-#I
-
-#1         -7       2
-#:Fs3,8, :Es3, 8, :Gs3,2,
-#:Fs3,8, :As3, 9, :Gs3,1,
-#:Fs3,8, :As3, 8, :Fs3,1, :Fs3,1,
-
-#I
-
-#1         -7       2
-#:Fs3,8, :Es3, 8, :Gs3,2,
-#:Fs3,8, :As3, 9, :Gs3,1,
-#:Fs3,8, :B3, 8, :Gs3,1, :Gs3,1,
-
-    #play degree((knit 5,4,6,4,7,1).tick(:r1), :FS3, :major), amp: 1.0, release: 2*bar, attack: 0.01 if idx % 4 ==0
-    idx+=1
+idx+=1
 end;end
-
 
 live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
     n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7})

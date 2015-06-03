@@ -68,7 +68,7 @@ end
 
       #play (knit "Fs2",2).tick(:a), amp: 1.5, release: bar/6.0, attack: 0.1
 #      with_fx (knit :echo,1,:none, 7).tick(:o), decay: bar*8 do
-       play deg_seq(*%w{FS3 3}).tick(:asd), release: bar*0.01, attack: 0.01;
+       play deg_seq(*%w{FS3 1}).tick(:asd), release: bar*0.01, attack: 0.01;
 #      end
 sleep bar
 end;end;end

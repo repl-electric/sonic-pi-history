@@ -23,7 +23,7 @@ with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   n = play (knit :Fs4, 7, _, 1).tick, amp: 0.3
 
-  sample Mountain[/bow/i, /f#/i, 0],amp: 0.4 if dice(2) == 1
+  sample Mountain[/bow/i, /f#/i, 0],amp: 0.4 if dice(32) == 1
 
   sleep bar/4.0
   control n, note: (knit :As4, 4, :B4, 4,

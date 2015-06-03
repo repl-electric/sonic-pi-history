@@ -142,6 +142,7 @@ end\
 n = notes.tick(:Asdasdasdasd)
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 
+n = (degree (knit 3,8, 4,8, 5,2), :Fs3, :major).tick(:asdasd)
 
 
 #n = (stretch chord(:Fs3, 'M'),8, chord(:Es3, 'm'),8,

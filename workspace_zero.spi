@@ -70,9 +70,7 @@ live_loop :bar, autocue: false do; with_fx :level, amp: 2.0 do
     density(@polyrhythm.sort.last) do
      sample Mountain["HarshClash"], start: rrand(0.0,0.02), amp: 0.55
  with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
-
       with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
-
 
 #1   2   3   4  5   6       7
 #F♯, G♯, A♯, B, C♯, D♯, and E♯
@@ -137,7 +135,7 @@ with_transpose((ring 0).tick(:tock)){
         with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.20, 0.15,0.15, 0.15).tick(:sdf) ,decay: 0.0 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 
 with_transpose((ring -12,12).tick(:toack)){
-        #with_synth(:prophet){play n, cutoff: 80, amp: 0.3, attack: 0.1, release: 0.5, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)      
+        with_synth(:prophet){play n, cutoff: 80, amp: 0.3, attack: 0.1, release: 0.5, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)      
 }
         sleep bar
 puts n

@@ -197,7 +197,7 @@ notes = (knit
 ).tick(:a)
  play notes, amp: 0.8, release: (knit 3.9*bar,5, bar*4.1,1).tick(:lpo), attack: 0.01
  with_transpose(-12) do
-   with_synth(:beep){play notes, amp: 0.5, release: 4*bar, attack: 0.01, cutoff: 60}
+#   with_synth(:beep){play notes, amp: 0.5, release: 4*bar, attack: 0.01, cutoff: 60}
  end;end;end
 #end
 

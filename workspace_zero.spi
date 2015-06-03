@@ -59,7 +59,7 @@ end;end
 live_loop :ghost do;with_fx :level, amp: 0.5 do
 sync :foo
 #comment do
-2.times{sleep bar/2.0;sample knit(Mountain["MICROPERC",5],8, Mountain["MICROPERC",5],2).tick(:asd),
+2.times{sleep bar/2.0;sample knit(Mountain["MICROPERC",4],8, Mountain["MICROPERC",5],2).tick(:asd),
         amp: rrand(0.55,0.6), attack: rrand(0.0,0.05)}
 #end
 #2.times{sleep bar/2.0;sample knit(Mountain["microperc",6],2).tick(:asd),

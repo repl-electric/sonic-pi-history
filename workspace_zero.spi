@@ -62,13 +62,14 @@ end;end;end
 #with_fx :distortion do
 #with_fx :slicer, phase: bar*8.0,smooth: 5.0, mix: 0.0 do
 live_loop :bar, autocue: false do; with_fx :level, amp: 2.0 do
-with_fx :reverb, room: 1.0, mix: 0.0, damp: 0.1 do |fx_r|
 
-control fx_r, #room: (ramp 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0).tick,
-              mix: (ramp 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0).tick
+#control fx_r, #room: (ramp 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0).tick,
+#              mix: (ramp 0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0).tick
 
     1.times {sync :foo}
     density(@polyrhythm.sort.last) do
+with_fx :reverb, room: 1.0, mix: 0.0, damp: 0.1 do |fx_r|
+
       sample Mountain["HarshClash"], start: rrand(0.0,0.02), amp: 1.55
       with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
 

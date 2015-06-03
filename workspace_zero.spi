@@ -17,7 +17,7 @@ end
 end
 
 
-live_loop :ghost do;with_fx :level, amp: 2.0 do
+live_loop :ghost do;with_fx :level, amp: 9.0 do
 sync :foo
 comment do
 2.times{sleep bar/2.0;sample knit(Mountain["MICROPERC",7],8, Mountain["stick",5],2).tick(:asd),

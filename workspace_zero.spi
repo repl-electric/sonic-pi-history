@@ -37,7 +37,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     when 0,4,2,6
      if m_idx%1 == 0
        with_fx :echo, decay: 2, pre_amp: 0.5 do
-       sample Ether["noise",26], amp: 2.0+rrand(0.0,0.1), rate: (ring 0.8,1.0).tick
+       sample Ether["noise",27], amp: 2.0+rrand(0.0,0.1), rate: (ring 0.8,1.0).tick
        end
      else
        sample Mountain["subkick",0], amp: 3.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)

@@ -25,7 +25,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
 
   if dice(1) == 1
      with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
-       sample Mountain[/bow/i, (ring /f#/i).tick(:a), 0],amp: 0.4 
+       sample Mountain[/bow/i, (ring /f#/i, /b/i).tick(:a), 0],amp: 0.4 
   end;end
 
   sleep bar/4.0

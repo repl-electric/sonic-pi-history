@@ -23,7 +23,7 @@ with_synth :beep do
 with_fx (knit :echo,7, :none,1).tick(:fx), decay: 4.0 do
   n = play (knit :Fs4, 7, _, 1).tick, amp: 0.3
   sleep bar/4.0
-  control n, note: (knit :As4, 4, :B4, 4).tick
+  control n, note: (knit :As4, 8, :B4, 4).tick
   sleep bar/2.0
 end;end;end;end 
 

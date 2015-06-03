@@ -46,7 +46,6 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     m_idx+=1
 end;end
 
-
 live_loop :ghost do;with_fx :level, amp: 0.5 do
 sync :foo
 #comment do
@@ -163,9 +162,9 @@ end\
 #             chord(:As3, 'sus4'),8, chord(:Cs4, 'M'),2).tick("asdasd")
 
 
-#n = (stretch chord(:Fs3, 'sus4'),2, chord(:Fs3, 'M'),2,
-#             chord(:Cs3, 'sus4'),2, chord(:Cs3, 'M'),2
-#)
+n = (stretch chord(:Fs3, 'sus4'),2, chord(:Fs3, 'M'),2,
+             chord(:Cs3, 'sus4'),2, chord(:Cs3, 'M'),2
+)
 
 with_transpose((ring 12,-12).tick(:tock)){
         with_synth(:dark_ambience){play n, pan: (Math.sin(vt*13)/1.5), amp: 1.8 ,decay: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)

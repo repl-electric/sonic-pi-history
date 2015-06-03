@@ -182,7 +182,7 @@ with_transpose((ring 12).tick(:tock)){
         with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.2).tick(:sdf) ,decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
 
 with_transpose((ring 12).tick(:toack)){
-        with_synth(:prophet){play n, cutoff: 120, amp: 0.5, attack: 0.1, release: 0.5, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)      
+        with_synth(:prophet){play n, cutoff: 120, amp: 0.8, attack: 0.1, release: 0.5, pan: (Math.sin(vt*13)/1.5), decay: 0.1} #,release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)      
 }
         sleep bar
 puts n

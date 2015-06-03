@@ -173,7 +173,7 @@ n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)
 #             chord(:As3, 'sus4'),8, chord(:Cs4, 'M'),2).tick("asdasd")
 
 
-n = stretch(chord(:Fs4,'13'),8).tick(:a)
+n = stretch(chord(:Fs4,'13'),18).tick(:a)
 
 with_transpose((ring 12).tick(:tock)){
         #with_synth(:dark_ambience){play n, pan: (Math.sin(vt*13)/1.5), amp: 1.8 ,decay: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)

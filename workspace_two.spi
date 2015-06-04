@@ -3,7 +3,7 @@ bar = 1.0
 live_loop :drums do
   density(1) do
     with_fx :bitcrusher do
-      sample Ambi["kick",(ring 11,12).tick], amp: 0.5, rate: (ring 1,0.9,1,1).tick
+      sample Ambi["kick",(ring 11,12).tick], amp: 0.5, rate: (ring 1,0.9,1,0.8).tick
     end
     sleep bar/2.0
   end

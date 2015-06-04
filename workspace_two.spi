@@ -1,7 +1,7 @@
 bar = 1.0
 
 live_loop :drums do
-    sample Ambi["kick",3]
+    sample Ambi["kick",4]
 
     sleep bar
 

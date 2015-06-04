@@ -5,7 +5,7 @@ live_loop :drums do
     sleep bar
 end
 
-live_loop :drums do
+live_loop :hats do
     sample Ambi["hat",0]
     sleep bar/2
 end

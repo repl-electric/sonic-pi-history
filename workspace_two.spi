@@ -24,5 +24,5 @@ end
 
 live_loop :perc do
   sync :drums 
-  sample Ether[/hats/i, 0]
+  sample Ether[/hats/i, 0], beat_stretch: (ring 0, 8).tick
 end

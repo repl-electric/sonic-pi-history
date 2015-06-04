@@ -3,7 +3,7 @@ bar = 1.0
 def sample_and_sleep (*args)
  s = args.first
  sample *args
- sleep sample_duration(sample)
+ sleep sample_duration(s)
 end
 
 live_loop :drums do

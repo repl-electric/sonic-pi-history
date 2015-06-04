@@ -18,7 +18,9 @@ end
 
 live_loop :thinking_about_13 do
   4.times{sync :foo}
-  play chord(:Fs3,'13')
+  play (ring chord(:Fs3,'13'), chord(:Fs3,'13')).tick
+
+
 end
 
 live_loop :bells do; with_fx :level, amp: 0.0 do

@@ -7,5 +7,5 @@ end
 
 live_loop :hats do
     sample Ambi["hat"].tick
-    sleep bar/4
+    sleep bar/8
 end

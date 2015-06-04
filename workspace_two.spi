@@ -16,7 +16,7 @@ live_loop :hats do
     4.times{
  
     if dice()
-    sample Noise["hat"].tick
+    sample Ether["hat"].tick
     sleep bar/4
 }
 end

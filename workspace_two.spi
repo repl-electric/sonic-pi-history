@@ -6,6 +6,6 @@ live_loop :drums do
 end
 
 live_loop :hats do
-    sample Ambi["hat",3]
+    sample Ambi["hat",4]
     sleep bar/4
 end

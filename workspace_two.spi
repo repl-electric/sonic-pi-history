@@ -39,5 +39,5 @@ end
 
 live_loop :ambi do
  sync :drums
- sample_and_sleep Ether["inter",1]
+ sample_and_sleep Ether["inter",0]
 end

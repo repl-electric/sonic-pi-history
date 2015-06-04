@@ -7,5 +7,5 @@ end
 
 live_loop :hats do
     sample Ambi["hat",1]
-    sleep bar/2
+    sleep bar/4
 end

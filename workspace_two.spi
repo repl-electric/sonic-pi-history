@@ -1,32 +1,32 @@
 bar = 1.0
 
 live_loop :drums do
- density(1) do
-  with_fx :bitcrusher do
-  sample Ambi["kick",11], amp: 0.5
-end
-  sleep bar/2.0
-end
+  density(1) do
+    with_fx :bitcrusher do
+      sample Ambi["kick",11], amp: 0.5
+    end
+    sleep bar/2.0
+  end
 
- density(2) do
-  sample Ambi["am_snare_fibres",1]
-  sleep bar/2.0
-end
+  density(2) do
+    sample Ambi["am_snare_fibres",1]
+    sleep bar/2.0
+  end
 end
 
 live_loop :hats do
-    sync :drums
-    4.times{
-if dice(12) != 1 
-  sample Ether[/noise/i][1..5].tick, amp: 0.5
-  sleep bar/4
-end
-}
+  sync :drums
+  4.times{
+    if dice(12) != 1
+      sample Ether[/noise/i][1..5].tick, amp: 0.5
+      sleep bar/4
+    end
+  }
 end
 
 live_loop :perc do
   sync :drums
   with_fx :bitcrusher do
     sample Ether[/hats/i, 0], beat_stretch: (ring 0.2, 0.1, 0.2, 0.3).tick
-end
+  end
 end

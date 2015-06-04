@@ -1,10 +1,8 @@
 bar = 1.0
 
 live_loop :drums do
-
  density(3) do
   sample Ambi["kick",11], amp: 0.5
-
   sleep bar/2.0
 end
 
@@ -12,7 +10,6 @@ end
   sample Ambi["am_snare_fibres",1]
   sleep bar/2.0
 end
-
 end
 
 live_loop :hats do

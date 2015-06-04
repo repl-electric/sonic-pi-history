@@ -27,8 +27,9 @@ live_loop :thinking_about_13 do
  puts notes
 
   notes.hook().shuffle.each do |n|
-    sleep rrand(0.0, 1.0)
-    play n, decay: 2*bar
+    d = rrand(0.0, 1.0)
+    sleep d 
+    play n, decay: (2*bar)-d
   end
  
 

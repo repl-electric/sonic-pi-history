@@ -18,7 +18,7 @@ end
 
 live_loop :thinking_about_13 do
   4.times{sync :foo}
-  play (ring chord(:Fs3,'13'), chord(:B3,'13')).tick, decay: 4*bar
+  play (ring chord(:Fs3,'13'), chord(:Cs3,'13')).tick, decay: 4*bar
 
 end
 

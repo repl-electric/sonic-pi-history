@@ -1,6 +1,6 @@
 
 loop do
    s = Ambi[/.*/i].tick
-  sample s 
+  sample s, amp: 4.0
   sleep sample_duration s
 end

@@ -1,7 +1,6 @@
 bar = 1.0
 
 def sample_and_sleep (*args)
-puts args
  sample = args.first
  sample args
  sleep sample_duration(sample)

@@ -23,10 +23,10 @@ end
 live_loop :hats do
   sync :drums
   4.times{
-    if dice(12) != 1
+#    if dice(12) != 1
       sample Ether[/noise/i,9].tick, amp: 3.8
       sleep bar/8
-    end
+ #   end
   }
 end
 

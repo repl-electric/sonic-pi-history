@@ -14,7 +14,9 @@ end
 live_loop :hats do
     sync :drums
     4.times{
-    sample Ambi["hat"].tick
+ 
+    if dice()
+    sample Noise["hat"].tick
     sleep bar/4
 }
 end

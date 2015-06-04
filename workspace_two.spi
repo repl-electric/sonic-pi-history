@@ -6,7 +6,7 @@ def sample_and_sleep (*args)
  sleep sample_duration(s)
 end
 
-with_fx :reverb do
+with_fx :reverb, room: 1.0 do
 
 live_loop :drums do
   density(1) do

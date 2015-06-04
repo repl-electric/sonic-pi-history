@@ -24,5 +24,5 @@ end
 
 live_loop :perc do
   sync :drums 
-  sample Ether[/hats/]
+  sample Ether[/hats/, 0]
 end

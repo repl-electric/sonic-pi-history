@@ -1,3 +1,5 @@
+bar = 1.0
+
 live_loop :thinking_about_13 do
   4.times{sync :foo}
 #with_fx :distortion do

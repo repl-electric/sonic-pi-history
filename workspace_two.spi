@@ -38,5 +38,6 @@ live_loop :perc do
 end
 
 live_loop :ambi do
+ sync :drums
  sample_and_sleep Ether["A",0]
 end

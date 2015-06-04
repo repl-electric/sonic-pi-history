@@ -23,6 +23,8 @@ end
 end
 
 live_loop :perc do
-  sync :drums 
+  sync :drums
+with_fx :bitcrusher do
   sample Ether[/hats/i, 0], beat_stretch: (ring 0.2, 0.1, 0.2, 0.3).tick
+end
 end

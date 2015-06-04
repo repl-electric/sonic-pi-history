@@ -1,5 +1,11 @@
 bar = 1.0
 
+def sample_and_sleep (*args)
+ sample = args.first
+ sample args
+ sleep sample_duration(sample)
+end
+
 live_loop :drums do
   density(1) do
     with_fx :bitcrusher do
@@ -33,5 +39,4 @@ end
 
 live_loop :ambi do
  sample_and_sleep Ether["A",0]
-
 end

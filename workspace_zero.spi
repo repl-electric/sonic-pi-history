@@ -20,7 +20,7 @@ live_loop :thinking_about_13 do
   4.times{sync :foo}
 #with_fx :distortion do
  #with_fx :distortion do
-  notes = (ring chord(:Fs3,'13'), chord(:Ds3,'13'), 
+  notes = (ring chord(:Fs3,'11'), chord(:Ds3,'13'), 
                 chord(:Fs3,'13'), chord(:As3,'13'))
   notes.tick
 

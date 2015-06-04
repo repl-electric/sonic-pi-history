@@ -14,7 +14,7 @@ live_loop :thinking_about_13 do
   notes.hook().each do |n|
     sleep rand_i(0,2)
     play n, decay: 2*bar
-end
+  end
 
  
 

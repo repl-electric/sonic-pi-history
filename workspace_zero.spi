@@ -24,8 +24,8 @@ live_loop :thinking_about_13 do
   notes.tick
 
   notes.hook.each{|n|
-  sleep rand_i(0,2)
- play notes.hook, decay: 2*bar}
+    sleep rand_i(0,2)
+    play notes.hook, decay: 2*bar}
 
  
 

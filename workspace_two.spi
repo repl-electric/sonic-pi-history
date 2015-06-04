@@ -1,1 +1,5 @@
-      sample Ambi["am_snare_fibres",1]
+
+live_loop : do
+    sample Ambi["am_snare_fibres",1]
+    sleep bar
+end

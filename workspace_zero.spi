@@ -16,7 +16,7 @@ with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
 end
 end
 
-live_loop :bells do
+live_loop :bells do; with_fx :level, amp: 0.0 do
 8.times{sync :foo}
 with_fx :distortion, amp: 0.3, mix: 0.3 do
 with_synth :beep do
@@ -34,7 +34,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   control n, note: (knit :As4, 4, :B4, 4,
                          :Cs4, 4, :B4, 4).tick
   sleep bar/2.0
-end;end;end;end 
+end;end;end;end;end
 
 live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo

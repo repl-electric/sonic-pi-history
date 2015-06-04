@@ -16,7 +16,7 @@ live_loop :hats do
     4.times{
  
 if dice(6) != 6 
-  sample Ether["noise", 6]
+  sample Ether["noise", 7]
   sleep bar/4
 end
 }

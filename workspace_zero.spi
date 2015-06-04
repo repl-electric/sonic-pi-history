@@ -23,7 +23,10 @@ live_loop :thinking_about_13 do
              chord(:Fs3,'13'), invert_chord(chord(:As3,'13'),-3) )
   notes.tick
 
-  play notes.hook, decay: 2*bar
+  notes.hook.each{|n|
+  sleep rand_i(0,2)
+ play notes.hook, decay: 2*bar}
+
  
 
 end

@@ -1,5 +1,5 @@
 
 loop do
-      sample Ambi[/clap/i].tick amp: 0.5
+      sample Ambi[/clap/i].tick, amp: 0.5
 sleep 2\
 end

@@ -19,8 +19,13 @@ end
 live_loop :thinking_about_13 do
   4.times{sync :foo}
 #with_fx :distortion do
-  play (ring chord(:Fs3,'13'), chord(:Cs3,'13'), 
-             chord(:Fs3,'13'), invert_chord(chord(:As3,'13'),-3) ).tick, decay: 2*bar
+  notes = (ring chord(:Fs3,'13'), chord(:Cs3,'13'), 
+             chord(:Fs3,'13'), invert_chord(chord(:As3,'13'),-3) )
+  notes.tick
+
+  play notes.hook, decay: 2*bar
+ 
+
 end
 #end
 

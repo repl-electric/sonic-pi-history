@@ -1,5 +1,6 @@
 
 loop do
-   sample Ambi[/.*/i].tick, amp: 0.5
-   sleep 2\
+   s = Ambi[/.*/i].tick
+  sample s 
+  sleep sample_duration s
 end

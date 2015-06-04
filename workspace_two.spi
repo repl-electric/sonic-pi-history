@@ -30,3 +30,8 @@ live_loop :perc do
     sample Ether[/hats/i, 0], beat_stretch: (ring 0.2, 0.1, 0.2, 0.3).tick
   end
 end
+
+live_loop :ambi do
+ sample_and_sleep Ether["A",0]
+
+end

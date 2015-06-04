@@ -21,3 +21,8 @@ if dice(12) != 1
 end
 }
 end
+
+live_loop :perc do
+  sync :drums 
+  sample Ether[/hats/]
+end

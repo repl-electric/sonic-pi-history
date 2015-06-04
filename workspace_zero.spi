@@ -18,11 +18,11 @@ end
 
 live_loop :thinking_about_13 do
   8.times{sync :foo}
-with_fx :distortion do
+#with_fx :distortion do
   play (ring chord(:Fs3,'13'), chord(:Cs3,'13'), 
              chord(:Fs3,'13'), chord(:As3,'13') ).tick, decay: 4*bar
-
-end;end
+end
+#end
 
 live_loop :bells do; with_fx :level, amp: 0.0 do
 8.times{sync :foo}

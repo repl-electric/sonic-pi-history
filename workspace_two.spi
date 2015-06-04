@@ -15,10 +15,9 @@ live_loop :hats do
     sync :drums
     4.times{
  
-    if dice(6) != 6
-   
-    sample Ether["hat"].tick
-    sleep bar/4
+if dice(6) != 6 
+  sample Ether["noise"].tick
+  sleep bar/4
 end
 }
 end

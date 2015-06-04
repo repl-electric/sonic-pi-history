@@ -7,6 +7,9 @@ live_loop :drums do
 
     sample Ambi["am_snare_fibres",1]
 
+    sleep bar/2.0
+
+
 end
 
 live_loop :hats do

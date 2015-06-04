@@ -24,7 +24,7 @@ live_loop :hats do
   sync :drums
   4.times{
     if dice(12) != 1
-      sample Ether[/noise/i,1].tick, amp: 0.8
+      sample Ether[/noise/i,3].tick, amp: 0.8
       sleep bar/8
     end
   }

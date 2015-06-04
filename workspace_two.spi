@@ -1,5 +1,5 @@
 
 live_loop :drums do
     sample Ambi["am_snare_fibres",1]
-    sleep bar
+    sleep 1
 end

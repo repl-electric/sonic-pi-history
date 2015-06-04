@@ -6,8 +6,6 @@ def sample_and_sleep (*args)
  sleep sample_duration(s)
 end
 
-with_fx :reverb, room: 1.0 do
-
 live_loop :drums do
   density(1) do
     with_fx :bitcrusher do
@@ -42,6 +40,3 @@ end
 live_loop :ambi do
  sync :drums
  sample_and_sleep Ether["inter",0], amp: 0.1
-end
-
-end

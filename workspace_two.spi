@@ -15,8 +15,10 @@ live_loop :drums do
   end
 
   density(2) do
+    with_fx :echo do
     sample Ambi["perc",(ring 11,8).tick]
     sleep bar/2.0
+end
   end
 end
 

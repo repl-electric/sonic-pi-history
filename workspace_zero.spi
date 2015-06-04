@@ -17,7 +17,7 @@ end
 end
 
 live_loop :thinking_about_13 do
-sync :foo
+  2.times{sync :foo}
   play chord(:Fs3,'13')
 end
 

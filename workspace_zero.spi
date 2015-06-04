@@ -234,7 +234,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.5 do
       1.times{sync :foo}
       with_fx(:slicer, mix: 0.1){
       play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)
-      sample Ambi[/clap/i,1], amp: 0.5
+      sample Ambi[/clap/i,2], amp: 0.5
       }
       1.times{sync :foo}
     end

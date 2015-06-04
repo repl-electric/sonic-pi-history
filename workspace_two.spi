@@ -9,7 +9,7 @@ end
 live_loop :drums do
   density(1) do
     with_fx :bitcrusher do
-      sample Ether["kick",(ring 4).tick], amp: 0.5, rate: (ring 1,0.9,1,0.8).tick
+      sample Ether["kick",(ring 5).tick], amp: 0.5, rate: (ring 1,0.9,1,0.8).tick
     end
     sleep bar/2.0
   end

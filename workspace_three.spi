@@ -1,1 +1,6 @@
-sample Mountain[/stick/i,12], amp: 2.8, rate: 1.0
+
+
+loop do
+sample Mountain[/.*/].tick, amp: 2.8, rate: 1.0
+sleep 1
+end

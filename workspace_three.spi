@@ -8,7 +8,7 @@ sleep bar
 end
 
 live_loop :drums do
-sample Mountain[/kick/], amp: 1.2
+sample Mountain[/hats/], amp: 1.2
 
 4.times{ sync :pent}
 

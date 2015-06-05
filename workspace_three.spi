@@ -1,5 +1,5 @@
 bar =1 
 live_loop :pent do
-play  scale(:Fs3, :major_pentatonic).choose, release: 0.1, attack: 0.2
+play  scale(:Fs3, :major_pentatonic).choose, release: 0.1, attack: 0.1
 sleep bar
 end

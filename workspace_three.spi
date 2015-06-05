@@ -1,7 +1,7 @@
 
 
 loop do
-s = Mountain[/.*/].tick
+s = Mountain[/.*/].reverse.tick
 sample  s; sleep sample_duration(s)
 end
 

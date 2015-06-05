@@ -51,6 +51,8 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     when 1,3,4,5
       #sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 7
+      sample Ambi[/noise/i,0], amp: 0.1, rate: -1.0
+
       #sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.2
     end
     m_idx+=1
@@ -235,7 +237,6 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.5 do
       with_fx(:slicer, mix: 0.1){
       play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)
       }
-      sample Ambi[/noise/i,0], amp: 0.1, rate: -1.0
       1.times{sync :foo}
     end
 end;end

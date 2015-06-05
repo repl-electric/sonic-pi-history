@@ -1,6 +1,6 @@
 
 
 loop do
-sample Mountain[/.*/].tick, amp: 2.8, rate: 1.0
+sample Mountain[/.*/].tick, amp: 1.0, rate: 1.0
 sleep 1
 end

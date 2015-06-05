@@ -2,8 +2,13 @@ bar = 0.2
 live_loop :pent do
 with_synth :prophet do 
 with_fx :distortion, mix: 0.3 do
-sample :drum_heavy_kick
 play  scale(:Fs3, :major_pentatonic).choose, release: 0.1, attack: 0.1
 end;end
 sleep bar
+end
+
+live_loop :drums do
+ sync :pent
+sample :drum_heavy_kick
+
 end

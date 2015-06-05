@@ -1,8 +1,8 @@
 bar =1 
 live_loop :pent do
-with_synth :prophet 
+with_synth :prophet do 
 with_fx :distortion, mix: 0.3 do
 play  scale(:Fs3, :major_pentatonic).choose, release: 0.1, attack: 0.1
-end
+end;end
 sleep bar
 end

@@ -1,0 +1,5 @@
+bar =1 
+live_loop :pent do
+play  scale(:Fs3, :major_pentatonic).choose
+sleep bar
+end

@@ -46,7 +46,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 1.0 do
        }
        sample Mountain["subkick",1], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      else
-     if dice(6) >= 3
+     if dice(6) >= 9
      sample Mountain["subkick",0], amp: 2.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      else
      sample Mountain["roomykick",0], amp: 2.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)

@@ -222,7 +222,7 @@ end
 idx+=1
 end;end
 
-live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
+live_loop :highlight do |idx|;with_fx :level, amp: 0.5 do
     #n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7})
     n = chord(:Cs4,'13')
 

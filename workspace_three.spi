@@ -1,4 +1,4 @@
-bar = 0.3
+bar = 0.2
 live_loop :pent do
 with_synth :prophet do 
 with_fx :distortion, mix: 0.3 do

@@ -1,7 +1,6 @@
 
 
 loop do
-s = Mountain[/.*/].tick, amp: 1.0, rate: 1.0
-
+s = Mountain[/.*/].tick
 sample  s; sleep sample_duration(s)
 end

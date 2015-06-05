@@ -16,26 +16,6 @@ with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
 end
 end
 
-live_loop :thinking_about_13 do
-  4.times{sync :foo}
-#with_fx :distortion do
- #with_fx :distortion do
-  notes = (ring chord(:Fs3,'7'), chord(:Ds3,'7'), 
-                chord(:Fs3,'7'), chord(:As3,'7'))
-  notes.tick
-
- puts notes
-
-  notes.hook().reverse.each do |n|
-    d = rrand(0.0, 0.1)
-    sleep d 
-    play n, decay: (4*bar)+d, amp: 1.0/notes.hook().count
-  end
- 
-
-end
-#end
-
 live_loop :bells do; with_fx :level, amp: 0.0 do
 8.times{sync :foo}
 with_fx :distortion, amp: 0.3, mix: 0.3 do

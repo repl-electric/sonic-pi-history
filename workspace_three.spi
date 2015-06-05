@@ -8,7 +8,9 @@ sleep bar
 end
 
 live_loop :drums do
- sync :pent
+4.times{ sync :pent}
+ 
+
 sample :drum_heavy_kick
 
 end

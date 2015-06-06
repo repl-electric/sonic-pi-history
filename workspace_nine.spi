@@ -32,7 +32,7 @@ end
 
 def chords_for(root, scale)
  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
- chords
+ chords.to_a
 end
 
 bar = 1.0

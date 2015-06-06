@@ -45,17 +45,17 @@ end
 live_loop :cam2 do
   @bass_line.tick
   4.times {sync :whole}
-    with_fx(:reverb, room: 1.0, mix: 0.9) do
-      with_synth :prophet do
-        play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
-        with_transpose(12) do
-          with_synth :supersaw do
-            play @bass_line.hook, attack: 0.01, amp: 0.2, release: bar*0.1
-          end
+  with_fx(:reverb, room: 1.0, mix: 0.9) do
+    with_synth :prophet do
+      play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
+      with_transpose(12) do
+        with_synth :supersaw do
+          play @bass_line.hook, attack: 0.01, amp: 0.2, release: bar*0.1
         end
       end
     end
   end
+end
 
 live_loop :cam3 do
   1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

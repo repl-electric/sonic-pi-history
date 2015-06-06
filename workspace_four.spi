@@ -63,14 +63,13 @@ live_loop :cam1 do |idx|
     with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
       sample (knit :elec_plip, 6, :elec_blip2, 1, :elec_blip, 1,
               :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
-              :elec_plip, 6, :elec_pop, 2).tick, rate: (ring 1.0, 2.0).tick, amp: 0.1
+              :elec_plip, 6, :elec_pop, 2).tick, rate: (ring 1.0, -1.0).tick, amp: 0.1
       sleep bar
       sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
     end
   end
   idx+=1
 end
-
 
 live_loop :cam2 do
   @bass_line.tick

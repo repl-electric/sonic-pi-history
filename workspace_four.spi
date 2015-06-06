@@ -61,6 +61,6 @@ live_loop :cam3 do
   1.times{ sync :half }
   sync :whole
   with_synth(:hollow) do
-    play (knit degree(1, :Fs4, :major), 2, degree(2, :Fs4, :major)).tick
+    play (knit degree(1, :Fs4, :major), 2, degree(2, :Fs4, :major), 2).tick
   end
 end

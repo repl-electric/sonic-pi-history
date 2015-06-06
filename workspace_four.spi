@@ -14,7 +14,7 @@ sync :whole
 kick = [:elec_soft_kick].choose
 sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick
 density(3) do
-  sample elec_soft_kick
+  sample :elec_blip
 end
 
 end

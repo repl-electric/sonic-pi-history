@@ -15,7 +15,7 @@ kick = [:elec_soft_kick].choose
 sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick
 density(6) do
   sample (knit :elec_blip, 6, :elec_blip2, 1, :elec_blip, 1, :elec_flip, 1, :elec_tick, 1, :elec_twip, 1,
-               :elec_plip, 1).choose
+               :elec_plip, 1, :elec_blup, 1).choose
   sleep bar
 end
 end

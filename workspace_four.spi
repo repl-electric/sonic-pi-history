@@ -31,13 +31,12 @@ bar = 1.0
 ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
 PICK_SCALE = "Fs"
 
-
-def chords_for(root, scale)
+define :chords_for do |root, scale|
  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
  (ring *chords)
 end
 
-def find_scale_root(octave)
+define :find_scale_root do |octave|
  "#{PICK_SCALE}#{octave}"
 end
 

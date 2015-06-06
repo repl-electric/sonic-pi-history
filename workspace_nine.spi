@@ -54,6 +54,7 @@ end
 
 @bass_line = chords_for(:Fs4, :major_pentatonic).shuffle
 
+use_synth :saw
 
 live_loop :smooth_chords do
   @bass_line.each_cons(2) do |a,b|

@@ -2,3 +2,6 @@ require 'json'
 
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = File.read(ROOM_SOURCE)
+
+
+puts ROOM

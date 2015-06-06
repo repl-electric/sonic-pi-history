@@ -16,7 +16,7 @@ sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick
 end
 
 live_loop :cam2 do
-sync :whole
+4.times{sync :whole}
 with_synth :prophet do
   play scale(:Fs2, :major_pentatonic).shuffle.tick, attack: 0.01, amp: 0.1, release: 2.0
 end

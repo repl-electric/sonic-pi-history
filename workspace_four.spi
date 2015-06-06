@@ -2,6 +2,9 @@ require 'json'
 
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = File.read(ROOM_SOURCE)
+CAMERA_1 =
+CAMERA_2 =
+CAMERA_3 =
 
 bar = 1.0
 
@@ -30,17 +33,19 @@ end
 @bass_line = scale(:Fs1, :major_pentatonic).shuffle
 
 live_loop :cam2 do
-4.times{ sync :whole }
+@bass_line.tick
+4.times{ sync :whole 
+with_transpose(12) do
+  with_synth :supersaw do
+    play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*0.1
+  end
+end
+}
 with_fx(:reverb, room: 1.0) do; with_synth :prophet do
-  play @bass_line.tick(:bass), attack: 0.01, amp: 0.1, release: bar*4
+  play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4
 end
 end;
 
-with_transpose(12) do
-  with_synth :supersaw do
-    play @bass_line.hook(:bass), attack: 0.01, amp: 0.1, release: bar*0.1
-  end
-end
 
 end
 

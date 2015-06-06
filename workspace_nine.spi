@@ -54,7 +54,6 @@ end
 
 @bass_line = chords_for(:Fs1, :major_pentatonic).shuffle
 
-puts @bass_line
 
 live_loop :smooth_chords do
  puts "A: #{@bass_line}"

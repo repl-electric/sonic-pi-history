@@ -13,9 +13,15 @@ ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare,
 live_loop :metronome do
   cue :whole
   cue :half
-  sleep bar/2.0
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
   cue :half
-  sleep bar/2.0
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
 end
 
 live_loop :cam1 do |idx|

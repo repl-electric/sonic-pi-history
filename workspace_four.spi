@@ -61,7 +61,7 @@ live_loop :cam1 do |idx|
   sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
   density(6) do
     with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
-      sample (knit :elec_plip, 1, :elec_blip2, 1, :elec_blip, 1,
+      sample (knit ELECTRIC_SAMPLES.choose, 4, ELECTRIC_SAMPLES.choose, 2,  
               ).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: 0.5
       sleep bar
       sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)

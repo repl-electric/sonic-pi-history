@@ -56,5 +56,5 @@ end
 live_loop :cam3 do
 4.times{ sync :whole }
 sync :whole;
-hollowed_synth degree(1, :Fs4, :major)
+hollow degree(1, :Fs4, :major)
 end

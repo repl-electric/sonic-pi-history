@@ -81,7 +81,7 @@ end
 live_loop :texture do
 sync :whole
  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
-with_synth(:pnoise){play :Fs1, amp: 0.06, attack: bar*4.0, release: bar*4.0}
+with_synth(:pnoise){play :Fs1, amp: 0.03, attack: bar*4.0, release: bar*4.0}
 end
 sleep bar*8
 end

@@ -41,14 +41,20 @@ with_fx :bitcrusher, sample_rate: 20000 do
 with_transpose(12) do
   with_synth :supersaw do
     play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.1
-  end; end
+  end
 end
 end
 end
-with_fx(:reverb, room: 1.0, mix: 0.9) do; with_synth :prophet do
+end
+with_fx(:reverb, room: 1.0, mix: 0.9) do
+ with_synth :prophet do
   play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5 
-end;end;end
+end
+end
+end
 
 live_loop :cam3 do
 4.times{ sync :whole }
+sync :whole;
+hollowed_synth degree(1, :Cs3, :major)
 end

@@ -79,6 +79,6 @@ live_loop :cam3 do
 end
 
 live_loop :texture do
-with_synth(:noise){play :Fs1}
+with_synth(:noise){play :Fs1, amp: 0.1}
 sleep bar*8
 end

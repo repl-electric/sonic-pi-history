@@ -34,5 +34,5 @@ end;end
 live_loop :cam3 do
 sync :whole
 with_fx(:reverb, room: 1.0) do; with_synth :supersaw do
-  play scale(:Fs2, :major_pentatonic).shuffle.tick, attack: 0.01, amp: 0.1, release: bar*1
+  play scale(:Fs2, :major_pentatonic).shuffle.tick, attack: 0.01, amp: 0.1, release: bar*0.1
 end;end;end

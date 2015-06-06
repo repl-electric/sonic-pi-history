@@ -37,21 +37,6 @@ end
 
 bar = 1.0
 
-live_loop :metronome do
-  cue :whole
-  cue :half
-  cue :quarter
-  sleep bar/4.0
-  cue :quarter
-  cue :half
-  sleep bar/4.0
-  cue :quarter
-  sleep bar/4.0
-  cue :quarter
-  sleep bar/4.0
-end
-
-
 @bass_line = chords_for(:Fs3, :major_pentatonic).shuffle
 
 use_synth :saw

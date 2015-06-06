@@ -43,5 +43,6 @@ with_transpose(12) do
   with_synth :supersaw do
     play @bass_line.hook(:bass), attack: 0.01, amp: 0.5, release: bar*0.1
   end
-end; end
+  sleep bar
+end;end
 end

@@ -9,6 +9,10 @@ SOUND_MAX = ROOM.map{|event| event["sound"]["max"]}
 SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
 
+def chords_for(root, scale)
+ (0..8).map{|degree| chord_degree(degree), root, scale}
+end
+
 bar = 1.0
 
 ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
@@ -43,14 +47,7 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
-@bass_line = (ring chord_degree(1, :Fs1, :major_pentatonic),
-                   chord_degree(2, :Fs1, :major_pentatonic),
-                   chord_degree(3, :Fs1, :major_pentatonic),
-                   chord_degree(4, :Fs1, :major_pentatonic),
-                   chord_degree(5, :Fs1, :major_pentatonic),
-                   chord_degree(6, :Fs1, :major_pentatonic),
-                   chord_degree(7, :Fs1, :major_pentatonic),
-                   chord_degree(8, :Fs1, :major_pentatonic)).shuffle
+@bass_line = chords_for(:Fs1, :major_pentatonic)
 
 live_loop :cam2 do
   @bass_line.tick

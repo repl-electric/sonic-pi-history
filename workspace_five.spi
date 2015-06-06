@@ -21,4 +21,4 @@ camera_at = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min,
                          (CAMERA_1+CAMERA_2+CAMERA_3).max, 0.0, 1.0)
 
 
-puts camera_at.(CAMERA_1[9])
+puts camera_at.(CAMERA_1[10])

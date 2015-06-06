@@ -3,5 +3,17 @@ require 'json'
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = File.read(ROOM_SOURCE)
 
+bar = 1.0
 
-puts ROOM
+live_loop :metronome do
+  cue :whole; sleep bar
+end
+
+live_loop :cam1 do
+end
+
+live_loop :cam2 do
+end
+
+live_loop :cam2 do
+end

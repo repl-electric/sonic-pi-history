@@ -40,7 +40,7 @@ with_fx :bitcrusher, sample_rate: 20000 do
  with_fx(:pitch_shift, window_size: 0.1) do
 with_transpose(12) do
   with_synth :supersaw do
-    play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.5
+    play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.1
   end; end
 end
 end

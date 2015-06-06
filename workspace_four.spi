@@ -38,7 +38,7 @@ end
 end;end
 
 live_loop :cam3 do
-4.times{ sync :whole }
+5.times{ sync :whole }
 density(8) do
 with_transpose(12) do
   with_synth :supersaw do

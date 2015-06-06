@@ -35,7 +35,9 @@ with_fx(:reverb, room: 1.0) do; with_synth :prophet do
   play @bass_line.tick(:bass), attack: 0.01, amp: 0.1, release: bar*4
 end
 with_transpose(12) do
-  play @bass_line.hook(:bass), attack: 0.01, amp: 0.5, release: bar*0.1
+  with_fx :supersaw dp
+    play @bass_line.hook(:bass), attack: 0.01, amp: 0.5, release: bar*0.1
+  end
 end
 end;end
 

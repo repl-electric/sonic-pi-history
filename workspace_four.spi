@@ -42,7 +42,6 @@ with_transpose(12) do
   end
 end
 
-
 end
 
 live_loop :cam3 do

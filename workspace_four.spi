@@ -16,11 +16,13 @@ sync :whole
 kick = [:elec_soft_kick].choose
 sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
 density(6) do
+ with_fx (knit :none, 7, :echo, 1).tick do
   sample (knit :elec_plip, 6, :elec_blip2, 1, :elec_blip, 1, 
                :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
                :elec_plip, 1, :elec_pop, 1).tick
   sleep bar
   sample :elec_snare, amp: 0.01
+  end
 end
 end
 

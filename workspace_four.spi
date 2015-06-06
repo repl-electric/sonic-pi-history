@@ -1,7 +1,7 @@
 require 'json'
 
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
-ROOM        = File.read(ROOM_SOURCE)
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
 CAMERA_1 = ROOM.map{|event| event["people"]["cam_1"]}
 CAMERA_2 = ROOM.map{|event| event["people"]["cam_2"]}
 CAMERA_3 = ROOM.map{|event| event["people"]["cam_3"]}

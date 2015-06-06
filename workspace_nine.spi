@@ -52,7 +52,7 @@ live_loop :metronome do
 end
 
 
-@bass_line = chords_for(:Fs1, :major_pentatonic).shuffle
+@bass_line = chords_for(:Fs3, :major_pentatonic).shuffle
 
 
 live_loop :smooth_chords do

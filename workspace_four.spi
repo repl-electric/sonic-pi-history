@@ -68,7 +68,7 @@ live_loop :cam3 do
  with_fx (knit :echo, 2, :reverb, 2).tick(:room) do
   with_synth(:hollow) do
     play (knit degree(1, :Fs4, :major), 6, degree(2, :Fs4, :major),
-               degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major)).tick
+               degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major)).tick(:notes)
   end
 end
 end

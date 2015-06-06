@@ -31,14 +31,13 @@ end
 
 live_loop :cam2 do
 4.times{ sync :whole }
-cue :hit
 with_fx(:reverb, room: 1.0) do; with_synth :prophet do
   play @bass_line.tick(:bass), attack: 0.01, amp: 0.1, release: bar*4
 end
 end;end
 
 live_loop :cam3 do
-sync :hit
+4.times{ sync :whole }
 density(4) do
 with_transpose(12) do
   with_synth :supersaw do

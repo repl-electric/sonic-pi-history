@@ -21,7 +21,7 @@ density(6) do
                :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
                :elec_plip, 1, :elec_pop, 1).tick, rate: (ring 1.0, 2.0).tick
   sleep bar
-  sample [:elec_snare, :elec_filt_snare].tick amp: 0.02, rate: 
+  sample [:elec_snare, :elec_filt_snare].tick amp: 0.02, rate: 1.0
   end
 end
 idx+=1

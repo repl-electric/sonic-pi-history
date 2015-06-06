@@ -57,7 +57,15 @@ end
 use_synth :saw
 
 live_loop :smooth_chords do
-  @bass_line.each_cons(2) do |a,b|
+  [chord(:c, :major7),
+    chord(:b3, 'm7-5'),
+    chord(:f, :major7),
+    chord(:e, 'm7-5'),
+    chord(:a, '7+5-9'),
+    chord(:d, :minor7),
+    chord(:d, :minor7),
+    chord(:g, '7sus4'),
+    chord(:g, '7')].each_cons(2) do |a,b|
    puts b
    if @last_c.nil?
       play (a.first - 24), amp: 0.6

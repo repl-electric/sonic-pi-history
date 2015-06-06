@@ -49,6 +49,7 @@ end
                   chord_degree(4, :Fs1, :major_pentatonic),
                   chord_degree(5, :Fs1, :major_pentatonic),
                   chord_degree(6, :Fs1, :major_pentatonic),
+                  chord_degree(7, :Fs1, :major_pentatonic),
                   chord_degree(7, :Fs1, :major_pentatonic)).shuffle
 
 live_loop :cam2 do

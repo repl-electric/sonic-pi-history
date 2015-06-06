@@ -57,8 +57,9 @@ end
 puts @bass_line
 
 live_loop :smooth_chords do
+ puts "A: #{@bass_line}"
   @bass_line.each_cons(2) do |a,b|
-  puts "A: #{a}"
+ 
     if @last_c.nil?
       play (a.first - 24), amp: 0.6
       play a, release: 0.1

@@ -2,61 +2,65 @@ require 'json'
 
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = File.read(ROOM_SOURCE)
-CAMERA_1 =
-CAMERA_2 =
-CAMERA_3 =
+CAMERA_1 = ROOM
+CAMERA_2 = ROOM
+CAMERA_3 = ROOM
 
 bar = 1.0
 
 ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
 
 live_loop :metronome do
-  cue :whole; sleep bar
+  cue :whole
+  cue :half
+  sleep bar/2.0
+  cue :half
+  sleep bar/2.0
 end
 
 live_loop :cam1 do |idx|
-sync :whole
-kick = [:elec_soft_kick].choose
-sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
-density(6) do
- with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
-  sample (knit :elec_plip, 6, :elec_blip2, 1, :elec_blip, 1, 
-               :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
-               :elec_plip, 6, :elec_pop, 2).tick, rate: (ring 1.0, 2.0).tick, amp: 0.1
-  sleep bar
-  sample (knit :elec_snare, 4, :elec_filt_snare, 4).tick(:snare), amp: 0.02, rate: 1.0
+  sync :whole
+  kick = [:elec_soft_kick].choose
+  sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
+  density(6) do
+    with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
+      sample (knit :elec_plip, 6, :elec_blip2, 1, :elec_blip, 1,
+              :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
+              :elec_plip, 6, :elec_pop, 2).tick, rate: (ring 1.0, 2.0).tick, amp: 0.1
+      sleep bar
+      sample (knit :elec_snare, 4, :elec_filt_snare, 4).tick(:snare), amp: 0.02, rate: 1.0
+    end
   end
-end
-idx+=1
+  idx+=1
 end
 
 @bass_line = scale(:Fs1, :major_pentatonic).shuffle
 
 live_loop :cam2 do
-@bass_line.tick
-4.times do
-  sync :whole 
-with_fx :bitcrusher, sample_rate: 20000 do
- with_fx(:pitch_shift, window_size: 0.1) do
-with_transpose(12) do
-  with_synth :supersaw do
-    play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.1
+  @bass_line.tick
+  4.times do
+    sync :whole
+    with_fx :bitcrusher, sample_rate: 20000 do
+      with_fx(:pitch_shift, window_size: 0.1) do
+        with_transpose(12) do
+          with_synth :supersaw do
+            play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.1
+          end
+        end
+      end
+    end
   end
-end
-end
-end
-end
-with_fx(:reverb, room: 1.0, mix: 0.9) do
- with_synth :prophet do
-  play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5 
-end
-end
+  with_fx(:reverb, room: 1.0, mix: 0.9) do
+    with_synth :prophet do
+      play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
+    end
+  end
 end
 
 live_loop :cam3 do
-1.times{ sync :whole }
-sync :whole;
-with_synth(:hollow) do
- play (ring degree(1, :Fs4, :major), degree(2, :Fs4, :major)).tick
-end
+  1.times{ sync :whole }
+  sync :whole
+  with_synth(:hollow) do
+    play (ring degree(1, :Fs4, :major), degree(2, :Fs4, :major)).tick
+  end
 end

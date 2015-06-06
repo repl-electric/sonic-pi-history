@@ -20,7 +20,7 @@ density(6) do
                :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
                :elec_plip, 1, :elec_pop, 1).tick
   sleep bar
-  sample :elec_snare, amp: 0.1
+  sample :elec_snare, amp: 0.01
 end
 end
 

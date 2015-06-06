@@ -63,4 +63,5 @@ live_loop :smooth_chords do
       sleep 1
     end
   end
+sleep 1
 end

@@ -42,7 +42,7 @@ sync :cam2
 density(4) do
 with_transpose(12) do
   with_synth :supersaw do
-    play @bass_line.hook(:bass), attack: 0.01, amp: 3.5, release: bar*0.1
+    play @bass_line.hook(:bass), attack: 0.01, amp: 1.5, release: bar*0.1
   end
   sleep bar
 end;end

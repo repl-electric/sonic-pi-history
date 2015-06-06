@@ -42,7 +42,7 @@ live_loop :cam1 do |idx|
               :elec_flip, 3, :elec_tick, 3, :elec_twip, 2,
               :elec_plip, 6, :elec_pop, 2).tick, rate: (ring 1.0, 2.0).tick, amp: 0.1
       sleep bar
-      sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.2, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
+      sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.1, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
     end
   end
   idx+=1

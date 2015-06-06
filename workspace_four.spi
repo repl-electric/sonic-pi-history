@@ -11,6 +11,9 @@ end
 
 live_loop :cam1 do
 sync :whole
+kick = [:sample_heavy_kick].choose
+
+sample kick
 end
 
 live_loop :cam2 do

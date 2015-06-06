@@ -30,8 +30,8 @@ def chords_for(root, scale)
  (ring *chords)
 end
 
-def find_scale(octave)
- "F#{octave}"
+def find_scale_root(octave)
+ "Fs#{octave}"
 end
 
 bar = 1.0
@@ -51,7 +51,7 @@ live_loop :metronome do
   sleep bar/4.0
 end
 
-@bass_line = chords_for(:Fs1, :major_pentatonic).shuffle
+@bass_line = chords_for(find_scale_root(1), :major_pentatonic).shuffle
 
 live_loop :cam1 do |idx|
   sync :whole
@@ -92,14 +92,14 @@ live_loop :cam3 do
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
     with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
       with_synth(:hollow) do
-        note =  (stretch scale(:Fs4, :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
-                         scale(:Fs4, :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
+        note =  (stretch scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
 
-                         scale(:Fs4, :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
-                         scale(:Fs4, :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
 
-                         scale(:Fs3, :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
-                         scale(:Fs3, :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
 ).tick
         play note, release: 2, amp: 2.0
       end
@@ -111,7 +111,7 @@ live_loop :texture do
 sync :whole
 with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
 with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
-with_synth(:pnoise){play chords_for(:Fs0, :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
+with_synth(:pnoise){play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
 end
 sleep bar*8
 end
@@ -122,10 +122,10 @@ live_loop :texture do
     with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
       with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
         with_synth(:dark_ambience) do
-          play chords_for(:Fs1, :major_pentatonic).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+          play chords_for(find_scale_root(1), :major_pentatonic).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
         end
         with_synth(:pnoise) do
-          play chords_for(:Fs0, :major_pentatonic).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+          play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
         end
       end
       sleep bar*8

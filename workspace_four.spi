@@ -13,8 +13,9 @@ live_loop :cam1 do
 sync :whole
 kick = [:elec_soft_kick].choose
 sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick
-density(4) do
+density(2) do
   sample [:elec_blip, :elec_blip2].choose
+  sleep bar
 end
 
 end

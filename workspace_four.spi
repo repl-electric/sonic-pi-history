@@ -10,10 +10,13 @@ live_loop :metronome do
 end
 
 live_loop :cam1 do
+sync :whole
 end
 
 live_loop :cam2 do
+sync :whole
 end
 
 live_loop :cam2 do
+sync :whole
 end

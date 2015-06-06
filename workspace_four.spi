@@ -9,26 +9,8 @@ SOUND_MAX = ROOM.map{|event| event["sound"]["max"]}
 SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
 
-def octave_transform(chord)
-  chord.map {|x| 60 + (x%12) }.sort
-end
- 
-def t_matrix(chord_a, chord_b)
-  z = octave_transform(chord_a).zip(octave_transform(chord_b))
-  z.map {|a,b| b - a }
-end
- 
-def voice_lead(chord_a, chord_b)
-  a_leadings = chord_a.map {|x|
-    [x, octave_transform(chord_a).index(60 + x%12)]
-  }
-  t_matrix = t_matrix(chord_a, chord_b)
-  puts t_matrix
-  b_voicing = a_leadings.map {|x,y|
-    x + t_matrix[y]
-  }
-  b_voicing
-end
+puts ROOM
+
 
 def chords_for(root, scale)
  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}

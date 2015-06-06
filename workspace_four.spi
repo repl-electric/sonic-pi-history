@@ -77,3 +77,7 @@ live_loop :cam3 do
     end
   end
 end
+
+live_loop :texture do
+with_synth(:noise){play :Fs1}
+end

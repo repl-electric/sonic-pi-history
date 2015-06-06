@@ -48,6 +48,11 @@ live_loop :cam2 do
     with_fx(:reverb, room: 1.0, mix: 0.9) do
       with_synth :prophet do
         play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
+        with_transpose(12) do
+          with_synth :supersaw do
+            play @bass_line.hook, attack: 0.01, amp: 0.2, release: bar*0.1
+          end
+        end
       end
     end
   end

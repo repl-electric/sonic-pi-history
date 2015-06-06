@@ -42,8 +42,7 @@ sync :hit
 density(4) do
 with_transpose(12) do
   with_synth :supersaw do
-    puts @bass_line.hook(:bass)
-    play @bass_line.hook(:bass), attack: 0.01, amp: 1.5, release: bar*0.1
+    play @bass_line.hook(:bass), attack: 0.01, amp: 1.5, release: bar*1.1
   end
   sleep bar
 end;end

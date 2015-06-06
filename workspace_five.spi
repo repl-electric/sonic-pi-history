@@ -8,5 +8,5 @@ with_fx :pitch_shift, pitch_dis: 2.1, time_dis: 2.1, window_size: 2.5,   do
 with_synth(:pnoise){play chords_for(:Fs0, :major_pentatonic).tick, amp: 1.0, attack: bar*4.0, release: bar*4.0}
 end
 sleep bar*8
-end
+#end
 end

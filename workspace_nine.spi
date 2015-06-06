@@ -56,5 +56,6 @@ end
 
 
 live_loop :smooth_chords do
-sleep 1
+  @bass_line.each_cons(2) do |a,b|
+  end
 end

@@ -35,18 +35,18 @@ end
 live_loop :cam2 do
 @bass_line.tick
 4.times{ sync :whole 
+with_fx :bitcrusher do
 with_transpose(12) do
   with_synth :supersaw do
     play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*0.1
   end
+end
 end
 }
 with_fx(:reverb, room: 1.0) do; with_synth :prophet do
   play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4
 end
 end;
-
-
 end
 
 live_loop :cam3 do

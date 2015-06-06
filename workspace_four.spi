@@ -46,21 +46,22 @@ live_loop :cam2 do
   @bass_line.tick
   4.times do
     sync :whole
-  with_fx(:reverb, room: 1.0, mix: 0.9) do
-    with_synth :prophet do
-      play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
+    with_fx(:reverb, room: 1.0, mix: 0.9) do
+      with_synth :prophet do
+        play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.5
+      end
     end
   end
 end
 
 live_loop :cam3 do
- 1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
-with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
- with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
-  with_synth(:hollow) do
-    play (knit degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major),2,
-               degree(1, :Fs4, :major), 6, degree(5, :Fs4, :major),2).tick(:notes), release: 8, amp: 0.2
+  1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
+  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+    with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
+      with_synth(:hollow) do
+        play (knit degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major),2,
+              degree(1, :Fs4, :major), 6, degree(5, :Fs4, :major),2).tick(:notes), release: 8, amp: 0.2
+      end
+    end
   end
-end
-end
 end

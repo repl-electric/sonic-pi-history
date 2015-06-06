@@ -20,6 +20,6 @@ sync :whole
 play scale(:Fs2, :major_pentatonic).choose
 end
 
-live_loop :cam2 do
+live_loop :cam3 do
 sync :whole
 end

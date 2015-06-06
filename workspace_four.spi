@@ -64,7 +64,7 @@ live_loop :cam3 do
   1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
     with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
-      with_synth(:beep) do
+      with_synth(:saw) do
         note =  (knit degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major),2,
                       degree(1, :Fs4, :major), 6, degree(5, :Fs4, :major),2).tick
         play note, release: 2, amp: 2.0

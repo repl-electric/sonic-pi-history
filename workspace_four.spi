@@ -10,7 +10,7 @@ SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
 
 def chords_for(root, scale)
- (0..8).map{|degree| chord_degree(degree), root, scale}
+ (0..8).map{|degree| chord_degree(degree, root, scale)}
 end
 
 bar = 1.0

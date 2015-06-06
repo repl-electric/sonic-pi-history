@@ -10,3 +10,4 @@ SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
 
 puts CAMERA_1.min
+puts CAMERA_1.max

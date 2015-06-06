@@ -11,8 +11,7 @@ end
 
 live_loop :cam1 do
 sync :whole
-kick = [:sample_heavy_kick].choose
-
+kick = [:drum_bass_soft].choose
 sample kick
 end
 

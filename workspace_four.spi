@@ -44,7 +44,7 @@ end
 end
 }
 with_fx(:reverb, room: 1.0) do; with_synth :prophet do
-  play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.1 
+  play @bass_line.hook, attack: 0.01, amp: 0.1, release: bar*4, res: 0.2 
 end
 end;
 end

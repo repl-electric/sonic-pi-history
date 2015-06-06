@@ -25,7 +25,7 @@ end
 live_loop :cam2 do
 4.times{ sync :whole }
 with_fx(:reverb, room: 1.0) do; with_synth :prophet do
-  play scale(:Fs2, :major_pentatonic).shuffle.tick, attack: 0.01, amp: 0.1, release: bar*4
+  play scale(:Fs1, :major_pentatonic).shuffle.tick, attack: 0.01, amp: 0.1, release: bar*4
 end
 end;end
 

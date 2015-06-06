@@ -39,7 +39,7 @@ bar = 1.0
 
 @bass_line = chords_for(:Fs4, :major_pentatonic).shuffle
 
-use_synth :saw
+use_synth :beep
 
 live_loop :smooth_chords do
   [chord(:c, :major7),

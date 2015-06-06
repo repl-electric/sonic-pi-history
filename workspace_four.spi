@@ -12,7 +12,7 @@ end
 live_loop :cam1 do
 sync :whole
 kick = [:drum_bass_soft].choose
-sample kick, rate: 1.0
+sample kick, rate: (ring 1.0, 0.9,1.0,0.9).tick
 end
 
 live_loop :cam2 do

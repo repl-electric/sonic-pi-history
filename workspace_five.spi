@@ -12,4 +12,4 @@ SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
 
 
 puts (CAMERA_1+CAMERA_2+CAMERA_3).min
-puts CAMERA_1.max
+puts (CAMERA_1+CAMERA_2+CAMERA_3).max

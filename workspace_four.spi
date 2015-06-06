@@ -60,7 +60,7 @@ live_loop :cam1 do |idx|
   kick = [:elec_soft_kick].choose
   sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
 
-  s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[8], ELECTRIC_SAMPLES[2]]
+  s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[0], ELECTRIC_SAMPLES[2]]
 
   density(4) do
     with_fx (knit :none, 7, :echo, 1).tick, decay: bar do

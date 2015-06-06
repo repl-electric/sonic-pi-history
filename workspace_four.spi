@@ -17,7 +17,7 @@ end
 
 live_loop :cam2 do
 sync :whole
-play scale(:Fs2, :major_pentatonic).shuffle.tick
+play scale(:Fs2, :major_pentatonic).shuffle.tick, attack: 0.1
 end
 
 live_loop :cam3 do

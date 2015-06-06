@@ -1,0 +1,85 @@
+require 'json'
+
+ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
+CAMERA_1  = ROOM.map{|event| event["people"]["cam_1"]}
+CAMERA_2  = ROOM.map{|event| event["people"]["cam_2"]}
+CAMERA_3  = ROOM.map{|event| event["people"]["cam_3"]}
+SOUND_MAX = ROOM.map{|event| event["sound"]["max"]}
+SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
+SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
+
+def octave_transform(chord)
+  chord.map {|x| 60 + (x%12) }.sort
+end
+ 
+def t_matrix(chord_a, chord_b)
+  z = octave_transform(chord_a).zip(octave_transform(chord_b))
+  z.map {|a,b| b - a }
+end
+ 
+def voice_lead(chord_a, chord_b)
+  a_leadings = chord_a.map {|x|
+    [x, octave_transform(chord_a).index(60 + x%12)]
+  }
+  t_matrix = t_matrix(chord_a, chord_b)
+  puts t_matrix
+  b_voicing = a_leadings.map {|x,y|
+    x + t_matrix[y]
+  }
+  b_voicing
+end
+
+def chords_for(root, scale)
+ chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+ (ring *chords)
+end
+
+bar = 1.0
+
+ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
+
+live_loop :metronome do
+  cue :whole
+  cue :half
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
+  cue :half
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
+end
+
+
+@bass_line = chords_for(:Fs1, :major_pentatonic).shuffle
+
+live_loop :smooth_chords do
+  @bass_line.each_cons(2) do |a,b|
+  puts a
+    if @last_c.nil?
+      play (a.first - 24), amp: 0.6
+      play a, release: 0.1
+      sleep 1
+    end
+ 
+    @last_c ||= Array(a)[1..-1]
+ 
+    puts "orig #{@last_c}"
+    @last_c = voice_lead(@last_c,Array(b)[1..-1])
+ 
+    # bass note
+    play (b.first - 24), amp: 0.6
+ 
+    with_fx :reverb, pre_amp: 2, mix: 0.2 do
+      8.times do |i|
+        play @last_c, release: 0.1, pan: (Math.sin(vt*13)/1.5) if spread(5,8)[i]
+        sleep 0.125
+      end
+    end
+ 
+  end
+  @last_c = nil
+end

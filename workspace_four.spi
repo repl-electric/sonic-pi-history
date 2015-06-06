@@ -97,8 +97,12 @@ live_loop :cam3 do
         note =  (stretch scale(:Fs4, :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
                          scale(:Fs4, :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
 
-                         scale(:Fs2, :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
-                         scale(:Fs2, :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+                         scale(:Fs5, :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(:Fs5, :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+
+                         scale(:Fs3, :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(:Fs3, :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+
 ).tick
         play note, release: 2, amp: 2.0
       end

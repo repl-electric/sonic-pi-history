@@ -17,6 +17,7 @@ end
 
 live_loop :cam2 do
 sync :whole
+play scale(:Fs2, :major_pentatonic).tick
 end
 
 live_loop :cam2 do

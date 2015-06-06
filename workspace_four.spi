@@ -39,7 +39,7 @@ live_loop :cam2 do
 with_fx :bitcrusher, sample_rate: 20000 do; with_fx(:pitch_shift) do
 with_transpose(24) do
   with_synth :supersaw do
-    play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.1
+    play @bass_line.hook, attack: 0.01, amp: 1.0, release: bar*0.2
   end; end
 end
 end

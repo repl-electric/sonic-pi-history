@@ -64,7 +64,7 @@ live_loop :cam3 do
       with_synth(:hollow) do
         note =  (knit degree(1, :Fs4, :major), 6, degree(3, :Fs4, :major),2,
                       degree(1, :Fs4, :major), 6, degree(5, :Fs4, :major),2).tick
-        play note, release: 1, amp: 2.2
+        play note, release: 1, amp: 2.0
       end
     end
   end

@@ -28,4 +28,4 @@ sound_avg_rate = linear_map_fn(SOUND_AVG.min,
 sound_min_rate = linear_map_fn(SOUND_MIN.min, 
                                SOUND_MIN.max, 0.0, 1.0)`
 
-all_sample_names
+all_sample_nasmes

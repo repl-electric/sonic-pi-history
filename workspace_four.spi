@@ -80,4 +80,5 @@ end
 
 live_loop :texture do
 with_synth(:noise){play :Fs1}
+sleep bar*8
 end

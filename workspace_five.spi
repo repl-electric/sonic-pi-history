@@ -9,7 +9,7 @@ with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
 with_synth(:pnoise){
     play chords_for(:Fs0, :major_pentatonic).tick, amp: 3.0, attack: bar*4.0, release: bar*4.0, sustain: bar
 }
-#end
+end
 sleep bar*8
 end
 end

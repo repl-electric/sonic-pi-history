@@ -1,0 +1,70 @@
+require 'json'
+
+ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
+CAMERA_1  = ROOM.map{|event| event["people"]["cam_1"]}
+CAMERA_2  = ROOM.map{|event| event["people"]["cam_2"]}
+CAMERA_3  = ROOM.map{|event| event["people"]["cam_3"]}
+SOUND_MAX = ROOM.map{|event| event["sound"]["max"]}
+SOUND_AVG = ROOM.map{|event| event["sound"]["avg"]}
+SOUND_MIN = ROOM.map{|event| event["sound"]["min"]}
+
+def octave_transform(chord)
+  chord.map {|x| 60 + (x%12) }.sort
+end
+ 
+def t_matrix(chord_a, chord_b)
+  z = octave_transform(chord_a).zip(octave_transform(chord_b))
+  z.map {|a,b| b - a }
+end
+ 
+def voice_lead(chord_a, chord_b)
+  a_leadings = chord_a.map {|x|
+    [x, octave_transform(chord_a).index(60 + x%12)]
+  }
+  t_matrix = t_matrix(chord_a, chord_b)
+  puts t_matrix
+  b_voicing = a_leadings.map {|x,y|
+    x + t_matrix[y]
+  }
+  b_voicing
+end
+
+def chords_for(root, scale)
+ chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+ chords.to_a
+end
+
+bar = 1.0
+
+@bass_line = chords_for(:Fs4, :major_pentatonic) + [chord_degree(1, :Fs3, :major_pentatonic)]
+
+puts @bass_line
+
+use_synth :beep
+
+live_loop :smooth_chords do
+  @bass_line.each_cons(2) do |a,b|
+   puts b
+   if @last_c.nil?
+      play (a.first - 24), amp: 0.6
+      play a, release: 0.1
+      sleep 1
+    end
+
+    @last_c ||= Array(a)[1..-1]
+
+    puts "orig #{@last_c}"
+    @last_c = voice_lead(@last_c,Array(b)[1..-1])
+
+    play (b.first - 24), amp: 0.6
+
+    with_fx :reverb, pre_amp: 2, mix: 0.2 do
+      8.times do |i|
+        play @last_c, release: 0.1, pan: (Math.sin(vt*13)/1.5) if spread(5,8)[i]
+        sleep 0.125
+      end
+    end
+
+  end
+end

@@ -1,0 +1,137 @@
+require 'json'
+ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
+CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
+CAMERA_2    = ROOM.map{|event| event["people"]["cam_2"]}
+CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
+SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
+SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
+SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
+
+define :linear_map_fn do |x0, x1, y0, y1|
+ lambda{|x| 
+  dydx = ((y1 - y0) / ( x1 - x0))
+  dx   = x - x0
+  (y0 + ( dydx * dx))
+  }
+end
+
+people_rate = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min, 
+                            (CAMERA_1+CAMERA_2+CAMERA_3).max, 0.0, 1.0)
+sound_max_rate = linear_map_fn(SOUND_MAX.min, 
+                               SOUND_MAX.max, 0.0, 1.0)
+sound_avg_rate = linear_map_fn(SOUND_AVG.min, 
+                               SOUND_AVG.max, 0.0, 1.0)
+sound_min_rate = linear_map_fn(SOUND_MIN.min, 
+                               SOUND_MIN.max, 0.0, 1.0)
+
+#POWER OF CHANGE
+
+bar = 1.0
+ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
+PICK_SCALE = "C"
+
+define :chords_for do |root, scale|
+ chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+ (ring *chords)
+end
+
+define :find_scale_root do |octave|
+ "#{PICK_SCALE}#{octave}"
+end
+
+live_loop :metronome do
+  cue :whole
+  cue :half
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
+  cue :half
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0
+end
+
+@bass_line = chords_for(find_scale_root(1), :major_pentatonic).shuffle
+
+live_loop :cam1 do |idx|
+  sync :whole
+  kick = [:elec_soft_kick].choose
+  sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
+
+  s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[3], ELECTRIC_SAMPLES[2]]
+
+  density(4) do
+    with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
+     with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
+      sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: 0.25
+      sleep bar
+      sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
+     end
+    end
+  end
+  idx+=1
+end
+
+live_loop :cam2 do
+  @bass_line.tick
+  4.times {sync :whole}
+  with_fx(:reverb, room: 1.0, mix: 0.9) do
+    with_synth :prophet do
+      play @bass_line.hook[0..2], attack: 0.01, amp: 0.2, release: bar*4, res: 0.5
+      with_transpose(12) do
+        with_synth :supersaw do
+          play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.1
+        end
+      end
+    end
+  end
+end
+
+live_loop :cam3 do
+  1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
+  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+    with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
+      with_synth(:hollow) do
+        note =  (stretch scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
+
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(find_scale_root(4), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+
+                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+).tick
+        play note, release: 2, amp: 2.0
+      end
+    end
+  end
+end
+
+live_loop :texture do
+sync :whole
+with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
+with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+with_synth(:pnoise){play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
+end
+sleep bar*8
+end
+end
+
+live_loop :texture do
+  with_fx :reverb, room: 1.0 do
+    with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+      with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+        with_synth(:dark_ambience) do
+          play chords_for(find_scale_root(1), :major_pentatonic).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+        end
+        with_synth(:pnoise) do
+          play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+        end
+      end
+      sleep bar*8
+    end
+  end
+end

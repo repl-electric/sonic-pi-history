@@ -9,7 +9,7 @@ SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
 SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
 PEOPLE_MIN = 0
-PEOPLE_MAX = 70
+PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
 define :linear_map_fn do |x0, x1, y0, y1|
   lambda{|x|
     dydx = ((y1 - y0) / ( x1 - x0))

@@ -77,11 +77,11 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
-  case @cam1_smoothed_score
+  kick = case @cam1_smoothed_score
   when 0.9..1.0
-   kick = :drum_heavy_kick
+   :drum_heavy_kick
    else
-   kick = :elec_soft_kick
+   :elec_soft_kick
   end
 
   with_fx :level, amp: 0.5 do

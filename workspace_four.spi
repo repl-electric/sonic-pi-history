@@ -143,7 +143,7 @@ end
 live_loop :cam3 do
  with_fx :level, amp: 0.3 do
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
-    with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 0.001  do
+    with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 0.01  do
       with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
         with_synth(:hollow) do
           note =  (stretch scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),

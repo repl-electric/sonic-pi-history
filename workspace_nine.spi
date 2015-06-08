@@ -71,12 +71,6 @@ live_loop :camera_number_one do |idx|
     DRUMS_STATE = true
   end
 
-  @sound_time.tick(:moving_forward_in_sound)
-
-  if @sound_time.hook(:moving_forward_in_sound) > 50
-    DRUM_DENSITY = 8
-end
-
   case @cam1_smoothed_score
   when 0.8..1.0
     DRUMS_LIFE[:kick] = :drum_bass_soft
@@ -97,6 +91,7 @@ end
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
     DRUM_DENSITY = 4
   end
+  DRUM_DENSITY = 8
   with_fx :level, amp: @cam1_smoothed_score*1.0 do
     sync :whole
     @timeline.tick(:moving_forward_in_time_and_space)

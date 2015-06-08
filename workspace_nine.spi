@@ -29,8 +29,8 @@ BASS_SYNTHS = [:dsaw, :prophet, :saw]
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0
-  cue :quarter;cue :half
-  sleep bar/4.0
+  cue :quarter
+  sleep bar/4.0; cue :half
   cue :quarter
   sleep bar/4.0
   cue :quarter

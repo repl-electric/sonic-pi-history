@@ -79,16 +79,14 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
-  kick, perc_samples = nil
-
-  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELE} 
+  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)} 
 
   case @cam1_smoothed_score
   when 0.9..1.0
-    kick = :elec_hollow_kick
-    kick_start = 0.0
-    perc_samples = ELECTRIC_SAMPLES[8..16]
-    beat_stretching = (ring 1.0, 0.5, 0.25, -1.0)
+    DRUMS_LIFE[:kick] = :elec_hollow_kick
+    DRUMS_LIFE[:kick_start] = 0.0
+    DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[8..16]
+    DRUMS_LIFE[:beat_stretching] = (ring 1.0, 0.5, 0.25, -1.0)
     DRUM_DENSITY =+ 2
   when 0.5..0.9
     kick = :elec_soft_kick

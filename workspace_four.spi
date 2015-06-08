@@ -59,7 +59,7 @@ end
 SNARE_SAMPLES = [:elec_snare]
 
 live_loop :cam1 do |idx|
-with_level, amp: 0.5 do
+with_fx amp: 0.5 do
   sync :whole
   kick = [:elec_soft_kick].choose
   sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0

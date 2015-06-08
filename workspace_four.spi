@@ -143,9 +143,9 @@ live_loop :cam3 do
   puts "π=- #{score}  π=-"
   APEG_LIFE = {} 
   case score
-    when 0.1..1.0
+    when 0.3..1.0
       APEG_LIFE = {release: 0.5, attack: 0.5} 
-    when 0.0..0.1
+    when 0.0..0.3
       APEG_LIFE = {release: 0.1, attack: 0.01} 
   end
 

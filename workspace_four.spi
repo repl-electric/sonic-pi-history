@@ -88,7 +88,6 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:kick] = :elec_hollow_kick
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[8..16]
     DRUMS_LIFE[:beat_stretching] = (ring 1.0, 0.5, 0.25, -1.0)
-    DRUM_DENSITY =+ 2
   when 0.5..0.9
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, 1.0)
@@ -100,6 +99,9 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
   end
+
+    DRUM_DENSITY =+ 2
+
 
   with_fx :level, amp: @cam1_smoothed_score*1.0 do
     sync :whole

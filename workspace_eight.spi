@@ -1,0 +1,34 @@
+require 'json'
+ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
+CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
+CAMERA_2    = ROOM.map{|event| event["people"]["cam_2"]}
+CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
+SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
+SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
+SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
+PEOPLE_MIN = 0
+PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
+define :linear_map_fn do |x0, x1, y0, y1|
+  lambda{|x|
+    dydx = ((y1 - y0) / ( x1 - x0))
+    dx   = x - x0
+    (y0 + ( dydx * dx))
+  }
+end
+define :chords_for do |root, scale|
+  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+  (ring *chords)
+end
+define :find_scale_root do |octave|
+  "#{PICK_SCALE}#{octave}"
+end
+define :smoothed_score do |now, cached|
+  if(cached < now && now > 0.0)
+    cached -= now/5.0
+  elsif(cached > now && now > 0.0)
+    cached += now/5.0
+  else
+    cached
+  end
+end

@@ -33,8 +33,7 @@ SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
 PICK_SCALE = "C"
 MODE = ["minor_pentatonic", "major_pentatonic"][0]
 DRUMS_STATE = true
-
-DRUM_DENSITY = 1
+DRUM_DENSITY = 4
 
 ##
 

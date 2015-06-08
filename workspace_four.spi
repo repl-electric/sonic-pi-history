@@ -62,7 +62,10 @@ live_loop :cam1 do |idx|
   with_fx :level, amp: 0.5 do
     sync :whole
     kick = [:elec_soft_kick].choose
+
+    if DRUMS_STATE
     sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
+    end
 
     s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[3], ELECTRIC_SAMPLES[2]]
 

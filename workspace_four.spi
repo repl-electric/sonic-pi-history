@@ -65,7 +65,7 @@ live_loop :cam1 do |idx|
 
   if(@cam1_smoothed_score < score)
     @cam1_smoothed_score -= score/10.0
-  elsif @cam1_smoothed_score > score
+  elsif(@cam1_smoothed_score > score)
     @cam1_smoothed_score += score/10.0
   end
 

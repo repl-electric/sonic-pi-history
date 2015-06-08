@@ -182,8 +182,8 @@ live_loop :cam2 do |cam2_idx|
         end
       end
     end
-    cam2_idx+=1
   end
+  cam2_idx+=1
 end
 
 live_loop :cam3 do

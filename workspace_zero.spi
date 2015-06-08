@@ -37,9 +37,9 @@ def stretch_it(*args)
   end
   (res||[]).ring
 end
-define :beat_stretch do |path, stretch_duration, rate=nil|
+define :beat_stretch do |path, stretch_duration|
   stretch_duration = stretch_duration.to_f
-  rate = rate || 1
+  rate = 1.0
   dur = load_sample(path).duration
-  return (1.0 / stretch_duration) * rate * (current_bpm / (60.0 / dur))
+  (1.0 / stretch_duration) * rate * (current_bpm / (60.0 / dur))
 end

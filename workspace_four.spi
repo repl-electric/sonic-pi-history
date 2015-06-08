@@ -131,8 +131,7 @@ live_loop :camera_number_one do |idx|
   end
 end
 
-BASS_SYNTHS = [:prophet, :beep]
-BASS_REVERB = 0.9
+BASS_SYNTHS = [:prophet, :tri]
 
 live_loop :camera_number_two do |cam2_idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]

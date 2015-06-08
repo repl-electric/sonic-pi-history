@@ -71,7 +71,8 @@ live_loop :cam1 do |idx|
   elsif(@cam1_smoothed_score > score && score > 0.0)
     @cam1_smoothed_score += score/5.0
   end
-
+\
+@cam1_smoothed_score = 1.0
   if(@cam1_smoothed_score > 0.1)
     DRUMS_STATE = true
   end

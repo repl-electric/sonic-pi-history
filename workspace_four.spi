@@ -56,7 +56,7 @@ end
 
 @bass_line = chords_for(find_scale_root(1), :major_pentatonic).shuffle
 
-SNARE_SAMPLES = [:elec_snare]
+SNARE_SAMPLES = [:sn_zome]
 
 live_loop :cam1 do |idx|
 with_fx :level, amp: 0.5 do

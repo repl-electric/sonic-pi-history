@@ -6,7 +6,7 @@ define :linear_map_fn do |x0, x1, y0, y1|
 end
 define :chords_for do |root, scale|
   chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
-  (ring *chords)
+  ring( *chords)
 end
 define :find_scale_root do |octave|
   "#{PICK_SCALE}#{octave}"
@@ -36,4 +36,10 @@ def stretch_it(*args)
     knit(*values.flat_map{|v| [v, num_its]})
   end
   (res||[]).ring
+end
+define :beat_stretch do |path, stretch_duration, rate=nil|
+  stretch_duration = stretch_duration.to_f
+  rate = rate || 1
+  dur = load_sample(path).duration
+  return (1.0 / stretch_duration) * rate * (current_bpm / (60.0 / dur))
 end

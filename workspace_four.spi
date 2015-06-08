@@ -91,8 +91,12 @@ with_fx :level, amp: 1.0 do
         if repeat_times.hook(:time) == 2
           control fx_reverb , room: 0.0, mix: 0.5
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.1
-          sleep bar
-          control fx_reverb , room: 1.0, mix: 0.9
+          sleep bar/4.0
+          control fx_reverb , room: 0.1, mix: 0.6
+          sleep bar/4.0
+          control fx_reverb , room: 0.2, mix: 0.7
+          sleep bar/4.0
+          control fx_reverb , room: 0.5, mix: 0.8
         end
 
         with_synth :supersaw do

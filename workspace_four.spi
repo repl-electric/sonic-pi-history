@@ -32,7 +32,7 @@ ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare,
 SNARE_SAMPLES = [:sn_zome, :sn_dolf, :sn_dub, :elec_snare].shuffle
 PICK_SCALE = "C"
 MODE = ["minor_pentatonic", "major_pentatonic"][0]
-DRUMS_STATE = false
+DRUMS_STATE = true
 
 ##
 

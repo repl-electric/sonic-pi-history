@@ -75,7 +75,7 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
-BASS_SYNTHS = [:beep, :prophet].shuffle
+BASS_SYNTHS = [:beep, :supersaw].shuffle
 
 live_loop :cam2 do |cam2_idx|
 with_fx :level, amp: 1.0 do

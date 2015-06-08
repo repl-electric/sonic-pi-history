@@ -72,7 +72,7 @@ define :smoothed_score do |now, cached|
 end
 
 live_loop :camera_number_one do |idx|
-  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
+  DRUMS_LIFE = {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)

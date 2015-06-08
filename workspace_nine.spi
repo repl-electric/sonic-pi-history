@@ -214,7 +214,7 @@ live_loop :camera_number_three do
                    scale(find_scale_root(3), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(3), MODE).shuffle, (ring 2,6).tick(:dups1),
                    ).tick
-          play note, release: APEG_LIFE[:release], amp: score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
+          play note, release: APEG_LIFE[:release], amp: @cam3_smoothed_score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
         end
       end
     end

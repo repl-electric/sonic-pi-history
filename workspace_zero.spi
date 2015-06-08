@@ -209,7 +209,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     end;end
     #use_synth :prophet
     with_transpose(12) do
-      if(idx%8 == 3)
+      if(idx%8 == 5)
       play (knit _,1, _,2, "Fs1" ,1, "B1", 2).tick(:a), cutoff: 65, amp: 0.55, release: bar/4.0, attack: 0.01
       sleep bar/2.0
       end

@@ -91,6 +91,9 @@ live_loop :camera1 do |idx|
   end
 end
 live_loop :camera2 do |cam2_idx|
+  if cam2_idx % 120 == 0 
+    BASS_SYNTHS = BASS_SYNTHS.shuffle
+end
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)

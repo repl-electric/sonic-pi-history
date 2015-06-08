@@ -84,6 +84,8 @@ live_loop :cam1 do |idx|
    :elec_soft_kick
   end
 
+  puts kick
+
   with_fx :level, amp: 0.5 do
     sync :whole
     @sound_time.tick()

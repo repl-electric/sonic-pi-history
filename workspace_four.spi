@@ -9,20 +9,20 @@ SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
 
 define :linear_map_fn do |x0, x1, y0, y1|
- lambda{|x| 
-  dydx = ((y1 - y0) / ( x1 - x0))
-  dx   = x - x0
-  (y0 + ( dydx * dx))
+  lambda{|x|
+    dydx = ((y1 - y0) / ( x1 - x0))
+    dx   = x - x0
+    (y0 + ( dydx * dx))
   }
 end
 
-people_rate = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min, 
+people_rate = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min,
                             (CAMERA_1+CAMERA_2+CAMERA_3).max, 0.0, 1.0)
-sound_max_rate = linear_map_fn(SOUND_MAX.min, 
+sound_max_rate = linear_map_fn(SOUND_MAX.min,
                                SOUND_MAX.max, 0.0, 1.0)
-sound_avg_rate = linear_map_fn(SOUND_AVG.min, 
+sound_avg_rate = linear_map_fn(SOUND_AVG.min,
                                SOUND_AVG.max, 0.0, 1.0)
-sound_min_rate = linear_map_fn(SOUND_MIN.min, 
+sound_min_rate = linear_map_fn(SOUND_MIN.min,
                                SOUND_MIN.max, 0.0, 1.0)
 
 #POWER OF CHANGE
@@ -35,12 +35,12 @@ PICK_SCALE = "Fs"
 ##
 
 define :chords_for do |root, scale|
- chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
- (ring *chords)
+  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+  (ring *chords)
 end
 
 define :find_scale_root do |octave|
- "#{PICK_SCALE}#{octave}"
+  "#{PICK_SCALE}#{octave}"
 end
 
 live_loop :metronome do
@@ -60,124 +60,125 @@ end
 @bass_line = chords_for(find_scale_root(1), :major).shuffle
 
 live_loop :cam1 do |idx|
-with_fx :level, amp: 0.5 do
-  sync :whole
-  kick = [:elec_soft_kick].choose
-  sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
+  with_fx :level, amp: 0.5 do
+    sync :whole
+    kick = [:elec_soft_kick].choose
+    sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: 4.0
 
-  s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[3], ELECTRIC_SAMPLES[2]]
+    s1, s2, s3 = *[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[3], ELECTRIC_SAMPLES[2]]
 
-  density(4) do |n|
-    with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
-     with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
-      sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: (n==1) ? 0.40 : 0.25
-      sleep bar
-      sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
-     end
+    density(4) do |n|
+      with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
+        with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
+          sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: (n==1) ? 0.40 : 0.25
+          sleep bar
+          sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
+        end
+      end
     end
+    idx+=1
   end
-  idx+=1
-end
 end
 
 BASS_SYNTHS = [:prophet, :supersaw]
 BASS_REVERB = 0.9
 
 live_loop :cam2 do |cam2_idx|
-with_fx :level, amp: 1.0 do
-  @bass_line.tick
-  repeat_times = (ring 4,4,4,2,4,2)
-  (repeat_times.tick(:time)).times {sync :whole} 
+  with_fx :level, amp: 1.0 do
+    @bass_line.tick
+    repeat_times = (ring 4,4,4,2,4,2)
+    (repeat_times.tick(:time)).times {sync :whole}
 
-  with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
-    with_synth BASS_SYNTHS[0] do
-      play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
+    with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
+      with_synth BASS_SYNTHS[0] do
+        play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
 
-      with_transpose(12) do
+        with_transpose(12) do
 
-        if repeat_times.hook(:time) == 2
-          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
-          control fx_reverb , room: 0.0, mix: 0.5
-          sleep bar/4.0
-          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
+          if repeat_times.hook(:time) == 2
+            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
+            control fx_reverb , room: 0.0, mix: 0.8
+            sleep bar/4.0
+            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
 
-          control fx_reverb , room: 0.1, mix: 0.6
-          sleep bar/4.0
-          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
+            control fx_reverb , room: 0.1, mix: 0.9
+            sleep bar/4.0
+            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
 
-          control fx_reverb , room: 0.2, mix: 0.7
-          sleep bar/4.0
-          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
+            control fx_reverb , room: 0.2, mix: 0.8
+            sleep bar/4.0
+            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
 
-          control fx_reverb , room: 0.5, mix: 0.8
-          sleep bar/4.0
-          control fx_reverb , room: 1.0, mix: 0.9
-        else
+            control fx_reverb , room: 0.5, mix: 0.7
+            sleep bar/4.0
+            control fx_reverb , room: 1.0, mix: 0.9
+          else
 
-        with_synth BASS_SYNTHS[1] do
-          play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
-        end
+            with_synth BASS_SYNTHS[1] do
+              play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
+            end
 
-          4.times{
+            4.times{
               sync :half
               control fx_reverb, mix: (rrand 0.5, 0.9)
-          }
-          control fx_reverb, mix: 0.9
+            }
+            control fx_reverb, mix: 0.9
+          end
+        end
+      end
+    end
+    cam2_idx+=1
+  end
+end
+
+live_loop :cam3 do
+ with_fx :level, amp: 0.3 do
+    1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
+    with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+      with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
+        with_synth(:hollow) do
+          note =  (stretch scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
+                   scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
+
+                   scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                   scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+
+                   scale(find_scale_root(2), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
+                   scale(find_scale_root(2), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
+                   ).tick
+          play note, release: 2, amp: 2.0
         end
       end
     end
   end
-  cam2_idx+=1
-end
-end
-
-live_loop :cam3 do; with_fx :level, amp: 0.3 do
-  1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
-  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
-    with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
-      with_synth(:hollow) do
-        note =  (stretch scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 6,2).tick(:dups1),
-                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups2),
-
-                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
-                         scale(find_scale_root(3), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
-
-                         scale(find_scale_root(2), :major_pentatonic).shuffle, (ring 4,4).tick(:dups1),
-                         scale(find_scale_root(2), :major_pentatonic).shuffle, (ring 2,6).tick(:dups1),
-).tick
-        play note, release: 2, amp: 2.0
-      end
-    end
-  end
-end
 end
 
 live_loop :texture do
   with_fx :level, amp: 0.0 do
-sync :whole
-with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
-with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
-with_synth(:pnoise){play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
-end
-sleep bar*8
-end
-end
-end
-
-live_loop :texture do
- with_fx :level, amp: 0.0 do
-  with_fx :reverb, room: 1.0 do
-    with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+    sync :whole
+    with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
       with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
-        with_synth(:dark_ambience) do
-          play chords_for(find_scale_root(1), :major_pentatonic).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
-        end
-        with_synth(:pnoise) do
-          play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
-        end
+        with_synth(:pnoise){play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
       end
       sleep bar*8
     end
   end
 end
+
+live_loop :texture do
+  with_fx :level, amp: 0.0 do
+    with_fx :reverb, room: 1.0 do
+      with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+        with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+          with_synth(:dark_ambience) do
+            play chords_for(find_scale_root(1), :major_pentatonic).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+          end
+          with_synth(:pnoise) do
+            play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+          end
+        end
+        sleep bar*8
+      end
+    end
+  end
 end

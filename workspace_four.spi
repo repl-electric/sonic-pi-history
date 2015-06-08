@@ -22,7 +22,7 @@ camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 @timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
 @sound_time = (ring SOUND_AVG.map{|p| linear_map_fn(0, 100, 0.0, 1.0).(p)})
-@cam1_smoothed_score = nil
+@cam1_smoothed_score,@cam2_smoothed_score,@cam2_smoothed_score = nil
 
 #POWER OF CHANGE
 
@@ -72,7 +72,6 @@ live_loop :cam1 do |idx|
   score = @timeline.tick(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
-
   puts "1π=- #{@cam1_smoothed_score}  π=-"
 
   if(@cam1_smoothed_score > 0.1)
@@ -122,8 +121,10 @@ BASS_REVERB = 0.9
 @bass_line = chords_for(find_scale_root(2), MODE).shuffle
 
 live_loop :cam2 do |cam2_idx|
-
-
+  score = @timeline.tick(:moving_forward_in_time_and_space)[0]
+  @cam2_smoothed_score ||= score
+  @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
+  puts "2π=- #{@cam2_smoothed_score}  π=-"
 
   with_fx :level, amp: 1.0 do
     @bass_line.tick

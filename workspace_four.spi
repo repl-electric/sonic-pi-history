@@ -67,7 +67,7 @@ define :smoothed_score do |now, cached|
   elsif(cached > now && now > 0.0)
     cached += now/5.0
   else
-   cached
+    cached
   end
 end
 
@@ -81,7 +81,7 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
-  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)} 
+  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
 
   case @cam1_smoothed_score
   when 0.8..1.0
@@ -97,21 +97,21 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[0..8].reverse
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
     DRUM_DENSITY = 4
-   else
+  else
     DRUMS_LIFE[:kick_start] = 0.7
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
     DRUM_DENSITY = 4
   end
 
-  with_fx :level, amp: @cam1_smoothed_score*0.5 do
+  with_fx :level, amp: @cam1_smoothed_score*0.2 do
     sync :whole
     @sound_time.tick()
     if DRUMS_STATE
-    sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*2, start: DRUMS_LIFE[:kick_start], finish: 1.0
-    if @cam1_smoothed_score >= 0.8
-      sample :drum_cymbal_closed, amp: 0.1
-    end
+      sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*2, start: DRUMS_LIFE[:kick_start], finish: 1.0
+      if @cam1_smoothed_score >= 0.8
+        sample :drum_cymbal_closed, amp: 0.1
+      end
     end
 
     s1, s2, s3 = DRUMS_LIFE[:perc_samples].tick
@@ -158,36 +158,36 @@ live_loop :cam2 do |cam2_idx|
     with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
       with_synth BASS_SYNTHS[0] do
         play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5, cutoff: @cam2_smoothed_score*100
-          if repeat_times.hook(:time) == 2
-            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
-            control fx_reverb , room: 0.0, mix: 0.8
-            sleep bar/4.0
-            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
+        if repeat_times.hook(:time) == 2
+          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
+          control fx_reverb , room: 0.0, mix: 0.8
+          sleep bar/4.0
+          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
 
-            control fx_reverb , room: 0.1, mix: 0.9
-            sleep bar/4.0
-            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
+          control fx_reverb , room: 0.1, mix: 0.9
+          sleep bar/4.0
+          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
 
-            control fx_reverb , room: 0.2, mix: 0.8
-            sleep bar/4.0
-            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02, beat_stretch: (rrand 0.0,1.0)
+          control fx_reverb , room: 0.2, mix: 0.8
+          sleep bar/4.0
+          sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02, beat_stretch: (rrand 0.0,1.0)
 
-            control fx_reverb , room: 0.5, mix: 0.7
-            sleep bar/4.0
-            control fx_reverb , room: 1.0, mix: 0.9
-          else
+          control fx_reverb , room: 0.5, mix: 0.7
+          sleep bar/4.0
+          control fx_reverb , room: 1.0, mix: 0.9
+        else
 
           with_transpose(12) do
             with_fx :pitch_shift do
-            with_synth BASS_SYNTHS[1] do              
-              play @bass_line.hook[-1], attack: 0.01, amp: 0.5, release: bar*0.3
+              with_synth BASS_SYNTHS[1] do
+                play @bass_line.hook[-1], attack: 0.01, amp: 0.5, release: bar*0.3
+              end
             end
-          end
 
-          4.times{
-            sync :half
-            control fx_reverb, damp: (rrand 0.0, 1.0)
-          }
+            4.times{
+              sync :half
+              control fx_reverb, damp: (rrand 0.0, 1.0)
+            }
           end
         end
       end
@@ -198,17 +198,17 @@ end
 
 live_loop :cam3 do
   with_fx :level, amp: 1.0 do
-  score = @timeline.tick(:moving_forward_in_time_and_space)[2]
-  puts "3π=- #{score}  π=-"
-  APEG_LIFE = {} 
-  case score
+    score = @timeline.tick(:moving_forward_in_time_and_space)[2]
+    puts "3π=- #{score}  π=-"
+    APEG_LIFE = {}
+    case score
     when 0.0..0.3
-      APEG_LIFE = {release: 0.1, attack: 0.01,   synth: :mod_saw, mod_range: 5} 
+      APEG_LIFE = {release: 0.1, attack: 0.01,   synth: :mod_saw, mod_range: 5}
     when 0.3..6.0
-      APEG_LIFE = {release: 0.25, attack: 0.25,  synth: :mod_fm, mod_range: 10} 
+      APEG_LIFE = {release: 0.25, attack: 0.25,  synth: :mod_fm, mod_range: 10}
     when 0.6..1.0
-      APEG_LIFE = {release: 2.0, attack: 0.01,    synth: :beep, mod_range: 12} 
-  end
+      APEG_LIFE = {release: 2.0, attack: 0.01,    synth: :beep, mod_range: 12}
+    end
 
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
     with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do

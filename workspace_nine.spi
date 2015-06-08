@@ -99,7 +99,7 @@ live_loop :camera2 do |cam2_idx|
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
   puts "2 -=π #{@cam2_smoothed_score}  π=-"
   if(@cam2_smoothed_score > 0.5)
-    @bass_line = (chords_for(find_scale_root(2), MODE)+[chord(find_scale_root(1), 'sus4')]).shuffle
+    @bass_line = (chords_for(find_scale_root(2), MODE)+[chord(find_scale_root(2), 'sus4')]).shuffle
   else
     @bass_line = chords_for(find_scale_root(1), MODE).shuffle
   end

@@ -24,17 +24,15 @@ define :find_scale_root do |octave|
   "#{PICK_SCALE}#{octave}"
 end
 define :smoothed_score do |now, cached|
-  cached = if(cached < now && now > 0.0)
+  r = if(cached < now && now > 0.0)
     cached -= now/5.0
   elsif(cached > now && now > 0.0)
     cached += now/5.0
   else
     cached
   end
-  if cached < 0 
-    cached = 0.0
-  elsif(cached > now)
-    cached = now
+  if r < 0 
+    r = 0.0
   end
   cached
 end

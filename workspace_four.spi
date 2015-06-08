@@ -1,5 +1,4 @@
 require 'json'
-require 'json'
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = JSON.parse(File.read(ROOM_SOURCE))
 CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
@@ -10,12 +9,27 @@ SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
 PEOPLE_MIN = 0
 PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
+define :smoothed_score do |now, cached|
+  if(cached < now && now > 0.0)
+    cached -= now/5.0
+  elsif(cached > now && now > 0.0)
+    cached += now/5.0
+  else
+    cached
+  end
+end
+define :chords_for do |root, scale|
+  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
+  (ring *chords)
+end
+define :find_scale_root do |octave|
+  "#{PICK_SCALE}#{octave}"
+end
 define :linear_map_fn do |x0, x1, y0, y1|
   lambda{|x|
     dydx = ((y1 - y0) / ( x1 - x0))
     dx   = x - x0
-    (y0 + ( dydx * dx))
-  }
+    (y0 + ( dydx * dx))}
 end
 camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
@@ -26,8 +40,6 @@ camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0
 @cam2_smoothed_score ||= nil
 @cam3_smoothed_score ||= nil
 
-#POWER OF CHANGE
-
 bar = 1.0
 ELECTRIC_SAMPLES = (ring :elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup)
 SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
@@ -35,17 +47,7 @@ PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
 DRUM_DENSITY = 4
-
-##
-
-define :chords_for do |root, scale|
-  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
-  (ring *chords)
-end
-
-define :find_scale_root do |octave|
-  "#{PICK_SCALE}#{octave}"
-end
+BASS_SYNTHS = [:dsaw, :prophet, :saw]
 
 live_loop :metronome do
   cue :whole
@@ -59,16 +61,6 @@ live_loop :metronome do
   sleep bar/4.0
   cue :quarter
   sleep bar/4.0
-end
-
-define :smoothed_score do |now, cached|
-  if(cached < now && now > 0.0)
-    cached -= now/5.0
-  elsif(cached > now && now > 0.0)
-    cached += now/5.0
-  else
-    cached
-  end
 end
 
 live_loop :camera_number_one do |idx|
@@ -130,9 +122,6 @@ live_loop :camera_number_one do |idx|
     idx+=1
   end
 end
-
-BASS_SYNTHS = [:dsaw, :prophet, :saw]
-
 live_loop :camera_number_two do |cam2_idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
@@ -195,7 +184,6 @@ live_loop :camera_number_two do |cam2_idx|
   end
   cam2_idx+=1
 end
-
 live_loop :camera_number_three do
   with_fx :level, amp: 1.0 do
     score = @timeline.hook(:moving_forward_in_time_and_space)[2]
@@ -226,6 +214,23 @@ live_loop :camera_number_three do
                    ).tick
           play note, release: APEG_LIFE[:release], amp: score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
         end
+      end
+    end
+  end
+end
+live_loop :texture do
+  with_fx :level, amp: 0.2 do
+    with_fx :reverb, room: 1.0 do
+      with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+        with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+          with_synth(:dark_ambience) do
+            play chords_for(find_scale_root(1), MODE).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+          end
+          with_synth(:pnoise) do
+            play chords_for(find_scale_root(0), MODE).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+          end
+        end
+        sleep bar*8
       end
     end
   end

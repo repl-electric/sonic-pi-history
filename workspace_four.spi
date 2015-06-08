@@ -16,6 +16,9 @@ define :linear_map_fn do |x0, x1, y0, y1|
   }
 end
 
+PEOPLE_MIN = 0
+PEOPLE_MAX = 100
+
 people_rate = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min,
                             (CAMERA_1+CAMERA_2+CAMERA_3).max, 0.0, 1.0)
 sound_max_rate = linear_map_fn(SOUND_MAX.min,
@@ -24,6 +27,8 @@ sound_avg_rate = linear_map_fn(SOUND_AVG.min,
                                SOUND_AVG.max, 0.0, 1.0)
 sound_min_rate = linear_map_fn(SOUND_MIN.min,
                                SOUND_MIN.max, 0.0, 1.0)
+
+camera3_rate = linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0)
 
 #POWER OF CHANGE
 
@@ -143,7 +148,9 @@ end
 live_loop :cam3 do
   APEG_LIFE = {release: 0.1, attack: 0.01} 
 
- with_fx :level, amp: 1.0 do
+  
+
+  with_fx :level, amp: 1.0 do
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
 #    with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do
       with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do

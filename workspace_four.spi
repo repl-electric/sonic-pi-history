@@ -80,7 +80,7 @@ live_loop :cam1 do |idx|
   end
 
   kick = case @cam1_smoothed_score
-  when 0.1..1.0
+  when 0.9..1.0
    :elec_hollow_kick
    else
    :elec_soft_kick

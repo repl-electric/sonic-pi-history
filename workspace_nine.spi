@@ -32,7 +32,7 @@ define :smoothed_score do |now, cached|
     cached
   end
   if cached < 0 
-    cached = 0
+    cached = 0.0
   elsif(cached > now)
     cached = now
   end
@@ -43,9 +43,9 @@ camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 @timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
 @sound_time = (ring SOUND_AVG.map{|p| linear_map_fn(0, 100, 0.0, 1.0).(p)})
-@cam1_smoothed_score ||= nil
-@cam2_smoothed_score ||= nil
-@cam3_smoothed_score ||= nil
+@cam1_smoothed_score = nil
+@cam2_smoothed_score = nil
+@cam3_smoothed_score = nil
 bar = 1.0
 ELECTRIC_SAMPLES = (ring :elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup)
 SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)

@@ -66,10 +66,17 @@ live_loop :camera_number_one do |idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
-  puts "1π=- #{@cam1_smoothed_score}  π=-"
+  puts "1 -=π #{@cam1_smoothed_score} π=-"
   if(@cam1_smoothed_score > 0.1)
     DRUMS_STATE = true
   end
+
+  @sound_time.tick(:moving_forward_in_sound)
+
+  if @sound_time.hook(:moving_forward_in_sound) > 50
+    DRUM_DENSITY = 8
+end
+
   case @cam1_smoothed_score
   when 0.8..1.0
     DRUMS_LIFE[:kick] = :drum_bass_soft
@@ -123,8 +130,7 @@ live_loop :camera_number_two do |cam2_idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
-  puts "2π=- #{@cam2_smoothed_score}  π=-"
-
+  puts "2 -=π #{@cam2_smoothed_score}  π=-"
   if(@cam2_smoothed_score > 0.5)
     @bass_line = chords_for(find_scale_root(2), MODE).shuffle
   else

@@ -20,3 +20,5 @@ PEOPLE_MIN = 0
 PEOPLE_MAX = 100
 
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0)}
+
+puts camera3_rate

@@ -8,7 +8,7 @@
 
 live_loop :test do
   sample Mountain["kick",0], beat_stretch: (ring 0.0,0.1,0.2,0.3).tick
-
+  sleep 2
 end
 
 #      sample Mountain[/kick/i,4], amp: 1.8, rate: 1.0

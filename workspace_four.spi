@@ -113,7 +113,7 @@ live_loop :cam2 do |cam2_idx|
 
             control fx_reverb , room: 0.2, mix: 0.8
             sleep bar/4.0
-            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
+            sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02, beat_stretch: (rrand 0.0,1.0)
 
             control fx_reverb , room: 0.5, mix: 0.7
             sleep bar/4.0

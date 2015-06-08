@@ -96,7 +96,7 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
    else
-    DRUMS_LIFE[:kick_start] = 0.01
+    DRUMS_LIFE[:kick_start] = 0.1
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
   end

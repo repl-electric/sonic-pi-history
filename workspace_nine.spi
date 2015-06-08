@@ -75,7 +75,7 @@ puts @cam1_smoothed_score
     end
     s1, s2, s3 = DRUMS_LIFE[:perc_samples].tick
     density(DRUM_DENSITY) do |n|
-      with_fx :lpf, cutoff: cap(0.8+@cam1_smoothed_score*100,120) do
+      with_fx :lpf, cutoff: 80 do
         with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
           with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
             if DRUMS_STATE

@@ -122,6 +122,9 @@ BASS_REVERB = 0.9
 @bass_line = chords_for(find_scale_root(2), MODE).shuffle
 
 live_loop :cam2 do |cam2_idx|
+
+
+
   with_fx :level, amp: 1.0 do
     @bass_line.tick
     repeat_times = (ring 4,4,4,2,4,2)

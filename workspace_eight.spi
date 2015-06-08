@@ -24,3 +24,6 @@ define :smoothed_score do |now, cached|
   end
   r
 end
+define :cap do |v, max|
+  v > max ? max : v
+end

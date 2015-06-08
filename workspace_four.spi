@@ -63,7 +63,7 @@ define :smoothed_score do |now, cached|
   if(cached < now && now > 0.0)
     cached -= now/5.0
   elsif(cached > now && now > 0.0)
-    cached += actual/5.0
+    cached += now/5.0
   end
   cached
 end

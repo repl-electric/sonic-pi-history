@@ -31,7 +31,8 @@ bar = 1.0
 ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup]
 SNARE_SAMPLES = [:sn_zome, :sn_dolf, :sn_dub, :elec_snare].shuffle
 PICK_SCALE = "C"
-MODE = "minor_pentatonic"
+MODE = ["minor_pentatonic", "major_pentatonic"]
+
 DRUMS_STATE = false
 
 ##
@@ -87,7 +88,7 @@ live_loop :cam1 do |idx|
   end
 end
 
-BASS_SYNTHS = [:prophet, :tri]
+BASS_SYNTHS = [:prophet, :supersaw]
 BASS_REVERB = 0.9
 @bass_line = chords_for(find_scale_root(1), MODE).shuffle
 

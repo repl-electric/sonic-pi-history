@@ -138,7 +138,7 @@ live_loop :cam2 do |cam2_idx|
 end
 
 live_loop :cam3 do
-  with_fx :level, amp: 2.0 do
+  with_fx :level, amp: 0.3 do
   score = @timeline.tick(:moving_forward_in_time_and_space)[2]
   puts "π=- #{score}  π=-"
   APEG_LIFE = {} 

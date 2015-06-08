@@ -108,10 +108,9 @@ with_fx :level, amp: 1.0 do
         else
 
           4.times{
- sleep bar/4.0
- control fx_reverb, damp: (rrand 1.0)
-}
-
+              sleep bar/4.0
+              control fx_reverb, damp: (rrand 0.0,1.0)
+          }
         end
 
         with_synth BASS_SYNTHS[1] do

@@ -88,7 +88,7 @@ end
 
 BASS_SYNTHS = [:prophet, :tri]
 BASS_REVERB = 0.9
-@bass_line = chords_for(find_scale_root(1), :major).shuffle
+@bass_line = chords_for(find_scale_root(1), scale(:A2, :minor_pentatonic)).shuffle
 
 live_loop :cam2 do |cam2_idx|
   with_fx :level, amp: 1.0 do

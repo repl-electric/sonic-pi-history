@@ -163,9 +163,9 @@ end
 live_loop :camera_number_three do
   score = @timeline.hook(:moving_forward_in_time_and_space)[2]
   @cam3_smoothed_score ||= score
-  @cam3_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
+  @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)
   puts "3π=- #{@cam3_smoothed_score}  π=-"
-  with_fx :level, amp: 1.0 do
+  with_fx :level, amp: @cam3_smoothed_score do
     APEG_LIFE = {}
     case @cam3_smoothed_score
     when 0.0..0.3

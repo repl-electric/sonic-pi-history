@@ -152,7 +152,7 @@ live_loop :camera2 do |cam2_idx|
   cam2_idx+=1
 end
 live_loop :camera3 do
-  with_fx :level, amp: @cam3_smoothed_score do
+  with_fx :level, amp: @cam3_smoothed_score+0.1 do
     score = @timeline.hook(:moving_forward_in_time_and_space)[2]
     @cam3_smoothed_score ||= score
     @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)

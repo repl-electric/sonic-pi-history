@@ -41,7 +41,6 @@ live_loop :camera1 do |idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
-  puts "1 -=π #{@cam1_smoothed_score} π=-"
   DRUMS_STATE = true if(@cam1_smoothed_score > 0.1)
 
   case @cam1_smoothed_score

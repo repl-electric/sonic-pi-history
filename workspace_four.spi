@@ -90,11 +90,11 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:beat_stretching] = (ring 1.0, 0.5, 0.25, -1.0)
     DRUM_DENSITY = 8
   when 0.5..0.8
-    DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8].reverse
+    DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, 1.0)
     DRUM_DENSITY = 4
   when 0.2..0.5
-    DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[16..24]
+    DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[1..8].reverse
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
     DRUM_DENSITY = 4
    else

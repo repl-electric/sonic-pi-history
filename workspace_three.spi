@@ -79,7 +79,6 @@ live_loop :camera1 do |idx|
           with_fx :bitcrusher, bit: ring( 4,5,6,7,8,9,10).tick(:bits) do
             if DRUMS_STATE
               perc_pat = knit( s1, 4, s2, 2, s3, 3)
-puts perc_pat.hook(:beat)
               sample perc_pat.tick(:beat), rate: beat_stretch(perc_pat.hook(:beat), 0.1), amp: (n==1) ? 0.50 : 0.35, pan: ring( 0.25,-0.25).tick(:pan)
             end
             sleep bar

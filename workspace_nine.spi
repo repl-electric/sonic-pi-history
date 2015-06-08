@@ -161,7 +161,7 @@ live_loop :camera3 do
     #when 0.3..0.6
     #  APEG = {release: 0.25, attack: 0.25, synth: :hollow, mod_range: 10, amp_factor: 8.0}
     #when 0.6..1.0
-else   
+   when 0.0..1.0   
    APEG = {release: 2.0, attack: 0.01,  synth: :beep, mod_range: 12, amp_factor: 0.8}
     end
 

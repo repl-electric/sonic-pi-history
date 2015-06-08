@@ -154,6 +154,7 @@ live_loop :camera3 do
   @cam3_smoothed_score ||= score
   @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)
   with_fx :level, amp: @cam3_smoothed_score+0.5 do
+puts @cam3_smoothed_score
     APEG = {}
     case @cam3_smoothed_score
     when 0.0..0.3
@@ -163,7 +164,6 @@ live_loop :camera3 do
     when 0.6..1.0
       APEG = {release: 2.0, attack: 0.01,  synth: :beep, mod_range: 12, amp_factor: 0.8}
     end
-
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
     @timeline.tick(:moving_forward_in_time_and_space)
     with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do

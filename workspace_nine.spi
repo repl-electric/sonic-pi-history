@@ -45,6 +45,8 @@ end
 
 live_loop :metronome do
   @timeline.tick(:moving_forward_in_time_and_space)
+  puts  @timeline.hook(:moving_forward_in_time_and_space)
+ 
   cue :whole
   cue :half
   cue :quarter

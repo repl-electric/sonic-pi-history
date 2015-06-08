@@ -77,13 +77,19 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
+  case @cam1_smoothed_score
+  when 0.8..1.0
+   kick = :drum_heavy_kick
+   else
+  kick = :elec_soft_kick
+   end
+
+
   with_fx :level, amp: 0.5 do
     sync :whole
     @sound_time.tick()
-    kick = [:elec_soft_kick, :drum_heavy_kick].choose
 
     if DRUMS_STATE
-
     sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*4, start: 0.0, finish: 1.0
     end
 

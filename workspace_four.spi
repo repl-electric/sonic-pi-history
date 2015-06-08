@@ -47,8 +47,7 @@ PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
 DRUM_DENSITY = 4
-BASS_SYNTHS = [:dsaw, :prophet, :saw].shuffle
-
+BASS_SYNTHS = [:dsaw, :prophet, :saw, :beep].shuffle
 live_loop :metronome do
   cue :whole
   cue :half
@@ -62,7 +61,6 @@ live_loop :metronome do
   cue :quarter
   sleep bar/4.0
 end
-
 live_loop :camera_number_one do |idx|
   DRUMS_LIFE = {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]

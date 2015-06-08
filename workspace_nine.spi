@@ -68,7 +68,7 @@ puts @cam1_smoothed_score
     sync :whole
     @timeline.tick(:moving_forward_in_time_and_space)
     if DRUMS_STATE
-      sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*1.5, start: DRUMS_LIFE[:kick_start]
+      sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*2.5, start: DRUMS_LIFE[:kick_start]
       if @cam1_smoothed_score >= 0.8
         sample :drum_cymbal_closed, amp: 0.1
       end

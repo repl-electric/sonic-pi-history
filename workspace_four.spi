@@ -9,28 +9,6 @@ SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
 PEOPLE_MIN = 0
 PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
-define :smoothed_score do |now, cached|
-  if(cached < now && now > 0.0)
-    cached -= now/5.0
-  elsif(cached > now && now > 0.0)
-    cached += now/5.0
-  else
-    cached
-  end
-end
-define :chords_for do |root, scale|
-  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
-  (ring *chords)
-end
-define :find_scale_root do |octave|
-  "#{PICK_SCALE}#{octave}"
-end
-define :linear_map_fn do |x0, x1, y0, y1|
-  lambda{|x|
-    dydx = ((y1 - y0) / ( x1 - x0))
-    dx   = x - x0
-    (y0 + ( dydx * dx))}
-end
 camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
@@ -183,11 +161,13 @@ live_loop :camera_number_two do |cam2_idx|
   cam2_idx+=1
 end
 live_loop :camera_number_three do
+  score = @timeline.hook(:moving_forward_in_time_and_space)[2]
+  @cam3_smoothed_score ||= score
+  @cam3_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
+  puts "3π=- #{@cam3_smoothed_score}  π=-"
   with_fx :level, amp: 1.0 do
-    score = @timeline.hook(:moving_forward_in_time_and_space)[2]
-    puts "3π=- #{score}  π=-"
     APEG_LIFE = {}
-    case score
+    case @cam3_smoothed_score
     when 0.0..0.3
       APEG_LIFE = {release: 0.1, attack: 0.01,   synth: :mod_saw, mod_range: 5}
     when 0.3..6.0
@@ -203,10 +183,8 @@ live_loop :camera_number_three do
         with_synth(APEG_LIFE[:synth]) do
           note =  (stretch scale(find_scale_root(1), MODE).shuffle, (ring 6,2).tick(:dups1),
                    scale(find_scale_root(1), MODE).shuffle, (ring 2,6).tick(:dups2),
-
                    scale(find_scale_root(2), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(2), MODE).shuffle, (ring 2,6).tick(:dups1),
-
                    scale(find_scale_root(3), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(3), MODE).shuffle, (ring 2,6).tick(:dups1),
                    ).tick

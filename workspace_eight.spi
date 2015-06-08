@@ -1,59 +1,17 @@
-require 'json'
-ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
-ROOM        = JSON.parse(File.read(ROOM_SOURCE))
-CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
-CAMERA_2    = ROOM.map{|event| event["people"]["cam_2"]}
-CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
-SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
-SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
-SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
-PEOPLE_MIN = 0
-PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
-define :linear_map_fn do |x0, x1, y0, y1|
-  lambda{|x|
-    dydx = ((y1 - y0) / ( x1 - x0))
-    dx   = x - x0
-    (y0 + ( dydx * dx))
-  }
-end
-define :chords_for do |root, scale|
-  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
-  (ring *chords)
-end
-define :find_scale_root do |octave|
-  "#{PICK_SCALE}#{octave}"
-end
-define :smoothed_score do |now, cached|
-  cached = if(cached < now && now > 0.0)
-    cached -= now/5.0
-  elsif(cached > now && now > 0.0)
-    cached += now/5.0
-  else
-    cached
+live_loop :texture do
+  with_fx :level, amp: 0.2 do
+    with_fx :reverb, room: 1.0 do
+      with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+        with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+          with_synth(:dark_ambience) do
+            play chords_for(find_scale_root(1), MODE).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+          end
+          with_synth(:pnoise) do
+            play chords_for(find_scale_root(0), MODE).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+          end
+        end
+        sleep bar*8
+      end
+    end
   end
-  if cached < 0.0
-    cached = 0.0
-  elsif(cached > now)
-    cached = now
-  end
-  cached
 end
-require 'json'
-ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
-ROOM        = JSON.parse(File.read(ROOM_SOURCE))
-CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
-CAMERA_2    = ROOM.map{|event| event["people"]["cam_2"]}
-CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
-SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
-SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
-SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
-PEOPLE_MIN = 0
-PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
-camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
-camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
-camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
-@timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
-@sound_time = (ring SOUND_AVG.map{|p| linear_map_fn(0, 100, 0.0, 1.0).(p)})
-@cam1_smoothed_score ||= nil
-@cam2_smoothed_score ||= nil
-@cam3_smoothed_score ||= nil

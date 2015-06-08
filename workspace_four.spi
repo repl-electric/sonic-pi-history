@@ -140,7 +140,7 @@ end
 live_loop :cam3 do |time|
   with_fx :level, amp: 1.0 do
 
-  APEG_LIFE = {release: 0.5, attack: 0.1} 
+  APEG_LIFE = {release: 0.5, attack: 0.5} 
 
   @timeline.tick(:moving_forward_in_time_and_space)
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

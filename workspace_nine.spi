@@ -25,9 +25,9 @@ define :find_scale_root do |octave|
 end
 define :smoothed_score do |now, cached|
   r = if(cached < now && now > 0.0)
-    cached -= now/5.0
-  elsif(cached > now && now > 0.0)
     cached += now/5.0
+  elsif(cached > now && now > 0.0)
+    cached -= now/5.0
   else
     cached
   end

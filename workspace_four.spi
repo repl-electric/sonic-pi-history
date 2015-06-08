@@ -104,7 +104,7 @@ live_loop :camera_number_one do |idx|
 
   with_fx :level, amp: @cam1_smoothed_score*0.1 do
     sync :whole
-    @cam1_smoothed_score.tick(:moving_forward_in_time_and_space)
+    @timeline.tick(:moving_forward_in_time_and_space)
     if DRUMS_STATE
       sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*1.5, start: DRUMS_LIFE[:kick_start], finish: 1.0
       if @cam1_smoothed_score >= 0.8

@@ -32,6 +32,8 @@ ELECTRIC_SAMPLES = [:elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare,
 SNARE_SAMPLES = [:sn_zome, :sn_dolf, :sn_dub, :elec_snare].shuffle
 PICK_SCALE = "Fs"
 
+##
+
 define :chords_for do |root, scale|
  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
  (ring *chords)

@@ -1,4 +1,5 @@
 require 'json'
+require 'json'
 ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
 ROOM        = JSON.parse(File.read(ROOM_SOURCE))
 CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
@@ -7,7 +8,8 @@ CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
 SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
 SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
-
+PEOPLE_MIN = 0
+PEOPLE_MAX = 100
 define :linear_map_fn do |x0, x1, y0, y1|
   lambda{|x|
     dydx = ((y1 - y0) / ( x1 - x0))
@@ -15,20 +17,12 @@ define :linear_map_fn do |x0, x1, y0, y1|
     (y0 + ( dydx * dx))
   }
 end
+camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+timeline = [camera1_rate, camera2_rate, camera3_rate].transpose
 
-PEOPLE_MIN = 0
-PEOPLE_MAX = 100
-
-people_rate = linear_map_fn((CAMERA_1+CAMERA_2+CAMERA_3).min,
-                            (CAMERA_1+CAMERA_2+CAMERA_3).max, 0.0, 1.0)
-sound_max_rate = linear_map_fn(SOUND_MAX.min,
-                               SOUND_MAX.max, 0.0, 1.0)
-sound_avg_rate = linear_map_fn(SOUND_AVG.min,
-                               SOUND_AVG.max, 0.0, 1.0)
-sound_min_rate = linear_map_fn(SOUND_MIN.min,
-                               SOUND_MIN.max, 0.0, 1.0)
-
-camera3_rate = linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(CAMERA_3)
+puts timeline
 
 #POWER OF CHANGE
 

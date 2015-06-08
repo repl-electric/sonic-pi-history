@@ -75,15 +75,18 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
+BASS_SYNTHS = [:prophet, :supersaw]
 
 live_loop :cam2 do |cam2_idx|
 with_fx :level, amp: 1.0 do
   @bass_line.tick
-  ((ring 4,4,4,2,2).tick(:time)).times {sync :whole} 
+  repeat_times = (ring 4,4,4,2,2)
+  (repeat_times.tick(:time)).times {sync :whole} 
   with_fx(:reverb, room: 1.0, mix: 0.9) do
     with_synth :prophet do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
-      with_transpose(12) do
+
+      with_transpose(repeat_times.hook(:time) == 2 ? 8 : 12) do
         with_synth :supersaw do
           play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
         end

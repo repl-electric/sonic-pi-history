@@ -131,7 +131,7 @@ live_loop :camera_number_one do |idx|
   end
 end
 
-BASS_SYNTHS = [:dsaw, :tri]
+BASS_SYNTHS = [:dsaw, :saw]
 
 live_loop :camera_number_two do |cam2_idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]

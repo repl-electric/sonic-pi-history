@@ -92,8 +92,6 @@ with_fx :level, amp: 1.0 do
             control fx_reverb , room: 0.0
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.1
             control fx_reverb , room: 1.0
-
-        else
         end
 
         with_synth :supersaw do

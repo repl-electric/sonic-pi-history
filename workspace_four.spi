@@ -58,7 +58,21 @@ live_loop :metronome do
   sleep bar/4.0
 end
 
+
 live_loop :cam1 do |idx|
+  score = @timeline.tick(:moving_forward_in_time_and_space)
+  @cam1_smoothed_score || = score
+
+  if(@cam1_smoothed_score < score)
+    @cam1_smoothed_score -= score/10.0
+  elsif @cam1_smoothed_score > score
+    @cam1_smoothed_score += score/10.0
+  end
+
+  if(@cam1_smoothed_score > 0.2)
+    DRUMS_STATE = true
+  end
+
   with_fx :level, amp: 0.2 do
     sync :whole
     @sound_time.tick()

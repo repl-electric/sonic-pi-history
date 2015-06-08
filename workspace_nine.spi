@@ -185,12 +185,12 @@ live_loop :camera_number_two do |cam2_idx|
 end
 
 live_loop :camera_number_three do
+  with_fx :level, amp: 1.0 do
     score = @timeline.hook(:moving_forward_in_time_and_space)[2]
-    @cam3_smoothed_score ||= score
-    @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)
-    puts "3π=- #{@cam3_smoothed_score}  π=-"
+
+    puts "3π=- #{score}  π=-"
     APEG_LIFE = {}
-    case @cam3_smoothed_score
+    case score
     when 0.0..0.3
       APEG_LIFE = {release: 0.1, attack: 0.01,   synth: :mod_saw, mod_range: 5}
     when 0.3..6.0
@@ -198,11 +198,11 @@ live_loop :camera_number_three do
     when 0.6..1.0
       APEG_LIFE = {release: 2.0, attack: 0.01,    synth: :beep, mod_range: 12}
     end
-  with_fx :level, amp: 1.0 do
+
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
     @timeline.tick(:moving_forward_in_time_and_space)[2]
     with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do
-      with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: @cam3_smoothed_score*8, pre_amp: 0.3 do
+      with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: score*8, pre_amp: 0.3 do
         with_synth(APEG_LIFE[:synth]) do
           note =  (stretch scale(find_scale_root(1), MODE).shuffle, (ring 6,2).tick(:dups1),
                    scale(find_scale_root(1), MODE).shuffle, (ring 2,6).tick(:dups2),
@@ -213,7 +213,7 @@ live_loop :camera_number_three do
                    scale(find_scale_root(3), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(3), MODE).shuffle, (ring 2,6).tick(:dups1),
                    ).tick
-          play note, release: APEG_LIFE[:release], amp: @cam3_smoothed_score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
+          play note, release: APEG_LIFE[:release], amp: score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
         end
       end
     end

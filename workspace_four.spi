@@ -77,10 +77,9 @@ end
 
 
 live_loop :cam2 do |cam2_idx|
+with_fx :level, :amp 1.0 do
   @bass_line.tick
-  
- ((ring 4,4,4,2,2).tick(:time)).times {sync :whole}
-  
+  ((ring 4,4,4,2,2).tick(:time)).times {sync :whole} 
   with_fx(:reverb, room: 1.0, mix: 0.9) do
     with_synth :prophet do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
@@ -92,6 +91,7 @@ live_loop :cam2 do |cam2_idx|
     end
   end
   cam2_idx+=1
+end
 end
 
 live_loop :cam3 do; with_fx :level, amp: 0.0 do

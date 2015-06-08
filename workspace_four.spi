@@ -104,7 +104,7 @@ live_loop :cam1 do |idx|
     DRUM_DENSITY = 4
   end
 
-  with_fx :level, amp: @cam1_smoothed_score*1.0 do
+  with_fx :level, amp: @cam1_smoothed_score*0.9 do
     sync :whole
     @sound_time.tick()
     if DRUMS_STATE

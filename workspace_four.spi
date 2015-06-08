@@ -137,12 +137,18 @@ live_loop :cam2 do |cam2_idx|
   end
 end
 
-live_loop :cam3 do |time|
+live_loop :cam3 do
   with_fx :level, amp: 1.0 do
+  score = @timeline.tick(:moving_forward_in_time_and_space)[2]
 
-  APEG_LIFE = {release: 0.5, attack: 0.5} 
+  APEG_LIFE = {} 
+  case score do
+    when 0.0..0.5
+      APEG_LIFE = {release: 0.5, attack: 0.5} 
+    when 0.5..1.0
+      APEG_LIFE = {release: 0.1, attack: 0.01} 
+  end
 
-  @timeline.tick(:moving_forward_in_time_and_space)
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
 #    with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do
       with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do

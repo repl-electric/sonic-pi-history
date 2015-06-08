@@ -143,10 +143,10 @@ live_loop :cam3 do
   puts "π=- #{score}  π=-"
   APEG_LIFE = {} 
   case score
-    when 0.3..1.0
-      APEG_LIFE = {release: 0.5, attack: 0.5,  synth: :mod_fm} 
     when 0.0..0.3
       APEG_LIFE = {release: 0.1, attack: 0.01, synth: :beep} 
+    when 0.3..1.0
+      APEG_LIFE = {release: 0.5, attack: 0.5,  synth: :mod_fm} 
   end
 
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

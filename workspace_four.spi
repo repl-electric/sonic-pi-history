@@ -59,18 +59,21 @@ live_loop :metronome do
   sleep bar/4.0
 end
 
+define :smoothed_score do |now, cached|
+  if(cached < now && now > 0.0)
+    cached -= now/5.0
+  elsif(cached > now && now > 0.0)
+    cached += actual/5.0
+  end
+  cached
+end
 
 live_loop :cam1 do |idx|
   score = @timeline.tick(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
+  @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
 
   puts "1π=- #{@cam1_smoothed_score}  π=-"
-
-  if(@cam1_smoothed_score < score && score > 0.0)
-    @cam1_smoothed_score -= score/5.0
-  elsif(@cam1_smoothed_score > score && score > 0.0)
-    @cam1_smoothed_score += score/5.0
-  end
 
   if(@cam1_smoothed_score > 0.1)
     DRUMS_STATE = true
@@ -93,7 +96,7 @@ live_loop :cam1 do |idx|
     sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*4, start: 0.0, finish: 1.0
     end
 
-    s1, s2, s3 = ELECTRIC_SAMPLES[0..8].tick #*[ELECTRIC_SAMPLES[1], ELECTRIC_SAMPLES[3], ELECTRIC_SAMPLES[2]]
+    s1, s2, s3 = ELECTRIC_SAMPLES[0..8].tick
 
     density(DRUM_DENSITY) do |n|
       with_fx (knit :none, 7, :echo, 1).tick, decay: bar do

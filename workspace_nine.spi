@@ -46,7 +46,7 @@ end
 live_loop :metronome do
   @timeline.tick(:moving_forward_in_time_and_space)
   puts  @timeline.hook(:moving_forward_in_time_and_space)
- 
+
   cue :whole
   cue :half
   cue :quarter
@@ -58,4 +58,10 @@ live_loop :metronome do
   sleep bar/4.0
   cue :quarter
   sleep bar/4.0
+end
+
+live_loop :poop do
+  sync :whole
+  puts  @timeline.hook(:moving_forward_in_time_and_space)
+
 end

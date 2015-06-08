@@ -95,10 +95,6 @@ with_fx :level, amp: 1.0 do
 
       with_transpose(12) do
 
-        with_synth BASS_SYNTHS[1] do
-          play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
-        end
-
         if repeat_times.hook(:time) == 2
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
           control fx_reverb , room: 0.0, mix: 0.5
@@ -117,6 +113,10 @@ with_fx :level, amp: 1.0 do
           sleep bar/4.0
           control fx_reverb , room: 1.0, mix: 0.9
         else
+
+        with_synth BASS_SYNTHS[1] do
+          play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
+        end
 
           4.times{
               sync :half

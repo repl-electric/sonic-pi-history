@@ -67,9 +67,9 @@ live_loop :cam1 do |idx|
   puts "1π=- #{@cam1_smoothed_score}  π=-"
 
   if(@cam1_smoothed_score < score && score > 0.0)
-#    @cam1_smoothed_score -= score/5.0
+    @cam1_smoothed_score -= score/5.0
   elsif(@cam1_smoothed_score > score && score > 0.0)
- #   @cam1_smoothed_score += score/5.0
+    @cam1_smoothed_score += score/5.0
   end
 
   if(@cam1_smoothed_score > 0.2)

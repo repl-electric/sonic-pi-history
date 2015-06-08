@@ -20,7 +20,7 @@ end
 camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
-timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
+@timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
 
 #POWER OF CHANGE
 
@@ -139,6 +139,8 @@ end
 
 live_loop :cam3 do |time|
   APEG_LIFE = {release: 0.1, attack: 0.01} 
+
+  @timeline.tick(:moving_forward_in_time_and_space)
 
   with_fx :level, amp: 1.0 do
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

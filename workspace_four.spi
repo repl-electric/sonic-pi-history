@@ -163,18 +163,6 @@ live_loop :cam3 do
 end
 
 live_loop :texture do
-  with_fx :level, amp: 0.0 do
-    sync :whole
-    with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
-      with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
-        with_synth(:pnoise){play chords_for(find_scale_root(0), :major_pentatonic).tick, amp: 0.4, attack: bar*4.0, release: bar*4.0}
-      end
-      sleep bar*8
-    end
-  end
-end
-
-live_loop :texture do
   with_fx :level, amp: 0.2 do
     with_fx :reverb, room: 1.0 do
       with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do

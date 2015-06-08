@@ -129,7 +129,7 @@ with_fx :level, amp: 1.0 do
 end
 end
 
-live_loop :cam3 do; with_fx :level, amp: 0.0 do
+live_loop :cam3 do; with_fx :level, amp: 1.0 do
   1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
     with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do

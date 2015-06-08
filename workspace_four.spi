@@ -83,7 +83,7 @@ with_fx :level, amp: 1.0 do
   repeat_times = (ring 4,4,4,2,4,2)
   (repeat_times.tick(:time)).times {sync :whole} 
   with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
-    with_synth :prophet do
+    with_synth BASS_SYNTHS[0] do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
 
       with_transpose(12) do
@@ -101,7 +101,7 @@ with_fx :level, amp: 1.0 do
           control fx_reverb , room: 1.0, mix: 0.9
         end
 
-        with_synth :supersaw do
+        with_synth BASS_SYNTHS[1] do
           play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
         end
       end

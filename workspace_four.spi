@@ -104,7 +104,6 @@ with_fx :level, amp: 1.0 do
 
           control fx_reverb , room: 0.5, mix: 0.8
           sleep bar/4.0
-
           control fx_reverb , room: 1.0, mix: 0.9
         end
 

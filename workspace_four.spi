@@ -89,7 +89,7 @@ with_fx :level, amp: 1.0 do
       with_transpose(12) do
 
         if repeat_times.hook(:time) == 2
-          sample :misc_rand_noise
+          sample :perc_snap
         else
         end
 

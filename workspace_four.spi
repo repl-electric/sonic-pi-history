@@ -71,7 +71,8 @@ define :smoothed_score do |now, cached|
   end
 end
 
-live_loop :cam1 do |idx|
+live_loop :camera_number_one do |idx|
+  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.tick(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
@@ -80,9 +81,6 @@ live_loop :cam1 do |idx|
   if(@cam1_smoothed_score > 0.1)
     DRUMS_STATE = true
   end
-
-  DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
-
   case @cam1_smoothed_score
   when 0.8..1.0
     DRUMS_LIFE[:kick] = :drum_bass_soft
@@ -136,7 +134,7 @@ end
 BASS_SYNTHS = [:prophet, :beep]
 BASS_REVERB = 0.9
 
-live_loop :cam2 do |cam2_idx|
+live_loop :camera_number_two do |cam2_idx|
   score = @timeline.tick(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
@@ -198,7 +196,7 @@ live_loop :cam2 do |cam2_idx|
   cam2_idx+=1
 end
 
-live_loop :cam3 do
+live_loop :camera_number_three do
   with_fx :level, amp: 1.0 do
     score = @timeline.tick(:moving_forward_in_time_and_space)[2]
     puts "3π=- #{score}  π=-"

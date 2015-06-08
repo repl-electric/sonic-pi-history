@@ -190,11 +190,11 @@ live_loop :camera_number_three do
     APEG_LIFE = {}
     case score
     when 0.0..0.3
-      APEG_LIFE = {release: 0.1, attack: 0.01,   synth: :mod_saw, mod_range: 5}
+      APEG_LIFE = {release: 0.1, attack: 0.01,  synth: :mod_saw, mod_range: 5, amp_factor: 2.0 }
     when 0.3..0.6
-      APEG_LIFE = {release: 0.25, attack: 0.25,  synth: :mod_fm, mod_range: 10}
+      APEG_LIFE = {release: 0.25, attack: 0.25, synth: :mod_fm, mod_range: 10 amp_factor: 2.0}
     when 0.6..1.0
-      APEG_LIFE = {release: 2.0, attack: 0.01,    synth: :beep, mod_range: 12}
+      APEG_LIFE = {release: 2.0, attack: 0.01,  synth: :beep, mod_range: 12, amp_factor: 0.5}
     end
 
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
@@ -211,7 +211,7 @@ live_loop :camera_number_three do
                    scale(find_scale_root(3), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(3), MODE).shuffle, (ring 2,6).tick(:dups1),
                    ).tick
-          play note, release: APEG_LIFE[:release], amp: @cam3_smoothed_score*2, attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
+          play note, release: APEG_LIFE[:release], amp: @cam3_smoothed_score*APEG_LIFE[:amp_factor], attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
         end
       end
     end

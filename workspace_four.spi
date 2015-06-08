@@ -34,6 +34,8 @@ PICK_SCALE = "C"
 MODE = ["minor_pentatonic", "major_pentatonic"][0]
 DRUMS_STATE = true
 
+DRUM_DENSITY = 3
+
 ##
 
 define :chords_for do |root, scale|

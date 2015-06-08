@@ -74,11 +74,11 @@ live_loop :cam1 do |idx|
       with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
         with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
           if DRUMS_STATE
-            sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: (n==1) ? 0.40 : 0.25, start: 0.2
+            sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: (n==1) ? 0.40 : 0.25, start: 0.3
           end
           sleep bar
           if DRUMS_STATE
-            sample (knit SNARE_SAMPLES.tick, 4).tick(:snare_sample), amp: 0.1, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare), start: 0.2
+            sample (knit SNARE_SAMPLES.tick, 4).tick(:snare_sample), amp: 0.1, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare), start: 0.3
           end
         end
       end

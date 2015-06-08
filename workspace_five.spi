@@ -7,3 +7,6 @@ CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
 SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
 SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
+
+
+puts CAMERA_3

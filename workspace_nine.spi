@@ -161,9 +161,9 @@ live_loop :camera3 do
     case @cam3_smoothed_score
     when 0.0..0.3
       APEG = {release: 0.1, attack: 0.01,  synth: :hollow, mod_range: 5, amp_factor: 6.0 }
-    when 0.3..0.6
+    when 0.3..0.7
       APEG = {release: 0.25, attack: 0.25, synth: :hollow, mod_range: 10, amp_factor: 9.0}
-    when 0.6..1.0
+    when 0.7..1.0
       APEG = {release: 2.0, attack: 0.01,  synth: :beep, mod_range: 12, amp_factor: 0.8}
     end
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

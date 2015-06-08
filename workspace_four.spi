@@ -77,7 +77,7 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
-BASS_SYNTHS = [:tri, :prophet].shuffle
+BASS_SYNTHS = [:prophet, :supersaw]
 BASS_REVERB = 0.9
 
 live_loop :cam2 do |cam2_idx|
@@ -85,6 +85,7 @@ with_fx :level, amp: 1.0 do
   @bass_line.tick
   repeat_times = (ring 4,4,4,2,4,2)
   (repeat_times.tick(:time)).times {sync :whole} 
+
   with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
     with_synth BASS_SYNTHS[0] do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
@@ -94,7 +95,6 @@ with_fx :level, amp: 1.0 do
         with_synth BASS_SYNTHS[1] do
           play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
         end
-
 
         if repeat_times.hook(:time) == 2
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
@@ -120,9 +120,7 @@ with_fx :level, amp: 1.0 do
               control fx_reverb, mix: (rrand 0.5, 0.9)
           }
           control fx_reverb, mix: 0.9
-
         end
-
       end
     end
   end

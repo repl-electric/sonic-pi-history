@@ -25,8 +25,8 @@ PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
 DRUM_DENSITY = 4
-#BASS_SYNTHS = [:prophet, :dsaw, :saw, :beep]
-BASS_SYNTHS = [:dsaw, :prophet, :saw]
+BASS_SYNTHS = [:prophet, :dsaw, :beep]
+#BASS_SYNTHS = [:dsaw, :prophet, :saw]
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0

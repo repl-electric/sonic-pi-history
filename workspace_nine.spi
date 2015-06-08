@@ -178,7 +178,7 @@ live_loop :camera3 do
                    scale(find_scale_root(3), MODE).shuffle, (ring 4,4).tick(:dups1),
                    scale(find_scale_root(3), MODE).shuffle, (ring 2,6).tick(:dups1),
                    ).tick
-          play note, release: APEG[:release],  
+          play note, release: APEG[:release], amp: (@cam3_smoothed_score*APEG[:amp_factor]), 
                      attack: APEG[:attack], mod_pulse_width: score, mod_range: APEG[:mod_range]
         end
       end

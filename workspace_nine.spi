@@ -9,33 +9,6 @@ SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
 SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
 PEOPLE_MIN = 0
 PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
-define :linear_map_fn do |x0, x1, y0, y1|
-  lambda{|x|
-    dydx = ((y1 - y0) / ( x1 - x0))
-    dx   = x - x0
-    (y0 + ( dydx * dx))
-  }
-end
-define :chords_for do |root, scale|
-  chords = (0..8).map{|degree| chord_degree(degree+1, root, scale)}
-  (ring *chords)
-end
-define :find_scale_root do |octave|
-  "#{PICK_SCALE}#{octave}"
-end
-define :smoothed_score do |now, cached|
-  r = if(cached < now && now > 0.0)
-    cached += now/5.0
-  elsif(cached > now && now > 0.0)
-    cached -= now/5.0
-  else
-    cached
-  end
-  if r < 0.0
-    r = 0.0
-  end
-  r
-end
 camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
@@ -45,15 +18,14 @@ camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0
 @cam2_smoothed_score ||= nil
 @cam3_smoothed_score ||= nil
 bar = 1.0
-
-
-
 ELECTRIC_SAMPLES = (ring :elec_triangle, :elec_snare, :elec_lo_snare, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_chime, :elec_bong, :elec_twang, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup)
 SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
 PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "Gb"].choose
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
 DRUM_DENSITY = 4
+BASS_SYNTHS = [:dsaw, :prophet, :saw]
+
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0
@@ -64,7 +36,7 @@ live_loop :metronome do
   cue :quarter
   sleep bar/4.0
 end
-live_loop :camera_number_one do |idx|
+live_loop :camera1 do |idx|
   DRUMS_LIFE = {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
@@ -101,9 +73,7 @@ live_loop :camera_number_one do |idx|
         sample :drum_cymbal_closed, amp: 0.1
       end
     end
-
     s1, s2, s3 = DRUMS_LIFE[:perc_samples].tick
-
     density(DRUM_DENSITY) do |n|
       with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
         with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
@@ -120,8 +90,7 @@ live_loop :camera_number_one do |idx|
     idx+=1
   end
 end
-BASS_SYNTHS = [:dsaw, :prophet, :saw]
-live_loop :camera_number_two do |cam2_idx|
+live_loop :camera2 do |cam2_idx|
   score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
@@ -161,7 +130,6 @@ live_loop :camera_number_two do |cam2_idx|
           sleep bar/4.0
           control fx_reverb , room: 1.0, mix: 0.9
         else
-
           with_transpose(12) do
             with_fx :slicer, mix: @cam2_smoothed_score do
             with_fx :pitch_shift do
@@ -170,7 +138,6 @@ live_loop :camera_number_two do |cam2_idx|
               end
             end
             end
-
             4.times{
               sync :half
               control fx_reverb, damp: (rrand 0.0, 1.0)
@@ -182,13 +149,11 @@ live_loop :camera_number_two do |cam2_idx|
   end
   cam2_idx+=1
 end
-
-live_loop :camera_number_three do
-  with_fx :level, amp: 1.0 do
+live_loop :camera3 do
+  with_fx :level, amp: @cam3_smoothed_score do
     score = @timeline.hook(:moving_forward_in_time_and_space)[2]
     @cam3_smoothed_score ||= score
     @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)
-
     puts "3π=- #{@cam3_smoothed_score}  π=-"
     APEG_LIFE = {}
     case score
@@ -216,6 +181,23 @@ live_loop :camera_number_three do
                    ).tick
           play note, release: APEG_LIFE[:release], amp: @cam3_smoothed_score*APEG_LIFE[:amp_factor], attack: APEG_LIFE[:attack], mod_pulse_width: score, mod_range: APEG_LIFE[:mod_range]
         end
+      end
+    end
+  end
+end
+live_loop :texture do
+  with_fx :level, amp: 0.2 do
+    with_fx :reverb, room: 1.0 do
+      with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
+        with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
+          with_synth(:dark_ambience) do
+            play chords_for(find_scale_root(1), MODE).tick, amp: 10.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+          end
+          with_synth(:pnoise) do
+            play chords_for(find_scale_root(0), MODE).tick, amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0
+          end
+        end
+        sleep bar*8
       end
     end
   end

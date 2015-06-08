@@ -91,7 +91,7 @@ with_fx :level, amp: 1.0 do
         if repeat_times.hook(:time) == 2
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.1
         else
-sample :guit_em9
+sample :guit_harmonics9
         end
 
         with_synth :supersaw do

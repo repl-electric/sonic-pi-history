@@ -141,7 +141,7 @@ live_loop :cam2 do |cam2_idx|
 end
 
 live_loop :cam3 do
-  APEG_LIFE = {:release 2.0 :attack: 0.01} 
+  APEG_LIFE = {:release 2.0, :attack: 0.01} 
 
  with_fx :level, amp: 1.0 do
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }

@@ -57,8 +57,6 @@ live_loop :metronome do
   sleep bar/4.0
 end
 
-@bass_line = chords_for(find_scale_root(1), :major).shuffle
-
 live_loop :cam1 do |idx|
   with_fx :level, amp: 0.5 do
     sync :whole
@@ -80,8 +78,9 @@ live_loop :cam1 do |idx|
   end
 end
 
-BASS_SYNTHS = [:prophet, :supersaw]
+BASS_SYNTHS = [:prophet, :tri]
 BASS_REVERB = 0.9
+@bass_line = chords_for(find_scale_root(1), :major).shuffle
 
 live_loop :cam2 do |cam2_idx|
   with_fx :level, amp: 1.0 do

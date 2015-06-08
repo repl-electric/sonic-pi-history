@@ -87,7 +87,7 @@ live_loop :cam1 do |idx|
   end
 end
 
-BASS_SYNTHS = [:prophet, :supersaw]
+BASS_SYNTHS = [:prophet, :beep]
 BASS_REVERB = 0.9
 @bass_line = chords_for(find_scale_root(1), MODE).shuffle
 

@@ -56,6 +56,8 @@ end
 
 @bass_line = chords_for(find_scale_root(1), :major_pentatonic).shuffle
 
+SNARE_SAMPLES = [:elec_snare]
+
 live_loop :cam1 do |idx|
   sync :whole
   kick = [:elec_soft_kick].choose
@@ -75,7 +77,7 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
-BASS_SYNTHS = [:tri, :dsaw].shuffle
+BASS_SYNTHS = [:tri, :prophet].shuffle
 BASS_REVERB = 0.9
 
 live_loop :cam2 do |cam2_idx|

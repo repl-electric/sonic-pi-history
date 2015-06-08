@@ -121,13 +121,12 @@ live_loop :cam2 do |cam2_idx|
             control fx_reverb , room: 1.0, mix: 0.9
           else
 
-        with_transpose(12) do
-
-#            with_fx :distortion do
+          with_transpose(12) do
+            with_fx :distortion do
             with_synth BASS_SYNTHS[1] do              
               play @bass_line.hook[-1], attack: 0.01, amp: 0.5, release: bar*0.3
             end
-#            end
+            end
 
             4.times{
               sync :half

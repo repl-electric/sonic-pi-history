@@ -67,9 +67,7 @@ live_loop :camera_number_one do |idx|
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
   puts "1 -=π #{@cam1_smoothed_score} π=-"
-  if(@cam1_smoothed_score > 0.1)
-    DRUMS_STATE = true
-  end
+  DRUMS_STATE = true if(@cam1_smoothed_score > 0.1)
 
   case @cam1_smoothed_score
   when 0.8..1.0
@@ -91,7 +89,6 @@ live_loop :camera_number_one do |idx|
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
     DRUM_DENSITY = 4
   end
-  DRUM_DENSITY = 8
   with_fx :level, amp: @cam1_smoothed_score*1.0 do
     sync :whole
     @timeline.tick(:moving_forward_in_time_and_space)

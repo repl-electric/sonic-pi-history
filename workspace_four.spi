@@ -66,9 +66,9 @@ live_loop :cam1 do |idx|
   density(4) do
     with_fx (knit :none, 7, :echo, 1).tick, decay: bar do
      with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
-      sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: 0.25
+#      sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: 0.25
       sleep bar
-      sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
+#      sample (knit :elec_snare, 4).tick(:snare_sample), amp: 0.02, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
      end
     end
   end
@@ -116,6 +116,8 @@ end
 end
 
 live_loop :texture do
+  with_fx :level, amp: 0.0 do
+
 sync :whole
 with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 1.5  do
 with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
@@ -124,8 +126,10 @@ end
 sleep bar*8
 end
 end
+end
 
-live_loop :texture do; with_fx :level, amp: 0.0 do
+live_loop :texture do
+ with_fx :level, amp: 0.0 do
   with_fx :reverb, room: 1.0 do
     with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
       with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do

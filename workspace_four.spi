@@ -78,7 +78,7 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
-  kick, perc_samples = nil,nil
+  kick, perc_samples = nil
 
   case @cam1_smoothed_score
   when 0.9..1.0

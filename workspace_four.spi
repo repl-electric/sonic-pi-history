@@ -89,7 +89,7 @@ with_fx :level, amp: 1.0 do
       with_transpose(12) do
 
         if repeat_times.hook(:time) == 2
-          control fx_reverb , room: 0.0
+          control fx_reverb , room: 0.0, mix: 0.5
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.1
           control fx_reverb , room: 1.0
         end

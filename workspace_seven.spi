@@ -1,1 +1,1 @@
-puts SonicPi::Core::RingArray.methods
+puts SonicPi::Core::RingArray.methods.sort

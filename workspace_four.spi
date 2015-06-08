@@ -81,12 +81,10 @@ live_loop :cam1 do |idx|
 
   kick = case @cam1_smoothed_score
   when 0.9..1.0
-   :drum_heavy_kick
+   :elec_hollow_kick
    else
    :elec_soft_kick
   end
-
-  puts kick
 
   with_fx :level, amp: @cam1_smoothed_score do
     sync :whole

@@ -151,7 +151,7 @@ live_loop :cam3 do
 
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
     with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do
-      with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 1.0 do
+      with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: 2.0 do
         with_synth(APEG_LIFE[:synth]) do
           note =  (stretch scale(find_scale_root(1), MODE).shuffle, (ring 6,2).tick(:dups1),
                    scale(find_scale_root(1), MODE).shuffle, (ring 2,6).tick(:dups2),

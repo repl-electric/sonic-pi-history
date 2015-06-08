@@ -80,7 +80,7 @@ live_loop :cam1 do |idx|
   with_fx :level, amp: 0.5 do
     sync :whole
     @sound_time.tick()
-    kick = [:elec_soft_kick, :hollow_kick].choose
+    kick = [:elec_soft_kick, :drum_heavy_kick].choose
 
     if DRUMS_STATE
 

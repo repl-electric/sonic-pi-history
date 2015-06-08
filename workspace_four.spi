@@ -101,7 +101,6 @@ live_loop :cam2 do |cam2_idx|
       with_synth BASS_SYNTHS[0] do
         play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5, cutoff: 80
 
-        with_transpose(12) do
 
           if repeat_times.hook(:time) == 2
             sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.02
@@ -121,6 +120,8 @@ live_loop :cam2 do |cam2_idx|
             sleep bar/4.0
             control fx_reverb , room: 1.0, mix: 0.9
           else
+
+        with_transpose(12) do
 
 #            with_fx :distortion do
             with_synth BASS_SYNTHS[1] do              

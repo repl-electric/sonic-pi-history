@@ -31,10 +31,29 @@ define :smoothed_score do |now, cached|
   else
     cached
   end
-  if cached < 0 
-    cached = 0
+  if cached < 0.0
+    cached = 0.0
   elsif(cached > now)
     cached = now
   end
   cached
 end
+require 'json'
+ROOM_SOURCE = "/Users/josephwilk/Workspace/josephwilk/ruby/bright/data.json"
+ROOM        = JSON.parse(File.read(ROOM_SOURCE))
+CAMERA_1    = ROOM.map{|event| event["people"]["cam_1"]}
+CAMERA_2    = ROOM.map{|event| event["people"]["cam_2"]}
+CAMERA_3    = ROOM.map{|event| event["people"]["cam_3"]}
+SOUND_MAX   = ROOM.map{|event| event["sound"]["max"]}
+SOUND_AVG   = ROOM.map{|event| event["sound"]["avg"]}
+SOUND_MIN   = ROOM.map{|event| event["sound"]["min"]}
+PEOPLE_MIN = 0
+PEOPLE_MAX = (CAMERA_1+CAMERA_2+CAMERA_3).max
+camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+camera3_rate = (CAMERA_3).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
+@timeline = (ring *[camera1_rate, camera2_rate, camera3_rate].transpose)
+@sound_time = (ring SOUND_AVG.map{|p| linear_map_fn(0, 100, 0.0, 1.0).(p)})
+@cam1_smoothed_score ||= nil
+@cam2_smoothed_score ||= nil
+@cam3_smoothed_score ||= nil

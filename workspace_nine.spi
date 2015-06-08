@@ -37,7 +37,7 @@ live_loop :metronome do
 end
 live_loop :camera1 do |idx|
   DRUMS_LIFE = {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: ring( 0.8, 0.8, 0.8, -1.0)}
-  score = @timeline.read(:moving_forward_in_time_and_space)[0]
+  score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
   DRUMS_STATE = true if(@cam1_smoothed_score > 0.1)
@@ -93,7 +93,7 @@ live_loop :camera1 do |idx|
 end
 live_loop :camera2 do |cam2_idx|
   BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
-  score = @timeline.read(:moving_forward_in_time_and_space)[0]
+  score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)
   if(@cam2_smoothed_score > 0.5)
@@ -110,8 +110,8 @@ live_loop :camera2 do |cam2_idx|
     end
     with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
       with_synth BASS_SYNTHS[0] do
-        play @bass_line.read[0..2], attack: 0.01, amp: 0.8, release: bar*4, res: 0.5, cutoff: 60
-        if repeat_times.read(:time) == 2
+        play @bass_line.hook[0..2], attack: 0.01, amp: 0.8, release: bar*4, res: 0.5, cutoff: 60
+        if repeat_times.hook(:time) == 2
           sample ring( :perc_snap, :perc_snap2).tick(:perc), amp: 0.01, beat_stretch: (rrand 0.0,1.0)
           control fx_reverb , room: 0.0, mix: 0.8
           sleep bar/4.0
@@ -133,7 +133,7 @@ live_loop :camera2 do |cam2_idx|
             with_fx :slicer, mix: @cam2_smoothed_score do
               with_fx :pitch_shift do
                 with_synth BASS_SYNTHS[1] do
-                  play @bass_line.read(:bass)[-1], attack: 0.01, amp: 0.5, release: bar*0.3
+                  play @bass_line.hook(:bass)[-1], attack: 0.01, amp: 0.5, release: bar*0.3
                 end
               end
             end
@@ -149,7 +149,7 @@ live_loop :camera2 do |cam2_idx|
   cam2_idx+=1
 end
 live_loop :camera3 do
-  score = @timeline.read(:moving_forward_in_time_and_space)[2]
+  score = @timeline.hook(:moving_forward_in_time_and_space)[2]
   @cam3_smoothed_score ||= score
   @cam3_smoothed_score = smoothed_score(score, @cam3_smoothed_score)
   with_fx :level, amp: @cam3_smoothed_score+0.5 do
@@ -183,7 +183,7 @@ live_loop :camera3 do
   end
 end
 live_loop :room_texture do
-  score = @sound_time.read(:time)
+  score = @sound_time.hook(:time)
   @avg_smoothed ||= score
   @avg_smoothed = smoothed_score(score, @avg_smoothed)
   with_fx :level, amp: @avg_smoothed*0.2 do

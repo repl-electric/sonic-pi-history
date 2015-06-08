@@ -82,16 +82,16 @@ with_fx :level, amp: 1.0 do
   @bass_line.tick
   repeat_times = (ring 4,4,4,2,2)
   (repeat_times.tick(:time)).times {sync :whole} 
-  with_fx(:reverb, room: 1.0, mix: 0.9) do |fx_reverb|
+  with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
     with_synth :prophet do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
 
       with_transpose(12) do
 
         if repeat_times.hook(:time) == 2
-            control fx_reverb , room: 0.0
+          control fx_reverb , room: 0.0
           sample (ring :perc_snap, :perc_snap2).tick(:perc), amp: 0.1
-            control fx_reverb , room: 1.0
+          control fx_reverb , room: 1.0
         end
 
         with_synth :supersaw do

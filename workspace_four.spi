@@ -118,9 +118,11 @@ end
 
 BASS_SYNTHS = [:prophet, :beep]
 BASS_REVERB = 0.9
-@bass_line = chords_for(find_scale_root(2), MODE).shuffle
 
 live_loop :cam2 do |cam2_idx|
+@bass_line = chords_for(find_scale_root(2), MODE).shuffle
+
+
   score = @timeline.tick(:moving_forward_in_time_and_space)[0]
   @cam2_smoothed_score ||= score
   @cam2_smoothed_score = smoothed_score(score, @cam2_smoothed_score)

@@ -87,7 +87,7 @@ live_loop :cam1 do |idx|
     perc_samples = ELECTRIC_SAMPLES[0..8]
    else
     kick = :elec_soft_kick
-    perc_samples = ELECTRIC_SAMPLES[8..12]
+    perc_samples = ELECTRIC_SAMPLES[8..16]
   end
 
   with_fx :level, amp: @cam1_smoothed_score do

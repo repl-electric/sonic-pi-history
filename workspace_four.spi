@@ -61,7 +61,7 @@ end
 
 live_loop :cam1 do |idx|
   score = @timeline.tick(:moving_forward_in_time_and_space)
-  @cam1_smoothed_score || = score
+  @cam1_smoothed_score ||= score
 
   if(@cam1_smoothed_score < score)
     @cam1_smoothed_score -= score/10.0

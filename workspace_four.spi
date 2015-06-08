@@ -105,6 +105,13 @@ with_fx :level, amp: 1.0 do
           control fx_reverb , room: 0.5, mix: 0.8
           sleep bar/4.0
           control fx_reverb , room: 1.0, mix: 0.9
+        else
+
+          4.times{
+ sleep bar/4.0
+ control fx_reverb, damp: (rrand 1.0)
+}
+
         end
 
         with_synth BASS_SYNTHS[1] do

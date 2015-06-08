@@ -75,7 +75,6 @@ live_loop :cam1 do |idx|
   idx+=1
 end
 
-BASS_SYNTHS
 
 live_loop :cam2 do |cam2_idx|
   @bass_line.tick

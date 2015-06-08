@@ -93,6 +93,12 @@ live_loop :cam1 do |idx|
     kick_start = 0.0
     perc_samples = ELECTRIC_SAMPLES.shuffle[0..8]
     beat_stretching = (ring 0.8, 0.8, 0.8, 1.0)
+  when 0.0..0.2
+    kick_start = 0.1
+    kick = :elec_soft_kick
+    kick_start = 0.1
+    perc_samples = ELECTRIC_SAMPLES[0..8]
+    beat_stretching = (ring 0.8, 0.8, 0.8, -1.0)
    else
     kick = :elec_soft_kick
     kick_start = 0.1

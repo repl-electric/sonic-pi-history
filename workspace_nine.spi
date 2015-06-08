@@ -63,6 +63,6 @@ end
 
 live_loop :poop do
   sync :whole
-  puts  "LOCAL TIME: " + @timeline.hook(:moving_forward_in_time_and_space)
+  puts  "LOCAL TIME: #{@timeline.hook(:moving_forward_in_time_and_space)}"
 
 end

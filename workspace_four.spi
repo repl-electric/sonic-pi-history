@@ -79,11 +79,15 @@ live_loop :cam1 do |idx|
     DRUMS_STATE = true
   end
 
-  kick = case @cam1_smoothed_score
+  kick, perc_samples = nil,nil
+
+  case @cam1_smoothed_score
   when 0.9..1.0
-   :elec_hollow_kick
+   kick = :elec_hollow_kick
+    perc_samples = ELECTRIC_SAMPLES[0..8]
    else
-   :elec_soft_kick
+    kick = :elec_soft_kick
+    perc_samples = ELECTRIC_SAMPLES[0..8]
   end
 
   with_fx :level, amp: @cam1_smoothed_score do
@@ -94,7 +98,7 @@ live_loop :cam1 do |idx|
     sample kick, beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*2, start: 0.0, finish: 1.0
     end
 
-    s1, s2, s3 = ELECTRIC_SAMPLES[0..8].tick
+    s1, s2, s3 = perc_samples.tick
 
     density(DRUM_DENSITY) do |n|
       with_fx (knit :none, 7, :echo, 1).tick, decay: bar do

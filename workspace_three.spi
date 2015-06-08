@@ -6,6 +6,6 @@
 #end
 
 
-  sample Mountain["kick",0], amp: 1.0+rrand(0.0,0.2), rate: -1.8
+  sample Mountain["kick",0], amp: 1.0+rrand(0.0,0.2), rate: -2.0
 
 #      sample Mountain[/kick/i,4], amp: 1.8, rate: 1.0

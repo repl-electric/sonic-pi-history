@@ -31,10 +31,10 @@ define :smoothed_score do |now, cached|
   else
     cached
   end
-  if r < 0 
+  if r < 0.0
     r = 0.0
   end
-  cached
+  r
 end
 camera1_rate = (CAMERA_1).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}
 camera2_rate = (CAMERA_2).map{|p| linear_map_fn(PEOPLE_MIN, PEOPLE_MAX, 0.0, 1.0).(p)}

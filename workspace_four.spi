@@ -81,9 +81,8 @@ live_loop :cam1 do |idx|
   when 0.8..1.0
    kick = :drum_heavy_kick
    else
-  kick = :elec_soft_kick
-   end
-
+   kick = :elec_soft_kick
+  end
 
   with_fx :level, amp: 0.5 do
     sync :whole

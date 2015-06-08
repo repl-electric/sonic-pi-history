@@ -73,7 +73,7 @@ end
 
 live_loop :camera_number_one do |idx|
   DRUMS_LIFE= {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
-  score = @timeline.tick(:moving_forward_in_time_and_space)[0]
+  score = @timeline.hook(:moving_forward_in_time_and_space)[0]
   @cam1_smoothed_score ||= score
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
   puts "1π=- #{@cam1_smoothed_score}  π=-"
@@ -104,7 +104,7 @@ live_loop :camera_number_one do |idx|
 
   with_fx :level, amp: @cam1_smoothed_score*0.1 do
     sync :whole
-    @sound_time.tick()
+    @cam1_smoothed_score.tick(:moving_forward_in_time_and_space)
     if DRUMS_STATE
       sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*1.5, start: DRUMS_LIFE[:kick_start], finish: 1.0
       if @cam1_smoothed_score >= 0.8

@@ -87,6 +87,12 @@ with_fx :level, amp: 1.0 do
       play @bass_line.hook[0..2], attack: 0.01, amp: 0.3, release: bar*4, res: 0.5
 
       with_transpose(12) do
+
+        if repeat_times.hook(:time) == 2
+          sample :misc_rand_noise
+        else
+        end
+
         with_synth :supersaw do
           play @bass_line.hook[-1], attack: 0.01, amp: 0.2, release: bar*0.3
         end

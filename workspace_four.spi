@@ -106,7 +106,7 @@ live_loop :cam1 do |idx|
     @sound_time.tick()
     if DRUMS_STATE
     sample DRUMS_LIFE[:kick], beat_stretch: (ring 1.0, 0.9, 0.99, 0.9).tick, amp: @cam1_smoothed_score*2, start: DRUMS_LIFE[:kick_start], finish: 1.0
-    sample :elec_cymbal
+    sample :drum_cymbal_pedal
 
     end
 

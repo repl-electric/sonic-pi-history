@@ -77,7 +77,7 @@ live_loop :cam1 do |idx|
   @cam1_smoothed_score = smoothed_score(score, @cam1_smoothed_score)
   puts "1π=- #{@cam1_smoothed_score}  π=-"
 
-  @cam1_smoothed_score = 1.0
+  @cam1_smoothed_score = 0.9
 
   if(@cam1_smoothed_score > 0.1)
     DRUMS_STATE = true

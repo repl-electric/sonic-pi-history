@@ -186,7 +186,7 @@ live_loop :camera3 do
   end
 end
 live_loop :texture do
-  with_fx :level, amp: @sound_time.hook*0.1 do
+  with_fx :level, amp: @sound_time.hook()*0.1 do
     with_fx :reverb, room: 1.0 do
       with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
         with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do

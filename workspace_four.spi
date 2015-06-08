@@ -54,8 +54,7 @@ live_loop :metronome do
   sleep bar/4.0
 end
 
-@bass_line = chords_for(find_scale_root(1), :major_pentatonic).shuffle
-
+@bass_line = chords_for(find_scale_root(1), :major).shuffle
 SNARE_SAMPLES = [:sn_zome, :sn_dolf, :sn_dub, :elec_snare].shuffle
 
 live_loop :cam1 do |idx|

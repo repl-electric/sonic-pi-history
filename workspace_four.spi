@@ -100,7 +100,7 @@ live_loop :cam1 do |idx|
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, -1.0)
   end
 
-    DRUM_DENSITY =+ 2
+  DRUM_DENSITY =+ 8
 
 
   with_fx :level, amp: @cam1_smoothed_score*1.0 do

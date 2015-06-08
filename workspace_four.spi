@@ -96,7 +96,7 @@ live_loop :cam1 do |idx|
   when 0.2..0.5
     kick_start = 0.1
     kick = :elec_soft_kick
-    kick_start = 0.1
+    kick_start = 0.0
     perc_samples = ELECTRIC_SAMPLES[0..8]
     beat_stretching = (ring 0.8, 0.8, 0.8, -1.0)
    else

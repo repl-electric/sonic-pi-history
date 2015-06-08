@@ -70,7 +70,7 @@ live_loop :cam1 do |idx|
         with_fx :bitcrusher, bit: (ring 4,5,6,7,8,9,10).tick(:bits) do
           #sample (knit s1, 4, s2, 2, s3, 3).tick, beat_stretch: (ring 1.0, 0.5, 0.25, -1.0).tick, amp: (n==1) ? 0.40 : 0.25
           sleep bar
-          sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: 0.2, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
+          sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: 0.9, beat_stretch: (knit 1.0, 2, 0.5, 2).tick(:snare)
         end
       end
     end

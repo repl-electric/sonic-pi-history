@@ -202,7 +202,7 @@ live_loop :camera_number_three do
     end
 
     1.times{ sync (knit :half, 2, :quarter, 2).tick(:time) }
-    @timeline.tick(:moving_forward_in_time_and_space)[2]
+    @timeline.tick(:moving_forward_in_time_and_space)
     with_fx :pitch_shift, pitch_dis: 0.0001, time_dis: 0.01, window_size: 1.5  do
       with_fx (knit :echo, 2, :reverb, 2).tick(:room), decay: score*8, pre_amp: 0.3 do
         with_synth(APEG_LIFE[:synth]) do

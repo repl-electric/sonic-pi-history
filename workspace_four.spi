@@ -125,7 +125,7 @@ sleep bar*8
 end
 end
 
-live_loop :texture do
+live_loop :texture do; with_fx :amp 0.0 do;
   with_fx :reverb, room: 1.0 do
     with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
       with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick, smooth: 1.0 do
@@ -139,4 +139,5 @@ live_loop :texture do
       sleep bar*8
     end
   end
+end
 end

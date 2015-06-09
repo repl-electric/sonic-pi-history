@@ -1,2 +1,1 @@
- play note, release: APEG[:release], amp: APEG[:amp_factor],
-            attack: APEG[:attack], mod_pulse_width: 1.0, mod_range: APEG[:mod_range]
+ play note, mod_pulse_width: 1.0

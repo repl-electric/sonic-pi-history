@@ -153,7 +153,7 @@ live_loop :camera3 do
   score = @timeline.hook(:inc_time)[2]
   @cam3_smoothed ||= score
   @cam3_smoothed = smoothed_score(score, @cam3_smoothed)
-  with_fx :level, amp: @cam3_smoothed+0.5 do
+  with_fx :level, amp: @cam3_smoothed*0.0 do
     APEG = {}
     case @cam3_smoothed
     when 0.0..0.3

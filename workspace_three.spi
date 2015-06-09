@@ -4,7 +4,7 @@ loop do
 s1, s2, s3 = *ELECTRIC_SAMPLES[0..8].tick(:beat)
 
            perc_pat = knit( s1, 3,nil,1, s2, 2, nil,1, s3, 2)
-              sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: ring( 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
+              sample perc_pat.tick(:beat), pan: ring( 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
    sleep 1/10.0
 end
             

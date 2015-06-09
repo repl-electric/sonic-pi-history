@@ -101,7 +101,7 @@ puts @cam2_smoothed
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle
   else
     BASS_SYNTHS = [:dsaw, :prophet, :saw] 
-    @bass_line = (chords_for(find_scale_root(1)+chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2), 'sus4'), chord(find_scale_root(2), 'M')])
+    @bass_line = (chords_for(find_scale_root(1), MODE)+chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2), 'sus4'), chord(find_scale_root(2), 'M')])
   end
   with_fx :level, amp: @cam2_smoothed+0.1 do
     @bass_line.tick(:bass)

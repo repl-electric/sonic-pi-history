@@ -35,7 +35,7 @@ live_loop :metronome do
   sleep bar/4.0
 end
 live_loop :camera1 do |idx|
-  DRUMS_LIFE = {kick_start: 0.01, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
+  DRUMS_LIFE = {:fx_crush: true, kick_start: 0.01, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:inc_time)[0]
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
@@ -43,7 +43,7 @@ live_loop :camera1 do |idx|
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false 
   case @cam1_smoothed
   when 0.8..1.0
-    DRUMS_LIFE[:kick_start] = 0.0
+    DRUMS_LIFE[:fx_crush] = false
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[8..16]
     DRUMS_LIFE[:beat_stretching] = (ring 1.0, 0.5, 0.25, -1.0)
     DRUM_DENSITY = 8
@@ -51,13 +51,11 @@ live_loop :camera1 do |idx|
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, 1.0)
     DRUM_DENSITY = 4
-    DRUMS_LIFE[:kick_start] = 0.0
   when 0.2..0.5
     DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[0..8].reverse
     DRUMS_LIFE[:beat_stretching] = (ring 0.2, 0.1, 0.1, -1.0)
     DRUM_DENSITY = 4
   else
-    DRUMS_LIFE[:kick_start] = 0.0
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.2, 0.1, 0.2, 0.3)
     DRUM_DENSITY = 4
@@ -73,7 +71,7 @@ live_loop :camera1 do |idx|
     density(DRUM_DENSITY) do |n|
       with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
         with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do
-          with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits), mix: 1.0 do
+          with_fx (?:bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
             if DRUMS_STATE
               perc_pat = (knit s1, 3,nil,1, s2, 2, nil,1, s3, 2)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: (ring 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)

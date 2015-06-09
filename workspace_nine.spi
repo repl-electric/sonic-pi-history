@@ -75,7 +75,7 @@ live_loop :camera1 do |idx|
     density(DRUM_DENSITY) do |n|
       with_fx :lpf, cutoff: 80, mix: 0 do
         with_fx knit( :none, 7, :echo, 1).tick(:beat), decay: bar do
-          with_fx :bitcrusher, bit: (ring 14).tick(:bits) do
+          with_fx :bitcrusher, bit: (ring 20).tick(:bits) do
             if DRUMS_STATE
               perc_pat = knit( s1, 4, s2, 2, s3, 3)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: ring( 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)

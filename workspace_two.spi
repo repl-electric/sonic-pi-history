@@ -97,6 +97,7 @@ live_loop :camera2 do |cam2_idx|
   if(@cam2_smoothed > 0.7)
     @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
   elsif(@cam2_smoothed < 0.15)
+    BASS_SYNTHS =  [:beep, :tri]
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle
   else
     @bass_line = (chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2), 'sus4'), chord(find_scale_root(2), 'M')])

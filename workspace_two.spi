@@ -75,7 +75,7 @@ live_loop :camera1 do |idx|
       with_fx(:echo){
       with_synth(:tri){play_pattern_timed (chords_for(find_scale_root(4), MODE).shuffle.choose), 
                             [@cam1_smoothed]
-                           [release: 0.2, attack: 0.2, amp: 2.0]
+                            [release: 0.2, attack: 0.2, amp: 0.5]
                        
 }}
     end

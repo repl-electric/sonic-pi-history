@@ -39,7 +39,7 @@ live_loop :camera1 do |idx|
   score = @timeline.hook(:inc_time)[0]
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
-  @cam1_smoothed = 1.7
+  @cam1_smoothed = 1.0
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false 
   case @cam1_smoothed
   when 0.8..1.0

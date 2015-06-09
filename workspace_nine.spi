@@ -41,7 +41,7 @@ live_loop :camera1 do |idx|
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false 
-  @cam1_smoothed = 0.5
+  @cam1_smoothed = 0.9
   case @cam1_smoothed
   when 0.8..1.0
     DRUMS_LIFE[:kick_start] = 0.0

@@ -95,7 +95,7 @@ puts @cam2_smoothed
   case @cam2_smoothed
   when  0.6..1.0
     BASS_SYNTHS = [:dsaw, :prophet] 
-    @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
+    @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus2'),chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
   when 0.0..0.15
     BASS_SYNTHS = [:fm, :beep] 
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle

@@ -63,7 +63,7 @@ live_loop :camera1 do |idx|
     @timeline.tick(:inc_time)
     if DRUMS_STATE
       sample DRUMS_LIFE[:kick], rate: beat_stretch(DRUMS_LIFE[:kick],(ring 1.0, 0.9, 0.99, 0.9).tick(:beat)), amp: @cam1_smoothed*4.0, start: DRUMS_LIFE[:kick_start]
-      with_fx(:bitcrusher, mix:0.1){with_fx(:echo, decay: 8){sample((knit :drum_cymbal_soft,1,nil,7).tick(:s), amp: 0.1)}} if @cam1_smoothed >= 0.8
+      with_fx(:bitcrusher, mix:0.5){with_fx(:echo, decay: 8){sample((knit :drum_cymbal_soft,1,nil,7).tick(:s), amp: 0.1)}} if @cam1_smoothed >= 0.8
     end
     s1, s2, s3 = *DRUMS_LIFE[:perc_samples].tick(:beat)
     density(DRUM_DENSITY) do |n|

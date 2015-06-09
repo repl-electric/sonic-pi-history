@@ -1,4 +1,4 @@
-ELECTRIC_SAMPLES = (ring :elec_triangle, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_wood, :elec_pop, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup)
+ELECTRIC_SAMPLES = (ring :elec_triangle, :elec_hi_snare, :elec_mid_snare, :elec_cymbal, :elec_soft_kick, :elec_filt_snare, :elec_fuzz_tom, :elec_wood, :elec_beep, :elec_blip, :elec_blip2, :elec_ping, :elec_bell, :elec_flip, :elec_tick, :elec_hollow_kick, :elec_twip, :elec_plip, :elec_blup)
 
 loop do
 s1, s2, s3 = *(ELECTRIC_SAMPLES[0..8]).tick(:beat)

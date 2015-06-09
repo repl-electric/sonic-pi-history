@@ -24,7 +24,6 @@ SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
 PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "Gb"].choose
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
-BASS_SYNTHS =  [:dsaw, :prophet, :saw]
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0
@@ -90,6 +89,7 @@ live_loop :camera1 do |idx|
   end
 end
 live_loop :camera2 do |cam2_idx|
+  BASS_SYNTHS =  [:dsaw, :prophet, :saw]
   BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
   score = @timeline.hook(:inc_time)[0]
   @cam2_smoothed ||= score

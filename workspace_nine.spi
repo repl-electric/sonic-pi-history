@@ -159,7 +159,7 @@ live_loop :camera3 do
     APEG = {}
     case @cam3_smoothed
     when 0.0..0.3
-      APEG = {release: 0.1, attack: 0.01,  synth: :fm, mod_range: 5, amp_factor: 6.0 }
+      APEG = {release: 0.1, attack: 0.01,  synth: :hollow, mod_range: 5, amp_factor: 6.0 }
     when 0.3..0.7
       APEG = {release: 0.25, attack: 0.25, synth: :hollow, mod_range: 10, amp_factor: 9.0}
     when 0.7..1.0

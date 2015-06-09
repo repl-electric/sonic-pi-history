@@ -194,7 +194,7 @@ live_loop :room_texture do
       with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do
         with_fx :slicer, phase: (ring bar*1, bar*4,bar*8).tick(:slice), smooth: 1.0 do
           with_synth(:dark_ambience) do
-            play chords_for(find_scale_root(2), MODE).tick(:slice), amp: @avg_smoothed*40.0, attack: bar*4.0, release: bar*4.0, sustain: bar
+            play chords_for(find_scale_root(2), MODE).tick(:slice), amp: @avg_smoothed*30.0, attack: bar*4.0, release: bar*4.0, sustain: bar
           end
           with_synth(:pnoise) do
             play chords_for(find_scale_root(0), MODE).tick(:slice), amp: 0.5, attack: bar*4.0, release: bar*2.0, sustain: bar/2.0

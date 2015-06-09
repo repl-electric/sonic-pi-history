@@ -70,7 +70,7 @@ live_loop :camera1 do |idx|
       with_fx(:echo, decay: 8){sample((knit :drum_cymbal_soft,1,nil,7).tick(:s), amp: 0.05)} if @cam1_smoothed >= 0.8
     end
     DRUMS_LIFE[:perc_samples].tick(:beat)
-    s1, s2, s3 = *DRUMS_LIFE[:perc_samples]
+    s1, s2, s3 = *DRUMS_LIFE[:perc_samples].tick(:beat)
     density(DRUM_DENSITY) do |n|
       with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
         with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do

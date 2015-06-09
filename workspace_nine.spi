@@ -121,15 +121,12 @@ live_loop :camera2 do |cam2_idx|
           control fx_reverb , room: 0.0, mix: 0.8
           sleep bar/4.0
           sample perc_samples.tick(:perc), amp: 0.01
-
           control fx_reverb , room: 0.1, mix: 0.9
           sleep bar/4.0
           sample perc_samples.tick(:perc), amp: 0.01
-
           control fx_reverb , room: 0.2, mix: 0.8
           sleep bar/4.0
           sample perc_samples.tick(:perc), amp: 0.02
-
           control fx_reverb , room: 0.5, mix: 0.7
           sleep bar/4.0
           control fx_reverb , room: 1.0, mix: 0.9

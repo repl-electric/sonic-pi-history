@@ -72,7 +72,7 @@ live_loop :camera1 do |idx|
     density(DRUM_DENSITY) do |n|
       with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
         with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do
-          with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
+          with_fx :bitcrusher, bits: (ring *(8..14).to_a).tick(:bits) do
             if DRUMS_STATE
               perc_pat = (knit s1, 4, s2, 2, s3, 3)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: (ring 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
@@ -98,7 +98,7 @@ live_loop :camera2 do |cam2_idx|
     BASS_SYNTHS = [:dsaw, :prophet] 
     @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
   when 0.0..0.15
-    BASS_SYNTHS = [:fm,:beep] 
+    BASS_SYNTHS = [:fm, :beep] 
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle
   else
     BASS_SYNTHS = [:dsaw, :prophet, :saw] 

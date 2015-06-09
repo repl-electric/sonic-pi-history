@@ -94,14 +94,14 @@ live_loop :camera2 do |cam2_idx|
   case @cam2_smoothed
   when  0.6..1.0
     BASS_SYNTHS = [:dsaw, :prophet] 
-    @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus2'),chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
+    @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3),'sus2'),chord(find_scale_root(3),'sus4'), chord(find_scale_root(3),'M')])
   when 0.0..0.15
     BASS_SYNTHS = [:fm, :beep] 
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle
   else
     BASS_SYNTHS = [:dsaw, :prophet, :saw] 
     @bass_line = (chords_for(find_scale_root(1), MODE)+
-                  chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2), 'sus2'),chord(find_scale_root(2), 'sus4'),chord(find_scale_root(2), 'M')])
+                  chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2),'sus2'),chord(find_scale_root(2),'sus4'),chord(find_scale_root(2),'M')])
   end
   with_fx :level, amp: @cam2_smoothed+0.1 do
     @bass_line.tick(:bass)
@@ -158,9 +158,9 @@ live_loop :camera3 do
     APEG = {}
     case @cam3_smoothed
     when 0.0..0.3
-      APEG = {release: 0.1, attack: 0.01,  synth: :hollow, amp_factor: 7.0 }
+      APEG = {release: 0.1, attack: 0.01,  synth: :hollow, amp_factor: 8.0 }
     when 0.3..0.7
-      APEG = {release: 0.25, attack: 0.25, synth: :hollow, amp_factor: 9.0}
+      APEG = {release: 0.25, attack: 0.25, synth: :hollow, amp_factor: 10.0}
     when 0.7..1.0
       APEG = {release: 2.0, attack: 0.01,  synth: :beep, amp_factor: 0.8}
     end

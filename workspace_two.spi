@@ -73,7 +73,7 @@ live_loop :camera1 do |idx|
 
    density(DRUM_DENSITY) do 
       with_fx(:echo){
-      with_synth(:prophet){play chord(find_scale_root(4), 'sus7'), decay: 2.0, attack: 0.2, amp: 0.5, cutoff: 80}}
+      with_synth(:prophet){play chord(find_scale_root(4), '7sus4'), decay: 2.0, attack: 0.2, amp: 0.5, cutoff: 80}}
     end
 
    idx+=1

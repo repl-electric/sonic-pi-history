@@ -75,7 +75,7 @@ live_loop :camera1 do |idx|
       with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
         with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do
           with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
-            play :A1, amp: 2
+            play :A4, amp: 2
             if DRUMS_STATE
               perc_pat = (knit s1, 4, s2, 2, s3, 2, nil, 1)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.55 : 0.25, pan: (ring 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)

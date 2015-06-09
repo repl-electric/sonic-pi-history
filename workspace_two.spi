@@ -92,7 +92,7 @@ live_loop :camera2 do |cam2_idx|
   @cam2_smoothed = smoothed_score(score, @cam2_smoothed)
   BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
   case @cam2_smoothed
-  when  0.7..1.0
+  when  0.6..1.0
     BASS_SYNTHS = [:dsaw, :prophet] 
     @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
   when 0.0..0.15

@@ -40,7 +40,7 @@ live_loop :camera1 do |idx|
   score = @timeline.hook(:inc_time)[0]
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
-  @cam1_smoothed = 0.2
+  @cam1_smoothed = 0.5
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false
   case @cam1_smoothed
   when 0.8..1.0
@@ -77,7 +77,7 @@ live_loop :camera1 do |idx|
         with_fx knit( :none, 7, :echo, 1).tick(:beat), decay: bar do
           with_fx :bitcrusher, bit: (ring 1).tick(:bits), mix: 0.0 do
             if DRUMS_STATE
-              perc_pat = knit( s1, 4, s2, 2, s3, 3)
+              perc_pat = knit(s1, 4, s2, 2, s3, 3)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: ring( 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
             end
             sleep bar

@@ -72,7 +72,8 @@ live_loop :camera1 do |idx|
     s1, s2, s3 = *DRUMS_LIFE[:perc_samples].tick(:beat)
 
    density(DRUM_DENSITY) do 
-      with_synth(:hollow){play chords_for(find_scale_root(5), MODE).shuffle.choose, release: 0.5, attack: 0.2, amp: 1.0}
+      with_fx(:echo){
+      with_synth(:hollow){play chords_for(find_scale_root(5), MODE).shuffle.choose, release: 0.5, attack: 0.2, amp: 1.0}}
       sleep bar
     end
 

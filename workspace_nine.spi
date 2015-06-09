@@ -73,7 +73,7 @@ live_loop :camera1 do |idx|
     end
     s1, s2, s3 = *(DRUMS_LIFE[:perc_samples].tick(:beat))
     density(DRUM_DENSITY) do |n|
-      with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
+      with_fx :lpf, cutoff: 80, mix: 0 do
         with_fx knit( :none, 7, :echo, 1).tick(:beat), decay: bar do
           with_fx :bitcrusher, bit: ring( *(4..10).to_a).tick(:bits) do
             if DRUMS_STATE

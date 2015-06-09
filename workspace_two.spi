@@ -73,7 +73,7 @@ live_loop :camera1 do |idx|
     density(DRUM_DENSITY) do |n|
       with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
         with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do
-#          with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
+          with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
             if DRUMS_STATE
               perc_pat = (knit s1, 4, s2, 2, s3, 2, nil, 1)
               sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.25, pan: (ring 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
@@ -83,7 +83,7 @@ live_loop :camera1 do |idx|
               sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: @cam1_smoothed*0.2, rate: beat_stretch(SNARE_SAMPLES[0], (knit 1.0, 2, 0.5, 2).tick(:snare))
             end
           end
- #       end
+        end
       end
     end
     idx+=1

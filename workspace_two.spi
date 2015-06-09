@@ -73,7 +73,7 @@ live_loop :camera1 do |idx|
 
    density(DRUM_DENSITY) do 
       with_fx(:echo){
-      with_synth(:hollow){play chords_for(find_scale_root(5), MODE).shuffle.choose, release: 0.5, attack: 0.2, amp: 1.0}}
+      with_synth(:hollow){play chords_for(find_scale_root(5), MODE).shuffle.choose, release: 0.5, attack: 0.2, amp: 2.0}}
       sleep bar
     end
 

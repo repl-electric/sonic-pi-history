@@ -102,7 +102,7 @@ live_loop :camera2 do |cam2_idx|
   else
     @bass_line = (chords_for(find_scale_root(2), MODE)+[chord(find_scale_root(2), 'sus4')]).shuffle
   end
-  with_fx :level, amp: @cam2_smoothed+0.1 do
+  with_fx :level, amp: @cam2_smoothed*0.0 do
     @bass_line.tick(:bass)
     repeat_times = (ring 4,4,4,2,4,2)
     (repeat_times.tick(:time)).times do

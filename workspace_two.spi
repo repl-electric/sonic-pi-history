@@ -24,6 +24,7 @@ SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
 PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "Gb"].choose
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
+BASS_SYNTHS =  [:dsaw, :prophet, :saw]
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0
@@ -35,11 +36,10 @@ live_loop :metronome do
   sleep bar/4.0
 end
 live_loop :camera1 do |idx|
-  DRUMS_LIFE = {kick_start: 0.1, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
+  DRUMS_LIFE = {kick_start: 0.001, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:inc_time)[0]
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
-  @cam1_smoothed = 1.0
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false 
   case @cam1_smoothed
   when 0.8..1.0
@@ -51,7 +51,6 @@ live_loop :camera1 do |idx|
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, 1.0)
     DRUM_DENSITY = 4
-    DRUMS_LIFE[:kick_start] = 0.0
   when 0.2..0.5
     DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[0..8].reverse
     DRUMS_LIFE[:beat_stretching] = (ring 0.2, 0.1, 0.1, -1.0)
@@ -62,6 +61,7 @@ live_loop :camera1 do |idx|
     DRUMS_LIFE[:beat_stretching] = (ring 0.2, 0.1, 0.2, 0.3)
     DRUM_DENSITY = 4
   end
+  puts @cam1_smoothed
   with_fx :level, amp: @cam1_smoothed*0.9 do
     sync :whole
     @timeline.tick(:inc_time)
@@ -69,30 +69,36 @@ live_loop :camera1 do |idx|
       sample DRUMS_LIFE[:kick], rate: beat_stretch(DRUMS_LIFE[:kick],(ring 1.0, 0.9, 0.99, 0.9).tick(:beat)), amp: @cam1_smoothed*4.0, start: DRUMS_LIFE[:kick_start]
       with_fx(:echo, decay: 8){sample((knit :drum_cymbal_soft,1,nil,7).tick(:s), amp: 0.05)} if @cam1_smoothed >= 0.8
     end
-    s1, s2, s3 = *DRUMS_LIFE[:perc_samples].tick(:beat)
-
-   density(DRUM_DENSITY) do 
-      with_fx(:echo){
-      with_synth(:prophet){play chord(find_scale_root(2), 'sus2'), decay: 7.0, attack: 0.2, amp: 2.5, cutoff: 60}}
+    s1, s2, s3 = *(DRUMS_LIFE[:perc_samples].tick(:beat))
+    density(DRUM_DENSITY) do |n|
+      with_fx :lpf, cutoff: 80, mix: 1-@cam1_smoothed do
+        with_fx (knit :none, 7, :echo, 1).tick(:beat), decay: bar do
+          with_fx :bitcrusher, bits: (ring *(8..10).to_a).tick(:bits) do
+            if DRUMS_STATE
+              perc_pat = (knit s1, 4, s2, 2, s3, 3)
+              sample perc_pat.tick(:beat), amp: (n==1) ? 0.50 : 0.35, pan: (ring 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
+            end
+            sleep bar
+            if DRUMS_STATE
+              sample (knit SNARE_SAMPLES[0], 4).tick(:snare_sample), amp: @cam1_smoothed*0.2, rate: beat_stretch(SNARE_SAMPLES[0], (knit 1.0, 2, 0.5, 2).tick(:snare))
+            end
+          end
+        end
+      end
     end
-
-   idx+=1
+    idx+=1
   end
 end
 live_loop :camera2 do |cam2_idx|
+  BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
   score = @timeline.hook(:inc_time)[0]
   @cam2_smoothed ||= score
   @cam2_smoothed = smoothed_score(score, @cam2_smoothed)
-  BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
-  case @cam2_smoothed
-  when  0.7..1.0
-    BASS_SYNTHS = [:dsaw, :prophet] 
+  if(@cam2_smoothed > 0.7)
     @bass_line = (chords_for(find_scale_root(3), MODE).shuffle+[chord(find_scale_root(3), 'sus4'), chord(find_scale_root(3), 'M')])
-  when 0.0..0.15
-    BASS_SYNTHS = [:fm, :beep] 
+  elsif(@cam2_smoothed < 0.15)
     @bass_line = (chords_for(find_scale_root(1), MODE)).shuffle
   else
-    BASS_SYNTHS = [:dsaw, :prophet, :saw] 
     @bass_line = (chords_for(find_scale_root(2), MODE).shuffle+[chord(find_scale_root(2), 'sus4'), chord(find_scale_root(2), 'M')])
   end
   with_fx :level, amp: @cam2_smoothed+0.1 do

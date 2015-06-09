@@ -1,1 +1,1 @@
-(ring *(4..10).to_a)
+puts ring( *(4..10).to_a)

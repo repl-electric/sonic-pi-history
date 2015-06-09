@@ -82,7 +82,7 @@ live_loop :camera1 do |idx|
             end
             sleep bar
             if DRUMS_STATE
-              sample knit(SNARE_SAMPLES[4], 4).tick(:snare_sample), amp: @cam1_smoothed*0.2, rate: beat_stretch(SNARE_SAMPLES[0], knit( 1.0, 2, 0.5, 2).tick(:snare))
+              sample knit(SNARE_SAMPLES[4], 4).tick(:snare_sample), amp: @cam1_smoothed*1.2, rate: beat_stretch(SNARE_SAMPLES[0], knit( 1.0, 2, 0.5, 2).tick(:snare))
             end
           end
         end

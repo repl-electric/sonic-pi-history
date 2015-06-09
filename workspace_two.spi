@@ -109,7 +109,7 @@ live_loop :camera2 do |cam2_idx|
       sync :whole
       @timeline.tick(:inc_time)
     end
-    with_fx(:reverb, room: cap(0.8+@cam2_smoothed,1.0), mix: 0.9, room_lag: 1.0) do |fx_reverb|
+    with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
       with_synth BASS_SYNTHS[0] do
         play @bass_line.ring.hook(:bass)[0..2], attack: 0.01, amp: 0.8, release: bar*4, res: 0.5, cutoff: 60
         if repeat_times.hook(:time) == 2

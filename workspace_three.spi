@@ -5,6 +5,6 @@ s1, s2, s3 = *ELECTRIC_SAMPLES[0..8].tick(:beat)
 
  perc_pat = knit( s1, 4, s2, 2, s3, 3)
  sample perc_pat.tick(:beat), amp: 1.0, pan: ring( 0.25,-0.25).tick(:pan), rate: beat_stretch(perc_pat.hook(:beat),0.1)
-sleep 1/2.0
+sleep 1/8.0
 end
             

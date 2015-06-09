@@ -187,6 +187,8 @@ live_loop :room_texture do
   score = @sound_time.hook(:time)
   @avg_smoothed ||= score
   @avg_smoothed = smoothed_score(score, @avg_smoothed)
+@avg_smoothed = 1.0
+ 
   with_fx :level, amp: @avg_smoothed*0.2 do
     with_fx :reverb, room: 1.0 do
       with_fx :pitch_shift, pitch_dis: 0.01, time_dis: 0.1, window_size: 0.5 do

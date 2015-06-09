@@ -74,7 +74,7 @@ live_loop :camera1 do |idx|
    density(DRUM_DENSITY) do 
       with_fx(:echo){
       with_synth(:tri){play_pattern_timed (chords_for(find_scale_root(4), MODE).shuffle.choose), 
-                            @cam1_smoothed
+                            [@cam1_smoothed]
                            [release: 0.2, attack: 0.2, amp: 2.0]
                        
 }}

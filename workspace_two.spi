@@ -91,6 +91,7 @@ live_loop :camera2 do |cam2_idx|
   @cam2_smoothed ||= score
   @cam2_smoothed = smoothed_score(score, @cam2_smoothed)
   BASS_SYNTHS = BASS_SYNTHS.shuffle if (cam2_idx % 120 == 0)
+puts @cam2_smoothed
   case @cam2_smoothed
   when  0.6..1.0
     BASS_SYNTHS = [:dsaw, :prophet] 

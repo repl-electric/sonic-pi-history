@@ -66,7 +66,7 @@ live_loop :camera1 do |idx|
     sync :whole
     @timeline.tick(:inc_time)
     if DRUMS_STATE
-    with_synth(:dark_ambience){play chords_for(find_scale_root(3), MODE).tick(:d)[-1], release: 2}
+    with_synth(:dark_ambience){play chords_for(find_scale_root(3), MODE).shuffle.tick(:d)[-1], release: 2}
     sample DRUMS_LIFE[:kick], rate: beat_stretch(DRUMS_LIFE[:kick],(ring 1.0, 0.9, 0.99, 0.9).tick(:beat)), amp: @cam1_smoothed*4.0, start: DRUMS_LIFE[:kick_start]
     with_fx(:echo, decay: 8){sample((knit :drum_cymbal_soft,1,nil,7).tick(:s), amp: 0.05)} if @cam1_smoothed >= 0.8
     end

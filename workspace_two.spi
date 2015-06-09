@@ -50,12 +50,12 @@ live_loop :camera1 do |idx|
   when 0.5..0.8
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES.shuffle[0..8]
     DRUMS_LIFE[:beat_stretching] = (ring 0.8, 0.8, 0.8, 1.0)
-    DRUM_DENSITY = 4
+    DRUM_DENSITY = 2
     DRUMS_LIFE[:kick_start] = 0.0
   when 0.2..0.5
     DRUMS_LIFE[:perc_samples]    = ELECTRIC_SAMPLES[0..8].reverse
     DRUMS_LIFE[:beat_stretching] = (ring 0.2, 0.1, 0.1, -1.0)
-    DRUM_DENSITY = 4
+    DRUM_DENSITY = 2
   else
     DRUMS_LIFE[:kick_start] = 0.0
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[0..8]

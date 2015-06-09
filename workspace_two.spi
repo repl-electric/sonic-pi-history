@@ -24,7 +24,7 @@ SNARE_SAMPLES =    (ring :sn_zome, :sn_dolf, :sn_dub, :elec_snare)
 PICK_SCALE = ["Fs", "B", "E", "A", "D", "G", "C", "F", "Bb", "Eb", "Ab", "Db", "Gb"].choose
 MODE = ["minor_pentatonic", "major_pentatonic"].choose
 DRUMS_STATE = true
-BASS_SYNTHS =  [:dsaw,  :tri]
+BASS_SYNTHS =  [:beep, :tri]
 live_loop :metronome do
   cue :whole;cue :half;cue :quarter
   sleep bar/4.0

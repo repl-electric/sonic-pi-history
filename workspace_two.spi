@@ -35,7 +35,7 @@ live_loop :metronome do
   sleep bar/4.0
 end
 live_loop :camera1 do |idx|
-  DRUMS_LIFE = {fx_crush: true, kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
+  DRUMS_LIFE = {kick_start: 0.0, kick: :elec_soft_kick, perc_samples: ELECTRIC_SAMPLES[0..8], beat_stretching: (ring 0.8, 0.8, 0.8, -1.0)}
   score = @timeline.hook(:inc_time)[0]
   @cam1_smoothed ||= score
   @cam1_smoothed = smoothed_score(score, @cam1_smoothed)
@@ -43,7 +43,6 @@ live_loop :camera1 do |idx|
   DRUMS_STATE = (@cam1_smoothed > 0.1) ? true : false 
   case @cam1_smoothed
   when 0.8..1.0
-    DRUMS_LIFE[:fx_crush] = false
     DRUMS_LIFE[:perc_samples] = ELECTRIC_SAMPLES[8..16]
     DRUMS_LIFE[:beat_stretching] = (ring 1.0, 0.5, 0.25, -1.0)
     DRUM_DENSITY = 8

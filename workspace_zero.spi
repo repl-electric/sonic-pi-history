@@ -124,8 +124,8 @@ live_loop :drifty do; with_fx :level, amp: 5.0 do
 ).tick(:asb)
 
 
-      n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
-                   chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)
+      #n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
+      #             chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)
 
       with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
       sleep bar

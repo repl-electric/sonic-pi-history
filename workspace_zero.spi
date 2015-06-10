@@ -195,7 +195,7 @@ end;end;end
 live_loop :drifty do; with_fx :level, amp: 15.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
-  with_fx :reverb, room: 1.0, mix: 0.0, damp: 0.1 do |fx_r|
+  with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
       n = (knit 
 
@@ -203,15 +203,11 @@ live_loop :drifty do; with_fx :level, amp: 15.0 do
 #          (stretch chord(:Cs2, '11'),1),8
 
         (stretch chord(:Fs3, 'sus4'),1), 24,
-        _, 24,
         (stretch invert_chord(chord(:B3, 'M'),-1),1), 24,
-        _, 24,
         (stretch invert_chord(chord(:B3, 'M'),0),1), 24,
-        _, 24,
         (stretch invert_chord(chord(:Cs3, :major7),2),0), 24,
         _, 24,
         (stretch chord(:Fs3, 'M'),1), 24,
-        _, 24,
 
 
 #        (stretch invert_chord(chord(:Fs3, '7sus4'),-1),1), 2,

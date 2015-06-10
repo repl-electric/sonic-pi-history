@@ -69,7 +69,7 @@ comment do
 end
 end; end
 
-live_loop :beats do;with_fx :level, amp: 0.5 do
+live_loop :beats do;with_fx :level, amp: 0.0 do
     sync :foo
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
@@ -203,7 +203,6 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
 
         (stretch chord(:Cs4, 'sus4'),1, chord(:Cs4, 'M'),1,  chord(:Es3, 'sus4'),1, chord(:Es3, 'M'),1),31,
         (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1),1
-
 
 ).tick(:asb)
       with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)

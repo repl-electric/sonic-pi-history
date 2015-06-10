@@ -1,1 +1,1 @@
-puts (stretch chord(:Fs3, 'sus4'),1).map{|a| note_info(a)}
+puts (stretch chord(:Fs3, '7sus4'),1).map{|a| note_info(a)}

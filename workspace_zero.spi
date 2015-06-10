@@ -191,7 +191,7 @@ with_transpose((ring 12).tick(:toack)){
 
 end;end;end
 
-live_loop :drifty do; with_fx :level, amp: 0.2 do
+live_loop :drifty do; with_fx :level, amp: 0.3 do
   1.times {sync :foo}
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do

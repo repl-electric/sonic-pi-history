@@ -1,9 +1,0 @@
-puts (stretch chord(:As3, 'minor'),1).map{|a| note_info(a)}
-
-puts chord_degree(3, :Fs3, 'major').map{|a| note_info(a)}
-
-
-
-#As Cs Es
-
-#As Cs  F4

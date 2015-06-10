@@ -200,7 +200,7 @@ live_loop :drifty do; with_fx :level, amp: 10.0 do
       n = (knit 
         (stretch chord(:Fs3, '7sus4'),1), 32,
         (stretch invert_chord(chord(:As3, 'minor'),-1),1), 32,
-        (stretch invert_chord(chord(:B3, 'M'),-1),1), 32
+        (stretch invert_chord(chord(:B4, 'M'),-1),1), 32
 
 #        (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1), 2,
 #        (stretch chord(:B3, 'sus4'),1, chord(:B3, 'M'),1,  chord(:Ds3, 'sus4'),1, chord(:Ds3, 'M'),1), 1,

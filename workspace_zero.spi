@@ -135,7 +135,7 @@ end
 end
 end
 
-live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do
+live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01
     4.times{sync :foo}

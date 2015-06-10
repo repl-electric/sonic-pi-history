@@ -106,15 +106,15 @@ live_loop :drifty do; with_fx :level, amp: 15.0 do
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
       n = (knit 
         (stretch chord(:Fs3, 'sus4'),1), 24,
-         _, 24,
+         _, 16,
         (stretch invert_chord(chord(:B3, 'M'),-1),1), 24,
-         _, 24,
+         _, 16,
         (stretch invert_chord(chord(:B3, 'M'),0),1), 24,
-         _, 24,
+         _, 16,
         (stretch invert_chord(chord(:Cs3, "major7"),2),2), 24,
-         _, 24,
+         _, 16,
         (stretch chord(:Fs3, 'M'),1), 24,
-         _, 24,
+         _, 16,
 
 
 #        (stretch invert_chord(chord(:Fs3, '7sus4'),-1),1), 2,

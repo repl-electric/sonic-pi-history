@@ -24,7 +24,6 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   n = play (knit :Fs4, 7, _, 1,
                  :As4, 7, _, 1).tick, amp: 0.3
 
-  with_synth(:beep){play chord(:Cs4, "M7"), attack: 2.0}
 
   if dice(32) == 1
      with_fx :pan, pan: Math.sin(vt*13)/1.5 do
@@ -35,6 +34,11 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   sleep bar/4.0
   control n, note: (knit :As4, 4, :B4, 4,
                          :Cs4, 4, :B4, 4).tick
+
+(knit :As4, 4, :B4, 4, :Cs4, 4, :B4, 4)
+  with_synth(:beep){play chord(:Cs4, "M7"), attack: 2.0, amp: 0.1}
+
+
   sleep bar/2.0
 end;end;end;end 
 

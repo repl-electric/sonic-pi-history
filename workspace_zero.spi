@@ -35,8 +35,9 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   control n, note: (knit :As4, 4, :B4, 4,
                          :Cs4, 4, :B4, 4).tick
 
-(knit :As4, 4, :B4, 4, :Cs4, 4, :B4, 4)
+if (knit :As4, 4, :B4, 4, :Cs4, 4, :B4, 4).hook == :B4
   with_synth(:beep){play chord(:Cs4, "M7"), attack: 2.0, amp: 0.1}
+end
 
 
   sleep bar/2.0

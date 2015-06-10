@@ -37,7 +37,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   sleep bar/2.0
 end;end;end;end 
 
-live_loop :bass do |m_idx|;with_fx :level, amp: 0.0 do
+live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)
     when 0,4,2,6

@@ -191,6 +191,28 @@ with_transpose((ring 12).tick(:toack)){
 
 end;end;end
 
+
+
+live_loop :drifty do; with_fx :level, amp: 1.0 do
+  1.times {sync :foo}
+  density(@polyrhythm.sort.last) do
+  with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
+    with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
+      n = (knit (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B3, 'M'),1), 7,
+                (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B4, 'M'),1),1).tick(:asb)
+      with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+      sleep bar
+    end
+  end
+end
+end
+end
+
+
+
+
+
+
 live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01

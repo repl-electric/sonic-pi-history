@@ -106,7 +106,7 @@ live_loop :drifty do; with_fx :level, amp: 5.0 do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
       n = (knit 
-        (stretch invert_chord(chord(:Es3, 'm'), 0),1), 20,
+        (stretch invert_chord(chord(:Es3,:dim), 0),1), 20,
          _, 4,
         (stretch invert_chord(chord(:Gs3, 'm'), 0),1), 20,
          _, 4,

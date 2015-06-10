@@ -100,6 +100,7 @@ sleep bar
 end;end;end
 
 #(knit :As4, 4, :B4, 4,:Cs4, 4, :B4, 4).tick
+#(ring "Fs4", "As4", "Cs4")
 live_loop :drifty do; with_fx :level, amp: 5.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do

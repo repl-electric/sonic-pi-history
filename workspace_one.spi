@@ -101,6 +101,18 @@ end;end;end
 
 #(knit :As4, 4, :B4, 4,:Cs4, 4, :B4, 4).tick
 #(ring "Fs4", "As4", "Cs4")
+#(knit :Fs4, 7, _, 1,:As4, 7, _, 1)
+
+  if dice(32) == 1
+     with_fx :pan, pan: Math.sin(vt*13)/1.5 do
+     with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
+       sample Mountain[/bow/i, /f#/i, 0],amp: 0.4 
+  end;end;end
+
+  sleep bar/4.0
+  control n, note: (knit :As4, 4, :B4, 4,
+                         :Cs4, 4, :B4, 4).tick
+  sleep bar/2.0
 live_loop :drifty do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do

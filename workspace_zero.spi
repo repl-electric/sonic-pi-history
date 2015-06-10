@@ -202,9 +202,10 @@ live_loop :drifty do; with_fx :level, amp: 3.0 do
         (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1), 1,
         (stretch chord(:B3, 'sus4'),1, chord(:B3, 'M'),1,  chord(:Ds3, 'sus4'),1, chord(:Ds3, 'M'),1), 1,
 
+        (stretch chord(:Cs4, 'sus4'),1, chord(:Cs4, 'M'),1,  chord(:Es3, 'sus4'),1, chord(:Es3, 'M'),1),30,
+        (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1),1,
+        (stretch chord(:Gs3, 'sus4'),1, chord(:Gs3, 'M'),1,  chord(:B3, 'sus4'),1, chord(:Cs3, 'M'),1),30,
 
-        (stretch chord(:Cs4, 'sus4'),1, chord(:Cs4, 'M'),1,  chord(:Es3, 'sus4'),1, chord(:Es3, 'M'),1),31,
-        (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1),1
 
 ).tick(:asb)
       with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)

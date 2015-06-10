@@ -101,7 +101,7 @@ end;end;end
 
 #(knit :As4, 4, :B4, 4,:Cs4, 4, :B4, 4).tick
 #(ring "Fs4", "As4", "Cs4")
-live_loop :drifty do; with_fx :level, amp: 5.0 do
+live_loop :drifty do; with_fx :level, amp: 1.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

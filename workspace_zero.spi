@@ -101,7 +101,7 @@ end;end;end
 #with_fx :reverb do
 #with_fx :distortion do
 #with_fx :slicer, phase: bar*8.0,smooth: 5.0, mix: 0.0 do
-live_loop :bar, autocue: false do; with_fx :level, amp: 1.0 do
+live_loop :bar, autocue: false do; with_fx :level, amp: 0.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
      sample Mountain["HarshClash"], start: rrand(0.0,0.02), amp: 0.55

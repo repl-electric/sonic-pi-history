@@ -101,6 +101,7 @@ end;end;end
 
 live_loop :drifty do; with_fx :level, amp: 5.0 do
   1.times {sync :foo}
+  density(@polyrhythm.sort.last) do
    sample Mountain["HarshClash"], start: rrand(0.0,0.02), amp: 0.55
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do

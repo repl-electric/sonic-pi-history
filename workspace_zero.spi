@@ -202,8 +202,8 @@ live_loop :drifty do; with_fx :level, amp: 5.0 do
         (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1), 2,
         (stretch chord(:B3, 'sus4'),1, chord(:B3, 'M'),1,  chord(:Ds3, 'sus4'),1, chord(:Ds3, 'M'),1), 1,
 
-        (stretch chord(:Cs4, 'sus4'),1, chord(:Cs4, 'M'),1,  chord(:Es3, 'sus4'),1, chord(:Es3, 'M'),1),30,
-        (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1),1,
+        (stretch chord(:Cs4, 'sus4'),1, chord(:Cs4, 'M'),1,  chord(:Es3, 'sus4'),1, chord(:Es3, 'M'),1),29,
+        (stretch chord(:As3, 'sus4'),1, chord(:As3, 'M'),1,  chord(:Cs3, 'sus4'),1, chord(:Cs3, 'M'),1),2,
         (stretch chord(:Gs3, 'sus4'),1, chord(:Gs3, 'minor'),1,  chord(:B3, 'sus4'),1, chord(:Cs3, 'M'),1),1,
 
 

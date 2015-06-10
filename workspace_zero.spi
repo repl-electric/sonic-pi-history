@@ -34,12 +34,6 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   sleep bar/4.0
   control n, note: (knit :As4, 4, :B4, 4,
                          :Cs4, 4, :B4, 4).tick
-
-if (knit :As4, 4, :B4, 4, :Cs4, 4, :B4, 4).hook == :B4
-  with_synth(:beep){play chord(:Cs4, "M7"), attack: 2.0, amp: 0.1}
-end
-
-
   sleep bar/2.0
 end;end;end;end 
 
@@ -173,10 +167,10 @@ n = notes.tick(:asdasdasdasd)
 #(knit *(1..18).to_a.zip([18].cycle)).tick(:asdasdasdasd).times { n = notes.tick(:asdasd) }
 
 #n = (degree (knit 3,8, 4,8, 5,2).tick(:flicker), :Fs3, :major)
-n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B3, 'M'),1)
+#n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B3, 'M'),1)
 
-n = (knit (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B3, 'M'),1), 31,
-          (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B5, 'M'),1),1).tick(:asb)
+#n = (knit (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B3, 'M'),1), 31,
+#          (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, 'M'),1, chord(:As3, 'sus4'),1, chord(:B5, 'M'),1),1).tick(:asb)
 
 
 #n = stretch(chord(:Fs3,'13').shuffle,18).tick(:a)

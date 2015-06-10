@@ -192,7 +192,7 @@ with_transpose((ring 12).tick(:toack)){
 
 end;end;end
 
-live_loop :drifty do; with_fx :level, amp: 2.0 do
+live_loop :drifty do; with_fx :level, amp: 5.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

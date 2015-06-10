@@ -99,7 +99,7 @@ end
 sleep bar
 end;end;end
 
-live_loop :drifty do; with_fx :level, amp: 15.0 do
+live_loop :drifty do; with_fx :level, amp: 10.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

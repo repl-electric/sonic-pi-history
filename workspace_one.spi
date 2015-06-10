@@ -113,7 +113,7 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
          _, 4,
         (stretch invert_chord(chord(:B3,:M), 0),1), 20,     #2
          _, 4,
-        (stretch invert_chord(chord(:Es4,:dim), 0),1), 20,     #2
+        (stretch invert_chord(chord(:Es4,:dim), -1),1), 20,     #2
          _, 4,
         (stretch invert_chord(chord(:Fs3,:M), 0),1), 20,     #2
          _, 4,

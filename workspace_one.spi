@@ -188,7 +188,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
       play n, amp: 0.5, release: (knit bar,3).tick(:Bass), attack: 0.01, cutoff: 60
     end
 
-    3.times{sync :foo}
+    1.times{sync :foo}
 
     with_transpose(0) do
     with_synth :beep do

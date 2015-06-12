@@ -17,7 +17,7 @@ debut,fin = 0.1, 0.3
 lib = Mountain
 
 3.times{
-sample lib[/noise/i][n], start: debut, finish: fin
+sample lib[/vinyl/i][n], start: debut, finish: fin
 sleep bar/2.0
 }
 sample lib[/noise/i][n], start: debut, finish: fin

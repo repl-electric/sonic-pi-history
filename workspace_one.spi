@@ -63,7 +63,7 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
    case (m_idx%16)
      when 0..16
-       sample (knit Frag[/hat/i, 2],1, Frag[/hat/i, 1], 2).tick
+       sample (knit Frag[/hat/i, 1],1, Frag[/hat/i, 1], 7).tick
    end
 end
 m_idx+=1

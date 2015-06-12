@@ -24,7 +24,8 @@ with_fx :distortion, amp: 0.3, mix: 0.3 do
 with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   n = play (knit :Fs4, 7, _, 1,
-                 :As4, 7, _, 1).tick, amp: 0.3
+#                 :As4, 7, _, 1
+).tick, amp: 0.3
 
 
   if dice(32) == 1

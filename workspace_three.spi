@@ -1,5 +1,0 @@
-play chord_degree(7, :Fs3, :major,5).map{|a| note_info(a).midi_string}
-
-#F4 Ab4 B4 Eb4
-
-#Es gs b4

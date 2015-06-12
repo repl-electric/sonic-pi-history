@@ -8,10 +8,10 @@ live_loop :crackels do
 # sample Ambi[/crackle/i,0]
 
 # sample Ether[/noise/i][6..9].tick
- sample Ether[/noise/i][10..14].tick
+# sample Ether[/noise/i][10..14].tick
 
 
-#sample Ether[/noise/i][10..13].tick
+sample Ether[/noise/i][21..27].tick
 
 
 # sample Ether[/noise/i][10..14].tick

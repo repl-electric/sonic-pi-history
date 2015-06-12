@@ -188,7 +188,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
 
     (ring 1,0).tick(:double).times do
     with_synth [:prophet, :growl][0] do
-      play n, amp: 0.5, release: (knit bar,3).tick(:Bass), attack: 0.2, cutoff: 60
+      play n, amp: 0.5, release: (knit bar,3).tick(:Bass), attack: 0.2, cutoff: 90
     end
     end
 

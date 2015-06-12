@@ -1,1 +1,7 @@
-sample Frag[/hat/i,0]
+
+
+live_loop :demo do
+
+sample Frag[/hat/i,0].tick
+sleep bar
+end

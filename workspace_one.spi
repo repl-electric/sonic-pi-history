@@ -67,7 +67,7 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
      when 8,16
       sample Frag[/snap/i,0]
   
-    when 1..16
+    else
        sample Frag[/snap/i].tick
    end
 #   sleep bar

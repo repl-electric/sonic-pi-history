@@ -12,5 +12,6 @@ end
 
 
 live_loop :more do
+sync :demo
 sample_and_sleep Frag[/snaps/i].tick
 end

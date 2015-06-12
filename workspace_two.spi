@@ -22,6 +22,5 @@ sample Frag[/coil/i, /f#/i, 3], rate: -1.0, amp: 0.0
 end
 
 live_loop :coils2 do
-16.times{sync :demo}
-sample Frag[/atmos/i, /f#m/i].tick
+sample_and_sleep Frag[/atmos/i, /f#m/i].tick
 end

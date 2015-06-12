@@ -1,4 +1,9 @@
-puts Frag[/coil/i,/f#/i].count
+bar = 1.0
+live_loop :crackels do
+
+ sample Ambi[/crackle/]
+ sleep bar
 
 
-sample   sample Frag[/coil/i,/f#/i,1], amp: 1.0
+
+end

@@ -1,0 +1,26 @@
+
+
+live_loop :demo do
+sample Frag[/hat/i].tick(), amp: 0
+sleep 0.25
+end
+
+live_loop :kick do
+sample Frag[/kick/i,9], amp: 0
+sleep 1
+end
+
+
+live_loop :more do
+sync :demo
+sample_and_sleep Frag[/snaps/i].tick, amp: 0.0
+end
+
+live_loop :coils do
+16.times{sync :demo}
+sample Frag[/coil/i, /f#/i, 3], rate: -1.0, amp: 0.0
+end
+
+live_loop :coils2 do
+sample_and_sleep Frag[/atmos/i, /f#m/i].tick
+end

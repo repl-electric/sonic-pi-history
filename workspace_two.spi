@@ -22,4 +22,5 @@ sample Frag[/coil/i, /f#/i, 3], rate: -1.0
 end
 
 live_loop :coils2 do
+sleep 1
 end

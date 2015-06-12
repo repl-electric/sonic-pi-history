@@ -151,6 +151,8 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
       #n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
       #             chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)
 
+puts "#{(n||[]).map{|a|note_info(a).midi_string}} == #{(ring "Fs4", "B4", "Eb4")}"
+
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   sample Ether[/highat/].tick(:high), amp: 10
 end

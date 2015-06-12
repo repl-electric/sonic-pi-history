@@ -21,7 +21,7 @@ live_loop :coils do
 sample Frag[/coil/i, /f#/i, 2], rate: -1.0
 end
 
-live_loop :coils do
+live_loop :coils2 do
 16.times{sync :demo}
 sample Frag[/coil/i, /f#/i, 0]
 end

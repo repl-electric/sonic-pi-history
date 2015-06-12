@@ -68,6 +68,5 @@ end
 end
 
 live_loop :tin2 do
- sync :crackels
- x = tin Mountain[/stick/i,4], "x x x - - - - - - - - - - - - -"
+ x = tin Mountain[/stick/i,4], "x x x x - - - - - - - - - - - -"
 end

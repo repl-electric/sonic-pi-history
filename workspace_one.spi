@@ -166,7 +166,7 @@ end
 end
 live_loop :bithit do
   sync :Bhit
- sample Ether[/noise/].tick(:high), amp: 10
+ sample Mountain[/noise/].tick(:high), amp: 10
 end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do

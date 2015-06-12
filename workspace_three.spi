@@ -29,7 +29,7 @@ end
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
 }
-sleep bar/4.0
+
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
 sample lib[/vinyl/i], start: debut, finish: fin

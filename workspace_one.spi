@@ -186,7 +186,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     n = notes.tick(:a)
     with_transpose(0) do
     with_synth :beep do
-      play n, amp: 0.9, release: 2*bar, attack: 0.01, cutoff: 60
+      play n, amp: 1.0, release: 2*bar, attack: 0.01, cutoff: 60
     end;end
     #use_synth :prophet
     with_transpose(12) do

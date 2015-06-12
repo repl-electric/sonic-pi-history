@@ -20,7 +20,7 @@ lib = Mountain
 sample lib[/vinly/i][n], start: debut, finish: fin
 sleep bar/2.0
 }
-sample lib[/noise/i][n], start: debut, finish: fin
+sample lib[/vinly/i][n], start: debut, finish: fin
 sleep bar/4.0
-sample lib[/noise/i][n], start: debut, finish: fin
+sample lib[/vinly/i][n], start: debut, finish: fin
 end

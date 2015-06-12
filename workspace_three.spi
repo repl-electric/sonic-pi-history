@@ -66,6 +66,6 @@ end
 live_loop :tin2 do
  sync :crackels
 
-tin "x - - - - - - - - - - - - - - -"
+tin Mountain[/stick/i,4],"x - - - - - - - - - - - - - - -"
 
 end

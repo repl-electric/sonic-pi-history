@@ -165,7 +165,7 @@ end
 end
 end
 live_loop :bithit do
-  2.times{sync :bhit}
+  1.times{sync :bhit}
   sample Ether[/hat/i,4], amp: 0.1
 end
 

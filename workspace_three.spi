@@ -67,5 +67,5 @@ end
 end
 
 #live_loop :crackels do; run Mountain[/microperc/i,7],bar, "x x x x x x x x x x x x x x x x" ;end
-live_loop :tin2 do; sync :crackels; run Mountain[/microperc/i,6],bar, "x x x x x x x x x x x x x x x x", pan: 0.55 ;end
+live_loop :tin2 do; sync :crackels; run Mountain[/microperc/i,6],bar, "x x x x x x x x x x x x x x x x", pan: 1.55 ;end
 live_loop :tin3 do; sync :crackels; run Mountain[/impact/i,2],bar,    "- - - - - x - - - - - - - - x -", rate: -1 ;end

@@ -2,7 +2,7 @@ bar = 1.0
 
 live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
-   #density(4) do
+   density(3) do
    case (m_idx%16)+1
      when 8,16
       with_fx((ring :echo, :none).tick(:echo)){sample Frag[/snap/i,6]}

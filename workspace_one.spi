@@ -21,7 +21,7 @@ live_loop :bells do
 with_fx :distortion, amp: 0.3, mix: 0.3 do
 with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
-  n = play (knit :Fs4, 7, _, 1,
+  n = play (knit #:Fs4, 7, _, 1,
                  :As4, 7, _, 1).tick, amp: 0.3
 
 
@@ -120,7 +120,8 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
   #      (stretch invert_chord(chord(:As3,:m), -1),1), 12,    #3 -1
 
  #      _,24,
-       _,24,
+        _,24, 
+
         (stretch invert_chord(chord(:Ds4,:m), -2),1), 20,    #6 -1
          _, 4,
         (stretch invert_chord(chord(:Es3,:dim), 0),1), 20,  #7

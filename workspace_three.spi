@@ -25,25 +25,25 @@ sleep bar/4.0
 
 sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/2.0 
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep  bar/8.0 +  bar/8.0
 #
 
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
 
 
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 
 sleep bar/2.0
 
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 end

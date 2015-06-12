@@ -7,7 +7,7 @@ live_loop :crackels do
 
 # sample Ambi[/crackle/i,0]
 
- sample Ether[/noise/i, soft_noise].tick
+ sample Ether[/noise/i ]soft_noise.tick
  sleep bar/2.0
 
 

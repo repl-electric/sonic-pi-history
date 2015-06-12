@@ -18,6 +18,6 @@ end
 
 
 live_loop :coils do
-sync :demo
+2.times{sync :demo}
 sample_and_sleep Frag[/coil/i, /f#/i, 0]
 end

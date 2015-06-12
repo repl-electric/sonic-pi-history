@@ -13,6 +13,8 @@ live_loop :crackels do
 n=5
 debut,fin = 0.0, 0.008
 lib = Mountain
+
+comment do
 3.times{
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
@@ -21,12 +23,13 @@ sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/4.0
 sample lib[/vinyl/i], start: debut, finish: fin
 
+end
+
 2.times{
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
 }
 sleep bar/4.0
-
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/4.0
 sample lib[/vinyl/i], start: debut, finish: fin

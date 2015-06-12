@@ -19,6 +19,6 @@ end
 
 live_loop :digi do
 sync :test
-sample Scape[/digital/i].tick
+sample_and_sleep Scape[/digital/i].tick
 sleep 1.0
 end

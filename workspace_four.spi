@@ -17,8 +17,8 @@ sleep 0.25
 end
 
 
-live_loop :kick2 do
+live_loop :digi do
 sync :test
-sample Scape[/kick/i].tick
+sample Scape[/digital/i].tick
 sleep 1.0
 end

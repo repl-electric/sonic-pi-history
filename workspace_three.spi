@@ -12,6 +12,6 @@ end
 
 
 live_loop :low do
-sample Eraser[/low/i].tick
+sample Eraser[/fx/i].tick
 sleep 1
 end

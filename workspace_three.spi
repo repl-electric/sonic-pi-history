@@ -52,6 +52,6 @@ live_loop :tin do
  sync :crackels
 12.times{
  sleep bar/4.0
- sample Ether[/perc/i,9]
+ sample Mountain[/perc/i,9]
 }
 end

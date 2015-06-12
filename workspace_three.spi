@@ -56,7 +56,7 @@ live_loop :tin do
 end
 
 def tin(s, bar, pat)
-loop do
+12.times do
  p = (ring *pat.split("\s"))
  if p.hook == "x"
   sample s

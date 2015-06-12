@@ -166,7 +166,9 @@ end
 end
 live_loop :bithit do
   9.times{sync :bhit}
-  sample Frag[/coil/i,/f#/i,1], amp: 0.5
+  with_fx (ring :none, :echo).tick do
+    sample Frag[/coil/i,/f#/i,1], amp: 0.5
+  end
 end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do

@@ -68,7 +68,7 @@ end
 
 live_loop :tin2 do
  sync :crackels
- run Mountain[/microperc/i,0],bar, "x x x x x x x x x x x x x x x x"
+ run Mountain[/microperc/i,3],bar, "x x x x x x x x x x x x x x x x"
 end
 
 live_loop :tin3 do

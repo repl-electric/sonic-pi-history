@@ -50,5 +50,6 @@ end
 
 live_loop :tin do
  sync :crackels
+ sleep bar/4.0
  sample Mountain[/tin/,0]
 end

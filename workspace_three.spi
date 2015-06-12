@@ -1,4 +1,4 @@
 puts Frag[/coil/i,/f#/i].count
 
 
-sample   sample Frag[/coil/i,/f#/i,2], amp: 1.0
+sample   sample Frag[/coil/i,/f#/i,3], amp: 1.0

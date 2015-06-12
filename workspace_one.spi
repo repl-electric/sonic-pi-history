@@ -70,7 +70,7 @@ comment do
 end
 end; end
 
-live_loop :beats do;with_fx :level, amp: 0.2 do
+live_loop :beats do;with_fx :level, amp: 0.5 do
     sync :foo
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)

@@ -1,7 +1,7 @@
 bar = 1.0
 
 
-soft_noise
+soft_noise = []
 
 live_loop :crackels do
 

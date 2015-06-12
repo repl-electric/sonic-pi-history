@@ -55,7 +55,7 @@ live_loop :tin do
 }
 end
 
-def tin(s, pat)
+def tin(s, bar, pat)
 loop do
  sync :crackels
  p = (ring *pat.split("\s"))
@@ -63,10 +63,10 @@ loop do
   sample s
  end
  p.tick
- sleep 1.0/4.0
+ sleep bar/4.0
 end
 end
 
 live_loop :tin2 do
- x = tin Mountain[/stick/i,4], "x x x x - - - - x x x x - - - -"
+ x = tin Mountain[/stick/i,4],bar, "x x x x - - - - x x x x - - - -"
 end

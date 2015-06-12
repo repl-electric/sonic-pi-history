@@ -19,4 +19,5 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
    end
 #   sleep bar
 end
+m_idx+=1
 end

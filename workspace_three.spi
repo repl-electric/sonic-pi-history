@@ -8,3 +8,10 @@ live_loop :mid do
 sample Eraser[/mid/i].tick
 sleep 1
 end
+
+
+
+live_loop :low do
+sample Eraser[/low/i].tick
+sleep 1
+end

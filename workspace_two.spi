@@ -23,7 +23,7 @@ m_idx+=1
 end
 
 
-live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.1 do
+live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
    #density(4) do
    sample Frag[/kick/i, 0]

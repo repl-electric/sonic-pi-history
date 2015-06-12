@@ -12,5 +12,5 @@ end
 
 
 live_loop :more do
-sample_and_sleep Frag[/b#/i,9]
+sample_and_sleep Frag[/b#/i,0]
 end

@@ -108,6 +108,11 @@ end;end;end
  # control n, note: (knit :As4, 4, :B4, 4,
  #                        :Cs4, 4, :B4, 4).tick
  # sleep bar/2.0
+
+# 3 ->  4   AS4 - > B4
+
+FS4->AS4  FS4->B4   AS4->CS4  *AS4->B4*
+
 live_loop :drifty do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
@@ -119,13 +124,12 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
 
   #      (stretch invert_chord(chord(:Gs3,'m'), -1),1), 12,    #2 -1
   #      (stretch invert_chord(chord(:As3,:m), -1),1), 12,    #3 -1
-
  #      _,24,
         _,24, 
 
         (stretch invert_chord(chord(:Ds4,:m), -2),1), 20,    #6 -1
          _, 4,
-        (stretch invert_chord(chord(:Es3,:dim), 0),1), 20,  #7
+        (stretch invert_chord(chord_degree(7, :Fs3, :major), 0),1), 20,  #7
          _, 4,
         (stretch invert_chord(chord(:Es3,:dim), 1),1), 20,  #7
          _, 4,

@@ -1,10 +1,8 @@
 bar = 1.0
 
-
 soft_noise = [6,7,8,9, 10,12,13,14, 21,27]
 
 live_loop :crackels do
-
 # sample Ambi[/crackle/i,0]
 
 # sample Ether[/noise/i][6..9].tick
@@ -52,6 +50,8 @@ live_loop :tin do
  sync :crackels
 12.times{
  sleep bar/4.0
+ (ring 1,0).tick.times do
  sample Mountain[/stick/i,4]
+end
 }
 end

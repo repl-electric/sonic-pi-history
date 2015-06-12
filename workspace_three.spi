@@ -11,15 +11,19 @@ live_loop :crackels do
 # sample Ether[/noise/i][10..14].tick
 
 
+n = 21
+
 3.times{
 
-sample Ether[/noise/i][21]
+
+
+sample Ether[/noise/i][n]
 sleep bar/2.0
 }
 
-sample Ether[/noise/i][21]
+sample Ether[/noise/i][n]
 sleep bar/4.0
-sample Ether[/noise/i][21]
+sample Ether[/noise/i][n]
 
 
 

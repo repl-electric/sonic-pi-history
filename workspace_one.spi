@@ -180,7 +180,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
                    :Cs2, 2, 
                    invert_chord(chord(:Ds1,:m), -2)[0], 2,
                    invert_chord(chord_degree(7, :Fs1, :major,3), -2)[0], 2,
-                   invert_chord(chord(:Es2,'dim'), 1)[0],4,
+                   invert_chord(chord(:Es2,'dim'), 1)[0],2,
                    invert_chord(chord(:Fs1,'sus4'), -1)[0],2
                                
 )

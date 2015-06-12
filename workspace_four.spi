@@ -1,5 +1,5 @@
 live_loop :test do
-sample Scape[/perc/i].tick, beat_stretch: (ring *((0..10).to_a)).tick
+sample Scape[/perc/i].tick, beat_stretch: (ring *((0..4).to_a)).tick
 sleep 0.25
 end
 

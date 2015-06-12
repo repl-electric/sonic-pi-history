@@ -9,8 +9,6 @@ live_loop :crackels do
 
 # sample Ether[/noise/i][6..9].tick
 # sample Ether[/noise/i][10..14].tick
-
-
 #n = 5
 n=5
 debut,fin = 0.0, 0.008
@@ -23,11 +21,12 @@ sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/4.0
 sample lib[/vinyl/i], start: debut, finish: fin
 
-3.times{
+2.times{
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
 }
 sleep bar/4.0
+
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/4.0
 sample lib[/vinyl/i], start: debut, finish: fin

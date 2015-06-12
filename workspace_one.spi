@@ -165,7 +165,7 @@ end
 end
 end
 live_loop :bithit do
-  1.times{sync :bhit}
+  9.times{sync :bhit}
   sample Frag[/coil/i,/f#/i,1], amp: 1.0
 end
 

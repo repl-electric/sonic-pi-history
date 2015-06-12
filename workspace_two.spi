@@ -11,7 +11,6 @@ sleep 1
 end
 
 
-live_loop :kick do
-sample Frag[/kick/i,9]
-sleep 1
+live_loop :more do
+sample_and_sleep Frag[/kick/i,9]
 end

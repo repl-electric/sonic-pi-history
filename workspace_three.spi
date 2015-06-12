@@ -1,7 +1,11 @@
 bar = 1.0
 live_loop :crackels do
 
- sample Ambi[/crackle/i,0]
+# sample Ambi[/crackle/i,0]
+
+ sample Ether[/crackle/i,0]
+
+
  sleep bar
 
 

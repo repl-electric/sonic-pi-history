@@ -178,7 +178,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
 
      notes = (knit invert_chord(chord(:As2,:m), 1)[0], 1, 
                    :Cs2, 2, 
-                   invert_chord(chord(:Ds2,:m), -2)[0], 2,
+                   invert_chord(chord(:Ds2,:m), 0)[0], 2,
                    invert_chord(chord_degree(7, :Fs1, :major,3),0)[0], 2,
                    invert_chord(chord(:Es2,'dim'), 1)[0],2,
                    invert_chord(chord(:Fs1,'M'), 0)[0],4,

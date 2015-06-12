@@ -14,12 +14,13 @@ live_loop :crackels do
 #n = 5
 n=5
 debut,fin = 0.1, 0.3
+lib = Mountain
 
 3.times{
-sample Ether[/noise/i][n], start: debut, finish: fin
+sample lib[/noise/i][n], start: debut, finish: fin
 sleep bar/2.0
 }
-sample Ether[/noise/i][n], start: debut, finish: fin
+sample lib[/noise/i][n], start: debut, finish: fin
 sleep bar/4.0
-sample Ether[/noise/i][n], start: debut, finish: fin
+sample lib[/noise/i][n], start: debut, finish: fin
 end

@@ -13,16 +13,16 @@ live_loop :crackels do
 n=5
 debut,fin = 0.0, 0.008
 lib = Mountain
+pan = -0.25
 
+sample lib[/vinyl/i], start: debut, finish: fin, pan: -0.25
+sleep bar/4.0
+sample lib[/vinyl/i], start: debut, finish: fin, pan: -0.15
+sleep bar/4.0
+sample lib[/vinyl/i], start: debut, finish: fin, pan: -0.05
+sleep bar/4.0
 
-sample lib[/vinyl/i], start: debut, finish: fin
-sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin
-sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin
-sleep bar/4.0
-
-sample lib[/vinyl/i], start: debut, finish: fin
+sample lib[/vinyl/i], start: debut, finish: fin, pan: 0.0
 sleep bar/2.0 
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep  bar/8.0 +  bar/8.0
@@ -45,6 +45,4 @@ sleep bar/2.0
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/8.0
 sample lib[/vinyl/i], start: debut, finish: fin
-
-
 end

@@ -7,7 +7,6 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
      when 8,16
      sample Frag[/snap/i][7..14].tick
      sleep bar/4.0
-
       with_fx((ring :echo, :none).tick(:echo)){sample Frag[/snap/i,6]}
 
      when 7,15
@@ -28,7 +27,7 @@ m_idx+=1
 end
 
 
-live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.1 do
    sync :foo
    #density(4) do
    sample Frag[/kick/i, 0]

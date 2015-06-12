@@ -65,7 +65,7 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
 #density(4) do
    case (m_idx%16)+1
      when 8
-      sample Frag[/snap/i].tick
+      sample Frag[/snap/i,0].tick
   
     when 1..16
        sample Frag[/snap/i].tick

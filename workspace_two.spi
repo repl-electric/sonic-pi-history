@@ -5,7 +5,7 @@ sample Frag[/hat/i].tick()
 sleep 0.25
 end
 
-live_loop :demo do
+live_loop :kick do
 sample Frag[/kick/i].tick()
-sleep 1.0
+sleep 
 end

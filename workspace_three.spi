@@ -47,3 +47,8 @@ sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
 sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 end
+
+live_loop :tin do
+ sync :crackels
+ sample Mountain[/tin/,0]
+end

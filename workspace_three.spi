@@ -14,7 +14,7 @@ n=5
 debut,fin = 0.0, 0.008
 lib = Mountain
 pan = -0.25
-pan_inc = 0.05
+pan_inc = 0.01
 
 sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0

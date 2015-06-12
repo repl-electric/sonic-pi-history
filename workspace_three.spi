@@ -1,0 +1,6 @@
+live_loop :hats do
+
+sample Eraser[/hat/i].tick
+sleep 1
+
+end

@@ -33,7 +33,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
   end;end;end
 
   sleep bar/4.0
-  control n, note: (knit #:As4, 4, :B4, 4,
+  control n, note: (knit :As4, 4, :B4, 4,
                          :Cs4, 4, :B4, 4).tick
   sleep bar/2.0
 end;end;end;end 

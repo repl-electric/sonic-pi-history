@@ -51,6 +51,6 @@ live_loop :tin do
 12.times{
  sleep bar/4.0
  
- (knit sample Mountain[/stick/i,4], 4, 2,_,).tick
+ (knit sample Mountain[/stick/i,4], 4, ,_,2).tick
 }
 end

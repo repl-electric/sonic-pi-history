@@ -1,7 +1,7 @@
 
 
 live_loop :demo do
-sample Frag[/hat/i].tick()
+sample Frag[/hat/i].tick(), amp: 0
 sleep 0.25
 end
 

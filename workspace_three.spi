@@ -51,12 +51,21 @@ live_loop :tin do
  sample Mountain[/kick/i,7]
  12.times{
  sleep bar/4.0
- sample (knit Mountain[/stick/i,4], 4, nil,2).tick
+ sample (knit Mountain[/stick/i,4], 4, nil,2).tick, amp: 0
 }
 end
 
-def tin(pat)
-puts pat.split("\s")
+def tin(s, pat)
+ p = (ring *pat.split("\s"))
+ if p.hook == "x"
+  sample s
+ end
 end
 
+
+live_loop :tin2 do
+ sync :crackels
+
 tin "x - - - - - - - - - - - - - - -"
+
+end

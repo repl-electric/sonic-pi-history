@@ -66,8 +66,8 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
    case (m_idx%16)+1
      when 8,16
       with_fx(:echo){sample Frag[/snap/i,6]}
-     when 7, 15
-      sample Frag[/snap/i].hook ; sleep bar/4.0 ; sample Frag[/snap/i].hook   
+     when 7,15
+      sample Frag[/snap/i].hook ; sleep bar/2.0 ; sample Frag[/snap/i].hook   
    else
      sample Frag[/snap/i][0..5].tick
    end

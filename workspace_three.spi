@@ -1,6 +1,6 @@
 live_loop :hats do
 
 sample Eraser[/glitch/i].tick
-sleep 1
+sleep 0.25
 
 end

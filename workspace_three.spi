@@ -14,7 +14,7 @@ lib = Mountain
 pan = -0.25
 pan_inc = 0.01
 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
 sleep bar/4.0
 sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0

@@ -15,3 +15,9 @@ live_loop :more do
 sync :demo
 sample_and_sleep Frag[/snaps/i].tick
 end
+
+
+live_loop :coils do
+sync :demo
+sample_and_sleep Frag[/coils/i].tick
+end

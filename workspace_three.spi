@@ -14,7 +14,7 @@ live_loop :crackels do
 3.times{
 
 sample Ether[/noise/i][21]
-sleep bar
+sleep bar/2.0
 }
 
 sample Ether[/noise/i][21]

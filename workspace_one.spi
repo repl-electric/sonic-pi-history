@@ -176,7 +176,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
 #comment do
 #    notes = (knit "Cs2" ,3, "Fs1" ,1, "B1", 2)
 
-     notes = (knit chord(:As1,:m)[0], 1, :Cs2, 2, invert_chord(chord(:Ds1,:m), -2)[0], 1)
+     notes = (knit chord(:As1,:m)[0], 1, :Cs2, 2, invert_chord(chord(:Ds1,:m), -2)[0], 2)
 
     n = notes.tick(:a)
     with_transpose(0) do

@@ -196,11 +196,11 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
 
     with_transpose(0) do
     with_synth :beep do
-      play n, amp: 1.0, release: (knit 2*bar, 9, 8*bar, 2, 2*bar,3).tick(:Bass), attack: 0.01, cutoff: 60
+      play n, amp: 1.0, release: (knit 2*bar, 9, 8*bar, 2, 2*bar,3).tick(:Bass), attack: (0.01, cutoff: 60
     end;end
     #use_synth :prophet
     with_transpose(12) do
-      play n, cutoff: 60, amp: 0.5, release: (knit 2.0*bar,5,2.0*bar,1).tick(:sd), attack: 0.01
+      play n, cutoff: 60, amp: 0.5, release: (knit 2.0*bar,5,2.0*bar,1).tick(:sd), attack: (knit 0.01,13, 0.5, 1, 0.01,3).tick(:att)
     end
 #end
 comment do

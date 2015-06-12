@@ -127,27 +127,41 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
 
         _,24, 
 
-#HIT FS4-B4
+#HIT FS3-AS4
+
 
         (stretch invert_chord(chord(:Ds4,:m), -2),1), 20,    #6 -1
          _, 4,
 
-#HIT AS4-CS4
+#HIT FS4-B4
 
         (stretch invert_chord(chord_degree(7, :Fs3, :major,3), -2),1), 20,  #7
          _, 4,
 
-#HIT AS4-B4
+#HIT FS4-B4
 
         (stretch invert_chord(chord_degree(7, :Fs3, :major,5), -2),1), 20,  #7
          _, 4,
+
+#HIT AS4-CS4
+
+
         (stretch invert_chord(chord(:Fs3,:sus4), -1),1), 20, #1 -1
          _, 4,    
+
+#HIT AS4-CS4
+
+
         (stretch invert_chord(chord(:Fs3,:M), -1),1), 20, #1 -1
+
+
+#HIT AS4-B4
+
+
          _, 4,
          _,24,
  
-
+#HIT AS4-B4
 
 ).tick(:asb)
   puts (n||[]).map{|a|note_info(a).midi_string}

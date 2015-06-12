@@ -59,7 +59,7 @@ def tin(s, bar, pat)
 12.times do
  p = (ring *pat.split("\s"))
  if p.hook == "x"
-  sample s
+  sample s, amp: 0.1
  end
  p.tick
  sleep bar/4.0
@@ -68,5 +68,5 @@ end
 
 live_loop :tin2 do
  sync :crackels
- x = tin Mountain[/stick/i,4],bar, "x x x x x x x x x x x x x x x x", amp: 0.1
+ x = tin Mountain[/stick/i,4],bar, "x x x x x x x x x x x x x x x x"
 end

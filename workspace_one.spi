@@ -17,7 +17,7 @@ end
 end
 
 live_loop :bells do
-8.times{sync :foo}
+2.times{sync :foo}
 with_fx :distortion, amp: 0.3, mix: 0.3 do
 with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do

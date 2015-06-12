@@ -179,13 +179,13 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
                    invert_chord(chord(:Ds2,:m), 0)[0], 2,
                    invert_chord(chord_degree(7, :Fs1, :major,3),-3)[0], 2,
                    invert_chord(chord(:Es1,'dim'), 1)[0],2,
-                   :Fs1,4,
+                   :Fs1,2,_,2,
                    invert_chord(chord(:B1,:M), -1)[0],3)
 
     n = notes.tick(:a)
     with_transpose(0) do
     with_synth :beep do
-      play n, amp: 1.0, release: 2*bar, attack: 0.01, cutoff: 60
+      play n, amp: 1.0, release: (knit 2*bar, 9, 2*bar, 2, 2*bar,3).tick(:Bass), attack: 0.01, cutoff: 60
     end;end
     #use_synth :prophet
     with_transpose(12) do

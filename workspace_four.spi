@@ -5,6 +5,7 @@ end
 
 
 live_loop :snare do
+sync :test
 sample Scape[/snare/i].tick
 sleep 0.5
 end

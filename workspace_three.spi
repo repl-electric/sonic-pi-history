@@ -57,7 +57,6 @@ end
 
 def tin(s, bar, pat)
 loop do
- sync :crackels
  p = (ring *pat.split("\s"))
  if p.hook == "x"
   sample s

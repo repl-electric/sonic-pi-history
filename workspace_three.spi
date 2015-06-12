@@ -13,7 +13,7 @@ live_loop :crackels do
 
 #n = 5
 n=5
-debut,fin = 0.1, 0.3
+debut,fin = 0.1, 0.2
 lib = Mountain
 
 3.times{

@@ -165,8 +165,8 @@ end
 end
 end
 live_loop :bithit do
-  sync :bhit
- sample Ether[/hat/i,4], amp: 0.1
+  2.times{sync :bhit}
+  sample Ether[/hat/i,4], amp: 0.1
 end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do

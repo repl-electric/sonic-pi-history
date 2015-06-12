@@ -1,7 +1,7 @@
 bar = 1.0
 live_loop :crackels do
 
- sample Ambi[/crackle/i]
+ sample Ambi[/crackle/i].tick
  sleep bar
 
 

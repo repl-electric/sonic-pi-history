@@ -14,7 +14,6 @@ n=5
 debut,fin = 0.0, 0.008
 lib = Mountain
 
-comment do
 
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/4.0

@@ -37,15 +37,15 @@ sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
 
 
-sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 
 sleep bar/2.0
 
-sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 end
 
 live_loop :tin do

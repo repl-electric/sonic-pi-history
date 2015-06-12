@@ -52,6 +52,6 @@ live_loop :tin do
  sync :crackels
 16.times{
  sleep bar/16.0
- sample Ether[/noise/,5], start: 0.0, finish: 1.0
+ sample Ether[/noise/,5]
 }
 end

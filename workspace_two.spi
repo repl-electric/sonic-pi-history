@@ -7,5 +7,5 @@ end
 
 live_loop :kick do
 sample Frag[/kick/i,0].tick()
-sleep 
+sleep 1
 end

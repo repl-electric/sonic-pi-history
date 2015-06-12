@@ -13,17 +13,13 @@ live_loop :crackels do
 
 #n = 5
 n=8
-debut,fin = 0.0, 0.1
+debut,fin = 0.0, 0.01
 
 3.times{
-
-
 sample Ether[/noise/i][n], start: debut, finish: fin
 sleep bar/2.0
 }
-
 sample Ether[/noise/i][n], start: debut, finish: fin
 sleep bar/4.0
 sample Ether[/noise/i][n], start: debut, finish: fin
-
 end

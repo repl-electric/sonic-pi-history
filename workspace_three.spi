@@ -16,36 +16,36 @@ lib = Ether
 pan = -0.25
 pan_inc = 0.01
 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/2.0 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep  bar/8.0 +  bar/8.0
 #
 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i][6], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/4.0
 
 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
 
 sleep bar/2.0
 
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
 sleep bar/8.0
-sample lib[/vinyl/i], start: debut, finish: fin, pan: pan+=pan_inc
+sample lib[/noise/i], start: debut, finish: fin, pan: pan+=pan_inc
 end
 
 live_loop :tin do

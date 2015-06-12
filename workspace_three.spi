@@ -18,32 +18,32 @@ sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_
 sleep bar/4.0
 sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/4.0
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/4.0
 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/2.0 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep  bar/8.0 +  bar/8.0
 #
 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/4.0
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/4.0
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/4.0
 
 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/8.0
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 
 sleep bar/2.0
 
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 sleep bar/8.0
-sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.1
+sample lib[/microperc/i][n], start: debut, finish: fin, pan: pan+=pan_inc, beat_stretch: 0.5
 end
 
 live_loop :tin do

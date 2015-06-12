@@ -63,7 +63,7 @@ loop do
   sample s
  end
  p.tick
- sleep 1
+ sleep bar/4.0
 end
 end
 

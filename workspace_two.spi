@@ -1,7 +1,6 @@
 
 
 live_loop :demo do
-
-sample Frag[/hat/i,0].tick
+sample Frag[/hat/i].tick()
 sleep bar
 end

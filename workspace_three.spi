@@ -57,6 +57,7 @@ end
 
 def tin(s, pat)
 loop do
+ sync :crackels
  p = (ring *pat.split("\s"))
  if p.hook == "x"
   sample s
@@ -68,5 +69,5 @@ end
 
 live_loop :tin2 do
  sync :crackels
- tin Mountain[/stick/i,4], "x x x - - - - - - - - - - - - -"
+ x = tin Mountain[/stick/i,4], "x x x - - - - - - - - - - - - -"
 end

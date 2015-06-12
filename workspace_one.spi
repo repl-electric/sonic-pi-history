@@ -107,7 +107,7 @@ end;end;end
  # control n, note: (knit :As4, 4, :B4, 4,
  #                        :Cs4, 4, :B4, 4).tick
  # sleep bar/2.0
-live_loop :drifty do; with_fx :level, amp: 5.0 do
+live_loop :drifty do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

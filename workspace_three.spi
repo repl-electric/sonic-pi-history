@@ -55,16 +55,16 @@ live_loop :tin do
 }
 end
 
-def run(s, bar, pat)
+def run(s, bar, pat, rate = 1.0)
 pat.length.times do
  p = (ring *pat.split("\s"))
  sleep bar/4.0
  if p.hook == "x"
-  sample s, amp: 1.0
+  sample s, amp: 1.0, rate: rate
  end
  p.tick
 end
 end
 
 live_loop :tin2 do; sync :crackels; run Mountain[/microperc/i,6],bar, "x x x x x x x x x x x x x x x x" ;end
-live_loop :tin3 do; sync :crackels; run Mountain[/kick/i,5],bar,      "x - - - - - - - - - - - - - - -" ;end
+live_loop :tin3 do; sync :crackels; run Mountain[/kick/i,5],bar,      "x - - - - - - - - - - - - - - -", rate: -1.0 ;end

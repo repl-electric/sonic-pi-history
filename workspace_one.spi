@@ -111,7 +111,7 @@ end;end;end
 
 # 3 ->  4   AS4 - > B4
 
-FS4->AS4  FS4->B4   AS4->CS4  *AS4->B4*
+#FS4->AS4  FS4->B4   AS4->CS4  *AS4->B4*
 
 live_loop :drifty do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}

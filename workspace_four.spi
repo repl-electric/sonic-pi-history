@@ -1,4 +1,4 @@
 live_loop :test do
-sample Scape[/hat/]
+sample Scape[/perc/i]
 sleep 1.0
 end

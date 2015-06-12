@@ -70,3 +70,9 @@ live_loop :tin2 do
  sync :crackels
  run Mountain[/stick/i,4],bar, "x x x x x x x x x x x x x x x x"
 end
+
+
+live_loop :tin3 do
+ sync :crackels
+ run Mountain[/kick/i,4],bar, "x - - - - - - - - - - - - - - - -"
+end

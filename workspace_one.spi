@@ -125,7 +125,8 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
 
 #HIT FS3-AS4
 
-        _,24, 
+        (stretch invert_chord(chord(:As3,:M), 0),0), 24,     #1
+#        _,24, 
 
 #HIT FS3-AS4
 

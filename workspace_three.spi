@@ -60,7 +60,7 @@ pat.length.times do
  p = (ring *pat.split("\s"))
  sleep bar/4.0
  if p.hook == "x"
-  sample s, *args
+  sample s, pan: 0.5
  end
  p.tick
 end

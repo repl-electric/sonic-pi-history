@@ -23,6 +23,5 @@ end
 
 live_loop :coils2 do
 16.times{sync :demo}
-
 sample Frag[/atmos/i, /f#m/i].tick
 end

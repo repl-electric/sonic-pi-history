@@ -55,12 +55,12 @@ live_loop :tin do
 }
 end
 
-def run(s, bar, pat, rate = (ring 1.0), amp = (ring 1.0))
+def run(s, bar, pat, *args)
 pat.length.times do
  p = (ring *pat.split("\s"))
  sleep bar/4.0
  if p.hook == "x"
-  sample s, amp: amp.tick(:am), rate: rate.tick(:rate)
+  sample s, *args
  end
  p.tick
 end

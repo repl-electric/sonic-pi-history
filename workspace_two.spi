@@ -16,8 +16,7 @@ sync :demo
 sample_and_sleep Frag[/snaps/i].tick
 end
 
-
 live_loop :coils do
 2.times{sync :demo}
-sample_and_sleep Frag[/coil/i, /f#/i, 0]
+sample Frag[/coil/i, /f#/i, 0]
 end

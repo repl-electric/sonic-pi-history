@@ -22,7 +22,7 @@ live_loop :crackels do
 
 # sample Ether[/noise/i][20..-1].tick
 
-sample Ether[/noise/i, 16]
+sample Ether[/noise/i, 17]
 
 
  sleep bar/2.0

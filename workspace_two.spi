@@ -27,7 +27,7 @@ end
 live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.1 do
    sync :foo
    #density(4) do
-   sample Frag[/perc/i, 0]
+   sample Ether[/perc/i, 0]
    sleep bar/2.0
    sample Frag[/perc/i, 6]
 

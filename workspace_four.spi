@@ -1,4 +1,4 @@
 live_loop :test do
-sample Scape[/perc/i]
+sample Scape[/perc/i].tick
 sleep 1.0
 end

@@ -58,11 +58,11 @@ end
 def tin(s, bar, pat)
 12.times do
  p = (ring *pat.split("\s"))
+ sleep bar/4.0
  if p.hook == "x"
   sample s, amp: 0.1
  end
  p.tick
- sleep bar/4.0
 end
 end
 

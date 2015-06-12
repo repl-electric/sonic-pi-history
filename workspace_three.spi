@@ -25,7 +25,7 @@ sample lib[/vinyl/i], start: debut, finish: fin
 
 end
 
-2.times{
+3.times{
 sample lib[/vinyl/i], start: debut, finish: fin
 sleep bar/2.0
 }

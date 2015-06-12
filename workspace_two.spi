@@ -13,9 +13,9 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
      sleep bar/4.0
      sample Frag[/snap/i][0..5].tick, finish: 0.1
      sleep bar/2.0
-     sample Frag[/noise/i][0..5].hook, finish: 0.1
+     sample Frag[/snap/i][0..5].hook, finish: 0.1
      sleep bar/4.0
-     sample Frag[/noise/i][0..5].hook, finish: 0.1
+     sample Frag[/snap/i][0..5].hook, finish: 0.1
    end
 #end
 #   sleep bar

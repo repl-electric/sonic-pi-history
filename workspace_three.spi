@@ -10,7 +10,7 @@ live_loop :crackels do
 #n = 5
 n=5
 debut,fin = 0.0, 0.1
-lib = Ether
+lib = Mountain
 pan = -0.25
 pan_inc = 0.01
 

@@ -68,9 +68,7 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
       sample Frag[/snap/i,0]
   
      when 7
-       sample Frag[/snap/i].hook ; sleep bar/4.0 ;        sample Frag[/snap/i].hook
-
-     
+       sample Frag[/snap/i].hook ; sleep bar/4.0 ;        sample Frag[/snap/i].hook   
    else
        sample Frag[/snap/i].tick
   

@@ -111,33 +111,39 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
-    with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
-      n = (knit 
-        (stretch invert_chord(chord(:Fs3,:M), 0),1), 20,     #1
+    with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.0, phase: bar/2.0 do
+      n = (knit
+#        (stretch invert_chord(chord(:Fs3,:M)[1..-1], 0),1), 6,     #1
+ #       (stretch invert_chord(chord(:Fs3,:M), 0),1), 18,     #1
+
+  #      (stretch invert_chord(chord(:Gs3,'m'), -1),1), 12,    #2 -1
+  #      (stretch invert_chord(chord(:As3,:m), -1),1), 12,    #3 -1
+       _,24,
+       _,24,
+        (stretch invert_chord(chord(:Ds4,:m), -2),1), 20,    #6 -1
          _, 4,
-        (stretch invert_chord(chord(:Gs3,:m), 0),1), 20,     #2
+        (stretch invert_chord(chord(:Es3,:dim), 0),1), 20,  #7
          _, 4,
-        (stretch invert_chord(chord(:As3,:m), -1),1), 20,    #3 -1
-         _, 4,
-        (stretch invert_chord(chord(:Ds4,:m), -1),1), 20,    #6 -1
-         _, 4,
-        (stretch invert_chord(chord(:B3,:M), 0),1), 20,      #4
-         _, 4,
-        (stretch invert_chord(chord(:Es4,:dim), -2),2), 20,  #7
+        (stretch invert_chord(chord(:Es3,:dim), 1),1), 20,  #7
          _, 4,
         (stretch invert_chord(chord(:Fs3,:sus4), -1),1), 20, #1 -1
+         _, 4,    
+       (stretch invert_chord(chord(:Fs3,:M), -1),1), 20, #1 -1
          _, 4,
-       
-        (stretch invert_chord(chord(:Cs3,:M), 1),1), 20,     #1
-   _, 4,
- (stretch invert_chord(chord(:Fs3,:M), 0),1), 20,     #1
-         _, 4,
+
+         _,24,
+ 
+       # (stretch invert_chord(chord(:Fs3,:M), 0),1), 24,     #1
+        #(stretch invert_chord(chord(:Fs3,:M), 1),1), 24,     #1
+
+
 ).tick(:asb)
   puts (n||[]).map{|a|note_info(a).midi_string}
 
       #n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
       #             chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)
 
+#with_transpose(-12){      with_synth(:beep){play (n ? n.sort[0] : n), pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} , release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
       with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
       sleep bar
     end
@@ -145,7 +151,6 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
 end
 end
 end
-
 live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     #play (knit "Fs3",1).tick(:a), amp: 1.5, release: 2*bar, attack: 0.01

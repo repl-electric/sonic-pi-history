@@ -166,7 +166,7 @@ end
 end
 live_loop :bithit do
   sync :bhit
- sample Mountain[/kick/].tick(:high), amp: 10
+ sample Mountain[/kick/,9], amp: 10
 end
 
 live_loop :bassline do |idx|;with_fx :level, amp: 0.0 do

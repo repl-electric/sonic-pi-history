@@ -55,7 +55,7 @@ live_loop :tin do
 }
 end
 
-def run(s, bar, pat, *args)
+define :pat do(s, bar, pat, *args)
 pat.length.times do
  p = ring( *pat.split("\s"))
  sleep bar/4.0

@@ -26,7 +26,6 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do
                  :As4, 7, _, 1
 ).tick, amp: 0.3
 
-
   if dice(32) == 1
      with_fx :pan, pan: Math.sin(vt*13)/1.5 do
      with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
@@ -70,7 +69,7 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
    else
      sample Frag[/snap/i][0..5].tick
      sleep bar/4.0
-     sample Frag[/snap/i][0..5].tick
+     #sample Frag[/snap/i][0..5].tick
      sleep bar/2.0
      sample Frag[/snap/i][0..5].hook
      sleep bar/2.0
@@ -196,7 +195,6 @@ live_loop :bithit do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
   end
 end
-
 live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do; with_fx :distortion, mix: 0.1 do
     3.times{sync :foo}

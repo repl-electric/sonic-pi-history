@@ -58,28 +58,8 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     m_idx+=1
 end;end
 
-live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
-   sync :foo
-   #density(4) do
-   case (m_idx%16)+1
-     when 16
-      with_fx((ring :echo, :none).tick(:echo)){sample Frag[/snap/i,6]}
-     when 7,15
-      sample Frag[/snap/i].hook ; sleep bar/2.0 ; sample Frag[/snap/i].hook   
-   else
-     sample Frag[/snap/i][0..5].tick
-     sleep bar/4.0
-     #sample Frag[/snap/i][0..5].tick
-     sleep bar/2.0
-     #sample Frag[/snap/i][0..5].hook
-     sleep bar/2.0
-     sample Frag[/snap/i][0..5].hook
-   end
-#   sleep bar
-end
-#end
-m_idx+=1
-end
+live_loop :tin2 do; sync :crackels; run Mountain[/microperc/i,6],bar, "x x x x x - x - x x x x x - x -", pan: 0.55 ;end
+live_loop :tin3 do; sync :crackels; run Mountain[/impact/i,2],bar,    "- - - - - x - - - - - - - - x -", rate: -1, amp: 0.5 ;end
 
 live_loop :ghost do;with_fx :level, amp: 0.1 do
 sync :foo

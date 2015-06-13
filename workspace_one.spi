@@ -58,7 +58,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     m_idx+=1
 end;end
 
-live_loop :tin2 do; sync :foo; run Mountain[/microperc/i,6],bar, "x x x x x - x - x x x x x - x -", pan: (ring 0.55,-0.5).tick, amp: rrand(0.9,1.0), beat_stretch: rrand(1.0,1.01) ;end
+live_loop :tin2 do; sync :foo; run Mountain[/microperc/i,6],bar, "x x x x x - x - x x x x x - x -", pan: (ring 0.25,-0.25).tick, amp: rrand(0.9,1.0), beat_stretch: rrand(1.0,1.01) ;end
 live_loop :tin3 do; sync :foo; run Mountain[/impact/i,2],bar,    "- - - - - x - - - - - - - - x -", rate: -0.1, amp: 0.0 ;end
 
 live_loop :ghost do;with_fx :level, amp: 0.1 do

@@ -1,1 +1,1 @@
-puts chord(:a2, '+5', invert: -1)
+puts chord(:a2, '+5', invert: -2)

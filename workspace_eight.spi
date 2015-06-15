@@ -69,10 +69,10 @@ end
 use_synth :fm
 
 live_loop :arp do
-  play arpeggiator(:fs4, num_octaves: 2, chord: :M7).tick, release: 0.1
-  sleep 0.125
+ # play arpeggiator(:fs4, num_octaves: 2, chord: :M7).tick, release: 0.1
+  #sleep 0.125
 
   # or  
-  #play arpeggiator(:c4, num_octaves: 3, scale: :minor_pentatonic, direction: :down, grouping: 4).tick, release: 0.05
-  #sleep 0.0625
+  play arpeggiator(:c4, num_octaves: 3, scale: :minor_pentatonic, direction: :down, grouping: 4).tick, release: 0.05
+  sleep 0.0625
 end

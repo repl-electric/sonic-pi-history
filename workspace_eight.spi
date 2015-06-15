@@ -1,0 +1,78 @@
+#ARGS
+#root
+
+#octaves - 0 == just the root, 2 equals root -> root + 24
+#chord: chord type
+#direction: one of :up, :down, :updown, :random, :none
+#transpose: convenience for transpose
+#group: 1 - group the notes after the pattern has been decided
+
+#(alternative)
+#notes: array of notes which will have octave data removed
+#pattern: array of indexes into the pattern
+
+#(? not sure)
+#hold: don't remove notes
+
+define :arpeggiator do |root, options={}|
+  options[:num_octaves] ||= 1
+  options[:direction] ||= :up
+  options[:transpose] ||= nil
+  options[:grouping] ||= 0
+
+  options[:chord] ||= :major
+  options[:scale] ||= nil
+  options[:notes] ||= nil
+
+  if options[:notes]
+    # TODO: num_octaves for arbitrary notes
+    note_pool = Array(options[:notes]).ring
+  elsif options[:scale]
+    note_pool = scale(root, options[:scale], num_octaves: options[:num_octaves])
+  else
+    note_pool = options[:num_octaves].times.flat_map do |n|
+      chord(root, options[:chord]).map {|x| x + (n * 12) }
+    end
+  end
+
+  # safety net
+  note_pool = Array(root) if note_pool.empty?
+
+  # Make array for following transformations
+  note_pool = note_pool.to_a
+
+  note_pool = case options[:direction]
+  when :up
+    note_pool.sort
+  when :down
+    note_pool.sort.reverse
+  when :updown
+    note_pool.sort + note_pool.sort.reverse[1..-1]
+  when :downup
+    note_pool.sort.reverse + note_pool.sort[1..-1]
+  when :random
+    note_pool.shuffle
+  when :from_notes
+    note_pool
+  end
+
+  note_pool = if options[:grouping] != 0
+    # TODO stop this crashing if grouping > note_pool.length
+    note_pool.each_cons(options[:grouping]).to_a.flatten
+  else
+    note_pool
+  end
+
+  (ring *note_pool)
+end
+
+use_synth :fm
+
+live_loop :arp do
+  play arpeggiator(:c4, num_octaves: 2, chord: :m7).tick, release: 0.1
+  sleep 0.125
+
+  # or  
+  #play arpeggiator(:c4, num_octaves: 3, scale: :minor_pentatonic, direction: :down, grouping: 4).tick, release: 0.05
+  #sleep 0.0625
+end

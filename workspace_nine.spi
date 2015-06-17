@@ -12,7 +12,7 @@ def pat(s, p, *args)
 end
 
 live_loop :beatz do
-density((ring 2,3).tick) do
+density(3) do
  32.times{
  cue :s
  sleep bar/16.0}

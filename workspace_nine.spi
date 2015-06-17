@@ -1,5 +1,8 @@
 bar = 4.0
 
+live_loop :time do
+end
+
 live_loop :kick do
 sample Ambi[/kick/, 0]
 sleep bar/4.0

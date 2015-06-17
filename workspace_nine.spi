@@ -18,6 +18,6 @@ sample Ambi[/kick/, 0]
 end
 
 live_loop :snare do
-sleep bar/4.0
+sync :two,:three
 sample_and_sleep Ambi[/snare/, 0]
 end

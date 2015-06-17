@@ -19,7 +19,7 @@ end
 
 live_loop :snare do
 sync :two,:four
-sample Ambi[/snare/i, /fibres/i], amp: (ring 0.5,0.5).tick
+sample Ambi[/snare/i, /fibres/i], amp: (ring 1.5,0.5).tick
 end
 
 live_loop :hat do

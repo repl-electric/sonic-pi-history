@@ -72,13 +72,13 @@ end; end
 
 live_loop :beats do;with_fx :level, amp: 0.6 do
     sync :foo
-    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
+   # sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end;end
 
 live_loop :foo do;with_fx :level, amp: 0.5 do
     density(@polyrhythm.sort.first) do
-      sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
+   #   sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
 
 comment do
       with_synth(:dark_ambience){play (knit

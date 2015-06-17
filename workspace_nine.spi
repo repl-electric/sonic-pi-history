@@ -40,7 +40,7 @@ live_loop(:snare) do;
                       16.times{pat(Ether[/click/i,16],     (ring *%w{- - - - x - - - - - - - x - - -}).tick(:b), amp: 0.1)};
 
 end
-live_loop(:hats)do; 16.times{pat(Ether[/hat/i,22],     (ring *%w{x - - - - - x - - - x - - - - -}).tick(:a), amp: 0.2)};end
+live_loop(:hats)do; 16.times{pat(Ether[/hat/i,22],     (ring *%w{x - - - - - x - - - x - - - - -}).tick(:a), amp: 0.1)};end
 
 
 

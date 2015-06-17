@@ -1,1 +1,5 @@
+
+
+live_loop :kick do
 sample Ambi[/kick/, 0]
+end

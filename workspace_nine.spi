@@ -12,6 +12,7 @@ def pat(s, p, *args)
 end
 
 live_loop :beatz do
+sync :foo
 density(2) do
  32.times{
  cue :s

@@ -19,7 +19,7 @@ end
 
 live_loop :snare do
 sync :two,:four
-sample Ambi[/snare/i, /fibres/i], amp: (ring 0.8,0.5).tick, attack: rrand(0.0,0.05)
+sample Ambi[/snare/i, /fibres/i], amp: (ring 0.6,0.5).tick, attack: rrand(0.0,0.05)
 end
 
 live_loop :hat do

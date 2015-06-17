@@ -36,7 +36,7 @@ live_loop(:snare) do; 16.times{pat(Ether[/click/i,17],     (ring *%w{- - - - x -
                                                                     #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
 live_loop(:kicker)do; 16.times{pat(Ether[/click/i,10],     (ring *%w{x - - - - - x - - - x - - - - -}).tick(:a), amp: 0.2)};end
 live_loop(:snare) do; 
-with_fx :echo, decay: 0.05 do
+with_fx :echo, decay: 0.1 do
                       16.times{pat(Ether[/click/i,17],     (ring *%w{- - - - x - - - - - - - x - - -}).tick(:b), amp: 0.2)};
 end
 end

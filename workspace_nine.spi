@@ -14,7 +14,7 @@ end
 
 live_loop :kick do
 sync :one, :three
-sample Ambi[/kick/, 0]
+sample Ambi[/kick/, 1]
 end
 
 live_loop :snare do

@@ -31,7 +31,7 @@ live_loop(:snare) do; 16.times{pat(Ether[/noise/i,10],     (ring *%w{- - - - x -
 
 live_loop(:perc1) do; 16.times{
 with_fx :echo, mix: 0.3 do; with_fx :slicer, phase: 0.125, probability: 0.5 do
-                               pat(Ambi[/hat/i,1],         (ring *%w{- x - x - x - x - x - x - x - x}).tick(:d), amp: 0.01);end;end};end
+                               pat(Ambi[/hat/i,1],         (ring *%w{- x - x - x - x - x - x - x - x}).tick(:d), amp: 0.05);end;end};end
 
 
 live_loop(:perc)  do; 16.times{pat(Ether[/click/i,15],     (ring *%w{- - - - - - x - - - - x - - - -}).tick(:p), beat_stretch: 0.1, amp: 0.0)};end

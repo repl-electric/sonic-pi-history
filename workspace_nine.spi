@@ -19,5 +19,5 @@ end
 
 live_loop :snare do
 sync :two,:four
-sample_and_sleep Ambi[/snare/, 0]
+sample_and_sleep Ambi[/snare/, 1]
 end

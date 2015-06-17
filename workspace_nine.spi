@@ -14,7 +14,7 @@ end
 
 live_loop :kick do
 sync :one, :three
-sample Ambi[/kick/i,/hart/i], amp: (ring 1.0,0.5).tick,attack: rrand(0.0,0.1)
+sample Ambi[/kick/i,/hart/i], amp: (ring 1.0,0.5).tick, attack: rrand(0.0,0.01)
 end
 
 live_loop :snare do

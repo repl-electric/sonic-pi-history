@@ -28,7 +28,7 @@ end
 #live_loop :tin2  do; 16.times{pat(Ether[/hat/i,11], bar,  (ring *%w{x - x - x - x _ x - x - x - x -}).tick(:a), pan: (ring -0.25,0.25).tick(:rz), amp: 1*(ring 0.1,0.1,0.1,0.1,0.3,0.3,0.5,0.5, 0.4,0.4,0.4,0.4,0.8,0.8,0.8,0.8).tick(:v), beat_stretch: (ring 0.8,0.8,0.8,0.8,0.8,0.8,1.0,1.0).tick(:o))};end
 live_loop(:kicker)do; 16.times{pat(Ether[/noise/i,2],      (ring *%w{x - x - - - - x - x - - - - - -}).tick(:a), amp: 2.0, beat_stretch: (rrand 0.99,1.0))};end
 live_loop(:snare) do; 16.times{pat(Ether[/noise/i,10],     (ring *%w{- - - - x - - - - - - - x - - -}).tick(:b), beat_stretch: 2.0, amp: 0.5)};end
-live_loop(:perc1)  do; 16.times{pat(Ambi[/tom/i,0],       (ring *%w{- x - x - x - x - x - x - x - x}).tick(:d), amp: 0.15)};end
+live_loop(:perc1)  do; 16.times{pat(Ambi[/tom/i,0],        (ring *%w{- x - x - x - x - x - x - x - x}).tick(:d), amp: 0.05)};end
 
 
 live_loop(:perc)  do; 16.times{pat(Ether[/click/i,15],     (ring *%w{- - - - - - x - - - - x - - - -}).tick(:p), beat_stretch: 0.1, amp: 0.0)};end

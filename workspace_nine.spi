@@ -1,10 +1,11 @@
-
+bar = 4.0
 
 live_loop :kick do
 sample Ambi[/kick/, 0]
-sleep 4/2.0
+sleep bar/4.0
 end
 
 live_loop :snare do
 sample_and_sleep Ambi[/kick/, 0]
+sleep bar/4.0
 end

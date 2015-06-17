@@ -38,7 +38,7 @@ with_fx :slicer, phase: 0.125, probability: 0.5 do
 live_loop(:kick)  do; 16.times{pat(Ether[/kick/i,11],      (ring *%w{x - - - - - - - - - - - - - - -}).tick(:d), amp: 0.05)};end
 
 
-live_loop(:perc)  do; 16.times{pat(Ether[/click/i,15],     (ring *%w{- - - - - - x - - - - x - - - -}).tick(:p), beat_stretch: 0.1, amp: 0.0)};end
+#live_loop(:perc)  do; 16.times{pat(Ether[/click/i,15],     (ring *%w{- - - - - - x - - - - x - - - -}).tick(:p), beat_stretch: 0.1, amp: 0.0)};end
 live_loop(:swish) do; 
 with_fx :reverb, room: 0.7, mix: 0.3 do
 16.times{

@@ -29,7 +29,7 @@ with_fx :echo, mix: 0.3 do; with_fx :slicer, phase: 0.125, probability: 0.5 do
                                pat(Ambi[/hat/i,1],         (ring *%w{- x - x - x - x - x - x - x - x}).tick(:d), amp: 0.05);end;end};end
 
 
-live_loop(:kicker)do; 16.times{pat(Ether[/click/i,2],      (ring *%w{x - x - - - - x - x - - - - - -}).tick(:a), amp: 2.0, beat_stretch: (rrand 0.98,1.0))};end
+live_loop(:kicker)do; 16.times{pat(Ether[/click/i,2],      (ring *%w{x - x - - - - - x - x - - - - -}).tick(:a), amp: 2.0, beat_stretch: (rrand 0.98,1.0))};end
 live_loop(:snare) do; 16.times{pat(Ether[/click/i,8],      (ring *%w{- - - - x - - - - - - - x - - -}).tick(:b), beat_stretch: 1.0, amp: 0.5)};end
 live_loop(:perc1) do; 16.times{
 with_fx :echo, mix: 0.3 do;

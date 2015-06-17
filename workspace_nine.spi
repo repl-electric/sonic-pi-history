@@ -19,7 +19,7 @@ end
 
 live_loop :snare do
 sync :two,:four
-sample Ambi[/snare/,/white/i]
+sample Ambi[/snare/,/white/i], amp: 1.0
 end
 
 live_loop :hat do

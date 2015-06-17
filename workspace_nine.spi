@@ -17,10 +17,11 @@ live_loop :beatz do
 ## cue :s
 # sleep bar/4.0
 # sync :foo
+density(2) do
  32.times{
  cue :s
  sleep bar/16.0}
-
+end
 end
 
                                                                    #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  

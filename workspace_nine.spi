@@ -6,6 +6,6 @@ sleep bar/4.0
 end
 
 live_loop :snare do
-sample_and_sleep Ambi[/kick/, 0]
+sample_and_sleep Ambi[/snare/, 0]
 sleep bar/4.0
 end

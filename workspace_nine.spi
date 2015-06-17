@@ -29,7 +29,7 @@ live_loop(:kicker)do; 16.times{pat(Ether[/click/i,6],     (ring *%w{x - x - - - 
 live_loop(:snare) do; 16.times{pat(Ether[/click/i,8],     (ring *%w{- x - - x - - - - x - - x - x -}).tick(:b), beat_stretch: 0.9, amp: 0*1.5, pan: (ring 0.25,-0.25).tick(:rz2))};end
 live_loop(:perc)  do; 16.times{pat(Ether[/click/i,15],    (ring *%w{- - - - - - x - - - - x - - - -}).tick(:p), beat_stretch: 0.9, amp: 0*1.5)};end
 live_loop(:swish) do; 
-with_fx :reverb, room: 0.1 do
+with_fx :reverb, room: 0.1, mix: 0.2 do
 16.times{
 with_fx(:slicer, phase: 0.15, probability: 0.5){pat(Ether[/snare/i,12],  
                                                           (ring *%w{- - - - - x - - - - - - - - - x}).tick(:c), amp: 1*0.1, start: 0.0, rate: -1.0)}};end;end

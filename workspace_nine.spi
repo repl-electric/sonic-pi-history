@@ -17,7 +17,7 @@ live_loop :beatz do
 ## cue :s
 # sleep bar/4.0
 # sync :foo
- 16.times{
+ 32.times{
  cue :s
  sleep bar/16.0}
 

@@ -29,4 +29,4 @@ live_loop :tin4  do; 16.times{pat(Ether[/hat/i,8],   (ring *%w{- - - x - x - - -
 live_loop :swish do; 16.times{pat(Ether[/snare/i,12],(ring *%w{- - - - - x - - - - - - - - - x}).tick(:c), amp: 0*0.1, start: 0.0, rate: -1.0)};end
 live_loop :kick  do; 16.times{pat(Ether[/kick/i,5],  (ring *%w{x x - - - - - - - - - - - - - -}).tick(:d), amp: 0*0.5)};end
 
-live_loop :kick2  do; 16.times{pat(Ether[/kick/i,4], bar, (ring *%w{- - x x - - - - - - - - - - - -}).tick(:e), amp: 1*0.9, rate: rrand(0.9,1.0))};end
+live_loop :kick2  do; 16.times{pat(Ether[/kick/i,4], bar, (ring *%w{- - x x - - - - - - - - - - - -}).tick(:e), amp: 0*0.9, rate: rrand(0.9,1.0))};end

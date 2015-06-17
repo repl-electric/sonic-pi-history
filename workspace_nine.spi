@@ -13,7 +13,7 @@ end
 
 
 live_loop :beatz do
- sync :foo
+ #sync :foo
 ## cue :s
 # sleep bar/4.0
 # sync :foo

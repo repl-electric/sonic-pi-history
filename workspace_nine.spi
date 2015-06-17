@@ -1,9 +1,19 @@
 bar = 4.0
 
 live_loop :time do
+cue :one
+sleep bar/4.0
+cue :two
+sleep bar/4.0
+cue :three
+sleep bar/4.0
+cue :four
+sleep bar/4.0
+
 end
 
 live_loop :kick do
+sync :one, :three
 sample Ambi[/kick/, 0]
 sleep bar/4.0
 end

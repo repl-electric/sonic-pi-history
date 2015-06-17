@@ -19,7 +19,7 @@ end
 
 live_loop :snare do
 sync :two,:four
-sample Ambi[/snare/,1]
+sample Ambi[/snare/,3]
 end
 
 live_loop :hat do

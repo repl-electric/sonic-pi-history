@@ -16,7 +16,7 @@ live_loop :beatz do
 density(-2) do
  32.times{
  cue :s
- sleep bar/16.0 + (ring 3/5.0,  2/5.0).tick}
+ sleep bar/16.0 + (ring 6/5.0,  2/5.0).tick}
 end
 end
  with_fx :lpf, cutoff: 80 do

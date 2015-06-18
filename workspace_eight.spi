@@ -13,12 +13,12 @@ end
 
 live_loop :beatz do
 sync :foo
-density(1) do
+#density(1) do
  32.times{
  cue :s
  sleep (bar/16.0) 
 }
-end
+#end
 end
  with_fx :lpf, cutoff: 75 do
 

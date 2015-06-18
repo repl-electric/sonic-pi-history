@@ -1,0 +1,42 @@
+bar = 4.0                                                         #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
+
+def as_ring(pat)
+ ring(*pat.split("\s"))
+end
+
+def pat(s, p, *args)
+ sync :s
+ if p == "x"
+  sample *([s]+args)
+ end
+end
+
+live_loop :beatz do
+#sync :foo
+density(-2) do
+ 32.times{
+ cue :s
+ sleep bar/16.0}
+end
+end
+ 
+                                                                    #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
+#live_loop :tin2  do; 16.times{pat(Ether[/hat/i,11], bar,  (ring *%w{x - x - x - x _ x - x - x - x -}).tick(:a), pan: (ring -0.25,0.25).tick(:rz), amp: 1*(ring 0.1,0.1,0.1,0.1,0.3,0.3,0.5,0.5, 0.4,0.4,0.4,0.4,0.8,0.8,0.8,0.8).tick(:v), beat_stretch: (ring 0.8,0.8,0.8,0.8,0.8,0.8,1.0,1.0).tick(:o))};end
+
+
+live_loop(:kicker)do; 32.times{pat(Ether[/click/i,10],     (ring *%w{x - - - - - - - x - - - - - - -}).tick(:a), amp: 0.2)};end
+live_loop(:snare) do; 32.times{pat(Ether[/click/i,17],     (ring *%w{- - - - x - - - - - - - x - - -}).tick(:b), amp: 0.2)};end
+
+                                                                    #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
+
+end
+live_loop(:hats)do; 32.times{pat(Ether[/hat/i,4],          (ring *%w{x - x - x - x - - - x - x x x -}).tick(:a), amp: 0.05)};end
+
+
+live_loop(:swish) do; 
+with_fx :reverb, room: 0.7, mix: 0.3 do
+16.times{
+with_fx(:slicer, phase: 0.15, probability: 0.5){pat(Ether[/snare/i,12],  
+                                                          (ring *%w{- - - - - x - - - - - - - - - x}).tick(:c), amp: (knit 0.01,24, 0.05,8).tick(:amp), start: 0.0, rate: -1.0)}};end;end
+#live_loop(:kick)  do; 16.times{pat(Ether[/kick/i,5],      (ring *%w{x - - - - - - - - - - - - - - -}).tick(:d), amp: 0.0)};end
+#live_loop :kick2  do; 16.times{pat(Ether[/kick/i,6], bar, (ring *%w{- - x x - - - - - - - - - - - -}).tick(:e), amp: 0.0)};end

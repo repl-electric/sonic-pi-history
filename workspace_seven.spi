@@ -1,0 +1,172 @@
+sample_root = "/Users/josephwilk/Downloads/"
+$sample_name = "#{sample_root}pendulamen94.wav"
+load_sample $sample_name
+
+define :play_list do |list|
+
+  # works out the length of the array
+  num = list.length
+
+  # Setup and initial value
+  $omega_1 = 0
+
+  num.times do |beat|
+    pitch  = list[beat][0]
+    gain   = list[beat][1]
+    pos    = list[beat][2]
+
+    # If start is negative then use the previous omega value
+    if list[beat][3] < 0.0 then
+      alpha  = $omega_1
+    else
+      alpha = list[beat][3]
+    end
+
+    # Work out the stop point of the sample
+    omega  = alpha + $tick*$num_ticks*list[beat][4]
+    $omega_1 = omega
+
+    repeat = list[beat][5]
+    repeat.times do |i|
+      if gain > 0.0 then
+        sample $sample_name, rate: pitch, volume: gain, pan: pos, start: alpha, finish: omega
+      end
+      sleep $duration*(omega-alpha).abs/pitch
+    end
+  end
+end
+
+x00 = 0.0
+x10 = 0.0625
+x20 = x10*2
+x30 = x10*3
+x40 = x10*4
+x50 = x10*5
+x60 = x10*6
+x70 = x10*7
+x80 = x10*8
+x90 = x10*9
+xA0 = x10*10
+xB0 = x10*11
+xC0 = x10*12
+xD0 = x10*13
+xE0 = x10*14
+xF0 = x10*15
+
+$num_ticks = 12.0
+$tick = x10/$num_ticks
+$duration = sample_duration("#{sample_root}pendulamen94.wav")
+
+# Pitch change, Volume, Pan, Start, Increment Size, Repeat
+list = [[1.0, 1.0, 0.0, x00, 6, 2],
+        [1.0, 1.0, 0.0, x00, 16,1],
+        [1.0, 1.0, 0.0, x40, 4, 1]]
+
+with_fx :reverb do
+  with_fx :flanger do
+    with_fx :distortion do
+      5.times do |i|
+        play_list(list)
+      end
+    end
+  end
+end
+
+list = [[1.0, 1.0, 0.0, x00, 1, 2],
+        [1.0, 1.0, 0.0, x20, 2, 1],
+        [1.0, 1.0, 0.0, x30, 1, 1],
+        [1.0, 0.0, 0.0, x00, 1, 1],
+        [1.0, 1.0, -1.0, x40, 0.25, 2],
+        [1.0, 1.0, -0.5, x40, 0.25, 2],
+        [1.0, 1.0, 0.5, x40, 0.25, 2],
+        [1.0, 1.0, 1.0, x40, 0.25, 2],
+        [1.0, 1.0, 0.0, xC0, 4, 1],
+        [1.0, 1.0, 0.0, x00, 4, 1]]
+
+with_fx :reverb do
+  with_fx :flanger do
+    with_fx :distortion do
+      5.times do |i|
+        play_list(list)
+      end
+    end
+  end
+end
+
+list = [[1.0, 1.0, 0.0, x00, 1, 2],
+        [1.0, 1.0, 0.0, x20, 2, 1],
+        [1.0, 1.0, 0.0, x30, 1, 1],
+        [1.0, 0.0, 0.0, x00, 1, 1],
+        [1.0, 1.0, 0.0, x40, 1, 2],
+        [1.0, 1.0, 0.0, xE0, 0.25, 4],
+        [1.0, 1.0, 0.0, -1.0, 0.25, 4],
+        [1.0, 1.0, 0.0, -1.0, 0.16667,6],
+        [1.0, 1.0, 0.0, -1.0, 0.16667,6],
+        [1.0, 1.0, 0.0, x10, 0.08333,12],
+        [1.0, 1.0, 0.0, -1.0, 0.08333,12],
+        [1.0, 1.0, 0.0, -1.0, 0.16667,6],
+        [1.0, 1.0, 0.0, -1.0, 0.16667,6]]
+
+with_fx :reverb do
+  with_fx :flanger do
+    with_fx :distortion do
+      5.times do |i|
+        play_list(list)
+      end
+    end
+  end
+end
+
+list = [[1.0,              1.0, 0.0, x00, 8, 1],
+        [pitch_ratio(2),   1.0, 0.0, x80, 1, 1],
+        [pitch_ratio(4),   1.0, 0.0, x90, 1, 1],
+        [pitch_ratio(10),  1.0, 0.0, xA0, 2, 1],
+        [1.0,              1.0, 0.0, x00, 2, 1],
+        [pitch_ratio(-10), 1.0, 0.0, x20, 1, 1]]
+
+with_fx :reverb do
+  with_fx :flanger do
+    with_fx :distortion do
+      5.times do |i|
+        play_list(list)
+      end
+    end
+  end
+end
+
+list = [
+  [1.0,              1.0,  0.0, x00, 6,       1],
+  [1.0,              1.0,  0.0, xA0, 2,       1],
+  [1.0,              1.0,  0.0, x40, 0.16667, 6],
+  [1.0,              1.0,  0.0, -1,  0.08333,12],
+  [1.0,              1.0, -1.0, xE0, 0.5,     2],
+  [pitch_ratio(2),   1.0, -0.5, xE0, 0.5,     2],
+  [pitch_ratio(4),   1.0,  0.5, xE0, 0.5,     2],
+  [pitch_ratio(6),   1.0,  1.0, xE0, 0.5,     2],
+  [1.0,              1.0,  0.0, x00, 8,       1],
+  [pitch_ratio(2),   1.0,  0.0, x80, 1,       1],
+  [pitch_ratio(-4),  1.0,  0.0, x90, 1,       1],
+  [pitch_ratio(-10), 1.0,  0.0, xA0, 2,       1],
+  [pitch_ratio(-10), 1.0,  0.0, x00, 0.5,     2],
+  [pitch_ratio(-10), 1.0,  0.0, x10, 0.5,     2],
+  [pitch_ratio(-10), 1.0,  0.0, x20, 1,       1],
+  [pitch_ratio(-20), 1.0,  0.0, x20, 1,       1],
+  [pitch_ratio(-30), 0.0,  0.0, x20, 1,       1]]
+
+list2 =[[pitch_ratio(-20), 1.0, 0.0, x20, 1, 1],
+        [pitch_ratio(-30), 0.0, 0.0, x20, 1, 1]]
+
+with_fx :reverb do
+  with_fx :flanger do
+    with_fx :distortion do
+      6.times do |i|
+        play_list(list)
+      end
+      5.times do |i|
+        play_list(list2)
+        list2[0][0] = list2[0][0]*0.5    # lower the frequency each time round the loop
+        list2[0][1] = list2[0][1] - 0.249 # so should be 0.005 on the last cycle
+      end
+    end
+  end
+end

@@ -1,3 +1,5 @@
+load "/Users/xavierriley/Projects/sonic-pi/app/server/core.rb"
+
 class SPVector < Hamster::Vector
   def pattern(*args)
     group_size = args.max

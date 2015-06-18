@@ -22,7 +22,7 @@ end
  with_fx :lpf do
 
          #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
-                                                                             live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],     
+                                                                             live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11], start:0.1,     
 (ring *%w{x - - - - - - - x - - - - - - -    x - x - - - - - x - x - - - - -}).tick(:a), amp: 1.0)};end
                                                                                live_loop(:snare) do; 32.times{pat(Ether[/click/i,13],     
 (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - -}).tick(:b), amp: 1.0)};end

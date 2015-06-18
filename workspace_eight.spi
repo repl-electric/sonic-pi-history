@@ -20,7 +20,7 @@ density(-2) do
 }
 end
 end
- with_fx :lpf, cutoff: 80 do
+ with_fx :lpf, cutoff: 75 do
 
          #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
                                                                              live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],      

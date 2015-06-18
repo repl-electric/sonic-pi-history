@@ -24,7 +24,7 @@ end
 
          #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
                                                                              live_loop(:kicker2)do; 32.times{pat(Ether[/click/i,11],      
-(ring *%w{- - x x - - - - - - - - - - - -    x - - - - - - - x - - - - - - -}).tick(:a), amp: 3.0, start: 0.1,)};end
+(ring *%w{- - x x - - - - - - - - - - - -    x - - - - - - - - - - - - - - -}).tick(:a), amp: 3.0, start: 0.1,)};end
                                                                              live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],      
 (ring *%w{x x - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -}).tick(:a), amp: 3.0, start: 0.1,)};end
                                                                                live_loop(:snare) do; 32.times{pat(Ether[/click/i,13],     

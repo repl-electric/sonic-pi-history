@@ -19,13 +19,10 @@ density(-2) do
  sleep bar/16.0}
 end
 end
- 
-                                                                    #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
-#live_loop :tin2  do; 16.times{pat(Ether[/hat/i,11], bar,  (ring *%w{x - x - x - x _ x - x - x - x -}).tick(:a), pan: (ring -0.25,0.25).tick(:rz), amp: 1*(ring 0.1,0.1,0.1,0.1,0.3,0.3,0.5,0.5, 0.4,0.4,0.4,0.4,0.8,0.8,0.8,0.8).tick(:v), beat_stretch: (ring 0.8,0.8,0.8,0.8,0.8,0.8,1.0,1.0).tick(:o))};end
+ with_fx :lpf do
 
-                                                                    #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
-
-                                                                               live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],     
+         #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  
+                                                                             live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],     
 (ring *%w{x - - - - - - - x - - - - - - -    x - x - - - - - x - x - - - - -}).tick(:a), amp: 1.0)};end
                                                                                live_loop(:snare) do; 32.times{pat(Ether[/click/i,13],     
 (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - -}).tick(:b), amp: 1.0)};end
@@ -36,3 +33,4 @@ end
 (ring *%w{- - - - - x - - - - - - - - - x    - - - - - x - - - - - - - - - x}).tick(:c), amp: (knit 0.01,24, 0.05,8).tick(:amp), start: 0.0, rate: -1.0)}};end;end
 #live_loop(:kick)  do; 16.times{pat(Ether[/kick/i,5],      (ring *%w{x - - - - - - - - - - - - - - -}).tick(:d), amp: 0.0)};end
 #live_loop :kick2  do; 16.times{pat(Ether[/kick/i,6], bar, (ring *%w{- - x x - - - - - - - - - - - -}).tick(:e), amp: 0.0)};end
+end

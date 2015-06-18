@@ -15,6 +15,7 @@ live_loop :beatz do
 #sync :foo
 density(-2) do
  32.times{
+ sleep (ring 3/5.0,  2/5.0).tick 
  cue :s
  sleep bar/16.0}
 end

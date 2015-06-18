@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/core.rb"
 
-class SPVector < Hamster::Vector
+class SonicPi::Core::RingVector < Hamster::Vector
   def pattern(*args)
     group_size = args.max
 

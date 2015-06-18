@@ -29,7 +29,7 @@ end
 (ring *%w{x - - - - - - - x - - - - - - -    x - x - - - - - x - x - - - - -}).tick(:a), amp: 1.0)};end
                                                                                live_loop(:snare) do; 32.times{pat(Ether[/click/i,13],     
 (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - -}).tick(:b), amp: 1.0)};end
-                                                                               live_loop(:hats)do; 32.times{pat(Ether[/hat/i,3],          
+                                                                               live_loop(:hats)do; 32.times{pat(Ether[/hat/i,2],          
 (ring *%w{x - x - x - x - x - x - x - x -    x - x - x - x - - - x x x x - -}).tick(:a), amp: 0.05)};end
                                                                                live_loop(:swish) do; with_fx :reverb, room: 0.7, mix: 0.3 do; 16.times{
                                                                                with_fx(:slicer, phase: 0.15, probability: 0.5){pat(Ether[/snare/i,12],  

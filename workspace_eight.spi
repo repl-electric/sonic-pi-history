@@ -27,7 +27,7 @@ end
 
 live_loop(:kicker)do; 32.times{pat(Ether[/click/i,11],     
 (ring *%w{x - - - - - - - x - - - - - - -    x - - - - - - - x x - - - - - -}).tick(:a), amp: 1.0)};end
-                                                                               live_loop(:snare) do; 32.times{pat(Ether[/click/i,15],     
+                                                                               live_loop(:snare) do; 32.times{pat(Ether[/click/i,14],     
 (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - -}).tick(:b), amp: 1.0)};end
                                                                                live_loop(:hats)do; 32.times{pat(Ether[/hat/i,4],          
 (ring *%w{x - x - x - x - - - x - x x x -    x - x - x - x - - - x x x x x x}).tick(:a), amp: 0.05)};end

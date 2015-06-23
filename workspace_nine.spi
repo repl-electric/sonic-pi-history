@@ -4,9 +4,12 @@ def as_ring(pat)
  ring(*pat.split("\s"))
 end
 
-def pat(s, p, *args)
+def pat(s, p, delta=0, *args)
  sync :s
  if p == "x"
+  if delta != 0
+    sleep delta
+  end
   sample *([s]+args)
  end
 end

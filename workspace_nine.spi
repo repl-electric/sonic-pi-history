@@ -1,6 +1,6 @@
 bar = 4.0
 
-def as_ring(pat)
+define :pat_to_ring do pat
  ring(*pat.split("\s"))
 end
 
@@ -12,7 +12,7 @@ def pat(s, p, delta=0, *args)
     sample *([s]+args)
    when  "r"
     sleep(delta) if delta != 0
-    sample *([s]+args) if dice(6) > 3
+    sample *([s]+args) if dice(6) > 5
   end
 end
 

@@ -1,3 +1,5 @@
+["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+
 bar = 4.0
 
 define :pat_to_ring do pat

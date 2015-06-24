@@ -1,3 +1,3 @@
 puts Sink[/clap/i,18]
 
-Ambi[/clap/].map{|x|puts x}
+Ambi[/clap/,14]

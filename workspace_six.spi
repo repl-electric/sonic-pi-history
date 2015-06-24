@@ -1,3 +1,1 @@
-puts Sink[/clap/i,18]
-
-puts Ambi[/clap/,13]
+puts Down[/hat/i,[4,1]].ring

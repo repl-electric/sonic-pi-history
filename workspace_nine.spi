@@ -52,7 +52,9 @@ drum_loop(:kick,   (ring *%w{x - - - - - - - x - - - - - - -    x - - - - - - - 
 drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,13], delta: 0.001,  amp: 0.2, start: 0.0, rate: 1.0)
 drum_loop(:clap,   (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - x - - -}), Ether[/noise/i,5], amp: 0.0, start: 0.0, rate: 1.0)
 drum_loop(:cchat,  (ring *%w{x - - x - - x - - x - - - - - x    - - x - - - x - x - x - - - - -}), Down[/hat/i,6], rate: (knit 1.01,3,1.0,2,-1.2,3), amp: 0.0*rrand(0.8,1.0), start: rrand(0.0,0.00001))
+with_fx(:reverb){
 drum_loop(:ochat,  (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - -}), Down[/hat/i,2], amp: 0.1);  
+}
 drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - - - - - - - r -}), Ether[/snare/i,12], delta: 0.01, amp: 1.0*(knit 0.5,24, 1.9,8).tick(:amp), start: 0.0, rate: (knit -0.8,16, -1.5,16).tick(:rate))
 drum_loop(:fast,   (ring *%w{- - - - - - x - x - x - - - - -    - - - - - - x - x - x - - - - -}), Ether[/click/i,20], amp: 0.0, rate: -1.0)
 

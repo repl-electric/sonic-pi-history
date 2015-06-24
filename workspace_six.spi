@@ -1,1 +1,1 @@
-puts Down[/hat/i,[1,2]].map{|a| puts a }.tick
+puts Down[/hat/i,[1,2]].tick

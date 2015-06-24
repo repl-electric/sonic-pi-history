@@ -167,7 +167,7 @@ end
 end
 live_loop :bithit do
   9.times{sync :bhit}
-  with_fx (ring :none, :echo).tick, decay: bar*8 do
+  with_fx (ring :none, :echo).tick, decay: bar*16 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
   end
 end

@@ -41,7 +41,7 @@ end
 #Dance music generic
 with_fx :bitcrusher, sample_rate: 20000, mix: 0.2 do
 with_fx :pitch_shift, mix: 0.5 do
-with_fx :hpf, mix: 0.1 do
+with_fx :hpf, mix: 0.0 do
 with_fx :level, amp: 1.0 do
 with_fx :lpf, cutoff: 70, mix: 0.2 do
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8  

@@ -29,9 +29,7 @@ end
 end
 
 define :drum_loop do |name, state, sample, *args|
-puts sample.class
   live_loop name, auto_cue: false do  
-     
      pat(sample.is_a?(SonicPi::Core::RingVector) ? sample.tick("#{name}_sample".to_sym) : sample, state.tick(name), 
          delta=(args[0][:delta] || 0),
          *[args[0].reduce({}){|a,(k,v)|

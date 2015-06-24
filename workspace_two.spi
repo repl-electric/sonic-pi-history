@@ -1,0 +1,37 @@
+bar = 1.0
+
+live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
+   sync :foo
+#   density(3) do
+   case (m_idx%16)+1
+     when 8,16
+      with_fx(ring( :echo, :none).tick(:echo)){sample Frag[/snap/i,6], finish: 0.1}
+     when 7,15
+      sample Frag[/snap/i].hook, finish: 0.1 ; sleep bar/8.0 ; sample Frag[/snap/i].hook, finish: 0.1
+   else
+     sample Frag[/snap/i][0..5].tick, finish: 0.1
+     sleep bar/4.0
+     sample Frag[/snap/i][0..5].tick, finish: 0.1
+     sleep bar/2.0
+     sample Frag[/snap/i][0..5].hook, finish: 0.1
+     sleep bar/4.0
+     sample Frag[/snap/i][0..5].hook, finish: 0.1
+   end
+#end
+#   sleep bar
+end
+m_idx+=1
+end
+
+
+live_loop :kick_drms do |m_idx|;with_fx :level, amp: 0.5 do
+   sync :foo
+   #density(4) do
+   sample Ether[/noise/i, 0]
+   sleep bar/2.0
+   sample Ether[/noise/i, 6]
+
+#   sleep bar
+end
+m_idx+=1
+end

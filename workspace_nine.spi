@@ -12,7 +12,7 @@ def pat(s, p, delta=0, *args)
     sample *([s]+args)
    when  "r" #random
     sleep(delta) if delta != 0
-    sample *([s]+args) if dice(6) > 5
+    sample *([s]+args) if dice(6) > 3
   end
 end
 

@@ -6,7 +6,7 @@ define :pat_to_ring do pat
  ring(*pat.split("\s"))
 end
 
-def pat(s, p, delta=0, *args)
+define :pat do |s, p, delta=0, *args|
  sync :s
  case p
    when  "x" #hit

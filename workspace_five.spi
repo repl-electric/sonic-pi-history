@@ -209,7 +209,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
 
     with_transpose(0) do
     with_synth :beep do
-      play n, amp: 1.0, release: (knit 2.01*bar, 9, 8.02*bar, 2, 2.1*bar,5).tick(:Bass), attack: 0.05, cutoff: 60,  res: 0.5
+      play n, amp: 1.0, release: (knit 2.01*bar, 9, 8.02*bar, 2, 2.1*bar,5).tick(:Bass), attack: 0.01, cutoff: 60,  res: 0.5
     end;end
     #use_synth :prophet
     6.times{

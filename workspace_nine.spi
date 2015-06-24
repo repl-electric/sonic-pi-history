@@ -17,7 +17,6 @@ def pat(s, p, delta=0, *args)
       sleep delta
     end
     sample *([s]+args) if dice(6) > 3
- else
  end
 
  end

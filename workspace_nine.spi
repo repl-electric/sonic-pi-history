@@ -8,18 +8,12 @@ def pat(s, p, delta=0, *args)
  sync :s
  case p
    when  "x"
-     if delta != 0
-      sleep delta
-    end
+    sleep(delta) if delta != 0
     sample *([s]+args)
    when  "r"
-     if delta != 0
-      sleep delta
-    end
+    sleep(delta) if delta != 0
     sample *([s]+args) if dice(6) > 3
- end
-
- end
+  end
 end
 
 live_loop :beatz do

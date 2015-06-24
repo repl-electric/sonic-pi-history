@@ -59,7 +59,7 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
     m_idx+=1
 end;end
 
-live_loop :ghost, auto_cue: false do;with_fx :level, amp: 0.1 do
+live_loop :ghost, auto_cue: false do;with_fx :level, amp: 0.0 do
 sync :foo
 #comment do
 2.times{sleep bar/2.0;sample knit(Mountain["MICROPERC",3],8, Mountain["MICROPERC",5],2).tick(:asd),

@@ -19,7 +19,7 @@ define :pat do |s, p, delta=0, *args|
 end
 
 live_loop :beatz, auto_cue: false do
-#sync :foo
+sync :foo
 density(2) do
  16.times{
  cue :s

@@ -31,7 +31,7 @@ define :drum_loop do |name, state, sample, *args|
 end
 
 #Dance music generic
-with_fx :bitcrusher, sample_rate: 44000, mix: 0.15 do
+with_fx :bitcrusher, sample_rate: 44000, mix: 0.15, bits: 12 do
 with_fx :pitch_shift, mix: 0.5 do
 with_fx :hpf, mix: 0.0 do
 with_fx :level, amp: 0.4 do

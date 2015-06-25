@@ -1,5 +1,24 @@
-sample Down[/hat/i, [17, 16,15]].tick
-sleep 1
-sample Down[/hat/i, [17, 16,15]].tick
-sleep 1
-sample Down[/hat/i, [17, 16,15]].tick
+notes = (scale :e1, :minor_pentatonic, num_octaves: 2).shuffle
+
+live_loop :foo do
+  tick_reset
+  sleep -0.05
+  s = synth :dsaw, note: :e3, sustain: 8, note_slide: 0.05, release: 0
+  64.times do
+    sleep 0.125
+    control s, note: notes.tick
+  end
+  sleep 0.05
+end
+
+live_loop :bar do
+  #  sync :foo
+  sample :loop_industrial, beat_stretch: 1
+  sleep 1
+end
+
+live_loop :mb do
+  #sync :foo
+  sample :bd_haus, amp: 3
+  sleep 0.5
+end

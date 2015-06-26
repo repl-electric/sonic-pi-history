@@ -16,7 +16,7 @@ with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
 end
 end
 
-define :knited do |args|
+define :knited do |*args|
 end
 
 live_loop :bells do

@@ -187,7 +187,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
 
     n = notes.tick(:a)
     sleep bar/2.0
-    with_fx :distortion, mix: 0.1 do
+    with_fx :slicer, mix: 0.1 do
     sample Heat[/stacked_bells/i,sam(n),1], amp: 1.5, attack: 0.2
     end
     (knit 0,3,1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,sam(n,1)], amp: 2.0}}

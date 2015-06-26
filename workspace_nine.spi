@@ -77,4 +77,4 @@ drum_loop(:cymbal, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - 
 drum_loop(:fast,    (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}),       Sink[/F#/i,0], amp: 1.0)
 drum_loop(:fast2,   (ring *%w{x - - - - - - - - - - - - - - -    x - x - - - - - - - - - - - - -}),       Sink[/F#/i,1], amp: 1.0)
 drum_loop(:fast5,   (ring *%w{- - - - - - - - - - - - - - - -    - - - - x - - - - - - - - - - -}),       Sink[/C#/i,0], amp: 1.0)
-drum_loop(:fast3,   (ring *%w{x - - - - - - - - - - - - - - -    -*16 -*16 - - - - - - - - - - - - - -}), Sink[/F1#/i,0], amp: 1.0)
+drum_loop(:fast3,   (ring *%w{x - - - - - - - - - - - - - - -    -*16 -*16 -*16}), Sink[/F1#/i,0], amp: 1.0)

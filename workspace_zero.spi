@@ -131,7 +131,7 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
          _, 4,
 #HIT AS4-B4
         (stretch chord(:B4,:M, invert: -2)[0..2],1), 10,              #4
-        (stretch invchord(:B4,:M, -3)[0..2],1), 10,              #4
+        (stretch chord(:B4,:M, invert: -3)[0..2],1), 10,              #4
          _,4,
 #HIT AS4-B4
 ).tick(:asb)

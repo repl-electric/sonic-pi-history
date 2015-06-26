@@ -159,7 +159,9 @@ end
 
 def sam(n)  
   n = n.is_a?(Integer) ? note_info(42).midi_string : n 
+  if n
   /#{n.to_s.gsub("s","#")[0..1]}/i
+  end
 end
 
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do

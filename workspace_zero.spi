@@ -159,6 +159,7 @@ end
 
 def sam(n)  
   n = n.is_a?(Integer) ? note_info(42).midi_string : n 
+  puts n
   /#{n.to_s.gsub("s","#")[2]}/i
 end
 

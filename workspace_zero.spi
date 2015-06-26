@@ -183,7 +183,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     sample Ether[/noise/i,5], amp: 1.0 
   
     (ring 1,0).tick(:double).times do
-      sample Frag[/hat/i,11], amp: 1.0 
+      sample Frag[/coil/i,11], amp: 1.0 
       #with_fx(:reverb){sample Heat[/low_pad/i,/F#1/i,0], amp: 0.2, decay: 1.0}
       with_synth [:pnoise, :prophet][1] do
       play n, amp: 0.7, release: (knit bar,1).tick(:Bass), attack: 0.01, cutoff: 60

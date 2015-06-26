@@ -174,7 +174,7 @@ end
 
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
-    1.times{sync :foo}
+    3.times{sync :foo}
      notes = (knit 
                    chord(:As1,:m,    invert: 2)[0], 1,
                    :Cs2, 2,

@@ -157,6 +157,10 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
+def sam(note)
+  /#{note.gsub("s","#")[2]}/i
+end
+
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
     3.times{sync :foo}
@@ -174,7 +178,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
 
     sleep bar/2.0
     (knit 0,3,1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,/D#1/i,0], amp: 1.0}}
-    sample Heat[/bells/i,/#{n[0]}#1/i,1], amp: 1.5, attack: 0.2
+    sample Heat[/bells/i,sam(n),1], amp: 1.5, attack: 0.2
     #sample Ether[/noise/i,5], amp: 1.0 
   
     (ring 1,0).tick(:double).times do

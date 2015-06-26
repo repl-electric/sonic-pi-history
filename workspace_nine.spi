@@ -31,7 +31,7 @@ define :drum_loop do |name, state, sample, *args|
 end
 
 define :empty do
-  %w{- - - - - - - - -}
+  %w{- - - - - - - -}
 end
 
 #Dance music generic

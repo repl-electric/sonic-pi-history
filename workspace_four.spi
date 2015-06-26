@@ -1,1 +1,1 @@
-puts note(43)
+puts Note.fine_name(43)

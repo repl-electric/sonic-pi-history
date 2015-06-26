@@ -70,10 +70,12 @@ end
 drum_loop(:kick2,  (ring *%w{x x - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -}),  Down[/kick/i,5], amp: (ring 1.0,0.8))
 drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}),  Down[/clap/, 13], delta: 0.001,  amp: 0.2, start: 0.0, rate: 1.0)
 drum_loop(:snare2, (ring *%w{- - - x - - - - - - - x - - - -    - - - x - - - - - - - x - - - -    - - - - x - - - - - - x - - - -    - - - x - - - - x - - x - - x x}),  Down[/snare/,3], delta: 0.002,  amp: 0.2, start: 0.0, rate: 1.0)
-drum_loop(:cchat,  (ring *%w{x - x - - - x - x - x - - - x - }),  Down[/hat/i,0] ,amp: 0.2)
+drum_loop(:cchat,  (ring *%w{x - x - - - x - x - x - - - x - }),                                          Down[/hat/i,0] ,amp: 0.2)
                                                                                                                                                                           
 drum_loop(:ochat,  (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - - }),                                                                       Down[/hat/i, 2], amp: 1.0);
 drum_loop(:cymbal, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -     - - - - - - - - - - - - - - - r}), Down[/noise/i,7], amp: 0.8)  
-drum_loop(:fast,    (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}),  Sink[/F#/i,0], amp: 1.0)
-drum_loop(:fast2,   (ring *%w{x - - - - - - - - - - - - - - -    x - x - - - - - - - - - - - - -}), Sink[/F#/i,1], amp: 1.0)
+drum_loop(:fast,    (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}),       Sink[/F#/i,0], amp: 1.0)
+drum_loop(:fast2,   (ring *%w{x - - - - - - - - - - - - - - -    x - x - - - - - - - - - - - - -}),       Sink[/F#/i,1], amp: 1.0)
+drum_loop(:fast5,   (ring *%w{x - - - - - - - - - - - - - - -    x - x - - - - - - - - - - - - -}),       Sink[/F#/i,8], amp: 1.0)
+
 drum_loop(:fast3,   (ring *%w{x - - - - - - - - - - - - - - -    -*16 -*16 - - - - - - - - - - - - - -}), Sink[/F1#/i,0], amp: 1.0)

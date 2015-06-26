@@ -157,8 +157,8 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
-def sam(note)
-  /#{note.gsub("s","#")[2]}/i
+def sam(n)
+  /#{n.gsub("s","#")[2]}/i
 end
 
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do

@@ -38,7 +38,7 @@ define :expand_pattern do |pat|
   else
     slice
   end
-  }.ring
+  }
   x
 end
 

@@ -1,1 +1,1 @@
-SonicPi::Note.resolve_note_name(nil, octave)
+SonicPi::Note.resolve_note_name(nil, 4)

@@ -1,1 +1,1 @@
-puts note_info(nil).midi_string
+SonicPi::Note.resolve_note_name(n, octave)

@@ -32,7 +32,7 @@ end
      #  sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
   end;end;end
 
-  if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+  if (knit :echo,2, :reverb,2).look(:fx) == :reverb
    control fx_verb, damp: rrand(0.0,1.0)
   end
   sleep bar/4.0
@@ -41,18 +41,18 @@ end
                          :Cs4, 4, :B4, 4).tick
 
 
-  if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+  if (knit :echo,2, :reverb,2).look(:fx) == :reverb
    control fx_verb, damp: rrand(0.0,1.0)
   end
 
   sleep bar/4.0
 
-  if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+  if (knit :echo,2, :reverb,2).look(:fx) == :reverb
    control fx_verb, damp: rrand(0.0,1.0)
   end
 
   sleep bar/4.0
-  if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+  if (knit :echo,2, :reverb,2).look(:fx) == :reverb
    control fx_verb, damp: rrand(0.0,1.0)
   end
 

@@ -117,7 +117,7 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
         (stretch chord(:Ds4,:m, invert: -2),1), 20,                   #6
          _, 4,
 #HIT FS4-B4
-        (stretch invert_chord(chord_degree(7, :Fs3, :major,3), -2),1), 20,  #7
+        (stretch chord_degree(7, :Fs3, :major, 3, invert: -2),1), 20,  #7
          _, 4,
 #HIT FS4-B4
         (stretch chord(:Es3,'dim', invert: 1),1), 10,                 #7

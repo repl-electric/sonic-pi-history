@@ -68,7 +68,7 @@ end
 
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 drum_loop(:highli, (ring *%w{- - - x x - - - - - - - - - - -    - - r r - - - - - - - - - - - -    -*16                               -*16                           }),  Ether[/noise/i,11],  amp: 0.2, start: 0.0, rate: 1.0)
-drum_loop(:kick,   (ring *%w{r - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    -*16                               -*16}),                             Mountain[/impact/i,5], amp: 0.2, rate: rrand(0.9,1.0))
+drum_loop(:kick,   (ring *%w{r - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    -*16                               -*16}),                             Mountain[/impact/i,5], amp: 0.2, delta: -0.001 rate: rrand(0.9,1.0))
 drum_loop(:kick2,  (ring *%w{x x - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -}),  Mountain[/subkick/i,0], amp: (ring 1.0,0.8), start: (knit 0.01,1, 0.02,31), rate: rrand(0.9,1.0))
 drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}),  Ambi[/clap/,13], delta: 0.001,  amp: 0.2, start: 0.0, rate: 1.0)
 drum_loop(:snare2, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}),  Ambi[/clap/,17], delta: 0.002,  amp: 0.2, start: 0.0, rate: 1.0)

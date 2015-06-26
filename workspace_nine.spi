@@ -39,7 +39,6 @@ define :expand_pattern do |pat|
     slice
   end
   }
-\ x.flatten
 end
 
 #Dance music generic

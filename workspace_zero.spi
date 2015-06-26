@@ -8,20 +8,20 @@ use_bpm 60
 set_volume! 3.0
 @polyrhythm = [2,3]
 
-live_loop :begin do		
+live_loop :begin, auto_cue: false do		
   sync :foo		
   with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do		
   #sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0		
   end		
 end
 
-live_loop :crackling do;with_fx :level, amp: 0.6 do
+live_loop :crackling, auto_cue: false do;with_fx :level, amp: 0.6 do
     sync :foo
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end;end
 
-live_loop :uncertainty do
+live_loop :uncertainty, auto_cue: false do
 8.times{sync :foo}
 with_fx :distortion, amp: 0.8, mix: 0.3 do
 with_synth :beep do
@@ -50,7 +50,7 @@ end
 end
 end;end;end;end
 
-live_loop :banging do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :banging, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)
     when 0,4,2,6
@@ -98,7 +98,7 @@ end;end;end
 # 1    3    1    4    3    5    3     4  
 #FS4->AS4  FS4->B4   AS4->CS4  *AS4->B4*
 
-live_loop :drifting_through_code do; with_fx :level, amp: 2.0 do
+live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
@@ -150,14 +150,14 @@ end
 end
 end
 
-live_loop :recursion do
+live_loop :recursion, auto_cue: false do
   9.times{sync :bhit}
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
   end
 end
 
-live_loop :rumbling_loops do |idx|;with_fx :level, amp: 0.5 do
+live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
     3.times{sync :foo}
      notes = (knit 
@@ -218,7 +218,7 @@ end
 idx+=1
 end;end
 
-live_loop :forward_back do |idx|;with_fx :level, amp: 0.0 do
+live_loop :forward_back, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
     n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
     with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
       with_synth :hollow do
@@ -234,7 +234,7 @@ live_loop :forward_back do |idx|;with_fx :level, amp: 0.0 do
     end
 end;end
 
-live_loop :semi_colon do;with_fx :level, amp: 0.5 do
+live_loop :semi_colon, auto_cue: false do;with_fx :level, amp: 0.5 do
     2.times{sync :start}
       sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
 end;end

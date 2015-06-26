@@ -16,10 +16,6 @@ with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
 end
 end
 
-define :knited do |*args|
-  args.map{||}
-end
-
 live_loop :bells do
 8.times{sync :foo}
 with_fx :distortion, amp: 0.3, mix: 0.3 do

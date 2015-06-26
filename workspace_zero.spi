@@ -160,7 +160,7 @@ end
 def sam(n)  
  n = n.is_a?(Integer) ? note_info(n).midi_string[0..1] : n[0..1]
  n = n == "Eb" ? "Ds" : n
- puts n
+ puts "note: #{n}"
   if n
     /#{n.to_s.gsub("s","#")}/i
   else

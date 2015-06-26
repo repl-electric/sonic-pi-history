@@ -22,7 +22,7 @@ end;end;end
 
 define :drum_loop do |name, state, sample, *args|
   live_loop name, auto_cue: false do  
-     pat(sample.is_a?(SonicPi::Core::RingVector) ? sample.tick("#{name}_sample".to_sym) : sample, state.tick(name), 
+     pat(sample.is_a?(SonicPi::Core::RingVector) ? sample.tick("#{name}_sample".to_sym) : sample, expand_pattern(state).tick(name), 
          delta=(args[0][:delta] || 0),
          *[args[0].reduce({}){|a,(k,v)|
      v.is_a?(SonicPi::Core::RingVector) ? a[k]=v.tick("#{name}_#{k}".to_sym) : a[k]=v
@@ -30,15 +30,16 @@ define :drum_loop do |name, state, sample, *args|
   end
 end
 
-def create_pattern(pat)
-  pat.map{|slice| 
+define :expand_pattern do |pat|
+  x = pat.map{|slice| 
   case slice
   when "-*16"
     ("-"*16).split("")
   else
     slice
   end
-  }.flatten
+  }.flatten.ring
+  x
 end
 
 #Dance music generic

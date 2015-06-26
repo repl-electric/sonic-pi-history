@@ -192,7 +192,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     sample Heat[/stacked_bells/i,sam(n),1], amp: 1.5, attack: 0.2
     end;end
     (knit 0,3,1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,sam(n,1)], amp: 1.0}}
-    #sample Ether[/noise/i,5], amp: 1.0 
+    sample Ether[/noise/i,5], amp: 1.0 
   
     (ring 1,0).tick(:double).times do
       with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.5}

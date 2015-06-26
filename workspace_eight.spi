@@ -38,8 +38,8 @@ with_fx :level, amp: 0.4 do
 with_fx :lpf, cutoff: 70, mix: 0.3 do
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 drum_loop(:highli, (ring *%w{- - - x x - - - - - - - - - - -    - - r r - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}), Ether[/noise/i,11..13],  amp: 0.2, start: 0.0, rate: 1.0)
-drum_loop(:kick,   (ring *%w{x x - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -}), Mountain[/impact/i,5], amp: (ring 1.0,0.8), start: (knit 0.01,1, 0.02,31), rate: rrand(0.9,1.0))
-drum_loop(:kick2,  (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}), Mountain[/subkick/i,1], amp: 0.1, beat_stretch: 0.9)
+drum_loop(:kick,   (ring *%w{x x - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -    x - - - - - - - x - - - - - - -}), Mountain[/subkick/i,0], amp: (ring 1.0,0.8), start: (knit 0.01,1, 0.02,31), rate: rrand(0.9,1.0))
+drum_loop(:kick2,  (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}), Mountain[/impact/i,1], amp: 0.1, beat_stretch: 0.9)
 drum_loop(:clap1,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,13], delta: 0.01,  amp: 0.2, start: 0.0, rate: 1.0)
 drum_loop(:clap2,  (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,17], delta: 0.02,  amp: 0.2, start: 0.0, rate: 1.0)
 drum_loop(:noise,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - r - - -}),                                                                       Ether[/noise/i,5], amp: 1.0, start: 0.0, rate: 1.0)

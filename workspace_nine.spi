@@ -79,4 +79,3 @@ drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - 
 drum_loop(:fast,    (ring *%w{x - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -}),  Sink[/F#/i,0], amp: 1.0)
 drum_loop(:fast2,   (ring *%w{x - - - - - - - - - - - - - - -    x - x - - - - - - - - - - - - -}), Sink[/F#/i,1], amp: 1.0)
 drum_loop(:fast3,   (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - x - - - - - - - -}), Sink["Juno",/F#1/i,3], amp: 1.0)
-drum_loop(:fast4,   (ring *%w{x - - - - - - - - - - - - - - -    -*16 -*16}), Sink["Low_Pad",/F#1/i,0], amp: 1.0)

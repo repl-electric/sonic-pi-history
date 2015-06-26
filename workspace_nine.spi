@@ -34,15 +34,12 @@ def create_pattern(pat)
   pat.map{|slice| 
   case slice
   when "-*16"
-    ("-"*16).split
+    ("-"*16).split("")
   else
     slice
   end
   }.flatten
 end
-
-
-
 
 #Dance music generic
 with_fx :bitcrusher, sample_rate: 20000, mix: 0.15 do

@@ -157,12 +157,13 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
-def sam(n)   
+def sam(n)
+ puts "In: #{n}"   
  n = n.is_a?(Integer) ? note_info(n).midi_string : n
  n = n.to_s
  n = n.split(/\d/)[0]
  n = n == "Eb" ? "Ds" : n
- puts "note: #{n}"
+ puts "out: #{n}"
   if n
     /#{n.to_s.gsub("s","#")}/i
   else

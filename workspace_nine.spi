@@ -43,6 +43,7 @@ define :expand_pattern do |pat|
 end
 
 #Dance music generic
+comment do
 with_fx :bitcrusher, sample_rate: 20000, mix: 0.15 do
 with_fx :pitch_shift, mix: 0.5 do
 with_fx :hpf, mix: 0.0 do
@@ -63,3 +64,4 @@ drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - 
 drum_loop(:fast,   (ring *%w{- - - - - - x - x - x - - - - -    - - - - - - x - x - x - - - - -}), Ether[/click/i,20], amp: 1.0, rate: -1.0)
 
 end;end;end;end;end
+end

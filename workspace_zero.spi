@@ -159,7 +159,7 @@ end
 
 def sam(n)
   n = n.is_a?(Integer) ? :A1 : :A2 
-  /#{n.to_sgsub("s","#")[2]}/i
+  /#{n.to_s.gsub("s","#")[2]}/i
 end
 
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do

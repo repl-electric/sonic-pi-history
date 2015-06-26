@@ -174,7 +174,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
 
     sleep bar/2.0
     with_fx(:reverb){sample Heat[/low_pad/i,/D#1/i,0], amp: 1.0}
-    #sample Heat[/bells/i,/f#1/i,1], amp: 0.5, attack: 0.2, beat_stretch: 2.0, release: 2.0
+    sample Heat[/bells/i,/f#1/i,1], amp: 0.5, attack: 0.2, beat_stretch: 2.0, release: 2.0
     #sample Ether[/noise/i,5], amp: 1.0 
   
     (ring 1,0).tick(:double).times do

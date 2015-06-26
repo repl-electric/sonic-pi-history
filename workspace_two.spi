@@ -19,10 +19,10 @@ live_loop :if do
             with_synth(:beep){
               play (knit :Fs1, 1, :Fs2, 1, :Fs2, 1, :Fs1, 3, _, 1,
                     :Fs2, 7, _, 1,
-                    :Cs4, 7, _, 1,
-                    :Ds4, 7, _, 1,
-                    :As4, 7, _, 1,
-                    :Es4, 7, _, 1,).tick, amp: 0.2, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0
+                    :Cs2, 7, _, 1,
+                    :Ds2, 7, _, 1,
+                    :As2, 7, _, 1,
+                    :Es2, 7, _, 1,).tick, amp: 0.2, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0
             }
           end
         end

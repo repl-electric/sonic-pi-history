@@ -11,15 +11,6 @@ define :pat do |s, p, delta=0, *args|
     sample *([s]+args) if dice(6) > 3
   end
 end
-
-live_loop :beatz, auto_cue: false do
-sync :foo
-density(2) do
- 16.times do
- cue :s
- sleep (bar/16.0)
-end;end;end
-
 define :drum_loop do |name, state, sample, *args|
   state = expand_pattern(state)
   live_loop name, auto_cue: false do  
@@ -30,7 +21,6 @@ define :drum_loop do |name, state, sample, *args|
      a}])
   end
 end
-
 define :expand_pattern do |pat|
   pat.to_a.map{|slice| 
   case slice
@@ -41,6 +31,14 @@ define :expand_pattern do |pat|
   end
   }.flatten.ring
 end
+
+live_loop :drum_timing_loop, auto_cue: false do
+sync :foo
+density(2) do
+  16.times do
+ cue :s
+ sleep (bar/16.0)
+end;end;end
 
 #Dance music generic
 with_fx :bitcrusher, sample_rate: 44000, mix: 0.15, bits: 12 do

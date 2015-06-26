@@ -31,14 +31,15 @@ define :drum_loop do |name, state, sample, *args|
 end
 
 define :expand_pattern do |pat|
-  x = pat.map{|slice| 
+  x = pat.to_a.map{|slice| 
   case slice
   when "-*16"
     ("-"*16).split("")
   else
     slice
   end
-  }.flatten
+  }
+\ x.flatten
 end
 
 #Dance music generic

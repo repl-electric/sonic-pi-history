@@ -38,9 +38,7 @@ define :expand_pattern do |pat|
   else
     slice
   end
-  }
-puts x
-  x
+  }.flatten
 end
 
 #Dance music generic

@@ -1,1 +1,1 @@
-puts Note.find_name(43)
+puts note_info(42)

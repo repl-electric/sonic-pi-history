@@ -108,16 +108,16 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
       n = (knit
-        (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 12,              #3
+        (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 12,        #3
         (stretch chord(:As3,:m, invert: 0),1), 12,                    #3
 #HIT 1 3 FS3-AS4
-        (stretch invert_chord(chord(:Cs3,:M)[1..-1], 1),1), 12,             #5
+        (stretch invert_chord(chord(:Cs3,:M)[1..-1], 1),1), 12,       #5
         (stretch chord(:Cs3,:M, invert: 1),1), 12,                    #5
 #HIT FS3-AS4
         (stretch chord(:Ds4,:m, invert: -2),1), 20,                   #6
          _, 4,
 #HIT FS4-B4
-        (stretch chord_degree(7, :Fs3, :major, 3, invert: -2),1), 20,  #7
+        (stretch chord_degree(7, :Fs3, :major, 3, invert: -2),1), 20, #7
          _, 4,
 #HIT FS4-B4
         (stretch chord(:Es3,'dim', invert: 1),1), 10,                 #7
@@ -179,7 +179,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     sleep bar/2.0
 
     (ring 1,0).tick(:double).times do
-      sample Heat[/#{n}/i,(ring 7,8).tick(:kicker)], amp: 2.0
+      sample Heat[/A#/i,(ring 7,8).tick(:kicker)], amp: 2.0
       with_synth [:pnoise, :prophet][0] do
       play n, amp: 0.7, release: (knit bar,1).tick(:Bass), attack: 0.01, cutoff: 60
     end

@@ -37,7 +37,7 @@ live_loop :bellz do
             control fx_verb, damp: rrand(0.0,1.0)
           end
 
-          sleep bar/4.0
+          sleep bar/8.0
 
           if (knit :echo,2, :reverb,2).look(:fx) == :reverb
             control fx_verb, damp: rrand(0.0,1.0)

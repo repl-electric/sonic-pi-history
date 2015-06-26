@@ -2,6 +2,7 @@
 bar = 4.0
 define :pat do |s, p, delta=0, *args|
  sync :s
+puts s
  case p
    when  "x" #hit
     sleep(delta) if delta != 0

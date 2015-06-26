@@ -1,3 +1,25 @@
+["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+bar = 4.0
+define :pat do |s, p, delta=0, *args|
+ sync :s
+ case p
+   when  "x" #hit
+    sleep(delta) if delta != 0
+    sample *([s]+args)
+   when  "r" #random
+    sleep(delta) if delta != 0
+    sample *([s]+args) if dice(6) > 3
+  end
+end
+
+live_loop :beatz, auto_cue: false do
+sync :foo
+density(2) do
+ 16.times do
+ cue :s
+ sleep (bar/16.0)
+end;end;end
+
 define :drum_loop do |name, state, sample, *args|
   live_loop name, auto_cue: false do  
      pat(sample.is_a?(SonicPi::Core::RingVector) ? sample.tick("#{name}_sample".to_sym) : sample, state.tick(name), 

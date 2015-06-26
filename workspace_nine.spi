@@ -32,17 +32,14 @@ define :drum_loop do |name, state, sample, *args|
 end
 
 define :expand_pattern do |pat|
-  h = false
   x = pat.to_a.map{|slice| 
   case slice
   when "-*16"
-    h = true
     ("-"*16).split("")
   else
     slice
   end
   }
-  puts x.flatten.ring if(h)
   x.flatten.ring
 end
 

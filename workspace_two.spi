@@ -2,7 +2,7 @@ _=nil
 bar = 1.0
 live_loop :bellz do
   sync :foo
-  with_fx :distortion, amp: 0.8, mix: 0.2 do
+  with_fx :distortion, amp: 0.8, mix: 0.1 do
     with_synth :beep do
       with_fx (knit :reverb,2).tick(:fx), decay: 4.0, room: 1.0, room_lag: 2.0 do |fx_verb|
         with_transpose([0,5].choose) do
@@ -25,7 +25,6 @@ live_loop :bellz do
                     :Es4, 7, _, 1,).tick, amp: 0.2, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0
             }
           end
-
         end
       end
     

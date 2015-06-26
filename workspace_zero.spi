@@ -7,6 +7,7 @@ bar = 1.0
 use_bpm 60
 set_volume! 3.0
 @polyrhythm = [2,3]
+def invchord(root, type, inversions);invert_chord(chord(root,type), inversions); end
 
 live_loop :intro do
 sync :foo

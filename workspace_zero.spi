@@ -29,11 +29,11 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
                          :Cs4, 4, :B4, 4).tick
 
   sleep bar/4.0
- if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+ if (knit :echo,2, :reverb,2).look(:fx) == :reverb
   control fx_verb, damp: rrand(0.0,1.0)
 end
   sleep bar/4.0
- if (knit :echo,2, :reverb,2).hook(:fx) == :reverb
+ if (knit :echo,2, :reverb,2).look(:fx) == :reverb
   control fx_verb, damp: rrand(0.0,1.0)
 end
 end;end;end;end
@@ -65,15 +65,15 @@ live_loop :new_drms do |m_idx|;with_fx :level, amp: 0.1 do
      when 8,16
       with_fx((ring :echo, :none).tick(:echo)){sample Frag[/snap/i,6]}
      when 7,15
-      sample Frag[/snap/i].hook ; sleep bar/2.0 ; sample Frag[/snap/i].hook  
+      sample Frag[/snap/i].look ; sleep bar/2.0 ; sample Frag[/snap/i].look  
    else
      sample Frag[/snap/i][0..5].tick
      sleep bar/4.0
      sample Frag[/snap/i][0..5].tick
      sleep bar/2.0
-     sample Frag[/snap/i][0..5].hook
+     sample Frag[/snap/i][0..5].look
      sleep bar/2.0
-     sample Frag[/snap/i][0..5].hook
+     sample Frag[/snap/i][0..5].look
    end
 #   sleep bar
 end
@@ -247,7 +247,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
       with_synth :hollow do
         2.times{sync :foo}
         play n.tick(:f),  attack: 0.5, amp: 2.0
-#        with_synth(:pnoise){play n.hook(:f), amp: 0.001}
+#        with_synth(:pnoise){play n.look(:f), amp: 0.001}
       end
       1.times{sync :foo}
       with_fx(:slicer, mix: 0.1){

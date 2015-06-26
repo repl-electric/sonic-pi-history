@@ -39,6 +39,7 @@ define :expand_pattern do |pat|
     slice
   end
   }.flatten.ring
+puts x
   x
 end
 

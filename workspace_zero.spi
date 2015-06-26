@@ -158,7 +158,7 @@ live_loop :recursion, auto_cue: false do
 end
 
 def sam(n)  
- n = n.is_a?(Integer) ? note_info(n).midi_string[0..1] : n[0..1]
+ n = n.is_a?(Integer) ? note_info(n).midi_string[0..2] : n[0..2]
  n = n == "Eb" ? "Ds" : n
  puts "note: #{n}"
   if n

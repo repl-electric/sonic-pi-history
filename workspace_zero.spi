@@ -1,15 +1,27 @@
 ["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
-#                          \:o/
-#     π=-    π=-   π=-      █
-#    π=-   π=-   π=-      .||.  
+#                        \:o/
+#   π=-    π=-   π=-      █
+# π=-   π=-   π=-      .||. 
 _ = nil#.go
 bar = 1.0
 use_bpm 60
 set_volume! 3.0
 @polyrhythm = [2,3]
-def invchord(root, type, inversions);invert_chord(chord(root,type), inversions); end
 
-live_loop :bells do
+live_loop :begin do		
+  sync :foo		
+  with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do		
+  #sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0		
+  end		
+end
+
+live_loop :crackling do;with_fx :level, amp: 0.6 do
+    sync :foo
+    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
+    sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
+end;end
+
+live_loop :uncertainty do
 8.times{sync :foo}
 with_fx :distortion, amp: 0.8, mix: 0.3 do
 with_synth :beep do
@@ -21,7 +33,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
   if dice(32) == 1
      with_fx :pan, pan: Math.sin(vt*13)/1.5 do
      with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
-       sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
+     #sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
   end;end;end
 
   sleep bar/4.0
@@ -38,7 +50,7 @@ end
 end
 end;end;end;end
 
-live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :banging do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)
     when 0,4,2,6
@@ -46,22 +58,16 @@ live_loop :bass do |m_idx|;with_fx :level, amp: 0.5 do
        with_fx(:echo, decay: 2, pre_amp: 0.3){
          sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
        }
-       sample Mountain["subkick",1], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+       #sample Mountain["subkick",1], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      else
-     sample Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     #sample Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      end
     when 1,3,4,5
       #sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 7
-      sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.25
+      #sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.25
     end
     m_idx+=1
-end;end
-
-live_loop :beats do;with_fx :level, amp: 0.6 do
-    sync :foo
-    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
-    sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end;end
 
 live_loop :foo do;with_fx :level, amp: 0.5 do
@@ -88,21 +94,11 @@ end
 sleep bar
 end;end;end
 
-#(knit :As4, 4, :B4, 4,:Cs4, 4, :B4, 4).tick
-#(ring "Fs4", "As4", "Cs4")
-#(knit :Fs4, 7, _, 1,:As4, 7, _, 1)
-
-
- # control n, note: (knit :As4, 4, :B4, 4,
- #                        :Cs4, 4, :B4, 4).tick
- # sleep bar/2.0
-
-# 3 ->  4   AS4 - > B4
 
 # 1    3    1    4    3    5    3     4  
 #FS4->AS4  FS4->B4   AS4->CS4  *AS4->B4*
 
-live_loop :drifty do; with_fx :level, amp: 2.0 do
+live_loop :drifting_through_code do; with_fx :level, amp: 2.0 do
   1.times {sync :foo}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
@@ -144,23 +140,24 @@ puts "#{(n||[]).map{|a|note_info(a).midi_string}  ==  (ring "Fs4", "B4", "Eb4")}
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   cue :bhit
 end
-      with_transpose(-12){with_synth(:prophet){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
-      with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
-      #with_synth(:prophet){play n, cutoff: 70, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
+#with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
+      with_synth(:tri){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
+      with_synth(:prophet){play n, cutoff: 70, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
       sleep bar
     end
   end
 end
 end
 end
-live_loop :bithit do
+
+live_loop :recursion do
   9.times{sync :bhit}
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
   end
 end
 
-live_loop :bassline do |idx|;with_fx :level, amp: 0.5 do
+live_loop :rumbling_loops do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
     3.times{sync :foo}
      notes = (knit 
@@ -181,7 +178,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     #sample Ether[/noise/i,5], amp: 1.0 
   
     (ring 1,0).tick(:double).times do
-      with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.08}
+      with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.05}
       #sample Frag[/coil/i,11], amp: 1.0 
       with_synth [:pnoise, :prophet][0] do
       play n, amp: 0.7, release: (knit bar,1).tick(:Bass), attack: 0.01, cutoff: 60
@@ -221,7 +218,7 @@ end
 idx+=1
 end;end
 
-live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
+live_loop :forward_back do |idx|;with_fx :level, amp: 0.0 do
     n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
     with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
       with_synth :hollow do
@@ -237,7 +234,7 @@ live_loop :highlight do |idx|;with_fx :level, amp: 0.0 do
     end
 end;end
 
-live_loop :high do;with_fx :level, amp: 0.5 do
+live_loop :semi_colon do;with_fx :level, amp: 0.5 do
     2.times{sync :start}
       sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
 end;end

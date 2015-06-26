@@ -21,7 +21,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
   if dice(32) == 1
      with_fx :pan, pan: Math.sin(vt*13)/1.5 do
      with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
-     #  sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
+       sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
   end;end;end
 
   sleep bar/4.0

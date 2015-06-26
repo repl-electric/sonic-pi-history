@@ -178,7 +178,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
 
     sleep bar/2.0
 
-     sample Heat[/low_pad/i,/F#1/i,0], amp: 1.0
+     sample Heat[/low_pad/i,/A#1/i,0], amp: 1.0
 
     (ring 1,0).tick(:double).times do
 #      sample Heat[/F#1/i,2], amp: 1.0

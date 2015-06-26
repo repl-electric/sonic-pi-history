@@ -158,10 +158,11 @@ live_loop :recursion, auto_cue: false do
 end
 
 def sam(n)  
-  n = n.is_a?(Integer) ? note_info(n).midi_string : n 
-puts n
+ n = n.is_a?(Integer) ? note_info(n).midi_string[0..1] : n[0..1]
+ n = n == "Eb" ? "Ds" : n
+ puts n
   if n
-    /#{n.to_s.gsub("s","#")[0..1]}/i
+    /#{n.to_s.gsub("s","#")}/i
   else
    false
   end

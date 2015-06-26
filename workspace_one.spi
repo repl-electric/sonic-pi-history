@@ -41,7 +41,7 @@ density(2) do
 end;end;end
 
 #Dance music generic
-with_fx :bitcrusher, sample_rate: 44000, mix: 0.15, bits: 12 do |b_fx|
+with_fx :bitcrusher, sample_rate: 44000, mix: 0.1, bits: 12 do |b_fx|
 with_fx :pitch_shift, mix: 0.5 do
 with_fx :hpf, mix: 0.1 do
 with_fx :level, amp: 0.5 do

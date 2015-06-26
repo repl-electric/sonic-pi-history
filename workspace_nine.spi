@@ -75,7 +75,7 @@ drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - 
 drum_loop(:snare2, (ring *%w{- - - x - - - - - - - x - - - -    - - - x - - - - - - - x - - - -    - - - - x - - - - - - x - - - -    - - - x - - - - x - - x - - - -}),  Down[/snare/,3], delta: 0.002,  amp: 0.2, start: 0.0, rate: 1.0)
 
 drum_loop(:clap,   (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - r - - -}),                                                                        Ether[/noise/i,5], amp: 1.0, start: 0.0, rate: 1.0)
-drum_loop(:cchat,  (ring *%w{x - x - - - x - - x - - - - - x }),  Down[/hat/i,0] ,amp: 0.2)
+drum_loop(:cchat,  (ring *%w{x - x - - - x - x - x - - - x - }),  Down[/hat/i,0] ,amp: 0.2)
                                                                                                                                                                           
 drum_loop(:ochat,  (ring *%w{- - - - x - - - - - - - x - - -    - - - - x - - - - - - - x - - - }),                                                                       Down[/hat/i, 4], amp: 1.8);
 drum_loop(:cymbal, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -     - - - - - - - - - - - - - - - r}), Ether[/noise/i,7], amp: 0.8)  

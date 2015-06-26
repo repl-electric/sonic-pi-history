@@ -1,1 +1,1 @@
-puts note_info(42).midi_string[0..2]
+puts note_info(42).midi_string[0..1]

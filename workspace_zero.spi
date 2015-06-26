@@ -120,8 +120,8 @@ live_loop :drifty do; with_fx :level, amp: 2.0 do
         (stretch invert_chord(chord_degree(7, :Fs3, :major,3), -2),1), 20,  #7
          _, 4,
 #HIT FS4-B4
-        (stretch invchord(:Es3,'dim', 1),1), 10,                 #7
-        (stretch invchord(:Es3,'dim', 1),1), 10,                 #7
+        (stretch chord(:Es3,'dim', invert: 1),1), 10,                 #7
+        (stretch chord(:Es3,'dim', invert: 1),1), 10,                 #7
          _, 4,
 #HIT AS4-CS4
         (stretch dice(6) > 3 ? invchord(:Fs3,'sus4', -1) : invchord(:Fs3,'sus4', 0),1), 20,          #1

@@ -1,1 +1,1 @@
-puts SonicPi::Note.resolve_note_name(nil, nil)
+note_info(nil)

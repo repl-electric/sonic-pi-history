@@ -160,7 +160,7 @@ end
 def sam(n)  
   n = n.is_a?(Integer) ? note_info(42).midi_string : n 
   if n
-  /#{n.to_s.gsub("s","#")[0..1]}/i
+    /#{n.to_s.gsub("s","#")[0..1]}/i
   end
 end
 

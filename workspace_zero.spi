@@ -157,8 +157,8 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
-def sam(n)
-  n = n.is_a?(Integer) ? :A1 : :A2 
+def sam(n)  
+  n = n.is_a?(Integer) ? note_info(42).midi_string : n 
   /#{n.to_s.gsub("s","#")[2]}/i
 end
 

@@ -1,0 +1,47 @@
+theNotes = [:a2, :a3, :e3, :a4, :g4, :e4]
+
+define :foo do |samp, n|
+  sample samp,
+    rate: pitch_ratio(note(n) - note(:a3)),
+    sustain: 0.05,
+    release: 0.1,
+    amp:3
+end
+
+live_loop :CLOCK do
+  sleep 0.25
+end
+
+with_fx :reverb, damp: 1, room: 1, mix: 0.4 do
+  live_loop :X do
+    with_fx :echo, phase: [0.375, 0.375, 0.75].sample, decay: 8 do
+      with_fx :flanger, depth: 10 do
+        foo :ambi_piano, theNotes.sample
+        sync :CLOCK
+        sleep 0.25 * rrand_i(1, 2)
+      end
+    end
+  end
+
+  live_loop :Y do
+    sync :X
+    sample :drum_splash_soft,
+      rate: pitch_ratio(note(theNotes.sample) - note(:a4)),
+      attack: 0.75,
+      sustain: 0,
+      amp: 0.6,
+      release: 0
+  end
+
+with_fx :echo, phase: 1, decay: 8 do
+    live_loop :Z do
+      sync :CLOCK
+      sample  :perc_snap,
+        rate: 2.5,
+        attack: 0,
+        sustain: 0,
+        amp: 0.5,
+        release: 0.1
+    end
+  end
+end

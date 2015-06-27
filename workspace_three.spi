@@ -5,3 +5,4 @@
 #play :E3
 
 sample Mountain[/subkick/i,0], amp: 2.0, rate: pitch_ratio(note(:Fs1) - note(:E1))
+puts pitch_ratio(note(:Fs1) - note(:E1))

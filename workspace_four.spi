@@ -12,11 +12,6 @@ live_loop :CLOCK do
   sleep 0.25
 end
 
-
-\\\\\\\\\\\\\\\\\\\\\\\
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 with_fx :reverb, damp: 1, room: 1, mix: 0.4 do
   live_loop :X do
     with_fx :echo, phase: [0.375, 0.375, 0.75].sample, decay: 8 do

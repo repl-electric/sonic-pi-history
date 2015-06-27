@@ -157,7 +157,7 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
-def sam(n, oct=1)
+define :sam do |n, oct=1|
   if n
  puts "In: #{n}"   
  n = n.is_a?(Integer) ? note_info(n).midi_string : n

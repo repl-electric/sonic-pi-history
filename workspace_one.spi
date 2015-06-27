@@ -1,7 +1,7 @@
 ["experiments"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 bar = 4.0
 define :pat do |s, p, delta=0, *args|
- sync :s
+ sync :drum_hit
  case p
    when  "x" #hit
     sleep(delta) if delta != 0
@@ -35,7 +35,7 @@ end
 live_loop(:drum_timing_loop, auto_cue: false){
 density(2){
   16.times{
- cue :s
+ cue :drum_hit
  sleep (bar/16.0)}}}
 
 with_fx :level, amp: 1.0 do

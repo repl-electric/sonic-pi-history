@@ -50,7 +50,7 @@ end
 end
 end;end;end;end
 
-live_loop :banging, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
    sync :foo
     case (m_idx%8)
     when 0,4,2,6

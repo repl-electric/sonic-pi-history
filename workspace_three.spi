@@ -4,4 +4,4 @@
 #sample Mountain[/subkick/i,0], rate: 8.0
 #play :E3
 
-sample Mountain[/subkick/i,0], rate: pitch_ratio(note(:Fs1) - note(:E1))
+sample Mountain[/subkick/i,0], rate: pitch_ratio(note(:Gs1) - note(:E1))

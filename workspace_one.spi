@@ -33,7 +33,6 @@ define :expand_pattern do |pat|
 end
 
 live_loop :drum_timing_loop, auto_cue: false do
-sync :foo
 density(2) do
   16.times do
  cue :s

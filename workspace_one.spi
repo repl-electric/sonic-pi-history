@@ -41,7 +41,7 @@ end;end;end
 
 with_fx :bitcrusher, sample_rate: 44000, mix: 0.1, bits: 12 do |b_fx|
 with_fx :pitch_shift, mix: 0.5 do
-with_fx :hpf, mix: 0.1 do
+with_fx :hpf, mix: 0.0 do
 with_fx :level, amp: 0.5 do
 with_fx :lpf, cutoff: 70, mix: 0.2 do
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8

@@ -19,7 +19,7 @@ define :drum_loop do |name, state, sample, *args|
          *[args[0].reduce({}){|a,(k,v)|
      v.is_a?(SonicPi::Core::RingVector) ? a[k]=v.tick("#{name}_#{k}".to_sym) : a[k]=v
      if(k == :amp)
-       a[k] =* @drums_amp
+       a[k] = a[k] * @drums_amp
      end
      a}])
   end

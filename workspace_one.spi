@@ -42,7 +42,7 @@ density(2){
  cue :drum_hit
  sleep (bar/16.0)}}}
 
-@drums_amp = 1.0
+@drums_amp = 0.0
 
 with_fx :level, amp: 1.0 do
 with_fx :bitcrusher, sample_rate: 44000, mix: 0.1, bits: 12 do

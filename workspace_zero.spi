@@ -141,8 +141,8 @@ live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 2.0 d
 #HIT AS4-B4
 ).tick(:asb)
   #puts (n||[]).map{|a|note_info(a).midi_string}
-      n = (stretch chord(:Fs3, 'sus4'),2, chord(:Fs3, "M"),1,
-                   chord(:As3, 'sus4'),2, chord(:As3, 'M'),1)
+      n = (stretch chord(:Fs3, 'sus4'),2, chord(:Fs3, "M"),2,
+                   chord(:As3, 'sus4'),2, chord(:As3, 'M'),2)
 
 #puts "#{(n||[]).map{|a|note_info(a).midi_string}  ==  (ring "Fs4", "B4", "Eb4")}"
 

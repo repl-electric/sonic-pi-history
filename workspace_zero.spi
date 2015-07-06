@@ -141,8 +141,8 @@ live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 2.0 d
 #HIT AS4-B4
 ).tick(:asb)
   #puts (n||[]).map{|a|note_info(a).midi_string}
-      n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs6, "M"),1, 
-                   chord(:As3, 'sus4'),1, chord(:As6, 'M'),1)
+      #n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
+      #             chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)
 
 #puts "#{(n||[]).map{|a|note_info(a).midi_string}  ==  (ring "Fs4", "B4", "Eb4")}"
 
@@ -151,7 +151,7 @@ if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 end
 #with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
       with_synth(:beep){play n, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)
-      with_synth(:prophet){play n, cutoff: 80, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
+      #with_synth(:prophet){play n, cutoff: 70, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
       sleep bar
     end
   end
@@ -166,7 +166,7 @@ live_loop :recursion, auto_cue: false do
   end
 end
 
-live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
+live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
     3.times{sync :next}
      notes = (knit

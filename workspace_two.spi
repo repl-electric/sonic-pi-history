@@ -1,6 +1,6 @@
 _=nil
 bar = 1.0
-live_loop :exceptions, auto_cue: false do
+live_loop :exceptions, auto_cue: false do; with_fx :amp 0.0 do
   (knit 1,6, 2,1).tick(:time).times{sync :next}
   with_fx :distortion, amp: 0.8, mix: 0.3 do
     with_synth :beep do
@@ -40,4 +40,5 @@ live_loop :exceptions, auto_cue: false do
       end
     end
   end
+end
 end

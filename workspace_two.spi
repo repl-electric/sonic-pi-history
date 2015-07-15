@@ -33,7 +33,7 @@ define :expand_pattern do |pat|
 end
 
 live_loop(:drum_timing_loop, auto_cue: false){
-  sync :next
+  #sync :next
   density(2){
     16.times{ cue :drum_hit
               sleep (bar/16.0)}}}

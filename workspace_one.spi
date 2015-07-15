@@ -38,7 +38,7 @@ live_loop(:drum_timing_loop, auto_cue: false){
     16.times{ cue :drum_hit
               sleep (bar/16.0)}}}
 
-bty
+btyfdyjdbryr
 
 drum_loop(:fast,   (ring *%w{x - - -  _ _ _ _ - - -  _ _ _ _}), Heat[/f#/i,0], amp: 1.0)
 drum_loop(:fast2,   (ring *%w{- - - -  _ _ _ x - - -  _ _ _ _}), Heat[/b/i,0], amp: 1.0)

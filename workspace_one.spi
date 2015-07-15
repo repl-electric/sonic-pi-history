@@ -40,4 +40,4 @@ live_loop(:drum_timing_loop, auto_cue: false){
 
 
 
-drum_loop(:fast,   (ring *%w{x - - - }), Heat[/f/i,0], amp: 1.0)
+drum_loop(:fast,   (ring *%w{x - - - }), Heat[/f#/i,0], amp: 1.0)

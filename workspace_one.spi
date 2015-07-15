@@ -39,7 +39,7 @@ live_loop(:drum_timing_loop, auto_cue: false){
 #sync :next
 density(2){
   16.times{
- cue :drum_hit
+ #ue :drum_hit
  sleep (bar/16.0)}}}
 
 @drums_amp = 0.0

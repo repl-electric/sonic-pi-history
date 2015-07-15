@@ -40,4 +40,4 @@ live_loop(:drum_timing_loop, auto_cue: false){
 
 
 
-drum_loop(:fast,   (ring *%w{x - - - }), Ether[/f#/i,20], amp: 0.0, rate: (knit -1.0, 2, 1.0,2))
+drum_loop(:fast,   (ring *%w{x - - - }), Hot[/f#/i,20], amp: 0.0, rate: (knit -1.0, 2, 1.0,2))

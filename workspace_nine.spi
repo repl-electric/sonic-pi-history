@@ -55,5 +55,4 @@ def deg_seq(*pattern_and_roots)
 end
 
 
-
 puts deg_seq(%w{F3 1313})

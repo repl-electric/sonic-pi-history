@@ -191,9 +191,9 @@ end
       control fx_reverb, damp: (rrand 0.0,1.0)
       sleep bar/8.0
     }
-end;end
+end;end;end
 idx+=1
-end;end
+end
 
 live_loop :tracing_forward_back, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
     n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring

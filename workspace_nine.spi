@@ -1,8 +1,6 @@
 
 _ = nil
 
-  with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
-    with_fx (knit :none,7, :echo, (ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0 do
       n = (knit
         (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 12,              #3
         (stretch invert_chord(chord(:As3,:m), 0),1), 12,                    #3

@@ -4,6 +4,7 @@ puts x
 
 def doit(a)
 a.map{|s| s.gsub(/#/,"s")}
+a.last
 
 
 end

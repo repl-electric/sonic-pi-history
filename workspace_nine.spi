@@ -8,7 +8,7 @@ a.map{|s| s.gsub(/#/,"s")}
 note, factor = a.last.split("*")
 factor ||= 1
 a[-1] = note
-a.map{|s| [s] * factor }
+a.map{|s| [s] * 2 }
 end
 
 puts doit(%w{A#4 B#4 C#4 B4*4})

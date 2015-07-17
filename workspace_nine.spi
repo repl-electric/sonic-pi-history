@@ -56,6 +56,4 @@ def deg_seq(*pattern_and_roots)
 end
 
 
-puts deg_seq(*%w{F3 1313})
-
-puts deg_seq(*%w{F3 31}.map{|a| [a] * 4}.flatten)
+puts deg_seq(*%w{Fs3 34 Fs4 5 Fs3 4}.map{|a| [a] * 4}.flatten)

@@ -2,7 +2,7 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 
 puts x
 
-def chord_pat(a)
+def chord_pat(*a)
   note, factor = a.last.split("*")
   factor ||= "1"
   factor = factor.to_i

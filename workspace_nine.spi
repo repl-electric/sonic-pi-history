@@ -73,4 +73,4 @@ class Object
   end
 end
 
-puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).map(&:four)
+puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4)

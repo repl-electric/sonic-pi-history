@@ -35,6 +35,29 @@ define :i_bass do |note|
   end
 end
 
+define :i_deter do |note1, note2|
+with_fx :distortion, amp: 0.8, mix: 0.3 do
+with_synth :beep do
+with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
+  active_synth = play (knit :Fs4, 7, _, 1,  :As4, 7, _, 1).tick, amp: 0.3
+
+  if dice(32) == 1
+     with_fx :pan, pan: Math.sin(vt*13)/1.5 do
+     with_fx :bitcrusher, bits: 7, sample_rate: 32000 do
+     #sample Mountain[/bow/i, /f#/i, 0],amp: 0.4
+  end;end;end
+
+  sleep bar/4.0
+  control active_synth, note: (knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4).tick
+  
+  2.times{
+   sleep bar/4.0
+   if fx_verb.name =~ /reverb/
+     control fx_verb, damp: rrand(0.0,1.0)
+   end
+  }
+end
+
 ## Space
 
 live_loop :begin, auto_cue: false do
@@ -156,7 +179,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     3.times{sync :next}
     notes = (knit "Cs3",2, "Gs2",2, "As2",2,
                   "Cs3",2, "Gs2",2, "As2",2,
-                 "B2",2,  "Gs2",2, "As2",2)
+                  "B2",2,  "Gs2",2, "As2",2)
 
 comment do
     notes = (knit chord(:As1,:m,    invert: 2)[0], 1,

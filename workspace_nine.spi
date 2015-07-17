@@ -31,7 +31,7 @@ _ = nil
 
 
 
-puts (knit chord(:As3,:m)[0..1], 12,
+z = (knit chord(:As3,:m)[0..1], 12,
            chord(:As3,:m),       12,
            chord(:Cs3,:M, invert: 2).delete_at(1), 12,
            chord(:Cs3,:M, invert: 1), 12,
@@ -49,3 +49,6 @@ puts (knit chord(:As3,:m)[0..1], 12,
         chord(:B4,:M, invert: -2)[0..2], 10,
         chord(:B4,:M, invert: -3)[0..2], 10,
          _, 4)
+
+
+n == z

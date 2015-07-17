@@ -25,6 +25,7 @@ def note_knit(*patterns)
                      puts chord_pat(%w{A#4 B4 C#4 B4*4},
                                        %w{})
 
+deg_seq(%w{F3 1313})
 
 def deg_seq(*pattern_and_roots)
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id| 

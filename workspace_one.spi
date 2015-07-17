@@ -39,6 +39,6 @@ live_loop(:drum_timing_loop, auto_cue: false){
               sleep (bar/16.0)}}}
 
 
-drum_loop(:fast,   (ring *%w{x - - -  - - - - - - -  _ _ _ _}), Heat[/f#/i,8], amp: 1.0)
+drum_loop(:fast,   (ring *%w{x - - -  - - - - - - -  _ _ _ _}), Heat[/f#/i,9], amp: 1.0)
 drum_loop(:fast2,  (ring *%w{- - - -  - - - x - - -  _ _ _ _}), Heat[/b/i,1], amp: 1.0)
 drum_loop(:fast3,  (ring *%w{x - - -  - - - x - - -  - - - -}), Heat[/kick/i,0], amp: 1.0)

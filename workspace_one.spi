@@ -45,4 +45,4 @@ drum_loop(:fast3,  (ring *%w{x - - -  - - - x - - - -  - - - -}), Heat[/kick/i,5
 drum_loop(:fast4,  (ring *%w{- - - -  - - - x - - - -  - - - -}), Heat[/a#/i,1], amp: 0.1)
 drum_loop(:fast5,  (ring *%w{- - - -  r - - - - - - -  x - - -}), Heat[/c#/i,17], amp: 1.0, release: 0.1)
 drum_loop(:fast6,  (ring *%w{x - x -  - - x -  x - x -  - - x -}), Heat[/hat/i,3], amp: 1.0)
-drum_loop(:fast7,  (ring *%w{- - - -  x - - -  - - - -  - - - -}), Heat[/hat/i,8], amp: 1.0)
+drum_loop(:fast7,  (ring *%w{- - - -  x - - -  - - - -  x- - - -}), Heat[/hat/i,8], amp: 1.0)

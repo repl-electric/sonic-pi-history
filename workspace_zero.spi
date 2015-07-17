@@ -19,16 +19,15 @@ live_loop :bits, auto_cue: false do;with_fx :level, amp: 0.6 do
     sync :next
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
-end;end
+end
+end
 
 live_loop :indeterminism, auto_cue: false do
 8.times{sync :next}
 with_fx :distortion, amp: 0.8, mix: 0.3 do
 with_synth :beep do
 with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
-  n = play (knit :Fs4, 7, _, 1,
-                 :As4, 7, _, 1
-).tick, amp: 0.3
+  n = play (knit :Fs4, 7, _, 1,  :As4, 7, _, 1).tick, amp: 0.3
 
   if dice(32) == 1
      with_fx :pan, pan: Math.sin(vt*13)/1.5 do
@@ -37,13 +36,13 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
   end;end;end
 
   sleep bar/4.0
-  control n, note: (knit :As4, 4, :B4, 4,
-                         :Cs4, 4, :B4, 4).tick
+  control n, note: (knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4).tick
  2.times{
-  sleep bar/4.0
-  if fx_verb.name =~ /reverb/
-  control fx_verb, damp: rrand(0.0,1.0)
- end}
+   sleep bar/4.0
+   if fx_verb.name =~ /reverb/
+     control fx_verb, damp: rrand(0.0,1.0)
+   end
+ }
 end;end;end;end
 
 live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
@@ -70,13 +69,11 @@ live_loop :next do;with_fx :level, amp: 0.5 do
     density(@polyrhythm.sort.first) do
       #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
 
-comment do
       with_synth(:dark_ambience){play (knit
        "Fs4",1,_,1,"Fs2",6,
        "B4", 1, "Ds5",1, "Bs2",6,
        "Ds5",1,_,1,"Ds2",6
 ).tick(:a), cutoff: 80, amp: 0.5, release: 2*bar, attack: 0.01}
-end
 
 ##       "Fs4",1,_,1,"Fs2",6,
 #         "Fs3",1

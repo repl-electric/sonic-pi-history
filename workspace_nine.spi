@@ -17,12 +17,6 @@ def deg_seq(*pattern_and_roots)
   end}
   patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
-
-puts "-------------------------------------------"
-puts patterns
-puts roots
-puts "-------------------------------------------"
-
   notes = patterns.each_with_index.map do |pattern, idx|
     root = roots[idx]
     if(root[0] == ":")
@@ -38,6 +32,7 @@ puts s
       else :minor
       end
     end
+    #MESSEY 
     root = root[0..1] + root[2..-1] if root.length > 2
     pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
   end.flat_map{|x| x}
@@ -69,6 +64,7 @@ puts "-----------"
 puts x.map{|s| note_info(s).midi_note}
 puts "-----------"
 puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).map{|a| [a]  * 4}.flatten
-puts "->" 
 puts  stretch(deg_seq(*%w{Fs4 3 4 Fs3 5 Fs4 4}), 4)
 puts  note_seq(%w{A#4 B4 C#4 B4*4},  %w{}).map{|s| note_info(s).midi_note}
+
+puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).map(&four)

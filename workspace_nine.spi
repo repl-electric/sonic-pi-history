@@ -8,7 +8,6 @@ a.map{|s| s.gsub(/#/,"s")}
 note, factor = a.last.split("*")
 factor ||= 1
 a[-1] = note
-
 a.map{|s| [s] *factor }
 end
 

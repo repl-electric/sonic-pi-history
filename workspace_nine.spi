@@ -4,15 +4,17 @@ puts x
 
 def chord_pat(*patterns)
   patterns.reject{|a| a.empty?}.
-    map{|a|
-  note, factor = a.last.split("*")
-  factor ||= "1"
-  factor = factor.to_i
-  a[-1] = note
-  a.map{|s| s.gsub(/#/,"s")}.
-                   map{|s| [s.to_sym] * factor }.
-                   flatten
-  }.flatten.ring
-end
+  map{|a|
+    note, factor = a.last.split("*")
+    factor ||= "1"
+    factor = factor.to_i
+    a[-1] = note
+    a.map{|s| s.gsub(/#/,"s")}.
+                     map{|s| [s.to_sym] * factor }.
+                     flatten
+                     }.
+                     flatten.ring
+  end
 
-puts chord_pat(%w{A#4 B4 C#4 B4*4}, %w{})
+                     puts chord_pat(%w{A#4 B4 C#4 B4*4},
+                                       %w{})

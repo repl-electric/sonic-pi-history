@@ -33,3 +33,6 @@ puts n
 
 
 puts (knit (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 12)
+
+
+puts (stretch invert_chord(chord(:As3,:m)[0..1], 0),1)

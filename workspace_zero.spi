@@ -58,6 +58,7 @@ with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
   }
 end
 end
+end
 
 ## Space
 

@@ -8,7 +8,7 @@ factor ||= "1"
 factor = factor.to_i
 a[-1] = note
 a.map{|s| s.gsub(/#/,"s")}.
-   map{|s| [s] * factor }.
+   map{|s| [s.to_sym] * factor }.
    flatten
 end
 

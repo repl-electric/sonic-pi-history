@@ -3,8 +3,9 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 puts x
 
 def chord_pat(*patterns)
-  puts patterns
-  patterns.map{|a|
+  puts patterns.
+  patterns.reject{|a| a.empty?}.
+    map{|a|
   note, factor = a.last.split("*")
   factor ||= "1"
   factor = factor.to_i

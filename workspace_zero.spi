@@ -8,19 +8,6 @@ use_bpm 60
 set_volume! 2.0
 @polyrhythm = [2,3]
 
-def sam(n, oct=1)
-  if n
- n = n.is_a?(Integer) ? note_info(n).midi_string : n
- n = n.to_s
- n = n.split(/\d/)[0]
- n = n == "Eb" ? "Ds" : n
- n = n.gsub("s","#")
-    /#{n}#{oct}/i
-  else
-   false
-  end
-end
-
 live_loop :begin, auto_cue: false do
   sync :next
   with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do

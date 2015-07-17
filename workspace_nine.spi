@@ -4,6 +4,8 @@ puts x
 
 def doit(a)
 a.map{|s| s.gsub(/#/,"s")}
+
+
 end
 
-puts doit(%w{[A#4 B#4 C#4 B4]*4})
+puts doit(%w{A#4 B#4 C#4 B4*4})

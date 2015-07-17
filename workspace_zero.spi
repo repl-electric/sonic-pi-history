@@ -175,7 +175,6 @@ end
                   :Fs1,                            2,
                   _,1,:Fs2,1,
                   chord(:B1,:M,     invert: -1)[0],3)
-end
 
     note = notes.tick(:a)
     

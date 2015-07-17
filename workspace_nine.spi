@@ -51,4 +51,4 @@ z = (knit chord(:As3,:m)[0..1], 12,
          _, 4)
 
 
-put n == z
+puts n == z

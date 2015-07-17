@@ -13,4 +13,4 @@ a.map{|s| s.gsub(/#/,"s")}.
    ring
 end
 
-puts doit(%w{A#4 B4 C#4 B4*2})
+puts doit(%w{A#4 B4 C#4 B4*100})

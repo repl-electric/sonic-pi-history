@@ -28,7 +28,7 @@ _ = nil
 #HIT AS4-B4
         (stretch invert_chord(chord(:B4,:M), -2)[0..2],1), 10,              #4 
         (stretch invert_chord(chord(:B4,:M), -3)[0..2],1), 10,              #4 
-         _,4,
+         _,4)
 #HIT AS4-B4
 
 

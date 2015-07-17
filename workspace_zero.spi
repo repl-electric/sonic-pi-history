@@ -131,7 +131,7 @@ end
 end
 end
 
-live_loop :recursion, auto_cue: false do
+live_loop :recursion, auto_cue: false do; with_fx :level, amp: 0.0 do
   9.times{sync :bhit}
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5

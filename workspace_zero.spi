@@ -157,11 +157,11 @@ live_loop :recursion, auto_cue: false do; with_fx :level, amp: 0.0 do
   end
 end;end
 
+with_fx :distortion, mix: 0.1 do
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
-with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0.1  do
+with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; 
     3.times{sync :next}
 comment do
-
     notes = (knit "Cs3",2, "Gs2",2, "As2",2,
                   "Cs3",2, "Gs2",2, "As2",2,
                   "B2",2,  "Gs2",2, "As2",2)

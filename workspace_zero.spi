@@ -84,7 +84,7 @@ end
       play (knit "Fs2",2).tick(:a), amp: 1.5, release: bar/6.0, attack: 0.1
 
       with_fx (knit :echo,1,:none, 7).tick(:o), decay: bar*8 do
-#      with_synth(:hollow){ play deg_seq(*%w{FS1 111}).tick(:asd)}
+      with_synth(:hollow){ play deg_seq(*%w{FS1 111}).tick(:asd)}
       end
 sleep bar
 end;end;end

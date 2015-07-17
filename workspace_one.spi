@@ -39,7 +39,7 @@ live_loop(:drum_timing_loop, auto_cue: false){
               sleep (bar/16.0)}}}
 
 
-set_volume! 0.2
+set_volume! 0.02
 
 drum_loop(:fast,   (ring *%w{x - - -  - - - - - - - -  _ _ _ _}), Heat[/f#/i,15], amp: 1.0, attack: 0.01)
 drum_loop(:fast2,  (ring *%w{- - - -  - - - - x - - -  _ _ _ _}), Heat[/clap/i,6], amp: 1.0)

@@ -11,7 +11,7 @@ def chord_pat(*patterns)
   a[-1] = note
   a.map{|s| s.gsub(/#/,"s")}.
                    map{|s| [s.to_sym] * factor }.
-                   flatten.
+                   flatten
   }.flatten.ring
 end
 

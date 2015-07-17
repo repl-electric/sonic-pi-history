@@ -17,6 +17,7 @@ def deg_seq(*pattern_and_roots)
   end}
   patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
+puts roots
   notes = patterns.each_with_index.map do |pattern, idx|
     root = roots[idx]
     if(root[0] == ":")

@@ -1,3 +1,5 @@
+
+_ = nil
       n = (knit
         (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 12,        #3
         (stretch chord(:As3,:m, invert: 0),1), 12,                    #3

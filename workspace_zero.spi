@@ -5,7 +5,7 @@
 _ = nil#.go
 bar = 1.0
 use_bpm 60
-set_volume! 1.0
+set_volume! 2.0
 @polyrhythm = [2,3]
 
 def sam(n, oct=1)

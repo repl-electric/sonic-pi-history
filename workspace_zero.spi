@@ -102,7 +102,7 @@ notes = (knit chord(:As3,:m)[0..1], 12,
               chord(:B4,:M, invert: -3)[0..2], 10,
               _, 4)
 
-n= notes.tick(:asb)
+n = notes.tick(:asb)
 
 n = (stretch chord(:Fs3, 'sus4'),1, chord(:Fs3, "M"),1,
              chord(:As3, 'sus4'),1, chord(:As3, 'M'),1)

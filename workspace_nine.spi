@@ -5,7 +5,7 @@ puts x
 def doit(a)
 a.map{|s| s.gsub(/#/,"s")}
 
-a.last.split("*")
+note, factor = a.last.split("*")
 
 
 end

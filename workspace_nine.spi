@@ -1,8 +1,13 @@
 x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
+              3           4          -              
 
-puts x
+[:Fs4 34  :Fs3 5 :Fs4 4]*8
 
-def chord_pat(*patterns)
+#               1   2  3  4 5  6   7  8
+#Cs Ds Es Fs Gs As B Cs Ds Es Fs
+#puts x
+
+def note_knit(*patterns)
   patterns.reject{|a| a.empty?}.
   map{|a|
     note, factor = a.last.split("*")
@@ -13,7 +18,7 @@ def chord_pat(*patterns)
                      map{|s| [s.to_sym] * factor }.
                      flatten
                      }.
-                     flatten.ring
+  flatten.ring
   end
 
                      puts chord_pat(%w{A#4 B4 C#4 B4*4},

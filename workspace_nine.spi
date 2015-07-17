@@ -6,6 +6,7 @@ def doit(a)
 a.map{|s| s.gsub(/#/,"s")}
 
 note, factor = a.last.split("*")
+a[-1] = note
 
 a.reduce([]){ |r, a| r+[a]}
 end

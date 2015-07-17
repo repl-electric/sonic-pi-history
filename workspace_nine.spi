@@ -52,5 +52,4 @@ puts (knit chord(:As3,:m)[0..1], 1,
         chord(:B4,:M, invert: -2)[0..2],
         chord(:B4,:M, invert: -3)[0..2],
          _, 4,
-
 )

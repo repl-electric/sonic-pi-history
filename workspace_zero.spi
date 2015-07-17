@@ -30,7 +30,7 @@ define :i_bass do |note|
   end
   with_transpose(0) do
     with_synth :beep do
-      play n, amp: 1.0, release: (knit 2.01*bar, 9, 8.02*bar, 2, 2.1*bar,5).tick(:Bass), attack: 0.05, cutoff: 60,  res: 0.5
+      play note, amp: 1.0, release: (knit 2.01*bar, 9, 8.02*bar, 2, 2.1*bar,5).tick(:Bass), attack: 0.05, cutoff: 60,  res: 0.5
     end
   end
 end

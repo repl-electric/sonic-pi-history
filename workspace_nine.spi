@@ -9,7 +9,7 @@ note, factor = a.last.split("*")
 factor ||= "1"
 factor = factor.to_i
 a[-1] = note
-a.map{|s| [s] *  }
+a.map{|s| [s] * factor }
 end
 
 puts doit(%w{A#4 B#4 C#4 B4*4})

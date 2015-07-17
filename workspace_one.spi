@@ -43,7 +43,7 @@ drum_loop(:fast,   (ring *%w{x - - -  - - - - - - - -  _ _ _ _}), Heat[/f#/i,15]
 drum_loop(:fast2,  (ring *%w{- - - -  - - - - x - - -  _ _ _ _}), Heat[/clap/i,6], amp: 1.0)
 drum_loop(:fast3,  (ring *%w{x - - -  - - - - x - - -  - - - -}), Heat[/kick/i,2], amp: 1.0)
 drum_loop(:fast4,  (ring *%w{- - - -  - - - - x - - -  - - - -}), Heat[/a#/i,1], amp: 0.0)
-drum_loop(:fast5,  (ring *%w{x - - -  x - - - x - - -  x - - -}), (knit Heat[/c#/i,12],4, Heat[/_b/i,29],4), amp: 1.2, release: 0.1)
+drum_loop(:fast5,  (ring *%w{x - - -  x - - - x - - -  x - - -}), (knit Heat[/c#/i,12],4, Heat[/_b/i,39],4), amp: 1.2, release: 0.1)
 drum_loop(:fast6,  (ring *%w{x - x - - - x -  x - x -  - - x -}), Heat[/hat/i, 1..2], amp: 1.0)
 drum_loop(:fast7,  (ring *%w{- - - - x - - -  - - - -  x- - - -}), Heat[/hat/i,8], amp: 1.0)
 drum_loop(:fast7,  (ring *%w{- - - - x - - -  - - - -  x- - - -}), Heat[/hat/i,8], amp: 1.0)

@@ -57,3 +57,5 @@ end
 
 
 puts deg_seq(*%w{F3 1313})
+
+puts deg_seq(*%w{F3 3}.map{|a| [a]*4})

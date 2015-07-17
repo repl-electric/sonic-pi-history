@@ -43,5 +43,5 @@ puts (knit chord(:As3,:m)[0..1], 1,
 )
 
 
-puts            invert_chord(chord(:Cs3,:M, invert: 1), 1)
+puts            invert_chord(chord(:Cs3,:M, invert: 2), 1)
 puts            invert_chord(chord(:Cs3,:M)[1..-1], 1)

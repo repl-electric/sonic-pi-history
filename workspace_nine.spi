@@ -4,7 +4,7 @@ _ = nil
         (stretch invert_chord(chord(:As3,:m)[0..1], 0),1), 1,        #3
         (stretch chord(:As3,:m, invert: 0),1), 1,                    #3
 #HIT 1 3 FS3-AS4
-        (stretch invert_chord(chord(:Cs3,:M)[1..-1], 1),1), 12,       #5
+        (stretch invert_chord(chord(:Cs3,:M)[1..-1], 1),1), 1,       #5
         (stretch chord(:Cs3,:M, invert: 1),1), 12,                    #5
 #HIT FS3-AS4
         (stretch chord(:Ds4,:m, invert: -2),1), 20,                   #6
@@ -36,12 +36,7 @@ puts n
 
 puts (knit chord(:As3,:m)[0..1], 1,
            chord(:As3,:m),       1,
-           invert_chord(chord(:Cs3,:M)[1..-1], 1), 12,       #5
-
-
+           chord(:Cs3,:M, invert: 2).delete_at(1), 1
+           chord(:Cs3,:M, invert: 1) 1,                    #5
 
 )
-
-
-puts            chord(:Cs3,:M, invert: 2).delete_at(1)
-puts            invert_chord(chord(:Cs3,:M)[1..-1], 1)

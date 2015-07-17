@@ -70,7 +70,7 @@ puts x.map{|s| note_info(s).midi_note}
 puts "-----------"
 puts deg_seq(*%w{FS4 3 4 FS2 6 FS4 4}.map{|a| [a] * 4}.flatten)
 puts "->" 
-puts  stretch(deg_seq(*%w{Fs4 34 Fs5 5 Fs4 4}), 4)
+puts  stretch(deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}), 4)
 
 
 

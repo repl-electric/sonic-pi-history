@@ -172,7 +172,7 @@ with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; with_fx :distortion, mix: 0
     control fx_reverb, damp: (rrand 0.0,1.0)
     sleep bar/8.0
     }
-#comment do
+comment do
 notes = (knit
 "Cs3",2, "Gs2",2, "As2",2,
 "Cs3",2, "Gs2",2, "As2",2,
@@ -182,7 +182,7 @@ notes = (knit
  with_transpose(-12) do
    with_synth(:beep){play notes, amp: 0.2, release: 4*bar, attack: 0.01, cutoff: 60}
  end;end;end
-#end
+end
 idx+=1
 end;end
 

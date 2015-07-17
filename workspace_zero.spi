@@ -81,7 +81,7 @@ live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 0.0 do
           (knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4).tick)
 end;end
 
-live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.0 do
    sync :next
     case (m_idx%8)
     when 0,4,2,6

@@ -68,7 +68,7 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 puts "-----------"
 puts x.map{|s| note_info(s).midi_note}
 puts "-----------"
-puts deg_seq(*%w{FS4 34 FS3 5 FS4 4}.map{|a| [a] * 4}.flatten)
+puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}.map{|a| [a] * 4}.flatten)
 puts "->" 
 puts  stretch(deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}), 4)
 puts  chord_pat(%w{A#4 B4 C#4 B4*4},  %w{}).map{|s| note_info(s).midi_note}

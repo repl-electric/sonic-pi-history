@@ -58,6 +58,6 @@ end
 
 
 
-puts deg_seq(*%w{Fs3 34 Fs4 5 Fs3 4}.map{|a| [a] * 4}.flatten)
+puts deg_seq(*%w{Fs3 3 4 Fs4 5 Fs3 4}.map{|a| [a] * 4}.flatten)
 puts "->" 
 puts  stretch(deg_seq(*%w{Fs3 34 Fs4 5 Fs3 4}), 4)

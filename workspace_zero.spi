@@ -75,7 +75,7 @@ live_loop :bits, auto_cue: false do;with_fx :level, amp: 0.6 do
 end
 end
 
-live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 0.5 do
+live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
   8.times{sync :next}
   i_deter((knit :Fs4, 7, _, 1,  :As4, 7, _, 1).tick,
           (knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4).tick)

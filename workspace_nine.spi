@@ -34,7 +34,7 @@ def deg_seq(*pattern_and_roots)
     end
     #MESSEY
     root = root[0..1] + root[2..-1] if root.length > 2
-    puts pattern.match(/(\d)/)[1]
+    puts pattern.match(/(\d)/)[2]
     pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
   end.flat_map{|x| x}
  (ring *notes)

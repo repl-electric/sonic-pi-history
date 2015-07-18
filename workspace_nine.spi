@@ -33,9 +33,6 @@ def deg_seq(*pattern_and_roots)
       pat
     end
   }.flatten
-  puts patterns
-  puts roots
-
   notes = patterns.each_with_index.map do |pattern, idx|
     root = roots[idx]
     if(root[0] == ":")

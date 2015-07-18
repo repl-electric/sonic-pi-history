@@ -8,7 +8,7 @@ _=nil
                   _,1,:Fs2,1,
                   chord(:B1,:M,     invert: -1)[0],3)
 
-puts notes.map{|n| note_info(n||0).midi_string}
+puts notes
 
 
 (ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", _, "Fs4", "Eb4", "Eb4", "Eb4")

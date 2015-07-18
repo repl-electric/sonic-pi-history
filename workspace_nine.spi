@@ -25,6 +25,7 @@ def deg_seq(*pattern_and_roots)
   patterns = pattern_and_roots.select{|a| /^[\d_]+$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_]+$/ !~ a.to_s}
 
+   
   puts patterns
   puts roots
 
@@ -34,7 +35,6 @@ def deg_seq(*pattern_and_roots)
       root = root[1..-1]
     end
     s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-puts s
     if(s == :minor)
       s = if    root.to_s[1] == "h"
         :harmonic_minor

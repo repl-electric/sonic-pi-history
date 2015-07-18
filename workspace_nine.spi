@@ -1,4 +1,4 @@
-
+_=nil
    notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
                   :Cs2,                            2,
                   chord(:Ds2,:m,    invert: 0)[0], 2,

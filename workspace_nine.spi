@@ -56,4 +56,4 @@ x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1)
 puts x
 puts "---------------------"
 #puts deg_seq(*%w{FS4 1*7 _ 3*7 _})
-puts deg_seq(*%w{FS3 1 FS4 2})
+puts deg_seq(*%w{FS3 1 FS4 23434})

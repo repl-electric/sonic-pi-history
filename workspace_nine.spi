@@ -8,4 +8,4 @@ _=nil
                   _,1,:Fs2,1,
                   chord(:B1,:M,     invert: -1)[0],3)
 
-puts notes.map{|n| note_info(n||-10).midi_note}
+puts notes.map{|n| note_info(n||20).midi_note}

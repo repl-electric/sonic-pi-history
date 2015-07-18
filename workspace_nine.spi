@@ -76,7 +76,7 @@ puts "---------------------"
 puts deg_seq(%w{Fs4 1*7 _ 3*7 _})
 puts deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4)
 
-interleave(deg_seq(%w{Fs4 1*7 _ 3*7 _}), deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4))
+interleave(deg_seq(%w{Fs4 1*7 _ 3*7 _}).to_a, deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4).to_a)
 
 def interleave(*args)
   raise 'No arrays to interleave' if args.empty?

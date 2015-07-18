@@ -34,7 +34,7 @@ def deg_seq(*pattern_and_roots)
     end
     #MESSEY
     root = root[0..1] + root[2..-1] if root.length > 2
-     puts pattern
+    puts pattern
     
     pattern.
       scan(/(\d{1}|-\d{1})/).
@@ -46,3 +46,5 @@ end
 
 
 puts deg_seq(%w{Fs4 34  -3  4})
+
+puts degree(-1.to_i, :F3, :major)

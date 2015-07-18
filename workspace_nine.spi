@@ -10,12 +10,12 @@ _=nil
 
 puts notes
 
-puts note_info(41)
+puts note_info(10)
 #puts chord(:As1,:m,    invert: 2)[0     41]
 
 
 
-puts note_info("Fs2")
+puts note_info("Fs2") => #<SonicPi::Note :Fs4>
 
 
 (ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", _, "Fs4", "Eb4", "Eb4", "Eb4")

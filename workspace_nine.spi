@@ -74,4 +74,4 @@ def note_seq(*patterns)
 _ = nil
 puts "---------------------"
 puts deg_seq(%w{Fs4 1*7 _ 3*7 _})
-puts deg_seq(%w{Fs4 34 Fs3 5 Fs4 4})
+puts deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4)

@@ -47,4 +47,4 @@ end
 
 puts deg_seq(%w{Fs4 34  -3  4})
 
-degree(-5, :F3, :major) == degree(5, :F2, :major)
+puts degree(-5, :F3, :major) == degree(5, :F2, :major)

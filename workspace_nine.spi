@@ -16,10 +16,46 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 #puts x
 
 def deg_seq(*pattern_and_roots)
-pattern_and_roots = pattern_and_roots.flatten
+  pattern_and_roots = pattern_and_roots.flatten
+  pattern_and_roots = pattern_and_roots.map{|pat| 
+    if pat =~ /\*/ 
+      note, factor = pat.split("*")
+      ([note] * factor.to_i).join("")
+    else
+      pat
+    end
+  }.flatten
+
+  pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
+    if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
+      accu[0..-2] << "#{accu[-1]}#{id}"
+    else
+      accu << id
+  end}
   puts pattern_and_roots
+  patterns = pattern_and_roots.select{|a| /^[\d_]+$|^\d\*\d$/ =~ a.to_s }
+  roots   = pattern_and_roots.select{|a| /^[\d_*]+$/ !~ a.to_s}
 
-
+  notes = patterns.each_with_index.map do |pattern, idx|
+    root = roots[idx]
+    puts root
+    if(root[0] == ":")
+      root = root[1..-1]
+    end
+    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
+    if(s == :minor)
+      s = if    root.to_s[1] == "h"
+        :harmonic_minor
+      elsif root.to_s[1] == "m"
+        :melodic_minor
+      else :minor
+      end
+    end
+    #MESSEY 
+    root = root[0..1] + root[2..-1] if root.length > 2
+    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+  end.flat_map{|x| x}
+  (ring *notes)
 end
 
 
@@ -41,4 +77,4 @@ _ = nil
 x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1)
 puts x.map{|n| note_info(n||100).midi_note}
 puts "---------------------"
-puts deg_seq(%w{FS4 1*7 _ 3*7 _}, %w{FS4 1*7 _ 3*7 _})
+puts deg_seq(%w{FS4 1*7 _ 3*7 _})

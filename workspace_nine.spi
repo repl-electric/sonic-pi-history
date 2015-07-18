@@ -1,1 +1,1 @@
-puts chord(:A1, 'M')
+puts chord("F3", 'M7')

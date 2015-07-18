@@ -11,5 +11,6 @@ _=nil
 puts notes.map{|n| note_info(n||0).midi_string}
 
 
-(ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", "Ab4", "Fs4", "Eb4", "Eb4", "Eb4")
+(ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", _, "Fs4", "Eb4", "Eb4", "Eb4")
+(ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", _, "Fs4", "Eb4", "Eb4", "Eb4")
  

@@ -47,4 +47,4 @@ end
 
 puts deg_seq(%w{Fs4 34  -3  4})
 
-puts degree(-1, :F3, :major)
+puts degree(-2, :F3, :major)

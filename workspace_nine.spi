@@ -1,1 +1,11 @@
-puts chord("F3", 'major')
+
+   notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
+                  :Cs2,                            2,
+                  chord(:Ds2,:m,    invert: 0)[0], 2,
+                  chord(:Es1, 'dim',invert: 0)[0], 2,
+                  chord(:Es1,'dim', invert: 2)[0], 2,
+                  :Fs1,                            2,
+                  _,1,:Fs2,1,
+                  chord(:B1,:M,     invert: -1)[0],3)
+
+pute notes

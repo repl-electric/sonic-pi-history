@@ -23,7 +23,6 @@ def deg_seq(*pattern_and_roots)
 
   notes = patterns.each_with_index.map do |pattern, idx|
     root = roots[idx]
-    puts root
     if(root[0] == ":")
       root = root[1..-1]
     end

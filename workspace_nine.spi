@@ -64,3 +64,4 @@ def note_seq(*patterns)
 _ = nil
 x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1)
 puts x
+puts deg_seq(*%w{FS4 1*7 _ 3*7 _})

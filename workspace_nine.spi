@@ -1,1 +1,1 @@
-puts chord(:As1, :m, invert: 2)
+puts chord(:As1, :m)

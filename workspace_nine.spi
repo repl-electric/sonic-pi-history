@@ -61,4 +61,4 @@ def note_seq(*patterns)
   flatten.ring
   end
 
-(knit :Fs4, 7, _, 1,  :As4, 7, _, 1).tick
+x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1).

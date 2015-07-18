@@ -39,7 +39,12 @@ def deg_seq(*pattern_and_roots)
     pattern.
       scan(/(\d{1}|-\d{1})/).
       flatten.
-      map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
+      map{|d| 
+        if(d == "_" )
+           nil
+        else
+        degree(d.to_i, root, s)
+    end}
   end.flat_map{|x| x}
  (ring *notes)
 end

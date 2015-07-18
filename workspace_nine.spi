@@ -69,9 +69,9 @@ puts  note_seq(%w{A#4 B4 C#4 B4*4},  %w{}).map{|s| note_info(s).midi_note}
 
 class SonicPi::Core::RingVector
   include SonicPi::SpiderAPI
-  def stretchy(n)
-    stretch(self.to_a, n)
+  def stretch(n)
+    SonicPi::SpiderAPI.stretch(self.to_a, n)
   end
 end
 
-puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).stretchy(4)
+puts deg_seq(*%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4)

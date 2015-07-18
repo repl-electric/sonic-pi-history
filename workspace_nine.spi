@@ -44,7 +44,7 @@ def deg_seq(*pattern_and_roots)
  (ring *notes)
 end
 
-
+asd
 #puts deg_seq(%w{Fs4 34  -3  4})
 
 puts degree(-10, :F3, :major) 

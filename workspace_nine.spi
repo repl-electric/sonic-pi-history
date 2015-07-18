@@ -35,26 +35,6 @@ def deg_seq(*pattern_and_roots)
   patterns = pattern_and_roots.select{|a| /^[\d_]+$|^\d\*\d$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_*]+$/ !~ a.to_s}
 
-  notes = patterns.each_with_index.map do |pattern, idx|
-    root = roots[idx]
-    puts root
-    if(root[0] == ":")
-      root = root[1..-1]
-    end
-    s = /[[:upper:]]/.match(root.to_s[0]) ? :major : :minor
-    if(s == :minor)
-      s = if    root.to_s[1] == "h"
-        :harmonic_minor
-      elsif root.to_s[1] == "m"
-        :melodic_minor
-      else :minor
-      end
-    end
-    #MESSEY 
-    root = root[0..1] + root[2..-1] if root.length > 2
-    pattern.to_s.split("").map{|d| d == "_" ? nil : degree(d.to_i, root, s)}
-  end.flat_map{|x| x}
-  (ring *notes)
 end
 
 

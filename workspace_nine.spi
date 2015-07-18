@@ -25,6 +25,8 @@ def deg_seq(*pattern_and_roots)
     end
   }.flatten
 
+puts pattern_and_roots
+
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
     if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
       accu[0..-2] << "#{accu[-1]}#{id}"

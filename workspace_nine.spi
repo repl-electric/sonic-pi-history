@@ -33,9 +33,7 @@ def deg_seq(*pattern_and_roots)
       end
     end
     #MESSEY
-    root = root[0..1] + root[2..-1] if root.length > 2
-    puts pattern
-    
+    root = root[0..1] + root[2..-1] if root.length > 2  
     pattern.
       scan(/(\d{1}|-\d{1})/).
       flatten.

@@ -42,7 +42,7 @@ def deg_seq(*pattern_and_roots)
       map{|d| 
         if(d == "_" )
            nil
-        elsif(d.to_i < 0)
+        elsif(d.to_i < 0) #Only support one octave down
            root = root[0..-2] + (root[-1].to_i - 1).to_s
            puts root
            degree(d.to_i.abs, root, s)

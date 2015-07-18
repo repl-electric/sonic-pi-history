@@ -41,7 +41,8 @@ def deg_seq(*pattern_and_roots)
         if(d == "_" )
            nil
         elsif(d.to_i < 0) #Only support one octave down
-           root = root[0..-2] + (root[-1].to_i - 1).to_s
+           octave_shift = (d.to_i/10).abs
+           root = root[0..-2] + (root[-1].to_i - octave_shift).to_s
            puts root
            degree(d.to_i.abs, root, s)
         else

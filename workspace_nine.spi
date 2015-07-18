@@ -31,9 +31,13 @@ def deg_seq(*pattern_and_roots)
     else
       accu << id
   end}
+
   puts pattern_and_roots
   patterns = pattern_and_roots.select{|a| /^[\d_]+$|^\d\*\d$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_*]+$/ !~ a.to_s}
+
+  puts patterns
+  puts roots
 
 end
 

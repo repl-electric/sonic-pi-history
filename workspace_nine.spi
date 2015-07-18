@@ -43,8 +43,7 @@ def deg_seq(*pattern_and_roots)
         if(d == "_" )
            nil
         elsif(d.to_i < 0)
-           root = root[-1]
-puts root
+           root[-1] = (root[-1].to_i - 1)
            degree(d.to_i.abs, root, s)
         else
            degree(d.to_i, root, s)

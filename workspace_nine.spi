@@ -74,7 +74,5 @@ def note_seq(*patterns)
   end
 
 _ = nil
-x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1)
-puts x.map{|n| note_info(n||100).midi_note}
-puts "---------------------"
-puts deg_seq(%w{FS4 1*7 _ 3*7 _})
+deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}

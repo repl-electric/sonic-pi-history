@@ -19,7 +19,7 @@ def deg_seq(*pattern_and_roots)
   patterns_and_roots = pattern_and_roots.map{|pat| 
     if pat =~ /\*/ 
       note, factor = pat.split("*")
-      [note] * factor.to_i
+      ([note] * factor.to_i).join("")
     else
       pat
     end

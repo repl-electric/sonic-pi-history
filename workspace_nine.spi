@@ -40,4 +40,4 @@ def deg_seq(*pattern_and_roots)
 end
 
 
-deg_seq(%w{Fs4 34  -3  4})
+puts deg_seq(%w{Fs4 34  -3  4})

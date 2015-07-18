@@ -76,4 +76,11 @@ puts "---------------------"
 puts deg_seq(%w{Fs4 1*7 _ 3*7 _})
 puts deg_seq(%w{Fs4 34 Fs3 5 Fs4 4}).stretch(4)
 
+def interleave(*args)
+  raise 'No arrays to interleave' if args.empty?
+  max_length = args.map(&:size).max
+  # assumes no values coming in will contain nil. using dup because fill mutates
+  args.map{|e| e.dup.fill(nil, e.size...max_length)}.inject(:zip).flatten.compact
+end
+
 [1,2,3,4].interleave([1,2,3,45])

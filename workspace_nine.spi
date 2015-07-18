@@ -11,7 +11,7 @@ _=nil
 puts notes
 
 puts note_info(41)
-puts chord(:As1,:m,    invert: 2)[0     41]
+#puts chord(:As1,:m,    invert: 2)[0     41]
 
 
 

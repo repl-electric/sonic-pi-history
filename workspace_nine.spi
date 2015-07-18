@@ -16,6 +16,15 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 #puts x
 
 def deg_seq(*pattern_and_roots)
+  patterns_and_roots = patterns_and_roots.map{|pat| 
+    if pat =~ /\*/ 
+      note, factor = pat.split("*")
+      [note] * factor.to_i
+    else
+      pat
+    end
+  }.flatten
+
   pattern_and_roots = pattern_and_roots.reduce([]){|accu, id|
     if(/^[\d_]+$/ =~ accu[-1] && /^[\d_]+$/ =~ id)
       accu[0..-2] << "#{accu[-1]}#{id}"
@@ -26,14 +35,6 @@ def deg_seq(*pattern_and_roots)
   patterns = pattern_and_roots.select{|a| /^[\d_]+$|^\d\*\d$/ =~ a.to_s }
   roots   = pattern_and_roots.select{|a| /^[\d_*]+$/ !~ a.to_s}
 
-  patterns = patterns.map{|pat| 
-    if pat =~ /\*/ 
-      note, factor = pat.split("*")
-      [note] * factor.to_i
-    else
-      pat
-    end
-  }.flatten
   notes = patterns.each_with_index.map do |pattern, idx|
     root = roots[idx]
     puts root

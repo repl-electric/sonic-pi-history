@@ -83,4 +83,4 @@ def interleave(*args)
   args.map{|e| e.dup.fill(nil, e.size...max_length)}.inject(:zip).flatten.compact
 end
 
-interleave([1,2,3,4], [1,2,3,45])
+puts interleave([1,2,3,4], [1,2,3,45])

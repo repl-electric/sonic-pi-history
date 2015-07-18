@@ -23,4 +23,4 @@ puts note_info("Fs2") => #<SonicPi::Note :Fs4>
 (ring "F4", "Cs4", "Cs4", "Eb4", "Eb4", "F4", "F4", "B4", "B4", "Fs4", "Fs4", _, "Fs4", "Eb4", "Eb4", "Eb4")
  
 
-puts chord_degree(1, :Fs1, :major)
+puts chord_degree(3, :Fs1, :major)

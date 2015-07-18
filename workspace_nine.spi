@@ -45,6 +45,7 @@ def deg_seq(*pattern_and_roots)
         elsif(d.to_i < 0)
            puts root
            root = (root[-1].to_i - 1)
+           puts root
            degree(d.to_i.abs, root, s)
         else
            degree(d.to_i, root, s)

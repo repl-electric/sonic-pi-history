@@ -16,6 +16,7 @@ x =(knit :As4, 4, :B4, 4,  :Cs4, 4, :B4, 4)
 #puts x
 
 def deg_seq(*pattern_and_roots)
+pattern_and_roots = pattern_and_roots.flatten
   puts pattern_and_roots
 
 

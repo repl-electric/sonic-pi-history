@@ -61,4 +61,6 @@ def note_seq(*patterns)
   flatten.ring
   end
 
+_ = nil
 x = (knit :Fs4, 7, _, 1,  :As4, 7, _, 1)
+puts x

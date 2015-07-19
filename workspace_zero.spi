@@ -69,9 +69,9 @@ live :begin, amp: 0.0 do
 end
 
 live :bits, amp: 0.0 do
-    sync :next
-    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
-    sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
+  sync :next
+  sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
+  sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
 
 live :indeterminism, amp: 0.0 do
@@ -149,6 +149,7 @@ end
       i_int(n)
       #i_float(n)
       sleep bar
+end
 end
 end
 end

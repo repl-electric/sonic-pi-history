@@ -98,7 +98,7 @@ live :bang, amp: 0.0 do |m_idx|
       sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.25
     end
     m_idx+=1
-end;end
+end
 
 live :next, amp: 0.0 do
   density(@polyrhythm.sort.first) do

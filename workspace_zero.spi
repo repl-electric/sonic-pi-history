@@ -111,7 +111,7 @@ live :next, amp: 0.0 do
                                        ).tick(:a), cutoff: 80, amp: 0.5, release: 2*bar, attack: 0.01}
     end
     sleep bar
-end;end;end
+end;end
 
 live :drifting_through_code, amp: 0.0 do
   1.times {sync :next}

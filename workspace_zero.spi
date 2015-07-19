@@ -73,7 +73,6 @@ live :bits, amp: 0.0 do
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
-end
 
 live :indeterminism, amp: 0.0 do
   8.times{sync :next}

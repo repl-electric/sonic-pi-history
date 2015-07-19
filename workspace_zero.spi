@@ -158,7 +158,7 @@ end
 
 with_fx :distortion, mix: 0.1 do
 live :rumbling_loops, amp: 0.0 do |idx|
-with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; 
+with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|
     3.times{sync :next}
 comment do
     notes = (knit "Cs3",2, "Gs2",2, "As2",2,

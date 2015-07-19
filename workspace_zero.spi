@@ -79,7 +79,7 @@ live :indeterminism, amp: 0.0 do
   8.times{sync :next}
   i_deter(deg_seq(*%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(*%w{Fs4 34 -5 4}).stretch(4).tick)
-end;end
+end
 
 live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.0 do
    sync :next

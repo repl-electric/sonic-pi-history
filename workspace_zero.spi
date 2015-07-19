@@ -100,7 +100,8 @@ live :bang, amp: 0.0 do |m_idx|
     m_idx+=1
 end
 
-live :next, amp: 0.0 do
+live_loop :next do
+  with_fx :level, amp: 0.0 do
   density(@polyrhythm.sort.first) do
     #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     comment do
@@ -111,7 +112,8 @@ live :next, amp: 0.0 do
                                        ).tick(:a), cutoff: 80, amp: 0.5, release: 2*bar, attack: 0.01}
     end
     sleep bar
-end;end
+end
+end
 
 live :drifting_through_code, amp: 0.0 do
   1.times {sync :next}
@@ -147,7 +149,10 @@ end
       i_int(n)
       #i_float(n)
       sleep bar
-end;end;end;end
+end
+end
+end
+end
 
 live :recursion, amp: 0.0 do
   9.times{sync :bhit}
@@ -197,7 +202,8 @@ end
       control fx_reverb, damp: (rrand 0.0,1.0)
       sleep bar/8.0
     }
-end;end
+end
+end
 idx+=1
 end
 

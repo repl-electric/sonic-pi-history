@@ -154,7 +154,7 @@ live :recursion, amp: 0.0 do
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
   end
-end;end
+end
 
 with_fx :distortion, mix: 0.1 do
 live :rumbling_loops, amp: 0.0 do |idx|

@@ -61,14 +61,14 @@ end
 
 ## Space
 
-live_loop :begin, auto_cue: false do
+live :begin, amp: 0.0 do
   sync :next
   with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
   #sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
   end
 end
 
-live_loop :bits, auto_cue: false do;with_fx :level, amp: 0.0 do
+live :bits, amp: 0.0 do
     sync :next
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
@@ -81,7 +81,7 @@ live :indeterminism, amp: 0.0 do
           deg_seq(*%w{Fs4 34 -5 4}).stretch(4).tick)
 end
 
-live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.0 do
+live :bang, amp: 0.0 do |m_idx|
    sync :next
     case (m_idx%8)
     when 0,4,2,6
@@ -101,7 +101,7 @@ live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.0 do
     m_idx+=1
 end;end
 
-live_loop :next do;with_fx :level, amp: 0.0 do
+live :next, amp: 0.0 do
   density(@polyrhythm.sort.first) do
     #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     comment do
@@ -114,7 +114,7 @@ live_loop :next do;with_fx :level, amp: 0.0 do
     sleep bar
 end;end;end
 
-live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 0.0 do
+live :drifting_through_code, amp: 0.0 do
   1.times {sync :next}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
@@ -148,9 +148,9 @@ end
       i_int(n)
       #i_float(n)
       sleep bar
-end;end;end;end;end
+end;end;end;end
 
-live_loop :recursion, auto_cue: false do; with_fx :level, amp: 0.0 do
+live :recursion, amp: 0.0 do
   9.times{sync :bhit}
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5
@@ -158,7 +158,7 @@ live_loop :recursion, auto_cue: false do; with_fx :level, amp: 0.0 do
 end;end
 
 with_fx :distortion, mix: 0.1 do
-live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
+live :rumbling_loops, amp: 0.0 do |idx|
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|; 
     3.times{sync :next}
 comment do
@@ -200,9 +200,9 @@ end
     }
 end;end
 idx+=1
-end;end
+end
 
-live_loop :tracing_forward_back, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
+live :tracing_forward_back, amp: 0.0 do |idx|
     n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
     with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
       with_synth :hollow do
@@ -216,9 +216,9 @@ live_loop :tracing_forward_back, auto_cue: false do |idx|;with_fx :level, amp: 0
       }
       1.times{sync :next}
     end
-end;end
+end
 
-live_loop :missing_semi_colon, auto_cue: false do;with_fx :level, amp: 0.0 do
+live :missing_semi_colon, amp: 0.0 do
     2.times{sync :start}
     sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
-end;end
+end

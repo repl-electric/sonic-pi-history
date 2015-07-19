@@ -152,7 +152,6 @@ end
 end
 end
 end
-end
 
 live :recursion, amp: 0.0 do
   9.times{sync :bhit}
@@ -165,11 +164,11 @@ with_fx :distortion, mix: 0.1 do
 live :rumbling_loops, amp: 0.0 do |idx|
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|
     3.times{sync :next}
-comment do
+    comment do
     notes = (knit "Cs3",2, "Gs2",2, "As2",2,
                   "Cs3",2, "Gs2",2, "As2",2,
                   "B2",2,  "Gs2",2, "As2",2)
-end
+    end
 
     notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
                   :Cs2,                            2,
@@ -202,8 +201,8 @@ end
       control fx_reverb, damp: (rrand 0.0,1.0)
       sleep bar/8.0
     }
-end
-end
+  end
+  end
 idx+=1
 end
 

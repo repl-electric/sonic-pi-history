@@ -3,8 +3,8 @@ define :shader do |endpoint, *args|
   endpoint = "/#{endpoint.to_s}"
   @client ||= OSC::Client.new('localhost', 9177)
   begin
-  @client.send(OSC::Message.new(endpoint, *args))
-  rescue e 
+    @client.send(OSC::Message.new(endpoint, *args))
+  rescue _
    #Its ok, don't worry. ssh
   end
 end

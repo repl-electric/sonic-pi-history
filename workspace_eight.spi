@@ -25,4 +25,5 @@ puts notes
 #C#3a
 #D#4m -2
 
+puts chord(:Ds4, :m, invert:-2)
 puts chord(:Ds4, :m)

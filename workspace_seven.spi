@@ -1,6 +1,8 @@
 require 'osc-ruby'
-@client = OSC::Client.new( 'localhost', 9177 )
 define :shader do |endpoint, *args|
+  if(!@client)
+    @client = OSC::Client.new( 'localhost', 9177 )
+  end
   @client.send(OSC::Message.new(endpoint, *args))
 end
 
@@ -12,5 +14,4 @@ live_loop :dance do
 shader("/smoothed-uniform", "iColorFactor", 2.0)
 sample :drum_heavy_kick
 sleep 1
-
 end

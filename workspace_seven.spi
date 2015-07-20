@@ -11,7 +11,7 @@ define :shader do |endpoint, *args|
   end
 end
 
-shader(:shader, "wave.glsl")
+shader(:shader, "nil.glsl")
 shader(:uniform, "iColorFactor", 0.0)
 live_loop :dance do
   shader(:suniform, "iColorFactor", 2.0)

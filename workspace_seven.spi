@@ -3,4 +3,4 @@ require 'osc-ruby'
 #@client.send(OSC::Message.new("/shader" , 
 #  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl"))
 
-@client.send(OSC::Message.new("/uniform", "iColorFactor", 0.0))
+@client.send(OSC::Message.new("/uniform-smoothed", "iColorFactor", 1.0))

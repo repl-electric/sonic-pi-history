@@ -6,7 +6,7 @@ require 'osc-ruby'
 @client.send(OSC::Message.new("/uniform", "iColorFactor", 0.0))
 
 live_loop :dance do
-#@client.send(OSC::Message.new("/smoothed-uniform", "iColorFactor", 1.0))
+@client.send(OSC::Message.new("/smoothed-uniform", "iColorFactor", 1.0))
 sample :drum_heavy_kick
 sleep 1
 

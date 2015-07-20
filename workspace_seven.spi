@@ -4,8 +4,8 @@ define :shader do |endpoint, *args|
   @client.send(OSC::Message.new(endpoint, *args))
 end
 
-shader(OSC::Message.new("/shader" , 
-  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl"))
+shader("/shader" , 
+  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl")
 
 shader("/uniform", "iColorFactor", 0.0))
 live_loop :dance do

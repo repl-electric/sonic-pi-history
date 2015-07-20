@@ -61,6 +61,7 @@ live_loop :next do
     sleep bar
 end
 end
+end
 
 live :drifting_through_code, amp: 0.0 do
   1.times {sync :next}

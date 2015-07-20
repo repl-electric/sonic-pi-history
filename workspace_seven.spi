@@ -7,7 +7,7 @@ end
 shader("/shader" , 
   "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl")
 
-shader("/uniform", "iColorFactor", 0.0))
+shader("/uniform", "iColorFactor", 0.0)
 live_loop :dance do
 shader("/smoothed-uniform", "iColorFactor", 2.0))
 sample :drum_heavy_kick

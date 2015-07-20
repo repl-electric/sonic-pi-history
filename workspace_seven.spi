@@ -10,7 +10,7 @@ define :shader do |endpoint, *args|
 end
 
 shader(:shader, 
-  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl")
+  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/wave.glsl")
 
 shader(:uniform, "iColorFactor", 0.0)
 live_loop :dance do

@@ -19,3 +19,10 @@ notes = (knit chord(:As3,:m)[0..1], 12,
                  _, 4)
 
 puts notes
+
+#a#3
+#C#3b
+#C#3a
+#D#4m -2
+
+puts chord(:Ds4, :m)

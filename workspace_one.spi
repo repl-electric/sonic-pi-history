@@ -1,8 +1,8 @@
 ["experiments", "drums"].each{|f| require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 bar = 4.0
 live_loop(:drum_timing_loop, auto_cue: false){ 
-#  sync :next
-density(2){ 16.times{ cue :drum_hit; sleep (bar/16.0)}}}
+#sync :next
+density(2){16.times{ cue :drum_hit; sleep (bar/16.0)}}}
 
 with_fx :level, amp: 1.0 do
 with_fx :bitcrusher, sample_rate: 44000, mix: 0.1, bits: 12 do

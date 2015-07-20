@@ -1,1 +1,1 @@
-@client.send(OSC::Message.new("/uniform", "iColorFactor", 5.0))
+@client.send(OSC::Message.new("/uniform", "iColorFactor", 9.0))

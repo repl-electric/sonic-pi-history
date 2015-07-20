@@ -1,3 +1,4 @@
+_=nil
 notes = (knit chord(:As3,:m)[0..1], 12,
                  chord(:As3,:m),       12,
                  chord(:Cs3,:M, invert: 2).delete_at(1), 12,

@@ -10,7 +10,7 @@ shader(:shader,
 
 shader(:uniform, "iColorFactor", 0.0)
 live_loop :dance do
-shader(:suniform, "iColorFactor", 2.0)
-sample :drum_heavy_kick
-sleep 1
+  shader(:suniform, "iColorFactor", 2.0)
+  sample :drum_heavy_kick
+  sleep 1
 end

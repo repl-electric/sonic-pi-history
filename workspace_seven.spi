@@ -1,7 +1,6 @@
 require 'osc-ruby'
 define :shader do |endpoint, *args|
-  endpoint = "/#{endpoint.to_s}"
-puts endpoint
+  endpoint = "/#{endpoint.to_s.gsub("suniform", "smoothed-uniform")}"
   @client ||= OSC::Client.new('localhost', 9177)
   begin
     @client.send(OSC::Message.new(endpoint, *args))

@@ -12,7 +12,7 @@ define :shader do |endpoint, *args|
 end
 
 shader(:shader, "nil.glsl")
-shader(:uniform, "iColorFactor", 0.0)
+shader(:uniform, "iColorFactor", 9.0)
 live_loop :dance do
   shader(:suniform, "iColorFactor", 2.0)
   sample :drum_heavy_kick

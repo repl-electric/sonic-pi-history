@@ -8,7 +8,7 @@ define :shader do |endpoint, *args|
   begin
    @client.send(OSC::Message.new(endpoint, *args))
   rescue Exception
-    puts "> <b>Graphics not loaded"
+    puts "> <b>Graphics not loaded</b."
     #Its ok, don't worry. ssh
   end
 end

@@ -1,8 +1,12 @@
 require 'osc-ruby'
 define :shader do |endpoint, *args|
   endpoint = "/#{endpoint.to_s}"
-  @client ||= OSC::Client.new( 'localhost', 9177 )
+  @client ||= OSC::Client.new('localhost', 9177)
+  do
   @client.send(OSC::Message.new(endpoint, *args))
+  rescue e
+   #Its ok, don't worry. ssh
+  end
 end
 
 shader(:shader, 

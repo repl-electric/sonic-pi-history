@@ -1,4 +1,4 @@
 require 'osc-ruby'
-
-puts @client = OSC::Client.new( 'localhost', 9177 )
-puts @client.send( OSC::Message.new( "/shader" , "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/wave.glsl" ))
+@client = OSC::Client.new( 'localhost', 9177 )
+@client.send(OSC::Message.new("/shader" , 
+  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/wave.glsl"))

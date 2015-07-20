@@ -6,8 +6,8 @@ define :shader do |endpoint, *args|
   endpoint = "/#{endpoint.to_s.gsub("suniform", "smoothed-uniform")}"
   @client ||= OSC::Client.new('localhost', 9177)
   begin
-    @client.send(OSC::Message.new(endpoint, *args))
-#  rescue Exception #Its ok, don't worry. ssh
+   @client.send(OSC::Message.new(endpoint, *args))
+  rescue Exception #Its ok, don't worry. ssh
   end
 end
 

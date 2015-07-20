@@ -7,13 +7,11 @@ define :shader do |endpoint, *args|
   @client ||= OSC::Client.new('localhost', 9177)
   begin
     @client.send(OSC::Message.new(endpoint, *args))
-  rescue e
-   #Its ok, don't worry. ssh
+  rescue e #Its ok, don't worry. ssh
   end
 end
 
 shader(:shader, "nil.glsl")
-
 shader(:uniform, "iColorFactor", 0.0)
 live_loop :dance do
   shader(:suniform, "iColorFactor", 2.0)

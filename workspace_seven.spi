@@ -1,5 +1,8 @@
 require 'osc-ruby'
 define :shader do |endpoint, *args|
+  if endpoint == :shader
+    args[0] = "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/#{args[0]}"
+  end
   endpoint = "/#{endpoint.to_s.gsub("suniform", "smoothed-uniform")}"
   @client ||= OSC::Client.new('localhost', 9177)
   begin
@@ -9,8 +12,7 @@ define :shader do |endpoint, *args|
   end
 end
 
-shader(:shader, 
-  "/Users/josephwilk/Workspace/c++/of_v0.8.4_osx_release/apps/myApps/shaderview/bin/data/nil.glsl")
+shader(:shader, "nil.glsl")
 
 shader(:uniform, "iColorFactor", 0.0)
 live_loop :dance do

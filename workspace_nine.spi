@@ -23,7 +23,7 @@ end;end;end
 @x = 0
 live_loop :indeterminism, auto_cue: false do
  with_fx :level, amp: 1.0 do
-    1.times{sync :next}
+    5.times{sync :next}
     @x+=1.0
     puts @x
     sample Mountain[/kick/i,3], amp: 0.5

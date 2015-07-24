@@ -16,4 +16,4 @@ def shader(endpoint, *args)
 end
 
 
-shader("uniform", "iBeat", 100000.0)
+shader("uniform", "iBeat", 200000.0)

@@ -20,7 +20,7 @@ end;end;end
 live_loop :indeterminism, auto_cue: false do
  with_fx :level, amp: 1.0 do
     shader(:uniform, "iBeat", 0.0)
-    5.times{sync :next}
+    1.times{sync :next}
 
     @x ||= 0
     @x+=1.0

@@ -1,1 +1,1 @@
-(knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2)
+put s(knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2)

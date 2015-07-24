@@ -24,7 +24,7 @@ live_loop :indeterminism, auto_cue: false do
 
     @x ||= 0
     @x+=1.0
-    sample Mountain[/kick/i,3], amp: 1.0
+    #sample Mountain[/kick/i,3], amp: 1.0
     shader(:uniform, "iGlobalBeatCount", @x)
 
     shader(:uniform, "iBeat", 1.0)

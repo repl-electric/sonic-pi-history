@@ -1,4 +1,5 @@
 puts (knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2)
 
 
-puts (knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2)
+puts (ring 7).tick(:d)
+puts (knit :none,7, :echo,7).tick(:r2)

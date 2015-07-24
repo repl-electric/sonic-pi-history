@@ -28,7 +28,7 @@ live_loop :indeterminism, auto_cue: false do
     shader(:uniform, "iGlobalBeatCount", @x)
 
     shader(:uniform, "iBeat", 1.0)
-    i_deter(src= deg_seq(%w{Fs3 3 5  _ 3 3 _ }).tick,
+    i_deter(src= deg_seq(%w{Fs3 5 5  _ 3 3 _ }).tick,
             dest=deg_seq(%w{Fs2 1 1  _ 1 1 _ }).tick)
   end
 end

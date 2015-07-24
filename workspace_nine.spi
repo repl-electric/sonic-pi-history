@@ -24,7 +24,7 @@ live_loop :indeterminism, auto_cue: false do
     4.times{sync :next}
     sample Mountain[/kick/i,3], amp: 0.5
     @beat_count= @beat_count*2.0
-    shader(:uniform, "iBeat", 0.1)
+    shader(:uniform, "iBeat", 2.0)
     puts @beat_count
     i_deter(src= deg_seq(%w{Fs3 1 1  _ 3 3 _ }).tick,
             dest=deg_seq(%w{Fs2 1 1  _ 1 1 _ }).tick)

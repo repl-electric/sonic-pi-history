@@ -15,4 +15,4 @@ def shader(endpoint, *args)
 end
 
 
-shader(:uniform, "iBeat", 0.9)
+shader(:uniform, "iBeat", 2.9)

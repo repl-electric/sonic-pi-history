@@ -1,5 +1,5 @@
 ["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
-
+set_volume! 0.5
 bar = 1.0
 @polyrhythm = [3.0]
 

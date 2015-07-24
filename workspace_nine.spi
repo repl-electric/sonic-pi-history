@@ -1,3 +1,5 @@
+bar = 1.0
+
 live_loop :next do;with_fx :level, amp: 0.0 do
   density(@polyrhythm.sort.first) do
     #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4

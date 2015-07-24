@@ -42,7 +42,6 @@ live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 1.0 do
     @x+=1.0
     shader(:uniform, "iGlobalBeatCount", @x)
     shader(:uniform, "iBeat", 1.0)
-
      if m_idx%16 == 0
        with_fx(:echo, decay: 2, pre_amp: 0.3){
          #sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick

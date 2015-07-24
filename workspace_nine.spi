@@ -18,7 +18,7 @@ live_loop :next do;with_fx :level, amp: 0.0 do
 end;end;end
 
 live_loop :indeterminism, auto_cue: false do
- x = 0
+ x ||= 0
  with_fx :level, amp: 1.0 do
     1.times{sync :next}
     x+=1.0

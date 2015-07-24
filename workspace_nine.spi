@@ -38,6 +38,9 @@ live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 1.0 do
    sync :next
     case (m_idx%8)
     when 0,4,2,6
+    @x ||= 0
+    @x+=1.0
+
     shader(:uniform, "iGlobalBeatCount", @x)
      if m_idx%16 == 0
        with_fx(:echo, decay: 2, pre_amp: 0.3){

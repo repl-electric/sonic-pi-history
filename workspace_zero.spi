@@ -105,7 +105,7 @@ live_loop :recursion, auto_cue: false do; with_fx :level, amp: 0.5 do
 end;end
 
 with_fx :distortion, mix: 0.1 do
-live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.3 do
+live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.4 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
     3.times{sync :next}
 comment do

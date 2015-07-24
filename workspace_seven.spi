@@ -13,3 +13,6 @@ def shader(endpoint, *args)
     puts "$!> Graphics not loaded"
   end
 end
+
+
+shader(:uniform, "iBeat", 0.9)

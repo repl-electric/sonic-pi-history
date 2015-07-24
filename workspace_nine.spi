@@ -1,2 +1,5 @@
-puts (knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2)
-puts (ring 7).tick(:d)
+live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
+  8.times{sync :next}
+  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+end;end

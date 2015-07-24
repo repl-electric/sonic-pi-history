@@ -20,13 +20,10 @@ live_loop :next do;with_fx :level, amp: 0.0 do
     sleep bar
 end;end;end
 
-@x = 0
 live_loop :indeterminism, auto_cue: false do
  with_fx :level, amp: 1.0 do
     10.times{sync :next}
-    @x+=1.0
-    puts @x
-    #sample Mountain[/kick/i,3], amp: 0.5
+    sample Mountain[/kick/i,3], amp: 0.5
     shader(:uniform, "iBeat", (ring 0.0, 1.0).tick(:dr))
     i_deter(src= deg_seq(%w{Fs3 1 1  _ 3 3 _ }).tick,
             dest=deg_seq(%w{Fs2 1 1  _ 1 1 _ }).tick)

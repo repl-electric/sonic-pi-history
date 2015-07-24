@@ -7,7 +7,7 @@ live_loop :next do;with_fx :level, amp: 0.0 do
   @x ||= 0
     @x+=1.0
     shader(:uniform, "iGlobalBeatCount", @x)
-    sample Mountain[/kick/i,3], amp: 0.5
+    sample Mountain[/kick/i,3], amp: 1.0
   density(@polyrhythm.sort.first) do
   
     #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4

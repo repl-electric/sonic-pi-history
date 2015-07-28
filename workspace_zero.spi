@@ -15,7 +15,7 @@ live_loop :begin, auto_cue: false do
   end
 end
 
-live_loop :bits, auto_cue: false do;with_fx :level, amp: 0.0 do
+live_loop :bits, auto_cue: false do;with_fx :level, amp: 0.5z do
     sync :next
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)

@@ -8,7 +8,7 @@ live_loop :indeterminism, auto_cue: false do
 
   1.times{
 #sleep 1.25
-#  shader(:beat, 0.0)
+  shader(:beat, 0.0)
 
 }
 end

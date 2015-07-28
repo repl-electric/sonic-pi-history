@@ -3,7 +3,7 @@
 shader(:shader, "nil.glsl") 
 
 live_loop :indeterminism, auto_cue: false do
-  sample Mountain[/kick/i, 0], amp: 0.5
+  sample :kick_heavy_kick, amp: 0.5
   shader(:beat, 1.0)
 
   4.times{

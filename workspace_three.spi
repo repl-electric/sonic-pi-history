@@ -3,10 +3,10 @@
 shader(:shader, "nil.glsl") 
 
 live_loop :indeterminism, auto_cue: false do
-  sample :drum_heavy_kick, amp: 0.5
   shader(:beat, 1.0)
+  sample :drum_heavy_kick, amp: 0.5
 
-  4.times{
+  8.times{
 sleep 1
   shader(:beat, 0.0)
 

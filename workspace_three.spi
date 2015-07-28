@@ -1,6 +1,6 @@
 ["shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-shader(:shader, "nil.glsl") 
+#shader(:shader, "nil.glsl") 
 
 live_loop :indeterminism, auto_cue: false do
   shader(:beat, 1.0)

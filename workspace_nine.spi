@@ -25,12 +25,9 @@ live_loop :begin do
   end
 end
 
-live_loop :drfit do
-sync :next
-sample_and_sleep Mountain[/cracklin/], rate: 0.95, amp: 0.2
-end
 
-live_loop :kick do
-sync :next
-sample Mountain[/kick/i,4]
-end
+live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
+  8.times{sync :next}
+  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+end;end

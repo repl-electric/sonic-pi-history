@@ -28,6 +28,6 @@ end
 
 live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
   1.times{sync :next}
-  i_deter(deg_seq(%w{Fs3 13}).tick,
-          deg_seq(%w{Fs3 14}).stretch(4).tick)
+  i_deter(deg_seq(%w{Fs3 11}).tick,
+          deg_seq(%w{Fs3 11}).stretch(4).tick)
 end;end

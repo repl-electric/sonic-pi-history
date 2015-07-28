@@ -21,6 +21,6 @@ end;end;end
 live_loop :begin do
   sync :next
   with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
-  #sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
+    sample Ether.all(/F#/)[2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
   end
 end

@@ -30,3 +30,8 @@ live_loop :drfit do
 sync :next
 sample Mountain[/white/,0]
 end
+
+live_loop :kick do
+sync :next
+sample Mountain[/impact/,0]
+end

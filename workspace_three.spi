@@ -7,7 +7,7 @@ live_loop :indeterminism, auto_cue: false do
   sample :drum_heavy_kick, amp: 2.5
 
   1.times{
-#sleep 1.25
+sleep 1.25
   shader(:beat, 0.0)
 
 }

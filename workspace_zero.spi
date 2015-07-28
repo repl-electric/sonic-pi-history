@@ -28,7 +28,7 @@ live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end;end
 
-live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 0.5 do
+live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 1.0 do
    sync :next
     case (m_idx%8)
     when 0,4,2,6

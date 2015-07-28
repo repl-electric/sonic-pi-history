@@ -17,3 +17,8 @@ live_loop :next do;with_fx :level, amp: 1.0 do
     end
     sleep bar
 end;end;end
+
+live_loop :begin do
+  sample Ether[/f#/,0]
+sleep 1
+end

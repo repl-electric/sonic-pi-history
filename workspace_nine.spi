@@ -25,7 +25,6 @@ live_loop :begin do
   end
 end
 
-
 live_loop :drfit do
 sync :next
 sample_and_sleep Mountain[/cracklin/], rate: 0.95, amp: 0.2
@@ -33,5 +32,5 @@ end
 
 live_loop :kick do
 sync :next
-sample Mountain[/impact/i,0]
+sample Mountain[/kick/i,0]
 end

@@ -28,7 +28,7 @@ end
 
 live_loop :drfit do
 sync :next
-sample Mountain[/white/,0]
+sample Mountain[/Cracklin_01/i,0]
 end
 
 live_loop :kick do

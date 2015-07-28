@@ -32,5 +32,5 @@ end
 
 live_loop :kick do
 sync :next
-sample Mountain[/kick/i,0]
+sample Mountain[/kick/i,2]
 end

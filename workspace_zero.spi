@@ -140,7 +140,9 @@ end
 
     with_fx(:pitch_shift, mix: 0.1){
     i_bass(note)
+    with_transpose(-12){
     i_float(note)
+    }
     }
 
     6.times{

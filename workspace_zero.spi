@@ -54,11 +54,11 @@ live_loop :next do;with_fx :level, amp: 1.0 do
     uncomment do
       with_synth(:dark_ambience){
 
-#with_fx :reverb do
-       play deg_seq(%w{:F3 1111}).tick, amp: 8.0, 
+with_fx :echo do
+       play deg_seq(%w{:F3 1111 }).tick, amp: 8.0, 
               release: (ring 1.0,2.5).tick(:r), attack: 0.01,
               cutoff: 80
-#end
+end
       }
     end
     sleep bar

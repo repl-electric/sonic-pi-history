@@ -75,7 +75,7 @@ end
 #with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
       i_int(n)
 with_transpose(-12) do
-      i_float(n)
+      i_int(n)
 end
       sleep bar
 end;end;end;end;end

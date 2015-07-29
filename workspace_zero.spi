@@ -59,9 +59,9 @@ live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 4.0 d
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx((knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0) do
-notes = (knit chord(:As3,:M)[0..1], 1,
+notes = (knit chord(:As3,:m)[0..1], 1,
               chord(:As3,:m),       1,
-              chord(:Cs3,:M, invert: 2).delete_at(1), 1,
+              chord(:Cs3,:M7, invert: 2).delete_at(1), 1,
               chord(:Cs3,:M, invert: 1), 1,
               chord(:Ds4,:m, invert: -2), 1,
 )

@@ -1,0 +1,3 @@
+  with_synth(:synth_violin){
+    play note, amp: 8.0
+  }

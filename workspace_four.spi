@@ -6,8 +6,8 @@ end
 
 define :i_int do |note|
   with_synth(:synth_violin){
-    play note
-}
+    play note, amp: 2.0
+  }
 end
 
 define :i_bass do |note|

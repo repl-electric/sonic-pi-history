@@ -54,12 +54,13 @@ live_loop :next do;with_fx :level, amp: 1.0 do
     uncomment do
       with_synth(:dark_ambience){
 with_fx(:reverb) do
-       play (ring :Fs3, :fs4).tick, amp: 4.0, release: 2.0, decay: 5.0, attack: 1.0
+       play (ring :Fs3, :fs4).tick, amp: 8.0, release: 2.0, decay: 5.0, attack: 1.0
       }
 end
     end
     sleep bar
 end;end;end
+
 
 live_loop :drifting_through_code, auto_cue: false do; with_fx :level, amp: 4.0 do
   1.times {sync :next}

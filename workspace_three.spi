@@ -15,4 +15,4 @@ end
 
 #shader(:mesh)
 
-shader(:uniform, "iCellCount", 2)
+shader(:uniform, "iCellCount", 2.0)

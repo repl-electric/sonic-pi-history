@@ -5,7 +5,7 @@ define :i_float do |note|
 end
 
 define :i_int do |note|
-  with_synth(:beep){play note, amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2),
+  with_synth(:beep){play note, amp: (ring 0.25).tick(:sdf), decay: rrand(0.1,0.2),
                     release: 0.1} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
 end
 

@@ -55,7 +55,7 @@ live_loop :next do;with_fx :level, amp: 1.0 do
       with_synth(:dark_ambience){
 
 #with_fx :reverb do
-       play (ring :Fs3, :Fs4, :As4), amp: 8.0, 
+       play (ring :Fs3, :Fs4, :Fs5), amp: 8.0, 
               release: (ring 1.0,2.5).tick(:r), attack: 0.01,
               cutoff: 80
 #end

@@ -53,10 +53,8 @@ live_loop :next do;with_fx :level, amp: 1.0 do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     uncomment do
       with_synth(:dark_ambience){
-play (knit
-          "Fs4",1,_,1,"Fs2",6,
-          "B4", 1, "Ds5",1, "Bs2",6,
-          "Ds5",1,_,1,"Ds2",6).tick(:a), cutoff: 80, amp: 0.0, release: 2*bar, attack: 0.01}
+       play :Fs3
+}
     end
     sleep bar
 end;end;end

@@ -56,7 +56,7 @@ live_loop :next do;with_fx :level, amp: 1.0 do
                                        "Fs4",1,_,1,"Fs2",6,
                                        "B4", 1, "Ds5",1, "Bs2",6,
                                        "Ds5",1,_,1,"Ds2",6
-                                       ).tick(:a), cutoff: 80, amp: 0.5, release: 2*bar, attack: 0.01}
+                                       ).tick(:a), cutoff: 80, amp: 2.5, release: 2*bar, attack: 0.01}
     end
     sleep bar
 end;end;end

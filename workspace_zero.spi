@@ -140,6 +140,7 @@ end
 
     with_fx(:pitch_shift){
     i_bass(note)
+    i_int(note)
     }
 
     6.times{

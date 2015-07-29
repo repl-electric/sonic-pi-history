@@ -55,7 +55,7 @@ live_loop :next do;with_fx :level, amp: 1.0 do
       with_synth(:dark_ambience){
 
 with_fx :echo do
-       play deg_seq(%w{:F3 1 _ 1 _ 1 _ 1}).tick, amp: 20.0, 
+       play deg_seq(%w{:F3 1 _ _ 1 _ 1 _ 1}).tick, amp: 20.0, 
               release: (ring 1.0,2.5).tick(:r), attack: 0.01, release: 0.1,
               cutoff: 80
 end

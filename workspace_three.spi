@@ -17,3 +17,5 @@ end
 
 shader(:suniform, :iCellMotion, 1.0) 
 shader(:uniform, "iCellCount", 20.0)
+
+shader(:uniform, :iBeat, 1.0)

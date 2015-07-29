@@ -13,4 +13,6 @@ sleep 1.25
 }
 end
 
-shader(:mesh)
+#shader(:mesh)
+
+shader(:uniform, "iCellCount", 2)

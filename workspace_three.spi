@@ -15,5 +15,5 @@ end
 
 #shader(:mesh)
 
-shader(:uniform, :iCellMotion, 0.1) 
+shader(:uniform, :iCellMotion, 0.2) 
 shader(:uniform, "iCellCount", 40.0)

@@ -53,8 +53,10 @@ live_loop :next do;with_fx :level, amp: 1.0 do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     uncomment do
       with_synth(:dark_ambience){
+with_fx(:reverb) do
        play :Fs3, amp: 4.0, release: 1.0
       }
+end
     end
     sleep bar
 end;end;end

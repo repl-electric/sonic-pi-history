@@ -63,7 +63,7 @@ notes = (knit chord(:As3,:m), 1,
               chord(:As3,:m), 1,
               chord(:Cs3,:M7), 1,
               chord(:Cs3,:M7), 1,
-              chord(:Ds4,:m, invert: -2), 1,
+              chord(:Ds4,:m), 1,
 )
 
 n = notes.tick(:asb)

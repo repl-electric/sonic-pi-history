@@ -6,7 +6,7 @@ end
 
 define :i_int do |note|
   with_synth(:synth_violin){
-    play note, amp: 2.0
+    play note, amp: 8.0
   }
 end
 

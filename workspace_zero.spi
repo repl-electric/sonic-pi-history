@@ -140,8 +140,9 @@ end
 
     with_fx(:pitch_shift){
     i_bass(note)
-    i_int(note)
     }
+    i_int(note)
+
 
     6.times{
       control fx_reverb, damp: (rrand 0.0,1.0)

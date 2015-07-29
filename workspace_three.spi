@@ -4,7 +4,7 @@ shader(:shader, "nil.glsl")
 
 live_loop :indeterminism, auto_cue: false do
   shader(:uniform, :iBeat, 1.0)
-  sample :drum_heavy_kick, amp: 2.5
+#  sample :drum_heavy_kick, amp: 2.5
 
   5.times{
   sleep 1.0

@@ -22,7 +22,7 @@ live :bits, amp: 0.5 do
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
 
-live :indeterminism, amp: 0.0 do
+live :indeterminism, amp: 1.0 do
   8.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)

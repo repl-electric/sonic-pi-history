@@ -1,3 +1,4 @@
+bar =1.-
 _ = nil
 live_loop :bellz do
 1.times{sync :next}

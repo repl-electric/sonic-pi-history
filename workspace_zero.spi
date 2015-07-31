@@ -91,7 +91,7 @@ end
       sleep bar
 end;end;end;end
 
-live :recursion, amp: 0.0 do
+live :recursion, amp: 1.0 do
   9.times{sync :bhit}
   with_fx (ring :none, :echo).tick, decay: bar*8 do
     sample Frag[/coil/i,/f#/i,1], amp: 0.5

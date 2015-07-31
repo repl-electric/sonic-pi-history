@@ -1,0 +1,3 @@
+with_synth(:synth_violin) do
+ play 50
+end

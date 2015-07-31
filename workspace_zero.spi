@@ -119,7 +119,7 @@ end
 
     note = notes.tick(:a)
 
-    sample Mountain[/kick/, 3], amp: 0.5
+    sample Mountain[/kick/, 3], amp: 1.0
 
     sleep bar/2.0
 

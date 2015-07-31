@@ -1,0 +1,54 @@
+["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+set_volume! 3.0
+bar = 1.0
+@polyrhythm = [3.0]
+
+live_loop :next do;with_fx :level, amp: 1.0 do
+    @x ||= 0
+    @x+=1.0
+    density(@polyrhythm.sort.first) do
+    #sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
+    comment do
+      with_synth(:dark_ambience){play (knit
+                                       "Fs4",1,_,1,"Fs2",6,
+                                       "B4", 1, "Ds5",1, "Bs2",6,
+                                       "Ds5",1,_,1,"Ds2",6
+                                       ).tick(:a), cutoff: 80, amp: 0.5, release: 2*bar, attack: 0.01}
+    end
+    sleep bar
+end;end;end
+
+live_loop :begin do
+  sync :next
+  with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
+    #sample Ether[/F#/,2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
+  end
+end
+
+
+live_loop :indeterminism, auto_cue: false do; with_fx :level, amp: 1.0 do
+  8.times{sync :next}
+  i_deter(deg_seq(%w{Fs4 1*7 _ 1*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+end;end
+
+
+live_loop :bang, auto_cue: false do |m_idx|;with_fx :level, amp: 1.0 do
+   sync :next
+    case (m_idx%8)
+    when 0,4,2,6
+     if m_idx%16 == 0
+       with_fx(:echo, decay: 2, pre_amp: 0.3){
+         sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
+       }
+        sample Mountain["subkick",1], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     else
+        sample Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     end
+    when 1,3,4,5
+      #sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+    when 7
+      sample Mountain["Impact_0#{(stretch (1..5).to_a, 16).tick(:b)}"], rate: -1.0,amp: 0.25
+    end
+    m_idx+=1
+end;end

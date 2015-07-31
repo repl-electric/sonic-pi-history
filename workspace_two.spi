@@ -13,7 +13,7 @@ live_loop :exceptions do
                   :Es4, 7, _, 1,
                   ).tick, amp: 0.3
 
-        with_transpose(-12) do
+        with_transpose(-5) do
           with_synth(:beep){
             play (knit :Fs4, 1, :Fs4, 1, :Fs4, 1, :Fs4, 3, _, 1,
                   :Fs4, 7, _, 1,

@@ -16,7 +16,7 @@ live :begin, amp: 0.0 do
   end
 end
 
-live :bits, amp: 1.0 do
+live :bits, amp: 0.5 do
     sync :next
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
@@ -34,7 +34,7 @@ live :bang, amp: 0.5 do |m_idx|
     when 0,4,2,6
      if m_idx % 16 == 0
        with_fx(:echo, decay: 2, pre_amp: 0.3){
-       #sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
+         #sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
        }
         sample Mountain["subkick",1], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
      else

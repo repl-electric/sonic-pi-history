@@ -25,7 +25,7 @@ end
 live :indeterminism, amp: 1.0 do
   8.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
-          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+             deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end
 
 live :bang, amp: 0.5 do |m_idx|
@@ -48,7 +48,7 @@ live :bang, amp: 0.5 do |m_idx|
     m_idx+=1
 end
 
-live :next, amp: 0.0 do
+live :next, amp: 1.0 do
   density(@polyrhythm.sort.first) do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     sleep bar

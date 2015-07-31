@@ -20,7 +20,7 @@ live_loop :exceptions do
                   :Cs4, 7, _, 1,
                   :Ds4, 7, _, 1,
                   :As4, 7, _, 1,
-                  :Es4, 7, _, 1,).tick, amp: 0.1, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0, release: 0.2
+                  :Es4, 7, _, 1,).tick, amp: 0.1, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0, release: 0.01
           }
         end
 

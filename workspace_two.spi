@@ -13,7 +13,7 @@ with_fx (knit :reverb,2).tick(:fx), decay: (knit 4.0,7, 8.0,1).tick(:de), room: 
                  :Es4, 7, _, 1,
 ).tick, amp: 0.3
 
-with_transpose(0) do
+with_transpose(-12) do
             with_synth(:beep){
               play (knit :Fs4, 1, :Fs4, 1, :Fs4, 1, :Fs4, 3, _, 1,
                     :Fs4, 7, _, 1,

@@ -3,7 +3,7 @@
 #   π=-    π=-   π=-      █
 #  π=-   π=-   π=-      .||.
 _ = nil
-bar = 3.0
+bar = 1.0
 use_bpm 60
 set_volume! 0.2
 @polyrhythm = [2,3]

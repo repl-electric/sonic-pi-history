@@ -119,11 +119,11 @@ end
 
     note = notes.tick(:a)
 
-    (ring 1).tick("timing").times{sample Mountain[/micro/i, 2], amp: 0.3}
+    (ring 1).tick("timing").times{sample Mountain[/micro/i, 5], amp: 0.3}
 
     sleep bar/2.0
 
-    (ring 1).tick("timing").times{sample Mountain[/micro/i, 2], amp: 0.5}
+    (ring 1).tick("timing").times{sample Mountain[/micro/i, 6], amp: 0.5}
 
 
 #    with_fx(:reverb, room: 1.0, mix: 0.9, decay: 4.0) {

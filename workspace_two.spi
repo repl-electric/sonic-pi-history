@@ -1,5 +1,5 @@
 live_loop :bellz do
-1.times{sync :foo}
+1.times{sync :next}
 with_fx :distortion, amp: 0.8, mix: 0.3 do
 with_synth :beep do
 with_fx (knit :reverb,2).tick(:fx), decay: (knit 4.0,7, 8.0,1).tick(:de), room: 1.0 do |fx_verb|

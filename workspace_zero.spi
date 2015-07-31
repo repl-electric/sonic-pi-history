@@ -90,7 +90,7 @@ end
      
         with_transpose(12) do
           with_fx :distortion do
-            i_float(n, cutoff: 80)
+            i_float(n, cutoff: 85)
           end
         end
       #i_float(n)

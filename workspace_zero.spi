@@ -89,7 +89,7 @@ end
       i_int(n)
      
 with_transpose(12) do
-      i_float(n, cutoff: 70)
+      i_float(n, cutoff: 75)
 end
       #i_float(n)
       sleep bar

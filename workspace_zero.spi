@@ -119,7 +119,7 @@ end
 
     note = notes.tick(:a)
 
-    (ring 1).tick("timing").times{sample Mountain[/impact/i, 5], amp: 4.0}
+    (ring 1).tick("timing").times{sample Mountain[/impact/i, 4], amp: 4.0}
 
     sleep bar/2.0
 

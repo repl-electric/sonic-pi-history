@@ -88,11 +88,6 @@ end
 #with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
       i_int(n)
      
-        with_transpose(12) do
-          with_fx :distortion, mix: 0.2 do
-            i_float(n, cutoff: 100, release: 1.0, attack: 0.01)
-          end
-        end
       #i_float(n)
       sleep bar
 end;end;end;end

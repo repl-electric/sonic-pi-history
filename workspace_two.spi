@@ -1,3 +1,4 @@
+_ = nil
 live_loop :bellz do
 1.times{sync :next}
 with_fx :distortion, amp: 0.8, mix: 0.3 do

@@ -2,7 +2,7 @@
 
 shader(:shader, "nil.glsl") 
 
-shader(:uniform, "iCellCount", 10.0)
+shader(:uniform, "iCellCount", 20.0)
 
 shader(:uniform, "iMesh", 0.0)
 #shader(:suniform, :iCellMotion, 1.0) 

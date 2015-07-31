@@ -138,7 +138,7 @@ end
 
     1.times{sync :next}
 
-                                                                                  with_fx(:pitch_shift, pitch_dis: 4.0) do
+                                                                                  with_fx(:pitch_shift, time_dis: 4.0) do
                                                                                     i_bass(note)
                                                                                     
                                                                                   end

@@ -8,14 +8,13 @@ live_loop :exceptions do
     with_synth :beep do
       with_fx (knit :reverb,2).tick(:fx), decay: 4.0, room: 1.0, room_lag: 2.0 do |fx_verb|
         with_transpose([0].choose) do
-          n = play (knit :Fs5, 1, :Fs4, 1, :Fs4, 1, :Fs3, 3, _, 1,
-                    :Fs3, 7, _, 1,
-                    :Cs3, 7, _, 1,
-                    :Ds3, 7, _, 1,
-                    :As3, 7, _, 1,
-                    :Es3, 7, _, 1,
-
-                    ).tick, amp: 0.3
+  n = play (knit :Fs5, 1, :Fs4, 1, :Fs5, 1, :Fs4, 3, _, 1,
+                 :Fs4, 7, _, 1,
+                 :Cs4, 7, _, 1,
+                 :Ds4, 7, _, 1,
+                 :As4, 7, _, 1,
+                 :Es4, 7, _, 1,
+).tick, amp: 0.3
 
           with_transpose(0) do
             with_synth(:beep){

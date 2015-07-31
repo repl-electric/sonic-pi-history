@@ -6,6 +6,9 @@ shader(:uniform, "iCellCount", 1.0)
 shader(:uniform, "iCellMotion", 0.0)
 shader(:uniform, "iMesh", 1.0)
 
+shader(:uniform, "mesh", 1.0)
+
+
 #shader(:suniform, :iCellMotion, 1.0) 
 #shader(:uniform, "iCellCount", 20.0)
 

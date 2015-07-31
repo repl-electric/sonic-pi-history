@@ -20,7 +20,7 @@ with_transpose(-12) do
                     :Cs4, 7, _, 1,
                     :Ds4, 7, _, 1,
                     :As4, 7, _, 1,
-                    :Es4, 7, _, 1,).tick, amp: 0.2, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0, release: 0.1
+                    :Es4, 7, _, 1,).tick, amp: 0.2, attack: 0.01, cutoff: 60, res: 0.5, detune: 0.0, release: 0.01
             }
           end
 

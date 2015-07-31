@@ -48,8 +48,8 @@ live :bang, amp: 0.5 do |m_idx|
     m_idx+=1
 end
 
-live :next, amp: 0.5 do
-  density(@polyrhythm.sort.first) do
+live :next, amp: 0.0 do
+#  density(@polyrhythm.sort.first) do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     sleep bar
 end

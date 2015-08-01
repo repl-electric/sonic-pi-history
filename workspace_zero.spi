@@ -18,9 +18,10 @@ live_loop :loop do |idx|
       if (knit d,4, d1,4).look == d1
         sample Mountain[/impact/i,1..4].tick(:sam)
       end
-      shader(:uniform, "iBeat", 0.0)
+     
 
       sleep sample_duration(d)
+    shader(:uniform, "iBeat", 0.0)
     end
   end
   idx+=1

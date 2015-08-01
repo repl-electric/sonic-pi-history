@@ -11,3 +11,8 @@ live_loop :drumz do
    sample (knit d,4, d0,4).tick
    sleep sample_duration(d)
 end
+
+live_loop :kick do
+  sync :drumz
+  sample Mountain[/kick/i, 3]
+end

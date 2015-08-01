@@ -22,7 +22,6 @@ live_loop :kick do
     else
     sample Mountain[/microperc/i,5..8].tick, rate: 1.0    end
 end
-end
     sleep x/32.0
 }
 end

@@ -3,25 +3,28 @@
 
 #load_snippets("~/.sonic-pi/snippets")
 
-d = MountainLoop[/bearsbeat_01/i]
-d1 = MountainLoop[/bearsbeat_02/i]
-puts d
-puts d1
+d=  "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum Loops/90_BearsBeat_01_SP.wav"
+d1 = "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum Loops/90_BearsBeat_02_SP.wav"
+
+#d = MountainLoop[/bearsbeat/i]
+#d1 = MountainLoop[/bearsbeat/i,]
+
+
 use_sample_bpm d
 x = sample_duration(d)
 
 live_loop :loop do
-  #with_fx :bitcrusher, bits: (ring *6..8).tick do
+  with_fx :bitcrusher, bits: (ring *6..8).tick do
   with_fx (knit :slicer,1, :none,3).tick, mix: 0.1, amp: 1.0 do
     sample Mountain[/kick/i, 4..5].tick
-    sample (knit d,4, d1,4).tick, amp: 1.0, rate: [-1.0, 1.0, 1.0].choose
+    sample (knit d,4, d1,4).tick, amp: 1.0, rate: [-1.0, 1.0].choose
     
     if (knit d,4, d1,4).look == d1
       sample Mountain[/impact/i,1..4].tick(:sam)
     end
 
     sleep sample_duration(d)
-  #end
+  end
 end
 end
 
@@ -40,7 +43,6 @@ end
 
 live_loop :synthers do
   #sync :loop
-with_fx :reverb, room: 1.0, dry: 0.5 do
   with_synth(:prophet) do
     notes = scale(:fs2, :major_pentatonic).shuffle
     with_synth :dsaw do
@@ -53,7 +55,6 @@ with_fx :reverb, room: 1.0, dry: 0.5 do
     with_transpose(-24) do
       play notes.tick, cutoff: 70, release: 0.3
     end
-end
 
     sleep 1/8.0
   end

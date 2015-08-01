@@ -9,6 +9,11 @@ use_sample_bpm d
 
 live_loop :drum do
   sample Mountain[/kick/i, 3]
-   sample (knit d, 4, d1, 4).tick
+  sample (knit d, 4, d1, 4).tick
   sleep sample_duration(d)
+end
+
+live_loop :synths do
+   sync :drum
+   play scale(:Fs2, :major_pentatonic).shuffle.choose
 end

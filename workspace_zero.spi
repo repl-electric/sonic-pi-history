@@ -40,6 +40,6 @@ live_loop :synthers do
   #8.times{sync :loop}
   with_synth(:prophet) do
    play deg_seq(%w{Fs3 1}), cutoff: 50
-   sleep 1/2.0
+   sleep 1/8.0
 end
 end

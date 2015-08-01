@@ -12,6 +12,7 @@ sleep sample_duration(d)
 end
 
 live_loop :kick do
+  sync :loop
   sample Ether[/hat/i,1], rate: 1.0
   sleep 1/4.0
 end

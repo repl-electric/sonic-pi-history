@@ -17,3 +17,8 @@ live_loop :kicks do
   sync :drums
   sample Mountain[/kick/i, 3..4].shuffle.choose
 end
+
+live_loop :synths do
+  sync :drums
+  play scale(:Fs2, :major_pentatonic).shuffle.choose, release: 1.0, amp: 0.5
+end

@@ -18,7 +18,7 @@ live_loop :kick do
 
 32.times {|n|
     if n == 3
-      sample Ether[/noise/i, 8], rate: 0.6
+      sample Ether[/click/i, 8], rate: 0.6
     else
     sample Mountain[/microperc/i,5..8].tick, rate: 1.0    end
     sleep x/32.0

@@ -28,4 +28,4 @@ end
 }
 end
 
-shader(:uniform, :iCellCount, 100.0)
+shader(:uniform, :iCellCount, 50.0)

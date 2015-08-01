@@ -40,6 +40,6 @@ live_loop :kick do
   #8.times{sync :loop}
   with_synth(:prophet) do
    play :Fs3
-  sleep 8
+  sleep 1
 end
 end

@@ -30,5 +30,5 @@ live_loop :synths do
   with_synth(:prophet) do
   play scale(:fs1, :major).choose, cutoff: 60
  end
-  sleep x/8.0
+  sleep x/4.0
 end

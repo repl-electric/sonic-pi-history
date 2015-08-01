@@ -13,7 +13,7 @@ live_loop :loop do
   #with_fx :bitcrusher, bits: (ring *6..8).tick do
   with_fx (knit :slicer,1, :none,3).tick, mix: 0.1, amp: 1.0 do
     sample Mountain[/kick/i, 4..5].tick
-    sample (knit d,4, d1,4).tick, amp: 1.0, rate: [-1.0, 1.0,1.0].choose
+    sample (knit d,4, d1,4).tick, amp: 1.0, rate: [-1.0, 1.0, 1.0].choose
     
     if (knit d,4, d1,4).look == d1
       sample Mountain[/impact/i,1..4].tick(:sam)

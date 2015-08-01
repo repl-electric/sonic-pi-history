@@ -31,6 +31,6 @@ live_loop :kick do
 #      sample Ether[/click/i, 8], rate: 0.6
 #    else
 #    sample Mountain[/microperc/i,5..8].tick, rate: 1.0#    end
-    sleep x/16.0
+    sleep x/2.0
 }
 end

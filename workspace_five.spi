@@ -24,4 +24,4 @@ live_loop :synths do
   play scale(:Fs2, :major_pentatonic).shuffle.choose, release: 1.0, amp: 0.5, cutoff: 50
 end
 end
-shader(:uniform, :iCellMotion, 6.0)
+shader(:uniform, :iCellMotion, 8.0)

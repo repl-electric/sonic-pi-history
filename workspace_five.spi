@@ -16,7 +16,7 @@ end
 live_loop :hat do
   sync :drum
   16.times{
-  sample Ether[/hat/i, 3]
+  sample Ether[/click/i, 3]
  sleep sample_duration(d)/16.0
 
 }

@@ -5,6 +5,8 @@ load_snippets("~/.sonic-pi/snippets")
 d = MountainLoop[/bearsbeat/i,0]
 d1 = MountainLoop[/bearsbeat/i,1]
 
+mountainloop
+
 use_sample_bpm d
 
 live_loop :drums  do

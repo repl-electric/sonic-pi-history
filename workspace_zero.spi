@@ -24,7 +24,7 @@ live_loop :loop do
 end
 end
 
-live_loop :kicker do
+live_loop :hats do
   sync :loop
   16.times{
     sample Ether[/click/i, 0], amp: 8.0

@@ -25,7 +25,6 @@ live_loop :kick do
 }
 end
 
-chords_for()˘
 
 live_loop :synths do
   with_fx :echo do

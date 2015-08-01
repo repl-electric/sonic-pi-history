@@ -25,7 +25,7 @@ end
 live_loop :hats do
   sync :loop
   16.times{
-    sample Ether[/noise/i, 7], amp: 1.0
+    sample Ether[/noise/i, 1], amp: 1.0
     sleep x/16.0
   }
 end

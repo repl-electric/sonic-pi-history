@@ -13,7 +13,7 @@ live_loop :drums  do
   sleep sample_duration d
 end
 
-live_loop : do
+live_loop :hats do
 
 end
 

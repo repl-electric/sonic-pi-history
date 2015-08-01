@@ -7,4 +7,6 @@ d = MountainLoop[/bearsbeat/i,0]
 
 use_sample_bpm d
 
+loop do
 sample d
+end

@@ -33,4 +33,4 @@ live_loop :synths do
    sleep 1/8.0
 end
 
- shader(:uniform, "iCellMotion", 8.0)
+ shader(:uniform, "iCellMotion", 100.0)

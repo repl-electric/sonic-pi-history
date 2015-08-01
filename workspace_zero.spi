@@ -13,5 +13,9 @@ end
 
 live_loop :kick do
   sync :loop
-  sample Ether[/hat/i,1], rate: 1.0
+
+8.times {
+sample Ether[/hat/i,1], rate: 1.0
+sleep 1/8.0  
+}
 end

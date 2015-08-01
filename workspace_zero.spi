@@ -39,7 +39,7 @@ end
 
 live_loop :synthers do
   #sync :loop
-with_fx :reverb, room: 1.0 do
+with_fx :reverb, room: 1.0, dry: 0.5 do
   with_synth(:prophet) do
     notes = scale(:fs2, :major_pentatonic).shuffle
     with_synth :dsaw do

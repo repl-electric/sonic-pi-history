@@ -28,7 +28,7 @@ end
 
 live_loop :synths do
   with_fx :echo do
-  with_synth(:prophet) do
+  with_synth(:echo) do
   play scale(:fs2, :major_pentatonic).shuffle.tick, cutoff: 60, attack: 0.1, release: 0.2
  end
 end

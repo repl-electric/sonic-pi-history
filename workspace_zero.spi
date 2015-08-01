@@ -25,10 +25,9 @@ live_loop :kick do
 }
 end
 
-
 live_loop :synths do
   with_synth(:prophet) do
-  play scale(:fs3, :major_pentatonic).shuffle.tick, cutoff: 60, attack: 0.1
+  play scale(:fs3, :major_pentatonic).shuffle.tick, cutoff: 50, attack: 0.1
  end
   sleep x/4.0
 end

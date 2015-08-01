@@ -1,3 +1,8 @@
+#10 year old children can do this. 
+["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+load_snippets("~/.sonic-pi/snippets")
+
+
 d= MountainLoop[/bearbeat/,0]
 
 use_sample_bpm d

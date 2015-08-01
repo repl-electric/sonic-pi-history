@@ -28,6 +28,6 @@ end
 
 live_loop :synths do
 #  with_synth()
-  play scale(:fs2, :major).choose
+  play scale(:fs1, :major).choose
   sleep x/16.0
 end

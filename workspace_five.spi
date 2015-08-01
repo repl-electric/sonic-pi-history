@@ -2,8 +2,4 @@
 ["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 load_snippets("~/.sonic-pi/snippets")
 
-play 60
-sleep 1
-play 50
-sleep 1/2.0
-play 40
+d = MountainLoop[/bearsbeat/i,0]

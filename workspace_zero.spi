@@ -25,7 +25,7 @@ live_loop :kick do
 
 #with_fx(:) do
    i_deter(deg_seq(%w{:f3 1_3}), 
-           deg_seq(%w{:f3 11}))
+           deg_seq(%w{:f3 11}), amp: 0.5)
 #end
    
 

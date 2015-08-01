@@ -14,8 +14,11 @@ live_loop :drums  do
 end
 
 live_loop :hats do
-sync :drums  
-sample Ether[/click/, 0..4].tick
+  sync :drums
+32.times{
+  sample Ether[/click/, 0..4].tick
+  sleep sample_duration(d)/32.0
+}
   
 end
 

@@ -14,6 +14,11 @@ end
 
 live_loop :synth do
   sync :drums
+  4.times{
+  with_synth(:dsaw) do
   play scale(:Fs2, :major_pentatonic).shuffle.choose
+end
+  }
+  sleep 1/8.0
 
 end

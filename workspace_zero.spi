@@ -9,7 +9,7 @@ use_sample_bpm d
 x = sample_duration(d)
 
 live_loop :loop do
-with_fx :bitcrusher do
+with_fx :bitcrusher, bits: (ring *3..7).tick do
     sample d, amp: 0.5
     sleep sample_duration(d)
 end

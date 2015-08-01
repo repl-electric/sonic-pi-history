@@ -13,5 +13,5 @@ end
 
 live_loop :kick do
   sample Mountain[/hat/,3], rate: 1.0
-  sleep 1/2.0
+  sleep 1/4.0
 end

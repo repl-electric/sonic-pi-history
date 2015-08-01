@@ -52,7 +52,7 @@ with_fx :reverb do
     with_transpose(-24) do
       play notes.tick, cutoff: 70, release: 0.3
     end
-edn
+end
 
     sleep 1/8.0
   end

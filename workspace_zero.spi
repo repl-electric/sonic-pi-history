@@ -25,7 +25,7 @@ end
 live_loop :kicker do
   sync :loop
 
-32.times{  sample Mountain[/kick/]
+32.times{  sample Mountain[/kick/] }
 end
 
 live_loop :background do

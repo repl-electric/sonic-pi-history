@@ -9,7 +9,7 @@ use_sample_bpm d
 
 live_loop :drumz do
    shader(:uniform, :iCellCount, rand(50))
-   sample (knit d,4, d0,4).tick
+   sample (knit d,4, d0,4).tick, rate: [1.0, -1.0].choose
    sleep sample_duration(d)
 end
 

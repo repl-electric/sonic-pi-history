@@ -14,7 +14,9 @@ live_loop :drums  do
 end
 
 live_loop :hats do
-
+sync :drums  
+sample Ether[/click/, 0..4].tick
+  
 end
 
 live_loop :synth do

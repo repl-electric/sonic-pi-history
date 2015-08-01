@@ -17,12 +17,6 @@ live_loop :kick do
   sample Mountain[/kick/i, 3..4].tick
 end
 
-live_loop :hats do
-  sync :drumz
-  sample Ether[/click/i, 3..4].tick
-end
-
-
 live_loop :synths do
   sync :drumz
   4.times{

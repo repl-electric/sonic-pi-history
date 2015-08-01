@@ -22,7 +22,8 @@ live_loop :kick do
 
 
 #with_fx(:) do
-   i_deter(deg_seq(%w{:f4 13}), deg_seq(%w{:f4 1 1 3 3}))
+   i_deter(deg_seq(%w{:f4 1_3}), 
+           deg_seq(%w{:f4 11}))
 #end
    
 

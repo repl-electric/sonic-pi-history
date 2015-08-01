@@ -43,7 +43,7 @@ live_loop :synthers do
     with_transpose(-12) do
       play deg_seq(%w{Fs3 3 _ 1 _ 3 _}).tick, cutoff: 50, release: 0.3
     end
-      play deg_seq(%w{Fs3 1 _ 1 _ 3 _}).tick, cutoff: 50, release: 0.3
+      play deg_seq(%w{Fs3 1 _ 5 _ 3 _}).tick, cutoff: 50, release: 0.3
 
 
     sleep 1/8.0

@@ -20,5 +20,7 @@ end
 
 live_loop :synths do
   sync :drums
+  with_synth(:dsaw) do
   play scale(:Fs2, :major_pentatonic).shuffle.choose, release: 1.0, amp: 0.5
+end
 end

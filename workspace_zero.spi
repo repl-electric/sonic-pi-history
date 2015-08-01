@@ -18,7 +18,7 @@ live_loop :kick do
 
 32.times {|n|
     if n == 3
-    sample Ether[/hat/i,5..8].tick, rate: 1.0
+    sample Ether[/hat/i,5].tick, rate: 1.0
 
       else
     sample Mountain[/microperc/i,5..8].tick, rate: 1.0end

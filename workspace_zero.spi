@@ -41,7 +41,9 @@ live_loop :synthers do
   with_synth(:prophet) do
     play deg_seq(%w{Fs3 1 3 5}).tick, cutoff: 60, release: 1.0
 
+     with_transpose(-12) do
     play deg_seq(%w{Fs3 135}), cutoff: 60, release: 1.0
+end
 
     sleep 1/8.0
   end

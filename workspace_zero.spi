@@ -27,7 +27,7 @@ end
 live_loop :kicker do
   sync :loop
   16.times{
-    sample Ether[/hat/, 2]
+    sample Ether[/hat/, 1]
   }
 end
 

@@ -25,7 +25,6 @@ live_loop :kick do
 }
 end
 
-
 live_loop :synths do
   sync :loop
   with_fx :echo do
@@ -33,5 +32,5 @@ live_loop :synths do
   play scale(:fs2, :major_pentatonic).shuffle.tick, cutoff: 60, attack: 0.1, release: 0.2
   end
   end
-  sleep x/32.0
+  sleep x/16.0
 end

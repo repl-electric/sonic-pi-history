@@ -3,8 +3,8 @@
 
 #load_snippets("~/.sonic-pi/snippets")
 
-d = MountainLoop[/bearsbeat/i, 0]
-d1 = MountainLoop[/bearsbeat/i, 1]
+d = MountainLoop[/bearsbeat_01/i]
+d1 = MountainLoop[/bearsbeat_02/i]
 
 use_sample_bpm d
 x = sample_duration(d)

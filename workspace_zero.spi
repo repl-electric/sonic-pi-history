@@ -9,6 +9,9 @@ use_sample_bpm d
 live_loop :loop do
 sample d
 sleep sample_duration(d)
+end
 
+live_loop :kick do
+  sample Mountain[/kick/,1]
 
 end

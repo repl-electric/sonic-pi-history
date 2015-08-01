@@ -3,9 +3,11 @@
 load_snippets("~/.sonic-pi/snippets")
 
 d = MountainLoop[/bearsbeat/i,0]
+d0 = MountainLoop[/bearsbeat/i,0]
+
 use_sample_bpm d
 
 live_loop :drumz do
-   sample d
+   sample (knit d,4, d0,4).tick
    sleep sample_duration(d)
 end

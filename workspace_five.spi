@@ -2,7 +2,7 @@
 ["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 load_snippets("~/.sonic-pi/snippets")
 
-d = MountainLoop[/bear/,0]
+d = MountainLoop[/bearsbeats/,0]
 
 sample d
 use_sample_bpm d

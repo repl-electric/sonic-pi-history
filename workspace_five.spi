@@ -22,7 +22,7 @@ live_loop :synths do
   4.times{
   with_synth(:dsaw) do
   play scale(:Fs2, :major_pentatonic), release: 1.0, cutoff: 60
-edn
+end
   sleep sample_duration(d)/8.0
 }
 end

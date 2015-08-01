@@ -39,7 +39,7 @@ live_loop :synthers do
   sync :loop
   with_synth(:prophet) do
     notes = scale(:fs2, :major_pentatonic).shuffle
-   4.times{
+    4.times{
     with_synth :dsaw do
       play   notes.tick, cutoff: 50, release: 1.0
     end

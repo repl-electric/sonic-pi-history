@@ -9,7 +9,7 @@ use_sample_bpm d
 
 live_loop :drum do
  with_fx((knit :slicer,1, :none,4).tick(:fx))  do
-    shader(:uniform, "iCellCount", 1.0)
+    shader(:uniform, "iCellCount", rand(50))
 
 
  sample Mountain[/kick/i, 3..4].tick(:drums)

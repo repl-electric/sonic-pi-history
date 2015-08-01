@@ -27,3 +27,5 @@ end
   sleep sample_duration(d)/8.0
 }
 end
+
+shader(:uniform, :iCellMotion, 2.0)

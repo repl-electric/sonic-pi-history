@@ -14,7 +14,7 @@ x = sample_duration(d)
 
 live_loop :loop do
 #  with_fx :bitcrusher, bits: (ring *6..8).tick do
-    sample (ring d,d,d,d1).tick, amp: 1.0
+    sample (knit d,4,d1,4).tick, amp: 1.0
     sleep sample_duration(d)
 #  end
 end

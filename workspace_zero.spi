@@ -13,5 +13,5 @@ end
 
 live_loop :kick do
   sample Mountain[/kick/,1]
-
+  sleep 1
 end

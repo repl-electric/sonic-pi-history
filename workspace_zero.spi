@@ -26,7 +26,7 @@ live_loop :kick do
 end
 
 live_loop :synths do
-  with_fx :distortion, mix: 0.1 do
+  with_fx :slicer, mix: 0.1 do
   with_synth(:prophet) do
   play scale(:fs3, :major_pentatonic).shuffle.tick, cutoff: 50, attack: 0.1, release: 0.2
  end

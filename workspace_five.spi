@@ -3,6 +3,6 @@
 load_snippets("~/.sonic-pi/snippets")
 
 
-d = sample MountainLoop[/bearsbeat/i,0]
+d = MountainLoop[/bearsbeat/i,0]
 
 use_sample_bpm d

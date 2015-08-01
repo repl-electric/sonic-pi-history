@@ -34,7 +34,7 @@ end
 
 live_loop :kick do
   8.times{sync :loop}
-  i_deter(deg_seq(%w{:f3 1_3}),
-          deg_seq(%w{:f3 11}),)
+  i_deter(deg_seq(%w{:F3 1_3}),
+          deg_seq(%w{:F3 11}),)
 
 end

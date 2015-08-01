@@ -8,10 +8,11 @@ d1 = MountainLoop[/bearsbeat/i,1]
 use_sample_bpm d
 
 live_loop :drum do
- 
+ with_fx(:bitcrusher) do
  sample Mountain[/kick/i, 3..4].tick(:drums)
   sample (knit d, 4, d1, 4).tick
   sleep sample_duration(d)
+end
 end
 
 live_loop :hat do
@@ -21,7 +22,6 @@ live_loop :hat do
  sleep sample_duration(d)/16.0
 }
 end
-
 
 live_loop :synths do
    sync :drum

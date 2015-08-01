@@ -36,7 +36,7 @@ live_loop :background do
   sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.5
 end
 
-live_loop :kick do
+live_loop :synthers do
   #8.times{sync :loop}
   with_synth(:prophet) do
    play :Fs3, cutoff: 60

@@ -31,5 +31,5 @@ live_loop :synths do
   play scale(:fs3, :major_pentatonic).shuffle.tick, cutoff: 40, attack: 0.1, release: 0.2
  end
 end
-  sleep x/4.0
+  sleep x/2.0
 end

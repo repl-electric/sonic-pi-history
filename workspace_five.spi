@@ -14,9 +14,14 @@ live_loop :drum do
 end
 
 live_loop :hat do
+  sync :drum
+  16.times{
   sample Ether[/hat/i, 3]
-  sample (knit d, 4, d1, 4).tick
-  sleep sample_duration(d)
+ sleep sample_duration(d)/16.0
+
+}
+
+
 end
 
 

@@ -38,8 +38,10 @@ end
 
 live_loop :kick do
   #8.times{sync :loop}
+  with_synth(:prophet) do
+
   i_deter(deg_seq(%w{:F3 1 _ 3}),
           deg_seq(%w{:F3 11}))
   sleep 32
-
+end
 end

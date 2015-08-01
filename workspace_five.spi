@@ -16,3 +16,8 @@ live_loop :kick do
   sync :drumz
   sample Mountain[/kick/i, 3..4].tick
 end
+
+live_loop :synths do
+  sync :drumz
+  play scale(:Fs2, :major_pentatonic), release: 1.0, cutoff: 60
+end

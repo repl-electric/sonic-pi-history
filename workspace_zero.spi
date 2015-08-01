@@ -18,7 +18,7 @@ end
 live_loop :kick do
   sync :loop
   32.times {|n|
-  i_float(deg_seq(%w{Fs3 1 3 1 1 Fs2 1 1 1 1}))
+  i_float(deg_seq(%w{Fs3 1 3 1 5 Fs2 1 1 1 1}))
 
     if n == 3
       sample Ether[/click/i, 8], rate: 0.6

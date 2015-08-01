@@ -47,6 +47,6 @@ live_loop :synthers do
       play deg_seq(%w{Fs3 1 _ 5 _ 5 _}).tick, cutoff: 60, release: 0.3
     end
 
-    sleep 1/8.0
+#    sleep 1/8.0
   end
 end

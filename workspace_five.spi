@@ -9,6 +9,5 @@ use_sample_bpm d
 
 live_loop :drums do
    sample d
-  sleep sample_duration(d)
-
+   sleep sample_duration(d)
 end

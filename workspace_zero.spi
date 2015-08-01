@@ -17,7 +17,7 @@ live_loop :kick do
   sync :loop
 
 32.times {
-    sample Mountain[/microperc/i,0..3].tick, rate: 1.0
+    sample Mountain[/microperc/i,5..3].tick, rate: 1.0
     sleep x/32.0
 }
 end

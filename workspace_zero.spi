@@ -16,8 +16,12 @@ end
 live_loop :kick do
   sync :loop
 
-32.times {
-    sample Mountain[/microperc/i,5..8].tick, rate: 1.0
+32.times {|n|
+    if n == 3
+    sample Ether[/microperc/i,5..8].tick, rate: 1.0
+
+      else
+    sample Mountain[/microperc/i,5..8].tick, rate: 1.0end
     sleep x/32.0
 }
 end

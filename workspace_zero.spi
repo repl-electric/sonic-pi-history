@@ -4,6 +4,8 @@
 #load_snippets("~/.sonic-pi/snippets")
 
 d=  "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum Loops/90_BearsBeat_01_SP.wav"
+d1 = "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum Loops/90_BearsBeat_02_SP.wav"
+
 use_sample_bpm d
 
 x = sample_duration(d)

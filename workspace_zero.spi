@@ -9,7 +9,7 @@ use_sample_bpm d
 x = sample_duration(d)
 
 live_loop :loop do
-sample d
+sample d, rate: 0.5
 sleep sample_duration(d)
 end
 
@@ -24,6 +24,8 @@ live_loop :kick do
     sleep x/32.0
 }
 end
+
+chords_for()˘
 
 live_loop :synths do
   with_fx :echo do

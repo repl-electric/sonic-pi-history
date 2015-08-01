@@ -11,3 +11,9 @@ live_loop :drums  do
   sample (knit d,4, d1,4).tick
   sleep sample_duration d
 end
+
+live_loop :synth do
+  sync :drums
+  play scale(:Fs2, :major_pentatonic).shuffle.choose
+
+end

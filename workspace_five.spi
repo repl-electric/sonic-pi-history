@@ -28,4 +28,4 @@ end
 }
 end
 
-shader(:uniform, :iCellMotion, 3.0)
+shader(:uniform, :iCellMotion, 4.0)

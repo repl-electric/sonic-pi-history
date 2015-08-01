@@ -4,7 +4,6 @@
 #load_snippets("~/.sonic-pi/snippets")
 
 d=  "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum\ Loops/120_DeepVerb_01_SP.wav"
-˘˘
 use_sample_bpm d
 
 live_loop :loop do

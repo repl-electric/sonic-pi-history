@@ -2,8 +2,8 @@
 
 #load_snippets("~/.sonic-pi/snippets")
 
-play 50
-sleep 1
-play 60
-sleep 0.5
-play 30
+live_loop :loop do
+
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum\ Loops/120_DeepVerb_01_SP.wav"
+
+end

@@ -43,5 +43,4 @@ live_loop :synthers do
       play   notes.tick, cutoff: 50, release: 1.0
     end
     sleep 1/8.0
-  end
 end

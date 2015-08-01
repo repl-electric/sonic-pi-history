@@ -43,7 +43,9 @@ live_loop :synthers do
       play notes.tick, cutoff: 60, release: 1.0
     end
     with_transpose(12) do
-      play notes.tick, cutoff: 60, release: 1.0
+      with_synth(:prophet){
+      play notes.tick, cutoff: 60, release: 1.0}
+
     end
     sleep 1/8.0
   }

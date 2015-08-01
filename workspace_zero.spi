@@ -39,7 +39,7 @@ end
 live_loop :synthers do
   sync :loop
   with_synth(:prophet) do
-    play   deg_seq(%w{Fs3 5 _ 3 _ 1}).tick, cutoff: 50, release: 1.0
+    play   deg_seq(%w{Fs3 5 _ 3 _ 1}).tick, cutoff: 60, release: 1.0
     with_transpose(-12) do
       play deg_seq(%w{Fs3 3 _ 1 _ 3 _}).tick, cutoff: 60, release: 0.3
     end

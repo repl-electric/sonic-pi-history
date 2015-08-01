@@ -11,7 +11,7 @@ x = sample_duration(d)
 
 live_loop :loop do
 #  with_fx :bitcrusher, bits: (ring *6..8).tick do
-    sample Mountain[/kick/i]
+    sample Mountain[/kick/i, 0]
     sample (knit d,4, d1,4).tick, amp: 1.0
     
     if (knit d,4, d1,4).look == d1

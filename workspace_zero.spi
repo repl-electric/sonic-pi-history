@@ -24,8 +24,7 @@ end
 
 live_loop :background do
   sync :loop
-  sample Mountain[//i]
-
+  sample Mountain[/crackle/i]
 end
 
 live_loop :kick do

@@ -14,5 +14,5 @@ end
 
 live_loop :kicks do
   sync :drums
-sample Mountain[/kick/i, 3]
+  sample Mountain[/kick/i, 3..4].shuffle.choose
 end

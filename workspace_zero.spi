@@ -24,7 +24,7 @@ end
 
 live_loop :background do
   sync :loop
-  sample Mountain[/crackle/i, 0], rate: 0.9
+  sample Mountain[/crackle/i, 1], rate: 0.9
 end
 
 live_loop :kick do

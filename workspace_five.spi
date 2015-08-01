@@ -14,5 +14,5 @@ end
 
 live_loop :kick do
   sync :drumz
-  sample Mountain[/kick/i, 3]
+  sample Mountain[/kick/i, 3..4].tick
 end

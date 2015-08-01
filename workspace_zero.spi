@@ -6,6 +6,8 @@
 d=  "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum\ Loops/120_DeepVerb_01_SP.wav"
 use_sample_bpm d
 
+x = sample_duration(d)
+
 live_loop :loop do
 sample d
 sleep sample_duration(d)
@@ -16,6 +18,6 @@ live_loop :kick do
 
 8.times {
 sample Ether[/hat/i,0..6], rate: 1.0
-sleep 1/32.0  
+sleep x/8.0  
 }
 end

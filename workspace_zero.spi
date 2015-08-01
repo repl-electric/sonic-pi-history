@@ -7,7 +7,8 @@ d=  "/Users/josephwilk/Workspace/music/samples/loops/Mountain/Drum\ Loops/120_De
 use_sample_bpm d
 
 live_loop :loop do
-sample_and_sleep d
+sample d
+sleep sample_duration(d)
 
 
 end

@@ -12,6 +12,6 @@ sleep sample_duration(d)
 end
 
 live_loop :kick do
-  sample Mountain[/kick/,3], rate: 1.0
+  sample Mountain[/hat/,3], rate: 1.0
   sleep 1
 end

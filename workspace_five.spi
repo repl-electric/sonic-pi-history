@@ -8,7 +8,7 @@ d1 = MountainLoop[/bearsbeat/i,1]
 use_sample_bpm d
 
 live_loop :drum do
-fx = (knit :slicer,1, :none,4).tick(:fx)
+fx = (knit :bitcrusher,1, :none,4).tick(:fx)
  with_fx(fx, phase: 0.1)  do
     shader(:uniform, "iCellCount", rand(50))
     sample Mountain[/kick/i, 3..4].tick(:drums)

@@ -5,7 +5,7 @@
 
 d = MountainLoop[/bearsbeat_01/i]
 d1 = MountainLoop[/bearsbeat_02/i]
-
+puts d1,d2
 use_sample_bpm d
 x = sample_duration(d)
 

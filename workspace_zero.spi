@@ -16,7 +16,7 @@ live_loop :loop do
 end
 
 live_loop :kick do
-  sync :loop
+  2.times{sync :loop}
   32.times {|n|
 #  i_float(deg_seq(%w{Fs3 1 3 1 5 Fs2 1 1 1 1}))
 
@@ -31,6 +31,6 @@ live_loop :kick do
 #      sample Ether[/click/i, 8], rate: 0.6
 #    else
 #    sample Mountain[/microperc/i,5..8].tick, rate: 1.0#    end
-    sleep x*2
+#    sleep x*2
 }
 end

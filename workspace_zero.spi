@@ -36,7 +36,7 @@ live_loop :background do
 end
 
 live_loop :synthers do
-  #sync :loop
+  sync :loop
   with_synth(:prophet) do
     notes = scale(:fs2, :major_pentatonic).shuffle
     with_synth :dsaw do

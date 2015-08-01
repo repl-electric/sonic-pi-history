@@ -9,16 +9,16 @@ use_sample_bpm d
 x = sample_duration(d)
 
 live_loop :loop do
-with_fx :bitcrusher, bits: (ring *4..7).tick do
+  with_fx :bitcrusher, bits: (ring *4..7).tick do
     sample d, amp: 0.5
     sleep sample_duration(d)
-end
+  end
 end
 
 live_loop :kick do
   sync :loop
 
-32.times {|n|
+  32.times {|n|
     if n == 3
       sample Ether[/click/i, 8], rate: 0.6
     else
@@ -32,7 +32,7 @@ end
 live_loop :synths do
   #sync :loop
   with_synth(:prophet) do
-    play scale(:fs2, :major_pentatonic).shuffle.tick, cutoff: 60, attack: 0.01, release: 0.02
+    play scale(:fs2, :minor_pentatonic).shuffle.tick, cutoff: 60, attack: 0.01, release: 0.02
   end
   sleep x/32.0
 end

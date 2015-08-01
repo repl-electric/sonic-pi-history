@@ -16,4 +16,5 @@ end
 live_loop :synths do
    sync :drum
    play scale(:Fs2, :major_pentatonic).shuffle.choose
+   sleep 1/8.0
 end

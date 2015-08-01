@@ -3,5 +3,7 @@
 load_snippets("~/.sonic-pi/snippets")
 
 play 60
+sleep 1
 play 50
+sleep 1/2.0
 play 40

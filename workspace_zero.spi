@@ -1,0 +1,53 @@
+#10 year old children can do this. 
+["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+load_snippets("~/.sonic-pi/snippets")
+d  = MountainLoop[/bearsbeat/i,0]
+d1 = MountainLoop[/bearsbeat/i,1]
+
+use_sample_bpm d
+x = sample_duration(d)
+
+live_loop :loop do
+  with_fx :bitcrusher, bits: (ring *6..8).tick do
+  with_fx (knit :slicer,1, :none,3).tick, mix: 0.1, amp: 0.5 do
+    sample Mountain[/kick/i, 4..5].tick
+    sample (knit d,4, d1,4).tick, amp: 1.0, rate: [-1.0, 1.0].choose
+    
+    if (knit d,4, d1,4).look == d1
+      sample Mountain[/impact/i,1..4].tick(:sam)
+    end
+
+    sleep sample_duration(d)
+  end
+end
+end
+
+live_loop :hats do
+  sync :loop
+  16.times{
+    sample Ether[/hat/i, 7], amp: 1.0
+    sleep x/16.0
+  }
+end
+
+live_loop :background do
+  sync :loop
+  sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.5
+end
+
+live_loop :synthers do
+  sync :loop
+    notes = scale(:fs2, :major_pentatonic).shuffle
+    4.times{
+    with_synth :dsaw do
+      play notes.tick, cutoff: 60, release: 1.0
+    end
+    with_transpose(12) do
+      with_synth(:prophet){
+        play notes.tick, cutoff: 60, release: 0.25
+      }
+
+    end
+    sleep 1/8.0
+  }
+end

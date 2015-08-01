@@ -39,7 +39,7 @@ end
 live_loop :synthers do
   #8.times{sync :loop}
   with_synth(:prophet) do
-   play :Fs3, cutoff: 60
+   play :Fs3, cutoff: 50
    sleep 1
 end
 end

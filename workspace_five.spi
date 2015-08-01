@@ -19,5 +19,8 @@ end
 
 live_loop :synths do
   sync :drumz
+  4.times{
   play scale(:Fs2, :major_pentatonic), release: 1.0, cutoff: 60
+  sleep sample_duration(d)/8.0
+}
 end

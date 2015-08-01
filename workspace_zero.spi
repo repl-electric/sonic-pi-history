@@ -10,8 +10,8 @@ x = sample_duration(d)
 
 live_loop :loop do
 with_fx :bitcrusher do
-sample d
-sleep sample_duration(d)
+    sample d, amp: 2.0
+    sleep sample_duration(d)
 end
 end
 

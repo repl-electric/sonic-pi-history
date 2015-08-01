@@ -15,6 +15,8 @@ end
 
 live_loop :synths do
    sync :drum
-   play scale(:Fs2, :major_pentatonic).shuffle.choose
+   with_synth(:dsaw) do
+   play scale(:Fs2, :major_pentatonic).shuffle.choose, cutoff: 50
+  end
    sleep 1/8.0
 end

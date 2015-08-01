@@ -8,17 +8,22 @@ d1 = MountainLoop[/bearsbeat/i,1]
 use_sample_bpm d
 
 live_loop :drums  do
+  sample Mountain[/kick/i, 3] 
   sample (knit d,4, d1,4).tick
   sleep sample_duration d
+end
+
+live_loop : do
+
 end
 
 live_loop :synth do
   sync :drums
   4.times{
   with_synth(:dsaw) do
-  play scale(:Fs2, :major_pentatonic).shuffle.choose, cutoff: 60, release: 1.0, amp: 0.5
-end
+      play scale(:Fs2, :major_pentatonic).shuffle.choose, cutoff: 60, release: 1.0, amp: 0.5
+    end
   
-  sleep 1/8.0
+    sleep 1/8.0
 }
 end

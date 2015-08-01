@@ -1,5 +1,8 @@
-play 60
-sleep 1
-play 50
-sleep 0.5
-play 40
+d= MountainLoop[/bearbeat/,0]
+
+use_sample_bpm d
+
+live_loop :drum do
+ sample d
+sleep sample_duration(d)
+end

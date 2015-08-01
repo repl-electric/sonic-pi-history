@@ -34,4 +34,4 @@ live_loop :synth do
 }
 end
 
-shader(:uniform, :iCellMotion, 2.0)
+shader(:uniform, :iCellMotion, 3.0)

@@ -3,8 +3,9 @@
 load_snippets("~/.sonic-pi/snippets")
 
 
-play 60
-sleep 1
-play 50
-sleep 0.5
-play 40
+d = sample MountainLoop[/bearsbeat/i,0]
+use_sample_bpm d
+
+live_loop :drums do
+
+end

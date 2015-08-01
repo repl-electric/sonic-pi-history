@@ -10,7 +10,7 @@ use_sample_bpm d
 x = sample_duration(d)
 
 live_loop :loop do
-#  with_fx :bitcrusher, bits: (ring *6..8).tick do
+  with_fx :bitcrusher, bits: (ring *6..8).tick do
   with_fx (ring :bitcrusher, :none).tick, bits: (ring *7..12).tick, mix: 0.1, amp: 1.0 do
     sample Mountain[/kick/i, 4..5].tick
     sample (knit d,4, d1,4).tick, amp: 1.0
@@ -20,7 +20,7 @@ live_loop :loop do
     end
 
     sleep sample_duration(d)
-#  end
+  end
 end
 end
 
@@ -40,7 +40,6 @@ live_loop :synthers do
   #8.times{sync :loop}
   with_synth(:prophet) do
     play deg_seq(%w{Fs3 1 _ 3 _ 1}).tick, cutoff: 50, release: 1.0
-
     with_transpose(-12) do
       play deg_seq(%w{Fs3 1 _ 1 _ 1 _}).tick, cutoff: 50, release: 0.3
     end

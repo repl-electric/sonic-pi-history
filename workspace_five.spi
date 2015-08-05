@@ -20,9 +20,15 @@ live_loop :drums do
   end
 end
 
-live_loop :hats do
+live_loop :timing do
   sync :drums
   32.times{ cue :thirtytwo 
   sleep sample_duration(d)/32.0
 }
+end
+
+live_loop :noise do
+  sync :thirtytwo
+  sample Mountain[/stick/i, 0]
+
 end

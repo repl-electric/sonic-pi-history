@@ -48,9 +48,9 @@ live_loop :noise do |nidx|
 end
 
 live_loop :synths do
-  sync :thirtytwo
+  8.times{sync :thirtytwo}
   use_synth :hollow
   with_fx :flanger do
-#    play (knit :Fs2, 6, :Cs3, 1, :As2, 1), release: 0.1, attack: 0.01, amp: 8.0
+    play (knit :Fs2, 6, :Cs3, 1, :As2, 1), release: 0.1, attack: 0.01, amp: 8.0
   end
 end

@@ -56,11 +56,11 @@ live_loop :synths do
         end
       end
     end
-    with_fx(:slicer) do
+    with_fx(:slicer, phase: 0.025) do
     with_synth :beep do
       play (knit :Fs5, 8).tick(:notes), release: 1.0
     end
-end
+    end
     with_synth :dsaw do
       with_fx :flanger do
         with_transpose([12,0].choose) do

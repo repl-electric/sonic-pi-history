@@ -50,6 +50,6 @@ end
 live_loop :synths do
   sync :thirtytwo
   use_synth :hollow
-  play :Fs1, release: 0.01, attack: 0.01
+  play :Fs3, release: 0.01, attack: 0.01
 
 end

@@ -52,7 +52,7 @@ live_loop :float do
   sync :drums
       with_fx :distortion, mix: 0.1, distort: 0.4 do
     with_fx(:reverb) do
-      with_fx(:echo) do
+#      with_fx(:echo) do
         with_synth :beep do
          n = play (knit :Fs5, 1).tick(:notes), release: 0.5, amp: 1.0
         end

@@ -51,6 +51,6 @@ live_loop :synths do
   8.times{sync :thirtytwo}
   use_synth :dsaw
   with_fx :flanger do
-    play (knit :Fs2, 6, :Cs3, 1, :As2, 1),tick, release: 1.0, attack: 0.01, amp: 1.0, cutoff: 60
+    play (knit :Fs2, 6, :Cs3, 1, :As2, 1),tick, attack: 0.01, amp: 1.0, cutoff: 60
   end
 end

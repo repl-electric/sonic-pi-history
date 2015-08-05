@@ -50,7 +50,7 @@ _=nil
 live_loop :float do
   n = 0
   sync :drums
-    with_fx((ring :reverb, :echo).tick(:fx), room: 1.0) do
+    with_fx((ring :echo).tick(:fx), room: 1.0) do
 #      with_fx(:echo) do
       with_fx :distortion, mix: 0.2, distort: 0.2, amp: 0.2 do
         with_synth :beep do

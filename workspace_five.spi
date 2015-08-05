@@ -48,14 +48,19 @@ end
 _=nil
 
 live_loop :float do
+  n = 0
   sync :drums
   with_fx(:reverb) do
     with_fx(:echo) do
       with_fx :distortion do
         with_synth :beep do
-          play (knit _, 7, :Fs3, 1).tick(:notes), release: 8.5
+         n= play (knit _, 7, :Fs3, 1).tick(:notes), release: 8.5
         end
       end
+
+ sleep 8
+  control n, note: :Fs2
+
     end
 end
 end

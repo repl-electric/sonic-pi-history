@@ -49,7 +49,7 @@ end
 
 live_loop :synths do
   8.times{sync :thirtytwo}
-  with_fx(:reverb, room: 1.0) do |fx_r|
+  with_fx(:reverb, room: 1.0, mix: 0.5) do |fx_r|
     with_synth :prophet do
       with_fx :flanger do
         with_transpose([12,24].choose) do

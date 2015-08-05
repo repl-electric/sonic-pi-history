@@ -50,6 +50,6 @@ end
 live_loop :synths do
   sync :thirtytwo
   use_synth :hollow
-  play (ring :Cs4, :Fs3), release: 0.01, attack: 0.01, amp: 10.0
+  play (ring :Cs4, :Fs3, :As3), release: 0.01, attack: 0.01, amp: 10.0
 
 end

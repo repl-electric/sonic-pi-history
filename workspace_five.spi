@@ -45,8 +45,9 @@ live_loop :noise do |nidx|
   nidx = nidx+1
 end
 
-live_loop :float do
+_=nil
 
+live_loop :float do
     with_fx(:slicer, phase: sample_duration(d1)/64) do
       with_fx :distortion do
         with_synth :beep do
@@ -54,11 +55,8 @@ live_loop :float do
         end
       end
     end
-
-
 end
 
-_=nil
 live_loop :synths do
   8.times{sync :thirtytwo}
   with_fx(:reverb, room: 1.0, mix: 0.5) do |fx_r|

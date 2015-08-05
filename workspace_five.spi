@@ -22,6 +22,7 @@ end
 
 live_loop :timing do
   sync :drums
+  with_
   32.times{ cue :thirtytwo 
   sleep sample_duration(d)/32.0
 }
@@ -29,5 +30,5 @@ end
 
 live_loop :noise do
   sync :thirtytwo
-  sample Mountain[/micro/i, 0..3].tick
+  sample Mountain[/micro/i, 5..8].tick
 end

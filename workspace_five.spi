@@ -48,7 +48,9 @@ live_loop :noise do |nidx|
 end
 
 live_loop :synths do
-  sync :drums
-  use_synth :dark_ambience
-  play :Fs5, release: 8.0, attack: 0.01
+  sync :thirtytwo
+  use_synth :hollow
+
+  play :Fs1, release: 0.01, attack: 0.01
+
 end

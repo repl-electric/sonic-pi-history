@@ -2,7 +2,7 @@
 ["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 load_snippets("~/.sonic-pi/snippets")
 
-set_volume! 3z.0
+set_volume! 3.0
 
 d =  MountainLoop[/bearsbeat/i,0]
 d1 =  MountainLoop[/bearsbeat/i,1]

@@ -50,5 +50,5 @@ end
 live_loop :synths do
   sync :drums
   use_synth :dark_ambience
-  play :Fs4, release: 8.0, attack: 0.01
+  play :Fs5, release: 8.0, attack: 0.01
 end

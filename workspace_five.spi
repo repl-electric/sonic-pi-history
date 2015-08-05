@@ -50,9 +50,10 @@ _=nil
 live_loop :float do
   n = 0
   sync :drums
-      with_fx :distortion, mix: 0.1, distort: 0.4 do
     with_fx(:reverb, room: 1.0) do
 #      with_fx(:echo) do
+      with_fx :distortion, mix: 0.1, distort: 0.4 do
+
         with_synth :beep do
          n = play (knit :Fs4, 1).tick(:notes), release: 1.5, amp: 0.5, attack: 0.5
         end

@@ -22,13 +22,13 @@ end
 
 live_loop :timing do
   sync :drums
-  with_fx(:reverb) do
+  with_fx(:reverb, mix: 0.3) do
     
   with_fx(:slicer, probabilty: 0.5) do
   32.times{ cue :thirtytwo 
   sleep sample_duration(d)/32.0
 }
-  end
+ end
 
 end
 end

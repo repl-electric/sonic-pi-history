@@ -32,7 +32,7 @@ live_loop :noise do |nidx|
   with_fx(:reverb, mix: 0.2, room: 1.0) do    
   with_fx(:slicer, phase: 0.025, probabilty: 0.5) do
       if (nidx % 8) == 0
-        sample Ether[/hat/i, 2], amp: 1.0
+        sample Ether[/hat/i, 3], amp: 1.0
       end
     end
   end

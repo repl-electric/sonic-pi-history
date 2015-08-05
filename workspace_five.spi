@@ -57,9 +57,9 @@ live_loop :float do
          n = play (knit _, 7, :Fs4, 1).tick(:notes), release: 8.5, amp: 2.0
         end
       end
-
+      
       sleep 2
-      control n, note: :Fs2
+      control n, note: :Fs4
     end
 end
 end

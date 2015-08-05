@@ -67,7 +67,7 @@ with_fx(:reverb) do |fx_r|
 end
 
   4.times{
-      control fx_r, dry: rrand(0.0,1.0),
+      control fx_r, dry: rrand(0.0,1.0)
        sleep 0.1
 }
 

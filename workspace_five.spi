@@ -45,6 +45,7 @@ live_loop :noise do |nidx|
   nidx = nidx+1
 end
 
+_=nil
 live_loop :synths do
   8.times{sync :thirtytwo}
   with_fx(:reverb, room: 1.0, mix: 0.5) do |fx_r|

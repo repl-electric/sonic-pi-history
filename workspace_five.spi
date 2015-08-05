@@ -49,7 +49,7 @@ _=nil
 
 live_loop :float do
   sync :drums
-    with_fx(:slicer, phase: sample_duration(d1)/64) do
+    with_fx(:echo)do
       with_fx :distortion do
         with_synth :beep do
           play (knit _, 7, :Fs4, 1).tick(:notes), release: 8.5

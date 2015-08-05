@@ -57,7 +57,7 @@ live_loop :synths do
       end
     end
 
-    with_synth :beep  do
+    with_synth :beep do
       play (knit _, 7, :As5, 1).tick, cutoff: 100, release: 0.5
     end
 

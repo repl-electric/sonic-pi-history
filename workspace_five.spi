@@ -12,21 +12,18 @@ use_sample_bpm d
 live_loop :drums do
   with_fx :bitcrusher, bits: (ring *5..8).tick, amp: 0.2 do
     samples = (knit d, 4, d1,4)
-    sample samples.tick, rate: [-1.0, 1.0].choose
-    
+    sample samples.tick, rate: [-1.0, 1.0].choose  
     if(samples.look() == d1)
       sample Mountain[/kick/, 3]
     end
-
     sleep sample_duration(d)
   end
 end
-
 
 live_loop :hats do
   sync :drums
   32.times{
   sample Mountain[/stick/i, 0]
-    sleep sample_duration(d)/32.0
+    sleep sample_duration(d)/32.0, amp: 0.1
   }  
 end

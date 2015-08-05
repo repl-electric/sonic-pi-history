@@ -34,5 +34,5 @@ live_loop :noise do |idx|
   sample Ether[/hat/i, 4]
     end
   end
-  idx +=1
+  idx =+1
 end

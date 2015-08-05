@@ -53,9 +53,8 @@ live_loop :float do
     with_fx(:reverb, room: 1.0) do
 #      with_fx(:echo) do
       with_fx :distortion, mix: 0.2, distort: 0.2, amp: 0.2 do
-
         with_synth :beep do
-         n = play (knit :Fs4, 1).tick(:notes), release: 1.5, amp: 0.5, attack: 0.5
+         n = play (knit :As4, 1).tick(:notes), release: 1.5, amp: 0.5, attack: 0.5
         end
  #     end
       

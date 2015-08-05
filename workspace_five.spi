@@ -29,5 +29,5 @@ end
 
 live_loop :noise do
   sync :thirtytwo
-  sample Mountain[/stone/i, 0..3].tick
+  sample Mountain[/micro/i, 0..3].tick
 end

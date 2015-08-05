@@ -32,6 +32,6 @@ live_loop :noise do
   with_fx(:reverb, mix: 0.2) do    
   with_fx(:slicer, probabilty: 0.5) do
   sample Ether[/hat/i, 5]
-end
-end
+    end
+  end
 end

@@ -58,7 +58,7 @@ live_loop :float do
         end
  #     end
       
-      sleep 1
+      sleep 0.5
       control n, note: :Fs3
 
       sleep 2

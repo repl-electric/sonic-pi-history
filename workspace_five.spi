@@ -31,7 +31,7 @@ live_loop :noise do |nidx|
   sync :thirtytwo
   with_fx(:reverb, mix: 0.2, room: 0.8) do    
   with_fx(:slicer, phase: 0.025, probabilty: 0.5) do
-      if (nidx % 16) == 3 
+      if (nidx % 16) == 3
         sample Ether[/hat/i, 3], amp: 1.0
       else
         sample Ether[/hat/i, 0], amp: 0.025

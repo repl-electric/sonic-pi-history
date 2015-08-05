@@ -70,7 +70,7 @@ live_loop :synths do
       end
     end
     with_fx(:slicer, phase: sample_duration(d1)/64) do
-      with_fx :distortion do
+      with_fx :distortion, mix: 0.2 do
         with_synth :beep do
           play (knit _, 7, :Fs4, 1).tick(:notes), release: 0.5, amp: 0.5
         end

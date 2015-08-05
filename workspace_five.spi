@@ -50,5 +50,6 @@ end
 
 live_loop :synths do
   sync :drums
+  use_synth :dark_ambience
   play :Fs2
 end

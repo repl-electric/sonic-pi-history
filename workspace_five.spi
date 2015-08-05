@@ -64,11 +64,10 @@ live_loop :synths do
       end
     end
 
-  4.times{
+    4.times{
       control fx_r, dry: rrand(0.0,1.0)
       sleep 0.1
-  }
-
-end
-
+    }
+    
+  end
 end

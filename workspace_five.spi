@@ -34,5 +34,5 @@ end
 
 live_loop :noise do
   sync :thirtytwo
-  sample Ether[/hat/i, 2]
+  sample Ether[/hat/i, 3]
 end

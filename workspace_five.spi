@@ -51,7 +51,7 @@ live_loop :synths do
   8.times{sync :thirtytwo}
   with_synth :dsaw do
   with_fx :flanger do
-    play (knit :Fs2, 6, :Cs3, 1, :As2, 1).tick, cutoff: 30
+    play (knit :Fs2, 6, :Cs3, 1, :As2, 1).tick, cutoff: 60
   end
 end
 end

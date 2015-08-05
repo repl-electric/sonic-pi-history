@@ -34,5 +34,5 @@ end
 
 live_loop :noise do
   sync :thirtytwo
-  sample Mountain[/micro/i, 5..8].tick,amp:3.0
+  sample Mountain[/micro/i, 5..8].tick,amp: 1.0
 end

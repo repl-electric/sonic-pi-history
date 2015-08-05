@@ -58,8 +58,8 @@ live_loop :float do
         end
       end
 
- sleep 8
-  control n, note: :Fs2
+      sleep 8
+      control n, note: :Fs2
 
     end
 end

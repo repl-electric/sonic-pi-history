@@ -27,11 +27,12 @@ live_loop :timing do
 }
 end
 
-live_loop :noise do
+live_loop :noise do |idx|
   sync :thirtytwo
   with_fx(:reverb, mix: 0.2) do    
   with_fx(:slicer, probabilty: 0.5) do
   sample Ether[/hat/i, 4]
     end
   end
+  idx +=1
 end

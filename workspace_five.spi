@@ -58,7 +58,7 @@ live_loop :synths do
     end
 
     with_synth :hollow do
-      play (knit :Fs5, 8).tick(:notes), cutoff: 120, release: 1.0
+      play (knit :Fs5, 8).tick(:notes) release: 1.0
     end
 
     with_synth :dsaw do

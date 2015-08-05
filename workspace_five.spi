@@ -50,6 +50,6 @@ end
 live_loop :synths do
   sync :thirtytwo
   use_synth :hollow
-  play (ring :Cs1, :Fs2, :As2).tick, release: 0.1, attack: 0.01, amp: 2.0
+  play (knit :Cs3, :Fs2, :As2).tick, release: 0.1, attack: 0.01, amp: 2.0
 
 end

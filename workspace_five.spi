@@ -31,7 +31,7 @@ live_loop :noise do |idx|
   sync :thirtytwo
   with_fx(:reverb, mix: 0.2) do    
   with_fx(:slicer, probabilty: 0.5) do
-      if (idx % 4) == 0
+      if (idx % 2) == 0
         sample Ether[/hat/i, 5]
       end
     end

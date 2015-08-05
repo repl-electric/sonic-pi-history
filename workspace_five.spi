@@ -27,7 +27,6 @@ live_loop :hats do
   sync :drums
   32.times{
   sample Mountain[/stick/i, 0]
-sleep sample_duration(d)/32.0
-}
-  
+    sleep sample_duration(d)/32.0
+  }  
 end

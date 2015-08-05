@@ -22,7 +22,7 @@ end
 
 live_loop :hats do
   sync :drums
-  32.times{ cue :thirtytwo }
-    sleep sample_duration(d)/32.0, amp: 0.1
-  }  
+  32.times{ cue :thirtytwo 
+  sleep sample_duration(d)/32.0
+}
 end

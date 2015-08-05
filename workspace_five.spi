@@ -36,5 +36,5 @@ live_loop :noise do |nidx|
       end
     end
   end
-  nidx = nidx+ 1
+  nidx = nidx+1
 end

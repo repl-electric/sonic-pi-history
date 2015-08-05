@@ -46,3 +46,9 @@ live_loop :noise do |nidx|
   end
   nidx = nidx+1
 end
+
+
+live_loop :synths do
+  sync :drums
+  play :Fs2
+end

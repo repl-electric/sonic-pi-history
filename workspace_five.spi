@@ -35,7 +35,7 @@ live_loop :noise do |nidx|
         sample Ether[/hat/i, 3], amp: 0.5
       else
         if (nidx % 64) > 32
-          sample Ether[/click/i, 8], amp: 0.025,, bit_rate: 4.0
+          sample Ether[/click/i, 8], amp: 0.025, bit_rate: 4.0
         else
           sample Ether[/click/i, 4], amp: 0.025, bit_rate: 2.0
         end

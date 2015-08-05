@@ -11,7 +11,14 @@ use_sample_bpm d
 
 live_loop :drums do
   with_fx :bitcrusher, bits: (ring *5..8).tick, amp: 0.2 do
+    sample Mountain[/kick/]
     sample (knit d, 4, d1,4).tick
     sleep sample_duration(d)
   end
+end
+
+
+live_loop :hats do
+  sync :drums
+  
 end

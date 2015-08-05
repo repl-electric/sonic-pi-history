@@ -53,6 +53,7 @@ live_loop :synths do
   with_fx :flanger do
     play (knit :Fs2, 6, :Cs3, 1, :As2, 1).tick, cutoff: 60
   end
+end
 
   with_synth :dsaw do
   with_fx :flanger do
@@ -60,5 +61,4 @@ live_loop :synths do
   end
 end
 
-end
 end

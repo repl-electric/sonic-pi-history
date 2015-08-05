@@ -54,11 +54,11 @@ live_loop :float do
     with_fx(:echo) do
       with_fx :distortion do
         with_synth :beep do
-         n= play (knit _, 7, :Fs4, 1).tick(:notes), release: 8.5, amp: 2.0
+         n = play (knit _, 7, :Fs4, 1).tick(:notes), release: 8.5, amp: 2.0
         end
       end
 
-      sleep 8
+      sleep 2
       control n, note: :Fs2
     end
 end

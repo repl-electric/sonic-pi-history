@@ -12,16 +12,3 @@ live_loop :drums do
   sample (knit d, 4, d1,4).tick
   sleep sample_duration(d)
 end
-
-live_loop :kicks do
-  sync :drums
-  sample Mountain[/kick/i, 3..4].shuffle.choose
-end
-
-live_loop :synths do
-  sync :drums
-  with_synth(:dsaw) do
-  play scale(:Fs2, :major_pentatonic).shuffle.choose, release: 1.0, amp: 0.5, cutoff: 50
-end
-end
-shader(:uniform, :iCellMotion, 10.0)

@@ -35,7 +35,7 @@ live_loop :noise do |nidx|
         sample Ether[/hat/i, 3], amp: 1.0
       else
         if (knit d, 4, d1,4).look == d1
-          sample Ether[/hat/i, 5].tick, amp: 0.025
+          sample Ether[/hat/i, 8].tick, amp: 0.025
         else
           sample Ether[/hat/i, 1], amp: 0.025
         end

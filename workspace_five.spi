@@ -56,10 +56,12 @@ live_loop :synths do
       end
     end
 
+   play (knit :Fs2, 6, :Cs3, 1, :As3, 1).tick, cutoff: 60
+
     with_synth :dsaw do
       with_fx :flanger do
         with_transpose([12,0].choose) do
-          play (knit :Fs2, 6, :Cs3, 1, :As3, 1).tick, cutoff: 60
+          play (knit :Fs2, 6, :Cs3, 1, :As2, 1).tick, cutoff: 60
         end
       end
     end

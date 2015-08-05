@@ -58,7 +58,7 @@ live_loop :synths do
     end
 
     with_synth :hollow do
-      play (knit _, 7, :Fs5, 1).look, cutoff: 100, release: 1.0
+      play (knit _, 7, :Fs4, 1).look, cutoff: 100, release: 1.0
     end
 
     with_synth :dsaw do

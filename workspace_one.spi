@@ -1,4 +1,4 @@
-["experiments", "drums"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+["experiments", "drums"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 bar = 4.0
 live_loop(:drum_timing_loop, auto_cue: false){ 
   sync :next

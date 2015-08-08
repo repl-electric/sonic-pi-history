@@ -47,21 +47,6 @@ end
 
 _=nil
 
-live_loop :float do
-  n = 0
-  sync :drums
-    with_fx((ring :echo).tick(:fx), room: 1.0) do
-#      with_fx(:echo) do
-      with_fx :distortion, mix: 0.2, distort: 0.2, amp: 0.2 do
-        with_synth :beep do
-         n = play (knit :As3, 1).tick(:notes), release: 10.5, amp: 0.5, attack: 0.5, note_lag: 1.0
-        end
- #     end
-      
-    end
-end
-end
-
 live_loop :synths do
   8.times{sync :thirtytwo}
   with_fx(:reverb, room: 1.0, mix: 0.5) do |fx_r|

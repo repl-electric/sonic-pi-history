@@ -18,7 +18,7 @@ end
 
 live :bits, amp: 0.4 do
     sync :next
-    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.5
+    sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
 

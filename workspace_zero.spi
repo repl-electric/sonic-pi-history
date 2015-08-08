@@ -39,20 +39,3 @@ live_loop :background do
   sync :loop
   sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.5
 end
-
-live_loop :synthers do
-  sync :loop
-  notes = scale(:fs2, :major_pentatonic).shuffle
-  4.times{
-    with_synth :dsaw do
-      play notes.tick, cutoff: 60, release: 1.0
-    end
-    with_transpose(12) do
-      with_synth(:prophet){
-        play notes.tick, cutoff: 60, release: 0.25
-      }
-
-    end
-    sleep 1/8.0
-  }
-end

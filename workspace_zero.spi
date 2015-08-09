@@ -27,8 +27,7 @@ live :indeterminism, amp: 1.0 do
 
 with_fx(:distortion, mix: 0.2, distort: 0.2) do |fx_r|
   with_synth(:hollow) do
-
-  play deg_seq(%w{Fs4 1}), release: 2.0, attack: 1, amp: 0.1
+  play deg_seq(%w{Fs4 1}), release: 8.0, attack: 1, amp: 0.1
 end
   4.times{
     sleep bar/4.0

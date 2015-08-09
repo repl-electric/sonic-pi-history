@@ -148,7 +148,7 @@ sleep bar/2.0
 (knit 1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,note_to_sample(note,1)], amp: 0.3}}
 
 (ring 1,0).tick(:double).times do
-  # with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.5}
+   with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.5}
   #sample Frag[/coil/i,11], amp: 1.0
   with_synth [:pnoise, :prophet][0] do
  #   play note, amp: 0.7, release: (knit bar,1).tick(:Bass), attack: 0.01, cutoff: 60

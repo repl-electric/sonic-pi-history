@@ -27,7 +27,7 @@ live :indeterminism, amp: 1.0 do
   with_fx(:distortion, mix: 0.2, probability: 0.5) do
   4.times{
   with_synth(:hollow) do
-    play deg_seq(%w{Fs4 1313 Fs3 131313}).stretch(4).look, release: (ring 0.1,0.2,0.3,4.0).tick(:n), attack: (ring 0.1,0.2,0.3,1.0).tick(:a), amp: 1.0
+    play deg_seq(%w{Fs4 1313 Fs3 1313}).stretch(4).look, release: (ring 0.1,0.2,0.3,4.0).tick(:n), attack: (ring 0.1,0.2,0.3,1.0).tick(:a), amp: 1.0
     sleep bar/8.0
   end
   }

@@ -22,9 +22,9 @@ live :bits, amp: 0.0 do
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
 
+with_fx(:distortion, mix: 0.2, distort: 0.2) do |fx_r|
 live :indeterminism, amp: 1.0 do
   4.times{sync :next}
-  with_fx(:distortion, mix: 0.2, distort: 0.2) do |fx_r|
   4.times{
   with_synth(:hollow) do
     play deg_seq(%w{Fs4 13 Fs3 1313}).stretch(4).look, release: (ring 0.1,0.2,0.3,4.0).tick(:n), attack: (ring 0.1,0.2,0.3,1.0).tick(:a), amp: 1.0
@@ -37,6 +37,7 @@ live :indeterminism, amp: 1.0 do
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end
+end
 
 live :next, amp: 1.0 do
   density(@polyrhythm.sort.first) do
@@ -44,6 +45,7 @@ live :next, amp: 1.0 do
     sleep bar
   end
 end
+
 
 live :drifting_through_code, amp: 2.0 do
   1.times {sync :next}

@@ -31,7 +31,7 @@ with_fx(:distortion, mix: 0.2, distort: 0.2) do |fx_r|
   with_synth(:hollow) do
     play deg_seq(%w{Fs4 13 Fs3 1313}).stretch(4).look, release: (ring 0.1,0.2,0.3,4.0).tick(:n), attack: (ring 0.1,0.2,0.3,1.0).tick(:a), amp: 1.0
     sleep bar/4.0
-    control fx_r, distort: (ring 0.5, 0.1, 0.0).tick(:distory)
+    control fx_r, distort: (ring 0.5, 0.2, 0.0).tick(:distory)
   end
   }
 end

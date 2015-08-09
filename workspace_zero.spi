@@ -24,13 +24,14 @@ end
 
 live :indeterminism, amp: 1.0 do
   with_fx(:flanger, room: 0.5) do
-    sample (ring Sop[/vor_sopr_leg_oo_02d_04_F#4/], _, Sop[/vor_sopr_leg_oo_02u_04_F#4/], _).tick(:sop), amp: 0.1
+    sample (ring Sop[/vor_sopr_leg_oo_02d_04_F#4/], _, 
+                 Sop[/vor_sopr_leg_oo_02u_04_F#4/], _).tick(:sop), amp: 0.1
   end
   4.times{sync :next}
   with_fx(:distortion, mix: 1.0, distort: 0.8) do |fx_r|
   with_synth(:hollow) do
-  play deg_seq(%w{Fs4 1 3}).tick, decay: bar/4.0, attack: 4, amp: 1.0, release: 1.0
-end
+  play deg_seq(%w{Fs4 1 3}).tick, decay: bar, attack: 4, amp: 1.0, release: 1.0
+  end
   4.times{
     sleep bar/4.0
     control fx_r, distort: (ring 0.8, 0.8, 0.5, 0.0).tick(:distory)

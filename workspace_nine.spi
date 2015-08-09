@@ -10,3 +10,6 @@ def chord_seq(*args)
     acc += chord(notes[0],notes[1], invert: i)
   }
 end
+
+
+chord_seq(*%w{Fs3 1})

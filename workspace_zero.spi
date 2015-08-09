@@ -32,7 +32,6 @@ live :indeterminism, amp: 1.0 do
     control fx_r, distort: (ring 0.2, 0.1, 0.0).tick(:distory)
   end
   }
-  end
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)

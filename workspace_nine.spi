@@ -1,4 +1,12 @@
-
-sample Sop[/vor_sopr_leg_oo_02d_04_F#4/]
-
-#sample Sop[/vor_sopr_leg_oo_02u_04_F#4/]
+def chord_seq(*args)
+  args.each_slice(2).reduce([]){|acc, notes| 
+    chord_type = notes[1]
+    i = if chord_type =~ /[abc]$/
+      invert_char = chord_type[-1]
+      {'a':1, 'b':2, 'c:'3}[invert_char]
+    else
+      0
+    end
+    acc += chord(notes[0],notes[1], invert: i)
+  }
+end

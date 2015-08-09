@@ -165,7 +165,7 @@ end;end
 idx+=1
 end;end
 
-live :tracing_forward_back, amp: 0.3 do
+live :tracing_forward_back, amp: 0.4 do
   n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
 puts n
 

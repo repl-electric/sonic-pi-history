@@ -23,7 +23,7 @@ live :indeterminism, amp: 0.5 do
   4.times{sync :next}
 
   with_synth(:hollow) do
-    play deg_seq(%w{Fs4 1*7 _ 3*7 _}).look, release:" bar*4
+    play deg_seq(%w{Fs4 1*7 _ 3*7 _}).look, release: bar*4
   end
 
   4.times{sync :next}

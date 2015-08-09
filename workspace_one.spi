@@ -24,7 +24,7 @@ with_fx :lpf, cutoff: 70, mix: 0.0 do
 drum_loop(:cchat,  (ring *%w{x - x - - - x - }),  Down[/hat/i, 9], amp: 1.0*rrand(0.5,0.3), start: rrand(0.0,0.00001))
 #with_fx(:reverb, mix: 0.3){with_fx(:slicer, phase: 0.025, probability: 1.0){
 drum_loop(:ochat,  (ring *%w{- - - - x - - -}),                                                                                                          
-                            Down[/high/i, 10], amp: 1.0);
+                            Down[/high/i, 20], amp: 1.0);
 #}}
 
 drum_loop(:cymbal, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -     - - - - - - - - - - - - - - - r}), Ether[/noise/i,7],  amp: 0.2)  

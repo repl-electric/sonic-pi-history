@@ -92,11 +92,9 @@ end
 cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "B4", "Eb4", "Fs4")
 with_fx(:slicer, probability: 0.5) do
-sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/up/vor_sopr_leg_oo_02u_04_F#4.wav"  
+  sample Sop["vor_sopr_leg_oo_02u_04_F#4"]
 end
 end
-
-
 
 #with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
       i_int(n)

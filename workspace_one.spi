@@ -42,26 +42,3 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4
 drum_loop(:bang2, (ring *%w{-*8 -*8
                             x - - - - - - -   -*8}), Mountain["subkick",0], amp: build(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                            rate: build(32, lambda{rrand(0.9,1.0)}))
-
-
-
-
-live :bangz, amp: 1.0 do |m_idx|
-   sync :next
-    case (m_idx%8)
-    when 0,4,2,6
-     if m_idx % 16 == 0
-       with_fx(:echo, decay: 2, pre_amp: 0.3){
-       # sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
-      }
-       sample Mountain["subkick",4], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
-     else
-        sample Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
-     end
-    when 1,3,4,5
-      #sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
-    when 7
-      #sample Mountain["Impact_0#{(stretch *(1..5), 16).tick(:b)}"], rate: -1.0,amp: 1.25
-    end
-    m_idx+=1
-end

@@ -19,7 +19,7 @@ live :bits, amp: 1.0 do
     sleep sample_duration(Mountain["Cracklin_01"], rate: 0.95)
 end
 
-live :indeterminism, amp: 0.5 do
+live :indeterminism, amp: 0.0 do
   4.times{sync :next}
 
   with_fx(:flanger) do

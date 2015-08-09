@@ -14,4 +14,4 @@ def chord_seq(*args)
 end
 
 
-play chord_seq(*%w{Fs2 1a Fs3 sus4x})
+play chord_seq(*%w{Fs2 1a Fs3 sus4y})

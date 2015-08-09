@@ -22,8 +22,10 @@ end
 live :indeterminism, amp: 0.5 do
   4.times{sync :next}
 
+  with_fx(:lpf) do
   with_synth(:hollow) do
     play deg_seq(%w{Fs4 1*7 _ 3*7 _}).look, release: bar*4, attack: 1.0
+  end
   end
 
   4.times{sync :next}
@@ -99,7 +101,7 @@ n = notes.tick(:asb)
 #n = [chord_seq(*%w{Fs3 1 Fs2 1 B3 1}).ring.tick(:n)]
 
 if n
-          puts (n.map{|n| note_info(n)})
+  puts (n.map{|n| note_info(n)})
 else
  puts n
 end

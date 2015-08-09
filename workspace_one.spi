@@ -26,7 +26,7 @@ drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - 
 end
 
 
-drum_loop(:hat,  (ring *%w{x - - - - - - -}), Ether[/hat/i,14], amp: 0.5)
+drum_loop(:hat,  (ring *%w{x - - - - - - -}), Ether[/hat/i,14], amp: 0.2)
 drum_loop(:ohat, (ring *%w{- - - - - - - -
                            - - - - - - - -
                            - - - - x - - -}), Ether[/hat/i,13], amp: 0.1)

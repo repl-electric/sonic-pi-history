@@ -28,7 +28,7 @@ live :indeterminism, amp: 1.0 do
   4.times{
   with_synth(:hollow) do
     play deg_seq(%w{Fs4 1}).stretch(4).look, release: bar/4.0, attack: 0.5, amp: 0.5
-    sleep bar/4.0
+    sleep bar/2.0
   end
   }
   end

@@ -129,6 +129,8 @@ notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
   _,1,:Fs2,1,
   chord(:B1,:M,     invert: -1)[0],3)
 
+notes = (knit :F1, 1).tick(:a)
+
 note = notes.tick(:a)
 
 sleep bar/2.0

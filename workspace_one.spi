@@ -37,10 +37,6 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -
                             - - - - - - - -
                             - - - - - - - -
                             - - - - - - - -}), Mountain["subkick",4], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0))
-drum_loop(:bang2, (ring *%w{- - - - - - - -
-                            - - - - - - - -
-                            x - - - - - - -
-                            - - - - - - - -}), Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0))
 
 
 

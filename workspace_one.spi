@@ -36,7 +36,8 @@ end
 drum_loop(:bang,  (ring *%w{x - - - - - - -
                             - - - - - - - -
                             x - - - - - - -
-                            - - - - - - - -}), Mountain["subkick",4], amp: (knit 1.0+rrand(0.0,0.2),32), rate: rrand(0.9,1.0))
+                            - - - - - - - -}), Mountain["subkick",4], amp: (knit 1.0+rrand(0.0,0.2),32), 
+                                                                      rate: (knit rrand(0.9,1.0),32))
 
 
 

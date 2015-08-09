@@ -45,7 +45,7 @@ drum_loop(:bang2, (ring *%w{- - - - - - - -
 
 
 
-live :bangz, amp: .0 do |m_idx|
+live :bangz, amp: 1.0 do |m_idx|
    sync :next
     case (m_idx%8)
     when 0,4,2,6

@@ -182,6 +182,7 @@ puts n
   end
 end
 
+
 live :missing_semi_colon, amp: 0.2 do
     2.times{sync :next}
     sample (knit Mountain["microperc_07"],3,Mountain["microperc_06"],1).tick(:s)

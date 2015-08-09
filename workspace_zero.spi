@@ -24,7 +24,7 @@ live :indeterminism, amp: 0.5 do
 
   with_fx(:flanger) do
   with_synth(:hollow) do
-    play deg_seq(%w{Fs3 1*7 _ 3*7 _}).look, release: bar*4, attack: 1.0, amp: 1.0
+    play deg_seq(%w{Fs3 1*7 _ 3*7 _}).look, release: bar*4, attack: 3.0, amp: 1.0
   end
   end
 

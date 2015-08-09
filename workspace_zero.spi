@@ -92,11 +92,9 @@ n = notes.tick(:asb)
 
 n = [chord_seq(*%w{Fs3 1 Fs2 1 B4 1}).ring.tick(:n)]
 
-if n
+
   puts "Harmony[#{(([]|n).map{|n| note_info(n)})}]"
-else
- puts n
-end
+
 
 cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 #cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "B4", "Eb4", "Fs4")

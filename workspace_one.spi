@@ -26,5 +26,4 @@ drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - 
 end
 
 
-drum_loop(:hat,  (ring *%w{x - - - - - - - }), Ether[/coil/i, /F#/i], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
-                                                                                   rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+drum_loop(:hat,  (ring *%w{x - - - - - - - }), Ether[/coil/i, /F#/i], amp: 1.0

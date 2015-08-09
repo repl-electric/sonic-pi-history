@@ -41,12 +41,12 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4
                            #1 2 3 4 5 6 7 8
 drum_loop(:bang2, (ring *%w{-*8 -*8
                             x - - - - - - -   -*8}), Mountain["subkick",0], amp: build(32, lambda{1.0 + rrand(0.0,0.2)}), 
-                                                                                 rate: build(32, lambda{rrand(0.9,1.0)}))
+                                                                           rate: build(32, lambda{rrand(0.9,1.0)}))
 
 
 
 
-live :bangz, amp: 0.0 do |m_idx|
+live :bangz, amp: 1.0 do |m_idx|
    sync :next
     case (m_idx%8)
     when 0,4,2,6

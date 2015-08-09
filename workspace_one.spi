@@ -31,12 +31,7 @@ end
 end
 end
 
-
-
-
-
-
-live :bang, amp: 1.0 do |m_idx|
+live :bang, amp: 0.0 do |m_idx|
    sync :next
     case (m_idx%8)
     when 0,4,2,6

@@ -35,6 +35,7 @@ def ring_gen(n, fn)
   (ring *((0..n).map{fn.()}))
 end
 
+with_fx(:level, amp: 0.5) do
                            #1 2 3 4 5 6 7 8
 drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                                    rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
@@ -42,3 +43,4 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4
 drum_loop(:bang2, (ring *%w{-*8 -*8
                             x - - - - - - -   -*8}), Mountain["subkick",0], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                            rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+end

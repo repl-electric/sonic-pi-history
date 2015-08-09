@@ -24,11 +24,9 @@ end
 
 live :indeterminism, amp: 1.0 do
   4.times{sync :next}
-  with_fx(:flanger) do
+  with_fx(:distortion, mix: 0.2) do
   with_synth(:hollow) do
-
     play deg_seq(%w{Fs4 34 -5 4}).stretch(4).look, release: bar*4, attack: 1.0, amp: 1.0
-
   end
   end
   4.times{sync :next}

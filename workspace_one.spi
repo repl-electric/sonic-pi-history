@@ -23,7 +23,7 @@ with_fx :lpf, cutoff: 70, mix: 0.0 do
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 drum_loop(:cchat,  (ring *%w{x - - - - - - - }),  Ether[/click/i, 20], amp: 1.0*rrand(0.5,0.3), start: rrand(0.0,0.00001))
 #with_fx(:reverb, mix: 0.3){with_fx(:slicer, phase: 0.025, probability: 1.0){
-drum_loop(:ochat,  (ring *%w{r - - - - - - -}),    Down[/hat/i, 15], amp: 1.0);
+drum_loop(:ochat,  (ring *%w{r - - - - - - - - - - - - - - -}),   Down[/hat/i, 15], amp: 1.0);
 #}}
 
 drum_loop(:cymbal, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -     - - - - - - - - - - - - - - - r}), Ether[/noise/i,7],  amp: 0.2)  

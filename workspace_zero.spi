@@ -33,7 +33,7 @@ live :indeterminism, amp: 1.0 do
 end
   4.times{
     sleep bar/4.0
-    control fx_r, distort: (ring 0.8, 0.8, 0.0, 0.0).tick(:distory)
+    control fx_r, distort: (ring 0.8, 0.8, 0.5, 0.0).tick(:distory)
   }
 end
   4.times{sync :next}

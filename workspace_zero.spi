@@ -129,7 +129,7 @@ sleep bar/2.0
 #  sample Frag[/coil/i,11], amp: 0.1 if dice(6) > 3
   #sample Frag[/coil/i,/f#/i].choose, amp: 0.5, rate: 0.8
   with_synth [:pnoise, :prophet][0] do
-    play note, amp: 0.7, release: (knit bar,1).tick(:bass), attack: 0.01, cutoff: 60
+    #play note, amp: 0.7, release: (knit bar,1).tick(:bass), attack: 0.01, cutoff: 60
   end
 end
 

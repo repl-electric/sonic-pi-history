@@ -26,7 +26,7 @@ live :indeterminism, amp: 1.0 do
   4.times{sync :next}
 
   with_fx(:reverb, room: 1.0) do
-    puts deg_seq(%w{Fs4 1 3}).look
+    puts "ind- #{deg_seq(%w{Fs4 1 3}).look}"
   case deg_seq(%w{Fs4 1 3}).look
   when note(:Fs4)
   sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav", amp: 1.0

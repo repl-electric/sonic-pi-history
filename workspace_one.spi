@@ -43,7 +43,14 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4
 drum_loop(:bang2, (ring *%w{-*8 -*8
                             x - - - - - - -   -*8}), Mountain["subkick",0], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                            rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
-drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,13],        amp: 0.1, delta: 0.001, start: 0.0, rate: 1.0)
+drum_loop(:snare, (ring *%w{- - - - - - - - 
+                            x - - - - - - -    
+                            - - - - - - - - 
+                            x - - - - - - -    
+                            - - - - - - - - 
+                            x - - - - - - -   
+                            - - - - - - - - 
+                            x - - - - - - -}), Ambi[/clap/,13],        amp: 1.1, delta: 0.001, start: 0.0, rate: 1.0)
 
 
 end

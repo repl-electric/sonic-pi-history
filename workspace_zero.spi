@@ -153,12 +153,12 @@ puts n
   with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
     with_synth :hollow do
       2.times{sync :next}
-      play n.tick(:f),  attack: 0.5, amp: 2.0
+     # play n.tick(:f),  attack: 0.5, amp: 2.0
 #        with_synth(:pnoise){play n.look(:f), amp: 0.001}
     end
     1.times{sync :next}
     with_fx(:slicer, mix: 0.1){
-    play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)
+    #play n.tick(:f), attack: 0.01, amp: 0.4, release: ring(2.0,0.5).tick(:r3)
     }
     1.times{sync :next}
   end

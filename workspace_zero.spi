@@ -43,7 +43,7 @@ end
 
   (knit 1,6, 2,1).tick(:time).times{sync :next}
 
-  i_deter(deg_seq(%w{Fs4 1 Fs4 414}).tick, 
+  i_deter(deg_seq(%w{Fs4 1414}).tick, 
           deg_seq(%w{Fs4 1414}).stretch(4).tick)
 
 end

@@ -40,8 +40,8 @@ end
 end
 
   1.times{sync :next}
-  i_deter(deg_seq(%w{Fs4 1414}).tick, 
-          deg_seq(%w{Fs3 1414}).stretch(4).tick)
+  i_deter(deg_seq(%w{Fs3 1414}).tick, 
+          deg_seq(%w{Fs4 1414}).stretch(4).tick)
 
 end
 

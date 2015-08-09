@@ -60,7 +60,7 @@ end
 end
 
 live :drifting_through_code, amp: 2.0 do
-  4.times {sync :next}
+  2.times {sync :next}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
     with_fx((knit :none,7, :echo,(ring 7).tick(:d)).tick(:r2), mix: 0.8, phase: bar/2.0) do
@@ -86,7 +86,7 @@ notes = (knit chord(:As3,:m)[0..1], 12,
 n = notes.tick(:asb)
 n = chord(:Fs3, 'sus4') + chord(:Fs3, "M") + chord(:As3, 'sus4') + chord(:As3, 'M')
 
-n = [chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring.stretch(1).tick(:asb)]
+n = [chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring.stretch(2).tick(:asb)]
 
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   cue :bhit

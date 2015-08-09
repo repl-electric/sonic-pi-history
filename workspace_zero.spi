@@ -24,7 +24,7 @@ end
 
 live :indeterminism, amp: 1.0 do
   with_fx(:flanger, room: 0.5) do
-    #sample (ring Sop[/vor_sopr_leg_oo_02d_04_F#4/], _, Sop[/vor_sopr_leg_oo_02u_04_F#4/], _).tick(:sop), amp: 0.1
+    sample (ring Sop[/vor_sopr_leg_oo_02d_04_F#4/], _, Sop[/vor_sopr_leg_oo_02u_04_F#4/], _).tick(:sop), amp: 0.1
   end
   4.times{sync :next}
   with_fx(:distortion, mix: 1.0, distort: 0.8) do |fx_r|
@@ -157,7 +157,7 @@ end
 
 live :tracing_forward_back, amp: 0.0 do
   n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
-puts n
+  puts n
 
   notes = n
   with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do

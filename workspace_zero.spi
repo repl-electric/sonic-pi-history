@@ -25,11 +25,11 @@ end
 live :indeterminism, amp: 1.0 do
   4.times{sync :next}
 
-  with_fx(:flanger) do
-  with_synth(:hollow) do
+#  with_fx(:flanger) do
+ # with_synth(:hollow) do
     #play deg_seq(%w{Fs3 34 -5 4}).stretch(4).look, release: bar*4, attack: 5.0, amp: 1.0
-  end
-  end
+ # end
+ # end
 
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,

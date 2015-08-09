@@ -2,7 +2,7 @@ def chord_seq(*args)
   args.each_slice(2).reduce([]){|acc, notes| 
     chord_type = notes[1]
     i = 0
-    if chord_type =~ /[abc]$/
+    if chord_type =~ /[abcxyz]$/
       invert_char = chord_type[-1]
       chord_type = chord_type[0..-2]
       i = {'a' => 1, 'b' => 2, 'c' => 3,

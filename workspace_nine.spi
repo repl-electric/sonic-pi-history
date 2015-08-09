@@ -1,1 +1,1 @@
-puts (knit rrand(0.9,1.0),32)
+puts (knit *rrand(0.9,1.0),32)

@@ -43,7 +43,7 @@ end
 
   (knit 1,6, 2,1).tick(:time).times{sync :next}
 
-  i_deter(chord(:Fs4, '11'), 
+  i_deter(chord(:Fs3, '11'), 
           deg_seq(%w{Fs3 145}).stretch(4).tick)
 
 end

@@ -29,7 +29,7 @@ live :indeterminism, amp: 1.0 do
   4.times{sync :next}
   with_fx(:distortion, mix: 1.0, distort: 0.8) do |fx_r|
   with_synth(:hollow) do
-  play deg_seq(%w{Fs4 1 3}), decay: bar/4.0, attack: 4, amp: 1.0, release: 1.0
+  play deg_seq(%w{Fs4 1 3}).tick, decay: bar/4.0, attack: 4, amp: 1.0, release: 1.0
 end
   4.times{
     sleep bar/4.0

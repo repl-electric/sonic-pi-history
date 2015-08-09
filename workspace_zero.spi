@@ -25,7 +25,7 @@ end
 live :indeterminism, amp: 1.0 do
   4.times{sync :next}
 
-with_fx(:distortion, mix: 0.2, distort: 0.5) do |fx_r|
+with_fx(:distortion, mix: 0.5, distort: 0.5) do |fx_r|
   with_synth(:hollow) do
 
 

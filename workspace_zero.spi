@@ -31,7 +31,7 @@ live :indeterminism, amp: 1.0 do
     when note(:Fs4)
 
 
-      sample Sop[/vor_sopr_leg_oo_02d_04_F#4/] amp: 1.5
+      sample Sop[/vor_sopr_leg_oo_02d_04_F#4/], amp: 1.5
 
 #      sample "vor_sopr_leg_oo_02u_04_F#4.wav"
 

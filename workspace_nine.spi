@@ -3,7 +3,7 @@ def chord_seq(*args)
     chord_type = notes[1]
     i = if chord_type =~ /[abc]$/
       invert_char = chord_type[-1]
-      {'a':1, 'b':2, 'c:'3}[invert_char]
+      {'a' => 1, 'b' => 2, 'c' => 3}[invert_char]
     else
       0
     end

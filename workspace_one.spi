@@ -2,7 +2,7 @@
 bar = 4.0
 live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (bar/16.0)}}}
 
-with_fx :level, amp: 0.5 do
+with_fx :level, amp: 0.0 do
 with_fx :bitcrusher, sample_rate: 44000, mix: 0.5, bits: 12 do
 with_fx :pitch_shift, mix: 0.5 do
 with_fx :hpf, mix: 0.5 do
@@ -13,6 +13,9 @@ drum_loop(:kick,   (ring *%w{r - - - - - - - - - - - - - - -    - - - - - - - - 
 drum_loop(:kick2,  (ring *%w{x - x - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -}), Mountain[/kick/i,3..4], amp: (ring 0.25,0.1), start: (knit 0.01,1, 0.03,31), rate: pitch_to_ratio(note(:Fs1) - note(:E1)) )
 drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,13],        amp: 0.1, delta: 0.001, start: 0.0, rate: 1.0)
 drum_loop(:snare2, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - - - - - - - - -}), Ambi[/clap/,17],        amp: 0.1, delta: 0.005, start: 0.0, rate: 1.0)
+
+
+
 
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 drum_loop(:cchat,  (ring *%w{x - - - - - - - }),  Ether[/click/i, 20], amp: 0.0*rrand(0.5,0.3), start: rrand(0.0,0.00001))
@@ -26,4 +29,29 @@ end
 end
 end
 end
+end
+
+
+
+
+
+
+live :bang, amp: 1.0 do |m_idx|
+   sync :next
+    case (m_idx%8)
+    when 0,4,2,6
+     if m_idx % 16 == 0
+       with_fx(:echo, decay: 2, pre_amp: 0.3){
+       # sample Ether["noise",(ring 12).tick(:noise)], amp: 0.5+rrand(0.0,0.1), rate: (ring 0.7,0.8,1.0).tick
+      }
+       sample Mountain["subkick",4], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     else
+        sample Mountain["subkick",0], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+     end
+    when 1,3,4,5
+      #sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
+    when 7
+      #sample Mountain["Impact_0#{(stretch *(1..5), 16).tick(:b)}"], rate: -1.0,amp: 0.25
+    end
+    m_idx+=1
 end

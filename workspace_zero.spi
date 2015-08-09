@@ -29,9 +29,9 @@ live :indeterminism, amp: 1.0 do
     puts "ind-> #{deg_seq(%w{Fs4 1 3}).look}"
   case deg_seq(%w{Fs4 1 3}).look
   when note(:Fs4)
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav", amp: 1.0
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav", amp: 0.1
   when note(:As4)
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_06_A#4.wav", amp: 1.0
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_06_A#4.wav", amp: 0.1
   end
   end
 

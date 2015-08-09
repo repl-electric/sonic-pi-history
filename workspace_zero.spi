@@ -89,7 +89,7 @@ n = chord(:Fs3, 'sus4') + chord(:Fs3, "M") + chord(:As3, 'sus4') + chord(:As3, '
 #                   5     1     4  
 n = [chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring.stretch(2).tick(:notes)]
 n =  chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
-n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:notez)
+n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 
 cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 

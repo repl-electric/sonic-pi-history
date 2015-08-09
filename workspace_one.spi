@@ -28,4 +28,12 @@ end
 drum_loop(:hat,  (ring *%w{x - - - - - - -}), Ether[/hat/i,14], amp: 0.1)
 drum_loop(:ohat, (ring *%w{- - - - - - - -
                            - - - - - - - -
-                           - - - - x - - -}), Ether[/hat/i,13], amp: 0.1)
+                           - - - - x - - -
+                           - - - - - - - -
+                           - - - - - - - -
+                           - - - - - - - -
+
+                           - - - - - - - -
+
+
+}), Ether[/hat/i,13], amp: 0.1)

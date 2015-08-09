@@ -27,8 +27,8 @@ live :indeterminism, amp: 1.0 do
   with_fx(:distortion, mix: 0.2) do
   4.times{
   with_synth(:hollow) do
-    play deg_seq(%w{Fs4 1}).stretch(4).look, release: bar*4, attack: 1.0, amp: 0.5
-        sleep bar/4.0
+    play deg_seq(%w{Fs4 1}).stretch(4).look, release: bar*1, attack: 1.0, amp: 0.5
+    sleep bar/4.0
   end
 }
   end

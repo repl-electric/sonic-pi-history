@@ -45,7 +45,7 @@ end
   i_deter((ring chord(:Fs4, 'sus4'), chord(:Fs4, 'M7')).tick,
                 (ring :As4, :Fs5, 
                       :Cs4, :B4,
-                      :Fs4, :B3).stretch(2).tick)
+                      :Fs4, :B3).stretch(1).tick)
 
 end
 

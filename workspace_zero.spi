@@ -30,7 +30,7 @@ live :indeterminism, amp: 1.0 do
     play deg_seq(%w{Fs4 1}).stretch(4).look, release: bar/4.0, attack: 1.0, amp: 0.5
     sleep bar/4.0
   end
-}
+  }
   end
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,

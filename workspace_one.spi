@@ -61,7 +61,7 @@ live :bangz, amp: 1.0 do |m_idx|
     when 1,3,4,5
       sample Ether["snare",3], amp: 0.5+rrand(0.0,0.2), rate: rrand(0.9,1.0)
     when 7
-      #sample Mountain["Impact_0#{(stretch *(1..5), 16).tick(:b)}"], rate: -1.0,amp: 0.25
+      sample Mountain["Impact_0#{(stretch *(1..5), 16).tick(:b)}"], rate: -1.0,amp: 0.25
     end
     m_idx+=1
 end

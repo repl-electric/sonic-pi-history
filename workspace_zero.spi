@@ -43,7 +43,10 @@ end
   (knit 1,6, 2,1).tick(:time).times{sync :next}
 
   i_deter((ring chord(:Fs4, 'sus4'), chord(:Fs4, 'M7')).tick,
-                (ring :As4, :Fs5, :Cs4, :B4).stretch(4).tick)
+                (ring :As4, :Fs5, 
+                      :Cs4, :B4,
+                      :Fs3, :B4
+).stretch(4).tick)
 
 end
 

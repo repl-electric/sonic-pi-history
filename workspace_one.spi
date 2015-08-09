@@ -13,7 +13,7 @@ drum_loop(:kick,   (ring *%w{r - - - - - - - - - - - - - - -    - - - - - - - - 
 drum_loop(:kick2,  (ring *%w{x - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -    x - - - - - - - - - - - - - - -}), Mountain[/kick/i,3..4], amp: (ring 0.25,0.1), start: (knit 0.01,1, 0.03,31), rate: pitch_to_ratio(note(:Fs1) - note(:E1)) )
 drum_loop(:snare,  (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - x - - - - - - -}), Ambi[/clap/,13],        amp: 0.1, delta: 0.001, start: 0.0, rate: 1.0)
 drum_loop(:snare2, (ring *%w{- - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - -    - - - - - - - - x - - - - - - -    - - - - - - - - - - - - - - - -}), Ambi[/clap/,17],        amp: 0.1, delta: 0.005, start: 0.0, rate: 1.0)
-drum_loop(:clap,   (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - x - - -}),                                                                       Ether[/noise/i,5],      amp: 0.2, start: 0.0, rate: 1.0)
+drum_loop(:clap,   (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - x - - -}),                                                                       Ether[/noise/i,5],      amp: 0.0, start: 0.0, rate: 1.0)
 
                             #1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8    1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 drum_loop(:cchat,  (ring *%w{x - - - - - - - }),  Ether[/click/i, 20], amp: 1.0*rrand(0.5,0.3), start: rrand(0.0,0.00001))

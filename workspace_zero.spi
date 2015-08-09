@@ -35,7 +35,7 @@ live :indeterminism, amp: 1.0 do
     end
   end
 
-   sample Sop[/F#4/i]
+   sample Sop[/F#4/i].tick
 
 with_fx(:distortion, mix: 1.0, distort: 0.5) do |fx_r|
   with_synth(:hollow) do

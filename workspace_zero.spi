@@ -33,7 +33,7 @@ live :indeterminism, amp: 1.0 do
 
       sample Sop[/vor_sopr_leg_oo_02d_04_F#4/] amp: 1.5
 
-      sample "vor_sopr_leg_oo_02u_04_F#4.wav"
+#      sample "vor_sopr_leg_oo_02u_04_F#4.wav"
 
     when note(:As4)
       #sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_06_A#4.wav", amp: 0.1

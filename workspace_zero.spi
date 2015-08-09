@@ -5,7 +5,7 @@
 _ = nil
 bar = 1.0
 use_bpm 60
-set_volume! 0.5
+set_volume! 0.4
 @polyrhythm = [2,3]
 load_snippets("~/.sonic-pi/snippets/")
 

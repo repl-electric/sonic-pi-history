@@ -20,7 +20,7 @@ with_fx :lpf, cutoff: 70, mix: 0.0 do
 #drum_loop(:clap,   (ring *%w{- - - - - - - - x - - - - - - -    - - - - - - - - x - - - x - - -}),                                                                        Ether[/noise/i,5],      amp: 0.2, start: 0.0, rate: 1.0)
 
 
-drum_loop(:cchat,  (ring *%w{x - x - - - x}),  Ether[/hat/i, 2], amp: 1.0*rrand(0.5,0.3), rate: (knit 1.01,3,-1.1,2,-1.2,3), start: rrand(0.0,0.00001))
+drum_loop(:cchat,  (ring *%w{x - x - - - x}),  Ether[/hat/i, 4], amp: 1.0*rrand(0.5,0.3), rate: (knit 1.01,3,-1.1,2,-1.2,3), start: rrand(0.0,0.00001))
 with_fx(:reverb, mix: 0.3){with_fx(:slicer, phase: 0.025, probability: 0.5){
 drum_loop(:ochat,  (ring *%w{- - - - x - -}),                                                                                                          
                             Down[/hat/i, [17, 16,15]], amp: 1.0);}}

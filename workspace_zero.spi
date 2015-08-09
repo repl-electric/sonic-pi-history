@@ -91,7 +91,7 @@ end
 
 cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "B4", "Eb4", "Fs4")
-sample " /Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/up/vor_sopr_leg_oo_02u_04_F#4.wav"  
+sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/up/vor_sopr_leg_oo_02u_04_F#4.wav"  
 end
 
 

@@ -38,11 +38,10 @@ end
                            #1 2 3 4 5 6 7 8
 drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4], amp: build(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                                    rate: build(32, lambda{rrand(0.9,1.0)}))
-
                            #1 2 3 4 5 6 7 8
 drum_loop(:bang2, (ring *%w{-*8 -*8
-                            x - - - - - - -   -*8}), Mountain["subkick",0], amp: (knit 1.0+rrand(0.0,0.2),32), 
-                                                                            rate: (knit rrand(0.9,1.0),32))
+                            x - - - - - - -   -*8}), Mountain["subkick",0], amp: build(32, lambda{1.0 + rrand(0.0,0.2)}), 
+                                                                                 rate: build(32, lambda{rrand(0.9,1.0)}))
 
 
 

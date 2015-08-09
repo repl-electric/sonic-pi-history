@@ -155,6 +155,7 @@ end;end
 
 live :tracing_forward_back, amp: 0.5 do
   n = chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
+puts n
   with_fx (ring :none, :echo).tick(:a), phase: bar/4.0, decay: (knit bar*8, 3, bar*6,1).tick(:q) do
     with_synth :hollow do
       2.times{sync :next}

@@ -99,7 +99,7 @@ n = notes.tick(:asb)
 #n = [chord_seq(*%w{Fs3 1 Fs2 1 B3 1}).ring.tick(:n)]
 
 if n
-          puts note_info(n)
+          puts (n.map(:&note_info))
 else
  puts n
 end

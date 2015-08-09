@@ -12,4 +12,4 @@ def chord_seq(*args)
 end
 
 
-chord_seq(*%w{Fs3 1})
+puts chord_seq(*%w{Fs3 1})

@@ -26,7 +26,7 @@ live :indeterminism, amp: 1.0 do
   4.times{sync :next}
 
 with_fx(:distortion, mix: 1.0, distort: 0.5) do |fx_r|
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav"
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav", amp: 0.1
 
   with_synth(:hollow) do
   play deg_seq(%w{Fs4 1 3}), decay: bar/4.0, attack: 4, amp: 1.0, release: 1.0

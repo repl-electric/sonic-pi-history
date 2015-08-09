@@ -36,7 +36,7 @@ end
 drum_loop(:bang, (ring *%w{x - - - - - - - -}), Mountain["subkick",4], amp: 1.0+rrand(0.0,0.2), rate: rrand(0.9,1.0))
 
 
-live :bang, amp: 0.0 do |m_idx|
+live :bangz, amp: 0.0 do |m_idx|
    sync :next
     case (m_idx%8)
     when 0,4,2,6

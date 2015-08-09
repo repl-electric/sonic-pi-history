@@ -22,7 +22,7 @@ end
 live :indeterminism, amp: 0.5 do
   4.times{sync :next}
 
-  with_fx(:flanger, cutoff: 70) do
+  with_fx(:flanger) do
   with_synth(:hollow) do
     play deg_seq(%w{Fs4 1*7 _ 3*7 _}).look, release: bar*4, attack: 1.0, amp: 5.0
   end

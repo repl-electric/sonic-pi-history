@@ -63,7 +63,7 @@ live :next, amp: 1.0 do
   end
 end
 
-live :drifting_through_code, amp: 0.0 do
+live :drifting_through_code, amp: 1.0 do
   1.times {sync :next}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

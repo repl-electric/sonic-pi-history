@@ -31,7 +31,7 @@ with_fx(:distortion, mix: 1.0, distort: 0.5) do |fx_r|
 end
   4.times{
     sleep bar/4.0
-    control fx_r, distort: (ring 0.8, 0.8, 0.,0.8).tick(:distory)
+    control fx_r, distort: (ring 0.8, 0.8, 0.0,0.8).tick(:distory)
   }
 end
   4.times{sync :next}

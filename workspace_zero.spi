@@ -28,7 +28,7 @@ live :indeterminism, amp: 1.0 do
 with_fx(:distortion, mix: 1.0, distort: 0.5) do |fx_r|
 
   #sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_04_F#4.wav", amp: 0.1
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_12_A#4.wav", amp: 0.1
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Legato/Oo/int 02/down/vor_sopr_leg_oo_02d_06_A#4.wav", amp: 0.1
 
 
 

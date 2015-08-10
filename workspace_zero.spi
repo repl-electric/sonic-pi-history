@@ -179,7 +179,10 @@ end
 
 1.times{sync :next}
   i_bass(note)
+
+  with_transpose(12) do
   i_float(note)
+  end
 
 
 6.times{

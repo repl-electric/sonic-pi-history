@@ -38,7 +38,6 @@ uncomment do
        play deg_seq(%w{Fs4 1 _}).look, decay: 8, release: 1.0, decay: 2.0, attack: 2.0
     end
   end
-
   with_transpose(-12-12) do
     with_synth(:dark_ambience) do
        play deg_seq(%w{Fs4 1 _}).look, decay: 7, release: 1.0, decay: 2.0, attack: 2.0
@@ -56,10 +55,10 @@ end
   4.times{sync :next}
   #(knit 1,6, 2,1).tick(:time).times{sync :next}
 
-  #i_deter((ring chord(:Fs4, 'sus4'), chord(:Fs4, 'M7')).tick,
-  #              (ring :As4, :Fs5, 
-  #                    :Cs4, :B4,
-  #                    :Fs4, :B4).stretch(4).tick)
+  i_deter((ring :Fs4).tick,
+                (ring :As4, :Fs5, 
+                      :Cs4, :B4,
+                      :Fs4, :B4).stretch(4).tick)
 
 end
 

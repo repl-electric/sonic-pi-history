@@ -138,7 +138,7 @@ notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
   _,1,:Fs2,1,
   chord(:B1,:M,     invert: -1)[0],3)
 
-note = notes.tick(:a)
+note = (ring :F2).tick(:a)
 #note = (knit :Fs2, 1, :Fs3,1).tick(:a)
 puts "BASS[#{note_info(note||0)}]"
 sleep bar/2.0

@@ -35,7 +35,7 @@ uncomment do
 
   with_transpose(12) do
     with_synth(:dark_ambience) do
-       play deg_seq(%w{Fs3 1 _}).look, release: 1.0, decay: 2.0
+       play deg_seq(%w{Fs3 1 _}).look, release: 1.0, decay: 2.0, attack: 2.0
     end
   end
 

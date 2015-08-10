@@ -39,7 +39,7 @@ comment do
 end
 end
 
-#  1.times{sync :next}
+  1.times{sync :next}
   #(knit 1,6, 2,1).tick(:time).times{sync :next}
 
   i_deter((ring chord(:Fs4, 'sus4'), chord(:Fs4, 'M7')).tick,

@@ -179,6 +179,8 @@ end
 
 1.times{sync :next}
   i_bass(note)
+  i_float(note)
+
 
 6.times{
   control fx_reverb, damp: (rrand 0.0,1.0)

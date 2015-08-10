@@ -1,5 +1,7 @@
-bar = 1.0
-_ = nil
-live_loop :exceptions do
-  (knit 1,6, 2,1).tick(:time).times{sync :next}
-end
+
+n = 1.0
+
+100.times {
+set_volume! n 
+n = n-0.01
+} 

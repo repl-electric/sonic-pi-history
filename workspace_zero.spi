@@ -20,10 +20,8 @@ live :bits, amp: 1.0 do
 end
 
 live :indeterminism, amp: 0.5 do
-  2.times{sync :next}
-  
-   
-  2.times{sync :next}
+  1.times{sync :next}
+  1.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34}).stretch(4).tick)
 end

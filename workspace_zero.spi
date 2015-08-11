@@ -175,7 +175,6 @@ end;end;end
 
 live :tracing_forward_back, amp: 0.0 do
     1.times{sync :next}
-  end
 end
 
 live :missing_semi_colon, amp: 0.0 do

@@ -3,7 +3,7 @@ bar = 1.0
 
 
 
-set_volume! 0.9
+set_volume! 0.8
 
 
 define :i_float do |note, *opts|

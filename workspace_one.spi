@@ -27,7 +27,7 @@ end
 
 
 drum_loop(:ghost, (ring *%w{- - - - - - - -   - - - - - - - -   - - - - x - - -   - - - - - - x -}), Ether[/noise/i,7], amp: 0.0)
-drum_loop(:hat,   (ring *%w{x - - - - - - -}), Down[/hat/i,6], amp: 0.1, rate: 0.9, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
+drum_loop(:hat,   (ring *%w{x - - - - - - -}), Down[/hat/i,6], amp: 0.1, rate: 0.9, start: ring_gen(32, lambda{rrand(0.0,0.01)}))
 drum_loop(:ohat,  (ring *%w{- - - - - - - -
                             - - - - - - - -
                             - - - - x - - -

@@ -23,7 +23,7 @@ live :indeterminism, amp: 0.5 do
 
   play deg_seq(%w{Fs4 1 3}).tick, decay: (ring bar*3, bar*4).tick(:a), attack: 4, amp: 0.2, release: 1.0
       with_synth(:dark_ambience) do
-        play deg_seq(%w{Fs3 1 3}).tick, decay: bar*4, attack: 4, amp: 0.2, release: 1.0
+        play deg_seq(%w{Fs3 1 3}).tick, decay: bar*4, attack: 4, amp: 0.3, release: 1.0
       end
 
   4.times{

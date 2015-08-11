@@ -127,7 +127,7 @@ end
 
 
 
-#puts "Harmony[#{(([]|n).map{|n| note_info(n).midi_string})}]"
+puts "Harmony[#{(([]|n).map{|n| note_info(n).midi_string})}]"
 
 cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
 #cue :bhit if (n||[]).map{|a|note_info(a).midi_string} == (ring "B4", "Eb4", "Fs4")

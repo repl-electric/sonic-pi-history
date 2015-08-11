@@ -139,7 +139,7 @@ end
 
     note = notes.tick(:a)
 
-    note = (knit :Fs1,3, :Fs2,4).tick(:d)
+    note = (knit :Fs1,3, :Fs2,1).tick(:d)
 
     puts "BASS[#{note_info(note||0)}]"
 

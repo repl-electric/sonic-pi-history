@@ -55,7 +55,7 @@ live :indeterminism, amp: 0.5 do
   end
   end
 
-  4.times{sync :next}
+  2.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34}).stretch(4).tick)
 end
@@ -139,7 +139,6 @@ end
     puts "BASS[#{note_info(note||0)}]"
 
     sleep bar/2.0
-
 
 #    (knit 1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,note_to_sample(note,1)], amp: 1.0}}
 

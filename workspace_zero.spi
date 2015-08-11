@@ -20,7 +20,7 @@ live :bits, amp: 1.0 do
 end
 
 live :indeterminism, amp: 0.5 do
-  4.times{sync :next}
+  2.times{sync :next}
   
    
   2.times{sync :next}

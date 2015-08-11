@@ -36,7 +36,7 @@ live :indeterminism, amp: 0.5 do
 
       with_transpose(-24) do
       with_synth(:dark_ambience) do
-        play deg_seq(%w{Fs3 1}).tick, decay: bar, attack: 1, amp: 1.0, release: 1.0
+        play deg_seq(%w{Fs3 1}).tick, decay: bar, attack: 1, amp: 2.0, release: 1.0
       end
       end
 

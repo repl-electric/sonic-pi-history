@@ -50,7 +50,7 @@ live :indeterminism, amp: 0.5 do
   end
 
   4.times{sync :next}
-  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+  i_deter(deg_seq(%w{Fs4 1 _ 3 _}).tick,
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end
 
@@ -102,7 +102,6 @@ Fs3 1 Fs2 1 F3 1
 Fs3 sus4 Fs2 1 B3 1
 Fs3 sus4 Fs2 1 B3 1
 Fs3 sus4 Fs2 1 B4 1
-
 
 }).ring.tick(:n)]
 

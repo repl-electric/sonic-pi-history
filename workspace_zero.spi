@@ -57,9 +57,8 @@ uncomment do
 end
 end
 
-  4.times{sync :next}
+  #4.times{sync :next}
   #(knit 1,6, 2,1).tick(:time).times{sync :next}
-
   i_deter((ring :Fs4, :B4, :FS4, :Cs4).tick,
           (ring :As4, :Fs4,:Cs4, :B4, :Fs4, :B4).stretch(4).tick)
 

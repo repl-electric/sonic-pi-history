@@ -10,7 +10,7 @@ live_loop :mel do
   end
   #sync :foo
   with_fx :reverb, room: 1 do
-    sample :bass_trance_c, rate: 1.9, pitch: 1, window_size: 1, time_dis: 1, amp: 8, release: 0.1
+    sample :bass_trance_c, rate: 1.0, pitch: 1, window_size: 1, time_dis: 1, amp: 8, release: 0.1
   end
   sleep 4
 end

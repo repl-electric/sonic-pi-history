@@ -31,7 +31,7 @@ live :indeterminism, amp: 0.5 do
    sleep bar/8.0
 
       with_synth(:hollow) do
-        play :As3, decay: 1.0, attack: 1.0, amp: 0.5, release: 1.0
+        play :As3, decay: 1.0, attack: 1.0, amp: 1.5, release: 1.0
       end
 
       with_transpose(-12) do

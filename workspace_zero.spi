@@ -49,7 +49,7 @@ live :indeterminism, amp: 0.5 do
 
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1 _ 3 _}).tick,
-          deg_seq(%w{Fs4 344}).stretch(4).tick)
+          deg_seq(%w{Fs4 34}).stretch(4).tick)
 end
 
 

@@ -69,9 +69,10 @@ end
 end
 
 live :drifting_through_code, amp: 2.0 do
+  sample Mountain[/kick/, 3], amp: 0.2
+
   1.times {sync :next}
 
-  sample Mountain[/kick/, 3], amp: 0.2
 
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

@@ -122,13 +122,6 @@ end
       sleep bar
 end;end;end;end
 
-live :recursion, amp: 0.0 do
-  9.times{sync :bhit}
-  with_fx (ring :none, :echo).tick, decay: bar*8 do
-    sample Frag[/coil/i,/f#/i,1], amp: 0.5
-  end
-end
-
 with_fx :distortion, mix: 0.1 do
 with_fx(:pitch_shift, window_size: 4.0) do
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
@@ -176,11 +169,3 @@ end
 end;end
 idx+=1
 end;end;end
-
-live :tracing_forward_back, amp: 0.0 do
-    1.times{sync :next}
-end
-
-live :missing_semi_colon, amp: 0.0 do
-    2.times{sync :start}
-end

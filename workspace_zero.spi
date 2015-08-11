@@ -63,7 +63,7 @@ end
 
 live :next, amp: 1.0 do
   density(@polyrhythm.sort.first) do
-    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
+    sample Mountain["pebble",1], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     sleep bar
 end
 end
@@ -71,7 +71,6 @@ end
 live :drifting_through_code, amp: 2.0 do
   sample Mountain[/impact/i, 1..3].tick(:kick), amp: 0.1
   1.times {sync :next}
-
 
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|

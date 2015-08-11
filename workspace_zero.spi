@@ -61,7 +61,7 @@ live :indeterminism, amp: 0.5 do
 end
 
 
-live :next, amp: 0.5 do
+live :next, amp: 1.0 do
   density(@polyrhythm.sort.first) do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
     sleep bar

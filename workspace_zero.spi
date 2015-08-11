@@ -113,7 +113,7 @@ end;end;end;end
 
 with_fx :distortion, mix: 0.1 do
 with_fx(:pitch_shift, window_size: 4.0) do
-live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
+live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
 with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
     3.times{sync :next}
 comment do
@@ -132,6 +132,8 @@ end
                   chord(:B1,:M,     invert: -1)[0],3)
 
     note = notes.tick(:a)
+
+    note = (ring :Fs1).tick(:b)
 
     puts "BASS[#{note_info(note||0)}]"
 

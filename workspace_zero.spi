@@ -139,7 +139,7 @@ end
 
     note = notes.tick(:a)
 
-      note = (ring :F2).tick
+      note = [(ring :F2).tick(:d)]
 
     puts "BASS[#{note_info(note||0)}]"
 

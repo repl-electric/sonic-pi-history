@@ -1,3 +1,5 @@
+set_volume! 1.0
+
 live_loop :beat do
   play :Fs3, amp: 2
   sleep 1

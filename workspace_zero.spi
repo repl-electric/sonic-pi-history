@@ -9,13 +9,6 @@ set_volume! 1.0
 @polyrhythm = [2,3]
 load_snippets("~/.sonic-pi/snippets/")
 
-live :begin, amp: 0.0 do
-  sync :next
-  with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do
-    sample Ether[/F#/,2], amp: 3.0+rrand(0.0,0.2), rate: -1.0
-  end
-end
-
 live :bits, amp: 0.0 do
     sync :next
     sample Mountain["Cracklin_01"], rate: 0.95, amp: 0.2
@@ -90,6 +83,12 @@ Fs3 1 Fs2 1 B3 1
 Fs3 1 Fs2 1 B3 1
 Fs3 1 Fs2 1 B3 1
 Fs3 1 Fs2 1 Cs4 1
+
+Fs3 1 Fs2 1 B3 1
+Fs3 1 Fs2 1 B3 1
+Fs3 1 Fs2 1 B3 1
+Fs3 1 Fs2 1 Cs4 1
+
 }).ring.tick(:n)]
 
 puts "Harmony[#{(([]|n).map{|n| note_info(n).midi_string})}]"
@@ -102,13 +101,6 @@ end
       #i_float(n)
       sleep bar
 end;end;end;end
-
-live :recursion, amp: 0.0 do
-  9.times{sync :bhit}
-  with_fx (ring :none, :echo).tick, decay: bar*8 do
-    sample Frag[/coil/i,/f#/i,1], amp: 0.5
-  end
-end
 
 with_fx :distortion, mix: 0.1 do
 with_fx(:pitch_shift, window_size: 4.0) do

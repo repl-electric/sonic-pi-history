@@ -69,7 +69,7 @@ end
 end
 
 live :drifting_through_code, amp: 2.0 do
-  sample Mountain[/kick/, 3], amp: 0.2
+  sample Mountain[/kick/, 3], amp: 1.0
   1.times {sync :next}
 
 

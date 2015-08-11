@@ -43,5 +43,5 @@ drum_loop(:bang1, (ring *%w{x - - - - - - -
                                                     rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 drum_loop(:bang2, (ring *%w{-*8 -*8
-                            x - - - - - - -   -*8}), Mountain["subkick",1..3], amp: ring_gen(32, lambda{0.2}), 
+                            x - - - - - - -   -*8}), Mountain["subkick",2..4], amp: ring_gen(32, lambda{0.2}), 
                                                     rate: ring_gen(32, lambda{rrand(0.9,1.0)}))

@@ -30,7 +30,7 @@ live :indeterminism, amp: 0.5 do
 
    sleep bar/8.0
 
-    play deg_seq(%w{Fs4 3 1}).tick, decay: 0.2, attack: 0.1, amp: 0.2, release: 0.1
+    play deg_seq(%w{Fs4 3 1}).tick, decay: 0.1, attack: 0.1, amp: 0.2, release: 0.1
 
 
       with_transpose(-12) do

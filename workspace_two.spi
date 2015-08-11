@@ -1,7 +1,7 @@
 set_volume! 1.0
 #Testing audio quality
 live_loop :beat do
-  play [:Fs3,:B3,:Cs4], amp: 0.2
+  play [:Fs3,:B3,:Cs4, :Ds4], amp: 0.2
   sleep 1
 
 end

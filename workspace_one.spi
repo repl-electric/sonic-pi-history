@@ -30,6 +30,8 @@ drum_loop(:swipe,  (ring *%w{- - - - - - - - - - - - x - - -    - - - - - - - - 
 drum_loop(:ghost,  (ring *%w{x - x - - - }), Ether[/click/i,7], amp: 0.2)
 drum_loop(:ghost2, (ring *%w{- - x - - - }), Ether[/click/i,9], amp: 0.01)
 drum_loop(:ghost3, (ring *%w{- - - x - x }), Ether[/click/i,0], amp: 0.1, rate: -1.0)
+drum_loop(:ghost4, (ring *%w{- - - x - - }), Ether[/click/i,1], amp: 0.1, rate: -1.0)
+
 
 drum_loop(:hat,   (ring *%w{x - - - - - - -}), Ether[/hat/i,17], amp: 0.1, rate: 0.9, start: ring_gen(32, lambda{rrand(0.1,0.5)}))
 drum_loop(:ohat,  (ring *%w{- - - - - - - -

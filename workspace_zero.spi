@@ -21,7 +21,7 @@ end
 
 live :indeterminism, amp: 0.2 do
   1.times{sync :next}
-  i_deter(deg_seq(%w{Fs4 13}).tick,
+  i_deter(deg_seq(%w{Fs4 1}).tick,
           deg_seq(%w{Fs4 3 _ 4 _ }).stretch(4).tick)
 end
 

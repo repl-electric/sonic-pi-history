@@ -111,6 +111,9 @@ n = [chord_seq(*%w{Fs3 1 Fs2 1 B3 1
                    As3 1 As3 1 As3 1
                    Fs3 1 Fs2 1 Cs4 1
 
+                   Ds3 1 Ds2 1 Ds4 1 
+                   Fs4 1 As4 1 Cs4 1 
+
 
 }).ring.tick(:n)]
 end

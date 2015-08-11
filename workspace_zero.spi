@@ -153,6 +153,8 @@ end
 
     note = notes.tick(:a)
 
+      note = (ring :F1).tick
+
     puts "BASS[#{note_info(note||0)}]"
 
     sleep bar/2.0

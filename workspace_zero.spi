@@ -69,7 +69,7 @@ end
 end
 
 
-live :drifting_through_code, amp: 2.0 do
+live :drifting_through_code, amp: 4.0 do
   sample Mountain[/impact/i, 1..3].tick(:kick), amp: 0.1
   1.times {sync :next}
 

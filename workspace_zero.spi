@@ -34,6 +34,13 @@ live :indeterminism, amp: 0.5 do
       end
       end
 
+      with_transpose(-24) do
+      with_synth(:dark_ambience) do
+        play deg_seq(%w{Fs4 1 3}).tick, decay: bar*3, attack: 4, amp: 0.3, release: 3.0
+      end
+      end
+
+
 
   4.times{
     sleep bar/4.0

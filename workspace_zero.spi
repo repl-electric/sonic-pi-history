@@ -29,7 +29,7 @@ live :indeterminism, amp: 0.5 do
 
       with_synth(:dark_ambience) do
         play deg_seq(%w{Fs3 5}).tick, decay: bar*4, 
-        ring: 0.3
+        ring: 0.3,
         attack: 1, amp: 1.5, release: 1.0, room: 200, reverb_time: 200
       end
 

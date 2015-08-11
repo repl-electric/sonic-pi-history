@@ -30,8 +30,9 @@ live :indeterminism, amp: 0.5 do
 
    sleep bar/8.0
 
+      with_synth(:hollow) do
     play :Fs2, decay: 0.1, attack: 0.1, amp: 0.4, release: 0.1
-
+end
 
       with_transpose(-12) do
       with_synth(:dark_ambience) do

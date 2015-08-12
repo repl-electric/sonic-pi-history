@@ -21,7 +21,7 @@ define :i_int do |note, *opts|
               attack: 0.01
 } #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
   defaults = defaults.merge(opts[0]||{})
-  with_synth(:beep){play note, defaults}
+  with_synth(:blade){play note, defaults}
 end
 
 define :i_bass do |note|

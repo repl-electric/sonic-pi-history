@@ -19,7 +19,7 @@ define :i_int do |note, *opts|
               decay: 0.1 + (knit 0.1, 3,0.3,3,0.4,5).tick(:d),
               release: 0.1,
               attack: 0.01,
-              cutoff: 60
+              cutoff: 70
 } #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
   defaults = defaults.merge(opts[0]||{})
   with_synth(:blade){play note, defaults}

@@ -85,8 +85,8 @@ live :drifting_through_code, amp: 10.0 do
 n = [chord_seq(*%w{
 As3 1  As3 1 
 Cs3 1  Cs3 1 
-Ds4 1
-Fs3 1
+Ds4 1  Ds4 1
+Fs3 1  Fs3 1
 Es3 1
 Fs3 1
 Fs4 1

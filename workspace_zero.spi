@@ -93,8 +93,8 @@ n = notes.tick(:asb)
 n = [chord_seq(*%w{
 Fs3 1 Es4 1 B3 1
 Fs3 1 Es4 1 B3 1
-Fs3 1 Es4 1 B3 1
-Fs3 1 Es4 1 B3 1
+Fs3 1 Fs4 1 B3 1
+Fs3 1 Fs4 1 B3 1
 
 Fs3 1 Fs4 1 B3 1
 Fs3 1 Fs4 1 B3 1

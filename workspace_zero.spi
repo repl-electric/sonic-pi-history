@@ -83,7 +83,7 @@ n = notes.tick(:asb)
 #n =  chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 n = [chord_seq(*%w{
-Fs3 M Cs3 1 B3 1
+Fs3 M Cs3 1 D3 1
 Fs3 M Es4 1 B3 1
 Fs3 M Fs4 1 B3 1
 Fs3 M Fs4 1 B3 1

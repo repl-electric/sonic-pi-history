@@ -22,7 +22,6 @@ define :i_int do |note, *opts|
   with_synth(:beep){play note, defaults}
 end
 
-
 define :i_bass do |note|
   with_transpose(12) do
     with_synth(:beep) do

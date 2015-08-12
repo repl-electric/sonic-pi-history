@@ -86,6 +86,7 @@ n = [chord_seq(*%w{
 As3 m 
 Cs3 M 
 Ds4 m
+Fs3 1
 
 }).ring.tick(:n)]
 

@@ -15,7 +15,7 @@ end
 
 define :i_int do |note, *opts|
   defaults = {pan: (Math.sin(vt*13)/1.5), 
-              amp: (ring 0.25).tick(:sdf), 
+              amp: (ring 0.85).tick(:sdf), 
               decay: 0.1 + rrand(0.1,0.2),
               release: 0.5,
               attack: 1.0

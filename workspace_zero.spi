@@ -85,7 +85,7 @@ n = notes.tick(:asb)
 n = [chord_seq(*%w{
 Fs3 M 
 Cs3 M 
-Ds3 M
+Ds3 m
 
 }).ring.tick(:n)]
 

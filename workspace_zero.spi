@@ -88,7 +88,7 @@ Fs3 M Cs3 1 Ds3 1
 
 }).ring.tick(:n)
 
-puts "Harmony[#{(([]|n).map{|z| note_info(z).midi_string})}]"
+#puts "Harmony[#{(([]|n).map{|z| note_info(z).midi_string})}]"
 
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   cue :bhit

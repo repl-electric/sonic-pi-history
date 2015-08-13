@@ -33,13 +33,13 @@ drum_loop(:hat2,  (ring *%w{- - - - - - - -
 }), Ether["clap",3..4], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 
-drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ambi[/hat/i,3], amp: 1.0, rate: 1.0)
+drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ambi[/hat/i,3], amp: 1.0, rate: 1.0, )
 drum_loop(:perc4,  (ring *%w{
 - - - - - - - -
 - - - - - - - -
 - - - - - - - -
 - - - - - x - -
-}), Ambi[/hat/i,13], amp: 6.0, rate: 1.0)
+}), Ambi[/hat/i,14], amp: 6.0, rate: 1.0)
 
 
 

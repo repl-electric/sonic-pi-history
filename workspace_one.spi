@@ -17,4 +17,4 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -
 drum_loop(:perc,  (ring *%w{- - - - - - - - 
                             - - - - - - - -
                             - - - - - - - -
-                            - - - - - - x -}), Ether[/coil/,/fs/].tick, amp: 0.5, rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+                            - - - - - - x -}), Ether[/coil/,/fs/], amp: 0.5, rate: ring_gen(32, lambda{rrand(0.9,1.0)}))

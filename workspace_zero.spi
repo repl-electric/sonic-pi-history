@@ -9,6 +9,12 @@ set_volume! 1.0
 @polyrhythm = [2,3]
 load_snippets("~/.sonic-pi/snippets/")
 
+live :next, amp: 0.5 do
+  density(@polyrhythm.sort.first) do
+    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
+    sleep bar
+  end
+end
 
 live :indeterminism, amp: 0.0 do
   4.times{sync :next}
@@ -28,14 +34,6 @@ live :indeterminism, amp: 0.0 do
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
-end
-
-
-live :next, amp: 0.5 do
-  density(@polyrhythm.sort.first) do
-    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
-    sleep bar
-  end
 end
 
 live :drifting_through_code, amp: 8.0 do
@@ -69,7 +67,7 @@ n = notes.tick(:asb)
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 n = [chord_seq(*%w{
 
-As3 m Cs3 M D4 my
+As2 m
 
 }).ring.tick(:n)]
 

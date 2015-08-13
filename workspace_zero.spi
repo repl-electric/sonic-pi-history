@@ -87,7 +87,7 @@ live_loop :melody do
 sync :next 
 
 4.times{
-with_transpose(-5) do
+with_transpose(0) do
 with_synth(:hollow) do
     i_nil (ring degree(1, :Fs4, :major),
                 degree(3, :Fs4, :major),

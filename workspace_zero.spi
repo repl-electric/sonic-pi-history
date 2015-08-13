@@ -53,7 +53,7 @@ live :next, amp: 0.5 do
 end
 end
 
-live :drifting_through_code, amp: 2.0 do
+live :drifting_through_code, amp: 5.0 do
   1.times {sync :next}
   density(1) do
   with_fx :reverb, room: 0.0, mix: 1.0, damp: 0.1 do |fx_r|

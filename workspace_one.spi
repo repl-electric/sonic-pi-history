@@ -19,4 +19,4 @@ drum_loop(:perc,  (ring *%w{- - - - - - - -
                             - - - - - - - -
                             - - - - - - x -}), Ether[/coil/i,/f#/i], amp: 1.5, rate: 1.0)
 
-sample Ether[/coils/i,0]
+sample Ether[/coil/i,0]

@@ -80,12 +80,12 @@ end
 end;end;end;end
 
 
-define :hollowed_synth do |n|
+define :i_hollowed_synth do |n|
   use_synth :hollow
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
-#    with_fx :slicer, phase: 1/64.0 do
+    with_fx :slicer, phase: 1/64.0 do
     play n, release: 8, amp: 2
- #   end
+    end
   end
 end
 
@@ -97,7 +97,6 @@ with_synth(:hollow) do
     hollowed_synth (ring degree(1, :Fs4, :major),
                          degree(3, :Fs4, :major),
                          (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
-
                          degree(6, :Fs4, :major)
 
 

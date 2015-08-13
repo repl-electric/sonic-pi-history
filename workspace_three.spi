@@ -5,4 +5,4 @@ live_loop :nil do
   @vol -= 0.01
 end
 
-set_volume! 0.01
+set_volume! 0.0

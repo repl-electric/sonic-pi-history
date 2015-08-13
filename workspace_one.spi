@@ -1,0 +1,9 @@
+["experiments", "drums"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+bar = 4.0
+live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (bar/16.0)}}}
+
+def ring_gen(n, fn)
+  (ring *((0..n).map{fn.()}))
+end
+
+drum_loop(:bang,  (ring *%w{x - - - - - - -  -*8 -*8 -*8}), Mountain["subkick",4], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))

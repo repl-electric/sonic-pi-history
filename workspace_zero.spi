@@ -96,7 +96,7 @@ with_synth(:hollow) do
                  #degree(7, :Fs3, :major)
 ).tick, release: 8.0
 end
-sleep bar
+sleep bar/2.0
 }
 
 end

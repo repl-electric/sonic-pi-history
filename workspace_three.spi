@@ -3,4 +3,5 @@ live_loop :nil do
   sleep 1
   set_volume! @vol
   @vol = @vol - 0.01
+  puts @vol
 end

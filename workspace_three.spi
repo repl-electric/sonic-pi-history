@@ -1,3 +1,6 @@
-n = 25
-sample Mountain["bass",n]
-puts Mountain["bass",n]
+@vol = 1.0
+live_loop :nil do
+  sleep 1
+  set_volume! @vol
+  @vol -= 0.01
+end

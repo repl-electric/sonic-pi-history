@@ -84,7 +84,7 @@ live :drifting_through_code, amp: 5.0 do
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 
 with_synth(:dsaw) do
-play degree(1, :Fs2, :major), release: 4.0, cutoff: 50
+play degree(1, :Fs2, :major), release: 4.0, cutoff: 40
 end
 
 n = chord(:Ds3, :M)

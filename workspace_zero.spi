@@ -105,7 +105,9 @@ x.tick
 if(x.look == degree(5, :Fs4, :major))
 f = :echo
 end           
+with_fx(f) do
     i_nil x.look, release: 8.0
+end
 
 end
 end

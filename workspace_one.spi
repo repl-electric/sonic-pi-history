@@ -34,7 +34,7 @@ drum_loop(:hat2,  (ring *%w{- - - - - - - -
 
 
 drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ambi[/hat/i,3], amp: 1.0, rate: 1.0)
-drum_loop(:perc4,  (ring *%w{- - - x - - - -}), Ambi[/hat/i,4], amp: 1.0, rate: 1.0)
+drum_loop(:perc4,  (ring *%w{- - - x - - - -}), Ambi[/hat/i,5], amp: 1.0, rate: 1.0)
 
 
 

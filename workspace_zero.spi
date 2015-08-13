@@ -82,15 +82,7 @@ live :drifting_through_code, amp: 5.0 do
         #n = [chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring.stretch(2).tick(:notes)]
         #n =  chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
-n = [chord_seq(*%w{
-As3 M  As3 M 
-Cs3 1  Cs3 1 
-Ds4 1  Ds4 1
-Fs3 1  Fs3 1
-Es3 1  Es3 1
-Fs3 1  Fs3 1
-Fs4 1  Fs4 1  
-}).ring.tick(:n)]
+n = chord(:As3, :M).ring.tick(:n)]
 
 puts "Harmony[#{(([]|n).map{|z| note_info(z).midi_string})}]"
 

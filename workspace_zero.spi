@@ -81,9 +81,12 @@ end;end;end;end
 
 live_loop :melody do
 sync :next 
+3.times{
 with_synth(:hollow) do
     play (ring :As3,:Ds3).tick release: 0.01, attack: 0.01, cutoff: 100
 end
+sleep bar/3.0
+}
 
 end
 

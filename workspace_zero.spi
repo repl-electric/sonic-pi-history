@@ -80,12 +80,18 @@ end
       i_int(n)
       #i_float(n)
 
+ 
+      sleep bar
+end;end;end;end
+
+live_loop :bass do
+ 2.times{sync :next}
   with_synth(:prophet) do
     play n, cutoff: 60
   end
-  
-      sleep bar
-end;end;end;end
+
+end
+
 
 live :recursion, amp: 0.0 do
   9.times{sync :bhit}

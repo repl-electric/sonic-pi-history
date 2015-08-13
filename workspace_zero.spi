@@ -91,7 +91,7 @@ Fs2 M As2 m
 
 }).ring.tick(:n)]
   with_synth(:prophet) do
-    play n, cutoff: 60, amp: 1, decay: 1.0
+    play n, cutoff: 60, amp: 0.2, decay: 1.0
   end
 
 end

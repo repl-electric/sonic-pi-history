@@ -81,7 +81,7 @@ end
       #i_float(n)
 
   with_synth(:prophet) do
-    play n
+    play n, cutoff: 40
   end
   
       sleep bar

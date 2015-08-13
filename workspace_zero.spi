@@ -97,7 +97,7 @@ with_synth(:hollow) do
 
 
 
-).tick, release: 4.0
+).tick, release: 2.0
 end
 sleep bar
 }

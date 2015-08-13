@@ -1,3 +1,3 @@
-
-sample Mountain["bass",2]
-puts Mountain["bass",2]
+n = 2
+sample Mountain["bass",n]
+puts Mountain["bass",n]

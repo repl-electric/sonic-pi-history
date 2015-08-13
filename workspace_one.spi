@@ -23,8 +23,14 @@ drum_loop(:bang2,  (ring *%w{x - - - - - - -
 drum_loop(:hat,  (ring *%w{x - - - - - - - 
                            x - - - - - - - 
                            x - - - - - - -
-                           x - - - - - x -
+                           x - - - - - - -
 }), Ether["click",1], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+
+drum_loop(:hat2,  (ring *%w{- - - - - - - - 
+                           - - - - - - - - 
+                           - - - - - - - -
+                           - - - - - - x -
+}), Ether["click",2], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 
 

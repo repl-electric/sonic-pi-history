@@ -128,6 +128,10 @@ end
 
     note = notes.tick(:a)
 
+    note = (ring :Cs2.tick(:a)
+
+
+
     puts "BASS[#{note_info(note||0)}]"
 
     sleep bar/2.0

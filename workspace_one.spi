@@ -17,4 +17,4 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -
 drum_loop(:perc,  (ring *%w{- - - - - - - - 
                             - - - - - - - -
                             - - - - - - - -
-                            - - - - - - x -}), Ether["ice",], amp: 0.5, rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+                            - - - - - - x -}), Ether["ice",1], amp: 0.5, rate: ring_gen(32, lambda{rrand(0.9,1.0)}))

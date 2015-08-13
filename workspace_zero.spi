@@ -36,7 +36,7 @@ live :indeterminism, amp: 0.0 do
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end
 
-live :drifting_through_code, amp: 20.0 do
+live :drifting_through_code, amp: 1.0 do
   1.times {sync :next}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
@@ -80,7 +80,6 @@ end
       i_int(n)
       #i_float(n)
 
- 
       sleep bar
 end;end;end;end
 

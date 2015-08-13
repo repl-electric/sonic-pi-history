@@ -94,7 +94,8 @@ sync :next
 
 4.times{
 with_synth(:hollow) do
-    hollowed_synth degree(1, :Fs4, :major)
+    hollowed_synth (ring degree(1, :Fs4, :major),
+                         degree(1, :Fs4, :major)).tick
 end
 sleep bar/2.0
 }

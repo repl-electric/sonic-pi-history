@@ -94,9 +94,7 @@ sync :next
 
 4.times{
 with_synth(:hollow) do
-    hollowed_synth (ring 
-:Fs3,:Fs3, :As4,:Ds4,:Cs4, :Fs3
-).tick release: 0.02, attack: 0.02
+    hollowed_synth (ring :Fs3,:Fs3, :As4,:Ds4,:Cs4, :Fs3).tick
 end
 sleep bar/2.0
 }

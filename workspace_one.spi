@@ -17,4 +17,4 @@ drum_loop(:bang,  (ring *%w{x - - - - - - -
 drum_loop(:perc,  (ring *%w{- - - - - - - - 
                             - - - - - - - -
                             - - - - - - - -
-                            - - - - - - x -}), Mountain["ice",2], amp: ring_gen(32, 0.1*lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+                            - - - - - - x -}), Mountain["ice",2], amp: 0.1, rate: ring_gen(32, lambda{rrand(0.9,1.0)}))

@@ -16,7 +16,7 @@ live :next, amp: 0.5 do
   end
 end
 
-live :indeterminism, amp: 1.0 do
+live :indeterminism, amp: 2.0 do
   4.times{sync :next}
  
   comment do

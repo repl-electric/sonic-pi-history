@@ -88,20 +88,6 @@ end
 end
 
 
-live_loop :bass do
- 4.times{sync :next}
-n = [chord_seq(*%w{
-
-Fs2 M As2 m 
-
-}).ring.tick(:n)]
-  with_synth(:growl) do
-    play n, cutoff: 60, amp: 0.0, decay: 1.0
-  end
-
-end
-
-
 live :recursion, amp: 0.0 do
   9.times{sync :bhit}
 end

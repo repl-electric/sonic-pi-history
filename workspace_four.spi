@@ -1,14 +1,8 @@
 ## Instruments
 bar = 1.0
 
-
-
-set_volume! 1.0
-
-
 define :i_float do |note, *opts|
-  defaults = {cutoff: 90, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, 
-  decay: 0.1 + rrand(0.1,0.2), release: 0.2 }
+  defaults = {cutoff: 70, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
   defaults = defaults.merge(opts[0]||{})
   with_synth(:prophet){play note, defaults}
 end
@@ -59,5 +53,12 @@ define :i_deter do |note1, note2|
         }
       end
     end
+  end
+end
+
+define :i_nil do |n|
+  use_synth :hollow
+  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+    play n, release: 8, amp: 2
   end
 end

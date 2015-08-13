@@ -86,6 +86,12 @@ end;end;end;end
 
 live_loop :bass do
  2.times{sync :next}
+n = [chord_seq(*%w{
+
+Fs2 M As2 m 
+
+}).ring.tick(:n)]
+
   with_synth(:prophet) do
     play n, cutoff: 60
   end

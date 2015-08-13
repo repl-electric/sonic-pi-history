@@ -79,12 +79,22 @@ end
       sleep bar
 end;end;end;end
 
+
+define :hollowed_synth do |n|
+  use_synth :hollow
+  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+#    with_fx :slicer, phase: 1/64.0 do
+    play n, release: 8, amp: 2
+ #   end
+  end
+end
+
 live_loop :melody do
 sync :next 
 
 4.times{
 with_synth(:hollow) do
-    play (ring 
+    hollowed_synth (ring 
 :Fs3,:Fs3, :As4,:Ds4,:Cs4, :Fs3
 ).tick release: 0.02, attack: 0.02
 end

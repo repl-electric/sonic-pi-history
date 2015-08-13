@@ -111,7 +111,7 @@ with_fx(f) do
     i_nil x.look, release: 8.0
 if f== :echo
 with_synth(:dark_ambience) do
-  with_transpose(5){play x.look, release: 4.0, attack: 1.0, amp: 2.0}
+  with_transpose(2){play x.look, release: 4.0, attack: 1.0, amp: 2.0}
 end
 end
 end

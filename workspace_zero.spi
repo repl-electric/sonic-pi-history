@@ -82,7 +82,7 @@ end;end;end;end
 live_loop :melody do
 sync :next 
 with_synth(:blade) do
-    play (ring :As2,:Ds2).tick release: 0.1, attack: 0.01, cutoff: 70
+    play (ring :As2,:Ds2).tick release: 0.1, attack: 0.01, cutoff: 60
 end
 
 end

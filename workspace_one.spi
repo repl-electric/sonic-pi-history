@@ -36,7 +36,7 @@ drum_loop(:hat2,  (ring *%w{- - - - - - - -
 drum_loop(:perc,  (ring *%w{- - - - - - - - 
                             - - - - - - - -
                             - - - - - - - -
-                            - - - - - - x -}), Ambience[/hat/i], amp: 0.5, rate: 1.0)
+                            - - - - - - x -}), Ambi[/hat/i], amp: 0.5, rate: 1.0)
 
 
 

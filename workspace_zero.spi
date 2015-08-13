@@ -67,7 +67,7 @@ n = notes.tick(:asb)
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 #n = (knit chord(:Cs3, :M7), 2, _, 1).tick(:n)
 
-n = [degree(2, :Fs2, :major)]
+n = [degree(3, :Fs2, :major)]
 
 puts "Harmony[#{(n||[]).map{|n| note_info(n).midi_string}}]"
 

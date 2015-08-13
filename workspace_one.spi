@@ -10,7 +10,7 @@ end
 drum_loop(:bang,  (ring *%w{x - - - - - - - 
                             - - - - - - - -
                             x - - - - - - -
-                            - - - - - - - -}), Mountain["subkick",0], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
+                            - - - - - - - -}), Mountain["subkick",0], amp: ring_gen(32, lambda{2.0 + rrand(0.0,0.2)}), rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 
 drum_loop(:bang2,  (ring *%w{x - - - - - - - 

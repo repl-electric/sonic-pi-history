@@ -67,7 +67,7 @@ n = notes.tick(:asb)
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 n = (knit chord(:As3, :m), 2, _, 1).tick(:n)
 
-puts "Harmony[#{(([]||n).map{|n| note_info(n).midi_string})}]"
+puts "Harmony[#{([]||n).map{|n| note_info(n).midi_string}}]"
 
 if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   cue :bhit

@@ -81,7 +81,7 @@ end;end;end;end
 
 live_loop :melody do
 sync :next 
-play :As2, release: 0.01, attack: 0.01
+play :As2, release: 0.09, attack: 0.01
 
 end
 

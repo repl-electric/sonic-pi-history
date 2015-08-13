@@ -91,7 +91,7 @@ with_transpose(-12) do
 with_synth(:hollow) do
     i_nil (ring degree(1, :Fs4, :major),
                 degree(3, :Fs4, :major),
-                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
+                _,
                  _,
 #                 degree(1, :Fs4, :major),
                  #degree(7, :Fs3, :major)

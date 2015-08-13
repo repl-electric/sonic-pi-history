@@ -82,7 +82,7 @@ end
 end;end;end;end
 
 live_loop :bass do
- 2.times{sync :next}
+ 4.times{sync :next}
 n = [chord_seq(*%w{
 
 Fs2 M As2 m 

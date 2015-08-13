@@ -130,7 +130,7 @@ end
 
     note = notes.tick(:a)
 
-    note = (ring :Cs2).tick(:a)
+    note = (ring :Cs2, :Ds2).tick(:a)
 
 
 

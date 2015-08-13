@@ -36,7 +36,7 @@ live :indeterminism, amp: 0.0 do
           deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 end
 
-live :drifting_through_code, amp: 0.0 do
+live :drifting_through_code, amp: 1.0 do
   1.times {sync :next}
   density(@polyrhythm.sort.last) do
   with_fx :reverb, room: 1.0, mix: 1.0, damp: 0.1 do |fx_r|
@@ -80,7 +80,7 @@ end
 end;end;end;end
 
 
-define :hollowed_synth do |n|
+define :i_nil do |n|
   use_synth :hollow
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
 #    with_fx :slicer, phase: 1/64.0 do
@@ -94,10 +94,10 @@ sync :next
 
 4.times{
 with_synth(:hollow) do
-    hollowed_synth (ring degree(1, :Fs4, :major),
-                         degree(3, :Fs4, :major),
-                         (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
-                         degree(6, :Fs4, :major)
+    i_nil (ring degree(1, :Fs4, :major),
+                degree(3, :Fs4, :major),
+                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
+                 degree(6, :Fs4, :major)
 
 
 ).tick

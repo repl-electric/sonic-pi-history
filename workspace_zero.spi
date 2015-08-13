@@ -94,7 +94,7 @@ with_synth(:hollow) do
                  degree(6, :Fs4, :major),
                  degree(1, :Fs4, :major),
                  degree(7, :Fs3, :major)
-).tick, release: 2.0
+).tick, release: 8.0
 end
 sleep bar
 }

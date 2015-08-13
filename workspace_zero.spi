@@ -85,7 +85,7 @@ sync :next
 with_synth(:hollow) do
     play (ring :As3,:Ds3).tick release: 0.01, attack: 0.01, cutoff: 100
 end
-sleep bar/3.0
+sleep bar/4.0
 }
 
 end

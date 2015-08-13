@@ -39,7 +39,7 @@ drum_loop(:perc4,  (ring *%w{
 - - - - - - - -
 - - - - - - - -
 - - - - x - - -
-}), Ambi[/hat/i,20], amp: 1.0, rate: 1.0)
+}), Down[/hat/i,20], amp: 1.0, rate: 1.0)
 
 
 

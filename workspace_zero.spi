@@ -79,6 +79,13 @@ end
       sleep bar
 end;end;end;end
 
+live_loop :melody do
+sync :next 
+play :As2
+
+end
+
+
 live_loop :bass do
  4.times{sync :next}
 n = [chord_seq(*%w{

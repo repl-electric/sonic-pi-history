@@ -98,7 +98,7 @@ with_synth(:hollow) do
 :Fs3,:Fs3, :As4,:Ds4,:Cs4, :Fs3
 ).tick release: 0.02, attack: 0.02
 end
-sleep bar/4.0
+sleep bar/2.0
 }
 
 end

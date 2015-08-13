@@ -83,7 +83,7 @@ live :drifting_through_code, amp: 5.0 do
         #n =  chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring
 #n = knit(chord(:Fs3, 1),2, chord(:Fs2, 1),2, chord(:B3, 1),2).tick(:yum)
 n = [chord_seq(*%w{
-As3 m  As3 1 
+As3 m  As3 m 
 Cs3 1  Cs3 1 
 Ds4 1  Ds4 1
 Fs3 1  Fs3 1

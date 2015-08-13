@@ -80,7 +80,7 @@ end
 end;end;end;end
 
 
-define :i_hollowed_synth do |n|
+define :hollowed_synth do |n|
   use_synth :hollow
   with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
     with_fx :slicer, phase: 1/64.0 do

@@ -82,12 +82,6 @@ end
 end;end;end;end
 
 
-define :i_nil do |n|
-  use_synth :hollow
-  with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
-    play n, release: 8, amp: 2
-  end
-end
 
 live_loop :melody do
 sync :next 

@@ -93,7 +93,7 @@ chord(:B3, "M", invert: 0)[1..-1],4,
 chord(:Cs3, "M", invert: 0)[1..-1],4,
 chord(:B3, "M", invert: 0)[1..-1],4
 
-).tick(:notes), release: (ring 2, 2).tick, cutoff: 85, attack: 0.3, decay: 6.0, amp: 0.2
+).tick(:notes), release: (ring 2, 2).tick, cutoff: 85, attack: 0.3, decay: 6.0, amp: 0.4
 
 4.times{ sync :next}
 end

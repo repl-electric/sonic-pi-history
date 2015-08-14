@@ -83,7 +83,7 @@ sync :next
 
 4.times{ sync :next}
 
-play chord(:Fs4)
+play chord(:Cs4, "9")
 
 end
 

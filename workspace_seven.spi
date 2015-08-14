@@ -1,1 +1,1 @@
-puts chord(:Cs3,'9', invert: -2)
+puts note_inspect(chord(:Cs3,'9', invert: -2))

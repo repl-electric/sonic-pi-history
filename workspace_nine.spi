@@ -147,7 +147,7 @@ end
 
 live_loop :drums do
   2.times{sync :next}
-  sample Mountain[/subkick/i, 2..4].tick, amp: 0.2
+  sample Mountain[/subkick/i, 2..4].tick, amp: 0.9
 end
 
 live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (4.0/16.0)}}}

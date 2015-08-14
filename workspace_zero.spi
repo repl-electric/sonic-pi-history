@@ -87,10 +87,8 @@ live_loop :melody do
 sync :next 
 
 4.times{
-with_transpose(0) do
-
+with_transpose(-12) do
 uncomment do
-
 with_fx(:bitcrusher, sample_rate: 20000, bits: 9.0, mix: rrand(0.0, 1.0), mix_slide: 2.0) do
 with_synth(:hollow) do
 x = (knit degree(1, :Fs4, :major), 1,

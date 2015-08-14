@@ -15,6 +15,12 @@ live_loop :kick do
   sample :drum_bass_soft if dice(6) > 3
 end
 
+live_loop :hats do
+  sync :drums
+  sample :drum_cymbal_pedal
+
+end
+
 live_loop :loop do |m_idx|
   sync :drums
   case m_idx % 4

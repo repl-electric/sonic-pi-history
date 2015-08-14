@@ -88,8 +88,6 @@ with_synth(:dsaw){
 play chord(:Fs3, "sus4"), decay: bar*4
 }
 
-
-
 4.times{
 with_transpose(-12) do
 uncomment do

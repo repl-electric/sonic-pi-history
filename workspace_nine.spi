@@ -132,7 +132,7 @@ def note_inspect(n)
   end
 end
 
-puts "Harmony[#{([x.look]||[]).map{|n| note_info(n).midi_string if n}}]"
+puts note_inspect(x.look)
 
 
 f = if(x.look == degree(5, :Fs4, :major))

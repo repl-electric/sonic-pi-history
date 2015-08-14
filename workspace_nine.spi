@@ -112,10 +112,9 @@ pat = [
       degree(3, :Fs3, :major), 1,
       degree(5, :Fs3, :major), 4,
       degree(6, :Fs3, :major), 8
-
-
-
 ]
+
+play chord(:Fs3, "sus4")
 
 x = (knit *pat)
 

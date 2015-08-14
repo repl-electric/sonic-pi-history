@@ -37,7 +37,7 @@ end
 live_loop :melody do
   sync :next
   4.times{
-    pattern = (ring :Fs1)
+    pattern = (knit degree(1, :Fs3, :major), 1)
     note = pattern.tick(:notes)
 
     with_transpose(0) do

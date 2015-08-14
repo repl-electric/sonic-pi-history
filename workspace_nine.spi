@@ -84,7 +84,7 @@ with_synth(:saw) do
 4.times{ sync :next}
 play (ring chord(:Cs3, "9", invert: -4),
            chord(:Cs3, 'M', invert: 1)[1..-1]
-).tick(:notes), release: 4
+).tick(:notes), release: 5
 end
 
 end

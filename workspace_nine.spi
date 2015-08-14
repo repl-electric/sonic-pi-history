@@ -83,7 +83,7 @@ end;end;end;end
 #          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 
 live_loop :chords do
-with_synth(:subpulse) do
+with_synth(:dsaw) do
 4.times{ sync :next}
 play (knit 
 #chord(:Fs4, "M", invert: -2)[1..-1],4,

@@ -85,7 +85,7 @@ live_loop :melody do
 sync :next 
 
 with_synth(:dsaw){
-play chord(:Fs3, "sus4"), release: bar*4
+play chord(:Fs3, "sus4"), decay: bar*4
 }
 
 

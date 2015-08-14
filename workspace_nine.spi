@@ -82,7 +82,7 @@ with_fx(:level, amp: 0.4) do
           end
 
             with_synth(:dark_ambience) do
-              with_transpose(-2) do
+              with_transpose(-12) do
                 play note, attack: 1.0, release: 2.0, decay: 1.0 
               end
             end

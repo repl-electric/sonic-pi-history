@@ -6,10 +6,9 @@
 #3 5 7 9
 puts note_inspect(chord(:Fs3,'9'))
 
-
 play chord(:Fs3, '9'), release: 10
 sleep 5
-play chord(:Fs3, 'M')[-2,-1]
+play chord(:Fs3, 'M')[-2,-1], release: 5
 
 
 

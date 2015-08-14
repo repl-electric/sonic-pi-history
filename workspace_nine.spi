@@ -126,7 +126,7 @@ x.tick
 
 def note_inspect(n)
   if n
-    puts "[#{(n||[]).map{|n| note_info(n).midi_string if n}}]"
+    puts "[#{(n||[]).map{|n| note_info(n).midi_string}}]"
   else
     puts "[ _ ]"
   end

@@ -140,8 +140,7 @@ end
 end
 end
 
-case x.look == degree(5, :Fs4, :major)
-
+case x.look
 when degree(6, :Fs3, :major)
 with_transpose(-12) do
 with_synth(:dark_ambience) do

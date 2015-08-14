@@ -100,7 +100,6 @@ else
 end
 
 with_fx(f) do
-
 with_transpose(-12) do
 with_synth(:hollow) do
     i_nil n, release: 8.0
@@ -108,7 +107,9 @@ end
 end
 end
 
-
+if n == degree(5, :Fs4, :major)
+  with_synth(:dark_ambience){play n}
+end
 
 
 sleep bar/2.0

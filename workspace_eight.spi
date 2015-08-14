@@ -19,8 +19,8 @@ live_loop :hats do
   
     if n == 4
       with_fx(:slicer, probability: 0.5) do
-     sample :drum_cymbal_closed
-end
+        sample :drum_cymbal_open
+      end
     end
 
     sleep sample_duration(:loop_amen)/4.0

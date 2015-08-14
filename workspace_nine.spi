@@ -85,7 +85,7 @@ live_loop :melody do
 sync :next 
 
 with_synth(:saw){
-  play (ring chord(:Es3, "7sus4"), 
+  play (ring  
              chord(:Fs3, "M"),
 
              chord(:As3, "m", invert: -2)

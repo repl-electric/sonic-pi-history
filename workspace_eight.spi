@@ -1,10 +1,10 @@
 live_loop :drums do
+
+with_fx(:bitcrusher, bits: (ring 4,5,6,7,8).tick(:crush)) do
 sample :loop_amen
 
-with_fx(:bitcrusher, bits: (ring 4,5,6,7,8).tick(:crush) ) do
 sleep sample_duration(:loop_amen)
 end
-
 end
 
 

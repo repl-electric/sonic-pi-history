@@ -3,7 +3,7 @@
 
 play (chord(:C3,'9')), release: 10
 
-3 5 7 9
+#3 5 7 9
 
 play degree(3, :Fs3, :major), degree(5, :Fs3, :major), degree(7, :Fs3, :major), degree(9, :Fs3, :major)
 

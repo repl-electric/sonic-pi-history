@@ -6,20 +6,17 @@ with_fx(:bitcrusher, bits: (ring 6,7,8,9,10,11).tick(:crush)) do
   end
 end
 
-
 live_loop :kick do
   sync :drums
   sample :drum_cymbal_pedal
   sample :drum_bass_soft
-  sleep 0.25
-  sample :drum_bass_soft if dice(6) > 3
 end
 
 live_loop :hats do
   sync :drums
   4.times{
-  sample :drum_cymbal_pedal
-  sleep sample_duration(:loop_amen)/4.0
+    sample :drum_cymbal_pedal
+    sleep sample_duration(:loop_amen)/4.0
   }
 end
 

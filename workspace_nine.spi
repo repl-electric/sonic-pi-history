@@ -82,8 +82,8 @@ live_loop :chords do
 sync :next
 
 4.times{ sync :next}
-play (ring chord(:Cs4, "9", invert: -4),
-           chord(:Cs4, 'M', invert: 1)[1..-1]
+play (ring chord(:Fs4, "9", invert: -4),
+           chord(:Fs4, 'M', invert: 1)[1..-1]
 ).tick(:notes), release: 4
 
 end

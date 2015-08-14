@@ -7,6 +7,7 @@ puts note("E4")
 puts note("E4")
 
 
+As
 puts note_inspect(degree(3, :Fs3, :major))
 
 

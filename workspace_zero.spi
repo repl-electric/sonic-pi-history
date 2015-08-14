@@ -135,10 +135,8 @@ end
 with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
 case x.look
 when degree(6, :Fs3, :major)
-with_transpose(-12) do
 with_synth(:dsaw) do
   play degree(3, :Fs3, :major), attack: 0.01, amp: 1.0, release: bar*4, res: 0.5, cutoff: 60
-end
 end
 with_transpose(12) do
   with_fx :slicer, mix: 0.2 do

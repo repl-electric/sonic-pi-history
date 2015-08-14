@@ -1,11 +1,11 @@
 ["log.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 
 
-play (chord(:C3,'9')), release: 10
+#play (chord(:C3,'9')), release: 10
 
 #3 5 7 9
 
-play degree(3, :Fs3, :major), degree(5, :Fs3, :major), degree(7, :Fs3, :major), degree(9, :Fs3, :major)
+play [degree(3, :Fs3, :major), degree(5, :Fs3, :major), degree(7, :Fs3, :major), degree(9, :Fs3, :major)]
 
 
 #1 2 3 4 5 6 7 8 9 10

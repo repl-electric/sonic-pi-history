@@ -82,7 +82,10 @@ live_loop :chords do
 sync :next
 
 4.times{ sync :next}
-play chord(:Cs4, "9"), release: 10
+play (ring chord(:Cs4, "9"),
+           chord(:Cs4)[1..-1]
+
+, release: 10
 
 end
 

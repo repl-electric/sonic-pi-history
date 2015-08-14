@@ -1,6 +1,6 @@
 puts note_inspect(chord(:Fs3,'9'))
 
-puts note("Bb4")
+puts note("E4")
 puts note("As4")
 
 

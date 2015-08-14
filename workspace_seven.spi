@@ -11,13 +11,13 @@ play chord(:Fs3, '9')
 
 puts chord(:Fs3, '9')
 
-x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
-     degree(2, :Fs4, :major)]
+#x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
+#     degree(2, :Fs4, :major)]
 
-play_chord x, release: 10
+#play_chord x, release: 10
 
 
-puts note_inspect(x)
+#puts note_inspect(x)
 
 #1 2 3 4 5 6 7 8 9 10
 #f g a b c d e f gs a

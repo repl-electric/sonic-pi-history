@@ -124,6 +124,14 @@ x = (knit *pat)
                  #degree(7, :Fs3, :major)
 x.tick
 
+def note_inspect(n)
+  if n
+    puts "[#{(n||[]).map{|n| note_info(n).midi_string if n}}]"
+  else
+    puts "[ _ ]"
+  end
+end
+
 puts "Harmony[#{([x.look]||[]).map{|n| note_info(n).midi_string if n}}]"
 
 

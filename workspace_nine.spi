@@ -84,6 +84,12 @@ end;end;end;end
 live_loop :melody do
 sync :next 
 
+with_synth(:dsaw){
+play chord(:Fs3, "sus4")
+}
+
+
+
 4.times{
 with_transpose(-12) do
 uncomment do
@@ -113,10 +119,6 @@ pat = [
       degree(5, :Fs3, :major), 4,
       degree(6, :Fs3, :major), 8
 ]
-
-with_synth(:dsaw){
-play chord(:Fs3, "sus4")
-}
 
 x = (knit *pat)
 

@@ -1,1 +1,1 @@
-puts chord("Fs3", 'sus4')
+puts chord("Fs3", 'sus4').map {|n| note_info n}

@@ -124,12 +124,12 @@ x = (knit *pat)
                  #degree(7, :Fs3, :major)
 x.tick
 
-def note_inspect(n)
+def note_inspect(n,ns="")
   n = [n] unless n.respond_to?(:map)
   if n
-    puts "[#{(n||[]).map{|n| n ? note_info(n).midi_string : "_"}}]"
+    puts "#{ns}[#{(n||[]).map{|n| n ? note_info(n).midi_string : "_"}}]"
   else
-    puts "[ _ ]"
+    puts "#{ns}[ _ ]"
   end
 end
 

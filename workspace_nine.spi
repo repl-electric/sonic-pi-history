@@ -115,7 +115,7 @@ pat = [
 ]
 
 with_synth(:beep){
-play chord(:Fs3, "sus4")
+play chord(:Fs2, "sus4")
 }
 
 x = (knit *pat)

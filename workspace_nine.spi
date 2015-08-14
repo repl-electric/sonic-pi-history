@@ -37,9 +37,12 @@ end
 live_loop :melody do
   sync :next
   4.times{
+    pattern = (ring :Fs1)
+    note = pattern.tick(:notes)
+
     with_transpose(0) do
       with_synth(:hollow) do
-        i_nil (ring :Fs1).tick
+        i_nil note
       end
     end
     sleep bar/2.0

@@ -83,7 +83,7 @@ end;end;end;end
 
 live_loop :what do
 
-4.times{sync :next}
+8.times{sync :next}
 with_synth(:saw){
   play (ring  
              chord(:Cs3, "sus4", invert: -1, number_of_notes: 3),

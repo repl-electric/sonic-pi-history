@@ -137,7 +137,8 @@ live_loop :drums do
 end
 
 live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (bar/16.0)}}}
-
 def ring_gen(n, fn)
   (ring *((0..n).map{fn.()}))
 end
+
+drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ether[/click/i,3], amp: 1.0, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

@@ -13,7 +13,7 @@ live :next, amp: 0.5 do
   end
 end
 
-live :indeterminism, amp: 1.0 do
+live :indeterminism, amp: 0.0 do
   4.times{sync :next}
 
     with_fx(:distortion, mix: 1.0, distort: 0.8) do |fx_r|

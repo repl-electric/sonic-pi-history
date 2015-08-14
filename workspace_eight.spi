@@ -13,13 +13,13 @@ live_loop :kick do
   sleep 0.5
 end
 
-live_loop :loop do |n|
+live_loop :loop do |m_idx|
   sync :drums
 
-  case n % 16
+  case m_idx % 16
    when 0
   sample :loop_industrial
-end
+  end
 
-  n+=1
+  m+idx+=1
 end

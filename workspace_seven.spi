@@ -1,1 +1,1 @@
-puts note_inspect(chord(:Cs3,'9'))
+puts note_inspect(chord(:Fs3,'9'))

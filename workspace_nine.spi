@@ -95,7 +95,7 @@ pat = [degree(1, :Fs4, :major),
        (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
         degree(6, :Fs3, :major)]
 
-x = (knit *pat,1)
+x = (knit *pat)
 
 
 

@@ -14,7 +14,7 @@ end
 
 live_loop :hats do
   sync :drums
-  4.times{
+  8.times{
     sample :drum_cymbal_pedal
     sleep sample_duration(:loop_amen)/4.0
   }

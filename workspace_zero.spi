@@ -139,9 +139,11 @@ with_transpose(-12) do
 with_synth(:dsaw) do
   play x.look, attack: 0.01, amp: 1.0, release: bar*4, res: 0.5, cutoff: 60
 end
+with_transpose(12) do
  with_fx :pitch_shift do
 with_synth(:prophet) do
  play x.look, attack: 0.01, amp: 0.5, release: bar*0.3
+end
 end
 end
 end

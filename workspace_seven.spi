@@ -2,3 +2,5 @@
 
 
 play (chord(:Fs3,'7-9'))
+
+puts note_inspect(chord(:Fs3, '7-9')

@@ -140,7 +140,7 @@ with_fx :distortion, mix: 0.1 do
 end
 
 live_loop :ending do
-  sample Mountain[/cracklin/i, 0], rate: 0.9
+  sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.9
   sleep sample_duration(Mountain[/cracklin/i, 0])
 end
 

@@ -124,7 +124,7 @@ x = (knit *pat)
                  #degree(7, :Fs3, :major)
 x.tick
 
-puts "Harmony[#{([x.look]||[]).map{|n| note_info(n).midi_string}}]"
+puts "Harmony[#{([x.look]||[]).map{|n| note_info(n).midi_string if n}}]"
 
 
 f = if(x.look == degree(5, :Fs4, :major))

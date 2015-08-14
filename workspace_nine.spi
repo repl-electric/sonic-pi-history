@@ -101,10 +101,10 @@ pat = [degree(1, :Fs4, :major), 1,
        degree(6, :Fs3, :major), 1,
 
 
-      degree(3, :Fs4, :major), 1,
-      degree(3, :Fs4, :major), 1,
-      degree(3, :Fs4, :major), 1,
-      degree(3, :Fs3, :major), 1
+      degree(1, :Fs4, :major), 1,
+      degree(4, :Fs4, :major), 1,
+      degree(5, :Fs4, :major), 1,
+      degree(7, :Fs3, :major), 1
 
 
 ]

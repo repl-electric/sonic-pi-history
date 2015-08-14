@@ -144,6 +144,5 @@ end
 drum_loop(:perc3,  (ring *%w{x - - - - - - -
                              - - - - - - - -
                              - - - - - - - -
-                             - - - - - - - -
-
+                             - - - - - - x -
 }), Ether[/click/i,2], amp: 0.3, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

@@ -73,7 +73,7 @@ with_fx(:level, amp: 0.4) do
             i_nil note, release: 8.0
           end
 
-          if note == degree(6,:Fs4, :major)
+          if note == degree(5,:Fs4, :major)
             with_synth(:dark_ambience) do
               with_transpose(-2) do
                 play note, attack: 1.0, release: 2.0, decay: 3.0 

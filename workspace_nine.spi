@@ -59,7 +59,9 @@ with_fx :distortion, mix: 0.1 do
     live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
         with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
           3.times{sync :next}
-          note = (ring :B1, :Cs1, :Ds1).tick(:a)
+          note = (ring :B1, :Cs1, :Ds1,
+                       :B1, :Cs1, :Ds1
+).tick(:a)
 
           puts "BASS[#{note_info(note||0)}]"
 

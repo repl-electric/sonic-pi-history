@@ -43,7 +43,7 @@ end
 
 
 live_loop :melody do;
-with_fx(:level, amp: 0.1) do
+with_fx(:level, amp: 0.0) do
   sync :next
   4.times{
     pattern = (knit degree(1, :Fs4, :major), 1,

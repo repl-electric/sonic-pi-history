@@ -133,7 +133,7 @@ def note_inspect(n,ns="")
   end
 end
 
-puts note_inspect(x.look)
+puts note_inspect(x.look, "Harmony: ")
 
 
 f = if(x.look == degree(5, :Fs4, :major))

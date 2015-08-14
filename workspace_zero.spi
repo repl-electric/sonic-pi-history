@@ -135,7 +135,7 @@ end
 with_fx(:reverb, room: 1.0, mix: 0.9, room_lag: 1.0) do |fx_reverb|
 case x.look
 when degree(6, :Fs3, :major)
-with_transpose(-12) do
+#with_transpose(-12) do
 with_synth(:dsaw) do
   play x.look, attack: 0.01, amp: 1.0, release: bar*4, res: 0.5, cutoff: 60
 end
@@ -143,7 +143,7 @@ with_transpose(12) do
  with_fx :pitch_shift do
 with_synth(:prophet) do
  play x.look, attack: 0.01, amp: 0.5, release: bar*0.3
-end
+#end
 end
 end
 end

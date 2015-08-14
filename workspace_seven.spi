@@ -1,7 +1,7 @@
 puts note_inspect(chord(:Fs3,'9'))
 
 puts note("E4")
-puts note("Ds4")
+puts note("Es4")
 
 
 

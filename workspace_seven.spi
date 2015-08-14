@@ -11,4 +11,4 @@ play_chord [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :
 #1 2 3 4 5 6 7 8 9 10
 #f g a b c d e f gs a
 
-puts note_inspect(chord(:Fs3, '7'))
+#puts note_inspect(chord(:Fs3, '7'))

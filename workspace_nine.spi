@@ -69,7 +69,11 @@ with_fx(:level, amp: 0.4) do
           end
 
           if note == degree(6,:Fs3, :major)
-
+            with_synth(:dark_ambience) do
+              with_transpose(-2) do
+                play n
+              end
+            end
           end
           
       end

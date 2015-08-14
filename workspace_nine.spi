@@ -86,7 +86,7 @@ live_loop :what do
 8.times{sync :next}
 with_synth(:saw){
   play (ring  
-             chord(:Fs3,'M7+9', invert: 0),
+             chord(:Fs3,'7-9', invert: 0),
 ).tick(:play), sustain_level: 0.5, amp: 0.5, decay: 5}
 end
 

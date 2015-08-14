@@ -6,7 +6,7 @@
 #3 5 7 9
 
 play chord(:Fs3, '9'), release: 10
-sleep 10
+sleep 5
 play chord(:Cs3, 'M'), release: 10
 
 

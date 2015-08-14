@@ -8,7 +8,7 @@
 x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
      degree(2, :Fs4, :major)]
 
-play_chord x
+play_chord x, release: 10
 
 
 puts note_inspect(x)

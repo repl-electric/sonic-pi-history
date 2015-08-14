@@ -108,8 +108,7 @@ end
 end
 
 if n == degree(5, :Fs4, :major)
-
-  with_synth(:dark_ambience){play n}, attack: 1.0, release: 4.0
+  with_synth(:dark_ambience){play n, attack: 1.0, release: 4.0}
 
 end
 

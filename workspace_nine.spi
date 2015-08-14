@@ -1,4 +1,7 @@
-["experiments.rb","log.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+["experiments.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+#                        \:o/ - nil.music.lights
+#   π=-    π=-   π=-      █
+#  π=-   π=-   π=-      .||.
 _ = nil
 bar = 1.0
 use_bpm 60
@@ -61,7 +64,7 @@ n = notes.tick(:asb)
 #n = chord(:Fs3, 'sus4') + chord(:Fs3, "M") + chord(:As3, 'sus4') + chord(:As3, 'M')
 #n = [chord_seq(*%w{Cs3 7 Fs3 M B3 M7}).ring.stretch(2).tick(:notes)]
 #n =  chord_seq(*%w{˘Cs3 7 Fs3 M B3 M7}).ring
-#n = knit(chord(:Fs4, 1),2, chord(:Fs4, 1),2, chord(:B4, 1),2).tick(:yum)
+n = knit(chord(:Fs4, 1),2, chord(:Fs4, 1),2, chord(:B4, 1),2).tick(:yum)
 #n = (knit chord(:Cs3, :M7), 2, _, 1).tick(:n)
 
 #n = [degree(3, :Fs4, :major)]
@@ -72,88 +75,29 @@ if (n||[]).map{|a|note_info(a).midi_string} == (ring "Fs4", "B4", "Eb4")
   cue :bhit
 end
 #with_transpose(-12){with_synth(:sine){play (n ? n.sort[0] : n), cutoff: 60, pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2), release: 0.01}}
- #     i_int(n)
+      i_int(n)
       #i_float(n)
 
       sleep bar
 end;end;end;end
 
 
-#  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
-#          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
-
-live_loop :chords do
-with_synth(:prophet) do
-4.times{ sync :next}
-play (knit 
-#chord(:Fs4, "M", invert: -2)[1..-1],4,
-#chord(:As3, "m", invert: 0)[1..-1],4
-chord(:As3, "m", invert: 0)[1..-1],4,
-chord(:B3, "M", invert: 0)[1..-1],4,
-chord(:Cs3, "M", invert: 0)[1..-1],4,
-chord(:B3, "M", invert: 0)[1..-1],4
-
-).tick(:notes), release: (ring 2, 2).tick, cutoff: 85, attack: 0.3, decay: 6.0, amp: 0.4
-
-4.times{ sync :next}
-end
-
-end
 
 live_loop :melody do
 sync :next 
 
-x = [
-degree(1, :Fs4, :major),1,
-degree(3, :Fs4, :major),1,
-(dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),1,
-degree(6, :Fs4, :major),1,
-
-degree(1, :Fs4, :major),1,
-degree(3, :Fs4, :major),1,
-(dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),1,
-degree(6, :Fs4, :major),1,
-
-degree(5, :Fs3, :major),8,
-_, 4,
-degree(3, :Fs3, :major),8,
-_, 4,
-(dice(6) > 3 ? degree(4, :Fs3, :major) : degree(5, :Fs3, :major)),8,
-degree(6, :Fs3, :major),8,
-
-degree(5, :Fs3, :major),8,
-_, 4,
-degree(3, :Fs3, :major),8,
-_, 4,
-(dice(6) > 3 ? degree(4, :Fs3, :major) : degree(5, :Fs3, :major)),8,
-degree(6, :Fs3, :major),8
-]
-
-
 4.times{
-n = (knit *x).tick
-
-f = if x.look == degree(5, :Fs4, :major)
-  :echo
-else
-  :none
-end
-
-with_fx(f) do
-with_transpose(0) do
+with_transpose(-12) do
 with_synth(:hollow) do
-    i_nil n, release: 8.0
+    i_nil (ring degree(1, :Fs4, :major),
+                degree(3, :Fs4, :major),
+                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
+                 degree(6, :Fs4, :major),
+#                degree(1, :Fs4, :major),
+                 #degree(7, :Fs3, :major)
+).tick, release: 8.0
 end
 end
-end
-
-if n == degree(5, :Fs4, :major)
-with_transpose([-2,0].choose){
-  with_synth(:dark_ambience){play n, attack: 1.0, release: 4.0, decay: 4.0}
-}
-end
-
-
 sleep bar/2.0
 }
 
@@ -186,9 +130,7 @@ end
 
     note = notes.tick(:a)
 
-    note = (ring :B1, :Cs2, :Ds2,
-                 :B1, :Cs2, :Ds2,
-                 :B1, :Cs2, :Fs2).tick(:a)
+    note = (ring :B1, :Cs2, :Ds2).tick(:a)
 
 
     puts "BASS[#{note_info(note||0)}]"

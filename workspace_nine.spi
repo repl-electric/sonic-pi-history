@@ -50,7 +50,6 @@ with_fx(:level, amp: 0.4) do
                     degree(3, :Fs4, :major), 1,
                     (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)), 1,
                     (dice(6) > 3 ? degree(6, :Fs4, :major) : degree(5, :Fs4, :major)), 1,
-
                      _, 4,
                     degree(1, :Fs3, :major), 1,
                     degree(3, :Fs3, :major), 1,
@@ -150,6 +149,6 @@ def ring_gen(n, fn)
   (ring *((0..n).map{fn.()}))
 end
 
-drum_loop(:perc3,  (ring *%w{x - x - - -}), Ether[/click/i,2], amp: 0.1, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
+drum_loop(:perc3,  (ring *%w{x - x - - -}), Ether[/click/i,2..4], amp: 0.1, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
 drum_loop(:perc4,  (ring *%w{- - - - - -
                              x - - - - -}), Ether[/click/i,4], amp: 0.2, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

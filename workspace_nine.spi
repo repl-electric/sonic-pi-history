@@ -101,10 +101,10 @@ pat = [
 #      (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)), 1,
 #       degree(6, :Fs3, :major), 1,
 
-      degree(1, :Fs4, :major), 3,
-      degree(4, :Fs4, :major), 3,
-      degree(5, :Fs4, :major), 3,
-      degree(6, :Fs4, :major), 8,
+      degree(1, :Fs3, :major), 3,
+      degree(4, :Fs3, :major), 3,
+      degree(5, :Fs3, :major), 3,
+      degree(6, :Fs3, :major), 8,
 
       _, 8,
       

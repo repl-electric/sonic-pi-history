@@ -14,8 +14,13 @@ end
 
 live_loop :hats do
   sync :drums
-  8.times{
+  8.times{ |n|
     sample :drum_cymbal_pedal
+  
+    if n == 4
+     sample :drum_cymbal_soft
+    end
+
     sleep sample_duration(:loop_amen)/4.0
   }
 end

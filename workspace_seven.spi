@@ -6,7 +6,7 @@
 #3 5 7 9
 
 play_chord [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
-            degree(9, :Fs3, :major)]
+            degree(2, :Fs4, :major)]
 
 
 puts note_inspect([degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major)])

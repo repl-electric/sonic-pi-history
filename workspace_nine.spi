@@ -30,13 +30,11 @@ live :indeterminism, amp: 1.0 do
       end
     end
 
-      4.times{
-        sleep bar/4.0
-        control fx_r, distort: (ring 0.8, 0.8, 0.5, 0.0).tick(:distory)
-      }
-    end
-
-
+    4.times{
+      sleep bar/4.0
+      control fx_r, distort: (ring 0.8, 0.8, 0.5, 0.0).tick(:distory)
+    }
+  end
 
   4.times{sync :next}
   i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
@@ -89,7 +87,7 @@ with_fx(:level, amp: 0.4) do
 
           if note == degree(5,:Fs4,:major)
             with_synth(:dark_ambience) do
-              with_transpose(-2) do
+              with_transpose([0,-2].choose) do
                 play note, attack: 1.0, release: 2.0, decay: 3.0 
               end
             end

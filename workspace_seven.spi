@@ -16,9 +16,9 @@ puts note_inspect(chord(:Fs3, 'M')[1..-1])
 #play chord(:Fs3, 'M')[1..-1], release: 5
 
 
-play chord(:Cs3, '9'), release: 10, amp: 2.0
-sleep 4
-play chord(:Cs3, 'M')[1..-1], release: 5
+#play chord(:Cs3, '9'), release: 10, amp: 2.0
+#sleep 4
+#play chord(:Cs3, 'M')[1..-1], release: 5
 
 
 play chord(:Cs4, '9'), release: 10, amp: 2.0

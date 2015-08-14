@@ -86,8 +86,8 @@ live_loop :chords do
 sync :next
 with_synth(:prophet) do
 4.times{ sync :next}
-play (knit chord(:Fs4, "M", invert: -2),2,
-           chord(:As4, "m", invert: -2),2
+play (knit chord(:Fs4, "M", invert: -2),8,
+           chord(:As4, "m", invert: -2),8
 ).tick(:notes), release: (ring 3, 3.5).tick, cutoff: 80
 end
 

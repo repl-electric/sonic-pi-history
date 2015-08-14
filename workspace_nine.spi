@@ -91,9 +91,9 @@ play (knit
 #chord(:As3, "m", invert: 0)[1..-1],4
 
 chord(:As4, "m", invert: -2)[1..-1],4,
-chord(:Cs4, "M", invert: 0)[1..-1],4
+chord(:Bs4, "M", invert: 0)[1..-1],4
 chord(:Cs3, "M", invert: 0)[1..-1],4
-chord(:Cs4, "M", invert: 0)[1..-1],4
+chord(:Bs4, "M", invert: 0)[1..-1],4
 
 
 

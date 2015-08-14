@@ -18,7 +18,7 @@ live_loop :hats do
     sample :drum_cymbal_pedal
   
     if n == 4
-     sample :drum_cymbal_soft
+     sample :drum_cymbal_closed
     end
 
     sleep sample_duration(:loop_amen)/4.0

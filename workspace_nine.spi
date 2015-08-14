@@ -141,4 +141,4 @@ def ring_gen(n, fn)
   (ring *((0..n).map{fn.()}))
 end
 
-drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ether[/click/i,3], amp: 1.0, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
+drum_loop(:perc3,  (ring *%w{x - - - - - - -}), Ether[/click/i,3], amp: 0.3, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

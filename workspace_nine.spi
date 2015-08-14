@@ -79,14 +79,14 @@ end
 end;end;end;end
 
 
-  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
-          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+#  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+#          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
 
 live_loop :chords do
 sync :next
 with_synth(:prophet) do
 4.times{ sync :next}
-play (ring chord(:Fs4, "M", invert: -2),
+play (knit chord(:Fs4, "M", invert: -2),
            chord(:As4, "M", invert: -2)
 ).tick(:notes), release: (ring 6, 3.5).tick, cutoff: 80
 end

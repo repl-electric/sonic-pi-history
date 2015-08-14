@@ -88,7 +88,7 @@ with_synth(:saw){
   play (ring  
              chord(:Fs3, "M", invert: 1),
 
-             chord(:As3, ",", invert: -2)
+             chord(:As3, "m", invert: -2)
 
 ).tick(:play), decay: bar*2, sustain_level: 0.5
 }

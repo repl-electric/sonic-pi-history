@@ -139,7 +139,7 @@ with_synth(:dsaw) do
   with_transpose(0){play x.look, release: 4.0, attack: 1.0, amp: 1.0, cutoff: 70}
 end
 with_synth(:prophet) do
-  with_transpose(0){play x.look, release: 4.0, attack: 1.0, amp: 1.0, cutoff: 20}
+  with_transpose(0){play x.look, release: 4.0, attack: 1.0, amp: 1.0, cutoff: 50}
 end
 
 

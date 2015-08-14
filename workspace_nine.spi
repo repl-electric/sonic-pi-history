@@ -60,11 +60,11 @@ with_fx(:level, amp: 1.0) do
     with_transpose(0) do
       with_synth(:hollow) do
 
-        f = if(note == degree(1, :Fs3, :major))
-          :echo
-        else
-          :none
-        end
+          f = if(note == degree(5, :Fs4, :major))
+            :echo
+          else
+            :none
+          end
 
           with_fx(f) do
             i_nil note

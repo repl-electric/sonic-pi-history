@@ -84,10 +84,10 @@ end;end;end;end
 
 live_loop :chords do
 sync :next
-with_synth(:saw) do
+with_synth(:prophet) do
 4.times{ sync :next}
 play (ring chord(:Fs4, "M", invert: -2)
-).tick(:notes), release: (ring 6, 3.5).tick
+).tick(:notes), release: (ring 6, 3.5).tick, cutoff: 80
 end
 
 end

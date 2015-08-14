@@ -89,15 +89,28 @@ x = [degree(1, :Fs4, :major),1,
                 (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),1,
                  degree(6, :Fs4, :major),1]
 
+
 4.times{
+n = (knit *x).tick
+
+f = if x.look == degree(5, :Fs4, :major)
+  :echo
+else
+  :none
+end
+
+with_fx(f) do
+
 with_transpose(-12) do
 with_synth(:hollow) do
-    i_nil (knit *x
-#                degree(1, :Fs4, :major),
-                 #degree(7, :Fs3, :major)
-).tick, release: 8.0
+    i_nil n, release: 8.0
 end
 end
+end
+
+
+
+
 sleep bar/2.0
 }
 

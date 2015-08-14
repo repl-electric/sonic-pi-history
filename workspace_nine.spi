@@ -91,7 +91,7 @@ sync :next
 
 with_synth(:saw){
   play (ring  
-             chord(:Gs3, "M", invert: 1),
+             chord(:Gs3, "m", invert: 1),
 
 
 ).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.5

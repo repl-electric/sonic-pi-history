@@ -131,7 +131,6 @@ with_fx :distortion, mix: 0.1 do
   end
 end
 
-
 live_loop :drums do
   2.times{sync :next}
   sample Mountain[/subkick/i, 2..4].tick, amp: 0.3

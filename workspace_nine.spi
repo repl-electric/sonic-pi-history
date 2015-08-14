@@ -87,7 +87,7 @@ sync :next
 with_synth(:prophet) do
 4.times{ sync :next}
 play (ring chord(:Fs4, "M", invert: -2),
-           chord(:Ds4, "M", invert: -2)
+           chord(:As4, "M", invert: -2)
 ).tick(:notes), release: (ring 6, 3.5).tick, cutoff: 80
 end
 

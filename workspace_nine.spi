@@ -81,6 +81,19 @@ end
       sleep bar
 end;end;end;end
 
+live_loop :what do
+
+4.times{sync :next}
+with_synth(:saw){
+  play (ring  
+             chord(:B3, "sus2", invert: -2, number_of_notes: 3),
+
+
+).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.5
+}
+
+end
+
 live_loop :melody do
 sync :next 
 
@@ -89,13 +102,6 @@ sync :next
 
 #chord(:As3, "m", invert: -2)
 
-with_synth(:saw){
-  play (ring  
-             chord(:B3, "sus2", invert: -2, number_of_notes: 3),
-
-
-).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.5
-}
 
 4.times{
 with_transpose(-12) do

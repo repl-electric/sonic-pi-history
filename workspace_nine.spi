@@ -65,7 +65,7 @@ with_fx(:level, amp: 1.0) do
           end
 
           with_fx(f) do
-            i_nil note
+            i_nil note, release: 8.0
           end
 
           if note == degree(6,:Fs3, :major)

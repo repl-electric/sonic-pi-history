@@ -83,7 +83,9 @@ sync :next
 with_synth(:saw) do
 4.times{ sync :next}
 play (ring chord(:Es3, "dim", invert: 1),
-           chord(:Fs3, 'M', invert: 1)[1..-1]).tick(:notes), release: (ring 6, 3.5).tick
+           chord(:Fs3, 'M', invert: 1)[1..-1]
+
+).tick(:notes), release: (ring 6, 3.5).tick
 end
 
 end

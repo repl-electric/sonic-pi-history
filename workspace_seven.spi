@@ -1,7 +1,7 @@
 ["log.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
 
 
-puts note_inspect(chord(:Fs3,'9'))
+play note_inspect(chord(:Fs3,'9'))
 
 puts note("E4")
 puts note("E4")

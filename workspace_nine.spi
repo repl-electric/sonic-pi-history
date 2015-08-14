@@ -91,7 +91,7 @@ play (knit
 chord(:As4, "m", invert: -2)[0..-1],4,
 chord(:B4, "M", invert: -2)[0..-1],4,
 chord(:Cs3, "M", invert: 0)[1..-1],4,
-chord(:B4, "M", invert: -2)[1..-1],4
+chord(:B4, "M", invert: -2)[0..-1],4
 
 ).tick(:notes), release: (ring 2, 2).tick, attack: 0.3, decay: 6.0, amp: 0.2
 

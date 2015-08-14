@@ -45,6 +45,11 @@ with_synth(:hollow) do
                 (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
                 degree(6, :Fs4, :major),
 
+               degree(1, :Fs4, :major),
+                degree(3, :Fs4, :major),
+                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),
+                degree(6, :Fs4, :major),
+
                 degree(1, :Fs3, :major),
                 degree(3, :Fs3, :major),
                 (dice(6) > 3 ? degree(4, :Fs3, :major) : degree(5, :Fs3, :major)),
@@ -53,8 +58,7 @@ with_synth(:hollow) do
                 degree(1, :Fs3, :major),
                 degree(3, :Fs3, :major),
                 (dice(6) > 3 ? degree(4, :Fs3, :major) : degree(5, :Fs3, :major)),
-                 degree(6, :Fs3, :major),
-
+                degree(6, :Fs3, :major),
 
                 degree(5, :Fs3, :major),
                 degree(3, :Fs3, :major),

@@ -12,9 +12,7 @@ sleep 5
 play chord(:Cs3, 'M'), release: 10
 
 
-
-
-puts chord(:Fs3, '9')
+#puts chord(:Fs3, '9')
 
 #x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
 #     degree(2, :Fs4, :major)]

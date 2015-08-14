@@ -114,7 +114,9 @@ pat = [
       degree(6, :Fs3, :major), 8
 ]
 
+with_synth(:beep){
 play chord(:Fs3, "sus4")
+}
 
 x = (knit *pat)
 

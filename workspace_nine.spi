@@ -56,6 +56,7 @@ with_fx(:level, amp: 0.4) do
 
                     degree(5, :Fs3, :major), 8,
                     degree(3, :Fs3, :major), 8,
+
                     (dice(6) > 3 ? degree(1, :Fs3, :major) : degree(3, :Fs3, :major)), 1,
                     degree(1, :Fs4, :major), 1
 )
@@ -128,4 +129,11 @@ with_fx :distortion, mix: 0.1 do
       idx+=1
     end
   end
+end
+
+
+live_loop :drums do
+  sync :next
+  sample Mountain[/subkick/i, 3]
+
 end

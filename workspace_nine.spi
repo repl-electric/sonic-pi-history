@@ -108,7 +108,7 @@ end
 end
 
 if n == degree(5, :Fs4, :major)
-with_transpose(-2){
+with_transpose([-2,0].choose){
   with_synth(:dark_ambience){play n, attack: 1.0, release: 4.0, decay: 4.0}
 }
 end

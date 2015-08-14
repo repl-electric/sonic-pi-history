@@ -4,13 +4,14 @@
 #play (chord(:C3,'9')), release: 10
 
 #3 5 7 9
+put note_inspect(chord(:Cs3,'M'))
+
 
 play chord(:Fs3, '9'), release: 10
 sleep 5
 play chord(:Cs3, 'M'), release: 10
 
 
-put note_inspect(chord(:Cs3,'M'))
 
 
 puts chord(:Fs3, '9')

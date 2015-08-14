@@ -143,7 +143,7 @@ with_transpose(12) do
   with_fx :slicer, mix: 0.2 do
  with_fx :pitch_shift do
 with_synth(:prophet) do
- play x.look, attack: 0.01, amp: 0.5, release: bar*0.3
+ #play x.look, attack: 0.01, amp: 0.5, release: bar*0.3
 end
 #end
 end

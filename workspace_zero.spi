@@ -109,11 +109,11 @@ x = (knit degree(1, :Fs4, :major), 1,
           degree(6, :Fs3, :major), 1,
 
           degree(1, :Fs4, :major), 1,
-          _, 1,
+          _, 3,
           degree(1, :Fs4, :major), 1,
-          _, 1,
+          _, 3,
           degree(1, :Fs3, :major), 1,
-          _, 1,
+          _, 3,
 
 
 
@@ -133,6 +133,7 @@ else
 end     
 with_fx(f) do
     i_nil x.look, release: 8.0
+
 if f == :echo
 with_synth(:dark_ambience) do
   with_transpose(0){play x.look, release: 4.0, attack: 1.0, amp: 2.0, noise: 0, ring: 0.2, room: 300, reverb_time: 200}

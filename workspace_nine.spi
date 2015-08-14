@@ -115,9 +115,6 @@ degree(3, :Fs3, :major),8,
 _, 4,
 (dice(6) > 3 ? degree(4, :Fs3, :major) : degree(5, :Fs3, :major)),8,
 degree(6, :Fs3, :major),8
-
-
-
 ]
 
 

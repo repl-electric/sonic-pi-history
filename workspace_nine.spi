@@ -85,6 +85,7 @@ sync :next
 play (ring chord(:Fs4, "9", invert: -4),
            chord(:Fs4, 'M', invert: 1)[1..-1]
 ).tick(:notes), release: 4
+4.times{ sync :next}
 
 end
 

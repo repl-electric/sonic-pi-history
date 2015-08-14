@@ -141,8 +141,8 @@ end
 
 
 live_loop :ending do
-  sample Mountain[/cracklin/i, 0], rate: 0.1, amp: 0.9
-  sleep sample_duration(Mountain[/cracklin/i, 0])
+ sleep 1
+  #sleep sample_duration(Mountain[/cracklin/i, 0])
 end
 
 live_loop :drums do

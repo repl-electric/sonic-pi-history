@@ -84,7 +84,7 @@ with_fx(:level, amp: 0.4) do
           end
 
             with_synth(:dark_ambience) do
-                play note, attack: 0.5, release: 1.0, decay: 3.0 
+                play note, attack: 0.5, release: 1.0, decay: 3.0, 
             end
 
           
@@ -131,7 +131,7 @@ end
 
 live_loop :drums do
   2.times{sync :next}
-  sample Mountain[/subkick/i, 2..4].tick, amp: 0.3
+  sample Mountain[/subkick/i, 2..4].tick, amp: 0.2
 end
 
 live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (4.0/16.0)}}}
@@ -139,6 +139,6 @@ def ring_gen(n, fn)
   (ring *((0..n).map{fn.()}))
 end
 
-drum_loop(:perc3,  (ring *%w{x - x - - -}), Ether[/click/i,2], amp: 0.2, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
+drum_loop(:perc3,  (ring *%w{x - x - - -}), Ether[/click/i,2], amp: 0.1, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
 drum_loop(:perc4,  (ring *%w{- - - - - -
-                             x - - - - -}), Ether[/click/i,4], amp: 0.4, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
+                             x - - - - -}), Ether[/click/i,4], amp: 0.2, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

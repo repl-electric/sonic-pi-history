@@ -1,0 +1,48 @@
+["log.rb"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}"}
+
+
+#play (chord(:C3,'9')), release: 10
+
+#3 5 7 9
+puts note_inspect(chord(:Fs3,'9'))
+puts note_inspect(chord(:Fs3, 'M')[1..-1])
+
+
+
+
+
+#play chord(:Fs3, '9'), release: 10, amp: 2.0
+#sleep 4
+#play chord(:Fs3, 'M')[1..-1], release: 5
+
+
+#play chord(:Cs3, '9'), release: 10, amp: 2.0
+#sleep 4
+#play chord(:Cs3, 'M')[1..-1], release: 5
+
+
+play chord(:Cs4, '9', invert: -4), release: 10, amp: 2.0
+sleep 4
+play chord(:Fs4, 'M', invert: 1)[1..-1], release: 5
+sleep 4
+play chord(:Cs4, '9', invert: -2), release: 10, amp: 2.0
+sleep 4
+
+
+
+
+
+#puts chord(:Fs3, '9')
+
+#x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),
+#     degree(2, :Fs4, :major)]
+
+#play_chord x, release: 10
+
+
+#puts note_inspect(x)
+
+#1 2 3 4 5 6 7 8 9 10
+#f g a b c d e f gs a
+
+#puts note_inspect(chord(:Fs3, '7'))

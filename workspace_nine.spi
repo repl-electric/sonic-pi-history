@@ -136,8 +136,6 @@ live_loop :drums do
   sample Mountain[/subkick/i, 2..4].tick, amp: 0.3
 end
 
-["experiments", "drums"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-bar = 4.0
 live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (bar/16.0)}}}
 
 def ring_gen(n, fn)

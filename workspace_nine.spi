@@ -85,7 +85,10 @@ live_loop :melody do
 sync :next 
 
 with_synth(:dsaw){
-  play chord(:Es3, "dim"), decay: bar*2, cutoff: 100,  sustain_level: 0.5
+  play (ring chord(:Es3, "dim"),
+             chord(:Fs3, "M")
+
+), decay: bar*2, cutoff: 100,  sustain_level: 0.5
 }
 
 4.times{

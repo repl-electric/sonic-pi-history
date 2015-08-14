@@ -127,7 +127,7 @@ x.tick
 def note_inspect(n)
   n = [n] unless n.respond_to?(:map)
   if n
-    puts "[#{(n||[]).map{|n| note_info(n).midi_string}}]"
+    puts "[#{(n||[]).map{|n| n ? note_info(n).midi_string : "_"}}]"
   else
     puts "[ _ ]"
   end

@@ -85,7 +85,7 @@ live_loop :melody do
 sync :next 
 
 with_synth(:dsaw){
-  play (ring chord(:Es3, "sus7"),
+  play (ring chord(:Es3, "7sus2"),
              chord(:Fs3, "M")
 ).tick(:play), decay: bar*2, cutoff: 100,  sustain_level: 0.5
 }

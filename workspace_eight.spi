@@ -17,13 +17,10 @@ end
 
 live_loop :hats do
   sync :drums
-
   4.times{
   sample :drum_cymbal_pedal
-  sleep 0.5
+  sleep 10
   }
-
-
 end
 
 live_loop :loop do |m_idx|

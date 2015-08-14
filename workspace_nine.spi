@@ -174,15 +174,6 @@ end
 end
 end
 
-control fx_reverb , room: 0.0, mix: 0.8
-sleep bar/8.0
-control fx_reverb , room: 0.1, mix: 0.9
-sleep bar/8.0
-control fx_reverb , room: 0.2, mix: 0.8
-sleep bar/8.0
-control fx_reverb , room: 0.5, mix: 0.7
-sleep bar/8.0
-control fx_reverb , room: 1.0, mix: 0.9
 
 end
 end

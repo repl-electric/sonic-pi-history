@@ -83,13 +83,16 @@ end;end;end;end
 live_loop :melody do
 sync :next 
 
+
+x = [degree(1, :Fs4, :major),1,
+                degree(3, :Fs4, :major),1,
+                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),1,
+                 degree(6, :Fs4, :major),1]
+
 4.times{
 with_transpose(-12) do
 with_synth(:hollow) do
-    i_nil (knit degree(1, :Fs4, :major),1,
-                degree(3, :Fs4, :major),1,
-                (dice(6) > 3 ? degree(4, :Fs4, :major) : degree(5, :Fs4, :major)),1,
-                 degree(6, :Fs4, :major),1
+    i_nil (knit *x
 #                degree(1, :Fs4, :major),
                  #degree(7, :Fs3, :major)
 ).tick, release: 8.0

@@ -90,7 +90,7 @@ with_synth(:saw){
 
              chord(:As3, "m", invert: -2)
 
-).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.2
+).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.5
 }
 
 4.times{

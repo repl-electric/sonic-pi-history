@@ -16,10 +16,9 @@ end
 live_loop :loop do |m_idx|
   sync :drums
 
-  case m_idx % 16
+  case m_idx % 8
    when 0
   sample :loop_industrial
   end
-
   m_idx+=1
 end

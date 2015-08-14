@@ -71,7 +71,7 @@ with_fx(:level, amp: 0.4) do
             :none
           end
 
-          with_fx(f, phase: 1.0) do
+          with_fx(f, phase: 0.5) do
             i_nil note, release: 8.0
           end
 

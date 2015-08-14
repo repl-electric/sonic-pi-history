@@ -88,10 +88,10 @@ with_synth(:prophet) do
 play (knit 
 #chord(:Fs4, "M", invert: -2)[1..-1],4,
 #chord(:As3, "m", invert: 0)[1..-1],4
-chord(:As4, "m", invert: 0)[1..-1],4,
-chord(:B4, "M", invert: 0)[1..-1],4,
+chord(:As3, "m", invert: 0)[1..-1],4,
+chord(:B3, "M", invert: 0)[1..-1],4,
 chord(:Cs3, "M", invert: 0)[1..-1],4,
-chord(:B4, "M", invert: 0)[1..-1],4
+chord(:B3, "M", invert: 0)[1..-1],4
 
 ).tick(:notes), release: (ring 2, 2).tick, cutoff: 85, attack: 0.3, decay: 6.0, amp: 0.2
 

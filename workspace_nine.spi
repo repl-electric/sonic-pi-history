@@ -134,5 +134,5 @@ end
 
 live_loop :drums do
   2.times{sync :next}
-  sample Mountain[/subkick/i, 3], amp: 0.3
+  sample Mountain[/subkick/i, 3..4], amp: 0.3
 end

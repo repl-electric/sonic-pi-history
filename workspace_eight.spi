@@ -9,6 +9,7 @@ end
 
 live_loop :kick do
   sync :drums
+  sample :drum_cymbal_pedal
   sample :drum_bass_soft
   sleep 0.25
   sample :drum_bass_soft if dice(6) > 3

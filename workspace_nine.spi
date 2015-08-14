@@ -84,11 +84,15 @@ end;end;end;end
 live_loop :melody do
 sync :next 
 
+
+#             chord(:Fs3, "M", invert: 1),
+
+#chord(:As3, "m", invert: -2)
+
 with_synth(:saw){
   play (ring  
-             chord(:Fs3, "M", invert: 1),
+             chord(:Gs3, "m", invert: 1),
 
-             chord(:As3, "m", invert: -2)
 
 ).tick(:play), decay: bar*2, sustain_level: 0.5, amp: 0.5
 }

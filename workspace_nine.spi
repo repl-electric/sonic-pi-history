@@ -125,7 +125,7 @@ x = (knit *pat)
 x.tick
 
 def note_inspect(n)
-  n = [n] unless n.responds_to?(:map)
+  n = [n] unless n.respond_to?(:map)
   if n
     puts "[#{(n||[]).map{|n| note_info(n).midi_string}}]"
   else

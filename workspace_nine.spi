@@ -86,8 +86,10 @@ sync :next
 
 with_synth(:saw){
   play (ring chord(:Es3, "7sus4"), 
-             chord(:Es3, "7sus2"),
+             chord(:Fs3, "M"),
+
              chord(:As3, "m", invert: -2)
+
 ).tick(:play), decay: bar*2, sustain_level: 0.5
 }
 

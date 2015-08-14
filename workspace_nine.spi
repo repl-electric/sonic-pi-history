@@ -136,3 +136,8 @@ live_loop :drums do
   2.times{sync :next}
   sample Mountain[/subkick/i, 2..4].tick, amp: 0.3
 end
+
+live_loop :perc do
+  1.times{sync :next}
+  sample Ether[/click/, 3], amp: 0.2
+end

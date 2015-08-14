@@ -43,7 +43,7 @@ end
 
 
 live_loop :melody do;
-with_fx(:level, amp: 0.4) do
+with_fx(:level, amp: 0.3) do
   sync :next
   4.times{
     pattern = (knit degree(1, :Fs4, :major), 1,
@@ -138,6 +138,7 @@ with_fx :distortion, mix: 0.1 do
     end
   end
 end
+
 
 live_loop :ending do
   sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.9

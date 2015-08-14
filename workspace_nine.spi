@@ -66,9 +66,9 @@ with_fx(:level, amp: 1.0) do
           :none
         end
 
-        with_fx(f) do
-        i_nil note
-end
+          with_fx(f) do
+            i_nil note
+          end
       end
     end
     sleep bar/2.0

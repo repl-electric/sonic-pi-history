@@ -56,16 +56,17 @@ with_synth(:hollow) do
                 degree(3, :Fs3, :major),
                 (dice(6) > 3 ? degree(1, :Fs3, :major) : degree(3, :Fs3, :major)),
                  degree(6, :Fs4, :major),
-
+_,_,_,_,
                 degree(1, :Fs3, :major),
                 degree(3, :Fs3, :major),
                 (dice(6) > 3 ? degree(1, :Fs3, :major) : degree(3, :Fs3, :major)),
                 degree(6, :Fs3, :major),
-
+_,_,_,_,
                 degree(5, :Fs3, :major),
                 degree(3, :Fs3, :major),
                 (dice(6) > 3 ? degree(1, :Fs3, :major) : degree(3, :Fs3, :major)),
                  degree(4, :Fs4, :major),
+_,_,_,_,
 #                degree(1, :Fs4, :major),
                  #degree(7, :Fs3, :major)
 ).tick, release: 8.0

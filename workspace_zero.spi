@@ -113,7 +113,7 @@ x = (knit degree(1, :Fs4, :major), 1,
 
 
           degree(5, :Fs5, :major), 6,
-          (dice(6) > 3 ? degree(1, :Fs4, :major) : degree(5, :Fs4, :major)), 1,
+          (dice(6) > 3 ? degree(6, :Fs4, :major) : degree(6, :Fs4, :major)), 1,
           degree(7, :Fs4, :major), 1)
 
 

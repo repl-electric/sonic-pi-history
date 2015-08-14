@@ -86,7 +86,7 @@ sync :next
 
 with_synth(:saw){
   play (ring  
-             chord(:Fs3, "M", invert: 2),
+             chord(:Fs3, "M", invert: 1),
 
              chord(:As3, "m", invert: -2)
 

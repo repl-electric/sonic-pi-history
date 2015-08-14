@@ -123,7 +123,7 @@ else
 end
 
 with_fx(f) do
-with_transpose(-12) do
+with_transpose(0) do
 with_synth(:hollow) do
     i_nil n, release: 8.0
 end

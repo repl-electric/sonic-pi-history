@@ -139,5 +139,5 @@ end
 
 live_loop :perc do
   1.times{sync :next}
-  sample Ether[/click/, 3], amp: 0.4
+  sample Ether[/click/, 3], amp: 0.5
 end

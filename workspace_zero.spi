@@ -117,10 +117,10 @@ x = (knit degree(1, :Fs4, :major), 1,
 
 x.tick
 
-if(x.look == degree(5, :Fs4, :major))
-f = :echo
+f = if(x.look == degree(5, :Fs4, :major))
+  :echo
 else
-f= :none
+  :none
 end     
 with_fx(f) do
     i_nil x.look, release: 8.0

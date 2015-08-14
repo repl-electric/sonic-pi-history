@@ -78,13 +78,15 @@ end
       sleep bar
 end;end;end;end
 
+
+  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+
 live_loop :chords do
 sync :next
 with_synth(:saw) do
 4.times{ sync :next}
-play (ring chord(:Es2, "dim", invert: 1),
-           chord(:Fs2, 'M', invert: 1)[1..-1]
-
+play (ring chord(:Fs4, "M", invert: -2)
 ).tick(:notes), release: (ring 6, 3.5).tick
 end
 

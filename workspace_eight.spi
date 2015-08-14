@@ -3,7 +3,6 @@ use_sample_bpm :loop_amen
 live_loop :drums do
 
 with_fx(:bitcrusher, 
-    bit
     bits: (ring 6,7,8,9,10,11).tick(:crush)) do
     sample :loop_amen, rate: [1,1,1,-1].choose
     sleep sample_duration(:loop_amen) 

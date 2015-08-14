@@ -18,8 +18,10 @@ live_loop :hats do
     sample :drum_cymbal_pedal
   
     if n == 4
+      with_fx(:reverb) do
       with_fx(:slicer, probability: 0.5, phase: 0.025) do
         sample :drum_cymbal_open
+      end
       end
     end
 

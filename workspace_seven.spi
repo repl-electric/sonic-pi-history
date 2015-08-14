@@ -5,6 +5,7 @@
 
 #3 5 7 9
 
+puts note_inspect(chord(:Fs3, '9'))
 puts chord(:Fs3, '9')
 
 x = [degree(3, :Fs3, :major), degree(5, :Fs3, :major) , degree(7, :Fs3, :major),

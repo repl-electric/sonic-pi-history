@@ -91,6 +91,7 @@ with_transpose(0) do
 
 uncomment do
 
+with_fx(:bitcrusher) do
 with_synth(:hollow) do
 x = (knit degree(1, :Fs4, :major), 1,
           degree(3, :Fs4, :major), 1,
@@ -135,6 +136,7 @@ with_fx(f) do
 if f == :echo
 with_synth(:dark_ambience) do
   with_transpose(0){play x.look, release: 4.0, attack: 1.0, amp: 2.0, noise: 0, ring: 0.2, room: 300, reverb_time: 200}
+end
 end
 end
 end

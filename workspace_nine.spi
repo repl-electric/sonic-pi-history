@@ -91,7 +91,7 @@ with_synth(:saw){
 end
 
 
-5 - 3
+#5 - 3
 
 live_loop :melody do
 sync :next 

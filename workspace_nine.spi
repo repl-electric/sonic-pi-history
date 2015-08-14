@@ -85,7 +85,6 @@ end;end;end;end
 live_loop :chords do
 with_synth(:prophet) do
 4.times{ sync :next}
-
 play (knit 
 #chord(:Fs4, "M", invert: -2)[1..-1],4,
 #chord(:As3, "m", invert: 0)[1..-1],4
@@ -94,7 +93,7 @@ chord(:B4, "M", invert: -2)[1..-1],4,
 chord(:Cs3, "M", invert: 0)[1..-1],4,
 chord(:B4, "M", invert: -2)[1..-1],4
 
-).tick(:notes), release: (ring 2, 2).tick, cutoff: 80, attack: 0.3, decay: 6.0, amp: 0.5
+).tick(:notes), release: (ring 2, 2).tick, cutoff: 75, attack: 0.3, decay: 6.0, amp: 0.5
 
 4.times{ sync :next}
 end

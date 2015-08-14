@@ -98,7 +98,6 @@ pat = [degree(1, :Fs4, :major), 1,
 x = (knit *pat)
 
 
-
 #                degree(1, :Fs4, :major),
                  #degree(7, :Fs3, :major)
 x.tick

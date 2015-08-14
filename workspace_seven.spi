@@ -8,7 +8,7 @@ puts note("E4")
 
 
 #As
-puts note_inspect(degree(9, :Fs3, :major))
+puts note_inspect(degree(1, :Fs3, :major))
 
 
 #1  2   3 4 5  6  7

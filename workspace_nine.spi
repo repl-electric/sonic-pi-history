@@ -25,7 +25,7 @@ live :indeterminism, amp: 1.0 do
 
     with_fx(:reverb, room: 0.9) do
       with_synth(:dark_ambience) do
-        play notes.tick(:note), decay: bar*4, attack: 1, amp: 1.0, release: 4.0
+        play notes.tick(:note), decay: bar*6, attack: 1, amp: 1.0, release: 2.0
       end
     end
 

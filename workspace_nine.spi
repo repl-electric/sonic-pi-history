@@ -96,7 +96,7 @@ live_loop :melody do;
               #vor_sopr_leg_oo_02u_01_C4.wav
               
               with_fx(:pan, pan: Math.sin(vt*13)/1.5) do
-              with_fx(:reverb, room: 0.5,) do
+              with_fx(:reverb, room: 0.5) do
               sample Sop[["vor_sopr_leg_oo_02u_04_F#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 1.0, decay: 8.0, cutoff: 80
               end
               end

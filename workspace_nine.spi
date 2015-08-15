@@ -117,7 +117,7 @@ live_loop :melody do;
       play (ring chord(:Fs3, "M")).tick
   end
 
-      sleep bar/4.0
+      sleep bar/2.0
 }
 end
 

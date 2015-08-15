@@ -149,5 +149,5 @@ end
 
 live_loop :drums do
   4.times{sync :next}
-  sample (knit Mountain[/subkick/i, 4],3, Mountain[/subkick/i, 3],1).tick, amp: 0.5
+  sample (knit Mountain[/subkick/i, 4],3, Mountain[/subkick/i, 3],1).tick, amp: 1.0
 end

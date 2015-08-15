@@ -126,7 +126,6 @@ live_loop :melody do;
 
   c.each{|n| play n; sleep 0.025}
 
-).tick
   end
 
       sleep bar

@@ -113,7 +113,7 @@ live_loop :melody do;
           end
 
 
-      sleep bar/8.0
+      sleep bar/4.0
     }
   end
 end

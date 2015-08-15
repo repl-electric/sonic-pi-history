@@ -114,7 +114,9 @@ live_loop :melody do;
 1.times{
   with_fx(:none, phase: 0.5) do
 #34 -5 4
-      play (ring chord(:Fs3, "M"), chord(:As3, "m", invert: -1), chord(:Cs3, "M"),
+      play (ring chord(:Fs3, "M"), 
+                 chord(:As3, "m", invert: -1), 
+                 chord(:Cs3, "M"),
                  chord(:As3, "M", invert: -1)
 ).tick
   end

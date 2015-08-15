@@ -161,14 +161,13 @@ end
 
 live_loop :movement do
   with_fx((knit :none, 3, :echo, 1).tick) do
-
-  sample Mountain[/microperc/i, 6]
-  sync :next
-  sample Mountain[/microperc/i, 6]
-  sync :next 
-  sample Mountain[/microperc/i, 6]
-  sync :next
-  sample Mountain[/microperc/i, 5]
-  sync :next
-end
+    sample Mountain[/microperc/i, 6]
+    sync :next
+    sample Mountain[/microperc/i, 6]
+    sync :next
+    sample Mountain[/microperc/i, 6]
+    sync :next
+    sample Mountain[/microperc/i, 5]
+    sync :next
+  end
 end

@@ -95,7 +95,7 @@ live_loop :melody do;
             if note == degree(1,:Fs4,:major)
               #vor_sopr_leg_oo_02u_01_C4.wav
 #              sample Sop[["vor_sopr_leg_oo_02u_04_F#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 1.0, decay: 8.0
-              sample Sop[["vor_sopr_leg_oo_02u_06_A#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 1.0, decay: 8.0
+              sample Sop[["vor_sopr_leg_oo_02u_06_F#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 1.0, decay: 8.0
 
             end
           end
@@ -145,4 +145,4 @@ with_fx :distortion, mix: 0.1 do
       idx+=1
     end
   end
-end
+end,

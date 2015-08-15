@@ -107,7 +107,7 @@ end
 
 with_fx :distortion, mix: 0.1 do
   with_fx(:pitch_shift, window_size: 4.0) do
-    live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.0 do
+    live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.50 do
         with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
           3.times{sync :next}
           note = (ring :B1, :Cs1, :Ds1,
@@ -138,23 +138,3 @@ with_fx :distortion, mix: 0.1 do
     end
   end
 end
-
-
-live_loop :ending do
- sleep 1
-  #sleep sample_duration(Mountain[/cracklin/i, 0])
-end
-
-live_loop :drums do
-  2.times{sync :next}
-  sample Mountain[/subkick/i, 2..4].tick, amp: 0.0
-end
-
-live_loop(:drum_timing_loop, auto_cue: false){sync :next;density(2){ 16.times{ cue :drum_hit; sleep (4.0/16.0)}}}
-def ring_gen(n, fn)
-  (ring *((0..n).map{fn.()}))
-end
-
-drum_loop(:perc3,  (ring *%w{x - x - - -}), Ether[/click/i,2..4], amp: 0.0, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))
-drum_loop(:perc4,  (ring *%w{- - - - - -
-                             x - - - - -}), Ether[/click/i,4..5], amp: 0.0, rate: 1.0, start: ring_gen(32, lambda{rrand(0.0,0.1)}))

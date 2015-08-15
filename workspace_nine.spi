@@ -91,13 +91,10 @@ live_loop :melody do;
 
           with_fx(:distortion, mix: 0.8) do
             if note == degree(1,:Fs4,:major)
-              #vor_sopr_leg_oo_02u_01_C4.wav
- 
-              
               with_fx(:pan, pan: Math.sin(vt*13)/1.5) do
-              with_fx(:reverb, room: 0.5) do
+                with_fx(:reverb, room: 0.5) do
                   sample Sop[["vor_sopr_leg_oo_02u_04_F#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 0.2, cutoff: 70
-              end
+                end
               end
             end
           end
@@ -151,6 +148,13 @@ with_fx :distortion, mix: 0.1 do
 end
 
 live_loop :drums do
-  4.times{sync :next}
   sample (knit Mountain[/subkick/i, 4],3, Mountain[/subkick/i, 5],1).tick, amp: 1.0
+  1.times{sync :next}
+  1.times{sync :next}
+
+  sample Mountain[/stick/i, 1], amp: 1.0
+
+  1.times{sync :next}
+  1.times{sync :next}
+
 end

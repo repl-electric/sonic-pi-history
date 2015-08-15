@@ -92,7 +92,7 @@ live_loop :melody do;
           end
 
           if note == degree(1,:Fs4,:major)
-            sample Sop[/F#/]
+            sample Sop[/F#/, 0]
           end
 
           with_synth(:dark_ambience) do

@@ -134,7 +134,7 @@ with_fx :distortion, mix: 0.1 do
 
           1.times{sync :next}
 
-          i_bass(note, release: (ring 2.0, 8.0, 5.0).tick(:bass_release))
+          i_bass(note, release: (ring 2.0, 2.0, 2.0).tick(:bass_release))
 
           6.times{
             control fx_reverb, damp: (rrand 0.0,1.0)

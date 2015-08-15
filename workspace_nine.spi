@@ -79,7 +79,7 @@ live_loop :melody do;
 
           with_fx(f, phase: 0.5) do
             with_transpose((ring -12,-12).tick(:t)) do
-              i_nil note, release: 6.0
+              i_nil note, release: 4.0
             end
           end
 

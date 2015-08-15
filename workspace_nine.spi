@@ -79,7 +79,7 @@ live_loop :melody do;
 
           with_fx(f, phase: 0.5) do
             with_transpose((ring -12,-12).tick(:t)) do
-              i_nil deg_seq(*w%{Fs3 1 3}).tick, release: 1.0
+              i_nil(deg_seq(*w%{Fs3 1 3}).tick, release: 1.0)
             end
           end
 

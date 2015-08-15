@@ -113,7 +113,8 @@ live_loop :melody do;
 
 8.times{
   with_fx(:none, phase: 0.5) do
-    i_nil(deg_seq(*%w{Fs3 1313131 Fs2 7 Fs3 31314141415 Fs2 7 Fs4 1113}).tick, attack: 0.1, release: 0.5, amp: 32.0)
+
+      play (ring chord(:Fs3, "M") )
   end
 
       sleep bar/8.0

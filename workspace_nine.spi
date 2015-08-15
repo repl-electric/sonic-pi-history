@@ -124,7 +124,7 @@ live_loop :melody do;
   c = notes.tick.reverse
 
 
-  c.each{|n| play n, release: 2; sleep 0.055}
+  c.each{|n| play n, release: 2; sleep 0.1}
 
   end
 

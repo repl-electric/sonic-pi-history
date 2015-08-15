@@ -77,11 +77,6 @@ live_loop :melody do;
             :none
           end
 
-          with_fx(f, phase: 0.5) do
-            with_transpose((ring -12,-12).tick(:t)) do
-              i_nil(deg_seq(*%w{Fs4 1313}).tick, attack: 0.1, release: 0.2, amp: 8.0)
-            end
-          end
 
           if note == degree(5,:Fs4,:major)
             with_synth(:dark_ambience) do
@@ -110,6 +105,14 @@ live_loop :melody do;
 
         end
       end
+
+          with_fx(f, phase: 0.5) do
+            with_transpose((ring -12,-12).tick(:t)) do
+              i_nil(deg_seq(*%w{Fs4 1313}).tick, attack: 0.1, release: 0.2, amp: 8.0)
+            end
+          end
+
+
       sleep bar/2.0
     }
   end

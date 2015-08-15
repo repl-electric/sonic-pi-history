@@ -169,7 +169,7 @@ live_loop :movement do
   sample Mountain[/microperc/i, pick]
   sync :next
   with_fx((knit :none, 3, :echo, 1).tick) do
-    sample Mountain[/microperc/i, [pick]-[6,5]]
+    sample Mountain[/microperc/i, [6,5]-[pick]]
     sync :next
   end
 end

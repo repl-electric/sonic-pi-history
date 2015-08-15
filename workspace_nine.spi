@@ -162,9 +162,8 @@ end
 live_loop :movement do
   sample Mountain[/microperc/i, 6]
 
-  sync :next
-  
-  sample Mountain[/microperc/i, 8]
+  sync :next 
+  sample Mountain[/microperc/i, 7]
 
   sync :next
 

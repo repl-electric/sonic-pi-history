@@ -116,7 +116,7 @@ live_loop :melody do;
 #34 -5 4
       play (ring chord(:Fs3, "M"), 
                  chord(:Es3, "m"), 
-                 chord(:Ds3, "M"),
+                 chord(:Ds3, "m"),
                  chord(:D3, "m"),
                  chord(:Cs4, "M", invert: -2),
 

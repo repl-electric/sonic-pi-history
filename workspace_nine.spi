@@ -111,10 +111,10 @@ live_loop :melody do;
   end
 
 
-8.times{
+1.times{
   with_fx(:none, phase: 0.5) do
 
-      play (ring chord(:Fs3, "M")).tick
+      play (ring chord(:Fs3, "M")).tick, release: 
   end
 
       sleep bar/8.0

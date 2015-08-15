@@ -118,7 +118,7 @@ live_loop :melody do;
                  chord(:Es3, "m"), 
                  chord(:Ds3, "M"),
                  chord(:D3, "M"),
-                 chord(:Cs4, "M", invert: -1)
+                 chord(:Cs4, "M", invert: -2), 
 
 ).tick
   end

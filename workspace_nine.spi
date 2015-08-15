@@ -92,7 +92,10 @@ live_loop :melody do;
           end
 
           if note == degree(1,:Fs4,:major)
+            sample Sop[["vor_sopr_leg_oo_02u_04_F#4", "vor_sopr_leg_oo_02d_04_F#4"].choose, 0], amp: 2.0, decay: 2.0
             sample Sop[/vor_sopr_leg_oo_02u_04_F#4/, 0], amp: 2.0, decay: 2.0
+
+                       .wav
           end
 
           with_synth(:dark_ambience) do

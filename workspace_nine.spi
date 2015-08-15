@@ -160,7 +160,7 @@ live_loop :drums do
 end
 
 live_loop :movement do
-  sample Mountain[/microperc/i, 0]
+  sample Mountain[/microperc/i, 3]
 
   sync :next
   
@@ -169,6 +169,5 @@ live_loop :movement do
   sync :next
 
   sample Mountain[/microperc/i, 2]
-
 
 end

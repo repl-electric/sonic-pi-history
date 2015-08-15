@@ -116,7 +116,7 @@ live_loop :melody do;
     i_nil(deg_seq(*%w{Fs3 1313131313141414151515}).tick, attack: 0.1, release: 0.5, amp: 32.0)
   end
 
-      sleep bar/4.0
+      sleep bar/8.0
 }
 end
 

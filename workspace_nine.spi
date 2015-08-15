@@ -124,7 +124,7 @@ live_loop :melody do;
   c = notes.tick
 
 
-  c.each{|n| play n, release: 2; sleep 0.025}
+  c.each{|n| play n, release: 2; sleep 0.055}
 
   end
 

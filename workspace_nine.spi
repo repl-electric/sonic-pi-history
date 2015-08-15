@@ -113,7 +113,7 @@ live_loop :melody do;
 
 4.times{
   with_fx(:none, phase: 0.5) do
-    i_nil(deg_seq(*%w{Fs3 1314}).tick, attack: 0.1, release: 0.5, amp: 32.0)
+    i_nil(deg_seq(*%w{Fs3 1313131313}).tick, attack: 0.1, release: 0.5, amp: 32.0)
   end
 
       sleep bar/4.0

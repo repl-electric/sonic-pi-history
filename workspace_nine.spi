@@ -114,10 +114,17 @@ live_loop :melody do;
 1.times{
   with_fx(:none, phase: 0.5) do
 #34 -5 4
-      play (ring chord(:Fs3, "M"), 
+
+ notes = (ring chord(:Fs3, "M"), 
                  chord(:Es3, "m"), 
                  chord(:Ds3, "m"),
-                 chord(:Cs3, "M"),
+                 chord(:Cs3, "M"))
+
+
+  c = notes.tick
+
+
+  c.each{|n| play n; sleep 0.025}
 
 ).tick
   end

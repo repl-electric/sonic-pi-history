@@ -121,7 +121,7 @@ live_loop :melody do;
                  chord(:Cs3, "M"))
 
 
-  c = notes.tick
+  c = notes.tick,reverse
 
 
   c.each{|n| play n, release: 2; sleep 0.055}

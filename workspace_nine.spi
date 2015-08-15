@@ -68,6 +68,8 @@ live_loop :melody do;
                  degree(1, :Fs4, :major), 1)
       note = pattern.tick(:notes)
 
+      puts note_inspect(note, "Harmony")
+
       with_transpose(0) do
         with_synth(:hollow) do
 

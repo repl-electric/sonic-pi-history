@@ -120,7 +120,7 @@ with_fx :distortion, mix: 0.1 do
           3.times{sync :next}
           note = (ring :B1, :Cs1, :Ds1,
                   :B1, :Cs1, :Ds1,
-                  :B1, :Cs1, :Fs2).tick(:a)
+                  :B1, :Cs1, :Fs3).tick(:a)
 
           puts "BASS[#{note_info(note||0)}]"
 

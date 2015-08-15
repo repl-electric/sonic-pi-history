@@ -103,7 +103,7 @@ live_loop :melody do;
 
           with_synth(:dark_ambience) do
             with_transpose(-24) do
-#              play note, attack: 0.5, release: 1.0, decay: 2.0, reverb_time: 200,   room: 80, noise: 0, detune1: 12, cutoff: 120
+              #              play note, attack: 0.5, release: 1.0, decay: 2.0, reverb_time: 200,   room: 80, noise: 0, detune1: 12, cutoff: 120
             end
           end
 
@@ -121,8 +121,8 @@ with_fx :distortion, mix: 0.1 do
         with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
           3.times{sync :next}
           note = (ring :B1, :Cs2, :Ds2,
-                       :B1, :Cs2, :Ds2,
-                       :B1, :Cs2, :Fs2).tick(:a)
+                  :B1, :Cs2, :Ds2,
+                  :B1, :Cs2, :Fs2).tick(:a)
 
           puts "BASS[#{note_info(note||0)}]"
 
@@ -160,15 +160,16 @@ live_loop :drums do
 end
 
 live_loop :movement do
-    sample Mountain[/microperc/i, 6]
-    sync :next
-    sample Mountain[/microperc/i, 6]
-    sync :next
-    sample Mountain[/microperc/i, 6]
-    sync :next
-  with_fx((knit :none, 3, :echo, 1).tick) do
+  pick = [6,5].choose
 
-    sample Mountain[/microperc/i, 5]
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  with_fx((knit :none, 3, :echo, 1).tick) do
+    sample Mountain[/microperc/i, [pick]-[6,5]]
     sync :next
   end
 end

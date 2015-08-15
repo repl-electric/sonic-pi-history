@@ -78,9 +78,9 @@ live_loop :melody do;
           end
 
           with_fx(f, phase: 0.5) do
-with_transpose((ring -12,0).tick(:t)) do
-            i_nil note, release: 8.0
-end
+            with_transpose((ring -12,0).tick(:t)) do
+              i_nil note, release: 8.0
+            end
           end
 
           if note == degree(5,:Fs4,:major)

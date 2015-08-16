@@ -39,7 +39,12 @@ live_loop :melody do
   
       #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
-  i_deter( x[0][1], x[0][3]
+
+
+  start_notes = (knit x[0])
+  end_notes   = (knit x[1])
+
+  i_deter( start_notes.tick(:d), end_notes.tick(:e)
 
           )
 

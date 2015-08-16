@@ -44,7 +44,7 @@ define :i_deter do |note1, note2, *opts|
   defaults = {amp: 0.3}
   s = (opts[0]||{})[:synth] || :beep
 
-  werble = if opts[0][:werble] != nil
+  werble = if opts[:werble] != nil
     opts[0][:werble]
   else
     true

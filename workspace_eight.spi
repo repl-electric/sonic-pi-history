@@ -32,6 +32,8 @@ live_loop :melody do
                        5 3
                        4 6
                        5 7
+                       6 8
+
 
 
     }).tick

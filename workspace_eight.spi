@@ -1,10 +1,10 @@
 live_loop :play do
 #34 -5 4
 
- notes = (ring   chord(:Fs3, "M"),  #I
-                 chord(:Es3, "m"),  #vii
-                 chord(:Ds3, "m"),  #vi
-                 chord(:Cs3, "M"))  #V
+ notes = (ring   chord(:Fs3, "M"),  #I    1
+                 chord(:As3, "m"),  #vii  7
+                 chord(:Ds3, "m"),  #vi   6
+                 chord(:Cs3, "M"))  #V    5
 
   c = notes.tick.reverse
 

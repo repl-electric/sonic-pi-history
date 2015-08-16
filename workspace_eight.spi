@@ -73,10 +73,10 @@ live_loop :melody do
 
 
 
-  3.times{
+  2.times{
     i_deter( start_notes.tick(:d), end_notes.tick(:e))
     puts note_inspect(start_notes.look(:d))
-    sleep bar/3.0
+    sleep bar/2.0
   }
 
 end

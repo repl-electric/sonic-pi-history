@@ -18,7 +18,7 @@ live_loop :play do
 
 comment do
   c.each{|n| 
-        play n, release: r, amp: 2.0
+        play n, release: r, amp: 1.0
         sleep d;
         puts "P[#{note_info(n||0)}]"
   }
@@ -33,7 +33,6 @@ live_loop :melody do
                        4 6
                        5 7
                        6 8}).tick, release: 0.1, attack: 0.05
-
  sleep 1/2.0
 
 end

@@ -73,8 +73,15 @@ live_loop :melody do
   (knit 1,4,4,1).tick(:time).times { sync :quarter}
   #r = (knit 0.5, 7, 1.0,1).tick(:r)
 
-  i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
+  )
+
+   x = start_notes.tick(:d)
+
+  with_fx(x.is_a?(Array) ? :echo : :none ) do
+
+  i_deter( x, end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
    puts note_inspect(start_notes.look(:d), "I:")
+end
 
 end
 

@@ -82,7 +82,7 @@ live_loop :melody do
 #                      x3[0],1, s32[0], 2, x3[5][0..1], 1, s247[5], 1,  chord("As3", "m"),    2,  chord("B3", "M"), 1,
 )
 
-  end_notes   = (knit s34[3],1, chord("Fs2", "sus4"),1, chord("As4", 'm7+5'),1, s34[3],1, chord("Fs4", "sus4"),1, chord("As4", 'm7+5'),1,
+  end_notes   = (knit s34[3],1, chord("Fs2", "sus4"),1, chord("As2", 'm7+5'),1, s34[3],1, chord("Fs4", "sus4"),1, chord("As4", 'm7+5'),1,
                  s34[3],1, chord("Fs4", "7sus4"),1
 )
 

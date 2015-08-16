@@ -7,7 +7,7 @@ set_volume! 1.0
 load_snippets("~/.sonic-pi/snippets/")
 
 live :next, amp: 0.0 do
-  density(@polyrhythm.sort.first) do
+  density(2) do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.5
     sleep bar
   end
@@ -124,9 +124,10 @@ live_loop :melody do;
 
   d = (knit 0.1,1, 0.0,3).tick(:delay)
   r = (knit 0.5,1,1.0,3).tick(:r)
-  c.each{|n| play n, release: r, amp: 2.0; sleep d;
-
-          puts "P[#{note_info(n||0)}]"
+  c.each{|n| 
+        play n, release: r, amp: 2.0
+        sleep d;
+        puts "P[#{note_info(n||0)}]"
 
 }
   end

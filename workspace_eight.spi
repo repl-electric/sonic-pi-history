@@ -67,7 +67,7 @@ live_loop :melody do
   r = (knit 0.5, 16, 1.0,1).tick(:r)
                  
  _ = nil
-  start_notes = (ring :Fs3, :Cs3, :As3, chord(:As3, "m+5"))
+  start_notes = (ring :Fs3, :Cs3, :As3, chord(:As3, "m7+5"))
   end_notes =   (ring :Fs2, _, _, _)
  
   (knit 1,4,4,1).tick(:time).times { sync :quarter}

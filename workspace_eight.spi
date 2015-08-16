@@ -39,11 +39,17 @@ live_loop :melody do
   
       #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
-  puts x
-
   i_deter( x[0][1], x[0][3]
 
           )
 
+
+end
+
+
+live_loop :bass do
+  sync :next
+
+  i_bass((ring :As1, :B2, :Cs2).tick)
 
 end

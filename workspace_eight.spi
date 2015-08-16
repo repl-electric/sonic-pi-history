@@ -77,7 +77,7 @@ live_loop :melody do
 
    x = start_notes.tick(:d)
 puts z
-  with_fx((knit :none,3, :echo,1) do
+  with_fx((knit :none,3, :echo,1).tick(:e)) do
 
   i_deter( x, end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
    puts note_inspect(start_notes.look(:d), "I:")

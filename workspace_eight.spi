@@ -40,7 +40,6 @@ live_loop :melody do
       #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
 
-
   start_notes = (knit x[0],1)
   end_notes   = (knit x[1],1)
 
@@ -54,5 +53,5 @@ end
 
 live_loop :bass do
   4.times{sync :next}
-  i_bass((ring :B1, :Cs2, :Ds2).tick)
+  i_bass((ring :B1, :Cs2, :Ds2).tick, amp: 0.5)
 end

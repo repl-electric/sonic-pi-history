@@ -57,7 +57,7 @@ live_loop :melody do
 
   start_notes = (knit x3[0],1, s2[0], 2, x3[3][0..1], 1, s47[5], 1, chord("As3", "m+5"), 2, x3[5][1..-1], 1, 
                       x3[0],1, s2[0], 2, x3[5][0..1], 1, s47[5], 1, chord("As3", "m"),   2, x3[5][1..-1], 1)
-  end_notes   = (knit s4[3],1, x[5],1 )
+  end_notes   = (knit s4[3],1, x3[5],1 )
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e))
 end

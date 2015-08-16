@@ -123,10 +123,13 @@ live_loop :melody do;
   c = notes.tick.reverse
 
   d = (knit 0.1,1, 0.0,3).tick(:delay)
-  c.each{|n| play n, release: 1, amp: 2.0; sleep d}
-  end
+  c.each{|n| play n, release: 1, amp: 2.0; sleep d;
 
-      sleep bar
+          puts "P[#{note_info(n||0)}]"
+
+}
+  end
+  sleep bar
 }
 end
 

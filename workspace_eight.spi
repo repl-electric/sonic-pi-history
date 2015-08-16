@@ -58,6 +58,7 @@ end
 
 
 live_loop :kick do
-  4.times{sync :next}
   sample Mountain[/subkick/i, 4]
+
+  4.times{sync :next}
 end

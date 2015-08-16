@@ -94,7 +94,7 @@ live_loop :melody do
   end_notes   = (knit  x3[0][1],1, x3[0][2],1,  x3[3][1],1,
                        x2[5][1],1, x3[4][1],1,  x3[2][1],1)
 
-  (knit 1,4,4,1).tick(:time).times { sync :quarter}
+  (knit 1,7,4,1       ).tick(:time).times { sync :quarter}
   r = (knit 0.2, 7, 1.0,1).tick(:r)
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)

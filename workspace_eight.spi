@@ -79,7 +79,7 @@ live_loop :melody do
                       chord("As3",'m7+5', invert: (ring 1, 0).tick(:thing)), 2
 )
   end_notes   = (knit s34[3][0],1, chord("Fs2", "sus4")[0],1, chord("As2", 'm7+5')[0],1, s34[3][0],1, chord("Fs2", "sus4")[0],1, chord("As2", 'm7+5')[0],1,
-                 s34[3][0],1, chord("Fs2", "7sus4")[0],1
+                 s34[3][0],1, chord("Fs2", "7sus4")[0],1)
 
 
   start_notes = (knit x3[0][0],1,                       

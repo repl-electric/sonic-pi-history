@@ -113,3 +113,8 @@ live_loop :movement do
     sync :next
   end
 end
+
+live :missing_semi_colon, amp: 0.0 do
+    2.times{sync :start}
+    sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
+end

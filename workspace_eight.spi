@@ -26,7 +26,7 @@ live :indeterminism, amp: 0.0 do
 end
 
 
-live :next, amp: 0.0 do
+live :next, amp: 1.0 do
   density(2) do
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.5
     sleep bar

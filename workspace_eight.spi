@@ -34,8 +34,8 @@ live_loop :next, amp: 1.0 do
   end
 end
 
-1*7 _ 3*7 _
-34 -5 4
+#1*7 _ 3*7 _
+#34 -5 4
 
 live_loop :melody do
   sync :next

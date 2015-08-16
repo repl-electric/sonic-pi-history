@@ -1,5 +1,4 @@
 live_loop :play do
-1.times{
   with_fx(:none, phase: 0.5) do
 #34 -5 4
 
@@ -17,8 +16,6 @@ live_loop :play do
         sleep d;
         puts "P[#{note_info(n||0)}]"
 
-}
-  end
+  }
   sleep 1
-}
 end

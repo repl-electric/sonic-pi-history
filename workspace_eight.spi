@@ -90,8 +90,9 @@ live_loop :melody do
 
 
   (knit 1,3,2,1).tick(:time).times { sync :quarter}
+  r = (knit 0.2, 3, 0.8,1).tick(:r)
 
-  i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: 0.2, amp: 0.5)
+  i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
    puts note_inspect(start_notes.look(:d))
 
 end

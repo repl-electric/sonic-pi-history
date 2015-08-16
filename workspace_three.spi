@@ -58,8 +58,9 @@ live_loop :melody do
 
   
 
+
   i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: 0.1, amp: 3.5, 
-werble: true, synth: :dark_ambience)
+werble: true, synth: :mod_tri)
    puts note_inspect(start_notes.look(:d))
 
 end

@@ -52,7 +52,6 @@ live_loop :melody do
   s47 = (1..7).map{|d| chord(n[d], "7sus4")}.ring
   p5 = (1..7).map{|d| chord(n[d], :M7)}.ring
 
-  r = (knit 0.5, 7, 1.0).tick(:r)
 
   start_notes = (knit x[0],1, s2[0], 2, x[3][0..1], 1, s47[5], 1, chord("As3", "m+5"), 2, p5[4], 1, 
                       x[0],1, s2[0], 2, x[5][0..1], 1, s47[5], 1, chord("As3", "m"),   2, p5[4], 1)

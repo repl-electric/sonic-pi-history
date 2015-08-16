@@ -76,7 +76,7 @@ live_loop :melody do
   
 
    x = start_notes.tick(:d)
-z = x.responds_to?(:length) ? :echo : :none 
+z = x.respond_to?(:length) ? :echo : :none 
 puts z
   with_fx(z) do
 

@@ -28,7 +28,7 @@ end
 
 live :next, amp: 1.0 do
   density(2) do
-    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.1
+    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.3
     sleep bar
   end
 end

@@ -115,17 +115,15 @@ live_loop :melody do;
   with_fx(:none, phase: 0.5) do
 #34 -5 4
 
- notes = (ring chord(:Fs3, "M"), 
-                 chord(:Es3, "m"), 
-                 chord(:Ds3, "m"),
-                 chord(:Cs3, "M"))
-
+ notes = (ring   chord(:Fs3, "M"),  #I
+                 chord(:Es3, "m"),  #vii
+                 chord(:Ds3, "m"),  #vi
+                 chord(:Cs3, "M"))  #V
 
   c = notes.tick.reverse
 
   d = [0.1, 0.0, 0.01].choose
   c.each{|n| play n, release: 1, amp: 2.0; sleep d}
-
   end
 
       sleep bar

@@ -77,7 +77,7 @@ live_loop :melody do
                       chord(:Es3, "dim", invert: 1), 2, 
                       x3[5][0], 1, 
                       x3[3][0], 1,  
-                      x3[1], 1,  
+                      x3[1][0], 1,  
                       chord("As3",'m7+5', invert: (ring 1, 0).tick(:thing)), 2
 )
   end_notes   = (knit s34[3][0],1, 

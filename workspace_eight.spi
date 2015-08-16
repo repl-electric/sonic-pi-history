@@ -96,11 +96,6 @@ live_loop :melody do
 
 end
 
-live_loop :bass do
-  4.times{sync :next}
-  i_bass((ring :B1, :Cs2, :Ds2).tick, amp: 0.2)
-end
-
 
 live_loop :kick do
   sample Mountain[/subkick/i, 2], amp: 0.5

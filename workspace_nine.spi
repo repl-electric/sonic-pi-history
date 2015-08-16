@@ -122,7 +122,7 @@ live_loop :melody do;
 
   c = notes.tick.reverse
 
-  d = [0.1, 0.0, 0.01].choose
+  d = (knit 0.1,1, 0.0,3].choose
   c.each{|n| play n, release: 1, amp: 2.0; sleep d}
   end
 

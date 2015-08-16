@@ -42,7 +42,7 @@ live_loop :melody do
   s2 = (1..7).map{|d| chord(n[d], :sus2)}
   s4 = (1..7).map{|d| chord(n[d], :sus4)}
 
-  start_notes = (knit x[0],1, s2[0], x[3],  1)
+  start_notes = (knit x[0],1, s2[0], 1, x[3],  1)
   end_notes   = (knit s4[3],1)
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e))

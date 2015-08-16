@@ -40,9 +40,14 @@ define :i_bass do |note, *opts|
 end
 
 define :i_deter do |note1, note2, *opts|
+  opts = opts[0] || {}
   defaults = {amp: 0.3}
   s = (opts[0]||{})[:synth] || :beep
-  werble = (opts[0]||{})[:werble] || true
+
+
+  werble = if opts[0][:werble] || true
+
+
   defaults = defaults.merge(opts[0]||{})
   with_fx :distortion, amp: 0.8, mix: 0.3 do
     with_synth(s) do

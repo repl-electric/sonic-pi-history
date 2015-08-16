@@ -153,7 +153,7 @@ live :tracing_forward_back, amp: 1.0 do
     with_synth :hollow do
       2.times{sync :next}
       play n.tick(:f),  attack: 0.5, amp: 2.0
-#        with_synth(:pnoise){play n.look(:f), amp: 0.001}
+        with_synth(:pnoise){play n.look(:f), amp: 0.001}
     end
     1.times{sync :next}
     with_fx(:slicer, mix: 0.1){

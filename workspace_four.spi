@@ -47,7 +47,7 @@ define :i_deter do |note1, note2, *opts|
       with_fx (knit :echo,2, :reverb,2).tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
         active_synth = play note1, defaults
         sleep bar/4.0
-        #control active_synth, note: note2
+        control active_synth, note: note2
 
         2.times{
           sleep bar/4.0

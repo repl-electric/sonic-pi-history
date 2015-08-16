@@ -65,7 +65,7 @@ live_loop :melody do
 
   p5 = (1..7).map{|d| chord(n[d], :M7)}.ring
 
-  r = (knit 0.5, 16, 4.0,1).tick(:r)
+  r = (knit 0.1, 16, 4.0,1).tick(:r)
                  
   start_notes = (knit x3[0],1,                       
                       s32[0], 2, 
@@ -95,7 +95,7 @@ live_loop :melody do
                        x2[5][1],1, x3[4][1],1,  x3[2][1],1)
 
   (knit 1,4,4,1, 1,4,4,1, 1,4,4,1, 4,1,4,1).tick(:time).times { sync :quarter}
-  r = (knit 0.2, 7, 1.0,1).tick(:r)
+  r = (knit 0.1, 7, 1.0,1).tick(:r)
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
    puts note_inspect(start_notes.look(:d))

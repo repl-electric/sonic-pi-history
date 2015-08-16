@@ -1,5 +1,5 @@
 bar = 1.0
-use_bpm 120
+use_bpm 60
 
 live :indeterminism, amp: 1.0 do
   4.times{sync :next}

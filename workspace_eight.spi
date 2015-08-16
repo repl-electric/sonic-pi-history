@@ -43,8 +43,7 @@ live_loop :melody do
   s4 = (1..7).map{|d| chord(n[d], :sus4)}
   s27 = (1..7).map{|d| chord(n[d], "7sus2")}
   s47 = (1..7).map{|d| chord(n[d], "7sus4")}
-
-  p5 = (1..7).map{|d| chord(n[d], "V7")}
+  p5 = (1..7).map{|d| chord(n[d], "V")}
 
 
 

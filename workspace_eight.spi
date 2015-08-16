@@ -19,6 +19,6 @@ live_loop :play do
 
 }
   end
-  sleep bar
+  sleep 1
 }
 end

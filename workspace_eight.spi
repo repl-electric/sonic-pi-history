@@ -71,12 +71,12 @@ live_loop :melody do
                       chord("As3", "m+5"),  2,  
                       (ring chord("B3", "M"), chord("As3", "m+5"), chord("Cs3", "M"), chord("B3", "M") ).tick, 1,
 
-#                      x3[0],1,
-#                      chord(:Es3, "dim", invert: 1), 2, 
-#                      x3[5], 1, 
-#                      x3[3], 1,  
-#                      x3[1], 1,  
-#                      chord("As3",'m7+5', invert: (ring 1, 0).tick(:thing)), 2
+                      x3[0],1,
+                      chord(:Es3, "dim", invert: 1), 2, 
+                      x3[5], 1, 
+                      x3[3], 1,  
+                      x3[1], 1,  
+                      chord("As3",'m7+5', invert: (ring 1, 0).tick(:thing)), 2
 #4 34 -5 4
 #                      x3[0],1, s32[0], 2, x3[5][0..1], 1, s247[5], 1,  chord("As3", "m"),    2,  chord("B3", "M"), 1,
 )

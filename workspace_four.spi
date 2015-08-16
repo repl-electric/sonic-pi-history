@@ -45,7 +45,7 @@ define :i_deter do |note1, note2, *opts|
   s = (opts[0]||{})[:synth] || :beep
 
   werble = if opts[:werble] != nil
-    opts[0][:werble]
+    opts[:werble]
   else
     true
   end

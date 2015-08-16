@@ -48,6 +48,6 @@ end
 
 
 live_loop :bass do
-  2.times{sync :next}
+  4.times{sync :next}
   i_bass((ring :As1, :B2, :Cs2).tick)
 end

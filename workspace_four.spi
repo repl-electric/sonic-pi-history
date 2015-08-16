@@ -41,7 +41,7 @@ end
 
 define :i_deter do |note1, note2, *opts|
   defaults = {amp: 0.3}
-  s = (opts[:synth]}||{}) || :beep
+  s = (opts[:synth]||{}) || :beep
   defaults = defaults.merge(opts[0]||{})
   with_fx :distortion, amp: 0.8, mix: 0.3 do
     with_synth s do

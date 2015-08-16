@@ -1,5 +1,4 @@
 live_loop :play do
-  with_fx(:none, phase: 0.5) do
 #34 -5 4
 
  notes = (ring   chord(:Fs3, "M"),  #I
@@ -16,6 +15,5 @@ live_loop :play do
         sleep d;
         puts "P[#{note_info(n||0)}]"
 
-  }
   sleep 1
 end

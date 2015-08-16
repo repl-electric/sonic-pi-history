@@ -94,7 +94,7 @@ live_loop :melody do
                  s34[3][0],1, chord("Fs3", "7sus4")[0],1
 )
 
-  i_deter( start_notes.tick(:d), end_notes.tick(:e), release: r, attack: 0.05)
+  i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05)
    puts note_inspect(start_notes.look(:d))
 
 end

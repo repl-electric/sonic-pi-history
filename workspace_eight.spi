@@ -1,45 +1,27 @@
-use_sample_bpm :loop_amen
+live_loop :play do
 
-live_loop :drums do ||
 
-with_fx(:bitcrusher, 
-    sample_rate: 30000,
-    bits: (ring 6,7,8,9,10,11).tick(:crush)) do
-    sample :loop_amen, rate: [1,1,1,-1].choose
-    sample :loop_amen, rate: 1 if dice(6) > 2
+1.times{
+  with_fx(:none, phase: 0.5) do
+#34 -5 4
 
-    sleep sample_duration(:loop_amen) 
+ notes = (ring   chord(:Fs3, "M"),  #I
+                 chord(:Es3, "m"),  #vii
+                 chord(:Ds3, "m"),  #vi
+                 chord(:Cs3, "M"))  #V
+
+  c = notes.tick.reverse
+
+  d = (knit 0.1,1, 0.0,3).tick(:delay)
+  r = (knit 0.5,1,1.0,3).tick(:r)
+  c.each{|n| 
+        play n, release: r, amp: 2.0
+        sleep d;
+        puts "P[#{note_info(n||0)}]"
+
+}
   end
+  sleep bar
+}
 end
-
-live_loop :kick do
-  sync :drums
-  sample :drum_cymbal_pedal
-  sample :drum_bass_soft
-end
-
-live_loop :hats do
-  sync :drums
-  8.times{ |n|
-    sample :drum_cymbal_pedal
-  
-    if n == 4
-      with_fx(:reverb, mix: 0.3, room: 0.5) do
-      with_fx(:slicer, probability: 0.5, phase: 0.025) do
-        sample :drum_cymbal_soft
-      end
-      end
-    end
-
-    sleep sample_duration(:loop_amen)/4.0
-  }
-end
-
-live_loop :loop do |m_idx|
-  sync :drums
-  case m_idx % 4
-   when 0
-  sample :loop_industrial
-  end
-  m_idx+=1
 end

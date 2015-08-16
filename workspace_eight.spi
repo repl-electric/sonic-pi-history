@@ -28,6 +28,7 @@ end
 end
 
 live_loop :melody do
- sleep bar
+
+ sleep 1
 
 end

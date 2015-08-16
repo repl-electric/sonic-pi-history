@@ -84,7 +84,7 @@ live_loop :melody do
                       s32[0][0], 2, 
                       x3[3][0..1], 1, 
                       chord(:Cs3, 'M', invert: 2)[0], 1,
-                      chord("As3", "m+5"),  2,  
+                      chord("As3", "m+5")[0],  2,  
                       chord("B3", "M"),1)
 
 

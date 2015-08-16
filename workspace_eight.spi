@@ -103,7 +103,7 @@ live :missing_semi_colon, amp: 1.0 do
     2.times{sync :start}
     sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
 end
-
+_=nil
 
 with_fx :distortion, mix: 0.1 do
 with_fx(:pitch_shift, window_size: 4.0) do

@@ -36,20 +36,16 @@ end
 
 live_loop :melody do
   sync :next
-  
+  n = {1 :Fs 2 :Gs 3 :As 4 :B 5 :Cs 6 :Ds 7 :Es}
       #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
+  suses = (1..7).map{|d| chord(n[d]) }
 
   start_notes = (knit x[0],1)
   end_notes   = (knit x[1],1)
 
-  i_deter( start_notes.tick(:d), end_notes.tick(:e)
-
-          )
-
-
+  i_deter( start_notes.tick(:d), end_notes.tick(:e))
 end
-
 
 live_loop :bass do
   4.times{sync :next}

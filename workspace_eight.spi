@@ -66,7 +66,7 @@ live_loop :melody do
                  
   start_notes = (knit chord(:Fs3, "M"),1, 
                       chord(:Fs3, "sus2"), 2, 
-                      x3[3][0..1], 1, 
+                      chord(:As3, "m")[0..1], 1, 
                       chord(:Cs3, 'M', invert: 2), 1,
                       chord("As3", "m+5"),  2,  
                       (ring chord("B3", "M"), chord("As3", "m+5"), chord("Cs3", "M"), chord("B3", "M") ).tick, 1,

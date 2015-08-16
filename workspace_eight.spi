@@ -37,7 +37,7 @@ end
 live_loop :melody do
   sync :next
   
-  x = (1..7).map{|d| chord_degree(c, :Fs3, :major)}
+  x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
 
 
   i_deter(deg_seq(%w{Fs3 134}).tick,

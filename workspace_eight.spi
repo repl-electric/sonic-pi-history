@@ -59,9 +59,10 @@ live_loop :melody do
                       x3[0],1, s2[0], 2, x3[5][0..1], 1, s47[5], 1, chord("As3", "m"),   2, x2[5], 1)
   end_notes   = (knit s4[3],1, x3[5],1 )
 
-  puts note_inspect(start_notes.look)
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e))
+  puts note_inspect(start_notes.look)
+
 end
 
 live_loop :bass do

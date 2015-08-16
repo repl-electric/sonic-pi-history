@@ -45,7 +45,7 @@ live_loop :melody do
   s47 = (1..7).map{|d| chord(n[d], "7sus4")}
   p5 = (1..7).map{|d| chord(n[d], :M7)}
 
-  start_notes = (knit x[0],1, s2[0], 2, x[3][0..1], 1, s47[5], 1, p5[0], 1)
+  start_notes = (knit x[0],1, s2[0], 2, x[3][0..1], 1, s47[5], 1, s[5], 1)
   end_notes   = (knit s4[3],1)
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e))

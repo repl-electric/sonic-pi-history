@@ -47,8 +47,12 @@ live_loop :melody do
       #I ii iii IV V vi  viio
   x2 = (1..7).map{|d| chord_degree(d, :Fs2, :major)}.ring
   x3 = (1..7).map{|d| chord_degree(d, :Fs3, :major)}.ring
-  s2 = (1..7).map{|d| chord(n[d], :sus2)}.ring
-  s4 = (1..7).map{|d| chord(n[d], :sus4)}.ring
+
+  s22 = (1..7).map{|d| chord(n2[d], :sus2)}.ring
+  s24 = (1..7).map{|d| chord(n2[d], :sus4)}.ring
+
+  s32 = (1..7).map{|d| chord(n[d], :sus2)}.ring
+  s34 = (1..7).map{|d| chord(n[d], :sus4)}.ring
   s327 = (1..7).map{|d| chord(n[d], "7sus2")}.ring
   s347 = (1..7).map{|d| chord(n[d], "7sus4")}.ring
 

@@ -132,7 +132,7 @@ live_loop :melody do;
 }
 end
 
-set_volume! 5.0
+set_volume! 1.0
 
 with_fx :distortion, mix: 0.1 do
   with_fx(:pitch_shift, window_size: 4.0) do

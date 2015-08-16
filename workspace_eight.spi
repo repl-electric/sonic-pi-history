@@ -72,7 +72,6 @@ live_loop :melody do
                       (ring chord("B3", "M"), chord("As3", "m+5"), chord("Cs3", "M"), chord("B3", "M") ).tick, 1
 
 #4 34 -5 4
-
 #                      x3[0],1, s32[0], 2, x3[5][0..1], 1, s247[5], 1,  chord("As3", "m"),    2,  chord("B3", "M"), 1,
 )
 

@@ -5,7 +5,7 @@ live_loop :play do
 
                  chord(:As3, "m"),2,  #vii  3
                  chord(:B3,  "M"),2,  #vii  3
-                 chord(:Cs2, "M", invert: 3),2,  #vi   5
+                 chord(:Cs3, "M"),2,  #vi   5
                  chord(:B3,  "M"), 2)  #V    5
 
   c = notes.tick.reverse

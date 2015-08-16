@@ -127,7 +127,9 @@ end
 
     note = notes.tick(:a)
 
-    note = (ring :B1, :Cs2, :Ds2).tick(:bass)
+    note = (ring :B1, :Cs2, :Ds2,
+                  :B1, :Cs2, :Ds2,
+                  :B1, :Cs2, :Fs2).tick(:bass)
 
 
     puts "BASS[#{note_info(note||0)}]"

@@ -2,9 +2,9 @@ live_loop :play do
 #34 -5 4
 
  notes = (knit   chord(:Fs3, "M"),2,  #I    1
-                 chord(:As3, "m"),  #vii  7
-                 chord(:Cs3, "M"),  #vi   5
-                 chord(:Cs3, "M"))  #V    5
+                 chord(:As3, "m"),2,  #vii  7
+                 chord(:Cs3, "M"),2,  #vi   5
+                 chord(:Cs3, "M")2,)  #V    5
 
   c = notes.tick.reverse
 

@@ -37,9 +37,10 @@ end
 live_loop :melody do
   sync :next
   
+      #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
 
-  i_deter( x[0][1], x[0][4]
+  i_deter( x[0][1], x[0][3]
 
           )
 

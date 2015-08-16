@@ -32,7 +32,7 @@ live_loop :melody do
                        5 3
                        4 6
                        5 7
-                       6 8}).tick, release: 0.1, attack: 0.01
+                       6 8}).tick, release: 0.1, attack: 0.05
 
  sleep 1/2.0
 

@@ -10,11 +10,16 @@ live_loop :play do
 
   d = (knit 0.1,1, 0.0,3).tick(:delay)
   r = (knit 0.5,1,1.0,3).tick(:r)
+
+play n
+
+comment do
   c.each{|n| 
         play n, release: r, amp: 2.0
         sleep d;
         puts "P[#{note_info(n||0)}]"
   }
+end
 
   sleep 1
 end

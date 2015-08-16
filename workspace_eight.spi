@@ -27,6 +27,6 @@ end
   sleep 1
 end
 
-live_loop : do
+live_loop :melody do
 
 end

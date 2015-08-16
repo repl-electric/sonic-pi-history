@@ -11,7 +11,7 @@ live_loop :play do
   d = (knit 0.1,1, 0.0,3).tick(:delay)
   r = (knit 0.5,1,1.0,3).tick(:r)
 
-play c
+  play c, amp: 2.0
 
 comment do
   c.each{|n| 

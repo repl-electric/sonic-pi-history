@@ -65,3 +65,18 @@ live_loop :kick do
   sample Mountain[/subkick/i, 2], amp: 0.5
   4.times{sync :next}
 end
+
+live_loop :movement do
+  pick = [6,5].choose
+
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  with_fx((knit :none, 3, :echo, 1).tick) do
+    sample Mountain[/microperc/i, [6,5]-[pick]]
+    sync :next
+  end
+end

@@ -1,6 +1,4 @@
 live_loop :play do
-
-
 1.times{
   with_fx(:none, phase: 0.5) do
 #34 -5 4
@@ -23,5 +21,4 @@ live_loop :play do
   end
   sleep bar
 }
-end
 end

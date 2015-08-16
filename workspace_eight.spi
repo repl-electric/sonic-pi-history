@@ -31,7 +31,7 @@ live_loop :next, amp: 1.0 do
   2.times{
     cue :half;     cue :quarter;
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.3
-    sleep bar/4.0;  cue :quarter
+    sleep bar/4.0; cue :quarter
     sleep bar/4.0; cue :quarter
     cue :half;  :quarter
     sleep bar/4.0; cue :quarter
@@ -86,12 +86,7 @@ live_loop :melody do
                  s34[3][0],1, chord("Fs2", "7sus4")[0],1)
 
 
-  start_notes = (knit x3[0][0],1,                       
-                      s32[0][0], 2, 
-                      x3[3][0..1], 1, 
-                      chord(:Cs3, 'M', invert: 2)[0], 1,
-                      chord("As3", "m+5")[0],  2,  
-                      chord("B3", "M")[0],1)
+  start_notes = (knit x3[0][0],1)
 
 
   end_notes   = (knit s34[3][0],1, chord("Fs3", "sus4")[0],1, chord("As3", 'm7+5')[0],1, s34[3][0],1, chord("Fs3", "sus4")[0],1, chord("As3", 'm7+5')[0],1,

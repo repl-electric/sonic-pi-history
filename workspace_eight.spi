@@ -75,9 +75,8 @@ live_loop :melody do
                       chord(:Es3, "dim", invert: 1), 2, 
                       x3[5], 1, 
                       x3[3], 1,  
-                      x3[1],  2,  
-                      chord("As3",'m7+5'), 1
-
+                      x3[1], 1,  
+                      chord("As3",'m7+5'), 2
 #4 34 -5 4
 #                      x3[0],1, s32[0], 2, x3[5][0..1], 1, s247[5], 1,  chord("As3", "m"),    2,  chord("B3", "M"), 1,
 )

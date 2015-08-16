@@ -36,7 +36,7 @@ end
 
 live_loop :melody do
   sync :next
-  i_deter(deg_seq(%w{Fs3 135}).tick,
+  i_deter(deg_seq(%w{Fs3 134}).tick,
           deg_seq(%w{Fs3 34}).stretch(4).tick)
 
 

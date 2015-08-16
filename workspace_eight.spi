@@ -1,8 +1,8 @@
 live_loop :play do
 #34 -5 4
 
- notes = (knit   chord(:Fs3, "M"),4,  #I    1
-                 chord(:As3, "m"),2,  #vii  7
+ notes = (knit   chord(:Fs4, "M"),4,  #I    1
+                 chord(:As4, "m"),2,  #vii  3
                  chord(:Cs3, "M"),2,  #vi   5
                  chord(:Cs3, "M"),2)  #V    5
 

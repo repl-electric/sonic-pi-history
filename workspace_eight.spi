@@ -29,9 +29,13 @@ end
 
 live_loop :next, amp: 1.0 do
   2.times{
-    cue :half
+    cue :half;     cue :quarter;
     sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.3
-    sleep bar/2.0
+    sleep bar/4.0;  cue :quarter
+    sleep bar/4.0; cue :quarter
+    cue :half;  :quarter
+    sleep bar/4.0; cue :quarter
+    sleep bar/4.0
   }
 end
 

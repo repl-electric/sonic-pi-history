@@ -38,12 +38,12 @@ live_loop :melody do
   sync :next
   n = {1 => :Fs3, 2 => :Gs3, 3 => :As3, 4  => :B3, 5 => :Cs3, 6 => :Ds3, 7 => :Es3}
       #I ii iii IV V vi  viio
-  x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
-  s2 = (1..7).map{|d| chord(n[d], :sus2)}
-  s4 = (1..7).map{|d| chord(n[d], :sus4)}
-  s27 = (1..7).map{|d| chord(n[d], "7sus2")}
-  s47 = (1..7).map{|d| chord(n[d], "7sus4")}
-  p5 = (1..7).map{|d| chord(n[d], :M7)}
+  x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}.ring
+  s2 = (1..7).map{|d| chord(n[d], :sus2)}.ring
+  s4 = (1..7).map{|d| chord(n[d], :sus4)}.ring
+  s27 = (1..7).map{|d| chord(n[d], "7sus2")}.ring
+  s47 = (1..7).map{|d| chord(n[d], "7sus4")}.ring
+  p5 = (1..7).map{|d| chord(n[d], :M7)}.ring
 
   start_notes = (knit x[0],1, s2[0], 2, x[3][0..1], 1, s47[5], 1, chord("As3", "m+5"), 2)
   end_notes   = (knit s4[3],1)

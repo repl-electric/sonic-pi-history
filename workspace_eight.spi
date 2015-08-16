@@ -39,7 +39,9 @@ live_loop :melody do
   n = {1 => :Fs3, 2 => :Gs3, 3 => :As3, 4  => :B3, 5 => :Cs3, 6 => :Ds3, 7 => :Es3}
       #I ii iii IV V vi  viio
   x = (1..7).map{|d| chord_degree(d, :Fs3, :major)}
-  s = (1..7).map{|d| chord(n[d], :sus2)}
+  s2 = (1..7).map{|d| chord(n[d], :sus2)}
+  s4 = (1..7).map{|d| chord(n[d], :sus4)}
+
 
   start_notes = (knit x[0],1)
   end_notes   = (knit s[3],1)

@@ -28,7 +28,9 @@ end
 end
 
 live_loop :melody do
+  play :F
 
- sleep 1
+
+ sleep 1/2.0
 
 end

@@ -28,7 +28,7 @@ end
 end
 
 live_loop :melody do
-  play :Fs3
+  play deg_seq(*%w{Fs3 5 2}) 
 
 
  sleep 1/2.0

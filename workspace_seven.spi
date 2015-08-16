@@ -9,12 +9,16 @@ set_volume! 0.2
 @polyrhythm = [2,3]
 load_snippets("~/.sonic-pi/snippets/")
 
-live :next, amp: 0.5 do
-  density(@polyrhythm.sort.first) do
-    cue :half
-    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: -1.0, amp: 0.4
-    sleep bar
-  end
+live_loop :next, amp: 1.0 do
+  2.times{
+    cue :half;     cue :quarter;
+    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.3
+    sleep bar/4.0; cue :quarter
+    sleep bar/4.0; cue :quarter
+    cue :half;  :quarter
+    sleep bar/4.0; cue :quarter
+    sleep bar/4.0
+  }
 end
 
 live :begin, amp: 0.0 do

@@ -1,6 +1,6 @@
 ["experiments", "drums"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-b1 = MountainLoop[/beatsbear/i,0]
+b1 = MountainLoop[/beatbeats/i,0]
 b2 = MountainLoop[/bearbeats/i,1]
 
 sample b2

@@ -14,7 +14,7 @@ end
 live_loop :looper2 do
   sync :hit
   sleep 1
-  with_fx(:bitcrusher, amp: 0.4, bits: (ring 6,7,8,9).tick(:messy)) do
+  with_fx(:bitcrusher, amp: 0.3, bits: (ring 6,7,8,9).tick(:messy)) do
     sample b2
   end
 end

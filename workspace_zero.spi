@@ -39,8 +39,9 @@ end
 
 live_loop :waves do
   sync :hit
-  sample Mountain[/cracklin/i,0], rate: 0.9
-  sleep sample_duration(Mountain[/cracklin/i,0])
+  s = Mountain[/cracklin/i,0]
+  sample s, rate: 0.9
+  sleep sample_duration(s)
 end
 
 live_loop :perc do

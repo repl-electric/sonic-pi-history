@@ -98,7 +98,7 @@ live_loop :melody do;
 
           with_synth(:dark_ambience) do
             with_transpose(-24) do
-              #              play note, attack: 0.5, release: 1.0, decay: 2.0, reverb_time: 200,   room: 80, noise: 0, detune1: 12, cutoff: 120
+              play note, attack: 0.5, release: 1.0, decay: 2.0, reverb_time: 200,   room: 80, noise: 0, detune1: 12, cutoff: 120
             end
           end
 
@@ -124,7 +124,8 @@ with_fx :distortion, mix: 0.1 do
     live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do
         with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
           3.times{sync :next}
-          note = (ring :B1, :Cs2, :Ds2,
+          note = (ring 
+                  :B1, :Cs2, :Ds2,
                   :B1, :Cs2, :Ds2,
                   :B1, :Cs2, :Fs2).tick(:a)
 

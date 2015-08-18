@@ -9,7 +9,9 @@ set_volume! 0.5
 live_loop :looper do
   with_fx(:level, amp: 0.5) do
   cue :hit
-  sample b1
+    with_fx(:slicer, probablity: 0.25) do
+      sample b1
+    end
   sleep 1
 end
 end

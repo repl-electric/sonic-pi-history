@@ -116,7 +116,7 @@ live_loop :melody do;
 #34 -5 4
 
   sleep bar
-}
+
 end
 
 set_volume! 1.0

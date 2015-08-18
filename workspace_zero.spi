@@ -55,7 +55,7 @@ end
 live_loop :waves do
   sync :hit
   s = Mountain[/cracklin/i,0]
-  sample s, rate: 0.3, amp: 0.1
+  sample s, rate: 0.5, amp: 0.1
   sleep sample_duration(s)
 end
 

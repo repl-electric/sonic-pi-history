@@ -22,13 +22,15 @@ end
 
 live_loop :kickers do
   sync :hit
-  with_fx((knit :none, 3, :echo, 1).tick(:fx), decay: 2.0) do
+  with_fx(:level, amp: 0.0) do
+ with_fx((knit :none, 3, :echo, 1).tick(:fx), decay: 2.0) do
     s = (ring  Mountain[/subkick/, 1], Mountain[/subkick/, 4]).tick(:samplers)
     4.times{
       sample s, amp: 1.0
       sleep sample_duration(b1)/4.0
     }
   end
+end
 end
 
 live_loop :perc do

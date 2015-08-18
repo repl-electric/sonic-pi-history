@@ -18,8 +18,9 @@ end
 
 live_loop :kickers do
   sync :looper
+  s = (ring  Mountain[/subkick/, 1], Mountain[/subkick/, 4]).tick(:samplers)
   4.times{
-    sample Mountain[/subkick/, 1], amp: 5.0
+    sample s, amp: 1.0
     sleep sample_duration(b1)/4.0
   }
 end

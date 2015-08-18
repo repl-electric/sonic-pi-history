@@ -22,7 +22,7 @@ live_loop :looper2 do
     r = [-1,1].choose
     if r == -1
         with_fx(:slicer, probablity: 0.5) do
-          sample b2, amp: 0.8
+          sample b2, amp: 0.4
         end
     end
     sample b2, rate: r 

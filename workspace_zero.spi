@@ -4,6 +4,7 @@ b1 = MountainLoop[/bear/i,0]
 b2 = MountainLoop[/bear/i,1]
 
 use_sample_bpm b1
+set_volume! 0.8
 
 live_loop :looper do
   cue :hit

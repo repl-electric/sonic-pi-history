@@ -6,18 +6,19 @@ b2 = MountainLoop[/bear/i,1]
 use_sample_bpm b1
 
 live_loop :looper do
+  cue :hit
   sample b1
   sleep 1
 end
 
 live_loop :looper2 do
-  sync :looper
+  sync :hit
   sleep 1
   sample b2
 end
 
 live_loop :kickers do
-  sync :looper
+  sync :hit
   s = (ring  Mountain[/subkick/, 1], Mountain[/subkick/, 4]).tick(:samplers)
   4.times{
     sample s, amp: 1.0

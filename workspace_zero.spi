@@ -7,7 +7,7 @@ use_sample_bpm b1
 set_volume! 0.5
 
 live_loop :looper do
-  with_fx(:level, amp: 0.5) do
+  with_fx(:level, amp: 0.0) do
   cue :hit
     with_fx(:slicer, probablity: 0.25) do
       sample b1

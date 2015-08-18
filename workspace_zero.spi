@@ -18,8 +18,6 @@ live_loop :looper2 do
   sync :hit
   with_fx(:level, amp: 0.5) do
   sleep 1
-    r = [1,1].choose
-    if r == -1
       with_fx(:slicer, probablity: 0.5) do
         sample b2, amp: 0.4
       end

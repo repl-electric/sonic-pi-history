@@ -7,7 +7,7 @@ use_sample_bpm b1
 set_volume! 0.8
 
 live_loop :looper do
-  with_fx(:level, amp: 0.0) do
+  with_fx(:level, amp: 0.5) do
   cue :hit
   sample b1
   sleep 1

@@ -44,7 +44,9 @@ live_loop :kickers do
 end
 
 live_loop :hats do
-  sample Ether[/hat/i,14], amp: 1.0
+  with_fx(:reverb) do
+    sample Ether[/hat/i,14], amp: 0.4
+  end
   sleep 0.25/2.0/2.0
 end
 

@@ -19,7 +19,7 @@ end
 live_loop :kickers do
   sync :looper
   4.times{
-    sample Mountain[/subkick/, 3..5].tick, amp: 2.0
+    sample Mountain[/subkick/, 3], amp: 2.0
     sleep sample_duration(b1)/4.0
   }
 end

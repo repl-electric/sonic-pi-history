@@ -33,7 +33,7 @@ end
 live_loop :kickers do
   with_fx(:level, amp: 1.0) do
     with_fx((knit :none, 3, :echo, 1).tick(:fx), phase: 0.25, decay: 2.0) do
-        sample (ring Ether[/kick/i,0], Ether[/noise/i,3]).tick, amp: 0.3
+        sample (ring Ether[/kick/i,0], Ether[/noise/i,14]).tick, amp: 0.3
         sleep 1/2.0/2.0/2.0
     end
   end

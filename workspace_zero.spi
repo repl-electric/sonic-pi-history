@@ -3,7 +3,6 @@
 b1 = MountainLoop[/bear/i,0]
 b2 = MountainLoop[/bear/i,1]
 
-
 use_sample_bpm b1
 
 live_loop :looper do
@@ -13,6 +12,9 @@ end
 
 live_loop :looper2 do
   sync :looper
+  
+  sample Mountain[/subkick/, 4], amp: 1.0
+
   sleep 1
   sample b2
 end

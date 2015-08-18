@@ -20,11 +20,11 @@ live_loop :looper2 do
   sleep 1
     r = [1,1].choose
     if r == -1
-        with_fx(:slicer, probablity: 0.5) do
-          sample b2, amp: 0.4
-        end
+      with_fx(:slicer, probablity: 0.5) do
+        sample b2, amp: 0.4
+      end
     end
-    sample b2, rate: r 
+    sample b2, rate: r
 end
 end
 

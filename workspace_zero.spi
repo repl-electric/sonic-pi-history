@@ -33,8 +33,7 @@ end
 live_loop :kickers do
   with_fx(:level, amp: 1.0) do
     with_fx((knit :none, 3, :echo, 1).tick(:fx), phase: 0.25, decay: 2.0) do
-      s = (ring  Mountain[/subkick/i, 1], Mountain[/subkick/i, 4]).tick(:samplers)
-        sample s, amp: 0.3
+        sample Ether[/kick/i,0], amp: 0.3
         sleep 1/2.0/2.0/2.0
     end
   end

@@ -44,8 +44,8 @@ live_loop :kickers do
 end
 
 live_loop :hats do
-    with_fx(:reverb, room: 0.8, mix: 0.3) do
-    with_fx(:slicer, probablity: 0.5) do     
+    with_fx(:echo, room: 0.8, mix: 0.3) do
+    with_fx(:slicer, phase: 0.025, probablity: 0.5) do     
       sample Ether[/hat/i, 14..18].tick, amp: 0.01
     end
   end

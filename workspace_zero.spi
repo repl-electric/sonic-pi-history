@@ -37,10 +37,6 @@ live_loop :kickers do
 end
 end
 
-live_loop :waves do
-  sleep sample
-
-end
 
 live_loop :perc do
   sync :hit

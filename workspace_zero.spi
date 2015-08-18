@@ -34,7 +34,7 @@ live_loop :kickers do
               Ether[/kick/i,1], Ether[/noise/i,1],
               Ether[/kick/i,0], Ether[/noise/i,14],
               Ether[/kick/i,1], Ether[/noise/i,1]
-).tick, amp: 0.3
+).tick, amp: 0.2
         sleep 1/2.0/2.0/2.0
     end
   end

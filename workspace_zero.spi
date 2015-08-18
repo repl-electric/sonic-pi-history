@@ -17,7 +17,6 @@ end
 live_loop :looper2 do
   sync :hit
   with_fx(:level, amp: 0.0) do
-
   sleep 1
   with_fx(:bitcrusher, amp: 0.3, bits: (ring 6,7,8,9).tick(:messy)) do
     sample b2
@@ -38,10 +37,15 @@ live_loop :kickers do
 end
 end
 
+live_loop :waves do
+  sleep sample
+
+end
+
 live_loop :perc do
   sync :hit
   16.times{
-    sample Ether[/click/i, 0..4].tick(:clickers), amp: 1.2
+    sample Ether[/click/i, 0..4].tick(:clickers), amp: 0.5
     sleep sample_duration(b1)/16.0
   }
 end

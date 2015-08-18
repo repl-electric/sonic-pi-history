@@ -9,5 +9,9 @@ use_sample_bpm b1
 live_loop :looper do
   sample b1
   sleep 2
+end
 
+live_loop :looper2 do
+  sleep 2
+  sample b2
 end

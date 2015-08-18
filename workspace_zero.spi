@@ -51,7 +51,7 @@ live_loop :hats do
     with_fx(:slicer, phase: 0.025, probablity: 0.5) do     
       sample Ether[/click/i, 14..18].tick, amp: 0.01
     end
-    sample open if open
+    sample open, amp: 0.2 if open
   end
   sleep 0.25/2.0/2.0/2.0
 end

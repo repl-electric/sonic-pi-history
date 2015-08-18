@@ -18,7 +18,6 @@ live_loop :looper2 do
   sync :hit
   with_fx(:level, amp: 0.5) do
   sleep 1
-  with_fx(:bitcrusher, amp: 0.2, bits: (ring 6,7,8,9).tick(:messy)) do
     r = [1,1].choose
     if r == -1
         with_fx(:slicer, probablity: 0.5) do
@@ -26,7 +25,6 @@ live_loop :looper2 do
         end
     end
     sample b2, rate: r 
-  end
 end
 end
 

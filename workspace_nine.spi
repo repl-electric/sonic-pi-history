@@ -111,8 +111,6 @@ live_loop :melody do;
   end
 
 
-1.times{
-  with_fx(:none, phase: 0.5) do
 #34 -5 4
 
   sleep bar

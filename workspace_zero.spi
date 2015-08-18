@@ -13,6 +13,6 @@ end
 live_loop :looper2 do
   sync :looper
   sleep 1
-  sample Mountain[/subkick/, 3..5].tick, amp: 1.0
+  sample Mountain[/subkick/, 3..5].tick, amp: 2.0
   sample b2
 end

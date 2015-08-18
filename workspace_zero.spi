@@ -45,7 +45,7 @@ end
 
 live_loop :hats do
   sample Ether[/hat/i,0], amp: 0.8
-  sleep 0.25/2.0
+  sleep 0.25/2.0/2.0
 end
 
 live_loop :waves do

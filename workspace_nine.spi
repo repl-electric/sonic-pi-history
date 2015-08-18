@@ -115,22 +115,6 @@ live_loop :melody do;
   with_fx(:none, phase: 0.5) do
 #34 -5 4
 
- notes = (ring   chord(:Fs3, "M"),  #I
-                 chord(:Es3, "m"),  #vii
-                 chord(:Ds3, "m"),  #vi
-                 chord(:Cs3, "M"))  #V
-
-  c = notes.tick.reverse
-
-  d = (knit 0.1,1, 0.0,3).tick(:delay)
-  r = (knit 0.5,1,1.0,3).tick(:r)
-  c.each{|n| 
-        play n, release: r, amp: 2.0
-        sleep d;
-        puts "P[#{note_info(n||0)}]"
-
-}
-  end
   sleep bar
 }
 end

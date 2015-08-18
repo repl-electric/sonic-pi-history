@@ -12,6 +12,7 @@ live_loop :looper do
 end
 
 live_loop :looper2 do
+  sync :looper
   sleep 2
   sample b2
 end

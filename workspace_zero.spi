@@ -8,11 +8,11 @@ use_sample_bpm b1
 
 live_loop :looper do
   sample b1
-  sleep 2
+  sleep 1
 end
 
 live_loop :looper2 do
   sync :looper
-  sleep 2
+  sleep 1
   sample b2
 end

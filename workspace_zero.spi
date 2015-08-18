@@ -23,7 +23,6 @@ live_loop :looper2 do
       end
     end
 end
-end
 
 live_loop :kickers do
   with_fx(:level, amp: 1.0) do

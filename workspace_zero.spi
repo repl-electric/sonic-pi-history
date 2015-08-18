@@ -42,11 +42,8 @@ live_loop :kickers do
 end
 
 live_loop :hats do
-  sync :hit
-
   sample Ether[/hat/], amp: 0.1
   sleep 0.25
-
 end
 
 live_loop :waves do

@@ -31,7 +31,7 @@ end
 live_loop :perc do
   sync :hit
   16.times{
-    sample Ether[/click/i, 0], amp: 1.2
+    sample Ether[/click/i, 0..4].tick(:clickers), amp: 1.2
     sleep sample_duration(b1)/16.0
   }
 end

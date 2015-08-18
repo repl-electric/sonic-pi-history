@@ -27,3 +27,11 @@ live_loop :kickers do
     sleep sample_duration(b1)/4.0
   }
 end
+
+live_loop :perc do
+  sync :hit
+  16.times{
+    sample Ether[/click/i, 0], amp: 0.2
+    sleep sample_duration(b1)/16.0
+  }
+end

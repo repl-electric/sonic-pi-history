@@ -230,3 +230,5 @@ live_loop :movement do
     sync :next
   end
 end
+
+set_volume! 0.9

@@ -68,6 +68,8 @@ live_loop :melody do;
 
       puts note_inspect(note, "Harmony")
 
+      i_int(note)
+
       with_transpose(0) do
         with_synth(:hollow) do
 

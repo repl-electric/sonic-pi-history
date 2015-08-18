@@ -14,7 +14,9 @@ end
 live_loop :looper2 do
   sync :hit
   sleep 1
+  with_fx(:bitcrusher, amp: 0.2, bits: 6) do
   sample b2
+  end
 end
 
 live_loop :kickers do

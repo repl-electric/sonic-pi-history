@@ -96,14 +96,14 @@ notes = (ring
 
 
     notes = (ring 
-             chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
-                  chord(:Fs3,"M"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord("B3","M"), 1.0,
+             #chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
+              #    chord(:Fs3,"M"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord("B3","M"), 1.0,
 
-                  chord(:Fs3,"M"), 1.0, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("Cs3","M"), 0.5,
-                  chord(:Fs3,"M"), 0.5, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0,
+               #   chord(:Fs3,"M"), 1.0, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("Cs3","M"), 0.5,
+                #  chord(:Fs3,"M"), 0.5, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0,
 
-                  chord(:Fs3,"M"), 1.0, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("B3","M"), 0.5,
-                  chord(:Fs3,"M"), 0.5, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0,
+                 # chord(:Fs3,"M"), 1.0, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("B3","M"), 0.5,
+                  #chord(:Fs3,"M"), 0.5, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0,
 
                   chord("Fs3","sus4"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"),0.5,chord(:As3, :minor7, invert: 0), 1.0, chord("Gs3","m"), 0.5,
                   chord("Fs3","M"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord("B3","M"), 1.0,

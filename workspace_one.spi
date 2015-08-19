@@ -127,10 +127,6 @@ notes = (ring
  
 
 
-
-
-
-
 # :As3,0.5, :Cs4, 2.0, :B3, 1.0,
 
 #                   :Fs4, 0.25, :Fs4,0.5, :As4, 1.0, :Gs4, 1.0
@@ -142,9 +138,9 @@ notes = (ring
 
      with_transpose(0) do
      #with_fx((knit :reverb, 2, :echo, 2).tick(:fx)) do
-          play notes.tick(:notes), release: notes.tick(:notes)
-          sleep notes.look(:notes)
-#          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*0 + 0.5, damp_time: (notes.look(:notes)/3.0), attack: 0.01)
+          #play notes.tick(:notes), release: notes.tick(:notes)
+          #sleep notes.look(:notes)
+          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*0 + 0.5, damp_time: (notes.look(:notes)/3.0), attack: 0.01)
      #end
      #sleep notes.look(:notes)
      puts note_inspect(notes.look(:notes))

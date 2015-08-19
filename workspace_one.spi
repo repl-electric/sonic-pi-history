@@ -96,8 +96,8 @@ notes = (ring
 
 
     notes = (ring 
-                  chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
-                  chord(:Fs3,"M"), 0.5, chord(:Ds3,"m"), 0.5,   chord(:Ds3,"m"), 0.5,  chord(:Ds4,"m+5"), 1.0, chord("As3","m"), 1.0,
+#                  chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
+#                  chord(:Fs3,"M"), 0.5, chord(:Ds3,"m"), 0.5,   chord(:Ds3,"m"), 0.5,  chord(:Ds4,"m+5"), 1.0, chord("As3","m"), 1.0,
 
 #                  chord(:Fs3,"M"), 1.0, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("Cs3","M"), 0.5,
 #                  chord(:Fs3,"M"), 0.5, chord(:As3,"m"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0,
@@ -115,6 +115,8 @@ notes = (ring
        #           chord("Fs3","M"), 1.0, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord("Fs3","M"), 1.0, chord("B3","M"), 0.5,
        #           chord("Fs3","M"), 0.5, chord(:As3,"m+5"), 0.5, chord(:Ds3,"m"), 0.5, chord(:Ds3,"m"), 1.0, chord(:B3,"M"), 1.0
 )
+
+notes = (ring  :Fs3, 0.5, :Fs3,0.5, :Cs4, 1.0)
 
 
      with_transpose(0) do

@@ -117,14 +117,14 @@ notes = (ring
 #)
 
     notes = (ring  :Fs3, 0.25, :Fs3,0.25, :Cs4, 1.0,
-                   :Fs3, 0.5, :Cs4, 1.0,
+                   :Fs3, 0.5,             :Cs4, 1.0,
 #                   :Fs3, 0.5, :Fs3,0.5, :Cs4, 1.0,
  )
 
 
      with_transpose(0) do
      #with_fx((knit :reverb, 2, :echo, 2).tick(:fx)) do
-          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*2, damp_time: (notes.look(:notes)/3.0))
+          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*2, damp_time: (notes.look(:notes)/3.0), attack: 0.01)
      #end
      #sleep notes.look(:notes)
      puts note_inspect(notes.look(:notes))

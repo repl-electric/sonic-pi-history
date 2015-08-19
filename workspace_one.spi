@@ -158,12 +158,7 @@ end
                   :F1, :As2, :Ds2,
                   :F1, :As2, :Fs2).tick(:bass)
 
-
-
-
-    note = notes.tick(:bzz).first
-  notes.tick(:bzz)
-
+  
     puts "BASS[#{note_info(note||0)}]"
 
     sleep bar/2.0

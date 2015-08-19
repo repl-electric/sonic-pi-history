@@ -88,13 +88,7 @@ notes = (ring
        :Fs3, 0.5,  s32[0], 0.25, chord(:As4, "m", invert: -3), 0.5, :As3, 0.25, :Fs3, 0.25, s32[0], 0.5, :Fs3,0.25, chord(:Gs3, "m7+5", invert: 0.0), 1.0)
 
 
-    notes = (ring x3[0], 1.0, :Es3, 0.5, :Ds3, 0.5, :Fs4, 1.0, :Cs4, 0.5,
-                  x3[0], 0.5, :Ds3, 0.5, :Ds3, 0.5, :Ds3, 1.0, :B3, 1.0,
-
-                  x3[0], 1.0, :As3, 0.5, :Ds3, 0.5, :Fs3, 1.0, :Cs3, 0.5,
-                  x3[0], 0.5, :As3, 0.5, :Ds3, 0.5, :Ds3, 1.0, :B3, 1.0)
-
-
+   
     
      with_transpose(0) do
      #with_fx((knit :reverb, 2, :echo, 2).tick(:fx)) do

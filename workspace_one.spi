@@ -123,7 +123,7 @@ notes = (ring
              chord(:Fs3, 'M'), 0.5,  chord(:As3, 'm+5'), 1.0,
              chord(:Fs3, 'M'), 0.25, chord(:As3, 'm'), 0.25, chord(:Gs3, 'm'), 1.0,
 
-             chord(:Fs3, 'M'), 0.25, chord(:Fs3, 'M'), 0.25, chord(:Cs4,'', 1.0, chord(:Fs3, 'M'), 0.5,
+             chord(:Fs3, 'M'), 0.25, chord(:Fs3, 'M'), 0.25, chord(:Cs4, "M"), 1.0, chord(:Fs3, 'M'), 0.5,
              chord(:Fs3, 'M'), 0.25, chord(:Fs3, 'M'), 0.25, :Cs4, 1.0,
  
 # :As3,0.5, :Cs4, 2.0, :B3, 1.0,

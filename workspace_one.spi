@@ -139,7 +139,7 @@ notes = (ring
      #with_fx((knit :reverb, 2, :echo, 2).tick(:fx)) do
           #play notes.tick(:notes), release: notes.tick(:notes)
           #sleep notes.look(:notes)
-          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*2, werble: false, damp_time: (notes.look(:notes)/3.0), attack: 0.01, amp: 1.0)
+          i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*1.5, werble: false, damp_time: (notes.look(:notes)/3.0), attack: 0.01, amp: 1.0)
      #end
      #sleep notes.look(:notes)
      puts note_inspect(notes.look(:notes))

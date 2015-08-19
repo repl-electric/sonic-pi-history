@@ -74,7 +74,6 @@ live_loop :melody do
   (knit 1,8,4,1).tick(:time).times { sync :quarter}
   #r = (knit 0.5, 7, 1.0,1).tick(:r)
 
-  
 
    x = start_notes.tick(:d)
   with_fx((knit :none,4, :echo,1).tick(:echoey), mix: 0.0, phase: 0.5, decay: 2.0) do

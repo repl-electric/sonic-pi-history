@@ -56,11 +56,9 @@ live_loop :melody do
   end_notes   = (knit  x3[0][1],1, x3[0][2],1,              x3[3][1],1,
                        x3[6][0],1, x3[4][1],1,              x3[2][1],1)
 
-  
 
 
   i_deter( start_notes.tick(:d), end_notes.tick(:e), attack: 0.05, release: 0.5, amp: 3.5, 
 werble: false, synth: :hollow)
    puts note_inspect(start_notes.look(:d))
-
 end

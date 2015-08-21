@@ -121,13 +121,11 @@ notes = (ring
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 1.0,                        chord(:B3, :sus2), 2.0,
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 0.5, chord(:Fs3, 'M'), 0.5, chord(:B3, 'M'), 2.0,
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 1.0,                        chord(:Cs4, :M, invert: 0), 1.0,
+              chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 1.0,                        chord(:Cs4, :M, invert: 0), 1.0,
               chord(:As3, "7sus4", invert: 0), 1.0, chord(:As3, "m7+5", invert: 1), 0.5, chord(:As3, "m"), 0.5
  )
 
      with_transpose(0) do
-     #with_fx((knit :reverb, 2, :echo, 2).tick(:fx)) do
-          #play notes.tick(:notes), release: notes.tick(:notes)
-          #sleep notes.look(:notes)
           n = notes.tick(:notes)
           s = notes.tick(:notes)
 

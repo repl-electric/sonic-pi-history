@@ -131,7 +131,7 @@ notes = (ring
       
  #         play n, release: s/2.0
 #           sleep s/4.0
-          i_deter(n,_, release: s*2.0, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1))
+          i_deter(n,_, release: s*1.5, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1))
      #end
      #sleep notes.look(:notes)
      puts note_inspect(n, "melo:")

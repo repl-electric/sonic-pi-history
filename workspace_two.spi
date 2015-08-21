@@ -1,7 +1,7 @@
 live_loop :stars do
   with_synth(:plucked){
     with_fx(:reverb) do |r_fx|
-   f =  play chord(:As2), release: 32.0, attack: 0.01, decay: 32.0, amp: 2.0, cutoff: 120
+   f =  play chord(:As2), release: 32.0, attack: 0.01, decay: 64.0, amp: 2.0, cutoff: 120
    32.times{ 
     sleep 1
    control r_fx, dry: rrand(0.0,1.0)

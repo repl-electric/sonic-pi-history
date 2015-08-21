@@ -131,6 +131,12 @@ end
 end
 
 
+live_loop :stars do
+  sync :next
+  play chord(:As3)
+
+end
+
 live_loop :movement do
   pick = [6,5].choose
   3.times{

@@ -142,7 +142,6 @@ live_loop :movement do
   end
 end
 
-
 with_fx :distortion, mix: 0.1 do
 with_fx(:pitch_shift, window_size: 4.0) do
 live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 0.5 do

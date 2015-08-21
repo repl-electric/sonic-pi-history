@@ -108,8 +108,8 @@ chord(:Ds4, 'm')[0..-2], 1.0,        chord(:Ds3, 'm7+5')[1..-1], 0.5, chord(:Ds3
 )
 
 notes= (ring 
-            chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4', invert: 0)[[1].choose], 1.0, chord(:Cs4, 'M'), 0.5,
-            chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4', invert: 0)[[0].choose], 1.0, chord(:Cs4, 'M'), 0.5,
+chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4', invert: 0)[[1].choose], 1.0, chord(:Cs4, 'M'), 0.5,
+chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4', invert: 0)[[0].choose], 1.0, chord(:Cs4, 'M'), 0.5,
 )
 
  
@@ -160,7 +160,7 @@ end
 
     note = notes.tick(:a)
 
-    note = (ring :F1,  :As2, :Ds2,
+    note = (ring :Ds2,  :As2, :Ds2,
                   :F1, :As2, :Ds2,
                   :F1, :As2, :Fs2).tick(:bass)
 

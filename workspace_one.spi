@@ -98,7 +98,7 @@ live_loop :playz do
 
 
 #chord(:Fs3, 'M'), 1.0, chord(:Fs3, 'M'), 1.0, chord(:B3, 'm'), 1.0, chord(:Ds4, 'm'), 1.0
-chord(:Ds3, 'm'), 1.0, chord(:Ds3, 'm'), 1.0, chord(:B3, 'm'), 1.0, chord(:Ds4, 'm'), 1.0
+chord(:Ds3, 'm'), 1.0, chord(:Ds3, 'm'), 1.0, chord(:Gs3, 'm'), 1.0, chord(:Ds4, 'm'), 1.0
 
 
 

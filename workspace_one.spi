@@ -122,7 +122,7 @@ chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4'
         end
 
 }
-          i_deter(n, _, release: s/2.0, werble: false, damp_time: (s/3.0), attack: 0.01, amp: 1.0)
+          i_deter(n, _, release: s/2.0, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0)
      #end
 #     sleep s/8.0
      puts note_inspect(n, "melo:")

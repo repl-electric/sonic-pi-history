@@ -134,7 +134,7 @@ end
 live_loop :stars do
   sync :next
   with_synth(:wobbling){
-    play chord(:As3), release: 16.0, attack: 0.01
+    play chord(:As3), release: 16.0, attack: 0.01, amp: 2.0
   }
 
 end

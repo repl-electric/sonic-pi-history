@@ -4,8 +4,8 @@ sync :quarter
     with_fx(:reverb) do |r_fx|
       f =  play chord(:As2), release: 4.0, attack: 0.1, decay: 2.0, amp: 1.0, cutoff: 120
       f =  play chord(:As2), release: 32.0, attack: 1.0, decay: 64.0, amp: 1.0, cutoff: 120
-   32.times{ 
-    sleep 1
+   4.times{ 
+    sleep 0.5
    control r_fx, dry: rrand(0.0,1.0)
 
     }

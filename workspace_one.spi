@@ -121,7 +121,7 @@ notes = (ring
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 1.0,                        chord(:B3, :sus2), 2.0,
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 0.5, chord(:Fs3, 'M'), 0.5, chord(:B3, 'M'), 2.0,
               chord(:Ds3, 'm'),  1.0, chord(:Fs3, 'M'), 1.0,                        chord(:Cs4, :M, invert: 0), 1.0,
-              chord(:As3, "sus7", invert: 1), 1.0, chord(:As3, "m7+5", invert: 1), 0.5, chord(:As3, "m"), 0.5
+              chord(:As3, "sus4", invert: 1), 1.0, chord(:As3, "m7+5", invert: 1), 0.5, chord(:As3, "m"), 0.5
  )
 
      with_transpose(0) do

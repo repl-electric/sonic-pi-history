@@ -134,7 +134,7 @@ end
 live_loop :stars do
   sync :next
   with_synth(:dark_ambience){
-   f =  play chord((ring :As4),, release: 16.0, attack: 0.01, decay: 16.0, amp: 1.0
+   f =  play chord((ring :As4), release: 16.0, attack: 0.01, decay: 16.0, amp: 1.0
    sleep 1
   }
 

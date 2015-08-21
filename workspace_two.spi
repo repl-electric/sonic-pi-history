@@ -1,9 +1,7 @@
 live_loop :stars do
   with_synth(:twang){
    f =  play chord(:As2), release: 16.0, attack: 0.01, decay: 16.0, amp: 2.0, cutoff: 120
-
-
-   sleep 32
+   31.times{ sleep 1}
   }
 
 end

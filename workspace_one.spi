@@ -103,8 +103,8 @@ live_loop :playz do
 #chord(:Cs4, 'M'), 1.0, chord(:Cs4, 'M'), 0.5, chord(:Fs3, 'M'), 1.0, chord(:As3, 'm'), 1.0,
 chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),    0.5, chord(:Ds3, 'm', invert: 2), 1.0, chord(:As3, 'm'),   1.0,
 chord(:Ds4, 'm'),        1.0,        chord(:Gs3, 'm')[1..-1],    0.5, chord(:Gs3, 'm'), 0.5, chord(:Fs4, 'M'),   1.0, chord(:Cs4, 'M'), 0.5,
-#chord(:Ds4, 'sus2'),     1.0,        chord(:Gs3, 'm'),           0.5, chord(:Ds4, 'm'), 1.0, chord(:As3, 'm'),   1.0,
-#chord(:Ds4, 'm')[0..-2], 1.0,        chord(:Ds3, 'm7+5')[1..-1], 0.5, chord(:Ds3, 'm'), 0.5, chord(:Ds4, 'm+5'), 1.0, chord(:As3, 'm+5'), 0.5
+chord(:Ds4, 'sus2'),     1.0,        chord(:Gs3, 'm'),           0.5, chord(:Ds4, 'm'), 1.0, chord(:As3, 'm'),   1.0,
+chord(:Ds4, 'm')[0..-2], 1.0,        chord(:Ds3, 'm7+5')[1..-1], 0.5, chord(:Ds3, 'm'), 0.5, chord(:Ds4, 'm+5'), 1.0, chord(:As3, 'm+5'), 0.5
 )
  
      with_transpose(0) do

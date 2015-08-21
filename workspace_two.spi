@@ -1,5 +1,5 @@
 live_loop :stars do
-sync :half
+sync :quarter
   with_synth(:plucked){
     with_fx(:reverb) do |r_fx|
       f =  play chord(:As2), release: 4.0, attack: 0.1, decay: 2.0, amp: 1.0, cutoff: 120

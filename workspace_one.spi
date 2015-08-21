@@ -117,11 +117,6 @@ notes = (ring
 )
 
   
-notes = (ring :FS3,  1.0, :Es3, 0.5, :Ds3, 0.5, :AS3,1.0, :Cs4, 0.5, :FS3,  0.5, :Ds3, 0.5, :Ds3, 0.5, :DS4, 1.0, :Cs4, 1.0
-
- )
-
-
 notes = (ring :FS3,  0.5, :Fs3, 0.5, chord(:B3, :sus2), 1.0, 
               :B3,   0.5, _, 0.5,    :Fs3, 1.0,
               :Fs3,  0.5, :Fs3, 0.5, :As3, 1.0,
@@ -131,8 +126,7 @@ notes = (ring :FS3,  0.5, :Fs3, 0.5, chord(:B3, :sus2), 1.0,
 notes = (ring :FS3,  1.0, :Fs3, 0.5,:Fs3, 0.5, chord(:B3, :sus2), 1.0, 
               :Fs3,  1.0, :Fs3, 1.0,           chord(:B3, :M), 1.0,
 
-
-
+             chord(:As3, "m"), 0.5
  )
 
 

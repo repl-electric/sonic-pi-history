@@ -103,7 +103,7 @@ live_loop :playz do
           s = notes.tick(:notes)
           i_deter(n, _, release: s*2.0, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0)
      #end
-     sleep s/8.0
+#     sleep s/8.0
      puts note_inspect(n, "melo:")
 end
 end

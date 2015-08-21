@@ -116,7 +116,7 @@ notes = (ring
                                                                                                                    :reverb,2, :echo, 1,
                                                                                                                    :reverb,2, :echo, 1))
      #end
-     #sleep notes.look(:notes)
+     sleep s
      puts note_inspect(n, "melo:")
 end
 end

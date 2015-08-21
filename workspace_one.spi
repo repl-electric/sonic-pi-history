@@ -77,24 +77,6 @@ live_loop :playz do
 
 #(knit 0.25,7, 1.0,1, 0.5,1, 1.0,1, 0.25,6, 1.0,1)
 
-notes = (ring 
-       :Fs3, 0.25, s32[1][1..-1], 0.25, :Fs3, 0.25, s32[1][0], 0.50, s24[4][0], 1.0, :As3, 0.25, :Ds3, 0.25, [chord(:As3, "m7+5"), chord(:As3, "m+5"), chord(:As3, "m+5", invert: [0,-1].choose)].choose, 1.0,
-       :Fs3, 0.5,  s32[0], 0.25, chord(:As4, "m", invert: -3), 0.25, :As3, 0.25, :Fs3, 0.25, s32[0], 0.25, :Fs3,0.25, :As3, 1.0)
-
-notes = (ring 
-       :Fs3, 0.25, s32[1][1..-1], 0.5, :Fs3, 0.25, s32[3][0], 1.0, 
-       :Cs4, 0.25, s32[3][1..-1], 0.5, [chord(:As3, "m7+5"), chord(:As3, "m+5"), chord(:As3, "m+5", invert: [0,-1,1].choose)].choose, 1.0, :Ds3, 0.25,:Cs3, 0.25,
-       :Cs3, 0.25, chord(:Ds4, "sus4", invert: -2.0), 0.5, [chord(:Ds3, "m7+5"), chord(:Ds3, "m+5"), chord(:Ds3, "m+5", invert: [0,-1,1].choose)].choose, 1.0, :Ds3, 0.25,:Cs3, 0.25,    
-       :Fs3, 0.5,  s32[0], 0.25, chord(:As4, "m", invert: -3), 0.5, :As3, 0.25, :Fs3, 0.25, s32[0], 0.5, :Fs3,0.25, chord(:Gs3, "m7+5", invert: 0.0), 1.0)
-
-
-    notes = (ring x3[0], 1.0, :Es3, 0.5, :Ds3, 0.5, :Fs4, 1.0, :Cs4, 0.5,
-                  x3[0], 0.5, :Ds3, 0.5, :Ds3, 0.5, :Ds3, 1.0, :B3, 1.0,
-
-                  x3[0], 1.0, :As3, 0.5, :Ds3, 0.5, :Fs3, 1.0, :Cs3, 0.5,
-                  x3[0], 0.5, :As3, 0.5, :Ds3, 0.5, :Ds3, 1.0, :B3, 1.0)
-
-
     notes = (ring 
                   chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
                   chord(:Fs3,"M"), 0.5, chord(:Ds3,"m"), 0.5,   chord(:Ds3,"m"), 0.5,  chord(:Ds4,"m+5"), 1.0, chord("As3","m"), 1.0,
@@ -128,10 +110,12 @@ notes = (ring
           n = notes.tick(:notes)
           s = notes.tick(:notes)
 
-      
- #         play n, release: s/2.0
-#           sleep s/4.0
-          i_deter(n,_, release: s*1.5, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1, :reverb, 1))
+          i_deter(n,_, release: s*1.5, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1, 
+                                                                                                          :reverb,2, :echo, 1,
+                                                                                                          :reverb, 3, :echo, 1
+                                                                                                          :reverb,2, :echo, 1,
+                                                                                                          :reverb,2, :echo, 1,
+))
      #end
      #sleep notes.look(:notes)
      puts note_inspect(n, "melo:")

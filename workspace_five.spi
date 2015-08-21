@@ -39,7 +39,7 @@ drum_loop(:hats,  (ring *%w{x - - -
                                             x - - -
                                             x - - -
                                             x - - -                                           
-                                            x - - x
+                                            x - - -
 }), (knit Ether["f#", 0], 4, 
             Ether["a#", 4], 4,      
 

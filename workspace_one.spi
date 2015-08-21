@@ -110,11 +110,11 @@ notes = (ring
           n = notes.tick(:notes)
           s = notes.tick(:notes)
 
-          i_deter(n,_, release: s*1.5, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1, 
-                                                                                                          :reverb,2, :echo, 1,
-                                                                                                          :reverb, 3, :echo, 1,
-                                                                                                          :reverb,2, :echo, 1,
-                                                                                                          :reverb,2, :echo, 1))
+          i_deter(n, n-12, release: s*1.5, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0, fx_pattern: (knit :reverb,2, :echo, 1, 
+                                                                                                                   :reverb,2, :echo, 1,
+                                                                                                                   :reverb, 3, :echo, 1,
+                                                                                                                   :reverb,2, :echo, 1,
+                                                                                                                   :reverb,2, :echo, 1))
      #end
      #sleep notes.look(:notes)
      puts note_inspect(n, "melo:")

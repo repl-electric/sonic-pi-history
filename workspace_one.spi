@@ -78,7 +78,7 @@ live_loop :playz do
 #(knit 0.25,7, 1.0,1, 0.5,1, 1.0,1, 0.25,6, 1.0,1)
 
     notes = (ring # 1 7 6 1 5                      
-                  #chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
+                  chord(:Fs3,"M"), 1.0, chord(:Es3,"dim"), 0.5, chord(:Ds3,"m"), 0.5, [chord("Fs4","M"), chord("Fs4","M", invert: -1), chord("Fs4","M", invert: -2), chord("As3","m7+5", invert: 0)].choose, 1.0, chord("Cs4","M"), 0.5,
                  # 1 6 6 6 3 
                   chord(:Es3,"dim", invert: 1), 0.5, chord(:Ds3,"m7+5"), 0.5,   chord(:Ds3,"m"), 0.5,  chord(:Ds4,"m+5"), 1.0, chord("As3","m"), 1.0,
 

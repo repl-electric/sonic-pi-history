@@ -40,7 +40,7 @@ drum_loop(:hats,  (ring *%w{x - - -
                                             x - - -
                                             x - - -                                           
                                             x - - x
-}), Mountain["kick",4], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
+}), Ether["hat",4], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                                    rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 

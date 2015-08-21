@@ -137,7 +137,7 @@ notes = (ring :FS3,  1.0, :Es3, 0.5, :Ds3, 0.5, :AS3,1.0, :Cs4, 0.5, :FS3,  0.5,
           #sleep notes.look(:notes)
           n = notes.tick(:notes)
           s = notes.tick(:notes)
-          play n
+          play n, release: s
            sleep s
 #          i_deter(n,_, release: notes.tick(:notes)*1.0, werble: true, damp_time: (notes.look(:notes)/3.0), attack: 0.01, amp: 1.0)
      #end

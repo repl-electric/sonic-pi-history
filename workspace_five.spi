@@ -40,7 +40,7 @@ drum_loop(:hats,  (ring *%w{x - - -
                                             x - - -
                                             x - - -                                           
                                             x - - x
-}), Ether["noise",13], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
+}), Ether["noise",12], amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), 
                                                                                    rate: ring_gen(32, lambda{rrand(0.9,1.0)}))
 
 

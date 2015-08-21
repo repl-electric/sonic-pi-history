@@ -136,7 +136,6 @@ live_loop :stars do
   with_synth(:wobbling){
    f =  play chord(:As3), release: 16.0, attack: 0.01, decay: 16.0, amp: 1.0
    sleep 1
-  control f release: 32
   }
 
 end

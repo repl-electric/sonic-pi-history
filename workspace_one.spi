@@ -102,7 +102,7 @@ live_loop :playz do
      with_transpose(0) do
           n = notes.tick(:notes)
           s = notes.tick(:notes)
-          i_deter(n, _, release: s*2.0, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0)
+          i_deter(n, _, release: s*1.0, werble: true, damp_time: (s/3.0), attack: 0.01, amp: 1.0)
      #end
 #     sleep s/8.0
      puts note_inspect(n, "melo:")

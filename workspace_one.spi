@@ -130,16 +130,6 @@ end
 end
 end
 
-
-live_loop :stars do
-  sync :next
-  with_synth(:twang){
-   f =  play chord(:As2), release: 16.0, attack: 0.01, decay: 16.0, amp: 2.0, cutoff: 120
-   sleep 1
-  }
-
-end
-
 live_loop :movement do
   pick = [6,5].choose
   3.times{

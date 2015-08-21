@@ -118,7 +118,7 @@ chord(:Ds3, 'sus4', invert: 1), 1.0, chord(:Gs3, 'm'),  0.5,  chord(:Ds3, 'sus4'
           s = notes.tick(:notes)
        with_synth(:plucked){
         if n.respond_to?(:length)
-          play n, attack: 0.01, amp: 0.1, release: s
+          play n, attack: 0.01, amp: 0.1, release: s*2
         end
 
 }

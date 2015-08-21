@@ -44,7 +44,7 @@ drum_loop(:hats,  (ring *%w{x - - -
             Ether["a#", 4], 4,      
             Ether["c#", 5], 4
 ).tick, amp: ring_gen(32, lambda{1.0 + rrand(0.0,0.2)}), start: 0.0, finish: ring_gen(32, lambda{ (rrand 0.01,0.2) }),
-                                                                                   rate: 1.0, cutoff: 120 release: 8.0, decay: 8.0)
+                                                                                   rate: 1.0, cutoff: 120, release: 8.0, decay: 8.0)
 # Ether["a#", 4]
 
 

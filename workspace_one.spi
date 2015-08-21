@@ -122,7 +122,7 @@ notes = (ring :FS3,  0.5, :Fs3, 0.5, chord(:B3, :sus2), 1.0,
  )
 
 
-notes = (ring :FS3,  1.0, :Gs3, 0.5,:Gs3, 0.5, chord(:B3, :sus2), 1.0, 
+notes = (ring :FS3,  1.0, :Ds3, 0.5,: Gs3, 0.5, chord(:B3, :sus2), 1.0, 
               :Fs3,  1.0, :Gs3, 1.0,           chord(:B3, :sus2), 1.0,
               :Fs3,  1.0, :Gs3, 1.0,           chord(:B3, :M), 1.0,
               :Fs3,  1.0, :Gs3, 1.0,           chord(:Cs4, :M), 1.0,

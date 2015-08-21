@@ -133,7 +133,7 @@ notes = (ring
           i_deter(notes.tick(:notes),_, release: notes.tick(:notes)*1.0, werble: false, damp_time: (notes.look(:notes)/3.0), attack: 0.01, amp: 1.0)
      #end
      #sleep notes.look(:notes)
-     puts note_inspect(notes.look(:notes))
+     puts note_inspect(notes.look(:notes), "melo:")
 end
 end
 end

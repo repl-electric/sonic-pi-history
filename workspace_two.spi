@@ -1,6 +1,6 @@
 set_volume! 0.2
 
-@f = MountainLoop[/f#/i, 3]
+@f = MountainLoop[/f#/i, 4]
 use_sample_bpm @f
 
 live_loop :stars do

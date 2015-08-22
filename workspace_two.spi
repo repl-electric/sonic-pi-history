@@ -17,12 +17,21 @@ sync :stars
     notes =    (knit :As2,1, :Fs2,1, :Cs2, 1).tick
     play notes, release: 1.0, amp: 0.2, decay: 3.0
     with_synth(:beep) do
-    with_transpose(-12) do
-      play notes, releae: 0.1, attack: 0.01
+      with_transpose(-12) do
+        play notes, releae: 0.1, attack: 0.01
       end
     end
   }
- sleep 4.0
+  sleep 4.0
+end
+
+live_loop :melody do
+  sync :stars
+  apeg = (knit, :Fs3, 1, :As3,1).tick
+  with_synth(:string){
+  play apeg
+  }
+
 end
 
 live_loop :drums do

@@ -1,12 +1,12 @@
 live_loop :stars do
 #sync :whole
-  with_synth(:plucked){
+  with_synth(:string){
     with_fx(:reverb) do |r_fx|
       f =  play chord(:As3), release: 1.0,   attack: 0.01, decay: 2.0, amp: 0.2
       f =  play chord(:As3), release: 32.0, attack: 1.0, decay: 64.0, amp: 1.0, cutoff: 120
    4.times{ 
-    sleep 0.5
-   control r_fx, dry: rrand(0.0,1.0)
+        sleep 0.5
+        control r_fx, dry: rrand(0.0,1.0)
 
     }
 end

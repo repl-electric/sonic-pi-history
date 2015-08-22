@@ -1,6 +1,10 @@
-use_sample_bpm MountainLoop[/.*/i, 0]
+f = MountainLoop[/.*/i, 0]
+
+use_sample_bpm f
 
 live_loop :stars do
+  s= MountainLoop[/.*/i, 0]
+
 #sync :whole
   with_synth(:plucked){
     with_fx(:reverb) do |r_fx|
@@ -27,11 +31,6 @@ sync :stars
   sleep 4.0
 end
 
-live_loop :mountain do
-  sync :stars
-   s= MountainLoop[/.*/i, 0]
-  sample_and_sleep s
-end
 
 live_loop :drums do
   sync :stars

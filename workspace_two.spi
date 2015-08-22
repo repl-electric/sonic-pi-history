@@ -31,6 +31,7 @@ with_fx(:lpf, cutoff: 80) do
   16.times{
     apeg = (stretch (chord :Ds3, "sus2", invert: 1), 4,
                               (chord :Gs3, "m", invert: 0), 1,
+                              (chord :Ds3, "sus4", invert: 0)
 ).tick
     with_fx(:echo) do
       with_synth(:string){

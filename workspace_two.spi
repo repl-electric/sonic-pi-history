@@ -28,10 +28,13 @@ end
 live_loop :melody do
   sync :stars
   apeg = (knit :Fs3, 1, :As3,1).tick
-  with_synth(:string){
-  play apeg, attack: 0.01
-  }
+  4.times{
 
+  with_synth(:string){
+    play apeg, attack: 0.01
+  }
+    sleep 0.5
+  }
 end
 
 live_loop :drums do

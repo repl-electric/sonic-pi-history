@@ -20,7 +20,7 @@ end
 live_loop :fizz do
   sync :stars
   4.times{
-  sample Ether[/hat/i,0]
+    sample Ether[/hat/i,1]
   sleep 1.0
   }
 end

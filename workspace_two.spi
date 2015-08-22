@@ -39,12 +39,12 @@ with_fx(:lpf, cutoff: 80) do
       apeg =  (knit         
                (chord :Ds3, "sus4", invert: 1),  16,
                (chord :Gs3, "m",      invert: 0),  16,
-               (chord :Ds3, "sus4", invert: 0)  , 16,
+               (chord :Ds3, "sus4", invert: 0) , 16,
                (chord :Cs4, "M", invert: -2)  , 1).tick(:chords)
 
       with_fx(:echo, phase: 0.025) do
         with_synth(:beep){
-          play apeg, attack: 0.01, cutoff: 80, release: 0.5, amp: 0.8
+          play apeg, attack: 0.01, cutoff: 80, release: 0.1, amp: 0.8
         }
       end
       sleep 0.25

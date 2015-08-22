@@ -25,7 +25,7 @@ end
 live_loop :chorsd do
   sample (knit Heat[/F#/i, 1],1, 
                        Heat[/A#/i, 1],1,
-                       Chill[/F#/i, 1],1
+                       Heat[/F#/i, 1],1
 ).tick, decay: 8.0
                                  sleep 1/2.0
 

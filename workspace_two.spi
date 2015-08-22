@@ -1,6 +1,6 @@
 set_volume! 0.2
 
-@f = MountainLoop[/.*/i, 9]
+@f = MountainLoop[/.*/i, 10]
 
 use_sample_bpm @f
 

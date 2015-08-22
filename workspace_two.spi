@@ -11,6 +11,14 @@ live_loop :stars do
 end}
 end
 
+live_loop :bass do
+sync :stars
+  with_synth(:beep){
+    play
+}
+ sleep 4.0
+end
+
 live_loop :drums do
   sync :stars
   with_fx((knit :reverb, 3, :echo, 1).tick, decay: 8.0 ) do

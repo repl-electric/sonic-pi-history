@@ -24,7 +24,7 @@ end
 
 live_loop :chorsd do
   sync :stars
-  sample Chill[/F#/, 0]
+  sample Chill[/F#/, 0], decay: 8.0
 
 end
 

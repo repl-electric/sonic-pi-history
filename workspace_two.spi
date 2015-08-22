@@ -28,7 +28,7 @@ end
 live_loop :melody do
   sync :stars
   16.times{
-    apeg = (stretch (chord :Ds3, "sus4", invert: 1), 4,
+    apeg = (stretch (chord :Ds3, "sus2", invert: 1), 4,
                               (chord :Ds3, "sus4", invert: 0), 1,
 ).tick
     with_fx(:echo) do

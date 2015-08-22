@@ -24,7 +24,7 @@ end
 
 live_loop :chorsd do
   sync :stars
-  with_fx(:echo, phase: sample_duration(@f)/4.0) do
+  with_fx(:echo, phase: sample_duration(@f)/8.0) do
     sample (knit Heat[/Multis/i,  /F#3/i, 0],1,
                       Heat[/Multis/i, /A#3/i, 0],1,
                            Heat[/Multis/i, /C#3/i, 0],1

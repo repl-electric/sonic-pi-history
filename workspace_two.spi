@@ -1,4 +1,4 @@
-set_volume! 0.5
+set_volume! 0.2
 
 @f = MountainLoop[/.*/i, 2]
 

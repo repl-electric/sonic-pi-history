@@ -44,7 +44,7 @@ with_fx(:lpf, cutoff: 80) do
 
       with_fx(:echo, phase: 0.025, decay: 4.0) do
         with_synth(:prophet){
-          play apeg, attack: 0.01, cutoff: 80
+          play apeg, attack: 0.01, cutoff: 80, release: 0.1
         }
       end
       sleep 0.5

@@ -120,7 +120,7 @@ end
           s = notes.tick(:notes)
        with_synth(:plucked){
         if n.respond_to?(:length)
-          play n, attack: 0.01, amp: 0.1, release: s*1
+          #play n, attack: 0.01, amp: 0.1, release: s*1
         end
 
 }

@@ -26,8 +26,7 @@ sync :stars
 end
 
 live_loop :melody do
-with_fx(:cutoff: 100) do
-
+with_fx(cutoff: 100) do
   sync :stars
   16.times{
     apeg = (stretch (chord :Ds3, "sus2", invert: 1), 4,

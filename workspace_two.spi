@@ -13,8 +13,8 @@ end
 
 live_loop :bass do
 sync :stars
-  with_synth(:beep){
-    play :As2
+  with_synth(:growl){
+    play :As2, release: 0.5
 }
  sleep 4.0
 end

@@ -23,6 +23,7 @@ end}
 end
 
 live_loop :chorsd do
+  sync :stars
   with_fx(:echo) do
   sample (knit Heat[/Multis/i,  /F#3/i, 0],1, 
                         Heat[/Multis/i, /A#3/i, 0],1,

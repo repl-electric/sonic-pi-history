@@ -1,13 +1,12 @@
 set_volume! 0.2
 
-@f = MountainLoop[/.*/i, 6]
+@f = MountainLoop[/.*/i, 7]
 
 use_sample_bpm @f
 
 live_loop :stars do
   sample @f, amp: 0.2
   sample @f, amp: 0.2, rate: -1.0
-
 
 #sync :whole
   with_synth(:plucked){

@@ -50,7 +50,7 @@ end
 
 live_loop :mountain do
   sync :stars
-   s= MountainLoop[/*./i, 0]
+   s= MountainLoop[/.*/i, 0]
   sample_and_sleep s
 end
 

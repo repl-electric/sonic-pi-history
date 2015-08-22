@@ -13,7 +13,7 @@ end
 live_loop :drums do
   sync :stars
   with_fx((knit :reverb, 3, :echo, 1).tick, decay: 8.0 ) do
-    sample Mountain[/subkick/i,2..4].tick(:s), amp: 1.0
+    sample Mountain[/subkick/i,1..4].tick(:s), amp: 1.0
   end
 
 end

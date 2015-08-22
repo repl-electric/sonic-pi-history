@@ -14,8 +14,8 @@ end
 live_loop :bass do
 sync :stars
   with_synth(:growl){
-    play :As2, release: 0.5
-}
+    play :As2, release: 1.0, amp: 0.5
+  }
  sleep 4.0
 end
 

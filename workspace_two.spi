@@ -25,11 +25,11 @@ end
 live_loop :chorsd do
   sync :stars
   with_fx(:echo) do
-  sample (knit Heat[/Multis/i,  /F#3/i, 0],1, 
-                        Heat[/Multis/i, /A#3/i, 0],1,
-                        Heat[/Multis/i, /C#3/i, 0],1
+    sample (knit Heat[/Multis/i,  /F#3/i, 0],1,
+                      Heat[/Multis/i, /A#3/i, 0],1,
+                           Heat[/Multis/i, /C#3/i, 0],1
 ).tick
-                                 sleep 1
+                                 sleep 1/2.0
                                 end
 
 

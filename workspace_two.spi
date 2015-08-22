@@ -19,7 +19,7 @@ sync :stars
     with_synth(:beep) do
     with_transpose(-12) do
       play notes, releae: 0.1
-end
+      end
     end
   }
  sleep 4.0

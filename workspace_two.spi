@@ -21,7 +21,7 @@ live_loop :fizz do
   sync :stars
   4.times{
     with_fx(:reverb, mix: 0.3, room: 0.3) do
-      sample (knit Ether[/hat/i,9], 3,  Ether[/hat/i,10],1 ).tick(:sample)
+      sample (knit Ether[/hat/i,9], 3,  Ether[/hat/i,10],1).tick(:sample), start: rrand(0.0,0.01)
       sleep 1.0
     end
   }

@@ -1,4 +1,4 @@
-@f = MountainLoop[/.*/i, 1]
+@f = MountainLoop[/.*/i, 2]
 
 use_sample_bpm @f
 

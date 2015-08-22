@@ -18,7 +18,7 @@ sync :stars
     play notes, release: 1.0, amp: 0.2, decay: 3.0
     with_synth(:beep) do
     with_transpose(-12) do
-      play notes, releae: 0.1
+      play notes, releae: 0.1, attack: 0.01
       end
     end
   }

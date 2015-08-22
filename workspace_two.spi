@@ -1,6 +1,6 @@
 @f = MountainLoop[/.*/i, 1]
 
-use_sample_bpm f
+use_sample_bpm @f
 
 live_loop :stars do
   sample @f

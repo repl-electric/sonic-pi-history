@@ -3,7 +3,7 @@
 use_sample_bpm @f
 
 live_loop :stars do
-  with_fx(:bitcrusher, bits (ring 4,5,6,7,8,9).tick(:thing) do
+  with_fx(:bitcrusher, bits (ring 4,5,6,7,8,9).tick(:thing)) do
             sample @f
   end
 

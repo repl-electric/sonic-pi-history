@@ -42,7 +42,7 @@ with_fx(:lpf, cutoff: 80) do
                (chord :Ds3, "sus4", invert: 0)  , 1,
                (chord :Cs4, "M", invert: -2)  , 1).tick(:chords)
 
-      with_fx(:echo, phase: 0.025, decay: 4.0) do
+      with_fx(:echo, phase: 0.025, decay: 1.0) do
         with_synth(:prophet){
           play apeg, attack: 0.01, cutoff: 80, release: 0.1
         }

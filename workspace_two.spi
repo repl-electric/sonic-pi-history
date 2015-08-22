@@ -25,28 +25,6 @@ sync :stars
   sleep 4.0
 end
 
-live_loop :melody do
-with_fx(:lpf, cutoff: 80) do
-  sync :stars
-  16.times{
-      apeg = (stretch 
-              (chord :Fs3, "sus4", invert: -1),  1,
-              (chord :Fs3, "M",      invert: -1),  1,
-              (chord :Fs3, "sus4", invert: -1)  , 1,
-              (chord :Fs4, "M",      invert: -1)  , 1,
-              ).tick
-
-      with_fx(:echo) do
-        with_fx(:bitcrusher, bits: (ring 4,10).tick(:bits)) do
-        with_synth(:beep){
-          play apeg, attack: 0.01, cutoff: 80, release: 0.1, amp: 0.8
-        }
-      end
-      end
-      sleep 0.25
-  }
-end
-end
 
 live_loop :mountain do
   sync :stars

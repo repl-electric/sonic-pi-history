@@ -18,5 +18,6 @@ live_loop :drums do
 end
 
 live_loop :fizz do
+  sync :stars
 
 end

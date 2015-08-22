@@ -23,7 +23,7 @@ end}
 end
 
 live_loop :chorsd do
-  with_fx(:echo, phase: 0.025) do
+  with_fx(:echo) do
   sample (knit Heat[/Multis/i,  /F#/i, 1],1, 
                         Heat[/Multis/i, /A#/i, 1],1,
                         Heat[/Multis/i, /C#/i, 1],1

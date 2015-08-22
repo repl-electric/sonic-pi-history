@@ -12,6 +12,6 @@ end
 
 live_loop :drums do
   sync :stars
-  sample Mountain[/subkick/,0]
+  sample Mountain[/subkick/,1]
 
 end

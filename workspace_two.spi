@@ -3,7 +3,7 @@ f = MountainLoop[/.*/i, 0]
 use_sample_bpm f
 
 live_loop :stars do
-  s= MountainLoop[/.*/i, 0]
+  sample MountainLoop[/.*/i, 0]
 
 #sync :whole
   with_synth(:plucked){

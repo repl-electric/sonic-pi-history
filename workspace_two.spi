@@ -1,3 +1,5 @@
+use_sample_bpm MountainLoop[/.*/i, 0]
+
 live_loop :stars do
 #sync :whole
   with_synth(:plucked){
@@ -24,7 +26,6 @@ sync :stars
   }
   sleep 4.0
 end
-
 
 live_loop :mountain do
   sync :stars

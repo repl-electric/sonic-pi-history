@@ -14,7 +14,7 @@ end
 live_loop :bass do
 sync :stars
   with_synth(:beep){
-    play
+    play :As2
 }
  sleep 4.0
 end

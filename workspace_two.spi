@@ -14,7 +14,7 @@ live_loop :stars do
     with_fx(:reverb) do |r_fx|
       notes = (knit chord(:As3), 1, chord(:Fs3, 'sus2', invert: 1), 1, chord(:Fs3, 'M', invert: 0), 1).tick
       f =  play notes, release: 1.0,   attack: 0.01, decay: 2.0, amp: 0.2
-      f =  play notes, release: 32.0, attack: 1.0, decay: 64.0, amp: 1.0, cutoff: 120
+      f =  play notes, release: 32.0, attack: 1.0, decay: 128.0, amp: 1.0, cutoff: 120
    4.times{ 
         sleep 1.0
         sample @f, amp: 0.2

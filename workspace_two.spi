@@ -16,8 +16,10 @@ sync :stars
   with_synth(:growl){
     notes =    (knit :As2,1, :Fs2,1, :Cs2, 1).tick
     play notes, release: 1.0, amp: 0.2, decay: 3.0
+    with_synth(:beep) do
     with_transpose(-12) do
       play notes, releae: 0.1
+end
     end
   }
  sleep 4.0

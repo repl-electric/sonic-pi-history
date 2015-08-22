@@ -1,0 +1,13 @@
+live_loop :euro do
+
+with_fx(:echo, decay: 2.0)
+with_synth(:supersaw:){
+
+play :Fs3
+
+}
+
+sleep 1
+
+
+end

@@ -37,7 +37,7 @@ with_fx(:lpf, cutoff: 80) do
               ).tick
 
       with_fx(:echo) do
-        with_fx(:bitcrusher) do
+        with_fx(:bitcrusher, bits: (ring 4,10).tick) do
         with_synth(:beep){
           play apeg, attack: 0.01, cutoff: 80, release: 0.1, amp: 0.8
         }

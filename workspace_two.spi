@@ -37,7 +37,7 @@ with_fx(:lpf, cutoff: 80) do
               ).tick
 
       apeg =  (knit         
-               (chord :Ds3, "sus4", invert: 1),  1,
+               (chord :Ds3, "sus4", invert: 1),  16,
                (chord :Gs3, "m",      invert: 0),        1,
                (chord :Ds3, "sus4", invert: 0)  , 1,
                (chord :Cs4, "M", invert: -2)  , 1).tick(:chords)

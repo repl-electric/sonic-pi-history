@@ -7,7 +7,7 @@ play :Fs3, attack: 0.01, release: 2.0, decay: 8.0
 }
 }
 
-sleep 1
+sleep 8
 
 
 end

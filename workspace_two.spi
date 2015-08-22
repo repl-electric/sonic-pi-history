@@ -26,19 +26,20 @@ sync :stars
 end
 
 live_loop :melody do
-with_fx(:lpf, cutoff: 80) do
+with_fx(:lpf, cutoff: 90) do
   sync :stars
   16.times{
-    apeg = (stretch (chord :Ds3, "sus4", invert: 1),  1,
-                              (chord :Gs3, "m", invert: 0),        1,
-                              (chord :Ds3, "sus4", invert: 0)  , 1
-).tick
-    with_fx(:echo, phase: 0.025) do
-      with_synth(:string){
-        play apeg, attack: 0.01
-      }
-    end
-    sleep 0.25
+      apeg = (stretch 
+              (chord :Ds3, "sus4", invert: 1),  1,
+              (chord :Gs3, "m", invert: 0),        1,
+              (chord :Ds3, "sus4", invert: 0)  , 1
+              ).tick
+      with_fx(:echo, phase: 0.025) do
+        with_synth(:string){
+          play apeg, attack: 0.01
+        }
+      end
+      sleep 0.25
   }
 end
 end

@@ -14,7 +14,11 @@ end
 live_loop :bass do
 sync :stars
   with_synth(:growl){
-    play (knit :As2,1, :Fs2,1, :Cs2, 1).tick, release: 1.0, amp: 0.2, decay: 3.0
+    notes =    (knit :As2,1, :Fs2,1, :Cs2, 1).tick
+    play notes, release: 1.0, amp: 0.2, decay: 3.0
+    with_transpose(-12) do
+      play notes
+    end
   }
  sleep 4.0
 end

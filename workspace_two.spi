@@ -1,12 +1,11 @@
 set_volume! 0.2
 
-@f = MountainLoop[/.*/i, 12]
+@f = MountainLoop[/f#/i, 12]
 use_sample_bpm @f
 
 live_loop :stars do
   sample @f, amp: 0.8
-
-#sync :whole
+ #sync :whole
   with_synth(:plucked){
     with_fx(:reverb) do |r_fx|
       notes = (knit chord(:As3), 1, chord(:Fs3, 'sus2', invert: 1), 1, chord(:Fs3, 'M', invert: 0), 1).tick

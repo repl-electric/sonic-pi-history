@@ -31,9 +31,9 @@ with_fx(:lpf, cutoff: 80) do
   16.times{
       apeg = (stretch 
               (chord :Fs3, "sus4", invert: -1),  1,
-              (chord :Fs3, "M",      invert: -1),        1,
+              (chord :Fs3, "M",      invert: -1),  1,
               (chord :Fs3, "sus4", invert: -1)  , 1,
-              (chord :Fs4, "M", invert: -1)  , 1,
+              (chord :Fs4, "M",      invert: -1)  , 1,
               ).tick
 
       with_fx(:echo) do
@@ -46,6 +46,12 @@ with_fx(:lpf, cutoff: 80) do
       sleep 0.25
   }
 end
+end
+
+live_loop :mountain do
+  sync :stars
+   s= MountainLoop[/*/, 0]
+  sample_and_sleep s
 end
 
 live_loop :drums do

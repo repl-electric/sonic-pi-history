@@ -27,7 +27,7 @@ end
 
 live_loop :melody do
   sync :stars
-  48times{
+  8.times{
     apeg = (knit :Fs3, 1, :As3,1).tick
     with_fx(:echo) do
       with_synth(:string){

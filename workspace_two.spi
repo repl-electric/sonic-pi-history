@@ -17,7 +17,7 @@ live_loop :stars do
    4.times{ 
        sleep 1.0
       notes = (knit chord(:As3), 1, chord(:Fs3, 'sus2', invert: 1), 1, chord(:Fs3, 'M', invert: 0), 1).tick
-      f =  play notes, release: 1.0,   attack: 0.01, decay: 2.0, amp: 0.2
+      f =  play notes, release: 1.0,   attack: 0.01, decay: 24.0, amp: 0.2
       f =  play notes, release: 32.0, attack: 1.0, decay: 128.0, amp: 1.0, cutoff: 120
 
       sample @f, amp: 0.2

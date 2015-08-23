@@ -4,6 +4,10 @@ live_loop :apeg do
   note = (knit chord(:Ds3, 'm'),32, chord(:Gs3, 'm'),32, chord(:Fs3, 'M'),32).tick
   high = note.choose
 
+  with_synth(:dark_ambience) do
+    play note[0], attack: 1.0
+  end
+
   with_synth(:prophet) do
     c = (knit 80,7, 90, 1).tick(:cut)
 

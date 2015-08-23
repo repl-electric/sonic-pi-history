@@ -29,12 +29,13 @@ live_loop :arp do
 end
 
 live_loop :drum do
-  (ring 1).tick(:time).times{sync :arp}
+  #(ring 1).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do
 #    sample Ether[/kick/i, 9]
   end
 #  (ring 2).tick(:time).times{sync :arp}
   sample Ether[/clap/i, 4]
+  sleep 0.025
 
 end
 

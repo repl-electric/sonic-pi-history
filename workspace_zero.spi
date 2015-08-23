@@ -59,6 +59,6 @@ end
 live_loop :ending do
   sync :apeg
   s  = Mountain[/cracklin/i, 0]
-  sample s, rate: 0.9, amp: 2.0
+  sample s, rate: 0.9, amp: 0.0
   sleep sample_duration(s)
 end

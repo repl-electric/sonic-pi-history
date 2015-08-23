@@ -68,7 +68,7 @@ live_loop :humand do
   8.times{sync :arp}
   sample Sop[/g#/i,4]
   8.times{sync :arp}
-  sample Sop[/d#/i,4]
+  sample Sop[/d#/i,5]
   end
 end
 

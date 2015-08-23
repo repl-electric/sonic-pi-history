@@ -25,10 +25,6 @@ live_loop :arp do
   sleep 1/8.0
 end
 
-live_loop :hum do
-  
-end
-
 live_loop :drum do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do

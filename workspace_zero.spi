@@ -2,7 +2,15 @@ live_loop :test do
 
 synth :blade, note: :d3, release: 7.0, cutoff: 50
 bix = (ring :d, :r, :r, :a, :f5, :r, :a, :r)
+32.times do
+
+use_transpose -12
 play bix.tick
+sleep 0.125
+end
+
+
+
 sleep 1
 
 end

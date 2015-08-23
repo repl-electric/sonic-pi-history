@@ -21,6 +21,6 @@ end
 end
 
 live_loop :drum do
-  4.times{sync :arp}
+  8.times{sync :arp}
   sample Mountain[/subkick/i, 4], amp: 1.0
 end

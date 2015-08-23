@@ -1,5 +1,5 @@
 live_loop :apeg do
-  notes = chord(:Ds3, 'm')
+  notes = (knit chord(:Ds3, 'm'),1, chord(:Gs3, 'm'),1).tick
 
   with_synth(:beep) do
     play notes

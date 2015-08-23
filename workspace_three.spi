@@ -51,7 +51,7 @@ live_loop :hats do |idx|
     else
       sample Down[/hat/i,13], amp: 0.0
     end
-  sleep 1/2.0}
+  sleep 1/4.0}
   idx+=1
 end
 

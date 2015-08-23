@@ -31,6 +31,10 @@ end
 live_loop :hats do
   sync :arp
   2.times{
+   
+  with_fx(:slicer, :phase: 0.025) do 
   sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
+end
+
     sleep 1/4.0}
 end

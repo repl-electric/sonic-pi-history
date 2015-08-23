@@ -12,7 +12,7 @@ live_loop :arp do
               chord(:Ds3, 'm+5', invert: 0), 32,
               chord(:Ds3, 'm'),32,  chord(:Gs3,'m'),32, chord(:Fs3 ,'M'),32).tick(:c)
 
-    synth :hollow, note: chord(:fs4, 'M')[3]
+    #synth :hollow, note: chord(:fs4, 'M')[3]
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = n.choose
       with_transpose(12) do

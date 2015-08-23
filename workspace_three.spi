@@ -22,6 +22,6 @@ with_fx((knit :echo,4, :reverb, 1, :echo, 3).tick(:fx), decay: 1.0, phase: 1/4.0
 end
 
 live_loop :drum do
-  sample :drums_kick_hollow
+  sample :drum_kick_hollow
   4.times{sync :arp}
 end

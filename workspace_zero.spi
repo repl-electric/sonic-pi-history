@@ -13,6 +13,8 @@ synth :dsaw, note: bix.look, detune: 12, release: 0.1
 sleep 0.125
 end
 end
+end
 
-
+live_loop :beats do
+sample :loop_mika
 end

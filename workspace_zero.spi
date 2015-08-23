@@ -1,6 +1,10 @@
 live_loop :apeg do
   notes = chord(:Ds3, 'm')
+
+  with_synth(:prophet) do
   play notes
+  end
+
 
   sleep 1/4.0
 

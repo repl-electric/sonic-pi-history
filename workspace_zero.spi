@@ -33,7 +33,7 @@ end
 live_loop :kicker do
   4.times{sync :apeg}
   with_fx((knit :echo, 1).tick(:fx)) do
-    sample :drum_heavy_kick, amp: 0.5
+    sample :drum_heavy_kick, amp: 0.0
   end
   4.times{sync :apeg}
   sample :sn_dolf, amp: 0.0

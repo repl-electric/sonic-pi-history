@@ -3,7 +3,7 @@ set_volume! 1.0
 live_loop :arp do
 
 with_synth :sine do
-  play (chord :Ds3) , amp: 10
+  play (chord :Ds3) , amp: 1
 end
  sleep 1/2.0
 

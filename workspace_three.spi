@@ -1,13 +1,7 @@
-live_loop :euro do
+live_loop :arp do
 
-with_fx(:echo, decay: 2.0) {
-with_synth(:supersaw){
-
-play :Fs3, attack: 0.01, release: 2.0, decay: 8.0
-}
-}
-
-sleep 8
-
+with_synth :sine do
+  play (chord :Ds3) 
+end
 
 end

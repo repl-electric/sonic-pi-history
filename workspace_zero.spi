@@ -29,7 +29,7 @@ live_loop :kicker do
   sample :sn_dolf, amp: 0.5
 end
 
-live_loop :hats do |idx|
+live_loop :hats do |m_idx|
   m = [0.1,0.2,0.3,0.4].choose
   with_fx(:reverb, mix: m, room: 0.3) do
     with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
@@ -37,5 +37,5 @@ live_loop :hats do |idx|
     end
   end
   sync :apeg
-  idx += 1
+  m_idx += 1
 end

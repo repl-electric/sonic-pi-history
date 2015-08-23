@@ -31,22 +31,6 @@ live_loop :apeg do
 end
 
 
-live_loop :hats do |idx|
-  sync :arp
-  m = [0.3,0.2,0.1, 0.4].choose
-  4.times{
-    if idx %8 != 2
-      with_fx(:reverb, room: 0.3, mix: m) do
-        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-          sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
-        end
-      end
-    else
-      sample :drum_cymbal_closed, amp: 1.0
-    end
-  sleep 1/4.0}
-  idx+=1
-end
 
 live_loop :perc do
   4.times{sync :arp}

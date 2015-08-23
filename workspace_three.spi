@@ -65,5 +65,8 @@ end
 
 live_loop :perc do
   4.times{sync :arp}
+  synth :blade, note: :fs3, cutoff: 60, release: 7.0
+  4.times{sync :arp}
   synth :blade, note: :gs3, cutoff: 60, release: 7.0
+  4.times{sync :arp}
 end

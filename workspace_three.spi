@@ -19,7 +19,7 @@ live_loop :arp do
     #synth :hollow, note: chord(:fs0, 'M')[2]
 
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
-      c = (n+(chord(:B3))+ chord(:Cs3)).choose
+      c = ((chord(:B3))+ chord(:Cs3)).choose
       with_transpose(12) do
         play (ring c, _).tick , amp: 0.3, release: 0.2, attack: 0.1, attack_level: 0.5
       end

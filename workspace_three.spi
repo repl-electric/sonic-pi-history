@@ -34,7 +34,7 @@ live_loop :drum do
     sample Ether[/kick/i, 9]
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
-  sample Ether[/snare/i, 5]
+  sample Ether[/snare/i, 4]
 end
 
 live_loop :hats do |idx|

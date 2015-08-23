@@ -26,7 +26,7 @@ live_loop :drum do
   with_fx((knit :none,3, :echo,1).tick(:f)) do
     sample :drum_heavy_kick
   end
-  (ring 4, 4,4, 6, 2).tick(:time).times{sync :arp}
+  (ring 4, 4,4, 6, 6).tick(:time).times{sync :arp}
   sample :sn_dolf
 end
 

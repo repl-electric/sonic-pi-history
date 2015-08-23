@@ -25,5 +25,6 @@ end
 live_loop :kicker do
   2.times{sync :apeg}
   sample :drum_heavy_kick, amp: 0.5
-
+  2.times{sync :apeg}
+  sample :sn_dub, amp: 0.5
 end

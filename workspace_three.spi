@@ -26,6 +26,7 @@ live_loop :arp do
 end
 
 live_loop :apeg do
+  sync :arp
   sample @s, amp: 2.0
   sleep 1
 end

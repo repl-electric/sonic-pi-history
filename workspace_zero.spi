@@ -1,4 +1,8 @@
-#fin
-#eventually
-#once this sample stops.......
-#now fin.
+live_loop :test do
+
+bix = (ring :d, :r, :r, :a, :f5, :r, :a, :r)
+
+play bix.tick
+sleep 1
+
+end

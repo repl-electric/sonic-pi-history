@@ -2,7 +2,7 @@
 set_volume! 1.0
 _=nil
 
-@s = MountainLoop[/.*/,4]
+@s = MountainLoop[/.*/,5]
 use_sample_bpm @s
 
 live_loop :arp do

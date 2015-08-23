@@ -1,3 +1,5 @@
+set_volume! 0.5
+
 live_loop :apeg do
   notes = (knit chord(:Ds3, 'm'),16, chord(:Gs3, 'm'),16).tick
 

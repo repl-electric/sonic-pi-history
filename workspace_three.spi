@@ -31,15 +31,14 @@ end
 live_loop :hats do |idx|
   sync :arp
   2.times{
-
-    if idx %32 != 4
-    with_fx(:reverb, room: 0.3, mix: 0.3) do
-      with_fx(:slicer, phase: 0.025, probability: 0.5, mix: 0.3) do
-        sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
+    if idx %32 != 4 or idx %32 != (32-8)
+      with_fx(:reverb, room: 0.3, mix: 0.3) do
+        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: 0.3) do
+          sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
+        end
       end
     end
-end
 
-    sleep 1/4.0}
- idx+=1
+  sleep 1/4.0}
+  idx+=1
 end

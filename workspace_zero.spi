@@ -39,7 +39,7 @@ live_loop :hats do |m_idx|
     end
   end
   else
-    sample :drum_cymbal_soft
+    sample :drum_cymbal_soft, amp: 0.1
   end
   sync :apeg
   m_idx += 1

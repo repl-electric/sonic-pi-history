@@ -41,7 +41,7 @@ live_loop :hats do |idx|
     if idx %8 != 2
       with_fx(:reverb, room: 0.3, mix: m) do
         with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-          sample Ether[/hat/i,16], start: rrand(0.0,0.1)
+          sample Ether[/hat/i,17], start: rrand(0.0,0.1)
         end
       end
     else

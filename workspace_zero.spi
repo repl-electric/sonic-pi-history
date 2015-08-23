@@ -1,5 +1,4 @@
 set_volume! 0.25
-
 _= nil
 live_loop :apeg do
   note = (knit chord(:Ds3, 'm'),32, chord(:Gs3, 'm'),32).tick
@@ -14,6 +13,11 @@ live_loop :apeg do
 
     with_transpose(-12) do
       play (knit note[0], 7, _,1).tick(:bass)
+
+      with_transpose(-12) do
+        play (knit note[0], 7, _,1).tick(:bass), release: 0.05, attack: 0.1
+      end
+
     end
 
   end

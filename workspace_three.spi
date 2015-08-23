@@ -3,7 +3,7 @@ set_volume! 1.0
 _=nil
 live_loop :arp do
   with_synth :prophet do
-    n = (knit (chord :Ds3, 'm'),16,  chord(:Gs3,'m'),8,  chord(:Fs3 ,'M'),8).tick(:c)
+    n = (knit (chord :Ds3, 'm'),16,  chord(:Gs3,'m'),16,  chord(:Fs3 ,'M'),8).tick(:c)
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = n.choose
       with_transpose(12) do

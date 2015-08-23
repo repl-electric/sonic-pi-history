@@ -48,6 +48,6 @@ live_loop :hats do |idx|
 end
 
 live_loop :perc do
-  8.times{sync :arp}
+  4.times{sync :arp}
   sample (ring :elec_blip2, :elec_blip).tick, amp: 0.2
 end

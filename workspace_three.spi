@@ -44,6 +44,6 @@ live_loop :hats do |idx|
       sample :drum_cymbal_soft, amp: 0.4
     end
 
-  sleep 1/2.0}
+  sleep 1/4.0}
   idx+=1
 end

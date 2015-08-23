@@ -2,7 +2,7 @@ set_volume! 1.0
 _=nil
 live_loop :arp do
 with_synth :sine do
-n = (chord :Ds3)
+n = (chord :Ds4)
 with_fx(:echo) do
   play n , amp: 1, release: 0.1, attack: 0.1, attack_level: 0.5
 end

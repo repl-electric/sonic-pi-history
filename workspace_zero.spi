@@ -16,7 +16,7 @@ end
 end
 
 live_loop :beats do
-with_fx(:slicer, phase: 0.25, invert_wave: 1.) do
+with_fx(:slicer, phase: 0.25, invert_wave: 1) do
 sample :loop_mika
 end
 sleep 8

@@ -1,3 +1,5 @@
+set_volume! 10
+
 live_loop :arp do
 
 with_synth :sine do

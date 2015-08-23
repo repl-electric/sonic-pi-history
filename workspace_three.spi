@@ -1,5 +1,4 @@
 ["experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-
 set_volume! 1.0
 _=nil
 live_loop :arp do
@@ -23,5 +22,5 @@ end
 
 live_loop :drum do
   sync :arp
-  sample Mountain[/subkick/i, 2], amp: 2.0
+  sample Mountain[/subkick/i, 2], amp: 1.0
 end

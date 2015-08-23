@@ -4,7 +4,7 @@ _=nil
 live_loop :arp do
   with_synth :prophet do
     n = (knit (chord :Ds3, 'm'),8,  chord(:Gs3,'m'),8,  chord(:Fs3 ,'M'),8).tick(:c)
-    with_fx((knit :echo,4, :reverb, 1, :echo, 3).tick(:fx), decay: 1.0, phase: 1/2.0, room: 0.1) do
+    with_fx((knit :echo,4, :reverb, 1, :echo, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = n.choose
       with_transpose(12) do
         play (ring c, _).tick , amp: 0.3, release: 0.2, attack: 0.1, attack_level: 0.5

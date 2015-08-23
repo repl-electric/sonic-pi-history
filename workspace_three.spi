@@ -22,5 +22,5 @@ end
 
 live_loop :drum do
   sync :arp
-  sample Mountain[/subkick/i, 1], amp: 1.0
+  sample Mountain[/subkick/i, 3], amp: 1.0
 end

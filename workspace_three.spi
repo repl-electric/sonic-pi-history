@@ -51,6 +51,12 @@ live_loop :hats do |idx|
   idx+=1
 end
 
+live_loop :humand do
+  sync :arp
+  sample Sop[/f#3/,0]
+
+end
+
 live_loop :perc do
   4.times{sync :arp}
   sample (ring :elec_blip2, :elec_blip).tick, amp: 0.2

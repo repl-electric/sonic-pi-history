@@ -4,7 +4,7 @@ live_loop :apeg do
   note = (knit chord(:Ds3, 'm'),32, chord(:Gs3, 'm'),32, chord(:Fs3, 'M'),32).tick
   high = note.choose
 
-  with_synth(:beep) do
+  with_synth(:prophet) do
     with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), room: 0.8) do
       with_transpose(12) do
         play high, amp: 0.5
@@ -27,9 +27,8 @@ live_loop :kicker do
   with_fx((knit :none, 3, :echo, 1).tick(:fx)) do
     sample :drum_heavy_kick, amp: 0.5
   end
-
   4.times{sync :apeg}
-  sample :sn_dolf, amp: 0.5
+  sample :sn_dolf, amp: 0.5 
 end
 
 live_loop :hats do |m_idx|

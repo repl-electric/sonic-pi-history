@@ -28,3 +28,9 @@ live_loop :kicker do
   4.times{sync :apeg}
   sample :sn_dolf, amp: 0.5
 end
+
+live_loop :hats do
+  sample :drum_cymbal_pedal
+  sync :apeg
+
+end

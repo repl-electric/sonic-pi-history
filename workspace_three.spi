@@ -6,7 +6,7 @@ _=nil
 #use_sample_bpm
 
 define :note_to_sample do |n|
-  note_info(n.midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")
+  note_info(n.midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#"))
 end
 
 live_loop :arp do

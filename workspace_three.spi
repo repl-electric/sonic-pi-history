@@ -37,6 +37,8 @@ live_loop :hats do |idx|
           sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
         end
       end
+    else
+      sample :drum_cymbal_open
     end
 
   sleep 1/4.0}

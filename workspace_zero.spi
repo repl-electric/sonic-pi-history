@@ -30,7 +30,9 @@ live_loop :kicker do
 end
 
 live_loop :hats do
-  sample :drum_cymbal_pedal, amp: 0.2
+
+  sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
   sync :apeg
+
 
 end

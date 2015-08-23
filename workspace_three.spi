@@ -3,6 +3,6 @@ live_loop :arp do
 with_synth :sine do
   play (chord :Ds3) 
 end
- sleep 1
+ sleep 1/2.0
 
 end

@@ -7,10 +7,10 @@ _=nil
 
 live_loop :arp do
   with_synth :prophet do
-    n = (knit chord(:Ds4, 'sus4', invert: 0),32, 
-              chord(:Ds4, 'sus2', invert: 0),32,
-              chord(:Ds4, 'm7+5', invert: 0), 32,
-              chord(:Ds4, 'm'),32,  chord(:Gs4,'m'),32, chord(:Fs4 ,'M7'),32).tick(:c)
+    n = (knit chord(:Ds3, 'sus4', invert: 0),32, 
+              chord(:Ds3, 'sus2', invert: 0),32,
+              chord(:Ds3, 'm+5', invert: 0), 32,
+              chord(:Ds3, 'm'),32,  chord(:Gs3,'m'),32, chord(:Fs3 ,'M'),32).tick(:c)
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = n.choose
       with_transpose(12) do
@@ -29,13 +29,12 @@ live_loop :arp do
 end
 
 live_loop :drum do
-  #(ring 1).tick(:time).times{sync :arp}
+  (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do
-#    sample Ether[/kick/i, 9]
+    sample Ether[/kick/i, 9]
   end
-#  (ring 2).tick(:time).times{sync :arp}
-  sample Ether[/clap/i, 4]
-  sleep 1/8.0
+  (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
+  sample Ether[/snare/i, 4]
 
 end
 
@@ -44,13 +43,13 @@ live_loop :hats do |idx|
   m = [0.3,0.2,0.1, 0.4].choose
   4.times{
     if idx %8 != 2
-  #    with_fx(:reverb, room: 0.3, mix: m) do
+      with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
           sample Ether["clap",4], start: rrand(0.0,0.1)
 #        end
- #     end
+      end
     else
-      sample Ether["clap",5], amp: 1.0, rate: 0.95
+      sample Ether["clap",4], amp: 1.0, rate: 0.95
     end
   sleep 1/4.0}
   idx+=1

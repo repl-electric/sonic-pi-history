@@ -2,8 +2,8 @@
 set_volume! 1.0
 _=nil
 
-@s = MountainLoop[/.*/,5]
-use_sample_bpm @s
+#@s = MountainLoop[/.*/,12]
+#use_sample_bpm
 
 live_loop :arp do
   with_synth :prophet do
@@ -17,7 +17,7 @@ live_loop :arp do
       with_transpose(-12) do
         play (ring n[0], _, _, _, _, _, _, _).tick(:bass), decay: (1/2.0)*6, release: 0.1, attack: 0.5, amp: 0.2
         with_transpose(-12) do
-          play (ring n[0], _, _, _, _, _, _, _).tick(:look), decay: 0.1, release: 0.05, attack: 0.1, amp: 0.5, detune: 12
+          play (ring n[0], _, _, _, _, _, _, _).tick(:look), decay: 0.1, release: 0.05, attack: 0.1, amp: 0.5
         end
       end
     end
@@ -25,14 +25,37 @@ live_loop :arp do
   sleep 1/8.0
 end
 
-live_loop :apeg do
-  sync :arp
-  sample @s, amp: 2.0
-  sleep 1
+live_loop :hum do
+  
 end
 
-live_loop :human do
-  sync :arp
-  synth :blade, note: :cs3, cutoff: 70, release: 7.0
+live_loop :drum do
+  (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
+  with_fx((knit :none,3, :echo,1).tick(:f)) do
+    sample :drum_heavy_kick
+  end
+  (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
+  sample :sn_dolf
+end
 
+live_loop :hats do |idx|
+  sync :arp
+  m = [0.3,0.2,0.1, 0.4].choose
+  4.times{
+    if idx %8 != 2
+      with_fx(:reverb, room: 0.3, mix: m) do
+        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
+          sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
+        end
+      end
+    else
+      sample :drum_cymbal_closed, amp: 1.0
+    end
+  sleep 1/4.0}
+  idx+=1
+end
+
+live_loop :perc do
+  4.times{sync :arp}
+  sample (ring :elec_blip2, :elec_blip).tick, amp: 0.2
 end

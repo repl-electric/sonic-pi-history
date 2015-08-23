@@ -1,7 +1,7 @@
 set_volume! 0.25
 
 live_loop :apeg do
-  note = (knit chord(:Ds3, 'm'),16, chord(:Gs3, 'm'),16).tick
+  note = (knit chord(:Ds3, 'm'),32, chord(:Gs3, 'm'),32).tick
 
   high = note.choose
 
@@ -10,8 +10,6 @@ live_loop :apeg do
       play high
     end
     play note.to_a - [high]
-
-
   end
 
 

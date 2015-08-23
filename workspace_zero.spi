@@ -10,7 +10,7 @@ live_loop :apeg do
         c = (knit 80,7, 90, 1).tick(:cut)
         play high, amp: 0.5, cutoff: c, decay: (c == 90 ? 1.0 : 0.5)  
       end
-      play note.to_a - [high], amp: 1.0, cutoff: 70
+      play note.to_a - [high], amp: 1.0, cutoff: 70, decay: (c == 90 ? 1.0 : 0.5)
     end
 
     with_synth(:beep) do

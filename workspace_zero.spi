@@ -1,6 +1,6 @@
 live_loop :test do
 
-synth :blade, note: :e3, release: 7.0, cutoff: 70
+synth :blade, note: :es3, release: 7.0, cutoff: 70
 bix = (ring :ds3, :r, :r, :as3, :fs5, :r, :as3, :r)
 with_fx(:echo, mix: 0.4, phase: 0.125) do
 32.times do

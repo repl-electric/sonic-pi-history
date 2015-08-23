@@ -30,7 +30,7 @@ end
 
 live_loop :hats do |idx|
   sync :arp
-   m = [0.3,0.2,0.1].choose
+   m = [0.3,0.2,0.1, 0.4].choose
   2.times{
     if idx %32 != 4 or idx %32 != (32-8)
       with_fx(:reverb, room: 0.3, mix: m) do

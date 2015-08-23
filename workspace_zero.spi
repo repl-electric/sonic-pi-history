@@ -54,6 +54,8 @@ live_loop :hats do |m_idx|
   m_idx += 1
 end
 
+["experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+
 live_loop :ending do
   sync :apeg
   s  = Mountain[/cracklin/, 0]

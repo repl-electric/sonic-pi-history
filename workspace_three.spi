@@ -9,7 +9,7 @@ with_transpose(12) do
   play (ring n[0]).tick, amp: 0.4, release: 0.1, attack: 0.1, attack_level: 0.5
   sleep 0.015
   play (ring n[1]).tick, amp: 0.3, release: 0.1, attack: 0.1, attack_level: 0.5
-  play (ring n[2]).tick, amp: 0.3, release: 0.1, attack: 0.1, attack_level: 0.5
+  play (ring n[2]).tick, amp: 0.3, release: 0.1, attack: 0.15, attack_level: 0.5
 end
 
 end

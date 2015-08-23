@@ -27,7 +27,7 @@ live_loop :arp do
           with_synth(:dsaw) do
             play (ring n[0], _, _, _, _, _, _, _).tick(:look), decay: 0.1, release: 0.05, attack: 0.1, amp: 0.5, detune: 12
 
-            sample Heat[/low_pad/i, /ds3/i]
+            sample Heat[/low_pad/i, /d#3/i]
 
         end
           end

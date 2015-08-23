@@ -23,8 +23,7 @@ end
 
 live_loop :drum do
   2.times{sync :arp}
-  sample :sn_dub
+  sample :drum_heavy_kick
   2.times{sync :arp}
   sample :sn_dolf
-
 end

@@ -35,7 +35,7 @@ live_loop :drum do
   end
 #  (ring 2).tick(:time).times{sync :arp}
   sample Ether[/clap/i, 4]
-  sleep 0.15
+  sleep 0.015
 
 end
 

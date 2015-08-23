@@ -62,14 +62,14 @@ live_loop :hats do |idx|
 end
 
 live_loop :humand do
-  with_fx(:bitcrusher) do
+  with_fx(:bitcrusher, sample_rate: 30000) do
   8.times{sync :arp}
   sample Sop[/f#/i,4]
   8.times{sync :arp}
   sample Sop[/g#/i,4]
   8.times{sync :arp}
   sample Sop[/d#/i,4]
-end
+  end
 end
 
 live_loop :perc do

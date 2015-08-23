@@ -41,7 +41,7 @@ live_loop :hats do |idx|
         end
       end
     else
-      sample :drum_cymbal_closed, amp: 0.2
+      sample :drum_cymbal_closed, amp: 0.5
     end
   sleep 1/4.0}
   idx+=1

@@ -31,7 +31,7 @@ z = (knit chord(:Ds3, 'sus4', invert: 0),32,
         end
         with_transpose(-12) do
           with_synth(:dsaw) do
-            play (ring n[0], _, _, _, _, _, _, _).look(:bass, offset: 1.0), decay: 0.1, release: 0.8, attack: 0.2, amp: 0.5, detune: 12
+            play (ring n[0], _, _, _, _, _, _, _).look(:bass, offset: 1), decay: 0.1, release: 0.8, attack: 0.2, amp: 0.5, detune: 12
 
             if (ring n[0], _, _, _, _, _, _, _).look(:bass)
               with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do

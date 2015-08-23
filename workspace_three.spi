@@ -32,7 +32,7 @@ live_loop :hats do
   sync :arp
   2.times{
 
-    with_fx(:reverb, room: 0.5, mix: 0.3) do
+    with_fx(:reverb, room: 0.2, mix: 0.3) do
       with_fx(:slicer, phase: 0.025, probability: 0.5, mix: 0.3) do
         sample :drum_cymbal_pedal, start: rrand(0.0,0.1)
       end

@@ -33,6 +33,6 @@ end
 
 live_loop :human do
   sync :arp
-  synth :blade, note: :gs3, cutoff: 70, release: 7.0
+  synth :blade, note: :gs4, cutoff: 70, release: 7.0
 
 end

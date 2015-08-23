@@ -56,7 +56,7 @@ end
 
 live_loop :humand do
   sync :arp
-  sample Sop[/f#3/,0]
+  sample Sop[/f#3/i,0]
 end
 
 live_loop :perc do

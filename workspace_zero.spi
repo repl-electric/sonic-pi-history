@@ -6,12 +6,11 @@ live_loop :apeg do
   
   with_synth(:beep) do
     with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx)) do
-    with_transpose(12) do
-      play high, amp: 0.5
+      with_transpose(12) do
+        play high, amp: 0.5
+      end
+      play note.to_a - [high], amp: 1.0
     end
-
-    play note.to_a - [high], amp: 1.0
-end
 
     with_transpose(-12) do
       play (knit note[0], 7, _,1).tick(:bass), decay: (1/4.0)*6, amp: 0.2

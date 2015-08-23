@@ -8,7 +8,7 @@ with_fx(:echo, decay: 1.0, phase: 1/4.0) do
 
  c = n.choose
  with_transpose(12) do
-   play (ring c, _).tick , amp: 0.3, release: 0.1, attack: 0.1, attack_level: 0.5
+   play (ring c, _).tick , amp: 0.3, release: 0.2, attack: 0.1, attack_level: 0.5
   end
   play (n.to_a - [c]) , amp: 1, release: 0.1, attack: 0.1, attack_level: 0.5
 

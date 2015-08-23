@@ -1,7 +1,6 @@
 live_loop :test do
 
-sync :blade, note: :d3
-
+sync :blade, note: :d3, releasE: 7.0
 
 bix = (ring :d, :r, :r, :a, :f5, :r, :a, :r)
 

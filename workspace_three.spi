@@ -62,8 +62,9 @@ live_loop :hats do |idx|
 end
 
 live_loop :humand do
-  sample (ring Heat[/bells/i, /d#3/i], Heat[/bells/i, /g#3/i]).tick(:s), decay: 16.0, cutoff: 80
   with_fx(:bitcrusher, sample_rate: 30000) do
+  sample (ring Heat[/bells/i, /d#3/i], Heat[/bells/i, /g#3/i]).tick(:s), decay: 16.0, cutoff: 80
+
   8.times{sync :arp}
   sample Sop[/f#/i,4]
   8.times{sync :arp}

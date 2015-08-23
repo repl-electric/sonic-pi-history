@@ -4,7 +4,11 @@ live_loop :arp do
 
 with_fx(:echo, phase: 1/8.0) do
 with_synth :sine do
-  play (chord :Ds3).choose , amp: 1, release: 0.1, attack: 0.1
+n = (chord :Ds3).choose
+  play n , amp: 1, release: 0.1, attack: 0.1
+with_transpose(12) do
+  play n
+end
 end
 end
  sleep 1/4.0

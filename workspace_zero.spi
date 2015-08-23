@@ -32,14 +32,16 @@ end
 live_loop :hats do |m_idx|
   m = [0.1,0.2,0.3,0.4].choose
 
-  if(m_idx % 16 != 2)
   with_fx(:reverb, mix: m, room: 0.3) do
     with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
+
+  if(m_idx % 16 != 2)
     sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
-    end
-  end
   else
     sample :drum_cymbal_soft, amp: 0.1
+  end
+    end
+
   end
   sync :apeg
   m_idx += 1

@@ -16,6 +16,8 @@ end
 end
 
 live_loop :beats do
+with_fx(:slicer) do
 sample :loop_mika
+end
 sleep 8
 end

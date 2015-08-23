@@ -19,6 +19,11 @@ live_loop :apeg do
       end
     end
   end
-
   sleep 1/4.0
+end
+
+live_loop :kicker do
+  2.times{sync :apeg}
+  sample :drum_heavy_kick
+
 end

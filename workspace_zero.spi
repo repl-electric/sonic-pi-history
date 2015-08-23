@@ -3,7 +3,7 @@ _= nil
 live_loop :apeg do
   note = (knit chord(:Ds3, 'm'),32, chord(:Gs3, 'm'),32, chord(:Fs3, 'M'),32).tick
   high = note.choose
-  
+
   with_synth(:beep) do
     with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), room: 0.8) do
       with_transpose(12) do
@@ -34,14 +34,12 @@ live_loop :hats do |m_idx|
 
   with_fx(:reverb, mix: m, room: 0.3) do
     with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-
-  if(m_idx % 16 != 2)
-    sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
-  else
-    sample :drum_cymbal_soft, amp: 0.1
-  end
+      if(m_idx % 16 != 2)
+        sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
+      else
+        sample :drum_cymbal_soft, amp: 0.1, start: rrand(1.0)
+      end
     end
-
   end
   sync :apeg
   m_idx += 1

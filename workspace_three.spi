@@ -29,7 +29,9 @@ live_loop :drum do
 end
 
 live_loop :hats do
-  sample :drum_cymbal_pedal
   sync :arp
-
+  2.times{
+  sample :drum_cymbal_pedal
+    sleep 1/4.0
+}
 end

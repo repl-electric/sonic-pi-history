@@ -46,3 +46,8 @@ live_loop :hats do |idx|
   sleep 1/4.0}
   idx+=1
 end
+
+live_loop :perc do
+  sync :arp
+  sample :elec_cymbal
+end

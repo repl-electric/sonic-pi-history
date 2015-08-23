@@ -1,10 +1,17 @@
 set_volume! 0.25
 
 live_loop :apeg do
-  notes = (knit chord(:Ds3, 'm'),16, chord(:Gs3, 'm'),16).tick
+  note = (knit chord(:Ds3, 'm'),16, chord(:Gs3, 'm'),16).tick
+
+  high = note.choose
 
   with_synth(:beep) do
-    play notes
+    with_transpose(12) do
+      play high
+    end
+    play note - [high]
+
+
   end
 
 

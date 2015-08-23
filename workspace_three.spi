@@ -12,7 +12,7 @@ with_fx(:echo, decay: 1.0, phase: 1/4.0) do
   play (n.to_a - [c]) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
 
 with_transpose(-12) do
-        play (ring n[0], _, _, _, _, _, _, _, _).tick(:bass), release: 1.0
+        play (ring n[0], _, _, _, _, _, _, _).tick(:bass), release: 1.0
 end
 
 

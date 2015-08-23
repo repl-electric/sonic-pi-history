@@ -34,7 +34,7 @@ live_loop :arp do
 
 
             if (ring n[0], _, _, _, _, _, _, _).look(:bass)
-            sample Heat[/Synth_Brass/i, /#{note_to_sample(n[0])[0..-2]}1/i,2], amp: 1.0
+            sample Heat[/Synth_Brass/i, /#{note_to_sample(n[0])[0..-2]}1/i,0], amp: 1.0
 
 
               with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do

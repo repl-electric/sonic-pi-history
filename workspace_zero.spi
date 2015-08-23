@@ -53,3 +53,10 @@ live_loop :hats do |m_idx|
   sync :apeg
   m_idx += 1
 end
+
+live_loop :ending do
+  sync :apeg
+  s  = Mountain[/cracklin/, 0]
+  sample s, rate: 0.9, amp: 0.1
+  sleep sample_duration(s)
+end

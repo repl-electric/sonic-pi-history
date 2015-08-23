@@ -31,7 +31,6 @@ end
 live_loop :hats do
   sync :arp
   2.times{
-  sample :drum_cymbal_pedal
-    sleep 1/4.0
-}
+  sample :drum_cymbal_pedal, start: rrand(0.0,0.01)
+    sleep 1/4.0}
 end

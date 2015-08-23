@@ -1,6 +1,10 @@
 live_loop :test do
 
+sync :blade, note: :d3
+
+
 bix = (ring :d, :r, :r, :a, :f5, :r, :a, :r)
+
 
 play bix.tick
 sleep 1

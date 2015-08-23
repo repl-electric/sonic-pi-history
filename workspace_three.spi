@@ -49,5 +49,5 @@ end
 
 live_loop :perc do
   32.times{sync :arp}
-  sample :elec_cymbal
+  sample :elec_filt_snare
 end

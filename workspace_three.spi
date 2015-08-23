@@ -2,7 +2,7 @@ set_volume! 1.0
 
 live_loop :arp do
 
-with_fx(:echo, phase: 0.025) do
+with_fx(:echo, phase: 0.25) do
 with_synth :sine do
   play (chord :Ds3).choose , amp: 1, release: 0.1
 end

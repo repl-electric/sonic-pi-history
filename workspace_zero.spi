@@ -44,9 +44,9 @@ live_loop :hats do |m_idx|
   with_fx(:reverb, mix: m, room: 0.3) do
     with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
       if(m_idx % 16 != 2)
-        sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
+        sample :drum_cymbal_pedal, amp: 0.0, start: rrand(0.0, 0.1)
       else
-        sample :drum_cymbal_soft, amp: 0.1, start: rrand(0.0,1.0)
+        sample :drum_cymbal_soft, amp: 0.0, start: rrand(0.0,1.0)
       end
     end
   end

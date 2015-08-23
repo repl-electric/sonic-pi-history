@@ -22,7 +22,7 @@ live_loop :arp do
 end
 
 live_loop :drum do
-  2.times{sync :arp}
+  4.times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do
     sample :drum_heavy_kick
   end

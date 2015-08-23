@@ -49,7 +49,7 @@ live_loop :hats do |idx|
 #        end
       end
     else
-      sample Down[/hat/i,13], amp: 0.0
+      sample Ether["clap",4], amp: 2.0
     end
   sleep 1/4.0}
   idx+=1

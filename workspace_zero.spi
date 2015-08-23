@@ -13,7 +13,7 @@ live_loop :apeg do
     end
 
     with_transpose(-12) do
-      play (knit note[0], 7, _,1).tick(:bass), decay: (1/4.0)*6, amp: 0.2
+      play (knit note[0], 7, _,1).tick(:bass), decay: (1/4.0)*6, amp: 0.2, , cutoff: 60
       with_transpose(-12) do
         play (knit note[0], 7, _,1).tick(:bass), release: 0.1, attack: 0.1, amp: 0.3
       end

@@ -27,3 +27,8 @@ live_loop :drum do
   1.times{sync :arp}
   sample :sn_dolf
 end
+
+live_loop :hats do
+  sync :arp
+  sample :drum_cymbal_pedal
+end

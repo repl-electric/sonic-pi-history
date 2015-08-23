@@ -8,7 +8,7 @@ use_transpose -12
 play bix.tick, release: 0.1
 
 use_transpose -24
-synth :dsaw, note: bix.look, detune: -12, release: 0.1
+synth :dsaw, note: bix.look, detune: 0, release: 0.1
 
 sleep 0.125
 end

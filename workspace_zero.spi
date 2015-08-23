@@ -24,14 +24,16 @@ end
 
 live_loop :kicker do
   4.times{sync :apeg}
-  sample :drum_heavy_kick, amp: 0.5
+  with_fx((knit :none, 3, :echo, 1).tick(:fx)) do
+    sample :drum_heavy_kick, amp: 0.5
+  end
+
   4.times{sync :apeg}
   sample :sn_dolf, amp: 0.5
 end
 
 live_loop :hats do |m_idx|
   m = [0.1,0.2,0.3,0.4].choose
-
   with_fx(:reverb, mix: m, room: 0.3) do
     with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
       if(m_idx % 16 != 2)

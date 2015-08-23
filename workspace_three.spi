@@ -18,3 +18,8 @@ end
  sleep 1/4.0
 
 end
+
+live_loop :drum do
+  sync :arp
+  sample Mountain[/subkick/i, 2]
+end

@@ -32,7 +32,9 @@ end
 live_loop :hats do
 
   with_fx(:reverb, mix: 0.3, room: 0.3) do
-  sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
+    with_fx(:slicer, phase: 0.025) do
+    sample :drum_cymbal_pedal, amp: 0.2, start: rrand(0.0, 0.1)
+    end
   end
   sync :apeg
 

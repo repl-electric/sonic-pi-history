@@ -5,7 +5,7 @@ live_loop :arp do
 #with_fx(:echo) do
 with_synth :sine do
 n = (chord :Ds3)
-  play n , amp: 1, release: 0.1, attack: 0.1, attack_level: 0.3
+  play n , amp: 1, release: 0.1, attack: 0.1, attack_level: 0.4
 with_transpose(12) do
   play (ring n[0], _).tick, release: 0.05 
 end

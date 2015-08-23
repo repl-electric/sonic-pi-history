@@ -64,7 +64,7 @@ end
 live_loop :humand do
   with_fx(:bitcrusher, sample_rate: 30000) do
     with_fx(:flanger){
-    sample (ring Heat[/bells/i, /d#3/i], Heat[/bells/i, /g#3/i], Heat[/bells/i, /f#3/i]).choose, decay: 16.0, cutoff: 80
+      sample (ring Heat[/bells/i, /d#3/i], Heat[/bells/i, /g#3/i], Heat[/bells/i, /f#3/i]).choose, decay: 16.0, cutoff: 80
                         }
   8.times{sync :arp}
   sample Sop[/f#/i,4]

@@ -7,7 +7,7 @@ with_fx(:echo, decay: 0.05, phase: 1/8.0) do
   play n , amp: 1, release: 0.1, attack: 0.1, attack_level: 0.5
 
 with_transpose(12) do
-  play (ring n[-1], _, _,).tick, 
+  play (ring n[-1], _, _,).tick, amp: 1, release: 0.1, attack: 0.1, attack_level: 0.5
 end
 
 

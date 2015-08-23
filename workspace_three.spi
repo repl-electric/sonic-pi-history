@@ -23,5 +23,5 @@ end
 
 live_loop :drum do
   sample :sn_dub
-  4.times{sync :arp}
+  2.times{sync :arp}
 end

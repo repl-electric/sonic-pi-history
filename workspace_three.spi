@@ -57,6 +57,8 @@ end
 live_loop :humand do
   4.times{sync :arp}
   sample Sop[/f#/i,4]
+  4.times{sync :arp}
+  sample Sop[/g#/i,4]
 end
 
 live_loop :perc do

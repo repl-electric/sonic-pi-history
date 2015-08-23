@@ -10,7 +10,13 @@ live_loop :apeg do
       play high
     end
     play note.to_a - [high]
+
+    with_transpose(-12) do
+      play note[0]
+    end
+
   end
+
 
 
   sleep 1/4.0

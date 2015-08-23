@@ -28,7 +28,7 @@ live_loop :arp do
             play (ring n[0], _, _, _, _, _, _, _).look(:bass), decay: 0.1, release: 0.05, attack: 0.1, amp: 0.5, detune: 12
 
             if (ring n[0], _, _, _, _, _, _, _).look(:bass)
-              sample Heat[/Low_Pad/i, /#{note_info(n[0]).midi_name}d#2/i], amp: 2.0
+              sample Heat[/Low_Pad/i, /#{note_info(n[0]).midi_note}d#2/i], amp: 2.0
             end
 
         end

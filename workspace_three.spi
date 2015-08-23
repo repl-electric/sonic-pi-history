@@ -28,7 +28,7 @@ end
 live_loop :drum do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do
-    sample :drum_heavy_kick
+    sample Mountain[/subkick/i, 2]
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
   sample :sn_dolf

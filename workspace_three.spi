@@ -28,7 +28,7 @@ live_loop :drum do
   sample :sn_dolf
 end
 
-live_loop :hats do
+live_loop :hats do |idx|
   sync :arp
   2.times{
 
@@ -39,4 +39,5 @@ live_loop :hats do
     end
 
     sleep 1/4.0}
+ idx+=1
 end

@@ -29,10 +29,3 @@ live_loop :apeg do
   sample @s, amp: 2.0
   sleep 1
 end
-
-
-
-live_loop :perc do
-  4.times{sync :arp}
-  sample (ring :elec_blip2, :elec_blip).tick, amp: 0.2
-end

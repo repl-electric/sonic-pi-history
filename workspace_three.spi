@@ -11,7 +11,7 @@ end
 
 live_loop :arp do
   with_synth :prophet do
-    n = (knit chord(:Fs3, 'm', invert: 0),32,  
+    n = (knit chord(:Fs3, 'M', invert: 0),32,  
          #chord(:Fs3,'M'),32, chord(:Fs3 ,'M'),32
 ).tick(:c)
 
@@ -58,10 +58,7 @@ live_loop :drum do
                               end
 end
 
-                            live_loop :bassed do
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_blende_F#m.wav"
-32.times{sync :arp}
-                            end
+                            
 
 live_loop :hats do |idx|
   sync :arp

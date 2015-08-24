@@ -9,6 +9,9 @@ define :note_to_sample do |n|
   note_info(n).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")
 end
 
+# F♯, G♯, A, B, C♯, D, and E
+
+
 live_loop :arp do
   with_synth :prophet do
     n = (knit 
@@ -52,6 +55,8 @@ live_loop :arp do
   sleep 1/8.0
 end
 
+
+
 live_loop :drum do
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
@@ -82,6 +87,9 @@ live_loop :hats do |idx|
   idx+=1
 end
 
+# F♯, G♯, A, B, C♯, D, and E
+
+
 live_loop :humand do
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
     with_fx(:flanger, pan: (Math.sin(vt*13)/1.5), phase: 2, wave: 4, invert_wave: 1, stereo_invert_wave: 1){
@@ -95,7 +103,7 @@ live_loop :humand do
   8.times{sync :arp}
   sample Sop[/g#/i,4]
   8.times{sync :arp}
-  sample Sop[/d#/i,5]
+  sample Sop[/d/i,5]
   end
 end
 

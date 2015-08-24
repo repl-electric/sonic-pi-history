@@ -20,6 +20,7 @@ live_loop :arp do
          chord(:Fs3, ['m7+5'].choose),  16,
 
          chord(:A3, :sus2, invert: -2), 32,
+
 #         chord_degree(3, :Fs3, :minor), 32,
 #         chord_degree(6, :Fs3, :minor), 32,
 #         chord_degree(7, :Fs3, :minor,  3, invert:-3),32,
@@ -33,7 +34,7 @@ live_loop :arp do
       with_transpose(12) do
         play (ring c, _).tick , amp: 0.5, release: 0.2, attack: 0.1, attack_level: 0.5
       end
-      play (n.to_a - [c]) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
+#      play (n.to_a - [c]) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
       with_transpose(-12) do
         with_synth(:growl) do
         play (ring n[0], _, _, _, _, _, _, _).tick(:bass), decay: (1/2.0)*6, release: 0.2, attack: 0.5, amp: 0.8

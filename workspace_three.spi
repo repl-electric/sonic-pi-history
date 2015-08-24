@@ -27,12 +27,12 @@ live_loop :arp do
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = (knit n[0],2, :r, 1,n[-1],2, :r,1, n[1],3).tick(:c) #.choose
       with_transpose(12) do
-        play (ring c, _).tick , amp: 0.5, release: 1.0, attack: 0.1, attack_level: 0.5
+        play (ring c, _).tick , amp: 0.5, release: 0.2, attack: 0.1, attack_level: 0.5
       end
       play (n.to_a - [c]) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
       with_transpose(-12) do
         with_synth(:growl) do
-        play (ring n[0], _, _, _, _, _, _, _).tick(:bass), decay: (1/2.0)*6, release: 0.5, attack: 0.5, amp: 0.3
+        play (ring n[0], _, _, _, _, _, _, _).tick(:bass), decay: (1/2.0)*6, release: 0.1, attack: 0.5, amp: 0.2
         end
         with_transpose(-12) do
           with_synth(:dsaw) do

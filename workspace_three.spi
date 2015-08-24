@@ -60,7 +60,6 @@ end
 
                             live_loop :bassed do
 sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_blende_F#m.wav"
-
 32.times{sync :arp}
                             end
 

@@ -21,7 +21,7 @@ live_loop :arp do
          chord(:A3, :sus2, invert: 0), 32,
          chord_degree(6, :Fs3, :minor, 3,  invert: -3), 10,
          chord_degree(7, :Fs3, :minor,  3, invert: -2),10,
-         chord_degree(7, :Fs3, :minor,  3, invert: -1),12,
+         chord_degree(7, :Fs3, :minor,  3, invert: -1),32,
 
 ).tick(:c)
 

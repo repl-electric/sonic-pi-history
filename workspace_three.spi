@@ -17,7 +17,7 @@ live_loop :arp do
     n = (knit 
          chord_degree(6, :Fs3, :minor),32,
          chord_degree(7, :Fs3, :minor, 3, invert:-3),32,
-         chord_degree(1, :Fs3, :minor),32,
+         chord_degree(1, :Fs3, :minor), 32,
          chord_degree(3, :Fs3, :minor), 32,
 
 
@@ -113,6 +113,6 @@ live_loop :perc do
   4.times{sync :arp}
   synth :blade, note: :fs4, cutoff: 70, release: 7.0
   4.times{sync :arp}
-  synth :blade, note: :gs4, cutoff: 70, release: 7.0
+  #synth :blade, note: :gs4, cutoff: 70, release: 7.0
   4.times{sync :arp}
 end

@@ -11,7 +11,7 @@ end
 
 live_loop :arp do
   with_synth :prophet do
-    n = (knit chord(:Fs3, 'M', invert: 0),32,  
+    n = (knit chord(:Fs3, 'm', invert: 0),32,  
          #chord(:Fs3,'M'),32, chord(:Fs3 ,'M'),32
 ).tick(:c)
 

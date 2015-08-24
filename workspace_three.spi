@@ -107,7 +107,7 @@ live_loop :humand do
                           end
                         }
   8.times{sync :arp}
-  sample Sop[/f#/i,4]
+  sample Sop[/f#/i,4], amp: 2.0
   8.times{sync :arp}
   #sample Sop[/g#/i,4]
   8.times{sync :arp}

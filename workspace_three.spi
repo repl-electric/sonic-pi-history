@@ -58,6 +58,11 @@ live_loop :drum do
                               end
 end
 
+                            live_loop :bassed do
+32.times{sync :arp}
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_blende_F#m.wav"
+                            end
+
 live_loop :hats do |idx|
   sync :arp
   m = [0.3,0.2,0.1, 0.4].choose

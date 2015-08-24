@@ -18,7 +18,7 @@ live_loop :arp do
          chord_degree(6, :Fs3, :minor),32,
          chord_degree(7, :Fs3, :minor, 3, invert:-3),32,
          chord(:Fs3, ['m+5', 'm'].choose), 16,
-         chord(:Fs3, ['m+5', 'm7+5', 'm'].choose), 16,
+         chord(:Fs3, ['m+5', 'm7+5'].choose), 16,
 
          chord(:A3, :sus2), 32,
          chord_degree(3, :Fs3, :minor), 32,

@@ -14,6 +14,8 @@ live_loop :arp do
     n = (knit 
          chord_degree(6, :Fs3, :minor),32,
          chord_degree(7, :Fs3, :minor),32,
+         chord_degree(1, :Fs3, :minor),32,
+
   
          #chord(:Fs3,'M'),32, chord(:Fs3 ,'M'),32
 ).tick(:c)

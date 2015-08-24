@@ -13,7 +13,7 @@ end
 
 
 live_loop :arp do
-  with_synth :prophet do
+  with_synth :plucked do
     n = (knit 
          chord_degree(6, :Fs3, :minor),32,
          chord_degree(7, :Fs3, :minor, 3, invert:-3),32,
@@ -53,7 +53,6 @@ live_loop :arp do
   end
   sleep 1/8.0
 end
-
 
 
 live_loop :drum do

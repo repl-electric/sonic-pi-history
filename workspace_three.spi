@@ -15,7 +15,7 @@ end
 live_loop :arp do
   with_synth :prophet do
     n = (knit 
-         chord(:Fs3, ['m+5'].choose), 32,
+         chord(:Fs3, ['m+5'].choose), 64,
          chord(:A3, :sus2, invert: -2), 32,
          chord_degree(3, :Fs3, :minor), 32,
          chord_degree(6, :Fs3, :minor),32,

@@ -26,7 +26,7 @@ live_loop :arp do
          chord(:Fs4, ['m'].choose),     8,
          chord(:Fs3, ['m'].choose),     8,
          chord(:Fs4, ['m'].choose),     8,
-         chord(:Fs3, ['m'].choose),     2,
+         chord(:Fs3, ['m'].choose, invert: -1),     2,
          chord(:Fs4, ['m'].choose),     2,
 
 

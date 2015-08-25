@@ -71,7 +71,7 @@ live_loop :drum do
     sample Ether[/kick/i, 10], rate: 1.0, amp: 4.0
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
-  sample Ether[/snare/i, 8], rate: 1.55
+  sample Ether[/snare/i, 19], rate: 1.55
                               end
 end
 

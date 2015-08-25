@@ -126,8 +126,4 @@ end
 live_loop :perc do
   sample Ether[/coil/i,/f#/,2].tick,amp: 2.0
   4.times{sync :arp}
-  #synth :blade, note: :fs5, cutoff: 70, release: 7.0
-  4.times{sync :arp}
-  #synth :blade, note: :gs4, cutoff: 70, release: 7.0
-  4.times{sync :arp}
 end

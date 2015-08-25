@@ -32,7 +32,9 @@ live_loop :arp do
 
 ).tick(:c)
 
+    with_fx(:reverb) do
     synth :hollow, note: chord(:fs3, 'm')[0], amp: 4.0
+    end
 
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
       c = (knit n[0],2, :r, 1,n[-1],2, :r,1, n[1],3).tick(:c) #.choose

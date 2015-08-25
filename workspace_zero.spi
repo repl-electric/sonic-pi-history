@@ -105,7 +105,7 @@ end
 # F♯, G♯, A, B, C♯, D, and E
 
 live_loop :humand do
-  with_fx(:bitcrusher, bits: 7, sample_rate: 30000) do
+  with_fx(:bitcrusher, bits: 24, sample_rate: 30000) do
     with_fx(:flanger, pan: (Math.sin(vt*13)/1.5), phase: 2, wave: 4, invert_wave: 1, stereo_invert_wave: 1){
       octive = [2].choose
       with_fx(:bitcrusher, bits: 7) do

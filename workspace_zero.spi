@@ -124,6 +124,6 @@ live_loop :humand do
 end
 
 live_loop :perc do
-  sample Ether[/coil/i,/f#/,2].tick,amp: 2.0
+  sample Ether[/coil/i,/f#/,3].tick,amp: 2.0
   1.times{sync :arp}
 end

@@ -124,6 +124,6 @@ live_loop :humand do
 end
 
 live_loop :perc do
-  sample Frag[/coil/i,"D",0], amp: 1.0
+  sample Frag[/coil/i,"D",2], amp: 1.0
   32.times{sync :arp}
 end

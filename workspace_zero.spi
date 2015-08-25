@@ -32,7 +32,7 @@ live_loop :arp do
 
 ).tick(:c)
 
-    with_fx(:slicer, phase: 1/8.0, invert_phase: 1, probability: 0.2) do
+    with_fx(:slicer, phase: 1/8.0, invert_phase: 1, probability: 0.5) do
       synth :growl, note: chord(:fs3, 'm')[0], amp: 2.0, attack: 0.01
     end
 

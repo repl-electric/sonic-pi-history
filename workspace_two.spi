@@ -1,0 +1,61 @@
+set_volume! 0.2
+
+@f = MountainLoop[/.*/i, 12]
+use_sample_bpm @f
+
+live_loop :stars do
+  sample @f, amp: 0.8
+ #sync :whole
+  with_synth(:plucked){
+    with_fx(:reverb) do |r_fx|
+      notes = (knit chord(:As3), 1, chord(:Fs3, 'sus2', invert: 1), 1, chord(:Fs3, 'M', invert: 0), 1).tick
+      f =  play notes, release: 32.0,   attack: 0.01, decay: 64.0, amp: 0.2
+      f =  play notes, release: 64.0, attack: 1.0, decay: 128.0, amp: 1.0, cutoff: 120
+   4.times{ 
+       sleep 1.0
+      notes = (knit chord(:As3), 1, chord(:Fs3, 'sus2', invert: 1), 1, chord(:Fs3, 'M', invert: 0), 1).tick
+      f =  play notes, release: 32.0,   attack: 0.01, decay: 64.0, amp: 0.2
+      f =  play notes, release: 64.0, attack: 1.0, decay: 128.0, amp: 1.0, cutoff: 120
+
+      sample @f, amp: 0.2
+      control r_fx, dry: rrand(0.0,1.0)}
+end}
+end
+
+live_loop :chorsd do
+  sync :stars
+  with_fx(:echo, phase: sample_duration(@f)/8.0) do
+    sample (knit Heat[/Multis/i,  /F#3/i, 0],1,
+                      Heat[/Multis/i, /A#3/i, 0],1,
+                           Heat[/Multis/i, /C#3/i, 0],1
+).tick, amp: 0.1
+                                 sleep 1/2.0
+                                end
+
+
+end
+
+live_loop :bass do
+sync :stars
+  with_synth(:growl){
+    notes =    (knit :As2,1, :Fs2,1, :Cs2, 1).tick
+    play notes, release: 1.0, amp: 0.2, decay: 3.0
+    with_synth(:beep) do
+      with_transpose(-12) do
+        play notes, releae: 0.1, attack: 0.01
+      end
+    end
+  }
+  sleep 4.0
+end
+
+live_loop :drums do
+  sync :stars
+  with_fx((knit :reverb, 3, :echo, 1).tick, decay: 8.0 ) do
+    sample Mountain[/subkick/i,2..3].tick(:s), amp: 1.0
+  end
+end
+
+live_loop :cracklin do
+  sample_and_sleep Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.2
+end

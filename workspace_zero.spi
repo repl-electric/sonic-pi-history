@@ -28,6 +28,13 @@ live_loop :arp do
          chord_degree(4, :Fs2, :minor, 3,  invert: 2),32,
          chord_degree(7, :Fs2, :minor, 3,  invert: 1),32,
 
+         chord_degree(4, :Fs2, :minor, 3,  invert: 2),8,
+         chord_degree(7, :Fs2, :minor, 3,  invert: 1),8,
+         chord_degree(4, :Fs2, :minor, 3,  invert: 2),8,
+         chord_degree(7, :Fs2, :minor, 3,  invert: 1),8,
+
+
+
 #         chord_degree(5, :Fs3, :minor, 3,  invert: -3),32,
 #         chord_degree(5, :Fs3, :minor, 3,  invert: -4),32,
   
@@ -72,7 +79,7 @@ live_loop :arp do
       end
     end
   end
-  sleep 1/2.0
+  sleep 1/8.0
 end
 
 

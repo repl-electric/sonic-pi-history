@@ -93,7 +93,7 @@ live_loop :hats do |idx|
                                 with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxk)) do
       with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-         sample Ether["clap", range.new(2,rrand_i(6))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 3.0
+         sample Ether["clap", range(2,rrand_i(6))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 3.0
 end
 #        end
       end

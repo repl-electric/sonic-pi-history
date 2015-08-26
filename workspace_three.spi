@@ -1,1 +1,1 @@
-puts Ether[/snare/i, [22,22,22,24]]
+puts Ether[/snare/i, [22,22,22,24]].inspect

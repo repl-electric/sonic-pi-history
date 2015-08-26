@@ -1,4 +1,4 @@
 
 
 
-synth :string, note: :A3, release: 0.5
+synth :string, note: :A3, release: 0.5, attack: 0.01

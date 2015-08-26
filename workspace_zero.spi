@@ -80,10 +80,10 @@ live_loop :drum do
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f)) do
-  #sample Ether[/kick/i, [5,5,5,4]].tick(:drums), rate: 1.0, amp: 3.0
+ #sample Ether[/kick/i, [5,5,5,4]].tick(:drums), rate: 1.0, amp: 3.0
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
-  #sample Ether[/snare/i, [22,22,22,24]].tick(:snares), rate: 3.0
+# sample Ether[/snare/i, [22,22,22,24]].tick(:snares), rate: 3.0
                               end
 end
 
@@ -94,7 +94,7 @@ live_loop :hats do |idx|
                                 with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxkc)) do
       with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-         sample Ether["clap", Range.new(2,(ring 3,4).tick(:cr))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 2.0
+ #        sample Ether["clap", Range.new(2,(ring 3,4).tick(:cr))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 2.0
 end
 #        end
       end

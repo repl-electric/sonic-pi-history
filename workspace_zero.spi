@@ -91,7 +91,7 @@ live_loop :hats do |idx|
   sync :arp
   m = [0.3,0.2,0.1, 0.4].choose
   4.times{
-                                with_fx(:bitcrusher, bits: (ramp *(5..24).to_a.reverse).tick(:fxz)) do
+                                with_fx(:bitcrusher, bits: (ramp *(5..24).to_a.reverse).tick(:fxk)) do
       with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
          sample Ether["clap",4], start: rrand(0.0,0.1),rate: 2.0, amp: 1.0

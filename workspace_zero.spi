@@ -11,7 +11,6 @@ end
 
 # F♯, G♯, A, B, C♯, D, and E
 
-
 live_loop :arp do
   with_synth :prophet do
     n = (knit 
@@ -87,8 +86,6 @@ live_loop :drum do
   sample Ether[/snare/i, 22], rate: 1.0
                               end
 end
-
-                            
 
 live_loop :hats do |idx|
   sync :arp

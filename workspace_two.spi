@@ -1,4 +1,6 @@
 
 
-
+live_loop : do
 synth :string, note: :A3, release: 0.5, attack: 0.01, amp: 2.0
+sleep 1/2.0
+end

@@ -86,9 +86,8 @@ live_loop :arp do
 end
 
                             live_loop :background do
- sample Ether[/D/i, 0], amp: 8.0, rate: (ring 2.0,1.0).tick
+                              sample Ether[/D/i, 0], amp: 8.0, rate: (ring 2.0,1.0).tick
                               8.times{sync :drum}
-                             
                             end
 
 live_loop :drum do

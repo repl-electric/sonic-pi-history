@@ -21,6 +21,8 @@ notes = (knit
                                     16.times{
                                     with_synth(:prophet) {
                                       play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
+
+                                                                  synth :plucked, note: notes.look(:notes)
                                     }
                                       sleep @d/16.0
                                     }

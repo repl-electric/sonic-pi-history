@@ -83,7 +83,6 @@ live_loop :drum do
  sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 8.0
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
-  sample Frag[/.*/i, 9], rate: 1.0, amp: 8.0
                               end
 end
 

@@ -22,7 +22,7 @@ picked = nil
                                                               sync :beater
                                                               32.times{
                                                                 with_synth(:prophet) {
-                                                                  c  = n.choose
+                                                                  c  = picked.choose
                                                                   play n.to_a-[c], cutoff: 80, attack: 0.01, release: 0.3
                                                                   synth :plucked, note: c, attack: 0.01
                                                                 }

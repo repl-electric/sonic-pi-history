@@ -77,7 +77,7 @@ end
 live_loop :drum do
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
-  with_fx((knit :none,3, :echo,1).tick(:f)) do
+  with_fx((knit :none,3, :echo,1).tick(:f), :mix: 0.3) do
  sample Ether[/kick/i, [5,5,5,4]].tick(:drums), rate: 1.0, amp: 8.0
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}

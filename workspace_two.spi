@@ -18,14 +18,11 @@ notes = (knit
 )
 
                                                               sync :beater
-                                                              16.times{
+                                                              32.times{
                                                                 with_synth(:prophet) {
                                                                   play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
-
                                                                   synth :plucked, note: notes.look(:notes)[0], attack: 0.01
-                                    }
-                                                                sleep @d/16.0
-                                    }
-                                    
-
-                                  end
+                                                                }
+                                                                sleep @d/32.0
+                                                              }
+                                                            end

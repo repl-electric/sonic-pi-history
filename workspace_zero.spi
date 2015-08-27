@@ -79,7 +79,7 @@ live_loop :arp do
 end
 
 live_loop :drum do
-  sample Heat[/f#/i,1], amp: 1.0
+  sample Heat[/F#/i,1], amp: 1.0
   sample Heat[/A/i,1], amp: 1.0
   sample Heat[/C/i,1], amp: 1.0
 

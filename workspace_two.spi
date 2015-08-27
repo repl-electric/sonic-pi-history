@@ -12,7 +12,7 @@ _=nil
 live_loop :arp do
   sync :beater
 
-64.times{                                                              
+128.times{                                                              
   with_synth :prophet do
    n = (knit 
          chord(:Fs3, ['m'].choose),     64,
@@ -33,6 +33,6 @@ live_loop :arp do
           synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
         end
   end
-  sleep @d/64.0
+  sleep @d/128.0
 }
 end

@@ -16,7 +16,6 @@ notes = (knit
                                                                         (chord :A3, 'm'),32,
                                                                         (chord :D3, 'm'),32
 )
-
                                                               sync :beater
                                                               32.times{
                                                                 with_synth(:prophet) {
@@ -28,3 +27,9 @@ notes = (knit
                                                                 sleep @d/32.0
                                                               }
                                                             end
+                                                            with_synth(:prophet){
+                                                              with_transpose(-12){
+                                                                  play n[0], cutoff: 80, attack: 0.01, release: 0.3
+                                                                
+}
+}

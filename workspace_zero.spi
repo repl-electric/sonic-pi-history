@@ -81,6 +81,7 @@ end
 live_loop :drum do
   sample Heat[/f#/i,1], amp: 1.0
   sample Heat[/a/i,1], amp: 1.0
+  sample Heat[/c/i,1], amp: 1.0
 
 
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do

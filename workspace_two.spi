@@ -28,7 +28,11 @@ live_loop :arp do
          chord_degree(4, :Fs2, :minor, 3,  invert: 2),32,
          chord_degree(7, :Fs2, :minor, 3,  invert: 1),32).tick(:pat)
 
-                                                                   play n[0], cutoff: 80, release: 0.1
+      c = (knit n[0],2, :r, 1,n[-1],2, :r,1, n[1],3).tick(:c) #.choose
+      with_transpose(0) do
+        synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
+      end
+
   end
   sleep @d/32.0
 }

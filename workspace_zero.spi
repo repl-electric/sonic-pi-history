@@ -62,7 +62,7 @@ live_loop :arp do
       c = (knit n[0],2, :r, 0,n[-1],2, :r,2, n[1],3).tick(:c) #.choose
       with_transpose(0) do
         synth :prophet,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
-        synth :plucked,  note: (ring c, _).tick , amp: 1.0, attack: 0.01, cutoff: 80
+        synth :plucked,  note: n.to_a , amp: 1.0, attack: 0.01, cutoff: 80
 
       end
       #play (n.to_a) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5

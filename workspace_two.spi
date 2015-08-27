@@ -14,7 +14,20 @@ live_loop :arp do
 
   32.times{                                                              
   with_synth :prophet do
-  play :Fs3, cutoff: 80, release: 0.1                                      
+   n = (knit 
+         chord(:Fs3, ['m'].choose),     64,
+         chord(:Fs3, ['m+5'].choose),   32,
+         chord(:Fs3, ['m7+5'].choose, invert: -1),  16,
+         chord(:A3, :sus2, invert: 0), 32,
+
+         chord_degree(6, :Fs3, :minor, 3,  invert: -3)[0..2],8,
+         chord_degree(6, :Fs3, :minor, 3,  invert: -3),24,
+         chord_degree(6, :Fs3, :minor, 3,  invert: -4),32,
+
+         chord_degree(3, :Fs2, :minor, 3,  invert: 1),64,
+         chord_degree(4, :Fs2, :minor, 3,  invert: 2),32,
+         chord_degree(7, :Fs2, :minor, 3,  invert: 1),32)
+  play n, cutoff: 80, release: 0.1                                      
   end
   sleep @d/32.0
 }

@@ -53,7 +53,7 @@ live_loop :arp do
         synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
       end
       play (n.to_a) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
-  sleep 1/(128.0*2*2*2)
+  sleep 1/(128.0*2*2*2*2)
 end
 end
 end

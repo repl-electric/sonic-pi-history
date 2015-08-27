@@ -96,7 +96,7 @@ live_loop :drum do
 
 
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
-  (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}
+  (ring 32, 32).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :echo,1).tick(:f), mix: 0.5, decay: 0.5, phase: 1/2.0) do
  sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 2.0
   end

@@ -10,7 +10,7 @@ end
 
                                   live_loop :synth do
                                     sync :beater
-                                    8.times{
+                                    16.times{
                                     with_synth(:prophet) {
                                       play (knit 
                                                                         (chord :Fs3, 'm'),32,
@@ -20,7 +20,7 @@ end
                                                                         (chord :D3, 'm'),32
 ).tick(:notes), cutoff: 80
                                     }
-                                      sleep @d/8.0
+                                      sleep @d/16.0
                                     }
                                     
 

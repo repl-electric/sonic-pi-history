@@ -80,7 +80,7 @@ end
 
 live_loop :drum do
 #  sample Heat[/F#/i,1], amp: 1.0
-  sample Heat[/_A/i,0], amp: 1.0
+  sample Heat[/_C/i,0], amp: 1.0
  # sample Heat[/C/i,1], amp: 1.0
 
 

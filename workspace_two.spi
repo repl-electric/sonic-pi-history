@@ -7,6 +7,7 @@ live_loop :beatz do
 end
 
 live_loop :arp do
+  sync :beatz
   with_synth :prophet do
     n = (knit 
          chord(:Fs3, ['m'].choose),     64,

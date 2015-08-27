@@ -80,7 +80,7 @@ end
 
                             live_loop :background do
                               8.times{sync :drum}
-                              sample Ambi[/Fm/i], amp: 1.0
+                              sample Sink[/Fm/i], amp: 1.0
                               
                             end
 

@@ -1,4 +1,4 @@
-@k = Fraz[/Drums/, 4]
+@k = Fraz[/Drums/, 5]
 use_sample_bpm @k
 
  @d = sample_duration(@k)

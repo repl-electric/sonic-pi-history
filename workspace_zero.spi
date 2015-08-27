@@ -45,8 +45,10 @@ live_loop :arp do
       synth :hollow, note: (knit 
                             chord(:Fs3, 'm')[0],2,
                             _,2,
+                            chord(:Fs3, 'm+5', invert: -2)[-2],2,
                             _, 2,
-                            chord(:Fs3, 'm+5', invert: -2)[-2],2).tick(:hc), amp: 5.0, attack: 0.01
+                            
+).tick(:hc), amp: 5.0, attack: 0.01
     end
 
     with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do

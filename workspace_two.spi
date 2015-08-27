@@ -29,7 +29,7 @@ end
                                                                 sleep @d/32.0
                                                               }
                                                             end
-                                                            with_synth(:prophet){
+                                                            with_synth(:growl){
                                                               with_transpose(-12){
                                                                   play @picked[0], cutoff: 80, attack: 0.01, release: 0.3
                                                                 

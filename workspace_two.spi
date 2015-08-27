@@ -12,7 +12,7 @@ end
                                     sync :beater
                                     4.times{
                                     with_synth(:prophet) {
-                                      play :Fs2, cutoff: 80
+                                      play (knit (chord-degree :Fs2, :minor),8).tick(:notes) cutoff: 80
                                     }
                                       sleep @d/4.0
                                     }

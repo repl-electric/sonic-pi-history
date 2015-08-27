@@ -22,7 +22,7 @@ notes = (knit
                                     with_synth(:prophet) {
                                       play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
 
-                                                                  synth :plucked, note: notes.look(:notes)
+                                                                  synth :plucked, note: notes.look(:notes), attack: 0.01
                                     }
                                       sleep @d/16.0
                                     }

@@ -10,7 +10,7 @@ _=nil
 live_loop :arp do
   sync :beater
   with_synth :prophet do
-  play :Fs3                                     
+  play :Fs4                                      
   end
   sleep 1/(128.0*128.0)
 

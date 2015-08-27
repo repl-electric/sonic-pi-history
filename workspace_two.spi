@@ -16,7 +16,7 @@ notes = (knit
                                                                         (chord :A3, 'm'),32,
                                                                         (chord :D3, 'm'),32
 )
-        n  =  notes.tick(:notes)
+                                                              n  =  notes.tick(:notes)
 
                                                               sync :beater
                                                               32.times{

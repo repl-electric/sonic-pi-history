@@ -17,6 +17,8 @@ sample  Fraz[/F#m/i, 0]
 sleep 1
 end
 
+r = 1/8.0
+
 live_loop :arp do
   with_synth :prophet do
     n = (knit 
@@ -80,7 +82,7 @@ live_loop :arp do
       end
     end
   end
-  sleep 1/8.0
+  sleep 1/16.0
 end
 
                             live_loop :background do

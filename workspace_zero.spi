@@ -84,7 +84,7 @@ live_loop :drum do
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
   sample Frag[/kick/i, [0,9]].tick(:snares), rate: 1.0, amp: 8.0
-  sample Frag[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 8.0
+  sample Frag[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 8.0, start: (rrand 0.0,0.1)
 
                               end
 end

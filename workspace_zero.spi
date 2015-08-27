@@ -86,7 +86,7 @@ live_loop :arp do
 end
 
                             live_loop :background do
-                              sample Ether[/D/i, 0], amp: 8.0, rate: rand_i(-2,2), pan: (Math.sin(vt*13)/1.5)
+                              sample Ether[/D/i, 0], amp: 8.0, rate: rand_i(,2), pan: (Math.sin(vt*13)/1.5)
                               8.times{sync :drum}
                             end
 

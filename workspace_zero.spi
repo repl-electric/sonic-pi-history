@@ -47,7 +47,7 @@ live_loop :arp do
                             chord(:Fs3, 'm')[0],2,
                             _, 3,
                             _, 3,
-                            chord(:Fs4, 'm+5', invert: -1),2,
+                            chord(:Fs4, 'm7+5', invert: -1),2,
                             _, 3
 
                             

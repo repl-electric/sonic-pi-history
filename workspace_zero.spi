@@ -79,7 +79,7 @@ live_loop :arp do
 end
 
 live_loop :drum do
-  sample Heat[/f#m/,0], amp: 1.0
+  sample Heat[/f#m/,0], amp: 5.0
 
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
   (ring 4, 4,4, 4,4).tick(:time).times{sync :arp}

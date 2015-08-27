@@ -14,7 +14,7 @@ live_loop :arp do
 
 128.times{                                                              
   with_synth :prophet do
-   n = (knit 
+    n = (knit 
          chord(:Fs3, ['m'].choose),     64,
          chord(:Fs3, ['m+5'].choose),   32,
          chord(:Fs3, ['m7+5'].choose, invert: -1),  16,
@@ -26,14 +26,61 @@ live_loop :arp do
 
          chord_degree(3, :Fs2, :minor, 3,  invert: 1),64,
          chord_degree(4, :Fs2, :minor, 3,  invert: 2),32,
-         chord_degree(7, :Fs2, :minor, 3,  invert: 1),32).tick(:pat)
+         chord_degree(7, :Fs2, :minor, 3,  invert: 1),32,
 
-        play (n.to_a) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
-        c = (knit n[0],2, :r, 1,n[-1],2, :r,1, n[1],3).tick(:c) #.choose
-        with_transpose(0) do
-          synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
+#         chord_degree(5, :Fs3, :minor, 3,  invert: -3),32,
+#         chord_degree(5, :Fs3, :minor, 3,  invert: -4),32,
+#         chord_degree(7, :Fs3, :minor,  3, invert: -2),16,
+#         chord_degree(7, :Fs3, :minor,  3, invert: -1),16,
+#         chord_degree(7, :Fs3, :minor,  3, invert: 0),32,
+#         chord(:Fs4, ['m'].choose),     8,
+#         chord(:Fs3, ['m'].choose),     8,
+#         chord(:Fs4, ['m'].choose),     8,
+#         chord(:Fs4, ['m'].choose, invert: -1),  4,
+#         chord(:Fs4, ['m'].choose, invert: -2),   4,
+).tick(:c)
+    puts note_inspect(n)
+    with_fx(:slicer, phase: 1/2.0, invert_phase: 1, probability: 0.5, mix: 0.0) do
+      synth :hollow, note: (knit 
+                            _,3,
+                            chord(:Fs2, 'm'),2,
+                            _, 3,
+                            _, 3,
+                            chord(:Fs2, 'm7+5', invert: 1),2,
+                            _, 3
+).tick(:hc), amp: 1.0, attack: 0.01, decay: 1.0, release: 0.1, cutoff: 80
+    end
+
+    with_fx((knit :none,4, :reverb, 1, :none, 3).tick(:fx), decay: 1.0, phase: 1/4.0, room: 0.1) do
+      c = (knit n[0],2, :r, 1,n[-1],2, :r,1, n[1],3).tick(:c) #.choose
+      with_transpose(0) do
+        synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
+      end
+      play (n.to_a) , amp: 1, release: 0.2, attack: 0.1, attack_level: 0.5
+      with_transpose(-12) do
+        with_synth(:growl) do
+          play (knit n[0],1, _,7).tick(:bass), decay: (1/2.0)*2, release: 0.1, attack: 0.1, amp: 0.6
         end
+        with_transpose(0) do
+          with_synth(:growl) do
+            play (ring :Fs2, _, _, _, _, _, _, _).look(:bass), decay: 0.5, release: (knit 0.5,8, 0.5,8).tick(:r), attack: 0.001, amp: 0.2, detune: 12
+            if (ring n[0], _, _, _, _, _, _, _).look(:bass)
+              with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do
+                sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5
+                            #puts¯ note_info(n[0]).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")[0..-2]
+                            end
+                            end
+                            end
+                            end
+      end
+    end
   end
+
+
+
+
+
+
   sleep @d/128.0
 }
 end

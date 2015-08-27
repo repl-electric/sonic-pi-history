@@ -46,9 +46,9 @@ live_loop :arp do
                             _,3,
                             chord(:Fs3, 'm')[0],2,
                             _, 3,
-                            _, 4,
-                            chord(:Fs3, 'm+5', invert: -2)[-2],1,
-                            _, 3
+                            _, 3,
+                            chord(:Fs3, 'm+5', invert: -2)[-2],2,
+                            _, 2
 
                             
 ).tick(:hc), amp: 5.0, attack: 0.01, decay: 1.0

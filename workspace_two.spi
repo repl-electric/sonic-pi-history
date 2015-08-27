@@ -14,6 +14,6 @@ live_loop :arp do
   with_synth :prophet do
   play :Fs3, cutoff: 80, release: 0.1                                      
   end
-  sleep @d/8.9
+  sleep @d/8.0
 
 end

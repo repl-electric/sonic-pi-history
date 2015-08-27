@@ -12,7 +12,7 @@ end
 # F♯, G♯, A, B, C♯, D, and E
 
 live_loop :beatz do
-  Fraz[/80/i, /Fm/,0]
+sample   Fraz[/80/i, /Fm/,0]
 sleep 1
 end
 

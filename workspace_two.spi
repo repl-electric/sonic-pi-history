@@ -80,6 +80,6 @@ live_loop :arp do
 
 
 
-  sleep @d/128.0
+  sleep @d/64.0
 }
 end

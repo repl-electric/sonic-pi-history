@@ -79,8 +79,8 @@ live_loop :arp do
 end
 
                             live_loop :background do
-                              2.times{sync :drum}
-  sample Ether[/Fm/i], amp: 1.0
+                              4.times{sync :drum}
+                              sample Ether[/Fm/i], amp: 1.0
                               
                             end
 

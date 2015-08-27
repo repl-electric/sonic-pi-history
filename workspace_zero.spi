@@ -10,7 +10,7 @@ define :note_to_sample do |n|
 end
 
 # F♯, G♯, A, B, C♯, D, and E
-use_sample_bpm Fraz[/F#m/i, 0]
+#use_sample_bpm Fraz[/F#m/i, 0]
 
 live_loop :beatz do
 sample  Fraz[/F#m/i, 0]

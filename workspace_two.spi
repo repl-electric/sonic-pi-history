@@ -1,6 +1,1 @@
-
-
-live_loop :s do
-synth :plucked, note: :A3, release: 0.5, attack: 0.01, amp: 1.0
-sleep 1/2.0
-end
+                              sample Sink[/Fm/i], amp: 1.0

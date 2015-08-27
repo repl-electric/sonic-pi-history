@@ -5,7 +5,7 @@ _=nil
 
                                               live_loop :beater do
                                                 puts :cycle
-                                                sample Fraz[/90_F#m/i, 0],  amp: 8.0
+                                                sample Fraz[/90_F#m/i, 2],  amp: 8.0
                                                             sleep  1
                                                             end
                                                             

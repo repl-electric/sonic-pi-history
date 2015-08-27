@@ -44,6 +44,7 @@ live_loop :arp do
     with_fx(:slicer, phase: 1/2.0, invert_phase: 1, probability: 0.5) do
       synth :hollow, note: (knit 
                             chord(:Fs3, 'm')[0],4,
+                            _, 2,
                             chord(:Fs3, 'm+5')[-2],4).tick(:hc), amp: 5.0, attack: 0.01
     end
 
@@ -66,8 +67,8 @@ live_loop :arp do
                             #puts¯ note_info(n[0]).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")[0..-2]
                             end
                             end
-        end
-          end
+                            end
+                            end
       end
     end
   end
@@ -89,7 +90,7 @@ live_loop :hats do |idx|
   sync :arp
   m = [0.3,0.2,0.1, 0.4].choose
   4.times{
-                                with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxkc)) do
+   with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxkc)) do
       with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
          sample Frag["hat", Range.new(0,(ring 2,4).tick(:cr))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 2.0

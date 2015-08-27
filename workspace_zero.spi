@@ -47,7 +47,7 @@ live_loop :arp do
                             chord(:Fs2, 'm')[0],2,
                             _, 3,
                             _, 3,
-                            chord(:Fs2, 'm7+5', invert: 1)[0],2,
+                            chord(:Fs2, 'm7+5', invert: 1)[1],2,
                             _, 3
 ).tick(:hc), amp: 10.0, attack: 0.01, decay: 1.0, release: 0.1, cutoff: 70
     end

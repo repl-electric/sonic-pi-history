@@ -92,7 +92,7 @@ live_loop :hats do |idx|
                                 with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxkc)) do
       with_fx(:reverb, room: 0.3, mix: m) do
 #        with_fx(:slicer, phase: 0.025, probability: 0.5, mix: m) do
-         sample Frag["hat", Range.new(2,(ring 3,4).tick(:cr))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 2.0
+         sample Frag["hat", Range.new(2,(ring 1,4).tick(:cr))].tick(:d), start: rrand(0.0,0.1), rate: 1.0, amp: 2.0
 end
 #        end
       end

@@ -1,7 +1,7 @@
 use_sample_bpm Fraz[/FR2_90_F#m_Drums_33/i, 0]
 
  @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
-
+_=nil
 live_loop :beater do
    puts :cycle
    sample Fraz[/FR2_90_F#m_Drums_33/i, 0],  amp: 8.0
@@ -31,7 +31,7 @@ end
                                                             end
                                                             with_synth(:growl){
                                                               with_transpose(-12){
-                                                                  play (knit @picked[0],1,_,7).tick(:bass), cutoff: 80, attack: 0.01, release: 1.0
+                                                                  play (knit @picked[0],1,_,7).tick(:bas¯s), cutoff: 80, attack: 0.01, release: 1.0
                                                                 
 }
 }

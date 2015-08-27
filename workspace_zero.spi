@@ -80,7 +80,7 @@ end
 
                             live_loop :background do
                               8.times{sync :drum}
-                              sample Sink[/Fm/i], amp: 1.0
+ sample Ether[/Fm/i, 0], amp: 1.0
                               
                             end
 

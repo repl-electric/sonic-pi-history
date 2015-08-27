@@ -9,6 +9,7 @@ live_loop :beater do
 end
 
                                   live_loop :synth do
+                                    sync :beater
                                     with_synth(:prophet) {
                                       play :Fs2, cutoff: 80
                                     }

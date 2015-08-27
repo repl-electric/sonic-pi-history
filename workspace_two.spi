@@ -11,9 +11,12 @@ end
 _=nil
 live_loop :arp do
   sync :beater
+
+  32.times{                                                              
   with_synth :prophet do
   play :Fs3, cutoff: 80, release: 0.1                                      
   end
   sleep @d/32.0
+}
 
 end

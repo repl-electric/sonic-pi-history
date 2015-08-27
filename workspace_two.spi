@@ -1,6 +1,6 @@
 use_sample_bpm Fraz[/FR2_90_F#m_Drums_33/i, 0]
 
-# @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
+ @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
 
 live_loop :beater do
    puts :cycle
@@ -10,8 +10,12 @@ end
 
                                   live_loop :synth do
                                     sync :beater
+                                    4.times{
                                     with_synth(:prophet) {
                                       play :Fs2, cutoff: 80
                                     }
+                                      sleep @d/4.0
+                                    }
+                                    
 
                                   end

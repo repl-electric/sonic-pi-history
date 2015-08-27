@@ -43,9 +43,9 @@ live_loop :arp do
 
     with_fx(:slicer, phase: 1/2.0, invert_phase: 1, probability: 0.5) do
       synth :hollow, note: (knit 
-                            _,1,
+                            _,2,
                             chord(:Fs3, 'm')[0],3,
-                            _, 1,
+                            _, 2,
                             chord(:Fs3, 'm+5', invert: -2)[-2],3).tick(:hc), amp: 5.0, attack: 0.01
     end
 

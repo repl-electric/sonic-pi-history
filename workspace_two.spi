@@ -7,21 +7,21 @@ live_loop :beater do
    sample Fraz[/FR2_90_F#m_Drums_33/i, 0],  amp: 8.0
    sleep  1
 end
-
-                                  live_loop :synth do
-notes = (knit 
-                                                                        (chord :Fs3, 'm'),32,
-                                                                        (chord :Fs3, 'm+5'),32,
-                                                                        (chord :Fs3, 'm7+5'),32,
-                                                                        (chord :A3, 'm'),32,
-                                                                        (chord :D3, 'm'),32
-)
+                                                            
+                                                            live_loop :synth do
+                                                              notes = (knit
+                                                                       (chord :Fs3, 'm'),32,
+                                                                       (chord :Fs3, 'm+5'),32,
+                                                                       (chord :Fs3, 'm7+5'),32,
+                                                                       (chord :A3, 'm'),32,
+                                                                       (chord :D3, 'm'),32
+                                                                       )
                                                               n  =  notes.tick(:notes)
-
+                                                              
                                                               sync :beater
                                                               32.times{
                                                                 with_synth(:prophet) {
-        c  = n.choose
+                                                                  c  = n.choose
                                                                   play n.to_a-[c], cutoff: 80, attack: 0.01, release: 0.3
                                                                   synth :plucked, note: c, attack: 0.01
                                                                 }

@@ -17,14 +17,14 @@ notes = (knit
                                                                         (chord :D3, 'm'),32
 )
 
-                                    sync :beater
-                                    16.times{
-                                    with_synth(:prophet) {
-                                      play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
+                                                              sync :beater
+                                                              16.times{
+                                                                with_synth(:prophet) {
+                                                                  play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
 
                                                                   synth :plucked, note: notes.look(:notes), attack: 0.01
                                     }
-                                      sleep @d/16.0
+                                                                sleep @d/16.0
                                     }
                                     
 

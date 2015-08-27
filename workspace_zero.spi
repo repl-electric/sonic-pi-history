@@ -5,9 +5,6 @@ _=nil
 #@s = MountainLoop[/.*/,12]
 #use_sample_bpm
 
-#sample Frag[/.*/i, 9], rate: 1.0, amp: 8.0
-
-
 define :note_to_sample do |n|
   note_info(n).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")
 end
@@ -86,6 +83,7 @@ live_loop :drum do
  sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 8.0
   end
   (ring 4, 4,4, 4, 4).tick(:time).times{sync :arp}
+  sample Frag[/snare/i, [0]].tick(:snares), rate: 1.0, amp: 8.0
                               end
 end
 

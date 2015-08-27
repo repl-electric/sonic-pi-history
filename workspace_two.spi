@@ -2,7 +2,7 @@ use_sample_bpm Fraz[/F#m/i, 0]
 
 live_loop :beatz do
    puts :cycle
-   sample  Fraz[/F#m/i, 0, amp: 4.0]
+   sample  Fraz[/F#m/i, 0, amp: 8.0]
    sleep 1
 end
 

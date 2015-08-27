@@ -13,7 +13,7 @@ end
                                     4.times{
                                     with_synth(:prophet) {
                                       play (knit 
-                                                                        (chord :Fs3, 'm'),32
+                                                                        (chord :Fs3, 'm'),32,
                                                                         (chord :Fs3, 'm+5'),32
 ).tick(:notes), cutoff: 80
                                     }

@@ -11,6 +11,11 @@ end
 
 # F♯, G♯, A, B, C♯, D, and E
 
+live_loop :beats do
+  Fraz[/80/i, /Fm/,0]
+sleep 1
+end
+
 live_loop :arp do
   with_synth :prophet do
     n = (knit 
@@ -39,7 +44,6 @@ live_loop :arp do
 #         chord(:Fs4, ['m'].choose, invert: -2),   4,
 ).tick(:c)
     puts note_inspect(n)
-
     with_fx(:slicer, phase: 1/2.0, invert_phase: 1, probability: 0.5, mix: 0.0) do
       synth :hollow, note: (knit 
                             _,3,

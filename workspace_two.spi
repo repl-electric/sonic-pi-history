@@ -71,5 +71,5 @@ live_loop :arp do
       end
     end
   end
-  sleep 1/(128.0*2*2)
+  sleep 1/(128.0*2*2*2)
 end

@@ -20,8 +20,10 @@ notes = (knit
                                                               sync :beater
                                                               32.times{
                                                                 with_synth(:prophet) {
-                                                                  play notes.tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
-                                                                  synth :plucked, note: notes.look(:notes)[0], attack: 0.01
+        n  =  notes.tick(:notes)
+        c  = n.choose
+                                                                  play n-[c], cutoff: 80, attack: 0.01, release: 0.3
+                                                                  synth :plucked, note: c, attack: 0.01
                                                                 }
                                                                 sleep @d/32.0
                                                               }

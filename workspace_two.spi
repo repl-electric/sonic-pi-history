@@ -18,7 +18,7 @@ end
                                                                         (chord :Fs3, 'm7+5'),32,
                                                                         (chord :A3, 'm'),32,
                                                                         (chord :D3, 'm'),32
-).tick(:notes), cutoff: 80, attack: 0.01
+).tick(:notes), cutoff: 80, attack: 0.01, release: 0.3
                                     }
                                       sleep @d/16.0
                                     }

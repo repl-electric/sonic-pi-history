@@ -1,11 +1,12 @@
-use_sample_bpm Fraz[/FR2_90_F#m_Drums_33/i, 0]
+@k = Fraz[/Drums/, 4]
+use_sample_bpm @k
 
- @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
+ @d = sample_duration(@k)
 _=nil
 
                                               live_loop :beater do
                                                 puts :cycle
-                                                sample Fraz[/Drums/, 4],  amp: 8.0
+                                                sample @k,  amp: 8.0
                                                             sleep  1
                                                             end
                                                             

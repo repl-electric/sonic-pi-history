@@ -1,6 +1,6 @@
 use_sample_bpm Fraz[/F#m/i, 0]
 
- @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
+# @d = sample_duration(Fraz[/FR2_90_F#m_Drums_33/i, 0])
 
 live_loop :beater do
    puts :cycle

@@ -118,7 +118,7 @@ live_loop :drum do |e_idx|
   (ring 4).tick(:time).times{sync :arp}
 #  sample Frag[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
   #sample Frag[/noise/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
-  sample Fraz[/kick/i, [0,9]].tick(:snares), rate: 1.0, amp: 5.0
+  #sample Fraz[/kick/i, [0,9]].tick(:snares), rate: 1.0, amp: 5.0
   sample Fraz[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
 end
 e_idx+=1

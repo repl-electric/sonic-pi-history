@@ -67,7 +67,6 @@ live_loop :arp do
 
       play (ring n.to_a-[c]).tick(:support), amp: 2, release: 0.2, attack: 0.1, attack_level: 0.5
 
-
       with_transpose(-12) do
         with_synth(:growl) do
           play (knit n[0],1, _,7).tick(:bass), decay: (1/2.0)*2, release: 0.1, attack: 0.1, amp: 0.6

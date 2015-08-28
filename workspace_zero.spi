@@ -12,11 +12,6 @@ end
 # F♯, G♯, A, B, C♯, D, and E
 #use_sample_bpm Fraz[/F#m/i, 0]
 
-live_loop :beatz do
-#sample  Fraz[/F#m/i, 0]
-sleep 1
-end
-
 r = 1/8.0
 
 live_loop :arp do

@@ -100,12 +100,15 @@ live_loop :background do
   8.times{sync :drum}
 end
 
+@cell_count = 0
 live_loop :drum do |e_idx|
 #  sample Heat[/F#/i,1], amp: 1.0
  # sample Heat[/C/i,1], amp: 1.0
 
   puts e_idx % 16
   if(e_idx % 4 == 0)
+    @cell_count += 1
+    shader(:uniform, "iCellCount",  @cell_count)
     #sample Fraz[/kick/i, [14,15]].tick(:high), rate: 1.0, amp: 0
   end
 

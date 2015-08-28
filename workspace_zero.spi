@@ -97,24 +97,21 @@ live_loop :background do
   8.times{sync :drum}
 end
 
-
-
 @cell_count = 0
 live_loop :drum do |e_idx|
 #  sample Heat[/F#/i,1], amp: 1.0
  # sample Heat[/C/i,1], amp: 1.0
-
   puts e_idx % 16
   if(e_idx % 4 == 0)
     @cell_count += 1
-    shader(:uniform, "iCellCount",  20)
+    shader(:uniform, "iCellCount",  10)
     sample Fraz[/kick/i, [14,15]].tick(:high), rate: 1.0, amp: 0
   end
 
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
   (ring 4).tick(:time).times{sync :arp;   shader(:uniform, "iOffBeat",  0.0)}
   with_fx((knit :none,3, :none,1).tick(:f), mix: 0.5, decay: 0.5, phase: 1/2.0) do |x_fx|
- sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 4.0
+      sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 4.0
    shader(:uniform, "iBeat",  1.0)
 
   end

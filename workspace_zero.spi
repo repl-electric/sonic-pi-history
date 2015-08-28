@@ -67,10 +67,12 @@ live_loop :arp do
        # synth :plucked,  note: (ring c, _, _, _ ).tick , amp: 2.0, attack: 0.01
       end
 
+      with_transpose(-12){
       with_synth(:hollow){
         play (knit n[0],32, 
 ).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5
       }
+}
 
       with_transpose(-12) do
         with_synth(:growl) do

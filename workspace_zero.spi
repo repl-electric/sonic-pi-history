@@ -63,20 +63,9 @@ live_loop :arp do
       with_transpose(0) do
         #synth :prophet,  note: (ring c, _).tick , amp: 1.0, attack: 0.01, cutoff: 60
         synth :plucked,  note: (ring c, _).tick , amp: 2.0, attack: 0.01
-
       end
 
-      play (knit _,1, n.to_a, 1, _,1, n.to_a, 1,
-                     _,1, n.to_a, 1, _,1, n.to_a, 1,
-
-                     _,1, n.to_a, 1, _,1, n.to_a, 1,
-                     _,1, n.to_a, 1, _,1, n.to_a, 1,
-
-                     _,1, n.to_a, 1, _,1, n.to_a, 1,
-                     _,1, n.to_a, 1, _,1, n.to_a, 1,
-
-                     _,0, n.to_a, 2, _,0, n.to_a, 2,
-                     _,0, n.to_a, 2, _,0, n.to_a, 2,).tick(:support), amp: 2, release: 0.2, attack: 0.1, attack_level: 0.5
+      play (ring n-[c]).tick(:support), amp: 2, release: 0.2, attack: 0.1, attack_level: 0.5
 
 
       with_transpose(-12) do

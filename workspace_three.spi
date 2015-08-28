@@ -1,1 +1,1 @@
-   sample Fraz[/kick/i, 14], rate: 1.0, amp: 20
+  sample Fraz[/hat/i, 0],amp: 10.0 if idx % 4 == 0

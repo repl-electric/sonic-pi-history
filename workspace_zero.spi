@@ -100,7 +100,6 @@ live_loop :background do
   8.times{sync :drum}
 end
 
- shader(:uniform, "iCellMovement",  0.5)
 
 
 @cell_count = 0

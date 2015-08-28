@@ -97,10 +97,10 @@ live_loop :arp do
   sleep 1/8.0
 end
 
-                            live_loop :background do
-                              sample Ether[/D/i, 0], amp: 8.0, rate: rrand(-2.0,2.0), pan: (Math.sin(vt*13)/1.5)
-                              8.times{sync :drum}
-                            end
+live_loop :background do
+  sample Ether[/D/i, 0], amp: 8.0, rate: rrand(-2.0,2.0), pan: (Math.sin(vt*13)/1.5)
+  8.times{sync :drum}
+end
 
 live_loop :drum do |e_idx|
 #  sample Heat[/F#/i,1], amp: 1.0

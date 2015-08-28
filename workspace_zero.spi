@@ -106,8 +106,8 @@ live_loop :drum do |e_idx|
 #  sample Heat[/F#/i,1], amp: 1.0
  # sample Heat[/C/i,1], amp: 1.0
 
-  puts e_idx % 32
-  if(e_idx % 16 == 0)
+  puts e_idx % 16
+  if(e_idx % 4 == 0)
    sample Frag[/kick/i, 0], rate: 1.0, amp: 8
   end
 

@@ -107,7 +107,7 @@ live_loop :drum do |e_idx|
  # sample Heat[/C/i,1], amp: 1.0
 
   if(e_idx % 32 == 0)
- sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 4.0
+   sample Frag[/kick/i, 0], rate: 1.0, amp: 4.0
   end
 
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do

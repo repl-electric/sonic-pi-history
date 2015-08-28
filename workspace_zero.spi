@@ -68,12 +68,14 @@ live_loop :arp do
 
       play (knit _,1, n.to_a, 1, _,1, n.to_a, 1,
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
+
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
 
-                     _,0, n.to_a, 2, _,0, n.to_a, 2,
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
+
+                     _,0, n.to_a, 2, _,1, n.to_a, 1,
                      _,1, n.to_a, 1, _,1, n.to_a, 1,
 
 ).tick(:support), amp: 2, release: 0.2, attack: 0.01, attack_level: 0.5

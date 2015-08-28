@@ -68,7 +68,7 @@ live_loop :arp do
       end
 
       with_transpose(-12){
-      with_synth(:hollow){
+      with_synth(:dsaw){
         play (knit n[0..1].to_a-[c],32, 
 ).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5
       }

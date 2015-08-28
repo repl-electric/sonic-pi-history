@@ -68,7 +68,7 @@ live_loop :arp do
       end
 
       with_transpose(-12){
-      with_synth(:dsaw){
+      with_synth(:fm){
         play (knit n,32, 
 ).tick(:support), amp: 2, release: 0.2, attack: 0.1, attack_level: 0.5, detune: 12
       }

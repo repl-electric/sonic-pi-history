@@ -68,7 +68,7 @@ live_loop :arp do
       end
 
       with_synth(:hollow){
-        play (ring n.to_a-[c]).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5
+        play (knit n.to_a-[c],31, _, 1).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5
       }
 
       with_transpose(-12) do

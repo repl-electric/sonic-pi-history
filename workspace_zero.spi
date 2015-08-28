@@ -97,12 +97,12 @@ live_loop :drum do
 #  sample Heat[/F#/i,1], amp: 1.0
  # sample Heat[/C/i,1], amp: 1.0
   with_fx(:bitcrusher, bits: 10, sample_rate: 30000) do
-  (ring 8).tick(:time).times{sync :arp}
+  (ring 16).tick(:time).times{sync :arp}
   with_fx((knit :none,3, :none,1).tick(:f), mix: 0.5, decay: 0.5, phase: 1/2.0) do |x_fx|
   puts x_fx
  sample Frag[/kick/i, [1,1,1,1]].tick(:drums), rate: 1.0, amp: 5.0
   end
-  (ring 8).tick(:time).times{sync :arp}
+  (ring 16).tick(:time).times{sync :arp}
 #  sample Frag[/kick/i, [0,9]].tick(:snares), rate: 1.0, amp: 5.0
 #  sample Frag[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
 end

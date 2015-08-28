@@ -68,7 +68,7 @@ live_loop :arp do
       end
 
       with_synth(:hollow){
-        play (knit n.to_a-[c],24, 
+        play (knit n[-1].to_a-[c],24, 
                         _, 1, n.to_a-[c],0, 
                         _, 0, n.to_a-[c],1,
                         _, 0, n.to_a-[c],1, 

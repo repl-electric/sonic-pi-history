@@ -62,7 +62,7 @@ end
       with_transpose(0) do
         #synth :prophet,  note: (ring c, _).tick , amp: 1.0, attack: 0.01, cutoff: 60
         synth :plucked,  note: (ring c, _ ).tick , amp: 2.0, attack: 0.01
-        shader(:uniform, "iCellMotion", 1.0)
+        shader(:uniform, "iCellMotion", 2.0)
       end
 
       with_transpose(0){

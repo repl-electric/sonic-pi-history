@@ -70,7 +70,7 @@ live_loop :arp do
       with_synth(:hollow){
         play (knit n.to_a-[c],24, 
                         _, 0, n.to_a-[c],2, 
-                        _, 0, n.to_a-[c],2,
+                        _, 1, n.to_a-[c],1,
                         _, 0, n.to_a-[c],1, 
                         _, 1, n.to_a-[c],2, 
 ).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5

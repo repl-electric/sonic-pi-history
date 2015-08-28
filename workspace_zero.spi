@@ -64,7 +64,7 @@ live_loop :arp do
                       n[1],2, _,2).tick(:c) #.choose
       with_transpose(0) do
         #synth :prophet,  note: (ring c, _).tick , amp: 1.0, attack: 0.01, cutoff: 60
-        synth :plucked,  note: (ring c, _, _, _ ).tick , amp: 2.0, attack: 0.01
+       # synth :plucked,  note: (ring c, _, _, _ ).tick , amp: 2.0, attack: 0.01
       end
 
       with_synth(:hollow){
@@ -119,9 +119,7 @@ live_loop :drum do |e_idx|
   end
   (ring 4).tick(:time).times{sync :arp}
 #  sample Frag[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
-
   sample Frag[/noise/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
-
   sample Fraz[/kick/i, [0,9]].tick(:snares), rate: 1.0, amp: 5.0
   sample Fraz[/snap/i, [0,0,0,0,1,1,1,1]].tick(:snap), rate: 1.0, amp: 2.0, start: (rrand 0.0,0.1)
 end

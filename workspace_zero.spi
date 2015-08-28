@@ -127,7 +127,7 @@ end
 live_loop :hats do |idx|
   sync :arp
   m = [0.3,0.2,0.1, 0.4].choose
-  sample Fraz[/hat/i, 5],amp: 2.0 if idx % 4 == 0
+  sample Fraz[/hat/i, 6],amp: 2.0 if idx % 4 == 0
 
   4.times{
    with_fx(:bitcrusher, bits: (ramp *(7..24).to_a.reverse).tick(:fxkc)) do

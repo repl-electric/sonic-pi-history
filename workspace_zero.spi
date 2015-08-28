@@ -72,8 +72,6 @@ live_loop :arp do
                         _, 1, n[0],1, 
                         _,1,  n[0],1,
                         _, 1, n[0],1, 
-
-
 ).tick(:support), amp: 20, release: 0.2, attack: 0.1, attack_level: 0.5
       }
 

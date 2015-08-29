@@ -77,7 +77,7 @@ end
         end
         with_transpose(0) do
           with_synth(:growl) do
-            play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs2,1,_,3 ).tick(:bass), decay: 0.2, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 1.0, detune: 12
+            play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.2, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 1.0, detune: 12
             if (knit n[0],1, _,7).look(:bass)
               with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do
        #         sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5

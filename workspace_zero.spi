@@ -140,7 +140,7 @@ live_loop :hats do |idx|
 end
 #        end
       end
-  sleep 1/8.0}
+  sleep 1/4.0}
   idx+=1
 end
 

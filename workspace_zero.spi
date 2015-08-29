@@ -75,7 +75,7 @@ end
         with_synth(:growl) do
           #play (knit n[0],1, _,7).tick(:bass), decay: (1/2.0)*2, release: 0.1, attack: 0.1, amp: 0.6
         end
-        with_transpose(0) do
+        with_transpose(-12) do
           with_synth(:prophet) do
             play (knit :Fs2,1,_,1,n[0],1, _,3, :Fs2,1,_,1 ).tick(:bass), decay: 0.3, release: (knit 0.1,8, 0.1,8).tick(:r), attack: 0.001, amp: 1.0, detune: 12, cutoff: 80
             if (knit n[0],1, _,7).look(:bass)

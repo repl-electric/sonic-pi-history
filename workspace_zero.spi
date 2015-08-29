@@ -82,7 +82,7 @@ end
               play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.1, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 0.35, detune: 0
             }
             if (knit n[0],1, _,7).look(:bass)
-              with_fx(:slicer, phase: 1/16.0, smooth: 0.0, probability: 0.5) do
+              with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do
                 sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5
                             #puts¯ note_info(n[0]).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")[0..-2]
                             end

@@ -79,7 +79,7 @@ end
           with_synth(:prophet) do
             play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.2, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 0.5, detune: 12, cutoff: rrand(100,120)
             with_synth(:dsaw){
-              play (knit n[0],1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.1, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 0.35, detune: 0
+              play (knit n[0],1,_,1,n[0],1,_,1,n[0],1,_,3 ).tick(:bass), decay: 0.1, release: (knit 1.0,8, 0.5,8).tick(:r), attack: 0.001, amp: 0.35, detune: 0
             }
             if (knit n[0],1, _,7).look(:bass)
               with_fx(:slicer, phase: 1/8.0, smooth: 0.5, probability: 0.5) do

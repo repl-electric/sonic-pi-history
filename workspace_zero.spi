@@ -66,8 +66,8 @@ end
 
       with_transpose(0){
       with_synth(:fm){
-#        play (knit n,32, 
-).tick(:support), amp: 2, release: 0.2, attack: 0.1, attack_level: 0.5, detune: 12
+        play (knit n,32, 
+).tick(:support), amp: 0, release: 0.2, attack: 0.1, attack_level: 0.5, detune: 12
       }
 }
 

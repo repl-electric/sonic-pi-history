@@ -83,7 +83,7 @@ end
             }
             if (knit n[0],1, _,7).look(:bass)
               with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do
-       #         sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5
+                sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5
                             #puts¯ note_info(n[0]).midi_string.gsub("s", "#").gsub("Eb", "D#").gsub("Ab", "G#")[0..-2]
                             end
                             end

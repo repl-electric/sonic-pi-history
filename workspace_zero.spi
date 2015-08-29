@@ -77,7 +77,7 @@ end
         end
         with_transpose(-12) do
           with_synth(:prophet) do
-            play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.1, release: (knit 0.15,8, 0.1,8).tick(:r), attack: 0.001, amp: 1.0, detune: 12, cutoff: 80
+            play (knit :Fs1,1,_,1,n[0],1,_,1,:Fs1,1,_,3 ).tick(:bass), decay: 0.1, release: (knit 0.2,8, 0.1,8).tick(:r), attack: 0.001, amp: 1.0, detune: 12, cutoff: 80
             if (knit n[0],1, _,7).look(:bass)
               with_fx(:slicer, phase: 1/8.0, smooth: 0.0, probability: 0.5) do
        #         sample Heat[/Low_Pad/i, /#{note_to_sample(n[-1])[0..-2]}1/i], amp: 2.5

@@ -20,6 +20,6 @@ end
 live_loop :beat do
  sample Fraz[/kick/i,0]
  4.times{sync :apeg}
- sample Fraz[/clap/i,0]
+ sample Fraz[/snap/i,0]
  4.times{sync :apeg}
 end

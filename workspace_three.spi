@@ -31,7 +31,7 @@ end
 
 live_loop :chorus do
   sync :apeg
-  with_fx(:reverb, room: 1.0, mix: 1.0, dry: rrand(0.0,1.0)){
+  with_fx(:reverb, room: 1.0, mix: 1.0, dry: 0.1){
     with_synth(:hollow){
       play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp)
     }
@@ -51,4 +51,10 @@ live_loop :drums do |d_idx|
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2
   4.times{sync :apeg}
   d_idx+=1
+end
+
+
+live_loop :hats do
+  sync :apeg
+
 end

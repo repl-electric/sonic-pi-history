@@ -37,6 +37,12 @@ live_loop :chorus do
 #  }
 end
 
+live_loop :coils do
+  32.times{sync :arp}
+  sample Fraz[/coil/i, 0], amp: 0.4
+
+end
+
 live_loop :drums do |d_idx|
   if d_idx % 8 == 0
     sample Fraz[/kick/i,11], amp: 1.0

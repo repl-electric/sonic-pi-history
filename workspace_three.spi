@@ -18,8 +18,8 @@ live_loop :apeg do
     }
 
     with_synth(:prophet){
-    play (knit root,1, _, 15).tick(:bass), release: 1.0, decay: 1.0
-}
+      play (knit root,1, _, 15).tick(:bass), release: 0.2, decay: 1.0, 
+    }
   }
 
   sleep 0.25

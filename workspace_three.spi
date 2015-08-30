@@ -8,5 +8,6 @@ live_loop :apeg do
   with_transpose(tranpose.tick(:t)){
     play root
   }
+  sleep 0.5
 
 end

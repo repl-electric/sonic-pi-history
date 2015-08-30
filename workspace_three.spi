@@ -7,6 +7,10 @@ velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 1
 
 live_loop :apeg do
   root = :Fs3
-  play root
+
+  with_transpose(tranpose.tick(:t)){
+    play root
+  }
+
   sleep 0.25
 end

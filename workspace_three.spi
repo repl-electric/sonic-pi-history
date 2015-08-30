@@ -34,7 +34,3 @@ live_loop :beat do
  sample Fraz[/snap/i,[0,0,0,0, 1,1,1,1]].tick(:s), cutoff: 100
  4.times{sync :apeg}
 end
-
-live_loop :bass do
-
-end

@@ -59,7 +59,7 @@ end
 
 live_loop :texture do
   sample Mountain[/crack/i, 0], rate: 0.9, amp: 1.0
-  16.times{sync :arp}
+  2.times{sync :arp}
 end
 
 live_loop :hats do

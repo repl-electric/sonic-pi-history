@@ -20,8 +20,8 @@ live_loop :drums do |d_idx|
   end
 
   with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx)){
-  sample Fraz[/kick/i,[0,0]].tick(:kick)
-}
+    sample Fraz[/kick/i,[0,0]].tick(:kick)
+  }
   4.times{sync :apeg}
   sample Fraz[/kick/i,1]
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2

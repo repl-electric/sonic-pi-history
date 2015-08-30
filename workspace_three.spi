@@ -29,6 +29,8 @@ end
 
 live_loop :chorus do
   2.times{sync :apeg}
+  synth :dark_ambience, note: :Fs3
+
 #  with_fx(:reverb, room: 1.0, mix: 1.0){
     with_synth(:hollow){
       play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5

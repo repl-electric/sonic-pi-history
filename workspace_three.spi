@@ -48,11 +48,11 @@ live_loop :drums do |d_idx|
   end
 
   with_fx((knit :none, 0, :echo, 4, :none, 0).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
-    sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: 80
+#    sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: 80
   }
   4.times{sync :apeg}
 #  sample Fraz[/kick/i,1]
-  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, cutoff: 80
+#  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, cutoff: 80
   4.times{sync :apeg}
   d_idx+=1
 end

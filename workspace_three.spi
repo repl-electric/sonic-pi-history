@@ -30,6 +30,9 @@ end
 
 live_loop :beat do |b_idx|
 
+  if b_idx % 32 == 0
+    sample Fraz[/kick/i,3]
+  end
   
  with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), decay: 0.1){
     sample Fraz[/kick/i,[0,1]].tick(:kick)

@@ -43,7 +43,7 @@ end
 
 live_loop :drums do |d_idx|
   if d_idx % 8 == 0
-    sample Frag[/kick/i,14], amp: 1.0
+    sample Frag[/kick/i,14], amp: 0.5
 
   end
 

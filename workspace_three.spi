@@ -29,7 +29,7 @@ end
 
 live_loop :harmony do
   sync :apeg
-  synth :hollow, note: :Fs4
+  synth :hollow, note: :Ds4
 end
 
 live_loop :beat do |b_idx|

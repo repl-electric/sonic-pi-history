@@ -29,7 +29,7 @@ end
 
 live_loop :chorus do
   2.times{sync :apeg}
-  synth :dark_ambience, note: :Fs3
+  synth :dark_ambience, note: :Fs3, release: 32
 
 #  with_fx(:reverb, room: 1.0, mix: 1.0){
     with_synth(:hollow){

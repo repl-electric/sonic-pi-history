@@ -19,6 +19,6 @@ end
 
 live_loop :beat do
  sync :apeg
- sample
+ sample Frag[/kick/,0]
 
 end

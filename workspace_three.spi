@@ -26,8 +26,10 @@ end
 
 live_loop :chorus do
   sync :apeg
+  with_fx(:reverb){
   with_synth(:hollow){
     play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp)
+  }
   }
 end
 

@@ -1,9 +1,9 @@
 hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
-tranpose = (ring *%w{15 0 0 0 5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
+tranpose = (ring *%w{19 0 0 0 5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
 live_loop :apeg do
-  root = (knit :Fs3, 16, :As3, 16, :Ds4, 16, ).tick(:root)
+  root = (knit :Fs3, 16, :As3, 16, :Ds4, 16).tick(:root)
   with_transpose(tranpose.tick(:t)){
     play root, release: hold.tick(:h) == 1 ? 0.8 : 0.5, attack: 1-(velocity.tick(:v)/100)
   }

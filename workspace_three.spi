@@ -38,7 +38,7 @@ end
 
 live_loop :coils do
   32.times{sync :arp}
-  sample Fraz[/coil/i, /f#/i], amp: 0.4
+  sample Fraz[/coil/i, /f#/i], amp: 0.5
 end
 
 live_loop :drums do |d_idx|

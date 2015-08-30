@@ -31,11 +31,11 @@ end
 
 live_loop :chorus do
   sync :apeg
-  with_fx(:reverb, room: 1.0, mix: 1.0, dry: 0.1){
+#  with_fx(:reverb, room: 1.0, mix: 1.0, dry: 0.1){
     with_synth(:hollow){
       play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp)
     }
-  }
+#  }
 end
 
 live_loop :drums do |d_idx|

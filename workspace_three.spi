@@ -19,7 +19,7 @@ end
 
 live_loop :beat do
  sample Frag[/kick/i,0]
-
  4.times{sync :apeg}
-
+ sample Frag[/clap/i,0]
+ 4.times{sync :apeg}
 end

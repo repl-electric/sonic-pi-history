@@ -21,13 +21,14 @@ live_loop :apeg do
       play (knit root,1, _, 15).look(:bass), release: 1.0, decay: 1.0, amp: 0.2, cutoff: 80
     }
   }
-
   sleep 0.25
 end
 
 live_loop :chorus do
   sync :apeg
-  
+  with_synth(:hollow){
+    play :Fs3
+  }
 
 end
 

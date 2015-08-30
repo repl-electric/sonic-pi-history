@@ -24,21 +24,19 @@ live_loop :apeg do
       play (knit root,1,  _,1, root,1, _, 14).tick(:bass), release: 0.5, cutoff: 80, attack: 0.01, decay: 2.0, amp: 0.5
     }
   }
-
   sleep 0.25
 end
 
 live_loop :beat do |b_idx|
-
   if b_idx % 32 == 0
     sample Fraz[/kick/i,3]
   end
   
- with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), decay: 0.1){
+  with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), decay: 0.1){
     sample Fraz[/kick/i,[0,1]].tick(:kick)
- }
- 4.times{sync :apeg}
- sample Fraz[/snap/i,[0,0,0,0, 1,1,1,1]].tick(:s), cutoff: 100
- 4.times{sync :apeg}
+  }
+  4.times{sync :apeg}
+  sample Fraz[/snap/i,[0,0,0,0, 1,1,1,1]].tick(:s), cutoff: 100
+  4.times{sync :apeg}
   b_idx+=1
 end

@@ -54,8 +54,8 @@ live_loop :drums do |d_idx|
 end
 
 live_loop :texture do
-  32.times{sync :arp}
   sample Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.2
+  32.times{sync :arp}
 end
 
 live_loop :hats do

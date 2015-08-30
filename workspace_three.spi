@@ -7,5 +7,5 @@ live_loop :apeg do
   with_transpose(tranpose.tick(:t)){
     play root, release: hold.tick(:h) == 1 ? 0.8 : 0.5, attack: 1-(velocity.tick(:v)/100)
   }
-  sleep 0.25/2.0
+  sleep 0.25
 end

@@ -20,6 +20,9 @@ live_loop :apeg do
     with_synth(:dsaw){
       play (knit root,1,  _,1, root,1, _, 14).tick(:bass), release: 0.5, cutoff: 80, attack: 0.01, decay: 2.0, amp: 0.5
     }
+    with_synth(:prophet){
+      play (knit root,1,  _,1, root,1, _, 14).tick(:bass), release: 0.5, cutoff: 80, attack: 0.01, decay: 2.0, amp: 0.5
+    }
   }
 
   sleep 0.25

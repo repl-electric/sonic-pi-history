@@ -16,7 +16,7 @@ end
 
 live_loop :drums do |d_idx|
 #  if d_idx % 16 == 0
-    sample Fraz[/kick/i,8], amp: 0.5
+    sample Fraz[/kick/i,10], amp: 0.5
 #  end
   sample Fraz[/kick/i,[0,0]].tick(:kick)
   4.times{sync :apeg}

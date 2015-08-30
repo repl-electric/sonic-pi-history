@@ -43,7 +43,7 @@ end
 
 live_loop :drums do |d_idx|
   if d_idx % 8 == 0
-    sample Fraz[/kick/i,11], amp: 2.0
+    sample Fraz[/kick/i,12], amp: 2.0
   end
 
   with_fx((knit :none, 3, :echo, 1, :none, 4).tick(:fx), decay: 0.2, mix: 0.4){

@@ -33,7 +33,7 @@ live_loop :chorus do
   sync :apeg
   with_fx(:reverb, room: 1.0, mix: 1.0, dry: rrand(0.0,1.0)){
     with_synth(:hollow){
-      play :Fs4, amp: (knit 1.0,4, 0.0,4).tick(:amp)
+      play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp)
     }
   }
 end

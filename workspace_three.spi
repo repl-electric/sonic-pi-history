@@ -30,7 +30,7 @@ end
 live_loop :harmony do
   sync :apeg
   with_fx(:reverb){
-    synth :hollow, note: chord(:Fs3).tick, amp: 2.0
+    synth :hollow, note: chord(:Fs3, 'm').tick, amp: 2.0
   }
 end
 

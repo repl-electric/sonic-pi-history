@@ -10,6 +10,12 @@ live_loop :apeg do
   with_transpose(tranpose.tick(:t)){
     play root, attack: 1-(velocity.tick(:v)/100), release: hold.tick(:h) == 1.0 ? 0.8 : 0.5
   }
-
   sleep 0.25
+end
+
+
+live_loop :drums do
+  sample Fraz[/kick/i,0]
+  4.times{sync :apeg}
+
 end

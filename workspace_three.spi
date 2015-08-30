@@ -9,7 +9,7 @@ live_loop :apeg do
   use_synth :blade
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16).tick(:notes)
   with_transpose(tranpose.tick(:t)){
-    play root, attack: 1-(velocity.tick(:v)/100), release: hold.tick(:h) == 1.0 ? 0.8 : 0.5, cutoff: 80
+    play root, attack: 1-(velocity.tick(:v)/100), release: hold.tick(:h) == 1.0 ? 0.8 : 0.5, cutoff: 90
   }
 
   with_transpose(-24){

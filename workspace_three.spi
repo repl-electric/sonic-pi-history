@@ -29,7 +29,6 @@ end
 
 live_loop :chorus do
   2.times{sync :apeg}
-
 #  with_fx(:reverb, room: 1.0, mix: 1.0){
     with_synth(:hollow){
       play :Fs3, amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
@@ -38,9 +37,8 @@ live_loop :chorus do
 end
 
 live_loop :coils do
-  32.times{sync :arp}
   synth :dark_ambience, note: :Fs3, release: 8
-
+  32.times{sync :arp}
   sample Fraz[/coil/i, /f#/i], amp: 1.0
 end
 

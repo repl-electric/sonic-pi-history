@@ -17,5 +17,7 @@ end
 live_loop :drums do
   sample Fraz[/kick/i,0]
   4.times{sync :apeg}
+  sample Fraz[/kick/i,0]
+  4.times{sync :apeg}
 
 end

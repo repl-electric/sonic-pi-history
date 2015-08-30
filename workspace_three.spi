@@ -31,9 +31,9 @@ end
 live_loop :beat do |b_idx|
 
   
-with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx)){
- sample Fraz[/kick/i,[0,1]].tick(:kick)
-}
+ with_fx((knit :none, 3, :reverb, 1, :none, 4).tick(:fx), decay: 0.1){
+    sample Fraz[/kick/i,[0,1]].tick(:kick)
+ }
  4.times{sync :apeg}
  sample Fraz[/snap/i,[0,0,0,0, 1,1,1,1]].tick(:s), cutoff: 100
  4.times{sync :apeg}

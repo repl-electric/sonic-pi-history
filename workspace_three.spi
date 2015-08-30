@@ -30,7 +30,9 @@ end
 live_loop :harmony do
   sync :apeg
   with_fx(:reverb){
-    synth :hollow, note: chord(:B3, 'M'), amp: 5.0
+    with_synth(:hollow){
+      play chord(:B3, 'M'), amp: 5.0
+}
   }
 end
 

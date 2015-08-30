@@ -29,7 +29,9 @@ end
 
 live_loop :harmony do
   sync :apeg
-  synth :hollow, note: :Ds4, amp: 2.0
+  with_fx(:reverb){
+    synth :hollow, note: :Ds4, amp: 2.0
+  }
 end
 
 live_loop :beat do |b_idx|

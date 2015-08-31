@@ -66,6 +66,6 @@ live_loop :hats do
   sync :apeg
   mix = [0.1,0.2,0.3,0.4,0.5].choose
   with_fx(:reverb, mix: mix, room: 0.5){
-    sample Frag[/hat/i, Range.new(0,(ring 2,4).tick(:r))].tick(:hats), amp: 0.1, cutoff: 80
+    sample Frag[/hat/i, Range.new(0,(ring 2,4).tick(:r))].tick(:hats), amp: 0.1, cutoff: 120
   }
 end

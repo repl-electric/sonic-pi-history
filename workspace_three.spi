@@ -17,11 +17,11 @@ live_loop :apeg do
   }
   with_transpose(-24){
     with_synth(:dsaw){
-#      play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70
+      play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70
     }
 
     with_synth(:prophet){
-      play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 0
+      play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70
     }
   }
   sleep 0.25
@@ -39,20 +39,20 @@ end
 live_loop :coils do
   synth :dark_ambience, note: :Fs3, release: 16
   32.times{sync :arp}
- # sample Fraz[/coil/i, /f#/i], amp: 1.0
+  sample Fraz[/coil/i, /f#/i], amp: 1.0
 end
 
 live_loop :drums do |d_idx|
   if d_idx % 2 == 0
-#    sample Fraz[/kick/i,16], amp: 2.0
+    sample Fraz[/kick/i,16], amp: 2.0
   end
 
   with_fx((knit :none, 0, :echo, 4, :none, 0).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
-#    sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: 80
+    sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: 80
   }
   4.times{sync :apeg}
 #  sample Fraz[/kick/i,1]
-#  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, cutoff: 80
+  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, cutoff: 80
   4.times{sync :apeg}
   d_idx+=1
 end

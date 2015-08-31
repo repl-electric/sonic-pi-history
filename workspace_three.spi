@@ -27,14 +27,15 @@ live_loop :apeg do
   sleep 0.25
 end
 
+with_fx(:reverb, room: 1.0, mix: 1.0){
 live_loop :chorus do
   2.times{sync :apeg}
-#  with_fx(:reverb, room: 1.0, mix: 1.0){
     with_synth(:hollow){
       play chord(:Fs3,"M"), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
     }
-#  }
 end
+}
+
 
 live_loop :coils do
   synth :dark_ambience, note: :Fs3, release: 16

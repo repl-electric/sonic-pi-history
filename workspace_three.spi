@@ -43,7 +43,7 @@ notes = (knit
          chord_degree(3, :fs3, :major)[1..-1], 8,
          chord_degree(6, :fs2, :major)[1..-1], 8,
       )
-      4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
+      4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/2.0}
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
       puts (notes.look(:h))
     }

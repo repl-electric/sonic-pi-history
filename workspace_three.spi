@@ -35,12 +35,18 @@ notes = (knit
             chord(:Fs3,"M", invert: 0),    8,
             chord(:Fs3,"M", invert: 1),    8,
             chord(:Fs3,"M", invert: 2),    8,
-            chord(:Fs3,"M", invert: 2),     8,
+            chord(:Fs3,"M", invert: 2),    8,
 
             chord(:As3,"m", invert: 0),    8,
             chord(:As3,"m", invert: 0),    8,
             chord(:As3,"m", invert: 0),    8,
-            chord(:As3,"m", invert: 0),     8,
+            chord(:As3,"m", invert: 0),    8,
+
+
+            chord(:Ds3,"m", invert: 0),    8,
+            chord(:Ds3,"m", invert: 0),    8,
+            chord(:Ds3,"m", invert: 0),    8,
+            chord(:Ds3,"m", invert: 0),    8,
 
 
 )

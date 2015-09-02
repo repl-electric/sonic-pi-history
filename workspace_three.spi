@@ -27,7 +27,7 @@ live_loop :apeg do
   sleep 0.25
 end
 
-with_fx(:reverb, room: 1.0, mix: 1.0){
+with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 live_loop :chorus do
   2.times{sync :apeg}
     with_synth(:hollow){
@@ -45,6 +45,7 @@ notes = (knit
             chord(:Ds4,"m", invert: -2),   8,
 
 )
+  control f_fx, dry: rrand(0.0,1.0)
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
 puts (notes.look(:h))
 

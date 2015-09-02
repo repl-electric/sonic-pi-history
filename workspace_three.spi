@@ -62,6 +62,8 @@ live_loop :drums do |d_idx|
   with_fx((knit :none, 0, :echo, 4, :none, 0).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
     sample Fraz[/kick/i,[0,0]].tick(:kick)
   }
+  sample "/Users/josephwilk/Dropbox/Music/samples/Chillstep\ Vocals/PBB_CHILLSTEP_VOCALS_WAV/WAV/VOCAL_HITS_AND_FX/BREATH_NOISES/CV_FE_BREATH_029.wav", amp: 0.1, rate: 0.5
+
   4.times{sync :apeg}
   sample Fraz[/kick/i,1]
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2

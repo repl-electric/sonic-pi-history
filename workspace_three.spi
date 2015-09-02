@@ -32,7 +32,7 @@ live_loop :chorus do
   2.times{sync :apeg}
     with_synth(:hollow){
       play (knit 
-chord(:Ds3,"m+5")
+chord(:Ds3,"m+5"),4
 chord(:Ds3,"m7+5"),4).tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
     }
 end

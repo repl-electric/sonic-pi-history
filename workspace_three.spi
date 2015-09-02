@@ -32,10 +32,15 @@ live_loop :chorus do
   2.times{sync :apeg}
     with_synth(:hollow){
 notes = (knit 
-            chord(:Fs4,"M"),     8,
+            chord(:Fs4,"M", invert: -3),     2,
+            chord(:Fs4,"M", invert: -2),     2,
+            chord(:Fs4,"M", invert: -1),     2,
+            chord(:Fs4,"M", invert: 0),     2,
+
+
             chord(:As4,"m+5"),   8,
             chord(:Ds4,"m+5"),   8,
-            chord(:Ds4,"m"),   8
+            chord(:Ds4,"m"),     8
 )
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
 puts (notes.look(:h))

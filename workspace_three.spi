@@ -47,8 +47,7 @@ notes = (knit
 )
       control r_fx, dry: rrand(0.0,1.0)
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
-puts (notes.look(:h))
-
+      puts (notes.look(:h))
     }
 end
 }

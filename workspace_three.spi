@@ -31,7 +31,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){
 live_loop :chorus do
   2.times{sync :apeg}
     with_synth(:hollow){
-      play (knit chord(:Ds4,"m"),4).tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
+      play (knit chord(:Ds3,"m"),4).tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
     }
 end
 }

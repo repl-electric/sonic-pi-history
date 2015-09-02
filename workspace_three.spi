@@ -33,8 +33,8 @@ live_loop :chorus do
     with_synth(:hollow){
 notes = (knit 
             chord(:Fs3,"M"),      8,
-            chord(:As4,"m7+5"),   8,
-            chord(:Ds4,"m7+5"),   8)
+            chord(:As4,"m+5"),   8,
+            chord(:Ds4,"m+5"),   8)
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
 puts (notes.look(:h))
 

@@ -57,7 +57,6 @@ end
 live_loop :drums do |d_idx|
   if d_idx % 2 == 0
     sample Fraz[/kick/i,16], amp: 2.0
-    sample "/Users/josephwilk/Dropbox/Music/samples/Chillstep\ Vocals/PBB_CHILLSTEP_VOCALS_WAV/WAV/VOCAL_HITS_AND_FX/BREATH_NOISES/CV_FE_BREATH_029.wav", amp: 0.2, rate: 1.0
   end
 
   with_fx((knit :none, 0, :echo, 4, :none, 0).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
@@ -66,6 +65,8 @@ live_loop :drums do |d_idx|
   4.times{sync :apeg}
   sample Fraz[/kick/i,1]
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2
+    sample "/Users/josephwilk/Dropbox/Music/samples/Chillstep\ Vocals/PBB_CHILLSTEP_VOCALS_WAV/WAV/VOCAL_HITS_AND_FX/BREATH_NOISES/CV_FE_BREATH_029.wav", amp: 0.2, rate: 1.0
+
   4.times{sync :apeg}
   d_idx+=1
 end

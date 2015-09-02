@@ -37,7 +37,6 @@ notes = (knit
             chord(:Fs4,"M", invert: -1),     2,
             chord(:Fs4,"M", invert: 0),     2,
 
-
             chord(:As4,"m+5"),   8,
             chord(:Ds4,"m+5"),   8,
             chord(:Ds4,"m"),     8

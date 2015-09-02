@@ -38,14 +38,9 @@ live_loop :chorus do
   2.times{sync :apeg}
     with_synth(:hollow){
 notes = (knit 
-            chord(:Fs3,"sus4", invert: 0),  8,
-            chord(:Fs3,"sus4", invert: 1),  8,
+chord_degree(3, :fs3, :major)[1..-1], 8
 
-            chord(:As3,"m", invert: 0),     8,
-            chord(:As3,"m", invert: 0),     8,
-
-            chord(:Ds3,"m", invert: 0),    8,
-            chord(:Ds3,"m", invert: 0),    8)
+)
       control r_fx, dry: rrand(0.0,1.0)
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
       puts (notes.look(:h))

@@ -38,8 +38,8 @@ notes = (knit
             chord(:As3,"m", invert: 0),     8,
             chord(:As3,"m", invert: 0),     8,
 
-            chord(:Ds4,"m", invert: -2),    8,
-            chord(:Ds4,"m", invert: -2),    8)
+            chord(:Ds4,"m", invert: -1),    8,
+            chord(:Ds4,"m", invert: -1),    8)
       control r_fx, dry: rrand(0.0,1.0)
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
       puts (notes.look(:h))

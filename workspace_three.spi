@@ -49,7 +49,7 @@ end
 
 
 live_loop :coils do
-  synth :dark_ambience, note: :Fs3, release: 16
+  synth :dark_ambience, note: :Fs3, release: 16, amp: 1.0
   32.times{sync :arp}
   sample Ether[/coil/i, /f#/i], amp: 1.0
 end

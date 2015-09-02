@@ -51,7 +51,7 @@ end
 live_loop :coils do
   synth :dark_ambience, note: :Fs3, release: 16
   32.times{sync :arp}
-  sample Fraz[/coil/i, /f#/i], amp: 1.0
+  sample Frag[/coil/i, /f#/i], amp: 1.0
 end
 
 live_loop :drums do |d_idx|

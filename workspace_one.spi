@@ -6,3 +6,4 @@ live_loop :euclid_beat do
 end
 
 puts (spread 1, 4)
+puts (spread 7, 11)

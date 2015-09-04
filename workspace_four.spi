@@ -11,7 +11,10 @@ live_loop :intro do
                             }
 end
 
-
+                            live_loop :darkambience do
+                              sync :intro
+                              synth :dark_ambience, note: :Fs2
+                            end
                             
 
 
@@ -24,6 +27,8 @@ end
                               sleep sample_duration(Dust[/F#/,9])/16.0
                             }
                           end
+
+
 
 
                                                            live_loop :melody do

@@ -1,6 +1,14 @@
 
-
 live_loop :intro do
-  sample_and_sleep Dust[/F#/,9], rate: 1.0, amp: 1.0 
-
+  with_fx(:reverb){
+    sample_and_sleep Dust[/F#/,9], rate: 1.0, amp: 1.0
+  }
 end
+
+
+                        live_loop :drums do
+                          sync :intro
+                          4.times{
+Dust[/F#/,9]
+}
+                        end

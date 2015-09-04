@@ -67,8 +67,8 @@ live_loop :drums do |d_idx|
   4.times{sync :apeg}
   sample Fraz[/kick/i,[1,2]].tick(:kick2)
 
-  with_fx(:slicer){
-                   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), probability: 0.5
+  with_fx(:slicer, probability: 0.5){
+  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99)
   }
 
   if(d_idx % 8 == 0)

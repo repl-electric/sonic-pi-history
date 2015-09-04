@@ -11,7 +11,7 @@ live_loop :apeg do
 #  with_fx(:distortion){
 
   with_synth(:hollow){
-    play :FS2
+    play :FS3
   }
 
     with_fx(:reverb, room: 0.8){

@@ -1,1 +1,6 @@
-  sample Dust[/F#/,9], rate: 1.0, amp: 1.0 
+
+
+live_loop :intro do
+  sample_and_sleep Dust[/F#/,9], rate: 1.0, amp: 1.0 
+
+end

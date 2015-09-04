@@ -6,10 +6,10 @@ live_loop :intro do
 end
 
 
-                        live_loop :drums do
-                          sync :intro
-                          64.times{
-                              sample Dust[/kick/,0], amp: 2.0
+                          live_loop :drums do
+                            sync :intro
+                            64.times{
+                              sample Dust[/kick/,0], amp: 8.0
                               sleep sample_duration(Dust[/F#/,9])/64.0
-}
-                        end
+                                                         }
+                                                         end

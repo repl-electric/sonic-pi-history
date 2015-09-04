@@ -117,8 +117,8 @@ live_loop :hats do
   sync :apeg
   mix = [0.1,0.2,0.3,0.4,0.5].choose
 
-  sample Fraz[/kick/,1],  amp: 2.5,  cutoff: 80 if (spread 1, 4).tick
-  sample Fraz[/snap/,0], amp: 2.5,   cutoff: 90 if (spread 1, 8).tick
+  sample Fraz[/kick/,1],  amp: 2.5,   cutoff: 80 if (spread 1, 4).tick
+  sample Fraz[/snap/,0],  amp: 2.5,   cutoff: 90 if (spread 4, 8).tick
 
   sample Dust[/banton/,0], amp: 2.5, cutoff: 80 if (spread 3, 8).tick
   sample Dust[/perc/,18],  amp: 0.2, cutoff: 80 if (spread 7, 11).look

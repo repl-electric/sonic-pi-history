@@ -67,9 +67,9 @@ live_loop :drums do |d_idx|
   4.times{sync :apeg}
   sample Fraz[/kick/i,[1,2]].tick(:kick2)
 
-                 with_fx(:slicer){
-  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99)
-}
+  with_fx(:slicer){
+                   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), probability: 0.5
+  }
 
   if(d_idx % 8 == 0)
   sample "/Users/josephwilk/Dropbox/Music/samples/Chillstep\ Vocals/PBB_CHILLSTEP_VOCALS_WAV/WAV/VOCAL_HITS_AND_FX/BREATH_NOISES/CV_FE_BREATH_029.wav", amp: 0.1, rate: 1.0, cutoff: 100  

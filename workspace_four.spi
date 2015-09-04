@@ -29,6 +29,6 @@ end
                                                            live_loop :melody do
                                                              with_synth(:hollow){
                                                                play :Fs3, attack: 8, release: 32
-                                                               sleep 1
+                                                               sleep 32
                                                              }
                                                            end

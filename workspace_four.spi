@@ -13,6 +13,8 @@ end
 
                           live_loop :drums do
                             sync :intro
-
+                            4.times{
                             sample Dust[/kick/,1], amp: 1.0
+                              sleep sample_duration(Dust[/F#/])/3.0
+                            }
                           end

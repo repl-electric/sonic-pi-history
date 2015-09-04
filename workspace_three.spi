@@ -60,7 +60,7 @@ live_loop :sample_fun do
 #sample Dust[/VoxClarinet/].tick(:a)
 
 
-sample Dust[/TDDC_Voice_Hit/,6]
+sample Dust[/TDDC_Voice_Hit/,5]
 
   (32-8).times{sync :apeg}
 

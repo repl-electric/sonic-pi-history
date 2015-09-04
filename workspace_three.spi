@@ -87,6 +87,8 @@ live_loop :drums do |d_idx|
 
   4.times{sync :apeg}
 #  sample Fraz[/kick/i,[1,2]].tick(:kick2), cutoff: (knit 0,1,120,1).tick(:kick2) 
+    sample Dust[/TDDC_Voice_Hit/,12], amp: 1.0
+
 
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){

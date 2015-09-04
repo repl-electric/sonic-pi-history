@@ -15,7 +15,7 @@ end
 
                                 4.times{sleep 1; control d, 
                                         detune1: (ring 12,10,5,0).tick(:d1),
-                                        detune2: (ring 24,12).tick(:d2)
+                                        detune2: (ring 24,12, 10, 5, 0).tick(:d2)
                                         }
                               }
                             end

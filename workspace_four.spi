@@ -10,6 +10,6 @@ end
                             sync :intro
                             64.times{
                               sample Dust[/kick/,0], amp: 8.0
-                              sleep sample_duration(Dust[/F#/,9])/64.0
+                              sleep sample_duration(Dust[/F#/,9])/128.0
                                                          }
                                                          end

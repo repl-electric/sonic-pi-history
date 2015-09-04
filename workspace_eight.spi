@@ -1,0 +1,166 @@
+bar = 1.0
+use_bpm 60
+
+live :indeterminism, amp: 1.0 do
+  4.times{sync :next}
+
+  with_fx(:distortion, mix: 1.0, distort: 0.8) do |fx_r|
+    with_synth(:hollow) do
+      play deg_seq(%w{Fs4 1 3}).tick, decay: bar*2, attack: 4, amp: 0.4, release: 1.0
+    end
+    notes = dice(6) > 3 ? deg_seq(%w{Fs3 1}) : deg_seq(%w{Fs4 1})
+    with_fx(:reverb, room: 0.9) do
+      with_synth(:dark_ambience) do
+      #  play notes.tick(:note), decay: bar*6, attack: 1, amp: 1.0, release: 2.0
+      end
+    end
+
+    4.times{
+      sleep bar/4.0
+      control fx_r, distort: (ring 0.8, 0.8, 0.5, 0.0).tick(:distory)
+    }
+  end
+
+  4.times{sync :next}
+  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+end
+
+
+live_loop :next, amp: 1.0 do
+  2.times{
+    cue :half;     cue :quarter;
+    sample Mountain["pebble",0], start: rrand(0.0,0.01), rate: 1.0, amp: 0.3
+    sleep bar/4.0; cue :quarter
+    sleep bar/4.0; cue :quarter
+    cue :half;  :quarter
+    sleep bar/4.0; cue :quarter
+    sleep bar/4.0
+  }
+end
+
+#1*7 _ 3*7 _
+#34 -5 4
+
+live_loop :melody do
+  #8 iterations
+  n = {1 => :Fs3, 2 => :Gs3, 3 => :As3, 4  => :B3, 5 => :Cs4, 6 => :Ds4, 7 => :Es4}
+  n2 = {1 => :Fs2, 2 => :Gs2, 3 => :As2, 4  => :B2, 5 => :Cs3, 6 => :Ds3, 7 => :Es3}
+
+      #I ii iii IV V vi  viio
+  x2 = (1..7).map{|d| chord_degree(d, :Fs2, :major)}.ring
+  x3 = (1..7).map{|d| chord_degree(d, :Fs3, :major)}.ring
+
+  s22 = (1..7).map{|d| chord(n2[d], :sus2)}.ring
+  s24 = (1..7).map{|d| chord(n2[d], :sus4)}.ring
+
+  s32 = (1..7).map{|d| chord(n[d], :sus2)}.ring
+  s34 = (1..7).map{|d| chord(n[d], :sus4)}.ring
+  s327 = (1..7).map{|d| chord(n[d], "7sus2")}.ring
+  s347 = (1..7).map{|d| chord(n[d], "7sus4")}.ring
+
+  s227 = (1..7).map{|d| chord(n2[d], "7sus2")}.ring
+  s247 = (1..7).map{|d| chord(n2[d], "7sus4")}.ring
+
+  p5 = (1..7).map{|d| chord(n[d], :M7)}.ring
+
+  r = (knit 0.5, 16, 1.0,1).tick(:r)
+                 
+ _ = nil
+  start_notes = (ring :Fs3, :Cs4, :B3, :As3, 
+                      :Es3, :B3, :Ds3, [chord(:As3, "m7+5"), chord(:As3, "m+5"), chord(:As3, "m+5", invert: rrand_i(0,1))].choose)
+  end_notes =   (ring :Fs2, _, _, _, :Cs3, _, _, _)
+ 
+  (knit 1,8,4,1).tick(:time).times { sync :quarter}
+  #r = (knit 0.5, 7, 1.0,1).tick(:r)
+
+
+   x = start_notes.tick(:d)
+  with_fx((knit :none,4, :echo,1).tick(:echoey), mix: 0.0, phase: 0.5, decay: 2.0) do
+ puts (knit :none,3, :echo,1).look(:echoey)
+ puts note_inspect(x, "I:")
+  i_deter( x, end_notes.tick(:e), attack: 0.05, release: r, amp: 0.5)
+  
+end
+
+end
+
+ 
+live_loop :kick do
+  sample Mountain[/subkick/i, 2], amp: 0.5
+  4.times{sync :next}
+end
+
+live_loop :movement do
+  pick = [6,5].choose
+
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  sample Mountain[/microperc/i, pick]
+  sync :next
+  with_fx((knit :none, 3, :echo, 1).tick) do
+    sample Mountain[/microperc/i, [6,5]-[pick]]
+    sync :next
+  end
+end
+
+live :missing_semi_colon, amp: 1.0 do
+    2.times{sync :start}
+    sample (knit Mountain["microperc_06"],3,Mountain["microperc_07"],1).tick(:s)
+end
+_=nil
+
+with_fx :distortion, mix: 0.1 do
+with_fx(:pitch_shift, window_size: 4.0) do
+live_loop :rumbling_loops, auto_cue: false do |idx|;with_fx :level, amp: 1.0 do
+with_fx :reverb, mix: 0.2, damp: 0.3 do |fx_reverb|;
+    3.times{sync :next}
+comment do
+    notes = (knit "Cs3",2, "Gs2",2, "As2",2,
+                  "Cs3",2, "Gs2",2, "As2",2,
+                  "B2",2,  "Gs2",2, "As2",2)
+end
+
+    notes = (knit chord(:As1,:m,    invert: 2)[0], 1,
+                  :Cs2,                            2,
+                  chord(:Ds2,:m,    invert: 0)[0], 2,
+                  chord(:Es1, 'dim',invert: 0)[0], 2,
+                  chord(:Es1,'dim', invert: 2)[0], 2,
+                  :Fs1,                            2,
+                  _,1,:Fs2,1,
+                  chord(:B1,:M,     invert: -1)[0],3)
+
+    note = notes.tick(:a)
+
+    note = (ring :B1, :Cs2, :Ds2,
+                  :B1, :Cs2, :Ds2,
+                  :B1, :Cs2, :Fs2).tick(:bass)
+
+
+    puts "BASS[#{note_info(note||0)}]"
+
+    sleep bar/2.0
+    #(ring 1,0).tick(:ti).times{with_fx(:pitch_shift, mix: 1.0, pitch: 0.025){with_fx(:slicer, mix: 0.5, phase: 0.025, probability: 0.5){sample Heat[/stacked_bells/i,note_to_sample(notes.reverse.look(:a),1)], amp: 1.5, attack: 0.2}}}
+    #(knit 1,1).tick(:heat).times {with_fx(:reverb){sample Heat[/low_pad/i,note_to_sample(note,1)], amp: 1.0}}
+
+    (ring 1,0).tick(:double).times do
+     # with_fx(:echo, decay: 2.0){sample Frag[/coil/i, /f#/i].tick(:coil), amp: 0.5}
+      #sample Frag[/coil/i,11], amp: 1.0
+      with_synth [:pnoise, :prophet][0] do
+      play note, amp: 0.7, release: (knit bar,1).tick(:Bass), attack: 0.01, cutoff: 60
+    end
+    end
+
+    1.times{sync :next}
+
+    i_bass(note)
+
+    6.times{
+      control fx_reverb, damp: (rrand 0.0,1.0)
+      sleep bar/8.0
+    }
+end;end
+idx+=1
+end;end;end

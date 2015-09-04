@@ -17,13 +17,10 @@ end
                             end
                             
 
-
                           live_loop :drums do
                             sync :intro
                             16.times{
-                              with_fx(:bitcrusher){
                               sample Dust[/kick/,3], amp: 1.0
-                              }
                               sleep sample_duration(Dust[/F#/,9])/16.0
                             }
                           end

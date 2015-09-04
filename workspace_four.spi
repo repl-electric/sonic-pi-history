@@ -1,3 +1,5 @@
+["experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+
 
 live_loop :intro do
   with_fx(:reverb){
@@ -11,5 +13,6 @@ end
 
                           live_loop :drums do
                             sync :intro
+
                             sample Dust[/kick/i,1], amp: 1.0
                           end

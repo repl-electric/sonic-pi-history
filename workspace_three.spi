@@ -117,9 +117,8 @@ live_loop :hats do
   sync :apeg
   mix = [0.1,0.2,0.3,0.4,0.5].choose
 
-  sample :elec_bong, amp: 1.5 if (spread 3, 8).tick
+  sample Dust[/banton/,9], amp: 1.5 if (spread 3, 8).tick
   sample :perc_snap, amp: 0.8 if (spread 7, 11).look
-
 
   with_fx(:reverb, mix: mix, room: 0.8){
   #  sample Frag[/hat/i, Range.new(0,(ring 2,4).tick(:r))].tick(:hats), amp: 0.1, cutoff: (knit 105,3,115,3).tick(:hats)

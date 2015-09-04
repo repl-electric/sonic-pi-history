@@ -14,8 +14,8 @@ end
                               d = synth :dark_ambience, note: :Fs3, release: 32, detune1: 12, detune2: 24
 
                                 4.times{sleep 1; control d, 
-                                        detune1: 10+rand_i(5),
-                                        detune2: 10+rand_i(5)
+                                        detune1: 12+rand_i(5),
+                                        detune2: 24+rand_i(5)
 }
                               }
                             end

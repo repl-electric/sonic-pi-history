@@ -11,7 +11,7 @@ end
                             live_loop :darkambience do
                               sync :intro
                               with_fx(:distortion){
-                              synth :dark_ambience, note: :Fs2, release: 32, detune1: 12, detune2: 12
+                              synth :dark_ambience, note: :Fs2, release: 32, detune1: 12, detune2: 24
                               }
                             end
                             

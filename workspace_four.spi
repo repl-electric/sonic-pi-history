@@ -20,7 +20,7 @@ end
                           live_loop :drums do
                             sync :intro
                             16.times{
-                              sample Dust[/kick/,3], amp: 1.0
+                              sample Dust[/kick/,3], amp: 1.0, cutoff: 80
                               sleep sample_duration(Dust[/F#/,9])/16.0
                             }
                           end

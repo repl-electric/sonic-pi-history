@@ -8,7 +8,9 @@
 
 live_loop :intro do
   with_fx(:reverb){
-    sample_and_sleep Dust[/F#/,9], rate: 1.0, amp: 1.0
+    with_fx(:bitcrusher){
+      sample_and_sleep Dust[/F#/,9], rate: 1.0, amp: 1.0
+                            }
   }
 end
 

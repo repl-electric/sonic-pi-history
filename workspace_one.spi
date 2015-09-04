@@ -4,3 +4,5 @@ live_loop :euclid_beat do
   sample :bd_haus, amp: 2 if (spread 1, 4).look
   sleep 0.125
 end
+
+puts (spread 1, 4)

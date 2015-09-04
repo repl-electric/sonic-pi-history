@@ -10,7 +10,7 @@ live_loop :apeg do
   
   with_fx(:distortion){
     with_synth(:hollow){
-      play (knit :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1,
+      play (knit :As4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1,
                  :Es4,1).tick(:thing), attack: 4.0, release: 0.1
     }
   }
@@ -18,7 +18,6 @@ live_loop :apeg do
     with_synth(:dsaw){
       play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70
     }
-
     with_synth(:prophet){
       play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70
     }

@@ -51,7 +51,7 @@ end
 live_loop :sample_fun do
   8.times{sync :apeg}
   sample Dust[/F/,3], rate: 1.0, amp: 0.5 
-  32-8.times{sync :apeg}
+  (32-8).times{sync :apeg}
 
 end
 

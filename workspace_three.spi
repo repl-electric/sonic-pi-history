@@ -59,11 +59,8 @@ live_loop :sample_fun do
 #sample Dust[/TDDC_Hit_Vapor_FullMix/]
 #sample Dust[/VoxClarinet/].tick(:a)
 
-
   (32-8).times{sync :apeg}
-  sample Dust[/TDDC_Voice_Hit/,5], amp: 0.2
-
-
+  sample Dust[/TDDC_Voice_Hit/,5], amp: 0.5
 end
 
 live_loop :coils do

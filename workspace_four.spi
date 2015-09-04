@@ -10,6 +10,6 @@ end
                           sync :intro
                           4.times{
                               sample Dust[/kick/,0]
-sleep sample_duration(Dust[/F#/,9])/4.0
+                              sleep sample_duration(Dust[/F#/,9])/4.0
 }
                         end

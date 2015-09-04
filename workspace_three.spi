@@ -88,10 +88,11 @@ live_loop :drums do |d_idx|
   #sample Fraz[/kick/i,[1,2]].tick(:kick2), cutoff: (knit 0,1,120,1).tick(:kick2) 
    #sample Dust[/Voice_Hit/,5], amp: 1.0, cutoff: 70
    
-   #sample Dust[/Voice_Hit/,11], cutoff: 70
-   sample Sop[/F#/,4], amp: 1.0, cutoff: 100
+   sample Dust[/Voice_Hit/,12], cutoff: 70
+   
+   
 
-
+sample Sop[/F#/,4], amp: 1.0, cutoff: 100
 
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){

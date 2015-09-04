@@ -13,7 +13,7 @@ end
 
                             live_loop :darkambience do
                               sync :intro
-                              synth :dark_ambience, note: :Fs2, release: 32
+                              synth :dark_ambience, note: :Fs2, release: 32, detune1: 12, detune2: 12
                             end
                             
 

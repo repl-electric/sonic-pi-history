@@ -15,6 +15,6 @@ end
                             sync :intro
                             4.times{
                             sample Dust[/kick/,1], amp: 1.0
-                              sleep sample_duration(Dust[/F#/])/4.0
+                              sleep sample_duration(Dust[/F#/,1])/4.0
                             }
                           end

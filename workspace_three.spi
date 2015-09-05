@@ -13,7 +13,7 @@ live_loop :apeg do
       play (knit :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
-                  _,8
+                  _,8,
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, _,1,    :As4,2
             ).tick(:thing), attack: 4.0, release: 0.1
     }

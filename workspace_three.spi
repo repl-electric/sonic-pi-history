@@ -16,7 +16,7 @@ live_loop :apeg do
 end
 
 live_loop :hollower do
-  4.times{sync :apeg}
+  2.times{sync :apeg}
   with_fx(:lpf, cutoff: 80){
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){

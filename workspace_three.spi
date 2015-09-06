@@ -23,7 +23,7 @@ live_loop :hollower do
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                  :Fs,8,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1,  _,1,   :As4,2
+                 :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1,:Fs3,1,  _,1,   :As4,2
             ).tick(:thing), attack: (knit 4.0,2, 
                                           4.0,2, 
                                           4.5,2,  

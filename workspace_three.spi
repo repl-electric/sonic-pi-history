@@ -19,9 +19,9 @@ live_loop :hollower do
 2.times{sync :apeg}
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
-      play (knit :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
+      play (knit :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
+                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
+                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
                  :Fs,8,
                  :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1,  _,1,   :As4,2
             ).tick(:thing), attack: (knit 2.2,2, 

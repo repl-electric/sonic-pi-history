@@ -10,7 +10,7 @@ live_loop :apeg do
   
   with_fx(:distortion, mix: rrand(0.9,1.0)){
     with_synth(:hollow){
-      play (knit _,1 :Fs4,1, :Cs4,1, _,1,:Fs3,1, :Cs4,1, _,1, :Es4,1,
+      play (knit _,1, :Fs4,1, :Cs4,1, _,1,:Fs3,1, :Cs4,1, _,1, :Es4,1,
                  :Fs4,1, :Cs4,1,_,1, _,1,:Fs3,1, :Cs4,1, _,1, :Es4,1,
                  :Fs4,1, :Cs4,1,_,1, _,1,:Fs3,1, :Cs4,1, _,1, :Es4,1,
                  :Fs,8,

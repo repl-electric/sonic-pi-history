@@ -16,13 +16,13 @@ live_loop :apeg do
 end
 
 live_loop :hollower do
-  2.times{sync :apeg}
+  4.times{sync :apeg}
   with_fx(:lpf, cutoff: 80){
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
-      play (knit :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1, :Fs4,1, :Es4,1,
-                 :Fs4,1, _,1,:Fs4,1, _,1,:Fs4,1, _,1, :Fs4,1, :Es4,1,
-                 :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1, :Fs4,1, :Es4,1,
+      play (knit :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1, :Fs4,1, :Es4,1,
+                 :Fs4,1, _,   1, :Fs4,1, _,1,:Fs4,1, _,1, :Fs4,1, :Es4,1,
+                 :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1, :Fs4,1, :Es4,1,
                  :Fs,8,
                  :Fs4,1, :Cs4,1,:Fs4,1, :Cs4,1,:Fs4,1,  _,1,   :As4,2
             ).tick(:thing), attack: (knit 4.0,2, 

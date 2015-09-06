@@ -8,21 +8,6 @@ live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16).tick(:notes)
   
-  with_fx(:distortion, mix: rrand(0.0,1.0)){
-    with_synth(:hollow){
-      play (knit :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs3,1,:Fs3,1, :Cs3,1, :Fs3,1, :Es4,1,
-                 :Fs,8,
-                 :Fs4,1, :Cs4,1,:Fs3,1, :Cs4,1,:Fs3,1,  _,1,   :As4,2
-            ).tick(:thing), attack: (knit 2.2,2, 
-                                          1.8,2, 
-                                          2.2,2,  
-                                          2.0,2).tick(:a), release: 0.0025, 
-      decay: 0.01,
-      amp: (ring 0.9,0.8,0.85,0.8).tick(:amp)
-    }
-  }
   with_transpose(-24){
     with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70}
     with_synth(:prophet){play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70}

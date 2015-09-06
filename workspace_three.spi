@@ -18,7 +18,7 @@ live_loop :apeg do
             ).tick(:thing), attack: (knit 2.5,2, 
                                           2.0,2, 
                                           2.0,2,  
-                                          2.0,2).tick(:a), release: 0.025
+                                          2.0,2).tick(:a), release: 0.025, amp: (ring 0.5,0.25).tick(:amp)
     }
   }
   with_transpose(-24){

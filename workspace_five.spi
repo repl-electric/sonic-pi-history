@@ -10,7 +10,7 @@ with_synth(:dark_ambience){
   play (ring :Fs4, _, :Cs4,_ , :Fs3, :Cs4, :Es4,:Es4,
                   :Gs4, _,:As4,_ , :Fs4, :As3, :Fs4, :Fs4,   #A C E G
                   :Fs4, _, :Cs4,_ , :Cs4, _,     :Es4, :Es4    #D F  A C 
- ).tick(:a), amp: 2.4, release: 0.4, attack: 0.01
+ ).tick(:a), amp: 2.4, release: 2.4, attack: 0.01
 #  play (ring :Fs4, :As4, :Cs3).tick(:a),  amp: 0.5,   release: 0.01,   attack: 4.0
 }
 (ring 2).tick(:times).times{  sync :apeg}

@@ -75,7 +75,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
 
                        :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,    :Cs4,   :Es4, :Es4,
                         :As4, :Cs4, :As3, :Cs4, :As4,  :Cs4,   :Fs4, :Fs4,                        #A  C   E      G
-                        :Ds4, :Cs5, :Cs5, :Gs4, :Cs5,  :Cs4,   :Es4, :Es4
+                        :Ds4, :Cs5, :Ds5, :Gs4, :Cs5,  :Cs4,   :Es4, :Es4
 
 
 ).tick(:notes),    #D E G

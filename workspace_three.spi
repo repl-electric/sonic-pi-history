@@ -69,7 +69,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
     live_loop :args do
       sync :apeg
       with_synth(:plucked){
-        play (ring :Fs4, :Cs4).tick(:notes),
+        play (ring :Fs4, :Cs3).tick(:notes),
         amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
       }
 #      puts note_inspect(notes.look(:thing), :DEG)

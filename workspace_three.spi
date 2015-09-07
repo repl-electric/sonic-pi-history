@@ -31,7 +31,6 @@ live_loop :hollower do
                :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
 
 
-
 #               :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,
  #              :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
   #             :Fs3,8,
@@ -48,7 +47,7 @@ live_loop :hollower do
                 # :Fs,4, _,4,
                 # :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, _,1,    :As4,2
             )
-      play notes.tick(:thing), attack:  (knit 0.01,2, 0.01,2, 0.5,2, 0.01,2).tick(:a), 
+      play notes.tick(:thing), attack:  (knit 0.01,2, 0.01,2, 0.05,2, 0.01,2).tick(:a), 
                                release: (knit 1.0,1, 0.5,7).tick(:release), decay: 0.1,  #detune1: 12, detune2: 12,
                                amp:     (ring 0.9,0.8,0.85,0.8).tick(:amp) * 1, cutoff: 130
 

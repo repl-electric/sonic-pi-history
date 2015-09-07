@@ -24,10 +24,11 @@ live_loop :hollower do
 
   with_fx(:distortion, mix: 0.1){
     with_synth(:hollow){
-      notes = (knit :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
-                    :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es4,1,
-                    :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
-                    :Ds4,1, _,3, :Fs4,1, :Ds4,1, :Fs3,1, [:Es4, :Cs4],1,
+      notes = (knit 
+               #:Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
+                #    :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es4,1,
+                 #   :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
+                  #  :Ds4,1, _,3, :Fs4,1, :Ds4,1, :Fs3,1, [:Es4, :Cs4],1,
 
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
                 # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,

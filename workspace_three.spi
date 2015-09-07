@@ -70,12 +70,12 @@ notes = (knit
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
       puts note_inspect(notes.look(:h), "CHORD")
-    }
+    
 
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
   sample Sop[/C#4/, 0]  if spread(1,32).tick("sop")
 end
-
+}
 
 end
 }

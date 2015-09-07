@@ -1,6 +1,6 @@
 
 
-
+_=nil
 live_loop :melody do
   2.times{sync :apeg}
   notes = (ring 

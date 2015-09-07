@@ -6,12 +6,10 @@
 _=nil
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.2).tick(:dis)) do
 live_loop :arse do
-with_synth(:beep){
+with_synth(:saw){
   play (ring :Fs4, _, :Cs4,_ , :Fs3, :Cs4, :Es4,:Es4,
                   :Gs4, _,:As4,_ , :Fs4, :As3, :Fs4, :Fs4,   #A C E G
                   :Fs4, _, :Cs4,_ , :Cs4, _,     :Es4, :Es4    #D F  A C 
-
-
  ).tick(:a), amp: 0.4, release: 0.4
 #  play (ring :Fs4, :As4, :Cs3).tick(:a),  amp: 0.5,   release: 0.01,   attack: 4.0
 }

@@ -125,7 +125,7 @@ with_fx(:flanger){
 }
 
 
-  sample Sop[/G#4/, 0] if spread(3,8).look(:spread)
+  sample Sop[/G#4/, 0] 
 
 
 

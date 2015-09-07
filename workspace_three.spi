@@ -71,6 +71,10 @@ notes = (knit
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
       puts note_inspect(notes.look(:h), "CHORD")
     }
+
+  sample Sop[/G#4/, 0] 
+
+
 end
 }
 
@@ -124,8 +128,6 @@ with_fx(:flanger){
   sample Sop[/A#4/,/Oo/, /down/, 0] if spread(3,8).look(:spread)
 }
 
-
-  sample Sop[/G#4/, 0] 
 
 
 

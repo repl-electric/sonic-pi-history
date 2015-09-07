@@ -13,8 +13,8 @@ live_loop :melody do
 
   with_fx(:distortion, pre_amp: 0.5, distort: 0.5, distort_slide: 1.0){ |dfx|
     with_synth(:hollow){
-  play notes.tick(:notes), amp: 0.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
-}
+      play notes.tick(:notes), amp: 1.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
+    }
 
 puts note_inspect(notes.look(:notes), "MELODY")
 

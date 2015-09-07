@@ -64,8 +64,8 @@ with_fx(:level, amp: 0.0) do
 end
 end
 
-#with_fx(:pitch_shift, time_dis: 4.0){
-#  with_fx(:distortion, mix: 0.3){
+with_fx(:pitch_shift, time_dis: 4.0){
+  with_fx(:distortion, mix: 0.3){
     live_loop :args do
       2.times{sync :apeg}
       with_synth(:gpa){ 
@@ -88,7 +88,7 @@ with_fx(:lpf, cutoff: 90, mix: 0.0){
 #      puts note_inspect(notes.look(:thing), :DEG)
 #} 
 end
-#}}
+}}
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|

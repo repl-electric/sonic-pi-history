@@ -1,3 +1,5 @@
+bar = 1.0
+
 define :i_deter do |note1, note2, *opts|
   opts = opts[0] || {}
   defaults = {amp: 0.3}

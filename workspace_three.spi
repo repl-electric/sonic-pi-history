@@ -118,10 +118,11 @@ live_loop :drums do |d_idx|
    #sample Dust[/TDDC_Voice_Hit/,16], amp: 1.0, cutoff: (knit 85,3,100,1).tick(:thing), rate: 1
 #   sample Sop[/F#/,4], amp: 3.0, cutoff: 100
 
+with_fx(:flanger){
   sample Sop[/F#4/,/Oo/, /down/, 1] if spread(4,11).tick(:spread)
   sample Sop[/F#4/,/Oo/, /up/, 0] if spread(1,8).look(:spread)
   sample Sop[/A#4/,/Oo/, /down/, 0] if spread(3,8).look(:spread)
-
+}
 
 
 

@@ -71,7 +71,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
       with_synth(:plucked){
         play (ring :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,  :Es4, :Es4,
                         :As4, :Cs4, :As3, :Cs4, :As4, :Cs4, :Es4, :Es4,
-                        :Ds4, :Cs4, :As3, :Cs4, :As4, :Cs4, :Es4, :Es4
+                        :Ds4, :Cs4, :Ds3, :Cs4, :Ds4, :Cs4, :Es4, :Es4
 
 
 ).tick(:notes),

@@ -64,6 +64,22 @@ live_loop :hollower do
   }
 end
 
+live_loop :args do
+      with_fx(:pitch_shift, time_dis: 4.0){
+      with_fx(:distortion, mix: 0.1){
+      with_synth(:plucked){
+        play :Fs3, amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
+      }
+#      puts note_inspect(notes.look(:thing), :DEG)
+    }
+#}
+  }
+
+ sleep 0.25/2
+
+end
+
+
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 live_loop :chorus do
   2.times{sync :apeg}

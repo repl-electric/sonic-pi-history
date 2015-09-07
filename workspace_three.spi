@@ -79,7 +79,7 @@ with_transpose(0){
                         :As4, :Cs4, :As3, :Cs4,  :As4,  :Cs4,   :Fs4, :Cs4,                        #A  C   E      G
                         :Ds4, :Cs4, :Ds4, :Cs4,  :Ds4,  :Cs4,   :Es4, :Es4
 ).tick(:notes),    #D E G
-        amp: 2*(ring 0.4,0.3).tick(:am), attack: 0.01, release: (knit 0.01,7, 2,1).tick(:r), cutoff: 85, decay: (knit 2.0, 1, 1.0,7).tick
+        amp: 2*(ring 0.4,0.3).tick(:am), attack: 2.0, release: (knit 0.01,7, 2,1).tick(:r), cutoff: 85, decay: (knit 2.0, 1, 1.0,7).tick
 }
       }
 #      puts note_inspect(notes.look(:thing), :DEG)

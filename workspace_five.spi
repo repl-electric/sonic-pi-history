@@ -6,8 +6,8 @@ live_loop :melody do
   play (ring :Cs4)
 
 end
-play :Cs4
+#play :Cs4
 
 
 
-Cs4 -> Gs4
+#Cs4 -> Gs4

@@ -52,7 +52,7 @@ live_loop :hollower do
                 # :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, _,1,    :As4,2
             )
       with_fx(:pitch_shift, time_dis: 4.0){
-        play notes.tick(:thing), amp: 0.8, attack: 0.5, release: 0.01
+        play notes.tick(:thing), amp: 0.8, attack: 0.5, release: 0.01, cutoff: 100
       }
 #      puts note_inspect(notes.look(:thing), :DEG)
     }

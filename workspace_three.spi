@@ -22,7 +22,7 @@ live_loop :hollower do
 # 3 A C E
 #6 D F A 
 
-  with_fx(:distortion, mix: rrand(1.0)){
+  with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
       notes = (knit 
                :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,

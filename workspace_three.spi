@@ -73,7 +73,7 @@ notes = (knit
     
 
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
-  sample Sop[/A#4/,/down/,0] 
+ sample  (knit 1,  sample Sop[/A#4/,/down/,0] , 7, _).tick :s
 end
 }
 

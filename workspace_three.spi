@@ -64,18 +64,20 @@ with_fx(:level, amp: 0.0) do
 end
 end
 
+with_fx(:pitch_shift, time_dis: 4.0){
+  with_fx(:distortion, mix: 0.1){
 live_loop :args do
   sync :apeg
-      with_fx(:pitch_shift, time_dis: 4.0){
-      with_fx(:distortion, mix: 0.1){
       with_synth(:plucked){
-        play (ring :As3).tick(:notes), amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
+        play (ring :As3).tick(:notes), 
+        amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
       }
 #      puts note_inspect(notes.look(:thing), :DEG)
-    }
+   
 #}
-  }
+  
 end
+}}
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|

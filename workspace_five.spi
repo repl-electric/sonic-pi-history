@@ -1,6 +1,6 @@
 live_loop :arse do
 sync :apeg
 
-play :FS2, amp: 0.5
+play :FS4, amp: 0.5
 
 end

@@ -16,10 +16,10 @@ puts note_inspect((ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1
              :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,                  #6  D F A C E
 
 ).look(:notes), "MELODY")
-}
+
 
 (control dfx, distort: (rrand 0.0, 0.5))
-
+}
 end
 #play :Cs4
 

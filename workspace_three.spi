@@ -72,7 +72,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
         play (ring :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,   :Es4, :Es4,
                         :As4, :Cs4, :As3, :Cs4, :As4,  :Cs4,   :Es4, :Es4,                        #
                         :Ds4, :Gs4, :Ds4, :Gs4, :Ds4, :Gs4,   :Es4, :Es4).tick(:notes),    #D E G
-        amp: 0.4, attack: 0.01, release: (knit 0.01,7, 2,1).tick(:r), cutoff: 85, decay: 2.0
+        amp: 0.4, attack: 0.01, release: (knit 0.01,7, 2,1).tick(:r), cutoff: 85, decay: (knit 2.0, 1)
       }
 #      puts note_inspect(notes.look(:thing), :DEG)
 #} 
@@ -119,7 +119,7 @@ end
 
 live_loop :coils do
   #play (ring chord("Cs3", "M7"), chord("Fs3", "M")).tick(:chords) , release: 8, attack: 4.0
-#  synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 8, attack: 4.0, amp: 2.5
+  synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 8, attack: 4.0, amp: 2.5
   32.times{sync :apeg}
 #  sample Ether[/coil/i, /f#/i], amp: 1.0
 end

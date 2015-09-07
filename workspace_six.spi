@@ -1,1 +1,7 @@
-  sample Frag[/coils/, /F#/,0], amp: 2.0
+live_loop :muggle do
+32.times{sync :apeg}
+  i_deter(deg_seq(%w{Fs4 1*7 _ 3*7 _}).tick,
+          deg_seq(%w{Fs4 34 -5 4}).stretch(4).tick)
+
+
+end

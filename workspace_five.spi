@@ -3,14 +3,18 @@
 _=nil
 live_loop :melody do
   2.times{sync :apeg}
+
   notes = (ring 
                :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
                :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B
                :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
 
 )
+
   with_fx(:distortion, pre_amp: 0.5, distort: 0.5, distort_slide: 1.0){ |dfx|
+    with_synth(:hollow){
   play notes.tick(:notes), amp: 0.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
+}
 
 puts note_inspect(notes.look(:notes), "MELODY")
 

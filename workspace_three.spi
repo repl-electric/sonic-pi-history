@@ -24,9 +24,9 @@ live_loop :hollower do
 
   with_fx(:distortion, mix: 0.3){
     with_synth(:hollow){
-      notes = (knit :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es5,1,
-                    :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es5,1,
-                    :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es5,1,
+      notes = (knit :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
+                    :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es4,1,
+                    :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
                     :Ds4,1, _,3, :Fs4,1, :Ds4,1, :Fs3,1, [:Es4, :Cs4],1,
 
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
@@ -38,7 +38,7 @@ live_loop :hollower do
                                           4.0,2,
                                           4.0,2, 
                                           4.5,2,  
-                                          4.0,2).tick(:a), 
+                                          2.0,2).tick(:a), 
       vibrato_depth: 0.5, vibrato_delay: 1.0, vibrato_onset: 1.0, vibrato_rate: 10,
       release: (knit 1.0,1, 0.25,7).tick(:release), decay: 0.01,  amp: (ring 0.9,0.8,0.85,0.8).tick(:amp) * 2.0
 

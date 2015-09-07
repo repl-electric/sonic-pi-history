@@ -7,7 +7,6 @@ velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 1
 live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16).tick(:notes)
-  
   with_transpose(-24){
     with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70}
     with_synth(:prophet){play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70}
@@ -50,7 +49,7 @@ with_synth(:plucked){
   play (ring :Fs4, :Fs4, _,  _,   :Cs4, _ , _,    :Fs3,  _,  :Cs4, _, :Es4,_, :Es4,_, _,
                   :Gs4, :Gs4,_,  _,   :As4, _ ,_,     :Fs4,  _,  :As3,_,  :Fs4,_, :Fs4,_, _,   #A C E G
                   :Fs4, :Fs4, _,  _,   :Cs4, _ , _,    :Cs4, _, _, _,       :Es4,_,  :Es4,_, _    #D F  A C 
- ).tick(:a), amp: 1.4*2, release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)
+ ).tick(:a), amp: 1.4*1, release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)
 }}
 end
 end

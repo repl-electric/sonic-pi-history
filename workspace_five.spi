@@ -9,7 +9,7 @@ live_loop :arse do
   sync :apeg
 with_synth(:hollow){
   play (ring :Fs4, :Cs4, :Es4,_).tick(:a), amp: 0.5, release: 0.4, attack: 4.0
-  play (ring :Fs4, :As4, :Cs3).tick(:a), amp: 0.5, release: 1.4, attack: 1.01
+  play (ring :Fs4, :As4, :Cs3).tick(:a), amp: 0.5, release: 1.4, attack: 4.0
 }
 
 end

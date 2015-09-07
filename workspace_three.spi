@@ -27,6 +27,7 @@ live_loop :hollower do
       notes = (knit 
                :Fs4,1, _,3, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                :Fs4,1, _,3, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
+               :Fs4,1, _,3, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
 
 
                #:Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,

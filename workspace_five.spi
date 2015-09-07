@@ -6,6 +6,7 @@
 _=nil
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.3).tick(:dis)) do
 live_loop :arse do
+(ring 2).tick(:times).times{  sync :apeg}
 
 with_fx(:lpf, cutoff: 80){
 with_synth(:hollow){
@@ -15,7 +16,6 @@ with_synth(:hollow){
  ).tick(:a), amp: 1.4, release: 1.4, attack: 0.01
 #  play (ring :Fs4, :As4, :Cs3).tick(:a),  amp: 0.5,   release: 0.01,   attack: 4.0
 }
-(ring 2).tick(:times).times{  sync :apeg}
 }
 end
 end

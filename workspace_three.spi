@@ -46,7 +46,7 @@ live_loop :hollower do
                 # :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, _,1,    :As4,2
             )
       play notes.tick(:thing), attack:  (knit 4.0,2, 4.0,2, 4.0,2, 4.0,2).tick(:a), 
-                               release: (knit 0.01,1, 0.5,7).tick(:release),          #decay: 0.1,  #detune1: 12, detune2: 12,
+                               release: (knit 0.01,1, 0.01,7).tick(:release),          #decay: 0.1,  #detune1: 12, detune2: 12,
                                amp:     (ring 0.9,0.8,0.85,0.8).tick(:amp) * 1
 
 #      puts note_inspect(notes.look(:thing), :DEG)

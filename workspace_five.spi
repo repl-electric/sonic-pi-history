@@ -3,18 +3,15 @@
 
 live_loop :melody do
   2.times{sleep 0.25}
-  with_fx(:distortion, pre_amp: 0.5, distort: 0.5, distort_slide: 1.0){ |dfx|
-  play (ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Fs4,       #1  FAC E G
+  notes = (ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Fs4,       #1  FAC E G
 #             :Cs3, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,       #3  ACE G B
  #            :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, [:Es4, :Cs4, :As4],       #6  D F A C E
 
-).tick(:notes), amp: 0.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
+)
+  with_fx(:distortion, pre_amp: 0.5, distort: 0.5, distort_slide: 1.0){ |dfx|
+  play notes.tick(:notes), amp: 0.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
 
-puts note_inspect((ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FACEG
-                        :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Es4,        #3  ACEGB
-                        :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,        #6  DFACE
-
-).look(:notes), "MELODY")
+puts note_inspect(note.look(:notes), "MELODY")
 
 
 (control dfx, distort: (rrand 0.0, 0.5))

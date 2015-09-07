@@ -9,7 +9,7 @@ live_loop :arse do
   sync :apeg
   play (ring :Fs4, :Cs4).tick(:a), amp: 0.5, release: 0.4
 
-  play (ring :Fs5, :Cs4).tick(:a), amp: 0.5, release: 0.4
+  play (ring :Fs4, :Cs4).tick(:a), amp: 0.5, release: 0.4
 
 
 end

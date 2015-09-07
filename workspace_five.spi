@@ -10,9 +10,9 @@ live_loop :melody do
 
 ).tick(:notes), amp: 0.5, attack: (knit 0.01,7, 1.0,1).tick(:at)
 
-puts note_inspect((ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
-             :Gs3, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Es4,                  #3  ACE G B
-             :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,                  #6  D F A C E
+puts note_inspect((ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FACEG
+                        :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Es4,        #3  ACEGB
+                        :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,        #6  DFACE
 
 ).look(:notes), "MELODY")
 

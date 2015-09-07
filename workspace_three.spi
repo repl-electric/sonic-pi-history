@@ -153,7 +153,7 @@ live_loop :drums do |d_idx|
  #  sample Dust[/Voice_Hit/,5], amp: 1.0, cutoff: 70
       
    sample Dust[/TDDC_Voice_Hit/,16], amp: 1.0, cutoff: (knit 85,3,100,1).tick(:thing), rate: 1
-   #sample Sop[/F#/,4], amp: 4.5, cutoff: 100
+   sample Sop[/F#/,4], amp: 4.5, cutoff: 100
 
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){

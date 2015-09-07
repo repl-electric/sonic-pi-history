@@ -25,9 +25,9 @@ live_loop :hollower do
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
       notes = (ring 
-               :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
-               :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B
-               :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
+              # :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
+              # :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B
+              # :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
 
 #               :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,
  #              :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
@@ -64,9 +64,9 @@ notes = (knit
          chord_degree(3, :fs3, :major)[1..-1], 8,
          chord(:Ds3, "m")[1..-1], 8,
 
- #        chord(:Fs3, 'sus4')[1..-1], 8,
-  #       chord(:As3, 'm+5')[1..-1], 8,
-   #      chord(:Ds3, "m7")[1..-1], 8,
+         chord(:Fs3, 'sus4')[1..-1], 8,
+         chord(:As3, 'm+5')[1..-1], 8,
+         chord(:Ds3, "m7")[1..-1], 8,
       )
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
       play notes.tick(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5

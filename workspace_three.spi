@@ -131,7 +131,7 @@ live_loop :drums do |d_idx|
 #  sample Fraz[/kick/i,[1,2]].tick(:kick2), cutoff: (knit 0,1,120,1).tick(:kick2) 
  #  sample Dust[/Voice_Hit/,5], amp: 1.0, cutoff: 70
       
-   sample Dust[/TDDC_Voice_Hit/,16], amp: 0.5, cutoff: (knit 85,3,100,1).tick(:thing), rate: 1
+   sample Dust[/TDDC_Voice_Hit/,16], amp: 0.5, cutoff: (knit 85,3,100,1).tick(:thing), rate: (ring 1, 0.5).tick(:r)
 #   sample Sop[/F#/,4], amp: 3.0, cutoff: 100
 
 with_fx(:flanger){

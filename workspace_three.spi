@@ -51,8 +51,9 @@ with_synth(:plucked){
                   :Gs4, :Gs4,_,  _,   :As4, _ ,_,     :Fs4,  _,  :As3,_,  :Fs4,_, :Fs4,_, _,   #A C E G
                   :Fs4, :Fs4, _,  _,   :Cs4, _ , _,    :Cs4, _, _, _,        :Es4,_,  :Es4,_, _    #D F  A C 
  ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)
-}}
 end
+
+}}
 end
 end
 

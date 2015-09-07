@@ -3,6 +3,8 @@
 
 live_loop :melody do
   2.times{sync :apeg}
+  with_fx(:distortion){
+
   play (ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
              :Gs3, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Es4,       #3  ACE G B
              :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,       #6  D F A C E
@@ -14,6 +16,7 @@ puts note_inspect((ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1
              :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, :Cs4, :Es4, :Es4,                  #6  D F A C E
 
 ).look(:notes), "MELODY")
+}
 
 end
 #play :Cs4

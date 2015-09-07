@@ -24,6 +24,9 @@ live_loop :hollower do
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
       play (knit :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
+
+                 :As4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
+
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
                 # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                 # :Fs,4, _,4,

@@ -16,7 +16,7 @@ live_loop :apeg do
 end
 
 live_loop :hollower do
-  2.times{sync :apeg}
+  1.times{sync :apeg}
 #  with_fx(:lpf, cutoff: 120){
 # 1 F A C
 # 3 A C E

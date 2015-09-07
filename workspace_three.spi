@@ -51,7 +51,7 @@ live_loop :hollower do
             )
       play notes.tick(:thing), amp: 0.2,
 #      puts note_inspect(notes.look(:thing), :DEG)
-    }
+    
 #}
   }
 end

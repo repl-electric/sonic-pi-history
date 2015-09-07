@@ -3,7 +3,7 @@
 
 live_loop :melody do
   2.times{sync :apeg}
-  play (ring :Cs4)
+  play (ring :Fs3, :Cs4)
 
 end
 #play :Cs4

@@ -73,7 +73,10 @@ notes = (knit
     
 
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
-  sample Frag[/coil/, /F#/,1]
+  
+   sample (knit sample Frag[/coil/, /D#/,9] ,1,   _,7).tick(:s)
+
+
 #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
 
 end

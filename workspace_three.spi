@@ -75,6 +75,9 @@ notes = (knit
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
     sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
 
+    sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7).tick(:s)
+
+ 
 #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
 
 end

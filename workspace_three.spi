@@ -143,11 +143,6 @@ with_fx(:flanger){
   #sample Sop[/F#4/,/Oo/, /down/, 0] if spread(1,8).look(:spread)
  # sample Sop[/A#4/,/Oo/, /down/, 0] if spread(3,8).look(:spread)
 }
-
-
-
-
-
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
@@ -155,9 +150,9 @@ with_fx(:flanger){
   }
 
   if(d_idx % 8 == 0)
-    #sample Vocals[/breath/], amp: 0.1, rate: 1.0, cutoff: 100  
+    sample Vocals[/breath/], amp: 0.1, rate: 1.0, cutoff: 100  
     sleep 0.25
-    #sample Vocals[/breath/], amp: 0.1, rate: 1.0, cutoff: 100
+    sample Vocals[/breath/], amp: 0.1, rate: 1.0, cutoff: 100
   end
 
   4.times{sync :apeg}

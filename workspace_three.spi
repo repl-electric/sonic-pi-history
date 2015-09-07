@@ -70,9 +70,9 @@ with_fx(:pitch_shift, time_dis: 4.0){
       2.times{sync :apeg}
       with_synth(:gpa){
    
-with_transpose(0){
+ with_transpose(0){
         play (ring
-                      # :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,   :Es4, :Es4,
+                       :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,   :Es4, :Es4,
                         #:As4, :Cs4, :As3, :Cs4, :As4,  :Cs4,   :Es4, :Es4,                        #
                        # :Ds4, :Gs4, :Ds4, :Gs4, :Ds4, :Gs4,   :Es4, :Es4,
 

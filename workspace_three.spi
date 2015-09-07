@@ -70,6 +70,8 @@ end
       2.times{sync :apeg}
       with_synth(:gpa){ 
  with_transpose(0){
+
+with_fx(:lpf, cutoff: 80){
         play (ring
                        :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,   :Es4, :Es4,
                        :As4, :Cs4, :As3, :Cs4, :As4,  :Cs4,   :Es4, :Es4,                        #
@@ -79,6 +81,7 @@ end
                        :As4, :Cs4, :As3, :Cs4,  :As4,  :Cs4,   :Fs4, :Cs4,                        #A  C   E      G
                         :Ds4, :Cs4, :Ds4, :Cs4,  :Ds4,  :Cs4,   :Es4, :Es4
 ).tick(:notes), wave: 4, amp: 0.2, release: (ring 1.5, 1.25).tick(:r), attack: 0.01    #D E G
+}
 }
       }
 #      puts note_inspect(notes.look(:thing), :DEG)

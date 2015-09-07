@@ -53,7 +53,7 @@ live_loop :hollower do
 #      puts note_inspect(notes.look(:thing), :DEG)
     
 #}
-  }
+  
 end
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|

@@ -161,7 +161,7 @@ with_fx(:flanger){
 end
 
 live_loop :texture do
-  sample_and_sleep Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.4                 
+  sample_and_sleep Mountain[/cracklin/i, 0], rate: 0.9, amp: 0.6                 
 end
 
 live_loop :hats do

@@ -125,6 +125,10 @@ with_fx(:flanger){
 }
 
 
+  sample Sop[/G#4/, 0] if spread(3,8).look(:spread)
+
+
+
 
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){

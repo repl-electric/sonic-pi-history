@@ -1,9 +1,0 @@
-puts note_inspect(chord(:Ds3, 'm7'), "p----------------")
-
-#a c f
-
-#a c e
-
-#d f a   c
-
-synth :gpa, note: :Fs4, wave: 6

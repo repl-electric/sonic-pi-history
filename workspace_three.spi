@@ -68,7 +68,7 @@ end
 #  with_fx(:distortion, mix: 0.3){
     live_loop :args do
       2.times{sync :apeg}
-      with_synth(:apeg){ 
+      with_synth(:gpa){ 
  with_transpose(0){
 
 with_fx(:lpf, cutoff: 90, mix: 0.0){

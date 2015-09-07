@@ -15,55 +15,6 @@ live_loop :apeg do
   sleep 0.25 * 1
 end
 
-live_loop :hollower do
-with_fx(:level, amp: 0.0) do
-  2.times{sync :apeg}
-#  with_fx(:lpf, cutoff: 120){
-# 1 F A C
-# 3 A C E
-#6 D F A 
-
-      notes = (knit 
-              # :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
-              # :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B
-              # :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
-
-#               :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,
- #              :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
-  #             :Fs3,8,
-   #            :Fs4,1, _,2, :Fs3,1, :Cs4,1, _,1, :As4,2,
-
-#               :Fs4,1,_,1,:Cs4,1,_,1,:Fs3,1,_,1,:Cs4,1,_,1,                :Fs3,1,_,1,:Cs4,1,_,1,:Es4,1,_,1,:Es4,1,_,1,
-  #             :As4,1,_,1,:As4,1,_,1,:As4,1,_,1,:As4,1,_,1,                :As4,1,_,1,:As4,1,_,1,:As4,1,_,1,:As4,1,_,1,
-    #           :Ds4,1,_,1,:Ds4,1,_,1,:Ds4,1,_,1,:Ds4,1,_,1,                :Ds4,1,_,1,:Ds4,1,_,1,:Ds4,1,_,1,:Ds4,1,_,1,
-
-
-                  #  :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
-                   # :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es4,1,
-                   #:As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
-                  #:Ds4,1, _,3, :Fs4,1, :Ds4,1, :Fs3,1, [:Es4, :Cs4],1,
-
-                 :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1,:Cs4,1, :Es4,2,
-                 :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1,:Cs4,1, :Es4,2,
-                 :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1,:Cs4,1, :Es4,2,
-                 :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1, _,1, :Es4,2
-                # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
-                # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
-                # :Fs,4, _,4,
-                # :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, _,1,    :As4,2
-            )
-      with_fx(:pitch_shift, time_dis: 4.0){
-      with_fx(:distortion, mix: 0.1){
-      with_synth(:plucked){
-        play notes.tick(:thing), amp: 0.0, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
-      }
-#      puts note_inspect(notes.look(:thing), :DEG)
-    }
-#}
-  }
-end
-end
-
 with_fx(:pitch_shift, time_dis: 4.0){
   with_fx(:distortion, mix: 0.3){
     live_loop :args do

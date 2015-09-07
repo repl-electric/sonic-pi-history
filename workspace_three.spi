@@ -78,7 +78,7 @@ end
                         :Fs4, :Cs4, :Fs3, :Cs4,   :Fs4,  :Cs4,   :Es4, :Es4,
                        :As4, :Cs4, :As3, :Cs4,  :As4,  :Cs4,   :Fs4, :Cs4,                        #A  C   E      G
                         :Ds4, :Cs4, :Ds4, :Cs4,  :Ds4,  :Cs4,   :Es4, :Es4
-).tick(:notes), wave: 5, amp: 0.1    #D E G
+).tick(:notes), wave: 5, amp: 1.1    #D E G
 }
       }
 #      puts note_inspect(notes.look(:thing), :DEG)

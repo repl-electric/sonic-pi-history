@@ -10,7 +10,7 @@ with_synth(:plucked){
   play (ring :Fs4, _,:Cs4,_).tick(:a), amp: 0.4, release: 0.4
 #  play (ring :Fs4, :As4, :Cs3).tick(:a),  amp: 0.5,   release: 0.01,   attack: 4.0
 }
-(ring 2,1).tick(:times).times{  sync :apeg}
+(ring 2).tick(:times).times{  sync :apeg}
 
 end
 end

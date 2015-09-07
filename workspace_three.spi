@@ -80,7 +80,7 @@ with_fx(:lpf, cutoff: 90, mix: 0.0){
                         :Fs4, :Cs4, :Fs3, :Cs4,   :Fs4,  :Cs4,   :Es4, :Es4,
                        :As4, :Cs4, :As3, :Cs4,  :As4,  :Cs4,   :Fs4, :Cs4,                        #A  C   E      G
                         :Ds4, :Cs4, :Ds4, :Cs4,  :Ds4,  :Cs4,   :Es4, :Es4
-).tick(:notes), wave: 0, attack: 0.1, release: 1.0, saw-cutoff: 2000, noise-level: 0.05, amp: 0.1
+).tick(:notes), wave: 0, attack: 0.1, release: 0.1, saw-cutoff: 2000, noise-level: 0.05, amp: 0.1
 }
 }
 

@@ -29,7 +29,7 @@ live_loop :hollower do
               # :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B
               # :Cs4, :Cs4, :Gs3, :Cs4, :Gs3, _,    :Es4, :Gs3,       #6  D F A C E G
 
-#               :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,
+               :Fs4,1, _,3, :Fs3,1,    :Cs4,1, :Fs3,1, :Es4,1,
  #              :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
   #             :Fs3,8,
    #            :Fs4,1, _,2, :Fs3,1, :Cs4,1, _,1, :As4,2,

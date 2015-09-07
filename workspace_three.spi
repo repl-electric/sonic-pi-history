@@ -72,7 +72,7 @@ notes = (knit
       puts note_inspect(notes.look(:h), "CHORD")
     }
 
-  sample Sop[/G#5/, 0] 
+  sample Sop[/G#5/, 0]  if spread(1,32).tick("sop")
 
 
 end

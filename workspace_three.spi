@@ -16,6 +16,7 @@ live_loop :apeg do
 end
 
 live_loop :hollower do
+with_fx(:level, amp: 0.0) do
   2.times{sync :apeg}
 #  with_fx(:lpf, cutoff: 120){
 # 1 F A C
@@ -46,8 +47,6 @@ live_loop :hollower do
                  :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1,:Cs4,1, :Es4,2,
                  :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1,:Cs4,1, :Es4,2,
                  :Fs4,1,:Cs4,1,:Fs3,1,:Cs4,1,:Fs3,1, _,1, :Es4,2
-
-
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
                 # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
                 # :Fs,4, _,4,
@@ -63,6 +62,7 @@ live_loop :hollower do
 #}
   }
 end
+end
 
 live_loop :args do
       with_fx(:pitch_shift, time_dis: 4.0){
@@ -74,7 +74,6 @@ live_loop :args do
     }
 #}
   }
-
  sleep 0.25
 
 end

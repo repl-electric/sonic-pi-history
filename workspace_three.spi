@@ -77,7 +77,7 @@ if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
 
     sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
                          "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7
-).tick(:s), cutoff: 100
+).tick(:s), cutoff: 90
 
  
 #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)

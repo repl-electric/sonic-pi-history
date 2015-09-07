@@ -4,5 +4,4 @@ live_loop :arse do
 #with_fx(:distortion) do
   play (ring :Fs4, :Cs4).tick(:a), amp: 0.5, release: 0.4, 
 #end
-sleep 0.25
 end

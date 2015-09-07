@@ -53,7 +53,6 @@ live_loop :hollower do
       with_fx(:pitch_shift, time_dis: 4.0){
   with_fx(:distortion, mix: 0.1){
         play notes.tick(:thing), amp: 0.8, attack: 0.5, release: 0.01, cutoff: 85
-}
       }
 #      puts note_inspect(notes.look(:thing), :DEG)
     }

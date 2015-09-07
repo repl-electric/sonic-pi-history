@@ -1,6 +1,6 @@
 
 _=nil
-with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)) do
+with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do
 live_loop :arse do
 1.times{  sleep 0.25}
 with_fx(:lpf, cutoff: 80){

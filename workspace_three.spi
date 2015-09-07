@@ -67,7 +67,7 @@ end
 #with_fx(:pitch_shift, time_dis: 4.0){
 #  with_fx(:distortion, mix: 0.3){
     live_loop :args do
-      1.times{sync :apeg}
+      2.times{sync :apeg}
       with_synth(:gpa){ 
  with_transpose(0){
 

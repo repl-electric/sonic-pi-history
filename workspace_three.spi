@@ -46,7 +46,7 @@ live_loop :hollower do
 
                :Fs4,16,
                :As3,16,
-               :Ds3,8
+               :Ds3,16
 
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
                 # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,

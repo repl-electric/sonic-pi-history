@@ -1,4 +1,4 @@
-puts note_inspect(chord(:As3, 'm'), "p----------------")
+puts note_inspect(chord(:As3, 'm+5'), "p----------------")
 
 #a c f
 

@@ -22,7 +22,6 @@ live_loop :hollower do
 # 3 A C E
 #6 D F A 
 
-  with_fx(:distortion, mix: 0.1){
     with_synth(:blade){
       notes = (knit 
               # :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
@@ -52,7 +51,9 @@ live_loop :hollower do
                 # :Fs4,1, :Cs4,1, :Fs4,1, :Cs4,1,:Fs4,1, _,1,    :As4,2
             )
       with_fx(:pitch_shift, time_dis: 4.0){
+  with_fx(:distortion, mix: 0.1){
         play notes.tick(:thing), amp: 0.8, attack: 0.5, release: 0.01, cutoff: 85
+}
       }
 #      puts note_inspect(notes.look(:thing), :DEG)
     }

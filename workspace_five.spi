@@ -3,7 +3,7 @@
 
 live_loop :melody do
   2.times{sync :apeg}
-  play (ring :Fs3, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4).tick(:notes)
+  play (ring :Fs3, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4).tick(:notes), amp: 0.5
 
 end
 #play :Cs4

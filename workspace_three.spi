@@ -92,8 +92,8 @@ end
 
 live_loop :highlight do
   16.times{sync :apeg}
-  i_deter(deg_seq(%w{Fs4 1 3  5}).tick,
-              deg_seq(%w{Fs4 3 5  6}).stretch(1).tick, amp: 1.5)
+  i_deter(deg_seq(%w{Fs4 1 3 5}).tick,
+              deg_seq(%w{Fs4 3 5 6}).stretch(1).tick, amp: 0.5)
 end
 
 live_loop :sample_fun do

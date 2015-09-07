@@ -19,14 +19,14 @@ live_loop :hollower do
   2.times{sync :apeg}
 #  with_fx(:lpf, cutoff: 120){
 # 1 F A C
-# 2 A C E
+# 3 A C E
 
   with_fx(:distortion, mix: rrand(0.0,1.0)){
     with_synth(:hollow){
       notes = (knit :Fs4,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
                     :As3,1, _,3, :As3,1, :Cs4,1, :As3,1, :Es4,1,
                     :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
-
+                    :As3,1, _,3, :Fs4,1, :Cs4,1, :Fs3,1, :Es4,1,
 
                 # :Fs4,1, _,   1, :As4,1, _,1,   :As4,1, _,1,    :As4,1, :Es4,1,
                 # :Fs4,1, :Cs4,1, :Fs3,1, :Cs4,1,:Fs3,1, :Cs4,1, :Fs3,1, :Es4,1,
@@ -53,7 +53,7 @@ live_loop :chorus do
 notes = (knit 
          chord_degree(1, :fs3, :major)[1..-1], 8,
          chord_degree(3, :fs3, :major)[1..-1], 8,
-#         chord(:Ds3, "m")[1..-1], 8,
+         chord(:Ds3, "m")[1..-1], 8,
 
  #        chord(:Fs3, 'sus4')[1..-1], 8,
   #       chord(:As3, 'm+5')[1..-1], 8,

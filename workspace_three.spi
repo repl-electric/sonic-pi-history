@@ -181,7 +181,7 @@ live_loop :hats do
 #   sample Dust[/perc/, [8,10]].tick(:perc) if (spread 3, 8).look(:spread)
   # sample Dust[/voice/, [3,4]].tick(:perc), start: (ring 0.0, 1.0-0.25).tick(:start), finish: (ring 0.25, 1.0).tick(:fin) if (spread 3, 8).look(:spread)
   
- sample Fraz[/snap/, [1,1]].tick(:perc), start: (ring 0.0, 1.0-0.25).tick(:start), finish: (ring 0.25, 1.0).tick(:fin) if (spread 3, 8).look(:spread)
+ sample Fraz[/snap/, [2,2]].tick(:perc), start: (ring 0.0, 1.0-0.25).tick(:start), finish: (ring 0.25, 1.0).tick(:fin) if (spread 3, 8).look(:spread)
 
 
  sample Dust[/voice/, [7,12]].tick(:perc), start: (ring 0.0, 1.0-0.25).tick(:start), finish: (ring 0.25, 1.0).tick(:fin) if (spread 3, 8).look(:spread)

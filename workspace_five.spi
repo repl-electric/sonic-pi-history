@@ -8,8 +8,8 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.2).tick(:dis)) do
 live_loop :arse do
   sync :apeg
 with_synth(:hollow){
-  play (ring :Fs4, :Cs4, :Es4,_).tick(:a), amp: 0.5, release: 0.4
-  play (ring :Fs4, :As4, :Cs3).tick(:a), amp: 0.5, release: 0.4, attack: 0.01
+  play (ring :Fs4, :Cs4, :Es4,_).tick(:a), amp: 0.5, release: 1.4
+  play (ring :Fs4, :As4, :Cs3).tick(:a), amp: 0.5, release: 1.4, attack: 0.01
 }
 
 end

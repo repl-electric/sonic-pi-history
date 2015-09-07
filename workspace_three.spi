@@ -122,7 +122,7 @@ live_loop :drums do |d_idx|
   end
 
   with_fx((knit :none, 3, :echo, 1, :none, 4).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
- #   sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: (knit 130, 1, 115, 3).tick(:kcut)
+    sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: (knit 130, 1, 115, 3).tick(:kcut)
     #sample Dust[/TDDC_Voice_Hit/,16], amp: 1.0, cutoff: (knit 85,3,90,1).tick(:thing), rate: -1
 #   sample Fraz[/kick/,0] #if (spread 3, 8, rotate: 1).tick(:pat)
 

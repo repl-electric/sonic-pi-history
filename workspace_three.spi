@@ -23,7 +23,7 @@ live_loop :hollower do
 #6 D F A 
 
   with_fx(:distortion, mix: 0.1){
-    with_synth(:string){
+    with_synth(:plucked){
       notes = (knit 
               # :Fs4, :Cs4, :Fs3, :Cs4, :Fs3, :Cs4, :Es4, :Es4,       #1  FAC E G
               # :Gs4, :As4, :Gs3, :As3, :Gs3, :As3, :Es4, :Fs4,         #3  ACE G B

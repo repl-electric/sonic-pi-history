@@ -70,7 +70,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
       2.times{sync :apeg}
       with_synth(:plucked){
         play (ring :Fs4, :Cs4, :Fs3, :Cs4, :Fs4, :Cs4, :Es4, :Es4,amp:
-                        :Fs4, :Cs4, :Fs3, :Cs4, :Fs4, :Cs4, :Es4, :F4
+                        :Fs4, :Cs4, :Fs3, :Cs4, :Fs4, :Cs4, :Es4, :Fs4
 ).tick(:notes),
         amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
       }

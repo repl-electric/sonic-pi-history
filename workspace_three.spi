@@ -66,10 +66,10 @@ end
 
 with_fx(:pitch_shift, time_dis: 4.0){
   with_fx(:distortion, mix: 0.1){
-live_loop :args do
-  sync :apeg
+    live_loop :args do
+      sync :apeg
       with_synth(:plucked){
-        play (ring :As3).tick(:notes), 
+        play (ring :Fs3).tick(:notes),
         amp: 0.4, attack: 0.01, release: 0.01, cutoff: 85, decay: 1.0
       }
 #      puts note_inspect(notes.look(:thing), :DEG)

@@ -50,7 +50,7 @@ live_loop :hollower do
             )
       play notes.tick(:thing), attack:  (knit 0.01,2, 0.01,2, 0.5,2, 0.01,2).tick(:a), 
                                release: (knit 1.0,1, 0.5,7).tick(:release), decay: 0.1,  #detune1: 12, detune2: 12,
-                               amp:     (ring 0.9,0.8,0.85,0.8).tick(:amp) * 1, cutoff: 70
+                               amp:     (ring 0.9,0.8,0.85,0.8).tick(:amp) * 1, cutoff: 130
 
 #      puts note_inspect(notes.look(:thing), :DEG)
     }

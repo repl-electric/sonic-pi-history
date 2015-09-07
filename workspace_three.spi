@@ -65,6 +65,7 @@ end
 end
 
 live_loop :args do
+  sync :apeg
       with_fx(:pitch_shift, time_dis: 4.0){
       with_fx(:distortion, mix: 0.1){
       with_synth(:plucked){
@@ -74,8 +75,6 @@ live_loop :args do
     }
 #}
   }
- sleep 0.25
-
 end
 
 

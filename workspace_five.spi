@@ -1,5 +1,5 @@
 live_loop :arse do
   sync :apeg
-  play :AS3, amp: 0.5
+  play :CS3, amp: 0.5
 
 end

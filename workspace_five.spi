@@ -6,4 +6,4 @@ puts note_inspect(chord(:Ds3, 'm7'), "p----------------")
 
 #d f a   c
 
-synth :gpa, note: :Fs5, wave: 4
+synth :gpa, note: :Fs4, wave: 4

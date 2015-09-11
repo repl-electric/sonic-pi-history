@@ -6,7 +6,6 @@ void main(void)
   vec3 color = vec3(1.0);
   gl_FragColor = vec4(color,1.0);
 }
-
 EOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)

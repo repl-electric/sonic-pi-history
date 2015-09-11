@@ -1,6 +1,6 @@
 x= <<EOS
 
-const int _VolumeSteps = 1;
+const int _VolumeSteps = 2;
 const float _StepSize = 1;
 const float _Density = 1;
 

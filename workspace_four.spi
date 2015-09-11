@@ -1,7 +1,7 @@
 x= <<EOS
 ////////////////////////////////////////////////////////////////////////////////////////
 // INFO:
-// - use the mouse to navigate (x is rotation, y is zoom)
+  // - use the mouse to navigate (x is rotation, y is zoom)
 // - play with the defines below to change the visuals
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,6 @@ x= <<EOS
 ////////////////////////////////////////////////////////////////////////////////////////
 // iq's 3d noise functions from the elevated shader (incl. modifications where needed)
 ////////////////////////////////////////////////////////////////////////////////////////
-uniform float iOvertoneVolume;
 // rotation matrix for fbm octaves
 mat3 m = mat3( 0.00,  0.80,  0.60,
                -0.80,  0.36, -0.48,
@@ -114,14 +113,14 @@ void main(void)
   // normalized and aspect ratio corrected pixel coordinate
   vec2 p = (gl_FragCoord.xy / iResolution.xy)*2.0-1.0;
   p.x *= iResolution.x/ iResolution.y;
-
+  float overtoneVolume = 1.0;
   // camera and user input
   vec3 oo = vec3(0, 0, 1.0-500/iResolution.y);
   vec3 od = normalize(vec3(p.x, p.y, -2.0));
   vec3 o,d;
-  o.xz = rt(oo.xz, 6.3*(3.00 * iOvertoneVolume)/iResolution.x);
+  o.xz = rt(oo.xz, 6.3*(3.00 * overtoneVolume)/iResolution.x);
   o.y = oo.y;
-  d.xz = rt(od.xz, 6.3*(3.00 * iOvertoneVolume)/iResolution.x);
+  d.xz = rt(od.xz, 6.3*(3.00 * overtoneVolume)/iResolution.x);
   d.y = od.y;
 
   // render
@@ -143,12 +142,12 @@ void main(void)
           s*=s;
 
           // get turbulence in d
-          float a = 0.2 + (iOvertoneVolume * 0.4); //start amplitude
+          float a = 0.2 + (overtoneVolume * 0.4); //start amplitude
           float b = START_FREQUENCY;
-          float d = (iOvertoneVolume * 0.4);
+          float d = (overtoneVolume * 0.4);
           for (int j = 0; j < 3; j++)
             {
-               d += 0.5/abs((fbm(5.0*curpos*b+((iOvertoneVolume + 0.1) * 0.1)*iGlobalTime/b)*3.0-1.5)/a);
+               d += 0.5/abs((fbm(5.0*curpos*b+((overtoneVolume + 0.1) * 0.1)*iGlobalTime/b)*3.0-1.5)/a);
               b *= 2.0;
               a /= 2.0;
             }
@@ -160,7 +159,7 @@ void main(void)
 
   gl_FragColor = col;
 }
-EOS
+iEOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)
 @client.send(OSC::Message.new("/shader", x))

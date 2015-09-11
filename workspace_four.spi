@@ -136,7 +136,7 @@ void main(void)
 
   float rotx = (0 / iResolution.y)*4.0;
   float roty = -(0 / iResolution.x)*4.0;
-  float zoom = sin(mod(iGlobalTime,128)*0.08) + 4.0;
+  float zoom = sin(mod(iGlobalTime,128)*0.1) + 4.0;
 
   // camera
   vec3 ro = zoom*normalize(vec3(cos(roty), cos(rotx), sin(roty)));

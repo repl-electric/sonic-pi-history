@@ -22,7 +22,7 @@ float noise( in vec3 x )
 
   f = f*f*(2.9-2.0*f);
 
-  float n = p.x + p.y*57.0 + 113.0*p.z;
+  float n = p.x + p.y*47.0 + 113.0*p.z;
 
   float res = mix(mix(mix( hash(n+  0.0), hash(n+  1.0),f.x),
                       mix( hash(n+ 57.0), hash(n+ 58.0),f.x),f.y),

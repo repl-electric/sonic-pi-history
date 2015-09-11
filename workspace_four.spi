@@ -101,8 +101,6 @@ vec4 volumeFunc(vec3 p)
   return shade(d);
 }
 
-// ray march volume from front to back
-// returns color
 vec4 rayMarch(vec3 rayOrigin, vec3 rayStep, out vec3 pos)
 {
   vec4 sum = vec4(0, 0, 0, 0);
@@ -134,15 +132,12 @@ void main(void)
   float roty = -(0 / iResolution.x)*4.0 - sin(p.y)*0.5;
   float zoom = (sin(mod(iGlobalTime,8))*0.5+0.5) - 4.0;
 
-  // camera
   vec3 ro = zoom*normalize(vec3(cos(roty), cos(rotx), sin(roty)));
   vec3 ww = normalize(vec3(0.0,0.0,0.0) - ro);
   vec3 uu = normalize(cross( vec3(0.0,1.0,0.0), ww ));
   vec3 vv = normalize(cross(ww,uu));
   vec3 rd = normalize( p.x*uu + p.y*vv + 1.5*ww );
-
   ro += rd*2.0;
-
   // volume render
   vec3 hitPos;
   vec4 col = rayMarch(ro, rd*_StepSize, hitPos);

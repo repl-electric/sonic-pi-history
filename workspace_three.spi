@@ -7,7 +7,7 @@ def shader(endpoint, *args)
     args[0] = "#{SHADER_ROOT}/#{args[0]}"
   end
   endpoint = "/#{endpoint.to_s.gsub("suniform", "smoothed-uniform")}"
-  @client = OSC::Client.new('10.0.0.10', 9002)
+  @client ||= OSC::Client.new('10.0.0.10', 9002)
   begin
     args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
     @client.send(OSC::Message.new(endpoint, *args))

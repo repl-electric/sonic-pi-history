@@ -60,7 +60,6 @@ float distanceFunc(vec3 p)
 // this should be in a 1D texture really
 vec4 gradient(float x)
 {
-  // no constant array initializers allowed in GLES SL!
   const vec4 c0 = vec4(2, 2, 1, 1);// yellow
   const vec4 c1 = vec4(1, 0, 0, 1);// red
   const vec4 c2 = vec4(0, 0, 0, 0); // black

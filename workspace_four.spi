@@ -1,5 +1,5 @@
 x= <<EOS
-x= <<EOS
+
 const int _VolumeSteps = 2;
 const float _StepSize = 3;
 const float _Density = 1;
@@ -8,6 +8,8 @@ const float _SphereRadius = 3.0;
 const float _NoiseFreq = 40.0;
 const float _NoiseAmp = 3.5;
 const vec3 _NoiseAnim = vec3(0, -1.0, 0);
+
+
 
 // matrix to rotate the noise octaves
 mat3 m = mat3( 0.00,  0.80,  0.60,
@@ -18,6 +20,7 @@ float hash( float n )
 {
   return fract(sin(n)*43758.5453);
 }
+
 
 float noise( in vec3 x )
 {
@@ -68,6 +71,7 @@ vec4 gradient(float x)
   const vec4 c2 = vec4(0, 0, 0, 0); // black
   const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
   const vec4 c4 = vec4(0, 0, 0, 0); // black
+
   x = clamp(x, 0.0, 0.999);
   float t = fract(x*4.0);
   vec4 c;
@@ -153,5 +157,5 @@ vec4 gradient(float x)
             }
 EOS
 
-@client ||= OSC::Client.new('10.0.0.10', 9002)
-@client.send(OSC::Message.new("/shader", x))
+            @client ||= OSC::Client.new('10.0.0.10', 9002)
+            @client.send(OSC::Message.new("/shader", x))

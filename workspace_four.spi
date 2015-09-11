@@ -52,7 +52,6 @@ float distanceFunc(vec3 p)
   // offset distance with pyroclastic noise
   //p = normalize(p) * _SphereRadius;// project noise point to sphere surface
   d += fbm(p*(overtonevolume * 0.75) + _NoiseAnim*0.1*iGlobalTime) * _NoiseAmp;
-  //  d += fbm(p*(overtonevolume * 0.75) + _NoiseAnim*0.01*overtonevolume) * _NoiseAmp;
   return d;
 }
 

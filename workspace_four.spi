@@ -80,8 +80,6 @@ vec4 gradient(float x)
   } else {
     c = mix(c3, c4, t);
   }
-  //return vec4(x);
-  //return vec4(t);
   return c;
 }
 

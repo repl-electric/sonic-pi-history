@@ -1,5 +1,5 @@
 x= <<EOS
-1
+2
 EOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)

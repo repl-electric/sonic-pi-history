@@ -126,7 +126,7 @@ void main(void)
   vec3 hitPos;
   vec4 col = rayMarch(ro, rd*_StepSize, hitPos);
   //vec4 col = gradient(p.x);
-  col.x = p.x*0.3;
+  col.x = p.x*0.5;
   col.y = p.y*0.3;
   gl_FragColor = col;
 }

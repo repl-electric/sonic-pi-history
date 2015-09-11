@@ -2,7 +2,6 @@ x= <<EOS
 const int _VolumeSteps = 4;
 const float _StepSize = 1;
 const float _Density = 2.8;
-
 const float _SphereRadius = 1.0;
 const float _NoiseFreq = 55.0;
 const float _NoiseAmp = 0.5;
@@ -15,7 +14,6 @@ float hash( float n )
 {
   return fract(sin(n)*43758.5453);
 }
-
 
 float noise( in vec3 x )
 {
@@ -43,7 +41,6 @@ float fbm( vec3 p )
   return f;
 }
 
-// returns signed distance to surface
 float distanceFunc(vec3 p)
 {
   float d = length(p) - _SphereRadius;// distance to sphere
@@ -75,7 +72,6 @@ vec4 gradient(float x)
   return c;
 }
 
-// shade a point based on distance
 vec4 shade(float d)
 {
   return gradient(d);
@@ -94,13 +90,10 @@ vec4 rayMarch(vec3 rayOrigin, vec3 rayStep, out vec3 pos)
   for(int i=0; i<_VolumeSteps; i++) {
     vec4 col = volumeFunc(pos);
     col.a *= _Density;
-    //col.a = min(col.a, 1.0);
 
-    // pre-multiply alpha
     col.rgb *= col.a;
     sum = sum + col*(1.0 - sum.a);
 #if 0
-    // exit early if opaque
     if (sum.a > _OpacityThreshold)
       break;
 #endif

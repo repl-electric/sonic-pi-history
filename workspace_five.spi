@@ -5,7 +5,7 @@ end
 
 
 live_loop :test do
-  play 30, amp: 0.0
+  play 30, amp: 2.0
   sleep 2.0
 
   x = Fake[/123/i,0]

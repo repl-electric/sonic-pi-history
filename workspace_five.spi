@@ -1,0 +1,14 @@
+module Fake
+  def self.[](*args)
+  end
+end
+
+
+live_loop :test do
+  play 30, amp: 0.0
+  sleep 2.0
+
+  x = Fake[/123/i,0]
+  # It does not make my funky module indent weirdly :) Good thing!
+  puts "indent?"
+end

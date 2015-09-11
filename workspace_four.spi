@@ -9,8 +9,6 @@ const float _NoiseFreq = 40.0;
 const float _NoiseAmp = 3.5;
 const vec3 _NoiseAnim = vec3(0, -1.0, 0);
 
-
-
 // matrix to rotate the noise octaves
 mat3 m = mat3( 0.00,  0.80,  0.60,
                -0.80,  0.36, -0.48,

@@ -19,7 +19,6 @@ float hash( float n )
   return fract(sin(n)*43758.5453);
 }
 
-
 float noise( in vec3 x )
 {
   vec3 p = floor(x);

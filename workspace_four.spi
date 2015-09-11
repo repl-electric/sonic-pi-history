@@ -1,4 +1,5 @@
 x= <<EOS
+x= <<EOS
 const int _VolumeSteps = 2;
 const float _StepSize = 3;
 const float _Density = 1;
@@ -67,10 +68,7 @@ vec4 gradient(float x)
   const vec4 c2 = vec4(0, 0, 0, 0); // black
   const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
   const vec4 c4 = vec4(0, 0, 0, 0); // black
-
-  float sound = texture2D(iChannel0, vec2(uv.x,.05)).x;
-
-  x = clamp(x, 0.0, 0.999)*sound;
+  x = clamp(x, 0.0, 0.999);
   float t = fract(x*4.0);
   vec4 c;
   if (x < 0.25) {
@@ -153,6 +151,10 @@ vec4 gradient(float x)
 
               gl_FragColor = col;
             }
+EOS
+
+@client ||= OSC::Client.new('10.0.0.10', 9002)
+@client.send(OSC::Message.new("/shader", x))
 EOS
 
             @client ||= OSC::Client.new('10.0.0.10', 9002)

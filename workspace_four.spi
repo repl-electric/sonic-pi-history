@@ -1,41 +1,36 @@
 x= <<EOS
-////////////////////////////////////////////////////////////////////////////////////////
-// INFO:
-  // - use the mouse to navigate (x is rotation, y is zoom)
-// - play with the defines below to change the visuals
-////////////////////////////////////////////////////////////////////////////////////////
 
-// the more slices the slower
-#define SLICES 2
-// start amplitude for the nois
-#define START_AMPLITUDE 1
-// start frequency for the noise
-#define START_FREQUENCY 1.25
-// start density value
-#define START_DENSITY 0.02
-// animation speed
-#define ANIMATION_SPEED 0.34
+const int _VolumeSteps = 2;
+const float _StepSize = 3;
+const float _Density = 1;
 
-////////////////////////////////////////////////////////////////////////////////////////
-// iq's 3d noise functions from the elevated shader (incl. modifications where needed)
-////////////////////////////////////////////////////////////////////////////////////////
-// rotation matrix for fbm octaves
+const float _SphereRadius = 3.0;
+const float _NoiseFreq = 40.0;
+const float _NoiseAmp = 3.5;
+const vec3 _NoiseAnim = vec3(0, -1.0, 0);
+
+
+
+// matrix to rotate the noise octaves
 mat3 m = mat3( 0.00,  0.80,  0.60,
                -0.80,  0.36, -0.48,
                -0.60, -0.48,  0.64 );
 
 float hash( float n )
 {
-  return fract(sin(n)*43758.5453123);
+  return fract(sin(n)*43758.5453);
 }
 
-// 3d noise function
+
 float noise( in vec3 x )
 {
   vec3 p = floor(x);
   vec3 f = fract(x);
+
   f = f*f*(3.0-2.0*f);
+
   float n = p.x + p.y*57.0 + 113.0*p.z;
+
   float res = mix(mix(mix( hash(n+  0.0), hash(n+  1.0),f.x),
                       mix( hash(n+ 57.0), hash(n+ 58.0),f.x),f.y),
                   mix(mix( hash(n+113.0), hash(n+114.0),f.x),
@@ -43,121 +38,124 @@ float noise( in vec3 x )
   return res;
 }
 
-// fbm noise for 2-4 octaves including rotation per octave
 float fbm( vec3 p )
 {
-  float f = 0.0;
-  f += 0.5000*noise( p );
-  p = m*p*2.02;
-  f += 0.2500*noise( p );
-  // set to 1 for 2 octaves
-#if 0
-  return f/0.75;
-#else
-  p = m*p*2.03;
-  f += 0.1250*noise( p );
-  // set to 1 for 3 octaves, 0 for 4 octaves
-#if 1
-  return f/0.875;
-#else
-  p = m*p*2.01;
+  float f;
+  f = 0.5000*noise( p ); p = m*p*2.02;
+  f += 0.2500*noise( p ); p = m*p*2.03;
+  f += 0.1250*noise( p ); p = m*p*2.01;
   f += 0.0625*noise( p );
-  return f/0.9375;
-#endif
-#endif
+  //p = m*p*2.02; f += 0.03125*abs(noise( p ));
+  return f;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////
+// returns signed distance to surface
+float distanceFunc(vec3 p)
+{
+  float d = length(p) - _SphereRadius;// distance to sphere
+  float overtonevolume = 0.5;
+  // offset distance with pyroclastic noise
+  //p = normalize(p) * _SphereRadius;// project noise point to sphere surface
+  d += fbm(p*(overtonevolume * 0.75) + _NoiseAnim*0.1*iGlobalTime) * _NoiseAmp;
+  //  d += fbm(p*(overtonevolume * 0.75) + _NoiseAnim*0.01*overtonevolume) * _NoiseAmp;
+  return d;
+}
 
 // color gradient
-vec3 gradient(float s)
+// this should be in a 1D texture really
+vec4 gradient(float x)
 {
-  return vec3(0.0, max(1.0-s*2.0, 0.0), max(s>0.5?1.0-(s-0.5)*5.0:1.0, 0.0));
-}
+  // no constant array initializers allowed in GLES SL!
+  const vec4 c0 = vec4(2, 2, 1, 1);// yellow
+  const vec4 c1 = vec4(1, 0, 0, 1);// red
+  const vec4 c2 = vec4(0, 0, 0, 0); // black
+  const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
+  const vec4 c4 = vec4(0, 0, 0, 0); // black
 
-// intersection for a sphere with a ray
-#define RADIUS 0.5
-bool intersectSphere(vec3 origin, vec3 direction, out float tmin, out float tmax)
-{
-  bool hit = false;
-  float a = dot(direction, direction);
-  float b = 2.0*dot(origin, direction);
-  float c = dot(origin, origin) - 0.5*0.5;
-  float disc = b*b - 4.0*a*c;           // discriminant
-  tmin = tmax = 0.0;
-
-  if (disc > 0.0) {
-    // Real root of disc, so intersection
-    float sdisc = sqrt(disc);
-    float t0 = (-b - sdisc)/(2.0*a);          // closest intersection distance
-    float t1 = (-b + sdisc)/(2.0*a);          // furthest intersection distance
-
-    tmax = t1;
-    if (t0 >= 0.0)
-      tmin = t0;
-    hit = true;
+  x = clamp(x, 0.0, 0.999);
+  float t = fract(x*4.0);
+  vec4 c;
+  if (x < 0.25) {
+    c =  mix(c0, c1, t);
+  } else if (x < 0.5) {
+    c = mix(c1, c2, t);
+  } else if (x < 0.75) {
+    c = mix(c2, c3, t);
+  } else {
+    c = mix(c3, c4, t);
   }
-
-  return hit;
+  //return vec4(x);
+  //return vec4(t);
+  return c;
 }
 
-// rotate around axis
-vec2 rt(vec2 x,float y)
+// shade a point based on distance
+vec4 shade(float d)
 {
-  return vec2(cos(y)*x.x-sin(y)*x.y,sin(y)*x.x+cos(y)*x.y);
+  // lookup in color gradient
+  return gradient(d);
+  //return mix(vec4(1, 1, 1, 1), vec4(0, 0, 0, 0), smoothstep(1.0, 1.1, d));
 }
 
-// shader main function
+// procedural volume
+// maps position to color
+vec4 volumeFunc(vec3 p)
+{
+  float d = distanceFunc(p);
+  return shade(d);
+}
+
+// ray march volume from front to back
+// returns color
+vec4 rayMarch(vec3 rayOrigin, vec3 rayStep, out vec3 pos)
+{
+  vec4 sum = vec4(0, 0, 0, 0);
+  pos = rayOrigin;
+  for(int i=0; i<_VolumeSteps; i++) {
+    vec4 col = volumeFunc(pos);
+    col.a *= _Density;
+    //col.a = min(col.a, 1.0);
+
+    // pre-multiply alpha
+    col.rgb *= col.a;
+    sum = sum + col*(1.0 - sum.a);
+#if 0
+    // exit early if opaque
+    if (sum.a > _OpacityThreshold)
+      break;
+#endif
+    pos += rayStep;
+  }
+  return sum;
+}
+
 void main(void)
 {
-  // normalized and aspect ratio corrected pixel coordinate
   vec2 p = (gl_FragCoord.xy / iResolution.xy)*2.0-1.0;
   p.x *= iResolution.x/ iResolution.y;
-  float overtoneVolume = 1.0;
-  // camera and user input
-  vec3 oo = vec3(0, 0, 1.0-500/iResolution.y);
-  vec3 od = normalize(vec3(p.x, p.y, -2.0));
-  vec3 o,d;
-  o.xz = rt(oo.xz, 6.3*(3.00 * overtoneVolume)/iResolution.x);
-  o.y = oo.y;
-  d.xz = rt(od.xz, 6.3*(3.00 * overtoneVolume)/iResolution.x);
-  d.y = od.y;
 
-  // render
-  vec4 col = vec4(0, 0, 0, 0);
-  float tmin, tmax;
-  if (intersectSphere(o, d, tmin, tmax))
-    {
-      // step thoug the sphere with max SLICES steps
-      for (float i = 0.0; i < SLICES; i+=1.0)
-        {
-          // stay within the sphere bounds
-          float t = tmin+i/SLICES;
-          if (t > tmax)
-            break;
-          vec3 curpos = o + d*t;
+  float rotx = (0 / iResolution.y)*4.0;
+  float roty = -(0 / iResolution.x)*4.0;
 
-          // get sphere falloff in s
-          float s = (0.5-length(curpos))*2.0;
-          s*=s;
+  float zoom = 4.0;
 
-          // get turbulence in d
-          float a = 0.2 + (overtoneVolume * 0.4); //start amplitude
-          float b = START_FREQUENCY;
-          float d = (overtoneVolume * 0.4);
-          for (int j = 0; j < 3; j++)
-            {
-               d += 0.5/abs((fbm(5.0*curpos*b+((overtoneVolume + 0.1) * 0.1)*iGlobalTime/b)*3.0-1.5)/a);
-              b *= 2.0;
-              a /= 2.0;
-            }
+  // camera
+  vec3 ro = zoom*normalize(vec3(cos(roty), cos(rotx), sin(roty)));
+  vec3 ww = normalize(vec3(0.0,0.0,0.0) - ro);
+  vec3 uu = normalize(cross( vec3(0.0,1.0,0.0), ww ));
+  vec3 vv = normalize(cross(ww,uu));
+  vec3 rd = normalize( p.x*uu + p.y*vv + 1.5*ww );
 
-          // get gradient color depending on s
-          col.rgb += gradient(s)*max(d*s,0.0);
-        }
-    }
+  ro += rd*2.0;
+
+  // volume render
+  vec3 hitPos;
+  vec4 col = rayMarch(ro, rd*_StepSize, hitPos);
+  //vec4 col = gradient(p.x);
 
   gl_FragColor = col;
+}
+
 }
 EOS
 

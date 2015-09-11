@@ -123,11 +123,11 @@ void main(void)
   vec3 vv = normalize(cross(ww,uu));
   vec3 rd = normalize( p.x*uu + p.y*vv + 1.5*ww );
   ro += rd*2.5;
-  // volume render
   vec3 hitPos;
   vec4 col = rayMarch(ro, rd*_StepSize, hitPos);
   //vec4 col = gradient(p.x);
   col.x = p.x*0.1;
+  col.y = p.y*0.1;
   gl_FragColor = col;
 }
 EOS

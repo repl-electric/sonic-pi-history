@@ -136,7 +136,7 @@ void main(void)
   vec3 hitPos;
   vec4 col = rayMarch(ro, rd*_StepSize, hitPos);
   //vec4 col = gradient(p.x);
-  col.x = sin(mod(iGlobalTime*1.4),32);
+  col.x = sin(mod(iGlobalTime*2.0),62)*0.1;
   gl_FragColor = col;
 }
 EOS

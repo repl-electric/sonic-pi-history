@@ -15,7 +15,7 @@ mat3 m = mat3( 0.00,  0.80,  0.60,
 
 float hash( float n )
 {
-  return fract(sin(n)*13758.5453);
+  return fract(sin(n)*43758.5453);
 }
 
 float noise( in vec3 x )

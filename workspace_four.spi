@@ -5,7 +5,7 @@ const float _StepSize = 1;
 const float _Density = 1.5;
 
 const float _SphereRadius = 3.0;
-const float _NoiseFreq = 65.0;
+const float _NoiseFreq = 35.0;
 const float _NoiseAmp = 4.5;
 const vec3 _NoiseAnim = vec3(0, -1.0, 0);
 mat3 m = mat3( 0.00,  0.80,  0.60,

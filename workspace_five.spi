@@ -9,6 +9,6 @@ live_loop :test do
   sleep 2.0
 
   x = Fake[/123/i,0]
-
-  puts "indent?"
+  # It does not make my funky module indent weirdly :) Good thing!
+                        puts "indent?"
 end

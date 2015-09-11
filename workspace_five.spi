@@ -10,5 +10,5 @@ live_loop :test do
 
   x = Fake[/123/i,0]
   # It does not make my funky module indent weirdly :) Good thing!
-                        puts "indent?"
+  puts "indent?"
 end

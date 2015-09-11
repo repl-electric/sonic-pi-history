@@ -27,7 +27,6 @@ void main(void)
   // mix the two, masking out lower part of wave
   gl_FragColor = vec4(mix(lcolor,pcolor,mask),1.0);
 }
-}
 EOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)

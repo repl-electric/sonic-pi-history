@@ -154,7 +154,4 @@ vec4 gradient(float x)
 EOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)
-@client.send(OSC::Message.new("/shader", x))EOS
-
-@client ||= OSC::Client.new('10.0.0.10', 9002)
 @client.send(OSC::Message.new("/shader", x))

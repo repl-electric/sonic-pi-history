@@ -1,0 +1,17 @@
+["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+_=nil
+hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
+tranpose = (ring *%w{-5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
+velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
+
+set_volume! 8.0
+
+live_loop :apeg do
+  use_synth :saw
+  root = (knit :Fs3, 16, :As3, 16, :Ds3, 16).tick(:notes)
+  with_transpose(-24){
+    with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 1.5, cutoff: 120}
+    with_synth(:prophet){play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 1.2, cutoff: 120}
+  }
+  sleep 0.25
+end

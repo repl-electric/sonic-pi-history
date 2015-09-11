@@ -86,9 +86,7 @@ vec4 gradient(float x)
 // shade a point based on distance
 vec4 shade(float d)
 {
-  // lookup in color gradient
   return gradient(d);
-  //return mix(vec4(1, 1, 1, 1), vec4(0, 0, 0, 0), smoothstep(1.0, 1.1, d));
 }
 
 vec4 volumeFunc(vec3 p)

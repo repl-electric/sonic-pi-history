@@ -21,7 +21,7 @@ with_fx(:pitch_shift, time_dis: 4.0){
       with_synth(:string){
         with_transpose(0){
 
-          with_fx(:lpf, cutoff: 90, mix: 0.0){
+          with_fx(:lpf, cutoff: 120, mix: 0.0){
             play (ring
                   :Fs4, :Cs4, :Fs3, :Cs4,  :Fs4,   :Cs4,   :Es4, :Es4,
                   :As4, :Cs4, :As3, :Cs4, :As4,  :Cs4,   :Es4, :Es4,                        #

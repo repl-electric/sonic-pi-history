@@ -36,7 +36,7 @@ float fbm( vec3 p )
   float f;
   f = 0.1000*noise( p ); p = m*p*4.02;
   f += 0.2500*noise( p ); p = m*p*2.03;
-  f += 0.1250*noise( p ); p = m*p*2.01;
+  f += 0.1250*noise( p ); p = m*p*6.01;
   f += 0.0625*noise( p );
   return f;
 }

@@ -12,7 +12,7 @@ def shader(endpoint, *args)
     args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
     @client.send(OSC::Message.new(endpoint, *args))
   rescue Exception
-    puts $!
+    puts $_
     puts "$!> Graphics not loaded"
   end
 end

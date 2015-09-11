@@ -159,7 +159,7 @@ void main(void)
 
   gl_FragColor = col;
 }
-iEOS
+EOS
 
 @client ||= OSC::Client.new('10.0.0.10', 9002)
 @client.send(OSC::Message.new("/shader", x))

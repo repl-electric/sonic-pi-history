@@ -68,7 +68,7 @@ vec4 gradient(float x)
   const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
   const vec4 c4 = vec4(0, 0, 0, 0); // black
 
-  float sound = texture2D(iChannel0, vec2(uv.x,.05)).x;
+  //float sound = texture2D(iChannel0, vec2(uv.x,.05)).x;
 
   x = clamp(x, 0.0, 0.999)*sound;
   float t = fract(x*4.0);

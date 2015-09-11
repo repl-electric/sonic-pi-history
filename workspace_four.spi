@@ -1,4 +1,5 @@
 x= <<EOS
+
 const int _VolumeSteps = 2;
 const float _StepSize = 3;
 const float _Density = 1;
@@ -141,6 +142,7 @@ void main(void)
   vec3 uu = normalize(cross( vec3(0.0,1.0,0.0), ww ));
   vec3 vv = normalize(cross(ww,uu));
   vec3 rd = normalize( p.x*uu + p.y*vv + 1.5*ww );
+
   ro += rd*2.0;
   // volume render
   vec3 hitPos;

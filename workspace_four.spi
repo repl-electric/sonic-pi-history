@@ -56,8 +56,6 @@ float distanceFunc(vec3 p)
   return d;
 }
 
-// color gradient
-// this should be in a 1D texture really
 vec4 gradient(float x)
 {
   const vec4 c0 = vec4(2, 2, 1, 1);// yellow

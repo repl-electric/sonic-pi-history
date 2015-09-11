@@ -67,7 +67,7 @@ vec4 gradient(float x)
   const vec4 c2 = vec4(0, 0, 0, 0); // black
   const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
   const vec4 c4 = vec4(0, 0, 0, 0); // black
-  x = clamp(x, 0.0, 0.999)*sound;
+  x = clamp(x, 0.0, 0.999);
   float t = fract(x*4.0);
   vec4 c;
   if (x < 0.25) {

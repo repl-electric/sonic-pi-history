@@ -27,7 +27,7 @@ float noise( in vec3 x )
   vec3 p = floor(x);
   vec3 f = fract(x);
 
-  f = f*f*(3.0-2.0*f);
+  f = f*f*(2.9-2.0*f);
 
   float n = p.x + p.y*57.0 + 113.0*p.z;
 

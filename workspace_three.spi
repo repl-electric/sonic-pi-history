@@ -87,7 +87,7 @@ live_loop :play do
      r  = (ring 1, 1, 1, 1,   1/2.0, 1/2.0, 1/2.0, 1/2.0)
 
     16.times do
-      play chord(:Cs4,'m'), release: 0.2, cutoff: 70, detune: 12, amp: rand+0.5
+      play chord(:Cs4,'m'), release: 0.1, cutoff: 70, detune: 12, amp: rand+0.5
       sleep r.tick()/8
     end
 

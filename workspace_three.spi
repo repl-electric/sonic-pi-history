@@ -14,7 +14,6 @@ end
 live_loop :lands, auto_cue: false do
   with_fx :reverb, room: 1, reps: 4 do
     use_synth :dsaw
-    use_random_seed 310003
     ns = (scale :fs2, :major, num_octaves: 4).take(4)
     16.times do
       play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2

@@ -1,0 +1,129 @@
+x= <<EOS
+const int _VolumeSteps = 4;
+const float _StepSize = 1;
+const float _Density = 2.8;
+const float _SphereRadius = 1.0;
+const float _NoiseFreq = 55.0;
+const float _NoiseAmp = 0.5;
+const vec3 _NoiseAnim = vec3(0, -1.0, 0);
+mat3 m = mat3( 0.00,  0.80,  0.60,
+               -0.80,  0.36, -0.48,
+               -0.60, -0.48,  0.64 );
+
+float hash( float n )
+{
+  return fract(sin(n)*43758.5453);
+}
+
+float noise( in vec3 x )
+{
+  vec3 p = floor(x);
+  vec3 f = fract(x);
+
+  f = f*f*(2.9-2.0*f);
+
+  float n = p.x + p.y*47.0 + 113.0*p.z;
+
+  float res = mix(mix(mix( hash(n+  0.0), hash(n+  1.0),f.x),
+                      mix( hash(n+ 57.0), hash(n+ 58.0),f.x),f.y),
+                  mix(mix( hash(n+113.0), hash(n+114.0),f.x),
+                      mix( hash(n+170.0), hash(n+171.0),f.x),f.y),f.z);
+  return res;
+}
+
+float fbm( vec3 p )
+{
+  float f;
+  f = 0.1000*noise( p ); p = m*p*4.02;
+  f += 0.2500*noise( p ); p = m*p*2.03;
+  f += 0.1250*noise( p ); p = m*p*6.01;
+  f += 0.025*noise( p );
+  return f;
+}
+
+float distanceFunc(vec3 p)
+{
+  float d = length(p) - _SphereRadius;// distance to sphere
+  float overtonevolume = 0.8;
+  d += fbm(p*(overtonevolume * 0.75) + _NoiseAnim*0.1*iGlobalTime) * _NoiseAmp;
+  return d;
+}
+
+vec4 gradient(float x)
+{
+  const vec4 c0 = vec4(2, 2, 1, 1);// yellow
+  const vec4 c1 = vec4(1, 0, 0, 1);// red
+  const vec4 c2 = vec4(0, 0, 0, 0); // black
+  const vec4 c3 = vec4(0, 0.5, 1, 0.5); // blue
+  const vec4 c4 = vec4(0, 0, 0, 0); // black
+
+  x = clamp(x, 0.0, 0.999);
+  float t = fract(x*4.0);
+  vec4 c;
+  if (x < 0.25) {
+    c =  mix(c0, c1, t);
+  } else if (x < 0.5) {
+    c = mix(c1, c2, t);
+  } else if (x < 0.75) {
+    c = mix(c2, c3, t);
+  } else {
+    c = mix(c3, c4, t);
+  }
+  return c;
+}
+
+vec4 shade(float d)
+{
+  return gradient(d);
+}
+
+vec4 volumeFunc(vec3 p)
+{
+  float d = distanceFunc(p);
+  return shade(d);
+}
+
+vec4 rayMarch(vec3 rayOrigin, vec3 rayStep, out vec3 pos)
+{
+  vec4 sum = vec4(0, 0, 0, 0);
+  pos = rayOrigin;
+  for(int i=0; i<_VolumeSteps; i++) {
+    vec4 col = volumeFunc(pos);
+    col.a *= _Density;
+
+    col.rgb *= col.a;
+    sum = sum + col*(1.0 - sum.a);
+#if 0
+    if (sum.a > _OpacityThreshold)
+      break;
+#endif
+    pos += rayStep;
+  }
+  return sum;
+}
+
+void main(void)
+{
+  vec2 p = (gl_FragCoord.xy / iResolution.xy)*2.0-1.0;
+  p.x *= iResolution.x/ iResolution.y;
+
+  float rotx = (0 / iResolution.y)*4.0;
+  float roty = -(0 / iResolution.x)*4.0;
+  float zoom = sin(iGlobalTime)*10.0 - 4.0;
+  vec3 ro = zoom*normalize(vec3(cos(roty)*0.1, cos(rotx)*2.0, sin(roty)));
+  vec3 ww = normalize(vec3(0.1,0.1,0.1) - ro);
+  vec3 uu = normalize(cross( vec3(0.2,0.3,0.3), ww ));
+  vec3 vv = normalize(cross(ww,uu));
+  vec3 rd = normalize( p.x*uu + p.y*vv + 1.5*ww );
+  ro += rd*4.8;
+  vec3 hitPos;
+  vec4 col = rayMarch(ro, rd*_StepSize, hitPos);
+  //vec4 col = gradient(p.x);
+  col.x = p.x*1.8;
+  col.y = p.y*1.8;
+  gl_FragColor = col;
+}
+EOS
+
+@client ||= OSC::Client.new('10.0.0.10', 9002)
+@client.send(OSC::Message.new("/shader", x))

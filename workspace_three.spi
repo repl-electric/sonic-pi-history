@@ -50,6 +50,12 @@ sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loop
 sleep 8
 end
 
+live_loop :loop2 do
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_unresolved_Bm.wav", beat_stretch: 8
+sleep 8
+end
+
+
 live_loop :beats do
 sample s
 sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_top.wav"

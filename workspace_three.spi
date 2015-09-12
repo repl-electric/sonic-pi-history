@@ -35,7 +35,7 @@ live_loop :tijd, auto_cue: true do
 end
 
 live_loop :ind do
-  sync :tijd
+  #sync :tijd
   sample Fraz[/snap/,1], beat_stretch: 1, pan: rdist(1)
   sleep 0.25/2
 end

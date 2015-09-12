@@ -86,7 +86,7 @@ live_loop :play do
 #   notes = scale(:s3, :minor_pentatonic, num_octaves: 4).take(4)
   
     16.times do
-      play chord(:Cs3,'m').choose, release: 0.2, cutoff: 70, detune: 12, amp: rand+0.5
+      play chord(:Cs3,'m'), release: 0.2, cutoff: 70, detune: 12, amp: rand+0.5
       sleep 0.125/2.0
     end
 

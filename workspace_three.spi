@@ -1,6 +1,7 @@
 # Tilburg 2
 
 # Coded by Sam Aaron
+use_bpm 80
 
 use_debug false
 load_samples :guit_em9, :bd_haus

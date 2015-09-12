@@ -89,9 +89,9 @@ live_loop :play do
 #    n = (chord(:Cs3,'m') + chord(:Cs4,'m') + chord(:Cs4,'m').reverse + chord(:Cs3,'m').reverse + chord(:Cs2,'m').reverse)
    
      n = (ring :Cs3, :es3,:gs3,:cs4,
-               :Cs4, :gs3,:e3,:cs3,
+               :Cs4, :gs3,:e3, :cs3,
                :Cs3, :cs3,:cs5,:cs3,
-               :Cs4, :gs3,:e3,:cs3, )
+               :Cs4, :gs3,:e3,:cs3 )
 
  puts n
     16.times do

@@ -10,6 +10,7 @@ live_loop :euclid_beat do
   sleep 0.125
 end
 
-puts (spread 1, 4)
-puts (spread 7, 11)
-puts (spread 3, 8)
+live_loop :prop do
+  synth :prophet, note: :fs1, release: 8
+  sleep 8
+end

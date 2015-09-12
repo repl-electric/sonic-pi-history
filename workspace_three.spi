@@ -57,7 +57,7 @@ sleep 8
 end
 
 live_loop :melo do
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_harmonics_Em.wav", beat_stretch: 1
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_harmonics_Em.wav"#, beat_stretch: 1
 sleep 1
 end
 

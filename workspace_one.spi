@@ -5,7 +5,7 @@ live_loop :euclid_beat do
   sample Dust[/perc/,0], amp: 1.5 if (spread 3, 8).tick(:hit)
   sample Dust[/perc/,8], amp: 1.5 if (spread 7, 11).look(:hit)
   #sample :perc_snap, amp: 0.8 if (spread 7, 11).look
-  sample Dust[/kick/,[4,4,4,4,5,5,5,5]].tick(:d), amp: 2 if (spread 1, 4).look(:hit)
+  sample Fraz[/kick/,[4,4,4,4,5,5,5,5]].tick(:d), amp: 2 if (spread 1, 4).look(:hit)
 
   sleep 0.125
 end

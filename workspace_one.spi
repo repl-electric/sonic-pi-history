@@ -17,5 +17,5 @@ end
 
 live_loop :zawa do
   synth :zawa, note: (ring :fs2).tick(:a), cutoff: (ring 80,70).tick(:cut)
-  sleep 4
+  sleep 1
 end

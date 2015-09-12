@@ -86,8 +86,9 @@ live_loop :play do
 #   notes = scale(:s3, :minor_pentatonic, num_octaves: 4).take(4)
      r  = (ring 1, 1, 1, 1,   1/2.0, 1/2.0, 1/2.0, 1/2.0)
 
+  n = chord(:Cs3,'m') + chord(:Cs4,'m')
     16.times do
-      play [chord(:Cs3,'m') + chord(:Cs4,'m')].flatten.tick(:a), release: 0.1, cutoff: 70, detune: 12, amp: rand+0.5
+      play n.tick(:a), release: 0.1, cutoff: 70, detune: 12, amp: rand+0.5
       sleep r.tick()/16
     end
 

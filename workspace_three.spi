@@ -62,9 +62,9 @@ sleep 8
 end
 
 live_loop :beats do
-sample s
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_top.wav"
-#sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_stp.wav"
+sample s,, beat_stretch: 8
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_top.wav", beat_stretch: 8
+#sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_stp.wav", beat_stretch: 8
 sleep 1
 end
 

@@ -3,6 +3,8 @@
 # Coded by Sam Aaron
 use_bpm 80
 
+use_sample_bpm "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_perc.wav"
+
 use_debug false
 load_samples :guit_em9, :bd_haus
 

@@ -30,14 +30,14 @@ live_loop :fietsen do
 end
 
 live_loop :tijd, auto_cue: true do
-  #sample :bd_haus, amp: 2.5, cutoff: 120
+  sample :bd_haus, amp: 2.5, cutoff: 120
   sleep 0.5
 end
 
 live_loop :ind do
   sync :tijd
   sample :loop_industrial, beat_stretch: 1
-  sleep 1
+  sleep 0.5
 end
 
  

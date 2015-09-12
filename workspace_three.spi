@@ -6,6 +6,9 @@ use_bpm 80
 s = "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_perc.wav"
 use_sample_bpm "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_perc.wav"
 
+# F♯, G♯, A, B, C♯, D, and E
+#i, iio, III, iv, v, VI, VII
+
 use_debug false
 load_samples :guit_em9, :bd_haus
 
@@ -63,7 +66,7 @@ end
 
 live_loop :beats do
 sample s, beat_stretch: 1
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_top.wav", beat_stretch: 1
+#sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_top.wav", beat_stretch: 1
 #sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/drum loops/80bpm/am_drm80_outlet_stp.wav", beat_stretch: 8
 sleep 1
 end

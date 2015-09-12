@@ -76,8 +76,8 @@ sleep 1
 end
 
 live_loop :playz do
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", beat_stretch: 1, amp: 1.0
-sleep 1
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", beat_stretch: 2, amp: 1.0
+sleep 2
 end
  
 live_loop :play do

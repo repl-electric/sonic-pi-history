@@ -31,7 +31,7 @@ end
 
 live_loop :tijd, auto_cue: true do
   sample Fraz[/kick/,10], amp: 2.5, cutoff: 120
-  sleep 0.5
+  sleep 1,o
 end
 
 live_loop :ind do

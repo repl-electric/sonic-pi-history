@@ -76,3 +76,12 @@ sample "/Users/josephwilk/Workspace/music/samples/loops/Sample\ Magic/synth & ke
 sleep 1
 end
  
+live_loop :play do
+  use_synth :dsaw
+  play chord("C#", 'm').take(4)
+    16.times do
+      #play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
+      sleep 0.125
+    end
+
+end

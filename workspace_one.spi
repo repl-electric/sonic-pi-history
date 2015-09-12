@@ -16,6 +16,6 @@ live_loop :prop do
 end
 
 live_loop :zawa do
-  synth :zawa, note: (ring :fs2, :as3).tick(:a), cutoff: (ring 80,70).tick(:cut)
+  synth :zawa, note: (ring :fs2, :as3, :gs3).tick(:a), cutoff: (ring 80,70).tick(:cut)
   sleep 1
 end

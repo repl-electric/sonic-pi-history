@@ -21,7 +21,7 @@ live_loop :lands, auto_cue: false do
     ns = (scale :fs2, :minor, num_octaves: 4).take(4)
     16.times do
       play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
-      sleep 0.125*2
+      sleep 0.125*4
     end
   end
 end

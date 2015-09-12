@@ -36,7 +36,7 @@ end
 
 live_loop :ind do
   #  sync :tijd
-  #sample :loop_industrial, beat_stretch: 1
+  sample :loop_industrial, beat_stretch: 1
   sleep 1
 end
 

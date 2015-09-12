@@ -77,7 +77,7 @@ sleep 1
 end
  
 live_loop :play do
-  use_synth :dsaw
+  use_synth :prophet
   notes = [chord("Fs3", 'm'), chord("As3", 'M'), chord("Ds3", 'M')].flatten.take(4)
     16.times do
       play notes.choose, release: 0.1, cutoff: rrand(70,120), detune: 12, amp: rand+0.5

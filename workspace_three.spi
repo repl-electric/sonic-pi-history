@@ -17,7 +17,7 @@ live_loop :lands, auto_cue: false do
     use_random_seed 310003
     ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
     16.times do
-      #play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
+      play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
       sleep 0.125
     end
   end

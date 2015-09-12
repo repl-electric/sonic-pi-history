@@ -29,7 +29,7 @@ live_loop :fietsen do
 end
 
 live_loop :tijd, auto_cue: true do
-with_fx(:echo, decay: 0.025, phase: 0.025){  sample Fraz[/kick/,1], amp: 2.5, cutoff: 120}
+with_fx(:echo, decay: 0.025, phase: 0.25){  sample Fraz[/kick/,1], amp: 2.5, cutoff: 120}
   sleep 0.5
 end
 

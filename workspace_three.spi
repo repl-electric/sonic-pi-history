@@ -86,7 +86,13 @@ live_loop :play do
 #   notes = scale(:s3, :minor_pentatonic, num_octaves: 4).take(4)
      r  = (ring 1, 1, 1, 1,   1/2.0, 1/2.0, 1/2.0, 1/2.0)
 
-    n = (chord(:Cs3,'m') + chord(:Cs4,'m') + chord(:Cs4,'m').reverse + chord(:Cs3,'m').reverse + chord(:Cs2,'m').reverse)
+#    n = (chord(:Cs3,'m') + chord(:Cs4,'m') + chord(:Cs4,'m').reverse + chord(:Cs3,'m').reverse + chord(:Cs2,'m').reverse)
+   
+     n = (ring :Cs3, :cs3,:cs3,:cs3,
+               :Cs3, :cs3,:cs3,:cs3,
+               :Cs3, :cs3,:cs3,:cs3,
+               :Cs3, :cs3,:cs3,:cs3, )
+
  puts n
     16.times do
 #      play n.tick(:a), release: 0.08, cutoff: 90, detune: 0, amp: rand+0.5

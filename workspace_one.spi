@@ -15,7 +15,6 @@ live_loop :prop do
   sleep 8
 end
 
-live_loop :drums do
-  Fraz[/kick/,0]
-  sleep 8
+live_loop :zawa do
+  synth :zawa, note: (ring :fs2).tick(:a), cutoff: (ring 100,70).tick(:cut)
 end

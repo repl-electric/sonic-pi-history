@@ -78,8 +78,8 @@ end
  
 live_loop :play do
   use_synth :dsaw
-  play chord("Cs", 'm').take(4)
     16.times do
+      play chord("Cs", 'm').take(4)
       #play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
       sleep 0.125
     end

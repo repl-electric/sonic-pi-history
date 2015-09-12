@@ -41,4 +41,9 @@ live_loop :ind do
   sleep 1-0.25
 end
 
+live_loop :loop do
+sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_island_F#m.wav", beat_stretch: 1
+sleep 1
+end
+
  

@@ -50,4 +50,9 @@ sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loop
 sleep 8
 end
 
+live_loop :beats do
+sample s
+sleep 1
+end
+
  

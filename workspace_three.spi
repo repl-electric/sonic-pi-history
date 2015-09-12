@@ -36,7 +36,7 @@ end
 
 live_loop :ind do
   sync :tijd
-  sample :loop_industrial, beat_stretch: 2, pan: rdist(1)
+  sample :loop_industrial, beat_stretch: 4, pan: rdist(1)
   sleep 0.25/2
 end
 

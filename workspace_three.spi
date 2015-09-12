@@ -35,7 +35,7 @@ live_loop :tijd, auto_cue: true do
 end
 
 live_loop :ind do
-  #  sync :tijd
+  sync :tijd
   sample :loop_industrial, beat_stretch: 1
   sleep 1
 end

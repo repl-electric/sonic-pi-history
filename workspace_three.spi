@@ -37,7 +37,7 @@ end
 live_loop :ind do
   #sync :tijd
   sample Fraz[/snap/,1], beat_stretch: 1, pan: rdist(1)
-  sleep 05
+  sleep 0.5
 end
 
  

@@ -29,7 +29,7 @@ live_loop :fietsen do
 end
 
 live_loop :tijd, auto_cue: true do
-  sample Fraz[/kick/,1], amp: 2.5, cutoff: 120
+with_fx(:echo){  sample Fraz[/kick/,1], amp: 2.5, cutoff: 120}
   sleep 0.5
 end
 
@@ -37,7 +37,7 @@ live_loop :ind do
   #sync :tijd
   sample Fraz[/snap/, [1,0]].tick(:a), beat_stretch: 1,  pan: rdist(1)
   sleep 0.25
-  with_fx(:echo){sample Fraz[/snap/, [1,0]].tick(:a), beat_stretch: 1,  pan: rdist(1)}
+  {sample Fraz[/snap/, [1,0]].tick(:a), beat_stretch: 1,  pan: rdist(1)
   sleep 1-0.25
 end
 

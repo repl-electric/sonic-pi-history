@@ -14,3 +14,8 @@ live_loop :prop do
   synth :prophet, note: :fs1, release: 8
   sleep 8
 end
+
+live_loop :drums do
+  Fraz[/kick/,0]
+  sleep 8
+end

@@ -36,7 +36,7 @@ end
 
 live_loop :ind do
   #sync :tijd
-  sample Fraz[/snap/, [1,0]].tick(:a), beat_rate: 1,  pan: rdist(1)
+  sample Fraz[/snap/, [1,0]].tick(:a), beat_stretch: 1,  pan: rdist(1)
   sleep 1
 end
 

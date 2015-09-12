@@ -54,8 +54,8 @@ sleep 8
 end
 
 live_loop :loop2 do
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_unresolved_Bm.wav", beat_stretch: 8
-sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_set_C.wav", beat_stretch: 8
+#sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_unresolved_Bm.wav", beat_stretch: 8
+#sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/guitar loops/80bpm/am_gtr80_set_C.wav", beat_stretch: 8
 sleep 8
 end
 

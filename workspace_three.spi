@@ -84,7 +84,7 @@ live_loop :play do
   use_synth :beep
 #  notes = [chord("Fs3", 'm'), chord("As3", 'M'), chord("Ds3", 'M')].flatten.take(4)
 #   notes = scale(:s3, :minor_pentatonic, num_octaves: 4).take(4)
-     r  = (ring 1, 1, 1, 1,   1/4.0, 1/4.0, 1/4.0, 1/4.0)
+     r  = (ring 1, 1, 1, 2,   1/4.0, 1/4.0, 1/4.0, 1/4.0)
 
 #    n = (chord(:Cs3,'m') + chord(:Cs4,'m') + chord(:Cs4,'m').reverse + chord(:Cs3,'m').reverse + chord(:Cs2,'m').reverse)
    

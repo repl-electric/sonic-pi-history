@@ -78,7 +78,7 @@ end
  
 live_loop :play do
   use_synth :dsaw
-  notes = [chord("Cs3", 'm')].take(4)
+  notes = [chord("Fs3", 'm'), chord("Cs3", 'm')].take(4)
     16.times do
       play notes.choose, release: 0.1, cutoff: rrand(70,120), detune: 12, amp: rand+0.5
       #play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2

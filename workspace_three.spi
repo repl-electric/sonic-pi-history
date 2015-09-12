@@ -84,7 +84,8 @@ live_loop :play do
   use_synth :dsaw
 #  notes = [chord("Fs3", 'm'), chord("As3", 'M'), chord("Ds3", 'M')].flatten.take(4)
 #   notes = scale(:s3, :minor_pentatonic, num_octaves: 4).take(4)
-  
+     r  = [1, 1, 1, 1,   1/2, 1/2, 1/2, 1/2]
+
     16.times do
       play chord(:Cs4,'m'), release: 0.2, cutoff: 70, detune: 12, amp: rand+0.5
       sleep 1/2.0

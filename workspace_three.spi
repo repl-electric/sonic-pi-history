@@ -30,7 +30,7 @@ live_loop :fietsen do
 end
 
 live_loop :tijd, auto_cue: true do
-  #sample :bd_haus, amp: 2.5, cutoff: 100
+  sample :bd_haus, amp: 2.5, cutoff: 100
   sleep 0.5
 end
 

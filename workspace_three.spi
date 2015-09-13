@@ -95,7 +95,7 @@ live_loop :play do
 #    n = (chord(:Cs3,'m') + chord(:Cs4,'m') + chord(:Cs4,'m').reverse + chord(:Cs3,'m').reverse + chord(:Cs2,'m').reverse)
    
      n = (ring :Cs4, :e4, :cs4, :gs4,
-               :Cs4, :gs4,:e4, :cs4,
+               :Cs4, :gs3,:e3, :cs3,
                :Cs3, :cs4,:cs5,:cs4,
                :Cs4, :gs4,:e4,:cs4 )
 

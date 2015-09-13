@@ -103,7 +103,7 @@ live_loop :play do
     16.times do
      play n.tick(:a), release: 0.08, cutoff: 110, detune: 0, amp: rand+0.5, attack: (knit 0.025,4, 0.001,4).tick(:at)
     puts note_inspect(n.look(:a), "play")
-      sleep r.tick(:sleepy)/4.0
+      sleep r.tick(:sleepy)/8.0
     end
 
 end

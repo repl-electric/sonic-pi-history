@@ -101,7 +101,7 @@ live_loop :play do
 
  puts n
     16.times do
-     play n.tick(:a), release: 0.08, cutoff: 110, detune: 0, amp: rand+0.5, attack: (knit 0.02,4, 0.01,4).tick(:at)
+     play n.tick(:a), release: 0.08, cutoff: 110, detune: 0, amp: rand+0.5, attack: (knit 0.02,4, 0.001,4).tick(:at)
     puts note_inspect(n.look(:a), "play")
       sleep r.tick(:sleepy)/4.0
     end

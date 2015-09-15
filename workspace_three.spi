@@ -11,7 +11,7 @@ end
 _=nil
 with_fx(:reverb) do
 live_loop :ambi do
-    use_synth :beep
+    use_synth :saw
 
 #C#, E, and G#
 

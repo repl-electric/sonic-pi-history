@@ -5,7 +5,6 @@ load_samples :guit_em9, :bd_haus
 
 #F♯, G♯, A, B, C♯, D, E, F♯
 
-
 live_loop :low do
   tick
   synth :hollow, wave: 1, phase: 0.25, 

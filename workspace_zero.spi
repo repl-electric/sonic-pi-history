@@ -29,10 +29,10 @@ sync :samplz
 
   play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.5, cutoff: 100
 
-  note = (knit :Cs4,1, :A3,1,  :Cs4,1, :D4,1,
-               :Cs4,1, :A3,1,  :Cs3,1, :A2,1, 
-               :Cs4,1, :A3,1,  :D4,1, :Fs4,1,
-               :Cs4,1, :A3,1,  :Cs3,1, :A2,1, 
+  note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,
+               :Cs4,1, :As3,1,  :Cs3,1, :As2,1, 
+               :Cs4,1, :As3,1,  :Ds4,1, :Fs4,1,
+               :Cs4,1, :As3,1,  :Cs3,1, :As2,1, 
 
 ).tick(:note)
   release = (ring 1.0/2.0, 1.0/2.0, 1.0/2.0, 1.0,  

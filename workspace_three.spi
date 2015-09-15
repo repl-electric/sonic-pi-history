@@ -16,7 +16,7 @@ live_loop :ambi do
 #  Cm => C G B D
   
   note = (knit :Cs4,1, :Gs4,1, :D3,1, :B4,1,
-               :B3,2,:Cs3,2, :Gs3,1, 
+#               :B3,2,:Cs3,2, :Gs3,1, 
 ).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 

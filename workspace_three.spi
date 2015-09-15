@@ -18,7 +18,7 @@ live_loop :ambi do
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => A   C  G  B  D
 
-  notes2 = (knit :Cs3,1, _,3,
+  notes2 = (knit :Cs4,1, _,3,
                  :Gs3,1, _,3,
                  :B3, 1, _,3).tick(:note1)
 

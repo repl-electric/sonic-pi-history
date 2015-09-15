@@ -1,3 +1,6 @@
+# F♯, G♯, A, B, C♯, D, and E. F
+#  Cm => C G B D
+
 play :Cs4, attack: 0.001, release: 0.5, cutoff: 100
 sleep 0.25
 play :A3, attack: 0.001, release: 0.5, cutoff: 100

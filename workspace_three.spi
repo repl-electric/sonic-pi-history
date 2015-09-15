@@ -1,9 +1,10 @@
+["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
 
 live_loop :ambi do
   use_synth :beep
 
-  note = (ring :FS3).tick(:note)
+  note = (knit :FS3).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 
   play note, release: release

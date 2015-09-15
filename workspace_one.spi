@@ -20,6 +20,6 @@ live_loop :melo do
 end
 
 live_loop :zawa do
-  synth :zawa, note: (ring :f2, :f2, :f1).tick(:a), cutoff: (ring 80,70).tick(:cut)
+  synth :zawa, note: (ring :fs2, :fs2, :fs1).tick(:a), cutoff: (ring 80,70).tick(:cut)
   sleep 1
 end

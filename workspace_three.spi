@@ -9,8 +9,9 @@ live_loop :samplz do
 end
 
 _=nil
+with_fx(:reverb) do
 live_loop :ambi do
-  use_synth :beep
+    use_synth :beep
 
 #C#, E, and G#
 
@@ -38,4 +39,5 @@ live_loop :ambi do
 
   play note, release: release, attack: 0.01
   sleep release
+end
 end

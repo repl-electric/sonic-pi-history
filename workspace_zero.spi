@@ -10,7 +10,8 @@ live_loop :low do
   tick
   synth :hollow, wave: 1, phase: 0.25, 
     release: 5, amp: 10.0, 
-    note: (knit :e2, 12, :cs2, 4).look, cutoff: (range 60, 120, 10).look
+    note: (knit :e3, 12, :cs3, 4).look, 
+    cutoff: (range 60, 120, 10).look
   sleep 4
 end
 

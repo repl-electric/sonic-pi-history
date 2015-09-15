@@ -15,7 +15,7 @@ live_loop :ambi do
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => C G B
   
-  note = (knit :FS,1).tick(:note)
+  note = (knit :CS,1).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 
   play note, release: release/4.0, attack: 0.01

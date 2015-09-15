@@ -19,7 +19,7 @@ live_loop :ambi do
                  :G3, 1,_,3,
                  :B3,1, _,3).tick(:note1)
 
-  play notes2, decay: 2.0, release: 2.0, attack: 0.01, amp: 0.5
+  #play notes2, decay: 2.0, release: 2.0, attack: 0.01, amp: 0.5
 
   note = (knit :Cs4,1, :Gs4,1, :D4,1, :B4,1,
                :B3,1,  :Cs3,2, :Gs3,1, 
@@ -31,8 +31,8 @@ live_loop :ambi do
                   1/2.0,1/2.0,1/2.0, 1/2.0
 ).tick(:r)
 
-  play note, release: release/4.0, attack: 0.01
-  sleep release
+  #play note, release: release/4.0, attack: 0.01
+  #sleep release
 
 
 end

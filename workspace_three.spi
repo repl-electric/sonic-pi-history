@@ -30,7 +30,7 @@ live_loop :ambi do
                :Gs4,1, :E3,2,  :B4,1, :Cs3,1, 
 
 ).tick(:note)
-  release = (ring 1.0,1.0,1.0,1.0,  
+  release = (ring 1.0/2.0,1.0/2.0,1.0/2.0,1.0/2.0,  
                   1/2.0,1/4.0,1/4.0, 1/4.0
 ).tick(:r)
 

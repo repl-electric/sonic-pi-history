@@ -12,9 +12,10 @@ end
 live_loop :ambi do
   use_synth :beep
 
-  chord()
-
-  note = (knit :FS3,1).tick(:note)
+# F♯, G♯, A, B, C♯, D, and E. F
+  Cm => C G B
+  
+  note = (knit :FS,1).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 
   play note, release: release

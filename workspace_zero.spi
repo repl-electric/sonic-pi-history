@@ -22,7 +22,7 @@ sync :samplz
 8.times{
   notes2 = (knit 
 #:Cs3,1, _,3,
-                 :Cs2,1, _,3,
+                 :Cs3,1, _,3,
 #                 :Cs3, 1, _,3,
 #                 :B3,1, _,3,
 ).tick(:note1)

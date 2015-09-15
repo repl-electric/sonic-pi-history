@@ -12,6 +12,7 @@ _=nil
 with_fx(:reverb) do
 live_loop :ambi do
     use_synth :beep
+sync :samplz
 
 #C#, E, and G#
 

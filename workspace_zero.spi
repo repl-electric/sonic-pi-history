@@ -26,7 +26,7 @@ sync :samplz
 #                 :Cs3, 1, _,3,
 #                 :B3,1, _,3,
 ).tick(:note1)
-  sample Ambi[/perc/,[2,2,1,1]].tick(:perc)
+  sample Ambi[/perc/,Range.new(0, (ring 2,4).tick(:r)]].tick(:perc)
   play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.5, cutoff: 100
 
   note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,

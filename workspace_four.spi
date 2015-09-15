@@ -9,9 +9,9 @@ play :Gs4, attack: 0.001, release: 0.5, cutoff: 100
 sleep 0.25
 play :Bs3, attack: 0.001, release: 0.5, cutoff: 100
 
-play :Cs4, attack: 0.001, release: 0.5, cutoff: 100
+play :Gs4, attack: 0.001, release: 0.5, cutoff: 100
 sleep 0.25/2.0
-play :A3, attack: 0.001, release: 0.5, cutoff: 100
+play :E3, attack: 0.001, release: 0.5, cutoff: 100
 sleep 0.25/2.0
 play :Gs4, attack: 0.001, release: 0.5, cutoff: 100
 sleep 0.25/2.0

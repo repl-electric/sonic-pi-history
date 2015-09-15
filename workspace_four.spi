@@ -4,4 +4,4 @@ live_loop :foo do
   sleep 0.25
 end
 
-puts (chord 0)
+puts (chord 0, :minor7)

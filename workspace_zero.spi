@@ -32,7 +32,7 @@ sync :samplz
   note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,
                :Cs4,1, :As3,1,  :Cs3,1, :As3,1, 
                :Cs4,1, :As3,1,  :Ds4,1, :Fs4,1,
-               :Cs4,1, :As3,1,  :Cs3,1, :As3,1, 
+               :Cs4,1, :As3,1,  :Cs3,1, :Fs2,1, 
 
 ).tick(:note)
   release = (ring 1.0/2.0, 1.0/2.0, 1.0/2.0, 1.0,  

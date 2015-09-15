@@ -10,7 +10,7 @@ end
 
 _=nil
 live_loop :ambi do
-  use_synth :beep
+  use_synth :dsaw
 
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => C G B D
@@ -22,7 +22,7 @@ live_loop :ambi do
   play notes2, decay: 2.0, release: 2.0, attack: 0.01, amp: 0.5
 
   note = (knit :Cs4,1, :As3,1, :Gs4,1, :B3,1,
-               :Gs4,1,  :E3,2, :Bs3,1, :Cs3,1, 
+               :Gs4,1, :E3,2, :Bs3,1, :Cs3,1, 
 
 ).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0,  

@@ -31,7 +31,7 @@ sync :samplz
 
   note = (knit :Cs4,1, :A3,1,  :Cs4,1, :D4,1,
                :Cs4,1, :A3,1,  :Cs3,1, :As2,1, 
-               :Cs4,1, :A3,1,  :Cs4,1, :D4,1,
+               :Cs4,1, :A3,1,  :D4,1, :D4,1,
                :Cs4,1, :A3,1,  :Cs3,1, :As2,1, 
 
 ).tick(:note)

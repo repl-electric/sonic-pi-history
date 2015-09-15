@@ -19,10 +19,11 @@ live_loop :ambi do
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => A   C  G  B  D
 
-  notes2 = (knit :Cs3,1, _,3,
-                 :B3,1, _,3,
-                 :Cs3, 1, _,3,
-                 :B3,1, _,3,
+  notes2 = (knit 
+#:Cs3,1, _,3,
+                 :As3,1, _,3,
+#                 :Cs3, 1, _,3,
+#                 :B3,1, _,3,
 ).tick(:note1)
 
   #play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.5, cutoff: 100

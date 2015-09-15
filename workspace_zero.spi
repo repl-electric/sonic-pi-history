@@ -1,46 +1,46 @@
-# Coded by Sam Aaron
+["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-use_debug false
-load_samples :guit_em9, :bd_haus
 
-#F♯, G♯, A, B, C♯, D, E, F♯
+use_bpm 80
 
-live_loop :low do
-  tick
-  synth :hollow, wave: 1, phase: 0.25, 
-    release: 5, amp: 10.0, 
-    note: (knit :e3, 12, :cs3, 4).look, 
-    cutoff: (range 60, 120, 10).look
-  sleep 4
+live_loop :samplz do
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", pitch_stretch: 16.0, pitch_dis: 0.0, time_dis: 0.1
+  sleep 4.0
 end
 
-live_loop :lands, auto_cue: false do
-  with_fx :reverb, room: 1, reps: 4 do
+_=nil
+with_fx(:reverb) do
+live_loop :ambi do
     use_synth :beep
-    use_random_seed 310003
-    ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
-    16.times do
-#      play ns.choose, detune: 12, release: 0.1, amp: 2, amp: rand + 0.5, cutoff: rrand(70, 120), amp: 2
-      sleep 0.125
-    end
-  end
-end
+sync :samplz
 
-live_loop :fietsen do
-  sleep 0.25
-#  sample :guit_em9, rate: -1
-  sleep 7.75
-end
+#C#, E, and G#
 
-live_loop :tijd, auto_cue: true do
-  sample :bd_haus, amp: 2.5, cutoff: 100
-  sleep 0.5
-end
+#(i, iio, III, iv, v, VI, VII)
+# F♯, G♯, A, B, C♯, D, and E. F
+#  Cm => A   C  G  B  D
+8.times{
+  notes2 = (knit 
+#:Cs3,1, _,3,
+                 :Cs3,1, _,3,
+#                 :Cs3, 1, _,3,
+#                 :B3,1, _,3,
+).tick(:note1)
 
-live_loop :ind do
-  #  sync :tijd
-#  sample :loop_industrial, beat_stretch: 1
-  sleep 1
-end
+  play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.5, cutoff: 100
 
- 
+  note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,
+               :Cs4,1, :As3,1,  :Cs3,1, :As2,1, 
+               :Cs4,1, :As3,1,  :Ds4,1, :Fs4,1,
+               :Cs4,1, :As3,1,  :Cs3,1, :As2,1, 
+
+).tick(:note)
+  release = (ring 1.0/2.0, 1.0/2.0, 1.0/2.0, 1.0,  
+                  1/4.0, 1/4.0, 1/4.0, 1/4.0
+).tick(:r)
+
+  play note, release: release, attack: 0.01
+  sleep release
+}
+end
+end

@@ -39,7 +39,7 @@ sync :samplz
                   1/4.0, 1/4.0, 1/4.0, 1/4.0
 ).tick(:r)
 
-#  play note, release: release, attack: 0.01
+  play note, release: release, attack: 0.01
   sleep release
 end
 end

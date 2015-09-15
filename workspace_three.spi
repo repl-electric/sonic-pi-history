@@ -4,7 +4,7 @@
 use_bpm 80
 
 live_loop :samplz do
-#  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav"
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav"
   sleep sample_duration("/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav")
 end
 
@@ -27,7 +27,7 @@ live_loop :ambi do
                :B3,1,  :Cs3,2, :Gs3,1, 
 
 ).tick(:note)
-  release = (ring 1.0,1.0,1.0,1.0, 
+  release = (ring 1.0,1.0,1.0,1.0,  
                   1/2.0,1/2.0,1/2.0, 1/2.0
 ).tick(:r)
 

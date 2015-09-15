@@ -32,7 +32,7 @@ live_loop :ambi do
 ).tick(:r)
 
   play note, release: release/4.0, attack: 0.01
-  sleep release
+  sleep release/2.0
 
 
 end

@@ -14,6 +14,11 @@ live_loop :apeg do
   sleep 0.25 * 1
 end
 
+live_loop :dis do
+sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_01.wav"
+sleep 8
+end
+
 with_fx(:pitch_shift, time_dis: 4.0){
   with_fx(:distortion, mix: 0.3){
     live_loop :args do

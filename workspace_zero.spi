@@ -47,7 +47,7 @@ end
 
 live_loop :blah do
 #sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_BASS_MULTIS/DCS_ClapBass/DCS_ClapBass_F\#1.wav"
-  #sample Ambi[/kick/,3]
+  sample Ambi[/kick/,3]
   sleep 2
 
 #sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_BASS_MULTIS/DCS_ClapBass/DCS_ClapBass_F\#2.wav"

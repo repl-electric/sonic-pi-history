@@ -27,7 +27,7 @@ sync :samplz
 #                 :B3,1, _,3,
 ).tick(:note1)
   sample Ambi[/perc/,Range.new(2, (ring 4,8).tick(:a))].tick(:perc), cutoff: 100
-  synth :beep, note: notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.7, cutoff: 100
+  play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.7, cutoff: 100
 
   note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,
                :Cs4,1, :As3,1,  :Cs3,1, :Fs3,1, 
@@ -47,25 +47,13 @@ end
 
 live_loop :blah do
 #sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_BASS_MULTIS/DCS_ClapBass/DCS_ClapBass_F\#1.wav"
-#  sample Ambi[/kick/,3]
-sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_DRUM_HITS/DCS_KICKS/DCS_Kick_14.wav"
-sleep 1
+sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_DRUM_HITS/DCS_KICKS/DCS_Kick_13.wav"
+  sample Ambi[/kick/,3]
+  sleep 2
 
 #sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_BASS_MULTIS/DCS_ClapBass/DCS_ClapBass_F\#2.wav"
-sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_DRUM_HITS/DCS_KICKS/DCS_Kick_13.wav"
 
-
-
-  #sample Ambi[/kick/,4]
-  #sample Ambi[/clap/,0]
-  sleep 0.5
-
-sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_DRUM_HITS/DCS_KICKS/DCS_Kick_14.wav"
-sleep 0.5
-
-#sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_BASS_MULTIS/DCS_ClapBass/DCS_ClapBass_F\#2.wav"
-sample "/Users/josephwilk/Workspace/music/samples/CHILLSTEP/DCS_SOUND_AND_FX/DCS_DRUM_HITS/DCS_KICKS/DCS_Kick_13.wav"
-sleep 1
-
-
+  sample Ambi[/kick/,4]
+  sample Ambi[/clap/,0]
+  sleep 2
 end

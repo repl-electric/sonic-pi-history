@@ -2,7 +2,7 @@
 
 use_bpm 80
 
-live_loop :sample do
+live_loop :samplz do
   sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth\ & key\ loops/80bpm/am_syn80_clover_C#.wav"
   sleep 1
 end

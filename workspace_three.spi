@@ -18,7 +18,7 @@ live_loop :ambi do
   note = (knit :FS,1).tick(:note)
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 
-  play note, release: release
+  play note, release: release, attack: 0.05
   sleep release/2.0
 
 

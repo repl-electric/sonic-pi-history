@@ -17,7 +17,7 @@ live_loop :ambi do
 
   notes2 = (knit :Cs4,1, _,4).tick(:note1)
 
-  play notes2
+  play notes2, decay: 4.0
 
   note = (knit :Cs4,1, :Gs4,1, :D4,1, :B4,1,
 #               :B3,2,:Cs3,2, :Gs3,1, 

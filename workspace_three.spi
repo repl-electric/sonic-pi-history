@@ -19,7 +19,7 @@ sync :samplz
 #(i, iio, III, iv, v, VI, VII)
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => A   C  G  B  D
-
+4.times{
   notes2 = (knit 
 #:Cs3,1, _,3,
                  :Cs3,1, _,3,
@@ -41,5 +41,6 @@ sync :samplz
 
   play note, release: release, attack: 0.01
   sleep release/2.0
+}
 end
 end

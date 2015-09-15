@@ -7,6 +7,7 @@ live_loop :ambi do
   release = (ring 1.0,1.0,1.0,1.0, 1/2.0,1/2.0,1/2.0, 1/2.0).tick(:r)
 
   play note, release: release
+  sleep release
 
 
 end

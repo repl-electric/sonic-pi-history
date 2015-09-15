@@ -46,6 +46,6 @@ end
 end
 
 live_loop :blah do
-  sample Ambi[/kick/,1]
+  sample Ambi[/kick/,2]
   sleep 2
 end

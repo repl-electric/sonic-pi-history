@@ -1,4 +1,0 @@
-live_loop :drums do
-  Fraz[/kick/,0], amp: 1.0
-  sleep 1
-end

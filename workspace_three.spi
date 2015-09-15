@@ -10,7 +10,7 @@ end
 
 _=nil
 live_loop :ambi do
-  use_synth :dsaw
+  use_synth :blade
 
 # F♯, G♯, A, B, C♯, D, and E. F
 #  Cm => C G B D

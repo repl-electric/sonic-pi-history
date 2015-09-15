@@ -1,0 +1,9 @@
+
+
+live_loop :ambi do
+  use_synth :beep
+
+  play (ring ).tick(:notes)
+
+
+end

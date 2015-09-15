@@ -66,13 +66,13 @@ notes = (knit
          chord(:Ds3, "m7")[1..-1], 8,   #D F A C
       )
 
-  2.times{sync :apeg}
+  1.times{sync :apeg}
       with_synth(:hoover)do
       play notes.tick(:h)[0], amp: 0.05
       
     end
 
-
+ 1.times{sync :apeg}
     with_synth(:hollow){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
       play notes.look(:h), amp: (knit 1.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5

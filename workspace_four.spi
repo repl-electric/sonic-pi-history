@@ -1,0 +1,5 @@
+live_loop :foo do
+  use_synth :dsaw
+  play :e3, detune: (chord 0, :minor7).tick
+  sleep 0.25
+end

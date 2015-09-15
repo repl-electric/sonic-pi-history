@@ -27,7 +27,7 @@ sync :samplz
 #                 :B3,1, _,3,
 ).tick(:note1)
   sample Ambi[/perc/,Range.new(2, (ring 4,8).tick(:a))].tick(:perc), cutoff: 100
-  play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.7, cutoff: 100
+  synth :beep, note: notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.7, cutoff: 100
 
   note = (knit :Cs4,1, :As3,1,  :Cs4,1, :Ds4,1,
                :Cs4,1, :As3,1,  :Cs3,1, :Fs3,1, 

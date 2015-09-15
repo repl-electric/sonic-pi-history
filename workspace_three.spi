@@ -4,7 +4,7 @@
 use_bpm 80
 
 live_loop :samplz do
-  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", pitch_stretch: 0.2
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", pitch_stretch: 8.0
   sleep 4.0
 end
 

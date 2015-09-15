@@ -11,7 +11,7 @@ end
 _=nil
 with_fx(:reverb) do
 live_loop :ambi do
-    use_synth :dsaw
+    use_synth :dark_ambience
 sync :samplz
 
 #C#, E, and G#

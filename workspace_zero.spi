@@ -11,7 +11,7 @@ end
 
 live_loop :lands, auto_cue: false do
   with_fx :reverb, room: 1, reps: 4 do
-    use_synth :dsaw
+    use_synth :beep
     use_random_seed 310003
     ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
     16.times do

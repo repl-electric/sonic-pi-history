@@ -1,9 +1,11 @@
 ["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
+
 use_bpm 80
 
 live_loop :samplz do
-  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav"
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav",
+    beat_stretch: 1
   sleep 1
 end
 

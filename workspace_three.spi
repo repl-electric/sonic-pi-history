@@ -4,7 +4,7 @@
 use_bpm 80
 
 live_loop :samplz do
-  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav"
+  sample "/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav", pitch_stretch: 2.0
   sleep sample_duration("/Users/josephwilk/Workspace/music/samples/loops/Sample Magic/synth & key loops/80bpm/am_syn80_clover_C#.wav")
 end
 
@@ -28,9 +28,9 @@ live_loop :ambi do
   #play notes2, decay: 1.0, release: 2.0, attack: 0.01, amp: 0.5, cutoff: 100
 
   note = (knit :Cs4,1, :A3,1,  :Gs3,1, :D4,1,
-               :B3,1, :Gs3,1,  :Cs3,1, :As3,1, 
-               :Cs4,1, :A3,1,  :Gs4,1, :B3,1,
-               :B3,1, :Gs3,1,  :Cs3,1, :As3,1, 
+#               :B3,1, :Gs3,1,  :Cs3,1, :As3,1, 
+ #              :Cs4,1, :A3,1,  :Gs4,1, :B3,1,
+#               :B3,1, :Gs3,1,  :Cs3,1, :As3,1, 
 
 ).tick(:note)
   release = (ring 1.0/2.0, 1.0/2.0, 1.0/2.0, 1.0,  

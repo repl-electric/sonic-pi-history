@@ -15,6 +15,7 @@ end
                            end
 
                            live_loop :snare do
-                             sample Corrupt[/snare/,0]
                              sleep 0.5
+
+                             sample Corrupt[/snare/,0]
                            end

@@ -21,6 +21,6 @@ end
                                                          :As1,1 , _, 3,
                                                          :Cs1,1 , _, 3
 
-).tick(:n), release: 1.0, decay: 0.5, cutoff: 80
+).tick(:n), release: 1.0, decay: 1.0, cutoff: 80
                              sleep 0.75
                            end

@@ -1,7 +1,7 @@
 
 
 live_loop :melo do
-  sample_and_sleep Corrupt[/F#/,[9,10]].tick(:r), amp: 3.0
+#  sample_and_sleep Corrupt[/F#/,[9,10]].tick(:r), amp: 3.0
 end
 
                            live_loop :hats do

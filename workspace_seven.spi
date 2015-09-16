@@ -1,1 +1,1 @@
-puts Sop[/A#/,0]
+puts Sop[/A#/,0].split(/\//)

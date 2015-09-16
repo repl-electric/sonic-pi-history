@@ -144,7 +144,7 @@ live_loop :sample_fun do
 
 #  sample (ring Dust["Vapor_keys_topline",0], Dust["Vapor_keys_02"]).tick(:a) 
 
-with_fx(:reverb, room: 1.0) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do
 sample Dust[/TDDC_Hit_Vapor_FullMix/]
 sample Dust[/VoxClarinet/].tick(:a)
 end

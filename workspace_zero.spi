@@ -22,6 +22,11 @@ live_loop :dis do
 sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 80
 end
 
+                         live_loop :coils do
+                           sample Fraz[/coil/, 0]
+sleep 1
+                         end
+
 with_fx(:pitch_shift, time_dis: 4.0){
   with_fx(:distortion, mix: 0.3){
     live_loop :args do

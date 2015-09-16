@@ -5,7 +5,7 @@ end
 
 live_loop :hats do
   sample Corrupt[/paper/,2..6].tick(:hat), cutoff: (range 80,120,10).tick(:range)
-  sleep 1.0
+  sleep 0.5
 end
 
 live_loop :kickers do

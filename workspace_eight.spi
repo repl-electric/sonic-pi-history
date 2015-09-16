@@ -3,7 +3,7 @@
 #1 3 5
 
 
-with_fx(:distortion, mix: 0.3) do
+with_fx(:distortion, mix: 0.1) do
 with_fx(:reverb) do
     live_loop :melo do
 

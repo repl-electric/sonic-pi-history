@@ -23,8 +23,8 @@ sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 80
 end
 
                          live_loop :coils do
-                           sample Fraz[/coil/, 0]
-sleep 1
+                           sample Fraz[/coil/, 1]
+                           sleep 1
                          end
 
 with_fx(:pitch_shift, time_dis: 4.0){

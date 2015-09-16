@@ -1,6 +1,6 @@
 #sample Corrupt[/f#/,23]
 
 
-live_loop : do
+live_loop :dust do
 sample_and_sleep Dust[/Warmer_135_F#m/]
 end

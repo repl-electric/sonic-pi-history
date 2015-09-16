@@ -9,13 +9,13 @@
  
 8.times{
   play :Fs3, attack: 0.01, release: 0.1
-sleep 0.5}
+sleep 0.25}
 
 control fx, mix: 0.0
 
 8.times{
   play :Fs3, attack: 0.01, release: 0.1
-sleep 0.5}
+sleep 0.25}
 
 
                          end

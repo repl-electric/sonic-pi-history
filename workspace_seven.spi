@@ -9,7 +9,6 @@ sample_and_sleep Dust[/Warmer_135_F#m/]
 end
 
                         live_loop :bass do
-                          sync :dust
                           synth :dsaw, note: (ring :Fs, :A, :Cs).tick(:n), release: 8.0, cutoff: 180, amp: 0.1
-
+                          sleep 2.0
                         end

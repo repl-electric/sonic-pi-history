@@ -26,6 +26,6 @@ end
                            end
 
                            live_loop :rythm do
-                             synth :dsaw, note: (ring :Fs2, :As2, :Cs1 ).tick(:notes), release: 0.1, attack: 0.0001
+                             synth :dsaw, detune: 12, note: (ring :Fs2, :As2, :Cs1).tick(:notes), release: 0.1, attack: 0.0001
                              sleep 0.25
                            end

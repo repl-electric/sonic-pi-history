@@ -9,11 +9,11 @@ live_loop :hats do
 end
 
 live_loop :kickers do
-  sample Corrupt[/kick/,0]
+#  sample Corrupt[/kick/,0]
   sleep 4.0
 end
 
 live_loop :snare do
   sleep 2.0
-  sample Corrupt[/snare/,1]
+ # sample Corrupt[/snare/,1]
 end

@@ -8,7 +8,8 @@
                            with_fx(:distortion, mix:0.9) do
  
 8.times{
-  play :Fs3}
+  play :Fs3
+sleep 0.5}
 
                          end
 end

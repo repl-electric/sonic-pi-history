@@ -7,7 +7,7 @@ end
 
                         live_loop :bass do
                           sync :dust
-                          synth :dsaw, note: (ring :Fs1).tick(:n), release: 2.0
+                          synth :dsaw, note: (ring :Fs1).tick(:n), release: 2.0, cutoff: 100
                           
 
                         end

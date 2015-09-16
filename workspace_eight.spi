@@ -16,7 +16,7 @@ control r_fx, dry: rrand(1.0)
 
 control x, note: degree(7, :Fs2, :minor)
 4.times{ sleep 1; control r_fx, dry: rand(1.0)}
-control r_fx, dry: rrand(1.0)
+control r_fx, dry: rand(1.0)
 
 control x, note: degree(1, :Fs3, :minor)
 sleep 0.25/2.0

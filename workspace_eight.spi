@@ -5,6 +5,8 @@
 
 with_fx(:distortion) do
 with_fx(:reverb) do
+    live_loop :melo do
+
 x = play degree(1, :Fs3, :minor), release: 0.5, decay: 18, note_slide: 0.1
 sleep 8
 control x, note: degree(2, :Fs3, :minor)
@@ -12,5 +14,7 @@ sleep 2
 control x, note: degree(7, :Fs2, :minor)
 sleep 4
 control x, note: degree(5, :Fs3, :minor)
+    end
+
 end
 end

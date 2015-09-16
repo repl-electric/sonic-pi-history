@@ -6,6 +6,6 @@ sample_and_sleep Dust[/Warmer_135_F#m/]
 end
 
                         live_loop :bass do
-                          synth note: (ring :Fs1).tick(:n)
+                          synth, :dsaw note: (ring :Fs1).tick(:n)
 
                         end

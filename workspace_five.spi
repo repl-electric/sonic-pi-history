@@ -14,3 +14,9 @@ end
                              sample Fraz[/snap/,[0,0,0,1]].tick(:s), cutoff: 100, amp: 0.5
                              sleep 1
                            end
+
+                           live_loop :propet do
+                             sleep 0.25
+                             synth :prophet, :Fs1, release: 0.5
+                             sleep 0.75
+                           end

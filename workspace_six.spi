@@ -8,3 +8,9 @@ end
                              sample Corrupt[/hat/,0..6].tick(:hat), cutoff: (range 80,120,10).tick(:range)
                              sleep 0.5
                            end
+
+                           live_loop :kickers do
+                             sleep 0.25
+                             sample Corrupt[/kick/,0]
+
+                           end

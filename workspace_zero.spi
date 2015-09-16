@@ -211,7 +211,7 @@ live_loop :hats do
   mix = [0.1,0.2,0.3,0.4,0.5].choose
 
   sample (ring Fraz[/kick/,0], Fraz[/kick/,1]).tick(:s),  amp: 2.5  if (spread 1, 4).tick(:d)
-  #sample Dust[/voice/,8],  amp: 2.5  if (spread 1, 8, rotate: 4).look(:d)
+  sample Dust[/voice/,8],  amp: 2.5  if (spread 1, 8, rotate: 4).look(:d)
   #sample Dust[/voice/,16], amp: 2.5 if (spread 3, 8).look(:d)
   #sample Dust[/voice/,14],  amp: 1.2 if (spread 7, 11).look(:d)
 

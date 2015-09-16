@@ -1,12 +1,15 @@
 #sample Corrupt[/f#/,23]
 # F♯, G♯, A, B, C♯, D, and E
 
+
+#   F# A C#
+
 live_loop :dust do
 sample_and_sleep Dust[/Warmer_135_F#m/]
 end
 
                         live_loop :bass do
                           sync :dust
-                          synth :dsaw, note: (ring :Fs1).tick(:n), release: 8.0, cutoff: 180, amp: 0.1
+                          synth :dsaw, note: (ring :Fs, :A, :Cs).tick(:n), release: 8.0, cutoff: 180, amp: 0.1
 
                         end

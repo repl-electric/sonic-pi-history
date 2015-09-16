@@ -114,7 +114,7 @@ end
 
 live_loop :sample_fun do
   32.times{sync :apeg}
-  sample Fraz[/coil/, 3], amp: 1.0
+  sample Fraz[/coil/, 4], amp: 1.0
 #  sample Dust[/F/,3], rate: 1.0, amp: 0.5 
   #sample Dust[/F#/,3], rate: 1.0, amp: 0.5 
 #  sample Dust[/A#/,4], rate: 1.0, amp: 1.0, cutoff: 80

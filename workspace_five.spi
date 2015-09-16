@@ -1,6 +1,6 @@
 ["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-
+_=nil
 
 live_loop :dark do
 sample_and_sleep Corrupt[/F#/,2],amp: 3.0

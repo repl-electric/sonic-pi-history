@@ -213,7 +213,7 @@ live_loop :hats do
   sample (ring Fraz[/kick/,0], Fraz[/kick/,1]).tick(:s),  amp: 2.5  if (spread 1, 4).tick(:d)
 
   sample Vocals[/breath/,5] if (spread 3, 8).look(:d)
-  sample Vocals[/breath/,7] if (spread 7, 11).look(:d)
+  sample Vocals[/breath/,8] if (spread 7, 11).look(:d)
 
   with_fx(:reverb, mix: mix, room: 0.8){
 

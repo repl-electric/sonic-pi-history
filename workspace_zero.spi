@@ -171,7 +171,7 @@ with_fx(:flanger){
   sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
   }
   }
- sample Vocals[/breath/,5], amp: 0.5, rate: 1.0, cutoff: 70 
+ sample Vocals[/breath/,6], amp: 0.5, rate: 1.0, cutoff: 70 
     
   if(d_idx % 8 == 0)
     sample Vocals[/breath/,5], amp: 0.5, rate: 1.0, cutoff: 100  

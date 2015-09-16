@@ -144,7 +144,7 @@ live_loop :sample_fun do
 
 #  sample (ring Dust["Vapor_keys_topline",0], Dust["Vapor_keys_02"]).tick(:a) 
 #sample Dust[/TDDC_Hit_Vapor_FullMix/]
-#sample Dust[/VoxClarinet/].tick(:a)
+sample Dust[/VoxClarinet/].tick(:a)
 
 #  (32-8).times{sync :apeg}
 #  sample Dust[/TDDC_Voice_Hit/,6], amp: 1.0
@@ -181,9 +181,7 @@ live_loop :drums do |d_idx|
 
 with_fx(:flanger){
   # sample Sop[/F#/,4], amp: 3.0, cutoff: 100
-
   #sample Sop[/F#4/,/Oo/, /down/, 1],amp: 1.0
-
 #  sample Sop[/F#4/,/Oo/, /down/, 1] if spread(4,11).tick(:spread)
   #sample Sop[/F#4/,/Oo/, /down/, 0] if spread(1,8).look(:spread)
  # sample Sop[/A#4/,/Oo/, /down/, 0] if spread(3,8).look(:spread)

@@ -1,1 +1,6 @@
-  sample Corrupt[/F#/,9], amp: 3.0
+
+
+live_loop :melo do
+  sample_and_sleep Corrupt[/F#/,9,10].tick(:r), amp: 3.0
+                 
+end

@@ -8,7 +8,6 @@ play degree(1, :Fs3, :minor), release: 8.0
 sleep 8
 play degree(2, :Fs3, :minor), release: 8.0
 sleep 8
-
 play degree(4, :Fs3, :minor), release: 8.0
 sleep 8
 

@@ -24,3 +24,8 @@ end
 ).tick(:n), release: 1.0, decay: 1.0, cutoff: 80
                              sleep 0.75
                            end
+
+                           live_loop :rythm do
+                             synth :dsaw, note: (ring :Fs3).tick(:notes)
+                             sleep 0.25
+                           end

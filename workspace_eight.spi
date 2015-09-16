@@ -12,7 +12,6 @@ x = play degree(1, :Fs3, :minor), release: 0.5, decay: 18, note_slide: 0.1
 8.times{ sleep 1; control r_fx, damp: rand(1.0)}
 control x, note: degree(2, :Fs3, :minor)
 2.times{ sleep 1; control r_fx, damp: rand(1.0)}
-control r_fx, dry: rrand(1.0)
 
 control x, note: degree(7, :Fs2, :minor)
 4.times{ sleep 1; control r_fx, damp: rand(1.0)}

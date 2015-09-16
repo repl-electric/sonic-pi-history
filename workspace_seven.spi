@@ -5,11 +5,18 @@
 #  sample_and_sleep Corrupt[/F#/,[9,9,9,10]].tick(:r), amp: 3.0
 
                          live_loop :ko do
-                           with_fx(:distortion, mix:0.9) do
+                           with_fx(:distortion, mix:0.9) do |fx|
  
 8.times{
   play :Fs3
 sleep 0.5}
+
+control fx, mix: 0.0
+
+8.times{
+  play :Fs3
+sleep 0.5}
+
 
                          end
 end

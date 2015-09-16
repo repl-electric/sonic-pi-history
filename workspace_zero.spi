@@ -6,7 +6,7 @@ velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 1
 
 live_loop :apegey do
   use_synth :saw
-  root = (knit #:Fs3, 16, :As3, 16, :Ds3, 16,  
+  root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  
                :Fs3, 16, :As3, 16, :Es3, 16).tick(:notes)
   with_transpose(-24){
     with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70}
@@ -19,7 +19,7 @@ live_loop :dis do
 #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
 #sample Corrupt[/f#/,0]
 #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
-with_fx(:slicer, phase: 0.50){
+with_fx(:slicer, phase: 0.50, ){
   sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 70
 }
 end

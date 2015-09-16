@@ -26,6 +26,6 @@ end
                            end
 
                            live_loop :rythm do
-                             synth :hollow, note: (ring :Fs2, :As2, :Cs1).tick(:notes), release: 0.1, attack: 0.0001, amp: 2.0
+                             synth :hollow, note: (ring :Fs2, :As2, :Cs1).tick(:notes), release: 0.1, attack: 0.0001, amp: 8.0
                              sleep 0.25
                            end

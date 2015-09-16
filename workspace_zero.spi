@@ -15,7 +15,7 @@ sample Sop[/A#/,0], amp: 4.0, cutoff: 100
 32.times{sync :apeg}
 
 end
-edn
+end
 
 live_loop :apeg do
   use_synth :saw

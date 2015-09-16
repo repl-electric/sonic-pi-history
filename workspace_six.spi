@@ -4,15 +4,15 @@ live_loop :melo do
 #  sample_and_sleep Corrupt[/F#/,[9,10]].tick(:r), amp: 3.0
 end
 
-                           live_loop :hats do
-                             sample Corrupt[/hat/,2..6].tick(:hat), cutoff: (range 80,120,5).tick(:range)
-                             sleep 0.5
-                           end
+live_loop :hats do
+  sample Corrupt[/hat/,2..6].tick(:hat), cutoff: (range 80,120,5).tick(:range)
+  sleep 0.5
+end
 
-                           live_loop :kickers do
-                             sample Corrupt[/kick/,0]
-                            sleep 2.0
-                           end
+live_loop :kickers do
+  sample Corrupt[/kick/,1]
+  sleep 2.0
+end
 
                            live_loop :snare do
                              sleep 1.0

@@ -4,7 +4,7 @@
 
 
 
-x = play degree(1, :Fs3, :minor), release: 8.0, decay: 8.0*4, note_lag: 2.0
+x = play degree(1, :Fs3, :minor), release: 8.0, decay: 8.0*4, note_slide: 1.0
 sleep 8
 control x, note: degree(2, :Fs3, :minor)
 sleep 8

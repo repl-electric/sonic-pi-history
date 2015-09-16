@@ -7,7 +7,6 @@ velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 1
 
 live_loop :vocals do
 sample Sop[/F#/,0], amp: 4.0
-
 16.times{sync :apeg}
 end
 
@@ -29,7 +28,7 @@ live_loop :dis do
 #sample Corrupt[/f#/,0]
 #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
 sync :apeg
-with_fx(:slicer, phase: 2, smooth_down: 2.0, smooth_up: 2.0){
+with_fx(:slicer, phase: (range 1, 2, 0.1).tick(:ph), smooth_down: 2.0, smooth_up: 2.0){
   sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 70
 }
 end

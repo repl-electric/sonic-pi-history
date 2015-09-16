@@ -10,7 +10,7 @@ end
 
 live_loop :kickers do
   sample Corrupt[/kick/,0]
-  sleep 2.0
+  sleep 4.0
 end
 
 live_loop :snare do

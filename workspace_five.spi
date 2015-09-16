@@ -26,6 +26,6 @@ end
                            end
 
                            live_loop :rythm do
-                             synth :dsaw, note: (ring :Fs3).tick(:notes)
+                             synth :dsaw, note: (ring :Fs3).tick(:notes), release: 0.1
                              sleep 0.25
                            end

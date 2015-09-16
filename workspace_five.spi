@@ -17,6 +17,8 @@ end
 
                            live_loop :propet do
                              sleep 0.25
-                             synth :prophet, note: (knit :Fs1,1 , _, 3).tick(:n), release: 1.0, decay: 0.5, cutoff: 80
+                             synth :prophet, note: (knit :Fs1,1 , _, 3,
+:As2,1 , _, 3
+).tick(:n), release: 1.0, decay: 0.5, cutoff: 80
                              sleep 0.75
                            end

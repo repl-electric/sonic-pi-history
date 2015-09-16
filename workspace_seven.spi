@@ -2,7 +2,7 @@
 
 
 
-#  sample_and_sleep Corrupt[/F#/,[9,9,9,10]].tick(:r), amp: 3.0
+ sample_and_sleep Corrupt[/F#/,[9,9,9,10]].tick(:r), amp: 3.0
 
                          live_loop :ko do
                            with_fx(:distortion, mix: 0.9, distort: 0.7, mix_slide: 1.0) do |fx|

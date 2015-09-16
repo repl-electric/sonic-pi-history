@@ -11,11 +11,10 @@ end
 
                            live_loop :kickers do
                              sample Corrupt[/kick/,0]
-´                             sleep 1.0
+´                            sleep 2.0
                            end
 
                            live_loop :snare do
                              sleep 1.0
-
                              sample Corrupt[/snare/,1]
                            end

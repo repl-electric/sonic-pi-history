@@ -8,6 +8,6 @@ end
 
 
                            live_loop :kick do
-                             sample Fraz[/kick/,[1]]
+                             sample Fraz[/kick/,[0]], 
                              sleep 1
                            end

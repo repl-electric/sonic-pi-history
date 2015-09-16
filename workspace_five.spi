@@ -11,6 +11,6 @@ end
                              sample Fraz[/kick/,[0,0]].tick(:A), cutoff: 100
                              sleep 1
                              sample Fraz[/kick/,[1,1]].tick(:b), cutoff: 100
-                             sample Fraz[/clap/,0], cutoff: 100
+                             sample Fraz[/clap/,0], cutoff: 100, amp: 0.5
                              sleep 1
                            end

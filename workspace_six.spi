@@ -14,7 +14,7 @@ live_loop :kickers do
   sleep 2.0
 end
 
-                           live_loop :snare do
-                             sleep 1.0
-                             sample Corrupt[/snare/,1]
-                           end
+live_loop :snare do
+  sleep 1.0
+  sample Corrupt[/snare/,1]
+end

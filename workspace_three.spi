@@ -100,7 +100,6 @@ notes = (knit
   1.times{sync :apeg}
       with_synth(:hoover)do
       play notes.tick(:h)[0], amp: 0.05
-      
     end
 
  1.times{sync :apeg}
@@ -112,7 +111,7 @@ notes = (knit
 
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
     #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
-with_fx(:flanger){
+  with_fx(:flanger){
     sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
                  "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
                  "/Users/josephwilk/Workspace/music/samples/Mountain/One Shots/Bowed Notes/G#_BowedHarmSoft_01_SP.wav",1,_,7

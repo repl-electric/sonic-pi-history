@@ -4,8 +4,7 @@ hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
 tranpose = (ring *%w{-5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
-
-with_fx(:reverb) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :vocals do
 sample Sop[/F#/,0], amp: 4.0, cutoff: 100
 32.times{sync :apeg}
@@ -13,7 +12,6 @@ sample Sop[/A#/,6], amp: 4.0, cutoff: 100
 32.times{sync :apeg}
 sample Sop[/A#/,0], amp: 4.0, cutoff: 100
 32.times{sync :apeg}
-
 end
 end
 

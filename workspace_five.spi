@@ -17,6 +17,6 @@ end
 
                            live_loop :propet do
                              sleep 0.25
-                             synth :prophet, note: :Fs1, release: 0.5, decay: 1.0
+                             synth :prophet, note: :Fs1, release: 0.5, decay: 0.1
                              sleep 0.75
                            end

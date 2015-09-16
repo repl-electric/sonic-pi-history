@@ -146,7 +146,7 @@ live_loop :sample_fun do
 
 with_fx(:echo, room: 1.0, mix: 1.0) do
 #sample Dust[/TDDC_Hit_Vapor_FullMix/]
-sample Dust[/VoxClarinet/].tick(:a)
+#sample Dust[/VoxClarinet/].tick(:a)
 end
 #  (32-8).times{sync :apeg}
 #  sample Dust[/TDDC_Voice_Hit/,6], amp: 1.0

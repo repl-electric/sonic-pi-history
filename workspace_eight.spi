@@ -20,8 +20,7 @@ control r_fx, dry: rrand(1.0)
 
 control x, note: degree(1, :Fs3, :minor)
 sleep 0.25/2.0
-control r_fx, dry: rrand(1.0)
-
+control r_fx, dry: rand(1.0)
 control x, note: degree(5, :Fs3, :minor)
 end
 end

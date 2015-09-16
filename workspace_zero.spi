@@ -165,7 +165,7 @@ live_loop :drums do |d_idx|
 with_fx(:flanger){
   # sample Sop[/F#/,4], amp: 3.0, cutoff: 100
 
-  sample Sop[/F#4/,/Oo/, /down/, 1],amp: 1.0
+  #sample Sop[/F#4/,/Oo/, /down/, 1],amp: 1.0
 
 #  sample Sop[/F#4/,/Oo/, /down/, 1] if spread(4,11).tick(:spread)
   #sample Sop[/F#4/,/Oo/, /down/, 0] if spread(1,8).look(:spread)

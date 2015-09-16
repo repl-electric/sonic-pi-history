@@ -9,6 +9,6 @@ sleep 8
 control x, note: degree(2, :Fs3, :minor)
 sleep 2
 control x, note: degree(7, :Fs2, :minor)
-sleep 8
+sleep 4
 
 control x, note: degree(5, :Fs3, :minor)

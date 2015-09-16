@@ -16,7 +16,7 @@ end
 
 live_loop :dis do
 #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
-
+sample Corrupt[/f#/,0]
 
 sleep 8
 end

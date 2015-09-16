@@ -173,9 +173,9 @@ with_fx(:flanger){
  sample Vocals[/breath/,4], amp: 0.2, rate: 1.0, cutoff: 70 
     
   if(d_idx % 8 == 0)
-    sample Vocals[/breath/,4], amp: 0.1, rate: 1.0, cutoff: 100  
+    sample Vocals[/breath/,4], amp: 0.2, rate: 1.0, cutoff: 100  
     sleep 0.25
-    sample Vocals[/breath/,4], amp: 0.1, rate: 1.0, cutoff: 100
+    sample Vocals[/breath/,4], amp: 0.2, rate: 1.0, cutoff: 100
   end
 
   4.times{sync :apeg}

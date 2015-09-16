@@ -126,7 +126,7 @@ end
 with_fx(:lpf, cutoff: 100) do
 live_loop :highlight do
   16.times{sync :apeg}
-with_transpose(-12) do
+with_transpose(-5) do
   i_deter(deg_seq(%w{Fs4 1*3 3*3  5*3   1*3  3*3   5*3 }).tick,
           deg_seq(%w{Fs4 3   5    6     3    5     2 }).stretch(3).tick, amp: 0.8*1,  
           damp_time: 0.25*1.0)

@@ -23,7 +23,7 @@ sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 80
 end
 
                          live_loop :coils do
-                           sample Frag[/coil/, 1]
+                           sample Frag[/coil/, 2]
                            sleep 1
                          end
 

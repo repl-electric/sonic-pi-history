@@ -4,6 +4,12 @@ hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
 tranpose = (ring *%w{-5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
+
+live_loop :vocals do
+4.times{sync :apeg}
+sample Sop[/F#/,0]
+end
+
 live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  
@@ -101,8 +107,8 @@ if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
     #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
 with_fx(:flanger){
     sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
-                         "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
-                         "/Users/josephwilk/Workspace/music/samples/Mountain/One Shots/Bowed Notes/G#_BowedHarmSoft_01_SP.wav",1,_,7
+                 "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
+                 "/Users/josephwilk/Workspace/music/samples/Mountain/One Shots/Bowed Notes/G#_BowedHarmSoft_01_SP.wav",1,_,7
 ).tick(:s), cutoff: 80, amp: 0.15
 }
 #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)

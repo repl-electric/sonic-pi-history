@@ -14,7 +14,7 @@ sleep 2
 control x, note: degree(7, :Fs2, :minor)
 sleep 4
 control x, note: degree(1, :Fs3, :minor)
-sleep 0.5
+sleep 0.25
 control x, note: degree(5, :Fs3, :minor)
     end
 

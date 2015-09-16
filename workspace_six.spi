@@ -1,5 +1,4 @@
 
-
 live_loop :melo do
   sample_and_sleep Corrupt[/F#/,[9,10]].tick(:r), amp: 3.0
 end
@@ -15,6 +14,6 @@ live_loop :kickers do
 end
 
 live_loop :snare do
-  sleep 1.0
+  sleep 2.0
   sample Corrupt[/snare/,1]
 end

@@ -212,7 +212,7 @@ live_loop :hats do
 
   sample (ring Fraz[/kick/,0], Fraz[/kick/,1]).tick(:s),  amp: 2.5  if (spread 1, 4).tick(:d)
 
-  sample Vocals[/breath/,6] if (spread 3, 8).look(:d)
+  sample Vocals[/breath/,5] if (spread 3, 8).look(:d)
 
 #  sample Dust[/voice/,8],  amp: 2.5  if (spread 1, 8, rotate: 4).look(:d)
 #  sample Dust[/voice/,16], amp: 2.5 if (spread 3, 8).look(:d)

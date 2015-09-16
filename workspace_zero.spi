@@ -144,9 +144,10 @@ live_loop :sample_fun do
 
 #  sample (ring Dust["Vapor_keys_topline",0], Dust["Vapor_keys_02"]).tick(:a) 
 
+with_fx(:bitcrusher) do
 sample Dust[/TDDC_Hit_Vapor_FullMix/]
 sample Dust[/VoxClarinet/].tick(:a)
-
+end
 #  (32-8).times{sync :apeg}
 #  sample Dust[/TDDC_Voice_Hit/,6], amp: 1.0
   #sample Dust[/TDDC_Voice_Hit/,11], amp: 1.0

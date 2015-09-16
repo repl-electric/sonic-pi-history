@@ -2,5 +2,9 @@
 
 live_loop :melo do
   sample_and_sleep Corrupt[/F#/,[9,10]].tick(:r), amp: 3.0
-                 
 end
+
+                           live_loop :hats do
+                             sample Corrupt[/hat/,0]
+                             sleep 0.25
+                           end

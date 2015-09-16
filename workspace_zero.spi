@@ -19,8 +19,7 @@ live_loop :dis do
 #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
 #sample Corrupt[/f#/,0]
 #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
-sample Ether[/f#/, /ambience/, 0]
-sleep 8
+sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 100
 end
 
 with_fx(:pitch_shift, time_dis: 4.0){

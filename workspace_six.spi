@@ -5,7 +5,7 @@ live_loop :melo do
 end
 
                            live_loop :hats do
-                             sample Corrupt[/hat/,2..6].tick(:hat), cutoff: (range 80,120,10).tick(:range)
+                             sample Corrupt[/hat/,2..6].tick(:hat), cutoff: (range 80,120,5).tick(:range)
                              sleep 0.5
                            end
 

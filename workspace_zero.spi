@@ -10,6 +10,8 @@ sample Sop[/F#/,0], amp: 4.0
 32.times{sync :apeg}
 sample Sop[/A#/,1], amp: 4.0
 32.times{sync :apeg}
+sample Sop[/A#/,1], amp: 4.0
+32.times{sync :apeg}
 
 end
 

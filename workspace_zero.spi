@@ -19,6 +19,7 @@ live_loop :dis do
 #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
 #sample Corrupt[/f#/,0]
 #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
+sync :apegey
 with_fx(:slicer, phase: 2, smooth_down: 2.0, smooth_up: 2.0){
   sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 70
 }

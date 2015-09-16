@@ -9,8 +9,7 @@ with_fx(:distortion, mix: 0.1) do
     live_loop :melo do
 with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 x = play degree(1, :Fs3, :minor), release: 0.5, decay: 18, note_slide: 0.1
-sleep 8
-control r_fx, dry: rrand(0.0,1.0)
+8.times{ sleep 1; control r_fx, dry: rrand(0.0,1.0)}
 control x, note: degree(2, :Fs3, :minor)
 sleep 2
 control r_fx, dry: rrand(1.0)

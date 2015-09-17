@@ -84,7 +84,7 @@ with_synth(:plucked){
 end
 end
 
-with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
+with_fx(:reverb, room: 1.0, mix: 0.0){ |r_fx|
 live_loop :chorus do
 notes = (knit 
          #chord_degree(1, :fs3, :major)[1..-1], 8,

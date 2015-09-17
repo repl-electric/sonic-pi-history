@@ -1,0 +1,30 @@
+["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+
+_=nil
+
+live_loop :dark do
+  sample_and_sleep Corrupt[/F#/,2], amp: 3.0
+end
+
+
+                           live_loop :kick do
+                             sample Fraz[/kick/,[0,0]].tick(:A), cutoff: 100
+                             sleep 1
+                             sample Fraz[/kick/,[1,1]].tick(:b), cutoff: 100
+                             sample Fraz[/snap/,[0,0,0,1]].tick(:s), cutoff: 100, amp: 0.5
+                             sleep 1
+                           end
+
+                           live_loop :propet do
+                             sleep 0.25
+                             synth :prophet, note: (knit :Fs1,1 , _, 3,
+                                                         :As1,1 , _, 3,
+                                                         :Cs1,1 , _, 3
+
+).tick(:n), release: 1.0, decay: 1.0, cutoff: 80
+                             sleep 0.75
+                           end
+
+                           live_loop :rythm do
+                             synth :hollow, note: (ring :Fs2, :As2, :Cs1).tick(:notes), release: 0.1, attack: 0.0001, amp: 8.0
+                           end

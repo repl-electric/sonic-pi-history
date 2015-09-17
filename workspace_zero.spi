@@ -83,7 +83,9 @@ with_synth(:plucked){
 }}
 end
 end
-
+# 
+#F#maj	G#min	A#min	Bmaj	C#maj	D#min	E#dim
+#F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 live_loop :chorus do
 notes = (knit 
@@ -98,8 +100,8 @@ notes = (knit
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,
 
-         chord(:Cs3, :M)[1..-1], 2,
-         chord(:Cs3, :maj9)[1..-1],6
+         chord(:Cs3, :M)[1..-1], 6,
+         chord(:Cs3, :maj9)[1..-1],2
 )
 
   1.times{sync :apeg}
@@ -110,7 +112,7 @@ notes = (knit
  1.times{sync :apeg}
     with_synth(:hollow){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
-      play notes.tick(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5
+      play notes.tick(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (range 80,130,5).tick(:cut), res: 0.1
       puts note_inspect(notes.look(:h), "CHORD")
     
 
@@ -187,11 +189,6 @@ live_loop :drums do |d_idx|
    sample Dust[/TDDC_Voice_Hit/,16], amp: 0.5, cutoff: (knit 85,3,100,1).tick(:thing), rate: (ring 1.0,  -1.0).tick(:r)
 
 with_fx(:flanger){
-  # sample Sop[/F#/,4], amp: 3.0, cutoff: 100
-  #sample Sop[/F#4/,/Oo/, /down/, 1],amp: 1.0
-#  sample Sop[/F#4/,/Oo/, /down/, 1] if spread(4,11).tick(:spread)
-  #sample Sop[/F#4/,/Oo/, /down/, 0] if spread(1,8).look(:spread)
- # sample Sop[/A#4/,/Oo/, /down/, 0] if spread(3,8).look(:spread)
 }
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){

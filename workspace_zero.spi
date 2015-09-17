@@ -28,7 +28,7 @@ live_loop :apeg do
     with_synth(:prophet){play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70}
   
     if (knit root,1, _, 15).look(:bass)
-      sample Corrupt[/kick/,3], amp: 2, cutoff: 80
+      sample Corrupt[/kick/,4], amp: 2, cutoff: 80
     end
 }
   sleep 0.25 * 1

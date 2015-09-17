@@ -105,8 +105,8 @@ notes = (knit
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,
 
-         chord(:Cs3, :M)[1..-1], 6,
-         chord(:Cs3, :maj9)[1..-1],2
+         chord(:Cs3, :M)[1..-1], 2,
+         chord(:Cs3, :maj9)[1..-1],6
 )
 
   1.times{sync :apeg}

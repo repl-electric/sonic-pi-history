@@ -118,6 +118,7 @@ notes = (knit
     
 
 if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
+ cue :lovely
     #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
 with_fx(:flanger){
     sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
@@ -130,6 +131,11 @@ end
 }
 end
 }
+
+                           live_loop :arrrrrrr do D F A C E
+                             sync :lovely
+                             sample Sop[/E/,0]
+                           end
 
 with_fx(:lpf, cutoff: 100) do
 live_loop :highlight do

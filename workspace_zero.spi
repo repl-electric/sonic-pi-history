@@ -112,7 +112,7 @@ notes = (knit
  1.times{sync :apeg}
     with_synth(:hollow){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
-      play notes.tick(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (range 1,130,5).tick(:cut), res: (ring 0.998,0.99).tick(:xcut)
+      play notes.tick(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (range 60,130,5).tick(:cut), res: (ring 0.998,0.99).tick(:xcut)
       puts note_inspect(notes.look(:h), "CHORD")
     
 

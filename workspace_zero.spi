@@ -132,7 +132,7 @@ end
 end
 }
 
-                           live_loop :arrrrrrr do D F A C E
+                           live_loop :arrrrrrr do #D F A C E
                              sync :lovely
                              sample Sop[/E/,0]
                            end

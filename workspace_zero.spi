@@ -107,7 +107,7 @@ notes = (knit
 
   1.times{sync :apeg}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.05
+      play notes.tick(:h)[0], amp: 0.02
     end
 
  1.times{sync :apeg}

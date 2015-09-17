@@ -1,1 +1,4 @@
+["log","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+
+
 sample Sop[/E/,0]

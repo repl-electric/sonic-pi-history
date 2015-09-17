@@ -1,1 +1,3 @@
 play chord('Cs3', "9")
+sleep 1
+play chord('Fs3', "M")

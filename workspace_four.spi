@@ -10,6 +10,6 @@ end
 live_loop :c do
 sleep 2.0
 shader("uniform", "iBeat", 2.0)
-sample Mountain[/snare/,0]
+sample Mountain[/snare/,1]
 sleep 2.0
 end

@@ -2,7 +2,7 @@
 
 #shader(:shader, "nil.glsl")
 live_loop :d do
-shader("uniform", "iBeat", 4.0)
+shader("decaying-uniform", "iBeat", 1.0)
 sleep 4.0
 
 end

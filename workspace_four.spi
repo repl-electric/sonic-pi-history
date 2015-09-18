@@ -4,12 +4,12 @@
 live_loop :d do
 shader("decaying-uniform", "iBeat", 1.0)
 sample Mountain[/subkick/,0], cutoff: 100
-sleep 4.0
+sleep 2.0
 end
 
 live_loop :c do
-sleep 2.0
+sleep 1.0
 shader("uniform", "iBeat", 1.5)
 sample Mountain[/snare/,1], cutoff: 100
-sleep 2.0
+sleep 1.0
 end

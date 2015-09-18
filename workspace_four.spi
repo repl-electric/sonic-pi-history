@@ -17,6 +17,6 @@ end
 
 live_loop :hats do
   sleep 0.5
-  Fraz[/hat/,0]
+  sample Fraz[/hat/,0]
   shader("decaying-uniform", "iHat", 0.01)
 end

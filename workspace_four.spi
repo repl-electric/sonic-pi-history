@@ -1,4 +1,4 @@
-["shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+["shaderview","experiments"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
 #shader(:shader, "nil.glsl")
 live_loop :d do

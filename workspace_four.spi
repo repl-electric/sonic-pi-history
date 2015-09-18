@@ -14,3 +14,8 @@ sample Mountain[/subkick/,1], cutoff: 100
 sample Mountain[/snare/,3], cutoff: 100
 sleep 1.0
 end
+
+live_loop :hats do
+  sleep 0.5
+  Mountain[/hat/]
+end

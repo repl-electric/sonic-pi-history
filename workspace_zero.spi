@@ -11,7 +11,7 @@ sample Sop[/F#/,0], amp: 1.0, cutoff: 100
 sample Sop[/F#/,0], amp: 0.5, cutoff: 100
 sample Sop[/A#/,0], amp: 0.5, cutoff: 100
 32.times{sync :apeg}
-#sample Sop[/A#/,0], amp: 1.0, cutoff: 100
+sample Sop[/A#/,0], amp: 1.0, cutoff: 100
 32.times{sync :apeg}
 end
 end

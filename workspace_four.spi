@@ -17,5 +17,5 @@ end
 
 live_loop :hats do
   sleep 0.5
-  Mountain[/hat/]
+  Mountain[/hat/,0]
 end

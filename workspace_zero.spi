@@ -222,7 +222,7 @@ live_loop :hats do
   mix = [0.1,0.2,0.3,0.4,0.5].choose
 
 if (spread 1, 4).tick(:d)
-  sample (ring Fraz[/kick/,0], Fraz[/kick/,0]).tick(:s),  amp: 2.5  
+  sample (ring Fraz[/kick/,0], Fraz[/kick/,[1,0]]).tick(:s),  amp: 2.5  
   shader("decaying-uniform", "iBeat", 1.0, 0.001)
 end
 

@@ -65,7 +65,7 @@ with_fx(:lpf, cutoff: 90, mix: 0.0){
                         :Fs4, :Cs4, :Fs3, :Cs4,   :Fs4,  :Cs4,   :Es4, :Es4,
                        :As4, :Cs4, :As3, :Cs4,  :As4,  :Cs4,   :Fs4, :Cs4,                        #A  C   E      G
                         :Ds4, :Cs4, :Ds4, :Cs4,  :Ds4,  :Cs4,   :Es4, :Es4
-).tick(:notes), wave: 6, attack: 0.04, release: 0.25, saw_cutoff: 100, noise_level: 0.05, amp: 1.0
+).tick(:notes), wave: 6, attack: 0.04, release: 0.25, saw_cutoff: 100, noise_level: 0.05, amp: 10.0
 }
 }
 }
@@ -74,11 +74,11 @@ end
 
 _=nil
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do
-live_loop :arse do
+live_loop :patterings do
 1.times{  sleep 0.25}
 with_fx(:lpf, cutoff: 60){
 with_synth(:plucked){
-  play (ring :Fs4, :Fs4, _,  _,   :Cs4, _ , _,    :Fs3,  _,  :Cs4, _, :Es4,_, :Es4,_, _,
+  play (ring :Fs4,  :Fs4, _,  _,   :Cs4, _ , _,    :Fs3,  _,  :Cs4, _, :Es4,_, :Es4,_, _,
                   :Gs4, :Gs4,_,  _,   :As4, _ ,_,     :Fs4,  _,  :As3,_,  :Fs4,_, :Fs4,_, _,   #A C E G
                   :Fs4, :Fs4, _,  _,   :Cs4, _ , _,    :Cs4, _, _, _,        :Es4,_,  :Es4,_, _   #D F  A C 
  ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1

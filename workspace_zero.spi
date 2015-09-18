@@ -226,7 +226,10 @@ live_loop :hats do
   sync :apeg
   mix = [0.1,0.2,0.3,0.4,0.5].choose
 
- sample (ring Fraz[/kick/,0], Fraz[/kick/,1]).tick(:s),  amp: 2.5  if (spread 1, 4).tick(:d)
+if (spread 1, 4).tick(:d)
+ sample (ring Fraz[/kick/,0], Fraz[/kick/,1]).tick(:s),  amp: 2.5  
+     shader("decaying-uniform", "iHat", 1.0)
+end
 
   with_fx(:reverb, mix: mix, room: 0.8){
      shader("decaying-uniform", "iHat", 1.0)

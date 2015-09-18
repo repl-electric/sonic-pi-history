@@ -22,26 +22,24 @@ live_loop :apeg do
                :Fs3, 16, :As3, 16, :Gs3, 16,
                :Fs3, 16, :As3, 16, :Es3, 16,
                :Fs3, 16, :As3, 16, :Cs3, 16
-).tick(:notes)
+          ).tick(:notes)
   with_transpose(-24){
     with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.5, cutoff: 70}
     with_synth(:prophet){play (knit root,1, _, 15).look(:bass), release: 1.5, decay: 2.0, amp: 0.2, cutoff: 70}
   
-    if (knit root,1, _, 15).look(:bass)
-      sample Fraz[/coil/,4], amp: 1, cutoff: (ring 70,80).tick(:cu)
-    end
-}
+    sample Fraz[/coil/,4], amp: 1, cutoff: (ring 70,80).tick(:cu) if (knit root,1, _, 15).look(:bass)
+  }
   sleep 0.25 * 1
 end
 
 live_loop :dis do
-#sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
-#sample Corrupt[/f#/,0]
-#sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
-sync :apeg
-with_fx(:slicer, phase: (range 1, 2, 0.1).tick(:ph), smooth_down: 2.0, smooth_up: 2.0){
-  sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 10
-}
+  #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
+  #sample Corrupt[/f#/,0]
+  #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
+  sync :apeg
+  with_fx(:slicer, phase: (range 1, 2, 0.1).tick(:ph), smooth_down: 2.0, smooth_up: 2.0){
+    sample_and_sleep Ether[/f#/, /ambience/, 0], cutoff: 10
+  }
 end
 
                          live_loop :coils do

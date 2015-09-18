@@ -17,6 +17,6 @@ end
 
 live_loop :hats do
   sleep 0.5
-  sample Frag[/hat/,[0,1]],tick amp: 0.2
+  sample Frag[/hat/,[0,1]].tick amp: 0.2
   shader("decaying-uniform", "iHat", 0.001, 0.001)
 end

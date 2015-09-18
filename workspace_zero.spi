@@ -69,8 +69,6 @@ with_fx(:lpf, cutoff: 90, mix: 0.0){
 }
 }
 }
-#      puts note_inspect(notes.look(:thing), :DEG)
-#} 
 end
 }}
 

@@ -11,6 +11,6 @@ live_loop :c do
 sleep 1.0
 shader("uniform", "iBeat", 0.2)
 sample Mountain[/subkick/,0], cutoff: 100
-sample Mountain[/snare/,2], cutoff: 100
+sample Mountain[/snare/,3], cutoff: 100
 sleep 1.0
 end

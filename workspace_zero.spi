@@ -223,7 +223,7 @@ live_loop :hats do
 
 if (spread 1, 4).tick(:d)
   sample Fraz[/kick/,[0,1]].tick(:s),  amp: 2.5  
-  shader("decaying-uniform", "iBeat", 0.2, 0.001)
+  shader("decaying-uniform", "iBeat", 0.6, 0.001)
 end
 
   with_fx(:reverb, mix: mix, room: 0.8){

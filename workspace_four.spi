@@ -2,8 +2,9 @@
 
 #shader(:shader, "nil.glsl")
 live_loop :d do
-shader("decaying-uniform", "iBeat", 1.0, 0.2)
 sample Mountain[/subkick/,0], cutoff: 100
+shader("decaying-uniform", "iBeat", 1.0, 0.2)
+
 sleep 4.0
 end
 

@@ -199,6 +199,7 @@ with_fx(:flanger){
   with_fx(:reverb, room: 0.5, mix: 0.3, phase: 0.025){
   with_fx(:slicer, probability: 0.5){
     sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
+shader("decaying-uniform", "iHat", 0.2)
   }
   }
  sample Vocals[/breath/,6], amp: 0.1, rate: 1.0, cutoff: 70 
@@ -223,7 +224,7 @@ live_loop :hats do
 
 if (spread 1, 4).tick(:d)
   sample Fraz[/kick/,[0,1]].tick(:s),  amp: 2.5  
-  shader("decaying-uniform", "iBeat", 1.0, 0.001)
+  shader("decaying-uniform", "iHat", 0.2)
 end
 
   with_fx(:reverb, mix: mix, room: 0.8){

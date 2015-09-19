@@ -40,7 +40,9 @@ notes = (knit :Fs2, 1, nil,31,
                 :Ds2, 1, nil,31,
                 :Cs3, 1, nil,31) 
 play notes.tick, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
-with_synth(:prophet){ play notes.look, attack: 0.5, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0}
+with_synth(:prophet){ 
+    play notes.look, attack: 0.5, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
+}
 control fx_r, damp: rrand(0.0,1.0)
 end
 end

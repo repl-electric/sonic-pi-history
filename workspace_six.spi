@@ -1,4 +1,4 @@
 
 with_synth(:gpa){
-play :Fs4, amp: 6.0, release: 4.0, attack: 0.1
+play :Fs4, amp: 6.0, release: 4.0, attack: 0.1, cutoff: 80
 }

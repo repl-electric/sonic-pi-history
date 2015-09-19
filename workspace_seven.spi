@@ -18,5 +18,5 @@ live_loop :stability do
                 :As2, 1, nil,31,
                 :Ds2, 1, nil,31,
                 :Cs3, 1, nil,31
-).tick, release: 4, decay: 10, cutoff: 60
+).tick, release: 4, decay: 10, cutoff: 60, detune: 12
 end

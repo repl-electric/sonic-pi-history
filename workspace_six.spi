@@ -1,6 +1,6 @@
 
 #play  chord(:Cs4, :M)
-live_loop : do
+live_loop :a do
 
 with_synth(:plucked) do
 play  chord(:Ds4, :m9)

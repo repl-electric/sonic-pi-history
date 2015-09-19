@@ -138,7 +138,7 @@ end
 
                            live_loop :arrrrrrr do #D F A C E
                              sync :lovely
-                             sample Sop[/F#/,0]
+                             #sample Sop[/F#/,0]
                            end
 
 with_fx(:lpf, cutoff: 100) do

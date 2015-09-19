@@ -41,7 +41,7 @@ notes = (knit
 
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,
-         chord(:Ds3, "m7")[1..-1], 8,   #D F A C E G
+         chord(:Ds3, "m7")[0..-1], 8,   #D F A C E G
 
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,

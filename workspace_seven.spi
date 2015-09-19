@@ -1,7 +1,11 @@
 with_fx(:reverb, room: 1.0) do
 live_loop :test do
-  sync :apeg
   use_synth :plucked
-  play (stretch chord(:Fs3, 'M').choose, 5).tick, attack: 0.001, amp: 2.0
+   notes = [chord(:Fs3, 'M'), chord(:As3, 'm'), chord(:Ds3, 'M')].choose
+    32.times{
+  sync :apeg
+
+  play (stretch notes , 5).tick, attack: 0.001, amp: 2.0
+}
 end
 end

@@ -176,7 +176,7 @@ live_loop :coils do
  #Cs3 Es3 Gs3 C4 Ds4
 #  synth :dark_ambience, note: (ring :Cs3, :Es3, :Gs3, :C4, :Ds4).tick, release: 8, attack: 4.0, amp: 4.0
   with_synth(:dark_ambience){
-  play chord(:Cs3, :maj9), release: 8, attack: 4.0, amp: 20.0
+  play (ring chord(:Cs3, :maj9), chord(:Fs3, :M)).tick(:c), release: 8, attack: 4.0, amp: 20.0
 }
   32.times{sync :apeg}
 #  sample Ether[/coil/i, /f#/i], amp: 1.0

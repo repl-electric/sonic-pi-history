@@ -1,7 +1,7 @@
 with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
   use_synth :hollow
-    notes = scale(:Fs3, :major_pentatonic, num_octaves: 2).take(4)
+    notes = chord(:Cs3, '11').take(4)
     2.times{
     sync :apeg
       play notes.tick, attack: 0.001, amp: 20.0, release: 0.09, attack: 0.01

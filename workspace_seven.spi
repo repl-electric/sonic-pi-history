@@ -22,7 +22,7 @@ end
 
 live_loop :kicker do
  sync :apeg
-  with_fx((knit :none,3, :echo,1).tick(:fx), phase: 0.25) do
+  with_fx((knit :none,3, :echo,1, :none 4 ).tick(:fx), phase: 0.25) do
   sample Mountain[/subkick/,[1,2]].tick, cutoff: 120 if spread(1,4).tick(:a)
   end
   sample Mountain[/micro/,5], cutoff: (range 70,100, 10).tick    if spread(7,11).look(:a)

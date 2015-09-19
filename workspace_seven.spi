@@ -1,4 +1,4 @@
-with_fx(:reverb, room: 1.0) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
   use_synth :hollow
     notes = scale(:Ds3, :major_pentatonic, num_octaves: 2).take(4)

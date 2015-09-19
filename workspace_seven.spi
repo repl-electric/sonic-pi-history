@@ -22,5 +22,5 @@ end
 
 live_loop :kicker do
  sync :apeg
-  sample Mountain[/subkick/,1]
+  sample Mountain[/subkick/,1] if spread(7,11)
 end

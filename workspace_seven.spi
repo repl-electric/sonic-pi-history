@@ -1,4 +1,4 @@
 live_loop :test do
   sync :apeg
-  play :Fs3
+  play (knit :Fs3, 8, :As3, 8).tick
 end

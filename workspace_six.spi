@@ -1,4 +1,5 @@
 synth(:plucked, note: :Fs3)
 
 play  chord(:Cs4, :M)
-  chord(:Cs4, :maj9)
+sleep 1
+play  chord(:Cs4, :maj9)

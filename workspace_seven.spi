@@ -4,6 +4,8 @@ live_loop :test do
   play (knit 
 :Fs3, 7, :Ds4, 1,
 :Fs3, 7, :As3, 1,
+:Fs3, 7, :Ds4, 1,
+:Fs3, 7, :As4, 1,
 
 ).tick
 end

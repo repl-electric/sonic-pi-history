@@ -1,4 +1,4 @@
 
 with_synth(:dark_sea_horn){
-play :Fs4, amp: 8.0, release: 8.0
+play :Fs4, amp: 8.0, release: 8.0, attack: 0.1
 }

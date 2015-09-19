@@ -1,5 +1,5 @@
 
 
     with_synth(:dark_sea_horn){
-play (knit root,1, _, 15).tick(:bass), amp: 1.0
+play :As3, amp: 1.0
 }

@@ -1,5 +1,0 @@
-require 'osc-ruby'
-@client = OSC::Client.new('localhost', 9177)
-#@client.send(OSC::Message.new("/shader" , "/Users/josephwilk/shaders/wave.glsl"))
-
-@client.send(OSC::Message.new("/uniform" , "iR",1.5))

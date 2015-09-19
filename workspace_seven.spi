@@ -1,4 +1,4 @@
-with_fx(:reverb) do
+with_fx(:reverb, room: 1.0) do
 live_loop :test do
   sync :apeg
   use_synth :plucked

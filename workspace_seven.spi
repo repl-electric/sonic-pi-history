@@ -17,6 +17,10 @@ live_loop :stability do
  play (knit :Fs2, 1, nil,31,
                 :As2, 1, nil,31,
                 :Ds2, 1, nil,31,
-                :Cs3, 1, nil,31
-).tick, release: 4, decay: 10, cutoff: 60, detune: 12
+                :Cs3, 1, nil,31).tick, release: 4, decay: 10, cutoff: 60, detune: 12
+end
+
+live_loop :kick do
+ sync :apeg
+  Mountain[/subkick/,0]
 end

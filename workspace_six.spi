@@ -3,6 +3,7 @@ synth(:plucked, note: :Fs3)
 play  chord(:Cs4, :M)
 sleep 1
 play  chord(:Cs4, :maj9)
-
 sleep 1
-play  chord(:Fs4, :dim)
+play  chord(:Es4, :dim)
+sleep 1
+play  chord(:Fs4, :M)

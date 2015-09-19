@@ -2,7 +2,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
   use_synth :tb303
     notes = (ring chord(:Fs3, '7'), chord(:As3,'m7+5'), 
-                        chord(:Ds3, 'm7+5''), chord(:Cs3)).tick(:m)
+                        chord(:Ds3, 'm7+5'), chord(:Cs3)).tick(:m)
     (32).times{
     sync :apeg
       play notes[0], attack: 0.001, amp: 0.5, cutoff: (range 50,80,5).tick(:c)

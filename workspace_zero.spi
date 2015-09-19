@@ -24,7 +24,7 @@ live_loop :apeg do
                :Fs3, 16, :As3, 16, :Cs3, 16
           ).tick(:notes)
   with_transpose(-24){
-    with_transpose(-24-12){
+    with_transpose(-12){
     with_synth(:dark_sea_horn){play (knit root,1, _, 15).tick(:bass), detune: 0 , attack: 0.001, release: 5.0, decay: 0.1, amp: 2.8, cutoff: 100}
    }
     sleep (0.25/2.0)

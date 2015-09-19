@@ -4,7 +4,7 @@ live_loop :test do
     notes = scale(:fs3, :major_pentatonic, num_octaves: 3).take(4)
     4.times{
     sync :apeg
-      play notes.tick, attack: 0.001, amp: 2.0
+      play notes.tick, attack: 0.001, amp: 8.0
     }
 end
 end

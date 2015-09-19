@@ -3,7 +3,7 @@ live_loop :test do
   use_synth :string
   play (knit 
 :Fs3, 7, :Ds4, 1,
-:Gs3, 7, :Ds4, 1,
+:Fs3, 7, :Ds4, 1,
 
 ).tick
 end

@@ -1,5 +1,4 @@
 
 with_synth(:dark_sea_horn){
 play :As3, amp: 1.0
-puts :a
 }

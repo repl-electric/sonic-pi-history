@@ -1,6 +1,6 @@
 
 #play  chord(:Cs4, :M)
-sleep 1
+
 play  chord(:Ds4, :m9)
 sleep 1/2.0
 play  chord(:Es4, :dim)

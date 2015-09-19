@@ -1,4 +1,4 @@
 
-with_synth(:wobbling){
+with_synth(:twang){
 play :Fs4, amp: 1.0, release: 8.0, attack: 0.1
 }

@@ -4,6 +4,6 @@ with_synth(:plucked) do
 play  chord(:Ds4, :m9)
 sleep 1/2.0
 play  chord(:Es4, :dim)
-sleep 1
+sleep 1/2.0
 play  chord(:Fs4, :M)
 end

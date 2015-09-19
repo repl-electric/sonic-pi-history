@@ -15,7 +15,7 @@ live_loop :stability do
  sync :apeg
  use_synth :dsaw
  play (knit :Fs2, 1, nil,7,
-                :Ds2, 1, nil,7,
+                :As2, 1, nil,7,
                 :Cs2, 1, nil,7
 
 ).tick, release: 4, cutoff: 60

@@ -19,7 +19,7 @@ end
 live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  
-               :Fs3, 16, :As3, 16, :Es3, 16,
+               :Fs3, 16, :As3, 16, :Gs3, 16,
                #:Fs3, 16, :As3, 16, :Es3, 16,
                :Fs3, 16, :As3, 16, :Cs3, 16
           ).tick(:notes)
@@ -41,7 +41,7 @@ notes = (knit
 
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,
-         chord(:Ds3, "m7")[0..-1], 8,   #D F A C E G
+         chord(:Ds3, "m7")[0..-1], 8,   #G B D F A C E G
 
          chord(:Fs3, 'sus4')[1..-1], 8,
          chord(:As3, 'm+5')[1..-1], 8,

@@ -1,5 +1,5 @@
 live_loop :test do
   sync :apeg
   use_synth :string
-  play (knit :Fs3, 7, :Gs3, 1).tick
+  play (knit :Fs3, 7, :Es3, 1).tick
 end

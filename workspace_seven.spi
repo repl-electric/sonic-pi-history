@@ -2,7 +2,7 @@ with_fx(:reverb, room: 1.0) do
 live_loop :test do
   use_synth :plucked
     notes = scale(:fs3, :major_pentatonic, num_octaves: 2).take(4)
-    16.times{
+    8.times{
     sync :apeg
       play notes.tick, attack: 0.001, amp: 2.0
     }

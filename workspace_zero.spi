@@ -174,7 +174,7 @@ end
 
 live_loop :coils do
  #Cs3 Es3 Gs3 C4 Ds4
-  synth :dark_ambience, note: (ring :Es3, :Fs4, :C4).tick, release: 8, attack: 4.0, amp: 4.0
+  synth :dark_ambience, note: (ring :C4).tick, release: 8, attack: 4.0, amp: 4.0
   32.times{sync :apeg}
 #  sample Ether[/coil/i, /f#/i], amp: 1.0
 end

@@ -1,7 +1,5 @@
 live_loop :test do
   sync :apeg
   use_synth :string
-  play (knit 
-chord(:Fs3, "M").stretch,
-).tick, release: (knit 0.5, 7, 2.0,1).tick(:r), cutoff: 80
+  play (stretch (chord(:Fs3, 'M'), 5).tick, release: (knit 0.5, 7, 2.0,1).tick(:r), cutoff: 80
 end

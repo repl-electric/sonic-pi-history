@@ -13,5 +13,5 @@ end
 
 live_loop :stability do
  sync :apeg
- play (knit :Fs2, 1, nil,7).tick
+ play (knit :Fs2, 1, nil,7).tick, release: 8
 end

@@ -23,6 +23,6 @@ end
 live_loop :kicker do
  sync :apeg
   sample Mountain[/pebble/,1], cutoff: (range 70,100, 10).tick if spread(7,11)
-  sample Mountain[/pebble/,0], cutoff: (range 100,70, 10).tick if spread(6,8)
+  sample Mountain[/pebble/,0], cutoff: (range 100,70, 10).tick if spread(3,8)
 
 end

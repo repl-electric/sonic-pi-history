@@ -1,4 +1,4 @@
 live_loop :test do
   sync :apeg
-  play :Fs3
+  play :Ds3
 end

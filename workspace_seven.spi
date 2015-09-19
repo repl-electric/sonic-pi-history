@@ -1,5 +1,5 @@
 live_loop :test do
-  sleep 0.25
+  sync :apeg
   use_synth :string
   play (knit 
 :Fs3, 7, :Ds4, 1,

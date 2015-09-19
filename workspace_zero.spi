@@ -178,7 +178,8 @@ live_loop :coils do
   with_synth(:dark_ambience){
     play (ring
               chord(:Fs3, :M),
-              chord(:As3, 'm+5'), 
+              chord(:As3, 'm+5'),
+              chord(:Ds3, 'm'),  
               chord(:Cs3, :maj9)
 
 ).tick(:c), release: 8, attack: 4.0, amp: 20.0

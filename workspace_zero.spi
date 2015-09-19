@@ -31,7 +31,7 @@ live_loop :apeg do
   
     #sample Fraz[/coil/,4], amp: 1, cutoff: (ring 70,80).tick(:cu) if (knit root,1, _, 15).look(:bass)
   }
-  sleep (0.25 * 1) - ((0.25))
+  sleep (0.25 * 1) - ((0.25)/2.0)
 end
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|

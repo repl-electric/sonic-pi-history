@@ -1,6 +1,6 @@
 synth(:plucked, note: :Fs3)
 
-play  chord(:Cs4, :M)
+#play  chord(:Cs4, :M)
 sleep 1
 play  chord(:Cs4, :maj9)
 sleep 1/2.0

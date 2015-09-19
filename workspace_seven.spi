@@ -1,1 +1,1 @@
-puts chord(:Cs3, "maj9")
+puts note_inspect(chord(:Cs3, "maj9"))

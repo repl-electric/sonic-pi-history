@@ -1,5 +1,5 @@
 live_loop :test do
   sync :apeg
   use_synth :string
-  play (stretch chord(:Fs3, 'M'), 5).tick
+  play (stretch chord(:Fs3, 'M'), 5).tick, attack: 0.001
 end

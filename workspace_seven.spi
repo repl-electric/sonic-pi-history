@@ -39,7 +39,7 @@ live_loop :kicker do
   with_fx((knit :none,3, :echo,1, :none, 4).tick(:fx), phase: 0.25) do
     sample Mountain[/subkick/,[1,2]].tick, cutoff: 120 if spread(1,4).tick(:a)
   end
-  with_fx(:reverb){
+  with_fx(:reverb, room: 1.0){
     sample Mountain[/snare/,1], cutoff: 110 if spread(1,8, rotate: 1).look(:a)
   }
 

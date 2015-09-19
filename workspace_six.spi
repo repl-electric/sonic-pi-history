@@ -1,4 +1,12 @@
 
 with_synth(:gpa){
 play chord_degree(1, :F3, :major), amp: 6.0, release: 4.0, attack: 0.1, cutoff: 80, wave: 6
+sleep 0.25
+play chord_degree(3, :F3, :major), amp: 6.0, release: 4.0, attack: 0.1, cutoff: 80, wave: 6
+
+sleep 0.25
+play chord_degree(1, :F3, :major), amp: 6.0, release: 4.0, attack: 0.1, cutoff: 80, wave: 6
+sleep 0.25
+play chord_degree(5, :F3, :major), amp: 6.0, release: 4.0, attack: 0.1, cutoff: 80, wave: 6
+
 }

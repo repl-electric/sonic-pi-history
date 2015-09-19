@@ -176,11 +176,11 @@ live_loop :coils do
  #Cs3 Es3 Gs3 C4 Ds4
 #  synth :dark_ambience, note: (ring :Cs3, :Es3, :Gs3, :C4, :Ds4).tick, release: 8, attack: 4.0, amp: 4.0
   with_synth(:dark_ambience){
-    play (ring, 
+    play (ring
                               chord(:Fs3, :M),
 chord(:As3, :m), 
 
-chord(:Cs3, :maj9), 
+chord(:Cs3, :maj9)
 
 ).tick(:c), release: 8, attack: 4.0, amp: 20.0
   }

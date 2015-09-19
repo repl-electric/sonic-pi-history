@@ -20,7 +20,7 @@ live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  
                :Fs3, 16, :As3, 16, :Gs3, 16,
-               :Fs3, 16, :As3, 16, :Es3, 16,
+               #:Fs3, 16, :As3, 16, :Es3, 16,
                :Fs3, 16, :As3, 16, :Cs3, 16
           ).tick(:notes)
   with_transpose(-24){
@@ -31,6 +31,50 @@ live_loop :apeg do
   }
   sleep 0.25 * 1
 end
+
+with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
+live_loop :chorus do
+notes = (knit 
+         chord_degree(1, :fs3, :major)[1..-1], 8,
+         chord_degree(3, :fs3, :major)[1..-1], 8,
+         chord(:Ds3, "m")[1..-1], 8,
+
+         chord(:Fs3, 'sus4')[1..-1], 8,
+         chord(:As3, 'm+5')[1..-1], 8,
+         chord(:Ds3, "m7")[1..-1], 8,   #D F A C E G
+
+         chord(:Fs3, 'sus4')[1..-1], 8,
+         chord(:As3, 'm+5')[1..-1], 8,
+
+         chord(:Cs3, :M)[1..-1], 4,
+         chord(:Cs3, :maj9)[1..-1],4
+)
+
+  1.times{sync :apeg}
+    with_synth(:hoover)do
+      play notes.tick(:h)[0], amp: 0.025
+    end
+
+ 1.times{sync :apeg}
+    with_synth(:hollow){
+      4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
+      play notes.look(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (ring 80,100,110,130).tick(:cut), res: (ring 0.98,0.99).tick(:xcut)
+      puts note_inspect(notes.look(:h), "CHORD")
+
+if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
+ cue :lovely
+    #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
+with_fx(:flanger){
+    sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
+                 "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
+                 Mountain[/G#_BowedHarmSoft/,0],1,_,7
+).tick(:s), cutoff: 80, amp: 0.15*1
+}
+#   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
+end
+}
+end
+}
 
 live_loop :dis do
   #sample "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics_Wav_SP/One\ Shots/Instrument\ FX/F\#_KalimbaTextureFX_SP_02.wav"
@@ -86,49 +130,7 @@ end
 # 
 #F#maj	G#min	A#min	Bmaj	C#maj	D#min	E#dim
 #F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5
-with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
-live_loop :chorus do
-notes = (knit 
-         chord_degree(1, :fs3, :major)[1..-1], 8,
-         chord_degree(3, :fs3, :major)[1..-1], 8,
-         chord(:Ds3, "m")[1..-1], 8,
 
-         chord(:Fs3, 'sus4')[1..-1], 8,
-         chord(:As3, 'm+5')[1..-1], 8,
-         chord(:Ds3, "m7")[1..-1], 8,   #D F A C
-
-         chord(:Fs3, 'sus4')[1..-1], 8,
-         chord(:As3, 'm+5')[1..-1], 8,
-
-         chord(:Cs3, :M)[1..-1], 4,
-         chord(:Cs3, :maj9)[1..-1],4
-)
-
-  1.times{sync :apeg}
-    with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.025
-    end
-
- 1.times{sync :apeg}
-    with_synth(:hollow){
-      4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
-      play notes.look(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (ring 80,100,110,130).tick(:cut), res: (ring 0.98,0.99).tick(:xcut)
-      puts note_inspect(notes.look(:h), "CHORD")
-
-if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
- cue :lovely
-    #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
-with_fx(:flanger){
-    sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
-                 "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
-                 Mountain[/G#_BowedHarmSoft/,0],1,_,7
-).tick(:s), cutoff: 80, amp: 0.15*1
-}
-#   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
-end
-}
-end
-}
 
                            live_loop :arrrrrrr do #D F A C E
                              sync :lovely

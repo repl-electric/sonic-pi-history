@@ -4,7 +4,7 @@ live_loop :test do
     notes = chord((ring :Fs3, :As3, :Ds3, :Cs3).tick(:m), '13')
     8.times{
     sync :apeg
-      play notes.tick, attack: 0.001, amp: 1.0, release: 0.09, attack: 0.01, wave: 4
+      play notes, attack: 0.001, amp: 1.0, release: 0.09, attack: 0.01, wave: 4
     }
 end
 end

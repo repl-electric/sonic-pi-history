@@ -33,7 +33,7 @@ notes = (knit :Fs2, 1, nil,31,
                 :Ds2, 1, nil,31,
                 :Cs3, 1, nil,31) 
 play notes.tick, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
-synth :prophet, notes.look, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
+synth :prophet, note: notes.look, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
 
 end
 

@@ -1,4 +1,4 @@
 synth(:plucked, note: :Fs3)
 
-play  chord(:Cs3, :M)
+play  chord(:Cs4, :M)
   chord(:Cs3, :maj9)

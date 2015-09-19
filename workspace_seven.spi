@@ -25,6 +25,7 @@ live_loop :test do
 end
 end
 
+with_fx(:reverb) do |fx_r|
 live_loop :stability do
  sync :apeg
  use_synth :dsaw
@@ -34,7 +35,7 @@ notes = (knit :Fs2, 1, nil,31,
                 :Cs3, 1, nil,31) 
 play notes.tick, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
 synth :prophet, note: notes.look, attack: 1.5, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
-
+end
 end
 
 live_loop :kicker do

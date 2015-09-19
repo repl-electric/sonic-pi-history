@@ -10,3 +10,8 @@ live_loop :test do
     }
 end
 end
+
+live_loop :stability do
+ sync :apeg
+ play :Fs2
+end

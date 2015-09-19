@@ -1,6 +1,6 @@
 with_fx(:reverb, room: 1.0) do
 live_loop :test do
-  use_synth :plucked
+  use_synth :hollow
     notes = scale(:fs3, :major_pentatonic, num_octaves: 3).take(4)
     4.times{
     sync :apeg

@@ -1,4 +1,3 @@
-synth(:plucked, note: :Fs3)
 
 #play  chord(:Cs4, :M)
 sleep 1

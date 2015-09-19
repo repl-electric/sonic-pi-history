@@ -1,6 +1,6 @@
 with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
-  use_synth :gpa
+  use_synth :beep
     notes = chord((ring :Fs3, :As3, :Ds3, :Cs3).tick(:m), '13')
     8.times{
     sync :apeg

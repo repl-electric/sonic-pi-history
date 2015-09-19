@@ -35,6 +35,7 @@ notes = (knit :Fs2, 1, nil,31,
                 :Cs3, 1, nil,31) 
 play notes.tick, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
 synth :prophet, note: notes.look, attack: 1.5, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
+control fx_r, damp: rrand(1.0)
 end
 end
 

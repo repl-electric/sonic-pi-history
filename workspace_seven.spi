@@ -6,5 +6,5 @@ live_loop :test do
 :Fs3, 7, :As3, 1,
 :Fs3, 7, :Ds4, 1,
 :Fs3, 7, :As4, 1,
-).tick, release: (knit 0.5, 7, 1.0,1).tick(:r)
+).tick, release: (knit 0.5, 7, 2.0,1).tick(:r)
 end

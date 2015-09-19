@@ -1,12 +1,5 @@
 
-#play  chord(:Cs4, :M)
-live_loop :a do
 
-with_synth(:plucked) do
-play  chord(:Ds4, :m9)
-sleep 1/2.0
-play  chord(:Es4, :dim)
-sleep 1/2.0
-play  chord(:Fs4, :M)
-end
-end
+    with_synth(:dark_sea_horn){
+play (knit root,1, _, 15).tick(:bass), amp: 1.0
+}

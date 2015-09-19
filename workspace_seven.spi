@@ -1,4 +1,5 @@
-
+["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+_
 live_loop :apeg do
   sleep (0.25 * 1)
 end

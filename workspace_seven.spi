@@ -60,7 +60,7 @@ sleep 2
 end
 
 live_loop :other do
-sample Corrupt[/hat/,[1,2]].tick, amp: 2.0, cutoff: 120
+sample Corrupt[/hat/,[1,2]].tick, amp: 1.0, cutoff: 120
 sleep 0.5
 end
 

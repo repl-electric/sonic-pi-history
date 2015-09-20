@@ -1,12 +1,2 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
-
-#testing audio and visuals........
-
-
-live_loop :test do
-  use_synth :dark_ambience
-  play :Fs3, release: 2.0, env_curv: 2
-  sleep 1.0
-  shader(:uniform, "iBeat", 1.0)
-end

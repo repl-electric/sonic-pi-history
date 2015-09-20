@@ -9,7 +9,7 @@ live_loop :background do
                        chord(:As3, :m),
                        chord(:Ds3, :m),
                        chord(:Cs3, :M),
-                       chord(:Cs3, 'maj7')
+                       chord(:Cs3, 'maj9')
 ).tick(:main)
 
   use_synth :dark_ambience

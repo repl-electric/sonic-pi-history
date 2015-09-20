@@ -4,8 +4,7 @@
 live_loop :coils do
   #play (ring chord("Cs3", "M7"), chord("Fs3", "M")).tick(:chords) , release: 8, attack: 4.0
   synth :dark_ambience, note: (ring :Es1, :Fs1).tick, release: 8, attack: 4.0, amp: 2.5
-shader("decaying-uniform", "iBeat", 1.0)
-
+  shader("decaying-uniform", "iBeat", 1.0, 0.01)
   32.times{sync :apeg}
 #  sample Ether[/coil/i, /f#/i], amp: 1.0
 end

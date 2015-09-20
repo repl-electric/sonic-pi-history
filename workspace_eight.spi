@@ -38,7 +38,7 @@ if spread(7,11).look(:drums)
 end
 
 if spread(6,8).look(:drums)
- sample Mountain[/microperc/, 1], cutoff: 85 
+ sample Mountain[/microperc/, 5], cutoff: 85 
  shader("uniform", "iHat", 0.8)
 end
 

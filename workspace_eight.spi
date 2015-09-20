@@ -41,8 +41,7 @@ live_loop :bass do
 end
 
 live_loop :voices do
-with_fx(:reverb, room: 1.0) do
-
+with_fx(:reverb, room: 1.0, mix: 1.0) do
   32.times{sync :space}
   sample Sop[/f#/, 0], amp: 1.0, cutoff: 100
   32.times{sync :space}

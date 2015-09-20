@@ -61,7 +61,7 @@ end
 
 live_loop :other do
 sleep 1.0
-sample Corrupt[/hat/,[1,2]].tick, amp: 0.2, cutoff: 120 if spread(7,11).tick(:c)
+sample Corrupt[/hat/,1]
 end
 
 

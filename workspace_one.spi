@@ -1,6 +1,6 @@
 _=nil
 live_loop :frag do
-  #sample_and_sleep Frag[/F#/,2]
+  sample_and_sleep Frag[/F#/,2]
   sleep 1
 end
 

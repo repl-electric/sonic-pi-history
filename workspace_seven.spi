@@ -37,12 +37,12 @@ end
 live_loop :thumb do
   sync :time
   with_fx(:echo, room: 0.8, mix: 0.3, decay: 4.0) do
-  with_fx(:slicer, phase: 0.25 ) do
+#  with_fx(:slicer, phase: 0.25 ) do
 if spread(1,8).tick
   shader("decaying-uniform", "iBeat", 1.0, 0.001)
   sample Mountain[/subkick/,[0,1]].tick(:drums), cutoff: 60 
 end
-  end
+#  end
   end
 
   sample Mountain[/snare/, Range.new(0, (ring 1,1).tick(:sr))].tick(:snare), cutoff: 70 if spread(1,8, rotate: 1).look

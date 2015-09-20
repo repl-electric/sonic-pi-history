@@ -18,6 +18,7 @@ end
 
 live_loop :graphics do
  sync :space  
- shader("uniform", "iBeat", 0.1)
+ sample Mountain[/subkick/, 0], cutoff: 80
+ shader("uniform", "iBeat", 0.)
   
 end

@@ -1,4 +1,8 @@
-sample Frag[/F#/,1]
+
+live_loop : do
+sample_and_sleep Frag[/F#/,1]
+
+end
 
 
             live_loop :a do

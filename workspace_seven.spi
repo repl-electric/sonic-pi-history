@@ -6,6 +6,6 @@ _=nil
 
 live_loop :test do
   use_synth :dark_ambience
-  play :Fs1
+  play :Fs1, release: 2.0
 sleep 1
 end

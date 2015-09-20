@@ -61,7 +61,7 @@ end
 
 live_loop :other do
 sleep 1.0
-sample Corrupt[/f#/,3]
+sample Corrupt[/f#/,4]
 end
 
 

@@ -11,8 +11,7 @@ end
 live_loop :mono do
 notes = scale(:Fs3, :minor_pentatonic, num_octave: 2).take(4)
   32.times{
-  play notes
-
-  sleep 0.5
+    play notes
+    sleep 0.5
 }
 end

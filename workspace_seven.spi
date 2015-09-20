@@ -24,7 +24,7 @@ live_loop :bass do
 32.times{
     sync :time
       with_synth(:dsaw){
-      play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.2, cutoff: 60, decay: 5.0, attack: 0.1
+      play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.2, cutoff: 60, decay: 5.0, attack: 0.1, detune: 12
       }
       with_synth(:prophet){
       play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.1, cutoff: 65, decay: 5.0, attack: 0.0001

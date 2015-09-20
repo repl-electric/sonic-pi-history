@@ -4,8 +4,9 @@ shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/tex
 
 shader(:uniform, "iStars", 0.0);
 shader(:uniform, "iCells", 1.0);
-
 shader(:uniform, "iVolume", 1.0);
+
+shader("decaying-uniform", "iBeat", 1.0)
 
 live_loop :space do
 synth :dark_ambience, note: :Fs2

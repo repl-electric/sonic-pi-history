@@ -53,7 +53,6 @@ end
 live_loop :graphics do
  sync :space  
 
-
 if spread(1,4).tick(:drums)
 with_fx((knit :none, 0, :echo, 1, :none, 0).tick(:fx), phase: 0.25*2.0) do 
 sample Dust[/kick/, [1,3,0,3]].tick(:s), amp: 1.0, cutoff: 100
@@ -69,7 +68,7 @@ shader("uniform", "iBeat", 0.98)
 
 if spread(7,11).look(:drums)
  #sample Mountain[/microperc/, 6], cutoff: (range 100, 80, 10).tick(:cut) 
- shader("uniform", "iHat", 0.8)
+# shader("uniform", "iHat", 0.8)
 end
 
 if spread(6,8).look(:drums)

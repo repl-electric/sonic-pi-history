@@ -18,7 +18,7 @@ live_loop :darkness do
   32.times{sync :time}
 end
 
-with_fx(:reverb) do
+with_fx(:reverb) do |r_fx|
 live_loop :bass do
  notes = (ring :Fs2).tick  
 32.times{

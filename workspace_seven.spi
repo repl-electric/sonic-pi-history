@@ -64,7 +64,7 @@ live_loop :other do
 end
 
                            live_loop :pop do
-                             synth :blade, note: :Fs3
+                             synth :dsaw, note: :Fs3
 sleep 0.25
                            end
 

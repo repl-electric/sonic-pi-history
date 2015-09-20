@@ -5,7 +5,10 @@ live_loop :space do
 end
 
 live_loop :background do
-  note = (ring (chord :Fs3, :M), chord(:As3, :m)).tick(:main)
+  note = (ring (chord :Fs3, :M), 
+                       chord(:As3, :m),
+                       chord(:Ds3, :m)
+).tick(:main)
 
   use_synth :dark_ambience
   play note, release: 8, decay: 10, amp: 5, attack: 2.0

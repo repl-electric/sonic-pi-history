@@ -3,7 +3,7 @@
 live_loop :minor do
  notes = (ring (chord :Fs3, 'm'), chord(:A3, 'm'), chord(:Cs3,:m9)).tick
  with_synth :dark_ambience do
-    play notes, release: 2.0
+    play notes, release: 2.0, amp: 3.0
 end
  sleep 1
 end

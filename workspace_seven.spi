@@ -25,6 +25,9 @@ live_loop :thumb do
   if spread(7,11).look
     sample Mountain[/microperc/,5], amp: 0.5, cutoff: (range 60, 100, 10).tick(:c)
   end
+  if spread(3,8).look
+    sample Mountain[/microperc/,5], amp: 0.5, cutoff: (range 60, 100, 10).tick(:c)
+  end
   
 
 

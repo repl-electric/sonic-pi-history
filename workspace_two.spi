@@ -3,5 +3,9 @@ shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/tex
 
 
 shader(:uniform, "iStars", 1.0);
-
 shader(:uniform, "iVolume", 1.0);
+
+live_loop :space do
+synth :dark_ambience, note: Fs3
+sleep 8
+end

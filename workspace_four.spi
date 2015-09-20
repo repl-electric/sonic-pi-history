@@ -6,7 +6,7 @@ live_loop :coils do
 end
 
 
-shader(:decaying-uniform, "iBeat", 1.0)
+shader("decaying-uniform", "iBeat", 1.0)
 
 live_loop :apeg do
   use_synth :saw

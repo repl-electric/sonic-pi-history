@@ -16,7 +16,7 @@ end
 live_loop :bass do
   use_synth :dsaw
   sync :time
-  play (knit :Fs2, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 4.0
+  play (knit :Fs2, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 4.0, attack: 2.0
   
   
 end

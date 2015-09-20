@@ -67,7 +67,7 @@ end
                              sync :other
                              8.times{
                              with_fx(:echo, phase: 0.25) do
-                               synth :dark_ambience, note: (knit :Fs3,7, :Fs4,2).tick, cutoff: 50, release: 0.1
+                               synth :dark_ambience, note: (knit :Fs3,7, :Fs4,2).tick
                              end
                              sleep 0.25
 }

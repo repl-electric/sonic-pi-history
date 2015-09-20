@@ -47,6 +47,10 @@ control fx_r, damp: rrand(0.0,1.0)
 end
 end
 
+live_loop :voices do
+sample_and_sleep  Corrupt[/128/,0]
+end
+
 live_loop :kicker do
  sync :apeg
   with_fx((knit :none,3, :echo,1, :none, 4).tick(:fx), phase: 0.25) do

@@ -22,7 +22,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
   use_synth :tb303
     notes = (ring chord(:Fs3, '7'),   [chord(:Fs3, '7')[-1]] + chord(:As3,'m7+5'), 
-                        chord(:Ds3, 'm7+5'), 
+                        [chord(:As3, 'm7+5')[-1]] + chord(:Ds3, 'm7+5'), 
                         chord(:Cs3, 'maj9') ).tick(:m)
     32.times{
     sync :apeg

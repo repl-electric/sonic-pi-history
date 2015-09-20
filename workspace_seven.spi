@@ -24,6 +24,7 @@ live_loop :bass do
 32.times{
     sync :times
     synth :dsaw, note: notes, release: 8.0, amp: 0.5, cutoff: 80
+    control r_fx, damp: rrand(0.0,1.0)
   }
 end
 end

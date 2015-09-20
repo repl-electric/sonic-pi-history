@@ -20,7 +20,7 @@ end
 
 with_fx(:reverb) do |r_fx|
 live_loop :bass do
- notes = (ring :Fs2).tick  
+ notes = (ring :Fs2, :As2, :Ds2, :Cs2).tick  
 32.times{
     sync :time
       with_synth(:dsaw){

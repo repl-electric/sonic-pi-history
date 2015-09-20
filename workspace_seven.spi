@@ -13,7 +13,6 @@ live_loop :darkness do
                       chord(:Ds3, 'm'),
                       chord(:Cs3, 'M'),
                       chord(:Cs3, 'maj9')
-
  ).tick
   play notes, release: 8.0, attack: 2.0, decay: 4.0
   32.times{sync :time}

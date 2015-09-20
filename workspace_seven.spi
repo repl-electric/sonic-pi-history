@@ -56,7 +56,7 @@ end
 
 live_loop :kickers do
 sample Corrupt[/kick/,[1,2]].tick, amp: 2.0, cutoff: 120
- sleep 0.5
+ sleep 1
                   end
 
 

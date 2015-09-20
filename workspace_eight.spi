@@ -40,6 +40,12 @@ if spread(1,4).tick(:drums)
  shader("decaying-uniform", "iBeat", 0.8, 0.0005)
   end
 
+if spread(1,8).tick(:drums)
+ sample Mountain[/snare/, 0], cutoff: 85 
+ shader("uniform", "iBeat", 1.0)
+  end
+
+
 if spread(7,11).look(:drums)
  sample Mountain[/microperc/, 6], cutoff: (range 100, 80, 10).tick(:cut) 
  shader("uniform", "iHat", 0.8)

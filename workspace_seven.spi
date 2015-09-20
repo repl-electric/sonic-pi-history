@@ -68,7 +68,7 @@ end
 
   if spread(7,11).look
     # WHAT should we do here..................
-         shader("uniform", "iFizzle", rrand(0.0,5.0))
+         shader("uniform", "iFizzle", rrand(0.0,0.1))
 
     sample Mountain[/microperc/,5], amp: 0.5, cutoff: (range 60, 100, 10).tick(:c)
   end

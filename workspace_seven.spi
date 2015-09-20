@@ -7,7 +7,7 @@ end
 
 live_loop :darkness do
   use_synth :dark_ambience
-  notes = (ring chord(:Fs3, 'M'), chord(:As3, 'm'), chord(:Ds3, 'm')).tick
+  notes = (ring chord(:Fs3, 'M'), chord(:As3, 'm'), chord(:Ds3, 'm'), chord(:Cs3, 'm')).tick
   play notes, release: 1.5, decay: 8.0
   32.times{sync :time}
 end

@@ -20,7 +20,7 @@ end
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :test do
-  use_synth :tb303
+  use_synth :plucked
     notes = (ring chord(:Fs3, '7'), chord(:As3,'m7+5'), 
                         chord(:Ds3, 'm7+5'), 
                         chord(:Cs3, 'maj9') ).tick(:m)
@@ -35,10 +35,10 @@ with_fx(:reverb) do |fx_r|
 live_loop :stability do
  sync :apeg
  use_synth :dsaw
-notes = (knit :Fs2, 1, nil,31,
-                :As2, 1, nil,31,
-                :Ds2, 1, nil,31,
-                :Cs3, 1, nil,31) 
+notes = (knit  :Fs2, 1, nil,31,
+                     :As2, 1, nil,31,
+                     :Ds2, 1, nil,31,
+                     :Cs3, 1, nil,31) 
 play notes.tick, release: 4, decay: 10, cutoff: 60, detune: 12, attack: 2.0
 with_synth(:prophet){ 
     play notes.look, attack: 0.5, release: 2, decay: 10, cutoff: 60, detune: 12, attack: 2.0

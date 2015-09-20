@@ -37,9 +37,9 @@ end
 live_loop :voices do
   with_fx(:reverb, room: 1.0, mix: 1.0) do
   32.times{sync :time}
-    sample Sop[/F#/,0], amp: 0.1, cutoff: 80
+    sample Sop[/F#/,0], amp: 0.1, cutoff: 60
   32.times{sync :time}
-    sample Sop[/A#/,4], amp: 0.15, cutoff: 80
+    sample Sop[/A#/,4], amp: 0.15, cutoff: 60
   32.times{sync :time}
   end
 end

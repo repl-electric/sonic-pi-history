@@ -35,9 +35,14 @@ end
 end
 
 live_loop :voices do
-  32.times{sync :time}
   with_fx(:reverb) do
+  32.times{sync :time}
     sample Sop[/F#/,0], amp: 0.2, cutoff: 80
+  32.times{sync :time}
+               #I always gets something odd here... lets see what happens
+    sample Sop[/A#/,3], amp: 0.1, cutoff: 80
+
+
   end
 end
 

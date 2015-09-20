@@ -18,6 +18,17 @@ live_loop :darkness do
   32.times{sync :time}
 end
 
+with_fx(:reverb) do
+live_loop :bass do
+  sync :times
+ notes = (ring :Fs2).tick  
+32.times{
+    sync :times
+     synth :dsaw, note: notes, release: 8.0, amp: 0.5, cutoff: 80
+  }
+end
+end
+
 
 live_loop :thumb do
   sync :time

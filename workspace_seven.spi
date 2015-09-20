@@ -8,7 +8,11 @@ end
 live_loop :darkness do
   use_synth :dark_ambience
   notes = (knit chord(:Fs3, 'M'),1, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1, 
-                      chord(:Cs3, 'm'),1, chord(:Cs3, 'maj9'),1 ).tick
+                      chord(:Cs3, 'm'),1, chord(:Cs3, 'maj9'),1,
+
+           chord(:Fs3, 'sus4'),1, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1,
+           chord(:Cs3, 'm'),1, chord(:Cs3, 'maj9'),1
+ ).tick
   play notes, release: 1.5, decay: 8.0
   32.times{sync :time}
 end

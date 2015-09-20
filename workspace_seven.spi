@@ -24,7 +24,7 @@ live_loop :bass do
 32.times{
     sync :time
       with_synth(:dsaw){
-      play (knit notes,1, _, 31).tick(:notes), release: 8.0, amp: 0.01, cutoff: 80
+      play (knit notes,1, _, 31).tick(:notes), release: 8.0, amp: 0.5, cutoff: 80
       }
     #control r_fx, damp: rrand(0.0,1.0)
   }

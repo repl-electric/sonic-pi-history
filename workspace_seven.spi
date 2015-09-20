@@ -6,7 +6,7 @@ _=nil
 
 live_loop :test do
   use_synth :dark_ambience
-  play :Fs2, release: 2.0
+  play :Fs3, release: 2.0
   sleep 1.0
   shader(:uniform, "iBeat", 1.0)
 end

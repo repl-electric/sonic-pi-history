@@ -1,1 +1,13 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+
+live_loop :space do
+  sleep 0.25*1
+end
+
+live_loop :background do
+  note = (ring (chord :Fs3, :M)).tick(:main)
+
+  use_synth :dark_ambience
+  play note
+  32.times{sync :space}
+end

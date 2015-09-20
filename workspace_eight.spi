@@ -51,7 +51,7 @@ end
 end
 
                           live_loop :darkness do
-                            sample_and_sleep Dust[/f#/, 0]
+                            sample_and_sleep Dust[/f#/, 1]
                           end
 
 live_loop :graphics do

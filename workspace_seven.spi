@@ -48,7 +48,7 @@ end
 end
 
 live_loop :voices do
-sample  Corrupt[/f#/,0]
+sample  Corrupt[/f#/,0], beat_stretch: 1
 sleep 1
 end
 

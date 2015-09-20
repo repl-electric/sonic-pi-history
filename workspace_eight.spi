@@ -37,7 +37,7 @@ live_loop :graphics do
  sync :space  
 if spread(1,4).tick(:drums)
  sample Mountain[/subkick/, [0,0,0,0,1,1,1,1]].tick(:s), cutoff: 95 
- shader("decaying-uniform", "iBeat", 0.8, 0.0005)
+ shader("decaying-uniform", "iBeat", 0.8, 0.005)
 end
 
 if spread(1,8, rotate: 1).tick(:drums)

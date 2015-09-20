@@ -19,9 +19,9 @@ end
 with_fx(:reverb, room: 1.0, mix: 1.0) do |rfx|
 live_loop :highlights do
  sync :space
- notes = (ring chord(:Fs3, '7'), chord(:As3, 'm+5'), chord(:Ds3, 'm'), chord(:Cs3, 'maj9')).tick
+ note = (ring chord(:Fs3, '7'), chord(:As3, 'm+5'), chord(:Ds3, 'm'), chord(:Cs3, 'maj9')).tick
  use_synth :tb303
-   
+   play note, amp: 0.1
 end
 end
 

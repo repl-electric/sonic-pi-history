@@ -3,6 +3,6 @@ live_loop :frag do
 end
 
 
-            live_loop :a do
-
-            end
+ live_loop :a do
+ sample Mountain[/cracklin/,0], rate: 0.9
+ end

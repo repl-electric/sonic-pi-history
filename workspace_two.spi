@@ -7,5 +7,5 @@ shader(:uniform, "iVolume", 1.0);
 
 live_loop :space do
 synth :dark_ambience, note: :Fs3
-sleep 8
+sleep 2
 end

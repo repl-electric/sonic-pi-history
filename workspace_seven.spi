@@ -7,7 +7,7 @@ end
 
 live_loop :darkness do
   use_synth :dark_ambience
-  notes = (ring :Fs3).tick, release: 8.0
-  play notes
+  notes = (ring :Fs3).tick
+  play notes, release: 4.0, decay: 8.0
   32.times{sync :time}
 end

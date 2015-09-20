@@ -41,7 +41,7 @@ if spread(1,4).tick(:drums)
   end
 
 if spread(7,11).look(:drums)
- sample Mountain[/microperc/, 6], cutoff: (range 70, 100, 10).tick(:cut) 
+ sample Mountain[/microperc/, 6], cutoff: (range 100, 80, 10).tick(:cut) 
  shader("uniform", "iHat", 0.8)
 end
 

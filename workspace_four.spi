@@ -5,6 +5,9 @@ live_loop :coils do
 #  sample Ether[/coil/i, /f#/i], amp: 1.0
 end
 
+
+shader(:decaying-uniform, "iBeat", 1.0)
+
 live_loop :apeg do
   use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  

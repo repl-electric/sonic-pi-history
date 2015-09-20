@@ -23,7 +23,7 @@ live_loop :hollow do
 notes = (knit chord(:Fs3, 'M'),32, chord(:As3, 'm'),32, chord(:Ds3, 'm'),32, 
                      chord(:Cs3, 'm'),32, chord(:Cs3, 'maj9'),32 ).tick
   
-  play notes.tick(:n), amp: 0.3, release: 1.0
+  play notes.tick(:n), amp: 0.3, release: 1.0, attack: 0.2
 
 
 end

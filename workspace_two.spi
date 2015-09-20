@@ -1,5 +1,5 @@
 shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/textures/tex16.png", 1)
-shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/textures/tex09.png", 1)
+shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/textures/tex09.jpg", 1)
 
 
 shader(:uniform, "iStars", 1.0);

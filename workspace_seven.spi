@@ -63,11 +63,9 @@ live_loop :other do
   sample_and_sleep Corrupt[/keys/,/f#/, [0,1]].tick
 end
 
-                                             live_loop :drums do
-                             sample Corrupt[/kick/,4], cutoff: 100
-sleep 1.0
-                                             end
-
+                           live_loop :pop do
+                             synth :blade, :Fs1
+                           end
 
 
 live_loop :kicker do

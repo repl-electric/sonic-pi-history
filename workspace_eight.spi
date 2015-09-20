@@ -41,12 +41,14 @@ live_loop :bass do
 end
 
 live_loop :voices do
+with_fx(:reverb) do
+
   32.times{sync :space}
   sample Sop[/f#/, 0], amp: 1.0, cutoff: 100
   32.times{sync :space}
   sample Sop[/a#/, 2], amp: 1.0, cutoff: 100
-  32.times{sync :space}
   #sample Dust[/voice/,16], amp: 0.1, cutoff: (range 100, 120).tick(:cutoffvoice)
+end
 end
 
 live_loop :graphics do

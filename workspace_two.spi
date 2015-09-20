@@ -6,6 +6,6 @@ shader(:uniform, "iStars", 1.0);
 shader(:uniform, "iVolume", 1.0);
 
 live_loop :space do
-synth :dark_ambience, note: :Fs3
+synth :dark_ambience, note: :Fs2
 sleep 2
 end

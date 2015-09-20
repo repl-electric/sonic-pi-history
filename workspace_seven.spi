@@ -46,7 +46,7 @@ end
 
                           live_loop :more_voices do
                             32.times{sync :time}
-                            sample Dust[/voices/, 14], amp: 0.01
+                            sample Frag[/coil/, 4], amp: 0.01
 
                           end
 

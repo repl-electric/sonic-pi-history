@@ -46,7 +46,7 @@ end
 
                           live_loop :more_voices do
                             32.times{sync :time}
-                            sample Frag[/coil/, [4,5,6]].tick(:coils), amp: 0.1
+                            sample Frag[/coil/, [4,5,6]].tick(:coils), amp: 0.08
 
                           end
 

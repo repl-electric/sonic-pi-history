@@ -48,6 +48,7 @@ end
 end
 
 live_loop :voices do
+sync :kicker
 sample  Corrupt[/f#/,0], beat_stretch: 4
 sleep 4
 end

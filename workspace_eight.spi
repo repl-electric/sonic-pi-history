@@ -59,7 +59,7 @@ end
 
 if spread(1,8, rotate: 1).look(:drums)
  sample Mountain[/snare/, [0,1]].tick(:a), cutoff: (range 90, 120, 10).tick(:cs)
-shader("uniform", "iBeat", 0.99)
+shader("uniform", "iBeat", 0.98)
  end
 
 

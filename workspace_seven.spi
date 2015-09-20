@@ -20,8 +20,8 @@ end
 
 
 live_loop :thumb do
-  4.times{sync :time}
-  sample Mountain[/subkick/,0], cutoff: 80
+  sync :time
+  sample Mountain[/subkick/,0], cutoff: 80 if spread(1,4).tick
   
 
 

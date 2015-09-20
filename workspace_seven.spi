@@ -16,7 +16,7 @@ end
 live_loop :drums do
   sync :time
   if spread(1,4).tick
-    Mountain[/subkick/,0], cutoff: 80
+    sample Mountain[/subkick/,0], cutoff: 80
   end
 
 end

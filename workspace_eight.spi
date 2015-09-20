@@ -41,7 +41,7 @@ if spread(1,4).tick(:drums)
   end
 
 if spread(1,8).tick(:drums)
- sample Mountain[/snare/, 1], cutoff: 85 
+ sample Mountain[/snare/, 1], cutoff: 70 
  shader("uniform", "iBeat", 1.0)
   end
 

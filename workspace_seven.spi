@@ -23,7 +23,7 @@ notes = (knit chord(:Fs3, 'M'),2, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1,
 
 end
 
-with_fx(:reverb, room: 1.0) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do
 live_loop :bass do
   use_synth :dsaw
   sync :time

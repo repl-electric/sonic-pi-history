@@ -65,7 +65,7 @@ end
 
                            live_loop :pop do
                              sync :other
-                             4.times{
+                             8.times{
                              with_fx(:echo, phase: 0.25) do
                                synth :dsaw, note: (knit :Fs3,7, :Fs4,2).tick, cutoff: 50, release: 0.1
                              end

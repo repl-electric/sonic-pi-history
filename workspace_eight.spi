@@ -21,7 +21,7 @@ live_loop :highlights do
  sync :space
  note = (ring chord(:Fs3, '7'), chord(:As3, 'm+5'), chord(:Ds3, 'm'), chord(:Cs3, 'maj9')).tick
  use_synth :tb303
-   play note[-1], amp: 0.05, release: 0.1, attack: 0.1, cutoff: 80
+   play note[-1], amp: 0.1, release: 0.1, attack: 0.1, cutoff: 80
 end
 end
 

@@ -44,7 +44,7 @@ live_loop :voices do
   8.times{sync :space}
  sample Sop[/f#/, 0], amp: 0.5, cutoff: 100
   8.times{sync :space}
- sample Sop[/a#/, 1], amp: 0.5, cutoff: 100
+ sample Sop[/a#/, 2], amp: 0.5, cutoff: 100
 
   #sample Dust[/voice/,16], amp: 0.1, cutoff: (range 100, 120).tick(:cutoffvoice)
 end

@@ -13,7 +13,7 @@ live_loop :coils do
               chord(:Cs3, :M),
               chord(:Cs3, :maj9)
 
-).tick(:c), release: 8, attack: 4.0, amp: 10.0, detune1: 0, detune2: 0
+).tick(:c), release: 8, attack: 4.0, amp: 10.0
   }
   32.times{sync :apeg}
 end

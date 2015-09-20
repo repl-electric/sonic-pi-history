@@ -18,6 +18,6 @@ end
 
 live_loop :graphics do
  sync :space  
- shader("uniform", "iBeat", 1.0)
+ shader("uniform", "iBeat", 0.1)
   
 end

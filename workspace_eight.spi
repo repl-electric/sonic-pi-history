@@ -24,7 +24,7 @@ live_loop :test do
                           chord(:Cs3, 'maj9') ).tick(:m)
     32.times{
       sync :space
-      play notes[-1], attack: 0.001, amp: 0.1, cutoff: (range 50,70,5).tick(:c)
+      play notes[-1], attack: 0.001, amp: 0.01, cutoff: (range 50,70,5).tick(:c)
     }
 end
 end

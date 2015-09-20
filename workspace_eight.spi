@@ -7,3 +7,7 @@ live_loop :minor do
 end
  sleep 1
 end
+
+live_loop :mono do
+  play scale(:Fs3, :minor_pentatonic, num_octave: 2).take(4)
+end

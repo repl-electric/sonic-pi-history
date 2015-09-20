@@ -63,7 +63,7 @@ end
 
 if spread(1,8, rotate: 1).look
    shader("uniform", "iHat", rrand(0.0,1.0))
-  sample Mountain[/snare/, Range.new(0, (ring 1,1).tick(:sr))].tick(:snare), cutoff: 70 
+  #sample Mountain[/snare/, Range.new(0, (ring 1,1).tick(:sr))].tick(:snare), cutoff: 70 
 end
 
   if spread(7,11).look

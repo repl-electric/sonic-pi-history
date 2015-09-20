@@ -23,13 +23,12 @@ notes = (knit chord(:Fs3, 'M'),2, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1,
 
 end
 
-with_fx(:reverb, room: 1.0, mix: 1.0) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 live_loop :bass do
   use_synth :dsaw
   sync :time
    notes = (ring :Fs2, :As2, :Ds2, :Cs2, :Cs2).tick(:notes)
-
-  play (knit notes, 1, _, 31).tick, amp: 0.15, cutoff: 60, release: 2.0, attack: 2.0, decay: 4.0, detune: 12
+  play (knit notes, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 2.0, attack: 2.0, decay: 4.0, detune: 12
   with_synth(:prophet){
     play (knit notes, 1, _, 31).look, amp: 0.15, cutoff: 60, release: 2.0, attack: 2.0, decay: 4.0
   }

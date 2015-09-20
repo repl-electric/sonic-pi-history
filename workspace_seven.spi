@@ -33,7 +33,7 @@ live_loop :thumb do
   sync :time
   with_fx(:echo) do
   with_fx(:slicer, phase: 0.25) do
-  sample Mountain[/subkick/,[0,1]].tick(:drums), cutoff: 70 if spread(1,8).tick
+  sample Mountain[/subkick/,[0,1]].tick(:drums), cutoff: 60 if spread(1,8).tick
   end
   end
 

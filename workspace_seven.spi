@@ -65,7 +65,7 @@ end
 
                            live_loop :pop do
                              synth :dsaw, note: :Fs3, cutoff: 50
-                             sleep 0.5
+                             sleep 1.0
                            end
 
 

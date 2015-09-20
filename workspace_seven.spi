@@ -60,7 +60,7 @@ sleep 2
 end
 
 live_loop :other do
-  sample_and_sleep Corrupt[/keys/,/f#/, 0,1]
+  sample_and_sleep Corrupt[/keys/,/f#/, [0,1]].tick
 end
 
                                              live_loop :drums do

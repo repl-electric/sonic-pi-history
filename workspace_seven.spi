@@ -49,10 +49,12 @@ end
 
 live_loop :voices do
 sync :kicker
-    sample Corrupt[/kick/,[1,2]].tick, amp: 2.0, cutoff: 120 if spread(1,4).tick(:a)
+sample Corrupt[/kick/,[1,2]].tick, amp: 2.0, cutoff: 120 if spread(1,4).tick(:a)
 
 sample  Corrupt[/f#/,0], beat_stretch: 4
-sleep 4
+sleep 2
+sample Corrupt[/kick/,[1,2]].tick, amp: 2.0, cutoff: 120 if spread(1,4).tick(:a)
+sleep 2
 end
 
 live_loop :kicker do

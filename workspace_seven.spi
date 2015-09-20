@@ -64,7 +64,8 @@ live_loop :other do
 end
 
                                              live_loop :drums do
-                                               
+                             sample Corrupt[/kick/]
+sleep 0.2
                                              end
 
 

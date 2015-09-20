@@ -32,7 +32,7 @@ end
 live_loop :bass do
   32.times{sync :space}
    use_synth :dsaw
-   shader(:uniform, :iWobble, rrand(0.0,1.0))
+   shader(:uniform, "iWobble", rrand(0.0,1.0))
    note = (ring :Fs2, :As2, :Ds2, :Cs2).tick(:bass)
    play note, cutoff: 60, release: 4.0, decay: 8.0  
    use_synth :prophet

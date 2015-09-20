@@ -18,6 +18,6 @@ end
 
 live_loop :graphics do
  sync :space  
-uniform("/decaying-uniform", "iBeat", 1.0)
+shaderview("/decaying-uniform", "iBeat", 1.0)
   
 end

@@ -8,7 +8,7 @@ live_loop :background do
   note = (ring (chord :Fs3, :M)).tick(:main)
 
   use_synth :dark_ambience
-  play note, release: 8
+  play note, release: 8, decay: 10
 
   32.times{sync :space}
 end

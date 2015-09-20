@@ -23,7 +23,7 @@ live_loop :thumb do
   sync :time
   sample Mountain[/subkick/,[0,1]].tick(:drums), cutoff: 70 if spread(1,8).tick
   if spread(7,11).look
-    sample Mountain[/microperc/,0], amp: 0.2, cutoff: (range 60, 100, 10).tick(:c)
+    sample Mountain[/microperc/,5], amp: 0.2, cutoff: (range 60, 100, 10).tick(:c)
   end
   
 

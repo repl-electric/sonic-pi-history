@@ -7,7 +7,9 @@ end
 live_loop :background do
   note = (ring (chord :Fs3, :M), 
                        chord(:As3, :m),
-                       chord(:Ds3, :m)
+                       chord(:Ds3, :m),
+                       chord(:Cs3, :M),
+                       chord(:Cs3, 'maj7')
 ).tick(:main)
 
   use_synth :dark_ambience

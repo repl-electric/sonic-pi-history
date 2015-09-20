@@ -2,6 +2,8 @@
 
 live_loop :minor do
  notes = (ring :Fs3, :A3, :D4).tick
- synth :dark_ambience, note: notes
+ with_synth :dark_ambience do
+    note: notes
+end
  sleep 1
 end

@@ -18,7 +18,7 @@ live_loop :darkness do
   32.times{sync :time}
 end
 
-with_fx(:reverb) do |r_fx|
+with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 live_loop :bass do
  notes = (ring :Fs2, :As2, :Ds2, :Cs2).tick  
 32.times{
@@ -35,14 +35,12 @@ end
 end
 
 live_loop :voices do
-  with_fx(:reverb) do
+  with_fx(:reverb, room: 1.0, mix: 1.0) do
   32.times{sync :time}
     sample Sop[/F#/,0], amp: 0.2, cutoff: 80
   32.times{sync :time}
-               #I always gets something odd here... lets see what happens
     sample Sop[/A#/,4], amp: 0.2, cutoff: 80
-
-
+  32.times{sync :time}
   end
 end
 

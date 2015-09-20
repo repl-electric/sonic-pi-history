@@ -13,14 +13,24 @@ live_loop :darkness do
   32.times{sync :time}
 end
 
+live_loop :hollow do
+  use_synth :hollow
+  sync :
+notes = (knit chord(:Fs3, 'M'),2, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1, 
+                      chord(:Cs3, 'm'),1, chord(:Cs3, 'maj9'),1 ).tick
+  
+
+
+end
+
 live_loop :bass do
   use_synth :dsaw
   sync :time
    notes = (ring :Fs2, :As2, :Ds2, :Cs2, :Cs2).tick(:notes)
 
-  play (knit notes, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 4.0, attack: 2.0, decay: 4.0
+  play (knit notes, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 2.0, attack: 2.0, decay: 4.0
   with_synth(:prophet){
-    play (knit notes, 1, _, 31).look, amp: 0.1, cutoff: 60, release: 4.0, attack: 2.0, decay: 4.0
+    play (knit notes, 1, _, 31).look, amp: 0.1, cutoff: 60, release: 2.0, attack: 2.0, decay: 4.0
   }
 end
 

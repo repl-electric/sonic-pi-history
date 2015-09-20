@@ -9,7 +9,7 @@ end
 end
 
 live_loop :mono do
-notes = scale(:Fs3, :minor_pentatonic).choos
+notes = scale(:Fs3, :minor_pentatonic).choose
   32.times{
     play notes
     sleep 0.5

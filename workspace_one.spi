@@ -1,8 +1,13 @@
 live_loop :frag do
-  sample_and_sleep Frag[/F#/,1]
+  sample_and_sleep Frag[/F#/,2]
 end
 
 
  live_loop :a do
- sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.1
+     sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.1
  end
+
+
+                        live_loop : do
+
+                        end

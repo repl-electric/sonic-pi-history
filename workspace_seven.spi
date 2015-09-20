@@ -27,7 +27,7 @@ live_loop :bass do
       play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.2, cutoff: 60, decay: 4.0, attack: 0.1, detune: 12
       }
       with_synth(:prophet){
-      play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.15, cutoff: 65, decay: 4.0, attack: 0.0001
+      play (knit notes,1, _, 31).tick(:notes), release: 4.0, amp: 0.15, cutoff: 70, decay: 4.0, attack: 0.0001
       }
     control r_fx, damp: rrand(0.0,1.0)
   }

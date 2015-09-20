@@ -18,14 +18,16 @@ end
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do |rfx|
 live_loop :highlights do
- 8.times{sync :space}
  note = (ring chord(:Fs3, '7'), 
                      chord(:As3, 'm7+5'), 
                      chord(:Ds3, 'm'), 
                      chord(:Cs3, 'maj9')).tick
  use_synth :tb303
+ 32.times{
+  sync :space
  play note[-1], attack: 0.001, amp: 0.5, cutoff: (range 50,70,5).tick(:c)
  control rfx, damp: rrand(0.0,1.0)
+}
 end
 end
 
@@ -37,6 +39,11 @@ live_loop :bass do
    play note, cutoff: 60, release: 4.0, decay: 2.0,  detune: 12
    use_synth :prophet
    play note, cutoff: 60, release: 4.0, decay: 2.0 , attack: 0.01
+end
+
+live_loop :voices do
+  sync :space
+  
 end
 
 live_loop :graphics do

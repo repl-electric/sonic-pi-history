@@ -10,4 +10,5 @@ end
 
 live_loop :mono do
   play scale(:Fs3, :minor_pentatonic, num_octave: 2).take(4)
+sleep 0.5
 end

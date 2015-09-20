@@ -51,6 +51,9 @@ if spread(1,8, rotate: 1).look
 end
 
   if spread(7,11).look
+    # WHAT should we do here..................
+         shader("uniform", "iFizzle", rrand(0.0,1.0))
+
     sample Mountain[/microperc/,5], amp: 0.5, cutoff: (range 60, 100, 10).tick(:c)
   end
   if spread(3,8).look

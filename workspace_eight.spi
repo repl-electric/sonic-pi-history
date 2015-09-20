@@ -1,1 +1,1 @@
-puts scale(:Fs3, :minor_pentatonic, num_octaves: 3).take(3)
+puts scale(:Fs3, :minor_pentatonic, num_octaves: 3).shuffle.take(3)

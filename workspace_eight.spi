@@ -22,11 +22,15 @@ live_loop :highlights do
  note = (ring chord(:Fs3, '7'), 
                      chord(:As3, 'm+5'), 
                      chord(:Ds3, 'm'), 
-                    chord(:Cs3, 'maj9')).tick
+                     chord(:Cs3, 'maj9')).tick
  use_synth :tb303
  play note[-1], attack: 0.001, amp: 0.5, cutoff: (range 50,70,5).tick(:c)
  control rfx, damp: rrand(0.0,1.0)
 end
+end
+
+live_loop :bass do
+  32.times{sync :space}
 end
 
 live_loop :graphics do
@@ -42,7 +46,7 @@ if spread(7,11).look(:drums)
 end
 
 if spread(6,8).look(:drums)
- sample Mountain[/microperc/, 5], cutoff: 85 
+ sample Mountain[/microperc/, 5], cutoff: (range 80, 100).tick(:cut2) 
  shader("uniform", "iHat", 0.8)
 end
 

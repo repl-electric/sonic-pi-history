@@ -2,4 +2,4 @@ shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/tex
 shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/textures/tex09.jpg", 1)
 
 
-shader(:uniform, "iStars", 0.0);
+shader(:uniform, "iStars", 1.0);

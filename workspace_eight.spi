@@ -22,6 +22,7 @@ live_loop :highlights do
  note = (ring chord(:Fs3, '7'), chord(:As3, 'm+5'), chord(:Ds3, 'm'), chord(:Cs3, 'maj9')).tick
  use_synth :tb303
  play note[-1], amp: 0.3, release: 0.8, decay: 1.0, attack: 0.1, cutoff: 70
+ control rfx, damp: rrand(0.0,1.0)
 end
 end
 

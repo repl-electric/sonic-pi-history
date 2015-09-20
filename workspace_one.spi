@@ -1,3 +1,4 @@
+_=nil
 live_loop :frag do
   sample_and_sleep Frag[/F#/,2]
 end

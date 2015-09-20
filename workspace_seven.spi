@@ -49,6 +49,7 @@ end
 
 live_loop :voices do
 sample  Corrupt[/128/,0]
+sleep 1
 end
 
 live_loop :kicker do

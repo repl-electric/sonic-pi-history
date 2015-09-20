@@ -22,7 +22,7 @@ with_fx(:reverb) do |r_fx|
 live_loop :bass do
  notes = (ring :Fs2).tick  
 32.times{
-    sync :times
+    sync :time
     synth :dsaw, note: notes, release: 8.0, amp: 1.o, cutoff: 80
     control r_fx, damp: rrand(0.0,1.0)
   }

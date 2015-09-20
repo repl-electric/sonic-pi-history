@@ -37,6 +37,9 @@ live_loop :thumb do
   end
   end
 
+  sample Mountain[/snare/,0].tick(:drums), cutoff: 60 if spread(1,16).tick
+
+
   if spread(7,11).look
     sample Mountain[/microperc/,5], amp: 0.5, cutoff: (range 60, 100, 10).tick(:c)
   end

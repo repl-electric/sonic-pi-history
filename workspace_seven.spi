@@ -65,7 +65,7 @@ end
 
                                              live_loop :drums do
                              sample Corrupt[/kick/,0]
-sleep 1.0
+sleep 1.0, cutoff: 100
                                              end
 
 

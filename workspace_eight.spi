@@ -48,7 +48,7 @@ end
 live_loop :graphics do
  sync :space  
 
- sample Dust[/voice/,16], amp: 0.2, cutoff: (range 100, 120).tick(:cutoffvoice)
+ sample Dust[/voice/,16], amp: 0.1, cutoff: (range 100, 120).tick(:cutoffvoice)
 
 if spread(1,4).tick(:drums)
 with_fx((knit :none, 0, :echo, 1, :none, 0).tick(:fx), phase: 0.25*2.0) do 

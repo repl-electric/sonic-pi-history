@@ -51,7 +51,7 @@ end
 end
 
                           live_loop :darkness do
-                            sample_and_sleep Corrupt[/f#/, 1], cutoff: (range 80, 100, 10)
+                            sample_and_sleep Corrupt[/f#/, 1], cutoff: (range 80, 100, 10).tick(:cu)
                           end
 
 live_loop :graphics do

@@ -9,6 +9,6 @@ end
 live_loop :darkness do
 use_synth :dark_ambience
 notes = (ring chord(:Fs3)).tick 
-play notes, release: 8.0, attack: 1.0
+play notes, release: 8.0, attack: 2.0
 32.times{sync :time}
 end

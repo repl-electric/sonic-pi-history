@@ -47,32 +47,9 @@ control fx_r, damp: rrand(0.0,1.0)
 end
 end
 
-live_loop :voices do
-sync :kicker
-#sample  Corrupt[/f#/,0], beat_stretch: 4
-sleep 2
-sleep 2
-end
-
-live_loop :kickers do
-sample Corrupt[/kick/,[1,2]].tick, amp: 2.0, cutoff: 120
-sleep 2
-end
-
 live_loop :other do
   sample_and_sleep Corrupt[/keys/,/f#/, [0,1]].tick
 end
-
-                           live_loop :pop do
-                             sync :other
-                             8.times{
-                             with_fx(:echo, phase: 0.25) do
-                               synth :dark_ambience, note: (knit :Fs3,7, :Fs4,2).tick, attack: 0.01, amp: 10.0
-                             end
-                             sleep 0.25
-}
-                           end
-
 
 live_loop :kicker do
  sync :apeg

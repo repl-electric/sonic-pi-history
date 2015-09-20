@@ -35,7 +35,7 @@ end
 end
 
 live_loop :voices do
-  32.time{sync :time}
+  32.times{sync :time}
   sample Sop[/F#/,0], amp: 0.3, cutoff: 100
 end
 

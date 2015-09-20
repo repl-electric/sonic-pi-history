@@ -12,7 +12,7 @@ live_loop :background do
                        chord(:Cs3, 'maj9')
 ).tick(:main)
   use_synth :dark_ambience
-  play note, release: 8, decay: 8, amp: 10, attack: 2.0, cutoff: 80
+  play note, release: 8, decay: 8, amp: 5, attack: 2.0, cutoff: 80
   32.times{sync :space}
 end
 

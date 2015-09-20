@@ -24,7 +24,7 @@ live_loop :highlights do
                      chord(:Ds3, 'm'), 
                     chord(:Cs3, 'maj9')).tick
  use_synth :tb303
- play note[-1],, attack: 0.001, amp: 0.5, cutoff: (range 50,70,5).tick(:c)
+ play note[-1], attack: 0.001, amp: 0.5, cutoff: (range 50,70,5).tick(:c)
  control rfx, damp: rrand(0.0,1.0)
 end
 end

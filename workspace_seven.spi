@@ -2,4 +2,10 @@
 _=nil
 
 #testing audio and visuals with streaming.
-play 60
+
+
+live_loop :test do
+  use_synth :dark_ambience
+  play :Fs1
+sleep 1
+end

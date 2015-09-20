@@ -52,7 +52,7 @@ end
 
 live_loop :thumb do
   sync :time
-  with_fx(:echo, room: 0.8, mix: 1.0, decay: 4.0, phase: 0.25/2.0 ) do
+  with_fx(:echo, room: 0.8, mix: 1.0, decay: 4.0, phase: 0.25 ) do
 #  with_fx(:slicer, phase: 0.25 ) do
 if spread(1,8).tick
   shader("decaying-uniform", "iBeat", 2.0, 0.001)

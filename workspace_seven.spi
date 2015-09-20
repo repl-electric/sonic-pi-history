@@ -20,8 +20,8 @@ end
 live_loop :hollow do
   use_synth :hollow
   sync :time
-notes = (knit chord(:Fs3, 'M'),1, chord(:As3, 'm'),1, chord(:Ds3, 'm'),1, 
-                      chord(:Cs3, 'm'),1, chord(:Cs3, 'maj9'),1 ).tick
+notes = (knit chord(:Fs3, 'M'),32, chord(:As3, 'm'),32, chord(:Ds3, 'm'),32, 
+                     chord(:Cs3, 'm'),32, chord(:Cs3, 'maj9'),32 ).tick
   
   play notes[-1], amp: 0.1, release: 1.0
 

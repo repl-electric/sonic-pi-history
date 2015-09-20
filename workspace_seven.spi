@@ -17,3 +17,12 @@ live_loop :darkness do
   play notes, release: 8.0, attack: 2.0, decay: 4.0
   32.times{sync :time}
 end
+
+
+live_loop :thumb do
+  4.times{sync :time}
+  sample Mountain[/subkick/,0], cutoff: 80
+  
+
+
+end

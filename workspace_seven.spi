@@ -65,6 +65,7 @@ end
 
                            live_loop :pop do
                              synth :blade, :Fs1
+sleep 0.25
                            end
 
 

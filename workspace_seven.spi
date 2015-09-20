@@ -16,7 +16,7 @@ end
 live_loop :bass do
   use_synth :dsaw
   sync :time
-   notes = (ring :Fs2, :As2, :Ds3, :Cs3, :Cs3).tick(:notes)
+   notes = (ring :Fs2, :As2, :Ds2, :Cs2, :Cs2).tick(:notes)
 
   play (knit notes, 1, _, 31).tick, amp: 0.1, cutoff: 60, release: 4.0, attack: 2.0
   with_synth(:prophet){

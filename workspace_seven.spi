@@ -61,7 +61,7 @@ end
 
 live_loop :other do
 sleep 1.0
-sample Corrupt[/keys/,1]
+sample Corrupt[/keys/].tick
 end
 
 

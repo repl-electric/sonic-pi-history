@@ -32,9 +32,11 @@ end
 live_loop :bass do
   32.times{sync :space}
    use_synth :dsaw
-   play :Fs1, cutoff: 60, release: 4.0, decay: 8.0  
+
+  note = (ring :Fs1, :As1, :Ds1, :Cs1).tick(:Bass)
+   play note, cutoff: 60, release: 4.0, decay: 8.0  
    use_synth :prophet
-   play :Fs1, cutoff: 60, release: 4.0, decay: 8.0 , attack: 0.01
+   play note, cutoff: 60, release: 4.0, decay: 8.0 , attack: 0.01
 end
 
 live_loop :graphics do

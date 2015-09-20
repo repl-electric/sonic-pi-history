@@ -73,7 +73,7 @@ end
 
 if spread(6,8).look(:drums)
  #sample Mountain[/microperc/, 7], cutoff: (range 70, 80).tick(:cut2) 
- shader("uniform", "iHat", 0.8)
+ #shader("uniform", "iHat", 0.8)
 end
 
 

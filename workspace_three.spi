@@ -1,6 +1,6 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
 live_loop :ambi do
-  sample Frag[/Fm/,0], beat_stretch: 1
+  sample Frag[/Fm/,0]
   sleep 4
 end

@@ -6,11 +6,12 @@ live_loop :ambi do
 end
 
 live_loop :corrupts do
+sample Corrupt[/F#m/,4]
+
 #   sample Corrupt[/Fm/, 2]
 sleep 1
 end
 
-sample Corrupt[/F#m/,4]
 
                live_loop :minor do
   with_synth(:string) do

@@ -16,7 +16,7 @@ end
 live_loop :drums do
    with_fx(:echo) do
    with_fx(:slicer, phase: 0.25) do
-    sample Mountain[/kick/,0],amp: 0.8, cutoff: 80
+    sample Mountain[/kick/,0], amp: 0.8, cutoff: 50
   end
   end
   sleep 0.25*1

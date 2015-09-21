@@ -58,7 +58,7 @@ end
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
-live_loop :chorus do
+live_loop :chorus2 do
 notes = (knit 
          chord_degree(1, :fs3, :major)[1..-1], 8,
          chord_degree(3, :fs3, :major)[1..-1], 8,
@@ -75,12 +75,12 @@ notes = (knit
          chord(:Cs3, :maj9)[1..-1],4
 )
 
-  1.times{sync :drum}
+  1.times{sync :drums}
     with_synth(:hoover)do
       #play notes.tick(:h)[0], amp: 0.025
     end
 
- 1.times{sync :drum}
+ 1.times{sync :drums}
     with_synth(:hollow){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
       #play notes.look(:h), amp: (knit 2.0,4, 0.0,4).tick(:amp), release: 0.5, decay: 0.5, cutoff: (ring 80,100,110,130).tick(:cut), res: (ring 0.98,0.99).tick(:xcut)

@@ -20,7 +20,7 @@ end
 
 live_loop :drums do
    with_fx(:slicer, phase: 0.0, mix: 0.0){
-    sample Dust[/F#m/,3], cutoff: (range 40, 130, 5).tick(:cutoff), pan: rdist(1)
+#    sample Dust[/F#m/,3], cutoff: (range 40, 130, 5).tick(:cutoff), pan: rdist(1)
    }
    sleep 4
 end

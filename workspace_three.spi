@@ -28,7 +28,6 @@ end
 
               live_loop :hats do
 sleep  0.125
-
-                sample Dust[/hat/, 3]
+                sample Dust[/hat/, 3] if spread(7,8).tick(:hat)
 
               end

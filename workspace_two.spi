@@ -119,7 +119,7 @@ live_loop :highlight2 do
   32.times{sync :drums}
   i_deter(deg_seq(%w{Fs4 1*3 3*3  5*3   1*3  3*3   5*3 }).tick,
              deg_seq(%w{Fs4 3     5     6       3       5     2 }).stretch(3).tick, 
-             amp: 0.1*1,  
+             amp: 0.1*0,  
              damp_time: 0.25*1.0)
 end
 end

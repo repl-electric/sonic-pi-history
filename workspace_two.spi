@@ -25,8 +25,8 @@ live_loop :warmup do
   sleep 8
 end
 
+
 live_loop :drums do
-   
    with_fx(:echo) do
 #   with_fx(:slicer, phase: 0.25) do
      if(spread(1,8).tick)
@@ -34,5 +34,10 @@ live_loop :drums do
      end
  # end
   end
+
+  if spread(7,11).look
+    sample Ether[/noise/, 0], amp: 0.1, cutoff: (range 70, 100).tick(:range)
+  end
+
   sleep 0.25*1
 end

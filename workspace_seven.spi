@@ -50,6 +50,7 @@ live_loop :drums do
   if spread(1,4).look
     sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
   end
-   sample Dust[/TDDC_Voice_Hit/,16], amp: 0.5, cutoff: (knit 85,3,100,1).tick(:thing), rate: (ring 1.0,  -1.0).tick(:r)
-
+  if spread(1,4).look
+    sample Dust[/TDDC_Voice_Hit/,16], amp: 0.5, cutoff: (knit 85,3,100,1).tick(:thing), rate: (ring 1.0,  -1.0).tick(:r)
+  end
 end

@@ -2,4 +2,8 @@ _=nil
 #No graphics for now :( 
 # Just messing and  exploring some ideas. It will be messy, its practice, its supposed to be :)
 
-play 60
+live_loop :space do
+  use_synth :dark_ambience
+  play :Fs1, release: 0.5, decay: 1.0
+  sleep 1.0
+end

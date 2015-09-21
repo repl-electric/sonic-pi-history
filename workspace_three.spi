@@ -10,4 +10,4 @@ live_loop :corrupts do
 sleep 1
 end
 
-sample Corrupt[/Fm/,5]
+sample Corrupt[/F#m/,5]

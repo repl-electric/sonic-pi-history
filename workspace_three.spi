@@ -18,6 +18,6 @@ live_loop :drums do
 end
 
               live_loop :kick do
-              sample Dust[/kick/, 0], amp: 1
-sleep 1
+                sample Dust[/kick/, 0], amp: 2
+                sleep 1
               end

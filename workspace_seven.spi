@@ -47,8 +47,8 @@ live_loop :drums do
   if spread(1,8).tick
     sample Mountain[/subkick/,0], cutoff: 100
   end
-  if spread(1,16).look
-  sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
-end
+  if spread(1,4.look
+    sample Fraz[/snap/i,[0,0,0,0,1,1,1,1]].tick(:snap), amp: 0.2, rate: rrand(1.01,0.99), cutoff: (knit 100,2, 100,1, 110,1).tick(:cutoff)
+  end
 
 end

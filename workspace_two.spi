@@ -3,7 +3,7 @@ shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/tex
 
 
 shader(:uniform, "iStars", 1.0);
-shader(:uniform, "iCells", 1.0);
+shader(:uniform, "iCells", 0.0);
 shader(:uniform, "iVolume", 1.0);
 
 #shader("decaying-uniform", "iBeat", 1.0, 0.001)
@@ -15,5 +15,9 @@ end
 
 live_loop :bass do
   sample Mountain[/subkick/,0], amp: 1.0 if spread(1,8).tick
+
+ sample Mountain[/subkick/,0], amp: 1.0 if spread(1,8).tick
+  
+
  sleep 0.25*1
 end

@@ -13,9 +13,9 @@ live_loop :lands do
 end
 
 live_loop :drums do
-  with_fx(:slicer){
+   with_fx(:slicer, phase: 2.0){
    sample Dust[/F#m/,0], cutoff: (range 40, 130, 5).tick(:cutoff)
-}
+   }
    sleep 4
 end
 

@@ -16,3 +16,8 @@ live_loop :drums do
    sample Dust[/F#m/,0], cutoff: (range 40, 130, 5).tick(:cutoff)
    sleep 4
 end
+
+              live_loop :kick do
+              sample Dust[/kick/, 0], amp: 1
+sleep 1
+              end

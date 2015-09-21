@@ -14,5 +14,5 @@ sample Corrupt[/F#m/,3]
 
                live_loop :minor do
                   synth :string, note: scale(:Fs3, :minor_pentatonic).take(3).shuffle
-                  sleep 0.25
+                  sleep 0.5
                end

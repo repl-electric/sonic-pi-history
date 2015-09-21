@@ -4,7 +4,7 @@ live_loop :lands do
   with_fx :reverb, room: 1, reps: 4 do
     use_synth :hollow
     use_random_seed 200
-    ns = (scale :fs4, :minor_pentatonic, num_octaves: 4).take(4)
+    ns = (scale :fs5, :minor_pentatonic, num_octaves: 4).take(4)
     16.times do
       play ns.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
       sleep 0.125/2.0

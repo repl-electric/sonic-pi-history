@@ -12,6 +12,14 @@ live_loop :dark do
   sleep 4
 end
 
+live_loop :bass do
+  #Always need a little bass
+  sync :dark
+  with_synth(:blade) do #Lets see if we can get blade to not sound  horrible
+    play :Fs1, amp: 0.1
+  end
+end
+
 live_loop :background do
    sample_and_sleep Frag[/f#/, 2], amp: 0.15
 end

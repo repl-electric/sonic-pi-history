@@ -13,9 +13,9 @@ live_loop :corrupts do
                  end
                  use_random_seed 310003
                  live_loop :minor do
-    ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
+                   ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
                    
-with_synth(:string) do
+                   with_synth(:plucked) do
                      play ns.choose
                    end
                    sleep 0.25

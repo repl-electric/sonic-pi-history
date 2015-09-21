@@ -14,10 +14,11 @@ live_loop :hollow_inside do
           play notes.choose, release: 0.11, amp: 0.8, cutoff: rrand(70, 120)
       end
     }
-end
       sleep 0.125
 
 }
+end
+
 end
 end
 

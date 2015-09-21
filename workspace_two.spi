@@ -144,5 +144,5 @@ end
 
                            live_loop :arrrrrrr do #D F A C E
                              sync :lovely
-                             sample Sop[/F#/,0], amp: 0.2
+                             sample Sop[/F#/,0], amp: 0.3
                            end

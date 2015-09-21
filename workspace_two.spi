@@ -9,7 +9,7 @@ shader(:uniform, "iVolume", 5.0);
 #shader("decaying-uniform", "iBeat", 1.0, 0.001)
 
 live_loop :space do
-synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 0.5, decay: 2.0, cutoff: 80, amp: 0.2
+synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 0.5, decay: 2.0, cutoff: 80, amp: 1.
 sleep 2
 end
 

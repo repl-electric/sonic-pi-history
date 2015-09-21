@@ -90,8 +90,8 @@ live_loop :patterings do
   1.times{sync :apeg}
 with_fx(:lpf, cutoff: 60){
 with_synth(:plucked){
-  play (ring :Fs4,  :Fs4, _,  _, :As4,  _,  _, _,  :As4, :As4,_,_,_,_,_,_
-                  :Fs4,  :Fs4, _,  _, :As4,  _,  _, _,  :As4, :As4,_,_,_,_,_,_
+  play (ring :Fs4,  :Fs4, _,  _, :As4,  _,  _, _,  :As4, :As4,_,_,_,_,_,_,
+                  :Fs4,  :Fs4, _,  _, :As4,  _,  _, _,  :As4, :As4,_,_,_,_,_,_,
                   :Fs4,  :Fs4, _,  _, :As4,  _,  _, _,  :As4, :As4,_,_,_,_,_,_
  ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1
 }}

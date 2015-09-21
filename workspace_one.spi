@@ -18,7 +18,7 @@ live_loop :bass do
   #if all else false reverb
   with_fx(:reverb, room: 1.0, mix: 1.0, damp: 0.8) do
   with_synth(:blade) do #Lets see if we can get blade to not sound  horrible
-    play (ring :Fs1, :Ds1, :CS1).tick(:notes), amp: 0.09, release: 2.0, attack: 0.1, decay: 0.9
+    play (ring :Fs1, :Ds1, :CS1, :Cs1).tick(:notes), amp: 0.09, release: 2.0, attack: 0.1, decay: 0.9
     play :Fs2, amp: 0.09, release: 1.0, attack: 0.1, decay: 0.5
   end
   end

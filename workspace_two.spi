@@ -5,7 +5,7 @@ _=nil
 live_loop :space do
   sync :drums
   use_synth :dark_ambience
-  play (ring :Es1, :Fs2).tick, release: 3.0, decay: 7.5, attack: 1.0, amp: 0.9
+  play (ring :Es1, :Fs2).tick, release: 3.0, decay: 7.5, attack: 1.0, amp: 1.2
   sleep 8.0
 end
 

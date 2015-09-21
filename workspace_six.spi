@@ -46,13 +46,13 @@ end
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
-live_loop :vocals do
+live_loop :vocals2 do
 sample Sop[/F#/,0], amp: 1.0, cutoff: 100
-32.times{sync :apeg}
+32.times{sync :drums}
 sample Sop[/F#/,0], amp: 0.5, cutoff: 100
 sample Sop[/A#/,0], amp: 0.5, cutoff: 100
-32.times{sync :apeg}
+32.times{sync :drums}
 sample Sop[/A#/,0], amp: 1.0, cutoff: 100
-32.times{sync :apeg}
+32.times{sync :drums}
 end
 end

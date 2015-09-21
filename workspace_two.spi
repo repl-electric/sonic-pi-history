@@ -75,7 +75,7 @@ notes = (knit
          chord(:Cs3, :maj9)[1..-1],4
 )
 
-  1.times{sync :drums}
+  sleep 0.25
     with_synth(:hoover)do
       #play notes.tick(:h)[0], amp: 0.025
     end

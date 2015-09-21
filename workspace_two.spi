@@ -126,7 +126,7 @@ end
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do
 live_loop :patterings do
 1.times{  sleep 0.25}
-with_fx(:lpf, cutoff: 60){
+with_fx(:lpf, cutoff: 40){
 with_synth(:plucked){
   play (knit :Fs4,2, _, 2,
                                           :As4,2, _, 2, _, 4
@@ -140,8 +140,8 @@ end
 #F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5
 
 
-                           live_loop : do
-
+                           live_loop :sop do
+                             
                            end
 
                            live_loop :arrrrrrr do #D F A C E

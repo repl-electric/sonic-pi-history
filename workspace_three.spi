@@ -1,5 +1,5 @@
 live_loop :hollow_inside do
-  with_fx(:lpf, cutoff: (range 30, 120,5).tick(:kf)) do
+  with_fx(:lpf, cutoff: (ramp 30, 120,5).tick(:kf)) do
   with_fx :reverb, room: 1, reps: 4 do
     use_random_seed 200
     notes = (scale :fs3, :minor_pentatonic, num_octaves: 4).take(4)

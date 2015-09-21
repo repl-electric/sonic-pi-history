@@ -4,6 +4,6 @@ _=nil
 
 live_loop :space do
   use_synth :dark_ambience
-  play :Fs1, release: 1.0, decay: 4.0, attack: 1.0
+  play :Fs1, release: 1.0, decay: 7.0, attack: 1.0
   sleep 8.0
 end

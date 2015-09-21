@@ -13,6 +13,6 @@ live_loop :lands, auto_cue: false do
 end
 
 live_loop :drums do
-   sample Mountain[/Fm/,0]
-sleep 8
+   sample Mountain[/F#m/,0]
+   sleep 8
 end

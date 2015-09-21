@@ -9,3 +9,5 @@ live_loop :corrupts do
 #   sample Corrupt[/Fm/, 2]
 sleep 1
 end
+
+sample Corrupt[/Fm/,4]

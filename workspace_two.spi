@@ -140,7 +140,11 @@ end
 #F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5
 
 
+                           live_loop : do
+
+                           end
+
                            live_loop :arrrrrrr do #D F A C E
                              sync :lovely
-                             sample Sop[/F#/,0], amp: 0.3
+#                             sample Sop[/F#/,0], amp: 0.3
                            end

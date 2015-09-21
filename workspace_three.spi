@@ -23,7 +23,7 @@ end
                     sample Dust[/kick/, [4,3,5,3]].tick, amp: 8
   #                end
                 end
-                sleep 1.0
+                sleep 2.0
               end
 
               live_loop :hats do

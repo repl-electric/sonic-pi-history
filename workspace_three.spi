@@ -2,10 +2,10 @@
 
 live_loop :ambi do
   sample Frag[/Fm/,0]
-  sleep 4
+  sleep 1
 end
 
 live_loop :corrupts do
    sample Corrupt[/Fm/, 0]
- sleep 1
+   sleep 1
 end

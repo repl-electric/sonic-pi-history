@@ -11,6 +11,7 @@ live_loop :corrupts do
                  sleep 1
                  
                  end
+                 use_random_seed 310003
                  live_loop :minor do
     ns = (scale :fs2, :minor_pentatonic, num_octaves: 4).take(4)
                    

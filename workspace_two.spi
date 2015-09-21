@@ -125,7 +125,7 @@ end
 end
 
                            live_loop :ending do
-                             sample_and_sleep Mountain[/cracklin/], rate: 0.9, amp: 0.8
+                             sample_and_sleep Mountain[/cracklin/], rate: 0.9, amp: 0.9
                            end
 
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do

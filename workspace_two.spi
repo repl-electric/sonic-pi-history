@@ -12,7 +12,7 @@ end
 live_loop :bass do
   16.times{sync :drums}
   use_synth :dsaw
-  notes = (ring :Fs2, :As2, :Ds2).tick
+  notes = (ring :Fs2, :As2, :Ds2, :Cs2).tick
 
 with_transpose(-12) do
   play notes, cutoff: 40, release: 2.0, decay: 2.0, attack: 0.1

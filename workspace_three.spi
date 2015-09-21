@@ -18,8 +18,8 @@ live_loop :drums do
 end
 
               live_loop :kick do
-                with_fx(:echo) do
+                with_fx(:echo, phase: 0.25) do
                 sample Dust[/kick/, 0], amp: 2
-end
+                end
                 sleep 1
               end

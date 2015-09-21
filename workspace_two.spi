@@ -37,7 +37,8 @@ live_loop :drums do
 
    
   if spread(7,11).look
-  with_fx(:reverb, room: 0.8, mix: 0.1) do 
+   mix = [0.1,0.2,0.3,0.4].choose
+  with_fx(:reverb, room: 0.8, mix: mix) do 
    sample Ether[/noise/, [0,0,1,1]].tick(:sample), amp: 0.2, cutoff: (range 70, 100).tick(:range)
  end
   end

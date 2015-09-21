@@ -5,9 +5,9 @@ live_loop :frag do
 end
 
 
- live_loop :a do
+# live_loop :a do
 #     sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.1
- end
+# end
 
 
 live_loop :apeg do

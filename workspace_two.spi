@@ -9,6 +9,6 @@ live_loop :space do
 end
 
 live_loop :warmup do
-  sample Frag[/F#/, /ambience/, 1], beat_stretch: 8.0
+  sample Frag[/F#/,  1], beat_stretch: 8.0
   sleep 8
 end

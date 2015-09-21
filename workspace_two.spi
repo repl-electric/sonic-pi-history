@@ -131,7 +131,7 @@ with_synth(:plucked){
   play (knit :Fs4,2, _, 2,
                                           :As4,2, _, 2, _, 4
 
- ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1.0
+ ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*0.0
 }}
 end
 end

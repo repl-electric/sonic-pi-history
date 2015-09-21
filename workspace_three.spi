@@ -7,12 +7,9 @@ end
 
 live_loop :corrupts do
 sample Corrupt[/F#m/,4]
-
 #   sample Corrupt[/Fm/, 2]
 sleep 1
 end
-
-
                live_loop :minor do
   with_synth(:string) do
                   play scale(:Fs3, :minor_pentatonic, num_octaves: 1).shuffle.take(3).shuffle 

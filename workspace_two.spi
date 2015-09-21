@@ -12,10 +12,14 @@ end
 live_loop :bass do
   16.times{sync :drums}
   use_synth :dsaw
-  play (ring :Fs1).tick, cutoff: 40, release: 2.0, decay: 2.0, attack: 0.1
+  notes = (ring :FS2).tick
+
+with_transpose(-12) do
+  play notes, cutoff: 40, release: 2.0, decay: 2.0, attack: 0.1
   with_synth(:prophet) do
-    play (ring :Fs2).tick, cutoff: 50, release: 2.0, decay: 2.0, attack: 0.001
+    play notes, cutoff: 50, release: 2.0, decay: 2.0, attack: 0.001
   end
+end
 
 end
 
@@ -40,7 +44,7 @@ live_loop :drums do
    mix = [0.1,0.2,0.3,0.4].choose
   with_fx(:reverb, room: 0.8, mix: mix) do 
    sample Ether[/noise/, [0,0,1,1]].tick(:sample), amp: 0.2, cutoff: (range 70, 100).tick(:range)
- end
+  end
   end
 
   sleep 0.25*1

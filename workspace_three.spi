@@ -13,5 +13,5 @@ live_loop :lands, auto_cue: false do
 end
 
 live_loop :drums do
-   Mountain[/Fm/,0]
+   sample Mountain[/Fm/,0]
 end

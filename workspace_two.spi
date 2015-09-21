@@ -93,7 +93,7 @@ with_fx(:flanger){
     sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
                  "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,
                  Mountain[/G#_BowedHarmSoft/,0],1,_,7
-).tick(:s), cutoff: 80, amp: 0.15*2
+).tick(:s), cutoff: 80, amp: 0.15*1
 }
 #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
 end

@@ -13,6 +13,6 @@ live_loop :lands, auto_cue: false do
 end
 
 live_loop :drums do
-   sample Dust[/F#m/,0], cutoff: 40
+   sample Dust[/F#m/,0], cutoff: (range 40, 130, 5).tick(:cutoff)
    sleep 4
 end

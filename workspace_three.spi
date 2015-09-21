@@ -1,0 +1,6 @@
+#Testing audio crackling
+
+live_loop :test do
+ synth :dark_ambience, release: 2.0
+sleep 2.0
+end

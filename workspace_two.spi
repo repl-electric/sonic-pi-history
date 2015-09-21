@@ -88,7 +88,7 @@ notes = (knit
 
   1.times{sync :drums}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.02
+      play notes.tick(:h)[0], amp: 0.1
     end
 
  1.times{sync :drums}
@@ -138,14 +138,3 @@ end
 # 
 #F#maj	G#min	A#min	Bmaj	C#maj	D#min	E#dim
 #F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5
-
-
-                           live_loop :sop do
-                             sample Sop[/A#/, 4], cutoff: 60, amp: 0.7
-                              32.times{sync :drums}
-                           end
-
-                           live_loop :arrrrrrr do #D F A C E
-                             sync :lovely
-#                             sample Sop[/F#/,0], amp: 0.3
-                           end

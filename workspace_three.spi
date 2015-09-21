@@ -13,6 +13,6 @@ live_loop :lands, auto_cue: false do
 end
 
 live_loop :drums do
-   sample Dust[/F#m/,0], cutoff: 60
+   sample Dust[/F#m/,0], cutoff: 40
    sleep 4
 end

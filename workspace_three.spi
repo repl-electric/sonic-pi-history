@@ -7,8 +7,13 @@ live_loop :hollow_inside do
     16.times{
     with_synth(:beep){
       play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
+    }
+    with_synth(:hollow){
+      play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
+    }
+
       sleep 0.125
-      }
+
 }
 end
 end

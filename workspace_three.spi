@@ -6,6 +6,6 @@ live_loop :ambi do
 end
 
 live_loop :corrupts do
-   sample Corrupt[/Fm/, 2]
+#   sample Corrupt[/Fm/, 2]
 sleep 1
 end

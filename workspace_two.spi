@@ -14,7 +14,7 @@ live_loop :bass do
   use_synth :dsaw
   play (ring :Fs1).tick, cutoff: 30, release: 2.0, decay: 2.0, attack: 0.1
   with_synth(:prophet) do
-  play (ring :Fs2).tick, cutoff: 40, release: 2.0, decay: 2.0, attack: 0.001
+    play (ring :Fs2).tick, cutoff: 50, release: 2.0, decay: 2.0, attack: 0.001
   end
 
 end

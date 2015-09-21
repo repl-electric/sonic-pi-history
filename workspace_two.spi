@@ -141,7 +141,7 @@ end
 
 
                            live_loop :sop do
-                             sample Sop[/A#/, 4], cutoff: 80, amp: 0.5
+                             sample Sop[/A#/, 4], cutoff: 60, amp: 0.5
                               32.times{sync :drums}
                            end
 

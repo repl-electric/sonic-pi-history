@@ -14,6 +14,6 @@ sleep 2
 end
 
 live_loop :bass do
-  sample Mountain[/subkick/,0], amp: 0.2
-sleep 1
+  sample Mountain[/subkick/,0], amp: 2.2
+ sleep 1
 end

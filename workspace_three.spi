@@ -27,7 +27,8 @@ end
               end
 
               live_loop :hats do
+sleep  0.125
+
                 sample Dust[/hat/, 3]
 
-sleep  0.125
               end

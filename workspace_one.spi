@@ -13,5 +13,5 @@ live_loop :dark do
 end
 
 live_loop :background do
-   
+   sample_and_sleep Frag[/f#/, 2], amp: 0.1
 end

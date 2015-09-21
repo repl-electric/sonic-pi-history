@@ -86,7 +86,7 @@ notes = (knit
 
   1.times{sync :drums}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.01
+      play notes.tick(:h)[0], amp: 0.02
     end
 
  1.times{sync :drums}

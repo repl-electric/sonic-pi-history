@@ -14,7 +14,7 @@ end
 
                live_loop :minor do
   with_synth(:string) do
-                  play scale(:Fs3, :minor_pentatonic, num_octaves: 3).take(3).shuffle 
+                  play scale(:Fs3, :minor_pentatonic, num_octaves: 4).take(3).shuffle 
   end
                   sleep 0.25
                end

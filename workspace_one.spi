@@ -15,3 +15,13 @@ end
 live_loop :background do
    sample_and_sleep Frag[/f#/, 2], amp: 0.1
 end
+
+live_loop :drums do
+  with_fx(:reverb) do
+  with_fx(:slicer) do
+     #Slice up the drums and put a little reverb on each slice
+     sample Corrupt[/kick/,0], amp: 0.1 # always start quiet as I've no idea what this will sound like
+  end
+  end
+   sleep 2.0
+end

@@ -4,7 +4,7 @@ _=nil
 
 live_loop :space do
   use_synth :dark_ambience
-  play (ring :Es1, :Fs1).tick, release: 3.0, decay: 7.5, attack: 1.0
+  play (ring :Es1, :Fs2).tick, release: 3.0, decay: 7.5, attack: 1.0
   sleep 8.0
 end
 

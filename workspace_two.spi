@@ -37,7 +37,6 @@ live_loop :dis do
 end
 
 live_loop :apeg do
-  use_synth :saw
   root = (knit :Fs3, 16, :As3, 16, :Ds3, 16,  
                :Fs3, 16, :As3, 16, :Gs3, 16,
                :Fs3, 16, :As3, 16, :Es3, 16,

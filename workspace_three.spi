@@ -2,10 +2,10 @@
 
 live_loop :hollow_inside do
   with_fx :reverb, room: 1, reps: 4 do
-    use_random_seed 200
-    notes = (scale :fs4, :minor, num_octaves: 4).take(4)
+    #use_random_seed 200
+    ns = (scale :fs4, :minor, num_octaves: 4).take(4)
     16.times do
-      play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
+      play ns.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
       sleep 0.125
     end
   end

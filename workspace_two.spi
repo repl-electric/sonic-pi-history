@@ -9,6 +9,6 @@ shader(:uniform, "iVolume", 1.0);
 shader("decaying-uniform", "iBeat", 1.0, 0.001)
 
 live_loop :space do
-synth :dark_ambience, note: :Fs2
+synth :dark_ambience, note: :Fs3
 sleep 2
 end

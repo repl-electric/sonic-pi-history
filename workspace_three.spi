@@ -3,7 +3,7 @@
 live_loop :lands, auto_cue: false do
   with_fx :reverb, room: 1, reps: 4 do
     use_synth :hollow
-    use_random_seed 31003
+    use_random_seed 100
     ns = (scale :fs4, :minor_pentatonic, num_octaves: 4).take(4)
     16.times do
       play ns.choose, detune: 12, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)

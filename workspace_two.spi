@@ -9,6 +9,12 @@ live_loop :space do
   sleep 8.0
 end
 
+live_loop :bass do
+  16.times{sync :drums}
+  use_synth :dsaw
+  play (ring :Fs2).tick, cutoff: 50, release: 2.0
+end
+
 live_loop :warmup do
   sync :drums
   sample Frag[/F#/,  1], beat_stretch: 8.0, amp: 0.2

@@ -31,8 +31,8 @@ live_loop :dis do
   #sample Corrupt[/f#/,0]
   #sample Corrupt[/f#/,1], amp: 1.0, cutoff: 100
   with_fx(:slicer, phase: (range 1, 2, 0.1).tick(:ph), smooth_down: 2.0, smooth_up: 2.0){
-    sample Ether[/f#/, /ambience/, 0], cutoff: 80, beat_rate: 4
-    sleep 4
+#    sample Ether[/f#/, /ambience/, 0], cutoff: 80, beat_rate: 4
+  #  sleep 4
   }
 end
 

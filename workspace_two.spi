@@ -12,7 +12,7 @@ end
 live_loop :bass do
   16.times{sync :drums}
   use_synth :dsaw
-  play (ring :Fs1).tick, cutoff: 30, release: 2.0
+  play (ring :Fs1).tick, cutoff: 30, release: 2.0, decay: 2.0
 end
 
 live_loop :warmup do

@@ -33,7 +33,11 @@ live_loop :drums do
    with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
 #   with_fx(:slicer, phase: 0.25) do
      if(spread(1,8).tick)
-       sample Mountain[/subkick/,[0,1]].tick(:dsam), amp: 1.2, cutoff: 100
+       sample Fraz[/subkick/,[0,1]].tick(:dsam), amp: 1.2, cutoff: 100
+
+#       sample Mountain[/subkick/,[0,1]].tick(:dsam), amp: 1.2, cutoff: 100
+
+
      end
  # end
   end

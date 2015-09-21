@@ -37,7 +37,7 @@ live_loop :drums do
        #sample Dust[/TDDC_Voice_Hit/,16], amp: 0.3, cutoff: (knit 85,3,100,1).tick(:thing), rate: (ring 1.0,  -1.0).tick(:r)
   
      #woops typo
-      sample Vocals[/breath/, 6], cutoff: 70
+      sample Vocals[/breath/, [6,7]], cutoff: 70
 
      end
      if(spread(1,4).look)

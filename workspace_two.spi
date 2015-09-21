@@ -4,7 +4,7 @@ shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/tex
 
 shader(:uniform, "iStars", 1.0);
 shader(:uniform, "iCells", 0.0);
-shader(:uniform, "iVolume", 2.0);
+shader(:uniform, "iVolume", 5.0);
 
 #shader("decaying-uniform", "iBeat", 1.0, 0.001)
 

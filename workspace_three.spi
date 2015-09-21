@@ -1,6 +1,6 @@
 
 
-live_loop :lands do
+live_loop :hollow_inside do
   with_fx :reverb, room: 1, reps: 4 do
     use_synth :hollow
     use_random_seed 200

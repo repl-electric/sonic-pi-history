@@ -15,9 +15,9 @@ end
 
 live_loop :bass do
   with_fx(:echo, phase: 0.25) do
-    with_fx(:slicer) do
-  sample Mountain[/subkick/,0], amp: 2.0 if spread(1,8).tick
-end
+  with_fx(:slicer) do
+  sample Mountain[/subkick/,0], amp: 3.0 if spread(1,8).tick
+  end
   end
   
 

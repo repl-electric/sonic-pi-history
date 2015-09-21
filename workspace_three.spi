@@ -27,7 +27,7 @@ end
               end
 
               live_loop :hats do
-sleep  0.125
+sleep  0.125/2.0
                 sample Dust[/hat/].tick(:d) if spread(7,8).tick(:hat)
 
               end

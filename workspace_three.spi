@@ -14,4 +14,5 @@ end
 
 live_loop :drums do
    sample Mountain[/Fm/,0]
+sleep 8
 end

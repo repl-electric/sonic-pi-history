@@ -141,7 +141,8 @@ end
 
 
                            live_loop :sop do
-                             
+                             sample Sop[/F#/, 0]
+                              32.times{sync :drums}
                            end
 
                            live_loop :arrrrrrr do #D F A C E

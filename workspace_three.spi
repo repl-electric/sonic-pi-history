@@ -6,7 +6,7 @@ live_loop :ambi do
 end
 
 live_loop :corrupts do
-sample Corrupt[/F#m/,4]
+sample Corrupt[/F#m/,0]
 #   sample Corrupt[/Fm/, 2]
 sleep 1
 end

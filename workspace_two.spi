@@ -14,9 +14,9 @@ sleep 2
 end
 
 live_loop :bass do
+  with_fx(:echo) do
   sample Mountain[/subkick/,0], amp: 1.0 if spread(1,8).tick
-
-  sample Mountain[/subkick/,0], amp: 1.0 if spread(1,8).tick
+end
   
 
  sleep 0.25*1

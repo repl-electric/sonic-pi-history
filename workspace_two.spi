@@ -9,17 +9,17 @@ shader(:uniform, "iVolume", 100.0);
 #shader("decaying-uniform", "iBeat", 1.0, 0.001)
 
 live_loop :space do
-synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 0.5, decay: 2.0, cutoff: 80, amp: 1.0
+synth :dark_ambience, note: (ring :Es3, :Fs4).tick, release: 0.5, decay: 2.0, cutoff: 80, amp: 2.0
 sleep 2
 end
 
 live_loop :bass do
   with_fx(:echo, phase: 0.25) do
   with_fx(:slicer, phase: 0.25) do
- if spread(1,16).tick
+  if spread(1,16).tick
   sample Mountain[/kick/,[0,1]].tick(:m), amp: 3.0, cutoff: 100
   shader(:uniform, "iVolume", (rand 100.0))
-end
+  end
   end
   end
   

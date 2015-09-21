@@ -2,5 +2,5 @@
 
 live_loop :test do
  synth :dark_ambience, release: 2.0, note: :Fs3
-sleep 0.5
+sleep 0.25
 end

@@ -30,7 +30,7 @@ end
                   live_loop :chords do
                     use_synth :dark_ambience
                     play (ring 
-                                 (chord :Fs3, "m")
+                                 (chord :Fs3, "m"),
                                  (chord :As3, "m")
 ), release: 8.0
                     sleep 8.0

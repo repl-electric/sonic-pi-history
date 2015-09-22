@@ -19,7 +19,7 @@ live_loop :frozen? do
           #Maybe some bass?
 
           with_transpose(-24){
-            with_synth(:dsaw)
+            with_synth(:dsaw){
              play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 40, amp: 0.2
             }
           }

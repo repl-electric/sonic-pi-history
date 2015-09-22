@@ -9,10 +9,15 @@ live_loop :frozen? do
   notes = scale(:Fs3, :minor_pentatonic, num_octaves:2).take(3).shuffle
   with_synth(:hollow){
         with_transpose(-12){
-      play notes.tick
-}
+          play notes.tick
+        }
   }
   sleep 0.25*2
 }
 end
+end
+
+live_loop :texture do
+  sample Dust[/f#m/, 4], beat_stretch: 8, amp: 0.1
+  sleep 8
 end

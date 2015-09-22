@@ -78,6 +78,6 @@ end
 
                   live_loop :something do
 #                    sample Ether[/f#m/,0], amp: 1.0
-                     sample Ether[/f#m/,4], amp: 1.0, cutoff: (rand 90, 120)
+                     sample Ether[/f#m/,4], amp: 1.0, cutoff: (rrand 90, 120)
                     sleep 8
                   end

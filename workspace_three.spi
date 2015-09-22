@@ -12,7 +12,7 @@ live_loop :frozen? do
           play notes.tick
         }
         with_synth(:blade){
-          play notes.look, amp: 0.1, release: 0.1, attack: 0.1
+          play notes.look, amp: 0.1, release: 0.1, attack: 0.1, cutoff: 70
         }
   }
   sleep 0.25

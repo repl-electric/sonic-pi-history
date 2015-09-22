@@ -45,6 +45,8 @@ live_loop :ending do
   sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 2.0
 end
 
+set_mixer_control! :lfp, cutoff: 80
+
  live_loop :drums do
                   with_fx(:echo, phase: 0.125*2, decay: 0.02) do
                 #    with_fx(:slicer, phase: 0.25) do

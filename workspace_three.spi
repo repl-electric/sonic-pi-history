@@ -34,7 +34,7 @@ end
                                  (chord :A3, "m9")
 ).tick(:notes), release: 8.0, attack: 0.5, amp: 2.0, 
                       detune1: -12, detune2: -24
-                    sleep 1.0
+                    sleep 8.0
 
                   end
 

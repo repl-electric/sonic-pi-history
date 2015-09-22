@@ -15,7 +15,7 @@ live_loop :frozen? do
         with_synth(:blade){
           play notes.choose, amp: 0.8+rand, release: 0.2, attack: 0.1, cutoff: rrand(80, 120)
         }
-        sleep 0.25
+        sleep 0.125
 end
 }
 }

@@ -31,7 +31,7 @@ end
                  
 
  live_loop :chords do
-with_fx(:hpf, cutoff: (ring 110, 60).tick) do
+with_fx(:hpf, cutoff: 110 do |fx|
                     use_synth :dark_ambience
                     play (ring 
                                  (chord :Fs3, "sus4"),

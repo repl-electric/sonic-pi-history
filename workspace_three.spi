@@ -42,6 +42,6 @@ end
                   live_loop :hats do
                     
                     sleep 1
-                    sample Dust[/hat/,0], cutoff: (range 40, 100).tick, amp: 0.3
+                    sample Dust[/hat/,0], cutoff: (range 40, 100).tick, amp: 0.4 if spread(7,11).tick
                   end
                 end

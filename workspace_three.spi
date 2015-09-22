@@ -18,6 +18,6 @@ end
 end
 
 live_loop :texture do
-  sample Dust[/f#m/, 4], beat_stretch: 8, amp: 0.1
-  sleep 8
+  sample Dust[/f#m/, 4], beat_stretch: 4, amp: 0.1
+  sleep 4
 end

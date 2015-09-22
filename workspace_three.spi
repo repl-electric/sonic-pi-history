@@ -45,7 +45,7 @@ end
                     sample Dust[/hat/,[0,1]].tick(:s2),  cutoff: (range 100, 60).tick(:c2), amp: 0.3 if spread(3,8).look
 
                     if (knit f, 28, t,1,  f, 3).tick(:open)
-                      sample Scape[/brush/, 1], amp: 0.1 + rand
+                      sample Scape[/brush/, 1], amp: 0.1 + rand, cutoff: rrand(100,120)
                     end
 
                   end

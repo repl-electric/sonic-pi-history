@@ -23,7 +23,7 @@ live_loop :frozen? do
               play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 40, amp: 0.7+rand, release: 4, decay: 8.0
             }
             with_synth(:prophet){
-              play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 50, amp: 0.7+rand, release: 4, decay: 8.0
+              play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 60, amp: 0.7+rand, release: 4, decay: 8.0
             }
 
           }

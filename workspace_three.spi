@@ -40,7 +40,7 @@ with_fx(:hpf, cutoff: 110) do |fx|
                                  (chord :Cs3, "m9")).tick(:notes), 
                       release: 4.0, attack: 0.5, amp: 8.0, decay: 8.3,
                       detune1: 24, detune2: -24
-                    sleep 8.0
+                    8.times{sleep 1.0 ; control fx, cutoff: (ring 130, 110).tick(:fx)}
 end
 end
 

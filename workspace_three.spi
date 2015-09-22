@@ -10,7 +10,7 @@ live_loop :frozen? do
   with_synth(:hollow){
     16.times do
       with_transpose(-12){
-         # play notes.tick, cutoff: rrand(80,100), amp: 0.8 + rand, release: 0.15, attack: 0.1
+         play notes.tick, cutoff: rrand(80,100), amp: 0.8 + rand, release: 0.15, attack: 0.1
         }
         blade_note = notes.choose
         with_synth(:blade){

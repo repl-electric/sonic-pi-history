@@ -28,6 +28,8 @@ end
 end
 
  live_loop :drums do
+                  with_fx(:echo) do
       sample Dust[/kick/,0], cutoff: 80
+end
       sleep 4
 end

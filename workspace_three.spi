@@ -30,7 +30,6 @@ end
 end
 
  live_loop :drums do
-                  
                   with_fx(:echo, phase: 0.125, decay: 4.0) do
                     with_fx(:slicer, phase: 0.25) do
                       sample Dust[/kick/,[3,1,4,0]].tick(:kick), cutoff: 80, amp: 1 + rand
@@ -38,3 +37,11 @@ end
                   end
       sleep 4
 end
+
+                with_fx(:reverb, room: 0.8, mix: 0.4) do
+                  live_loop :hats do
+                    
+                    sleep 1
+                    sample Dust[/hat/,0], cutoff: (range 40, 100).tick, amp: 0.1
+                  end
+                end

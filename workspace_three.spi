@@ -49,7 +49,7 @@ live_loop :kick do
   sample Dust[/kick/, [4,3,5,3]].tick, amp: 1.0, cutoff: 130
  # end
  # end
-  sleep 2.0
+  sleep 1.0
 end
 
 with_fx(:reverb, mix: 0.46, room: 0.7) do

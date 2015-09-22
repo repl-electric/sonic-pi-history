@@ -64,6 +64,6 @@ end
                 end
 
                 live_loop :texture2 do
-                  sample Dust[/f#/, 10], amp: 0.2
+                  sample Dust[/f#/, 10], amp: 0.3
                   sleep 8
                 end

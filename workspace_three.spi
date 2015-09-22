@@ -33,7 +33,7 @@ end
                                  (chord :Fs3, "m"),
                                  (chord :As3, "m")
 ), release: 8.0, attack: 0.5, amp: 8.0
-                    sleep 8.0
+                    sleep 4.0
 
                   end
 

@@ -27,6 +27,13 @@ live_loop :drums do
    sleep 8
 end
 
+                  live_loop :chords do
+                    use_synth :dark_ambience
+                    play (chord :Fm3)
+                    sleep 8.0
+
+                  end
+
               live_loop :kick do
                 with_fx(:echo, phase: 0.25) do
 #                 with_fx(:slicer, phase: 0.125) do

@@ -70,7 +70,7 @@ if spread(6,11).tick(:hat)
 end
 
 if (knit f, 29, t, 1, f, 2).tick(:hatz)
-  sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
+  #sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
   sample Scape[/SoftBrushHat/,0], cutoff: rrand(90, 130), amp: rand+0.1
 end
 end

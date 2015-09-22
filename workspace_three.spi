@@ -31,7 +31,7 @@ end
                     use_synth :dark_ambience
                     play (ring 
                                  (chord :Fs3, "m")[0],
-                                 (chord :As3, "m")
+                                 (chord :As3, "m")[0]
 ), release: 8.0, attack: 0.5, amp: 8.0
                     sleep 1.0
 

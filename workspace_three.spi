@@ -30,6 +30,7 @@ end
 # F♯, G♯, A, B, C♯, D,  E. 
                  
 
+with_fx(:hpf) do
  live_loop :chords do
                     use_synth :dark_ambience
                     play (ring 
@@ -40,6 +41,7 @@ end
                       release: 4.0, attack: 0.5, amp: 8.0, decay: 8.3,
                       detune1: 24, detune2: -24
                     sleep 8.0
+end
 end
 
               live_loop :kick do

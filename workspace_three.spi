@@ -26,14 +26,14 @@ live_loop :drums do
    end
    sleep 8
 end
-# (i, iio, III, iv, v, VI, VII)
-# F♯, G♯, A, B, C♯, D, and E. 
+# (i,    iio,   III, iv, v,   VI, VII)
+# F♯, G♯, A, B, C♯, D,  E. 
                   live_loop :chords do
                     use_synth :dark_ambience
                     play (ring 
                                  (chord :Fs3, "sus4", invert: -1),
                                  (chord :A3, "M"),
-                                 (chord :D3, "M")
+                                 (chord :Cs3, "m7")
 ).tick(:notes), release: 4.0, attack: 0.5, amp: 4.0, decay: 8.0 ,
                                   detune1: 24, detune2: -24
                     sleep 8.0

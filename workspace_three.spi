@@ -49,7 +49,7 @@ end
                       sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(80,90), amp: 1 + rand
                     with_fx(:flanger, mix: 1.0) do
                       sample Vocals[/breath/, [6,7]].tick(:v),
-                        cutoff: (range 40, 60).tick(:breath), amp: 1.0 - rand
+                        cutoff: (range 30, 60).tick(:breath), amp: 1.0 - rand
                     end
                  #   end
                   end

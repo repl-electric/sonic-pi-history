@@ -20,7 +20,7 @@ live_loop :frozen? do
 
           with_transpose(-24){
             with_synth(:dsaw){
-              play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 40, amp: 0.8+rand, release: 8
+              play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 40, amp: 0.8+rand, release: 4, decay: 8.0
             }
             with_synth(:prophet){
               play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 50, amp: 0.7+rand, release: 4, decay: 8.0

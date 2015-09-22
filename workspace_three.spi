@@ -78,6 +78,6 @@ end
 
                   live_loop :something do
 #                    sample Ether[/f#m/,0], amp: 1.0
-                     sample Ether[/f#m/,4], amp: 1.0, beat_stretch: 4
-                    sleep 4
+                     sample Ether[/f#m/,4], amp: 1.0
+                    sleep 8
                   end

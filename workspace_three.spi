@@ -54,7 +54,8 @@ end
                   use_synth :dark_ambience
                   notes = (ring chord(:Fs3,'sus4'), 
                            chord(:A3, 'M'),
-                           chord(:D3, 'M')).tick
+                           chord(:D3, 'M'), 
+                           chord(:Cs3, "m9")).tick
                   play notes, attack: 0.5, decay: 8.1 
                   sleep 8
                 end

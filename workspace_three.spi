@@ -46,7 +46,7 @@ end
                   with_fx(:echo, phase: 0.125*2, decay: 0.02) do
                 #    with_fx(:slicer, phase: 0.25) do
                     #one of these drums is annoying me....
-                      sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(50,90), amp: 1 + rand
+                      sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(50,60), amp: 1 + rand
                     with_fx(:flanger, mix: 1.0) do
                       sample Vocals[/breath/, [6,7]].tick(:v),
                         cutoff: (range 30, 60).tick(:breath), amp: 1.0 - rand

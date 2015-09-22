@@ -29,7 +29,7 @@ end
               live_loop :kick do
                 with_fx(:echo, phase: 0.25) do
                  with_fx(:slicer, phase: 0.125) do
-                    sample Dust[/kick/, [4,3,5,3]].tick, amp: 1, cutoff: 80
+                    sample Dust[/kick/, [4,3,5,3]].tick, amp: 1, cutoff: 70
                   end
                 end
                 sleep 2.0

@@ -68,7 +68,7 @@ end
 
 f=false
 t=true
-if (knit f, 30, t, 1, f, 1).tick(:hatz)
+if (knit f, 29, t, 1, f, 2).tick(:hatz)
   #sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
   sample Scape[/SoftBrushHat/,0], cutoff: 100                         
 end

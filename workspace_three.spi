@@ -32,7 +32,7 @@ end
                     play (ring 
                                  (chord :Fs3, "m7"),
                                  (chord :A3, "m9")
-).tick(:notes), release: 8.0, attack: 0.5, amp: 2.0, 
+).tick(:notes), release: 8.0, attack: 0.5, amp: 8.0, 
                       detune1: -12, detune2: -24
                     sleep 8.0
 

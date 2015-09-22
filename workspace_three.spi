@@ -75,3 +75,8 @@ if (knit f, 29, t, 1, f, 2).tick(:hatz)
 end
 end
 end
+
+                  live_loop :something do
+                    sample Dust[/C#m/,0]
+                    sleep 1
+                  end

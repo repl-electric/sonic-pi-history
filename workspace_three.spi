@@ -77,6 +77,6 @@ end
 end
 
                   live_loop :something do
-                    sample Dust[/C#m/,0]
+                    #sample Dust[/C#m/,0]
                     sleep 1
                   end

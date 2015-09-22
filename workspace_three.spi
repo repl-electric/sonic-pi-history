@@ -28,6 +28,6 @@ end
 end
 
  live_loop :drums do
-                  sample Dust[/kick/,0], cutoff: 80
-      sleep 2
+      sample Dust[/kick/,0], cutoff: 80
+      sleep 4
 end

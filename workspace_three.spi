@@ -78,5 +78,5 @@ end
 
                   live_loop :something do
 sample Ether[/f#m/,0], amp: 4.0
-                    sleep 1
+                    sleep 8
                   end

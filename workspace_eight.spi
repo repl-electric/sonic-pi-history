@@ -1,4 +1,4 @@
 #  sample Dust[/hat/,14], amp: 1.0
 
 
-sample Dust[/C#m/,0], amp: 2.0
+puts Dust[/C#m/,0]

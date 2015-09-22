@@ -82,7 +82,7 @@ end
 
                 live_loop :texture2 do
                   with_fx(:bitcrusher, mix: 0.08, sample_rate: 8*2000) do
-#                   sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
+                   sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
                                 end
                                 sleep 8
                                 end

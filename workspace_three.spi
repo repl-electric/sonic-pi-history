@@ -12,7 +12,7 @@ live_loop :frozen? do
           play notes.tick, cutoff: rrand(80,120)
         }
         with_synth(:blade){
-          play notes.look, amp: 0.1, release: 0.1, attack: 0.1, cutoff: 80
+          play notes.look, amp: 0.1, release: 0.1, attack: 0.1, cutoff: rrand
         }
   }
   sleep 0.25
@@ -21,6 +21,6 @@ end
 end
 
 live_loop :texture do
-  sample Dust[/f#m/, 4], amp: 0.1
+  sample Dust[/f#m/, 4], amp: 0.08
   sleep 8
 end

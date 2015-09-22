@@ -52,7 +52,7 @@ end
                 end
                 live_loop :chords do
                   use_synth :dark_ambience
-                  notes = (ring chord(:Fs3,'m'), chord(:A3, 'M'), chord(:)).tick
+                  notes = (ring chord(:Fs3,'m'), chord(:A3, 'M'), chord(:D3, 'M')).tick
                   play notes, attack: 0.5, decay: 8.1 
                   sleep 8
                 end

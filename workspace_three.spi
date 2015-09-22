@@ -43,7 +43,7 @@ end
                     
                     sleep 1*0.25
                     sample Dust[/hat/,[0,0]].tick(:s),    cutoff: (range 60, 100).tick(:c), amp: 0.6   if spread(7,11).tick
-                    sample Dust[/hat/,[1,1]].tick(:s2), cutoff: (range 100, 60).tick(:c2), amp: 0.5 if spread(6,8).look
+                    sample Dust[/hat/,[0,1]].tick(:s2), cutoff: (range 100, 60).tick(:c2), amp: 0.5 if spread(6,8).look
 
                   end
                 end

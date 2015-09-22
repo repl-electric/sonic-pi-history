@@ -36,7 +36,7 @@ end
 live_loop :texture do
 #with_fx(:slicer, phase: 0.25) do
 #  sample Dust[/f#m/, 5], amp: 0.1
-  sample Dust[/f#m/, 5], amp: 0.2
+  sample Dust[/f#m/, 5], amp: 0.1
 #end
   sleep 8
 end

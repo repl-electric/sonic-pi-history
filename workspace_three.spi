@@ -30,8 +30,9 @@ end
 # F♯, G♯, A, B, C♯, D,  E. 
                  
 
-with_fx(:hpf, cutoff: 120) do
  live_loop :chords do
+with_fx(:hpf, cutoff: 120) do
+
                     use_synth :dark_ambience
                     play (ring 
                                  (chord :Fs3, "sus4"),

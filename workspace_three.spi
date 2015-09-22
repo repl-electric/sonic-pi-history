@@ -12,7 +12,7 @@ live_loop :frozen? do
           play notes.tick
         }
   }
-  sleep 0.25*2
+  sleep 0.125*2
 }
 end
 end

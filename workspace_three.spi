@@ -14,7 +14,7 @@ live_loop :frozen? do
         }
         blade_note = notes.choose
         with_synth(:blade){
-          play blade_note, amp: 0.7+rand, release: 0.1, attack: 0.1, cutoff: rrand(60, 80)
+         ¢ play blade_note, amp: 0.7+rand, release: 0.1, attack: 0.1, cutoff: rrand(60, 80)
         }
           #Maybe some bass?
 

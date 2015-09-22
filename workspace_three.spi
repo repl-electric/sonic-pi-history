@@ -1,3 +1,6 @@
+f=false
+t=true
+
 live_loop :hollow_inside do
   with_fx(:lpf, cutoff: (ramp *(range 30, 130,5)).tick(:kf)) do
   with_fx :reverb, room: 1, reps: 4 do
@@ -66,13 +69,9 @@ if spread(6,11).tick(:hat)
                           cutoff: (range 100,80,10).tick(:r2)
 end
 
-f=false
-t=true
 if (knit f, 29, t, 1, f, 2).tick(:hatz)
   #sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
   sample Scape[/SoftBrushHat/,0], cutoff: 100                         
 end
-
-
 end
 end

@@ -44,7 +44,7 @@ if spread(7,8).tick(:hat)
 end
 
 if spread(6,11).tick(:hat)
-                sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.2, pan: -0.25
+                sample Dust[/hat/,[10,11]].tick(:d), amp: 0.1+rand*0.2, pan: -0.25
 end
 
 

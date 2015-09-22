@@ -11,6 +11,9 @@ live_loop :frozen? do
         with_transpose(-12){
           play notes.tick
         }
+        with_synth(:blade){
+          play notes.look, amp: 0.1, release: 0.1, attack: 0.1
+        }
   }
   sleep 0.25
 }

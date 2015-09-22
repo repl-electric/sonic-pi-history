@@ -33,7 +33,7 @@ end
                   with_fx(:echo, phase: 0.125*2, decay: 0.02) do
                 #    with_fx(:slicer, phase: 0.25) do
                       sample Dust[/kick/,[3,1,4,0]].tick(:kick), cutoff: 60, amp: 1 + rand
-                    sample Vocals[/breath/, 6], cutoff: (ring 80, 70).tick(:breath)
+                    sample Vocals[/breath/, 6], cutoff: (ring 80, 70).tick(:breath), amp: 1.0 - rand
                  #   end
                   end
       sleep 2

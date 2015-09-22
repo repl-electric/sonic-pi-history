@@ -38,7 +38,7 @@ end
 
               live_loop :hats do
 sleep  0.125
-with_fx(:reverb, mix: 0.3) do
+with_fx(:reverb, mix: 0.4) do
 if spread(7,8).tick(:hat)
                 sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.2 , pan: 0.25
 end

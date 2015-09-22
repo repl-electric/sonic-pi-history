@@ -35,7 +35,7 @@ end
                       sample Dust[/kick/,[3,1,4,0]].tick(:kick), cutoff: 80, amp: 1 + rand
                  #   end
                   end
-      sleep 4
+      sleep 2
 end
 
                 with_fx(:reverb, room: 0.8, mix: 0.4) do

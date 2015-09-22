@@ -49,7 +49,7 @@ end
                     end
                  #   end
                   end
-      sleep 2/2.0
+      sleep 2
 end
 
                 with_fx(:reverb, room: 0.8, mix: 0.5) do

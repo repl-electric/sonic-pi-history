@@ -10,6 +10,6 @@ live_loop :frozen? do
   with_synth(:hollow){
       play notes.tick
   }
-  sleep 0.25*1
+  sleep 0.25*2
 }
 end

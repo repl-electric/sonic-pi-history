@@ -12,7 +12,7 @@ live_loop :frozen? do
           play notes.tick, cutoff: rrand(80,120)
         }
         with_synth(:blade){
-          play notes.look, amp: 0.1+rand, release: 0.1, attack: 0.1, cutoff: rrand(80, 120)
+          play notes.look, amp: 1.0+rand, release: 0.1, attack: 0.1, cutoff: rrand(80, 120)
         }
   }
   sleep 0.25

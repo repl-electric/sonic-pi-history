@@ -32,7 +32,7 @@ end
  live_loop :drums do
                   
                   with_fx(:echo) do
-                    with_fx(:slicer) do
+                    with_fx(:slicer, phase: 0.25) do
                       sample Dust[/kick/,0], cutoff: 80
                     end
                   end

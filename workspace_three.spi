@@ -30,7 +30,7 @@ end
                   live_loop :chords do
                     use_synth :dark_ambience
                     play (ring 
-                                 (chord :Fs3, "sus4"),
+                                 (chord :Fs3, "sus4", invert: -1),
                                  (chord :A3, "m9")
 ).tick(:notes), release: 8.0, attack: 0.5, amp: 8.0, 
                       detune1: -12, detune2: -24

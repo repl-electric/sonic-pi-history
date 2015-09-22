@@ -29,7 +29,7 @@ end
 
                   live_loop :chords do
                     use_synth :dark_ambience
-                    play (chord :Fsm3)
+                    play (chord :Fs3, "m")
                     sleep 8.0
 
                   end

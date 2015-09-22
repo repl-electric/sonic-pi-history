@@ -65,5 +65,13 @@ if spread(6,11).tick(:hat)
                           pan: -0.025,
                           cutoff: (range 100,80,10).tick(:r2)
 end
+
+if spread(1,12, rotate: 11).tick(:hatz)
+  sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.2, 
+                          pan: -0.025,
+                          cutoff: (range 100,80,10).tick(:r2)
+end
+
+
 end
 end

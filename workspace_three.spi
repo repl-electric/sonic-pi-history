@@ -58,6 +58,6 @@ end
                            chord(:D3, 'M'), 
                            chord(:Cs3, "m9")).tick
                     play notes, attack: 0.5, decay: 8.2, detune1: 24, detune2: 0
-                    8.times{sleep 1; control fx, cutoff: (ring 110, 100).tick(:cutoff)}
+                    8.times{sleep 1; control fx, cutoff: (ring 120, 100).tick(:cutoff)}
                   end
                 end

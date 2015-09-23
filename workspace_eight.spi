@@ -1,5 +1,5 @@
 module Dust
-  def.self [](*args)
+  self.def [](*args)
   end
 end
 

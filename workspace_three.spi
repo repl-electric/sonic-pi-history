@@ -35,10 +35,10 @@ live_loop :frozen? do
 end
 
 live_loop :texture do
-  #with_fx(:slicer, phase: 0.25) do
-  #  sample Dust[/f#m/, 5], amp: 0.1
+  with_fx(:slicer, phase: 0.25) do
+    sample Dust[/f#m/, 5], amp: 0.1
   #sample Dust[/f#m/, 5], amp: 0.1
-  #end
+  end
   sleep 8
 end
 

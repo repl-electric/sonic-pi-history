@@ -3,7 +3,7 @@ f=false;t=true
 # Just messing around with SonicPi.
 # Nothing polished, just learning the music and code thing.
 
-attack_ring = (ring 100,80,60)
+attack_ring = (ring 0.1,0.2,0.3)
 
 live_loop :frozen? do
   with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do

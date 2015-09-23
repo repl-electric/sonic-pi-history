@@ -1,7 +1,7 @@
 require 'osc-ruby'
 @client ||= OSC::Client.new('localhost', 9177)
 
-@client.send(OSC::Message.new("shader-string", "
+@client.send(OSC::Message.new("/shader-string", "
 uniform float iKick;
 void main(void){
   gl_FragColor = vec4(iKick,0.0,1.0, 1.0);

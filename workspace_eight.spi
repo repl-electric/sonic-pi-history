@@ -1,9 +1,6 @@
-module Dust
-  def self.[](*args)
+Array[/F#/]
+  do
+    
   end
-end
 
-live_loop :texture2 do
-  sample Dust[/f#/,1]
-              sleep 8
-              end
+  

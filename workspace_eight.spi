@@ -1,6 +1,6 @@
 module Dust
-  def [](*args)
-end
+  self.def [](*args)
+  end
 end
 
 live_loop :texture2 do

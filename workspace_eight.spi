@@ -1,3 +1,3 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-sample Dust[/./i,0], amp: 4.0
+sample Dust[/./,0], amp: 4.0

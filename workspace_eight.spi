@@ -4,7 +4,7 @@ require 'osc-ruby'
 @client.send(OSC::Message.new("shader-string", "
 uniform float iKick;
 void main(void){
-  gl_FragColor = vec4(iKick,1.0,1.0, 1.0);
+  gl_FragColor = vec4(iKick,0.0,1.0, 1.0);
 }"))
 
 sample :drum_heavy_kick

@@ -4,7 +4,7 @@ f=false;t=true
 # Nothing polished, just learning the music and code thing.
 
 live_loop :frozen? do
-  with_fx(:lpf, cutoff: (ramp *(range 40, 130, 5)).tick(:cut3) ) do
+  with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
     with_fx(:reverb, reps: 4, room: 1.0){
       use_random_seed 200
       notes = scale(:Fs3, :minor_pentatonic, num_octaves:2).take(3).shuffle
@@ -83,7 +83,7 @@ end
 live_loop :texture2 do
   with_fx(:bitcrusher, mix: 0.08, sample_rate: 8*2000) do
     sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
-  end
-  sleep 8
-end
-#Sonic pi does not like my indentation :)
+                end
+                sleep 8
+                end
+                #Sonic pi does not like my indentation :)

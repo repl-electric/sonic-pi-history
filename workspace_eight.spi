@@ -1,5 +1,4 @@
 live_loop :texture2 do
-    sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
-                end
-                sleep 8
-                end
+  sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
+              sleep 8
+              end

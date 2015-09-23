@@ -1,7 +1,6 @@
 module Thing
   def self.[](*args)
   end
-end 
+end
 Thing[/F#/]
-      do
-      end
+      #"<--- Bad indent"

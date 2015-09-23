@@ -4,7 +4,7 @@ f=false;t=true
 # Nothing polished, just learning the music and code thing.
 
 attack_ring = (ring 0.01,0.2,0.3)
-release_ring = (ring 0.15)
+release_ring = (ring 0.15, 0.1)
 
 live_loop :frozen? do
   with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do

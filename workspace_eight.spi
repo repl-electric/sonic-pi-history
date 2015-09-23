@@ -1,5 +1,5 @@
 module Dust
-  self.def []
+  self.def[]()
 end
 end
 

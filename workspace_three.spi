@@ -58,8 +58,8 @@ live_loop :texture do
                 with_fx(:reverb, room: 0.8, mix: 0.5) do
                   live_loop :hats do
                     sleep 0.25
-                    sample Dust[/hat/,[1,1]].tick(:s),    amp: 1.65  if spread(7,11).tick
-                    sample Dust[/hat/,[0,1]].tick(:s2),   amp: 1.65 if spread(3,8).look
+                    sample Dust[/hat/,[1,1]].tick(:s),   cutoff: (range 60, 100).tick(:c),  amp: 1.65  if spread(7,11).tick
+                    sample Dust[/hat/,[0,1]].tick(:s2),  cutoff: (range 100, 60).tick(:c2), amp: 1.65 if spread(3,8).look
 
                     if (knit f, 28, t,1,  f, 3).tick(:open)
                       sample Scape[/brush/, 1], amp: 0.1 + rand*0.1, cutoff: rrand(100,120)

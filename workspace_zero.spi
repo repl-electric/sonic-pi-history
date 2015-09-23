@@ -179,7 +179,7 @@ live_loop :drums do |d_idx|
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.0
   end
 
-  with_fx((knit :echo, 1).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4){
+  with_fx((knit :echo, 1).tick(:fx), decay: 0.5, phase: 0.25, mix: 0.4, decay: 4.0){
     with_fx(:slicer, phase: 0.025, mix: 0.8) do
                                               sample Fraz[/kick/i,[0,0]].tick(:kick), cutoff: (knit 100, 1, 115, 3).tick(:kcut)
                                             end

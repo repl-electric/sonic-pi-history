@@ -1,6 +1,5 @@
 module Dust
-  self.def[]()
-end
+  self.def[](args)
 end
 end
 

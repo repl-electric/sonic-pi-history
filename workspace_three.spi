@@ -102,3 +102,9 @@ live_loop :texture do
                                 sleep 8
                                 end
                                 #Sonic pi does not like my indentation :)
+
+
+live_loop :iso do
+sample Dub[/Iso/, /F#3/]
+sleep 1
+end

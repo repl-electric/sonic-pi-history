@@ -1,4 +1,4 @@
 live_loop :texture2 do
-  sample Dust[/b/,1]
+  sample Dust[/c/,1]
   sleep 8
 end

@@ -8,7 +8,7 @@ live_loop :dark do
            chord(:CS3, :M),
            chord(:CS3, "maj9")
            ).tick
-  #play notes, decay: 4, attack: 0.5
+  play notes, decay: 4, attack: 0.5
   sleep 4
 end
 
@@ -19,7 +19,7 @@ live_loop :bass do
   with_fx(:reverb, room: 1.0, mix: 1.0, damp: 0.8) do
     with_synth(:dsaw) do #Lets see if we can get blade to not sound  horrible
       play (ring :Fs1, :As1, :DS1, :Cs1).tick(:notes), amp: 0.09, release: 2.0, attack: 0.1, decay: 0.9, cutoff: 60,
-      detune: 12
+        detune: 12
       play (ring :Fs2, :As2, :DS2, :Cs2).tick(:notes), amp: 0.09, release: 1.0, attack: 0.1, decay: 0.5, cutoff: 90, detune: 12
     end
   end

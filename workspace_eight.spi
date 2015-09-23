@@ -1,6 +1,7 @@
-Array[/F#/]
-  do
-    
+module Thing
+  def self.[](*args)
   end
-
-  
+end 
+Thing[/F#/]
+      do
+      end

@@ -7,7 +7,7 @@ live_loop :frozen? do
   with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
     with_fx(:reverb, reps: 4, room: 1.0){
       use_random_seed 300
-      notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).take(4).shuffle
+      notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).take(3).shuffle
       with_synth(:hollow){
         16.times do
           with_transpose(-12){

@@ -49,8 +49,7 @@ end
 live_loop :drums do
   with_fx(:echo, phase: 0.125*2, decay: 0.02) do
     with_fx(:slicer, phase: 0.25) do
-    #one of these drums is annoying me....
-    sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(20,40), amp: 0.5
+      sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(20,40), amp: 0.5
     end
   end
   sleep 2

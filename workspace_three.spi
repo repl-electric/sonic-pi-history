@@ -47,7 +47,7 @@ live_loop :ending do
 end
 
 live_loop :drums do
-  with_fx(:echo, phase: 0.125, decay: 0.02) do
+  with_fx(:echo, phase: 0.125, decay: 4.0) do
     with_fx(:slicer, phase: 0.25) do
       sample Dust[/kick/, [3,2,4,5]].tick(:kick), cutoff: rrand(60,80), amp: 0.5
     end

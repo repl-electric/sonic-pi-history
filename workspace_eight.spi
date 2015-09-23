@@ -8,4 +8,4 @@ void main(void){
 }"))
 
 sample :drum_heavy_kick
-@client.send(OSC::Message.new("/decaying-uniform", "iKick", "1.0"))
+@client.send(OSC::Message.new("/decaying-uniform", "iKick", "1.0", "0.01"))

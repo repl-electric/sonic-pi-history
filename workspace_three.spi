@@ -105,6 +105,5 @@ live_loop :texture do
 
 
 live_loop :iso do
-sample ChillD[/Iso/, /F#2/]
-sleep 5
+sample_and_sleep ChillD[/Iso/, /F#2/]
 end

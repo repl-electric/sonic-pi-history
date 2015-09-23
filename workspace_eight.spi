@@ -1,6 +1,11 @@
-module Thing
-  def self.[](*args)
-  end
-end
-Thing[/F#/]
-      puts "<--- Bad indent"
+require 'osc-ruby'
+@client ||= OSC::Client.new('localhost', 9177)
+
+@client.send(OSC::Message.new("shader-string", "
+uniform float iKick;
+void main(void){
+  gl_FragColor = vec4(iKick,0,0, 1.0);
+}"))
+
+sample :drum_heavy_kick
+@client.send(OSC::Message.new("decaying-uniform", "iKick", "1.0"))

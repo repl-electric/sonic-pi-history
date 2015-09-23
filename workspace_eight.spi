@@ -3,4 +3,4 @@ module Thing
   end
 end
 Thing[/F#/]
-      #"<--- Bad indent"
+      puts "<--- Bad indent"

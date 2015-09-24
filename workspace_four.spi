@@ -9,7 +9,7 @@ live_loop :coils do
   1.times{sync :apeg}
   shader("decaying-uniform", "iBeat", 0.1, 0.001)
   31.times{sync :apeg}
-  sample Ether[/coil/i, /f#/i], amp: 1.0
+  sample Ether[/coil/i, /f#/i], amp: 3.0
 end
 
 shader("texture", "/Users/josephwilk/Workspace/repl-electric/stars/resources/textures/tex16.png")

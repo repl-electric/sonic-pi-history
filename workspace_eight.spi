@@ -13,7 +13,7 @@ end
 # F#, G#, A,    B, C#,   D,  E.
 
 live_loop :apeg do
-  sample Corrupt[/F#m_KalimbaArpFX/].tick
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, beat_stretch: 4
   sleep 4
 end
 

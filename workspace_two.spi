@@ -25,7 +25,7 @@ live_loop :apeg do
                            play note,
                            cutoff: (ramp *(range 40, 135,5)).tick(:hoo),
                            amp: rand*0.06, attack: (ring 0.01).tick(:attack),
-                           release: 0.05, pan: (ring -0.25, 0.25).tick(:pan)
+                           release: 0.08, pan: (ring -0.25, 0.25).tick(:pan)
                            }
 
       with_transpose(-24){

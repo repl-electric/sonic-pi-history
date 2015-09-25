@@ -1,7 +1,5 @@
-
-
 with_fx(:echo, decay: 0.5) do
-  sample Dust[/F#m/,4], rate: 0.25
+  sample Dust[/F#m/,4], pitch: -12
 
   play :fs3
 end

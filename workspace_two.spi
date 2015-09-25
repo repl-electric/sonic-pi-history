@@ -13,7 +13,7 @@ live_loop :apeg do
       note = notes.tick(:n)
       with_transpose(-12) do
         with_synth(:hollow) do
-          play note, release: 0.1, cutoff: (rrand 70,90), amp: 0.4+rand
+          #play note, release: 0.1, cutoff: (rrand 70,90), amp: 0.4+rand
         end
       end
       #Lovely little trick in Sonic Pi. Can only be done with safe mode off =>

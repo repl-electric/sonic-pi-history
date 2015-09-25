@@ -7,8 +7,8 @@ live_loop :werbling do
 
   notes = (ring chord(:Fs3, :m))
   with_synth(:dark_ambience){
-
+    
   }
 
-  sleep 8
+  sleep 4
 end

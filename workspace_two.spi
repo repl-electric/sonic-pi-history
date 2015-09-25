@@ -68,8 +68,8 @@ end
 live_loop :kick do
   sync :werbling
   #Something is doing something odd...
-#  sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
+  #  sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
   sleep 2
-  sample Corrupt[/clap/,[2,2].tick(:something_else_maybe), amp: 0.3, cutoff: 110
-  sleep 2
-end
+  sample Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: 110
+                 sleep 2
+                 end

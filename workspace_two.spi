@@ -16,7 +16,7 @@ live_loop :apeg do
         end
       end
       #Lovely little trick in Sonic Pi. Can only be done with safe mode off =>
-      control fx, damp: rrand(0.5,1.0)
+      control fx, damp: rrand(0.0,1.0)
 
       #Meh, I've not a fan of blade.... Lets try something else
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.

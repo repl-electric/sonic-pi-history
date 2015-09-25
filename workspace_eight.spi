@@ -15,7 +15,7 @@ end
 use_bpm 120
 
 live_loop :apeg do
-  sample Corrupt[/F#m_KalimbaArpFX/].tick, beat_stretch: 1
+  sample Corrupt[/F#m_KalimbaArpFX/].tick
   sleep 1
 end
 

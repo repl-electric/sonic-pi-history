@@ -22,7 +22,7 @@ live_loop :apeg do
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.
                            #Did I kill it? No its still alive
                            play note, cutoff: (rrand 85, 95),
-                           amp: rand*0.1, attack: (ring 0.01,0.03).tick(:attack),
+                           amp: rand*0.06, attack: (ring 0.01,0.03).tick(:attack),
                            release: 0.1, pan: rdist(1)
                            }
 

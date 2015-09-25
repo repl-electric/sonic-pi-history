@@ -1,5 +1,5 @@
 with_fx(:echo, decay: 0.5) do
-  sample Dust[/F#m/,4], pitch: -12
+  sample Dust[/F#m/,4], pitch: (ring -12, -5).tick
 
   play :fs3
 end

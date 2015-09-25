@@ -19,7 +19,7 @@ end
 
 live_loop :kick do
   with_fx(:echo, phase: 0.125, decay: 4.0) do
-    sample Corrupt[/kick/,3], amp: 0.4, cutoff: 80
+    sample Corrupt[/kick/,3], amp: 0.3, cutoff: 80
   end
   sleep 4
 end

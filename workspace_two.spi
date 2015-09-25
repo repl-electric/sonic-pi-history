@@ -70,7 +70,7 @@ live_loop :kick do
   #Something is doing something odd...
   #sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
   with_fx(:echo, phase: 0.25, decay: 0.02) do
-    sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(80,120)
+    sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(80,100)
     sleep 0.25
   end
 end

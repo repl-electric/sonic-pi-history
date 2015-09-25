@@ -48,7 +48,7 @@ end
 
 live_loop :texture do
   sync :frozen?
-  sample Corrupt[/F#m/,/WarmGtrFX/,0], cutoff: 100, rate -1.0
+  sample Corrupt[/F#m/,/WarmGtrFX/,0], cutoff: 100, rate: -1.0
   with_fx(:slicer, phase: 0.125*2, invert_wave: 1,
   pulse_width: 0.8, smooth: 1.0) do
     sample Dust[/Halls/,/F#m/], cutoff: 130

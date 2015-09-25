@@ -7,8 +7,10 @@ live_loop :apeg do
     use_random_seed 300
     notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).drop(0).take(3)
     16.times{
+      with_transpose(-12) do
       with_synth(:hollow) do
         play notes.shuffle, release: 0.1, cutoff: (rrand 70,90), amp: 0.4+rand
+      end
       end
       sleep 0.125
     }

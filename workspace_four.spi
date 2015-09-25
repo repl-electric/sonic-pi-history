@@ -1,15 +1,14 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 shader("texture", "tex16")
 
-
-
 live_loop :coils do
   #play (ring chord("Cs3", "M7"), chord("Fs3", "M")).tick(:chords) , release: 8, attack: 4.0
   synth :dark_ambience, note: (ring :Es1, :Fs1).tick, release: 8, attack: 4.0, amp: 2.5
 sample Mountain[/subkick/,0]
   shader("decaying-uniform", "iKick", 1.0, 0.002)
+
   11.times{sync :apeg}
-  shader("decaying-uniform", "iBeat", 1.5, 0.001)
+  shader("decaying-uniform", "iBeat", 0.5, 0.001)
   (32-11).times{sync :apeg}
   sample Ether[/coil/i, /f#/i], amp: 3.0
 end

@@ -23,10 +23,8 @@ live_loop :apeg do
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.
                            #Did I kill it? No its still alive
                            #No idea is this is going to work
-                           play note,
-                           #gulp cutoff: (ramp *(range 40, 135,5)).tick(:hoo),
-                           amp: rand*0.01, pan: (ring -0.25, 0.25).tick(:pan)
-                           }
+                           play note
+                           #gulp cutoff: (ramp *(range 40, 135,5)).tick(:hoo)                           }
 
       with_transpose(-24){
         with_synth(:dsaw){

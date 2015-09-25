@@ -32,7 +32,7 @@ end
 
 live_loop :werbling do
   with_fx(:slicer, mix: 0.8, phase: 0.25) do
-    sample Dust[/F#m/, /voice/, 0], cutoff: (range 40, 60, 5).tick
+    #sample Dust[/F#m/, /voice/, 0], cutoff: (range 40, 60, 5).tick
   end
 
   sample Corrupt[/F#m/, /Guitar/,3], cutoff: (rrand 65, 80), amp: 0.2+rand*0.2

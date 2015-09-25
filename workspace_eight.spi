@@ -15,7 +15,9 @@ end
 use_bpm 120
 
 live_loop :apeg do
-  sample_and_sleep Corrupt[/F#m_KalimbaArpFX/].tick
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, pan: -0.25
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, pan: 0.25
+  sleep 4 
 end
 
 sample Dust[/A[^#]/,11]

@@ -3,8 +3,8 @@ t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
 live_loop :werbling do
-#  sample Corrupt[/F#m/,/Guitar/, 0]
+  #  sample Corrupt[/F#m/,/Guitar/, 0]
   sleep 8
 end
 
-  sample Corrupt[/F#m/,/Guitar/, 0]
+sample Corrupt[/F#m/,/Guitar/, 1]

@@ -53,7 +53,6 @@ live_loop :werbling do
            chord(:A3, 'M'),
            chord_degree(6, :Fs3, :minor),
            chord(:Cs3, 'm'),
-           chord(:Cs3, 'm9')
            ).tick
 
   with_synth(:dark_ambience){

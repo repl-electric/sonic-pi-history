@@ -19,6 +19,9 @@ live_loop :apeg do
       }
 
       with_transpose(-24){
+        with_synth(:dsaw){
+          
+          }
       }
 
 

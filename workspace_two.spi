@@ -11,7 +11,8 @@ live_loop :werbling do
            chord(:A3, 'M')
            ).tick
   with_synth(:dark_ambience){
-    play notes, decay: 8.15, amp: 0.7, detune1: (ring 12, 24).tick(:d), detune2: (ring -24, 12).tick(:d2)
+    play notes, decay: 8.15, amp: 0.7, detune1: (ring 12, 24).tick(:d), 
+    detune2: (ring -24, -12).tick(:d2)
   }
   sleep 8
 end

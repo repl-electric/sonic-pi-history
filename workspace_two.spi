@@ -8,5 +8,5 @@ live_loop :werbling do
   with_synth(:dark_ambience){
   }
 
-  sleep 8
+  sleep 4
 end

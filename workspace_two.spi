@@ -1,10 +1,10 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 t=true;f=false;_=nil
 #Just messing around, will see what happens.
-
+#Taking a break one sec....
 live_loop :apeg do
   with_fx(:reverb, room: 0.8, mix: 0.8, reps:4) do |fx|
-    use_random_seed (ring 300, 200).tick(:seed)
+    #use_random_seed (ring 300, 200).tick(:seed)
     notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).drop(0).take(4).shuffle
     16.times{
       note = notes.tick(:n)

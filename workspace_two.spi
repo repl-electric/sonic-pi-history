@@ -26,7 +26,7 @@ live_loop :werbling do
            chord(:A3, 'M'),
            chord_degree(6, :Fs3, :minor),
            chord(:Cs3, 'm'),
-           chord(:Cs3, 'm9+5')
+           chord(:Cs3, 'm9')
            ).tick
   with_synth(:dark_ambience){
     play notes, decay: 8.3, amp: 0.7, detune1: (ring 12, 24).tick(:d),

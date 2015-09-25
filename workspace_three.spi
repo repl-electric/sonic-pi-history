@@ -48,14 +48,14 @@ end
 
 live_loop :texture do
   with_fx(:slicer, phase: 0.25) do
-#    sample Dust[/f#m/, 5], amp: 0.2
+    #    sample Dust[/f#m/, 5], amp: 0.2
     #sample Dust[/f#m/, 5], amp: 0.1
   end
   sleep 8
 end
 
 live_loop :ending do
-  sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.0
+ # sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.0
 end
 
 live_loop :drums do

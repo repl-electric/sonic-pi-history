@@ -47,7 +47,7 @@ live_loop :frozen? do
 end
 
 live_loop :texture do
-  with_fx(:slicer, phase: 0.25, invert_wave: 1.0) do
+  with_fx(:slicer, phase: 0.25, invert_wave: 1) do
     sample Dust[/Halls/,/F#m/], cutoff: 130
     #    sample Dust[/f#m/, 5], amp: 0.2
     #sample Dust[/f#m/, 5], amp: 0.1

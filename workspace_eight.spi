@@ -1,7 +1,9 @@
 live_loop :echo do
+with_fx(:lpf, cutoff: 80) do
   with_fx(:echo, decay: 0.5) do
     sample Dust[/F#m/,4], pitch: (ring -12, -24).tick
     play (ring :fs3, :A3)
   end
   sleep 4
+end
 end

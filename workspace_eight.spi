@@ -12,9 +12,11 @@ end
 # (i, iio, III, iv, v,   VI, VII)
 # F#, G#, A,    B, C#,   D,  E.
 
+use_bpm 120
+
 live_loop :apeg do
-  sample Corrupt[/F#m_KalimbaArpFX/].tick, beat_stretch: 8
-  sleep 8
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, beat_stretch: 1
+  sleep 1
 end
 
 sample Dust[/A[^#]/,11]

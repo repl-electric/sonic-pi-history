@@ -5,8 +5,10 @@ t=true;f=false;_=nil
 live_loop :werbling do
   sample Corrupt[/F#m/, /Guitar/,2], cutoff: 55, amp: 0.5
 
+  notes = (ring 
   with_synth(:dark_ambience){
+    
   }
 
-  sleep 4
+  sleep 8
 end

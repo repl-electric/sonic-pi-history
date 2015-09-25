@@ -9,6 +9,5 @@ live_loop :werbling do
   with_synth(:dark_ambience){
     play notes, decay: 8.1, amp: 0.4
   }
-
-  sleep 4
+  sleep 8
 end

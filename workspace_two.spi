@@ -73,6 +73,6 @@ live_loop :kick do
   #   end
   #  end
   sleep 1
-  sample Corrupt[/clap/,[2,4]].tick(:something_else_maybe), amp: 0.3, cutoff: (rrand 70, 90)
+  sample Corrupt[/clap/,[2,4]].tick(:something_else_maybe), amp: 0.3, cutoff: 110
   sleep 1
 end

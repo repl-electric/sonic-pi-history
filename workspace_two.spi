@@ -24,51 +24,52 @@ live_loop :apeg do
                            #Did I kill it? No its still alive
                            #No idea is this is going to work
                            play note
-                           #gulp cutoff: (ramp *(range 40, 135,5)).tick(:hoo)                           }
+                           #gulp cutoff: (ramp *(range 40, 135,5)).tick(:hoo)                           
+                           }
 
-      with_transpose(-24){
-        with_synth(:dsaw){
-          #          play (knit note, 1, _, 31).tick(:bass), cutoff: 50, amp: 0.0, detune: 0, release: 8.0
+                           with_transpose(-24){
+                             with_synth(:dsaw){
+                               #          play (knit note, 1, _, 31).tick(:bass), cutoff: 50, amp: 0.0, detune: 0, release: 8.0
+                             }
+
+                             with_synth(:prophet){
+                               #         play (knit note, 1, _, 31).look(:bass), cutoff: 55, amp: 0.0, decay: 8.0, attack: 0.01
+                             }
+                           }
+
+
+                           sleep 0.125
+                           }
+      end
+      end
+
+      live_loop :werbling do
+        with_fx(:slicer, mix: 0.8, phase: 0.25) do
+          #sample Dust[/F#m/, /voice/, 0], cutoff: (range 40, 60, 5).tick
+        end
+
+
+        #AGHGHGHGHGHGHGHGHG
+
+        # Yuck that was messy....
+        #  sample Corrupt[/F#m/, /Guitar/,3], cutoff: 80, amp: 0.2+rand*0.2, rate: 0.5
+        notes = (ring
+                 chord(:Fs3, :m),
+                 chord_degree(6, :Fs3, :minor),
+                 ).tick
+
+        with_synth(:dark_ambience){
+          #play notes, decay: 8.5, amp: 0.25, detune1: (ring 12, 12).tick(:d),
+          #detune2: (ring -24, -12).tick(:d2), cutoff: 130
         }
+        sleep 8
+      end
 
-        with_synth(:prophet){
-          #         play (knit note, 1, _, 31).look(:bass), cutoff: 55, amp: 0.0, decay: 8.0, attack: 0.01
-        }
-      }
-
-
-      sleep 0.125
-    }
-  end
-end
-
-live_loop :werbling do
-  with_fx(:slicer, mix: 0.8, phase: 0.25) do
-    #sample Dust[/F#m/, /voice/, 0], cutoff: (range 40, 60, 5).tick
-  end
-
-
-  #AGHGHGHGHGHGHGHGHG
-
-  # Yuck that was messy....
-  #  sample Corrupt[/F#m/, /Guitar/,3], cutoff: 80, amp: 0.2+rand*0.2, rate: 0.5
-  notes = (ring
-           chord(:Fs3, :m),
-           chord_degree(6, :Fs3, :minor),
-           ).tick
-
-  with_synth(:dark_ambience){
-    #play notes, decay: 8.5, amp: 0.25, detune1: (ring 12, 12).tick(:d),
-    #detune2: (ring -24, -12).tick(:d2), cutoff: 130
-  }
-  sleep 8
-end
-
-live_loop :kick do
-  #Something is doing something odd...
-  #sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
-  with_fx(:echo, phase: 0.25, decay: 0.02) do
-    # sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(80,100)
-    sleep 0.25
-  end
-end
+      live_loop :kick do
+        #Something is doing something odd...
+        #sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
+        with_fx(:echo, phase: 0.25, decay: 0.02) do
+          # sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(80,100)
+          sleep 0.25
+        end
+      end

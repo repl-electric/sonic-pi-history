@@ -67,12 +67,9 @@ end
 
 live_loop :kick do
   sync :werbling
-  #  with_fx(:echo, phase: 0.25, decay: 0.01) do
-  #    with_fx(:slicer, phase: 0.125) do
+  #Something is doing something odd...
   sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
-  #   end
-  #  end
   sleep 2
-  sample Corrupt[/clap/,[2,4]].tick(:something_else_maybe), amp: 0.3, cutoff: 110
+  sample Corrupt[/clap/,[2].tick(:something_else_maybe), amp: 0.3, cutoff: 110
   sleep 2
 end

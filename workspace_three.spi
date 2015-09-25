@@ -25,7 +25,7 @@ live_loop :frozen? do
             play blade_note, amp: 0.7+rand, env_curv: 4,
             release: 0.3,#@hold.look(:release)*0.1,
             attack: 0.3,#1-(1.0/@velocity.look(:attack)),
-            cutoff: rrand(80, 90)
+            cutoff: 30
           }
         }
         #Maybe some bass?
@@ -48,7 +48,8 @@ end
 
 live_loop :texture do
   sync :frozen?
-  with_fx(:slicer, phase: 0.125*2, invert_wave: 1, pulse_width: 0.8, smooth: 1.0) do
+  with_fx(:slicer, phase: 0.125*2, invert_wave: 1, 
+                   pulse_width: 0.8, smooth: 1.0) do
     sample Dust[/Halls/,/F#m/], cutoff: 130
     #    sample Dust[/f#m/, 5], amp: 0.2
     #sample Dust[/f#m/, 5], amp: 0.1

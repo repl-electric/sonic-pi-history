@@ -10,7 +10,7 @@ live_loop :frozen? do
       notes = (scale :fs3, :minor_pentatonic, num_octaves: 2).take(2)
       16.times{
         with_synth(:blade){
-          play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
+          #play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)
         }
         with_synth(:hollow){
           with_transpose(-12) do

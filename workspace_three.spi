@@ -10,7 +10,6 @@ hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
 tranpose = (ring *%w{-5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
-
 live_loop :frozen? do
   with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
     with_fx(:reverb, reps: 4, room: 1.0){
@@ -49,7 +48,7 @@ end
 
 live_loop :texture do
   with_fx(:slicer, phase: 0.25) do
-    sample Dust[/f#m/, 5], amp: 0.2
+#    sample Dust[/f#m/, 5], amp: 0.2
     #sample Dust[/f#m/, 5], amp: 0.1
   end
   sleep 8

@@ -7,7 +7,7 @@ live_loop :frozen? do
   with_fx(:lpf, cutoff: (ramp *(range 30, 130,5)).tick(:kf)) do
     with_fx :reverb, room: 1, reps: 4 do
       use_random_seed 200
-      notes = (scale :fs3, :minor_pentatonic, num_octaves: 4).take(2)
+      notes = (scale :fs3, :minor_pentatonic, num_octaves: 3).take(2)
       16.times{
         with_synth(:blade){
           play notes.choose, release: 0.1, amp: rand + 2.0, cutoff: rrand(70, 120)

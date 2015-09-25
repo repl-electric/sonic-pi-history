@@ -7,8 +7,10 @@ live_loop :werbling do
   sample Corrupt[/F#m/,/Guitar/, 3], cutoff: 60, amp: 0.4
 
   notes = (chord(:fs3, "m"))
-  
-  
+
+  with_synth(:dark_ambience){
+    play notes.tick, decay: 8.1, amp: 0.5
+  }
 
   sleep 8
 end

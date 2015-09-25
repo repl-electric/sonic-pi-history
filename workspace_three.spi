@@ -24,8 +24,8 @@ live_loop :frozen? do
           blade_note = notes.choose
           with_synth(:blade){
             with_transpose(@transpose.tick(:t)){
-              play blade_note, amp: 0.7+rand, 
-              release: @hold.tick(:hold)*0.1+0.1, attack: 0.1, cutoff: rrand(80, 100)
+              play blade_note, amp: 0.7+rand,
+              release: @hold.tick(:hold)*0.1, attack: 0.1, cutoff: rrand(80, 100)
             }
           }
           #Maybe some bass?

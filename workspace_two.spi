@@ -7,7 +7,7 @@ live_loop :apeg do
   # Should remove that little glitch... Slowly change over 2s
   with_fx(:reverb, room: 1.0, mix: 1.0, reps:4, damp_slide: 1.0) do |fx|
     use_random_seed (ring 300, 200).tick(:seed)
-    notes = scale(:Fs3, :minor_pentatonic, num_octaves: 2).drop(0).tick(:drop)).take(3).shuffle
+    notes = scale(:Fs3, :minor_pentatonic, num_octaves: 2).drop(0)).take(3).shuffle
     16.times{
       note = notes.tick(:n)
       with_transpose(-12) do

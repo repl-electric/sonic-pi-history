@@ -18,7 +18,7 @@ live_loop :frozen? do
           end
         }
         with_transpose(-24){
-          synth :dsaw, note: (knit notes[-1],1,_,31).tick, release: 8.0
+          synth :dsaw, note: (knit notes[-1],1,_,31).tick(:bass), release: 8.0
         }
         sleep 0.125
       }

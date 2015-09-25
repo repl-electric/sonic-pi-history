@@ -8,7 +8,7 @@ sample Mountain[/subkick/,0]
   shader("decaying-uniform", "iKick", 1.0, 0.002)
 
   11.times{sync :apeg}
-  shader("decaying-uniform", "iBeat", 0.2, 0.001)
+  shader("decaying-uniform", "iBeat", 1.0, 0.001)
   (32-11).times{sync :apeg}
   sample Ether[/coil/i, /f#/i], amp: 3.0
 end

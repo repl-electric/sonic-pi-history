@@ -5,7 +5,7 @@ t=true;f=false;_=nil
 live_loop :apeg do
   with_fx(:reverb, room: 0.8, mix: 0.8, reps:4) do |fx|
     use_random_seed 200
-    notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).drop(0).take(3)
+    notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).drop(1).take(3)
     16.times{
       note = notes.shuffle
       with_transpose(-12) do

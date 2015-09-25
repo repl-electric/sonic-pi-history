@@ -59,12 +59,12 @@ with_fx(:reverb, mix: 0.46, room: 0.7) do
   live_loop :pop do
     sleep  0.125*1
     if spread(7,8).tick(:hat)
-      sample Dust[/hat/,[12,10]].tick(:d), amp: 0.1+rand*0.2 ,
+      sample Dust[/hat/,[12,10]].tick(:d), amp: 0.1+rand*0.0 ,
         pan: 0.025,
         cutoff: (range 80,110,10).tick(:r)
     end
     if spread(6,11).tick(:hat)
-      sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.2,
+      sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.0,
         pan: -0.025,
         cutoff: (range 100,80,10).tick(:r2)
     end

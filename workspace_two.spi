@@ -6,7 +6,7 @@ live_loop :werbling do
   #Our base sample, lets see where it takes us
   sample Corrupt[/F#m/,/Guitar/, 3], cutoff: 60, amp: 0.8
   use_random_seed 300
-  notes = (ring chord(:fs3, "m"), chord(:a3, 'M'))
+  notes = (ring chord(:fs3, "m"), chord(:a3, 'M'), chord_degree(2, :fs3, :minor))
   with_synth(:dark_ambience){
     play notes.tick, decay: 8.1, amp: 0.3, detune1: 24, detune2: -24
   }

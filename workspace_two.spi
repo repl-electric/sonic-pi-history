@@ -14,6 +14,8 @@ live_loop :apeg do
           play note, release: 0.1, cutoff: (rrand 70,90), amp: 0.4+rand
         end
       end
+      #Lovely little trick in Sonic Pi. Can only be done with safe mode off =>
+      control fx, damp: rrand(0.0,1.0)
 
       #Meh, I've not a fan of blade.... Lets try something else
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.

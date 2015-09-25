@@ -4,6 +4,7 @@ live_loop :echo do
       sample Dust[/F#m/,4], pitch: (ring -12, -24).tick
       play (ring :fs3, :A3)
     end
+    Dust[/A[^#]/,8]
     sleep 4
   end
 end

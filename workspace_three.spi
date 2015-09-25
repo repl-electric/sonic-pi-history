@@ -48,9 +48,10 @@ end
 
 live_loop :texture do
   sync :frozen?
+  notes = (ring chord("fs3", 'm'))
   sample Corrupt[/F#m/, /WarmGtrFX/,0], cutoff: 60, rate: 1.0
   with_synth(:dark_ambience){
-    play chord("fs3", 'm'), decay: 8.1, amp: 0.5, detune1: 24, detune2: -24
+    play notes.tick(:n), decay: 8.1, amp: 0.5, detune1: 24, detune2: -24
   }
   #sample Corrupt[/F#m/, /WarmTexture/,0]
   with_fx(:slicer, phase: 0.125*2, invert_wave: 1,

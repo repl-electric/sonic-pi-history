@@ -13,7 +13,7 @@ end
 # F#, G#, A,    B, C#,   D,  E.
 
 live_loop :apeg do
-  sample Dust["F#m_KalimbaArpFX"]
+  sample Dust[/F#m_KalimbaArpFX/]
   sleep 4
 end
 

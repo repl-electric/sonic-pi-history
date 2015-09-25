@@ -19,6 +19,6 @@ live_loop :werbling do
 end
 
 live_loop :kick do
-  sample Corrupt[/kick/,0], amp: 0, cutoff: 60
+  sample Corrupt[/kick/,1], amp: 0, cutoff: 60
   sleep 4
 end

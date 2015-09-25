@@ -29,11 +29,11 @@ live_loop :apeg do
 
       with_transpose(-24){
         with_synth(:dsaw){
-#          play (knit note, 1, _, 31).tick(:bass), cutoff: 50, amp: 0.0, detune: 0, release: 8.0
+          #          play (knit note, 1, _, 31).tick(:bass), cutoff: 50, amp: 0.0, detune: 0, release: 8.0
         }
 
         with_synth(:prophet){
-          play (knit note, 1, _, 31).look(:bass), cutoff: 55, amp: 0.0, decay: 8.0, attack: 0.01
+ #         play (knit note, 1, _, 31).look(:bass), cutoff: 55, amp: 0.0, decay: 8.0, attack: 0.01
         }
       }
 

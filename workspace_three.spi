@@ -7,46 +7,46 @@ attack_ring = (ring 0.01,0.2,0.3)
 release_ring = (ring 0.15, 0.1, 0.05)
 
 @hold     = (ring *%w{1  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
-@transpose = (ring *%w{-5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
+@transpose = (ring *%w{5 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 @velocity = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
 live_loop :frozen? do
-#  with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
-    with_fx(:reverb, reps: 4, room: 1.0){
-      use_random_seed 300
-      notes = scale(:Fs3, :minor_pentatonic, num_octaves: 2).drop(1).take(3).shuffle
-      with_synth(:hollow){
-        16.times do
-          with_transpose(@transpose.tick(:t) -12){
-            play notes.tick, cutoff: rrand(80,100), amp: 0.8 + rand,
-            release: release_ring.tick(:release)
-            #attack: attack_ring.tick(:attack)
+  #  with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
+  with_fx(:reverb, reps: 4, room: 1.0){
+    use_random_seed 300
+    notes = scale(:Fs3, :minor_pentatonic, num_octaves: 2).drop(1).take(3).shuffle
+    with_synth(:hollow){
+      16.times do
+        with_transpose(@transpose.tick(:t) -12){
+          play notes.tick, cutoff: rrand(80,100), amp: 0.8 + rand,
+          release: release_ring.tick(:release)
+          #attack: attack_ring.tick(:attack)
+        }
+        blade_note = notes.choose
+        with_synth(:blade){
+          with_transpose(@transpose.look(:t)){
+            play blade_note, amp: 0.7+rand,
+            release: @hold.tick(:hold)*0.1,
+            attack: 0.1,
+            cutoff: rrand(80, 100)
           }
-          blade_note = notes.choose
-          with_synth(:blade){
-            with_transpose(@transpose.look(:t)){
-              play blade_note, amp: 0.7+rand,
-              release: @hold.tick(:hold)*0.1,
-              attack: 0.1,
-              cutoff: rrand(80, 100)
-            }
-          }
-          #Maybe some bass?
+        }
+        #Maybe some bass?
 
-          with_transpose(-24){
-            with_synth(:dsaw){
-              play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 50, amp: 0.0+rand, release: 2, decay: 8.0,
-              detune: 12
-            }
-            with_synth(:prophet){
-              play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 40, amp: 0.0+rand, release: 2, decay: 8.0
-            }
+        with_transpose(-24){
+          with_synth(:dsaw){
+            play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 50, amp: 0.0+rand, release: 2, decay: 8.0,
+            detune: 12
           }
-          sleep 0.125
-        end
-      }
+          with_synth(:prophet){
+            play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 40, amp: 0.0+rand, release: 2, decay: 8.0
+          }
+        }
+        sleep 0.125
+      end
     }
- # end
+  }
+  # end
 end
 
 live_loop :texture do

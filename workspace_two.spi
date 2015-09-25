@@ -16,7 +16,7 @@ live_loop :apeg do
       end
 
       with_synth(:blade){
-        play note, cutoff: (rrand 80, 90), amp: 0.1+rand, attack: 0.03, release: 0.09, pan: rdist(1)
+        play note, cutoff: (rrand 80, 90), amp: 0.1+rand, attack: 0.03, release: 0.1, pan: rdist(1)
       }
 
       with_transpose(-24){

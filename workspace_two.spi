@@ -18,7 +18,7 @@ live_loop :apeg do
       #Meh, I've not a fan of blade.... Lets try something else
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.
                            #Did I kill it?
-                           play note, cutoff: (rrand 80, 85), amp: rand*0.1, attack: 0.03, release: 0.1, pan: rdist(1)
+                           play note, cutoff: (rrand 80, 90), amp: rand*0.1, attack: 0.03, release: 0.1, pan: rdist(1)
                            }
 
       with_transpose(-24){

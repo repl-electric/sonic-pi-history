@@ -3,7 +3,7 @@ t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
 live_loop :werbling do
-  sample Corrupt[/F#m/, /Guitar/,2], cutoff: 60, amp: 0.8
+  sample Corrupt[/F#m/, /Guitar/,2], cutoff: 65, amp: 0.8
   notes = (ring chord(:Fs3, :m), chord(:A3, 'M')).tick
   with_synth(:dark_ambience){
     play notes, decay: 8.1, amp: 0.4, detune1: 24, detune2: -24

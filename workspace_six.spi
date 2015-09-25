@@ -47,7 +47,7 @@ live_loop :slice do
       sample Dust[/F#m/,4],
       #      cutoff: (range 40, 80, 5).tick(:cutoff),
       pan: rdist(1),
-      pitch_stretch: pitch_to_ratio(note(:Fs2) - note(:As2))
+      pitch_stretch: pitch_to_ratio(note(:Fs2) - note(:As3))
     }
   end
   sleep 8

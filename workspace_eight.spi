@@ -8,4 +8,4 @@ live_loop :echo do
   end
 end
 
-sample Dust[/A[^#]/,3]
+sample Dust[/A[^#]/,4]

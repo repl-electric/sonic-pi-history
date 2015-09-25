@@ -68,7 +68,12 @@ live_loop :kick do
   #  with_fx(:echo, phase: 0.25, decay: 0.01) do
   #    with_fx(:slicer, phase: 0.125) do
   sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.3, cutoff: (rrand 70, 90)
+
+
   #   end
   #  end
-  sleep 2
+  sleep 1
+
+  sample Corrupt[/clap/,[2,4]].tick(:something_else_maybe), amp: 0.3, cutoff: (rrand 70, 90)
+
 end

@@ -8,7 +8,7 @@ live_loop :apeg do
   with_fx(:reverb, room: 1.0, mix: 1.0, reps:4, damp_slide: 0.5) do |fx|
     use_random_seed (ring 300).tick(:seed)
     notes = #scale(:Fs3, :minor_pentatonic, num_octaves: 2).drop(0).take(3).shuffle
-      notes = (ring :Fs2,:A2 )
+      notes = (ring :Fs2,:A2)
     16.times{
       note = notes.tick(:n)
       with_transpose(-12) do
@@ -70,7 +70,7 @@ live_loop :kick do
   #Something is doing something odd...
   #sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
   with_fx(:echo, phase: 0.25, decay: 0.02) do
-    sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(100,120)
+    sample_and_sleep Corrupt[/clap/,[2,2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(80,120)
     sleep 0.25
   end
 end

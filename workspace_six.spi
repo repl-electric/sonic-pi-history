@@ -44,7 +44,7 @@ end
 live_loop :slice do
   with_fx(:echo, phase: 0.25, mix: 0.0) do
     with_fx(:slicer, phase: 0.25, mix: 0.0){
-      sample Dust[/F#m/,4], pitch: -12, window_size: 0.2, pitch_dis: 0.001,
+      sample Dust[/F#m/,4], pitch: -24, window_size: 0.2, pitch_dis: 0.001,
       #      cutoff: (range 40, 80, 5).tick(:cutoff),
       pan: rdist(1)
     }

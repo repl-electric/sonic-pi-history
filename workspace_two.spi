@@ -19,7 +19,8 @@ live_loop :apeg do
       with_synth(:hoover){ #Once I start hoover I cannot stop. Everything will die.
                            #Did I kill it? No its still alive
                            play note, cutoff: (rrand 80, 90),
-                           amp: rand*0.1, attack: (ring 0.01,0.03).tick(:attack), release: 0.1, pan: rdist(1)
+                           amp: rand*0.1, attack: (ring 0.01,0.03).tick(:attack),
+                           release: 0.1, pan: rdist(1)
                            }
 
       with_transpose(-24){
@@ -54,7 +55,7 @@ live_loop :werbling do
 
   with_synth(:dark_ambience){
     play notes, decay: 8.3, amp: 0.7, detune1: (ring 12, 24).tick(:d),
-    detune2: (ring -24, -24).tick(:d2), cutoff: 80
+    detune2: (ring -24, 0).tick(:d2), cutoff: 80
   }
   sleep 8
 end

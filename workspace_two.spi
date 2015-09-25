@@ -3,7 +3,7 @@ t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
 live_loop :werbling do
-  sample Corrupt[/F#m/, /Guitar/,3], cutoff: (rrand 65, 80), amp: 0.2+rand
+  sample Corrupt[/F#m/, /Guitar/,3], cutoff: (rrand 65, 80), amp: 0.2+rand*0.2
   notes = (ring
            chord(:Fs3, :m),
            chord(:A3, 'M'),
@@ -16,4 +16,8 @@ live_loop :werbling do
     detune2: (ring -24, -12).tick(:d2)
   }
   sleep 8
+end
+
+live_loop : do
+
 end

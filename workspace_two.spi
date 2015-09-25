@@ -65,7 +65,7 @@ live_loop :werbling do
 end
 
 live_loop :kick do
-  sync :apeg
+  sync :werbling
   #  with_fx(:echo, phase: 0.25, decay: 0.01) do
   #    with_fx(:slicer, phase: 0.125) do
   sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.3, cutoff: (rrand 70, 90)

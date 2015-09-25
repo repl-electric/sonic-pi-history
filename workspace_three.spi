@@ -25,8 +25,8 @@ live_loop :frozen? do
           with_synth(:blade){
             with_transpose(@transpose.look(:t)){
               play blade_note, amp: 0.7+rand,
-              release: @hold.tick(:hold)*0.1, 
-              attack: 0.1, 
+              release: @hold.tick(:hold)*0.1,
+              attack: 0.1,
               cutoff: rrand(80, 100)
             }
           }

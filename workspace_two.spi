@@ -13,9 +13,9 @@ live_loop :apeg do
           play note, release: 0.1, cutoff: (rrand 70,90), amp: 0.4+rand
         end
       end
-      
+
       with_synth(:blade){
-        play note, cutoff: 50, amp: 0.1
+        play note, cutoff: 55, amp: 0.1
       }
 
       sleep 0.125

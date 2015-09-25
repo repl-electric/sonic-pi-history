@@ -24,8 +24,7 @@ live_loop :apeg do
                            #No idea is this is going to work
                            play note,
                            #gulp cutoff: (ramp *(range 40, 135,5)).tick(:hoo),
-                           amp: rand*0.06, 
-                           release: 0.08, pan: (ring -0.25, 0.25).tick(:pan)
+                           amp: rand*0.06, pan: (ring -0.25, 0.25).tick(:pan)
                            }
 
       with_transpose(-24){

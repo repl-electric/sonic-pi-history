@@ -54,7 +54,7 @@ live_loop :werbling do
            ).tick
 
   with_synth(:dark_ambience){
-    play notes, decay: 8.3, amp: 0.7, detune1: (ring 12, 24).tick(:d),
+    play notes, decay: 8.3, amp: 0.7, detune1: (ring 24, 24).tick(:d),
     detune2: (ring -24, 0).tick(:d2), cutoff: 80
   }
   sleep 8

@@ -4,7 +4,7 @@ t=true;f=false;_=nil
 
 live_loop :werbling do
   #Our base sample, lets see where it takes us
-  sample Corrupt[/F#m/,/Guitar/, 3], cutoff: 60, amp: 0.4
+  sample Corrupt[/F#m/,/Guitar/, 3], cutoff: 50, amp: 0.4
 
   notes = (chord(:fs3, "m"))
 

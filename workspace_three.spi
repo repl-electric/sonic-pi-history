@@ -62,7 +62,7 @@ live_loop :drums do
   with_fx(:echo, phase: 0.125, decay: 4.0) do
 
     with_fx(:slicer, phase: 0.25) do
-  #    sample Dust[/kick/, [3,2,4,5]].tick(:kick), amp: 1.5
+      #    sample Dust[/kick/, [3,2,4,5]].tick(:kick), amp: 1.5
     end
   end
   sleep 1

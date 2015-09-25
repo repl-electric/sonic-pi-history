@@ -89,14 +89,14 @@ live_loop :chords do
              chord(:A3, 'M'),
              chord(:D3, 'M'),
              chord(:Cs3, "m9")).tick
-    play notes, release: 2.0, attack: 0.5, decay: 8.2, detune1: 24, detune2: -24, amp: 8.0
+    #play notes, release: 2.0, attack: 0.5, decay: 8.2, detune1: 24, detune2: -24, amp: 8.0
     8.times{sleep 1; control fx, cutoff: (ring 80, 100).tick(:cutoff)}
   end
 end
 
 live_loop :texture2 do
   with_fx(:bitcrusher, mix: 0.08, sample_rate: 2*2000) do
-   # sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
+    # sample Dust[/f#/, 10], amp: 0.5, cutoff: 80
   end
   sleep 8
 end

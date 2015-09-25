@@ -49,6 +49,9 @@ live_loop :werbling do
     #sample Dust[/F#m/, /voice/, 0], cutoff: (range 40, 60, 5).tick
   end
 
+
+  #AGHGHGHGHGHGHGHGHG
+
   # Yuck that was messy....
   #  sample Corrupt[/F#m/, /Guitar/,3], cutoff: 80, amp: 0.2+rand*0.2, rate: 0.5
   notes = (ring
@@ -66,9 +69,8 @@ live_loop :werbling do
 end
 
 live_loop :kick do
-  sync :werbling
   #Something is doing something odd...
-  #  sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
+  #sample Corrupt[/kick/,[2,4]].tick(:kick), amp: 0.2, cutoff: 100
   sample_and_sleep Corrupt[/clap/,[2]].tick(:something_else_maybe), amp: 0.3, cutoff: rrand(100,120)
   #sleep 1
 end

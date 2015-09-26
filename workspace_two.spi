@@ -2,4 +2,9 @@
 t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
-puts [Corrupt[/F#m/]].flatten.to_a.join("\n")
+use_bpm 120
+
+live_loop :looper do
+sample [Corrupt[/F#m/]]
+sleep 1
+end

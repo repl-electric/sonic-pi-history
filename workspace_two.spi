@@ -17,7 +17,7 @@ end
 
 live_loop :looper3 do
   with_fx((knit :none, 3, :echo ,1).tick, phase: 0.125, decay: 0.5) do
-    sample Corrupt[/kick/, [2,3]].tick(:kick)
+    sample Corrupt[/kick/, [2,3]].tick(:kick), amp: rand
   end
   sleep 4
 end

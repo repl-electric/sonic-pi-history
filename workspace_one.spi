@@ -2,7 +2,7 @@
 t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
-use_bpm 120
+use_bpm 100
 
 #120*3 = 360
 #90*4 = 360
@@ -21,3 +21,5 @@ live_loop :looper3 do
   sleep  19.2/2
   sample Corrupt[/one shot/].tick
 end
+
+puts sample_duration(Corrupt[/one shot/,0])

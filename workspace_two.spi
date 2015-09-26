@@ -15,5 +15,5 @@ live_loop :looper2 do
 end
 
 
-puts Corrupt[/120/,/F#m/].to_a.join("\n")
+puts Corrupt[/120/,/F/].to_a.join("\n")
 puts sample_duration(Corrupt[/F#m/,0])

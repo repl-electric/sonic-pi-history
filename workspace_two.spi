@@ -2,4 +2,4 @@
 t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
-puts Corrupt[/F/, 3]
+puts Corrupt[/F/, 0]

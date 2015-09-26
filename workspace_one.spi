@@ -8,7 +8,7 @@ use_bpm 120
 #90*4 = 360
 
 live_loop :looper do
-  sample Corrupt[/100/,/bass/, 0]
+  sample Corrupt[/100/,/bass/, 1]
   sleep 19.2
 end
 

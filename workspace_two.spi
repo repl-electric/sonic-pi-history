@@ -21,8 +21,10 @@ live_loop :looper3 do
 end
 
 live_loop :looper4 do
-  sleep 2
+  sleep 1
   sample Corrupt[/kick/, 3]
+  sleep 1
+
   #sample Corrupt[/snare/, 0]
 end
 

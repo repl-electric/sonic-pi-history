@@ -9,4 +9,4 @@ live_loop :looper do
   sleep 120
 end
 
-puts sample_duration(sample Corrupt[/F#m/,0])
+puts sample_duration(Corrupt[/F#m/,0])

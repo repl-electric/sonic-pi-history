@@ -5,12 +5,12 @@ t=true;f=false;_=nil
 use_bpm 120
 
 live_loop :looper do
-  sample Corrupt[/F#m/,/120/, 0]
+  sample Corrupt[/_F#m_/,/120/, 0]
   sleep 16
 end
 
 live_loop :looper2 do
-  sample Corrupt[/F#/, /120/, 2]
+  sample Corrupt[/_F#_/, /120/, 2]
   sleep 16
 end
 

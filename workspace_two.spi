@@ -10,6 +10,7 @@ live_loop :looper do
 end
 
 live_loop :looper2 do
+  sleep 8
   sample Corrupt[/F#/, /120/, 5]
   sleep 16
 end

@@ -19,5 +19,5 @@ end
 
 live_loop :looper3 do
   sleep  19.2/2
-  sample Corrupt[/one shot/, 3]
+  sample Corrupt[/one shot/].tick
 end

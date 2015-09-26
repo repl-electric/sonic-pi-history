@@ -5,6 +5,6 @@ t=true;f=false;_=nil
 use_bpm 120
 
 live_loop :looper do
-sample [Corrupt[/F#m/]]
-sleep 1
+  sample Corrupt[/F#m/,0]
+  sleep 1
 end

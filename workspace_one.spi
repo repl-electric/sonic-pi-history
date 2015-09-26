@@ -2,7 +2,7 @@
 t=true;f=false;_=nil
 #Just messing around, will see what happens.
 
-use_bpm 120
+use_bpm 100
 
 #120*3 = 360
 #90*4 = 360
@@ -18,5 +18,6 @@ live_loop :looper2 do
 end
 
 live_loop :looper3 do
-  sleep 1
+  sleep  19.2/2
+  Corrupt[/one shot/, 0]
 end

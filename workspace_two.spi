@@ -10,11 +10,11 @@ live_loop :looper do
 end
 
 live_loop :looper2 do
-  sample Corrupt[/120/, 0]
+  sample Corrupt[/120/, 1]
   sleep 16
 end
 
-live_loop :looper2 do
+live_loop :looper3 do
   sample Corrupt[/kick/, 0]
   sleep 8
 end

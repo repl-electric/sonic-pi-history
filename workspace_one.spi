@@ -5,6 +5,6 @@ t=true;f=false;_=nil
 use_bpm 120
 
 live_loop :looper do
-  sample Corrupt[/bass/, /_D#_/, 0]
+  sample Corrupt[/90/,/bass/, /_D#_/, 0]
   sleep 16
 end

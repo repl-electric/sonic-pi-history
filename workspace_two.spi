@@ -22,7 +22,7 @@ live_loop :looper3 do
   sleep 4
 end
 
-with_fx(:reverb) do
+with_fx(:reverb, mix: 0.3) do
   live_loop :looper4 do
     sleep 2
     sample Corrupt[/kick/, 3]

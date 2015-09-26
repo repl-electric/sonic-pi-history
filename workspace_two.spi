@@ -6,7 +6,7 @@ use_bpm 120
 
 live_loop :looper do
   sample Corrupt[/F#m/,0]
-  sleep 8
+  sleep 16
 end
 
 puts sample_duration(Corrupt[/F#m/,0])

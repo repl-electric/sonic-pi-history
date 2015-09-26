@@ -9,4 +9,11 @@ live_loop :looper do
   sleep 16
 end
 
+live_loop :looper do
+  sample Corrupt[/120/, 0]
+  sleep 16
+end
+
+
+
 puts sample_duration(Corrupt[/F#m/,0])

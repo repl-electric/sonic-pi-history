@@ -17,5 +17,7 @@ live_loop :looper2 do
   sleep 19.2
 end
 
-21
-puts sample_duration( Corrupt[/100/,/bass/, 0])
+live_loop :looper3 do
+  sample Corrupt[/100/,/guitar/, 0]
+  sleep 19.2
+end

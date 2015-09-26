@@ -6,5 +6,5 @@ use_bpm 120
 
 live_loop :looper do
   sample Corrupt[/F#m/,0]
-  sleep 1
+  sleep 120
 end

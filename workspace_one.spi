@@ -22,4 +22,4 @@ live_loop :looper3 do
   sample Corrupt[/one shot/].tick
 end
 
-puts sample_duration(Corrupt[/one shot/,0])
+puts sample_duration(Corrupt[/100/,/beats/, 1])

@@ -18,7 +18,7 @@ live_loop :looper2 do
 end
 
 live_loop :looper3 do
-  sample Corrupt[/100/,/guitar/, 2]
+  sample Corrupt[/100/,/guitar/, 8]
   sleep 19.2
 end
 

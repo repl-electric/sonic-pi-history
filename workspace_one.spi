@@ -9,7 +9,7 @@ use_bpm 120
 
 live_loop :looper do
   sample Corrupt[/90/,/bass/, /_D#_/, 0]
-  sleep 
+  sleep
 end
 
 live_loop :looper2 do
@@ -17,4 +17,4 @@ live_loop :looper2 do
   sleep 8
 end
 
-puts  Corrupt[/90/,/bass/, /_D#_/, 0]
+puts sample_duration( Corrupt[/90/,/bass/, /_D#_/, 0])

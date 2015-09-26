@@ -15,13 +15,13 @@ live_loop :looper2 do
 end
 
 live_loop :looper3 do
-  sample Corrupt[/kick/, 2]
+  #sample Corrupt[/kick/, 2]
   sleep 2
 end
 
 live_loop :looper4 do
   sleep 2
-  sample Corrupt[/snare/, 0]
+  #sample Corrupt[/snare/, 0]
 end
 
 

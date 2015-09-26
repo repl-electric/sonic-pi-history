@@ -12,7 +12,7 @@ live_loop :looper do
   sleep 16
 end
 
-live_loop :looper do
+live_loop :looper2 do
   #  sample Corrupt[/90/,/bass/, /_D#_/, 0]
   sleep 8
 end

@@ -11,7 +11,7 @@ end
 
 live_loop :looper2 do
   sleep 8
-  sample Corrupt[/F#/, /120/, 7]
+  sample Corrupt[/F#/, /120/, 8]
   sleep 16
 end
 

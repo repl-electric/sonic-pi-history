@@ -16,9 +16,9 @@ live_loop :looper2 do
 end
 
 live_loop :looper3 do
-  with_fx((knit _, 3, :echo ,1).tick) do
-  sample Corrupt[/kick/, 2]
-end
+  with_fx((knit :none, 3, :echo ,1).tick) do
+    sample Corrupt[/kick/, 2]
+  end
   sleep 2
 end
 

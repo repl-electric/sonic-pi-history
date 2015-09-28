@@ -108,5 +108,5 @@ live_loop :texture2 do
 end
 
 live_loop :detroit do
-  #  sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.3
+  sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.3
 end

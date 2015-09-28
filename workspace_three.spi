@@ -3,7 +3,7 @@ f=false;t=true
 # Just messing around with SonicPi.
 # Nothing polished, just learning the music and code thing.
 @hold      = (ring *%w{2  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))
-@transpose = (ring *%w{10 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
+@transpose = (ring *%w{12 0 0 0 -5 0 0 0 0 -12 0 -2 -12 -2 0 -12}.map(&:to_i))
 @velocity  = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
 live_loop :frozen? do

@@ -28,7 +28,7 @@ live_loop :frozen? do
         with_fx(:distortion, mix: 0.2) do
           with_synth(:fm){
             with_transpose(@transpose.look(:t)){
-              play (knit blade_note,1,_,1).tick(:bl) amp: 0.0, env_curv: 4,
+              play (knit blade_note,1,_,1).tick(:bl), amp: 0.1, env_curv: 4,
               release: 0.2,
               attack: 0.01,
               cutoff: rrand(100,130)

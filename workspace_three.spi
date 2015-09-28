@@ -1,5 +1,5 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-f=false;t=true
+f=false;t=true;_=nil
 # Just messing around with SonicPi.
 # Nothing polished, just learning the music and code thing.
 @hold      = (ring *%w{2  0 0 0 0 0 0 0 0 0   0  1  0   1 0  0}.map(&:to_i))

@@ -14,7 +14,7 @@ live_loop :frozen? do
     notes = chord(:Cs3, 'm9')
     with_synth(:hollow){
       16.times do
-        with_transpose(@transpose.tick(:t) -12){
+        with_transpose(@transpose.tick(:t)){
           play notes.tick, cutoff: rrand(80,100),
           amp: 5.0 + rand,
           release: @hold.tick(:release)*0.3,

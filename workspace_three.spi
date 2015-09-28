@@ -109,4 +109,5 @@ end
 
 live_loop :detroit do
   sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 1.0
+
                                       end

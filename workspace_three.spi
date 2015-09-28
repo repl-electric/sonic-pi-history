@@ -25,7 +25,7 @@ live_loop :frozen? do
             play blade_note, amp: 0.7+rand, env_curv: 4,
             release: @hold.look(:release)*0.1,
             attack: 1-(1.0/@velocity.look(:attack)),
-            cutoff: 70
+            cutoff: rrand(80,100)
           }
         }
         #Maybe some bass?

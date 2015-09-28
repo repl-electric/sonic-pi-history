@@ -71,8 +71,8 @@ live_loop :drums do
 end
 
 live_loop :oneshot do
- sample Corrupt[/one shot/, "C#m"]
- sleep 32
+  sample Corrupt[/one shot/, "C#m"], amp: 2.0
+  sleep 32
 end
 
 with_fx(:reverb, room: 0.8, mix: 0.5) do

@@ -18,7 +18,8 @@ live_loop :looper2 do
 end
 
 live_loop :drums do
-  sample Corrupt[/kick/,3], cutoff: 100
+  #sample Corrupt[/kick/,3], cutoff: 100
+  synth :prophet, note: :Fs3
   sleep 32/2.0
 end
 
@@ -26,5 +27,3 @@ live_loop :looper3 do
   sleep  32/2.0
   #sample Corrupt[/one shot/].tick
 end
-
-puts sample_duration(Corrupt[/100/,/beats/, 1])

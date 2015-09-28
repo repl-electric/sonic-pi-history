@@ -13,7 +13,7 @@ live_loop :frozen? do
     notes = scale(:Fs3, :minor_pentatonic, num_octaves: 3).drop(0).take(3).shuffle
     #notes = chord(:Cs3, 'm9').take(3)
     with_synth(:hollow){
-      synth :supersaw, note: :FS3, cutoff: 60
+      synth :supersaw, note: :FS3, cutoff: 70
       16.times do
         with_transpose(@transpose.tick(:t)+12){
           play notes.tick, cutoff: rrand(80,100),

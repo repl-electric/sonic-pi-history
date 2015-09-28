@@ -45,40 +45,40 @@ live_loop :slice do
   with_fx(:echo, phase: 0.25, mix: 0.0) do
     with_fx(:slicer, phase: 0.25, mix: 0.0){
       sample Dust[/F#m/,4], pitch: -8, window_size: 0.2, pitch_dis: 0.001,time_dis:0.001,
-      #      cutoff: (range 40, 80, 5).tick(:cutoff),
-      pan: rdist(1)
-    }
-    play :A3
-  end
-  sleep 8
-end
+                  #      cutoff: (range 40, 80, 5).tick(:cutoff),
+                  pan: rdist(1)
+                  }
+                  play :A3
+                  end
+                  sleep 8
+                  end
 
-live_loop :push do
-  with_fx(:echo, phase: 0.25) do
-    with_fx(:slicer, phase: 0.125) do
-      sample Dust[/kick/, [4,3,5,3]].tick, amp: 1.0, cutoff: 130
-    end
-  end
-  sleep 4.0
-end
+                  live_loop :push do
+                    with_fx(:echo, phase: 0.25) do
+                      with_fx(:slicer, phase: 0.125) do
+                        sample Dust[/kick/, [4,3,5,3]].tick, amp: 1.0, cutoff: 130
+                      end
+                    end
+                    sleep 4.0
+                  end
 
-with_fx(:reverb, mix: 0.46, room: 0.7) do
-  live_loop :pop do
-    sleep  0.125*1
-    if spread(7,8).tick(:hat)
-      sample Dust[/hat/,[12,10]].tick(:d), amp: 0.1+rand*0.0 ,
-        pan: 0.025,
-        cutoff: (range 80,110,10).tick(:r)
-    end
-    if spread(6,11).tick(:hat)
-      sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.0,
-        pan: -0.025,
-        cutoff: (range 100,80,10).tick(:r2)
-    end
+                  with_fx(:reverb, mix: 0.46, room: 0.7) do
+                    live_loop :pop do
+                      sleep  0.125*1
+                      if spread(7,8).tick(:hat)
+                        sample Dust[/hat/,[12,10]].tick(:d), amp: 0.1+rand*0.0 ,
+                          pan: 0.025,
+                          cutoff: (range 80,110,10).tick(:r)
+                      end
+                      if spread(6,11).tick(:hat)
+                        sample Dust[/hat/,[10,10]].tick(:d), amp: 0.1+rand*0.0,
+                          pan: -0.025,
+                          cutoff: (range 100,80,10).tick(:r2)
+                      end
 
-    if (knit f, 29, t, 1, f, 2).tick(:hatz)
-      #sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
-      sample Scape[/SoftBrushHat/,0], cutoff: 130, amp: rand+0.1
-    end
-  end
-end
+                      if (knit f, 29, t, 1, f, 2).tick(:hatz)
+                        #sample Dust[/hat/,14], amp: 1.0, rate: (ring 0.5, 1.0, 2.0, 1.5).tick
+                        sample Scape[/SoftBrushHat/,0], cutoff: 130, amp: rand+0.1
+                      end
+                    end
+                  end

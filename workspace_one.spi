@@ -17,6 +17,11 @@ live_loop :looper2 do
   sleep 32
 end
 
+live_loop :drums do
+  sample Corrupt[/kick/,2]
+  sleep 32/4.0
+end
+
 live_loop :looper3 do
   sleep  32/2.0
   #sample Corrupt[/one shot/].tick

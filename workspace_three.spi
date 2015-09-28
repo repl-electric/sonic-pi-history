@@ -7,6 +7,8 @@ f=false;t=true
 @velocity  = (ring *%w{100 100 49 100 118 78 110 114 100 127 100 127 115 100 100 100}.map(&:to_i))
 
 live_loop :frozen? do
+ synth :supersaw, note: chord(:Cs4, 'm9').shuffle.choose, cutoff: 60,
+    
   #  with_fx(:lpf, cutoff: (ramp *(range 40, 130, 10)).tick(:cut3) ) do
   with_fx(:reverb, reps: 4, room: 1.0){
     use_random_seed 300#(ring 300, 200, 100).tick(:rand?)
@@ -108,6 +110,6 @@ live_loop :texture2 do
 end
 
 live_loop :detroit do
-  sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.2
+  sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.2Xx3
 
                                       end

@@ -19,7 +19,7 @@ end
 
 live_loop :drums do
   #sample Corrupt[/kick/,3], cutoff: 100
-  synth :prophet, note: :Fs3, cutof: 40
+  synth :prophet, note: :Fs3, cutof: 40, attack: 0.01
   sleep 32/8.0
 end
 

@@ -26,7 +26,7 @@ live_loop :frozen? do
         }
         blade_note = notes.choose
         with_fx(:distortion, mix: 0.2) do
-          with_synth(:fm){
+          with_synth(:blade){
             with_transpose(0){
               play (knit blade_note,1,_,0).tick(:bl), amp: 1.0, env_curv: 4,
               release: 0.2,

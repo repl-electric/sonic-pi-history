@@ -19,8 +19,8 @@ end
 
 live_loop :drums do
   #sample Corrupt[/kick/,3], cutoff: 100
-  synth :prophet, note: (ring :Fs2).tick, 
-                  cutoff: 40, attack: 0.01
+  synth :prophet, note: (ring :Fs4).tick,
+    cutoff: 40, attack: 0.01
   sleep 32/4.0
 end
 

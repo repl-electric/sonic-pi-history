@@ -21,6 +21,7 @@ live_loop :frozen? do
           attack: 1.0/@velocity.tick(:attack)
         }
         blade_note = notes.choose
+        with_fx(:distortion) do
         with_synth(:beep){
           with_transpose(@transpose.look(:t)){
             play blade_note, amp: 1.0, env_curv: 4,
@@ -29,6 +30,7 @@ live_loop :frozen? do
             cutoff: rrand(80,100)
           }
         }
+        end
         #Maybe some bass?
 
         with_transpose(-24){

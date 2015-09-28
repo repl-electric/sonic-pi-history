@@ -67,9 +67,9 @@ live_loop :drums do
   sample Dust[/kick/, [3,2,4,5]].tick(:kick), amp: 3.5, cutoff: 135
   #   end
   # end
-  sleep 1/2.0
+  sleep 1
   sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100)
-  sleep 1/2.0
+  sleep 1
 end
 
 live_loop :oneshot do

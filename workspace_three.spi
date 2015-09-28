@@ -22,7 +22,7 @@ live_loop :frozen? do
         }
         blade_note = notes.choose
         with_fx(:distortion, mix: 0.1) do
-          with_synth(:hollow){
+          with_synth(:beep){
             with_transpose(@transpose.look(:t)){
               play blade_note, amp: 1.0, env_curv: 4,
               release: 0.05,

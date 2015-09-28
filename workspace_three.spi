@@ -32,11 +32,11 @@ live_loop :frozen? do
 
         with_transpose(-24){
           with_synth(:dsaw){
-            play (knit blade_note,1, :r, 31).tick(:bassline), attack: 0.3, cutoff: 50, amp: 0.0*rand, release: 2, decay: 8.0,
+            play (knit blade_note,1, :r, 63).tick(:bassline), attack: 0.3, cutoff: 50, amp: 0.0*rand, release: 2, decay: 8.0,
             detune: 12
           }
           with_synth(:prophet){
-            play (knit blade_note,1, :r, 31).look(:bassline), attack: 0.35, cutoff: 40, amp: 0.0*rand, release: 2, decay: 8.0
+            play (knit blade_note,1, :r, 63).look(:bassline), attack: 0.35, cutoff: 40, amp: 0.0*rand, release: 2, decay: 8.0
           }
         }
         sleep 0.125
@@ -97,8 +97,6 @@ live_loop :texture2 do
   end
   sleep 8
 end
-#Sonic pi does not like my indentation :)
-
 
 live_loop :detroit do
   #  sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.3

@@ -31,7 +31,7 @@ live_loop :frozen? do
               play blade_note, amp: 1.0, env_curv: 4,
               release: 0.2,
               attack: 0.01,
-              cutoff: rrand(80,100)
+              cutoff: rrand(100,130)
             }
           }
         end

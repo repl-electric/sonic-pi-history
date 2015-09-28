@@ -18,7 +18,7 @@ live_loop :frozen? do
       synth :supersaw, note: chord(:Cs4, 'm9').shuffle.choose, cutoff: 60,
       release:(ring 0.5, 1.0).tick(:r)
       16.times do
-        with_transpose(@transpose.tick(:t)+12){
+        with_transpose(@transpose.tick(:t)+10){
           play notes.tick, cutoff: rrand(80,100),
           amp: 1.0 + rand,
           release: 0.125,#@hold.tick(:release)*0.3,

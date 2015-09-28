@@ -15,10 +15,10 @@ live_loop :frozen? do
     with_synth(:hollow){
       16.times do
         with_transpose(@transpose.tick(:t)){
-          play notes.tick, cutoff: rrand(80,100),
-          amp: 1.0 + rand,
-          release: @hold.tick(:release)*0.3,
-          attack: 1.0/@velocity.tick(:attack)
+        #  play notes.tick, cutoff: rrand(80,100),
+        #  amp: 1.0 + rand,
+        #  release: @hold.tick(:release)*0.3,
+        #  attack: 1.0/@velocity.tick(:attack)
         }
         blade_note = notes.choose
         with_fx(:distortion, mix: 0.2) do

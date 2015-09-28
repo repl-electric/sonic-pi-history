@@ -19,7 +19,7 @@ end
 
 live_loop :drums do
   sample Corrupt[/kick/,3], cutoff: 100
-  sleep 32/4.0
+  sleep 32/2.0
 end
 
 live_loop :looper3 do

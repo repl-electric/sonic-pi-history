@@ -17,7 +17,7 @@ live_loop :frozen? do
         with_transpose(@transpose.tick(:t)){
           play notes.tick, cutoff: rrand(80,100),
           amp: 1.0 + rand,
-          release: 0.01,#@hold.tick(:release)*0.3,
+          release: 0.2,#@hold.tick(:release)*0.3,
           attack: 0.1 #/@velocity.tick(:attack)
         }
         blade_note = notes.choose

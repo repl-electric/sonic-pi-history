@@ -14,7 +14,7 @@ live :next, amp: 0.5 do
   end
 end
 
-live :begin, amp: 0.0 do
+live :begin, amp: 1.0 do
   sync :next
   comment do
     with_fx :distortion, mix: (knit 0.0,3,1.0,1).tick(:v) do

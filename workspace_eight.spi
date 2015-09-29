@@ -1,0 +1,23 @@
+live_loop :echo do
+  with_fx(:lpf, cutoff: 80) do
+    with_fx(:echo, decay: 0.5) do
+      sample Dust[/F#m/,4], pitch: (ring -12*2, -24*2).tick
+      play (ring :fs3, :A3)
+    end
+    Dust[/A[^#]/,8]
+    sleep 4
+  end
+end
+
+# (i, iio, III, iv, v,   VI, VII)
+# F#, G#, A,    B, C#,   D,  E.
+
+use_bpm 90
+
+live_loop :apeg do
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, pan: -0.25
+  sample Corrupt[/F#m_KalimbaArpFX/].tick, pan: 0.25
+  sleep sample_duration(Corrupt[/F#m_KalimbaArpFX/,0])
+end
+
+sample Dust[/A[^#]/,11]

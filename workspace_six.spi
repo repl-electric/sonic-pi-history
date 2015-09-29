@@ -4,7 +4,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
     #8.times{  sleep 0.25}
     with_fx(:lpf, cutoff: rrand(60,100)){
       with_synth(:plucked){
-        use_random_seed 300
+        use_random_seed 3000
         notes = scale(:Fs2, :major_pentatonic, num_octaves: 2).drop(3).take(3).shuffle
         8.times{
           play (ring

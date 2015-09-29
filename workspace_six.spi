@@ -19,7 +19,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
           amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*0.5,
           cutoff: (rrand 60, 100)
 
-          sleep 0.25
+          sleep 0.125
     }}}
 
 

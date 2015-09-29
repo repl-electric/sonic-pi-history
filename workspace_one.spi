@@ -42,7 +42,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
       #play notes.tick(:h)[0], amp: 0.03
     end
 
-    com = scale(:Fs3, :major_pentatonic, num_octaves: 3).drop(4).take(3).shuffle
+    com = scale(:Fs3, :major_pentatonic, num_octaves: 3).drop(0).take(3).shuffle
 
     1.times{sync :apeg}
     with_synth(:zawa){play com.tick, cutoff: 40, attack: 0.01}

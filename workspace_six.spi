@@ -20,7 +20,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
           cutoff: (rrand 60, 100)
 
           sleep (knit
-                 0.25,1,
+                 0.5,1,
                  0.50,1,
                  0.25, 2,
                  0.5,1,

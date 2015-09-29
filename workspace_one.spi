@@ -27,7 +27,7 @@ end
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
   live_loop :chorus do
-    #use_random_seed 300
+    use_random_seed 300
     notes = (knit
              #             chord(:Fs3, "M")[1..-1], 7,  #F A C
              chord(:Fs3, 'maj9')[0..-1], 1,  #
@@ -37,7 +37,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 
     1.times{sync :apeg}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.01
+      play notes.tick(:h)[0], amp: 0.03
     end
 
     com = scale(:Fs2, :major, num_octaves: 3).take(3).shuffle

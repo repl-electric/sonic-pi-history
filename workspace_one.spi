@@ -50,9 +50,9 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 
              chord(:Cs3, :M)[1..-1], 4,
              chord(:Cs3, :maj9)[1..-1],4
-             
 
-    )
+
+             )
 
     1.times{sync :apeg}
     with_synth(:hoover)do
@@ -114,5 +114,7 @@ end
 
 shader(:uniform, "iStarLight", 0.5)
 
+shader(:uniform, "iSpaceMotion", 0.01)
+shader(:uniform, "iStarLight", 0.5)
 shader(:uniform, "iFlyingSpeed", 0.0)
 shader(:uniform, "iStars", 1.0)

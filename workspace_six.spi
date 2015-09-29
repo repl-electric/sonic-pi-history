@@ -9,7 +9,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
         8.times{
           play (ring
                 chord(:Fs3, 'maj9').choose, # :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,
-          ).tick(:a),  attack: (knit 0.01,3,4.0,1,
+          ).tick(:a),  attack: (knit 0.05,3,4.0,1,
                                 1.0,2,4.0,2
           ).tick(:att), release: (knit 1.0,3,4.0,1,
                                   1.0,2,4.0,2

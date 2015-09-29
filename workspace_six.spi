@@ -1,7 +1,7 @@
 _=nil
 with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do
   live_loop :patterings do
-    1.times{  sleep 0.125}
+    8.times{  sleep 0.125}
     with_fx(:lpf, cutoff: rrand(60,100)){
       with_synth(:plucked){
         play (ring

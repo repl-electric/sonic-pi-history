@@ -30,5 +30,3 @@ live_loop :d do
   sample Mountain[/subkick/,0]
   shader("uniform", "iKick", rand)
 end
-
-shader(:uniform, "iHat", rand)

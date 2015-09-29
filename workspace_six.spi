@@ -8,7 +8,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
         notes = scale(:Fs2, :major_pentatonic, num_octaves: 2).drop(3).take(3).shuffle
         8.times{
           play (ring
-                chord(:Fs3, 'maj9').choose, # :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,
+                chord((ring :Fs3, :As3).tick(:asd), 'maj9').choose, # :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,
           ).tick(:a),  attack: (knit
                                 0.1,3,4.0,1,
                                 0.1,2,4.0,2

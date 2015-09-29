@@ -88,5 +88,5 @@ live_loop :d do
   shader("decaying-uniform", "iKick", 1.0)
 
 end
-shader(:uniform, "iHyperspace", 0.001)
+shader(:uniform, "iFlyingSpeed", 0.001)
 shader(:uniform, "iStars", 1.0)

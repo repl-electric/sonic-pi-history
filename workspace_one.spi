@@ -114,7 +114,7 @@ end
 
 shader(:uniform, "iStarLight", 0.5)
 
-shader(:uniform, "iSpaceMotion", 0.06)
+shader(:uniform, "iSpaceMotion", 0.02)
 shader(:uniform, "iStarLight", 0.5)
 shader(:uniform, "iFlyingSpeed", 0.0)
 shader(:uniform, "iStars", 1.0)

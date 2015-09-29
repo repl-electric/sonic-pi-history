@@ -40,11 +40,11 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
       play notes.tick(:h)[0], amp: 0.03
     end
 
-    com = scale(:Fs2, :major, num_octaves: 3).take(3).shuffle
+    com = scale(:Fs3, :major, num_octaves: 3).take(3).shuffle
 
     1.times{sync :apeg}
     with_synth(:beep){play com.tick
-                            }
+                      }
     with_synth(:hollow){
       4.times{control r_fx, damp: rrand(0.0,1.0) ; sleep 0.25/4.0}
       play notes.look(:h).to_a.shuffle.choose, amp: (knit 2.0,8, 0.0,0).tick(:amp),

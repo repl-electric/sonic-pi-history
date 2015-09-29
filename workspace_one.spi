@@ -90,7 +90,7 @@ end
 
 live_loop :hats do
   sync :apeg
-  sample Frag[/hat/, Range.new(0, 4)].tick, cutoff: 100
+  sample Frag[/hat/, Range.new(0, 4)].tick, cutoff: 50
 end
 
 shader(:uniform, "iFlyingSpeed", 0.5)

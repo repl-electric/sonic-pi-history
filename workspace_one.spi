@@ -88,3 +88,5 @@ live_loop :d do
   shader("uniform", "iKick", 2.0)
 
 end
+
+shader(:uniform, "iStar", 1.0)

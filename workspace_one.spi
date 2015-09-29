@@ -27,7 +27,7 @@ end
 
 live_loop :sea do
   32.times{sync :apeg}
-  synth :dark_ambience, note: (ring :Fs2, :Es2).tick, decay: 8.0, amp: 2.0, detune1: 24, detune2: 12
+  synth :dark_ambience, note: (ring :Fs3, :Es3).tick, decay: 8.0, amp: 2.0, detune1: 24, detune2: 12
 end
 
 live_loop :d do

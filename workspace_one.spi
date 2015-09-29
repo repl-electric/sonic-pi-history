@@ -2,7 +2,6 @@ _=nil
 
 live_loop :highlight do
   with_fx(:lpf, cutoff: 0) do
-
     32.times{sync :apeg}
     with_transpose(0) do
       i_deter(    deg_seq(%w{Fs3 1*3 }).tick,
@@ -24,6 +23,11 @@ live_loop :apeg do
     }
     sleep 0.25 * 1
   }
+end
+
+live_loop :sea do
+  32.times{sync :apeg}
+  synth :dark_ambience, note: :Fs1
 end
 
 live_loop :d do

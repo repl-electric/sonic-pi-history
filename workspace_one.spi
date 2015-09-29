@@ -37,7 +37,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 
     1.times{sync :apeg}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.03
+      #play notes.tick(:h)[0], amp: 0.03
     end
 
     com = scale(:Fs3, :major_pentatonic, num_octaves: 3).drop(4).take(3).shuffle

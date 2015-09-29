@@ -1,7 +1,7 @@
 _=nil
 
-  live_loop :highlight do
-with_fx(:lpf, cutoff: 0) do
+live_loop :highlight do
+  with_fx(:lpf, cutoff: 0) do
 
     32.times{sync :apeg}
     with_transpose(0) do

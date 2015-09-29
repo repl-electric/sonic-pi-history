@@ -1,6 +1,6 @@
 _=nil
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-shader(:texture, "tex16.png", 2)
+shader(:texture, "tex16.png", 3)
 
 live_loop :highlight do
   with_fx(:lpf, cutoff: 50) do

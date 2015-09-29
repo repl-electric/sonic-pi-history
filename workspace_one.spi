@@ -32,7 +32,7 @@ end
 
 live_loop :d do
   4.times{sync :apeg}
-  with_fx(:echo, phase: 0.25, decay: ) do
+  with_fx(:echo, phase: 0.25, decay: 1) do
     sample Mountain[/subkick/,1], cutoff: 100
   end
   shader("uniform", "iKick", rand)

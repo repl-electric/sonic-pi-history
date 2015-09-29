@@ -24,3 +24,9 @@ live_loop :apeg do
     sleep 0.25 * 1
   }
 end
+
+live_loop :d do
+  4.times{sync :apeg}
+  sample Mountain[/subkick/,0]
+
+end

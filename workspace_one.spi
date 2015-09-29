@@ -1,6 +1,4 @@
-
-
-
+_=nil
 
 with_fx(:lpf, cutoff: 100) do
   live_loop :highlight do

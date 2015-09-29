@@ -34,5 +34,8 @@ live_loop :d do
   4.times{sync :apeg}
   sample Mountain[/subkick/,0], cutoff: 100
   shader("uniform", "iKick", rand)
+  4.times{sync :apeg}
+  sample Mountain[/subkick/,1], cutoff: 100
+  shader("uniform", "iKick", rand)
 
 end

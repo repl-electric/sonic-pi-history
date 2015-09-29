@@ -29,8 +29,8 @@ with_fx(:reverb, room: 1.0, mix: 0.0){ |r_fx|
   live_loop :chorus do
     notes = (knit
              chord(:Fs3, "M")[1..-1], 8,
-             chord(:As3, 'm')[1..-1], 8,
-             chord(:Ds3, "M")[1..-1], 8,
+             chord(:As3, 'M')[1..-1], 8,
+             chord(:Ds3, "m")[1..-1], 8,
              )
 
     1.times{sync :apeg}

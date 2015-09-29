@@ -25,9 +25,7 @@ live_loop :apeg do
   }
 end
 
-live_loop :chorus do
-  with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
-
+  live_loop :chorus do
     notes = (knit
              chord(:Fs3, "M")[1..-1], 8,
              chord(:As3, 'M')[1..-1], 8,
@@ -58,25 +56,25 @@ live_loop :chorus do
         #   sample (knit Sop[/F#4/,/down/,1] ,1,   _,7).tick(:s)
       end
     }
-    end
-  }
-  live_loop :sea do
-    32.times{sync :apeg}
-    synth :dark_ambience, note: (ring :Fs3, :Es3).tick, decay: 8.0, amp: 2.0, detune1: 24, detune2: 12
   end
+}
+live_loop :sea do
+  32.times{sync :apeg}
+  synth :dark_ambience, note: (ring :Fs3, :Es3).tick, decay: 8.0, amp: 2.0, detune1: 24, detune2: 12
+end
 
-  shader(:uniform, :iCells, 0.0)
+shader(:uniform, :iCells, 0.0)
 
-  live_loop :d do
-    4.times{sync :apeg}
-    with_fx(:echo, phase: 0.25, decay: 1) do
-      with_fx(:slicer, phase: 0.125) do
-        sample Mountain[/subkick/,1], cutoff: 100
-      end
+live_loop :d do
+  4.times{sync :apeg}
+  with_fx(:echo, phase: 0.25, decay: 1) do
+    with_fx(:slicer, phase: 0.125) do
+      sample Mountain[/subkick/,1], cutoff: 100
     end
-    #shader("uniform", "iKick", rand)
-    4.times{sync :apeg}
-    #sample Mountain[/subkick/,0], cutoff: 100
-    #shader("uniform", "iKick", 2.0)
-
   end
+  #shader("uniform", "iKick", rand)
+  4.times{sync :apeg}
+  #sample Mountain[/subkick/,0], cutoff: 100
+  #shader("uniform", "iKick", 2.0)
+
+end

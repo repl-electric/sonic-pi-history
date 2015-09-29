@@ -5,7 +5,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
     with_fx(:lpf, cutoff: rrand(60,100)){
       with_synth(:plucked){
         use_random_seed 200
-        notes = scale(:Fs3, :major_pentatonic, num_octaves: 2).take(4).shuffle
+        notes = scale(:Fs3, :major_pentatonic, num_octaves: 2).drop(2).take(4).shuffle
         8.times{
           play (ring
                 notes.tick, # :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,

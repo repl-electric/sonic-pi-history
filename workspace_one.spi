@@ -28,8 +28,8 @@ end
 with_fx(:reverb, room: 1.0, mix: 0.0){ |r_fx|
   live_loop :chorus do
     notes = (knit
-             chord_degree(1, :fs3, :major)[1..-1], 8,
-             chord_degree(3, :fs3, :major)[1..-1], 8,
+             chord(:Fs3, "M")[1..-1], 8,
+             chord(:As3)[1..-1], 8,
              chord(:Ds3, "m")[1..-1], 8,
              )
 

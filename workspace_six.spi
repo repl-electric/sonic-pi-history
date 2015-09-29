@@ -12,7 +12,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
           ).tick(:a),  attack: (knit
                                 0.01,1,
                                 0.1,1,
-                                0.01,2
+                                0.01,2,
                                 0.1,1,
                                 ).tick(:att)*0.1, release: 0.5,
           decay: (knit 2.0, 7, 8.0, 1).tick(:r)*0.1,

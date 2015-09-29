@@ -35,7 +35,6 @@ live_loop :apeg do
   sleep 0.25 * 1
 end
 
-
 with_fx(:lpf, cutoff: 100) do
   live_loop :highlight do
     32.times{sync :apeg}
@@ -47,17 +46,6 @@ with_fx(:lpf, cutoff: 100) do
   end
 end
 
-
-_=nil
-with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(:dis)+0.1) do
-  live_loop :patterings do
-    1.times{sleep 0.25}
-    with_fx(:lpf, cutoff: 60){
-      with_synth(:plucked){
-        play (ring :Gs4,  :Gs4, _, :Fs4 ).tick(:a), release: 1.4, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*2
-    }}
-  end
-end
 #
 #F#maj	G#min	A#min	Bmaj	C#maj	D#min	E#dim
 #F#maj7	G#min7	A#min7	Bmaj7	C#7	D#min7	E#m7b5

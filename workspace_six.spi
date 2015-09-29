@@ -10,7 +10,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
           play (ring
                 chord(:Fs3, 'maj9').choose, # :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,
           ).tick(:a),  attack: 0.01, release: (knit 1.0,3,4.0,1,
-                                               1.0,2,2.0,2
+                                               1.0,2,4.0,2
                                                ).tick(:re),
           decay: (knit 2.0, 7, 8.0, 1).tick(:r)*0.1,
           amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1,

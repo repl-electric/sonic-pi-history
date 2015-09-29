@@ -26,4 +26,4 @@ live_loop :apeg do
 end
 
 
-shader("uniform", :iBeat, 2.0)
+shader("uniform", :iBeat, 8.0)

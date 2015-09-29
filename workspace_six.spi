@@ -8,7 +8,7 @@ with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0,1,  0.2,  0.2,  0.2, 0.4).tick(
         16.times{  sleep 0.25/2.0
                    play (ring
                          :Fs4,  :Fs3, :As3, :As3, :Cs3, :Es3,:Es4,
-                         ).tick(:a), release: 4.4, decay: 2.0, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1
+                         ).tick(:a), release: 4.0, decay: 2.0, attack: 0.01, amp: (ring 1.0,0.9,0.8,0.8 ).tick(:amps)*1
                    }}}
 
 

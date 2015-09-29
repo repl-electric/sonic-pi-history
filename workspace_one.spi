@@ -89,8 +89,8 @@ live_loop :d do
 end
 
 live_loop :hats do
-sync :apeg
-  sample Fraz[/hat/, Range.new(0, 4)].tick, cutoff: 50
+  sync :apeg
+  sample Fraz[/hat/, Range.new(0, 4)].tick, cutoff: 80
 end
 
 shader(:uniform, "iFlyingSpeed", 0.5)

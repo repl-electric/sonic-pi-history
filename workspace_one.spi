@@ -31,7 +31,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
   live_loop :chorus do
     #use_random_seed 300
     notes = (knit
-                          chord(:Fs3, "M")[1..-1], 7,  #F A C
+             chord(:Fs3, "M")[1..-1], 7,  #F A C
              chord(:Fs3, 'maj9')[0..-1], 1,  #
              chord(:As3, 'M')[1..-1], 8,  # A C E
              chord(:Ds3, "m")[1..-1], 8,  # D F A

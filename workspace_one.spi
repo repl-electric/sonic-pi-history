@@ -94,5 +94,5 @@ live_loop :hats do
   shader("decaying-uniform", :iHit, 1.0)
 end
 
-shader(:uniform, "iFlyingSpeed", 1.5)
+shader(:uniform, "iFlyingSpeed", 1.0)
 shader(:uniform, "iStars", 1.0)

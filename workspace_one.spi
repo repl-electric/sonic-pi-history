@@ -40,7 +40,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
       play notes.tick(:h)[0], amp: 0.01
     end
 
-    com = scale(:Fs3, :major, num_octaves: 3).choose
+    com = scale(:Fs3, :major, num_octaves: 3).take(3).choose
 
     1.times{sync :apeg}
     with_synth(:hollow){

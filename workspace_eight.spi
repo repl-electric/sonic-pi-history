@@ -1,4 +1,10 @@
 _=nil
+
+live_loop :kick do
+sleep 0.25
+sample Mountain[/subkick/]
+end
+
 with_fx(:reverb, room: 0.9, mix: 0.8) do
   live_loop :a do
     4.times{ sleep 0.25}

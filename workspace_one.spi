@@ -3,7 +3,7 @@ _=nil
 shader(:texture, "tex16.png", 3)
 
 live_loop :highlight do
-  with_fx(:lpf, cutoff: 100) do
+  with_fx(:lpf, cutoff: 40) do
     16.times{sync :apeg}
     with_transpose(0) do
       i_deter(    deg_seq(%w{Fs4 1*3 1*5}).tick,

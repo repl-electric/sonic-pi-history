@@ -23,7 +23,7 @@ with_fx(:reverb) do
              )
 
     with_synth(:plucked) do
-      play notes.tick[0], release: 0.2
+      play notes.tick[-1], release: 0.2
     end
   end
 end

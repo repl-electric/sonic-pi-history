@@ -67,7 +67,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
       4.times{control r_fx, damp: rrand(0.0,1.0) ; sleep 0.25/4.0}
       play notes.look(:h).to_a.shuffle.choose, amp: (knit 1.0,4, 0.0,4).tick(:amp),
       release: 0.1, decay: 1.0, cutoff: (ring rrand(60,70)).tick(:cut),
-      res: (ring 0.97,0.99).tick(:xcut)
+      res: (ring 0.98,0.99).tick(:xcut)
       puts note_inspect(notes.look(:h), "CHORD")
 
 

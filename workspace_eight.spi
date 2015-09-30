@@ -2,7 +2,7 @@ _=nil
 
 live_loop :kick do
 sleep 0.5*2
-with_fx((knit :none, 3, :echo, 1).tick(:fx)), phase: 0.25 do #nothing
+with_fx((knit :none, 3, :echo, 1).tick(:fx), phase: 0.25) do #nothing
 sample Mountain[/subkick/,0], amp: 10.0
 end
 end

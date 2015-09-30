@@ -23,7 +23,7 @@ with_fx(:reverb) do
              )
 
     with_synth(:plucked) do
-      play notes.tick[-1], release: 1.0
+      play (knit notes.tick[-1],1, _, 1), release: 1.0
     end
   end
 end

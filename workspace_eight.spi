@@ -1,7 +1,7 @@
 _=nil
 with_fx(:reverb, room: 0.9, mix: 0.0) do
   live_loop :a do
-    2.times{ sync :apeg}
+    2.times{ sleep 0.25}
     notes = (knit
              #    chord(:Fs3, "M")[1..-1], 7,  #F A C
              #   chord(:Fs3, 'maj9')[0..-1], 1,  #

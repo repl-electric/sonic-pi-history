@@ -1,3 +1,4 @@
+_=nil
 with_fx(:reverb) do
   live_loop :a do
     2.times{ sync :apeg}
@@ -27,4 +28,3 @@ with_fx(:reverb) do
     end
   end
 end
-_=nil

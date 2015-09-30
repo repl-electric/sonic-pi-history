@@ -37,19 +37,19 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
              #  chord(:As3, 'M')[1..-1], 8,  # A C E
              # chord(:Ds3, "m")[1..-1], 8,  # D F A
 
-             chord_degree(1, :fs3, :major)[1..-1], 8,
-             chord_degree(3, :fs3, :major)[1..-1], 8,
-             chord(:Ds3, "m")[1..-1], 8,
+             chord_degree(1, :fs3, :major)[1..-2], 8,
+             chord_degree(3, :fs3, :major)[1..-2], 8,
+             chord(:Ds3, "m")[1..-2], 8,
 
-             chord(:Fs3, 'sus4')[1..-1], 8,
-             chord(:As3, 'm+5')[1..-1], 8,
-             chord(:Ds3, "m7")[1..-1], 8,   #D F A C
+             chord(:Fs3, 'sus4')[1..-2], 8,
+             chord(:As3, 'm+5')[1..-2], 8,
+             chord(:Ds3, "m7")[1..-2], 8,   #D F A C
 
-             chord(:Fs3, 'sus4')[1..-1], 8,
-             chord(:As3, 'm+5')[1..-1], 8,
+             chord(:Fs3, 'sus4')[1..-2], 8,
+             chord(:As3, 'm+5')[1..-2], 8,
 
-             chord(:Cs3, :M)[1..-1], 4,
-             chord(:Cs3, :maj9)[1..-1],4
+             chord(:Cs3, :M)[1..-2], 4,
+             chord(:Cs3, :maj9)[1..-2],4
 
 
              )

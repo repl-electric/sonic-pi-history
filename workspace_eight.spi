@@ -25,7 +25,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
 
     with_transpose(-12) do
       with_synth(:dark_sea_horn) do
-        play (knit _,0 , notes.tick[-1],1, _,7).tick(:r),
+        play (knit _,6 , notes.tick[-1],1, _,1).tick(:r),
           release: 8.0, sustain:2.0, decay: 8.0, amp: 0.1,
           attack: 1.0
       end

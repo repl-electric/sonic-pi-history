@@ -26,7 +26,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
     with_transpose(0) do
       with_synth(:gpa) do
         play (knit _,0 , notes.tick[-1],1, _,7).tick(:r), release: 1.0, decay: 2.0,
-          wave: 7
+          wave: 6
       end
     end
   end

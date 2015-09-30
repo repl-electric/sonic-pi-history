@@ -15,7 +15,7 @@ live_loop :highlight do
 end
 
 live_loop :apeg do
-  with_fx(:lpf, cutoff: 100, mix: 0.0){
+  with_fx(:lpf, cutoff: 100, mix: 1.0){
     root = (knit :Fs3, 16, :As3, 16, :Ds3, 16).tick(:notes)
     with_transpose(-24){
       with_synth(:dsaw){play (knit root,1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 0.8, cutoff: 60}

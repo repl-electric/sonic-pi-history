@@ -1,5 +1,5 @@
 _=nil
-with_fx(:reverb, room: 0.8) do
+with_fx(:reverb, room: 0.9, mix: 0.8) do
   live_loop :a do
     2.times{ sync :apeg}
     notes = (knit

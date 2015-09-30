@@ -24,7 +24,7 @@ with_fx(:reverb) do
              )
 
     with_synth(:plucked) do
-      play (knit  _, 4,notes.tick[-1],4).tick, release: 1.0
+      play (knit  _, 4,notes.tick[-1],4).tick(:r), release: 1.0
     end
   end
 end

@@ -5,7 +5,7 @@ sleep 0.5*2
 with_fx((knit :none, 3, :echo, 1).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
 sample Mountain[/subkick/,0], amp: 20.0
 end
-sample Fraz[/snap/,1] if spread(1,8).tick
+sample Fraz[/snap/,1] if spread(1,4).tick
 
 end
 

@@ -2,7 +2,7 @@ _=nil
 
 live_loop :kick do
 sleep 0.5
-sample Mountain[/subkick/,0], amp: 2.0
+sample Mountain[/subkick/,0], amp: 8.0
 end
 
 with_fx(:reverb, room: 0.9, mix: 0.8) do

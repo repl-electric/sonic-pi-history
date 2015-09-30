@@ -22,5 +22,5 @@ live_loop :a do
 
 
            )
-  play notes.tick[-1], release: 0.1
+  play notes.tick[-1], release: 0.5
 end

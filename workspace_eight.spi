@@ -1,3 +1,4 @@
+with_fx(:reverb) do
 live_loop :a do
   2.times{ sync :apeg}
   notes = (knit
@@ -24,4 +25,5 @@ live_loop :a do
   with_synth(:plucked) do
     play notes.tick[0], release: 0.2
   end
+end
 end

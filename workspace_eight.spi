@@ -45,6 +45,14 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
   end
 end
 
+live_loop :bassline do
+  sleep 1
+  with_synth(:dsaw){
+  play (ring :Fs1)
+}
+
+end
+
 live_loop :highlights do
   sleep 4
   with_synth(:dark_ambience) do

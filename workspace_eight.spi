@@ -60,7 +60,7 @@ live_loop :bassline do
     sample Corrupt[/F#_/,[1,2]].choose, cutoff: 100
   end
 
-  sample Corrupt[/B_KalimbaFX/,1]
+  sample Corrupt[/B_KalimbaFX/,2]
 
   #}
   with_synth(:dsaw){

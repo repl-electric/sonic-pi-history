@@ -48,7 +48,7 @@ end
 live_loop :bassline do
   sleep 1
   with_synth(:dsaw){
-    play (ring :Fs1), cutoff: 50
+    play (ring :Fs1), cutoff: 50, releasE: 0.5
   }
 
 end

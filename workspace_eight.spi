@@ -50,7 +50,6 @@ live_loop :bassline do
   with_synth(:dsaw){
     play (ring :Fs1), cutoff: 50, releasE: 0.5
   }
-
 end
 
 live_loop :highlights do

@@ -36,7 +36,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
              chord(:Cs3, :M)[0..-1], 2,
              chord(:Cs3, :maj9)[0..-1],2)
 
-    with_transpose(-5) do
+    with_transpose(-12) do
 
       with_synth(:dark_sea_horn) do
         uncomment do

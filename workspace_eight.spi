@@ -57,6 +57,6 @@ live_loop :hollow do
   with_synth(:hollow) do
     play (knit :As3,4, _,4,
           :Cs3, 4, _,4,
-          ,:Es3,1).tick, decay: 0.25, amp: 4.0, attack: 0.1
+          :Es3,4, _,4).tick, decay: 0.25, amp: 4.0, attack: 0.1
   end
 end

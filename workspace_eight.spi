@@ -47,7 +47,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
 end
 
 live_loop :highlights do
-  sleep 8
+  sleep 4
   with_synth(:dark_ambience) do
     play (ring :Fs3, :As3, :Ds3).tick, decay: 8.2, amp: 4.0, attack: 0.3
   end

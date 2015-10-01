@@ -51,3 +51,11 @@ live_loop :highlights do
     play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
   end
 end
+
+
+live_loop :hollow do
+  sleep 4
+  with_synth(:hollow) do
+    play (ring :As3, :Cs3, :Es3).tick, decay: 4.2, amp: 4.0, attack: 0.5
+  end
+end

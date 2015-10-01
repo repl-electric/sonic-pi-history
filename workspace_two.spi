@@ -2,5 +2,6 @@
 
 puts Corrupt[/F#_/,0].split("/")[-1]
 
+#sample Corrupt[/F#_/,[0,1,2]].choose
 
-sample Corrupt[/F#_/,[0,1,2]].choose
+sample   sample Sop[/O/,0], amp: 1.0

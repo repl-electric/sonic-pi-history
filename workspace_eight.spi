@@ -40,7 +40,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
       with_synth(:dark_sea_horn) do
         play (knit _,3 , notes.tick(:a, offset:1)[-1],1).tick(:r),
           release: 8.0, sustain:2.0, decay: 8.0, amp: 1.0,
-          cutoff: 40, attack: 1.0
+          cutoff: 60, attack: 1.0
       end
     end
   end

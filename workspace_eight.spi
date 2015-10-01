@@ -5,7 +5,7 @@ _=nil
 live_loop :kick do
   sleep 0.5*2.0
   with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
-    sample Mountain[/subkick/,0], amp: rand + 0.5, cutoff: (rrand 70,100)
+    sample Mountain[/subkick/,0], amp: rand + 2.5, cutoff: (rrand 70,100)
   end
   with_fx(:reverb, room: 1.0){
     sample Fraz[/snap/,[1,1,0,0]].tick(:snap), cutoff: 130, amp: rand if spread(1,2).tick

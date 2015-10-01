@@ -1,4 +1,4 @@
 #sample Sop[/F#/,10]
 
 puts Corrupt[/F#_/,0].split("/")[-1]
-sample Corrupt[/F#_/,0]
+sample Corrupt[/F#_/,1]

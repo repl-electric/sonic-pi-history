@@ -56,6 +56,6 @@ end
 live_loop :hollow do
   sleep 0.25
   with_synth(:hollow) do
-    play (ring :As3, :Cs3, :Es3).tick, decay: 0.25, amp: 4.0, attack: 0.5
+    play (ring :As3, :Cs3, :Es3).tick, decay: 0.25, amp: 4.0, attack: 0.1
   end
 end

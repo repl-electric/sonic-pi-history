@@ -64,7 +64,7 @@ live_loop :bassline do
     sample Corrupt[/B_KalimbaFX/,1]
   end
 
-  sample Dust[/voice_hit/,20]
+#  sample Dust[/voice_hit/,20]
   sample Dust[/voice_hit/,21]
 
 

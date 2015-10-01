@@ -49,7 +49,7 @@ end
 
 live_loop :bassline do
   sleep 8
-  with_fx(:flanger){
+  with_fx(:flanger, decay: 0.5){
     sample Corrupt[/A#_/,1]
   }
   with_synth(:dsaw){

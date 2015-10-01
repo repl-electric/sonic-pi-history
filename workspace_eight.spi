@@ -43,7 +43,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
           release: 8.0, sustain: 2.0, decay: 8.0, amp: 1.0,
           cutoff: 135, attack: 1.0
       end
-      sample (knit Sop[/F#/,10],1,_,3).tick(:s) amp: 1.0
+      sample (knit Sop[/F#/,10],1,_,3).tick(:s), amp: 1.0
     end
   end
 end

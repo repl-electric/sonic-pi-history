@@ -51,10 +51,10 @@ live_loop :highlights do
     play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
   end
 end
-
+_=nil
 live_loop :hollow do
   sleep 0.25
   with_synth(:hollow) do
-    play (knit :As3,4,_,4, :Cs3, :Es3).tick, decay: 0.25, amp: 4.0, attack: 0.1
+    play (knit :As3,4, _,4, :Cs3, :Es3).tick, decay: 0.25, amp: 4.0, attack: 0.1
   end
 end

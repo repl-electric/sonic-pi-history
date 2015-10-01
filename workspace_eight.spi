@@ -39,9 +39,17 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
     with_transpose(-12) do
       with_synth(:dark_sea_horn) do
         play (knit _,3 , notes.tick(:a, offset:1)[-1],1).tick(:r),
-          release: 8.0, sustain:2.0, decay: 8.0, amp: 1.0,
+          release: 8.0, sustain: 2.0, decay: 8.0, amp: 1.0,
           cutoff: 60, attack: 1.0
       end
     end
   end
+end
+
+live_loop :highlights do
+  sleep 8
+  with_synth(:dark_ambience) do
+    play :Fs3, decay: 8.0
+  end
+
 end

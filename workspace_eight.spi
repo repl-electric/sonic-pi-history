@@ -64,8 +64,8 @@ live_loop :bassline do
     #   sample Corrupt[/B_KalimbaFX/,1]
   end
 
-#  sample Dust[/A#/,1]
-  sample Sop[/F#/]
+  #  sample Dust[/A#/,1]
+  sample Sop[/F#/,0]
 
   #}
   with_synth(:dsaw){

@@ -56,10 +56,10 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :hollow do
     sleep 0.25
     with_synth(:hollow) do
-      play (knit 
-            :As3,4, _,4,
-            :Cs3, 4, _,4,
-            :Es3,4, _,4).tick, decay: 0.25, amp: 4.0, attack: 0.1
+      play (knit
+            :As4,4, _,4,
+            :Cs4, 4, _,4,
+            :Es4,4, _,4).tick, decay: 0.25, amp: 4.0, attack: 0.1
     end
   end
 end

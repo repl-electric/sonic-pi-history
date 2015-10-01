@@ -43,13 +43,14 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
           release: 8.0, sustain: 2.0, decay: 8.0, amp: 1.0,
           cutoff: 135, attack: 1.0
       end
- #     sample (knit Sop[/F#/,10],1,_,3).tick(:s), amp: 8.0
+      #     sample (knit Sop[/F#/,10],1,_,3).tick(:s), amp: 8.0
     end
   end
 end
 
 live_loop :bassline do
   sleep 8
+  sample Corrupt[/F#m_ViolinStabFX_SP_01/]
   with_synth(:dsaw){
     play (ring :Fs1), cutoff: 50, release: 1.0, decay: 8.0, amp: 0.5
   }

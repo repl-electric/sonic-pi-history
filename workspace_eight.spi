@@ -61,7 +61,7 @@ live_loop :bassline do
   end
 
   with_fx(:echo, phase: 0.5) do
-    sample Corrupt[/B_KalimbaFX/,6]
+    sample Corrupt[/B_KalimbaFX/,7]
   end
 
   #}

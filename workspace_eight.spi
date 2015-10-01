@@ -59,9 +59,12 @@ live_loop :bassline do
   with_fx(:reverb) do
     sample Corrupt[/F#_/,[1,2]].choose, cutoff: 100
   end
+
+  sample Corrupt[/B_KalimbaFX_SP_02/]
+
   #}
   with_synth(:dsaw){
-    play (ring :Fs2, :As2, :B2).tick, cutoff: 40, release: 1.0, decay: 8.0, amp: 0.5, detune:12
+#    play (ring :Fs2, :As2, :B2).tick, cutoff: 40, release: 1.0, decay: 8.0, amp: 0.5, detune:12
   }
   with_synth(:prophet){
     #    play (ring :Fs2, :As2, :Ds3).look, cutoff: 55, release: 1.0, decay: 8.0, amp: 0.5

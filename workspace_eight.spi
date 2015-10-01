@@ -56,7 +56,7 @@ live_loop :bassline do
   #sample Corrupt[/A#_/,1] if (spread 1, 4).tick(:s)
   #sample Corrupt[/F#_/,0] if (spread 1, 2).tick(:s)
   #sample Corrupt[/F#_/,1] if (spread 1, 2).look(:s)
-  with_fx(:reverb, room: 1.0) do
+  with_fx(:reverb, room: 1.0, mix: 1.0) do
     sample Corrupt[/F#_/,[1,2]].choose, cutoff: 100
   end
 

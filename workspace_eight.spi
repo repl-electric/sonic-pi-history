@@ -8,8 +8,8 @@ live_loop :kick do
     shader("decaying-uniform", :iBeat, 1.0)
   end
   with_fx(:reverb, room: 1.0){
-    sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(100,110), amp: rand if spread(1,2).tick
-   # shader("decaying-uniform", :iOffBeat, 1.0,0.001)
+    #sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(100,110), amp: rand if spread(1,2).tick
+    # shader("decaying-uniform", :iOffBeat, 1.0,0.001)
   }
 end
 

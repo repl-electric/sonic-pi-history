@@ -60,7 +60,7 @@ live_loop :bassline do
     sample Corrupt[/F#_/,[1,2]].choose, cutoff: 100
   end
 
-  with_fx(:echo, room:1.0) do
+  with_fx(:echo) do
     sample Corrupt[/B_KalimbaFX/,6]
   end
 

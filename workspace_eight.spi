@@ -9,7 +9,7 @@ live_loop :kick do
   end
   with_fx(:reverb, room: 1.0){
     sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(100,110), amp: rand if spread(1,2).tick
-    shader("decaying-uniform", :iOffBeat, 1.0,0.001)
+   # shader("decaying-uniform", :iOffBeat, 1.0,0.001)
   }
 end
 
@@ -65,10 +65,10 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :hollow do
     sleep 0.25*2
     with_synth(:hollow) do
-     # play (knit
+      # play (knit
       #      :As4,4, _,4,
-       #     :Cs4, 4, _,4,
-        #    :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
+      #     :Cs4, 4, _,4,
+      #    :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
     end
   end
 end

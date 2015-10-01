@@ -57,7 +57,7 @@ end
 live_loop :highlights do
   sleep 4
   with_synth(:dark_ambience) do
-    play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
+    #play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
   end
 end
 _=nil
@@ -65,10 +65,10 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :hollow do
     sleep 0.25*2
     with_synth(:hollow) do
-      play (knit
-            :As4,4, _,4,
-            :Cs4, 4, _,4,
-            :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
+     # play (knit
+      #      :As4,4, _,4,
+       #     :Cs4, 4, _,4,
+        #    :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
     end
   end
 end

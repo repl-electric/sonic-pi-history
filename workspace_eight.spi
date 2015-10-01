@@ -55,6 +55,10 @@ live_loop :bassline do
   with_synth(:dsaw){
     play (ring :Fs2), cutoff: 60, release: 1.0, decay: 8.0, amp: 0.5
   }
+  with_synth(:prophet){
+    play (ring :Fs2), cutoff: 60, release: 1.0, decay: 8.0, amp: 0.5
+  }
+
 end
 
 live_loop :highlights do

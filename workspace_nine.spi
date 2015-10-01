@@ -42,7 +42,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
         uncomment do
           play (knit _,3 , notes.tick(:a, offset:1)[-1],1).tick(:r),
             release: 8.0, sustain: 2.0, decay: 8.0, amp: 0.2,
-            cutoff: 60, attack: 1.0
+            cutoff: 100, attack: 1.0
         end
       end
       #     sample (knit Sop[/F#/,10],1,_,3).tick(:s), amp: 8.0

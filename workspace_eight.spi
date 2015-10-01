@@ -59,7 +59,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
       play (knit
             :As4,4, _,4,
             :Cs4, 4, _,4,
-            :Es4,4, _,4).tick, decay: 0.25, amp: 4.0, attack: 0.1
+            :Es4,4, _,4).tick, decay: 4.0, amp: 4.0, attack: 0.1
     end
   end
 end

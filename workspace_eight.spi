@@ -50,7 +50,7 @@ end
 
 live_loop :bassline do
   sleep 8
-  sample Corrupt[/F#m_ViolinStabFX/], cutoff: 100
+  with_fx(:reverb){sample Corrupt[/F#m_ViolinStabFX/], cutoff: 100}
   with_synth(:dsaw){
     play (ring :Fs1), cutoff: 50, release: 1.0, decay: 8.0, amp: 0.5
   }

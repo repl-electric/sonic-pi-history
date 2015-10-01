@@ -65,7 +65,7 @@ live_loop :bassline do
   end
 
   #  sample Dust[/A#/,1]
-  sample Sop[/O/,0], amp: 9.0
+  sample Sop[/O/,0], amp: 1.0
 
   #}
   with_synth(:dsaw){

@@ -65,6 +65,8 @@ live_loop :bassline do
   end
 
   sample Dust[/voice_hit/,20]
+  sample Dust[/voice_hit/,21]
+
 
   #}
   with_synth(:dsaw){

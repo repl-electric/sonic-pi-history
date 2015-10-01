@@ -56,7 +56,7 @@ live_loop :bassline do
   #sample Corrupt[/A#_/,1] if (spread 1, 4).tick(:s)
   #}
   with_synth(:dsaw){
-    play (ring :Fs2, :As3, :B3).tick, cutoff: 60, release: 1.0, decay: 8.0, amp: 0.5
+    play (ring :Fs2, :As2, :B3).tick, cutoff: 60, release: 1.0, decay: 8.0, amp: 0.5
   }
   with_synth(:prophet){
     play (ring :Fs2, :As2, :Ds3).look, cutoff: 60, release: 1.0, decay: 8.0, amp: 0.5

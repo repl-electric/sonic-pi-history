@@ -5,6 +5,7 @@ live_loop :kick do
   sleep 0.5*2.0
   with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
     sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5, cutoff: (rrand 70,100)
+    shader("decaying-uniform", :iBeat, 1.0)
   end
   with_fx(:reverb, room: 1.0){
     sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(100,110), amp: rand if spread(1,2).tick
@@ -48,7 +49,7 @@ end
 live_loop :bassline do
   sleep 1
   with_synth(:dsaw){
-    play (ring :Fs1), cutoff: 50, releasE: 0.5
+    play (ring :Fs1), cutoff: 50, release: 0.5
   }
 end
 

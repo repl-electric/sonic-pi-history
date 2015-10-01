@@ -43,7 +43,7 @@ with_fx(:reverb, room: 0.9, mix: 0.8) do
           release: 8.0, sustain: 2.0, decay: 8.0, amp: 1.0,
           cutoff: 135, attack: 1.0
       end
-      sample Sop[/F#/,3], amp: 10.0
+      sample Sop[/F#/,8], amp: 10.0
     end
   end
 end

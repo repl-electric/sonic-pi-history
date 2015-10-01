@@ -1,5 +1,4 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-
 _=nil
 
 live_loop :kick do
@@ -8,7 +7,7 @@ live_loop :kick do
     sample Mountain[/subkick/,[0,2]].tick(:m), amp: rand + 5.5, cutoff: (rrand 70,100)
   end
   with_fx(:reverb, room: 1.0){
-    sample Fraz[/snap/,[1,1,0,0]].tick(:snap), cutoff: rrand(100,120), amp: rand if spread(1,2).tick
+    sample Down[/snap/,[1,1,0,0]].tick(:snap), cutoff: rrand(100,120), amp: rand if spread(1,2).tick
   }
 end
 

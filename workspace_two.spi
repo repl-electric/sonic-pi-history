@@ -1,4 +1,4 @@
-shader(:uniform, "iStarLight", 1.5)
+shader(:uniform, "iStarLight", 1.0)
 
 shader(:uniform, "iSpaceMotion", 0.05)
 shader(:uniform, "iStarLight", 1.0)

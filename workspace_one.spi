@@ -5,4 +5,4 @@ shader(:uniform, :iCells, 1.0)
 
 shader(:uniform, :iBeat, 3.0)
 shader(:uniform, :iKick, 0.0)
-shader("decaying-uniform", :iWave, 1.0, 0.001)
+shader("decaying-uniform", :iWave, 1.0, 0.01)

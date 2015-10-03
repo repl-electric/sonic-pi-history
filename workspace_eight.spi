@@ -95,4 +95,4 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   end
 end
 
-shader(:uniform, :iStarLight, 1.0)
+shader(:uniform, :iStarLight, 2.0)

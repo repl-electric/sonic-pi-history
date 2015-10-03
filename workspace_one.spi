@@ -12,3 +12,5 @@ live_loop :kicker do
     #shader("decaying-uniform", :iOffBeat, 1.0,0.001)
   }
 end
+
+shader(:uniform, :iStars, 1.0)

@@ -12,3 +12,5 @@ shader("decaying-uniform", :iWave, 10.0, 0.1)
     #shader("decaying-uniform", :iOffBeat, 1.0,0.001)
   }
 end
+
+shader(:uniform, "iCells",0.0)

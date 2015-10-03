@@ -1,7 +1,7 @@
 ["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 
-live_loop :kicker do
+live_loop :kicker2 do
   sleep 0.5*2.0
   with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
     sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5, cutoff: (rrand 70,100)

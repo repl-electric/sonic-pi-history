@@ -1,5 +1,5 @@
 live_loop :kicker do
-  sleep 0.5*1.0
+  sleep 0.5*2.0
   with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
     sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5
     shader("uniform", :iBeat, rand+2)

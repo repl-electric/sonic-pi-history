@@ -14,3 +14,5 @@ live_loop :kicker do
 end
 
 shader(:uniform, :iStars, 1.0)
+
+shader(:uniform, :iCells, 1.0)

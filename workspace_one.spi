@@ -6,8 +6,8 @@ shader("decaying-uniform", :iBeat, 1.05)
 sleep 2
 end
 
-shader("uniform", :iCells, 1.0)
-shader("uniform", :iBeat, 3.05)
+#shader("uniform", :iCells, 1.0)
+#shader("uniform", :iBeat, 3.05)
 
 
 

@@ -79,7 +79,7 @@ end
 live_loop :highlights do
   sleep 4
   with_synth(:dark_ambience) do
-    #play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
+    play (ring :Fs3, :As3, :Ds3).tick, decay: 4.2, amp: 4.0, attack: 0.5
   end
 end
 _=nil

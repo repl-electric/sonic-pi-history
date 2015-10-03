@@ -10,7 +10,7 @@ shader(:uniform, :iFizzle, rand)
 end
 
 live_loop :image do
-  play :Fs2, release: 1
+  play :Fs2, release: 1, amp: 0.5
   sleep 1
 end
 

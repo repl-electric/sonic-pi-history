@@ -11,7 +11,7 @@ end
 
 live_loop :image do
   with_synth(:prophet){
-   play :As2, decay: 2, amp: 1.5, cutoff: 60
+   play :As2, decay: 1.8, amp: 1.5, cutoff: 60
 }
   with_synth(:dsaw){
    play :Fs2, decay: 1,8, amp: 1.5, cutoff: 50, detune: 12

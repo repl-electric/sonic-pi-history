@@ -96,6 +96,5 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 end
 
 shader(:uniform, :iCells, 1.0)
-
 shader(:uniform, :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.0)

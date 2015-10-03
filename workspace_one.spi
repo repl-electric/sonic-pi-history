@@ -1,4 +1,4 @@
-shader("curve-uniform", :iBeat, 1.0, 0.05, 0.1)
+shader("curve-uniform", :iBeat, 1.0, 0.01, 0.1)
 shader("uniform", :iCells, 1.0)
 
 

@@ -9,6 +9,11 @@ sleep 4
 shader(:uniform, :iFizzle, rand)
 end
 
+live_loop :image do
+  play :Fs2, release: 1
+  sleep 1
+end
+
 #shader("uniform", :iCells, 1.0)
 #shader("uniform", :iBeat, 3.05)
 

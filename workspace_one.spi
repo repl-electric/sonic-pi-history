@@ -1,6 +1,11 @@
-shader("curve-uniform", :iBeat, 1.0, 0.01, 0.19)
 
-shader("uniform", :iCells, 1.0)
+
+live_loop :drums do
+sample :drums_kick_heavy
+shader("curve-uniform", :iBeat, 1.0, 0.01, 0.19)
+end
+
+#shader("uniform", :iCells, 1.0)
 
 
 #shader("uniform", :iBeat, 0.0)

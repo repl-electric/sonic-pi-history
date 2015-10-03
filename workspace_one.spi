@@ -8,7 +8,7 @@ shader("decaying-uniform", :iWave, 10.0, 0.1)
 
   end
   with_fx(:reverb, room: 1.0){
-    sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(80,100), amp: rand if spread(1,2).tick
+#    sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(80,100), amp: rand if spread(1,2).tick
     #shader("decaying-uniform", :iOffBeat, 1.0,0.001)
   }
 end

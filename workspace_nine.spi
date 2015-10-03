@@ -1,0 +1,51 @@
+["log","experiments", "shaderview"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+_=nil
+
+live_loop :kick do
+  sleep 0.5*2.0
+  with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
+    sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5, cutoff: (rrand 70,100)
+    shader("decaying-uniform", :iBeat, 1.0)
+  end
+  with_fx(:reverb, room: 1.0){
+    #sample Down[/snare/,[1,1,1,0]].tick(:snap), cutoff: rrand(100,110), amp: rand if spread(1,2).tick
+    # shader("decaying-uniform", :iOffBeat, 1.0,0.001)
+  }
+end
+
+with_fx(:reverb, room: 0.9, mix: 0.8) do
+  live_loop :a do
+    4.times{ sync :apeg}
+    notes = (knit
+             # chord(:Fs3, "M")[1..-1], 7,  #F A C
+             # chord(:Fs3, 'maj9')[0..-1], 1,  #
+             # chord(:As3, 'M')[1..-1], 8,  # A C E
+             # chord(:Ds3, "m")[1..-1], 8,  # D F A
+
+             chord_degree(1, :fs3, :major)[0..-1], 4,
+             chord_degree(3, :fs3, :major)[0..-1], 4,
+             chord(:Ds3, "m")[0..-1], 4,
+
+             chord(:Fs3, 'sus4')[0..-1], 4,
+             chord(:As3, 'm+5')[0..-1], 4,
+             chord(:Ds3, "m7")[0..-1], 4,   #D F A C
+
+             chord(:Fs3, 'sus4')[0..-1], 4,
+             chord(:As3, 'm+5')[0..-1], 4,
+
+             chord(:Cs3, :M)[0..-1], 2,
+             chord(:Cs3, :maj9)[0..-1],2)
+
+    with_transpose(-12) do
+
+      with_synth(:dark_sea_horn) do
+        uncomment do
+          play (knit _,3 , notes.tick(:a, offset:1)[-1],1).tick(:r),
+            release: 8.0, sustain: 2.0, decay: 8.0, amp: 0.2,
+            cutoff: 100, attack: 1.0
+        end
+      end
+      #     sample (knit Sop[/F#/,10],1,_,3).tick(:s), amp: 8.0
+    end
+  end
+end

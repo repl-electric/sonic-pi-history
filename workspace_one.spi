@@ -3,7 +3,7 @@ live_loop :kicker do
   with_fx((knit :none, 5, :echo, 1, :none, 2).tick(:fx), phase: 0.5/2.0, decay: 1.0) do #nothing
     sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5, cutoff: (rrand 70,100)
     shader("uniform", :iBeat, rand)
-    shader("uniform", :iKick, 10.0)
+    #shader("uniform", :iKick, 10.0)
 shader("decaying-uniform", :iWave, 10.0, 0.1)
 
   end

@@ -1,1 +1,2 @@
 shader("curve-uniform", :iBeat, 0.9)
+shader("uniform", :iCells, 1.0)

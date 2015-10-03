@@ -1,12 +1,12 @@
 
 
-live_loop :drums do
-sample :bd_ada
-shader("decaying-uniform", :iBeat, 1.05)
-sleep 2
-end
+#live_loop :drums do
+#sample :bd_ada
+#shader("decaying-uniform", :iBeat, 1.05)
+#sleep 2
+#end
 
-#shader("uniform", :iCells, 1.0)
+shader("uniform", :iCells, 1.0)
 
 
 #shader("uniform", :iBeat, 0.0)

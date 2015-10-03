@@ -87,12 +87,14 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     sleep 0.25*2
     with_synth(:hollow) do
       play (knit
-            :As4,4, _,4,
+           :As4,4, _,4,
            :Cs4, 4, _,4,
-          :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
+           :Es4,4, _,4).tick, decay: 4.0, amp: 1.0, attack: 0.5
     end
   end
 end
+
+shader(:uniform, :iCells, 1.2)
 
 shader(:uniform, :iStarLight, 1.2)
 shader(:uniform, :iSpaceMotion, 0.5)

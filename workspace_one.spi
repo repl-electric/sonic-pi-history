@@ -3,6 +3,6 @@ shader(:uniform, :iStars, 0.0)
 shader(:uniform, :iCells, 1.0)
 
 
-shader(:uniform, :iBeat, 4.5)
+shader(:uniform, :iBeat, 0.5)
 shader(:uniform, :iKick, 0.0)
 shader(:uniform, :iWave, 1.0)

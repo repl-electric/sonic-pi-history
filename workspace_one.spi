@@ -4,7 +4,7 @@ live_loop :kicker do
     sample Down[/subkick/,[0,2]].tick(:m), amp: rand + 5.5
 #    shader("decaying-uniform", :iKick, 1.0, 0.001)
     shader("decaying-uniform", :iBeat, 0.8, 0.001)
-    shader("decaying-uniform", :iWave, 10.0, 0.1)
+    shader("decaying-uniform", :iWave, 1.0, 0.1)
 
   end
   with_fx(:reverb, room: 1.0){

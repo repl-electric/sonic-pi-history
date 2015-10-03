@@ -3,7 +3,7 @@
 live_loop :drums do
 sample :bd_ada
 shader("curve-uniform", :iBeat, 1.0, 0.01, 0.19)
-sleep 4
+sleep 2
 end
 
 #shader("uniform", :iCells, 1.0)

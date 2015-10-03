@@ -14,7 +14,7 @@ live_loop :image do
    play :Fs2, decay: 2, amp: 1.5, cutoff: 50
 }
   with_synth(:dsaw){
-   play :As2, decay: 2, amp: 1.5, cutoff: 50
+   play :As2, decay: 2, amp: 1.5, cutoff: 40
 }
 
 

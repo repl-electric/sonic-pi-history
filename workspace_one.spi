@@ -13,4 +13,4 @@ live_loop :kicker do
   }
 end
 
-shader(:uniform, :iStars, 50.0)
+shader(:uniform, :iStars, 10.0)

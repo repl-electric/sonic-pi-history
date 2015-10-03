@@ -6,7 +6,7 @@ shader("curve-uniform", :iBeat, 1.0, 0.01, 0.19)
 sleep 2
 end
 
-shader("uniform", :iCells, 1.0)
+#shader("uniform", :iCells, 1.0)
 
 
 #shader("uniform", :iBeat, 0.0)

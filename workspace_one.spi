@@ -6,7 +6,7 @@ shader("decaying-uniform", :iBeat, 5.0, 0.003)
 shader("decaying-uniform", :iKick, 1.0)
 shader("decaying-uniform", :iWave, 0.9, 0.0025)
 sleep 4
-shader(:uniform, :iFizzle, 1.0)
+shader(:uniform, :iFizzle, 0.1)
 end
 
 #shader("uniform", :iCells, 1.0)

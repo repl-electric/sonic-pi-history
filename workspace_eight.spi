@@ -96,5 +96,5 @@ end
 
 shader(:uniform, :iCells, 1.2)
 
-shader(:uniform, :iStarLight, 1.2)
+shader(:uniform, :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.5)

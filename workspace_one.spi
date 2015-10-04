@@ -3,9 +3,9 @@ live_loop :drums do
 with_fx(:echo, phase: 0.5, decay: 1.0) do
 sample Mountain[/subkick/,1], cutoff: 100
 end
-shader("decay", :iBeat, 5.0, 0.003)
-shader("decay", :iKick, 1.0)
-shader("decay", :iWave, 0.9, 0.0025)
+shader("decaying-uniform", :iBeat, 5.0, 0.003)
+shader("decaying-uniform", :iKick, 1.0)
+shader("decaying-uniform", :iWave, 0.9, 0.0025)
 sleep 4
 shader(:uniform, :iFizzle, rand)
 end

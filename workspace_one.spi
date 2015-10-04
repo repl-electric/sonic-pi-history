@@ -17,6 +17,12 @@ live_loop :drums do
   sleep 2
 end
 
+live_loop :what_are_we_doing_here do
+  sleep 2
+  with_synth :dark_sea_horn do
+  end
+end
+
 
 shader(:uniform,  :iWave, 0.0)
 #shader("uniform", :iMesh, 0.0)

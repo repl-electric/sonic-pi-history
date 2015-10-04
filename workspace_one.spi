@@ -25,6 +25,6 @@ end
 
 
 #shader("uniform", :iMesh, 0.0)
-shader("uniform", :iCells, 1.0)
+shader("uniform", :iCells, 2.0)
 #shader("uniform", :iBeat, 3.05)
 #shader("uniform", :iBeat, 0.0)

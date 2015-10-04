@@ -22,13 +22,13 @@ live_loop :fog_horn_moving_across_the_water do
 end
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
-live_loop :hollows do
-  notes = (ring chord(:Fs1, :M))
-  with_synth :hollow do
-    play notes.tick, cutoff: 40
+  live_loop :hollows do
+    notes = (ring chord(:Fs1, :M))
+    with_synth :hollow do
+      play notes.tick, cutoff: 40, release: 0.01
+    end
+    sleep 0.25*1
   end
-  sleep 0.25*1
-end
 end
 
 live_loop :bass do

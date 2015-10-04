@@ -19,6 +19,11 @@ live_loop :new_drums do
   if(spread(1,4).tick(:b))
     sample Fraz[/kick/,[0,1]].tick(:bass), cutoff: 85
   end
+
+  if(spread(1,4).tick(:b))
+    sample Fraz[/kick/,[0,1]].tick(:bass), cutoff: 85
+  end
+
   sleep 1
 end
 
@@ -38,7 +43,11 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 
              chord(:Fs3, :sus4)[1..-1],8,
              chord(:As3, "m+5"),8,
-             chord(:Ds3, :m9),8
+             chord(:Ds3, :m9),8,
+
+             chord(:Fs3, :sus4)[1..-1],8,
+             chord(:As3, "m+5"),8,
+             chord(:Cs3, :m7),8
              )
     with_synth :hollow do
       #What was that?

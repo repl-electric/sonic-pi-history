@@ -23,7 +23,7 @@ live_loop :new_drums do
   4.times{
     if(spread(7,9).look(:b))
       #sample Frag[/hats/,Range.new(0,(ring 2,4).tick(:range))].tick(:sam), cutoff: rrand(80,90)
-     # sample Dust[/bast/, 0].tick(:sam2), cutoff: 90
+      # sample Dust[/bast/, 0].tick(:sam2), cutoff: 90
     end
     sleep 0.25
   }
@@ -32,7 +32,7 @@ end
 live_loop :fog_horn_moving_across_the_water do
   sleep 8
   with_synth :dark_sea_horn do
-    play (ring :Fs2, :As2, :Ds2).tick, cutoff: (ramp *(range 80, 130)).tick(:loud), decay: 8.1, amp: 0.1
+    play (ring :Fs2, :As2, :Ds2).tick, cutoff: (ramp *(range 80, 135)).tick(:loud), decay: 8.1, amp: 0.1
   end
 end
 

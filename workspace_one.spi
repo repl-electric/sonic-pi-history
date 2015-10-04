@@ -105,7 +105,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 
     1.times{sync :apeg}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.00
+      play notes.tick(:h)[1], amp: 0.00
     end
 
     1.times{sync :apeg}

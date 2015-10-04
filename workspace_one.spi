@@ -130,7 +130,7 @@ shader("uniform", :iStars, 0.0)
 
 shader("uniform", :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.01)
-shader(:decay, :iDrop, 1.0)
+shader(:uniform, :iDrop, 1.0)
 shader(:decay, :iCellCount, 10.0)
 shader(:uniform, :iCellMotion, 0.1)
 

@@ -22,11 +22,13 @@ live_loop :softer do
   end
 end
 
+
 live_loop :drums do
   with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
     sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
   end
 
   sleep 1
+    sample Fraz[/snap/,[0,1]].tick(:s2), cutoff: 120, amp: 3.0+rand
   sleep 1
 end

@@ -4,6 +4,8 @@ _=nil
 
 
 live_loop :softly_kicking do
+  with_fx(:echo) do
   sample Mountain[/subkick/,0]
+  end
   sleep 2
 end

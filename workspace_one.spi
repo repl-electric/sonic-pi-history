@@ -122,10 +122,6 @@ live_loop :hats do
   }
 end
 
-live_loop :arrrrrrr do #D F A C E
-  sync :lovely
-  sample Sop[/F#/,0]
-end
 
 
 #shader("uniform", :iMesh, 0.0)

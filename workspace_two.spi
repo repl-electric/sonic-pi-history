@@ -35,7 +35,7 @@ end
 
 live_loop :hats do
   sleep 0.5
-  sample Frag[/hat/,0], cutoff: 60 if spread(3,8).tick
+  sample Frag[/hat/,0], cutoff: 80 if spread(3,8).tick
   #sample if spread(7,11).look
 
 end

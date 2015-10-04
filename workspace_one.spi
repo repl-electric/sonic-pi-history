@@ -78,7 +78,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 
     1.times{sleep 0.25}
     with_synth(:hoover)do
-      play notes.tick(:h)[0], amp: 0.0
+      play notes.tick(:h)[0], amp: 0.01
     end
 
     1.times{sleep 0.25}

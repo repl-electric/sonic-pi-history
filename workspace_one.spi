@@ -111,7 +111,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 shader("uniform", :iCells, 0.0)
 shader("uniform", :iStars, 1.0)
 
-shader("uniform", :iStarLight, 0.3)
+shader("uniform", :iStarLight, 0.2)
 
 
 #shader("uniform", :iBeat, 3.05)

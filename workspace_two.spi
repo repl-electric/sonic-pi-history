@@ -36,7 +36,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
       #What was that?
       play notes.tick, cutoff: 120, release: 0.2, attack: 0.01, amp: 2.0
     end
-    sleep 1
+    sleep 1*0.5
   end
 end
 

@@ -13,7 +13,6 @@ live_loop :drums do
     sample Frag[/snap/,[0,0,1]].tick(:r), cutoff: 90, amp: rand
     #shader(:decay, :iOffBeat, 1.0)
   end
-
   sleep 1
 end
 

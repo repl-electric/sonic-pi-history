@@ -131,7 +131,7 @@ shader("uniform", :iStars, 0.0)
 shader("uniform", :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.01)
 shader(:uniform, :iDrop, 1.0)
-shader(:uniform, :iCellCount, 0.0)
+shader(:uniform, :iCellCount, 2.0)
 shader(:uniform, :iCellMotion, 0.0)
 
 #shader("uniform", :iBeat, 3.05)

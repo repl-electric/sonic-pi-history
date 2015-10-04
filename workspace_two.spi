@@ -60,25 +60,25 @@ live_loop :hats do
     pan: pick_pan,
     cutoff: 80 if spread(3,8).tick
 
-  sample Fraz[/kick/,0] if spread(1,4).look(
+  sample Fraz[/kick/,0] if spread(1,4).look
 
 
-  sample Frag[/hat/,Range.new(0,2)].tick(:sh),
+    sample Frag[/hat/,Range.new(0,2)].tick(:sh),
     pan: other_pan,
     cutoff: 80 if spread(7,11).tick
-  sleep 0.25
-end
+    sleep 0.25
+    end
 
-live_loop :drums do
-  with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
-    sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
-  end
+    live_loop :drums do
+      with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
+        sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
+      end
 
-  sleep 1
-  use_random_seed 300
-  mix = [0.8,0.7,0.6].choose
-  with_fx(:reverb, room: 0.8, mix: mix) do
-    sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 1.0+rand
-  end
-  sleep 1
-end
+      sleep 1
+      use_random_seed 300
+      mix = [0.8,0.7,0.6].choose
+      with_fx(:reverb, room: 0.8, mix: mix) do
+        sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 1.0+rand
+      end
+      sleep 1
+    end

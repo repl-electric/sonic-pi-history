@@ -60,7 +60,7 @@ live_loop :drums do
   use_random_seed 300
   mix = [0.8,0.7,0.6].choose
   with_fx(:reverb, room: 0.8, mix: mix) do
-    sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 2.0+rand
+    sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 1.0+rand
   end
   sleep 1
 end

@@ -1,7 +1,7 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
 live_loop :drums do
-  with_fx((knit :none,3, :echo,1, :none,4).tick, phase: 0.5, decay: 1.0) do
+  with_fx((knit :none,3, :echo,1, :none,4).tick, phase: 0.25, decay: 1.0) do
     sample Mountain[/subkick/,1], cutoff: 100
   end
   shader(:decay, :iBeat, 5.0, 0.003)

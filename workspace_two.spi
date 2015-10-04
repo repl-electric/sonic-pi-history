@@ -25,7 +25,8 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :hollows do
     notes = (ring chord(:Fs3, :M))
     with_synth :hollow do
-      play notes.tick, cutoff: 80, release: 0.01, attack: 0.01
+      #What was that?
+      play notes.tick, cutoff: 90, release: 0.01, attack: 0.01
     end
     sleep 0.25*1
   end

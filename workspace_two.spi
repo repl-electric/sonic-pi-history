@@ -34,7 +34,7 @@ live_loop :fog_horn_moving_across_the_water do
   with_synth :dark_sea_horn do
     play (ring :Fs2, :As2, :Ds2,  :Fs2, :As2, :Gs2).tick,
       cutoff: 120,
-      decay: 8.1, amp: 0.5
+      decay: 8.1, amp: 0.0
   end
 end
 

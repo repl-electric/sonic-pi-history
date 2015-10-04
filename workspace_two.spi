@@ -25,7 +25,7 @@ live_loop :bass do
   notes = (ring :Fs1, :As1, :Ds1).tick(:n)
   #These two make a nice pair
   with_synth :prophet do
-    play notes, cutoff: 55, amp: 0.5,  decay: 8.0, attack: 0.1
+    play notes, cutoff: 55, amp: 0.5,  decay: 7.5, attack: 0.1
   end
   with_synth :dsaw do
     play notes, cutoff: 50, amp: 0.5,  decay: 8.0, attack: 0.5, detune: 12

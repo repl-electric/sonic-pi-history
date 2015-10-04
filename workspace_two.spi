@@ -29,7 +29,7 @@ end
 
 live_loop :more_softly do
   with_synth :dark_ambience do
-    play :Fs1, release: 2.0, decay: 2.0, attack: 0.5
+    play :Fs2, release: 2.0, decay: 2.0, attack: 0.5
   end
   sleep 4
 end

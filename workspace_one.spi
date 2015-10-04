@@ -45,7 +45,7 @@ live_loop :apeg do
           :Fs3, 16, :As3, 16, :Cs3, 16
           ).tick(:notes)
   with_transpose(-24){
-    with_synth(:dsaw){play (knit (knit :Fs3, 16, :As3, 16, :Ds3, 16,
+    with_synth(:dsaw){play (knit (knit :Fs3, 16, :As3, 16, :B3, 16,
                                   :Fs3, 16, :As3, 16, :Gs3, 16,
                                   :Fs3, 16, :As3, 16, :Es3, 16,
                                   :Fs3, 16, :As3, 16, :Cs3, 16

@@ -73,7 +73,7 @@ end
 
 live_loop :drums do
   with_fx((knit :none, 0, :echo,1, :none, 0).tick(:fx)) do
-    sample Mountain[/subkick/,3], cutoff: 120, amp: 3.0+rand
+    sample Mountain[/subkick/,4], cutoff: 120, amp: 3.0+rand
   end
 
   sleep 1

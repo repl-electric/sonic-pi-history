@@ -42,7 +42,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
              )
     with_synth :hollow do
       #What was that?
-      play notes.tick, cutoff: 120, decay: 0.5, release: 0.5, attack: 0.5, amp: (knit 1.0,4,0.0,4).tick(:amp)
+      play notes.tick, cutoff: 120, decay: 0.5, release: 0.5, attack: 0.9, amp: (knit 1.0,4,0.0,4).tick(:amp)
     end
     sleep 1*0.5
   end

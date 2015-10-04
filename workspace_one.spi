@@ -11,7 +11,7 @@ end
 
 live_loop :drums do
   sample Mountain[/subkick/,1], cutoff: 100
-  shader(:decay, :iKick, 0.5)
+  shader(:decay, :iBeat, 0.5)
   sleep 2
 end
 

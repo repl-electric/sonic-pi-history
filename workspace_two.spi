@@ -22,8 +22,8 @@ live_loop :new_drums do
 
   4.times{
     if(spread(7,9).look(:b))
-      sample Frag[/hats/,Range.new(0,(ring 2,4).tick(:range))].tick(:sam), cutoff: rrand(80,90)
-      sample Dust[/bast/, 0].tick(:sam2), cutoff: 90
+      #sample Frag[/hats/,Range.new(0,(ring 2,4).tick(:range))].tick(:sam), cutoff: rrand(80,90)
+     # sample Dust[/bast/, 0].tick(:sam2), cutoff: 90
     end
     sleep 0.25
   }
@@ -54,7 +54,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
              )
     with_synth :hollow do
       #What was that?
-     # play notes.tick, cutoff: 80, decay: 0.9, release: 0.5, attack: 1.5, amp: (knit 1.0,4,0.0,4).tick(:amp)
+      # play notes.tick, cutoff: 80, decay: 0.9, release: 0.5, attack: 1.5, amp: (knit 1.0,4,0.0,4).tick(:amp)
     end
     sleep 1*0.5
   end

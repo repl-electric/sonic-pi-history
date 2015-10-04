@@ -66,7 +66,7 @@ live_loop :highlight do
 end
 
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
-  live_loop :chorus do
+  live_loop :chorus2 do
     notes = (knit
              chord(:Fs3, :M)[0..-1], 8,
              chord(:As3, :M)[0..-1], 8,

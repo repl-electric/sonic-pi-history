@@ -35,6 +35,9 @@ end
 
 live_loop :hats do
   #sync :drums
+  #So we alternate here using random
+  
+  use_random_seed 300 #Fixing the seed stops the random flow
   pick_pan = [0.25, -0.25].choose
   other_pan =  ([0.25, -0.25] - [pick_pan])[0]
 

@@ -1,7 +1,7 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
 live_loop :drums do
-  with_fx(:echo, phase: 0.5, decay: 1.0) do
+  with_fx((knit :none,3, :echo,1, :none,4), phase: 0.5, decay: 1.0) do
     sample Mountain[/subkick/,1], cutoff: 100
   end
   shader(:decay, :iBeat, 5.0, 0.003)
@@ -25,21 +25,21 @@ live_loop :background do
   sleep 1
   with_synth :dark_sea_horn do
     play :Fs1, cutoff: (ramp *(range 80,100,5)).tick, decay: 1, amp: 1.0
-                        end
-                        end
+  end
+end
 
-                        live_loop :image do
-                          with_synth(:prophet){
-                            #play :As2, decay: 1.8, amp: 1.5, cutoff: 60
-                          }
-                          with_synth(:dsaw){
-                            #play :Fs2, decay: 1,8, amp: 1.5, cutoff: 50, detune: 12
-                          }
-                          sleep 2
-                        end
+live_loop :image do
+  with_synth(:prophet){
+    #play :As2, decay: 1.8, amp: 1.5, cutoff: 60
+  }
+  with_synth(:dsaw){
+    #play :Fs2, decay: 1,8, amp: 1.5, cutoff: 50, detune: 12
+  }
+  sleep 2
+end
 
 
-                        #shader("uniform", :iMesh, 0.0)
-                        shader("uniform", :iCells, 1.0)
-                        #shader("uniform", :iBeat, 3.05)
-                        #shader("uniform", :iBeat, 0.0)
+#shader("uniform", :iMesh, 0.0)
+shader("uniform", :iCells, 1.0)
+#shader("uniform", :iBeat, 3.05)
+#shader("uniform", :iBeat, 0.0)

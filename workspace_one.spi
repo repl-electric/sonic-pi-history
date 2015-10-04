@@ -88,8 +88,6 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
   end
 }
 
-
-
 with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
   live_loop :chorus do
     notes = (knit

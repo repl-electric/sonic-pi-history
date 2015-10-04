@@ -13,4 +13,6 @@ end
 live_loop :drums do
   sample Mountain[/subkick/,0], cutoff: 80
   sleep 1
+  sleep 1
+
 end

@@ -69,7 +69,7 @@ live_loop :bass do
     #play notes, cutoff: 55, amp: 0.5,  decay: 7.5, attack: 0.1
   end
   with_synth :dsaw do
-    play notes, cutoff: 50, amp: 0.5,  decay: 8.0, attack: 0.5, detune: 12
+    #play notes, cutoff: 50, amp: 0.5,  decay: 8.0, attack: 0.5, detune: 12
   end
   sleep 8
 end

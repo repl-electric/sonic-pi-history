@@ -45,10 +45,10 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
              chord(:As3, "m+5"),8,
              chord(:Ds3, :m9),8,
 
-             chord(:Fs3, :sus4)[1..-1],8,
-             chord(:As3, "m"),8,
-            # chord(:Cs3, :M),2,
-            # chord(:Cs3, :M7),6
+            # chord(:Fs3, :sus4)[1..-1],8,
+            # chord(:As3, "m"),8,
+             # chord(:Cs3, :M),2,
+             # chord(:Cs3, :M7),6
              )
     with_synth :hollow do
       #What was that?

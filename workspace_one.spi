@@ -122,7 +122,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
 shader(:uniform, :iInvert, 0.0)
 shader(:uniform,  :iWobble, 0.0)
 #shader("uniform", :iMesh, 0.0)
-shader("uniform", :iCells, 0.0)
+shader("uniform", :iCells, 1.0)
 shader("uniform", :iStars, 0.0)
 shader("uniform", :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.00)

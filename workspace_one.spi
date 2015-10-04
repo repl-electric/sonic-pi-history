@@ -111,7 +111,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
     1.times{sync :apeg}
     with_synth(:hollow){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
-      play notes.look(:h)[1], amp: (knit 4.0,4, 0.0,0).tick(:amp),
+      play notes.look(:h)[1], amp: (knit 2.0,4, 0.0,0).tick(:amp),
       release: 0.5, decay: 1.2, attack: 0.5,
       cutoff: (ring 80,100,110,130).tick(:cut)*1.0,
       res: (ring 0.98,0.99).tick(:xcut)

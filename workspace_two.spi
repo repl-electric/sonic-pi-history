@@ -32,6 +32,6 @@ live_loop :bass do
   with_synth :dsaw do
     play notes, cutoff: 50, amp: 0.5,  decay: 4.0
   end
-  sleep 4
+  sleep 8
 
 end

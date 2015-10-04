@@ -15,7 +15,7 @@ end
 live_loop :softer do
   sleep 1
   with_synth(:dsaw) do
-    play (knit :Fs1,8 :As1,8, :Ds1,8), cutoff: 60, decay: 1.0, detune: 12
+    play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: 60, decay: 1.0, detune: 12
   end
 end
 

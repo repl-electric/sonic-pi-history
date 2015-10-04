@@ -37,7 +37,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
              chord(:Ds3, :m),8)
     with_synth :hollow do
       #What was that?
-      play notes.tick, cutoff: 120, release: 0.1, attack: 0.01, amp: (knit 2.0,4,0.0,4).tick(:amp)
+      play notes.tick, cutoff: 120, release: 0.5, attack: 0.01, amp: (knit 2.0,4,0.0,4).tick(:amp)
     end
     sleep 1*0.5
   end

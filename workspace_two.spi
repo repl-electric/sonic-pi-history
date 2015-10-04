@@ -1,4 +1,9 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
+#Messing around with Sonic Pi, nothing polished. Just play. Play can go wrong, thats ok.
 
-play 60
+
+live_loop :softly_kicking do
+  sample Mountain[/subkick/,0]
+  sleep 1
+end

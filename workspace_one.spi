@@ -58,7 +58,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
              chord(:Cs3, :maj9)[1..-1],4
              )
 
-    1.times{sync :apeg}
+    1.times{sync 0.25}
     with_synth(:hoover)do
       play notes.tick(:h)[0], amp: 0.0
     end

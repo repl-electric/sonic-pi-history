@@ -21,6 +21,15 @@ live_loop :fog_horn_moving_across_the_water do
   end
 end
 
-live_loop : do
+live_loop :bass do
+  notes = (ring :Fs3)
+
+  #These two make a nice pair
+  with_synth :prophet do
+    play notes, cutoff: 40
+  end
+  with_synth :dsaw do
+    play notes, cutoff: 40
+  end
 
 end

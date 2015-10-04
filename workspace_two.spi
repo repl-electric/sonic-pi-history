@@ -29,6 +29,6 @@ live_loop :drums do
   end
 
   sleep 1
-  sample Fraz[/snap/,[0,1]].tick(:s2), cutoff: 100, amp: 3.0+rand
+  sample Fraz[/snap/,[0,1]].tick(:s2), cutoff: 80, amp: 3.0+rand
   sleep 1
 end

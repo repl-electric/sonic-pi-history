@@ -84,6 +84,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
     1.times{sync :apeg}
     with_synth(:dark_sea_horn){
       4.times{control r_fx, dry: rrand(0.0,1.0) ; sleep 0.25/4.0}
+      play notes.tick[1]
     }
   end
 }

@@ -4,12 +4,14 @@ _=nil
 #Let me know if the audio is too crackley... Still working on it :(
 
 live_loop :over_the_water do
+  with_fx(:reverb) do
   with_synth :dark_sea_horn do
     with_transpose(12*2) do
       play (ring :As1, :Cs1, :Fs1).tick, decay: 8.1,
-        cutoff: (ramp *(range 90,135)).tick(:s)
+        cutoff: (ramp *(range 90,135).reverse).tick(:pushing_back_out)
     end
   end
+edn
   sleep 8
 end
 

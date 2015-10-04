@@ -94,7 +94,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0){ |r_fx|
       puts note_inspect(notes.look(:h), "CHORD")
       if(notes.look(:h) == chord(:Ds3, "m7")[1..-1])
         cue :lovely
-        #sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
+        sample (knit Frag[/coils/, /F#/,0] ,1,   _,7).tick(:s)
         with_fx(:flanger){
           sample (knit "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/G#_HarmBow_01_SP.wav" ,1,   _,7,
                   "/Users/josephwilk/Dropbox/repl-electric/samples/Bowed Notes/D#_BowedGuitarNote_01_SP.wav",1,_,7,

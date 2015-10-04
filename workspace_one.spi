@@ -4,13 +4,12 @@ live_loop :drums do
   with_fx(:echo, phase: 0.5, decay: 2.0) do
     sample Mountain[/subkick/,0], cutoff: 130
   end
-
   shader(:decay, :iBeat, rand+4.0, 0.001)
   shader(:decay, :iKick, 10.0)
   #shader(:decay, :iWave, 0.5, 0.003)
   sleep 1
   with_fx(:reverb) do
-    sample Frag[/snap/,[0,0,1]].tick(:r), cutoff: 90, amp: rand
+    sample Frag[/snap/,[0,0,0,1]].tick(:r), cutoff: 90, amp: rand
     #shader(:decay, :iOffBeat, 1.0)
   end
   sleep 1

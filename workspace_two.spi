@@ -13,3 +13,10 @@ live_loop :softly_kicking do
   end
   sleep 1
 end
+
+live_loop :fog_horn_moving_across_the_water do
+  sleep 8
+  with_synth :dark_sea_horn do
+    play (ring :Fs1).tick, cutoff: 50, decay: 8.05
+  end
+end

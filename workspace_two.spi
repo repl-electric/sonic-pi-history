@@ -47,7 +47,9 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 
              chord(:Fs3, :sus4)[1..-1],8,
              chord(:As3, "m+5"),8,
-             chord(:Cs3, :m7),8
+
+             chord(:Cs3, :M),2
+             chord(:Cs3, :M7),6
              )
     with_synth :hollow do
       #What was that?

@@ -17,7 +17,7 @@ end
 
 
 #shader("uniform", :iMesh, 0.0)
-shader("uniform", :iCells, 0.0)
+shader("uniform", :iCells, 1.0)
 shader("uniform", :iStars, 0.0)
 shader("uniform", :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.01)

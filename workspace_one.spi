@@ -50,7 +50,7 @@ live_loop :apeg do
                                   :Fs3, 16, :As3, 16, :Es3, 16,
                                   :Fs3, 16, :As3, 16, :Cs3, 16
                                   ).tick(:notes),1, _, 15).tick(:bass), release: 1.5, decay: 2.5, amp: 1.5, cutoff: 50}
-    with_synth(:prophet){play (knit (knit :Fs3, 16, :As3, 16, :B3, 16,
+    with_synth(:prophet){play (knit (knit :Fs3, 16, :As3, 16, :Ds3, 16,
                                      :Fs3, 16, :As3, 16, :Gs3, 16,
                                      :Fs3, 16, :As3, 16, :Es3, 16,
                                      :Fs3, 16, :As3, 16, :Cs3, 16

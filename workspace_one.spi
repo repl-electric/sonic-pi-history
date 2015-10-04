@@ -16,7 +16,7 @@ live_loop :background do
     play (ring :Fs2, :Es2).tick, decay: 4.0,
       detune1: 24,
       detune2: 12,
-      amp: 4.0, attack: 1.0, cutoff: 100
+      amp: 4.0, attack: 1.0, cutoff: rrand(80, 100)
   end
   sleep 4
 end

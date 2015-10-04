@@ -21,7 +21,7 @@ end
 live_loop :what_are_we_doing_here do
   sleep 2
   with_synth :dark_sea_horn do
-    play (ring :Fs1, :As1, :Ds1).tick, cutoff: 40, decay: 2.0
+    play (ring :Fs1, :As1, :Ds1).tick, cutoff: 45, decay: 2.0
   end
 end
 

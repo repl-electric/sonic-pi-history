@@ -15,7 +15,7 @@ end
 live_loop :softer do
   sleep 1
   with_synth(:dsaw) do
-    play :Fs1, cutoff: 50, decay: 1.0
+    play :Fs1, cutoff: 55, decay: 1.0
   end
 end
 

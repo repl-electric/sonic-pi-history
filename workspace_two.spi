@@ -22,9 +22,10 @@ live_loop :fog_horn_moving_across_the_water do
 end
 
 live_loop :bass do
-  notes = (ring :Fs3)
+  notes = (ring :Fs2)
 
   #These two make a nice pair
+  
   with_synth :prophet do
     play notes, cutoff: 40, amp: 0.1,  decay: 4.0
   end

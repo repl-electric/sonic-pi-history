@@ -17,7 +17,9 @@ live_loop :drums do
   shader(:decay, :iBeat, rand+2.0, 0.001)
   shader(:decay, :iKick, 10.0)
   sleep 1
-  sample Frag[/snap/,0],cutoff: 70
+  with_fx(:reverb) do
+  sample Frag[/snap/,0], cutoff: 70
+  end
 
   sleep 1
 end

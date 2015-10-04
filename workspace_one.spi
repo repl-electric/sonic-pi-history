@@ -128,7 +128,7 @@ end
 shader("uniform", :iCells, 0.0)
 shader("uniform", :iStars, 0.0)
 
-shader("uniform", :iStarLight, 1.0)
+shader("uniform", :iStarLight, 0.0)
 shader(:uniform, :iSpaceMotion, 0.01)
 shader(:decay, :iDrop, 2.0)
 

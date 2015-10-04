@@ -26,7 +26,8 @@ live_loop :what_are_we_doing_here do
 end
 
 
-shader(:uniform,  :iWave, 0.0)
+shader(:uniform, :i)
+shader(:uniform,  :iWave, 1.0)
 #shader("uniform", :iMesh, 0.0)
 shader("uniform", :iCells, 1.0)
 shader("uniform", :iStars, 0.0)

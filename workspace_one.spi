@@ -5,7 +5,7 @@
 live_loop :dark do
   sleep 4
   with_synth :dark_ambience do
-    play (ring :Fs1, :As1).tick, decay: 4.0, detune1: 24, amp: 4.0
+    play (ring :Fs2, :As2).tick, decay: 4.0, detune1: 24, amp: 4.0
   end
 end
 

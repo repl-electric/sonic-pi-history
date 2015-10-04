@@ -32,7 +32,7 @@ end
 live_loop :fog_horn_moving_across_the_water do
   sleep 8
   with_synth :dark_sea_horn do
-    play (ring :Fs1, :As1, :Ds1).tick, cutoff: (ramp *(range 80, 130)).tick(:loud), decay: 8.1, amp: 0.1
+    play (ring :Fs2, :As2, :Ds2).tick, cutoff: (ramp *(range 80, 130)).tick(:loud), decay: 8.1, amp: 0.1
   end
 end
 

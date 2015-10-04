@@ -21,6 +21,15 @@ live_loop :fog_horn_moving_across_the_water do
   end
 end
 
+live_loop :hollow do
+
+  notes = (ring chord(:Fs1, :M))
+  with_synth :hollow do
+    play notes.tick, cutoff: 40
+  end
+  sleep 0.25*1
+end
+
 live_loop :bass do
   notes = (ring :Fs1, :As1, :Ds1).tick(:n)
   #These two make a nice pair
@@ -31,5 +40,4 @@ live_loop :bass do
     play notes, cutoff: 50, amp: 0.5,  decay: 8.0, attack: 0.5, detune: 12
   end
   sleep 8
-
 end

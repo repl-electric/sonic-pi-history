@@ -32,11 +32,11 @@ end
 
 live_loop :more_softly do
   with_synth :dark_ambience do
-    with_fx(:bitcrusher) do
-    sample Sop[/F#/, 0], cutoff: 80
-end
-    
-play (ring :Ds3).tick , release: 2.0, decay: 4.1,
+   with_fx(:bitcrusher, bits: 8) do
+      sample Sop[/F#/, 0], cutoff: 80
+    end
+
+    play (ring :Ds3).tick , release: 2.0, decay: 4.1,
       attack: 0.5, detune1: 12, detune2: 24, amp: 3.0, cutoff: 0
   end
   sleep 4

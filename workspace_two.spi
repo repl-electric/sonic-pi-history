@@ -21,7 +21,7 @@ live_loop :new_drums do
   end
 
   if(spread(7,9).look(:b))
-    sample Fraz[/hats/,Range.new(0,4)].tick(:sam), cutoff: 95
+    sample Frag[/hats/,Range.new(0,4)].tick(:sam), cutoff: 95
   end
 
   sleep 1

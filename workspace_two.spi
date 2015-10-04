@@ -4,7 +4,7 @@ _=nil
 
 
 live_loop :softly_kicking do
-  with_fx(:echo, phase: 0.125, decay: 0.5) do
+  with_fx(:echo, phase: 0.25, decay: 0.5) do
     sample Mountain[/subkick/,0]
   end
   sleep 2

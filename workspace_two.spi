@@ -31,7 +31,9 @@ end
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :hollows do
-    notes = (knit chord(:Fs3, :M)[1..-1],4, chord(:As3, :m),4)
+    notes = (knit chord(:Fs3, :M)[1..-1],4, 
+                  chord(:As3, :m),4,
+             chord(:Ds3, :m),4)
     with_synth :hollow do
       #What was that?
       play notes.tick, cutoff: 120, release: 0.1, attack: 0.01, amp: 2.0

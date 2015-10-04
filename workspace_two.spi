@@ -9,7 +9,7 @@ live_loop :softly_kicking do
   end
   sleep 1
   with_fx(:reverb) do
-    sample Fraz[/snap/,[0,0,0,1]].tick(:samples), cutoff: 90, amp: rand
+    sample Fraz[/snap/,[0,0,0,1]].tick(:samples), cutoff: 80, amp: rand
   end
   sleep 1
 end

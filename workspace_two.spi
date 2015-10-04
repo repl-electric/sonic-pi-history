@@ -36,7 +36,7 @@ end
 live_loop :hats do
   #sync :drums
   pick_pan = [0.25, -0.25].choose
-  other_pan =  [0.25, -0.25] - [pick_pan]
+  other_pan =  ([0.25, -0.25] - [pick_pan])[0]
 
   sample Frag[/hat/,Range.new(0,4)].tick(:sh),
     pan: pick_pan,

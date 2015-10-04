@@ -32,7 +32,7 @@ end
 
 live_loop :more_softly do
   with_synth :dark_ambience do
-   with_fx(:bitcrusher, bits: 8) do
+    with_fx(:bitcrusher, bits: 8, sample_rate: 2000) do
       sample Sop[/F#/, 0], cutoff: 80
     end
 

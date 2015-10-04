@@ -26,10 +26,10 @@ live_loop :bass do
 
   #These two make a nice pair
   with_synth :prophet do
-    play notes, cutoff: 20, amp: 0.1,  decay: 1.0
+    play notes, cutoff: 30, amp: 0.1,  decay: 1.0
   end
   with_synth :dsaw do
-    play notes, cutoff: 20, amp: 0.1,  decay: 1.0
+    play notes, cutoff: 30, amp: 0.1,  decay: 1.0
   end
   sleep 2
 

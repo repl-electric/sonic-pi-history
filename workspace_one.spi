@@ -24,7 +24,7 @@ end
 live_loop :background do
   sleep 1
   with_synth :dark_sea_horn do
-    play (:Fs1, :As1).tick(:note), cutoff: (ramp *(range 80,100,5)).tick, decay: 1, amp: 1.0
+    play (ring :Fs1, :As1).tick(:note), cutoff: (ramp *(range 80,100,5)).tick, decay: 1, amp: 1.0
   end
 end
 

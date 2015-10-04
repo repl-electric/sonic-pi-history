@@ -53,7 +53,7 @@ live_loop :apeg do
 end
 
 shader(:uniform, :iInvert, 1.0)
-shader(:uniform,  :iWobble, 1.0)
+shader(:uniform,  :iWobble, 0.0)
 #shader("uniform", :iMesh, 0.0)
 shader("uniform", :iCells, 1.0)
 shader("uniform", :iStars, 0.0)

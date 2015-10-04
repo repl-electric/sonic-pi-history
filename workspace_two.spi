@@ -29,7 +29,8 @@ live_loop :drums do
   end
 
   sleep 1
-  with_fx(:reverb, room: 0.8) do
+  mix = [0.9,0.8,0.7,0.6].choose
+  with_fx(:reverb, room: 0.8, mix: mix) do
     sample Fraz[/snap/,[0,1]].tick(:s2), cutoff: 80, amp: 2.0+rand
   end
   sleep 1

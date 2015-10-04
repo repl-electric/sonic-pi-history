@@ -1,7 +1,7 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 #Messing around with Sonic Pi, nothing polished. Just play. Play can go wrong, thats ok.
-set_volume! 1.1
+set_volume! 1.2
 
 live_loop :softly_kicking do
   with_fx(:echo, phase: 0.25, decay: 0.5) do

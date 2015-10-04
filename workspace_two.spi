@@ -5,7 +5,7 @@ _=nil
 
 live_loop :over_the_water do
   with_synth :dark_sea_horn do
-    play (ring :FS1, :As1, :Ds1).tick, decay: 8.1, cutoff: 80
+    play (ring :FS1, :As1, :Ds1).tick, decay: 8.1, cutoff: 85
   end
   sleep 8
 end
@@ -14,6 +14,7 @@ live_loop :drums do
   with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
     sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
   end
+
   sleep 1
   sleep 1
 end

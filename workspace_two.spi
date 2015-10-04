@@ -14,8 +14,10 @@ end
 
 live_loop :softer do
   with_fx(:reverb, reps: 4) do |fx|
-    sleep 1
-    control fx, damp: rand
+    4.times{
+      sleep 1/4.0
+      control fx, damp: rand
+    }
     with_synth(:dsaw) do
       play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(60,70), attack: 0.5, decay: 1.0, detune: 12
     end

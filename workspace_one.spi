@@ -16,10 +16,12 @@ live_loop :background do
     play (ring :Fs2, :Es2).tick, decay: 4.0,
       detune1: 24,
       detune2: 12,
-      amp: 4.0, attack: 1.0
+      amp: 4.0, attack: 1.0, cutoff: 100
   end
   sleep 4
 end
+
+
 
 live_loop :image do
   with_synth(:prophet){
@@ -28,8 +30,6 @@ live_loop :image do
   with_synth(:dsaw){
     #play :Fs2, decay: 1,8, amp: 1.5, cutoff: 50, detune: 12
   }
-
-
   sleep 2
 end
 

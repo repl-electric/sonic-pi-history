@@ -2,6 +2,15 @@
 
 
 
+live_loop :dark do
+  sleep 4
+  with_synth :dark_ambience do
+    play :Fs1
+  end
+end
+
+
+
 #shader("uniform", :iMesh, 0.0)
 shader("uniform", :iCells, 0.0)
 shader("uniform", :iStars, 0.0)

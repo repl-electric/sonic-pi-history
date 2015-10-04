@@ -13,7 +13,7 @@ end
 
 live_loop :background do
   with_synth :dark_ambience do
-    play :Fs2, decay: 4.0, detune1: -24, amp: 2.0
+    play :Fs2, decay: 4.0, detune1: -24, amp: 4.0
   end
   sleep 4
 end

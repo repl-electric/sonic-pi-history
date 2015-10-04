@@ -9,6 +9,11 @@ live_loop :dark do
   end
 end
 
+live_loop :drums do
+  sample Mountain[/subkick/,0]
+  sleep 2
+end
+
 
 
 #shader("uniform", :iMesh, 0.0)

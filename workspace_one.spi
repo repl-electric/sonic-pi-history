@@ -1,6 +1,6 @@
 
 live_loop :drums do
-with_fx(:echo, phase: 0.25, decay: 1.0) do
+with_fx(:echo, phase: 0.125, decay: 1.0) do
 sample Mountain[/subkick/,1], cutoff: 100
 end
 shader("decaying-uniform", :iBeat, 5.0, 0.003)

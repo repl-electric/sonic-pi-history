@@ -14,6 +14,12 @@ live_loop :softly_kicking do
   sleep 1
 end
 
+live_loop :new_drums do
+  if(spread(1,4).tick(:b))
+    sample Fraz[/kick/,0], cutoff: 40
+  end
+end
+
 live_loop :fog_horn_moving_across_the_water do
   sleep 8
   with_synth :dark_sea_horn do

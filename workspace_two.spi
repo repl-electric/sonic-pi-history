@@ -35,7 +35,7 @@ end
 
 live_loop :hats do
   #sync :drums
-  sample Frag[/hat/,0], cutoff: 80 if spread(3,8).tick
+  sample Frag[/hat/,Range.new(0,2)], cutoff: 80 if spread(3,8).tick
   sleep 0.25
   #sample if spread(7,11).look
 

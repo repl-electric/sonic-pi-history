@@ -7,5 +7,11 @@ live_loop :softly_kicking do
   with_fx(:echo, phase: 0.25, decay: 0.5) do
     sample Mountain[/subkick/,0]
   end
-  sleep 2
+  sleep 1
+  with_fx(:reverb) do
+    sample Fraz[/snap/,0], cutoff: 90
+  end
+  sleep 1
+
+
 end

@@ -10,7 +10,9 @@ live_loop :dark do
 end
 
 live_loop :drums do
-  sample Mountain[/subkick/,1], cutoff: 100
+  with_fx(:echo, phase: 0.25) do
+    sample Mountain[/subkick/,1], cutoff: 100
+  end
   shader(:decay, :iBeat, 1.0, 0.005)
   sleep 2
 end

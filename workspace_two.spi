@@ -6,7 +6,7 @@ _=nil
 live_loop :over_the_water do
   with_synth :dark_sea_horn do
     with_transpose(12) do
-      play (ring :FS1, :As1, :Ds1).tick, decay: 8.1, cutoff: 85
+      play (ring :As1, :Cs1, :Fs1).tick, decay: 8.1, cutoff: 85
     end
   end
   sleep 8

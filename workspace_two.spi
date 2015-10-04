@@ -20,11 +20,12 @@ live_loop :new_drums do
     sample Fraz[/kick/,[0,1]].tick(:bass), cutoff: 85
   end
 
+  2.times{
   if(spread(7,9).look(:b))
     sample Frag[/hats/,Range.new(0,(ring 2,4).tick(:range))].tick(:sam), cutoff: 80
   end
-
-  sleep 1
+  sleep 0.5
+}
 end
 
 live_loop :fog_horn_moving_across_the_water do

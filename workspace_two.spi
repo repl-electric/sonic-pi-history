@@ -30,7 +30,7 @@ end
 live_loop :more_softly do
   with_synth :dark_ambience do
     play (ring :Ds3).tick , release: 2.0, decay: 4.1,
-      attack: 0.5, detune1: 24, detune2: 24, amp: 3.0, cutoff: 130
+      attack: 0.5, detune1: 12, detune2: 24, amp: 3.0, cutoff: 130
   end
   sleep 4
 end

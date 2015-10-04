@@ -31,5 +31,6 @@ live_loop :bass do
   with_synth :dsaw do
     play notes, cutoff: 40
   end
+  sleep 2
 
 end

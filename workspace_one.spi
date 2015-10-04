@@ -29,7 +29,7 @@ live_loop :what_are_we_doing_here do
   sleep 4
   with_synth :dark_sea_horn do
     shader(:decay,  :iWobble, 1.0)
-    play (ring :Fs2, :As1, :Ds1).tick, cutoff: 135, decay: 4.0
+    play (ring :Fs2, :As2, :Ds1).tick, cutoff: 135, decay: 4.0
   end
 end
 

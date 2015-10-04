@@ -1,5 +1,11 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 #Messing around with Sonic Pi, nothing polished. Just play. Play can go wrong, thats ok.
+#Let me know if the audio is too crackley... Still working on it :(
 
-play 60
+live_loop :over_the_water do
+  with_synth :dark_sea_horn do
+    play (ring :FS1).tick, decay: 8.1
+end
+  sleep 8
+end

@@ -5,5 +5,5 @@ _=nil
 
 live_loop :softly_kicking do
   sample Mountain[/subkick/,0]
-  sleep 1
+  sleep 2
 end

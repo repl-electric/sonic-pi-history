@@ -21,7 +21,12 @@ live_loop :background do
   sleep 4
 end
 
-
+live_loop :background do
+  sleep 1
+  with_synth :dark_sea_horn do
+    play :Fs1, cutoff: 60
+  end
+end
 
 live_loop :image do
   with_synth(:prophet){

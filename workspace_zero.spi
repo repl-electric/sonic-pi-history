@@ -35,8 +35,8 @@ live_loop :light do
 end
 
 live_loop :hats do
-  sample Frag[/hat/,Range.new(0, 2)].tick(:s2), cutoff: 70 if spread(3,8).tick
-  sample Frag[/hat/,Range.new(0, 4)].tick(:s1), cutoff: 70 if spread(7,11).look
+  sample Frag[/hat/, Range.new(0, 2)].tick(:s2), cutoff: 70 if spread(3,8).tick
+  sample Frag[/hat/, Range.new(0, 4)].tick(:s1), cutoff: 70 if spread(7,11).look
   sleep 0.25
 end
 

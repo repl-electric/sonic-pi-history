@@ -12,7 +12,7 @@ end
 
 live_loop :bass do
   with_synth :dsaw do
-    play (ring :Fs1, :As1, :B1).tick, decay: 4.0, cutoff: 45, amp: 0.3, detune: 12
+    play (ring :Fs2, :As2, :B2).tick, decay: 4.0, cutoff: 45, amp: 0.3, detune: 12
   end
   with_synth :prophet do
     play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.25

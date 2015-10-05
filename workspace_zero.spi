@@ -12,7 +12,7 @@ end
 
 live_loop :war do
 
-  with_fx(:echo, phase: 0.5, decay: 0.5) do
+  with_fx(:echo, phase: 0.5, decay: 0.2) do
     sample Mountain[/subkick/,0], cutoff: 80
   end
   sleep 1

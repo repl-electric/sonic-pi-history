@@ -34,7 +34,7 @@ end
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
-    with_fx(:flanger, mix: 1.0, feedback: 0.1, depth: 1) do
+    with_fx(:flanger, mix: 1.0, feedback: 0.1, depth: 0.3) do
       with_synth(:hollow) do
         play (knit
               :Cs3,4, #FAB   ACE  DFA

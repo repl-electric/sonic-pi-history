@@ -1,4 +1,11 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 
-play 60
+#Messing around with Sonic Pi. Expect mess. Ambient minimal music.
+
+live_loop :drifting do
+  with_synth :dark_sea_horn do
+    play (ring :Fs1), decay: 8.01
+  end
+  sleep 8
+end

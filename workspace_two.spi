@@ -35,7 +35,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
     with_synth(:hollow) do
-      play :Fs2
+      play :Fs2, release: 0.1
     end
   end
 end

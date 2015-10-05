@@ -22,7 +22,7 @@ live_loop :softer do
       control fx, damp: rand
     }
     with_synth(:dsaw) do
-      play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(40,50),
+      play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(40,55),
         attack: 0.5, decay: 1.0, detune: 12
     end
     with_synth(:prophet) do

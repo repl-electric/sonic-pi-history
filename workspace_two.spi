@@ -34,20 +34,20 @@ end
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
-    with_fx(:krush) do
-    with_synth(:hollow) do
-      play (knit
-            :Cs3,4, #FAB   ACE  DFA
-            :Es2,4, :Fs3,3, :FS4,1,
-            :Cs3,4, #FAB   ACE  DFA
-            :Es2,4, :Fs3,3, :DS4,1,
-            :Cs3,4, #FAB   ACE  DFA
-            :Es2,4, :Fs3,3, :DS4,1
-      ).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 2.0,
-        cutoff: (range 85,135,25).tick
+    with_fx(:krush, mix: 0.01) do
+      with_synth(:hollow) do
+        play (knit
+              :Cs3,4, #FAB   ACE  DFA
+              :Es2,4, :Fs3,3, :FS4,1,
+              :Cs3,4, #FAB   ACE  DFA
+              :Es2,4, :Fs3,3, :DS4,1,
+              :Cs3,4, #FAB   ACE  DFA
+              :Es2,4, :Fs3,3, :DS4,1
+        ).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 2.0,
+          cutoff: (range 85,135,25).tick
+      end
     end
   end
-end
 end
 
 live_loop :more_softly do

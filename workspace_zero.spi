@@ -21,7 +21,7 @@ live_loop :bass do
 end
 
 live_loop :war do
-  with_fx(:echo, phase: 0.5, decay: 0.1) do
+  with_fx(:echo, phase: 0.5, decay: 1.0) do
     sample Mountain[/subkick/,[0,2]].tick(:kickers), cutoff: (ring 60, 70).tick(:heart)
   end
   sleep 1

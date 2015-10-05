@@ -2,8 +2,9 @@
 _=nil
 #Messing around with Sonic Pi, nothing polished. Just play. Play can go wrong, thats ok.
 #Let me know if the audio is too crackley... Still working on it :(
+
 with_fx(:reverb) do
-live_loop :over_the_water do
+  live_loop :over_the_water do
     with_synth :dark_sea_horn do
       with_transpose(0) do
         play (ring :As1, :Cs1, :Fs1).tick, decay: 8.5,

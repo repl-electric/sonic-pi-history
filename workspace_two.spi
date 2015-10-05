@@ -34,56 +34,57 @@ end
 live_loop :more_softly do
   with_synth :dark_ambience do
     #with_fx(:bitcrusher, bits: 8, sample_rate: 1000) do
-    sample Sop[(ring /F#/, /A#/).tick(:a), 0], cutoff: 80
-    #end
+    sample Sop[(ring /F#/, /A#/).tick(:a), 0],
+                cutoff: 40
+                #end
 
-    play (ring :Ds3).tick , release: 2.0, decay: 4.1,
-      attack: 0.5, detune1: 12, detune2: 24, amp: 3.0, cutoff: 50
-  end
-  sleep 4
-end
+                play (ring :Ds3).tick , release: 2.0, decay: 4.1,
+                attack: 0.5, detune1: 12, detune2: 24, amp: 3.0, cutoff: 50
+                end
+                sleep 4
+                end
 
-live_loop :highlight do
-  with_fx(:lpf, cutoff: 70) do
-    16.times{sleep 0.25}
-    with_transpose(0) do
-      i_deter(deg_seq(%w{Fs4 1*3  3*3}).tick,
-              deg_seq(%w{Fs4 3    5}).stretch(3).tick, amp: 0.8*1,
-              damp_time: 0.25*8.0)
-    end
-  end
-end
+                live_loop :highlight do
+                  with_fx(:lpf, cutoff: 70) do
+                    16.times{sleep 0.25}
+                    with_transpose(0) do
+                      i_deter(deg_seq(%w{Fs4 1*3  3*3}).tick,
+                              deg_seq(%w{Fs4 3    5}).stretch(3).tick, amp: 0.8*1,
+                              damp_time: 0.25*8.0)
+                    end
+                  end
+                end
 
-live_loop :hats do
-  #sync :drums
-  #So we alternate here using random
+                live_loop :hats do
+                  #sync :drums
+                  #So we alternate here using random
 
-  use_random_seed 300 #Fixing the seed stops the random flow
-  pick_pan = [0.25, -0.25].choose
-  other_pan =  ([0.25, -0.25] - [pick_pan])[0]
+                  use_random_seed 300 #Fixing the seed stops the random flow
+                  pick_pan = [0.25, -0.25].choose
+                  other_pan =  ([0.25, -0.25] - [pick_pan])[0]
 
-  sample Frag[/hat/,Range.new(0,4)].tick(:sh),
-    pan: pick_pan, amp: 1,
-    cutoff: 80 if spread(3,8).tick
+                  sample Frag[/hat/,Range.new(0,4)].tick(:sh),
+                    pan: pick_pan, amp: 1,
+                    cutoff: 80 if spread(3,8).tick
 
-  #sample Fraz[/kick/,[0,1]].tick(:d), cutoff: rrand(90,100) if spread(1,8).look
+                  #sample Fraz[/kick/,[0,1]].tick(:d), cutoff: rrand(90,100) if spread(1,8).look
 
-  sample Frag[/hat/,Range.new(0,[1,2].choose)].tick(:sh),
-    pan: other_pan, amp:1,
-    cutoff: 80 if spread(7,11).look
-  sleep 0.25
-end
+                  sample Frag[/hat/,Range.new(0,[1,2].choose)].tick(:sh),
+                    pan: other_pan, amp:1,
+                    cutoff: 80 if spread(7,11).look
+                  sleep 0.25
+                end
 
-live_loop :drums do
-  with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
-    sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
-  end
+                live_loop :drums do
+                  with_fx((knit :none, 3, :echo,1, :none, 4).tick(:fx)) do
+                    sample Mountain[/subkick/,[0,2]].tick(:s), cutoff: 120, amp: 3.0+rand
+                  end
 
-  sleep 1
-  use_random_seed 300
-  mix = [0.8,0.7,0.6].choose
-  with_fx(:reverb, room: 0.8, mix: mix) do
-    sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 1.0+rand
-  end
-  sleep 1
-end
+                  sleep 1
+                  use_random_seed 300
+                  mix = [0.8,0.7,0.6].choose
+                  with_fx(:reverb, room: 0.8, mix: mix) do
+                    sample Fraz[/snap/,[1,2]].tick(:s2), cutoff: 80, amp: 1.0+rand
+                  end
+                  sleep 1
+                end

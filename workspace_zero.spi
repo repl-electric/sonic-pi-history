@@ -1,6 +1,6 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
-
+#Testing audio quality
 #Messing around with Sonic Pi. Expect mess. Ambient minimal music.
 
 live_loop :drifting do

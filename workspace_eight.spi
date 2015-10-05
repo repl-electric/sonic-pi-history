@@ -12,7 +12,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
               :Cs3,4, #FAB   ACE  DFA
               :Es2,4, :Fs3,3, :DS4,1
         ).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 2.0,
-          cutoff: (range 85,135,25).tick
+          cutoff: (range 85,135,10).tick
       end
     end
     #    end

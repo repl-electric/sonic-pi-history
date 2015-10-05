@@ -34,6 +34,7 @@ end
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
+    with_fx(:krush) do
     with_synth(:hollow) do
       play (knit
             :Cs3,4, #FAB   ACE  DFA
@@ -46,6 +47,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
         cutoff: (range 85,135,25).tick
     end
   end
+end
 end
 
 live_loop :more_softly do

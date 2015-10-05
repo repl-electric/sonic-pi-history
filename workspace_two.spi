@@ -35,9 +35,9 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
     with_synth(:hollow) do
-      play (knit 
+      play (knit
             :Cs3,4, #FAB   ACE  DFA
-            :Es2,4, :Fs3,4).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 3.0
+            :Es2,4, :Ds3,4).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 3.0
     end
   end
 end

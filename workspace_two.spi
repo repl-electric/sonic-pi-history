@@ -11,8 +11,7 @@ with_fx(:reverb) do
           cutoff: 80
       end
     end
-  sleep 8
-
+    sleep 8
   end
 end
 

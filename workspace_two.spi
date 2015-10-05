@@ -6,7 +6,7 @@ _=nil
 with_fx(:reverb) do
   live_loop :over_the_water do
     with_synth :dark_sea_horn do
-      with_transpose(0) do
+      with_transpose(12) do
         play (ring :As1, :Cs1, :Fs1).tick, decay: 8.5,
           cutoff: 75
       end

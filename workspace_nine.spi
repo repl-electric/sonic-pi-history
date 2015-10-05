@@ -1,5 +1,5 @@
 live_loop :harmony do
-  sleep 0.25
+  sleep 0.5
   with_fx(:reverb){
     with_synth(:hollow){
       play chord(:Fs4, 'M'), amp: (knit 5.0,6, 0.0,2).tick(:amp)

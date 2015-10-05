@@ -35,7 +35,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :chorus do
     sleep 0.25
     with_synth(:hollow) do
-      play (ring :Cs3, :Es3, :As3).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 8.0
+      play (knit :Cs3,8, :Es3, :As3).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 8.0
     end
   end
 end

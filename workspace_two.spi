@@ -70,7 +70,7 @@ live_loop :hats do
 
   sample Frag[/hat/,Range.new(0,[1,2].choose)].tick(:sh),
     pan: other_pan, amp:1,
-    cutoff: 80 if spread(7,11).tick
+    cutoff: 80 if spread(7,11).look
   sleep 0.25
 end
 

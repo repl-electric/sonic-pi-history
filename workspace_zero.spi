@@ -10,6 +10,13 @@ live_loop :drifting do
   sleep 8
 end
 
+live_loop :bass do
+  with_synth :dsaw do
+    play (ring :Fs1), decay: 4.0, cutoff: 40
+  end
+  sleep 4
+end
+
 live_loop :war do
   with_fx(:echo, phase: 0.25, decay: 0.1) do
     sample Mountain[/subkick/,0], cutoff: (ring 60, 70).tick(:heart)

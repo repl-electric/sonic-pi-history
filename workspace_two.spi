@@ -6,7 +6,7 @@ _=nil
 live_loop :over_the_water do
   with_fx(:reverb) do
     with_synth :dark_sea_horn do
-      with_transpose(12*2) do
+      with_transpose(0) do
         play (ring :As1, :Cs1, :Fs1).tick, decay: 8.1,
           cutoff: (ramp *(range 10,135, 10).reverse).tick(:pushing_back_out)
       end

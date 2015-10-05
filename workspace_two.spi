@@ -31,13 +31,13 @@ live_loop :softer do
   end
 end
 
-wiht_fx(:chorus) do
-live_loop :chorus do
-  sleep 1
-  with_synth(:hollow) do
-    play :Fs2
+with_fx(:chorus) do
+  live_loop :chorus do
+    sleep 1
+    with_synth(:hollow) do
+      play :Fs2
+    end
   end
-end
 end
 
 live_loop :more_softly do

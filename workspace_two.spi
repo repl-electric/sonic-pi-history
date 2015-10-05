@@ -31,6 +31,13 @@ live_loop :softer do
   end
 end
 
+live_loop :chorus do
+  sleep 8
+  with_synth(:hollow) do
+    play :Fs2
+end
+end
+
 live_loop :more_softly do
   with_synth :dark_ambience do
     #with_fx(:bitcrusher, bits: 8, sample_rate: 1000) do

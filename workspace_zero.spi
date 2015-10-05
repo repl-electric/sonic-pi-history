@@ -17,13 +17,12 @@ live_loop :bass do
   with_synth :prophet do
     play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.25
   end
-
   sleep 4
 end
 
 live_loop :war do
   with_fx(:echo, phase: 0.25, decay: 0.1) do
-    sample Mountain[/subkick/,0], cutoff: (ring 60, 70).tick(:heart)
+    sample Mountain[/subkick/,[0,2]].tick(:kickers), cutoff: (ring 60, 70).tick(:heart)
   end
   sleep 1
   with_fx(:reverb, room: 0.8, mix: 0.8, decay: 1.0) do

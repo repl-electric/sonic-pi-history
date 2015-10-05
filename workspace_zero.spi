@@ -36,7 +36,7 @@ end
 
 live_loop :hats do
   sample Frag[/hat/, Range.new(0, 4)].tick(:s1), cutoff: rrand(65,75), amp: 0.1, pan: -0.25 if spread(7,11).tick
-  sample Frag[/hat/, Range.new(0, 2)].tick(:s2), cutoff: rrand(65,75), amp: rand, pan: 0.25 if spread(3,8).tick
+  sample Frag[/hat/, Range.new(0, (ring 2,4).tick(:s))].tick(:s2), cutoff: rrand(65,75), amp: rand, pan: 0.25 if spread(3,8).tick
   sleep 0.25
 end
 

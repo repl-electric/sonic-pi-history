@@ -1,6 +1,6 @@
 live_loop :harmony do
   sleep 0.5
-  with_fx(:reverb){
+  with_fx(:reverb) do
     with_synth(:hollow){
       with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
         #    with_fx :slicer, phase: 1/64.0 do
@@ -8,6 +8,5 @@ live_loop :harmony do
         #   end
       end
     }
-  }
-end
+  end
 end

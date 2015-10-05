@@ -34,6 +34,11 @@ live_loop :light do
   sleep 1
 end
 
+live_loop :hats do
+  sample Fraz[/hat/,0], cutoff: 60 if spread(3,8).tick
+  sleep 0.25
+end
+
 live_loop :war do
   with_fx(:echo, phase: 0.5, decay: 1.0) do
     sample Mountain[/subkick/,[0,2]].tick(:kickers), cutoff: (ring 60, 70).tick(:heart)

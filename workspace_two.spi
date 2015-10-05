@@ -22,7 +22,7 @@ live_loop :softer do
       control fx, damp: rand
     }
     with_synth(:dsaw) do
-      play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(40,50), 
+      play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(40,50),
         attack: 0.5, decay: 1.0, detune: 12
     end
     with_synth(:prophet) do
@@ -47,8 +47,8 @@ live_loop :highlight do
   with_fx(:lpf, cutoff: 80) do
     16.times{sleep 0.25}
     with_transpose(0) do
-      i_deter(deg_seq(%w{Fs4 1*3 3*3  5*3   1*3  3*3   5*3}).tick,
-              deg_seq(%w{Fs4 3   5    6     3    5     2 }).stretch(3).tick, amp: 0.8*1,
+      i_deter(deg_seq(%w{Fs4 1*3}).tick,
+              deg_seq(%w{Fs4 3  }).stretch(3).tick, amp: 0.8*1,
               damp_time: 0.25*8.0)
     end
   end

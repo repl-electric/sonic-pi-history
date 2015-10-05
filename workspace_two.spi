@@ -62,7 +62,7 @@ live_loop :hats do
   other_pan =  ([0.25, -0.25] - [pick_pan])[0]
 
   sample Frag[/hat/,Range.new(0,4)].tick(:sh),
-    pan: pick_pan, amp: 0,
+    pan: pick_pan, amp: 1,
     cutoff: 80 if spread(3,8).tick
 
   #sample Fraz[/kick/,[0,1]].tick(:d), cutoff: rrand(90,100) if spread(1,8).look

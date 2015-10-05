@@ -9,3 +9,9 @@ live_loop :drifting do
   end
   sleep 8
 end
+
+live_loop :war do
+  sample Mountain[/subkick/,0], cutoff: 100
+  sleep 1
+  sleep 1
+end

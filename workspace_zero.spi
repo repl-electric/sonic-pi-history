@@ -5,7 +5,7 @@ _=nil
 
 live_loop :drifting do
   with_synth :dark_sea_horn do
-    play (ring :Fs1), decay: 8.01, cutoff: 40
+    play (ring :Fs1, :As2), decay: 8.01, cutoff: 40
   end
   sleep 8
 end

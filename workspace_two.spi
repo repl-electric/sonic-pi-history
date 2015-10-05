@@ -39,7 +39,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
             :Cs3,4, #FAB   ACE  DFA
             :Es2,4, :Fs3,3, :FS4,1,
             :Cs3,4, #FAB   ACE  DFA
-            :Es2,4, :Fs3,3, :AS4,1
+            :Es2,4, :Fs3,3, :AS4,1,
             :Cs3,4, #FAB   ACE  DFA
             :Es2,4, :Fs3,3, :DS4,1
 

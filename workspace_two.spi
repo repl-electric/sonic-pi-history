@@ -22,7 +22,6 @@ live_loop :softer do
       control fx, damp: rand
     }
     with_synth(:dsaw) do
-      sample Vocals[/breath/,3], cutoff: 100
       play (knit :Fs1,8, :As1,8, :Ds1,8).tick(:notes), cutoff: rrand(40,55),
         attack: 0.5, decay: 1.0, detune: 12
     end
@@ -63,6 +62,9 @@ live_loop :more_softly do
                   use_random_seed 300 #Fixing the seed stops the random flow
                   pick_pan = [0.25, -0.25].choose
                   other_pan =  ([0.25, -0.25] - [pick_pan])[0]
+
+      sample Vocals[/breath/,3], cutoff: 100
+
 
                   sample Frag[/hat/,Range.new(0,4)].tick(:sh),
                     pan: pick_pan, amp: 1,

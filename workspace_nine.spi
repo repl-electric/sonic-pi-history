@@ -1,0 +1,8 @@
+live_loop :harmony do
+  sync :apeg
+  with_fx(:reverb){
+    with_synth(:hollow){
+      play chord(:Fs4, 'M'), amp: (knit 5.0,6, 0.0,2).tick(:amp) 
+    }
+  }
+end

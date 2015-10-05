@@ -20,6 +20,11 @@ live_loop :bass do
   sleep 4
 end
 
+live_loop :light do
+  i_hollow((ring :Fs3).tick)
+  sleep 1
+end
+
 live_loop :war do
   with_fx(:echo, phase: 0.5, decay: 1.0) do
     sample Mountain[/subkick/,[0,2]].tick(:kickers), cutoff: (ring 60, 70).tick(:heart)

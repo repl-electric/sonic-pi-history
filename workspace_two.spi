@@ -70,7 +70,7 @@ live_loop :more_softly do
                     pan: pick_pan, amp: 1,
                     cutoff: 80 if spread(3,8).tick
 
-                  sample Vocals[/breath/,6], cutoff: 80 if spread(6,8).look
+                  sample Vocals[/breath/,6], cutoff: 80 if spread(7,8).look
 
                   #sample Fraz[/kick/,[0,1]].tick(:d), cutoff: rrand(90,100) if spread(1,8).look
 

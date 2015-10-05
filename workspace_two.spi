@@ -31,22 +31,17 @@ live_loop :softer do
   end
 end
 
-with_fx(:reverb, room: 1.0, mix: 1.0) do
-  live_loop :chorus do
-    sleep 0.25
-    with_fx(:flanger, mix: 1.0, feedback: 0.5, depth: 0.3) do
-      with_synth(:hollow) do
-        play (knit
-              :Cs3,4, #FAB   ACE  DFA
-              :Es2,4, :Fs3,3, :FS4,1,
-              :Cs3,4, #FAB   ACE  DFA
-              :Es2,4, :Fs3,3, :DS4,1,
-              :Cs3,4, #FAB   ACE  DFA
-              :Es2,4, :Fs3,3, :DS4,1
-        ).tick, release: 0.5, attack: 0.01, decay: 0.5, amp: 2.0,
-          cutoff: 130#(range 85,135,25).tick
+live_loop :harmony do
+  sleep 0.5
+  with_fx(:reverb) do
+    with_synth(:hollow){
+      with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+        #        with_fx :slicer, phase: 1.0 do
+        #F G A B C D E
+        play (ring :Es3, :Ds3, :B3, :Gs4).tick, release: 8, amp: 2
+        #        end
       end
-    end
+    }
   end
 end
 

@@ -10,7 +10,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     with_synth :dark_sea_horn do
       #Woops little loud....
       #But I love this synth...
-      play (ring :As3, :Cs3, :Fs3).tick, decay: 8.01, amp: 0.2, cutoff: (ramp *(range 40, 130).reverse).tick(:out)
+      play (ring :As3, :Cs3, :Fs3).tick, decay: 8.01, amp: 0.1, cutoff: (ramp *(range 40, 130).reverse).tick(:out)
     end
     sleep 8
   end

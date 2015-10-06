@@ -30,7 +30,7 @@ live_loop :foam do
 end
 
 live_loop :splash do
-  with_fx(:echo, phase: 0.5) do
+  with_fx(:echo, phase: 0.5, decay: 0.5) do
     sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   end
   sleep 1

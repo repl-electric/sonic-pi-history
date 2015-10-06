@@ -38,7 +38,13 @@ live_loop :foam do
   end
 end
 
+
+
 live_loop :splash do
+  if spread(3,8).tick
+    sample Frag[/hat/, 0], cutoff: 30
+  end
+
   with_fx(:echo, phase: 0.5, decay: 1.0) do
     sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   end

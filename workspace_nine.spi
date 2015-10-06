@@ -5,7 +5,6 @@
 #include(SonicPi::Lang::Pattern)
 #require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/sonicpi/spiderapi"
 
-include SonicPi::Util
 define :i_hollow do |n, *opts|
   defaults = {release: 8}
   defaults.merge(opts[0]||{})

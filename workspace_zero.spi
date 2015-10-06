@@ -7,7 +7,7 @@ _=nil
 
 live_loop :sea do
   with_synth :dark_sea_horn do
-    play (ring :Fs1).tick, decay: 8.01
+    play (ring :Fs1).tick, decay: 8.01, amp: 0.1
   end
   sleep 8
 end

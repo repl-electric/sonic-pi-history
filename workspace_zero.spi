@@ -1,3 +1,6 @@
+module Instruments
+
+
 def i_hollow(n, *opts)
   defaults = {release: 8}
   defaults.merge(opts[0]||{})
@@ -95,4 +98,6 @@ def i_nil(n, *opts)
       play n, defaults
     end
   end
+end
+
 end

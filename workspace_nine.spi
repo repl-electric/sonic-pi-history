@@ -3,13 +3,14 @@
 #include(SonicPi::Lang::Sound)
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
+klass = Object.const_set name, Class.new(SonicPi::Runtime)
 
 module Instruments
 
-klass.send(:include, SonicPi::Lang::Core)
-klass.send(:include, SonicPi::Lang::Sound)
-klass.send(:include, SonicPi::Lang::Minecraft)
-klass.send(:include, SonicPi::Lang::Pattern)
+  klass.send(:include, SonicPi::Lang::Core)
+  klass.send(:include, SonicPi::Lang::Sound)
+  klass.send(:include, SonicPi::Lang::Minecraft)
+  klass.send(:include, SonicPi::Lang::Pattern)
 
 
   include(SonicPi::Lang::Core)

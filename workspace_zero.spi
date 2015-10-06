@@ -41,7 +41,7 @@ end
 live_loop :not_the_chat do
   sleep 0.25
   if spread(3,8).tick
-    sample Frag[/hat/, Range.new(0,2)].tick(:s), cutoff: 60
+    sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 60
   end
 
 end

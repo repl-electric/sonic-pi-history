@@ -42,7 +42,7 @@ end
 
 live_loop :splash do
   if spread(3,8).tick
-    sample Frag[/hat/, 0], cutoff: 90
+    sample Frag[/hat/, 0], cutoff: 60
   end
 
   with_fx(:echo, phase: 0.5, decay: 1.0) do

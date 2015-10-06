@@ -5,7 +5,7 @@ _=nil
 #   /█\
 #  .Π.
 
-with_fx(:reverb, room: 1.0) do
+with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sea do
     with_synth :dark_sea_horn do
       play (ring :As1, :Cs1, :Ds1).tick, decay: 8.1, amp: 0.2, cutoff: 50

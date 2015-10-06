@@ -5,12 +5,14 @@ _=nil
 #   /█\
 #  .Π.
 
+with_fx(:reverb) do
 live_loop :sea do
   with_synth :dark_sea_horn do
     play (ring :As1, :Cs1, :Ds1).tick, decay: 8.1, amp: 0.2, cutoff: 50
   end
   sleep 8
 end
+edn
 
 live_loop :foam do
   sleep 4

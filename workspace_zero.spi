@@ -15,8 +15,8 @@ end
 live_loop :splash do
   sample Mountain[/subkick/,0], cutoff: 50
   sleep 1
-  if dice(6) > 3 
-    sample Mountain[/subkick/,0], cutoff: 60
+  if dice(6) > 3
+    sample Mountain[/subkick/,2], cutoff: 60
   end
   sleep 1
 end

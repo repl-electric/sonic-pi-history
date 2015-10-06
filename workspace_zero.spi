@@ -43,6 +43,9 @@ live_loop :not_the_chat do
   if spread(3,8).tick
     sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 60, pan: 0.25
   end
+  if spread(7,11).tick
+    sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 60, pan: 0.25
+  end
 
 end
 

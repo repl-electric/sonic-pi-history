@@ -3,7 +3,7 @@
 #include(SonicPi::Lang::Sound)
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
-require_relative "../sonicpi/lib/sonicpi/spiderapi"
+require "sonicpi/spiderapi"
 module Instruments
 
   send(:include, SonicPi::SpiderAPI)

@@ -6,7 +6,7 @@
 
 module Instruments
 
-klass.send(:include, SonicPi::SpiderAPI)
+  self.send(:include, SonicPi::SpiderAPI)
 
   define :i_hollow do |n, *opts|
     defaults = {release: 8}

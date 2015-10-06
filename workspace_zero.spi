@@ -58,7 +58,7 @@ live_loop :splash do
       sample Fraz[/kick/,[1,0]].tick(:agh), cutoff: rrand(50,75)
     end
     with_fx(:slicer, phase: 0.25, invert_wave: 1) do
-      sample Fraz[/kick/,[1,0]].look(:agh), cutoff: rrand(50,65)
+      sample Fraz[/kick/,[1,0]].look(:agh), cutoff: rrand(50,75)
     end
 
   end

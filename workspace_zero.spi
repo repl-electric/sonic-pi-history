@@ -15,7 +15,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 end
 
 live_loop :harmony do
-  sleep 0.5
+  sleep 1.0
   i_hollow((ring :Fs3), amp: 0.1)
 end
 

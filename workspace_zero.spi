@@ -25,7 +25,7 @@ end
 live_loop :splash do
   sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   sleep 1
-  with_fx :reverb, room: 1.0 do
+  with_fx :reverb, room: 0.8 do
     sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
   end
   sleep 1

@@ -4,7 +4,6 @@
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/sonicpi/spiderapi"
-send(:include, SonicPi::SpiderAPI)
 
 define :i_hollow do |n, *opts|
   defaults = {release: 8}

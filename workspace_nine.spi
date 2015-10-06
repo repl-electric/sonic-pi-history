@@ -1,5 +1,5 @@
 ["shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 
-self.include(SonicPi::Lang::Core)
+include(SonicPi::Lang::Core)
 
 #i_hollow(:Fs2)

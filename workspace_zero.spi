@@ -53,7 +53,7 @@ live_loop :not_the_chat do
 end
 
 live_loop :splash do
-  with_fx(:echo, phase: 0.25/8.0, decay: 1.0) do
+  with_fx(:reverb, phase: 0.25, decay: 1.0) do
     with_fx(:slicer, phase: 0.25) do
       sample Fraz[/kick/,[1,0]].tick(:agh), cutoff: rrand(50,65)
     end

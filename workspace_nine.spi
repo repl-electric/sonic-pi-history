@@ -4,12 +4,12 @@
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/core.rb"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/studio"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/spider"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/spiderapi"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/server"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/util"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/sonicpi/rcv_dispatch"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/studio"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/spider"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/spiderapi"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/server"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/util"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/lib/rcv_dispatch"
 
 send(:include, SonicPi::SpiderAPI)
 

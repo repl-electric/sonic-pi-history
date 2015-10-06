@@ -5,4 +5,9 @@ _=nil
 #   /█\
 #  .Π.
 
-play 60
+live_loop :sea do
+  with_synth :dark_sea_horn do
+    play (ring :Fs1).tick, decay: 8.01
+  end
+  sleep 8
+end

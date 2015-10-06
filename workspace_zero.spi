@@ -12,6 +12,13 @@ live_loop :sea do
   sleep 8
 end
 
+live_loop :foam do
+  sleep 4
+  with_synth :dsaw do
+    play (ring :Fs1).tick, decay: 4.0, cutoff: 40
+  end
+end
+
 live_loop :splash do
   sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   sleep 1

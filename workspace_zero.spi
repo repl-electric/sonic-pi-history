@@ -8,7 +8,7 @@ _=nil
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sea do
     with_synth :dark_sea_horn do
-      play (ring :As3, :Cs3, :Ds3).tick, decay: 8.01, amp: 0.3, cutoff: (ramp (range 60, 130, 10)).tick(:cut)
+      play (ring :As3, :Cs3, :Ds3).tick, decay: 8.01, amp: 0.4, cutoff: (ramp (range 60, 130, 10)).tick(:cut)
     end
     sleep 8
   end

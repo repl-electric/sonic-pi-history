@@ -4,8 +4,8 @@
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/core.rb"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/studio"
-require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/spider"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/studio.rb"
+require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/spider.rb"
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/spiderapi"
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/server"
 require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/util"

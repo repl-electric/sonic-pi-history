@@ -13,10 +13,7 @@ live_loop :sea do
 end
 
 live_loop :splash do
-  sample Mountain[/subkick/,0], cutoff: 50
+  sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: 50
   sleep 1
-  if dice(6) > 3
-    sample Mountain[/subkick/,2], cutoff: 60
-  end
   sleep 1
 end

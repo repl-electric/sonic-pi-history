@@ -15,7 +15,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 end
 
 live_loop :harmony do
-  i_hollow((knit :Fs3,1, :As3,1, :Cs3, 1, :Es3, 1), amp: 0.1)
+  i_hollow((knit :Fs3,1, :As3,1, :Cs3, 1, :Es3, 1), amp: 0.2)
   sleep 1.0
 end
 

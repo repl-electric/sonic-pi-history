@@ -6,6 +6,12 @@
 
 module Instruments
 
+klass.send(:include, SonicPi::Lang::Core)
+klass.send(:include, SonicPi::Lang::Sound)
+klass.send(:include, SonicPi::Lang::Minecraft)
+klass.send(:include, SonicPi::Lang::Pattern)
+
+
   include(SonicPi::Lang::Core)
 
   define :i_hollow do |n, *opts|

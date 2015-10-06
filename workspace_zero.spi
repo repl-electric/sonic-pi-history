@@ -11,3 +11,9 @@ live_loop :sea do
   end
   sleep 8
 end
+
+live_loop :splash do
+  sample Mountain[/subkick/,0], cutoff: 50
+  sleep 1
+  sleep 1
+end

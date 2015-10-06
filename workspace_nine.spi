@@ -1,5 +1,3 @@
-
-
 def i_hollow(n, *opts)
   defaults = {release: 8}
   defaults.merge(opts[0]||{})

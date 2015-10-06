@@ -1,53 +1,98 @@
-["instruments", "shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
-_=nil
-#Testing audio quality
-#Messing around with Sonic Pi. Expect mess. Ambient minimal music.
-
-live_loop :drifting do
-  with_synth :dark_sea_horn do
-    play (ring :As2, :Cs2, :Fs3), decay: 8.01, cutoff: 60
-  end
-  sleep 8
-end
-
-live_loop :bass do
-  with_synth :dsaw do
-    play (ring :Fs2, :As2, :B2).tick, decay: 4.0, cutoff: 45, amp: 0.3, detune: 12
-  end
-  with_synth :prophet do
-    play (ring :Fs2, :As2, :Ds2).tick, decay: 4.0, cutoff: 50, amp: 0.25
-  end
-  sleep 4
-end
-
-live_loop :particles do
-  #Woops, lets cut that off
-  with_fx(:lpf, cutoff: 75) do
-    16.times{sleep 0.25}
-    i_deter(deg_seq(%w{Fs4 1*3 3*3}).tick,
-            deg_seq(%w{Fs4 3   5}).stretch(3).tick, amp: 0.8*0.5,
-            damp_time: 0.25*8.0)
+def i_hollow(n, *opts)
+  defaults = {release: 8}
+  defaults.merge(opts[0]||{})
+  with_fx(:reverb) do
+    with_synth(:hollow) do
+      with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+        #        with_fx :slicer, phase: 1.0 do
+        play n, defaults
+      end
+    end
   end
 end
 
-live_loop :light do
-  i_hollow((ring :Fs2, :As2, :Cs3).tick, 0.5)
-  sleep 1
+def i_float(note, *opts)
+  defaults = {cutoff: 70, attack: 0.01, pan: (Math.sin(vt*13)/1.5), amp: 0.5, decay: 0.1 + rrand(0.1,0.2), release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
+  defaults = defaults.merge(opts[0]||{})
+  with_synth(:prophet){play note, defaults}
 end
 
-live_loop :hats do
-  sample Frag[/hat/, Range.new(0, 4)].tick(:s1), cutoff: rrand(65,75), amp: 0.1, pan: -0.25 if spread(7,11).tick
-  sample Frag[/hat/, Range.new(0, (ring 2,4).tick(:s))].tick(:s2), cutoff: rrand(65,75), amp: rand, pan: 0.25 if spread(3,8).tick
-  sleep 0.25
+def i_int(note, *opts)
+  defaults = {pan: (Math.sin(vt*13)/1.5), amp: (ring 0.25).tick(:sdf), decay: 0.1 + rrand(0.1,0.2),
+              release: 0.3} #, release: (ring 1.0,0.25,0.4,0.25).tick(:dasd)}
+  defaults = defaults.merge(opts[0]||{})
+  with_synth(:beep){play note, defaults}
 end
 
-live_loop :war do
-  with_fx(:echo, phase: 0.5, decay: 1.0) do
-    sample Mountain[/subkick/,[0,2]].tick(:kickers), cutoff: (ring 60, 70).tick(:heart)
+
+def i_bass(note, *opts)
+  defaults = {cutoff: 60, res: 0.5,
+    release: (knit 2.5*bar,10, 8.0*bar,1,    5.0*bar,2,     5.0*bar,1, 2.5*bar,1, 2.5*bar,1).tick(:sd),
+    attack:  (knit 0.01,10,    0.15,1,        0.15,2,        0.25,1,    0.25,1,     0.01,1,).tick(:att),
+  amp:     (knit 0.5,13, 0.2, 3).tick(:ampe)}
+  defaults = defaults.merge(opts[0]||{})
+  with_transpose(12) do
+    with_synth(:beep) do
+      play note, defaults
+    end
   end
-  sleep 1
-  with_fx(:reverb, room: 0.8, mix: 0.8, decay: 1.0) do
-    sample Fraz[/snap/, [0,1]].tick(:snap), cutoff: rrand(60,70), decay: 1.0, amp: rand
+
+  defaults = {
+    amp: 1.0, release: (knit 2.01*bar, 9, 8.02*bar, 2, 2.1*bar,5).tick(:Bass),
+  attack: 0.05, cutoff: 60,  res: 0.5}
+  defaults = defaults.merge(opts[0]||{})
+  with_transpose(0) do
+    with_synth :beep do
+      play note, defaults
+    end
   end
-  sleep 1
+end
+
+def i_deter(note1, note2, *opts)
+  opts = opts[0] || {}
+  defaults = {amp: 0.3}
+  s = opts[:synth] || :beep
+  d = opts[:mix]   || 0.3
+  fx_pattern  = opts[:fx_pattern] || (knit :echo,2, :reverb,2)
+  distort_amp = opts[:distort_amp] || 0.8
+
+  damp_time = opts[:damp_time] || bar/4.0
+
+  opts.delete(:fx_pattern)
+  opts.delete(:distory_amp)
+  opts.delete(:damp_time)
+
+  werble = if opts[:werble] != nil
+    opts[:werble]
+  else
+    true
+  end
+
+  defaults = defaults.merge(opts)
+  with_fx :distortion, amp: distort_amp, mix: d do
+    with_synth(s) do
+      with_fx fx_pattern.tick(:fx), decay: 4.0, room: 1.0 do |fx_verb|
+        active_synth = play note1, defaults
+        sleep damp_time
+        control(active_synth, note: note2) if werble
+
+        2.times{
+          sleep damp_time
+          if fx_verb.name =~ /reverb/
+            control fx_verb, damp: rrand(0.0,1.0)
+          end
+        }
+      end
+    end
+  end
+end
+
+def i_nil(n, *opts)
+  defaults = {release: 2.0, amp: 2.0}
+  defaults = defaults.merge(opts[0]||{})
+  with_synth(:hollow) do
+    with_fx :pitch_shift, pitch_dis: 0.001, time_dis: 0.1, window_size: 1.5  do
+      play n, defaults
+    end
+  end
 end

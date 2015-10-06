@@ -3,7 +3,6 @@
 #include(SonicPi::Lang::Sound)
 #include(SonicPi::Lang::Minecraft)
 #include(SonicPi::Lang::Pattern)
-klass = Object.const_set name, Class.new(SonicPi::Runtime)
 
 module Instruments
 

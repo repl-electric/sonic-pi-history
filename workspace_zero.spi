@@ -15,7 +15,7 @@ end
 live_loop :foam do
   sleep 4
   with_synth :dsaw do
-    play (ring :Fs1).tick, decay: 4.0, cutoff: 40, detune: 12
+    play (ring :Fs1).tick, decay: 4.0, cutoff: 40, detune: 12, amp: 0.1
   end
 end
 

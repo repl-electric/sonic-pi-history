@@ -7,7 +7,7 @@ klass = Object.const_set name, Class.new(SonicPi::Runtime)
 
 module Instruments
 
-  klass.send(:include, SonicPi::Lang::Core)
+  self.send(:include, SonicPi::Lang::Core)
   klass.send(:include, SonicPi::Lang::Sound)
   klass.send(:include, SonicPi::Lang::Minecraft)
   klass.send(:include, SonicPi::Lang::Pattern)

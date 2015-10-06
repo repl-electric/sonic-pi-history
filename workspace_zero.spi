@@ -41,18 +41,18 @@ end
 live_loop :not_the_chat do
   sleep 0.25
   if spread(3,8).tick
-    sample Frag[/hat/, 0], cutoff: 60
-                        end
+    sample Frag[/hat/, Range.new(0,2)].tick, cutoff: 60
+  end
 
-                        end
+end
 
-                        live_loop :splash do
-                          with_fx(:echo, phase: 0.5, decay: 1.0) do
-                            sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
-                          end
-                          sleep 1
-                          with_fx :reverb, room: 0.8 do
-                            sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
-                          end
-                          sleep 1
-                        end
+live_loop :splash do
+  with_fx(:echo, phase: 0.5, decay: 1.0) do
+    sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
+  end
+  sleep 1
+  with_fx :reverb, room: 0.8 do
+    sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
+  end
+  sleep 1
+end

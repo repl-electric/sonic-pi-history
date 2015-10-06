@@ -53,7 +53,7 @@ end
 
 live_loop :splash do
   with_fx(:reverb, phase: 0.25, decay: 1.0, room: 1.0, mix: 1.0) do
-    with_fx :bitcrusher, mix: 0.1, sample_rate: 1000, bits: 8.0 do
+    with_fx :bitcrusher, mix: 0.01, sample_rate: 1000, bits: 8.0 do
       sample Sop[/F#/, 0], cutoff: 75 if spread(1,4).tick(:s)
     end
 

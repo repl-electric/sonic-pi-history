@@ -31,7 +31,7 @@ end
 live_loop :foam do
   sleep 4
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :B2).tick, decay: 4.0, cutoff: 45, detune: 12, amp: 0.2, attack: 0.5
+    play (ring :Fs2, :As2, :B2).tick, decay: 4.0, cutoff: 50, detune: 12, amp: 0.2, attack: 0.5
   end
   with_synth :prophet do
     play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.2, attack: 0.01

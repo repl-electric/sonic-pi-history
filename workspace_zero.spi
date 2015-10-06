@@ -9,6 +9,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sea do
     with_synth :dark_sea_horn do
       #Woops little loud....
+      #But I love this synth...
       play (ring :As3, :Cs3, :Ds3).tick, decay: 8.01, amp: 0.2, cutoff: 80
     end
     sleep 8

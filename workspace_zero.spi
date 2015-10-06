@@ -16,24 +16,24 @@ end
 
 live_loop :highs do
   16.times{sleep 0.25}
-  i_deter((ring)
-end
+#  i_deter((ring)
+          end
 
-live_loop :foam do
-  sleep 4
-  with_synth :dsaw do
-    play (ring :Fs1, :As1, :B1).tick, decay: 4.0, cutoff: 45, detune: 12, amp: 0.2, attack: 0.5
-  end
-  with_synth :prophet do
-    play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.2, attack: 0.01
-  end
-end
+          live_loop :foam do
+            sleep 4
+            with_synth :dsaw do
+              play (ring :Fs1, :As1, :B1).tick, decay: 4.0, cutoff: 45, detune: 12, amp: 0.2, attack: 0.5
+            end
+            with_synth :prophet do
+              play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.2, attack: 0.01
+            end
+          end
 
-live_loop :splash do
-  sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
-  sleep 1
-  with_fx :reverb, room: 0.8 do
-    sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
-  end
-  sleep 1
-end
+          live_loop :splash do
+            sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
+            sleep 1
+            with_fx :reverb, room: 0.8 do
+              sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
+            end
+            sleep 1
+          end

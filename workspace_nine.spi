@@ -6,7 +6,7 @@
 
 module Instruments
 
-  include(SonicPi::Lang::Core)
+  require(SonicPi::Lang::Core)
 
   define :i_hollow do |n, *opts|
     defaults = {release: 8}

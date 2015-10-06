@@ -20,7 +20,6 @@ live_loop :foam do
   with_synth :prophet do
     play (ring :Fs1).tick, decay: 4.0, cutoff: 40, amp: 0.1
   end
-
 end
 
 live_loop :splash do

@@ -25,7 +25,6 @@ end
 live_loop :splash do
   sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   sleep 1
-  sample Fraz[/snap/,[0,2]].tick(:agh), cutoff: rrand(50,65)
-
+  sample Fraz[/snap/,[0,2]].tick(:snappy), cutoff: rrand(50,65)
   sleep 1
 end

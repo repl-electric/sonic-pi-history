@@ -30,10 +30,10 @@ live_loop :foam do
 end
 
 live_loop :splash do
-  with_fx(:echo) do
+  with_fx(:echo, phase: 0.1) do
     sample Mountain[/subkick/,[0,2]].tick(:agh), cutoff: rrand(50,65)
   end
- sleep 1
+  sleep 1
   with_fx :reverb, room: 0.8 do
     sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
   end

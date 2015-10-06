@@ -14,6 +14,11 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   end
 end
 
+live_loop :harmony do
+  sleep 1
+  i_hollow((ring :Fs3), amp: 0.1)
+end
+
 live_loop :highs do
   with_fx :lpf, cutoff: 80 do
     16.times{sleep 0.25}

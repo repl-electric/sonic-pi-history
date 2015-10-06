@@ -41,7 +41,7 @@ end
 live_loop :not_the_chat do
   #sync :splash
   if spread(3,8).tick
-    sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 60, pan: 0.25
+    sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 100, pan: 0.25
   end
   if spread(7,11).tick
     sample Frag[/hat/, Range.new(0,2)].tick(:s2), cutoff: 60, pan: -0.25

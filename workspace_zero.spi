@@ -54,7 +54,9 @@ end
 
 live_loop :splash do
   with_fx(:echo, phase: 0.5, decay: 1.0) do
-    sample Fraz[/kick/,[1,0]].tick(:agh), cutoff: rrand(50,65)
+    with_fx(:slicer) do
+      sample Fraz[/kick/,[1,0]].tick(:agh), cutoff: rrand(50,65)
+      end
   end
   sleep 1
   with_fx :reverb, room: 0.8 do

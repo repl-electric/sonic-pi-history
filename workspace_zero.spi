@@ -16,7 +16,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
 end
 
 live_loop :corruption do
-  sample Corrupt[/kick/, 1], cutoff: 80
+  sample Corrupt[/kick/, 2], cutoff: 80
   sleep 4
 
 end

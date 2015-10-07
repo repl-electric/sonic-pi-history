@@ -45,7 +45,7 @@ end
 
 live_loop :har do
   i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
-  sleep 4
+  sleep 2
 end
 
 live_loop :corruption do

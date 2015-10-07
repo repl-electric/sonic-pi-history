@@ -51,7 +51,7 @@ end
 live_loop :corruption do
   with_fx(:echo, phase: 0.5, decay: 0.8, mix: 0.0) do
     #    with_fx(:slicer, phase: 0.25, smooth: 0.03) do
-    sample Dust[/kick/,25], cutoff: 100
+    sample Dust[/kick/,26], cutoff: 100
     #    end
   end
   sleep 1

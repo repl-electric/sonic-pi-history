@@ -17,6 +17,7 @@ end
 
 live_loop :corruption do
   sample Corrupt[/kick/, 4], cutoff: 60
-  sleep 4
+  sleep 1
+  sleep 1
 
 end

@@ -26,9 +26,9 @@ end
 
 
 live_loop :bows do
-  with_fx(:reverb, room: 1.0, mix: 1.0) do
+  with_fx(:reverb, room: 1.0, mix: 1.0) do |fx|
     sample Mountain[/bow/, /G#/,0], cutoff: 50
-    sleep 8
+    8.times{control fx, damp: rrand(0,1); sleep 1}
   end
 end
 

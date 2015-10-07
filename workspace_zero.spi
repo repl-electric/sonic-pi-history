@@ -6,6 +6,8 @@ load_snippets("~/.sonic-pi/snippets/")
 #   /█\
 #  .Π.
 
+# Taking a quick break...
+
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
     with_fx(:slicer, phase: 0.25) do
@@ -19,7 +21,7 @@ end
 
 live_loop :dark do
   with_synth :dark_sea_horn do
-    play (ring :fs2, :as2, :ds2), cutoff: 50, decay: 8.1, amp: 0.1
+    play (ring :fs2, :as2, :ds2), cutoff: rrand(50,70), decay: 8.1, amp: 0.1
   end
   sleep 8
 end

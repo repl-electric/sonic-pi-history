@@ -9,7 +9,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
-    sample Sop[/F#/,0], cutoff: 80
+    sample Sop[/F#/,0], cutoff: 50
     sleep 4
   end
 end

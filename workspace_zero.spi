@@ -25,9 +25,8 @@ live_loop :dark do
 end
 
 live_loop :har do
-  i_hollow(:fs1)
+  i_hollow((ring :fs1))
   sleep 4
-
 end
 
 live_loop :corruption do

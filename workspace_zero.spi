@@ -17,7 +17,7 @@ end
 
 live_loop :dark do
   with_synth :dark_sea_horn do
-    play :fs1, cutoff: 10
+    play :fs1, cutoff: 30
   end
   sleep 8
 end

@@ -17,7 +17,7 @@ end
 
 live_loop :corruption do
   with_fx(:echo, phase: 0.5, decay: 0.2) do
-    sample Corrupt[/kick/, 8], cutoff: 60
+    sample Ambi[/kick/, 0], cutoff: 60
   end
   sleep 1
   sleep 1

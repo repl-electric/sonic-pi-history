@@ -14,6 +14,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     sample Sop[/A#/,2], cutoff: 50
     sleep 4
     sample Sop[/C#/,0], cutoff: 50
+    sleep 4
 
   end
 end

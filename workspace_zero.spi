@@ -20,5 +20,10 @@ live_loop :corruption do
     sample Mountain[/subkick/,0], cutoff: 60
   end
   sleep 1
+  with_fx(:reverb) do
+    sample Fraz[/snap/,0], cutoff: 50
+  end
+
   sleep 1
+
 end

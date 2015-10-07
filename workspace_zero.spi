@@ -17,7 +17,7 @@ end
 
 live_loop :corruption do
   with_fx(:echo, phase: 0.5, decay: 0.2) do
-    sample Frag[/kick/, [0,0,1]].tick(:s), cutoff: 60
+    sample Frag[/kick/, [0,0,0,1]].tick(:s), cutoff: 60
   end
   sleep 1
   sleep 1

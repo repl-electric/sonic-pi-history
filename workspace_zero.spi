@@ -12,3 +12,5 @@ live_loop :test do
   shader :decay, :iBeat, 1.0, 0.01
   sleep 4
 end
+
+shader(:uniform, :iCells, 1.0)

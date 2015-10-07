@@ -26,7 +26,7 @@ end
 
 live_loop :corruption do
   #I've not quite found the fit for these sample, still trying
-  sample Corrupt[/bow/,/F#/], cutoff: 60 
+  sample Corrupt[/bow/,/F#/], cutoff: 70
   sleep 8
 end
 

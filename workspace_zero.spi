@@ -14,3 +14,9 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     sleep 4
   end
 end
+
+live_loop :corruption do
+  sample Corrupt[/kick/, 0]
+  sleep 4
+
+end

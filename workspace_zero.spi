@@ -6,7 +6,7 @@ load_snippets("~/.sonic-pi/snippets/")
 #   /█\
 #  .Π.
 
-sample Sop[/C#/,0], cutoff: 50
+sample Sop[/G#/,0], cutoff: 50
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do

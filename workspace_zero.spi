@@ -9,7 +9,7 @@ load_snippets("~/.sonic-pi/snippets/")
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
     with_fx(:slicer, phase: 0.25) do
-     # sample Sop[/F#/,0], cutoff: 55
+      # sample Sop[/F#/,0], cutoff: 55
     end
     sleep 4
     #    sample Sop[/A#/,2], cutoff: 55
@@ -24,6 +24,12 @@ live_loop :dark do
   sleep 8
 end
 
+live_loop :har do
+  i_hollow(:fs1)
+  sleep 4
+
+end
+
 live_loop :corruption do
   with_fx(:echo, phase: 0.5, decay: 0.8, mix: 0.5) do
     sample Mountain[/subkick/,0], cutoff: 60
@@ -32,7 +38,5 @@ live_loop :corruption do
   with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx)) do
     sample Fraz[/snap/,0], cutoff: 60
   end
-
   sleep 1
-
 end

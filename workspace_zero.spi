@@ -32,8 +32,11 @@ end
 
 live_loop :bows do
   with_fx((knit :reverb,3, :echo,1).tick(:maybe?), room: 1.0, mix: 1.0) do |fx|
+    with_fx(:distortion, mix: (ring 0.1,0.2).tick) do
+
     sample Mountain[/bow/, knit(/F#/,1,/A#/,1,/G#/,3).tick(:bows),0],
       cutoff: rrand(50,55)
+    end
     8.times{control fx, damp: rrand(0,1); sleep 1}
   end
 end

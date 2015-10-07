@@ -10,7 +10,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
     sample Sop[/F#/,0], cutoff: 55
     sleep 4
-    sample Sop[/A#/,2], cutoff: 55
+#    sample Sop[/A#/,2], cutoff: 55
     sleep 4
   end
 end

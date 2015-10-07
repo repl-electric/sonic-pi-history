@@ -6,8 +6,6 @@ load_snippets("~/.sonic-pi/snippets/")
 #   /█\
 #  .Π.
 
-# Taking a quick break...
-
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
     with_fx(:slicer, phase: 0.25) do

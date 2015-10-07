@@ -15,7 +15,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
       play (ring :As3, :Cs3, :Fs3).tick, decay: 8.01, amp: 0.0, cutoff: (ramp *(range 40, 130).reverse).tick(:out)
     end
     sleep 8
-    endr1xc
+    endr
   end
 
   live_loop :harmony do

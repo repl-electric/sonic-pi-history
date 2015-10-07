@@ -37,7 +37,7 @@ live_loop :corruption do
   end
   sleep 1
   with_fx(:bitcrusher, bits: (ring 10, 16).tick(:bits), sample_rate: 10000) do
-    with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx), decay: 1.0) do
+    with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx), decay: 2.0) do
       sample Fraz[/snap/,[0,1]].tick(:s), cutoff: 60, amp: 0.6
     end
   end

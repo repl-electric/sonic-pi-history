@@ -6,6 +6,8 @@ load_snippets("~/.sonic-pi/snippets/")
 #   /█\
 #  .Π.
 
+    sample Sop[/B#/,0], cutoff: 50
+
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do

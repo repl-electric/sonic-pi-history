@@ -5,71 +5,7 @@ _=nil
 #   /█\
 #  .Π.
 
-#Fin. Thanks!fffffffeeeee
+#Testing
 
-with_fx(:reverb, room: 1.0, mix: 1.0) do
-  live_loop :sea do
-    with_synth :dark_sea_horn do
-      #Woops little loud....
-      #But I love this synth...
-      play (ring :As3, :Cs3, :Gs3, :Fs3, :As3, :Ds3).tick, decay: 8.1, amp: 0.5, cutoff: (ramp *(range 40, 130).reverse).tick(:out)
-    end
-    sleep 8
-  end
-end
 
-live_loop :harmony do
-  #i_hollow((knit :Fs3,1, :As2,1, :Cs2, 1, :Fs2, 1), amp: 0.0)
-  sleep 1.0
-end
-
-live_loop :highs do
-  with_fx :lpf, cutoff: 100 do
-    16.times{sleep 0.25}
-    i_deter(    deg_seq(%w{Fs4 1*3 3*3}).tick,
-                deg_seq(%w{Fs4 3   1  }).stretch(3).tick, amp: 0.8*0.0,
-                damp_time: 0.25*1.0)
-  end
-end
-
-live_loop :foam do
-  sleep 4
-  with_synth :dsaw do
-    play (ring :Fs2, :As2, :Cs3).tick, decay: 4.0, cutoff: 50, detune: 12, amp: 0.5, attack: 0.5
-  end
-  with_synth :prophet do
-    play (ring :Fs1, :As1, :Ds1).tick, decay: 4.0, cutoff: 50, amp: 0.5, attack: 0.01
-  end
-end
-
-live_loop :not_the_chat do
-  #sync :splash
-  if spread(3,8).tick
-    sample Fraz[/hat/, Range.new(0,4)].tick(:s), cutoff: 70, pan: 0.25
-  end
-  if spread(7,11).tick
-    sample Fraz[/hat/, Range.new(0,2)].tick(:s2), cutoff: 70, pan: -0.25
-  end
-  sleep 1.0
-end
-
-live_loop :splash do
-  with_fx(:reverb, phase: 0.25, decay: 1.0, room: 1.0, mix: 1.0) do
-    with_fx :bitcrusher, mix: 0.01, sample_rate: 800, bits: 8.0 do
-      #sample Sop[/F#/, 0], cutoff: 75 if spread(1,4).tick(:s)
-    end
-
-    with_fx(:slicer, phase: 0.25) do
-      #sample Fraz[/kick/,[1,0]].tick(:agh), cutoff: rrand(50,75)
-    end
-    with_fx(:slicer, phase: 0.25, invert_wave: 1) do
-      #sample Fraz[/kick/,[1,0]].look(:agh), cutoff: rrand(50,75)
-    end
-
-  end
-  sleep 1
-  with_fx :reverb, room: 0.8 do
-    #sample Fraz[/snap/,[0,1]].tick(:snappy), cutoff: rrand(50,65)
-  end
-  sleep 1
-end
+play 60

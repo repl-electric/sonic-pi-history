@@ -19,9 +19,10 @@ end
 
 live_loop :dark do
   with_fx :reverb do
-    with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.01, mix: 0.0) do
+    with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.01, 
+    mix: 0.01) do
       with_synth :dark_sea_horn do
-        play (ring :fs3, :as3, :cs3), cutoff: 100, 
+        play (ring :fs3, :as3, :cs3), cutoff: 100,
           decay: 8.1, amp: 0.1
       end
       sleep 8

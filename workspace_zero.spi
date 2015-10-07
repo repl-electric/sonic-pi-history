@@ -9,7 +9,7 @@ _=nil
 
 live_loop :test do
 
-  shader :decay, :iBeat, 4.0, 0.01
+  shader :decay, :iBeat, 8.0, 0.01
   #shader :decay, :iWave, 1.0, 0.1
 
   play :Fs3, release: 4.0

@@ -36,10 +36,10 @@ live_loop :corruption do
     end
   end
   sleep 1
-  with_fx(:bitcrusher) do
-  with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx)) do
-    sample Fraz[/snap/,0], cutoff: 60
+  with_fx(:bitcrusher, bits: 10) do
+    with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx)) do
+      sample Fraz[/snap/,0], cutoff: 60
+    end
   end
-end
   sleep 1
 end

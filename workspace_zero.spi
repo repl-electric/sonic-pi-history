@@ -8,8 +8,8 @@ load_snippets("~/.sonic-pi/snippets/")
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :sop do
-    with_fx(:slicer) do
-    sample Sop[/F#/,0], cutoff: 55
+    with_fx(:slicer, phase: 0.25) do
+      sample Sop[/F#/,0], cutoff: 55
     end
     sleep 4
     #    sample Sop[/A#/,2], cutoff: 55

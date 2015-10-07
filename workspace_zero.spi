@@ -32,8 +32,8 @@ end
 
 live_loop :bows do
   with_fx((knit :reverb,3, :echo,1).tick(:maybe?), room: 1.0, mix: 1.0) do |fx|
-    with_fx(:distortion, mix: (ring 0.1,0.1, 0.1, 0.15).tick) do
-
+    with_fx(:distortion, mix: (ring 0.1, 0.1, 0.1, 0.15).tick) do
+      synth :dark_ambience, note: :Fs2
       sample Mountain[/bow/, knit(/F#/,1,/A#/,1,/G#/,3).tick(:bows),0],
         cutoff: rrand(50,55)
     end

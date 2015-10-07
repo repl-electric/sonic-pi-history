@@ -31,7 +31,9 @@ end
 
 live_loop :corruption do
   with_fx(:echo, phase: 0.5, decay: 0.8, mix: 0.5) do
-    sample Mountain[/subkick/,0], cutoff: 60
+    with_fx(:slicer) do
+  sample Mountain[/subkick/,0], cutoff: 60
+    end
   end
   sleep 1
   with_fx((ring :reverb, :reverb, :reverb, :echo).tick(:Fx)) do

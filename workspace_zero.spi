@@ -24,6 +24,11 @@ live_loop :dark do
   sleep 8
 end
 
+live_loop :bows do
+  sample Mountain[/bow/, /G#/], cutoff: 60
+  sleep 8
+end
+
 live_loop :har do
   i_hollow((ring :fs2, :as2, :ds2, :cs2).tick, amp: 0.2)
   sleep 4

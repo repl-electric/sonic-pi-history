@@ -24,6 +24,11 @@ live_loop :dark do
   sleep 8
 end
 
+live_loop :corruption do
+  #I've not quite found the fit for these sample, still trying
+  sample Corrupt[/bow/,/F#/], cutoff: 60 
+  sleep 8
+end
 
 live_loop :bows do
   with_fx((knit :reverb,3, :echo,1).tick(:maybe?), room: 1.0, mix: 1.0) do |fx|

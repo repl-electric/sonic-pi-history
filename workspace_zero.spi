@@ -7,5 +7,8 @@ _=nil
 
 #Testing
 
+live_loop :test do
 
-play 60
+  shader :decay, :iBeat, 1.0, 0.01
+  sleep 4
+end

@@ -13,7 +13,7 @@ live_loop :test do
   shader :decay, :iWave, 1.0, 0.1
 
   play :Fs3, release: 4.0
-  sample Mountain[/subkick/,0], cutoff: 10
+  sample Mountain[/subkick/,0], cutoff: 80
   sleep 4
 end
 

@@ -10,6 +10,8 @@ _=nil
 live_loop :test do
 
   shader :decay, :iBeat, 5.0, 0.01
+  shader :decay, :iWave, 5.0, 0.01
+
   play :Fs1, release: 4.0
   sample Mountain[/subkick/,90]
   sleep 4

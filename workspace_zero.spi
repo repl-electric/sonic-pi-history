@@ -33,7 +33,7 @@ end
 live_loop :bows do
   with_fx((knit :reverb,3, :echo,1).tick(:maybe?), room: 1.0, mix: 1.0) do |fx|
     synth :dark_ambience,
-      note: (ring :Fs3, :Fs3, :Fs3, :Gs3).tick(:dark), decay: 0.1, attack: 1.0, detune1: -24
+      note: (ring :Fs3, :Fs3, :Fs3, :Gs3).tick(:dark), decay: 0.1, attack: 1.0, detune1: -24, detune2: 12
 
     with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.15).tick) do
       sample Mountain[/bow/, knit(/F#/,1,/A#/,1,/G#/,3).tick(:bows),0],

@@ -4,17 +4,3 @@ _=nil
 # d[-_-]b
 #   /█\
 #  .Π.
-
-#Testing
-
-live_loop :test do
-
-  shader :decay, :iBeat, 8.0, 0.01
-  #shader :decay, :iWave, 1.0, 0.1
-
-  play :Fs3, release: 4.0
-  sample Mountain[/subkick/,1], cutoff: 130, amp: 8.0
-  sleep 4
-end
-
-shader(:uniform, :iCells, 1.0)

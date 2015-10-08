@@ -22,6 +22,8 @@ live_loop :dark do
   end
 end
 
+sample Mountain[/bow/, //]
+
 live_loop :bows do
   with_fx((knit :reverb,3, :echo,0).tick(:maybe?), room: 0.0, mix: 1.0) do |fx|
     synth :dark_ambience,

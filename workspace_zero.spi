@@ -19,7 +19,7 @@ live_loop :buzz do
   sleep 2
 end
 
-  live_loop :highlight do
+  live_loop :highlight2 do
 with_fx(:lpf, cutoff: 50) do
 
     32.times{sleep 0.25}

@@ -27,9 +27,9 @@ live_loop :bows do
     synth :dark_ambience,
       note: (ring :Fs3, :Fs3, :Fs3, :Gs3).tick(:dark), decay: 8.1, attack: 1.0, detune1: 24, detune2: 12
 
-    #    with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.15).tick)  do
-    #    sample Mountain[/bow/, knit(/G#/,3).tick(:bows),0], amp: 0.2
-    #    end
+    with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.15).tick)  do
+        sample Mountain[/bow/, knit(/G#/,3).tick(:bows),0], amp: 0.2
+        end
     8.times{control fx, damp: rrand(0,1); sleep 1}
   end
 end

@@ -15,8 +15,8 @@ end
 
 live_loop :buzz do
 #  with_sample_bpm
-  i_hollow((ring :Fs3).tick)
- sleep 2
+  i_hollow((ring :Fs3).tick, amp: 0.1)
+  sleep 2
 end
 
 

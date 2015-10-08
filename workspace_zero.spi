@@ -8,7 +8,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 live_loop :dark do
   with_synth :dark_sea_horn do
-    play (ring :FS2, :As2, :Ds2, :FS2, :As2, :Cs2).tick, decay: 8.1, cutoff: 60, amp: 0.3
+    play (ring :FS3, :As2, :Ds2, :FS2, :As2, :Cs2).tick, decay: 8.1, cutoff: 60, amp: 0.3
   end
   sleep 8
 end

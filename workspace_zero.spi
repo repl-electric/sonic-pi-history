@@ -64,7 +64,7 @@ end
 live_loop :kick do
   with_fx(:slicer, phase: 0.125/2.0, smooth: 0.1) do
   with_fx :echo, phase: 0.125, decay: 0.1 do
-    sample Fraz[/kick/,[0,0]].tick, cutoff: 75, start: 0.01
+#    sample Fraz[/kick/,[0,0]].tick, cutoff: 75, start: 0.01
   end
   end
 

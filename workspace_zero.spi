@@ -14,8 +14,8 @@ live_loop :dark do
 end
 
 live_loop :kick do
-  with_fx :echo do
-  sample Mountain[/kick/,1], cutoff: 70
+  with_fx :echo, phase: 0.125 do
+    sample Mountain[/kick/,1], cutoff: 70
   end
   sleep 2
 end

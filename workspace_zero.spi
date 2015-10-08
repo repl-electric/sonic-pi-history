@@ -30,7 +30,6 @@ live_loop :buzz do
   synth :dark_ambience, note: :Fs3, attack: 2.0, decay: 1.0, 
     detune1: 0, detune2: -24
   end
-end
   sleep 4
 end
 

@@ -27,7 +27,7 @@ live_loop :bow do
 end
 
 live_loop :pace do
-  sample Frag[/hat/, Range.new(0,4)].tick(:s), cutoff: 65, amp: 0.4 if spread(3,8).tick
+  sample Frag[/hat/, Range.new(0,4)].tick(:s), pan: 0.25, cutoff: 65, amp: 0.4 if spread(3,8).tick
 
   sample Frag[/hat/, Range.new(0,2)].tick(:s), cutoff: 65, amp: 0.4 if spread(7,11).look
 

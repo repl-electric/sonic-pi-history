@@ -28,7 +28,8 @@ end
 
 live_loop :pace do
   sample Fraz[/hat/, 0], cutoff: 60, amp: 0.2 if spread(3,8).tick
-sleep 0.25
+  
+  sleep 0.25
 end
 
 live_loop :kick do

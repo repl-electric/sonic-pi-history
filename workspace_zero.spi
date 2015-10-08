@@ -13,6 +13,8 @@ live_loop :dark do
   sleep 8
 end
 
+
+
 live_loop :kick do
   with_fx(:slicer, phase: 0.125/2.0, smooth: 0.1) do
   with_fx :echo, phase: 0.125, decay: 0.1 do
@@ -20,5 +22,9 @@ live_loop :kick do
   end
   end
 
-  sleep 2
+  sleep 1
+  with_fx(:reverb) do
+    sample Fraz[/snap/,0], cutoff: 60
+  end
+  sleep 1
 end

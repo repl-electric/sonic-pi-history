@@ -27,7 +27,6 @@ live_loop :bow do
 end
 
 live_loop :pace2 do
-  sync :kick
   pick_pan = [0.25,-0.25].shuffle
 
   sample Frag[/hat/, Range.new(0,4)].tick(:s), pan: pick_pan[0], cutoff: 65, amp: 0.4 if spread(3,8).tick

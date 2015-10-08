@@ -6,8 +6,8 @@ load_snippets("~/.sonic-pi/snippets/")
 #   /█\
 #  .Π.
 
-with_fx :reverb do
-  live_loop :dark do
+live_loop :dark do
+  with_fx :reverb do
     with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.05,
     mix: 0.1) do
       with_synth :dark_sea_horn do

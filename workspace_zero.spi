@@ -66,7 +66,7 @@ live_loop :kick do
   sleep 1
 #  sample Fraz[/kick/,[1,1]].tick, cutoff: 60
   with_fx(:reverb, room: 0.5, mix: 0.1) do
-    with_fx(:bitcrusher) do
+    with_fx(:bitcrusher, mix: 0.1) do
       sample Vocals[/breath/,6], cutoff: 55
     end
     #sample Fraz[/snap/,[0,1]].tick(:s), cutoff: rrand(60,70)

@@ -9,7 +9,7 @@ load_snippets("~/.sonic-pi/snippets/")
 live_loop :dark do
   with_synth :dark_sea_horn do
     
-    with_fx(:pitch_shift, window_size: 0.1) do
+    with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.01, mix: 0.1) do
     
     play (ring :FS4, :As3, :Ds3, :FS3, :As3, :Cs3).tick, decay: 8.1, cutoff: 60, amp: 0.3
   end

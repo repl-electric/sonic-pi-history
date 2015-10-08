@@ -19,6 +19,16 @@ live_loop :buzz do
   sleep 2
 end
 
+live_loop :bow do
+
+  with_fx(:reverb) do    
+
+  sample Mountain[/bow/, /F#3/], cutoff: 60
+  sleep 8
+  end
+  
+end
+
 live_loop :kick do
   with_fx(:slicer, phase: 0.125/2.0, smooth: 0.1) do
   with_fx :echo, phase: 0.125, decay: 0.1 do

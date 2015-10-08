@@ -25,7 +25,7 @@ live_loop :buzz do
 #  i_hollow((ring :As3, :Cs3, :B3, :As3, :Cs3, :Es3).tick, amp: 0.2)
 
   with_fx(:reverb, room: 1.0) do
-  synth :dark_ambience, note: :Fs1, attack: 2.0, decay: 1.0, 
+  synth :dark_ambience, note: :Fs1, attack: 2.0, decay: 4.0, 
     detune1: 0, detune2: -24, amp: 0.1
   end
   sleep 4

@@ -65,7 +65,7 @@ live_loop :kick do
 
   sleep 1
 #  sample Fraz[/kick/,[1,1]].tick, cutoff: 60
-  with_fx(:reverb, room: 0.5, mix: 0.9) do
+  with_fx(:reverb, room: 0.5, mix: 0.1) do
     sample Fraz[/snap/,0], cutoff: 75
   end
   sleep 1

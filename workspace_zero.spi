@@ -35,6 +35,6 @@ live_loop :bows do
 end
 
 live_loop :har do
-  i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
+  #i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
   sleep 1.0
 end

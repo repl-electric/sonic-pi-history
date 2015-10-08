@@ -14,6 +14,6 @@ live_loop :dark do
 end
 
 live_loop :kick do
-  sample Mountain[/kick/,1], cutoff: 80
+  sample Mountain[/kick/,1], cutoff: 70
   sleep 2
 end

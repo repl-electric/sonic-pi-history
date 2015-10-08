@@ -15,7 +15,7 @@ end
 
 live_loop :kick do
   with_fx :echo, phase: 0.125, decay: 0.1 do
-    sample Dust[/kick/,5], cutoff: 85
+    sample Fraz[/kick/,5], cutoff: 85
   end
   sleep 2
 end

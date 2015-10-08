@@ -10,7 +10,7 @@ load_snippets("~/.sonic-pi/snippets/")
 live_loop :dark do
   with_fx :reverb do
     with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.05,
-    mix: 0.0) do
+    mix: 0.1) do
       with_synth :dark_sea_horn do
         #lets see what it sound like if we go higher...
         play (ring :fs4, :as3, :ds3, :Fs3, :As3, :Cs3),

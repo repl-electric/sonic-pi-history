@@ -29,13 +29,12 @@ live_loop :bows do
     
     with_fx(:band_eq, freq: 10, mix: 1.0)  do
       sample Mountain[/bow/, knit(/G#/,3).tick(:bows),0], amp: 0.2
-
     end
     8.times{control fx, damp: rrand(0,1); sleep 1}
   end
 end
 
 live_loop :har do
-  #i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
+  i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
   sleep 1.0
 end

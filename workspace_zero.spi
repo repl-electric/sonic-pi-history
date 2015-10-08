@@ -15,7 +15,7 @@ end
 
 live_loop :kick do
   with_fx :echo, phase: 0.125, decay: 0.1 do
-    sample Ether[/kick/,2], cutoff: 75
+    sample Ether[/kick/,3], cutoff: 75
   end
   sleep 2
 end

@@ -53,7 +53,7 @@ end
 live_loop :pace2 do
   pick_pan = [0.25,-0.25].shuffle
 
-  sample Frag[/hat/, Range.new(0,4)].tick(:s), pan: pick_pan[0], cutoff: 65, amp: 0.4 if spread(3,8).tick
+  #sample Frag[/hat/, Range.new(0,4)].tick(:s), pan: pick_pan[0], cutoff: 65, amp: 0.4 if spread(3,8).tick
 
   sample Frag[/hat/, Range.new(0,2)].tick(:s), pan: pick_pan[1], cutoff: 65, amp: 0.4 if spread(7,11).look
 

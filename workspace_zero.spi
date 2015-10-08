@@ -28,9 +28,6 @@ live_loop :bows do
       note: (ring :Fs3, :Fs3, :Fs3, :Gs3).tick(:dark), decay: 8.1, attack: 1.0, detune1: 24, detune2: 12
     
 
-    with_fx(:) do
-      
-    end
     
     with_fx(:distortion, mix: (ring 0.0, 0.0, 0.1, 0.15).tick)  do
 

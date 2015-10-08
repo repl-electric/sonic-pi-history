@@ -12,3 +12,8 @@ live_loop :dark do
   end
   sleep 8
 end
+
+live_loop :kick do
+  Mountain[/kick/,0]
+sleep 2
+end

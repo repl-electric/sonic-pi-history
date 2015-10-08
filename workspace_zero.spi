@@ -22,9 +22,8 @@ live_loop :dark do
   end
 end
 
-(ring ).tick()
 
-knit
+(knit :As2,1).tick()
 
 
 live_loop :bows do

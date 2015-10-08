@@ -1,38 +1,7 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 load_snippets("~/.sonic-pi/snippets/")
-
 # d[-_-]b
 #   /█\
 #  .Π.
-
-live_loop :dark do
-  with_fx :reverb do
-    with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.05,
-    mix: 0.1) do
-      with_synth :dark_sea_horn do
-        play (ring :fs4, :as3, :ds3, :Fs3, :As3, :Cs3),
-          cutoff: 60,
-          decay: 8.1, amp: 0.7
-      end
-      sleep 8
-    end
-  end
-end
-
-live_loop :bows do
-  with_fx((knit :reverb,3, :echo,0).tick(:maybe?), room: 0.0, mix: 1.0, damp_slide: 1.0) do |fx|
-    synth :dark_ambience,
-      note: (ring :Fs3, :Fs3, :Fs3, :Gs3).tick(:dark), decay: 8.1, attack: 1.0, detune1: 24, detune2: 12, cutoff: 60
-    
-    with_fx(:band_eq, freq: 10, mix: 1.0)  do
-      sample Mountain[/bow/, knit(/G#/,3).tick(:bows),0], amp: 0.1
-    end
-    16.times{control fx, damp: rrand(0.0,1.0); sleep 0.5}
-  end
-end
-
-live_loop :har do
-  #i_hollow((ring :fs2, :as2, :es2, :gs2).tick, amp: 0.5)
-  sleep 1.0
-end
+play 50

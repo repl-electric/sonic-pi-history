@@ -24,7 +24,7 @@ live_loop :buzz do
 #  with_sample_bpm
 #  i_hollow((ring :As3, :Cs3, :B3, :As3, :Cs3, :Es3).tick, amp: 0.2)
   synth :dark_ambience, note: :Fs1, attack: 1.0, decay: 1.0
-  sleep 2
+  sleep 4
 end
 
   live_loop :highlight2 do

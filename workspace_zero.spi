@@ -20,7 +20,7 @@ live_loop :buzz do
 end
 
 live_loop :bow do
-  with_fx(:reverb, damp_slide: 1.0) do  |fx|
+  with_fx(:reverb, damp_slide: 1.0, room: 1.0) do  |fx|
   sample Mountain[/bow/, /G#/,0], cutoff: 60, amp: 0.2
   16.times { sleep 0.5; control fx, damp: rrand(0,1)}
   end

@@ -9,7 +9,6 @@ _=nil
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
 
-
 2.times {
 sample Mountain[/kick/,[1,10]].tick(:s2), amp: 0.5
 sleep 0.5

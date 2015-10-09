@@ -1,6 +1,6 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
-#load_snippets("~/.sonic-pi/snippets/")
+load_snippets("~/.sonic-pi/snippets/")
 # d[-_-]b
 #   /█\
 #  .Π.
@@ -9,9 +9,7 @@ _=nil
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
 
-sample Mountain[/kick/,[0,0]].tick(:sample), amp: 0.5
-
-2.times {
-  sample Mountain[/kick/,[1,10]].tick(:s2), amp: 0.5
-  sleep 0.5
-}
+live_loop :good do
+  
+  sleep 2
+end

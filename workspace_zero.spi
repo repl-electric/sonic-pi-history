@@ -23,3 +23,5 @@ live_loop :bad do
   synth :dark_sea_horn, note: :Fs3, cutoff: 60, decay: 60
   sleep 8
 end
+
+shadeer :uniform, :iCells, 0.0

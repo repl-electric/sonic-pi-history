@@ -30,4 +30,4 @@ end
 
 shader :uniform, :iCells, 0.0
 shader :uniform, :iStars, 2.0
-shader :uniform, :iFlyingSpeed, 0.02
+shader :uniform, :iFlyingSpeed, 0.05

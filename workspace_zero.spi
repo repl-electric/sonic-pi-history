@@ -20,6 +20,6 @@ live_loop :hard do
 end
 
 live_loop :bad do
-  synth :dark_sea_horn, note: :Fs3, cutoff: 60
+  synth :dark_sea_horn, note: :Fs3, cutoff: 60, decay: 60
   sleep 8
 end

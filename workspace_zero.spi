@@ -24,7 +24,7 @@ live_loop :hard do
 end
 
 live_loop :bad do
-  synth :dark_sea_horn, note: (ring :Fs3, :As3, :DS3).tick, cutoff: 60, decay: 60
+  synth :dark_sea_horn, note: (ring :Fs3, :As3, :DS3).tick, cutoff: 60, decay: 60, amp: 0.1
   sleep 8
 end
 

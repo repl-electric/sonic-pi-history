@@ -9,13 +9,15 @@ load_snippets("~/.sonic-pi/snippets/")
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
 
+
+
 live_loop :dark do
   with_synth :dark_sea_horn do
     
     with_fx(:pitch_shift, 
             window_size: 0.1, 
             pitch_dis: 0.01,
-    mix: 0.2) do
+    mix: 0.2) do=
     
     play (ring :FS4, :As3, :Ds3, :FS3, :As3, :Cs3).tick, decay: 8.01, cutoff: (ramp *(range 65, 130, 5) ).tick, amp: 0.0
   end

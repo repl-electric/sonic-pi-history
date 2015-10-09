@@ -34,7 +34,7 @@ shader :uniform, :iStars, 1.0
 shader :uniform, :iFlyingSpeed, 0.1
 
 100.times{|i|
-shader "uniform", :iStarLight, i*100/100.0
+shader "uniform", :iStarLight, i/100
 sleep 1
 }
 #shader "uniform", :iStarLight, 0.0a

@@ -8,3 +8,6 @@ load_snippets("~/.sonic-pi/snippets/")
 
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
+
+
+sample Mountain[/kick/,[0,0]].tick(:s2), cutoff: 60, amp: 0.5

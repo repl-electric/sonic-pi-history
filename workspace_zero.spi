@@ -33,4 +33,4 @@ shader :uniform, :iCells, 0.0
 shader :uniform, :iStars, 1.0
 shader :uniform, :iFlyingSpeed, 0.1
 
-shader :uniform, :iStarLight, 0.0
+shader :smoothed, :iStarLight, 0.01

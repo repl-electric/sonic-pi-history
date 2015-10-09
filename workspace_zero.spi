@@ -41,5 +41,5 @@ shader :uniform, :iDrop, 0.2
 #sleep 1/2.0
 #}
 
-shader :uniform, :iSpaceMotion, 0.01
+shader :uniform, :iSpaceMotion, 0.001
 #shader "uniform", :iStarLight, 0.0a

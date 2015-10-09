@@ -11,6 +11,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 live_loop :monkeys do
 
+  sleep 1
 end
 
 2.times {

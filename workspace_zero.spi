@@ -16,5 +16,5 @@ end
 
 live_loop :hard do
   sample Ether[/snap/,[0,0]].tick(:sample3)
-  sleep 2  
+  sleep 1
 end

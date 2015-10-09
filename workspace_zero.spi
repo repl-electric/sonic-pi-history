@@ -19,7 +19,7 @@ live_loop :good do
 end
 
 live_loop :hard do
-  sample Ether[/snap/,[0,0]].tick(:sample3)
+  sample Ether[/snap/,[1,0]].tick(:sample3)
   sleep 1
 end
 

@@ -9,7 +9,7 @@ _=nil
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
 
-sample Mountain[/kick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+sample Mountain[/kick/,[0,0]].tick(:sample), amp: 0.5
 
 live_loop :monkeys do
 

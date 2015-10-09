@@ -15,6 +15,6 @@ live_loop :good do
 end
 
 live_loop :hard do
-  sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
+  sample Ether[/snap/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
   sleep 2  
 end

@@ -18,3 +18,8 @@ live_loop :hard do
   sample Ether[/snap/,[0,0]].tick(:sample3)
   sleep 1
 end
+
+live_loop :bad do
+  synth :dark_sea_horn, note: :Fs3
+  sleep 8
+end

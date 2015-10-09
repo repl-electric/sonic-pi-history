@@ -12,6 +12,6 @@ _=nil
 sample Mountain[/kick/,[0,0]].tick(:sample), amp: 0.5
 
 2.times {
-sample Mountain[/kick/,[1,10]].tick(:s2), amp: 0.5
-sleep 0.5
+  sample Mountain[/kick/,[1,10]].tick(:s2), amp: 0.5
+  sleep 0.5
 }

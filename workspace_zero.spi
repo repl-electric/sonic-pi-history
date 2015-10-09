@@ -30,3 +30,4 @@ end
 
 shader :uniform, :iCells, 0.0
 shader :uniform, :iStars, 1.0
+shader :uniform, :iMovement, 1.0

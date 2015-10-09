@@ -31,7 +31,7 @@ end
 
 shader :uniform, :iCells, 0.0
 shader :uniform, :iStars, 1.0
-shader :uniform, :iFlyingSpeed, 0.1
+shader :uniform, :iFlyingSpeed, 0.0
 
 100.times{|i|
 shader "uniform", :iStarLight, i/100

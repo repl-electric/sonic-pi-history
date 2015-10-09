@@ -24,4 +24,4 @@ live_loop :bad do
   sleep 8
 end
 
-shader :uniform, :iCells, 0.0
+shader :uniform, :iCells, 1.0

@@ -6,6 +6,9 @@ load_snippets("~/.sonic-pi/snippets/")
 #  .Π.
 # Practicing with Sonic Pi
 
+#Fin, thanks!
+# This was live coded with Ruby and Sonic Pi.
+
 live_loop :dark do
   with_synth :dark_sea_horn do
     

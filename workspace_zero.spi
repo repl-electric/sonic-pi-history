@@ -11,6 +11,6 @@ load_snippets("~/.sonic-pi/snippets/")
 
 
 2.times {
-sample Mountain[/kick/,[1,5]].tick(:s2), cutoff: 60, amp: 0.5
+sample Mountain[/kick/,[1,6]].tick(:s2), cutoff: 60, amp: 0.5
 sleep 0.5
 }

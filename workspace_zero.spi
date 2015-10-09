@@ -11,7 +11,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 live_loop :good do
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
-  sleep 2
+  sleep 2.5
 end
 
 live_loop :hard do

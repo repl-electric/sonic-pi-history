@@ -9,9 +9,6 @@ load_snippets("~/.sonic-pi/snippets/")
 #Fin, thanks!
 # This was live coded with Ruby and Sonic Pi.
 
-live_loop : do
-
-end
 
 
 2.times {

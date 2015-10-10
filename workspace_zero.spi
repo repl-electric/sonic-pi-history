@@ -17,6 +17,9 @@ live_loop :good do
 
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
   sleep 2
+  sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 2
+
 end
 
 live_loop :hard do

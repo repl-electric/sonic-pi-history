@@ -36,7 +36,7 @@ shader :uniform, :iCellMotion, 0.1
 shader :uniform, :iDrop, 0.0
 
 
-shader "uniform", :iCellActivity, 1000.5
+shader "uniform", :iCellActivity, 100.5
 
 
 shader :uniform, :iSpaceMotion, 0.1

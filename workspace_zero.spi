@@ -37,8 +37,8 @@ shader :uniform, :iDrop, 0.0
 
 
 Thread.new do
-100.times{|i|
-shader "uniform", :iCellActivity, i/100.0
+40.times{|i|
+shader "uniform", :iCellActivity, 40-i
 sleep 1/2.0
 }
 end

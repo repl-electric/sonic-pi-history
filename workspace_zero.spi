@@ -36,10 +36,13 @@ shader :uniform, :iCellMotion, 1.0
 shader :uniform, :iDrop, 0.0
 
 
-#100.times{|i|
-#shader "uniform", :iStarLight, i/100.0
-#sleep 1/2.0
-#}
+Thread.new do
+100.times{|i|
+shader "uniform", :iCellActivity, i/100.0
+sleep 1/2.0
+}
+end
+
 
 shader :uniform, :iSpaceMotion, 0.1
 #shader "uniform", :iStarLight, 0.0a

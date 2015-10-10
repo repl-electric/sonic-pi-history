@@ -33,7 +33,7 @@ shader :uniform, :iCells, 0.0
 shader :uniform, :iStars, 0.0
 shader :uniform, :iCellMotion, 0.0
 
-shader :uniform, :iColorKick, 2.0
+shader :uniform, :iColorKick, 4.0
 
 
 #100.times{|i|

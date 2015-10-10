@@ -18,8 +18,7 @@ live_loop :good do
   sleep 1
   shader :uniform, :iWave, 0.0+rand
   with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
-  sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 80, amp: 1.0
-    
+    sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 80, amp: 1.0    
   end
   sleep 2
 

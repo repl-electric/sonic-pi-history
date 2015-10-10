@@ -24,7 +24,10 @@ live_loop :hard do
 end
 
 live_loop :bad2 do
+
   synth :dark_sea_horn, note: (ring :Fs1).tick, cutoff: 60, decay: 8, amp: 0.5
+  shader :uniform, :iDarkSea, (ring :Fs1).look.to_f
+
   sleep 8
 end
 

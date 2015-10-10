@@ -13,10 +13,11 @@ live_loop :good do
  shader :decay, :iKick, 4.0, 0.0015
  shader :decay, :iBeat, 4.5, 0.0015
 # shader :decay, :iCellActivity, 2.8+rand, 0.01
- shader :uniform, :iWave, 0.0+rand
 
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
   sleep 1
+ shader :uniform, :iWave, 0.0+rand
+
   sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   sleep 2
 

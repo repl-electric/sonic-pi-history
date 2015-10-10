@@ -31,6 +31,8 @@ live_loop :bad2 do
   sleep 8
 end
 
+set_volume! 2.0
+
 
 shader :uniform, :iCells, 1.0
 shader :uniform, :iStars, 0.0

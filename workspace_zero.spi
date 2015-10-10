@@ -11,7 +11,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 live_loop :good do
 shader :decay, :iKick, 3.0, 0.01
-#
+
  shader :decay, :iBeat, 3.5, 0.001
  # shader :uniform, :iWave, 0.0+rand
 

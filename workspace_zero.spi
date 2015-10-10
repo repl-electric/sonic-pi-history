@@ -40,7 +40,7 @@ set_volume! 1.0
 
 shader :uniform, :iCells, 1.0
 shader :uniform, :iStars, 0.0
-shader :uniform, :iCellMotion, 1.1
+shader :uniform, :iCellMotion, 0.0
 
 shader :uniform, :iDrop, 0.0
 shader :uniform, :iInvert, 0.0

@@ -28,9 +28,11 @@ live_loop :hard do
 end
 
 live_loop :bad2 do
-   n = (ring :Fs1, :As1, :Ds1).tick
+   n = (ring :Fs2, :As2, :Ds2).tick
   synth :dark_sea_horn, note: n, cutoff: 80, decay: 8, amp: 0.5
   puts note(n).to_f
+  shader :uniform, :iInvert, 0
+
   shader :decay, :iCellActivity, 2.8+rand, 0.01
 
   shader :uniform, :iDarkSea, note(n).to_f
@@ -49,7 +51,6 @@ shader :uniform, :iStars, 0.0
 shader :uniform, :iCellMotion, 0.0
 
 shader :uniform, :iDrop, 0.0
-shader :uniform, :iInvert, 1
 
 shader :uniform, :iCellActivity, 0.0
 shader :uniform, :iSpaceMotion, 0.1

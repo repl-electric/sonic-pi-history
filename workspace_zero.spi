@@ -31,7 +31,7 @@ end
 
 shader :uniform, :iCells, 1.0
 shader :uniform, :iStars, 0.0
-shader :uniform, :iCellMotion, 8.0
+shader :uniform, :iCellMotion, 1.0
 
 shader :uniform, :iDrop, 0.0
 

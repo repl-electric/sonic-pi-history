@@ -10,7 +10,7 @@ load_snippets("~/.sonic-pi/snippets/")
 # This was live coded with Ruby and Sonic Pi.
 
 live_loop :good do
-shader :decay, :iKick, 1.0, 0.01
+shader :decay, :iKick, 1.0, 0.009
  shader :decay, :iBeat, 1.5, 0.009
  # shader :uniform, :iWave, 0.0+rand
 

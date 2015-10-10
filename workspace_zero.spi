@@ -34,7 +34,7 @@ shader :uniform, :iStars, 0.0
 shader :uniform, :iCellMotion, 0.1
 
 shader :uniform, :iDrop, 0.0
-shader :uniform, :iInvert, 1.0
+shader :uniform, :iInvert, 2.0
 
 shader :uniform, :iCellActivity, 1.0
 shader :uniform, :iSpaceMotion, 0.1

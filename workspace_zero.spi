@@ -12,8 +12,6 @@ load_snippets("~/.sonic-pi/snippets/")
 live_loop :good do
  shader :decay, :iKick, 4.0, 0.0015
  shader :decay, :iBeat, 4.5, 0.0015
-shader :decay, :iCellActivity, 2.8+rand, 0.01
-
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
   sleep 1
   shader :uniform, :iWave, 0.0+rand
@@ -33,6 +31,8 @@ live_loop :bad2 do
    n = (ring :Fs1, :As1, :Ds1).tick
   synth :dark_sea_horn, note: n, cutoff: 80, decay: 8, amp: 0.5
   puts note(n).to_f
+shader :decay, :iCellActivity, 2.8+rand, 0.01
+
   shader :uniform, :iDarkSea, note(n).to_f
 #  shader :uniform, :iCellActivity, rand*1
  sleep 4

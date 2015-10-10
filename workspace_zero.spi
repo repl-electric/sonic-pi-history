@@ -29,7 +29,7 @@ live_loop :bad2 do
   puts note(n).to_f
   sleep 4
   shader :uniform, :iDarkSea, note(n).to_f
-  shader :uniform, :iCellActivity, rand*1
+#  shader :uniform, :iCellActivity, rand*1
   sleep 4
 
 end

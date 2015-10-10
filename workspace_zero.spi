@@ -12,6 +12,10 @@ load_snippets("~/.sonic-pi/snippets/")
 live_loop :good do
 shader :decay, :iKick, 0.0, 0.0015
  shader :decay, :iBeat, 0.5, 0.0015
+
+shader :uniform, :iCellActivity, 0.5
+
+
  # shader :uniform, :iWave, 0.0+rand
 
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5

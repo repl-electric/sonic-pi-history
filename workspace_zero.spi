@@ -24,7 +24,7 @@ live_loop :hard do
 end
 
 live_loop :bad2 do
-   n = (ring :Fs7).tick
+   n = (ring :Fs8).tick
   synth :dark_sea_horn, note: n, cutoff: 80, decay: 8, amp: 0.5
   shader :uniform, :iDarkSea, note(n).to_f
 

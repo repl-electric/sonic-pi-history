@@ -13,8 +13,8 @@ end
 
 live_loop :engines do
   sample Mountain[/subkick/,[0,0,0,1]].tick(:sample), cutoff: 135, amp: 4.0
-  shader :decaying_uniform, :iKick, 1.0
-  shader :decaying_uniform, :iBeat, 1.5
+  shader :decaying_uniform, :iKick, 2.0
+  shader :decaying_uniform, :iBeat, 2.5
   sleep 1
 
   with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do

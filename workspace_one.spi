@@ -26,4 +26,4 @@ end
 shader :iCells, 1.0
 shader :iInvert, 0.0
 shader :iWave, 0.0
-shader :iCellActivity, 1.0
+shader :iCellActivity, 0.99

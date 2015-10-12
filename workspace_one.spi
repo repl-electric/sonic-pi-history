@@ -1,0 +1,35 @@
+["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+_=nil
+load_snippets("~/.sonic-pi/snippets/")
+
+with_fx(:reverb, room: 1.0, mix: 1.0) do
+  live_loop :come_with_me_on_a_journey do
+    with_synth :dark_sea_horn do
+      play (ring :Fs4, :As3, :Ds3).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
+    end
+    sleep 8.0
+  end
+end
+
+
+
+live_loop :engines do
+  sample Mountain[/subkick/,[0,0,0,1]].tick(:sample), cutoff: 135, amp: 4.0
+  shader :decay, :iBeat, 1.5+rand, 0.001
+  sleep 1
+
+  with_fx(:reverb, room: 0.8, mix: 0.8, damp: 0.5) do
+    #shader :decay, :iOffBeat, 1.0
+    sample Fraz[/snap/,[0,1]].tick(:sample), cutoff: 90, amp: 0.5
+  end
+  sleep 1
+end
+
+shader :iCells, 0.0
+shader :iStarLight, 1.0
+shader :iStars, 0.5
+
+
+shader :iInvert, 0.0
+shader :iWave, 0.0
+shader :iCellActivity, 0.0

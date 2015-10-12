@@ -1,0 +1,64 @@
+["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
+_=nil
+load_snippets("~/.sonic-pi/snippets/")
+# d[-_-]b
+#   /█\
+#  .Π.
+# Practicing with Sonic Pi
+
+#Fin, thanks!
+# This was live coded with Ruby and Sonic Pi.
+
+live_loop :good do
+  #shader :decay, :iKick, 1.0
+  #shader :decay, :iBeat, 1.0, 0.0015
+  sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
+  sleep 1
+  #shader :uniform, :iWave, 0.0+rand
+  with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do
+  shader :decay, :iOffBeat, 1.0, 0.0015
+
+    sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 80, amp: 1.0    
+  end
+  sleep 2
+
+end
+
+live_loop :hard do
+  sample Ether[/snap/,[1,0]].tick(:sample3)
+  sleep 1
+end
+
+live_loop :bad2 do
+   n = (ring :Fs2, :As2, :Ds2).tick
+  synth :dark_sea_horn, note: n, cutoff: 80, decay: 8, amp: 0.5
+  puts note(n).to_f
+  shader :uniform, :iInvert, 1
+
+  #shader :decay, :iCellActivity, 2.8+rand*0.05, 0.01
+
+  shader :uniform, :iDarkSea, note(n).to_f
+#  shader :uniform, :iCellActivity, rand*1
+ sleep 4
+  
+ sleep 4
+
+end
+
+set_volume! 1.0
+
+
+#shader :uniform, :iCells, .0
+shader "growing-uniform", :iCells, 1.0, 0.001
+
+
+shader :uniform, :iStars, 0.0
+shader :uniform, :iCellMotion, 0.0
+
+
+
+shader :uniform, :iDrop, 0.0
+
+shader :uniform, :iCellActivity, 0.0
+shader :uniform, :iSpaceMotion, 0.0
+#shader "uniform", :iStarLight, 0.0a

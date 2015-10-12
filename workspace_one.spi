@@ -7,5 +7,6 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     with_synth :dark_sea_horn do
       play (ring :Fs1).tick(:notes)
     end
+    sleep 8.0
   end
 end

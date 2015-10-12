@@ -48,8 +48,8 @@ end
 set_volume! 1.0
 
 
-shader :uniform, :iCells, 0.0
-
+#shader :uniform, :iCells, .0
+shader "growing-uniform", :iCells, 1.0
 
 
 shader :uniform, :iStars, 0.0

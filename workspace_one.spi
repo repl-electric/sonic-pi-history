@@ -11,4 +11,4 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   end
 end
 
-shader :iCells, 0.1
+shader :iCells, 0.2

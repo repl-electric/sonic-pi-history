@@ -1,3 +1,11 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}
 _=nil
 load_snippets("~/.sonic-pi/snippets/")
+
+with_fx(:reverb, room: 1.0, mix: 1.0) do
+  live_loop :come_with_me_on_a_journey do
+    with_synth :dark_sea_horn do
+      play (ring :Fs1).tick(:notes)
+    end
+  end
+end

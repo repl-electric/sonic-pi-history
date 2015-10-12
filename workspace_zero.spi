@@ -10,8 +10,8 @@ load_snippets("~/.sonic-pi/snippets/")
 # This was live coded with Ruby and Sonic Pi.
 
 live_loop :good do
-  shader :decay, :iKick, 1.0
-  shader :decay, :iBeat, 1.0, 0.0015
+  #shader :decay, :iKick, 1.0
+  #shader :decay, :iBeat, 1.0, 0.0015
   sample Ether[/kick/,[0,0,0,1]].tick(:sample2), cutoff: 100, amp: 0.5
   sleep 1
   #shader :uniform, :iWave, 0.0+rand

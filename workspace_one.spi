@@ -31,6 +31,6 @@ shader :iStarLight, 0.0
 shader :iStars, 1.5
 
 
-shader :iInvert, 0.0
+shader :iInvert, 1.0
 shader :iWave, 0.0
 shader :iCellActivity, 0.0

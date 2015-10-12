@@ -16,6 +16,8 @@ live_loop :engines do
   shader :decaying_uniform, :iKick, 1.0
   shader :decaying_uniform, :iBeat, 0.5
   sleep 1
+  sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 1
 
 end
 

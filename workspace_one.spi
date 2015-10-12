@@ -24,4 +24,4 @@ live_loop :engines do
 end
 
 shader :iCells, 1.0
-shader :iInvert, 1.0
+shader :iInvert, 2.0

@@ -24,8 +24,8 @@ live_loop :engines do
 end
 
 shader :iCells, 0.0
-shader :iStarLight, 1.0
+shader :iStarLight, 0.5
 
 shader :iInvert, 0.0
 shader :iWave, 0.0
-shader :iCellActivity, 1.1
+shader :iCellActivity, 0.1

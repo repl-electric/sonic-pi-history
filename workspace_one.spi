@@ -11,9 +11,6 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   end
 end
 
-live_loop :dsaw do
-  sample Ether
-end
 
 
 live_loop :engines do

@@ -11,7 +11,7 @@
 with_fx(:reverb, room: 0.8, mix: 0.5) do
   live_loop :dark_beginnings do
     with_synth :dark_sea_horn do #This is my own synth
-      play (ring :As2, :Cs2, :Fs3).tick(:notes), decay: 8.01, cutoff: 60, amp: 0.3
+      play (ring :As2, :Cs2, :Fs3).tick(:notes), decay: 8.01, cutoff: 65, amp: 0.3
     end
     sleep 8
   end

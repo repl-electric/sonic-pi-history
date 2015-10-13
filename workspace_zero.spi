@@ -11,4 +11,14 @@
 #This is where we write our music code. When it flashes pink
 #thats me telling it to run our code and change the music
 
-#Lets try and do something that makes a sound.
+#<---------->
+
+#Lets try and loop and make sound 
+live_loop :dark_beginnings do
+  
+  with_synth :dark_sea_horn do #This is my own synth
+    play (ring :Fs1).tick(:notes), cutoff: 80, amp: 0.1
+  end
+
+  sleep 8
+end

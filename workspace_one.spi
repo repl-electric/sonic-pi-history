@@ -41,7 +41,7 @@ live_loop :shout do
   with_fx :lpf, cutoff: 110 do
     16.times{sleep 0.25}
   i_deter(deg_seq(%w{Fs4 1}).stretch(3).tick,
-          deg_seq(%w{Fs4 1}).stretch(3).tick, amp: 0.8*1,  damp_time: 0.25*2)
+          deg_seq(%w{Fs4 3}).stretch(3).tick, amp: 0.8*1,  damp_time: 0.25*2)
   end
 end
 

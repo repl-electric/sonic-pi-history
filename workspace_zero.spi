@@ -1,7 +1,5 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil;
 #load_snippets("~/.sonic-pi/snippets/")
-
-##############################################
 # d[-_-]b # # This is Sonic Pi and live coding music.       #
 #   /█\     # We run code which controls synths and samples.#
 #  .Π.       #############################################
@@ -10,8 +8,6 @@
 
 #This is where we write our music code. When it flashes pink
 #thats me telling it to run our code and change the music
-
-#Everything sounds better with reverb
 with_fx(:reverb, room: 0.8, mix: 0.5) do
   live_loop :dark_beginnings do
     with_synth :dark_sea_horn do #This is my own synth
@@ -26,6 +22,10 @@ live_loop :heart do
   with_fx(:echo, decay: 0.25, phase: 0.25) do
     sample Mountain[/subkick/,[0,0]].tick(:sample),
       cutoff: range(50,70, 5).tick(:a_cutoff), amp: 0.5
+  end
+  sleep 2
+  with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
+    sample Frag[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   end
   sleep 2
 end

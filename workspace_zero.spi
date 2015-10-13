@@ -49,8 +49,8 @@ end
 live_loop :determinisim do
   pan_pick = [0.25,-0.25].choose
   if spread(3,8).tick
-    sample Ether[/noise/,[0,1,0,7]].tick(:sample),
-      cutoff: range(40,70,5).tick(:cut), amp: 0.8, pan: pan_pick
+  #  sample Ether[/noise/,[0,1,0,7]].tick(:sample),
+  #    cutoff: range(40,70,5).tick(:cut), amp: 0.8, pan: pan_pick
   end
   sleep 0.25 #0.25 of a beat.
 end
@@ -65,7 +65,7 @@ live_loop :heart do
   sleep 1
   with_fx(:reverb, room: 1.0, mix: 0.5, damp: 0.5) do
     with_fx(:bitcrusher, bits: (range 6, 16,1).tick(:bits), mix: 0.2) do
-#      sample Frag[/snap/,[0,0,0,1]].tick(:sample), cutoff: rrand(60,70), amp: 0.9
+      #      sample Frag[/snap/,[0,0,0,1]].tick(:sample), cutoff: rrand(60,70), amp: 0.9
     end
   end
   sleep 1

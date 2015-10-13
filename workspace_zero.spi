@@ -13,15 +13,15 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
     with_synth :dark_sea_horn do #This is my own synth
       play (ring :As3, :Cs3, :Fs3).tick(:notes), decay: 8.01, cutoff: 61, amp: 0.3
     end
-#    sample Mountain[/bow/, /g#/, 1], cutoff: 65, amp: 0.5
+    #    sample Mountain[/bow/, /g#/, 1], cutoff: 65, amp: 0.5
     sleep 8
   end
 end
 
 live_loop :more_light do
   #This is a wrapper around a synth + fxs + useful params
-  i_hollow((ring :Cs4, :Es3, :as3).tick, amp: 0.1,
-           cutoff: rrand(80,90))
+ # i_hollow((ring :Cs4, :Es3, :as3).tick, amp: 0.1,
+ #          cutoff: rrand(80,90))
   sleep 4
 end
 

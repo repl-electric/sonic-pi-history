@@ -33,7 +33,7 @@ set_volume! 1.2
 live_loop :shout do
   16.times{sleep 0.25}
   i_deter (ring  :fs3).tick,
-    (ring :As3).tick(:two), damp_time: 8.0, amp: 0.5
+    (ring :As3).tick(:two), damp_time: 8.0, amp: 0.8
 end
 
 live_loop :bow do

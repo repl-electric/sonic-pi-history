@@ -35,7 +35,7 @@ live_loop :engines do
 end
 
 
- shader :iWave, 2.8
+ shader :iWave, 8.8
 
 
 shader :iInvert, 0.0

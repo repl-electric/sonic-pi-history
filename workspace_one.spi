@@ -10,8 +10,8 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     sleep 8.0
   end
 end
-
-
+ shdd
+shd
 live_loop :engines do
   sample Mountain[/subkick/,[0,0,0,1]].tick(:sample), cutoff: 135, amp: 4.0
   shader :decay, :iBeat, 0.5+rand, 0.001

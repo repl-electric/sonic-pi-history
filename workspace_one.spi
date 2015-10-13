@@ -24,7 +24,7 @@ end
 
 with_fx(:reverb, mix: 0.5) do
 live_loop :dsaws do
-  sync :come_with_me_on_a_journey
+  #sync :come_with_me_on_a_journey
   with_synth :prophet do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 60, amp: 1.0, decay: 4.0
   end

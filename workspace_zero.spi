@@ -15,13 +15,10 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
             pitch_dis: 0.1,
             window_size: 0.01,
     mix: 0.8) do
-
       with_synth :dark_sea_horn do #This is my own synth
         play (ring :Fs3, :As3, :Ds3, :Fs4, :As3, :Cs3).tick(:notes), decay: 8.1, cutoff: (ramp *(range 40, 90, 5).reverse).tick(:cutoff_flowing_and_back_again), amp: 0.25
       end
-
-      sample Mountain[/bow/, /f#/, 0], cutoff: 65, amp: 0.5
-
+      sample Mountain[/bow/, /f#/, 0], cutoff: 80, amp: 0.5
     end
 
     sleep 8

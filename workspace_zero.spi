@@ -20,13 +20,14 @@ end
 
 live_loop :more_light do
   #This is a wrapper around a synth + fxs + useful params
-  i_hollow((ring :Fs4, :B4).tick, amp: 0.1, cutoff: rrand(80,100))
+  i_hollow((ring :Cs4, :B4 ).tick, amp: 0.1, 
+           cutoff: rrand(80,100))
   sleep 4
 end
 
 live_loop :strange_light do
   16.times{sleep 0.25}
-
+  i_
 end
 
 live_loop :dsaws_make_me_happy do

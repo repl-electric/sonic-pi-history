@@ -13,11 +13,14 @@
 
 #<---------->
 
-#Lets try and loop and make sound 
+#Everything sounds better with reverb
+
+with_fx(:reverb, room: 1.0, mix: 0.8) do
 live_loop :dark_beginnings do
   #DARK
   with_synth :dark_sea_horn do #This is my own synth
     play (ring :Fs1).tick(:notes), cutoff: rrand(70,90), amp: 0.1
   end
   sleep 4
+end
 end

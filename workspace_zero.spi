@@ -21,7 +21,7 @@ end
 live_loop :more_light do
   #This is a wrapper around a synth + fxs + useful params
   i_hollow((ring :Cs4, :Es4, :as3 ).tick, amp: 0.1,
-           cutoff: rrand(80,100))
+           cutoff: rrand(80,90))
   sleep 4
 end
 

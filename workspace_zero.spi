@@ -31,7 +31,7 @@ live_loop :strange_light do
   i_deter(deg_seq(%w{fs4 1}).stretch(3).tick,
           deg_seq(%w{fs4 3}).stretch(3).tick,
           amp: 0.8*0.3,
-          damp_time: 0.25*4.0)
+          damp_time: 0.25*2.0)
 end
 
 live_loop :dsaws_make_me_happy do

@@ -20,9 +20,11 @@ end
 live_loop :determinisim do
   #I'm bored of these hats, lets find something different.
 
+  pan_pick = [0.25,-0.25].choose
+
   if spread(7,8).tick
     sample Ether[/noise/,[0,1]].tick(:sample),
-      cutoff: range(40,60,5).tick(:cut), amp: 0.8, pan: 0.25
+      cutoff: range(40,60,5).tick(:cut), amp: 0.8, pan: pan_pick
   end
   sleep 0.25 #0.25 of a beat.
 end

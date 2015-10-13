@@ -38,10 +38,9 @@ live_loop :bow do
 end
 
 live_loop :hats do
-  with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
-  sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
-  sleep 0.25
-    
+  with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do
+    sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
+    sleep 0.25
   end
 end
 

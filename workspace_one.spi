@@ -22,7 +22,7 @@ live_loop :melo do
   sleep 1
 end
 
-with_fx(:reverb, mix: 0.5) do
+with_fx(:reverb, mix: 0.0) do
 live_loop :dsaws do
   #sync :come_with_me_on_a_journey
   with_synth :prophet do

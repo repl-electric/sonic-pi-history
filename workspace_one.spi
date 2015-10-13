@@ -25,7 +25,6 @@ end
 
 live_loop :shout do
   16.times{sleep 0.25}
-  bar = 1.0
   i_deter (ring  :fs3).tick, 
           (ring :As3).tick(:two), bar: 4.0
 end

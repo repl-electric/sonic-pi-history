@@ -58,7 +58,7 @@ end
       sample Frag[/hat/,Range.new(0, 4)].tick(:sample), cutoff: (range 70,90,1).tick(:c1), amp: 0.8, pan: -0.25
     end
     if spread(3,8).tick
-      sample Frag[/hat/,[1,1]].tick(:sample), cutoff: (range 70,90,1).reverse.tick(:c2), amp: 0.8, pan: 0.25
+      sample Frag[/hat/,Range.new(0,2)].tick(:sample), cutoff: (range 70,90,1).reverse.tick(:c2), amp: 0.8, pan: 0.25
     end
       
 

@@ -58,7 +58,7 @@ end
   live_loop :hats do
 #  with_fx(:slicer, phase: 0.25, probability: 0.5) do
     
-    if spread(4,11).tick
+    if spread(4,12).tick
       sample Frag[/hat/,Range.new(0, 4)].tick(:sample), cutoff: (range 70,90,1).tick(:c1), amp: 0.8, pan: -0.25
     end
    # if spread(3,8).tick

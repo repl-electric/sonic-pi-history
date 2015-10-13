@@ -20,7 +20,7 @@ end
 
 live_loop :more_light do
   #This is a wrapper around a synth + fxs + useful params
-  i_hollow((ring :Fs4, :Es4), amp: 0.1)
+  i_hollow((ring :Fs4, :Es4).tick, amp: 0.1)
   sleep 4
 end
 

@@ -42,9 +42,14 @@ end
 #  with_fx(:slicer, phase: 0.25, probability: 0.5) do
     
     if spread(8,11).tick
-    sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
+      sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
     end
-    sleep 0.25
+    if spread(8,11).tick
+      sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
+    end
+      
+
+ sleep 0.25
   end
 #  end
 

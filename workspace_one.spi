@@ -15,7 +15,7 @@ end
 
 live_loop :bow do
   sample Mountain[/bow/,/g#/].tick(:sample), cutoff: 60, amp: 0.5
-  shader :decay, :iWave, radn+0.2, 0.01
+  shader :decay, :iWave, rand+0.2, 0.01
   sleep 8.0
 end
 

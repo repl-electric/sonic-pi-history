@@ -19,7 +19,7 @@ end
 
 live_loop :determinisim do
   #I'm bored of these hats, lets find something different.
-  sample Ether[/noise/,0].tick(:sample), cutoff: 55, amp: 0.8
+  sample Ether[/noise/,[0,1]].tick(:sample), cutoff: 55, amp: 0.8
   sleep 0.25 #0.25 of a beat.
 
 end

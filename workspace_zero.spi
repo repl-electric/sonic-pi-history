@@ -27,7 +27,10 @@ end
 
 live_loop :strange_light do
   16.times{sleep 0.25}
-  i_
+  i_deter(deg_seq(%w{}).stretch(3).tick,
+          deg_seq(%w{}).stretch(3).tick,
+          amp: 0.8*1,
+          damp_time: 0.25*8.0)
 end
 
 live_loop :dsaws_make_me_happy do

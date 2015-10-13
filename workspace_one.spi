@@ -20,10 +20,10 @@ end
 
 live_loop :dsaws do
   with_synth :prophet do
-    play (ring :Fs2, :As2, :Ds2, :Fs2, :As2, :Cs2).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0
+    play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0
   end
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :B2,  :Fs2, :As2, :Es3).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0, detune: (knit 12,3).tick(:detune)
+    play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0, detune: (knit 12,3).tick(:detune)
   end
   sleep 4.0
 end

@@ -29,7 +29,7 @@ live_loop :dsaws do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 65, amp: 0.5, decay: 4.0
   end
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0, detune: (knit 12,3).tick(:detune)
+    play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 60, amp: 0.5, decay: 4.0, detune: (knit 12,3).tick(:detune)
   end
   sleep 4.0
 end

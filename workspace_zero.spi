@@ -22,7 +22,7 @@ live_loop :dsaws_make_me_happy do
   with_synth :dsaw do
     play (ring :Fs2).tick(:notes), cutoff: 55, decay: 4.0, amp: 0.1, attack: 0.5, detune: 12
   end
-  with_synth :propet do
+  with_synth :prophet do
     play (ring :Fs2).tick(:notes), cutoff: 55, decay: 4.0, amp: 0.1, attack: 0.5
   end
 

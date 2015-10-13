@@ -27,7 +27,7 @@ end
 
 live_loop :strange_light do
   #sync :dark_beginnings
-  16.times{sleep 0.25}
+  32.times{sleep 0.25}
   #Meh somethings now right here....
   i_deter(deg_seq(%w{FS4 1 3}).stretch(3).tick,
           deg_seq(%w{FS4 3 5}).stretch(3).tick,

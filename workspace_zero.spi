@@ -49,15 +49,15 @@ end
 live_loop :determinisim do
   pan_pick = [0.25,-0.25].choose
   if spread(3,8).tick
-  #  sample Ether[/noise/,[0,1,0,7]].tick(:sample),
-  #    cutoff: range(40,70,5).tick(:cut), amp: 0.8, pan: pan_pick
+    #  sample Ether[/noise/,[0,1,0,7]].tick(:sample),
+    #    cutoff: range(40,70,5).tick(:cut), amp: 0.8, pan: pan_pick
   end
   sleep 0.25 #0.25 of a beat.
 end
 
 live_loop :heart do
   #A nice way to turn one drum into many.
-  sample Vocals[/breath/, [6,6]].tick(:breath), cutoff: 50, start: rand, rate: -1
+  #sample Vocals[/breath/, [6,6]].tick(:breath), cutoff: 50, start: rand, rate: -1
   with_fx(:echo, decay: 0.25, phase: 0.25) do
     #sample Mountain[/subkick/,[0,0,0,1]].tick(:sample),
     #  cutoff: range(50,70, 5).tick(:a_cutoff), amp: 0.5

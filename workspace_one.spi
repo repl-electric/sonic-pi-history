@@ -4,7 +4,7 @@ load_snippets("~/.sonic-pi/snippets/")
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :come_with_me_on_a_journey do
-    shader :iInvert, dice(2)
+    shader :iInvert, dice(2)-1
 
     with_synth :dark_sea_horn do
       play (ring :Fs1).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5

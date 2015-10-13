@@ -10,7 +10,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
       
 
     with_synth :dark_sea_horn do
-      play (ring :Fs4, :As3, :Fs3).tick(:notes), cutoff: 70, decay: 8.01, amp: 1.0
+      play (ring :Fs4, :As3, :Ds3).tick(:notes), cutoff: 70, decay: 8.01, amp: 1.0
     end
     end
 

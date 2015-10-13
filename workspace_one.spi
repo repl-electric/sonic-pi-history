@@ -7,7 +7,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     shader :iInvert, dice(2)-1
 
     with_synth :dark_sea_horn do
-      play (ring :Fs2, :As1, :Ds1).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
+      play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
     end
     sleep 8.0
   end

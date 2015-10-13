@@ -26,7 +26,7 @@ with_fx(:reverb, mix: 0.1) do
 live_loop :dsaws do
   #sync :come_with_me_on_a_journey
   with_synth :prophet do
-    play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 65, amp: 0.2, decay: 4.0
+    play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 65, amp: 0.5, decay: 4.0
   end
   with_synth :dsaw do
     play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 60, amp: 0.2, decay: 4.0, detune: (knit 12,3).tick(:detune)

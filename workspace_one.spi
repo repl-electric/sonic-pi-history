@@ -13,6 +13,11 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   end
 end
 
+live_loop :melo do
+  i_hollow((ring :Fs2).tick)
+  sleep 1
+end
+
 live_loop :dsaws do
   with_synth :prophet do
     play (ring :Fs2, :As2, :Fs2).tick(:notes), cutoff: 60, amp: 0.5, decay: 8.0

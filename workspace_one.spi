@@ -15,7 +15,7 @@ end
 
 live_loop :melo do
   i_hollow((ring :Fs4, :Es4).tick, amp: 8.5, pan: rdist(2))
-  sleep 1
+  sleep 4
 end
 
 with_fx(:reverb, mix: 0.5) do

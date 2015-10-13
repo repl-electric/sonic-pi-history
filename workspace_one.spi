@@ -55,7 +55,7 @@ end
 
 
 shader :iInvert, 0.0
-shader :iCells, 1.0
+shader :iCells, 0.0
 shader :iStarLight, 0.0
 shader :iStars, 1.0
 

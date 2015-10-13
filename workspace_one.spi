@@ -26,8 +26,8 @@ end
 live_loop :shout do
   16.times{sleep 0.25}
 
-  i_deter((ring  :fs3).tick, 
-          (ring, :As3).tick(:two))
+  i_deter (ring  :fs3).tick, 
+          (ring, :As3).tick(:two)
 end
 
 live_loop :bow do

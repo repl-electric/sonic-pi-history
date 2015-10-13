@@ -13,7 +13,7 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
 
     with_fx(:pitch_shift, time_dis: 0.1,
             pitch_dis: 0.01,
-            window_size: 0.01,
+            window_size: 0.1,
 
     mix: 0.2) do
 

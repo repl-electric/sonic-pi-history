@@ -38,7 +38,7 @@ live_loop :strange_light do
   #Meh somethings now right here....
   i_deter(deg_seq(%w{FS4 3}).stretch(1).tick,
           deg_seq(%w{FS4 5}).stretch(1).tick,
-          amp: 0.8*0.05,
+          amp: 0.1,
           damp_time: 0.25*2.0)
 end
 

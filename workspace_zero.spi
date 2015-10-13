@@ -17,7 +17,7 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
     mix: 0.3) do
 
       with_synth :dark_sea_horn do #This is my own synth
-        play (ring :Fs3, :As3, :Ds3, :Fs4, :As3, :Cs3).tick(:notes), decay: 8.1, cutoff: (ramp *(range 40, 80, 5)).tick(:cutoff_flowing), amp: 0.3
+        play (ring :Fs3, :As3, :Ds3, :Fs4, :As3, :Cs3).tick(:notes), decay: 8.1, cutoff: (ramp *(range 40, 90, 5)).tick(:cutoff_flowing), amp: 0.25
       end
       #    sample Mountain[/bow/, /g#/, 1], cutoff: 65, amp: 0.5
 

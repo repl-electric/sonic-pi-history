@@ -24,8 +24,8 @@ end
 live_loop :heart do
   #A nice way to turn one drum into many.
   with_fx(:echo, decay: 0.25, phase: 0.25) do
-    sample Mountain[/subkick/,[0,0]].tick(:sample), 
-      cutoff: rrand(60,80), amp: 0.5
+    sample Mountain[/subkick/,[0,0]].tick(:sample),
+      cutoff: rrand(60,70), amp: 0.5
   end
   sleep 2
 end

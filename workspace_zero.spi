@@ -19,7 +19,8 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
 end
 
 live_loop :more_light do
-  i_
+  #This is a wrapper around a synth + fxs + useful params
+  i_hollow(:Fs3, amp: 0.1)
   sleep 4
 end
 

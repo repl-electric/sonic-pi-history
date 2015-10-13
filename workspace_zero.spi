@@ -22,7 +22,7 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
 
     with_fx(:bitcrusher, mix: 0.1, bits: 6) do
       #      sample Sop[/f#/,0], cutoff: 50, amp: 0.01
-      sample Mountain[/bow/, /f#/, 0], cutoff: 60, pitch_dis: 0.01,  amp: 0.1, rate: 0.5/8.0
+      sample Mountain[/bow/, /f#/, 0], cutoff: 60, pitch_dis: 0.01,  amp: 0.0, rate: 0.5/8.0
     end
 
     sleep 8

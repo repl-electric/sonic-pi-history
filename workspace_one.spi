@@ -35,7 +35,7 @@ live_loop :engines do
 end
 
 
- shader :iWave, rand
+ shader :iWave, 0.1
 
 
 shader :iInvert, 0.0

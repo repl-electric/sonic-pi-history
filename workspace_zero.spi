@@ -36,7 +36,7 @@ end
 live_loop :dsaws_make_me_happy do
   sync :dark_beginnings
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 55, decay: 8.0, amp: 0.1, attack: 1.0, detune: dice(6) > 3 ? 12 : 5
+    play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 53, decay: 8.0, amp: 0.1, attack: 1.0, detune: dice(6) > 3 ? 12 : 5
   end
   with_synth :prophet do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 58, decay: 8.0, amp: 0.1, attack: 1.0

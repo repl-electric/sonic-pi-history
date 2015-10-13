@@ -7,7 +7,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
     shader :iInvert, dice(2)-1
 
     with_synth :dark_sea_horn do
-      play (ring :As2, :Cs2, :Fs3).tick(:notes), cutoff: 60, decay: 8.01, amp: 0.5
+      play (ring :As3, :Cs3, :Fs3).tick(:notes), cutoff: 60, decay: 8.01, amp: 0.5
     end
     sleep 8.0
   end
@@ -20,7 +20,7 @@ end
 
 with_fx(:reverb, mix: 0.5) do
 live_loop :dsaws do
-  #  sync :come_with_me_on_a_journey
+  # sync :come_with_me_on_a_journey
   with_synth :prophet do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 55, amp: 0.0, decay: 4.0
   end

@@ -15,7 +15,7 @@ end
 
 live_loop :melo do
   i_hollow((ring :Es3).tick, amp: 4.0)
-  sleep 1/2.0
+  sleep 1
 end
 
 live_loop :dsaws do

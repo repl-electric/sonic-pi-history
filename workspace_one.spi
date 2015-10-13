@@ -37,6 +37,11 @@ live_loop :bow do
   end
 end
 
+live_loop :hats do
+  sample Frag[/hat/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 0.25
+end
+
 
 live_loop :engines do
   #sample Mountain[/subkick/,[0,0,0,1]].tick(:sample), cutoff: 135, amp: 4.0

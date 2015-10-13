@@ -19,7 +19,7 @@ end
 
 live_loop :determinisim do
   #I'm bored of these hats, lets find something different.
-  sample Frag[/hat/,Range.new(0,4)].tick(:sample), cutoff: 55, amp: 0.8
+  sample Frag[/noise/,Range.new(0,4)].tick(:sample), cutoff: 55, amp: 0.8
   sleep 0.25 #0.25 of a beat.
 
 end

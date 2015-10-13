@@ -23,6 +23,8 @@ live_loop :dsaws do
   sleep 8.0
 end
 
+set_volume! 1.2
+
 live_loop :shout do
   16.times{sleep 0.25}
   i_deter (ring  :fs3).tick,

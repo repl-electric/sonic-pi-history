@@ -17,7 +17,11 @@ live_loop :dsaws do
   with_synth :prophet do
     play (ring :Fs2).tick(:notes), cutoff: 50
   end
-sleep 4.0
+  with_synth :dsaw do
+    play (ring :Fs2).tick(:notes), cutoff: 50
+  end
+
+  sleep 4.0
 end
 
 live_loop :bow do

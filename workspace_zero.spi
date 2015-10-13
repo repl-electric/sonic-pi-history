@@ -20,8 +20,12 @@ end
 live_loop :dsaws_make_me_happy do
   #sync :dark_beginnings
   with_synth :dsaw do
+    play (ring :Fs2).tick(:notes), cutoff: 55, decay: 4.0, amp: 0.1, attack: 0.5, detune: 12
+  end
+  with_synth :propet do
     play (ring :Fs2).tick(:notes), cutoff: 55, decay: 4.0, amp: 0.1, attack: 0.5
   end
+
   sleep 4.0
 end
 

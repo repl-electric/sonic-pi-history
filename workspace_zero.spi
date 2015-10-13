@@ -19,7 +19,7 @@ end
 
 live_loop :dsaws_make_me_happy do
   with_synth :dsaw do
-    play (ring :Fs2).tick(:notes), cutoff: 40
+    play (ring :Fs2).tick(:notes), cutoff: 40, decay: 4.0
   end
   sleep 4.0
 end

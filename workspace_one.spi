@@ -48,7 +48,7 @@ end
 
   with_fx(:reverb, room: 1.0, mix: 0.8, damp: 0.5) do
 live_loop :bow do
-    sample Mountain[/bow/,ring(/g#/).tick(:s),0], cutoff: 90, amp: 0.8
+    sample Mountain[/bow/,ring(/g#/, /F#/).tick(:s),0], cutoff: 90, amp: 0.8
     #shader :iWave, rand+8.0
     sleep 8.0
   end

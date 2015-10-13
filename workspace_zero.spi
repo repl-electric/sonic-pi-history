@@ -29,7 +29,7 @@ live_loop :strange_light do
   16.times{sleep 0.25}
   i_deter(deg_seq(%w{fs3 1}).stretch(3).tick,
           deg_seq(%w{fs3 1}).stretch(3).tick,
-          amp: 0.8*0.8,
+          amp: 0.8*0.3,
           damp_time: 0.25*8.0)
 end
 

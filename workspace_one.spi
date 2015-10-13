@@ -26,7 +26,7 @@ end
 shader :iInvert, 0.0
 shader :iCells, 1.0
 shader :iStarLight, 0.0
-shader :iStars, 1.5
+shader :iStars, 0.0
 
 
 shader :iInvert, 1.0

@@ -23,7 +23,7 @@ live_loop :strange_light do
 end
 
 live_loop :dsaws_make_me_happy do
-  #sync :dark_beginnings
+  sync :dark_beginnings
   with_synth :dsaw do
     play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 55, decay: 4.0, amp: 0.1, attack: 0.5, detune: 12
   end
@@ -31,7 +31,7 @@ live_loop :dsaws_make_me_happy do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 56, decay: 4.0, amp: 0.1, attack: 0.5
   end
 
-  sleep 4.0
+  sleep 8.0
 end
 
 live_loop :determinisim do

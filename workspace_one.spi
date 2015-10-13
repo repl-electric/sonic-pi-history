@@ -45,7 +45,7 @@ live_loop :engines do
 
   with_fx(:reverb, room: 0.8, mix: 0.8, damp: 0.5) do
     shader :decay, :iOffBeat, 1.0
-    sample Fraz[/snap/,[3,3]].tick(:sample), cutoff: 90, amp: 0.5
+    sample Fraz[/snap/,[3,0]].tick(:sample), cutoff: 90, amp: 0.5
   end
   sleep 1
 end

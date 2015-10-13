@@ -44,7 +44,7 @@ end
     if spread(8,11).tick
       sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
     end
-    if spread(8,11).tick
+    if spread(3,8).tick
       sample Frag[/hat/,[0,1]].tick(:sample), cutoff: 80, amp: 0.8
     end
       

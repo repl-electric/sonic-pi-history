@@ -6,7 +6,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :come_with_me_on_a_journey do
     shader :iInvert, dice(2)-1
 
-    with_fx(:pitch_shift, window_size: 0.1) do
+    with_fx(:pitch_shift, window_size: 0.1, pitch_dis: 0.01) do
       
 
     with_synth :dark_sea_horn do

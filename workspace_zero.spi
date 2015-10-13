@@ -27,7 +27,7 @@ end
 live_loop :heart do
   #A nice way to turn one drum into many.
   with_fx(:echo, decay: 0.25, phase: 0.25) do
-    sample Vocals[/breath/, [1,2]].tick(:breath), cutoff: 48, start: rand
+    sample Vocals[/breath/, [1,3]].tick(:breath), cutoff: 48, start: rand
     sample Mountain[/subkick/,[0,0,0,1]].tick(:sample),
       cutoff: range(50,70, 5).tick(:a_cutoff), amp: 0.5
   end

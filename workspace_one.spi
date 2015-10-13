@@ -79,7 +79,7 @@ live_loop :engines do
   end
 
   #shader :decay, :iBeat, 2.5+rand, 0.001
-  sleep 1
+  sleep 2
 
   with_fx(:reverb, room: 0.5, mix: 0.8, damp: 0.5) do
     shader :decay, :iOffBeat, 1.0

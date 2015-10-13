@@ -1,8 +1,8 @@
-["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil; 
+["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil;
 #load_snippets("~/.sonic-pi/snippets/")
 
-             ##############################################
-# d[-_-]b # # This is Sonic Pi and live coding music.       # 
+##############################################
+# d[-_-]b # # This is Sonic Pi and live coding music.       #
 #   /█\     # We run code which controls synths and samples.#
 #  .Π.       #############################################
 
@@ -16,11 +16,11 @@
 #Everything sounds better with reverb
 
 with_fx(:reverb, room: 1.0, mix: 0.8) do
-live_loop :dark_beginnings do
-  #DARK
-  with_synth :dark_sea_horn do #This is my own synth
-    play (ring :Fs1).tick(:notes), cutoff: rrand(70,90), amp: 0.1
+  live_loop :dark_beginnings do
+    #DARK
+    with_synth :dark_sea_horn do #This is my own synth
+      play (ring :Fs1).tick(:notes), cutoff: rrand(70,90), amp: 0.1
+    end
+    sleep 4
   end
-  sleep 4
-end
 end

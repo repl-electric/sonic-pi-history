@@ -20,12 +20,11 @@ end
 live_loop :heart do
   #A nice way to turn one drum into many.
   with_fx(:echo, decay: 0.25, phase: 0.25) do
-    sample Mountain[/subkick/,[0,0]].tick(:sample),
+    sample Mountain[/subkick/,[0,0,0,1]].tick(:sample),
       cutoff: range(50,70, 5).tick(:a_cutoff), amp: 0.5
   end
   sleep 1
   with_fx(:reverb, room: 1.0, mix: 0.5, damp: 0.5) do
-    #Its all about patterns, play sample 0 three times then sample 1
     sample Frag[/snap/,[0,0,0,1]].tick(:sample), cutoff: rrand(60,70), amp: 0.9
   end
   sleep 1

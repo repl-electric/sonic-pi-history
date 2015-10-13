@@ -24,3 +24,9 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
     sleep 4
   end
 end
+
+live_loop :heart do
+  #This is one of my custom samples.
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 2
+end

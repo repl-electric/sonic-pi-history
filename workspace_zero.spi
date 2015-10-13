@@ -19,7 +19,11 @@ with_fx(:reverb, room: 0.8, mix: 0.5) do
         play (ring :Fs3).tick(:notes), decay: 8.1, cutoff: (ramp *(range 40, 90, 5).reverse).tick(:cutoff_flowing_and_back_again), amp: 0.25
       end
     end
-      sample Mountain[/bow/, /f#/, 0], cutoff: 80, amp: 0.5
+
+    with_fx(:bitcrusher) do
+
+    sample Mountain[/bow/, /f#/, 0], cutoff: 80, amp: 0.5
+    end
 
     sleep 8
   end

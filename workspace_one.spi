@@ -5,7 +5,7 @@ load_snippets("~/.sonic-pi/snippets/")
 with_fx(:reverb, room: 1.0, mix: 1.0) do
   live_loop :come_with_me_on_a_journey do
     with_synth :dark_sea_horn do
-      play (ring :Fs4, :As3, :Ds3).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
+      play (ring :Fs1).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
     end
     sleep 8.0
   end

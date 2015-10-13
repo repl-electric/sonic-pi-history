@@ -59,6 +59,7 @@ shader :iCells, 0.0
 shader :iStarLight, 0.0
 shader :iStars, 1.5
 
+shader :iStarMotion, 1.0
 
 shader :iWave, 0.0
 shader :iCellActivity, 0.0

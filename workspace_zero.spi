@@ -11,7 +11,7 @@ end
 
 live_loop :harmony do
   sync :bass
-  i_hollow((ring :As3).tick, amp: 8.0)
+  i_hollow((ring :Cs3).tick, amp: 8.0)
   sleep 4
 end
 

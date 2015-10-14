@@ -53,7 +53,7 @@ end
 live_loop :dsaws_make_me_happy do
   sync :dark_beginnings
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :Cs3, :Cs2).tick(:notes), cutoff: 53, decay: 8.0, amp: 0.5, attack: 1.0, detune: dice(6) > 3 ? 12 : 12
+    play (ring :Fs2, :As2, :Cs3, :Bs2).tick(:notes), cutoff: 53, decay: 8.0, amp: 0.5, attack: 1.0, detune: dice(6) > 3 ? 12 : 12
   end
   puts note_inspect((ring :Fs2, :As2, :B2).look(:notes))
   with_synth :prophet do

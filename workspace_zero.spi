@@ -9,6 +9,13 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
   end
 end
 
+live_loop :bass do
+  with_synth :dsaw do
+    play (ring :FS2).tick(:notes), cutoff: 40, amp: 0.2
+  end
+  sleep 8
+end
+
 live_loop :engines do
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
     sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5

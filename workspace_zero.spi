@@ -47,6 +47,8 @@ live_loop :strange_light do
   #Meh somethings now right here....
 end
 
+with_fx :lp
+
 live_loop :dsaws_make_me_happy do
   sync :dark_beginnings
   with_synth :dsaw do

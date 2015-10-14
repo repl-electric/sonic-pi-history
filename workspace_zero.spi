@@ -10,8 +10,8 @@ with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do
 end
 
 live_loop :harmony do
-  i_hollow(:Fs3)
-sleep 4
+  i_hollow(:Es3)
+  sleep 4
 end
 
 live_loop :bass do

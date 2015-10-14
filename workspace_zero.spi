@@ -16,8 +16,12 @@ live_loop :bass do
   with_synth :prophet do
     play (ring :FS2, :As2, :Ds2).tick(:notes), cutoff: 55, amp: 0.2, decay: 8,attack: 0.5
   end
-
   sleep 8
+end
+
+live_loop :hats do
+  sleep 0.25
+  sample Ether[/noise/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
 end
 
 live_loop :engines do

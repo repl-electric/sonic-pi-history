@@ -12,9 +12,9 @@ end
 live_loop :bass do
   with_synth :dsaw do
     play (ring :FS2).tick(:notes), cutoff: 40, amp: 0.2, decay: 8
-      end
+  end
   with_synth :prophet do
-    play (ring :FS2).tick(:notes), cutoff: 40, amp: 0.2, decay: 8,
+    play (ring :FS2).tick(:notes), cutoff: 40, amp: 0.2, decay: 8
       end
 
   sleep 8

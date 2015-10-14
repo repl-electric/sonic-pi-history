@@ -18,8 +18,6 @@ live_loop :engines do
   with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
     sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   end
-
-  sleep 1
   sleep 1
 
 end

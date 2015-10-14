@@ -21,7 +21,13 @@ end
 
 live_loop :hats do
   sleep 0.25
-  sample Ether[/noise/,[0,0]].tick(:sample), cutoff: range(40,60).tick, amp: 0.5
+  sample Ether[/noise/,[0,0]].tick(:sample), 
+    cutoff: range(45,60).tick, amp: 0.5
+
+  sample Ether[/noise/,[0,0]].tick(:sample), 
+    cutoff: range(45,60).tick, amp: 0.5
+
+
 end
 
 live_loop :engines do

@@ -15,7 +15,7 @@ live_loop :harmony do
   sleep 4
 end
 
-with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
+with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |fx|
   live_loop :bass do
     with_synth :dsaw do
       play (ring :FS2, :As2, :Cs2).tick(:notes), cutoff: 50, amp: 0.2, decay: 8, attack: 0.5, detune: 12
@@ -23,7 +23,7 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
     with_synth :prophet do
       play (ring :FS2, :As2, :Es3).tick(:notes), cutoff: 55, amp: 0.2, decay: 8, attack: (ring 0.01, 0.5,0.5,0.5).tick(:Attack)
     end
-    sleep 4
+    4.times{sleep 1; control fx, damp: rand}
   end
 end
 

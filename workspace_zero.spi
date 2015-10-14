@@ -8,3 +8,8 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do
     sleep 8
   end
 end
+
+live_loop :engines do
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 2
+end

@@ -8,6 +8,11 @@
 
 #This is where we write our music code. When it flashes pink
 #thats me telling it to run our code and change the music
+
+#Fin. That was me just messing around with Sonic Pi.
+#Exploring music through code.
+#Thanks!
+
 with_fx(:reverb, room: 0.8, mix: 0.5) do
   live_loop :dark_beginnings do
 

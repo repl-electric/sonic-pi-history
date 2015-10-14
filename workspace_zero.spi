@@ -47,10 +47,13 @@ live_loop :strange_light do
   #Meh somethings now right here....
 end
 
+
+#F2 -Cs
+#F2 -B2
 live_loop :dsaws_make_me_happy do
   sync :dark_beginnings
   with_synth :dsaw do
-    play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 53, decay: 8.0, amp: 0.5, attack: 1.0, detune: dice(6) > 3 ? 12 : 5
+    play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 53, decay: 8.0, amp: 0.5, attack: 1.0, detune: dice(6) > 3 ? 12 : 5
   end
   puts note_inspect((ring :Fs2, :As2, :B2).look(:notes))
   with_synth :prophet do

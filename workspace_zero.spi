@@ -57,7 +57,7 @@ live_loop :dsaws_make_me_happy do
   end
   puts note_inspect((ring :Fs2, :As2, :B2).look(:notes))
   with_synth :prophet do
-    play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 58, decay: 8.0, amp: 0.5, attack: 1.0
+    play (ring :Fs2, :As2, :Cs2, :cs2).tick(:notes), cutoff: 58, decay: 8.0, amp: 0.5, attack: 1.0
   end
   puts (ring :Fs2, :As2, :Ds2).look(:notes)
 

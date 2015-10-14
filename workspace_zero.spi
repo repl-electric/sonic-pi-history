@@ -10,7 +10,7 @@ with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do
 end
 
 live_loop :harmony do
-  i_hollow((ring :Fs3, :Es3).tick )
+  i_hollow((ring :Fs3, :Es3, :As3).tick )
   sleep 4
 end
 

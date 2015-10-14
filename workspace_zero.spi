@@ -20,7 +20,7 @@ live_loop :bass do
     play (ring :FS2, :As2, :Cs2).tick(:notes), cutoff: 50, amp: 0.2, decay: 8, attack: 0.5, detune: 12
   end
   with_synth :prophet do
-    play (ring :FS2, :As2, :Es2).tick(:notes), cutoff: 55, amp: 0.2, decay: 8,attack: 0.5
+    play (ring :FS2, :As2, :Es2).tick(:notes), cutoff: 55, amp: 0.2, decay: 8, attack: (ring 0.01, 0.5,0.5,0.5).tick(:Attack)
   end
   sleep 4
 end

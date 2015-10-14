@@ -22,7 +22,7 @@ end
 live_loop :hats do
   direction = [-0.25, 0.25].choose
   sleep 0.25
-  sample Ether[/noise/,[0,0]].tick(:sample),
+  sample Ether[/noise/,[0,1]].tick(:sample),
     cutoff: range(50,60).tick, amp: 0.5, pan: direction
 
   sample Ether[/noise/,[0,1]].tick(:sample),

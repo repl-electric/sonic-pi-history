@@ -14,7 +14,8 @@ live_loop :movement do
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
 
   sleep 1
-  sample Fra[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  
+  sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   sleep 1
 
 end

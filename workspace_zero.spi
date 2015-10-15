@@ -20,7 +20,7 @@ live_loop :lights do
   shader :iDrop, 1.0
   shader :iSpaceMotion, 1.01
   shader :iCellCount, 4.0
-  shader :iCellMotion, 0.5
+  shader :iCellMotion, 0.8
   i_hollow (ring :FS3, :As3).tick
   sample Ether[/F#/, /inter/, 0]
   sleep 4

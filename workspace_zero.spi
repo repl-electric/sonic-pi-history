@@ -12,5 +12,6 @@ end
 
 live_loop :movement do
   shader :decay, :iKick, 1.0, 0.001
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   sleep 2
 end

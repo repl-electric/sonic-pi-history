@@ -12,7 +12,7 @@ live_loop :rumblings do
 end
 
 live_loop :lights do
-  shader :iSpaceLight, 8.5
+  shader :iSpaceLight, 0.5
   #  shader :iCells, 0.0
   shader :iStarMotion, 0.9
   i_hollow (ring :FS3, :As3).tick

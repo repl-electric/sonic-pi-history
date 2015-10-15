@@ -12,5 +12,9 @@ end
 live_loop :movement do
   shader :decay, :iBeat, rand+2.5, 0.001
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
-  sleep 2
+
+  sleep 1
+  sample Fra[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 1
+
 end

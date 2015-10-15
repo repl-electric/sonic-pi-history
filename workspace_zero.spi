@@ -16,7 +16,7 @@ live_loop :rumblings do
     play (ring :Fs2).tick(:notes), cutoff: 50
   end
   with_synth :dsaw do
-    play (ring :Fs2).tick(:notes), cutoff: 50
+    play (ring :Fs2).tick(:notes), cutoff: 50, decay: 4.0
   end
 
   sleep 4

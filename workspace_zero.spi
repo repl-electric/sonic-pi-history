@@ -15,7 +15,7 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
 end
 
 live_loop :lights do
-  shader :iStarLight, 1.0
+  shader :iStarLight, 0.0
   shader :iStars, 0.0
   shader :iDrop, 2.0
   shader :iCells, 2.0

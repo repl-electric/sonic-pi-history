@@ -16,7 +16,7 @@ end
 
 live_loop :lights do
   shader :iStarLight, 1.0
-  shader :iStars, 1.0
+  shader :iStars, 0.0
   shader :iDrop, 0.0
   shader :iCells, 0.0
   shader :decay, :iWave, 0.1, 0.1

@@ -1,5 +1,6 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
-
+["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
+load_snippets("~/.sonic-pi/snippets/")
 shader :iCell, 1.0
 
 live_loop :rumblings do
@@ -9,7 +10,6 @@ live_loop :rumblings do
   sleep 8
 end
 
-with_fx(:bi)
 
 live_loop :movement do
   shader :decay, :iBeat, rand+2.5, 0.001
@@ -17,7 +17,6 @@ live_loop :movement do
 
   sleep 1
   with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
-
     sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: rrand(80,90), amp: 0.8
   end
 

@@ -40,7 +40,7 @@ end
 live_loop :movement do
   shader :decay, :iBeat, rand+2.5, 0.001
   with_fx :flanger, feedback: 0.4, delay: 0.2 do
-    sample "/Users/josephwilk/Dropbox/repl-electric/samples/matz/behappy.wav", start: rand, finish: rand, beat_stretch: rand
+    sample "/Users/josephwilk/Dropbox/repl-electric/samples/matz/behappy.wav", start: rand, finish: rand, beat_stretch:4
   end
   #  sample Dust[/voice/,[15]].tick(:sample), cutoff: 80, amp: 0.5
 

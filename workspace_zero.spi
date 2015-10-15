@@ -1,2 +1,1 @@
-load_snippets("~/.sonic-pi/snippets/")
-init
+["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil; load_snippets("~/.sonic-pi/snippets/")

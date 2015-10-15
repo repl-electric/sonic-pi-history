@@ -4,6 +4,7 @@ load_snippets("~/.sonic-pi/snippets/")
 shader :iCell, 1.0
 
 live_loop :rumblings do
+  sample Mountain[/bow/,/F#/], cutoff: 60, amp: 0.5
   with_synth :dark_sea_horn do
     shader :iInvert, [0,1].choose
     play (ring :Fs4, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes), cutoff: 80, decay: 8.01
@@ -42,7 +43,7 @@ live_loop :movement do
   with_fx :flanger, feedback: 0.4, delay: 0.2 do
     sample "/Users/josephwilk/Dropbox/repl-electric/samples/matz/behappy.wav", start: rand, finish: rand, window_size: 0.5
   end
-  #  sample Dust[/voice/,[15]].tick(:sample), cutoff: 80, amp: 0.5
+  #sample Dust[/voice/,[15]].tick(:sample), cutoff: 80, amp: 0.5
 
   sleep 1
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|

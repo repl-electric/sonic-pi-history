@@ -11,5 +11,6 @@ live_loop :rumblings do
 end
 
 live_loop :movement do
-
+  shader :iKick, 1.0, 0.001
+  sleep 2
 end

@@ -4,3 +4,8 @@ live_loop :slow do
   play notes.tick, release: 0.5, cutoff: 80 #if rand > 0.5
   sleep 0.3
 end
+
+live_loop :fast do
+  play notes.tick, release: 0.25
+  sleep 0.295
+end

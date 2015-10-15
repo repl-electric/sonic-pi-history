@@ -11,6 +11,13 @@ live_loop :rumblings do
   sleep 8
 end
 
+live_loop :rumblings do
+  with_synth :prophet do
+    play (ring :Fs2).tick(:notes), cutoff: 50
+  end
+  sleep 4
+end
+
 live_loop :movement do
   shader :decay, :iBeat, rand+2.5, 0.001
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5

@@ -11,7 +11,7 @@ live_loop :rumblings do
   sleep 8
 end
 
-live_loop :rumblings do
+live_loop :rumblings2 do
   with_synth :prophet do
     play (ring :Fs2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
   end

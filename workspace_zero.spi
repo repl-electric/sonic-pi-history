@@ -6,7 +6,7 @@ shader :iCell, 1.0
 live_loop :rumblings do
   with_synth :dark_sea_horn do
     shader :iInvert, [0,1].choose
-    play (ring :As3, :Cs3, :Es3).tick(:notes), cutoff: rrand(60,70), decay: 8.01
+    play (ring :As3, :Cs3, :Es3).tick(:notes), cutoff: 70, decay: 8.01
   end
   sleep 8
 end

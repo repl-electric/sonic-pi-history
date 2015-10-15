@@ -13,6 +13,7 @@ end
 
 live_loop :lights do
   shader :iStars, 0.5, 0.001
+  i_deter (ring: FS3).tick
   sleep 4
 end
 

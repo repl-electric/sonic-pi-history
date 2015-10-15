@@ -1,4 +1,4 @@
-use_synth :sine
+use_synth :dsaw
 notes = (ring :E4, :Fs4, :B4, :Cs5, :D5, :Fs4, :E4, :Cs5, :B4, :Fs4, :D5, :Cs5)
 
 live_loop :slow do

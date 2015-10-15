@@ -12,7 +12,7 @@ live_loop :rumblings do
 end
 
 live_loop :lights do
-  shader :iStars, 0.8
+  shader :iStars, 0.9
   i_hollow (ring :FS3).tick
   sleep 4
 end

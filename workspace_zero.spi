@@ -1,6 +1,7 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 
 shader :iCell, 1.0
+shader :iInvert, 1.0
 
 live_loop :rumblings do
   with_synth :dark_sea_horn do

@@ -6,6 +6,6 @@ live_loop :slow do
 end
 
 live_loop :fast do
-  play notes.tick, release: 0.25
+  play notes.tick, release: 0.5
   sleep 0.295
 end

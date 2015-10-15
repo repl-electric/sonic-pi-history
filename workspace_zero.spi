@@ -39,8 +39,8 @@ end
 
 live_loop :movement do
   shader :decay, :iBeat, rand+2.5, 0.001
-sample "/Users/josephwilk/Dropbox/repl-electric/samples/matz/behappy.wav", start: rand
-sample Dust[/voice/,[15]].tick(:sample), cutoff: 80, amp: 0.5
+  sample "/Users/josephwilk/Dropbox/repl-electric/samples/matz/behappy.wav", start: rand, finish: rand
+  sample Dust[/voice/,[15]].tick(:sample), cutoff: 80, amp: 0.5
 
   sleep 1
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|

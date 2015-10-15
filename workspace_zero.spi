@@ -15,6 +15,10 @@ live_loop :rumblings do
   with_synth :prophet do
     play (ring :Fs2).tick(:notes), cutoff: 50
   end
+  with_synth :dsaw do
+    play (ring :Fs2).tick(:notes), cutoff: 50
+  end
+
   sleep 4
 end
 

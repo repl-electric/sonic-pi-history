@@ -18,7 +18,7 @@ live_loop :lights do
 end
 
 live_loop :rumblings2 do
-  sync rumblings
+  sync :rumblings
   shader :iWave, rand+0.2
   with_synth :prophet do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5

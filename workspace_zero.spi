@@ -4,7 +4,7 @@ shader :iCells, 1.0
 
 live_loop :rumblings do
   with_synth :dark_sea_horn do
-    shader :iBeat, 1.0, 0.001
+    shader :iBeat, 8.0, 0.001
     play (ring :Fs1).tick(:notes), cutoff: rrand(70,90)
   end
   sleep 8

@@ -6,7 +6,7 @@ live_loop :slow do
   use_synth [:beep, :dsaw, :prophet].choose
 
 
-  play notes.tick, release: 0.5, cutoff: 70 #if rand > 0.5
+  play notes.tick, release: 0.5, cutoff: 80 #if rand > 0.5
   sleep 0.3
 end
 

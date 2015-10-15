@@ -5,7 +5,7 @@ shader :iCell, 1.0
 
 with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
   live_loop :rumblings do
-    sample Mountain[/bow/,knit(/A#/,1).tick(:knit) ,0], cutoff: 70, amp: 0.9
+    sample Mountain[/bow/,knit(/G#/,1).tick(:knit) ,0], cutoff: 70, amp: 0.9
     with_synth :dark_sea_horn do
       shader :iInvert, [0,1].choose
       play (ring :Fs4, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes), cutoff: 80, decay: 8.01
@@ -21,7 +21,7 @@ live_loop :lights do
   shader :iCells, 0.0
   shader :decay, :iWave, 0.1, 0.1
   #shader :iSpaceMotion,
-    shader :iCellCount, 1.0
+  shader :iCellCount, 1.0
   shader :iCellMotion, 0.0
   i_hollow (ring :FS3, :As3).tick
   sample Ether[/F#/, /inter/, 0]

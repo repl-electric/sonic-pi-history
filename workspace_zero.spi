@@ -14,10 +14,10 @@ end
 live_loop :rumblings2 do
   shader :iWave, rand+0.2
   with_synth :prophet do
-    play (ring :Fs2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
+    play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
   end
   with_synth :dsaw do
-    play (ring :Fs2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
+    play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
   end
 
   sleep 4

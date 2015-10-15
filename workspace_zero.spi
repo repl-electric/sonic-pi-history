@@ -11,6 +11,10 @@ live_loop :rumblings do
   sleep 8
 end
 
+live_loop :lights do
+  shader :iStars, 0.5, 0.001
+end
+
 live_loop :rumblings2 do
   shader :iWave, rand+0.2
   with_synth :prophet do

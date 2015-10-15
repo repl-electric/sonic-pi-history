@@ -12,6 +12,7 @@ live_loop :rumblings do
 end
 
 live_loop :rumblings2 do
+  shader :iWave, rand
   with_synth :prophet do
     play (ring :Fs2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.5
   end

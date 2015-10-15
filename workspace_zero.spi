@@ -14,7 +14,7 @@ end
 live_loop :lights do
   shader :iStars, 1.5
   #  shader :iCells, 0.0
-  shader :iSpaceMotion, 0.5
+  shader :iSpaceMotion, 0.9
   i_hollow (ring :FS3, :As3).tick
   sleep 4
 end

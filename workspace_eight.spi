@@ -4,7 +4,7 @@ set_volume! 2.0
 
 live_loop :do do
   with_synth :dark_sea_horn do
-    play (ring :Fs1).tick(:notes), cutoff: 70
+    play (ring :Fs1).tick(:notes), cutoff: 75
   end
   sleep 8
 end

@@ -12,7 +12,7 @@ end
 with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
   live_loop :clack do
     with_synth :dsaw do
-      play (ring :FS2, :AS2).tick(:notes), cutoff: 40, release: 0.25
+      play (ring :FS2, :AS2).tick(:notes), cutoff: 40, release: 0.1
     end
     sleep 0.5
   end

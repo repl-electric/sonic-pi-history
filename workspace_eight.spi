@@ -11,9 +11,9 @@ end
 
 live_loop :if do
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
+    sample Vocals[/breath/, 0]
     sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 1.0
   end
-
 
   sleep 1
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|

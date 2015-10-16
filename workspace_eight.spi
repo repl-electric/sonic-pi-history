@@ -21,8 +21,8 @@ end
 
 live_loop :if do
   with_synth :dsaw do
-    play (ring :FS1).tick(:notes), amp: 0.2, cutoff: 50,amp:
-  end
+    play (ring :FS1).tick(:notes), amp: 0.2, cutoff: 50
+      end
   sleep 4
 end
 

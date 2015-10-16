@@ -12,7 +12,7 @@ end
 
 live_loop :bass do
   with_synth :dsaw do
-    play (ring :Fs2, :AS2, :Ds2).tick(:notes), amp: 0.5, cutoff: 40
+    play (ring :Fs2, :AS2, :Ds2).tick(:notes), amp: 0.5, cutoff: 40, detune: 12
   end
   sleep 4
 end

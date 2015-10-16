@@ -17,7 +17,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 end
 
 live_loop :harmony do
-  i_hollow (ring :FS4, :Es4, :As4), amp: 8.0
+  i_hollow (ring :GS4), amp: 8.0
   shader :iStars, 1.0
   shader :iCells, 0.0
   shader :iStarMotion, 0.1

@@ -17,4 +17,10 @@ live_loop :do do
   end
   sleep 8
 end
+
+live_loop :when do
+  sample Mountain[/bow/,/#F/].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 16
+end
+
 #end

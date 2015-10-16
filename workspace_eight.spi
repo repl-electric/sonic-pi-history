@@ -33,7 +33,7 @@ end
 
 live_loop :harmony do
   #  i_hollow (ring :FS4), amp: 8.0
-  shader :iStars, 1.0
+  shader :iStars, 0.0
   shader :iCells, 0.0
   shader :iStarLight, 1.0
   shader :iDrop, 1.0

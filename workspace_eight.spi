@@ -3,7 +3,7 @@ live_loop :ah do
 
   sample Sop[/vor_sopr_sustain_ah_F_01/,1]
 
-  sleep 4
+  sleep 8
 end
 
 set_volume! 8.0

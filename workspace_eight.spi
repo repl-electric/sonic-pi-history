@@ -41,7 +41,7 @@ end
 
 live_loop :kick do
   with_fx(:echo, decay: 0.5, mix: 0.8, phase: 0.25) do
-    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 90, amp: 4.0
+    #sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 90, amp: 4.0
   end
   sleep 1
   with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|

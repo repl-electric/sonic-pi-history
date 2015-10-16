@@ -1,5 +1,5 @@
 live_loop :ah do
-  sample Sop[/Sustains/,/yeh/,3], amp: 1.0,     pitch_stretch: 1, beat_stretch: 1
+  sample Sop[/Sustains/,/yeh/,3], amp: 1.0,     pitch_stretch: 2, beat_stretch: 1
   sleep 1
 end
 

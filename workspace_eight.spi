@@ -33,10 +33,10 @@ end
 live_loop :hats do
   sleep 0.25
   if spread(7,11).tick
-    sample Ether[/noise/,[0,4]].tick(:sample), cutoff: 60, amp: 0.5, pan: -0.25
+ #   sample Ether[/noise/,[0,4]].tick(:sample), cutoff: 60, amp: 0.5, pan: -0.25
   end
   if spread(3,8).tick
-    sample Frag[/noise/,[0,4]].tick(:sample), cutoff: 70, amp: 0.5, pan: 0.25
+#    sample Frag[/noise/,[0,4]].tick(:sample), cutoff: 70, amp: 0.5, pan: 0.25
   end
 
 

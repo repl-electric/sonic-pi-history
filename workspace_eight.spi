@@ -5,11 +5,16 @@ live_loop :do do
   shader :iInvert, [1.0,0.0].choose
   shader :decay, :iWave, 0.2+rand, 0.0001
 
+  shader :iStarMotion, 0.1
   sample Mountain[/bow/, /G#/, 0], amp: 0.5, cutoff: 80
   with_synth :dark_sea_horn do
     play (ring :As2, :Cs2, :Fs2).tick(:notes), cutoff: 65, decay: 8.01, amp: 0.5
   end
   sleep 8
+end
+
+live_loop :haromoney do
+
 end
 
 with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do |r_fx|

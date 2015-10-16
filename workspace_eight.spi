@@ -28,7 +28,7 @@ end
 
 live_loop :do do
   if spread(3, 8 ).tick
-    sample Frag[/hat/,[0,0]].tick(:sample), cutoff: range(70,90, 2).reverse.tick(:c), amp: 0.9
+    sample Frag[/hat/,Range.new(0,4)].tick(:sample), cutoff: range(70,90, 2).reverse.tick(:c), amp: 0.9
   end
   if spread(7, 11).tick
     sample Frag[/hat/,Range.new(0,4)].tick(:sample2), cutoff: range(70,90, 2).tick(:c), amp: 0.9

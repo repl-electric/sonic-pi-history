@@ -3,4 +3,4 @@ live_loop :ah do
   sleep 1
 end
 
-set_volume! 4.0
+set_volume! 8.0

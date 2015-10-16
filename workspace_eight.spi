@@ -21,6 +21,7 @@ end
 
 live_loop :haromoney do
   shader :iStarLight, 0.0
+  shader :iStars, 0.0
   shader :iDrop, 0.0
   shader :iCellCount, 40
   shader :iCellMotion, 0.0

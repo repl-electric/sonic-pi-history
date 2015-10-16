@@ -12,7 +12,6 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 
     with_fx(:pitch_shift, pitch_dis: 0.1,
     window_size: 0.01, mix: 1.0) do
-
       with_synth :dark_sea_horn do
         play (ring :Fs4, :As3, :DS3, :Fs3, :As3, :CS3).tick(:notes), cutoff: 60, amp: 0.5,
           decay: 8.1

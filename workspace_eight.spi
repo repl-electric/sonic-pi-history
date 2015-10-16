@@ -1,6 +1,4 @@
-
-
-
-live_loop : do
-sample Sop[/Sustains/,/yeh/,3], amp: 8.0
+live_loop :ah do
+  sample Sop[/Sustains/,/yeh/,3], amp: 1.0
+  sleep 1
 end

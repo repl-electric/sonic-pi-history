@@ -17,6 +17,7 @@ end
 live_loop :haromoney do
   shader :iStarLight, 1.0
   shader :iDrop, 0.1
+  shader :iCellCount, rand_i(10)
   i_hollow((ring :AS4, :Cs4, :Fs4).tick, amp: 8.0)
 
   sleep 4

@@ -1,7 +1,7 @@
 live_loop :ah do
   #sample Sop[/Sustains/,/yeh/,3], amp: 1.0,     pit´ch_stretch: 4, beat_stretch: 1
 
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh\ p/vor_sopr_sustain_eh_p_09.wav", beat_stretch: 8, cutoff: 80, decay: 0.9, amp: 8.0
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh\ p/vor_sopr_sustain_eh_p_02.wav", beat_stretch: 8, cutoff: 80, decay: 0.9, amp: 8.0
 
   play :FS3, decay: 4.0
 

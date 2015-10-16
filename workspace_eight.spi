@@ -27,12 +27,17 @@ end
 
 
 live_loop :do do
+
+  with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
+    
   if spread(3, 8 ).tick
     sample Frag[/hat/,Range.new(0,2)].tick(:sample), cutoff: range(80,90, 1).reverse.tick(:c), amp: 0.9
   end
   if spread(7, 11).tick
     sample Frag[/hat/,Range.new(0,4)].tick(:sample2), cutoff: range(80,90, 1).tick(:c), amp: 0.9
   end
+  end
+
   sleep 0.25
 end
 

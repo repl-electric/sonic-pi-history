@@ -19,7 +19,7 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
   end
 end
 
-with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
+with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|
 
   live_loop :if do
     with_synth :dsaw do

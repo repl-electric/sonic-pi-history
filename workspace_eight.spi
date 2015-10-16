@@ -1,7 +1,7 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 set_volume! 1.0
 shader :iCells, 0.0
-shader :iSpaceLight, 0.0
+shader :iSpaceLights, 0.0
 
 
 with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|

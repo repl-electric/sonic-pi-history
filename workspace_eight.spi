@@ -11,6 +11,7 @@ live_loop :do do
 end
 
 live_loop :bass do
+  sync :do
   with_synth :dsaw do
     play (ring :Fs2, :AS2, :Cs2).tick(:notes), amp: 0.5, cutoff: 55, detune: 12, decay: 4.0
   end

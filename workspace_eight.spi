@@ -23,6 +23,8 @@ live_loop :if do
     end
   end
   sleep 1
+  sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if dice(6) > 3
+
 
 
 end

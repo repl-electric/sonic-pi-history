@@ -25,7 +25,7 @@ live_loop :when do
 end
 
 live_loop :beat do
-  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 0.5
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 1.5
   sleep 2
 end
 

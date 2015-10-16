@@ -25,8 +25,13 @@ end
 live_loop :hats do
   sleep 0.25
   if spread(7,11).tick
-  sample Ether[/noise/,[0,1]].tick(:sample), cutoff: 60, amp: 0.5
-end
+    sample Ether[/noise/,[0,1]].tick(:sample), cutoff: 60, amp: 0.5
+  end
+  if spread(3,8).tick
+    sample Ether[/noise/,[0,1]].tick(:sample), cutoff: 60, amp: 0.5
+  end
+
+
 end
 
 with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|

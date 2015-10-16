@@ -1,1 +1,1 @@
-sample Scape[/brush/, 1], amp: 0.1 + rand, cutoff: rrand(100,120)
+ sample_and_sleep ChillD[/Detroit/, (ring /F#1/).tick], amp: 0.2

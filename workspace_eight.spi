@@ -4,7 +4,7 @@ set_volume! 8.0
 
 live_loop :begin do
   with_synth :dark_ambience do
-    play (ring :Fs2).tick(:notes), amp: 8.0, release: 8.0
+    play (ring :Fs2).tick(:notes), amp: 8.0, decay: 8.0
   end
   sleep 8
 end

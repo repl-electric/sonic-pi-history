@@ -19,7 +19,7 @@ live_loop :if do
   end
   sample Mountain[/subkick/,[0,1]].tick(:sample), cutoff: (ring 80, 90, 110).tick, amp: 1.0
   sleep 0.5
-  sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).look(:s)
+  #sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).look(:s)
 
   with_fx :flanger, depth: 0.8, feedback: 0.5, decay: 0.8, delay:0.5 do
     sample Dust[/Voice/,9], amp: 0.8, cutoff:  (range 60, 80, 10).tick(:p), pan: rdist(2)

@@ -15,7 +15,10 @@ live_loop :if do
     sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: (ring 80, 90).tick, amp: 1.0
   end
 
-  sleep 1
+  sleep 0.5
+   sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if dice(6) > 3
+
+  sleep 0.5
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|
     with_fx(:bitcrusher, mix: 0.1, bits: (range 6, 16,2).tick(:r)) do
       sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: rrand(70,80), amp: 1.0
@@ -23,7 +26,6 @@ live_loop :if do
     end
   end
   sleep 1
-  sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if dice(6) > 3
 
 
 

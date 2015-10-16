@@ -9,7 +9,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
     shader :iInvert, [0.0,1.0].choose
     #  sample Mountain[/bow/,/G#/,0], cutoff: 80, amp: 1.0
 
-    with_fx(:pitch_shift, pitch_dis: 0.01,
+    with_fx(:pitch_shift, pitch_dis: 0.1,
     window_size: 0.01, mix: 0.5) do
 
       with_synth :dark_sea_horn do

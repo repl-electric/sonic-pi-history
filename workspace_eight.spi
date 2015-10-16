@@ -20,7 +20,7 @@ with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
 end
 
 live_loop :go do
-  with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
+  with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|
     sample Mountain[/bow/, /F#3/], cutoff: 80
   end
   sleep 16

@@ -15,10 +15,10 @@ end
 
 live_loop :haromoney do
   shader :iStarLight, 0.01
-  shader :iDrop, 0.01
+  shader :iDrop, 0.1
 
   i_hollow((ring :FS4, :Es4).tick, amp: 8.0)
-  
+
   sleep 4
 end
 

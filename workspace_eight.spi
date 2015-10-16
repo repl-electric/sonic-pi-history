@@ -17,7 +17,10 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 end
 
 live_loop :harmony do
-  i
+  i_hollow :FS3
+  shader :iStars 1.0
+  sleep 4
+  
 end
 
 with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do |r_fx|

@@ -24,7 +24,7 @@ end
 
 live_loop :hats do
   sleep 0.25
-  sample Ether[/noise/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sample Ether[/noise/,[0,1]].tick(:sample), cutoff: 60, amp: 0.5
 end
 
 with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|

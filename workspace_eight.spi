@@ -13,7 +13,7 @@ with_fx(:reverb, room: 1.0, mix: 0.0) do |r_fx|
   live_loop :clack do
     #sync :if
     with_synth :zawa do
-      play (ring :FS2, :AS2).tick(:notes), cutoff: rrand(60,80), release: 0.1, attack: 0.01
+      play (ring :FS2, :AS2).tick(:notes), cutoff: rrand(60,80), release: 0.01, attack: 0.01
     end
     sleep 0.25
 

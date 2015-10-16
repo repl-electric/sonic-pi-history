@@ -12,17 +12,17 @@ end
 
 
 with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
-  
-live_loop :bass do
-  sync :do
-  with_synth :dsaw do
-    play (ring :Fs2, :AS2, :Cs2).tick(:notes), amp: 0.5, cutoff: 55, detune: 12, decay: 8.0
+
+  live_loop :bass do
+    sync :do
+    with_synth :dsaw do
+      play (ring :Fs2, :AS2, :Cs2).tick(:notes), amp: 0.5, cutoff: 55, detune: 12, decay: 8.0
+    end
+    with_synth :prophet do
+      play (ring :Fs2, :AS2, :Ds2).tick(:notes), amp: 0.5, cutoff: 55, decay: 8.0
+    end
+    sleep 8
   end
-  with_synth :prophet do
-    play (ring :Fs2, :AS2, :Ds2).tick(:notes), amp: 0.5, cutoff: 55, decay: 8.0
-  end
-  sleep 8
-end
 end
 
 live_loop :beat do

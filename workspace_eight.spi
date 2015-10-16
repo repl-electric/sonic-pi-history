@@ -3,7 +3,7 @@ set_volume! 1.0
 
 live_loop :do do
   shader :iInvert, [1.0,0.0].choose
-  shader :decay, :iWave, 0.1, 0.005
+  shader :decay, :iWave, 0.1, 0.001
   with_synth :dark_sea_horn do
     play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 50, decay: 8.01
   end

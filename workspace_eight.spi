@@ -7,7 +7,6 @@ live_loop :do do
 
   shader :iStarMotion, 0.1
   #  sample Mountain[/bow/, /F#/, 1], amp: 0.8, cutoff: 80
-
   with_fx(:pitch_shift,
           window_size: 0.1,
   pitch_dis: 0.01, mix: 0.1) do
@@ -22,7 +21,7 @@ end
 
 live_loop :haromoney do
   shader :iStarLight, 0.0
-  shader :iDrop, 0.1
+  shader :iDrop, 0.0
   shader :iCellCount, 40
   shader :iCellMotion, 0.0
   shader :iStarMotion, 0.0

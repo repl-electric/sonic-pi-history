@@ -11,7 +11,7 @@ end
 
 live_loop :if do
   with_fx(:echo, decay: 2.0, mix: 1.0, phase: 0.25) do
-    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 0.9
+    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 1.0
 
   end
   sleep 2

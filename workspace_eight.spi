@@ -31,7 +31,7 @@ end
 
 live_loop :if do
   if (spread 1,4).tick(:s)
-    sample Fraz[/kick/i,16], amp: 0.5, start: 0.2
+    sample Fraz[/kick/i,16], amp: 0.5, start: 0.2, cutoff: 80
   end
   #sample Mountain[/subkick/,[0,1]].tick(:sample), cutoff: (ring 80, 90, 110).tick, amp: 1.0
   sleep 0.5

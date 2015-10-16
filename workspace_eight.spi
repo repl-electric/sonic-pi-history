@@ -7,7 +7,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
   live_loop :do do
     #    shader :decay, :iBeat, 1.5, 0.001
     shader :iInvert, [0.0,1.0].choose
-    sample Mountain[/bow/,/F#/].tick(:sample), cutoff: 60, amp: 0.5
+    sample Mountain[/bow/,/F#/], cutoff: 60, amp: 0.5
 
     with_synth :dark_sea_horn do
       play (ring :As2, :Cs2, :FS2).tick(:notes), cutoff: 65, amp: 0.5, decay: 8.0

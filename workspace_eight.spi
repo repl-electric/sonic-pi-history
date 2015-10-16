@@ -1,6 +1,6 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 
-set_volume! 5.0
+set_volume! 10.0
 
 live_loop :do do
   sample Organ[/F#0/].tick, amp: 4.0

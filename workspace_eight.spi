@@ -15,11 +15,11 @@ end
 
 live_loop :begin do
   shader :decay, :iBeat, 2.0, 0.001
-
-
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
   sleep 1
   with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|
+  shader :decay, :iOffBeat, 2.0, 0.001
+
     sample Frag[/snap/,[0,1]].tick(:sample), cutoff: 80, amp: 0.5
 
   end

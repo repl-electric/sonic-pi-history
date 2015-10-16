@@ -58,8 +58,8 @@ live_loop :begin do
   with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|
     shader :decay, :iOffBeat, 1.0
 
-    sample Frag[/snap/,[0,1]].tick(:sample), cutoff: 
-      (ring 100,80).tick, amp: 0.5
+    sample Frag[/snap/,[0,1]].tick(:sample), cutoff:
+      (ring 100,90).tick, amp: 0.5
 
   end
   sleep 1

@@ -34,7 +34,7 @@ live_loop :do do
     if spread(7, 8).tick
       sample Frag[/hat/,Range.new(0,2)].tick(:sample), cutoff: range(80,90, 1).reverse.tick(:c), amp: 0.9
     end
-    if spread(10, 11).look
+    if spread(11, 11).look
       sample Frag[/hat/,Range.new(0,4)].tick(:sample2), cutoff: range(80,90, 1).tick(:c), amp: 0.9
     end
   end

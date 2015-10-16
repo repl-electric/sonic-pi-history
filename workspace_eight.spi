@@ -3,7 +3,7 @@ set_volume! 8.0
 
 with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
   live_loop :do do
-    shader :iInvert, rand_i(1)
+    shader :iInvert, [1.0,0.0].choose
     with_synth :dark_sea_horn do
       play (ring :Fs1).tick(:notes), cutoff: 70
     end

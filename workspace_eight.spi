@@ -22,7 +22,7 @@ with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
       play (ring :FS2, :AS2, :Cs2).tick(:notes), cutoff: 50, decay: 8.0
     end
     with_synth :prophet do
-      play (ring :FS2, :As2, :Ds2).tick(:notes), cutoff: 40, decay: 89.0, amp: 0.5
+      play (ring :FS2, :As2, :Ds2).tick(:notes), cutoff: 40, decay: 8.0, amp: 0.5
     end
     8.times{sleep 1.0; control r_fx, damp: rand}
   end

@@ -10,7 +10,7 @@ live_loop :do do
 end
 
 live_loop :static do
-  sample_and_sleep Mountain[/cracklin/,0], rate: 0.9
+  sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.2
 end
 
 live_loop :if do

@@ -1,5 +1,5 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
-load_snippets "~/.sonicpi/snippets"
+load_snippets "~/.sonicpi/snippets/*"
 set_volume! 8.0
 
 live_loop :begin do
@@ -10,6 +10,6 @@ live_loop :begin do
 end
 
 live_loop :do do
-  
+
   sleep 8
 end

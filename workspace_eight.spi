@@ -15,7 +15,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 end
 
 with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do |r_fx|
-  shader :decay, :iWave, 0.1
+  shader :decay, :iWave, 0.01
   live_loop :bass do
     with_synth :dsaw do
       play (ring :Fs2, :AS2, :B2).tick(:notes), cutoff: 50, decay: 8.0, amp: 0.5, detune: 12

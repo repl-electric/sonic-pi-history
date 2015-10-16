@@ -6,9 +6,9 @@ live_loop :do do
   shader :decay, :iWave, 0.2+rand, 0.0001
 
   shader :iStarMotion, 0.1
-#  sample Mountain[/bow/, /F#/, 1], amp: 0.8, cutoff: 80
+  #  sample Mountain[/bow/, /F#/, 1], amp: 0.8, cutoff: 80
 
-  with_fx(:pitch_shift) do
+  with_fx(:pitch_shift, window_size: 0.1) do
     with_synth :dark_sea_horn do
       play (ring :Fs4, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes),
         cutoff: 65, decay: 8.01, amp: 0.5

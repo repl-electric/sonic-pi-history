@@ -43,9 +43,9 @@ live_loop :do do
 end
 
 live_loop :if do
-  if (spread 1,4).tick(:s)
+#  if (spread 1,4).tick(:s)
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.2, cutoff: 80
-  end
+#  end
   sample Fraz[/kick/,[0,0,0,1]].tick(:sample), cutoff: (ring 100, 130).tick, amp: 1.0
   sleep 0.5
   #sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).look(:s)

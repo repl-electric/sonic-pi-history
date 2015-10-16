@@ -4,7 +4,7 @@ set_volume! 8.0
 
 live_loop :begin do
   with_synth :dark_ambience do
-    play (ring :Fs1).tick(:notes), amp: 4.0, decay: 8.01
+    play (ring :Fs1).tick(:notes), amp: 0.0, decay: 8.01
   end
   sleep 8
 end
@@ -12,6 +12,6 @@ end
 live_loop :do do
   with_synth :dark_sea_horn do
     play (ring :Fs1).tick(:notes), cutoff: rrand(70,80)
-      end
+  end
   sleep 8
 end

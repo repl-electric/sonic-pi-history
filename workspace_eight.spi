@@ -6,7 +6,7 @@ shader :iCells, 1.0
 with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
   live_loop :do do
     with_synth :dark_sea_horn do
-      play (ring :Fs1).tick(:notes), cutoff: 50
+      play (ring :Fs1).tick(:notes), cutoff: 50, amp: 0.5
     end
     sleep 8
   end

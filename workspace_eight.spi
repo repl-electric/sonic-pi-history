@@ -14,7 +14,8 @@ live_loop :do do
 end
 
 live_loop :haromoney do
-
+  i_hollow(:FS3)
+  sleep 4
 end
 
 with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do |r_fx|

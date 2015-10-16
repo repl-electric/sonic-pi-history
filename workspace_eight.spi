@@ -14,7 +14,7 @@ live_loop :do do
       play (ring :Fs3, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes),
         cutoff: 50, decay: 8.1, amp: 0.5
     end
-    with_fx(:bitcrusher, mix: 0.1) do
+    with_fx(:bitcrusher, mix: 0.1, sample_rate: 20000) do
       sample Sop[/F#/,0], cutoff: 80
     end
   end

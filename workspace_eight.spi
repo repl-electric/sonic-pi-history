@@ -18,7 +18,7 @@ live_loop :if do
 
   sleep 1
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|
-    sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: 60, amp: 0.8
+    sample Fraz[/snap/,[0,0]].tick(:sample), cutoff: 70, amp: 0.8
   end
   sleep 1
 

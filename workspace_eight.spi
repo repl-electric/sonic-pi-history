@@ -19,7 +19,7 @@ with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
   live_loop :clack do
     #sync :if
     with_synth :dsaw do
-      play (ring :FS2, :AS2, :Cs2).tick(:notes)
+      play (ring :FS2, :AS2, :Cs2).tick(:notes), cutoff: 50
     end
     with_synth :prophet do
       play (ring :FS2, :As2, :Ds2).tick(:notes), cutoff: 40, decay: 4.0, amp: 0.5

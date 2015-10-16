@@ -27,7 +27,7 @@ end
 
 
 live_loop :do do
-  sample Fraz[/hat/,[0,0]].tick(:sample), cutoff: 90, amp: 1.9
+  sample Fraz[/hat/,[0,0]].tick(:sample), cutoff: 95, amp: 1.9
   sleep 0.25
 end
 

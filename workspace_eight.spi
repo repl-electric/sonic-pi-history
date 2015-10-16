@@ -9,8 +9,8 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
     shader :iInvert, [0.0,1.0].choose
     #  sample Mountain[/bow/,/G#/,0], cutoff: 80, amp: 1.0
 
-    with_fx(:pitch_shift, pitch_dis: 0.01, 
-    window_size: 0.01, mix: 0.1) do
+    with_fx(:pitch_shift, pitch_dis: 0.01,
+    window_size: 0.01, mix: 0.5) do
 
       with_synth :dark_sea_horn do
         play (ring :Fs4, :As3, :DS3, :Fs3, :As3, :CS3).tick(:notes), cutoff: 75, amp: 0.5,
@@ -59,15 +59,15 @@ end
 live_loop :begin do
   #shader :decay, :iBeat, 2.0, 0.001
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
-#    sample Fraz[/kick/,[1,0]].tick(:sample), cutoff: 130, amp: 1.0
+    #    sample Fraz[/kick/,[1,0]].tick(:sample), cutoff: 130, amp: 1.0
   end
 
   sleep 1
   with_fx(:reverb, room: 1.0, mix: 0.4, damp: 0.5) do |r_fx|
     shader :decay, :iOffBeat, 1.0
 
- #   sample Frag[/snap/,[0,1]].tick(:sample), cutoff:
-  #    (ring 100,90).tick, amp: 0.5
+    #   sample Frag[/snap/,[0,1]].tick(:sample), cutoff:
+    #    (ring 100,90).tick, amp: 0.5
 
   end
   sleep 1

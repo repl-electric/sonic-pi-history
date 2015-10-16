@@ -14,6 +14,13 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
   end
 end
 
+live_loop :bass do
+  with_synth :dsaw do
+    play (ring :Fs2).tick(:notes), cutoff: 60, decay: 4.0, amp: 0.5
+  end
+  sleep 4
+end
+
 live_loop :begin do
   shader :decay, :iBeat, 2.0, 0.001
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5

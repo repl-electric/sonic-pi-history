@@ -31,7 +31,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0, damp: 0.5) do |r_fx|
 
 
 
-    4.times{sleep 1; control r_fx, :damp rand}
+    4.times{sleep 1; control r_fx, damp: rand}
   end
 end
 

@@ -3,11 +3,9 @@
 set_volume! 5.0
 
 live_loop :do do
-
   with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
     sample Mountain[/bow/, /G#/,0], cutoff: 80, amp: 0.5
   end
-
   with_synth :dark_sea_horn do
     play (ring :As3, :Cs3, :Fs3).tick(:notes), cutoff: 75, amp: 0.5, decay: 8.01
   end

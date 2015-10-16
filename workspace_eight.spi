@@ -17,7 +17,7 @@ with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
     end
 
     with_synth :prophet do
-      play (ring :FS2).tick(:notes), cutoff: 40
+      play (ring :FS2).tick(:notes), cutoff: 50
     end
 
     8.times{sleep 0.5; control r_fx, damp: rand}

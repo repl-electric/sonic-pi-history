@@ -12,7 +12,7 @@ end
 
 live_loop :bass do
   with_synth :dsaw do
-    play (ring ).tick(:notes)
+    play (ring :Fs2).tick(:notes)
   end
 end
 

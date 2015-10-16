@@ -25,9 +25,6 @@ with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
   end
 end
 
-live_loop :static do
-  #sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.1
-end
 
 live_loop :do do
   sample Fraz[/hat/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5

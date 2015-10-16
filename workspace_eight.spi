@@ -32,5 +32,5 @@ live_loop :if do
 end
 
 live_loop :back do
-  sample_and_sleep ChillD[/Detroit/, ring9/F#1/).tick], amp: 0.2
+  sample_and_sleep ChillD[/Detroit/, ring(/F#1/).tick], amp: 0.2
                                       end

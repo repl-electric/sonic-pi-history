@@ -3,7 +3,7 @@ live_loop :ah do
 
   sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh\ p/vor_sopr_sustain_eh_p_04.wav", beat_stretch: 8, cutoff: 80, decay: 0.9
 
-  play :FS3
+  play :FS3, decay: 4.0
 
   sleep 4
 end

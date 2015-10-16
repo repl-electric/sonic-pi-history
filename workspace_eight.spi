@@ -9,6 +9,10 @@ live_loop :do do
   sleep 8
 end
 
+live_loop :static do
+  sample_and_sleep Mountain[/cracklin/,0], rate: 0.9
+end
+
 live_loop :if do
   if (spread 1,4).tick(:s)
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.2
@@ -31,9 +35,6 @@ live_loop :if do
     end
   end
   sleep 1
-
-
-
 end
 
 live_loop :back do

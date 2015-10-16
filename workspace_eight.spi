@@ -19,8 +19,12 @@ live_loop :if do
   sleep 0.5
   sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).tick(:s)
 
+
+  with_fx(:bitcrusher, mix: 0.1) do
+    
   with_fx :flanger, feedback: 0.5, decay: 0.8, delay:0.5 do
     sample Dust[/Voice/,9], amp: 0.8, cutoff:  (range 60, 80, 10).tick(:p)
+  end
   end
 
   sleep 0.5

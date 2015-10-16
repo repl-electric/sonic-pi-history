@@ -9,7 +9,7 @@ live_loop :do do
   sleep 8
 end
 
-with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
+with_fx(:reverb, room: 1.0, mix: 0.0) do |r_fx|
   live_loop :clack do
     #sync :if
     with_synth :dsaw do

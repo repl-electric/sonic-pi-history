@@ -10,7 +10,7 @@ live_loop :do do
 end
 
 live_loop :if do
-  if (spread 1,16).tick(:kick2)
+  if (spread 1,8).tick(:kick2)
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.2
   end
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do

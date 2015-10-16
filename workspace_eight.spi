@@ -18,6 +18,8 @@ live_loop :if do
   sleep 0.5
   sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).tick(:s)
 
+sample Dust[/TDDC_Voice_Hit/,11], amp: 1.0
+
   sleep 0.5
   with_fx(:reverb, room: 0.9, mix: 0.5, damp: 0.5) do |r_fx|
     with_fx(:bitcrusher, mix: 0.1, bits: (range 6, 16,2).tick(:r)) do
@@ -33,4 +35,4 @@ end
 
 live_loop :back do
   sample_and_sleep ChillD[/Detroit/, ring(/F#1/).tick], amp: 0.2
-                                      end
+end

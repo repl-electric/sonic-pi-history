@@ -33,7 +33,7 @@ with_fx(:reverb, room: 0.8, mix: 0.4, damp: 0.5) do |r_fx|
       play (ring :Fs2, :AS2, :Cs2).tick(:notes), cutoff: 50, decay: 8.0, amp: 0.5, detune: 12
     end
     with_synth :prophet do
-      play (ring :Fs2, :AS2, :Ds2).tick(:notes), cutoff: 50, decay: 8.0, amp: 0.5, detune: 12
+#      play (ring :Fs2, :AS2, :Ds2).tick(:notes), cutoff: 50, decay: 8.0, amp: 0.5, detune: 12
     end
     sleep 8
   end

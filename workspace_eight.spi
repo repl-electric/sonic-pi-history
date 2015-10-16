@@ -29,7 +29,9 @@ with_fx(:reverb, room: 1.0, mix: 1.0, damp: 0.5) do |r_fx|
       play (ring :Fs2, :As2).tick(:notes), cutoff: 55, amp: 0.5
     end
 
-    sleep 4
+    
+    
+    4.times{sleep 1; control r_fx, :damp rand}
   end
 end
 

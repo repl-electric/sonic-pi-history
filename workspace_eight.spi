@@ -14,11 +14,14 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
   end
 end
 
+with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
 live_loop :bass do
   with_synth :dsaw do
     play (ring :Fs2, :AS2, :Ds2).tick(:notes), cutoff: 50, decay: 8.0, amp: 0.5, detune: 12
   end
   sleep 8
+end
+  
 end
 
 live_loop :begin do

@@ -10,14 +10,14 @@ live_loop :do do
 end
 
 live_loop :if do
-  if (spread 1,8).tick(:kick2)
+  if (spread 1,4).tick(:s)
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.2
   end
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
     sample Mountain[/subkick/,[0,3]].tick(:sample), cutoff: (ring 80, 90, 100).tick, amp: 1.0
   end
   sleep 0.5
-  sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).tick(:s)
+  sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).look(:s)
 
   with_fx :flanger, depth: 0.8, feedback: 0.5, decay: 0.8, delay:0.5 do
     sample Dust[/Voice/,9], amp: 0.8, cutoff:  (range 60, 80, 10).tick(:p), pan: rdist(2)

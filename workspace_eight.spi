@@ -1,7 +1,7 @@
 live_loop :ah do
   #sample Sop[/Sustains/,/yeh/,3], amp: 1.0,     pit´ch_stretch: 4, beat_stretch: 1
 
-  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh\ F/vor_sopr_sustain_eh_F_03.wav", beat_stretch: 4
+  sample "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Sustains/Yeh\ F/vor_sopr_sustain_eh_F_03.wav", beat_stretch: 8
   sleep 4
 
 end

@@ -33,3 +33,4 @@ live_loop :beat do
 end
 
 shader :iCells, 1.0
+shader :iStars, 1.0

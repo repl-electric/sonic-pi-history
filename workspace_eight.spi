@@ -4,7 +4,7 @@ set_volume! 5.0
 
 live_loop :do do
   with_synth :dark_sea_horn do
-    play (ring :As2, :Cs2, :Fs2).tick(:notes), cutoff: 65, amp: 0.5, decay: 8.01
+    play (ring :As2, :Cs2, :Fs2).tick(:notes), cutoff: 70, amp: 0.5, decay: 8.01
   end
   sleep 8
 end

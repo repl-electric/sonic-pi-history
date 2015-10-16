@@ -8,12 +8,9 @@ live_loop :do do
   end
   sleep 8
 end
-live_loop :unless do
-  with_synth :dsaw do
-    play (ring :Fs3).tick(:notes), cutoff: 40, decay: 4.0, amp: 0.2
-  end
-  sleep 4
-end
+
+
+
 
 live_loop :static do
   sample_and_sleep Mountain[/cracklin/,0], rate: 0.9, amp: 0.1

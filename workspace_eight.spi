@@ -21,7 +21,7 @@ end
 
 live_loop :if do
   with_synth :dsaw do
-    play (ring :FS3).tick(:notes), amp: 0.5, cutoff: 50, decay: 4.0
+    play (ring :FS2).tick(:notes), amp: 0.5, cutoff: 50, decay: 4.0
   end
   sleep 4
 end

@@ -13,10 +13,10 @@ with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
   live_loop :clack do
     #sync :if
     with_synth :dsaw do
-      play (ring :FS2, :AS2).tick(:notes), cutoff: rrand(40,50), decay: 4.0, detune: 12, amp: 0.4
+      play (ring :FS2, :AS2, :B2).tick(:notes), cutoff: rrand(40,50), decay: 4.0, detune: 12, amp: 0.4
     end
     with_synth :prophet do
-      play (ring :FS2, :As2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.4
+      play (ring :FS2, :As2, :Ds2).tick(:notes), cutoff: 50, decay: 4.0, amp: 0.4
     end
 
     8.times{sleep 0.5; control r_fx, damp: rand}

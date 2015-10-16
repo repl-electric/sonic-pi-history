@@ -27,9 +27,14 @@ end
 
 
 live_loop :do do
-  if spread(3, 8 ).tick 
-  sample Dust[/hat/,[0,0]].tick(:sample), cutoff: 70, amp: 1.9
-end
+  if spread(3, 8 ).tick
+    sample Dust[/hat/,[0,0]].tick(:sample), cutoff: 70, amp: 1.9
+  end
+  if spread(7, 11 ).tick
+    sample Dust[/hat/,[0,0]].tick(:sample), cutoff: 70, amp: 1.9
+  end
+
+
   sleep 0.25
 end
 

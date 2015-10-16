@@ -35,5 +35,5 @@ live_loop :beat do
   sleep 1
 end
 
-shader :iCells, 1.0
+shader :iCells, 0.0
 shader :iStars, 1.0

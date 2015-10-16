@@ -19,7 +19,7 @@ end
 live_loop :harmony do
   i_hollow :FS3, amp: 2.0
   shader :iStars, 1.0
-  shader :iCells, 1.0
+  shader :iCells, 0.0
   sleep 4
 
 end

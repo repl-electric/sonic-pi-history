@@ -25,7 +25,13 @@ live_loop :when do
 end
 
 live_loop :beat do
+
+  with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
+    
   sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 80, amp: 1.5
+  end
+
+
   sleep 2
 end
 

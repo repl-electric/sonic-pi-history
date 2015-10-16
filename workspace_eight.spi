@@ -13,15 +13,13 @@ live_loop :if do
   if (spread 1,16).tick(:kick2)
     sample Fraz[/kick/i,16], amp: 0.5, start: 0.2
   end
-
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
     sample Mountain[/subkick/,[0,3]].tick(:sample), cutoff: (ring 80, 90, 100).tick, amp: 1.0
   end
-
   sleep 0.5
   sample Dust[/clap/,1], amp: 0.2, cutoff: rrand(90,100) if spread(1,4).tick(:s)
 
-  with_fx :flanger, feedback: 0.5 do
+  with_fx :flanger, feedback: 0.5, decay: 0.4 do
     sample Dust[/TDDC_Voice_Hit/,6], amp: 0.8, cutoff:  (range 60, 80, 10).tick(:p)
   end
 

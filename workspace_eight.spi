@@ -10,7 +10,7 @@ live_loop :do do
     end
   end
 
-  sample 
+  sample Organ[/F#0/]
   sleep 8
 end
 

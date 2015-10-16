@@ -4,16 +4,14 @@ set_volume! 5.0
 
 live_loop :do do
   with_synth :dark_sea_horn do
-    play (ring :Fs1, :As1, :Ds1).tick(:notes), cutoff: 60, amp: 0.5, decay: 8.01
+    play (ring :As2, :Cs2, :Fs2).tick(:notes), cutoff: 60, amp: 0.5, decay: 8.01
   end
   sleep 8
 end
-
 live_loop :then do
   i_hollow  (ring :Fs3).tick(), amp: 1.0
   sleep 4
 end
-
 with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
   live_loop :clack do
     #sync :if

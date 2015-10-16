@@ -9,7 +9,10 @@ live_loop :do do
   sleep 8
 end
 
-
+live_loop :then do
+  i_hollow  (ring :Fs3).tick(), amp: 0.4
+  sleep 4
+end
 
 with_fx(:reverb, room: 1.0, mix: 0.0, damp_slide: 1) do |r_fx|
   live_loop :clack do

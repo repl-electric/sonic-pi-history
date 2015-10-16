@@ -3,7 +3,7 @@
 set_volume! 5.0
 
 live_loop :do do
-  sample Organ[/F#0/]
+  sample Organ[/F#0/,0]
   sleep 8
 end
 

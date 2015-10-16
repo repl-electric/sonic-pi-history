@@ -17,7 +17,7 @@ with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
 end
 
 live_loop :harmony do
-  i_hollow :FS3
+  i_hollow :FS3, amp: 2.0
   shader :iStars, 1.0
   sleep 4
 

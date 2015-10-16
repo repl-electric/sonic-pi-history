@@ -3,7 +3,7 @@ set_volume! 8.0
 
 with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
   live_loop :do do
-    shader :decay, :iBeat, 0.8, 0.001
+    shader :decay, :iBeat, 0.9, 0.001
     with_synth :dark_sea_horn do
       play (ring :Fs1).tick(:notes), cutoff: 70
     end

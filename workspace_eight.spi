@@ -1,3 +1,13 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 set_volume! 1.0
 shader :iCells, 1.0
+
+
+with_fx(:reverb, room: 1.0, mix: 1.0) do |r_fx|
+  live_loop :do do
+    with_synth :dark_sea_horn do
+      play (ring :Fs1).tick(:notes), cutoff: 50
+    end
+    sleep 8
+  end
+end

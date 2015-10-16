@@ -1,13 +1,13 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 set_volume! 8.0
 
-  live_loop :do do
-    shader :iInvert, [1.0,0.0].choose
-    with_synth :dark_sea_horn do
-      play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 65, decay: 8.01
-    end
-    sleep 8
+live_loop :do do
+  shader :iInvert, [1.0,0.0].choose
+  with_synth :dark_sea_horn do
+    play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 50, decay: 8.01
   end
+  sleep 8
+end
 
 live_loop :beat do
   shader :decay, :iBeat, 2.0, 0.001

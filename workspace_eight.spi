@@ -31,7 +31,7 @@ live_loop :begin do
   shader :decay, :iBeat, 2.0, 0.001
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
 
-    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 1.0
   end
 
   sleep 1

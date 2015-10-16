@@ -30,7 +30,7 @@ live_loop :harmony do
   shader :iCells, 0.0
   shader :iStarLight, 1.0
   shader :iDrop, 1.0
-  shader :iCellCount 40
+  shader :iCellCount 10
   shader :iStarMotion, 0.5
   sleep 1
 

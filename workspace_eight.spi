@@ -6,6 +6,7 @@ shader :iCells, 1.0
 
 
 live_loop :do do
+  shader :iInvert, [0.0,1.0].choose
   with_synth :dark_sea_horn do
     play (ring :Fs1).tick(:notes), cutoff: 60, amp: 0.5
   end
@@ -14,7 +15,6 @@ end
 
 live_loop :begin do
   shader :decay, :iBeat, 2.0, 0.001
-
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
     sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 70, amp: 0.8
   end

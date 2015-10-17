@@ -34,7 +34,7 @@ live_loop :harmony do
 
   shader :iDrop, 1.0
   #shader :iSpaceMotion, 0.4
-  i_hollow (ring :Fs3, :Cs3, :Es3).tick amp: 2.0
+  #i_hollow (ring :Fs3, :Cs3, :Es3).tick amp: 2.0
   sleep 4
 end
 

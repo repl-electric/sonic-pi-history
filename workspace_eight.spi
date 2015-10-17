@@ -14,7 +14,11 @@ live_loop :do do
 end
 
 live_loop :begin do
-  
-  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 70, amp: 0.8
+
+  with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do
+    sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 70, amp: 0.8
+    
+  end
   sleep 2
+
 end

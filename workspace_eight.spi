@@ -25,6 +25,8 @@ live_loop :rescue do
   sleep 4
 end
 
+shader :iStars, 1.0
+
 live_loop :begin do
   #shader :decay, :iBeat, 2.0, 0.001
   with_fx(:echo, decay: 0.5, mix: 1.0, phase: 0.25) do

@@ -24,7 +24,7 @@ end
 shader :iStarLight, 0.01
 
 live_loop :graphics do
-  shader :iCellMotion, 0.1
+  shader :iCellMotion, 0.5
   sleep 4
 end
 

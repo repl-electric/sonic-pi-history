@@ -17,7 +17,7 @@ end
 
 live_loop :harmony do
   shader :iSpaceMotion, 0.4
-  i_hollow :Fs3, amp: 2.0
+  i_hollow :Fs4, amp: 2.0
   sleep 4
 end
 

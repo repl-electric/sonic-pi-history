@@ -24,7 +24,7 @@ shader :iStarLight, 0.01
 
 live_loop :harmony do
   shader :iSpaceLight, 0.1
-  shader :iCellCount, 0.0
+  shader :iCellCount, 10.0
 
   shader :iDrop, 1.0
   #shader :iSpaceMotion, 0.4

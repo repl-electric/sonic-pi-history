@@ -41,10 +41,10 @@ end
 live_loop :rescue do
   sync :do
   with_synth :dsaw do
-   # play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 50, amp: 0.1, decay: 4.0
+    # play (ring :Fs2, :As2, :Cs2).tick(:notes), cutoff: 50, amp: 0.1, decay: 4.0
   end
   with_synth :prophet do
-    play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 53, amp: 0.1, decay: 4.0
+    #play (ring :Fs2, :As2, :Ds2).tick(:notes), cutoff: 53, amp: 0.1, decay: 4.0
   end
 
   sleep 8

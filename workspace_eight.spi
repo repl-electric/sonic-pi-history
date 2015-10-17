@@ -1,4 +1,8 @@
 ["instruments","shaderview","experiments", "log"].each{|f| load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"}; _=nil
 set_volume! 1.0
 
+
+live_loop :test do
 play 60
+sleep 1
+end

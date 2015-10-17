@@ -2,13 +2,18 @@
 set_volume! 5.0
 
 
+  shader :iCells, 1.0
 
 
 live_loop :do do
-  shader :iCells, 1.0
   shader :decay, :ibeat, 2.0, 0.001
   with_synth :dark_sea_horn do
     play (ring :Fs1).tick(:notes), cutoff: 60, amp: 0.5
   end
   sleep 8
+end
+
+live_loop :begin do
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 60, amp: 0.5
+  sleep 2
 end

@@ -16,7 +16,7 @@ end
 
 
 live_loop :harmony do
-
+sleep 4
 end
 
 live_loop :rescue do

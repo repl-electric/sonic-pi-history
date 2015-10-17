@@ -16,8 +16,8 @@ end
 
 
 live_loop :harmony do
-  
-  i_hollow :Fs3
+
+  i_hollow :Fs3, amp: 2.0
   sleep 4
 end
 

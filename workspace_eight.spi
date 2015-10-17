@@ -14,6 +14,8 @@ live_loop :do do
   sleep 8
 end
 
+  shader :iStarLight, 0.01
+
 
 live_loop :harmony do
   shader :iSpaceLight, 0.01

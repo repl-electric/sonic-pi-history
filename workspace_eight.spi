@@ -16,6 +16,7 @@ end
 
 
 live_loop :harmony do
+  i_hollow :Fs3
   sleep 4
 end
 

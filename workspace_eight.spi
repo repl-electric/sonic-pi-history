@@ -7,13 +7,16 @@ shader :iCells, 1.0
 
 live_loop :do do
   shader :iWave, rand*2
+  with_fx(:bitcrusher, mix: 0.1) do
   sample Mountain[/bow/,/G#/].tick(:sample), cutoff: 70, amp: 0.5
+    
+  end
   shader :iInvert, [0.0,1.0].choose
   with_fx(:pitch_shift) do
-  with_synth :dark_sea_horn do
-    play (ring :Fs3, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes), cutoff: 50, amp: 0.3, decay: 8.01
-  end
-    
+    with_synth :dark_sea_horn do
+      play (ring :Fs3, :As3, :Ds3, :Fs3, :As3, :Cs3).tick(:notes), cutoff: 50, amp: 0.3, decay: 8.01
+    end
+
   end
   sleep 8
 end

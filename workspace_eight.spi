@@ -14,6 +14,6 @@ live_loop :do do
 end
 
 live_loop :begin do
-  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 70, amp: 0.5
+  sample Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 70, amp: 0.8
   sleep 2
 end

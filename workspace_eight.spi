@@ -16,12 +16,13 @@ end
 
 
 live_loop :harmony do
-
+  
   i_hollow :Fs3
   sleep 4
 end
 
 live_loop :rescue do
+  sync :do
   with_synth :dsaw do
     play (ring :Fs2, :As2, :B2).tick(:notes), cutoff: 50, amp: 0.1, decay: 4.0
   end

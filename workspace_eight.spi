@@ -23,6 +23,11 @@ end
 
 shader :iStarLight, 0.01
 
+live_loop :graphics do
+  shader :iCellMotion, 0.1
+  sleep 4
+end
+
 live_loop :harmony do
   shader :iSpaceLight, 0.1
   shader :iCellCount, 10.0

@@ -16,6 +16,7 @@ end
 
 
 live_loop :harmony do
+  shader :iSpaceLights, 0.01
   shader :iSpaceMotion, 0.4
   i_hollow (ring :Fs4, :Cs3).tick amp: 2.0
   sleep 4

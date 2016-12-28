@@ -114,4 +114,4 @@ def note_slice
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(32)
 end
 
-#puts note_slice
+smp note_slice

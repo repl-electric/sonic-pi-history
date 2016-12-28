@@ -8,6 +8,6 @@ puts @slices.values.flatten.count
 
 live_loop :doit do
   tick
-  smp @slices["Fs4/8"].look, amp: 10
+  smp @slices["Gs4/8"].look, amp: 10
   sleep 1/8.0
 end

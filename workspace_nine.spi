@@ -57,7 +57,7 @@ module SampleBeats
       @@cache[k] = r
     end
     @@cache[k]
-   r
+    r
   end
   def self.flush
     @@cache = {}

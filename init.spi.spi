@@ -1,3 +1,5 @@
+live_loop :tes do
+
 ["instruments",
   "shaderview",
   "experiments",
@@ -7,6 +9,6 @@ echo f
 _=nil
 
 
-
-
+sleep 3
+end
 puts :TEST

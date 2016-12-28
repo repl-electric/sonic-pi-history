@@ -138,7 +138,7 @@ live_loop :synths, sync: :doit do
   with_transpose -12*2 do
     synth :dark_sea_horn, note: s.look[0], cutoff: 40, decay: 1, amp: 1.0
   end
-  synth :dark_sea_horn, note: s.look[0], cutoff: 60, decay: 1, amp: 2.5
+  synth :dark_sea_horn, note: s.look[1], cutoff: 60, decay: 1, amp: 2.5
   sleep 4
 end
 

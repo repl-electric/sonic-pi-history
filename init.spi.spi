@@ -5,6 +5,8 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkeys.rb
 
 _=nil
 def note_slices(note, m)
+  puts notes
+  puts m
   NoteSlices.find(note: note, max: m).take(16)
 end
 
@@ -15,8 +17,7 @@ puts @slices.values.flatten.count
 live_loop :doit do
   tick
   puts "a"
-  smp (ring
-       @slices["Fs4/8"].look,
+  smp  ring(       @slices["Fs4/8"].look,
        @slices["D4/8"].look
        @slices["E4/8"].look,
        ).look, amp: 10

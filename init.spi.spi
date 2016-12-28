@@ -102,6 +102,8 @@ end
 
 _=nil
 def note_slicez(note, m)
+  note = "C"
+  m = 0.2
   NoteSlices.find(note: note, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(16)
 end
 

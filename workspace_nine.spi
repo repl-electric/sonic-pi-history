@@ -113,9 +113,9 @@ with_fx :reverb, room: 0.4 do
     with_fx :lpf, cutoff:  line(80, 90, steps: 64).look do
       with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, sample_rate: 6000 do
         smp  knit(             @slices["Fs4/4"].look, 16,
-            # @slices["D4/8"].look, 8,
-             _,8
-        
+             # @slices["D4/8"].look, 8,
+             _,8,
+             
              @slices["E4/4"].look,8).look, amp: 2, pan:  ring(0, 0, 1, 1).look
         sleep 1/8.0
       end

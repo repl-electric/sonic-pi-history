@@ -1,9 +1,8 @@
-["instruments","shaderview","experiments", "log", "samples", "dsp", "monkey"].each
-{|f|
+["instruments","shaderview","experiments", "log", "samples", "dsp", "monkey"].each|f|
   s = "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"
   echo s
   load s
-};
+}
 _=nil
 
 

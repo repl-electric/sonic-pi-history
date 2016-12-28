@@ -102,8 +102,8 @@ def note_slices(note, m)
   NoteSlices.find(note: note, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(16)
 end
 
+ note_slices("Gs2",1/4.0)
 
-@slices = {"Gs2/4" => note_slices("Gs2",1/4.0)}
 
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count

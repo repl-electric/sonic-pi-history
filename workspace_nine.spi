@@ -107,10 +107,12 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-live_loop :doit do
-  tick
-  smp (knit @slices["Fs4/4"].look, 16,
-       @slices["D4/4"].look, 8,
-       @slices["E4/4"].look,8).look, amp: 10
-  sleep 1/8.0
-end
+with_fx :reverb do
+  live_loop :doit do
+    tick
+    smp (knit @slices["Fs4/4"].look, 16,
+         @slices["D4/4"].look, 8,
+         @slices["E4/4"].look,8).look, amp: 10
+    sleep 1/8.0
+  end
+  end

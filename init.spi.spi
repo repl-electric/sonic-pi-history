@@ -108,9 +108,7 @@ module NoteSlices
 end
 
 _=nil
-def note_slice
-  n = "C5"
-  m = 0.2
+def note_slice(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(32)
 end
 

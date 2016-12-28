@@ -79,7 +79,7 @@ module NoteSlices
       root
     end
     k = "noteslices[note#{root}octave#{octave}max#{max}min#{min}]"
-    if !@@cache.has_key?(k)
+#    if !@@cache.has_key?(k)
       query = []
       query << "note='#{root}'" if root
       query << "octave=#{octave}" if octave
@@ -88,17 +88,15 @@ module NoteSlices
       query << "path REGEXP '#{pat}'" if pat
       query = query.flatten
       r = Dsp.query("select * from notes_fine64 where #{query.join(" AND ")}")
-      @@cache[k] = r
-    end
-    @@cache[k]
+   #   @@cache[k] = r
+
+  #end
+ #   @@cache[k]
   end
   def self.flush
     @@cache = {}
   end
 end
-
-#NoteSlices.find(note: "Fs4").take(16)
-
 
 _=nil
 def note_slices(note, m)

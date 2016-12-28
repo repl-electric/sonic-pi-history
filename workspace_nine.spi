@@ -123,7 +123,7 @@ live_loop :drums, sync: :doit do
 end
 
 live_loop :synths, sync: :doit do
-  synth :gpa, note:  chord(:FS3, :m),  chord(:D3, :M)
+  synth :gpa, note:  ring( chord(:FS3, :m),  chord(:D3, :M))
   sleep 2
 end
 

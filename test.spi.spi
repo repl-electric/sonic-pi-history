@@ -1,9 +1,5 @@
-["samples", "dsp", "monkey"].each
-{|f|
-  load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"
-};
+["samples", "dsp", "monkey"].each{|f|  load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"};
 _=nil
-
 
 
 puts Mountain[/subkick/,0]

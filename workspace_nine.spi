@@ -129,10 +129,16 @@ end
 
 live_loop :synths, sync: :doit do
   tick
+  s =  (ring
+        (chord :FS3, :m),
+        (chord :D3, :M),
+        (chord :E3, :M))
   synth :gpa, note: (ring
                      (chord :FS3, :m),
                      (chord :D3, :M),
                      (chord :E3, :M)).look, decay: 4
+  
+  synth :dark_sea_horn, note s.look[0], cutoff: 40, decay: 1
   sleep 4
 end
 

@@ -110,7 +110,7 @@ puts @slices.values.flatten.count
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    with_fx :lpf, cutoff: (line 100, 110, steps: 64).look do
+    with_fx :lpf, cutoff: (line 80, 110, steps: 64).look do
       with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, sample_rate: 6000 do
         smp (knit
              @slices["Fs4/4"].look, 16,

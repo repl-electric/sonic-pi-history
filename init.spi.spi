@@ -107,4 +107,4 @@ def note_slice(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(16)
 end
 
-puts note_slice"Gs2",1/4.0)
+puts note_slice("Gs2",1/4.0)

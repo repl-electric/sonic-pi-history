@@ -133,7 +133,7 @@ live_loop :synths, sync: :doit do
         chord(:E3, :sus4),
         chord(:E3, :M))
   synth :gpa, note: s.look, decay: 4
-  synth :dark_sea_horn, note: s.look[0], cutoff: 45, decay: 1
+  synth :dark_sea_horn, note: s.look[0], cutoff: 50, decay: 1
   sleep 4
 end
 

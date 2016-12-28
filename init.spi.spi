@@ -108,11 +108,11 @@ module NoteSlices
 end
 
 _=nil
-def note_slice(n, m)
+def note_slices(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(16)
 end
 
- note_slices("Gs2",1/4.0)
+puts note_slices("Gs2",1/4.0)
 
 live_loop :doit do
   tick

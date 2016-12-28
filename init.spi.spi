@@ -1,16 +1,1 @@
-live_loop :tes do
-
-  ["instruments",
-    "shaderview",
-    "experiments",
-    "log", "samples", "dsp", "monkey"].each|f|
-    echo f
-}
-_=nil
-
 require "/Users/josephwilk/Workspace/repl_electric/live-coding-space/lib/samples"
-
-
-sleep 3
-end
-puts :TEST

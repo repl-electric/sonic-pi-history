@@ -148,7 +148,7 @@ live_loop :synths, sync: :doit do
   s = (ring
        (chord :FS3, :m),
        (chord :Cs3, :m),
-       (chord :E3, :sus4),
+       (chord :D3, :sus4),
        (chord :E3, :M))
   synth :gpa, note: s.look, decay: 4
   with_transpose -12*1 do

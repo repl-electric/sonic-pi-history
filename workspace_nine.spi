@@ -112,7 +112,7 @@ with_fx :reverb, room: 0.4 do
     tick
     smp  knit(         @slices["Fs4/4"].look, 16,
          @slices["D4/8"].look, 8,
-         @slices["E4/4"].look,8).look, amp: 2
+         @slices["E4/4"].look,8).look, amp: 2, pan:  ring(0, 1).look
     sleep 1/8.0
   end
 end

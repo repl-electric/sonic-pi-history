@@ -4,4 +4,4 @@ def note_slices(note, m)
 end
 
 
-note_slices("Fs4",1/8)
+puts note_slices("Fs4",1/8)

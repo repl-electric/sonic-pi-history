@@ -111,7 +111,7 @@ _=nil
 def note_slice
   n = "C5"
   m = 0.2
-  NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(2)
+  NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(32)
 end
 
 puts note_slice

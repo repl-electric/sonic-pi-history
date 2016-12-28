@@ -110,11 +110,12 @@ puts @slices.values.flatten.count
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    with_fx :lpf, cutoff:  line(80, 90, steps: 64).look do
-      with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, sample_rate: 6000 do
-        smp  knit(             @slices["Fs4/4"].look, 16,
+    with_fx :lpf, cutoff: (line 80, 90, steps: 64).look do
+      with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, sample_rate: 6000 do
+        smp (knit
+             @slices["Fs4/4"].look, 16,
              @slices["D4/8"].look, 8,
-             @slices["E4/4"].look,8).look, amp: 2, pan:  ring(0, 0, 1, 1).look
+             @slices["E4/4"].look,8).look, amp: 2, pan: (ring 0, 0, 1, 1).look
         sleep 1/8.0
       end
     end
@@ -141,13 +142,14 @@ end
 
 live_loop :synths, sync: :doit do
   tick
-  s =  ring(        chord(:FS3, :m),
-        chord(:D3, :M),
-        chord(:E3, :sus4),
-        chord(:E3, :M))
+  s = (ring
+       (chord :FS3, :m),
+       (chord :D3, :M),
+       (chord :E3, :sus4),
+       (chord :E3, :M))
   synth :gpa, note: s.look, decay: 4
   with_transpose -12*1 do
-    synth :dark_sea_horn, note: s.look[0], cutoff: 55, decay: 2, amp: 2.5
+    synth :dark_sea_horn, note: s.look[0], cutoff: 55, decay: 4, amp: 2.5
   end
   synth :dark_sea_horn, note: s.look[1], cutoff: 60, decay: 1, amp: 2.5
   sleep 4

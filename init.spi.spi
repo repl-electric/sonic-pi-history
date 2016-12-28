@@ -10,7 +10,7 @@ live_loop :doit do
   tick
   smp (ring
        @slices["Fs4/4"].look,
-       @slices["D4/4"].look
+       @slices["D4/8"].look
        @slices["E4/4"].look,
        ).look, amp: 10
   sleep 1/8.0

@@ -122,7 +122,7 @@ with_fx :reverb, room: 0.4 do
 end
 
 live_loop :drums, sync: :doit do
-  smp Mountain[/subkick/,0], amp: 2
+  smp Mountain[/subkick/,0], amp: 2, rpitch: :Fs2
   sleep 1/1.0
 end
 

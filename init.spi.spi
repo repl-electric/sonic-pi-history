@@ -67,6 +67,7 @@ module NoteSlices
     Dsp.query("select * from notes_fine where #{query}")
   end
   def self.find(root: nil, octave: nil, min: nil, max: nil, note: nil, pat: nil)
+    puts "A"
     @@cache = {}
     octave = if !note.nil?
       note[-1]

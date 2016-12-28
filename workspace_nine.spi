@@ -116,3 +116,8 @@ with_fx :reverb, room: 0.4 do
     sleep 1/8.0
   end
 end
+
+live_loop :drums, sync :doit do
+  smp Mountain[/subkick/,0]
+  sleep 1
+end

@@ -120,5 +120,5 @@ end
 
 live_loop :drums, sync: :doit do
   smp Mountain[/subkick/,0], amp: 2
-  sleep 2
+  sleep 1/4.0
 end

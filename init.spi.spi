@@ -1,4 +1,4 @@
-y_=nil
+_=nil
 def note_slices(note, m)
   NoteSlices.find(note: note, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(32)
 end
@@ -8,8 +8,7 @@ puts @slices.values.flatten.count
 
 live_loop :doit do
   tick
-  smp (ring
-       @slices["Fs4/8"].look,
+  smp  ring(       @slices["Fs4/8"].look,
        @slices["D4/8"].look
        @slices["E4/8"].look,
        ).look, amp: 10

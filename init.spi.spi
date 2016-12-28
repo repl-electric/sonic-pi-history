@@ -15,5 +15,5 @@ live_loop :doit do
        @slices["D4/8"].look
        @slices["E4/8"].look,
        ).look, amp: 10
-  sleep 1/12.0
+  sleep 1/8.0
 end

@@ -99,7 +99,8 @@ module NoteSlices
    #   @@cache[k] = r
 
   #end
- #   @@cache[k]
+    #   @@cache[k]
+    r
   end
   def self.flush
     @@cache = {}

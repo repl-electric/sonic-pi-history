@@ -2,7 +2,6 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb"
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkeys.rb"
 
-
 _=nil
 def note_slices(note, m)
   puts notes

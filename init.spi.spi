@@ -1,5 +1,3 @@
-# Welcome to Sonic Pi v2.11
-
 require "mysql2"
 module Dsp
   def self.query(sql)
@@ -57,7 +55,7 @@ module SampleBeats
       @@cache[k] = r
     end
     @@cache[k]
-    r
+   r
   end
   def self.flush
     @@cache = {}

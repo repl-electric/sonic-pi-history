@@ -1,3 +1,13 @@
-require "/Users/josephwilk/Workspace/repl_electric/live-coding-space/lib/samples"
+_=nil
+def note_slices(n, m)
+  NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(16)
+end
 
-sample Mountain[/a/]
+@slices ||= {"Fs4/8" => note_slices("Fs4",1/8.0)}
+
+live_loop :doit do
+  tick
+  puts "TICK"
+  sample @slices["Fs4/8"].map{|p|p[:path]}.look, amp: 10
+  sleep 2
+end

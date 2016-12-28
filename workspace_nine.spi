@@ -145,7 +145,7 @@ end
 live_loop :synths, sync: :doit do
   tick
   s =  ring(        chord(:FS3, :m),
-        chord(:Cs3, :m),
+        chord(:Cs4, :m),
         chord(:A3, :sus4),
         chord(:E4, :M))
   synth :gpa, note: s.look, decay: 4

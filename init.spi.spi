@@ -97,7 +97,7 @@ module NoteSlices
   end
 end
 
-NoteSlices.find(note: note).take(16)
+NoteSlices.find(note: "Fs4").take(16)
 
 
 _=nil

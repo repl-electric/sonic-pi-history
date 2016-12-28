@@ -1,3 +1,3 @@
 _=nil
-  NoteSlices.find(note: "F#2", max: 0.4, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(16)
+  NoteSlices.find(note: "F#2", max: 0.4, pat: "sop|alto|bass")
 

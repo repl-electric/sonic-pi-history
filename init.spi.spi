@@ -1,6 +1,6 @@
 _=nil
 def note_slices(note, m)
-  NoteSlices.find(note: note, max: m, pat: "sop|alto|bass").take(16)
+  NoteSlices.find(note: note, max: m).take(16)
 end
 
 

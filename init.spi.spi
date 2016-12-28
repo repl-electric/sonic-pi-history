@@ -2,8 +2,9 @@ require "mysql2"
 module Dsp
   def self.query(sql)
     puts sql
-    SonicPi::Core::RingVector.new(Dsp.connection.query(sql,:symbolize_keys => true).to_a)
-
+a =     SonicPi::Core::RingVector.new(Dsp.connection.query(sql,:symbolize_keys => true).to_a)
+    puts "ALIVE"
+    a
   end
   def self.connection()
     @@connection ||= Mysql2::Client.new(:host => "localhost", :username => "root", :database => "repl_electric_samples", :reconnect => true)

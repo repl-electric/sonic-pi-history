@@ -110,7 +110,8 @@ puts @slices.values.flatten.count
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    smp  knit(         @slices["Fs4/4"].look, 16,
+    smp (knit
+         @slices["Fs4/4"].look, 16,
          @slices["D4/8"].look, 8,
          @slices["E4/4"].look,8).look, amp: 2
     sleep 1/8.0
@@ -119,5 +120,5 @@ end
 
 live_loop :drums, sync: :doit do
   smp Mountain[/subkick/,0], amp: 2
-  sleep 1/2.9
+  sleep 1/2.0
 end

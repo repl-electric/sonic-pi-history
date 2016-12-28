@@ -122,3 +122,8 @@ live_loop :drums, sync: :doit do
   smp Mountain[/subkick/,0], amp: 2
   sleep 1/1.0
 end
+
+live_loop :synths, sync: :doit do
+  synth :gpa, note: (chord :FS3, :m)
+end
+

@@ -1,1 +1,7 @@
-sample Mountain[/subkick/, 0]
+
+live_loop :name do
+  tick
+
+  sample Mountain[/subkick/, 0]
+  sleep 1
+end

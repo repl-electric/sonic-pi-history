@@ -1,3 +1,10 @@
+["samples", "dsp", "monkey"].each
+{|f|
+  load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"
+};
+_=nil
+
+
 _=nil
 def note_slices(note, m)
   NoteSlices.find(note: note, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(32)

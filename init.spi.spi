@@ -112,7 +112,7 @@ def note_slices(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(16)
 end
 
-@slices ||= {"Fs4/8" note_slices("Fs4",1/8.0)}
+@slices ||= {"Fs4/8" => note_slices("Fs4",1/8.0)}
 
 live_loop :doit do
   tick

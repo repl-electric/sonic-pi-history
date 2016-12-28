@@ -110,14 +110,15 @@ puts @slices.values.flatten.count
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    with_fx :lpf, cutoff:  line(80, 90, steps: 64).look do
-      # with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, sample_rate: 6000 do
-      smp  knit(           #@slices["Fs4/4"].look, 16,
+    with_fx :lpf, cutoff: (line 80, 90, steps: 64).look do
+      # with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, sample_rate: 6000 do
+      smp (knit
+           #@slices["Fs4/4"].look, 16,
            #@slices["D4/8"].look, 1,
            #_,8,
            
            #@slices["E4/4"].look,1
-           ).look, amp: 1, pan:  ring(0, 0, 1, 1).look
+           ).look, amp: 1, pan: (ring 0, 0, 1, 1).look
       sleep 1/4.0
       #end
     end
@@ -133,10 +134,10 @@ live_loop :skitters, sync: :doit do
   tick
   if spread(3,8).look
     smp @slices["Fs3/8"].look
-    smp Frag[/hat/,[1,2]].look, amp: 0.1, rpitch:  ring(0, 12).look
+    smp Frag[/hat/,[1,2]].look, amp: 0.1, rpitch: (ring 0, 12).look
   end
   if spread(7,11).look
-    smp Frag[/hat/,[0,1]].look, amp: 0.1,  ring(0, 12).look
+    smp Frag[/hat/,[0,1]].look, amp: 0.1, rpitch: (ring 0, 12).look
   end
   
   sleep 0.25
@@ -144,10 +145,11 @@ end
 
 live_loop :synths, sync: :doit do
   tick
-  s =  ring(        chord(:FS3, :m),
-        chord(:Cs3, :m),
-        chord(:D3, :sus4),
-        chord(:E3, :M))
+  s = (ring
+       (chord :FS3, :m),
+       (chord :Cs3, :m),
+       (chord :D3, :sus4),
+       (chord :E3, :M))
   synth :gpa, note: s.look, decay: 4
   with_transpose -12*1 do
     synth :dark_sea_horn, note: s.look[0], cutoff: 55, decay: 4, amp: 1.5

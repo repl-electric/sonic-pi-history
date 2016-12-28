@@ -109,8 +109,8 @@ puts @slices.values.flatten.count
 
 live_loop :doit do
   tick
-  smp (ring @slices["Fs4/4"].look,
-       @slices["D4/4"].look,
-       @slices["E4/4"].look).look, amp: 10
+  smp  knit(@slices["Fs4/4"].look, 16
+       @slices["D4/4"].look, 8
+       @slices["E4/4"].look,8).look, amp: 10
   sleep 1/8.0
 end

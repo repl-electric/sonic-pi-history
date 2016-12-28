@@ -1,4 +1,4 @@
-["samples", "dsp", "monkey"].each
+["samples"].each
 {|f|
   load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"
 };

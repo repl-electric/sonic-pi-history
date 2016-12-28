@@ -1,3 +1,20 @@
+
+
+["instruments","shaderview","experiments", "log", "samples", "dsp", "monkey"].each
+{|f|
+  s = "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/#{f}.rb"
+  echo s
+  require s
+};
+_=nil
+
+
+
+
+
+
+
+
 _=nil
 def note_slices(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").take(16)

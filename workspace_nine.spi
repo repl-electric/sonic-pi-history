@@ -185,6 +185,6 @@ live_loop :synths, sync: :doit do
 end
 
 live_loop :perc do
-  synth :pluck, note: :es4, decay: 0.01, amp: 0.2
+  synth :pluck, note: :e4, decay: 0.01, amp: 0.2
   sleep 0.25
 end

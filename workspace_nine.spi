@@ -196,6 +196,6 @@ live_loop :perc do
            _, _,:cs4,:a3,
            )
   synth :plucked, note: score.look, decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.05
-  smp(@slices["Fs4/4"].look, amp: 7) if score.look
+  smp(@slices["Fs4/4"][0..2].look, amp: 7) if score.look
   sleep 0.125
 end

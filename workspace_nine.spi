@@ -189,7 +189,7 @@ live_loop :perc do
   score =  ring(           _, :Fs3, _,_,  _, _,:b3,:a3,
            _, :Fs3, _,_,  _, _,:b3,:a3,
            _, :Fs3, _,_,  _, _,:b3,:a3,
-           _, :Fs3, _,_,  :b3, _,:cs4,:a3,
+           _, :Fs3, _,_,  :a3, _,:cs4,:a3,
            )
   synth :plucked, note: score.look, decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.05
   smp(@slices["Fs4/4"][18..20].look, amp: 2) if score.look

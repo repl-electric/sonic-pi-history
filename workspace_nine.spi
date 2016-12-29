@@ -164,7 +164,7 @@ live_loop :synths, sync: :doit do
         chord(:E3, :M),2,
        
         chord(:Gs3, :m),1,
-       chord(:Cs4, :m),1, 
+        chord(:Cs4, :m),1,
        )
   )
   puts note_inspect(s.look)

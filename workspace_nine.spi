@@ -183,7 +183,7 @@ live_loop :synths, sync: :doit do
     synth :dsaw, note: bass.look, cutoff: 50, decay: 1, amp: 1.5, attack: 0.2
     synth :dark_sea_horn, note: s.look[0], cutoff: 100, decay: 1, amp: 1.5
   end
-  synth :dark_sea_horn, note: s.look[1], cutoff: 60, decay: 1, amp: 1.5
+  synth :dark_sea_horn, note: s.look[1], cutoff: 100, decay: 1, amp: 1.5
   sleep 2
 end
 
@@ -197,7 +197,7 @@ live_loop :perc do
                          _, :Fs3, _,_,
                          _, _,:b3,:a3,
                          _, :Fs3, _,_,
-                         _, _,:cs4,:a3,                         
+                         _, _,:cs4,:a3,
                          ).look, decay: (ring 0.25,0.5).look, amp: 0.7, attack: 0.05
   sleep 0.125
 end

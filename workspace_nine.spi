@@ -145,12 +145,12 @@ end
 
 live_loop :synths, sync: :doit do
   tick
-  s =  ring(        chord(:FS3, :m),
-        chord(:D4, :M),
-        chord(:E4, :sus4),
-        chord(:E4, :M),
-       chord_degree(5,:Cs4,:minor),
-        chord(:Cs4, :m))
+  s =  knit(        chord(:FS3, :m),2
+        chord(:D4, :M),2
+        chord(:E4, :sus4),1
+        chord(:E4, :M),1
+       chord_degree(5,:Cs4,:minor),1
+        chord(:Cs4, :m),2)
   puts note_inspect(s.look)
   synth :beep, note: s.look, decay: 4, amp: 5
   with_transpose -12*1 do

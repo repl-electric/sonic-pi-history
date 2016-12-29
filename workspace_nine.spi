@@ -179,7 +179,7 @@ live_loop :synths, sync: :doit do
             (chord :Cs3, :m)[0],2
             )
     synth :dsaw, note: bass.look, cutoff: 50, decay: 1, amp: 1.5, attack: 0.2
-    synth :dark_sea_horn, note: bass.look, cutoff: 60, decay: 1, amp: 1.5
+   # synth :dark_sea_horn, note: bass.look, cutoff: 60, decay: 1, amp: 1.5
   end
   #synth :dark_sea_horn, note: s.look[1], cutoff: 60, decay: 1, amp: 1.5
   sleep 2

@@ -165,7 +165,7 @@ live_loop :synths, sync: :doit do
        
         chord(:Gs3, :m),1,
         chord(:Cs4, :m),1,
-       )
+       
   )
   puts note_inspect(s.look)
   synth :gpa, note: s.look, decay:  ring(1.6).look, amp: 5, attack:  ring(0.0, 0.1).look

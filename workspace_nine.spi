@@ -214,7 +214,7 @@ with_fx :wobble, phase: 64 do
                              :fs2,15, :cs4,1,
                              ).look, decay: (ring 0.125,0.125).look, amp: 0.7, attack: 0.0001
     end
-    with_transpose (ring 12,0).look do
+    with_transpose (ring 12,0,0).look do
       synth :plucked, note: score.look, decay: (ring 0.25,0.5).look, amp: 0.7, attack: 0.05
     end
     smp(@slices["Fs2/4"][0..40].look, amp: 8) if score.look

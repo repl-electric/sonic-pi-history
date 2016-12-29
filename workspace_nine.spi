@@ -128,7 +128,7 @@ end
 live_loop :drums, sync: :doit do
   tick
   if  spread(1,4).look
-    smp Mountain[/subkick/,1], amp: 1.2#, rpitch: :Fs0
+    smp Mountain[/subkick/,2], amp: 1.2#, rpitch: :Fs0
     sleep 1/1.0/2.0
     smp Mountain[/subkick/,0], amp: 0.8#, rpitch: :Fs0
     sleep 1/1.0/2.0

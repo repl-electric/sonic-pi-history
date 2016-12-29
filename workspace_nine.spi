@@ -197,7 +197,7 @@ live_loop :perc do
            _, :Fs3, _,_,  _, _,:b3,:a3,
            :fs3, :fs3, _,_,  :cs4, _,:cs4,:a3,
            )
-  with_transpose -2 do
+  with_transpose -5 do
     synth :plucked, note: score.look(offset:0), decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.005
   end
   

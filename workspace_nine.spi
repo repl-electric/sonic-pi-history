@@ -150,7 +150,7 @@ live_loop :synths, sync: :doit do
         chord(:D3, :add9),2,
         chord(:E3, :sus4),1,
         chord(:E3, :M),1,
-       chord_degree(5,:E3,:major),1,
+       chord_degree(5,:E2,:major),1,
         chord(:Cs3, :m),2)
   puts note_inspect(s.look)
   synth :beep, note: s.look, decay:  ring(1.6).look, amp: 5, attack:  ring(0.0, 0.1).look

@@ -187,7 +187,7 @@ end
 
 live_loop :perc do
   tick
-  synth :plucked, note: (ring _, :Fs3, _,_
+  synth :plucked, note: (ring _, :Fs3, _,_,
                          _,_,_,_,
                          
                          ).look, decay: (ring 0.25,0.5).look, amp: 0.3, attack: 0.05

@@ -169,7 +169,6 @@ live_loop :synths, sync: :doit do
     bass = (knit
             (chord :FS3, :m)[0],1,
             (chord :FS3, :m)[1],1,
-            
             (chord :D3, :M)[0],2,
             (chord :D3, :add9)[0],2,
             (chord :E3, :sus4)[1],1,

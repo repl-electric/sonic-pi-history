@@ -111,13 +111,14 @@ end
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    with_fx :lpf, cutoff:  line(90, 100, steps: 64).look, mix: 1 do
-      with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, mix: 1, sample_rate: 6000 do
+    with_fx :lpf, cutoff: (line 90, 100, steps: 64).look, mix: 1 do
+      with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, mix: 1, sample_rate: 6000 do
         smp Dust[/LI_/,6..8].look
-        smp  knit(             @slices["Fs4/4"].look, 16,
+        smp (knit
+             @slices["Fs4/4"].look, 16,
              @slices["D4/8"].look, 1,
              @slices["E4/4"].look,1
-             ).look, amp: 1, pan:  ring(0.25, 0.25, -0.25, -0.25).look
+             ).look, amp: 1, pan: (ring 0.25, 0.25, -0.25, -0.25).look
         sleep 1/4.0
       end
     end
@@ -126,10 +127,10 @@ end
 
 live_loop :drums, sync: :doit do
   tick
-  if  spread(1,4).look
+  if (spread 1,4).look
     smp Mountain[/subkick/,1], amp: 1.2#, rpitch: :Fs0
     sleep 1/1.0/2.0
-    smp Mountain[/subkick/,0], amp: 0.8#, rpitch: :Fs0
+    smp Mountain[/subkick/,1], amp: 0.8#, rpitch: :Fs0
     sleep 1/1.0/2.0
     smp Mountain[/pebble/,1], amp: 0.5#, rpitch: :Fs0
     sleep 1/1.0/2.0
@@ -144,14 +145,14 @@ live_loop :drums, sync: :doit do
 end
 
 live_loop :skitters, sync: :doit do
-  with_fx :lpf, cutoff:  line(90,120,steps: 64).look do
+  with_fx :lpf, cutoff: (line 90,120,steps: 64).look do
     tick
     if spread(3,8).look
       smp @slices["Fs3/8"].look, amp: 1
-      smp Frag[/hat/,[1,2]].look, amp: 0.05, rpitch:  ring(12, 24, 12).look
+      smp Frag[/hat/,[1,2]].look, amp: 0.05, rpitch: (ring 12, 24, 12).look
     end
     if spread(7,11).look
-      smp Frag[/hat/,[0,1]].look, amp: 0.05, rpitch:  ring(0, 12, 12).look
+      smp Frag[/hat/,[0,1]].look, amp: 0.05, rpitch: (ring 0, 12, 12).look
     end
     sleep 0.25
   end
@@ -159,26 +160,28 @@ end
 
 live_loop :synths, sync: :doit do
   tick
-  s =  knit(        chord(:Fs3, :m),2,
-        chord(:D3, :M),2,
-        chord(:D3, :add9),2,
-        chord(:E3, :sus4),1,
-        chord(:E3, :add9),2,
-        chord(:D3, :M),1,
-        chord(:Cs3, :m7),1,
+  s = (knit
+       (chord :Fs3, :m),2,
+       (chord :D3, :M),2,
+       (chord :D3, :add9),2,
+       (chord :E3, :sus4),1,
+       (chord :E3, :add9),2,
+       (chord :D3, :M),1,
+       (chord :Cs3, :m7),1,
        )
   puts note_inspect(s.look)
-  synth :beep, note: s.look, decay:  ring(1.6).look, amp: 1, attack:  ring(0.0, 0.1).look
+  synth :beep, note: s.look, decay: (ring 1.6).look, amp: 1, attack: (ring 0.0, 0.1).look
   with_transpose -12*2 do
-    bass =  knit(             chord(:FS3, :m)[0],1,
-             chord(:FS3, :m)[1],1,
-             chord(:D3, :M)[0],2,
-             chord(:D3, :add9)[0],2,
-             chord(:E3, :sus4)[1],1,
-             chord(:E3, :M)[0],1,
-             chord(:Cs3, :m)[2],1,
-             chord(:Cs3, :m)[1],1,
-             chord(:Cs3, :m)[0],2
+    bass = (knit
+            (chord :FS3, :m)[0],1,
+            (chord :FS3, :m)[1],1,
+            (chord :D3, :M)[0],2,
+            (chord :D3, :add9)[0],2,
+            (chord :E3, :sus4)[1],1,
+            (chord :E3, :M)[0],1,
+            (chord :Cs3, :m)[2],1,
+            (chord :Cs3, :m)[1],1,
+            (chord :Cs3, :m)[0],2
             )
     synth :dsaw, note: bass.look, cutoff: 50, decay: 1, amp: 1.5, attack: 0.2
     synth :dark_sea_horn, note: :Fs1, cutoff: 100, decay: 2, amp: 1.5
@@ -189,7 +192,8 @@ end
 with_fx :wobble, phase: 64 do
   live_loop :perc do
     tick
-    score =  ring(             _, :Fs3, _,_,  _, _,:b3,:a3,
+    score = (ring
+             _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :Fs3, _,_,  :b3, _,:cs4,:a3,
@@ -200,13 +204,14 @@ with_fx :wobble, phase: 64 do
              :fs3, :fs3, _,_,  :cs4, _,:cs4,:a3,
              )
     with_transpose -12 do
-      synth :plucked, note:  knit(                             :fs2,15, :a3,1,
+      synth :plucked, note: (knit
+                             :fs2,15, :a3,1,
                              :fs2,15, :a3,1,
                              :fs2,15, :b3,1,
                              :fs2,15, :cs4,1,
-                             ).look, decay:  ring(0.125,0.125).look, amp: 0.7, attack: 0.0001
+                             ).look, decay: (ring 0.125,0.125).look, amp: 0.7, attack: 0.0001
     end
-    synth :plucked, note: score.look, decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.05
+    synth :plucked, note: score.look, decay: (ring 0.25,0.5).look, amp: 0.7, attack: 0.05
     smp(@slices["Fs4/4"][23..25].look, amp: 1) if score.look
     sleep 0.125
   end

@@ -192,6 +192,11 @@ live_loop :perc do
   synth :plucked, note: (ring
                          _, :Fs3, _,_,
                          _, _,:cs4,:a3,
+                         _, :Fs3, _,_,
+                         _, _,:cs4,:a3,
+                         _, :Fs3, _,_,
+                         _, _,:cs4,:a3,
+                         
                          
                          _, :Fs3, _,_,
                          _, _,:b3,:a3,

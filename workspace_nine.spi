@@ -114,7 +114,7 @@ with_fx :reverb, room: 0.4 do
     with_fx :lpf, cutoff:  line(90, 100, steps: 64).look, mix: 1 do
       with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, mix: 1, sample_rate: 6000 do
         smp Dust[/LI_/,6..8].look
-        smp  knit(             @slices["Fs4/4"].look, 15,
+        smp  knit(             @slices["Fs4/4"].look, 30,
              @slices["D4/8"].look, 1,
              @slices["E4/4"].look,1
              ).look, amp: 1, pan:  ring(0.25, 0.25, -0.25, -0.25).look

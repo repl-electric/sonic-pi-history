@@ -176,7 +176,7 @@ live_loop :synths, sync: :doit do
              chord(:D3, :add9)[0],2,
              chord(:E3, :sus4)[1],1,
              chord(:E3, :M)[0],1,
-             chord(:Cs3, :m)[2],1,
+             chord(:Cs4, :m)[2],1,
              chord(:Cs3, :m)[1],1,
              chord(:Cs3, :m)[0],2
             )

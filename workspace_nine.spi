@@ -116,7 +116,7 @@ with_fx :reverb, room: 0.4 do
         smp Dust[/LI_/,6..8].look
         smp (knit
              @slices["Fs4/4"].look, 16,
-             @slices["D4/8"].look, 1,
+             @slices["D4/8"].look, 16,
              @slices["E4/4"].look,1
              ).look, amp: 1, pan: (ring 0.25, 0.25, -0.25, -0.25).look
         sleep 1/4.0

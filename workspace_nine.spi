@@ -127,7 +127,7 @@ end
 live_loop :drums, sync: :doit do
   tick
   if true
-    smp Frag[/kick/,3], amp: 20.2, rpitch: :Fs2
+    smp Frag[/kick/,3], amp: 20.2, rpitch: 12
     sleep 1/1.0/2.0
     smp Mountain[/subkick/,1], amp: 0.8#, rpitch: :Fs0
     sleep 1/1.0/2.0

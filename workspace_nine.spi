@@ -149,7 +149,7 @@ live_loop :synths, sync: :doit do
         chord(:D4, :M),
         chord(:E4, :sus4),
         chord(:E4, :M),
-        chord(:Cs4, :m),
+        chord(:Cs4, :m6),
        chord_degree(5,:Cs4,:minor),
         chord(:Cs4, :m))
   synth :gpa, note: s.look, decay: 4, amp: 5

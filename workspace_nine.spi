@@ -146,8 +146,8 @@ end
 live_loop :synths, sync: :doit do
   tick
   s =  knit(        chord(:FS3, :m),2,
-        chord(:D3, :add9),1,
         chord(:D3, :m),1,
+        chord(:D3, :add9),1,
         chord(:E3, :sus4),1,
         chord(:E3, :M),1,
        chord_degree(5,:Cs3,:minor),1,

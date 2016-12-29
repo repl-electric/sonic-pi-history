@@ -111,15 +111,14 @@ end
 with_fx :reverb, room: 0.4 do
   live_loop :doit do
     tick
-    with_fx :lpf, cutoff: (line 80, 90, steps: 64).look do
-      # with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, sample_rate: 6000 do
-      smp (knit
-           #@slices["Fs4/4"].look, 16,
+    with_fx :lpf, cutoff:  line(80, 90, steps: 64).look do
+      # with_fx :bitcrusher, bits:  line(10, 32, steps:1).look, sample_rate: 6000 do
+      smp  knit(           #@slices["Fs4/4"].look, 16,
            #@slices["D4/8"].look, 1,
            #_,8,
            
            #@slices["E4/4"].look,1
-           ).look, amp: 1, pan: (ring 0, 0, 1, 1).look
+           ).look, amp: 1, pan:  ring(0, 0, 1, 1).look
       sleep 1/4.0
       #end
     end
@@ -128,7 +127,7 @@ end
 
 live_loop :drums, sync: :doit do
   tick
-  if (spread 1,4).look
+  if  spread(1,4).look
     smp Mountain[/subkick/,2], amp: 1.2#, rpitch: :Fs0
     sleep 1/1.0/2.0
     smp Mountain[/subkick/,0], amp: 0.8#, rpitch: :Fs0
@@ -146,36 +145,34 @@ live_loop :skitters, sync: :doit do
   tick
   if spread(3,8).look
     smp @slices["Fs3/8"].look, amp: 4
-    smp Frag[/hat/,[1,2]].look, amp: 0.05, rpitch: (ring 12, 24, 12).look
+    smp Frag[/hat/,[1,2]].look, amp: 0.05, rpitch:  ring(12, 24, 12).look
   end
   if spread(7,11).look
-    smp Frag[/hat/,[0,1]].look, amp: 0.05, rpitch: (ring 0, 12, 12).look
+    smp Frag[/hat/,[0,1]].look, amp: 0.05, rpitch:  ring(0, 12, 12).look
   end
   sleep 0.25
 end
 
 live_loop :synths, sync: :doit do
   tick
-  s = (knit
-       (chord :FS3, :m),2,
-       (chord :D3, :M),2,
-       (chord :D3, :add9),2,
-       (chord :E3, :sus4),1,
-       (chord :E3, :M),1,
-       (chord :Cs3, :m),4)
+  s =  knit(        chord(:FS3, :m),2,
+        chord(:D3, :M),2,
+        chord(:D3, :add9),2,
+        chord(:E3, :sus4),1,
+        chord(:E3, :M),1,
+        chord(:Cs3, :m),4)
   puts note_inspect(s.look)
-  synth :gpa, note: s.look, decay: (ring 1.6).look, amp: 5, attack: (ring 0.0, 0.1).look
+  synth :gpa, note: s.look, decay:  ring(1.6).look, amp: 5, attack:  ring(0.0, 0.1).look
   with_transpose -12*1 do
-    bass = (knit
-            (chord :FS3, :m)[0],1,
-            (chord :FS3, :m)[1],1,
-            (chord :D3, :M)[0],2,
-            (chord :D3, :add9)[0],2,
-            (chord :E3, :sus4)[1],1,
-            (chord :E3, :M)[0],1,
-            (chord :Cs3, :m)[2],1,
-            (chord :Cs3, :m)[1],1,
-            (chord :Cs3, :m)[0],2
+    bass =  knit(             chord(:FS3, :m)[0],1,
+             chord(:FS3, :m)[1],1,
+             chord(:D3, :M)[0],2,
+             chord(:D3, :add9)[0],2,
+             chord(:E3, :sus4)[1],1,
+             chord(:E3, :M)[0],1,
+             chord(:Cs3, :m)[2],1,
+             chord(:Cs3, :m)[1],1,
+             chord(:Cs3, :m)[0],2
             )
     synth :prophet, note: bass.look, cutoff: 60, decay: 1, amp: 1.5
     synth :dark_sea_horn, note: bass.look, cutoff: 60, decay: 1, amp: 1.5
@@ -185,6 +182,6 @@ live_loop :synths, sync: :doit do
 end
 
 live_loop :perc do
-  synth :pluck, note: :e3, decay: 0.01, amp: 0.2
+  synth :pluck, note: :cs3, decay: 0.01, amp: 0.2
   sleep 0.25
 end

@@ -166,7 +166,7 @@ live_loop :synths, sync: :doit do
         chord(:E3, :M),2,
         chord(:D3, :M),1,
         chord(:Cs3, :m7),1,
-       chord-degree(5, :Cs3, :minor),1,
+       chord-degree(5, :Cs3, :minor),1
        
        )
   puts note_inspect(s.look)

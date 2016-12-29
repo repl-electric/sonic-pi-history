@@ -183,6 +183,6 @@ end
 
 live_loop :perc do
   tick
-  synth :plucked, note:  ring(:E3, _, _,_).look, decay: 0.25, amp: 0.3, attack: 0.01
+  synth :plucked, note:  ring(:Fs3, _, _,_).look, decay: 0.25, amp: 0.3, attack: 0.01
   sleep 0.25
 end

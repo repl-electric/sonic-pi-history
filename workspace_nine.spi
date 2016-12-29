@@ -199,6 +199,6 @@ live_loop :perc do
                          _, :Fs3, _,_,
                          _, _,:cs4,:a3,
                          ).look, decay: (ring 0.25,0.5).look, amp: 0.7, attack: 0.05
-  
+  smp @slices["Fs3/4"].look, amp: 1
   sleep 0.125
 end

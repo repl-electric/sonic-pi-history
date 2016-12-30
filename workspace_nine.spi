@@ -192,7 +192,7 @@ live_loop :synths, sync: :doit do
   # synth :dark_sea_horn, note: s.look[-1], cutoff: 100, decay: 1, amp: 0.5
   sleep 2
 end
-with_fx :wobble, phase: 64 do
+with_fx :wobble, phase: 64, mix: 0.2 do
   live_loop :perc do
     tick
     score = (ring

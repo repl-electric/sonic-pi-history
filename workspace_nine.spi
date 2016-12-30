@@ -113,7 +113,7 @@ with_fx :reverb, room: 0.4 do
     tick
     with_fx :lpf, cutoff: (line 90, 100, steps: 64).look, mix: 1 do
       with_fx :bitcrusher, bits: (line 10, 32, steps:1).look, mix: 1, sample_rate: 6000 do
-        smp Dust[/LI_/,6..8].look
+        #smp Dust[/LI_/,6..8].look
         smp (knit
              @slices["Fs3/4"][0..8].look, 30,
              @slices["D4/8"].look, 1,

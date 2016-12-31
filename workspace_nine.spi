@@ -213,7 +213,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
                                :fs2,15, :a3,1,
                                :fs2,15, :b3,1,
                                :fs2,15, :cs4,1,
-                               ).look, decay: 2.0, amp: 1.0, attack: 0.0001
+                               ).look, decay: 4.0, amp: 1.0, attack: 0.0001
         
       else
         synth :plucked, note: (knit

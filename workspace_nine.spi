@@ -206,7 +206,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :fs3, _,_,  :cs4, _,:cs4,:a3,
              )
-    with_transpose -7 do
+    with_transpose -9 do
       synth :plucked, note: (knit
                              :fs2,15, :a3,1,
                              :fs2,15, :a3,1,

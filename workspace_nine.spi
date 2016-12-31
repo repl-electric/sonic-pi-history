@@ -211,7 +211,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
         puts :HIT
         with_transpose 12*2 do
           synth :chiplead, note: (knit
-                                  :d2,1
+                                  :d1,1
                                   ).look, cutoff: 75, release: 4.0, amp: 0.5
         end
         synth :plucked, note: (knit

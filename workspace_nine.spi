@@ -208,7 +208,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
         with_transpose 12*2 do
           with_fx :lpf do
             synth :gpa, note:  knit(                               :d2,1
-                               ).look, cutoff: 20, release: 4.0, amp: 2.5
+                               ).look, cutoff: 60, release: 4.0, amp: 2.5
           end
         end
         synth :plucked, note:  knit(                               :fs2,15, :a3,1,

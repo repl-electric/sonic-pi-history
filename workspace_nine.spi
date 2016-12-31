@@ -211,7 +211,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
         puts :HIT
         with_fx :gverb, room: 200 do
           synth :gpa, note: (knit
-                             :d5,32, :cs4,32, :D5,32, :e5,32, :Fs5,32
+                             :d4,32, :cs4,32, :D4,32, :e5,32, :Fs5,32
                              ).look, cutoff: 100, release: 8.0, amp: 4.5
         end
         synth :plucked, note: (knit

@@ -206,15 +206,15 @@ with_fx :wobble, phase: 64, mix: 0.2 do
       if spread(1,32).look
         puts :HIT
         with_fx :gverb do
-        synth :gpa, note:  knit(                           :d5,32, :cs4,32, :D5,32, :e5,32, :Fs5,32
-                           ).look, cutoff: 130, release: 8.0, amp: 4.5
-      end
-      synth :plucked, note:  knit(                             :fs2,15, :a3,1,
-                             :fs2,15, :a3,1,
-                             :fs2,15, :b3,1,
-                             :fs2,15, :cs4,1,
-                             ).look, decay: 4.0, release: 4.0, amp: 2.0, attack: 0.0001
-      
+          synth :gpa, note:  knit(                             :d5,32, :cs4,32, :D5,32, :e5,32, :Fs5,32
+                             ).look, cutoff: 120, release: 8.0, amp: 4.5
+        end
+        synth :plucked, note:  knit(                               :fs2,15, :a3,1,
+                               :fs2,15, :a3,1,
+                               :fs2,15, :b3,1,
+                               :fs2,15, :cs4,1,
+                               ).look, decay: 4.0, release: 4.0, amp: 2.0, attack: 0.0001
+        
       else
         synth :plucked, note:  knit(                               :fs2,15, :a3,1,
                                :fs2,15, :a3,1,

@@ -117,7 +117,7 @@ with_fx :reverb, room: 0.4 do
         smp  knit(             @slices["Fs3/4"][0..8].look, 30,
              @slices["D4/8"].look, 1,
              @slices["E4/4"].look,1
-             ).look, amp: 1, pan:  ring(0.25, 0.25, -0.25, -0.25).look, rpitch:  ring(-12,5,12).look
+             ).look, amp: 0, pan:  ring(0.25, 0.25, -0.25, -0.25).look, rpitch:  ring(-12,5,12).look
         sleep 1/4.0
       end
     end

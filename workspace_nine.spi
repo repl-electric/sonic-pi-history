@@ -215,7 +215,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
                                  :fs2,15, :a3,1,
                                  :fs2,15, :b3,1,
                                  :fs2,15, :cs4,1,
-                                 ).look, cutoff: 70, release: 4.0, amp: 0.5
+                                 ).look, cutoff: 75, release: 4.0, amp: 0.5
         end
         synth :plucked, note: (knit
                                :fs2,15, :a3,1,

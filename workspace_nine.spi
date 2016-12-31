@@ -206,7 +206,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :fs3, _,_,  :cs4, _,:cs4,:a3,
              )
-    with_transpose -5 do
+    with_transpose -2 do
       if spread(1,32).look
         puts :HIT
         synth :plucked, note: (knit

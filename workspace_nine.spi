@@ -205,11 +205,11 @@ with_fx :wobble, phase: 64, mix: 0.2 do
     with_transpose 0 do
       if spread(1,32).look
         puts :HIT
-        synth :chipbass, note:  knit(                               :fs2,15, :a3,1,
-                               :fs2,15, :a3,1,
-                               :fs2,15, :b3,1,
-                               :fs2,15, :cs4,1,
-                               ).look, cutoff: 55
+        synth :chipbass, note:  knit(                                :fs2,15, :a3,1,
+                                :fs2,15, :a3,1,
+                                :fs2,15, :b3,1,
+                                :fs2,15, :cs4,1,
+                                ).look, cutoff: 55, release: 2.0
         synth :plucked, note:  knit(                               :fs2,15, :a3,1,
                                :fs2,15, :a3,1,
                                :fs2,15, :b3,1,

@@ -202,7 +202,7 @@ with_fx :wobble, phase: 64, mix: 0.2 do
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :Fs3, _,_,  _, _,:b3,:a3,
              _, :Fs3, _,_,  _, _,:b3,:a3,
-             _, :fs3, _,_,  :cs4, _,:cs4,:a3,
+             _, :fs3, _,_,  :e4, _,:cs4,:a3,
              )
     with_transpose 0 do
       if spread(1,32).look

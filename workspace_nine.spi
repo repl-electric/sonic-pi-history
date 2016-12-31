@@ -134,7 +134,6 @@ live_loop :drums, sync: :doit do
     smp Mountain[/subkick/,1], amp: 0.8#, rpitch: :Fs0
     with_fx :echo, phase: 0.125, mix: 0 do
       smp Frag[/snap/,14], amp: 0.5#, rpitch: :Fs0
-      smp Fraz[/noise/,3], amp: 3.5#, rpitch: :Fs0
       sleep 1/1.0/2.0
       smp Frag[/snap/,14], amp: 0.5#, rpitch: :Fs0
     end

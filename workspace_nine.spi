@@ -171,7 +171,7 @@ live_loop :synths, sync: :doit do
         chord(:Cs3, :m7),1,
        )
   puts note_inspect(s.look)
-  synth :beep, note: s.look, decay:  ring(1.6).look, amp: 1, attack:  ring(0.0, 0.1).look
+  synth :gpa, note: s.look, decay:  ring(1.6).look, amp: 1, attack:  ring(0.0, 0.1).look
   with_transpose -12*2 do
     bass =  knit(             chord(:FS3, :m)[0],1,
              chord(:FS3, :m)[1],1,

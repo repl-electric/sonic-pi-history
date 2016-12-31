@@ -210,8 +210,8 @@ with_fx :wobble, phase: 64, mix: 0.2 do
       if spread(1,32).look
         puts :HIT
         with_fx :gverb, room: 200 do
-          synth :gpa, note:  knit(                             :d4,32, :cs4,32, :D4,32, :e4,32, :Fs4,32
-                             ).look, cutoff: 100, release: 8.0, amp: 2.0
+          #synth :gpa, note:  knit(          #                   :d4,32, :cs4,32, :D4,32, :e4,32, :Fs4,32
+          #                   ).look, cutoff: 100, release: 8.0, amp: 2.0
         end
         comment do
           synth :plucked, note:  knit(                                 :fs2,15, :a3,1,
@@ -219,23 +219,22 @@ with_fx :wobble, phase: 64, mix: 0.2 do
                                  :fs2,15, :b3,1,
                                  :fs2,15, :cs4,1,
                                  ).look, decay: 4.0, release: 4.0, amp: 1.0, attack: 0.0001
-          end
-          
-          else
-            comment do
-              synth :plucked, note:  knit(                                     :fs2,15, :a3,1,
-                                     :fs2,15, :a3,1,
-                                     :fs2,15, :b3,1,
-                                     :fs2,15, :cs4,1,
-                                     ).look, decay:  ring(0.125,0.125).look, amp: 0.0, attack: 0.0001
-            end
-          end
         end
-        with_transpose  ring(0, 12, 0, 12).look do
-          #synth :plucked, note: score.look, decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.05
+        
+      else
+        comment do
+          synth :plucked, note:  knit(                                 :fs2,15, :a3,1,
+                                 :fs2,15, :a3,1,
+                                 :fs2,15, :b3,1,
+                                 :fs2,15, :cs4,1,
+                                 ).look, decay:  ring(0.125,0.125).look, amp: 0.0, attack: 0.0001
         end
-        #smp(@slices["Fs2/4"][0..40].look, amp: 8) if score.look
-        sleep 0.125
       end
     end
-    
+    with_transpose  ring(0, 12, 0, 12).look do
+      #synth :plucked, note: score.look, decay:  ring(0.25,0.5).look, amp: 0.7, attack: 0.05
+    end
+    #smp(@slices["Fs2/4"][0..40].look, amp: 8) if score.look
+    sleep 0.125
+  end
+end

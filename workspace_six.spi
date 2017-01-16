@@ -22,4 +22,4 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                 :Fs3, :Cs4, :FS3, :A4,
                 :E4,  :Cs4, :Gs4, :Cs5,
                 ].cycle.take(32),                 
-               ).flatten
+               ).flatten;end;end

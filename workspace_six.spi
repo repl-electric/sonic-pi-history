@@ -4,7 +4,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
       tick
       score =  ring(               [:Fs3, _, :Fs2, :Fs3].cycle.take(64),                  
                [:Gs3, _, :E1, :E2].cycle.take(32),                 
-               [:Fs3, :A3, :D1, :D2].cycle.take(32),                   
+               [:Fs3, _, :D1, :D2].cycle.take(32),                   
                [:Fs3, :A3, :D1, :D2].cycle.take(32),                     
                [:Fs3, :A3, :FS2, :FS3,
                 :D3,  :A3, :fs2, :Fs3].cycle.take(16),               

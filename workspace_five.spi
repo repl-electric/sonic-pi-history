@@ -37,7 +37,7 @@ l = (line 0.0, 1.0, steps: 4).tick(:dis)
      at do
 
 with_fx :distortion, distort: l, mix: 1.0 do
-          with_fx :bitcrusher, bits: 6 do
+          with_fx :bitcrusher, bits: 6, mix:0 do
      8.times{
       d = @slices["D3/4"].take(32).tick 
       smp d, amp: 2, rpitch: (ring 0, -7, -12).tick(:rp); 

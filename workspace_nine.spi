@@ -119,7 +119,7 @@ with_fx :reverb, room: 0.4 do
              @slices["D4/8"].look, 1,
              @slices["E4/4"].look,1
              ).look, amp: 2, pan: (ring 0.25, 0.25, -0.25, -0.25).look, rpitch: (ring -12,5,12).look
-        sleep 1/4.0
+        sleep 1/8.0
       end
     end
   end

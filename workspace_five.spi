@@ -25,16 +25,14 @@ live_loop :drums2, sync: :kick do
     end
   end
   if spread(1,32, rotate: 0).look # F# G G# A A# B C C# D D# E F
-   
    s = [8,16,16,16,16].shuffle
-   
    at do      
    (sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])/16.0).times do
    synth :pluck, note: :B4
    sleep 1.0/16.0 * sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])
    end;end
     sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], s,
-                 rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress), cutoff: 105, amp: 2.0, fx: (ring :echo, :slicer)) do
+                 rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress), cutoff: 125, amp: 2.0, fx: (ring :echo, :slicer)) do
      smp @slices["Fs3/8"][7]      
      synth :pluck, note: (ring :Fs5, :B5, :Cs6, :Fs6).tick(:i), amp: 0.5, cutoff: 100   
      #smp Frag[/kick/,1], amp: 0.5

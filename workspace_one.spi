@@ -1,6 +1,6 @@
 _=nil
 with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
-  live_loop :melody,sync:  do #1/4
+  live_loop :melody,sync: :kick do #1/4
     with_fx :level, amp: 1.0 do
       tick
       score =  ring(               # ring(:Cs4,:E3, _, _),     32,              #E  6

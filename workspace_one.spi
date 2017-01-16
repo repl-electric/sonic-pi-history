@@ -73,7 +73,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
             #   s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand}#, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)}
           }
         else
-          s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 0.5, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand #, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)
+          s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 1.0, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand #, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)
         end
         with_transpose 12 do
           s = synth :gpa, note:  ring(_,_,_,note).look(:n), attack: 0.0001, release: 5.5, amp: 0.4*1#, cutoff: 100

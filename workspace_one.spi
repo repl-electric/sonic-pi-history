@@ -22,7 +22,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                [:Fs3, :A3, :D1, :D2].cycle.take(32),      #c         #B  4
                
                 ring(                :Fs3, :A3, :FS2, :FS3,
-                :D3, :A3,  :fs2, :E2,
+                :D3,  :A3,  :fs2, :Fs3,
                 ).cycle.take(32),                 #c
                
                

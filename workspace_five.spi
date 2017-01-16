@@ -30,7 +30,7 @@ live_loop :drums2, sync: :kick do
    
    at do      
    (sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])/16.0).times do
-   synth :pluck, note: :Fs2
+   synth :pluck, note: :Fs1
    sleep 1.0/16.0   * sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])
    end;end
   

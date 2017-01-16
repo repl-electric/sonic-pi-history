@@ -27,6 +27,6 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                 :E4,  _, _, _,
                 ].cycle.take(32),                 
                ).flatten                 
-               play score.look, decay: 1/2.0; sleep 1/4.0
+               synth :pluck, score.look, decay: 1/2.0; sleep 1/4.0
                end                                  
                end

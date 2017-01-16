@@ -1,7 +1,7 @@
 _=nil
 with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|
   live_loop :soft2, sync: :kick do #8sleeps
-    with_fx :level, amp: 1.0 do
+    with_fx :level, amp: 2.0 do
       score = ring(# 7 -> 1a -> 3 -> 5 -> 1a -> 6 -> 4
                    # 3 -> 6 -> 7 -> 1 -> 6 -> 4
                    [[:Fs2,8],[:A2,8],[:Cs3,8*2]],

@@ -37,7 +37,7 @@ live_loop :drums2, sync: :kick do
      at do
      with_fx :bitcrusher, bits: 12 do
      32.times{
-      d = @slices["Fs4/8"].take(16).tick 
+      d = @slices["Fs4/4"].take(16).tick 
       smp d, amp: 2; 
       sleep d[:offset] - d[:onset] 
      }

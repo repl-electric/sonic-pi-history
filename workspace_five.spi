@@ -36,7 +36,6 @@ live_loop :drums2, sync: :kick do
      smp @slices["Fs3/8"][7]      
      synth :pluck, note: (ring :Fs5, :B5, :Cs6, :Fs6).tick(:i), amp: 0.5, cutoff: 100   
      smp Frag[/kick/,1], amp: 0.5
-     synth :dsaw, note: :FS1, cutoff: 50, amp: 1.0
    end
       
    

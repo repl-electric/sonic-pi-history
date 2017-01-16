@@ -33,10 +33,9 @@ live_loop :drums2, sync: :kick do
    synth :pluck, note: :Fs1
    sleep 1.0/16.0   * sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])
    end;end
-  
-   
+     
     sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], s,
-                 rpitch:  ring(12, 5, 5+2.0,0).tick(:progrress), cutoff: 105, amp: 2.0)       do
+                 rpitch:  ring(12, 5, 5+2.0,0).tick(:progrress), cutoff: 105, amp: 2.0), fx_names:  ring(:echo)       do
      smp @slices["Fs3/8"][7]      
      synth :pluck, note: :Fs5, amp: 0.25, cutoff: 40   
      smp Frag[/kick/,1], amp: 0.25

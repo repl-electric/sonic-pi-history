@@ -19,8 +19,8 @@ live_loop :kick do
     end
     with_fx :lpf, cutoff: 135, mix_slide: 1.0, mix: 1.0 do |lpf_fx|
       with_transpose 12*2 do
-        synth :pluck, note: bass_note+ ring(0,5,-5,-7,5,7).look, decay: 0.25, cutoff: 100, attack: 0.001
-        #synth :gpa, note: bass_note
+        #synth :pluck, note: bass_note+ ring(0,5,-5,-7,5,7).look, decay: 0.25, cutoff: 100, attack: 0.001
+        synth :gpa, note: bass_note
         #synth :beep, note: bass_note, amp: 0.05*1, decay: 0.5
       end
       decay_rate =  knit(0.5+0.25,1,0.5,3).tick(:ds4) * bass_score.look(:b)[-1]

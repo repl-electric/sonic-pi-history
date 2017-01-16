@@ -9,8 +9,8 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                [:Fs3, _, _, _,
                 :D3,  _, _, _].cycle.take(16),               
                [
-                :Fs3, _, :FS3, :FS4,
-                :E4,  :Cs4, :fs3, :Fs4,
+                :Fs3, _, _, _,
+                :E4,  _, _, _,
                 ].cycle.take(16),                 
                [
                 :b4,  :D4, :B3, :b3,

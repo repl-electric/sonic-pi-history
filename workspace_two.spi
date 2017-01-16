@@ -12,7 +12,7 @@ live_loop :kick do
     #      [:E1,1],[:B0,1],[:Gs0,1],[:D1,1]                    )
     bass_note = bass_score.tick(:b)[0]
     #puts "Bass: #{bass_note}"
-    bass_note =  :D0
+    bass_note =  :D2
     #bass_note =  knit(:D1, 4, :E1,4, :Fs1, 4).tick(:internal)
     if !bass_note
       #synth :gpa, note:  ring(:Cs4, :fs3).tick(:asdasdasd), decay: 2, amp: 0.8

@@ -1,8 +1,32 @@
 _=nil
 with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
-  live_loop :melody4 do #1/4
+  live_loop :melody4, sync: :kick do #1/4
       tick
-      score =  ring(               :Fs3, :B3, :Fs2, :Fs3)          ;         play score.look
-
-  end                                  
-end
+      score =  ring(               [:Fs3, :B3, :Fs2, :Fs3].cycle.take(64),                  
+               [:Gs3, :B3, :E1, :E2].cycle.take(32),                 
+               [:Fs3, :A3, :D1, :D2].cycle.take(32),                   
+               [:Fs3, :A3, :D1, :D2].cycle.take(32),                     
+               [:Fs3, :A3, :FS2, :FS3,
+                :D3,  :A3, :fs2, :Fs3].cycle.take(16),               
+               [
+                :Fs3, :Cs4, :FS3, :FS4,
+                :E4,  :Cs4, :fs3, :Fs4,
+                ].cycle.take(16),                 
+               [
+                :b4,  :D4, :B3, :b3,
+                :cs4, :B3, :fs3, :A3,
+                ].cycle.take(32),                 
+               [
+                :cs4, :E4, :B3, :b3,
+                :cs4, :E3, :Gs3, :B3,
+                ].cycle.take(32).shuffle,                 
+               [
+                :Fs3, :Cs4, :FS3, :FS4,
+                :E4,  :Cs4, :fs3, :Gs4,
+                :Fs3, :Cs4, :FS3, :A4,
+                :E4,  :Cs4, :Gs4, :Cs5,
+                ].cycle.take(32),                 
+               ).flatten                 
+               play score.look
+               end                                  
+               end

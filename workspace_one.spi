@@ -10,8 +10,8 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                 ring(                :Fs3, :Cs4, :FS3, :FS4,
                 :E4,  :Cs4, :fs3, :Fs4,
                 ).cycle.take(16),                 #c
-                ring(                :Fs3, :B3, :FS2, :FS3,
-                :D3,  :B3, :fs2, :Fs3,
+                ring(                :Fs3, :B3, :FS3, :A4,
+                :D3,  :B3, :fs3, :Fs3,
                 ).cycle.take(16),                 #c
                 ring(                :Fs3, :Cs4, :FS3, :FS4,
                 :E4,  :Cs4, :fs3, :Fs4,

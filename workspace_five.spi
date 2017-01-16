@@ -82,7 +82,7 @@ with_fx :distortion, distort: l, mix: 1.0 do
     #control e_fx, phase: knit(0.0,31, 0.25,1).look
     s = MagicDust[/_HI/,eval(magic)].tick(:s2)
     with_fx (knit :none, 31, :echo, 1).look, decay: 4 do
-      smp s, amp: 0.9+rand*0.1, rate: 1.0, cutoff: line(80, 105, steps: 32).look
+      smp s, amp: 1.2+rand*0.1, rate: 1.0, cutoff: line(80, 105, steps: 32).look
     end
     s = Fraz[/kick/,[0,1]].look(:s2)
     if magic != "_"

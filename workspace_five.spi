@@ -36,7 +36,8 @@ live_loop :drums2, sync: :kick do
 
      at do
       d = @slices["Fs3/8"].tick 
-     smp d, amp: 10      ; sleep d[:finish] 
+     smp d, amp: 10  ; 
+    sleep d[:finish] 
     end
     
      synth :pluck, note:  ring(:Fs4, :Cs4, :A4, :Fs5).tick(:i), amp: 0.5, cutoff: 100   

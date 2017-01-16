@@ -47,7 +47,7 @@ with_fx :distortion, distort: l, mix: 0.0 do
     end
      end
      end
-     synth :pluck, note:  ring(:Fs5, :Cs4, :A4, :Fs5).tick(:i), amp: 0.5, cutoff: 100   
+     #synth :pluck, note:  ring(:Fs5, :Cs4, :A4, :Fs5).tick(:i), amp: 0.5, cutoff: 100   
      smp Frag[/kick/,1], amp: 0.5
    end
    

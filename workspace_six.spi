@@ -21,10 +21,10 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                 :cs4, _, _, _,
                 ].cycle.take(32).shuffle,                 
                [
-                :Fs3, _, :FS3, :FS4,
-                :E4,  _, :fs3, :Gs4,
-                :Fs3, _, :FS3, :A4,
-                :E4,  _, _, :Cs5,
+                :Fs3, _, _, _,
+                :E4,  _, _, _,
+                :Fs3, _, _, _,
+                :E4,  _, _, _,
                 ].cycle.take(32),                 
                ).flatten                 
                play score.look, decay: 2; sleep 1/4.0

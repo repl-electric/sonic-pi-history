@@ -84,7 +84,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
           }
         else
           if spread(1,8).look
-          s = synth :gpa, note: :FS3, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick*8, amp: 2.8*1+0.1*rand #, cutoff: (ramp *(range 0,135,0.25)).tick(:entry)
+          s = synth :gpa, note: :FS3, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick*8, amp: 3.8*1+0.1*rand #, cutoff: (ramp *(range 0,135,0.25)).tick(:entry)
         end
           end
         with_transpose 12 do

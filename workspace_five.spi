@@ -52,7 +52,7 @@ with_fx :distortion, distort: l, mix: 1.0 do
    end
    
      #(F#5->B)  => (A#5->E) => (A#5->E)
-#    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [32,64,64,64,64,64,64,64,64], rpitch: (ring -12, -12, -12).tick(:progrress), cutoff: 80, amp: 1.0) #   (F#5->B)  => (A#5->E) => (A#5->E)
+    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [32,64,64,64,64,64,64,64,64], rpitch: (ring -12, -12, -12).tick(:progrress), cutoff: 80, amp: 1.0) #   (F#5->B)  => (A#5->E) => (A#5->E)
     #smp @slices["Fs4/8"][0][:path], rpitch: (ring 12, 5, 5+2,0).tick(:progrress), cutoff: 80, amp: 1.0 #   (F#5->B)  => (A#5->E) => (A#5->E)
     
     #sample_smash(@slices["Fs4/8"][0][:path], [64,64,64,64,64,64,64,64], rpitch: (ring 12, 12, 12).tick(:progrress), cutoff: 80, amp:     1.0)

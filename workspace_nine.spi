@@ -127,28 +127,11 @@ end
 
 live_loop :drums, sync: :doit do
   tick
-  if spread(1,4).look
-    smp Fraz[/kick/,8], amp: 0.5, rpitch: 0
-    sleep 1/1.0/2.0
-    smp Mountain[/subkick/,0], amp: 0.8#, rpitch: :Fs0
-    sleep 1/1.0/2.0
-    smp Mountain[/subkick/,0], amp: 0.8#, rpitch: :Fs0
-    with_fx :echo, phase: 0.25, mix: 0.1*rand do
-      smp Frag[/snap/,14], amp: 0.125/2.0#, rpitch: :Fs0
-      sleep 1/1.0/2.0
-      if spread(1,32).look
-        smp Frag[/snap/,14], amp: 0.125, rate: -1.0#, rpitch: :Fs0
-      end
-    end
-    smp Mountain[/subkick/,1], amp: 0.8#, rpitch: :Fs0
-    sleep 1/1.0/2.0
-  else
     smp Mountain[/subkick/,0], amp: 2.1#, rpitch: :Fs0
     sleep 1/1.0
     smp Mountain[/subkick/,0], amp: 2.1#, rpitch: :Fs0
     smp Mountain[/snare/,1], amp: 0.2#, rpitch: :Fs0
     sleep 1/1.0
-  end
 end
 
 live_loop :skitters, sync: :doit do

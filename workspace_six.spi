@@ -2,8 +2,7 @@ _=nil
 with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
   live_loop :melody4 do #1/4
       tick
-      score = (ring
-               :Fs3, :B3, :Fs2, :Fs3)      
+      score =  ring(               :Fs3, :B3, :Fs2, :Fs3)                   play score.look
+
   end                                  
-             play score.look
 end

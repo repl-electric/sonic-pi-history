@@ -77,10 +77,10 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
           #s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand #, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)
         end
         with_transpose 12 do
-          s = synth :gpa, note:  ring(_,_,_,note).look(:n), attack: 0.0001, release: 5.5, amp: 0.4*1#, cutoff: 100
+        #  s = synth :gpa, note:  ring(_,_,_,note).look(:n), attack: 0.0001, release: 5.5, amp: 0.4*1#, cutoff: 100
         end
         with_transpose 0 do
-          synth :dark_ambience, note:  ring(note, _,_,_  ,_,_,_).tick(:thing), decay: 1.0, attack: 1.0, amp: 0.2
+         # synth :dark_ambience, note:  ring(note, _,_,_  ,_,_,_).tick(:thing), decay: 1.0, attack: 1.0, amp: 0.2
         end
       end
       high_score =  knit(                     ring(_,_,_,_),(32*4+ 32*4 + 32+32 + 32*3),

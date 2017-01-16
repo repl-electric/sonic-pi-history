@@ -26,7 +26,7 @@ live_loop :drums2, sync: :kick do
   end
   if spread(1,32, rotate: 0).look # F# G G# A A# B C C# D D# E F
     sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16].shuffle,
-                 rpitch:  ring(12, 5, 5+2.0,0).tick(:progrress), cutoff: 135, amp: 2.0)        #(F#5->B)  => (A#5->E) => (A#5->E)
+                 rpitch:  ring(12, 5, 5+2.0,0).tick(:progrress), cutoff: 105, amp: 2.0)        #(F#5->B)  => (A#5->E) => (A#5->E)
 #    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [32,64,64,64,64,64,64,64,64], rpitch:  ring(-12, -12, -12).tick(:progrress), cutoff: 80, amp: 1.0) #   (F#5->B)  => (A#5->E) => (A#5->E)
     #smp @slices["Fs4/8"][0][:path], rpitch:  ring(12, 5, 5+2,0).tick(:progrress), cutoff: 80, amp: 1.0 #   (F#5->B)  => (A#5->E) => (A#5->E)
     

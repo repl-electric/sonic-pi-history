@@ -31,7 +31,6 @@ live_loop :drums2, sync: :kick do
    at do      
    s.length.times do
    play :Fs5
-  
    sleep s.tick   
    end;end
    

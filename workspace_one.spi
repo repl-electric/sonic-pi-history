@@ -4,10 +4,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
     with_fx :level, amp: 1.0 do
       tick
       score = (ring
-               [:Fs3, :B3, :Fs2, :Fs3].cycle.take(64),      #F        #B  4
-               [:Gs3, :B3, :E1, :E2].cycle.take(32),      #e         #B  4
-               [:Fs3, :A3, :D1, :D2].cycle.take(32),      #c         #B  4
-               
+               [:Fs3, :B3, :Fs2, :Fs3].cycle.take(64),               [:Gs3, :B3, :E1, :E2].cycle.take(32),               [:Fs3, :A3, :D1, :D2].cycle.take(32),               
                (ring
                 :Fs3, :A3, :FS2, :FS3,
                 :D3,  :A3, :fs2, :Fs3,

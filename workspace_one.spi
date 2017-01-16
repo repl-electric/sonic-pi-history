@@ -110,7 +110,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
         as = synth :gpa, note: ghost, amp: 1.5, attack: 0.001, note_slide: 2
         if ghost != _
           puts "GHOST:#{ghost}"
-          sample_smash(@slices["Fs4/8"][4][:path], [4,8,16,32,32,32], cutoff: 100,
+          sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [4,8,16,32,32,32], cutoff: 100,
                        rpitch: (ring -12,0,0).tick(:ab), amp: 1)
         end
         at do

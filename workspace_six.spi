@@ -2,8 +2,7 @@ _=nil
 with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
   live_loop :melody4, sync: :kick do #1/4
       tick
-      score = (ring
-               [:Fs3, _, _, _].cycle.take(64),                  
+      score =  ring(               [:Fs3, _, _, _].cycle.take(64),                  
                [:Gs3, _, _, _].cycle.take(32),                 
                [:Fs3, _, _, _].cycle.take(32),                   
                [:Fs3, _, _, _].cycle.take(32),                     
@@ -28,7 +27,7 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
                 :E4,  _, _, _,
                 ].cycle.take(32),                 
                ).flatten                 
-               synth :plucked, score.look, decay: 1/2.0
+               synth :plucked, score.look, decay: 1/2.0, amp: 2.0
                 sleep 1/4.0
                end                                  
                end

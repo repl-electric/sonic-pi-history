@@ -28,7 +28,7 @@ live_loop :kick do
         synth :dsaw, note: bass_note, decay: decay_rate, release: 2.0, amp: 0.8*1.0, cutoff: 40
         #synth :prophet, note: bass_note, decay: decay_rate, release: 4.0, amp: 0.5*1.0, cutoff: 30, attack: 0.001
       end
-
+      
       with_fx :distortion, mix_slide: 0.5, mix: 1.0, distort: 0.5 do |dis_fx|
         if (look(:b) % 8 == 0)
           control(lpf_fx, mix: 0.0)
@@ -37,7 +37,7 @@ live_loop :kick do
           control(lpf_fx, mix: 1.0)
           control(dis_fx, mix: 0.8)
         end
-
+        
         with_fx :reverb, decay: 8.0, damp: 1.0 do
           with_transpose 12*1 do
             #synth :prophet, note: bass_note, release: 0.125, attack: 4, amp: 0.4, cutoff: 60
@@ -61,7 +61,7 @@ live_loop :kick do
     end
     with_fx :lpf, cutoff: 0, mix: 1.0 do
       s =  knit( chord(:Fs3, :m), 4, # chord(:Gs3, :dim), 4,  chord(:Fs3, :m), 4,
-                )
+                 )
       with_fx :distortion, distort: 0.5, mix: 1.0, mix_slide: 0.5 do |d_fx|
         if spread(1,8).tick(:kicker)
           control d_fx, mix: 0.5
@@ -75,7 +75,7 @@ live_loop :kick do
         #sample Mountain[/ice/].tick(:sample), cutoff: 100, aamp: 0.1
         with_transpose 0 do
           sample Fraz[/coil/,/c#/,[0,0]].tick(:sample), cutoff: 135, amp: 0.3, start: 0.2, finish: 0.15, rpitch:  ring(0,-2,-2,-2).tick(:itititi)
-
+          
           #with_fx :reverb, room: 1.0, mix: 1.0, spread: 1 do
           with_transpose 12*1 do
             #synth :beep, cutoff: 100, note: s.tick, release: 0.25, attack: 1.0, amp: 0.2, pan:  ring(0.25, -0.25).tick(:pan)

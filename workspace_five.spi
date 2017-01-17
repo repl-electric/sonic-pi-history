@@ -15,10 +15,10 @@ live_loop :drums2, sync: :kick do
   
   with_fx :lpf, cutoff:  line(125, 135, steps: 32).look do
     if spread(3,8, rotate: 0).look
-      sample Frag[/hat/,[0,0]].look, rpitch:  ring(12*1,12*2,12*1).look, amp: 1.5+rand*0.1#, cutoff: 40
+      #sample Frag[/hat/,[0,0]].look, rpitch:  ring(12*1,12*2,12*1).look, amp: 1.5+rand*0.1#, cutoff: 40
     end
     if spread(7,11, rotate: 1).look
-      smp Frag[/hat/,[1,1]].look, rpitch:  ring(12*1,12*2,12*1).look, amp: 1.5+rand*0.1# ,cutoff: 80
+      #smp Frag[/hat/,[1,1]].look, rpitch:  ring(12*1,12*2,12*1).look, amp: 1.5+rand*0.1# ,cutoff: 80
     end
     if spread(1,16, rotate: 0).look
       smp @slices["Fs4/8"][0], rpitch:  ring(7*-1, 12*0, 12*0).look, amp: 1#, cutoff: 40

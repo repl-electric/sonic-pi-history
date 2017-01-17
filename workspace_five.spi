@@ -58,7 +58,7 @@ live_loop :drums2, sync: :kick do
          with_fx  knit(:echo,1, :none, 7).tick(:as), mix: 1.0, decay: 1.0 do
            at do
              8.times{
-               synth :pluck, note:  chord_degree(5, :Cs4, :minor).tick(:i), amp: 0.8, cutoff: 100
+               synth :pluck, note:  chord_degree(5, :Fs4, :minor).tick(:i), amp: 0.8, cutoff: 100
                sleep 0.25
              }
            end

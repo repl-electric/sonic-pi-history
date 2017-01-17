@@ -36,8 +36,6 @@ live_loop :drums2, sync: :kick do
          l =  line(0.0, 1.0, steps: 4).tick(:dis)
          at do
            
-           with_fx :distortion, distort: l, mix: 0.0 do
-             with_fx :bitcrusher, bits: 6, mix: 0 do
                8.times{
                  d = @slices["Fs3/8"].take(32).tick
                  puts d
@@ -45,8 +43,6 @@ live_loop :drums2, sync: :kick do
                  sleep d[:offset] - d[:onset]
                }
                
-             end
-           end
          end
          synth :pluck, note:  ring(:Fs5, :Cs4, :A4, :Fs5).tick(:i), amp: 0.5, cutoff: 100
          smp Frag[/kick/,1], amp: 2.5

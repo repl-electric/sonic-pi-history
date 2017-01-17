@@ -47,31 +47,33 @@ live_loop :drums2, sync: :kick do
            end
          end
          synth :pluck, note:  ring(:Fs5, :Cs4, :A4, :Fs5).tick(:i), amp: 1.5, cutoff: 100
-         synth :pluck, note:  ring(:Fs1, _, :A1, _).tick(:i), amp: 1.5, cutoff: 30
-         
-         #         smp Frag[/kick/,1], amp: 0.5
-       end
-       
-       #(F#5->B)  => (A#5->E) => (A#5->E)
-       #sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [32,64,64,64,64,64,64,64,64], rpitch:  ring(-12, -12, -12).tick(:progrress), cutoff: 80, amp: 1.0) #   (F#5->B)  => (A#5->E) => (A#5->E)
-       #smp @slices["Fs4/8"][0][:path], rpitch:  ring(12, 5, 5+2,0).tick(:progrress), cutoff: 80, amp: 1.0 #   (F#5->B)  => (A#5->E) => (A#5->E)
-       
-       #sample_smash(@slices["Fs4/8"][0][:path], [64,64,64,64,64,64,64,64], rpitch:  ring(12, 12, 12).tick(:progrress), cutoff: 80, amp:     1.0)
-       #sample_smash(@slices["Fs4/8"][0][:path], [128,128,64,128,128], rpitch:  ring(12, 12, 12).tick(:progrress), cutoff: 80, amp:     1.0)
-       
-       at do
-         sleep 1; if spread(1,32).look
-           sample "/Users/josephwilk/Workspace/music/samples/melodyne/vor_alto_leg_oo_05_d_F#_D.wav", amp: 1.0
-           #sample Alt[/vor_alto_leg_oo_05_d_03/,0], amp: 2       #G# -> C#
-           #sample Alt[/vor_alto_leg_oo_05_d_09/,0], amp: 2       #G# -> C#
-           #  with_fx(:slicer, invert_wave: 1.0, phase: 0.25){sample Alt[/vor_alto_leg_oo_05_d_08/,0], amp: 1}       #F# -> B
-           #   sample Alt[/vor_alto_leg_oo_05_d_02/,0], amp: 1.5        #F# -> B
-           #with_fx :slicer,phase: 0.5 do
-           #sample Alt[/vor_alto_leg_oo_05_d_01/,0], amp: 1 ;end      #E -> A
-           #sample Alt[/vor_alto_leg_oo_05_d_07/,0], amp: 2       #E -> A
+         with_fx :lpf, cutoff: 40 do
+           synth :pluck, note:  ring(:Fs1, _, :A1, _).tick(:i), amp: 1.5, cutoff: 30
+           end
            
-           #sample Alt[/vor_alto_leg_oo_05_d_06/,0], amp: 2       #D -> G???
-       end; end
+           #         smp Frag[/kick/,1], amp: 0.5
+         end
+         
+         #(F#5->B)  => (A#5->E) => (A#5->E)
+         #sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [32,64,64,64,64,64,64,64,64], rpitch:  ring(-12, -12, -12).tick(:progrress), cutoff: 80, amp: 1.0) #   (F#5->B)  => (A#5->E) => (A#5->E)
+         #smp @slices["Fs4/8"][0][:path], rpitch:  ring(12, 5, 5+2,0).tick(:progrress), cutoff: 80, amp: 1.0 #   (F#5->B)  => (A#5->E) => (A#5->E)
+         
+         #sample_smash(@slices["Fs4/8"][0][:path], [64,64,64,64,64,64,64,64], rpitch:  ring(12, 12, 12).tick(:progrress), cutoff: 80, amp:     1.0)
+         #sample_smash(@slices["Fs4/8"][0][:path], [128,128,64,128,128], rpitch:  ring(12, 12, 12).tick(:progrress), cutoff: 80, amp:     1.0)
+         
+         at do
+           sleep 1; if spread(1,32).look
+             sample "/Users/josephwilk/Workspace/music/samples/melodyne/vor_alto_leg_oo_05_d_F#_D.wav", amp: 1.0
+             #sample Alt[/vor_alto_leg_oo_05_d_03/,0], amp: 2       #G# -> C#
+             #sample Alt[/vor_alto_leg_oo_05_d_09/,0], amp: 2       #G# -> C#
+             #  with_fx(:slicer, invert_wave: 1.0, phase: 0.25){sample Alt[/vor_alto_leg_oo_05_d_08/,0], amp: 1}       #F# -> B
+             #   sample Alt[/vor_alto_leg_oo_05_d_02/,0], amp: 1.5        #F# -> B
+             #with_fx :slicer,phase: 0.5 do
+             #sample Alt[/vor_alto_leg_oo_05_d_01/,0], amp: 1 ;end      #E -> A
+             #sample Alt[/vor_alto_leg_oo_05_d_07/,0], amp: 2       #E -> A
+             
+             #sample Alt[/vor_alto_leg_oo_05_d_06/,0], amp: 2       #D -> G???
+         end; end
        end
        if drum != "_"
          matches = drum.match(/(.*)(\[.*\])/)

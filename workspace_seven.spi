@@ -13,6 +13,7 @@ puts @slices.values.flatten.count
 
 live_loop :doit do
   tick
+  stop
   smp (ring
        @slices["Fs4/8"].look,
        @slices["D4/8"].look,

@@ -37,7 +37,6 @@ live_loop :drums2, sync: :kick do
          at do
            8.times{
              d = @slices["Fs3/4"].take(32).tick
-             puts d
              smp d, amp: 4#, rpitch: (ring 0, -7, -12).tick(:rp);
              sleep (d[:offset] - d[:onset])
            }

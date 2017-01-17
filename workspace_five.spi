@@ -34,11 +34,12 @@ live_loop :drums2, sync: :kick do
        sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], s,
        rpitch: (ring 0, 0, 0).tick(:progrress), cutoff: 130, amp: 1.0) do
          l = (line 0.0, 1.0, steps: 4).tick(:dis)
-         d = (@slices["Fs3/4"].drop(4).take(2) + @slices["A3/4"].drop(4).take(2) + @slices["B4/4"].take(2))
+         sd = (@slices["Fs3/4"].drop(4).take(2) + @slices["A3/4"].drop(4).take(2) + @slices["B4/4"].take(2))
          at do
            sum = 0
            8.times{
-             smp (ring *d).tick(:key), amp: 10, rpitch: (ring 12,0,0,0,0,0,0,0).tick(:rp);
+             d =sd.tick
+             smp d, amp: 10, rpitch: (ring 12,0,0,0,0,0,0,0).tick(:rp);
              sleep (d[:offset] - d[:onset])
              sum = sum + d[:offset] - d[:onset]
              

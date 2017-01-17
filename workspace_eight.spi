@@ -46,8 +46,8 @@ live_loop :drums, sync: :kick do
       (4).times{
         tick
         smp eval(kick.look), cutoff: 100, amp: 1.5, rpitch:  ring(0, 0, 0).look
-        smp eval(hat.look), amp: 2.0, rpitch: 12
-        smp eval(hat2.look),amp: rand*0.5+0.1, rpitch: 0
+#        smp eval(hat.look), amp: 2.0, rpitch: 12
+#        smp eval(hat2.look),amp: rand*0.5+0.1, rpitch: 0
         
         #        smp eval(snare.look), amp: 1.75, rpitch: 0
         #        smp eval(snare2.look), amp: 1.75, rpitch: 0

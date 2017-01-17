@@ -49,8 +49,8 @@ live_loop :drums, sync: :kick do
         smp eval(hat.look), amp: 2.0, rpitch: 0
         smp eval(hat2.look),amp: rand*0.5+0.1, rpitch: 0
         
-        #smp eval(snare.look), amp: 1.75, rpitch: 0
-        #smp eval(snare2.look), amp: 1.75, rpitch: 0
+        smp eval(snare.look), amp: 1.75, rpitch: 0
+        smp eval(snare2.look), amp: 1.75, rpitch: 0
         #smp eval(voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 1.5
         #smp eval(voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
         smp eval(cymbal.look), finish: 0.95, start: 1.0

@@ -56,10 +56,13 @@ live_loop :drums2, sync: :kick do
          #                  [:Gs0,1],[:Cs0,1], [:Cs0,1], [:Cs1,1])
          
          at do
+           with_fx :echo, mix: 0.01 do
+           
            4.times{
              synth :pluck, note: (chord :D4, :M).tick(:i), amp: 0.8, cutoff: 100
              sleep 0.25
            }
+           end
          end
          with_fx :lpf, cutoff: 40 do
            #  synth :dsaw, note: (ring :Fs1, _, :A1, _).tick(:i), amp: 1.0

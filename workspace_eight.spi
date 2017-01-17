@@ -44,9 +44,9 @@ live_loop :drums do
       
       (4).times{
         tick
-        sample eval(kick.look), cutoff: 100, amp: 1.5, rpitch:  ring(12, 24, 24).look if eval(kick.look)
-        sample eval(hat.look), amp: 5.0, rpitch: -12
-        sample eval(hat2.look),amp: rand*0.1+0.1, rpitch: -12
+        smp eval(kick.look), cutoff: 100, amp: 1.5, rpitch:  ring(12, 24, 24).look if eval(kick.look)
+        smp eval(hat.look), amp: 5.0, rpitch: -12
+        smp eval(hat2.look),amp: rand*0.1+0.1, rpitch: -12
         
         sample eval(snare.look), amp: 0.75, rpitch: -24*0
         sample eval(snare2.look), amp: 0.75, rpitch: -12

@@ -56,7 +56,7 @@ live_loop :drums2, sync: :kick do
          #                  [:Gs0,1],[:Cs0,1], [:Cs0,1], [:Cs1,1])
          
          
-         synth :pluck, note: (ring :Fs5, :Ds4, :A4, :Fs5).tick(:i), amp: 1.5, cutoff: 100
+         synth :pluck, note: (ring :Fs5, :D4, :A4, :Fs5).tick(:i), amp: 1.5, cutoff: 100
          with_fx :lpf, cutoff: 40 do
            #  synth :dsaw, note: (ring :Fs1, _, :A1, _).tick(:i), amp: 1.0
          end

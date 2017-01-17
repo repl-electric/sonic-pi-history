@@ -41,8 +41,8 @@ live_loop :kick do
         with_fx :reverb, decay: 8.0, damp: 1.0 do
           with_transpose 12*1 do
             #synth :prophet, note: bass_note, release: 0.125, attack: 4, amp: 0.4, cutoff: 60
-              #synth :dark_sea_horn ,note: bass_note, cutoff: 100, amp: 0.6
-              #  synth :chipbass, note: bass_note+0.0, amp: 0.013*1, decay: decay_rate, attack: 0.2
+            #synth :dark_sea_horn ,note: bass_note, cutoff: 100, amp: 0.6
+            #  synth :chipbass, note: bass_note+0.0, amp: 0.013*1, decay: decay_rate, attack: 0.2
             #synth :chiplead, note: bass_note+0.0, amp: 0.02*1, decay: decay_rate, attack: 0.2
             #                synth :beep, note: bass_note+0.0, amp: 0.3*1, decay: decay_rate
           end

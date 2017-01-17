@@ -14,7 +14,7 @@ live_loop :drums2, sync: :kick do
              ).look
   
   with_fx :lpf, cutoff: (line 80, 120, steps: 32).look do
-    if spread(3,8, rotate: 0).look
+    if spread(4,8, rotate: 0).look
       sample Frag[/hat/,[0,0]].look, rpitch: (ring 12*1,12*2,12*1).look, amp: 1.5+rand*0.1#, cutoff: 40
     end
     if spread(1,11, rotate: 1).look

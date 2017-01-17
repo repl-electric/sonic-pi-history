@@ -3,30 +3,30 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
   live_loop :melody,sync: :kick do #1/4
     with_fx :level, amp: 1.0 do
       tick
-      score =  ring(               [:Fs3, :B3, :Fs2, :Fs3].cycle.take(64), 
-               [:Gs3, :B3, :E1, :E2].cycle.take(32),   
-               [:Fs3, :A3, :D1, :D2].cycle.take(32), 
-               [:Fs3, :A3, :D1, :D2].cycle.take(32),  
+      score =  ring(               [:Fs3, :B3, :Fs2, :Fs3].cycle.take(64),
+               [:Gs3, :B3, :E1, :E2].cycle.take(32),
+               [:Fs3, :A3, :D1, :D2].cycle.take(32),
+               [:Fs3, :A3, :D1, :D2].cycle.take(32),
                [:Fs3, :A3, :FS2, :FS3,
                 :D3,  :A3, :fs2, :Fs3].cycle.take(16),                 #c
                [
-                :Fs3, :Cs4, :FS3, :FS4,
-                :E4,  :Cs4, :fs3, :Fs4,
-                ].cycle.take(16),                 #c
+                 :Fs3, :Cs4, :FS3, :FS4,
+                 :E4,  :Cs4, :fs3, :Fs4,
+               ].cycle.take(16),                 #c
                [
-                :b4,  :D4, :B3, :b3,
-                :cs4, :B3, :fs3, :A3,
-                ].cycle.take(32),                 #c
+                 :b4,  :D4, :B3, :b3,
+                 :cs4, :B3, :fs3, :A3,
+               ].cycle.take(32),                 #c
                [
-                :cs4, :E4, :B3, :b3,
-                :cs4, :E3, :Gs3, :B3,
-                ].cycle.take(32).shuffle,                 #c
+                 :cs4, :E4, :B3, :b3,
+                 :cs4, :E3, :Gs3, :B3,
+               ].cycle.take(32).shuffle,                 #c
                [
-                :Fs3, :Cs4, :FS3, :FS4,
-                :E4,  :Cs4, :fs3, :Gs4,
-                :Fs3, :Cs4, :FS3, :A4,
-                :E4,  :Cs4, :Gs4, :Cs5,
-                ].cycle.take(32),                 #c
+                 :Fs3, :Cs4, :FS3, :FS4,
+                 :E4,  :Cs4, :fs3, :Gs4,
+                 :Fs3, :Cs4, :FS3, :A4,
+                 :E4,  :Cs4, :Gs4, :Cs5,
+               ].cycle.take(32),                 #c
                ).flatten
       score2 =  knit(                 ring(_, _, _, _),  32,              #E  6
                  ring(_, _, _, _) , 32,              #B  4
@@ -81,9 +81,9 @@ with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
           }
         else
           if spread(1,4).look
-         # s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand #, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)
-        end
+            # s = synth :gpa, note: note, attack: 0.001, release: ring(0.125, 0.25, 0.125, 0.25).tick, amp: 2.8*1+0.1*rand #, cutoff:  ramp(* range(0,135,0.25)).tick(:entry)
           end
+        end
         with_transpose 12 do
           s = synth :gpa, note:  ring(_,_,_,note).look(:n), attack: 0.0001, release: 5.5, amp: 0.4*1#, cutoff: 100
         end

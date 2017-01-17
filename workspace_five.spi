@@ -31,7 +31,7 @@ live_loop :drums2, sync: :kick do
    synth :pluck, note: :Cs4
    sleep 1.0/16.0 * sample_duration(Alt[/vor_alto_leg_oo_05_d_08/,0])
        end;end #Fs->B    -5  C#    -7 B   -12 F#
-       sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], s, fx: (ring :echo, :none),
+       sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], s, fx: (ring :echo, :slicer),
        rpitch: (ring 0, 5, 7).tick(:progrress), cutoff: 130, amp: 1.0) do
          l = (line 0.0, 1.0, steps: 32).tick(:dis)
          with_fx :distortion, distort: l do

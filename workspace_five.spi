@@ -35,11 +35,10 @@ live_loop :drums2, sync: :kick do
        rpitch: (ring 0, 0, 0).tick(:progrress), cutoff: 130, amp: 0.4) do
          l = (line 0.0, 1.0, steps: 4).tick(:dis)
          at do
-           
            8.times{
              d = @slices["Fs3/8"].take(32).tick
              puts d
-             smp d, amp: 10#, rpitch: (ring 0, -7, -12).tick(:rp);
+             smp d, amp: 1#, rpitch: (ring 0, -7, -12).tick(:rp);
              sleep d[:offset] - d[:onset]
            }
            

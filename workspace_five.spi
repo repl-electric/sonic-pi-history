@@ -37,7 +37,7 @@ live_loop :drums2, sync: :kick do
          at do
            sum = 0
            8.times{
-             d = (@slices["Fs3/4"].drop(4).take(2)  @slices["A3/4"].drop(4).take(2)).tick
+             d = (@slices["Fs3/4"].drop(4).take(2) + @slices["A3/4"].drop(4).take(2)).tick
              smp d, amp: 10, rpitch: (ring 0,0,0,0,0,0,0,0).tick(:rp);
              sleep (d[:offset] - d[:onset])
              sum = sum + d[:offset] - d[:onset]

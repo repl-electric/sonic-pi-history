@@ -28,7 +28,7 @@ live_loop :doit do
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 4
     at do
-      sleep 1/8.0
+      sleep 1/8.0/2.0
       if spread(1,128).tick(:sindie)
         smp Mountain[/subkick/,1], amp: 0.25
       end

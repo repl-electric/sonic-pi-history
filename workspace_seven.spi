@@ -15,10 +15,10 @@ module Harp
   def self.slice(n, size: 1/4.0)
     @harp_cache ||= {}
     n = n.to_s.gsub(/s/,"#")
-    if !@harp.has_key?(n)
-      @harp[n] = NoteSlices.find(note: n, max: size, pat: "harp").take(64)
+    if !@harp_cache.has_key?(n)
+      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "harp").take(64)
     end
-    @harp[n]
+    @harp_cache[n]
   end
 end
 

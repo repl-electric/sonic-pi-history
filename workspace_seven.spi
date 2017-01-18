@@ -13,7 +13,7 @@ puts @slices.values.flatten.count
 
 module Harp
   def self.slice(n, size: 1/4.0)
-    n = n.to_s.gsub(/s/,/#/)
+    n = n.to_s.gsub(/s/,"#")
     @harp ||= NoteSlices.find(note: n, max: size, pat: "harp").take(64)
   end
 end

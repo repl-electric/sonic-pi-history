@@ -11,7 +11,7 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-#  smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(10, 130, 128).tick(:ram)
+#  smp Harp.slice(:Fs3).look, amp: 2, cutoff: (ramp 10, 130, 128).tick(:ram)
 module Dirty
   def self.slice(n, size: 1/4.0)
     @dirty_cache ||= {}
@@ -25,6 +25,6 @@ end
 
 live_loop :doit do
   tick
-  smp Harp.slice(:Fs3).look, amp: 2.0, cutoff:  ramp(10, 130, 128).tick(:4ram)
+  smp Harp.slice(:Fs3).look, amp: 2.0, cutoff: (ramp 10, 130, 128).tick(:r3am)
   sleep 1/8.0
 end

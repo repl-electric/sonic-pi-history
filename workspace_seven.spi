@@ -32,7 +32,7 @@ live_loop :doit do
     smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi)
   end
   if spread(1,8).look
-    smp Tech[/snare/,5], amp: 3
+    smp Tech[/snare/,7], amp: 3
   end
   d=(spread 7,11).map{|s| s ? :echo : :reverb}
   with_fx  d.look, decay: 1, phase: 0.5, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do

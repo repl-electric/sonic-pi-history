@@ -27,6 +27,13 @@ live_loop :doit do
   tick
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 4
+    at do
+      sleep 1/8.0
+      if spread(1,32).tick(:sindie)
+    smp Mountain[/subkick/,1], amp: 4
+      end
+    end
+    
   end
   if spread(1,2, rotate: 1).look
     smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi)

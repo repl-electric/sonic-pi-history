@@ -25,8 +25,8 @@ end
 
 live_loop :doit do
   tick
-  if spread(1,8).look
-  smp Mountain[/subkick/,0], amp: 4
+  if spread(1,4).look
+    smp Mountain[/subkick/,0], amp: 4
   end
   d=(spread 7,11).map{|s| s ? :echo : :reverb}
   with_fx  d.look, decay: 1, phase: 0.5, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do

@@ -33,7 +33,5 @@ live_loop :doit do
   with_fx  d.look, decay: 1, phase: 0.5, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do
     smp Harp.slice(:Fs3).look, amp: 2.0, cutoff: 80
   end
-  
-  
   sleep 1/8.0
 end

@@ -16,7 +16,7 @@ module Harp
     @harp_cache ||= {}
     n = n.to_s.gsub(/s/,"#")
     if !@harp_cache.has_key?(n)
-      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "harp").take(64)
+      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "strawberry").take(64)
     end
     @harp_cache[n]
   end

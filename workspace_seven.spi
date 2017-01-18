@@ -12,14 +12,14 @@ end
 puts @slices.values.flatten.count
 
 module Harp
-  def self.slice(note, size: 1/4.0)
-    @harp ||= NoteSlices.find(note: "F#4", max: 1/4.0, pat: "harp").take(64)
-   end
-end
-  
-  live_loop :doit do
-    tick
-    smp @harp.look, amp: 4
-    sleep 1/8.0
+  def self.slice(n, size: 1/4.0)
+    n = n.gsub(/s/,/#/)
+    @harp ||= NoteSlices.find(note: n, max: size, pat: "harp").take(64)
   end
-  
+end
+
+live_loop :doit do
+  tick
+  smp Harp.slice(:Fs4).look, amp: 4
+  sleep 1/8.0
+end

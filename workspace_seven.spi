@@ -24,6 +24,6 @@ end
 
 live_loop :doit do
   tick
-  smp Harp.slice(:Fs4).look, amp: 2
+  smp Harp.slice(:Fs5).look, amp: 2
   sleep 1/8.0
 end

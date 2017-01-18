@@ -16,6 +16,6 @@ puts @slices.values.flatten.count
 
 live_loop :doit do
   tick
-  smp @harp.look, amp: 1
+  smp @harp.look, amp: 2
   sleep 1/8.0
 end

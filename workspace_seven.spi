@@ -11,19 +11,19 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-module Harp
+module Strawberry
   def self.slice(n, size: 1/4.0)
-    @harp_cache ||= {}
+    @straw_cache ||= {}
     n = n.to_s.gsub(/s/,"#")
-    if !@harp_cache.has_key?(n)
-      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "strawberry").take(64)
+    if !@straw_cache.has_key?(n)
+      @straw_cache[n] = NoteSlices.find(note: n, max: size, pat: "strawberry").take(64)
     end
-    @harp_cache[n]
+    @straw_cache[n]
   end
 end
 
 live_loop :doit do
   tick
-  smp Harp.slice(:Fs3).look, amp: 2
+  smp Harp.slice(:Fs3).look, amp: 2, cutoff: 10
   sleep 1/8.0
 end

@@ -24,6 +24,6 @@ end
 
 live_loop :doit do
   tick
-  smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(100, 130, 128).look
+  smp Harp.slice(:Fs3).look, amp: 2, cutoff: (ramp 10, 130, 128).tick(:ram)
   sleep 1/8.0
 end

@@ -30,6 +30,13 @@ live_loop :doit do
   end
   if spread(1,2, rotate: 1).look
     smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi)
+    at do
+      sleep 1/8.0
+      if spread(1,32).tick(:sindie)
+        smp Frag[/hat/,3], amp: 0.25, rpitch: (ring 0,12,12).tick(:pi)
+
+      end
+    end
   end
   if spread(1,8).look
     smp Dust[/snare/,[2,1,2,1]].tick(:S), amp: 2

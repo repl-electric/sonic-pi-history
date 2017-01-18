@@ -13,7 +13,7 @@ puts @slices.values.flatten.count
 
 module Harp
   def self.slice(n, size: 1/4.0)
-    @harp_cache ||= {}
+    @harp_cache = {}
     n = n.to_s.gsub(/s/,"#")
     if !@harp_cache.has_key?(n)
       @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "strawberry").take(64)

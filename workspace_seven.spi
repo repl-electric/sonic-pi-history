@@ -11,11 +11,15 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-@harp ||= NoteSlices.find(note: "F#4", max: 1/4.0, pat: "harp").take(64)
-
-
-live_loop :doit do
-  tick
-  smp @harp.look, amp: 4
-  sleep 1/8.0
+module Harp
+  def self.slice(note, size: 1/4.0)
+    @harp ||= NoteSlices.find(note: "F#4", max: 1/4.0, pat: "harp").take(64)
+   end
 end
+  
+  live_loop :doit do
+    tick
+    smp @harp.look, amp: 4
+    sleep 1/8.0
+  end
+  

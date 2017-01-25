@@ -39,9 +39,9 @@ live_loop :drums2, sync: :kick do
              sd = @slices["Fs4/4"].drop(12).take(32)
              d = sd.tick
              at do
-               sum = d[:onset] + 0.1
+               sum = 0.00001#d[:onset] + 0.1
                4.times{
-                 smp d, amp: 5, start: sum #, rpitch: (ring 1,1,1,1).tick(:rp);
+                 smp d, amp: 5, #, rpitch: (ring 1,1,1,1).tick(:rp);
                  sleep (d[:offset] - d[:onset])
                  sum = sum + d[:offset] - d[:onset]
                }

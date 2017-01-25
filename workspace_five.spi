@@ -36,7 +36,7 @@ live_loop :drums2, sync: :kick do
          l = (line 0.0, 1.0, steps: 32).tick(:dis)
          with_fx :distortion, distort: l, mix: 1 do
            with_fx :bitcrusher, bits: 8, mix: 1 do
-             sd = @slices["Fs4/4"].drop(20).take(1)
+             sd = @slices["Fs4/4"].drop(20).take(2)
              d = sd.tick
              at do
                sum = 2.5

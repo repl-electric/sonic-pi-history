@@ -1,33 +1,34 @@
 _=nil
 with_fx :gverb, room: 300, mix: 1.0, spread: 4.0, damp: 1.0, dry: 1.0 do
   live_loop :melody4, sync: :kick do #1/4
-      tick;stop
-      score =  ring(               [:A4, _, _, _].cycle.take(64),                  
-               [:Gs3, _, _, _].cycle.take(32),                 
-               [:Fs3, _, _, _].cycle.take(32),                   
-               [:Fs3, _, _, _].cycle.take(32),                     
-               [:Fs3, _, _, _,
-                :D3,  _, _, _].cycle.take(16),               
-               [
-                :Fs3, _, _, _,
-                :E4,  _, _, _,
-                ].cycle.take(16),                 
-               [
-                :b4,  _, _, _,
-                :cs4, _, _, _,
-                ].cycle.take(32),                 
-               [
-                :cs4, _, _, _,
-                :cs4, _, _, _,
-                ].cycle.take(32).shuffle,                 
-               [
-                :Fs3, _, _, _,
-                :E4,  _, _, _,
-                :Fs3, _, _, _,
-                :E4,  _, _, _,
-                ].cycle.take(32),                 
-               ).flatten                 
-               synth :plucked, note: score.look, decay: 1/2.0, amp: 0.2, attack: 0.001
-                sleep 1/4.0
-               end                                  
-               end
+    tick;stop
+    score = (ring
+             [:A4, _, _, _].cycle.take(64),
+             [:Gs3, _, _, _].cycle.take(32),
+             [:Fs3, _, _, _].cycle.take(32),
+             [:Fs3, _, _, _].cycle.take(32),
+             [:Fs3, _, _, _,
+              :D3,  _, _, _].cycle.take(16),
+             [
+               :Fs3, _, _, _,
+               :E4,  _, _, _,
+             ].cycle.take(16),
+             [
+               :b4,  _, _, _,
+               :cs4, _, _, _,
+             ].cycle.take(32),
+             [
+               :cs4, _, _, _,
+               :cs4, _, _, _,
+             ].cycle.take(32).shuffle,
+             [
+               :Fs3, _, _, _,
+               :E4,  _, _, _,
+               :Fs3, _, _, _,
+               :E4,  _, _, _,
+             ].cycle.take(32),
+             ).flatten
+    synth :plucked, note: score.look, decay: 1/2.0, amp: 0.2, attack: 0.001
+    sleep 1/4.0
+  end
+end

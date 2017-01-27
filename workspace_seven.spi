@@ -61,6 +61,7 @@ end
 
 live_loop :chords   do
   sync :doit
+  tick
   with_fx :distortion, mix: 0.5 do
     synth :hollow, note: chord(:Fs2, :m11).shuffle.choose, decay: 7, attack: 1.0, amp: 0.4
   end

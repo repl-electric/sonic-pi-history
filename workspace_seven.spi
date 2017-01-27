@@ -26,7 +26,7 @@ end
 live_loop :doit do
   tick
   if spread(1,4).look
-#    smp Mountain[/subkick/,1], amp: 2
+    #    smp Mountain[/subkick/,1], amp: 2
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
@@ -36,7 +36,7 @@ live_loop :doit do
   end
   if spread(2,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room: 0.8 do
-      smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi), cutoff: (line 100, 120, steps: 128).look
+      smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi), cutoff: (ramp *(line 100, 120, steps: 128)).look
     end
     if spread(1,32).tick(:sindie)
       at do

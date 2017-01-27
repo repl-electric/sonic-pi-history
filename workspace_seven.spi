@@ -52,7 +52,7 @@ live_loop :doit do
   with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort:  line(0.0, 0.5, steps: 128).look do
     #D
     with_fx :krush, cutoff: 90 do
-      smp (Harp.slice(:Fs3).take(2)+[_,_]).look, amp: 4.0, rpitch:  ring(0).tick(:inner), cutoff: 100 , cutoff:  ramp(* line(10, 130, steps: 128)).tick(:r53am), rpitch:  ramp(* line(0, 12, 0.01)).tick(:initsgoes)
+      smp (Harp.slice(:Fs3).take(2)+[_,_]).look, amp: 4.0, rpitch:  ring(0).tick(:inner), cutoff: 100 , cutoff:  ramp(* line(10, 130, steps: 128)).tick(:r53am), rpitch:  ramp(* line(0, 12, steps:0.01)).tick(:initsgoes)
     end
   end
   d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle

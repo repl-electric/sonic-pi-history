@@ -65,7 +65,7 @@ end
 live_loop :mmmm do
   sync :doit
   s = synth :beep, note: :FS2, note_slide: 1
-  sleep (1/8.0)*4
+  sleep (1/8.0)*8
   control s, note: :FS4
 end
 

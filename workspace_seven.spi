@@ -58,6 +58,6 @@ live_loop :doit do
 end
 
 live_loop :chords,  sync: :doit do
-  synth :gpa, note: chord(:Cs3, :m)
+  synth :gpa, note: chord(:Cs3, :m), decay: 8
   sleep 1
 end

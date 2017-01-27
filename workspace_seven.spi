@@ -25,7 +25,7 @@ end
 
 live_loop :doit do
   tick
-  if spread(1,4).look
+  if spread(1,2).look
     smp Mountain[/subkick/,1], amp: 2
     if spread(1,128).tick(:sindie)
       at do

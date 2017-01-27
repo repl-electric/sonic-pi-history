@@ -62,6 +62,11 @@ live_loop :doit do
   sleep 1/8.0
 end
 
+live_loop :mmmm do
+  sync :doit
+  sleep (1/8.0)*2
+end
+
 live_loop :chords   do
   sync :doit
   tick

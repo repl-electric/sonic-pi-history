@@ -58,5 +58,6 @@ live_loop :doit do
 end
 
 live_loop :chords,  sync: :doit do
+  synth chord(:Cs3, :m)
   sleep 1
 end

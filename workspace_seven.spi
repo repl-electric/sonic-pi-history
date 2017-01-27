@@ -59,7 +59,7 @@ end
 
 live_loop :chords,  sync: :doit do
   with_fx :distortion do
-    synth :hollow, note: chord(:Fs4, :m11).choose, decay: 7, attack: 1.0, amp: 0.8
+    synth :hollow, note: chord(:Fs4, :m11).shuffle.choose, decay: 7, attack: 1.0, amp: 0.8
   end
   synth :dark_sea_horn, note: chord(:Fs4, :m9)[-1], cutoff: 55, decay: 2
   sleep 8

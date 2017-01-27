@@ -64,8 +64,8 @@ end
 
 live_loop :mmmm do
   sync :doit
-  puts Sop[/sustain/,/mm/][0]
-  smp Sop[/sustain/,/mm/][0], amp: 2
+  puts Sop[/sustain/,/mm/][2]
+  smp Sop[/sustain/,/mm/][2], amp: 2
   s = synth :gpa, note: :FS4, note_slide: 1, decay: 8, attack: 4.0
   sleep 1
   control s, note: :FS5

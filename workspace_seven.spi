@@ -26,7 +26,7 @@ end
 live_loop :doit do
   tick
   if spread(1,4).look
-    smp Frag[/kick/,4], amp: 2, cutoff: 80
+    smp Frag[/kick/,5], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)

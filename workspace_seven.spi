@@ -34,7 +34,7 @@ live_loop :doit do
       end
     end
   end
-  if (ring false,true).look
+  if (ring false,true).tick(:it)
     with_fx :reverb, mix: 0.3, room: 0.8 do
       smp Frag[/hat/,3], amp: 1, rpitch: (ring 0,12,12).tick(:pi)
     end

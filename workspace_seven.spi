@@ -39,12 +39,12 @@ live_loop :doit do
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
- #       smp Frag[/hat/,4], amp: 2.125, rpitch: (ring 0,12,12).tick(:pi)
+        #       smp Frag[/hat/,4], amp: 2.125, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
-    smp Fraz[/snap/,4], amp: 1, rpitch: -12*0, rate: (rand*0.1)+1
+  #  smp Fraz[/snap/,4], amp: 1, rpitch: -12*0, rate: (rand*0.1)+1
   end
   d=(spread 7,11).map{|s| s ? :echo : :slicer}.shuffle
   with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do

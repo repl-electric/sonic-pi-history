@@ -59,6 +59,6 @@ end
 
 live_loop :chords,  sync: :doit do
   synth :gpa, note: chord(:Cs4, :m), decay: 8, attack: 1.0
-  synth :dark_sea_horn, note: chord(:Cs4, :m9)[0], cutoff: 40
+  synth :dark_sea_horn, note: chord(:Cs4, :m9)[0], cutoff: 50
   sleep 8
 end

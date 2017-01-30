@@ -84,8 +84,8 @@ module Berry
 end
 live_loop :sop, sync: :doit do
   tick
-  #  smp Berry[/sustain/,/mm/][14], amp: 3
-  smp RHarp.slice((ring "F#4","B4", "Cs5").look).take(16).look, amp: 2
+   smp Berry[/sustain/,/mm/][14], amp: 3
+  smp RHarp.slice((ring "F#4","B4","Cs5").look).take(16).look, amp: 2
   sleep (1/8.0)*6
 end
 

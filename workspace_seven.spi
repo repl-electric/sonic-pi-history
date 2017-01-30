@@ -64,7 +64,7 @@ end
 
 live_loop :sop, sync: :doit do
   smp Sop[/sustain/,/mm/][2], amp: 2
-  sleep (1/8.0)*34
+  sleep (1/8.0)*6
 end
 
 live_loop :mmmm do

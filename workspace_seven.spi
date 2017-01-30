@@ -71,9 +71,9 @@ live_loop :mmmm do
   sync :doit
   s = synth :gpa, note: :FS4, note_slide: 1, decay: 8, attack: 4.0
   sleep 1
-  control s, note: :FS5
+  control s, note: :FS4+1
   sleep 1
-  control s, note: :D5
+  control s, note: :Fs4
   sleep 6
 end
 

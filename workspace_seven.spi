@@ -23,6 +23,18 @@ module Harp
   end
 end
 
+module RHarp
+  def self.slice(n, size: 1/4.0)
+    @harp_cache ||= {}
+    n = n.to_s.gsub(/s/,"#")
+    if !@harp_cache.has_key?(n)
+      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "Harp").take(64)
+    end
+    @harp_cache[n]
+  end
+end
+
+
 live_loop :doit do
   tick
   if spread(1,4).look
@@ -72,7 +84,7 @@ module Berry
 end
 live_loop :sop, sync: :doit do
   smp Berry[/sustain/,/mm/][14], amp: 3
-  smp Harp.slice("FS3", :a), amp: 2
+  smp Harp.slice("FS3", ), amp: 2
   sleep (1/8.0)*6
 end
 

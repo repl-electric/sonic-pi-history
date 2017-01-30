@@ -11,7 +11,7 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-#  smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(10, 130, 128).tick(:ram)
+#  smp Harp.slice(:Fs3).look, amp: 2, cutoff: (ramp 10, 130, 128).tick(:ram)
 module Harp
   def self.slice(n, size: 1/4.0)
     @straw_cache ||= {}
@@ -48,27 +48,27 @@ live_loop :doit do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room: 0.8 do
-      smp Frag[/hat/,3], amp: 0.4, rpitch:  ring(0,12,12).tick(:pi)
+      smp Frag[/hat/,3], amp: 0.4, rpitch: (ring 0,12,12).tick(:pi)
     end
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-        smp Frag[/hat/,4], amp: 0.5, rpitch:  ring(0,12,12).tick(:pi)
+        smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
     smp Dust[/snare/,6], amp: 1, rpitch: -12*0, rate: (rand*0.1)+1
   end
-  d= spread(1,12).map{|s| s ? :echo : :reverb}.shuffle
-  with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort:  line(0.0, 0.5, steps: 128).look do
+  d=(spread 1,12).map{|s| s ? :echo : :reverb}.shuffle
+  with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do
     #D
     ons=[ratio_on((Harp.slice(:Fs3)).look()),
          ratio_off((Harp.slice(:Fs3)).look())].shuffle
-    smp (Harp.slice(:Fs3)).look, amp: 4.0, rpitch:  ring(-5).tick(:inner), cutoff: 100 , finish: ons[0], start: ons[1], cutoff:  ramp(* line(10, 130, steps: 128)).tick(:r53am)
+    smp (Harp.slice(:Fs3)).look, amp: 4.0, rpitch: (ring -5).tick(:inner), cutoff: 100 , finish: ons[0], start: ons[1], cutoff: (ramp *(line 10, 130, steps: 128)).tick(:r53am)
   end
-  d= spread(1,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
-  with_fx  d.look, decay: 1, phase: 0.25, mix: 1, distort:  line(0.0, 0.5, steps: 128).look do
+  d=(spread 1,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
+  with_fx  d.look, decay: 1, phase: 0.25, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do
     smp (Harp.slice(:Fs3)).take(6).reverse.look, amp: 4.0, rpitch: 0, cutoff: 100
   end
   sleep 1/8.0
@@ -87,24 +87,26 @@ live_loop :sop, sync: :doit do
   with_fx :pitch_shift do
     smp Berry[/sustain/,/mm/][14], amp: 1
   end
-  smp RHarp.slice( ring("C#5").look).take(16).look, amp: 2
+  smp RHarp.slice((ring "C#5").look).take(16).look, amp: 2
   sleep (1/8.0)*6
 end
 
 live_loop :mmmm do
   sync :doit
   s = synth :gpa, note: :FS4, note_slide: 1, decay: 8, attack: 4.0
-  sleep 1
-  control s, note: :FS4+1
-  sleep 1
-  control s, note: :Fs4+2
-  sleep 6
-end
-
-live_loop :chords, sync: :doit   do
-  tick
-  with_fx :slicer, phase:  ring(0.5).tick(:as) do
-    synth :dark_sea_horn, note:  ring(:D1).look, cutoff: 70, decay: 8, attack: 1.0, amp: 0.5
-  end
-  sleep 8
-end
+  3.times{
+    sleep 1
+    control s, note: :FS4+1
+    sleep 1
+    control s, note: :Fs4+2
+}    
+    end
+    
+    live_loop :chords, sync: :doit   do
+      tick
+      with_fx :slicer, phase: (ring 0.5).tick(:as) do
+        synth :dark_sea_horn, note: (ring :D1).look, cutoff: 70, decay: 8, attack: 1.0, amp: 0.5
+      end
+      sleep 8
+    end
+    

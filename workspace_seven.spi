@@ -85,7 +85,7 @@ end
 live_loop :sop, sync: :doit do
   tick
   with_fx :pitch_shift do
-    #smp Berry[/sustain/,/mm/][14], amp: 1
+    smp Berry[/sustain/,/mm/][14], amp: 1
   end
   smp RHarp.slice("C#3").take(16).look, amp: 2
   sleep (1/8.0)*12

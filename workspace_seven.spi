@@ -70,8 +70,7 @@ live_loop :mmmm do
   sleep 1
   control s, note: :FS5
   sleep 1
-  
-  control s, note: :B5
+  control s, note: :D5
   
   sleep 6
 end

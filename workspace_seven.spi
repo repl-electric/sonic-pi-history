@@ -72,7 +72,7 @@ module Berry
 end
 live_loop :sop, sync: :doit do
   smp Berry[/sustain/,/mm/][14], amp: 3
-  smp Harp.slice("FS3"), amp: 2
+  smp Harp.slice("FS3", :a), amp: 2
   sleep (1/8.0)*6
 end
 

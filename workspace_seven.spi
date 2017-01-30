@@ -71,7 +71,7 @@ module Berry
   end
 end
 live_loop :sop, sync: :doit do
-  smp Berry[/sustain/,/mm/][8], amp: 8
+  smp Berry[/sustain/,/mm/][10], amp: 8
   smp Alt[/sustain/,/[^release]/,/mm/][0], amp: 2
   sleep (1/8.0)*6
 end

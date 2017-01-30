@@ -85,7 +85,7 @@ end
 live_loop :sop, sync: :doit do
   tick
   smp Berry[/sustain/,/mm/][14], amp: 3
-  smp RHarp.slice("Fs3")[0,3].look, amp: 8
+  smp RHarp.slice("F#3")[0,3].look, amp: 8
   sleep (1/8.0)*6
 end
 

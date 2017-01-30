@@ -98,7 +98,7 @@ live_loop :mmmm do
     sleep 1
     control s, note: :FS4+1
     sleep 1
-    #control s, note: :Fs4+2
+    control s, note: :Fs4+2
   }
 end
 

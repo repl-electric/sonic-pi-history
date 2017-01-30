@@ -84,7 +84,7 @@ module Berry
 end
 live_loop :sop, sync: :doit do
   smp Berry[/sustain/,/mm/][14], amp: 3
-  smp RHarp.slice("F#3")[0], amp: 8
+  smp RHarp.slice("D3")[0], amp: 8
   sleep (1/8.0)*6
 end
 

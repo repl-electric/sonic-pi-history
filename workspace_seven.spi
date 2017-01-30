@@ -105,7 +105,7 @@ live_loop :chords, sync: :doit   do
     #    synth :hollow, note: chord(:Fs2, :m11).shuffle.choose, decay: 7, attack: 1.0, amp: 0.4
   end
   with_fx :slicer, phase: (ring 0.5).tick(:as) do
-    synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 70, decay: 8, attack: 1.0, amp: 0.5
+    synth :dark_sea_horn, note: (ring :D1).look, cutoff: 70, decay: 8, attack: 1.0, amp: 0.5
   end
   sleep 8
 end

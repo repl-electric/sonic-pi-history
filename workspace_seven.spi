@@ -102,7 +102,6 @@ live_loop :sop, sync: :doit do
     smp Harp.slice("C#3").take(16).look, amp: 1.2
   end
   sleep (1/4.0)*12
-
 end
 
 live_loop :breath, sync: :doit do

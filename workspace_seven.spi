@@ -95,7 +95,8 @@ live_loop :sop, sync: :doit do
 end
 
 live_loop :voices, sync: :doit do
-  sample Vocals[//,34]
+  tick
+  sample Vocals[//,30..35].look
   sleep (1/2.0)*6
 end
 

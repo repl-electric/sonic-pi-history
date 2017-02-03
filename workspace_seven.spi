@@ -45,7 +45,7 @@ end
 
 live_loop :doit do
   tick
-  with_fx :distortion, mix: 0.2 do
+  with_fx :distortion, mix: 0.4 do
     with_fx :bitcrusher do
       smp (@slices["Fs4/4"][0..12]).look, amp: 2, rpitch: 0
     end

@@ -41,7 +41,6 @@ module Berry
     Sample.matches(samples, a)
   end
 end
-
 🍓=Straw
 
 live_loop :doit do

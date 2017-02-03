@@ -93,15 +93,16 @@ end
 
 live_loop :sop, sync: :doit do
   tick
-play :D3
+  play :D3
   
   with_fx :pitch_shift do
     #smp Berry[/sustain/,/mm/][14], amp: 1
   end
   with_fx :pitch_shift, pitch_dis: 0.2 do
     smp Harp.slice("C#3").take(16).look, amp: 1.2
-    sleep (1/8.0)*12
   end
+  sleep (1/4.0)*12
+
 end
 
 live_loop :breath, sync: :doit do

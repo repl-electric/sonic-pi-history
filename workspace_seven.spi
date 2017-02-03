@@ -80,7 +80,6 @@ live_loop :doit do
   with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
     smp (🍓.slice(:Fs3)).reverse.look, amp: 4.0, rpitch: 0, cutoff: 135
     smp (🍓.slice(:Fs3)).reverse.look, amp: 5.0, rpitch: 7, cutoff: 135
-    
   end
   if (spread 8, 12).look
     with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do

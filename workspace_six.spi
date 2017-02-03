@@ -1,1 +1,3 @@
+
+puts Junk[/snare/]
 smp Junk[/shot/,/snare/].tick(:sn), amp: 3.0, rpitch: -12*0

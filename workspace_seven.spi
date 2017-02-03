@@ -45,7 +45,7 @@ end
 
 live_loop :doit do
   tick
-  smp @slices["Fs4/4"][3], amp: 3, rpitch: -2
+  smp @slices["Fs4/4"][3], amp: 3, rpitch: 2
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 100
     if spread(1,128).tick(:sindie)

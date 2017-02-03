@@ -1,2 +1,2 @@
 Junk[/snare/].to_a
-smp Junk[/perc_hits/].tick(:sn), amp: 3.0, rpitch: -12*0
+smp Junk[/perc_hits/,1].tick(:sn), amp: 3.0, rpitch: -12*0

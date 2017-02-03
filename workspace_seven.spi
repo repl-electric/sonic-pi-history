@@ -45,11 +45,6 @@ end
 
 live_loop :doit do
   tick
-  with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
-    with_fx :bitcrusher do
-      smp (@slices["Fs3/4"].take(16)).look, amp: 2, rpitch: 0
-    end
-  end
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 100
     if spread(1,128).tick(:sindie)
@@ -86,8 +81,21 @@ live_loop :doit do
   with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
     smp (🍓.slice(:Fs3)).drop(0).reverse.look, amp: 4.0, rpitch: 0, cutoff: 100
   end
+  
+  with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
+    with_fx :bitcrusher do
+      smp (@slices["Fs3/4"].take(16)).look, amp: 2, rpitch: 0
+    end
+  end
+  
+  
+  
   sleep 1/8.0
+  
+  
+  
 end
+
 live_loop :sop, sync: :doit do
   tick
   with_fx :pitch_shift do

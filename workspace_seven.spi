@@ -96,10 +96,10 @@ end
 
 live_loop :mmmm do
   sync :doit
-  s = synth :hollow, note: :FS4, note_slide: 1, decay: 8, attack: 4.0
+  s = synth :hollow, note: :FS5, note_slide: 1, decay: 8, attack: 4.0
   3.times{
     sleep 1
-   
+    
     #   control s, note: :FS4+2
     #    sleep 1
     #  control s, note: :Fs4+3

@@ -96,7 +96,7 @@ end
 
 live_loop :voices, sync: :doit do
   tick
-  sample Vocals[//,32..34].look, amp: 0.5
+  sample Vocals[//,33..34].look, amp: 0.5
   sleep (1/2.0)*6
 end
 

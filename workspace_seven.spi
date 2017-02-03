@@ -93,7 +93,7 @@ end
 
 live_loop :sop, sync: :doit do
   tick
-  with_fx :reverb, room: 0.9 do
+  with_fx :echo, room: 0.9 do
     synth :chipbass, note: :D3, amp: 0.125
   end
   with_fx :pitch_shift do

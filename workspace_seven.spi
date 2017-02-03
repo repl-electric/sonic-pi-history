@@ -11,7 +11,7 @@ end
 @slices.values.flatten.each{|f| load_sample f[:path]}
 puts @slices.values.flatten.count
 
-#  smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(10, 130, 128).tick(:ram)
+#  smp Harp.slice(:Fs3).look, amp: 2, cutoff: (ramp 10, 130, 128).tick(:ram)
 module Straw
   def self.slice(n, size: 1/4.0)
     @straw_cache ||= {}
@@ -45,7 +45,7 @@ end
 
 live_loop :doit do
   tick
-  smp @slices["Fs4/4"][10..12].look, amp: 3, rpitch: 0
+  smp @slices["Fs4/4"][0..12].look, amp: 3, rpitch: 0
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 100
     if spread(1,128).tick(:sindie)
@@ -57,12 +57,12 @@ live_loop :doit do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room: 0.8 do
-      smp Frag[/hat/,3], amp: 0.4, rpitch:  ring(0,12,12).tick(:pi), cutoff: 110+rand(20)
+      smp Frag[/hat/,3], amp: 0.4, rpitch: (ring 0,12,12).tick(:pi), cutoff: 110+rand(20)
     end
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-        smp Frag[/hat/,4], amp: 0.5, rpitch:  ring(0,12,12).tick(:pi)
+        smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end
@@ -71,14 +71,14 @@ live_loop :doit do
       smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 1.0, rpitch: 0
     end
   end
-  d= spread(7,11).map{|s| s ? :echo : :slicer}.shuffle
-  with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort:  line(0.0, 0.5, steps: 128).look do
+  d=(spread 7,11).map{|s| s ? :echo : :slicer}.shuffle
+  with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
     ons=[ratio_on((🍓.slice(:Fs3)).look()),
          ratio_off((🍓.slice(:Fs3)).look())]
-    smp (🍓.slice(:Fs3)).look, amp: 4.0, rpitch:  ring(-5).tick(:inner), cutoff: 100 , finish: ons[0], start: ons[1], cutoff:  ramp(* line(10, 130, steps: 128)).tick(:r53am)
+    smp (🍓.slice(:Fs3)).look, amp: 4.0, rpitch: (ring -5).tick(:inner), cutoff: 100 , finish: ons[0], start: ons[1], cutoff: (ramp *(line 10, 130, steps: 128)).tick(:r53am)
   end
-  d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
-  with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort:  line(0.0, 0.5, steps: 128).look do
+  d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
+  with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
     smp (🍓.slice(:Fs3)).drop(0).reverse.look, amp: 4.0, rpitch: 0, cutoff: 100
   end
   sleep 1/8.0
@@ -112,8 +112,8 @@ live_loop :mmmm do
 end
 live_loop :chords, sync: :doit   do
   tick
-  with_fx :slicer, invert_wave:0, phase:  ring(0.5).tick(:as) do
-    synth :dark_sea_horn, note:  ring(:Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
+  with_fx :slicer, invert_wave:0, phase: (ring 0.5).tick(:as) do
+    synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
   end
   sleep (1/4.0)*8
 end

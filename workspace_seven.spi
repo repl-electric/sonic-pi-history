@@ -97,7 +97,7 @@ end
 live_loop :voices, sync: :doit do
   tick
   with_fx :wobble, phase: 12.0 do
-    sample Vocals[//,33..34].look, amp: 0.5
+    sample Vocals[//,50].look, amp: 0.5
   end
   sleep (1/2.0)*6
 end

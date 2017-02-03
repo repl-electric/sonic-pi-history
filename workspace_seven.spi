@@ -94,7 +94,7 @@ live_loop :sop, sync: :doit do
   end
 end
 
-live_loop :voices, sync: :doit do
+live_loop :breath, sync: :doit do
   tick
   sample Vocals[//,[1,1,1, 1,1,5]].look, amp: 0.25
   sleep (1/2.0)*6

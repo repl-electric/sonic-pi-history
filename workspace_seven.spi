@@ -45,7 +45,7 @@ end
 
 live_loop :doit do
   tick
-  smp @slices["Fs4/4"], amp: 4
+  smp @slices["Fs4/4"][0], amp: 4
   
   if spread(1,6).look
     

@@ -96,7 +96,7 @@ end
 
 live_loop :voices, sync: :doit do
   tick
-  with_fx :slicer, phase: 0.25 do
+  with_fx :slicer, phase: 0.5 do
     sample Vocals[//,32..34].look, amp: 0.5
   end
   sleep (1/2.0)*6

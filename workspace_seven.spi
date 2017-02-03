@@ -45,7 +45,7 @@ end
 
 live_loop :doit do
   tick
-  with_fx :krush do
+  with_fx :krush, mix: 0.1 do
     with_fx :bitcrusher do
       smp (@slices["Fs4/4"][0..12]).look, amp: 2, rpitch: 0
     end

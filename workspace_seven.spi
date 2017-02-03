@@ -82,54 +82,52 @@ live_loop :doit do
     smp (🍓.slice(:Fs3)).drop(0).reverse.look, amp: 4.0, rpitch: 0, cutoff: 100
   end
   
-  if (spread 1, 8).look
+  if (spread 8, 11).look
     with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
       with_fx :bitcrusher do
-        
         smp (@slices["Fs3/4"].take(16)).look, amp: 2, rpitch: 0
       end
     end
-    end
-    
-    
-    sleep 1/8.0
-    
-    
-    
   end
   
-  live_loop :sop, sync: :doit do
-    tick
-    with_fx :pitch_shift do
-      #smp Berry[/sustain/,/mm/][14], amp: 1
-    end
-    with_fx :pitch_shift, pitch_dis: 0.2 do
-      #smp Harp.slice("C#3").take(16).look, amp: 1
-      sleep (1/8.0)*12
-    end
-  end
   
-  live_loop :breath, sync: :doit do
-    tick
-    sample Vocals[[1,1,1, 1,1,5]].look, amp: 0.25
-    sleep (1/2.0)*6
-  end
+  sleep 1/8.0
   
-  live_loop :mmmm do
-    sync :doit
-    #s = synth :hollow, note: :FS5, note_slide: 1, decay: 8, attack: 4.0
-    3.times{
-      sleep 1
-      #   control s, note: :FS4+2
-      #    sleep 1
-      #  control s, note: :Fs4+3
-    }
-  end
-  live_loop :chords, sync: :doit   do
-    tick
-    with_fx :slicer, invert_wave:0, phase: (ring 0.5).tick(:as) do
-      synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
-    end
-    sleep (1/4.0)*8
-  end
   
+  
+end
+
+live_loop :sop, sync: :doit do
+  tick
+  with_fx :pitch_shift do
+    #smp Berry[/sustain/,/mm/][14], amp: 1
+  end
+  with_fx :pitch_shift, pitch_dis: 0.2 do
+    #smp Harp.slice("C#3").take(16).look, amp: 1
+    sleep (1/8.0)*12
+  end
+end
+
+live_loop :breath, sync: :doit do
+  tick
+  sample Vocals[[1,1,1, 1,1,5]].look, amp: 0.25
+  sleep (1/2.0)*6
+end
+
+live_loop :mmmm do
+  sync :doit
+  #s = synth :hollow, note: :FS5, note_slide: 1, decay: 8, attack: 4.0
+  3.times{
+    sleep 1
+    #   control s, note: :FS4+2
+    #    sleep 1
+    #  control s, note: :Fs4+3
+  }
+end
+live_loop :chords, sync: :doit   do
+  tick
+  with_fx :slicer, invert_wave:0, phase: (ring 0.5).tick(:as) do
+    synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
+  end
+  sleep (1/4.0)*8
+end

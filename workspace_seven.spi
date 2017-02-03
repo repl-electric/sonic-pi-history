@@ -42,7 +42,7 @@ end
 live_loop :doit do
   tick
   if spread(1,4).look
-    #    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+        smp Mountain[/subkick/,1], amp: 2, cutoff: 100
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
@@ -63,7 +63,7 @@ live_loop :doit do
     end
   end
   if spread(1,8).look
-       smp Dust[/snare/,2], amp: 0.25
+    smp Dust[/snare/,2], amp: 0.25
     with_fx :bitcrusher, bits: 16 do
       #smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 1.0, rpitch: 0
     end

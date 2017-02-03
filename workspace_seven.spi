@@ -89,12 +89,12 @@ live_loop :doit do
   end
   sleep 1/8.0
 end
-play :D3
-
 #D D# E F F#
 
 live_loop :sop, sync: :doit do
   tick
+play :D3
+  
   with_fx :pitch_shift do
     #smp Berry[/sustain/,/mm/][14], amp: 1
   end

@@ -112,7 +112,7 @@ live_loop :mmmm do
 end
 live_loop :chords, sync: :doit   do
   tick
-  with_fx :slicer, invert_wave:1, phase: (ring 0.25).tick(:as) do
+  with_fx :slicer, invert_wave:0, phase: (ring 0.25).tick(:as) do
     synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
   end
   sleep (1/4.0)*8

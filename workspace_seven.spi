@@ -89,6 +89,8 @@ live_loop :doit do
   end
   sleep 1/8.0
 end
+synth :D3
+
 
 #D D# E F F#
 

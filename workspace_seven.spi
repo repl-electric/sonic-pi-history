@@ -90,7 +90,7 @@ live_loop :doit do
   sleep 1/8.0
 end
 
-D D# E F F#
+#D D# E F F#
 
 live_loop :sop, sync: :doit do
   tick

@@ -96,7 +96,7 @@ end
 live_loop :breath, sync: :doit do
   tick
   sample Vocals[[1,1,1, 1,1,5]].look, amp: 0.25
-  smp @slices["F#4"]
+  smp @slices["F#4"], amp: 4
   sleep (1/2.0)*6
 end
 

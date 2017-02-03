@@ -100,7 +100,7 @@ end
 
 live_loop :breath, sync: :doit do
   tick
-  sample Vocals[[1,1,1, 1,1,5]].look, amp: 0.25
+  sample Vocals[[2,1,1, 1,1,5]].look, amp: 0.25
   sleep (1/2.0)*6
 end
 

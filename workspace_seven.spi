@@ -64,8 +64,10 @@ live_loop :doit do
   end
   if spread(1,8).look
     smp Dust[/snare/,2], amp: 0.25
+  end
+  if spread(1,4).rotate(2).look
     with_fx :bitcrusher, bits: 16 do
-      #smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 1.0, rpitch: 0
+      smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 1.0, rpitch: 0
     end
   end
   d=(spread 7,11).map{|s| s ? :echo : :slicer}.shuffle

@@ -1,4 +1,4 @@
-
+puts ""
 
 
 smp Junk[/perc_hits/,2].tick(:sn), amp: 3.0, rpitch: -12*0

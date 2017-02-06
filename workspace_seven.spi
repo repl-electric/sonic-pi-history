@@ -116,7 +116,7 @@ live_loop :doit do
   if s == 1
     8.times{
       if spread(1,4).look
-        smp Mountain[/subkick/,1], amp: 5, cutoff: 80
+        smp Mountain[/subkick/,1], amp: 10, cutoff: 80
       end
       sleep 1/8.0
     }

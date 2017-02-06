@@ -91,7 +91,7 @@ live_loop :doit do
       end
     end
   end
-  sleep (ring 1/8.0, 1/8.0,1/8.0, 1/8.0, 1/4).look
+  sleep (ring 1/8.0, 1/8.0,1/8.0, 1/8.0, 1/4.0).look
 end
 #D D# E F F#
 

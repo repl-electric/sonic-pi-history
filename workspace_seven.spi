@@ -114,10 +114,10 @@ live_loop :doit do
     end
   end
   if s == 1
-    8.times{
+    8.times{|n|
       sleep 1/8.0
       tick
-      if spread(1,4).look
+      if spread(1,4).look && n < 7
         smp Mountain[/subkick/,1], amp: 2, cutoff: 80
       end
     }

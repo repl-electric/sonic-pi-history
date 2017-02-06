@@ -97,9 +97,9 @@ end
 live_loop :sop, sync: :doit do
   tick
   with_fx :echo, room: 0.9 do
-    #    with_fx :distortion do
-    #    synth :chipbass, note: :Fs4, amp: 0.125, decay: 2
-    #   end
+        with_fx :distortion do
+        synth :chipbass, note: :Fs4, amp: 0.125, decay: 2
+       end
   end
   with_fx :pitch_shift do
     #smp Berry[/sustain/,/mm/][14], amp: 1

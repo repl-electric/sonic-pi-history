@@ -113,7 +113,7 @@ live_loop :doit do
       if s==1
         #puts "HIT"
         smp fslice, amp: 4.0, rpitch: 0, cutoff: 135,
-          start: ratio_on(fslice)-0.02
+          start: ratio_on(fslice)-0.03
       else
         smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
       end

@@ -115,11 +115,12 @@ live_loop :doit do
   end
   if s == 1
     8.times{
+      sleep 1/8.0
+      
       tick
       if spread(1,4).look
         smp Mountain[/subkick/,1], amp: 2, cutoff: 80
       end
-      sleep 1/8.0
     }
   else
     sleep s

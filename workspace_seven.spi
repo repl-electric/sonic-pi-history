@@ -85,7 +85,7 @@ live_loop :doit do
     if (spread 8, 12).look
       with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
         with_fx :bitcrusher, bits: (line 8, 32, steps: 1).look do
-          smp (🍓.slice(:Fs1).take(32)).look, amp: 2.6, rpitch: 0
+          smp (🍓.slice(:Fs0).take(32)).look, amp: 2.6, rpitch: 0
         end
       end
     end

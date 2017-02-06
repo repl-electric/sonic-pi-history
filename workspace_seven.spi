@@ -77,7 +77,7 @@ live_loop :doit do
            ratio_off((🍓.slice(:Fs3)).look())]
       smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: (ring 0).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, steps: 128)).tick(:r53am)
     end
-    d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
+    d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
       smp (🍓.slice(:Fs3)).reverse.look, amp: 4.0, rpitch: 0, cutoff: 135
       #smp (🍓.slice(:Fs3)).reverse.look, amp: 5.0, rpitch: 9, cutoff: 135

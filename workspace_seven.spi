@@ -115,8 +115,7 @@ live_loop :doit do
   if s == 1
     8.times{|n|
       sleep 1/8.0
-      tick
-      if spread(1,4).look && n < 7
+      if spread(1,4).tick && n < 7
         smp Mountain[/subkick/,1], amp: 4, cutoff: 80
       end
     }

@@ -114,7 +114,11 @@ live_loop :doit do
     end
   end
   if s == 1
-    8.times{ sleep 1/8.0 }
+    8.times{
+          smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+
+      sleep 1/8.0
+    }
   else
     sleep s
   end

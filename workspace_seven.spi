@@ -110,7 +110,7 @@ live_loop :doit do
       fslice = 🍓.slice(:Fs3).reverse.look
       smudge = ((ratio_off(fslice) - ratio_on(fslice))*128.0)
       #puts smudge
-      if s!=1/8.9
+      if s!=1/8.0
         #puts "HIT"
         smp fslice, amp: 4.0, rpitch: 0, cutoff: 135,
           start: ratio_on(fslice)-0.03

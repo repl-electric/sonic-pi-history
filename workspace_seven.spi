@@ -118,7 +118,7 @@ end
 
 live_loop :ambient, sync: :doit do
   sample 🍓.slice(:Fs3)[2][:path], amp: 8
-  sleep (1/2.0)*16
+  sleep (1/2.0)*32
 end
 
 live_loop :mmmm do

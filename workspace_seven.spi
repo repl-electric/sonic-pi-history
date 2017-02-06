@@ -42,6 +42,7 @@ end
 
 live_loop :doit do
   tick
+  s = (ring 1/8.0,1/8.0,1/8.0,1/8.0, 1/4.0).look
   if spread(1,4).look
     #smp Mountain[/subkick/,1], amp: 1, cutoff: 80
     if spread(1,128).tick(:sindie)
@@ -91,7 +92,7 @@ live_loop :doit do
       end
     end
   end
-  sleep (ring 1/8.0,1/8.0,1/8.0,1/8.0, 1/4.0).look
+  sleep s
 end
 #D D# E F F#
 

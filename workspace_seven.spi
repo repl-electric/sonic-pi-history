@@ -117,74 +117,71 @@ live_loop :doit do
       #puts smudge
       if s!=1/8.0
         #puts "HIT"
-        at do
           smp fslice, amp: 4.0, rpitch: 0, cutoff: 135,
             start: ratio_on(fslice)-0.01
-        end
-        end
-        smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
-        
-        #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 5.0, rpitch: (ring 9,9,5,-5).look, cutoff: 135
       end
-      if (spread 8, 12).look
-        with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
-          with_fx :bitcrusher, bits: (line 8, 32, steps: 1).look do
-            #smp (🍓.slice(:Cs0).take(32)).look, amp: 0.6, rpitch: 0
-          end
+      smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
+      
+      #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 5.0, rpitch: (ring 9,9,5,-5).look, cutoff: 135
+    end
+    if (spread 8, 12).look
+      with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
+        with_fx :bitcrusher, bits: (line 8, 32, steps: 1).look do
+          #smp (🍓.slice(:Cs0).take(32)).look, amp: 0.6, rpitch: 0
         end
       end
     end
-    
-    sleep s
-    
   end
-  #D D# E F F#
   
-  live_loop :sop, sync: :doit do
-    tick
-    with_fx :echo, room: 0.9 do
-      with_fx :distortion do
-        #synth :chipbass, note: :Fs4, amp: 0.125, decay: 2, pan: (line 0.25, -0.25, steps: 0.001).look
-      end
+  sleep s
+  
+end
+#D D# E F F#
+
+live_loop :sop, sync: :doit do
+  tick
+  with_fx :echo, room: 0.9 do
+    with_fx :distortion do
+      #synth :chipbass, note: :Fs4, amp: 0.125, decay: 2, pan: (line 0.25, -0.25, steps: 0.001).look
     end
-    with_fx :pitch_shift do
-      #smp Berry[/sustain/,/mm/][14], amp: 1
-    end
-    with_fx :pitch_shift, pitch_dis: 0.2 do
-      # smp Harp.slice("C#3").take(16).look, amp: 1.2
-    end
-    sleep (1/4.0)*12
   end
-  
-  live_loop :breath, sync: :doit do
-    tick
-    #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan: (line 0,1,steps:0.0125).look
-    sleep (1/2.0)*6
+  with_fx :pitch_shift do
+    #smp Berry[/sustain/,/mm/][14], amp: 1
   end
-  
-  live_loop :ambient, sync: :doit do
-    tick
-    puts look
-    puts 🍓.slice(:Fs3).look()[:path]
-    #sample 🍓.slice(:Fs3).look()[:path], amp: 1
-    sleep (1/2.0)*32
+  with_fx :pitch_shift, pitch_dis: 0.2 do
+    # smp Harp.slice("C#3").take(16).look, amp: 1.2
   end
-  
-  live_loop :mmmm do
-    sync :doit
-    #s = synth :hollow, note: :FS5, note_slide: 1, decay: 8, attack: 4.0
-    3.times{
-      sleep 1
-      #   control s, note: :FS4+2
-      #    sleep 1
-      #  control s, note: :Fs4+3
-    }
+  sleep (1/4.0)*12
+end
+
+live_loop :breath, sync: :doit do
+  tick
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan: (line 0,1,steps:0.0125).look
+  sleep (1/2.0)*6
+end
+
+live_loop :ambient, sync: :doit do
+  tick
+  puts look
+  puts 🍓.slice(:Fs3).look()[:path]
+  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  sleep (1/2.0)*32
+end
+
+live_loop :mmmm do
+  sync :doit
+  #s = synth :hollow, note: :FS5, note_slide: 1, decay: 8, attack: 4.0
+  3.times{
+    sleep 1
+    #   control s, note: :FS4+2
+    #    sleep 1
+    #  control s, note: :Fs4+3
+  }
+end
+live_loop :chords, sync: :doit   do
+  tick
+  with_fx :slicer, invert_wave:0, phase: (ring 0.5).tick(:as) do
+    #synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
   end
-  live_loop :chords, sync: :doit   do
-    tick
-    with_fx :slicer, invert_wave:0, phase: (ring 0.5).tick(:as) do
-      #synth :dark_sea_horn, note: (ring :Fs1).look, cutoff: 55, decay: 8, attack: 1.0, amp: 0.8
-    end
-    sleep (1/4.0)*8
-  end
-  
+  sleep (1/4.0)*8
+end

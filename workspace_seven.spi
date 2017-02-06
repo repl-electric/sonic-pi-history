@@ -116,22 +116,22 @@ live_loop :doit do
   if s == 1
     8.times{|n|
       sleep 1/8.0
-      if spread(1,4).tick(:owndrum)
+      if spread(1,4).look
         smp Mountain[/subkick/,1], amp: 4, cutoff: 80
       end
     }
   else
-      if spread(1,4).look
-    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
-    if spread(1,128).tick(:sindie)
-      at do
-        sleep (1/8.0/2.0)
-        #       smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
-        #       smp Mountain[/subkick/,0], amp: 0.8
+    if spread(1,4).look
+      smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+      if spread(1,128).tick(:sindie)
+        at do
+          sleep (1/8.0/2.0)
+          #       smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
+          #       smp Mountain[/subkick/,0], amp: 0.8
+        end
       end
     end
-  end
-
+    
     sleep 1/8.0
   end
 end

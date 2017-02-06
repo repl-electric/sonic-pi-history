@@ -40,6 +40,20 @@ module Berry
 end
 🍓=Straw
 
+live_loop :drrr, sync: :doit do
+    if spread(1,4).look
+    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+    if spread(1,128).tick(:sindie)
+      at do
+        sleep (1/8.0/2.0)
+        #       smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
+        #       smp Mountain[/subkick/,0], amp: 0.8
+      end
+    end
+  end
+  sleep 1/8.0
+end
+
 live_loop :doit do
   tick
   s =  ring(       1/8.0,1/8.0,1/8.0,1/8.0,
@@ -53,7 +67,7 @@ live_loop :doit do
        1
        ).look
   if spread(1,4).look
-#    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+    #    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)

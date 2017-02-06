@@ -112,7 +112,7 @@ end
 
 live_loop :breath, sync: :doit do
   tick
-  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan: (line 0,1,steps:0.0125).look
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan: (line 0,1,steps:0.0125).look
   sleep (1/2.0)*6
 end
 
@@ -120,7 +120,6 @@ live_loop :ambient, sync: :doit do
   sample 🍓.slice(:Fs3)[0][:path], amp: 4
   sleep (1/2.0)*12
 end
-
 
 live_loop :mmmm do
   sync :doit

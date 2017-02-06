@@ -84,9 +84,9 @@ live_loop :doit do
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
       if s==(1/4.0)
-        smp (fslice, amp: 4.0, rpitch: 0, cutoff: 135, start: fslice[:onset]+fslice[:onset]/4.0
+        smp fslice, amp: 4.0, rpitch: 0, cutoff: 135, start: fslice[:onset]+fslice[:onset]/4.0
       else
-        smp (fslice, amp: 4.0, rpitch: 0, cutoff: 135
+        smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
       end
 
       #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 5.0, rpitch: (ring 9,9,5,-5).look, cutoff: 135

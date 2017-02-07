@@ -42,13 +42,13 @@ end
 
 live_loop :drrr, sync: :doit do
   tick
-  if spread(1,8).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 50
+  if spread(1,4).look
+    #smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
 #        smp @slices["Fs3/4"][3], amp: 2
-        smp Mountain[/subkick/,0], amp: 0.8
+#        smp Mountain[/subkick/,0], amp: 0.8
       end
     end
   end
@@ -62,66 +62,77 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
+       8*2,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       8*2,
        ).look
   if spread(1,4).look
-#     smp Mountain[/subkick/,1], amp: 1.5, cutoff: 100
+    # smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
- #             smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
-  #             smp Mountain[/subkick/,1], amp: 2.0
+        #      smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
+        #       smp Mountain[/subkick/,0], amp: 0.8
       end
     end
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room: 0.8 do
-       # smp Frag[/hat/,3], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi), cutoff: 90+rand(20)
+      #  smp Frag[/hat/,3], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi), cutoff: 90+rand(20)
     end
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-     #      smp Frag[/hat/,4], amp: 1.5, rpitch: (ring 0,12,12).tick(:pi)
+        #   smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
-    #smp Dust[/snare/,12], amp: 0.25#, cutoff: 125
+    #smp Dust[/snare/,2], amp: 0.25
   end
   if spread(1,4).rotate(2).look
     with_fx :bitcrusher, bits: 16 do
-      #smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 0.25*2, rpitch: 0
+      #smp Junk[/perc_hit/,/_click_/].tick(:sn), amp: 0.8, rpitch: 0
     end
   end
   with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do
-    d=(spread 7,11).map{|s| s ? :echo : :reverb}#.shuffle
-    with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
+    d=(spread 7,11).map{|s| s ? :echo : :slicer}#.shuffle
+    with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort: (line 0.0, 0.5, steps: 128).look do
       ons=[ratio_on((🍓.slice(:Fs3)).look()),
            ratio_off((🍓.slice(:Fs3)).look())]
-      smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: (ring -5, -5).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, steps: 128)).tick(:r53am)
+  #    smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: (ring 0).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, steps: 128)).tick(:r53am)
       
     end
-    d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
+    d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, steps: 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
-      smp fslice, amp: 2.0, rpitch: 0, cutoff: 135
+      smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
       smudge = ((ratio_off(fslice) - ratio_on(fslice))*128.0)
       #puts smudge
       if s!=1/8.0
         #puts "HIT"
-        smp fslice, amp: 3.0, rpitch: 0, cutoff: 135, start: 0.7, finish: 1.0
+        smp fslice, amp: 4.0, rpitch: 0, cutoff: 135, start: 0.8, finish: 1.0
       end
-      smp fslice, amp: 2.0, rpitch: 0, cutoff: 135
-      #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 3.5, rpitch: (ring 9,9,5,-5).look, cutoff: 135
+      #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 5.0, rpitch: (ring 9,9,5,-5).look, cutoff: 135
     end
     if (spread 8, 12).look
       with_fx :distortion, mix: (line 0.0, 1.0, steps: 128).look do
         with_fx :bitcrusher, bits: (line 8, 32, steps: 1).look do
-          #smp (🍓.slice(:Cs0).take(32)).look, amp: 0.25, rpitch: 0
+          #smp (🍓.slice(:Cs0).take(32)).look, amp: 0.6, rpitch: 0
         end
       end
     end
   end
-  sleep s*32
+  
+  sleep s
 end
 #D D# E F F#
 
@@ -143,7 +154,7 @@ end
 
 live_loop :breath, sync: :doit do
   tick
-  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125/2.0, pan: (line 0,1,steps:0.0125).look
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan: (line 0,1,steps:0.0125).look
   sleep (1/2.0)*6
 end
 
@@ -151,7 +162,7 @@ live_loop :ambient, sync: :doit do
   tick
   puts look
   puts 🍓.slice(:Fs3).look()[:path]
-  sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end
 

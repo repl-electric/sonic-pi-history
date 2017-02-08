@@ -118,9 +118,9 @@ live_loop :doit do
     end
     if (ring true,false,true).look
       with_fx :wobble, phase: 12 do
-#        smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: 9, cutoff: 135
-#        smp 🍓.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch: 7, cutoff: 135
- #       smp 🍓.slice(:Fs3).drop(1).take(8).reverse.look, amp: 4.0, rpitch: 12, cutoff: 135
+        #        smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: 9, cutoff: 135
+        #        smp 🍓.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch: 7, cutoff: 135
+        #       smp 🍓.slice(:Fs3).drop(1).take(8).reverse.look, amp: 4.0, rpitch: 12, cutoff: 135
         
       end
     end
@@ -131,8 +131,8 @@ live_loop :doit do
       if s!=1/8.0
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 80, start: 0.65, finish: 1.0
       end
-      smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
-        rpitch: (ring 9,5,-5).look, cutoff: 135
+  #    smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
+   #     rpitch: (ring 9,5,-5).look, cutoff: 135
     end
     if (spread 8, 12).look
       with_fx :distortion, mix: (line 0.0, 1.0, 128).look do

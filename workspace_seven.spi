@@ -114,7 +114,7 @@ live_loop :doit do
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
-      smp (🍓.slice(:Fs3).take(1) + [_,_,_,_,_,_,_]).look, amp: 4.0, rpitch: 0, cutoff: 90
+      smp (🍓.slice(:Fs3).drop(1).take(1) + [_,_,_,_,_,_,_]).look, amp: 4.0, rpitch: 0, cutoff: 90
       if s!=1/8.0
         smp fslice, amp: 4.0, rpitch: 0, cutoff: 80, start: 0.65, finish: 1.0
       end

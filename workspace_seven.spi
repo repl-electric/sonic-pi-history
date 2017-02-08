@@ -120,7 +120,7 @@ live_loop :doit do
       with_fx :wobble, phase: 12 do
         smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: 2, cutoff: 135
         smp 🍓.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch: 5, cutoff: 135
-        smp 🍓.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch: 9, cutoff: 135
+        smp 🍓.slice(:Fs3).drop(1).take(4).reverse.look, amp: 4.0, rpitch: 9, cutoff: 135
         
       end
     end

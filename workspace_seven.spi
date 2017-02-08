@@ -101,7 +101,7 @@ live_loop :doit do
       fslice = 🍓.slice(:Fs3).reverse.look
       smp fslice, amp: 4.0, rpitch: 0, cutoff: 120
       if s!=1/8.0
-        smp fslice, amp: 2.0, attack: 0.3, rpitch: , cutoff: 80, start: 0.6, finish: 1.0
+        smp fslice, amp: 2.0, attack: 0.3, rpitch: 0, cutoff: 80, start: 0.6, finish: 1.0
       end
       #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
       #  rpitch:  ring(0,0,5,-5).look, cutoff: 135

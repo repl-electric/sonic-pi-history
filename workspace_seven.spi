@@ -102,7 +102,7 @@ live_loop :doit do
       
     end
       fslice = 🍓.slice(:Fs3).reverse.look
-      smp fslice, amp: 4.0, rpitch: 2#, cutoff: 140
+      smp fslice, amp: 4.0, rpitch: 5#, cutoff: 140
    
    
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle

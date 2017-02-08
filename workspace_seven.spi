@@ -138,7 +138,7 @@ live_loop :sop, sync: :doit do
   tick
   with_fx :echo, room: 0.9 do
     with_fx :distortion do
-      synth :chipbass, note: :Fs4, amp: 0.125, decay: 2, pan: (line 0.25, -0.25, steps: 0.001).look
+      synth :chipbass, note: :Fs4, amp: 0.125, decay: 2, pan: (line 0.25, -0.25, 0.001).look
     end
   end
   with_fx :pitch_shift do

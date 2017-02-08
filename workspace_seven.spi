@@ -83,9 +83,9 @@ live_loop :doit do
   end
   if spread(1,8).look
        if spread(1,16).look
-        smp Dust[/snare/,1], amp: 0.25
+     #   smp Dust[/snare/,1], amp: 0.25
        else
-        smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.01).look 
+    #    smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.01).look 
        end
   end
   if spread(1,4).rotate(2).look

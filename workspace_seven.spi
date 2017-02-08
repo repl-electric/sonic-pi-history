@@ -76,8 +76,9 @@ live_loop :doit do
        ).look
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 80
-        smp Frag[/coil/,1], start: 0.02, finish: 0.03
-    
+    if spread(1,8).look
+    smp Frag[/coil/,1], start: 0.02, finish: 0.03
+    end
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)

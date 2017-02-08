@@ -121,7 +121,7 @@ live_loop :doit do
       #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
       #  rpitch: (ring 0,0,5,-5).look, cutoff: 135
     end
-    if (spread 8, 12).look
+    if (spread 8, 16).look
       with_fx :distortion, mix: (line 0.0, 1.0, 128).look do
         with_fx :bitcrusher, bits: (line 8, 32, 1).look do
           smp (🍓.slice(:D2).take(32)).look, amp: 0.6,

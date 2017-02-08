@@ -77,7 +77,7 @@ live_loop :doit do
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,64).look
-      with_fx :slicer, phase: 0.5 do
+      with_fx :slicer, phase: 0.25 do
         smp Frag[/coil/,9]
       end
     end

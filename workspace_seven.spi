@@ -91,7 +91,7 @@ live_loop :doit do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room: 0.8 do
-      smp Frag[/hat/,3], amp: 0.8, rpitch: (ring 0,12,12).tick(:pi), cutoff: 90+rand(20)
+      smp Frag[/hat/,3], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi), cutoff: 90+rand(20)
     end
     if spread(1,32).tick(:sindie)
       at do

@@ -74,7 +74,7 @@ live_loop :doit do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.0, room: 0.9 do
-      smp Frag[/hat/,3], amp: 0.5, rpitch:  ring(0,12*4,12).tick(:pi), cutoff: 90+rand(20)
+      #smp Frag[/hat/,3], amp: 0.5, rpitch:  ring(0,12*4,12).tick(:pi), cutoff: 90+rand(20)
     end
     if spread(1,32).tick(:sindie)
       at do
@@ -96,7 +96,7 @@ live_loop :doit do
     end
   end
   with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do
-    d= spread(7,11).map{|s| s ? :echo : :reverb}.shuffle
+    d= spread(7,11).map{|s| s ? :echo : :reverb}#.shuffle
     with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort:  line(0.0, 0.5,128).look do
       ons=[ratio_on((🍓.slice(:Fs3)).look()),
            ratio_off((🍓.slice(:Fs3)).look())]
@@ -104,7 +104,7 @@ live_loop :doit do
       
     end
    
-    d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
+    d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
       #smp fslice, amp: 4.0, rpitch: 0, cutoff: 135
@@ -123,7 +123,7 @@ live_loop :doit do
     end
   end
   
-  sleep s*64
+  sleep s
 end
 #D D# E F F#
 

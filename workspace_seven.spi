@@ -158,7 +158,7 @@ live_loop :ambient, sync: :doit do
   tick
   puts look
   puts 🍓.slice(:Fs3).look()[:path]
-  sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end
 

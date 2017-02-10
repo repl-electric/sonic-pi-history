@@ -48,7 +48,7 @@ live_loop :drrr, sync: :doit do
       at do
         sleep (1/8.0/2.0)
         #        smp @slices["Fs3/4"][3], amp: 2
-        #        smp Mountain[/subkick/,0], amp: 0.8
+                smp Mountain[/subkick/,0], amp: 0.8
       end
     end
   end

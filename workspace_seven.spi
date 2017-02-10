@@ -43,7 +43,7 @@ live_loop :drrr, sync: :doit do
   tick
   if spread(1,16).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 60
-    if spread(1,128).tick(:sindie)
+    if spread(1,16).tick(:sindie)
       at do
         sleep (1/8.0)
         smp @slices["Fs3/4"][3], amp: 2

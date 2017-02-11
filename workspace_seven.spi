@@ -127,7 +127,7 @@ live_loop :doit do
       end
     end
   end
-  sleep s*2
+  sleep s*8
 end
 #D D# E F F#
 

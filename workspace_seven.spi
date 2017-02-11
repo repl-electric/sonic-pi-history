@@ -148,7 +148,7 @@ live_loop :sop, sync: :doit do
   with_fx :pitch_shift, pitch_dis: 0.2 do
      smp Harp.slice("F#4").take(16).look, amp: 4.2
   end
-  sleep (1/4.0)
+  sleep (1/8.0)
 end
 
 live_loop :breath, sync: :doit do

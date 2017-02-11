@@ -110,7 +110,7 @@ live_loop :doit do
    #     smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0
       end
      if spread(1,12).look
-      smp 🍓.slice(:Fs4), rate: 0.5, amp: 9
+      smp 🍓.slice(:Fs4).look, rate: 0.5, amp: 9
        #   smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 8.0,
        # rpitch:  ring(-12*2).look, cutoff: 100
     end

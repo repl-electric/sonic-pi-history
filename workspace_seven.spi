@@ -111,8 +111,8 @@ live_loop :doit do
       if s != 1/8.0
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0
       end
-      #smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
-      #  rpitch:  ring(-5, 5,5,-5,  5,5,-5 , 5).look, cutoff: 135
+      smp (🍓.slice(:Fs3)).drop(12).take(12).reverse.look, amp: 4.0,
+        rpitch:  ring(-5, 5,5,-5,  5,5,-5 , 5).look, cutoff: 135
     end
     if  spread(8, 16).look
       with_fx :distortion, mix:  line(0.0, 1.0, 128).look do

@@ -113,8 +113,8 @@ live_loop :doit do
      if spread(1,64).look
      at do
 32.times{|n|     
-if(n>32){      smp @slices["Fs3/8"].take(32).tick(:onsode), amp: 4}
-     sleep 1/8.0
+if(n>32)      smp @slices["Fs3/8"].take(32).tick(:onsode), amp: 4
+     sleep 1/8.0;end
      }
      end
        #   smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 8.0,

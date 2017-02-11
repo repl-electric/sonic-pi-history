@@ -79,7 +79,7 @@ live_loop :doit do
     if true#spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-        smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
+        smp Frag[/hat/,4], amp: 0.125, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end

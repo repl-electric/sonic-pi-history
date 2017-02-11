@@ -92,7 +92,7 @@ live_loop :doit do
   end
   if spread(3,8).look
     with_fx :bitcrusher, bits: 16 do
-   #   smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.4, rpitch: 0
+      smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.4, rpitch: 0
     end
   end
   with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do

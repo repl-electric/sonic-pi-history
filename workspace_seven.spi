@@ -41,7 +41,7 @@ end
 🍓=Straw
 live_loop :drrr, sync: :doit do
   tick
-  if spread(1,3).look 
+  if spread(1,6).look 
     smp @slices["Fs4/4"][3], amp: 2, pan:  ring(0.25,-0.25).tick(:pan)
   end
   if spread(1,16).look

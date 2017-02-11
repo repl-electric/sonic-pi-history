@@ -76,7 +76,7 @@ live_loop :doit do
     with_fx :reverb, mix: 0.0, room: 0.9 do
       smp Frag[/hat/,3], amp: 0.5, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: 90+rand(20)
     end
-    if spread(1,32).tick(:sindie)
+    if true#spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
         smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)

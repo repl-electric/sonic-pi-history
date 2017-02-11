@@ -63,7 +63,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0
        ).look
   if spread(1,4).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 85
+    smp Mountain[/subkick/,1], amp: 2, cutoff: 85
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
@@ -85,9 +85,9 @@ live_loop :doit do
   end
   if spread(1,8).look
        if spread(1,16).look
-     #   smp Dust[/snare/,1], amp: 0.25
+        smp Dust[/snare/,1], amp: 0.25
        else
-    #    smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.01).look 
+        smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.01).look 
        end
   end
   if spread(1,4).rotate(2).look
@@ -100,13 +100,13 @@ live_loop :doit do
     with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort: (line 0.0, 0.5,128).look do
       ons=[ratio_on((🍓.slice(:Fs3)).look()),
            ratio_off((🍓.slice(:Fs3)).look())]
-      smp (🍓.slice(:Fs3)).look, amp: 2.0, rpitch: (ring 0).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, 128)).tick(:r53am)
+      smp (🍓.slice(:Fs3)).look, amp: 3.0, rpitch: (ring 0).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, 128)).tick(:r53am)
       
     end
    
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0, distort: (line 0.0, 0.5, 128).look do
-      fslice = 🍓.slice(:Fs3).reverse.take(12).look
+      fslice = 🍓.slice(:Fs3).reverse.look
       smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 135
       if s != 1/8.0
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0

@@ -113,7 +113,7 @@ live_loop :doit do
      if spread(1,12).look
      at do
 16.times{     
-      smp @slices["Fs3/4"].take(32).tick(:onsode), amp: 7
+      smp @slices["Fs3/8"].take(32).tick(:onsode), amp: 7
      sleep 1/8.0/2.0
      }
      end

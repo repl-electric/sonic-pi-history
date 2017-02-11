@@ -42,7 +42,7 @@ end
 live_loop :fake_drums, sync: :doit do
   tick
    if spread(1,16).look
-with_fx(:slicer, phase: 0.5/1.0){    smp Mountain[/subkick/,1], amp: 2, cutoff: 60}
+#with_fx(:slicer, phase: 0.5/1.0){    smp Mountain[/subkick/,1], amp: 2, cutoff: 60}
     if spread(1,48).tick(:sindie)
       at do
         sleep (1/8.0)
@@ -62,7 +62,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0,
        16).look
   if spread(1,4).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
@@ -143,7 +143,7 @@ end
 
 live_loop :breath, sync: :doit do
   tick
-#  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan:  line(0,1,0.0125).look
+  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.125, pan:  line(0,1,0.0125).look
   sleep (1/2.0)*6
 end
 

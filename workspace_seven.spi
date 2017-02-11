@@ -63,7 +63,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0
        ).look
   if spread(1,4).look
-    smp Mountain[/subkick/,1], amp: (ring 4,2,2,2).look(:inside), cutoff: (ring 80,75,78,75).tick(:inside)
+    smp Mountain[/subkick/,1], amp: (ring 4,2,2,2).tick(:2inside), cutoff: (ring 80,75,78,75).tick(:inside)
     if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0/2.0)

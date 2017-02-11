@@ -69,8 +69,8 @@ live_loop :doit do
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)
-        smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
-        smp Mountain[/subkick/,0], amp: 0.8
+   #     smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
+   #     smp Mountain[/subkick/,0], amp: 0.8
       end
     end
   end

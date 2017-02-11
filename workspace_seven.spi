@@ -45,12 +45,12 @@ live_loop :drrr, sync: :doit do
     smp @slices["Fs4/4"][3], amp: 2, pan: (ring 0.25,-0.25).tick(:pan)
   end
   if spread(1,16).look
-    smp Mountain[/subkick/,1], amp: 2, cutoff: 60
+    #smp Mountain[/subkick/,1], amp: 2, cutoff: 60
     if spread(1,4).tick(:sindie)
       at do  
-        smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
+     #   smp Frag[/hat/,4], amp: 0.5, rpitch: (ring 0,12,12).tick(:pi)
         sleep (1/8.0/2.0)
-        smp Mountain[/subkick/,0], amp: 2.0
+      #  smp Mountain[/subkick/,0], amp: 2.0
       end
     end
   end
@@ -65,7 +65,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
   if spread(1,4).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 80
+    smp Mountain[/subkick/,1], amp: 2, cutoff: 80
     if spread(1,128).tick(:sindie)
       at do
         sleep (1/8.0/2.0)

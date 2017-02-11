@@ -112,7 +112,7 @@ live_loop :doit do
       end
      if spread(1,12).look
      at do
-4.times{     
+8.times{     
       smp @slices["Fs3/4"].tick(:onsode), amp: 4
      sleep 1/8.0 
      }

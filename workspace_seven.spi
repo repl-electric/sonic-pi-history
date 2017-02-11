@@ -146,7 +146,7 @@ live_loop :sop, sync: :doit do
     #smp Berry[/sustain/,/mm/][14], amp: 1
   end
   with_fx :pitch_shift, pitch_dis: 0.2 do
-     smp Harp.slice("F#3").take(16).look, amp: 4.2
+     smp Harp.slice("F#4").take(16).look, amp: 4.2
   end
   sleep (1/4.0)
 end

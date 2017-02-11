@@ -60,7 +60,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
-       1/8.0,1/8.0,1/8.0,1/8.0, 1/2.0*8
+       1/8.0,1/8.0,1/8.0,1/8.0, 16
        ).look
   if spread(1,4).look
    # smp Mountain[/subkick/,1], amp: 2, cutoff: 90
@@ -153,7 +153,7 @@ live_loop :ambient, sync: :doit do
   tick
   puts look
   puts 🍓.slice(:Fs3).look()[:path]
-  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end
 live_loop :mmmm do

@@ -103,7 +103,6 @@ live_loop :doit do
       ons=[ratio_on((🍓.slice(:Fs3)).look()),
            ratio_off((🍓.slice(:Fs3)).look())]
       smp (🍓.slice(:Fs3)).look, amp: 2.0, rpitch: (ring 0).tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, 128)).tick(:r53am)
-      
     end
    
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle

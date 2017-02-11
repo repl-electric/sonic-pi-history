@@ -90,7 +90,7 @@ live_loop :doit do
 #        smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.1).look 
        end
   end
-  if spread(3,8).rotate(2).look
+  if spread(3,8).look
     with_fx :bitcrusher, bits: 16 do
       smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.4, rpitch: 0
     end

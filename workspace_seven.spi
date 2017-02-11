@@ -84,7 +84,7 @@ live_loop :doit do
   end
   if spread(1,8).look
        if spread(1,64).look
-        with_fx(:reverb, mix: 0.5){  smp Dust[/snare/,[1,12]], amp: 0.35}
+        with_fx(:reverb, mix: 0.5){  smp Dust[/snare/,[1,12]], amp: 0.28}
        elsif spread(1,16).look
          smp Dust[/snare/,[1,12]], amp: 0.25
        else

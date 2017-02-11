@@ -41,7 +41,8 @@ end
 🍓=Straw
 live_loop :drrr, sync: :doit do
   tick
-         smp @slices["Fs4/4"][3], amp: 2
+if spread(1,3).look 
+  smp @slices["Fs4/4"][3], amp: 2
   if spread(1,16).look
     smp Mountain[/subkick/,1], amp: 2, cutoff: 60
     if spread(1,4).tick(:sindie)

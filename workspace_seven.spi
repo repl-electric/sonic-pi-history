@@ -182,7 +182,7 @@ live_loop :ambient, sync: :doit do
   sleep (1/2.0)*32
 end
 live_loop :cine, sync: :doit do
-   smp CineAmbi[/perc/,4], beat_stretch: 32, amp: 2 
+   smp CineAmbi[/perc/,5], beat_stretch: 32, amp: 2 
 64.times{
   tick
   if ring(1,0,0,0,1,0,1,0).look == 1

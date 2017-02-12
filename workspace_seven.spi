@@ -114,16 +114,6 @@ live_loop :doit do
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.5, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
 
-      if fslice[:path] =~ /vog_strw_sus_oh_f_01_rel/
-     at do
-32.times{|n|     
-if(n>24)  
-smp @slices["Fs3/8"].take(32).tick(:vocals), amp:(line 0.5, 1.5,32).look(:vocals), pan: (line -0.25, 0.25, 32).look(:vocals)
-end 
-     sleep 1/8.0/2.0
-     }
-end
-
       end
 
       smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 135

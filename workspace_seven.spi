@@ -178,13 +178,13 @@ live_loop :mmmm, sync: :doit do
 64.times{
   tick
 if(ring 1,0,0,0,1,0,1,0).look == 1
-  smp Junk[/lo/,0], amp: 0.2
+#  smp Junk[/lo/,0], amp: 0.2
 end
 if(ring 0,1,0,0,0,0,0,0).look == 1
-  smp Fraz[/snap/,2], amp: 0.5
+#  smp Fraz[/snap/,2], amp: 0.5
 end
 if(ring 0,0,1,0,0,0,0,0).look == 1
-  smp Fraz[/snap/,4], amp: 2
+#  smp Fraz[/snap/,4], amp: 2
 end
 sleep 1/2.0
 }

@@ -171,10 +171,10 @@ live_loop :mmmm, sync: :doit do
   tick
 
 if ring(1,1,1,0,1,0,1,0).look == 1
-  smp Junk[/lo/,0], amp: 10
+  smp Junk[/lo/,0], amp: 1
 end
 if ring(0,0,0,1,0,1,0,0).look == 1
-  smp Junk[/lo/,3], amp: 10
+  smp Junk[/lo/,3], amp: 1
 end
 sleep 1/2.0
 }

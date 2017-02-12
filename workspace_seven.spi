@@ -108,6 +108,8 @@ live_loop :slicing do
       smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch: (ring 5).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp *(line 10, 135, 128)).tick(:r53am)#, finish_offset: 0.1 #, finish: ons[0], start: ons[1]- (knit 0,31,0.01,1).tick(:spand)
 
       smp (🍓.slice(:Fs3)).drop(1).look, amp: 3.0, rpitch: (ring 5+2+1).tick(:inner)#, cutoff: 135,cutoff: (ramp *(line 10, 135, 128)).tick(:r53am)
+      
+      smp (🍓.slice(:Fs3)).drop(1).look, amp: 3.0, rpitch: (ring 12).tick(:inner), finish_offset: (knit 0,31, 0.1,1).look
 
       if (🍓.slice(:Fs3)).look[:path] =~ /vog_strw_sus_oh_f_01_rel/
         at do

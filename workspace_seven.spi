@@ -114,6 +114,7 @@ live_loop :doit do
       fslice = 🍓.slice(:Fs3).reverse.look
 
       if fslice[:path] =~ /vog_strw_sus_oh_f_01_rel/
+        smp Frag[/kick/]
       end
 
       smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135

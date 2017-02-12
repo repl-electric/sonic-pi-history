@@ -127,7 +127,7 @@ end
       if  knit(0,31, 0.0125, 1).look == 0.0125
         smp  ring(              @slices["Fs4/8"][16],
              @slices["Fs4/8"][17],
-             @slices["Fs4/8"][18]).tick(:sop)
+             @slices["Fs4/8"][18], @slices["Fs4/8"][18]).tick(:sop)
       end
       if s != 1/8.0
    #     smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0

@@ -19,6 +19,15 @@ module Straw
     @straw_cache[n]
   end
 end
+module Berry
+  def self.pick(a)
+    self[a]
+  end
+  def self.[](*a)
+    samples = Dir["/Users/josephwilk/Workspace/music/samples/strawberry/Samples/**/*.wav"]
+    Sample.matches(samples, a)
+  end
+end
 module Harp
   def self.slice(n, size: 1/4.0)
     @harp_cache ||= {}
@@ -27,15 +36,6 @@ module Harp
       @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "Harp").take(64)
     end
     @harp_cache[n]
-  end
-end
-module Berry
-  def self.pick(a)
-    self[a]
-  end
-  def self.[](*a)
-    samples = Dir["/Users/josephwilk/Workspace/music/samples/strawberry/Samples/**/*.wav"]
-    Sample.matches(samples, a)
   end
 end
 🍓=Straw;🥁=@slices
@@ -178,12 +178,9 @@ live_loop :breath, sync: :doit do
 end
 live_loop :ambient, sync: :doit do
   tick
-  puts look
-  puts 🍓.slice(:Fs3).look()[:path]
- # sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  #smp 🍓.slice(:Fs3).look(), amp: 1
   sleep (1/2.0)*32
 end
-
 live_loop :cine, sync: :doit do
    smp CineAmbi[/perc/,2], beat_stretch: 32, amp: 2 
 64.times{

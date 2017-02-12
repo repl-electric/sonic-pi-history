@@ -180,7 +180,7 @@ live_loop :ambient, sync: :slicing do
 end
 live_loop :cine, sync: :slicing do
   #with_fx :slicer, phase: 2 do
-  smp CineAmbi[/perc/,9], beat_stretch: 16, amp: 1
+  smp CineAmbi[/perc/,10], beat_stretch: 16, amp: 1
   #end
   32.times{
     tick

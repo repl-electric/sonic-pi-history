@@ -84,6 +84,9 @@ live_loop :doit do
     end
   end
   if spread(1,8).look
+     smp Frag[/snare/,0]
+     
+     
        if spread(1,128).look
    #      with_fx(:echo, mix: 0.5){ smp Dust[/snare/,1], amp: 0.28}
        elsif spread(1,16).look

@@ -64,7 +64,7 @@ live_loop :doit do
        ).look
 
   if (ring *%w{0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 0
-               0 0 0 0   1 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
+               0 0 0 0   0 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
     smp Dust[/perc/,2], amp: 0.75, rate: 1
   end
 

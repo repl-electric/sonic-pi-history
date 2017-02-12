@@ -64,7 +64,7 @@ live_loop :doit do
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp:  ring(1,0.7,1,0.8).tick(:inside2), cutoff:  ring(80).tick(:inside)
     if true# ring(*%w{0 0 0 0  0 0 0 0       0 0 0 0    0 0 0 1 }).tick(:s2indie) == "1"
-      smp Frag[/perc/,4], amp: 1.5, rate: -1
+      smp Dust[/perc/,4], amp: 1.5, rate: -1
     end
 
     if spread(1,32).tick(:sindie)

@@ -65,7 +65,7 @@ live_loop :doit do
   if (x= ring(*%w{0 p 0 0   0 0 0 0    0 0 0 0   0 0 0 0
                   0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 0
                   0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 0
-                  0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 0}).look) != "house"
+                  0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 0}).look) != "0"
     smp p, amp: 2.5, rate: 1
   end
   if spread(1,4).look

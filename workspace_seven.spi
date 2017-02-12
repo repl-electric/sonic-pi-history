@@ -169,7 +169,7 @@ end
 live_loop :mmmm do
   sync :doit
 
-  smp CineAmbi[/perc/,0]
+  smp CineAmbi[/perc/,0], beat_stretch: 32
 sleep 32
 
 end

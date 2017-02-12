@@ -174,7 +174,7 @@ if(ring 1,0,0,0,1,0,1,0).look == 1
   smp Junk[/lo/,0], amp: 4
 end
 if(ring 0,1,1,0,0,0,0,0).look == 1
-  smp Frag[/./,3], amp: 2
+  smp Frag[/click/,3], amp: 2
 end
 sleep 1/2.0
 }

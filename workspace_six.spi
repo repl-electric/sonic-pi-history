@@ -1,6 +1,6 @@
 #smp Berry[/ataxicone_10/]
 #sleep 32
 
-with_fx :slicer do
+with_fx :slicer, phase: 0.25 do
 smp Berry[/gaiazone_03/]
 end

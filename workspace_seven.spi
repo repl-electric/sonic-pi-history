@@ -169,6 +169,6 @@ live_loop :mmmm do
   sync :doit
 
   smp CineAmbi[/snap/]
-
+sleep 6
 
 end

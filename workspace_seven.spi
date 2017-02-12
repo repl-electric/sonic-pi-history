@@ -126,6 +126,8 @@ end
       fslice = 🍓.slice(:Fs3).reverse.look
       smp fslice, amp: 4.0, rpitch: (ring 0,0,0).look, cutoff: 60, finish_offset: (knit 0,31, 0.0125, 1).look
 
+        smp @slices["Fs4/8"][0]
+
 if (knit 0,31, 0.0125, 1).look == 0.0125
         smp @slices["Fs4/8"][0]
 end

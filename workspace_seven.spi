@@ -122,7 +122,7 @@ live_loop :slicing do
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(0,0,0).look, cutoff: 60, finish_offset:  knit(0,31, 0.0125, 1).look
-      if  knit(0,31, 0.0125, 1).look == 0.0125
+      if  knit(0,31, 0.0125, 1).look != 0
         smp  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop)

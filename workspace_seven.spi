@@ -126,7 +126,7 @@ end
       smp fslice, amp: 4.0, rpitch:  ring(0,0,0).look, cutoff: 60, finish_offset:  knit(0,31, 0.0125, 1).look
 
 if  knit(0,31, 0.0125, 1).look == 0.0125
-smp @slices["Fs3/8"].drop(12).take(32).tick(:vocals)
+        smp @slices["Fs3/8"].drop(12).take(32).tick(:vocals)
 end
       if s != 1/8.0
    #     smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0

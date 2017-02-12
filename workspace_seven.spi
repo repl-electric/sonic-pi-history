@@ -177,7 +177,7 @@ if(ring 0,1,0,0,0,0,0,0).look == 1
   smp Fraz[/snap/,2], amp: 1
 end
 if(ring 0,0,1,0,0,0,0,0).look == 1
-  smp Fraz[/snap/,4], amp: 1
+  smp Fraz[/snap/,4], amp: 2
 end
 sleep 1/2.0
 }

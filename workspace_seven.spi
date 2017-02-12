@@ -68,7 +68,7 @@ live_loop :slicing do
     smp p, amp: 1.5, rate: (ring -1, 1).look
   end
   if spread(1,4).look
-    smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2)#, cutoff: (ring 120).tick(:inside)
+    #smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2)#, cutoff: (ring 120).tick(:inside)
     if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2 
@@ -84,16 +84,16 @@ live_loop :slicing do
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-        smp Frag[/hat/,4], amp: 0.125, rpitch: (ring 0,12,12).tick(:pi)
+   #     smp Frag[/hat/,4], amp: 0.125, rpitch: (ring 0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
-     smp Frag[/snap/,[0,1,0,1]].tick(:insde), cutoff: (line 80,120,32).look
+#     smp Frag[/snap/,[0,1,0,1]].tick(:insde), cutoff: (line 80,120,32).look
        if spread(1,16).look
-         smp Dust[/snare/,16], amp: 0.25
+ #        smp Dust[/snare/,16], amp: 0.25
        else
-         smp Dust[/snare/,16], amp: 0.28, rpitch: (line 0,-2,0.1).look 
+  #       smp Dust[/snare/,16], amp: 0.28, rpitch: (line 0,-2,0.1).look 
        end
   end
   if spread(16,64).look

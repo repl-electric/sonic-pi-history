@@ -168,8 +168,7 @@ live_loop :ambient, sync: :doit do
 end
 live_loop :mmmm do
 tick
-  sync :doit; 
-smp CineAmbi[/perc/,0], beat_stretch: 32; 
+  sync :doit; smp CineAmbi[/perc/,0], beat_stretch: 32; 
 32.times{
 if (ring 1,0,0,0).look
   smp Junk[/lo/,0], amp: 2

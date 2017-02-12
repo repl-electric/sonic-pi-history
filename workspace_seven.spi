@@ -181,7 +181,9 @@ live_loop :ambient, sync: :slicing do
   sleep (1/2.0)*32
 end
 live_loop :cine, sync: :slicing do
+  with_fx :slicer, phase: 1 do
   smp CineAmbi[/perc/,8], beat_stretch: 16, amp: 1
+  end
   32.times{
     tick
     if(ring 1,0,0,0,1,0,1,0).look == 1

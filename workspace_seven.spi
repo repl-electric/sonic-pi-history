@@ -62,7 +62,7 @@ live_loop :doit do
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
 
-  if  ring(*%w{0 1 0 0   0 0 0 0    0 0 0 0   0 0 0 0
+  if  ring(*%w{0 1 0 1   0 0 0 0    0 0 0 0   0 0 0 0
                0 0 0 0   0 0 0 0    0 0 0 0   0 0 0 1}).look == "1"
     smp Dust[/perc/,2], amp: 0.5, rate: 1
   end

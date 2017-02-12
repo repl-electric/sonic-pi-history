@@ -128,7 +128,7 @@ end
         smp (ring 
              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
-             🥁["Fs4/8"][20]).tick(:sop)
+             🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop)
       end
       if s != 1/8.0
    #     smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0

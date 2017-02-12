@@ -116,7 +116,7 @@ live_loop :doit do
      at do
 32.times{|n|     
 if(n>24)  
-with_fx(:slicer){smp @slices["Fs3/8"].take(32).tick(:vocals), amp: 2, pan: (line -0.3, 0.3, 32).look(:vocals)}
+with_fx(:slicer){smp @slices["Fs3/8"].take(32).tick(:vocals), amp: 2, pan: (line -0.25, 0.25, 32).look(:vocals)}
 end 
      sleep 1/8.0/2.0
      }

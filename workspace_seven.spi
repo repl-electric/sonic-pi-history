@@ -115,7 +115,7 @@ live_loop :doit do
      at do
 32.times{|n|     
 if(n>24)  
-smp @slices["Fs3/8"].take(32).tick(:onsode), amp: 2
+smp @slices["Fs3/8"].take(32).tick(:onsode), amp: 1
 end 
      sleep 1/8.0/2.0
      }

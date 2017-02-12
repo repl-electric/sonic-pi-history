@@ -166,7 +166,7 @@ live_loop :ambient, sync: :doit do
  # sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end
-live_loop :mmmm, sync :doit do
+live_loop :mmmm, sync: :doit do
 tick
 smp CineAmbi[/perc/,0], beat_stretch: 32; 
 32.times{

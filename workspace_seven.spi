@@ -115,6 +115,13 @@ live_loop :doit do
       fslice = 🍓.slice(:Fs3).reverse.look
 
       if fslice[:path] =~ /vog_strw_sus_oh_f_01_rel/
+     at do
+32.times{|n|     
+if(n>24)  
+with_fx(:slicer){smp @slices["Fs3/8"].take(32).tick(:vocals), amp:(line 0.5, 1.5,32).look(:vocals), pan: (line -0.25, 0.25, 32).look(:vocals)}
+end 
+     sleep 1/8.0/2.0
+     }
 
       end
 

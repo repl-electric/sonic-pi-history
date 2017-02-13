@@ -129,6 +129,8 @@ live_loop :slicing do
       end
       if s != 1/8.0
         smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0
+        smp fslice, amp: 2.0, rpitch: -2, cutoff: 100, start: 0.66, finish: 1.0
+
       end
      if spread(1,64).look
      at do

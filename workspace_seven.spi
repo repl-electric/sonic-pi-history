@@ -128,7 +128,7 @@ live_loop :slicing do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset: (spread(7,11).look ? 0.0025 : 0.0)
 
-      if spread(7,11).look != false
+      if spread(7,11*2).look != false
 with_fx :reverb, room: 1.0, mix: 0 do# line(0.0,1.0,128).reverse.tick(:in) do
         smp  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],

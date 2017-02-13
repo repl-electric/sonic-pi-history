@@ -69,9 +69,11 @@ live_loop :slicing do
   end
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp:  ring(1.6).tick(:inside2), cutoff:  ring(80).tick(:inside)
-    if spread(1,32).tick(:sindie)
-        smp 🥁["Fs3/4"][3], amp: 10, rpitch: 0
+    if spread(1,2).look
+      smp 🥁["Fs3/4"][3], amp: 10, rpitch: 0
 
+    end
+    if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2 
         smp 🥁["Fs3/4"][3], amp: 10, rpitch: 0

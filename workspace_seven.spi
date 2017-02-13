@@ -122,10 +122,13 @@ live_loop :slicing do
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.5, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(12,0,12).look, cutoff: 135, finish_offset: (spread(7,11).look ? 0.01 : 0)
+
       if spread(7,11).look# != 0
+with_fx :pitch_shift do
         smp  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop)
+end
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
         #smp fslice, amp: 2.0, rpitch: -7, cutoff: 100, start: 0.66, finish: 1.0

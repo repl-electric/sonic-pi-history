@@ -129,7 +129,7 @@ with_fx :reverb, room: 1.0, mix: (line 0.0,1.0,128).tick(:in) do
         smp (ring 
              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
-             🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop)
+             🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), amp: 0
 end
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#

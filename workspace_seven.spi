@@ -120,7 +120,7 @@ live_loop :slicing do
     end
 
     if spread(1,2).look
-      smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: (ring -5,5,5).look, cutoff: 135
+      smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: (ring 9,5,5).look, cutoff: 135
     end
 
     d=(spread 3,8).map{|s| s ? :pitch_shift : :slicer}.shuffle

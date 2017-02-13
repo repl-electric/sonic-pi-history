@@ -89,11 +89,11 @@ live_loop :slicing do
     end
   end
   if spread(1,8).look
-    #smp Frag[/snap/,[0,1,0,1]].tick(:insde), cutoff: 80
+    smp Frag[/snap/,[0,1,0,1]].tick(:insde), cutoff: 80
     if spread(1,16).look
-    #  smp Dust[/snare/,16], amp: 0.25
+      smp Dust[/snare/,16], amp: 0.25
     else
-    # smp Dust[/snare/,16], amp: 0.28, rpitch: (line 0,-2,0.1).look
+     smp Dust[/snare/,16], amp: 0.28, rpitch: (line 0,-2,0.1).look
     end
   end
   if spread(16,64).look

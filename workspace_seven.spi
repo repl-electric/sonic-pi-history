@@ -98,6 +98,7 @@ live_loop :slicing do
 #      smp Dust[/snare/,1], amp: 0.25
     else
      smp Dust[/snare/,8], amp: 0.5, rpitch:  line(0,2,32).look
+
 #     smp Dust[/snare/,1], amp: 0.28, rpitch:  line(0,-2,0.1).look
     end
   end

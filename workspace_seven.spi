@@ -94,12 +94,11 @@ live_loop :slicing do
     #smp Frag[/snap/,[0,1,0,1]].tick(:insde), cutoff: 100
     if spread(1,16).look
     
-    smp Dust[/snare/,8], amp: 0.5
+    smp Dust[/snare/,8], amp: 0.55
 
 #      smp Dust[/snare/,1], amp: 0.25
     else
-    smp Dust[/snare/,8], amp: 0.5, rpitch: (line 0,-2,0.1).look
-
+     smp Dust[/snare/,8], amp: 0.5, rpitch: (line 0,-2,0.1).look
 
 #     smp Dust[/snare/,1], amp: 0.28, rpitch: (line 0,-2,0.1).look
     end

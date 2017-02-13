@@ -106,7 +106,7 @@ live_loop :slicing do
     d= spread(7,11).map{|s| s ? :echo : :slicer}#.shuffle
     with_fx  d.look, decay: 1*2, phase: 0.25, mix: 0, distort:  line(0.0, 0.5,128).look do
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
-      smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:r53am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(9).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:r53am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
       if (🍓.slice(:Fs3)).look[:path] =~ /vog_strw_sus_oh_f_01_rel/
         at do
           32.times{|n|

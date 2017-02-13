@@ -147,8 +147,8 @@ live_loop :slicing do
             sleep 1/8.0/2.0
           }
         end
-        smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 8.0,
-          rpitch: (ring 12*2).look, cutoff: 100
+        #   smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 8.0,
+        # rpitch: (ring -12*2).look, cutoff: 100
       end
     end
     if (spread 8, 16).look

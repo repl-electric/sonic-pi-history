@@ -68,12 +68,12 @@ live_loop :slicing do
     smp p, amp: 1.5, rate: (ring -1, 1).look
   end
   if spread(1,4).look
-    smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 120).tick(:inside)
+ #   smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 120).tick(:inside)
     if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2 
         #smp @slices["Fs3/4"][3], amp: 2, rpitch: 0
-        smp Mountain[/subkick/,0], amp: 2.0
+  #      smp Mountain[/subkick/,0], amp: 2.0
       end
     end
   end

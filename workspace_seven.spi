@@ -127,7 +127,6 @@ live_loop :slicing do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset:  knit(0,31, 0.025, 1).look
       if  knit(0,31, 0.0125, 1).look != 0
-        puts 🥁["Fs4/8"][17]
         smp  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop)

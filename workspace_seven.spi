@@ -93,7 +93,6 @@ live_loop :slicing do
   if spread(1,8).look
       smp Dust[/snare/,11], amp: 1.0
     if spread(1,16).look
-      smp Frag[/snare/,2], amp: 0.55
     else
       smp Dust[/snare/,2], amp: 0.5, rpitch:  line(0,0.5,32).look
     end

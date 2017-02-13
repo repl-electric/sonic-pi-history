@@ -117,6 +117,12 @@ live_loop :slicing do
         end
       end
     end
+
+    if spread(1,8).look
+    smp 🍓.slice(:Fs3).take(16), amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset:  knit(0,31, -0.01, 1).look
+end
+
+
     d= spread(3,8).map{|s| s ? :pitch_shift : :slicer}.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look

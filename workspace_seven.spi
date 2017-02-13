@@ -120,7 +120,7 @@ live_loop :slicing do
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).reverse.look
-      smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 65#, finish_offset: 0*(knit 0,31, 0.0125, 1).look
+      smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 100#, finish_offset: 0*(knit 0,31, 0.0125, 1).look
       if (knit 0,31, 0.0125, 1).look != :house
         smp (ring 
              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
@@ -129,9 +129,7 @@ live_loop :slicing do
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
         #smp fslice, amp: 2.0, rpitch: -7, cutoff: 100, start: 0.66, finish: 1.0
-        smp fslice, amp: 2.0, rpitch: -4, cutoff: 100, start: 0.66, finish: 1.0
-        smp fslice, amp: 2.0, rpitch: -2, cutoff: 100, start: 0.66, finish: 1.0
-
+        smp fslice, amp: 2.0, rpitch: 0, cutoff: 100, start: 0.66, finish: 1.0
       end
      if spread(1,64).look
      at do

@@ -128,7 +128,7 @@ live_loop :slicing do
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop), amp:0
       end
       if s != 1/8.0
-        smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0
+        #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0
         smp fslice, amp: 2.0, rpitch: -2, cutoff: 100, start: 0.66, finish: 1.0
 
       end

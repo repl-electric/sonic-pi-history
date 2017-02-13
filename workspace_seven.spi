@@ -79,12 +79,12 @@ live_loop :slicing do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.3, room:  line(0.0, 0.9, 0.05).look do
-      #smp Frag[/hat/,3], amp: 0.25, rpitch:  ring(0,12*4,12).tick(:pi), cutoff: 90+rand(20)
+      smp Frag[/hat/,3], amp: 0.25, rpitch:  ring(0,12*4,12).tick(:pi), cutoff: 90+rand(20)
     end
     if spread(1,32).tick(:sindie)
       at do
         sleep 1/8.0
-        #smp Frag[/hat/,4], amp: 0.125, rpitch:  ring(0,12,12).tick(:pi)
+        smp Frag[/hat/,4], amp: 0.125, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
   end

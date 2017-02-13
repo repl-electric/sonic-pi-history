@@ -86,7 +86,6 @@ live_loop :slicing do
     end
       at do
      if spread(1,64).tick(:sindie)
-
          sleep 1/8.0
          smp Frag[/hat/,4], amp: 0.125, rpitch: (ring 0,12,12).tick(:pi)
       end

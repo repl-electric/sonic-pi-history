@@ -127,9 +127,9 @@ live_loop :slicing do
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.5, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
-      smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset:  knit( 0,31, 0.01,1).look
+      smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset:  spread(3,8).look
 
-      if  knit( 0,31, 0.01,1).look != 0 #spread(7,11*2).look != false
+      if  spread(3,8).look #spread(7,11*2).look != false
 with_fx :reverb, room: 1.0, mix: 0* line(0.0,1.0,128).reverse.tick(:in) do
         smp  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],

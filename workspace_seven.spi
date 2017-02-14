@@ -150,7 +150,7 @@ end
             sleep 1/8.0/2.0
           }
         end
-           smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 8.0,
+           smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
         rpitch:  ring(12*2).look, cutoff: 100
       end
     end

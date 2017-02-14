@@ -40,7 +40,7 @@ end
 live_loop :fake_drums, sync: :slicing do
   tick
    if spread(1,4).look
-    smp Frag[/kick/,4], amp: 2#, cutoff: 60
+    smp Frag[/kick/,6], amp: 2#, cutoff: 60
     if spread(1,48).tick(:sindie)
       at do
         sleep (1/8.0)

@@ -80,7 +80,7 @@ live_loop :slicing do
       end
     end
   end
-  if spread(1,4, rotate: 2).look
+  if spread(1,2, rotate: 2).look
     with_fx :reverb, mix: 0.2, room: (line 0.0, 0.9, 32).look do
       smp Frag[/hat/,3], amp: 0.3, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: 90+rand(20)#, cutoff: (line 110, 135, 32).look
     end

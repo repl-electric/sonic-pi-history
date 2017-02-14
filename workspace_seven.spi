@@ -39,8 +39,8 @@ end
 🍓=Straw;🥁=@slices
 live_loop :fake_drums, sync: :slicing do
   tick
-   if spread(1,16).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 60
+   if spread(1,32).look
+    smp Mountain[/subkick/,1], amp: 2, cutoff: 60
     #smp Frag[/kick/,6], amp: 2#, cutoff: 60
     if spread(1,48).tick(:sindie)
       at do

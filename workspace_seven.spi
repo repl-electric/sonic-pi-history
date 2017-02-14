@@ -120,7 +120,7 @@ live_loop :slicing do
       end
     end
 
-  if spread(1,3).look
+  if spread(7,11).look
     smp 🍓.slice(:Fs3).drop(1).look, amp: 4.0, rpitch:  ring(12,5,0).look, cutoff: 135
   end
 

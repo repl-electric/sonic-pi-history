@@ -110,7 +110,7 @@ live_loop :slicing do
     d= spread(7,11).map{|s| s ? :echo : :reverb}.shuffle
     with_fx  d.look, decay: 1*2, phase: 0.25, mix: 1, distort:  line(0.0, 0.5,128).look do
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
-      smp ((🍓.slice(:Fs3)).take(1) + [🥁["Fs3/4"][12]]).look, amp: 4.0, rpitch:  ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      smp ((🍓.slice(:Fs3)).take(1) + [🥁["Fs3/4"][13]]).look, amp: 4.0, rpitch:  ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 #      smp (🍓.slice(:Fs3)).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:ra53am)
 #      smp (🍓.slice(:Fs3)).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(* line(10, 135, 128)).tick(:ra53am)
 

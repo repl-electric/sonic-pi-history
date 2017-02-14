@@ -67,14 +67,13 @@ live_loop :slicing do
                   0 0 0 0  0 0 0 0  0 0 0 0  b 0 0 0}).look) != "0"
     #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
-  if spread(1,4).shuffle.look
+  if spread(1,4).look
     smp Mountain[/subkick/,1], amp:  ring(1.6).tick(:inside2), cutoff:  ring(130).tick(:inside)
     if spread(1,16*4).look
       smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end
       at do
     if spread(1,32).tick(:sindie)
-
         sleep (1/8.0)*2 
         smp Mountain[/subkick/,0], amp: 2.0
       end

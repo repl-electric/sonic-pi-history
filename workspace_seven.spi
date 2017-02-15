@@ -131,7 +131,7 @@ if spread(7,11).look
      #smp fslice, amp: 4.0, rpitch:  ring(12,0,5).look, cutoff: 135#, finish_offset: rand(1)*0.0025
 end
 
-    d= spread(3,8).map{|s| s ? :pitch_shift : :reverb}#.shuffle
+    d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(0,0,0).look, cutoff: 135, 

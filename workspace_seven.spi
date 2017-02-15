@@ -132,20 +132,20 @@ if spread(7,11).look
      #smp fslice, amp: 4.0, rpitch: (ring 12,0,5).look, cutoff: 135#, finish_offset: rand(1)*0.0025
 end
 
-    d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
+    d=(spread 3,8).map{|s| s ? :pitch_shift : :slicer}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch: (ring 0,0,0).look, cutoff: 135, 
                   finish_offset: ((spread 1, 32).look ? 0.01 : 0.0)
       if spread(7,11*4).look# != 0
-with_fx :reverb, room: 1.0, mix: 1.0*(line 0.0,1.0,128).tick(:in) do
-with_fx :level, amp: 0.5 do
+        with_fx :reverb, room: 1.0, mix: 1.0*(line 0.0,1.0,128).tick(:in) do
+          with_fx :level, amp: 0.5 do
         smp (ring 
              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan: (line -0.25,0.25, 256).look
-      end
-    end
+          end
+        end
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0

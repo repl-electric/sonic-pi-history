@@ -197,7 +197,7 @@ end
 live_loop :ambient, sync: :slicing do
   tick
   with_fx :slicer, phase:  ring(1/4.0).look do
-    synth :dark_sea_horn, note:  chord(:Fs0, :m9).look, amp: 2, decay: 16, attack: 8.0
+    synth :dark_sea_horn, note:  chord(:Fs0, :m9).look, amp: 1, decay: 16, attack: 8.0
     #smp Berry[/gaiazone_9/], amp: 10
   end
   #smp Berry[/ataxicone_10/], amp: 2

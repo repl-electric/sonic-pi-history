@@ -196,7 +196,7 @@ live_loop :breath, sync: :slicing do
 end
 live_loop :ambient, sync: :slicing do
   tick
-  with_fx :slicer, phase: 0.125 do
+  with_fx :slicer, phase: 0.25 do
     synth :dark_sea_horn, note:  chord(:Fs3, :m9), cutoff: 60, amp: 2, decay: 8
     smp Berry[/gaiazone_9/], amp: 10
   end

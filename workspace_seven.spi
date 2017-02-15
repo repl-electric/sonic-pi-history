@@ -199,8 +199,8 @@ end
 live_loop :ambient, sync: :slicing do
   tick
   with_fx :slicer, phase: 0.125 do
-    synth :dark_sea_horn, note: (chord :Fs3, :m9), cutoff: 60
-    smp Berry[/gaiazone_9/],amp: 10
+    synth :dark_sea_horn, note: (chord :Fs3, :m9), cutoff: 60, amp: 2
+    smp Berry[/gaiazone_9/], amp: 10
   end
   #smp Berry[/ataxicone_10/], amp: 2
   #sample 🍓.slice(:Fs3).look()[:path], amp: 1

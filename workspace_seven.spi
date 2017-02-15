@@ -197,6 +197,8 @@ live_loop :breath, sync: :slicing do
 end
 live_loop :ambient, sync: :slicing do
   tick
+  smp Berry[/ataxicone_10/]
+
   #sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end

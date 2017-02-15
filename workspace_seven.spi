@@ -199,7 +199,7 @@ end
 live_loop :ambient, sync: :slicing do
   tick
   with_fx :slicer, phase: (ring 1/4.0).look, invert_wave: 1  do
-    synth :dark_ambience, note: (chord :Fs4, :m).look, amp: 1, decay: 10, attack: 8.0
+    synth :dark_ambience, note: (chord :Fs4, :m11), amp: 1, decay: 10, attack: 8.0
     #smp Berry[/gaiazone_9/], amp: 10
   end
   #smp Berry[/ataxicone_10/], amp: 2

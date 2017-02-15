@@ -199,7 +199,7 @@ end
 live_loop :ambient, sync: :slicing do
   tick
 
-  with_fx :slicer, phase: 0.25 do
+  with_fx :slicer, phase: 0.125 do
     smp Berry[/gaiazone_9/],amp: 4
   end
   #smp Berry[/ataxicone_10/], amp: 2

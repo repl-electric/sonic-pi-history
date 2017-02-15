@@ -141,7 +141,7 @@ end
           with_fx :level, amp: 0.5 do
         sample  ring(              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
-             🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), amp: 1, pan:  line(-0.25,0.25, 256).look
+             🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan:  line(-0.25,0.25, 256).look
           end
         end
       end

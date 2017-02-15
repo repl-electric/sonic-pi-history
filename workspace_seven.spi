@@ -144,8 +144,8 @@ with_fx :level, amp: 0.5 do
              🥁["Fs4/8"][16],🥁["Fs4/8"][17],
              🥁["Fs4/8"][18],🥁["Fs4/8"][19],
              🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan: (line -0.25,0.25, 256).look
-end
-end
+      end
+    end
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0

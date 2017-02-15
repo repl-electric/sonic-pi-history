@@ -2,5 +2,5 @@
 #sleep 32
 
 #with_fx :slicer, phase: 0.125 do
-  smp Berry[/gaiazone_01/]
+  smp Berry[/gaiazone_0/]
 #end

@@ -71,7 +71,7 @@ with_fx :pitch_shift, pitch: -12, time_dis: 0.5, mix:  ramp(1.0,0,256).tick(:u2)
     #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
   if spread(1,4).look
-    #smp Mountain[/subkick/,1], amp:  ring(1.6).tick(:inside2), cutoff:  ring(130).tick(:inside)
+    smp Mountain[/subkick/,1], amp:  ring(1.6).tick(:inside2), cutoff:  ring(130).tick(:inside)
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end

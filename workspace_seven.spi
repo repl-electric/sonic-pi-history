@@ -60,7 +60,7 @@ live_loop :slicing do
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
-with_fx :krush, phase: 2,  mix: 1, cutoff:  ramp(0,90,128).tick(:i1) do
+with_fx :mono, phase: 2,  mix: 1, cutoff:  ramp(0,90,128).tick(:i1) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x= ring(*%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0

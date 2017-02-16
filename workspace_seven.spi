@@ -55,7 +55,8 @@ live_loop :fake_drums, sync: :slicing do
 end
 live_loop :slicing do
   tick
-with_fx :level, amp: 0 do
+with_fx :level, amp: 1
+ do
   s = (ring
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,

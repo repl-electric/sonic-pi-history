@@ -61,8 +61,7 @@ live_loop :slicing do
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
-with_fx :lpf do
-
+with_fx :lpf, cutoff: (ramp 130, 50,128).tick(:insideser) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x=(ring *%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0

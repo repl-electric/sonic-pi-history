@@ -62,7 +62,7 @@ live_loop :slicing do
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
 #with_fx :panslicer, phase: 0.0125, mix: 1, cutoff: (ramp 0,90,128).tick(:i1) do
-with_fx :slicer, freq: :Fs2, mix: 1.0, phase: 1/0.8/2.0, cutoff: (ramp 0,90,128).tick(:i1) do
+with_fx :slicer, freq: :Fs2, mix: 1.0, phase: 1/0.8/4.0, cutoff: (ramp 0,90,128).tick(:i1) do
 
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x=(ring *%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0

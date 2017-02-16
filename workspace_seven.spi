@@ -82,7 +82,7 @@ live_loop :slicing do
   end
   if spread(7,11, rotate: 1).look
     with_fx :reverb, mix: 0.2, room: (line 0.0, 0.9, 32).look do
-      smp Frag[/hat/,3], amp: 0.3, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: (line 110, 135, 32).look
+      smp Frag[/hat/,3], amp: 0.3, rpitch: 2*(ring 0,12*4,12).tick(:pi), cutoff: (line 110, 135, 32).look
     end
       at do
      if spread(1,32).tick(:sindie)

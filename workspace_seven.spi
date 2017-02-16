@@ -92,7 +92,7 @@ with_fx :hpf, mix: 1, cutoff: (ramp 0,90,128).reverse.tick(:inssasdsadssssssside
       end
     end
   end
-  if spread(1,8).shuffle.look
+  if spread(1,8).look
     smp Dust[/snare/,13], amp: 0.25
     if spread(1,16).look
       smp Dust[/snare/,8], amp: 0.25

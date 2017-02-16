@@ -62,7 +62,7 @@ live_loop :slicing do
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
 
-synth :square, note: (ramp 0, 100, 120).look, cutoff: 50
+synth :square, note: (ramp 0, 100, 120).look
 with_fx (knit :hpf,16, :lpf,16).look, mix: 1, cutoff: (ramp 0,90,128).tick(:iasdsadeser) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x=(ring *%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0

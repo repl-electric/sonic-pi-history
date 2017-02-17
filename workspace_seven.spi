@@ -86,7 +86,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i1) do
      if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2 
-      #  smp Mountain[/subkick/,0], amp: 0.5
+        smp Mountain[/subkick/,0], amp: 0.5
       end
     end
   end

@@ -63,7 +63,10 @@ live_loop :slicing do
        ).look
 #with_fx :panslicer, phase: 0.0125, mix: 1, cutoff: (ramp 0,90,128).tick(:i1) do
 #with_fx :pitch_shift, pitch: -12, time_dis: 0.5, mix: (ramp 1.0,0,256).tick(:u2), phase: 0.25, cutoff: (ramp 0,90,128).tick(:i1) do
- smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 130).tick(:inside)
+
+if spread(1,2).look
+smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 130).tick(:inside)
+end
 
 with_fx :hpf, mix: 1, cutoff: (ramp 0,90,128).tick(:i1) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]

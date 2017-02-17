@@ -65,6 +65,8 @@ live_loop :slicing do
 #with_fx :pitch_shift, pitch: -12, time_dis: 0.5, mix: (ramp 1.0,0,256).tick(:u2), phase: 0.25, cutoff: (ramp 0,90,128).tick(:i1) do
 
 if spread(1,4).look
+
+sample "/Users/josephwilk/Workspace/music/samples/archive/samplephonics/SystemUnity_Wav_SP/One Shots/FX/Riser_VocalRevb.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/archive/samplephonics/SystemUnity_Wav_SP/One Shots/FX/Riser_ReverseCrash.wav"
 #smp Tech[/rise/,2]
 end

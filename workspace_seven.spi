@@ -65,7 +65,7 @@ live_loop :slicing do
 #with_fx :pitch_shift, pitch: -12, time_dis: 0.5, mix: (ramp 1.0,0,256).tick(:u2), phase: 0.25, cutoff: (ramp 0,90,128).tick(:i1) do
 
 if spread(1,4).look
-smp Tech[/rise/,0]
+#smp Tech[/rise/,0]
 end
 
 with_fx :hpf, mix: 1, cutoff: (ramp 0,90,128).tick(:i1) do

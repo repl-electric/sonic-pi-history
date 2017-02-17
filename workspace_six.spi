@@ -4,6 +4,6 @@
 #with_fx :slicer, phase: 0.125 do
 #  smp Berry[/gaiazone_10/]
 #end
-x = Tech[/rise/,5]
+x = Tech[/riser/,5]
 puts x
 smp x

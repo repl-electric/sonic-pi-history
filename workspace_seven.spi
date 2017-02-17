@@ -81,7 +81,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i1) do
   if spread(1,4).look
     smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 130).tick(:inside)
     if spread(1,16*4).look
-     # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
+      smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end
      if spread(1,32).tick(:sindie)
       at do

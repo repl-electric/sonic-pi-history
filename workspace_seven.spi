@@ -141,7 +141,7 @@ puts (🍓.slice(:Fs3)).take(1)
       if spread(7,11*4).look# != 0
 uncomment do
         with_fx :reverb, room: 1.0, mix: 0.1*(line 0.0,1.0,128).tick(:in) do
-          with_fx :level, amp: 0.1 do
+          with_fx :level, amp: 0.4 do
             #sample (knit Vocals[[2,2]].look,1,_,16).look, amp: 0.1*1.0, pan: (line -0.25,0.25,256).look
             sample (ring
                     🥁["Fs4/8"][16],🥁["Fs4/8"][17],

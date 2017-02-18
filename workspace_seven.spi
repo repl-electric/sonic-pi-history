@@ -102,7 +102,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
   end
   if spread(16,64).look
     with_fx :bitcrusher, bits: 16 do
-      smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
+#      smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
     end
   end
   with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do

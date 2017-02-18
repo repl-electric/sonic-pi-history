@@ -156,7 +156,7 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.66, finish: 1.0
         #smp fslice, amp: 2.0, rpitch: -2, cutoff: 100, start: 0.66, finish: 1.0
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 80, start: 0.84, finish: 1.0
-        smp fslice, amp: 2.0, rpitch: -2, cutoff: 80, start: 0.84, finish: 1.0
+        #smp fslice, amp: 2.0, rpitch: -2, cutoff: 80, start: 0.84, finish: 1.0
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 80, start: 0.84, finish: 1.0
 
         #smp fslice, amp: 2.0, rpitch: -2, cutoff: 100, start: 0.7, finish: 1.0

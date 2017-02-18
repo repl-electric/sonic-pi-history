@@ -146,7 +146,7 @@ comment do
             sample (ring
                     🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                     🥁["Fs4/8"][18],🥁["Fs4/8"][19],
-                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop), pan: (line -0.25,0.25, 256).look, cutoff: (ramp 50, 135, 256\2.0).tick(:s2opsop)
+                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop), pan: (line -0.25,0.25, 256).look, cutoff: (ramp 50, 135, 256).tick(:s2opsop)
           end
 end
         end

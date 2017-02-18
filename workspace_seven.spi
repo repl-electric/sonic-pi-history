@@ -85,9 +85,9 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
     with_fx :reverb, mix: 0.2, room: (line 0.0, 0.9, 32).look do
       smp Frag[/hat/,3], amp: 0.3, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: (line 110, 135, 32).look
     end
-      at do
      if spread(1,32).tick(:sindie)
 
+      at do
         sleep 1/8.0
          smp Frag[/hat/,4], amp: 0.25, rpitch: (ring 0,12,12).tick(:pi)
       end

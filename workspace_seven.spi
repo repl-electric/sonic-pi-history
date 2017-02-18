@@ -83,7 +83,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.2, room: (line 0.0, 0.9, 32).look do
-      smp Frag[/hat/,3], amp: 0.3, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: (line 110, 135, 32).look
+      #smp Frag[/hat/,3], amp: 0.3, rpitch: (ring 0,12*4,12).tick(:pi), cutoff: (line 110, 135, 32).look
     end
      if spread(1,32).tick(:sindie)
       at do
@@ -137,8 +137,7 @@ puts (🍓.slice(:Fs3)).take(1)
     d=(spread 3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
-      smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 135
-                  #finish_offset: ((spread 1, 32).look ? 0.1 : 0.0)
+      smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 135#, #finish_offset: ((spread 1, 32).look ? 0.1 : 0.0)
       if spread(7,11*4).look# != 0
 comment do
         with_fx :reverb, room: 1.0, mix: 1.0*(line 0.0,1.0,128).tick(:in) do

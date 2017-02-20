@@ -157,7 +157,7 @@ end
       synth :chipbass, note:  ring(:Fs0).look, cutoff: 40, amp: 0.5, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 
 if (fslice[:offset] - fslice[:onset]) > 0.1
-  synth :dark_sea_horn, note: :D0, cutoff: 40, decay: 4, attack: 0.001
+  synth :dark_sea_horn, note: :D1, cutoff: 40, decay: 4, attack: 0.001
 end
 
      if spread(1,64).look

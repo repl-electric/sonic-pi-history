@@ -157,7 +157,7 @@ end
       end
 
 if (fslice[:offset] - fslice[:onset]) > 0.1
-  synth :gpa, note: (ring (chord :Fs4,:m), (chord :A5,:M) ) .look, amp: 1.5, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+  synth :gpa, note: (ring (chord :Fs4,:m), (chord :A5,:M), (chord :Cs5, :m) ) .look, amp: 1.5, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
   synth :gpa, note: :D2, cutoff: 50, decay: 1, attack: 0.001
 end
 

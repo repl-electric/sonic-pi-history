@@ -40,8 +40,10 @@ end
 
 live_loop :doit do
 tick
+  sample 🥁["Fs4/8"][32]
+
   sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                       🥁["Fs4/8"][18],🥁["Fs4/8"][32],
-                      🥁["Fs4/8"][20],🥁["Fs4/8"][21]).look
+                      🥁["Fs4/8"][20],🥁["Fs4/8"][21]).look, amp: 0
   sleep 2
 end

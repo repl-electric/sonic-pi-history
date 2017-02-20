@@ -156,7 +156,7 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 
-      synth :dsaw, note: :FS1, cutoff: 80, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+      synth :dsaw, note: :FS1, cutoff: 80, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001, detune: 12
 
      if spread(1,64).look
      at do

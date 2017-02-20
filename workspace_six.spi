@@ -40,7 +40,7 @@ end
 
 live_loop :doit do
 tick
-  sample Berry[/sus/].take(128).look, amp: 0.1
+  sample Berry[/sus/].take(128).look
 puts look
 
   sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],

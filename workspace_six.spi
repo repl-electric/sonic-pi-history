@@ -39,9 +39,9 @@ end
 🍓=Straw;🥁=@slices
 
 live_loop :doit do
-
+tick
 sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                     🥁["Fs4/8"][18],🥁["Fs4/8"][19],
-                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).tick(:sop)
+                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).look
   sleep 2
 end

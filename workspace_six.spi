@@ -42,7 +42,7 @@ live_loop :doit do
 tick
  # sample Berry[/infin/].drop(128).take(128).look
   sample (ring 🥁["Fs4/8"][16],🥁["Fs4/8"][17],
-               🥁["Fs4/8"][18],🥁["E4/8"][15].tick(:insder),
+               🥁["Fs4/8"][18],🥁["E4/8"][15],
                🥁["Fs4/8"][20],🥁["Fs4/8"][21]).look, amp: 1
   sleep 2
 end

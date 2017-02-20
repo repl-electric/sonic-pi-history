@@ -1,8 +1,4 @@
-#smp Berry[/ataxicone_10/]
-#sleep 32
-
-#with_fx :slicer, phase: 0.125 do
-#  smp Berry[/gaiazone_10/]
-#end
-x = sample "/Users/josephwilk/Workspace/music/samples/archive/samplephonics/Synthaesthesia_Wav_SP/One Shots/Risers/EcstasyRiser_SP_1.wav"
-smp x
+sample (ring
+                    🥁["Fs4/8"][16],🥁["Fs4/8"][17],
+                    🥁["Fs4/8"][18],🥁["Fs4/8"][19],
+                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan: (line -0.25,0.25, 256).look, cutoff: (ramp 50, 135, 256/2.0).tick(:sopit)

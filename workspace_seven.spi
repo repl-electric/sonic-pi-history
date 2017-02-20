@@ -155,7 +155,7 @@ end
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 135, start: 0.84, finish: 1.0
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
-
+puts (fslice[:offset] - fslice[:onset])
 if (fslice[:offset] - fslice[:onset]) > 0.1
 with_fx :echo, mix:0 do
   #synth :gpa, note: (ring (chord :Fs4,:m)[1], (chord :A4,:M)[1], (chord :Cs4, :m)[1] ) .look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001

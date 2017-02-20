@@ -41,7 +41,7 @@ end
 live_loop :doit do
 tick
  # sample Berry[/infin/].drop(128).take(128).look
-puts look
+puts look(:insude)
 
   sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                       🥁["Fs4/8"][18],🥁["A4/8"].tick(:insude),

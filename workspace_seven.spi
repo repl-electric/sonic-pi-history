@@ -160,8 +160,7 @@ if (fslice[:offset] - fslice[:onset]) > 0.1
 with_fx :echo, mix:0 do
   #synth :gpa, note: (ring (chord :Fs4,:m)[1], (chord :A4,:M)[1], (chord :Cs4, :m)[1] ) .look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
-  synth :gpa, note: (ring :D2, :E2, :Fs2).tick(:in), cutoff: 50, decay: 1, attack: 0.001, amp: 1.5
-
+  #synth :gpa, note: (ring :D2, :E2, :Fs2).tick(:in), cutoff: 50, decay: 1, attack: 0.001, amp: 1.5
 end
 
      if spread(1,64).look

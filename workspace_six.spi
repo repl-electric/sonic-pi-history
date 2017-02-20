@@ -40,7 +40,8 @@ end
 
 live_loop :doit do
 tick
-  sample 🥁["A4/8"][3]
+  sample 🥁["A4/8"].tick
+puts look
 
   sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                       🥁["Fs4/8"][18],🥁["A4/8"][1],

@@ -155,7 +155,7 @@ end
       end
 
       synth :dsaw, note: :FS1, cutoff: 55, attack: 0.001, decay: fslice[:offset] - fslice[:onset]
-      synth :prophet, note: :FS1, cutoff: 35, attack: 0.001, decay: fslice[:offset] - fslice[:onset]
+      synth :prophet, note: :FS1, cutoff: 30, attack: 0.001, decay: fslice[:offset] - fslice[:onset]
 
 
      if spread(1,64).look

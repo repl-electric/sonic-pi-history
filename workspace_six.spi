@@ -44,7 +44,7 @@ tick
 puts look(:insude)
 
   sample (ring        🥁["Fs4/8"][16],🥁["Fs4/8"][17],
-                      🥁["Fs4/8"][18],🥁["A4/8"].tick(:insude),
+                      🥁["Fs4/8"][18],🥁["E4/8"].tick(:insude),
                       🥁["Fs4/8"][20],🥁["Fs4/8"][21]).look, amp: 1
   sleep 2
 end

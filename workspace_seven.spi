@@ -154,7 +154,7 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 
-      synth :gpa, note:  ring(:Fs1).look, amp: 1, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+      synth :dark_sea_horn, note:  ring(:Fs1).look, amp: 1, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 
      if spread(1,64).look
      at do

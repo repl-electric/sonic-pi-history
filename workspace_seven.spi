@@ -73,7 +73,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
     kick_drift = (line,-0.001,0.01,128).tick(:sloppy)
 #    at do
 #    sleep kick_drift
-with_fx :slicer, mix: 1, phase: 0.125 do
+with_fx :distortion, mix: 1, phase: 0.125 do
     smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 130).tick(:inside)
 #end
 end

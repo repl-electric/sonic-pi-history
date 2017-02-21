@@ -164,7 +164,7 @@ with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1
   synth :pluck, note:  ring(:D2, :E2, :Fs2).look(:in)
   synth :beep, note:  ring(:D2, :E2, :Fs2).look(:in), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
 at do 
- sleep 1/8.0
+ sleep 1/4.0
  16.times{
  control d_fx, mix: 0
 }

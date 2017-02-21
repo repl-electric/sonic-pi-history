@@ -1,1 +1,5 @@
-play  ring(:Cs3).look
+
+live_loop :tune do
+play  ring(:Cs3).look  
+sleep 1
+end

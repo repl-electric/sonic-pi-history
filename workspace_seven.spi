@@ -163,9 +163,9 @@ end
   with_fx :distortion, mix: 1.0 do |d_fx|
   synth :beep, note: (ring :D2, :E2, :Fs2).tick(:in), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
 at do 
- 32.times{
+ 16.times{
  control d_fx, mix: rand
-sleep 0.125
+ sleep 0.125
 }
 end
   end

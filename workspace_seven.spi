@@ -160,6 +160,7 @@ if (fslice[:offset] - fslice[:onset]) > 0.14
 with_fx :echo, mix:0 do
   #synth :gpa, note: (ring (chord :Fs4,:m)[1], (chord :A4,:M)[1], (chord :Cs4, :m)[1] ) .look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
+with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do
   with_fx :krush, mix: 0.2 do |d_fx|
   synth :hollow, note: (ring :D2, :E2, :Fs2).tick(:in), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
   synth :pluck, note: (ring :D2, :E2, :Fs2).look(:in)
@@ -169,6 +170,7 @@ at do
  control d_fx, mix: rand
  sleep 1/8.0
 }
+end
 end
   end
 end

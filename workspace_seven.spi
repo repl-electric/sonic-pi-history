@@ -73,9 +73,9 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
     kick_drift = (line,-0.01,0.01,8).tick(:sloppy)
 puts kick_drift
     at do
+    sleep kick_drift
     smp Mountain[/subkick/,1], amp: (ring 1.6).tick(:inside2), cutoff: (ring 80).tick(:inside)
 
-    sleep kick_drift
 end
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0

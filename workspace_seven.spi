@@ -239,6 +239,12 @@ live_loop :ambient, sync: :slicing do
   sleep (1/2.0)*32
 end
 
+live_loop :harmony, sync: :slicing do
+synth :gpa, note: chord(:FS3,:m11), decay: 2
+
+sleep 8
+end
+
 live_loop :drum_layer,sync: :slicing do
   tick
   smp Dust[/crunchy/,4], amp: 0.5

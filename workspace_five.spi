@@ -1,5 +1,5 @@
 
 live_loop :tune do
-play  ring(:FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
+play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
 sleep 1/2.0
 end

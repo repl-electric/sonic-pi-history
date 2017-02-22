@@ -242,6 +242,8 @@ live_loop :cine, sync: :slicing do
   #with_fx :slicer, phase: 2 do
   smp Dust[32]#, beat_stretch: 8, amp: 4
   #end
+sleep 32
+comment do
   16.times{
     tick
     if(ring 1,0,0,0,1,0,1,0).look == 1
@@ -254,5 +256,6 @@ live_loop :cine, sync: :slicing do
       #smp Fraz[/snap/,4], amp: 2
     end
     sleep 1/2.0
+end
   }
 end

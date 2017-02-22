@@ -240,7 +240,7 @@ live_loop :ambient, sync: :slicing do
 end
 
 live_loop :harmony, sync: :slicing do
-synth :gpa, note: chord(:FS3,:m11), decay: 2
+synth :gpa, note: chord(:FS3,:m11), decay: 2, attack: 1
 sleep 8
 end
 

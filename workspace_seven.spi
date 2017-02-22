@@ -118,7 +118,7 @@ with_fx :hpf, mix: 1, cutoff: (ramp 0,90,128).tick(:igo231) do
     with_fx  d.look, decay: 1*2, phase: 0.125, mix: 1, distort: (line 0.0, 0.5,128).look do
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
-      smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: (ring 12).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp 10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]- (knit 0,31,0.01,1).tick(:spand)
+      smp ((🍓.slice(:Fs3)).take(1)).look, amp: 4.0, rpitch: (ring 2,2,2).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp 10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]- (knit 0,31,0.01,1).tick(:spand)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch: (ring 7).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp 10, 135, 128).tick(:ra53am)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch: (ring 3).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp 10, 135, 128).tick(:ra53am)
 
@@ -139,7 +139,7 @@ with_fx :hpf, mix: 1, cutoff: (ramp 0,90,128).tick(:igo231) do
 #      smp fslice, amp: 4.0, rpitch: (ring 3).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
 
-    d=(spread 3,8).map{|s| s ? :pitch_shift : :slicer}#.shuffle
+    d=(spread 3,8).map{|s| s ? :pitch_shift : :krush}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.2, distort: (line 0.0, 0.5, 128).look do
       fslice = 🍓.slice(:Fs3).drop(0).reverse.drop(2).take(8).look
       smp fslice, amp: 4.0, rpitch: (ring 0).look, cutoff: 80#, finish_offset: ((spread 7, 11).look ? 0.01 : 0.0)
@@ -243,7 +243,7 @@ tick
 synth :dark_ambience, note: (ring 
                              #chord(:FS3,:m), chord(:B3, :sus2),
                              #chord(:B3, :m) 
-chord(:Fs4,:m)).look, decay: 16.2, attack: 1, amp: 0.5
+chord(:Cs4,:m7)).look, decay: 16.2, attack: 1, amp: 0.5
 16.times{
 control g_fx, mix: rand, damp: rand
 sleep 1

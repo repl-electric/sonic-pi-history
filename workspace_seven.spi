@@ -242,7 +242,7 @@ end
 with_fx :gverb do
 live_loop :harmony, sync: :slicing do
 tick
-with_fx :lpf, cutoff: 60 do
+with_fx :lpf, cutoff: 0 do
 synth :dark_ambience, note: (ring chord(:FS3,:m7), chord(:A3, :M), chord(:Cs4,:m)).look, decay: 4, attack: 1
 end
 sleep 8

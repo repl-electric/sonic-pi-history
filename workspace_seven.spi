@@ -164,14 +164,6 @@ if false#(fslice[:offset] - fslice[:onset]) > 0.1
 end
 
      if spread(1,64).look
-     at do
-          32.times{|n|
-            if(n>24)
-              #with_fx(:slicer){smp 🥁["Fs3/8"].take(32).tick(:vocals), amp: line(0.5, 1.5,32).look(:vocals), pan:  line(-0.25, 0.25, 32).look(:vocals)}
-            end
-            sleep 1/8.0/2.0
-          }
-        end
            smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
         rpitch:  ring(12*1).look, cutoff: 100
       end

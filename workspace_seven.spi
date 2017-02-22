@@ -72,11 +72,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
   if spread(1,4).look
     kick_drift = (line,0.001,0.01,4).tick(:sloppy)
     smp (knit _,3, Junk[/perc/,40],1).tick(:loopy), amp: 0.25
-    at do
-    sleep kick_drift
     smp Mountain[/subkick/,1], amp: 1.0*(ring 1.5).tick(:inside2), cutoff: (ring 80).tick(:inside)
-
-end
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end

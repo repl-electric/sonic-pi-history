@@ -135,7 +135,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:igo231) do
 
     if spread(3,8).look
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
-      smp fslice, amp: 4.0, rpitch:  ring(5,-5,5).tick(:i), cutoff: 135,finish_offset:  ring(0.2,0.0,0.0).look*0.0025
+      smp fslice, amp: 4.0, rpitch:  ring(2,-2,2).tick(:i), cutoff: 135,finish_offset:  ring(0.2,0.0,0.0).look*0.0025
     end
 
     d= spread(3,8).map{|s| s ? :pitch_shift : :slicer}#.shuffle

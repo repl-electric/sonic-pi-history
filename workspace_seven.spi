@@ -207,6 +207,7 @@ end
 
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
+stop
 tick
 synth :dark_ambience, note:  ring(                              #chord(:FS3,:m), chord(:B3, :sus2),
                              #chord(:B3, :m) 

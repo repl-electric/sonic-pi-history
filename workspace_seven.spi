@@ -241,8 +241,8 @@ end
 live_loop :cine, sync: :slicing do
 tick
   #with_fx :slicer, phase: 2 do
-  smp Dust[/crunchy/,5]
-puts Dust[/crunchy/,5]
+  smp Dust[/crunchy/,4]
+puts Dust[/crunchy/,4]
   #smp Dust[/./].look, amp: 4#, beat_stretch: 8, amp: 4
   #end
   #sleep 4

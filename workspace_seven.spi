@@ -240,7 +240,7 @@ live_loop :ambient, sync: :slicing do
 end
 live_loop :cine, sync: :slicing do
   #with_fx :slicer, phase: 2 do
-  smp Corrupt[/loop/,10], beat_stretch: 16, amp: 4
+  smp Corrupt[/loop/,11], beat_stretch: 16, amp: 4
   #end
   16.times{
     tick

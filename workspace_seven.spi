@@ -264,7 +264,7 @@ live_loop :drum_layer,sync: :slicing do
       smp Fraz[/snap/,2], amp: 0.5*0
     end
     if(ring 0,0,1,0,0,0,0,0).look == 1
-      smp Fraz[/snap/,4], amp: 1
+      smp Fraz[/snap/,4], amp: 1*0
     end
     tick
     sleep 1/2.0

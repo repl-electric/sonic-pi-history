@@ -196,11 +196,6 @@ live_loop :sop, sync: :slicing do
   end
   sleep (1/8.0)
 end
-live_loop :breath, sync: :slicing do
-  tick
-  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan: (line -0.25,0.25,256).look
-  sleep (1/2.0)*6
-end
 live_loop :ambient, sync: :slicing do
   tick
   with_fx :slicer, phase: (ring 1/4.0).look, invert_wave: 1  do
@@ -225,7 +220,11 @@ sleep 1
 }
 end
 end
-
+live_loop :breath, sync: :slicing do
+  tick
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan: (line -0.25,0.25,256).look
+  sleep (1/2.0)*6
+end
 live_loop :drum_layer,sync: :slicing do
   tick
   #smp Dust[/crunchy/,4], amp: 0.5

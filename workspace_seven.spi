@@ -174,7 +174,7 @@ with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1
   with_fx :krush, mix: 0.2, mix_slide: 4*1 do |d_fx|
   synth :hollow, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
   synth :pluck, note: bass_notes.look(:i)
-  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
+  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1,   attack: 0.001, amp: 1.0, wave: 4
 at do
  sleep 1/8.0; control d_fx, mix: 0
  15.times{control r_fx, damp: rand, mix: 1.0; sleep 1/8.0}
@@ -240,7 +240,7 @@ live_loop :ambient, sync: :slicing do
 end
 live_loop :cine, sync: :slicing do
   #with_fx :slicer, phase: 2 do
-  #smp CineAmbi[/perc/,2], beat_stretch: 32, amp: 1
+  smp CineAmbi[/perc/,2], beat_stretch: 32, amp: 1
   #end
   64.times{
     tick

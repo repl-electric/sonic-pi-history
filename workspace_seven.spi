@@ -250,7 +250,7 @@ tick
       smp Fraz[/snap/,2], amp: 2.5
     end
     if(ring 0,0,1,0,0,0,0,0).look == 1
-      smp Fraz[/snap/,4], amp: 2
+      smp Fraz[/snap/,4], amp: 4
     end
     tick
     sleep 1/2.0

@@ -248,7 +248,7 @@ tick
   8.times{
     tick
     if(ring 1,0,0,0,1,0,1,0).look == 1
-      smp Junk[/lo/,0], amp: 0.2
+      smp Junk[/lo/,0], amp: 1.2
     end
     if(ring 0,1,0,0,0,0,0,0).look == 1
       smp Fraz[/snap/,2], amp: 1.5

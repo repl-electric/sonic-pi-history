@@ -70,13 +70,12 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
     #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
   if spread(1,4).look
-dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
-puts dd.split("/").last if dd
+    dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     at do
     smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(80).tick(:inside)
     sleep kick_drift
-    smp dd, amp: 1*0.5, finish: 0.01
+    smp dd, amp: 1*0.5, finish: 0.02
 
 end
     if spread(1,16*4).look

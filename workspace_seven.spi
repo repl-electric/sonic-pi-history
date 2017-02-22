@@ -242,7 +242,7 @@ live_loop :harmony, sync: :slicing do
 tick
 synth :dark_ambience, note:  ring(chord(:FS3,:m), chord(:B3, :m), chord(:Cs4,:m)).look, decay: 8, attack: 1, amp: 1
 8.times{
-control g_fx, mix: rand
+control g_fx, mix: rand, damp: rand
 sleep 1
 }
 end

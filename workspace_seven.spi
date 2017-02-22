@@ -240,7 +240,7 @@ live_loop :ambient, sync: :slicing do
 end
 live_loop :cine, sync: :slicing do
   #with_fx :slicer, phase: 2 do
-  smp Dust[35]#, beat_stretch: 8, amp: 4
+  smp Dust[36]#, beat_stretch: 8, amp: 4
   #end
 sleep 32
 comment do

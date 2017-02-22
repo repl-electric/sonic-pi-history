@@ -239,7 +239,7 @@ end
 
 live_loop :harmony, sync: :slicing do
 tick
-with_fx :lpf do
+with_fx :lpf, cutoff: 90 do
 synth :chiplead, note:  ring(chord(:FS2,:m7), chord(:A2, :M), chord(:Cs3,:m)).look, decay: 4, attack: 1
 end
 sleep 8

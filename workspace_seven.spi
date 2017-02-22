@@ -1,5 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 _=nil
+set_volume! 1.1
 def note_slices(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(64)
 end

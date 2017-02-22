@@ -243,7 +243,7 @@ with_fx :reverb, mix_slide: 2, damp_slide: 2 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
 synth :dark_ambience, note: (ring 
-                             chord(:FS3,:m), chord(:B3, :sus4),
+                             chord(:FS3,:m), chord(:B3, :sus2),
                              chord(:B3, :m), chord(:Cs4,:m)).look, decay: 8.2, attack: 1, amp: 1
 8.times{
 control g_fx, mix: rand, damp: rand

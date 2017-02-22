@@ -165,7 +165,7 @@ end
 #puts (fslice[:offset] - fslice[:onset])
 if (fslice[:offset] - fslice[:onset]) > 0.1
 with_fx :echo, mix:0 do
-  synth :gpa, note: (knit (chord :Fs4,:m)[0],32, (chord :Cs3,:m)[0],32).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+  synth :gpa, note: (knit (chord :Fs4,:m)[0],32, (chord :Cs4,:m)[0],32).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
 bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
 bass_notes.tick(:i)

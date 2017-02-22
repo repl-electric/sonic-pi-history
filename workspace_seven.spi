@@ -247,7 +247,7 @@ tick
       smp Junk[/lo/,0], amp: 2.2
     end
     if(ring 0,1,0,0,0,0,0,0).look == 1
-      smp Fraz[/snap/,2], amp: 2.5
+      smp Fraz[/snap/,2], amp: 4.5
     end
     if(ring 0,0,1,0,0,0,0,0).look == 1
       smp Fraz[/snap/,4], amp: 4

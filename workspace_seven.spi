@@ -244,7 +244,7 @@ tick
   #smp Dust[/./].look, amp: 4#, beat_stretch: 8, amp: 4
   8.times{
     if(ring 1,0,0,0,1,0,1,0).look == 1
-      smp Junk[/lo/,0], amp: 2.2
+      smp Junk[/lo/,0], amp: 4.2
     end
     if(ring 0,1,0,0,0,0,0,0).look == 1
       smp Fraz[/snap/,2], amp: 4.5

@@ -220,7 +220,7 @@ live_loop :harmony, sync: :slicing do
 tick
 
 with_fx :slicer, phase: 0.5, invert_wave: 1 do
-ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 5
+  synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 5
 end
 with_fx :slicer, smooth: 1/16.0, 
                  phase: 1.0,

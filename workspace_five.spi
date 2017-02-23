@@ -1,11 +1,11 @@
 
 live_loop :tune do
-play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
+play  ring(:FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
 sleep 1/2.0
 end
 
 
-bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
+bass_notes =  ring(:Fs3, :B3, :Cs3, :Cs4)
 bass_notes.tick(:i)
 with_fx :level, amp: 0.00 do
 with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|

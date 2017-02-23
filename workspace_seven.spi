@@ -225,7 +225,7 @@ note: (ring
          chord(:FS3,:m), chord(:B3, :sus2),
          chord(:B3, :m), chord(:Cs4,:m)).look, decay: 16.2, attack: 1, amp: 1.5
 16.times{
-with_fx :slicer do
+with_fx :slicer, phase: 0.25 do
   control g_fx, mix: rand, damp: rand
   control ds.sub_nodes.choose, amp: 0.5 + rand
   sleep 1

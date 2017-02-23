@@ -220,9 +220,9 @@ note: (ring
          chord(:FS3,:m), chord(:B3, :sus2),
          chord(:B3, :m), chord(:Cs4,:m)).look, decay: 16.2, attack: 1, amp: 1.5
 16.times{
-control g_fx, mix: rand, damp: rand
-control ds, amp: rand
-sleep 1
+  control g_fx, mix: rand, damp: rand
+  control ds, amp: rand
+  sleep 1
 }
 end
 end

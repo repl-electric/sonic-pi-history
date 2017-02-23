@@ -219,7 +219,7 @@ with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
 with_fx :slicer, phase: 0.5, mix: 1 do
-  synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 5, note:  ring(         chord(:FS4,:m)[1], chord(:B3, :sus2)[1],
+  synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 5, note:  ring(         chord(:FS4,:m)[-1], chord(:B3, :sus2)[1],
          chord(:B3, :m)[1], chord(:Cs4,:m)[1]).look, decay: 16.0, amp: 1.5, attack: 6
 end
 ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note:  ring(         chord(:FS3,:m), chord(:B3, :sus2),

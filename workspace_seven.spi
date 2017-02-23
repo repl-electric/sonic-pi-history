@@ -223,7 +223,7 @@ tick
 with_fx :slicer, phase: 0.5, mix: 1 do
   synth :pretty_bell, detune1: 5, note: (ring
          chord(:FS4,:m)[0], chord(:B4, :sus2)[0],
-         chord(:B4, :m)[0], chord(:Cs5,:m)[0]).look, decay: 8.0, amp: 0.5, attack: 8
+         chord(:B4, :m)[0], chord(:Cs5,:m)[0]).look, decay: 8.0, amp: 0.25, attack: 8
 end
 ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: (ring
          chord(:FS3,:m), chord(:B3, :sus2),

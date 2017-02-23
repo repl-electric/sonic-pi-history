@@ -104,7 +104,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
        #  sleep 1/16.0
        #  with_fx(:reverb, decay: 1){smp Dust[/snare/,1], amp: 0.25}}
       end
-      smp Dust[/snare/,8], amp: 0.25
+      #smp Dust[/snare/,8], amp: 0.25
     else
       #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end

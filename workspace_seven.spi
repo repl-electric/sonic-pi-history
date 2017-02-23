@@ -220,10 +220,10 @@ end
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
-with_fx :echo, phase: 0.25, wave:0, mix: 1 do
+with_fx :echo, phase: 0.5, wave:0, mix: 1 do
   synth :pretty_bell, detune1: 5, note: (ring
          chord(:FS4,:m)[0], chord(:B4, :sus2)[0],
-         chord(:B4, :m)[0], chord(:Cs5,:m)[0]).look, decay: 0.25, amp: 0.25, attack: 8
+         chord(:B4, :m)[0], chord(:Cs5,:m)[0]).look, decay: 0.125, amp: 0.25, attack: 8
 end
 ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: (ring
          chord(:FS3,:m), chord(:B3, :sus2),

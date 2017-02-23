@@ -102,9 +102,9 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
       if spread(1,64).look
          at do
          sleep 1/8.0
-with_fx :reverb do
+with_fx(:reverb){
          smp Dust[/snare/,1], amp: 0.25
-end
+}
          end
       end
 

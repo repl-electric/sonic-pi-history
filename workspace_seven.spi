@@ -221,7 +221,7 @@ with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
 with_fx :slicer, phase: 0.5, mix: 1 do
-  synth :dark_ambience, detune1: 5, note: (ring
+  synth :pretty_bell, detune1: 5, note: (ring
          chord(:FS4,:m)[0], chord(:B4, :sus2)[0],
          chord(:B4, :m)[0], chord(:Cs5,:m)[0]).look, decay: 8.0, amp: 0.5, attack: 8
 end

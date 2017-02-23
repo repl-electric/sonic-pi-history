@@ -73,7 +73,7 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
   if spread(1,4).look
     dd = (knit _,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift = (line,0.0,1/16.0,8).tick(:sloppy)
-    smp Mountain[/subkick/,1], amp: 1.0*(ring 1.5).tick(:inside2), cutoff: (ring 135).tick(:inside)
+    smp Mountain[/subkick/,1], amp: 1.0*(ring 1.5).tick(:inside2), cutoff: (ring 80).tick(:inside)
     at{; sleep kick_drift; smp dd, amp: 0.5, finish: 0.01+rand(0.01) }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -106,7 +106,6 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
          with_fx(:reverb, decay: 2){smp Dust[/snare/,1], amp: 0.25}
          end
       end
-
       smp Dust[/snare/,8], amp: 0.25
     else
       smp Dust[/snare/,8], amp: 0.25, rpitch: (line 0,0.5,32).look

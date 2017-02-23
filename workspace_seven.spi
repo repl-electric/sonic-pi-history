@@ -226,13 +226,12 @@ with_fx :slicer, phase: 0.125,
          chord(:FS3,:m)[1], chord(:B3, :sus2)[1],
          chord(:B3, :m)[1], chord(:Cs4,:m)[1]).look, decay: 16.2, attack: 0, amp: 1.5
 end
-ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12,
-note: (ring
+ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: (ring
          chord(:FS3,:m), chord(:B3, :sus2),
          chord(:B3, :m), chord(:Cs4,:m)).look, decay: 16.2, attack: 1, amp: 0.0
 16.times{
-  control g_fx, mix: rand, damp: rand
-  control ds.sub_nodes.choose, amp: 2.5 + rand
+#  control g_fx, mix: rand, damp: rand
+#  control ds.sub_nodes.choose, amp: 2.5 + rand
   sleep 1
 }
 end

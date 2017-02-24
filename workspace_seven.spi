@@ -91,7 +91,6 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
     end
       at do
      if spread(1,64).tick(:sindie)
-
         sleep 1/8.0
         smp Frag[/hat/,4], amp: 0.25, rpitch: (ring 0,12,12).tick(:pi)
       end
@@ -248,7 +247,7 @@ end
 
 live_loop :drum_layer,sync: :slicing do
   tick
-  #smp Dust[/crunchy/,4], amp: 0.5
+  smp Dust[/crunchy/,4], amp: 0.5
   8.times{
     if(ring 1,0,0,0,1,0,1,0).look == 1
       smp Junk[/lo/,0], amp: 0.2*0

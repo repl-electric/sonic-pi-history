@@ -242,7 +242,7 @@ end
 end
 
 live_loop :soaring_bass_line, sync: :slicing do
- s = synth :dark_sea_horn, note: :FS4, decay: 8, pan: rand
+ s = synth :dark_sea_horn, note: :FS4, decay: 8, pan: rand, amp: 0.2
 32.times {sleep 1}
 end
 

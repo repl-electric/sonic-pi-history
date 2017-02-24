@@ -242,7 +242,7 @@ end
 end
 
 live_loop :soaring_bass_line, sync: :slicing do
- synth :dark_sea_horn, note: :FS2, decay: 8,
+ synth :dark_sea_horn, note: :FS2, decay: 8
 sleep 32
 end
 

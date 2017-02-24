@@ -232,7 +232,7 @@ end
 end
 end
 ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: (ring
-         [:FS3, :A3, :C4], 
+         [:FS3, :A3, :Cs4], 
          [:B3,  :Cs4, :Fs4],
          [:B3,   :D4,  :Fs4], 
          [:CS4, :E4, :Gs4]).look, decay: 16.2, attack: 1, amp: 1.5

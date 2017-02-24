@@ -228,13 +228,13 @@ with_fx :pitch_shift, time_dis: 0.2 do
 end
 end
 end
-np =  ring(         [[:FS3,16.2], [:A3, 16.2], [:Cs4,16.2]], 
+sel =  ring(         [[:FS3,16.2], [:A3, 16.2], [:Cs4,16.2]], 
          [[:B3, 16.2], [:Cs4,16.2], [:Fs4,16.2]],
          [[:B3, 16.2], [:D4, 16.2], [:Fs4,16.2]], 
          [[:CS4,16.2], [:E4, 16.2], [:Gs4,16.2]]).look
 ds = []
-np.each do
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: np, decay: 16.2, attack: 1, amp: 1.5)
+sel.each do |np|
+ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 1.5)
 end
 16.times{
   control g_fx, mix: rand, damp: rand

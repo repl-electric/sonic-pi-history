@@ -242,7 +242,7 @@ ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: n
 end
 16.times{
   control g_fx, mix: rand, damp: rand
-  control np.choose, amp: 1.0 + rand
+  control ds.choose, amp: 1.0 + rand
   sleep 1
 }
 end

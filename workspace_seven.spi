@@ -226,7 +226,7 @@ n = (ring
 at do
 sleep 4
 with_fx :echo, phase: 0.5, decay: 8, wave:0, mix: 0.9 do
-with_fx :pitch_shift, time_dis: 0.1 do
+with_fx :pitch_shift, time_dis: 0.2 do
   synth :pretty_bell, note: n, amp: 0.1, attack: 0.0
 end
 end

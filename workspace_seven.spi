@@ -228,10 +228,12 @@ with_fx :pitch_shift, time_dis: 0.2 do
 end
 end
 end
-ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note:  ring(         [:FS3,:A3, :Cs4], 
+
+np =  ring(         [:FS3,:A3, :Cs4], 
          [:B3, :Cs4,:Fs4],
          [:B3, :D4, :Fs4], 
-         [:CS4,:E4, :Gs4]).look, decay: 16.2, attack: 1, amp: 1.5
+         [:CS4,:E4, :Gs4]).look
+ds = synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: np, decay: 16.2, attack: 1, amp: 1.5
 16.times{
   control g_fx, mix: rand, damp: rand
   control ds.sub_nodes.choose, amp: 1.0 + rand

@@ -241,7 +241,7 @@ end
 end
 end
 
-with_fx :gverb, mix: 1, room: 200, spread: 8 do
+with_fx :gverb, mix: 1, room: 200, spread: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
  s = synth :dark_sea_horn, note: :FS4, decay: 8, pan: 0.25, amp: 0.2, attack: 6
 32.times {sleep 1}

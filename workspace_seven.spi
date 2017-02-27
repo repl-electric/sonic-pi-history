@@ -232,9 +232,9 @@ target_chord = (ring
          [[_,   16.2],   [:D4, 16.2], [_,   16.2]], 
          [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]).look
 ds = []
+synth :pluck, attack: 0.0001, decay: 0.001, note: target_chord[0][0], amp: 0.25
 target_chord.each do |np|
 if np[0]
-synth :pluck, attack: 0.0001, decay: 0.001, note: np[0], amp: 0.25
 ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count))
 end
 end

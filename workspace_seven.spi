@@ -248,7 +248,7 @@ live_loop :soaring_bass_line, sync: :slicing do
 tick
 n =  knit(:CS2,2, :D2,2, :E2,1, :Fs2,1).look
 puts "Bass: [#{n}]"
- s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 45
+ s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 46
  s = synth :dark_sea_horn, note: n, decay:  ring(3,3,3).look, pan: 0.25, amp: 1.8, attack: 0.001, cutoff: 40
 ( ring(4,4,4,4, 
        4,4,4,4,  

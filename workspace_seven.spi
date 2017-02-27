@@ -245,9 +245,11 @@ end
 end
 end
 
+with_fx :gverb do
 live_loop :soaring_bass_line, sync: :slicing do
  s = synth :dark_sea_horn, note: :FS4, decay: 8, pan: 0.25, amp: 0.2, attack: 6
 32.times {sleep 1}
+end
 end
 
 live_loop :drum_layer,sync: :slicing do

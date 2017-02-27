@@ -1,1 +1,5 @@
-midi_play :FS3
+
+live_loop :a do
+  midi_play :FS3
+  sleep 1
+end

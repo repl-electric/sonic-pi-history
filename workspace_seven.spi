@@ -247,8 +247,7 @@ end
 end
 end
 
-with_fx :distortion do |dis_fx|
-
+with_fx :distortion, mix: 0.1 do |dis_fx|
 with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick

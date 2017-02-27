@@ -251,7 +251,7 @@ with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 with_fx :distortion do |dis_fx|
 live_loop :soaring_bass_line, sync: :slicing do
 tick
-control dis_fx, mix: 0
+control dis_fx, mix: 1
 n = (knit :Fs2,16, :D2,8, :Cs2, 8, :Cs2, 8).look
 durs = (ring 1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1).look
 puts "Bass: [#{n}]"

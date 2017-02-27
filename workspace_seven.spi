@@ -256,7 +256,7 @@ durs = (ring 2).look
 puts "Bass: [#{n}]"
  s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 60
 # s = synth :dark_sea_horn, note: n, decay: durs, pan: 0.25, amp: 0.8, attack: 0.001, cutoff: 40
- durs.times {sleep 1/4.0}
+ durs.times {sleep 1/8.0}
 end
 #end
 #end

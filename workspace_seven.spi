@@ -252,6 +252,7 @@ with_fx :distortion do |dis_fx|
 live_loop :soaring_bass_line, sync: :slicing do
 tick
 control dis_fx, mix: 1
+puts :mixit
 n = (knit :Fs2,16, :D2,8, :Cs2, 8, :Cs2, 8).look
 durs = (ring 1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1).look
 puts "Bass: [#{n}]"

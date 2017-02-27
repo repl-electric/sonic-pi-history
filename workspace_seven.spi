@@ -251,8 +251,7 @@ end
 #with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
-notes = (knit [:Fs1,8],2, 
-[:GS1,8],1,[:B1,8],1, [:D2,8], 2, [:Cs2,8], 2, [:Fs2,8],2, [:GS2,8],1,[:B2,8],1, [:D3,8], 2, [:Cs2,8], 2).look
+notes = (knit [:Fs1,8],2,[:GS1,8],1,[:B1,8],1, [:D2,8], 2, [:Cs2,8], 2, [:Fs2,8],2, [:GS2,8],1,[:B2,8],1, [:D3,8], 2, [:Cs2,8], 2).look
 n = notes[0]
 durs = n[-1]
 puts "Bass: [#{n}]"

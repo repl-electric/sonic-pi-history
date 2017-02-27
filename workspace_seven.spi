@@ -251,7 +251,7 @@ with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
 puts "Bass: [#{(ring :CS2, :D2, :FS2).look}]"
- s = synth :dark_sea_horn, note: (ring :CS2, :D2, :Fs2).look, decay: (ring 16,8,8).look, pan: 0.25, amp: 1.8, attack: 6, cutoff: 130
+ s = synth :dark_sea_horn, note: (ring :CS2, :D2, :Fs2).look, decay: (ring 16,8,8).look, pan: 0.25, amp: 1.8, attack: 6, cutoff: 40
 ((ring 32,16,16).look).times {sleep 1}
 end
 end

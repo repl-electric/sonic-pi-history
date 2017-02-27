@@ -1,1 +1,1 @@
-puts note_inspect(chord(:b3, :sus2))
+puts note_inspect(chord(:b3, :sus3))

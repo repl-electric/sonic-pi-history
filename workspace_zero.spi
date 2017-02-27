@@ -1,5 +1,5 @@
 
 live_loop :a do
-  midi_play :FS3
+  midi_play :FS4
   sleep 0.5
 end

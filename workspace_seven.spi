@@ -250,6 +250,7 @@ end
 with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
+puts "BASS: #{(ring :FS2, :B2, :FS2, :D2).look}"
  s = synth :dark_sea_horn, note: (ring :FS2, :B2, :FS2, :D2).look, decay: 8, pan: 0.25, amp: 0.8, attack: 6, cutoff: 60
 32.times {sleep 1}
 end

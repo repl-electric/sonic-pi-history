@@ -145,7 +145,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
  
      smp fslice, amp: 8.0, rpitch:  ring(0).look, cutoff: 135#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 if !fslice
-smp Frag[/kick/]
+smp Frag[/coil/]
 end
       if spread(7,11*5).look# != 0
 comment do

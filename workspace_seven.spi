@@ -250,7 +250,7 @@ end
 with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
-n = (knit :CS2,16, :D1,16).look
+n = (knit :FS2,16, :D1,16).look
 durs = (ring 1,1,1,1,  1,1,1,1,  1,1,1,1,  1,1,1,1).look
 puts "Bass: [#{n}]"
  s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 60

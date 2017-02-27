@@ -255,7 +255,7 @@ n = (knit :Fs1,2, :GS1,1,:B1,1, :D2, 2, :Cs2, 2).look
 durs = (ring 8).look
 puts "Bass: [#{n}]"
 #s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 60
-s = synth :dark_sea_horn, note: n, decay: durs, pan: 0.25, amp: 1.8, attack: 4.0, cutoff: 45
+s = synth :dark_sea_horn, note: n, decay: durs, pan: 0.25, amp: 1.8, attack: 4.0, cutoff: 100
 durs.times {sleep 1}
 #end
 end

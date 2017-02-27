@@ -252,7 +252,7 @@ live_loop :soaring_bass_line, sync: :slicing do
 tick
 puts "Bass: [#{(ring :CS2, :D2, :FS2).look}]"
  s = synth :dark_sea_horn, note: (ring :CS2, :D2, :Fs2).look, decay: (ring 4,4,4).look, pan: 0.25, amp: 1.8, attack: 0, cutoff: 40
-((ring 8,8, 8,8  8,8, 8,8).look).times {sleep 1}
+((ring 8,8, 8,8,  8,8, 8,8).look).times {sleep 1}
 end
 end
 

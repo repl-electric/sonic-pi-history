@@ -252,7 +252,7 @@ notes =  knit([:Fs1,4],4,[:GS1,4],1,[:B1,4],3,[:D2,2],8,[:Cs2,2], 8,
 n=notes[0]
 durs=notes[-1]
 puts "Bass: [#{n}]"
-s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 55#60
+#s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 55#60
 #s = synth :dark_sea_horn, note: n, decay: durs-0.1, pan: 0.25, amp: 0.8, attack: 2.0, cutoff: 60
 durs.times {sleep 1}
 #end

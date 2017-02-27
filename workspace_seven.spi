@@ -100,9 +100,9 @@ with_fx :hpf, mix: 0, cutoff: (ramp 0,90,128).tick(:i231) do
     smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
     #  smp Dust[/snare/,1], amp: 0.25
-    #  smp Dust[/snare/,8], amp: 0.25
+      smp Dust[/snare/,8], amp: 0.25
     else
-    #  smp Dust[/snare/,8], amp: 0.25, rpitch: (line 0,0.5,32).look
+      smp Dust[/snare/,8], amp: 0.25, rpitch: (line 0,0.5,32).look
     end
   end
   if spread(16,64).look

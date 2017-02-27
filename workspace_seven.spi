@@ -251,7 +251,7 @@ with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
 n = (knit :CS2,4, :D2,4, :E2,2, :Fs2,2).look
-durs = (ring 4,4,4,4,   
+durs = (ring 2,2,2,2,  2,2,2,2,   
              4,4,4,4,  
              8,8, 
              8,8).look

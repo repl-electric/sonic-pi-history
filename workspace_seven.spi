@@ -250,12 +250,12 @@ end
 with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
-n = (knit :CS2,8, :D2,2, :E2,1, :Fs2,1).look
+n = (knit :CS2,4, :D2,4, :E2,1, :Fs2,1).look
 puts "Bass: [#{n}]"
  s = synth :prophet, note: n, decay: 0.25, pan: 0.25, amp: 1.0, attack: 0.0001, cutoff: 46
  s = synth :dark_sea_horn, note: n, decay: (ring 2,2,2).look, pan: 0.25, amp: 1.8, attack: 0.001, cutoff: 40
-((ring 2,2,2,2,  2,2,2,2, 
-       2,2,2,2,  2,2,2,2,  
+((ring 4,4,4,4,   
+       4,4,4,4,  
        8,8, 
        8,8).look).times {sleep 1}
 end

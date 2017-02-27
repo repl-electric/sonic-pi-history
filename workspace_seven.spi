@@ -161,7 +161,7 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 #puts (fslice[:offset] - fslice[:onset])
-if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
+if fslice && ((fslice[:offset] - fslice[:onset]) > 0.1)
   #synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
 

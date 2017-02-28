@@ -162,7 +162,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if !fslice
-  synth :chiplead, note: (ring :FS1, :CS1).look, amp: 0.2
+  synth :chiplead, note:  ring(:FS1, :CS2).look, amp: 0.2
 end
 
 

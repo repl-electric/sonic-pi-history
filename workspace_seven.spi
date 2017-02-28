@@ -146,7 +146,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i23wewe1) do
  
      smp fslice, amp: 6.0, rpitch:  ring(0).look, cutoff: 135#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
       if spread(7,11*5).look# != 0
-comment do
+uncomment do
         with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do
           with_fx :level, amp: 0.8*1.0 do
 #            sample  knit(Vocals[[2,2]].look,1,_,16).look, amp: 0.1*1.0, pan:  line(-0.25,0.25,256).look

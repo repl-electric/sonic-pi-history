@@ -142,7 +142,7 @@ end
     end
 
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
-    with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
+    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
 
       fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
  
@@ -152,7 +152,7 @@ comment do
         with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do
           with_fx :level, amp: 0.8*0 do
 #            sample  knit(Vocals[[2,2]].look,1,_,16).look, amp: 0.1*1.0, pan:  line(-0.25,0.25,256).look
-            sample  ring(                    🥁["Fs4/8"][16],🥁["Fs4/8"][17],
+            sample  ring(🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                     🥁["Fs4/8"][18],🥁["E4/8"][15],
                     🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan:  line(-0.25,0.25, 256).look, cutoff:  ramp(50, 135, 256/2.0).tick(:sopit)
           end

@@ -144,7 +144,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i23wewe1) do
 
       fslice =  ((🍓.slice(:Fs3).drop(1).reverse + [])).look
  
-     smp fslice, amp: 6.0, rpitch:  ring(-7).look, cutoff: 135, finish_offset: ( spread(1, 32).look ? 0.01 : 0.0)
+     smp fslice, amp: 6.0, rpitch:  ring(-5).look, cutoff: 135, finish_offset: ( spread(1, 32).look ? 0.01 : 0.0)
       if spread(7,11*5).look# != 0
 uncomment do
         with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do

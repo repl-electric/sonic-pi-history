@@ -144,7 +144,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i23wewe1) do
 
       fslice =  ((🍓.slice(:Fs3).drop(1).reverse + [])).look
  
-     smp fslice, amp: 5.0, rpitch:  ring(0).look, cutoff: 135#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+     smp fslice, amp: 6.0, rpitch:  ring(0).look, cutoff: 135#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
       if spread(7,11*5).look# != 0
 comment do
         with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do
@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

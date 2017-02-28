@@ -233,10 +233,11 @@ end
 end
 end
 target_chord =  ring(        
-       #  [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]], 
+         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]], 
        #  [[:B3, 2*16.2], [_,   16.2], [:Fs4,2*16.2]],
        #  [[_,   16.2],   [:D4, 16.2], [_,   16.2]], 
-         [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]).look
+       #  [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]
+).look
 ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.25

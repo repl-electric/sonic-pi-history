@@ -5,5 +5,5 @@ end
 
 live_loop :kicker do
   sample :drum_bass_soft
-  sleep 2
+  sleep 1
 end

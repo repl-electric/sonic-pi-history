@@ -175,7 +175,7 @@ if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
 x= knit( :Fs4,64,  :Cs5,64,
          :b4,64,   :D5,64
 ).look
-synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64, chord(:B4, :M), 64, chord(:D5, :M), 64 ).look, attack: 0.1, amp: 2
+synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64, chord(:B4, :M), 64, chord(:D5, :M), 64).look, attack: 0.1, amp: 2
   synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                            :b4,64,   :E4,64
 ).look, amp: 4.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001

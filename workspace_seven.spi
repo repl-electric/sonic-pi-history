@@ -59,9 +59,9 @@ live_loop :slicing do
   s =  ring(       1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
-       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0, 8
        ).look
-with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
+with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x= ring(*%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
@@ -72,7 +72,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
   if spread(1,4).look
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
-    #smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(110).tick(:inside)
+    #smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(82,80).tick(:inside)
     #at{; sleep kick_drift; smp dd, amp: 0.5, finish: 0.01+rand(0.01) }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -80,25 +80,25 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
      if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2
-    #    smp Mountain[/subkick/,0], amp: 0.5
+        smp Mountain[/subkick/,0], amp: 0.5
       end
     end
   end
-  if spread(1,2, rotate: 1).look
+  if spread(7,11, rotate: 1).look
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-     # smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+#      smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-      #  smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
+        #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
     #smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
-     # smp Dust[/snare/,1], amp: 0.25
+      #smp Dust[/snare/,1], amp: 0.25
       #smp Dust[/snare/,8], amp: 0.25
     else
       #smp Dust[/snare/,2], amp: 0.25
@@ -114,11 +114,11 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
   if spread(1,32).look
     #synth :dark_sea_horn, note: chord(:FS2, :m11), cutoff: 100, decay: 1.0, attack: 0.0001, amp: 1.0
   end
-    d= spread(7,11).map{|s| s ? :echo : :reverb}#.shuffle
-    with_fx  d.look, decay: 1*2, phase: 0.125, mix: 0, distort:  line(0.0, 0.5,128).look do
+    d= spread(7,11).map{|s| s ? :echo : :slicer}
+    with_fx  d.look, decay: 1*2, phase: 0.125, mix: 1, distort:  line(0.0, 0.5,128).look do
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
-#      smp ((🍓.slice(:Fs3)).drop(1)).look, amp: 4.0, rpitch:  ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      #smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch:  ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
 
@@ -134,30 +134,25 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
       end
     end
 
-    if spread(3,8).look
-      fslice = 🍓.slice(:Fs3).drop(1).reverse.look
-      smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 125, finish_offset: rand(1)*0.0025
-    end
     if spread(7,11).look
-      fslice = 🍓.slice(:Fs3).drop(1).look
-      #smp fslice, amp: 4.0, rpitch:  ring(7,5,5).tick(:i), cutoff: 135, finish_offset: rand(1)*0.0025
+      fslice = 🍓.slice(:Fs3).drop(1).reverse.look
+      #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
-
 
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
-    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
+    with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
 
-      fslice =  ((🍓.slice(:Fs3).drop(1).reverse + [])).look
+      fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
  
-     smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 135, finish_offset: ( spread(7, 11).look ? 0.2 : 0.0)
+     smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
       if spread(7,11*5).look# != 0
-uncomment do
-        with_fx :reverb, room: 1.0, mix: 1.0* line(0.5,1.0,128).tick(:in) do
-          with_fx :level, amp: 0.8*1 do
+comment do
+        with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do
+          with_fx :level, amp: 0.8*0 do
 #            sample  knit(Vocals[[2,2]].look,1,_,16).look, amp: 0.1*1.0, pan:  line(-0.25,0.25,256).look
             sample  ring(                    🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                     🥁["Fs4/8"][18],🥁["E4/8"][15],
-                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan:  line(-0.25,0.25, 256).look, cutoff:  ramp(50, 135, 256/2.0).tick(:sop2it)
+                    🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan:  line(-0.25,0.25, 256).look, cutoff:  ramp(50, 135, 256/2.0).tick(:sopit)
           end
 end
         end
@@ -166,20 +161,21 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 135, start: 0.8469, finish: 1.0
         #smp fslice, amp: 2.0, rpitch: -2, cutoff: 135, start: 0.8469, finish: 1.0
         smp fslice, amp: 2.0, rpitch: 0, cutoff: 135, start: 0.8469, finish: 1.0
+
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
-  synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 1.2, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+  #synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
 
      if spread(1,64).look
-        smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
-        rpitch:  ring(12*1).look, cutoff: 100
+        #smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
+        #rpitch:  ring(12*1).look, cutoff: 100
       end
     end
     if  spread(8, 16).look
@@ -191,7 +187,7 @@ end
     end
   end
 end
-  sleep s*8
+  sleep s
 end
 live_loop :sop, sync: :slicing do
   tick
@@ -210,7 +206,7 @@ live_loop :sop, sync: :slicing do
 end
 live_loop :breath, sync: :slicing do
   tick
-#  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
   sleep (1/2.0)*6
 end
 live_loop :ambient, sync: :slicing do
@@ -220,7 +216,7 @@ live_loop :ambient, sync: :slicing do
     #smp Berry[/gaiazone_9/], amp: 10
   end
   #smp Berry[/ataxicone_10/], amp: 2
-  sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end
 
@@ -277,7 +273,7 @@ end
 
 live_loop :drum_layer,sync: :slicing do
   tick
-  smp Dust[/crunchy/,4], amp: 0.0
+  #smp Dust[/crunchy/,4], amp: 0.5
   8.times{
     if ring(1,0,0,0, 1,0,1,0).look == 1
       smp Junk[/lo/,0], amp: 0.5*0

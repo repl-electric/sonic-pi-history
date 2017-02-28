@@ -162,7 +162,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if !fslice
-  synth :dark_ambience, note: :FS3
+  synth :chipbass, note: :FS3
 end
 
 

@@ -1,5 +1,9 @@
 live_loop :thing do
   sample "/Users/josephwilk/Music/Ableton/Live Recordings/Temp-2 Project/Samples/Processed/Freeze/Freeze 3-Off World Strings.wav"
-
   sleep 8
+end
+
+live_loop :kicker do
+  sample :drum_bass_soft
+  sleep 2
 end

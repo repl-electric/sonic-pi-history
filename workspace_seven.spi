@@ -72,7 +72,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i23wewe1) do
   if spread(1,4).look
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
-    smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(130).tick(:inside)
+    #smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(130).tick(:inside)
     #at{; sleep kick_drift; smp dd, amp: 0.5, finish: 0.01+rand(0.01) }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -86,23 +86,23 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i23wewe1) do
   end
   if spread(1,2, rotate: 1).look
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-      smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+     #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-        smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
+      #  smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
-    smp Dust[/snare/,2], amp: 0.25
+    #smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
-      smp Dust[/snare/,1], amp: 0.25
-      smp Dust[/snare/,8], amp: 0.25
+     # smp Dust[/snare/,1], amp: 0.25
+     # smp Dust[/snare/,8], amp: 0.25
     else
       #smp Dust[/snare/,2], amp: 0.25
-      smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
+     # smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end
   end
   if spread(16,64).look

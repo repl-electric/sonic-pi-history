@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
@@ -275,7 +275,7 @@ live_loop :drum_layer,sync: :slicing do
   #smp Dust[/crunchy/,4], amp: 0.5
   8.times{
     if ring(1,0,0,0, 1,0,1,0).look == 1
-      smp Junk[/lo/,0], amp: 0.5*1
+      smp Junk[/lo/,0], amp: 0.5*0
     end
     if ring(0,1,0,0,0,0,0,0).look == 1
       smp Fraz[/snap/,2], amp: 0.5*0

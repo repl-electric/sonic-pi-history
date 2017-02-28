@@ -140,7 +140,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
     end
 
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
-    with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
+    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.6, distort:  line(0.0, 0.5, 128).look do
 
       fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
  
@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

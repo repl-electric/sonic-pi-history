@@ -161,7 +161,7 @@ end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 #puts (fslice[:offset] - fslice[:onset])
-if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
+if fslice && (fslice[:offset] - fslice[:onset]) > 0.09
   synth :dark_ambience, note: :FS1
 end
 

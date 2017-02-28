@@ -191,7 +191,7 @@ end
     end
   end
 end
-  sleep s
+  sleep s*2
 end
 live_loop :sop, sync: :slicing do
   tick

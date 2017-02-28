@@ -219,8 +219,8 @@ end
 
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
+stop
 tick
-comment do
 n =  ring(         chord(:FS2,:m)[1], chord(:B2, :sus2)[1],
          chord(:B2, :m)[1], chord(:Cs3,:m)[1]).look
 at do
@@ -242,7 +242,6 @@ synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.se
 target_chord.each do |np|
 if np[0]
 ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count)*0.5)
-end
 end
 end
 16.times{

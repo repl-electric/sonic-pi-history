@@ -1,5 +1,5 @@
 
 live_loop :a do
-  midi_play :FS4
+  midi_play scale(:Fs3, :minor_pentatonic).choose
   sleep 2
 end

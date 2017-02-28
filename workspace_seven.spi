@@ -61,7 +61,7 @@ live_loop :slicing do
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
-with_fx :hpf, mix: 1, cutoff:  ramp(0,90,128).tick(:i2wee31) do
+with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
   if (x= ring(*%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
@@ -72,7 +72,7 @@ with_fx :hpf, mix: 1, cutoff:  ramp(0,90,128).tick(:i2wee31) do
   if spread(1,4).look
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
-    #smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(82,80).tick(:inside)
+    smp Mountain[/subkick/,1], amp: 1.0* ring(1.5).tick(:inside2), cutoff:  ring(82,80).tick(:inside)
     #at{; sleep kick_drift; smp dd, amp: 0.5, finish: 0.01+rand(0.01) }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -99,10 +99,10 @@ with_fx :hpf, mix: 1, cutoff:  ramp(0,90,128).tick(:i2wee31) do
     smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
       smp Dust[/snare/,1], amp: 0.25
-      #smp Dust[/snare/,8], amp: 0.25
+      smp Dust[/snare/,8], amp: 0.25
     else
       smp Dust[/snare/,2], amp: 0.25
-      #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
+      smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end
   end
   if spread(16,64).look
@@ -118,7 +118,7 @@ with_fx :hpf, mix: 1, cutoff:  ramp(0,90,128).tick(:i2wee31) do
     with_fx  d.look, decay: 1*2, phase: 0.125, mix: 1, distort:  line(0.0, 0.5,128).look do
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
-      smp ((🍓.slice(:Fs3)).take(1)).look, amp: 4.0, rpitch:  ring(-2,0,0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      smp ((🍓.slice(:Fs3)).take(16)).look, amp: 4.0, rpitch:  ring(-2,0,0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
 
@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

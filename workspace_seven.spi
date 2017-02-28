@@ -135,7 +135,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
     end
 
     if spread(7,11).look
-      fslice = 🍓.slice(:Fs3).drop(1).reverse.take(16).look
+      fslice = 🍓.slice(:Fs3).drop(1).reverse.take(8).look
       #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
 

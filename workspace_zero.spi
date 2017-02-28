@@ -2,7 +2,7 @@
 live_loop :a do
   with_fx :slicer do
     tick
-    midi_play  ring(:FS3, :b3, :b3, :Cs4).look, dur: 2
+    midi_play  ring(:FS3, :b3, :b3, :Cs4).look, dur: 1.9
     sleep 2
   end
 end

@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
@@ -205,7 +205,7 @@ live_loop :sop, sync: :slicing do
 end
 live_loop :breath, sync: :slicing do
   tick
-  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
+#  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
   sleep (1/2.0)*6
 end
 live_loop :ambient, sync: :slicing do

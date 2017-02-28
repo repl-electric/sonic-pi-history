@@ -1,5 +1,6 @@
 
 live_loop :a do
-  midi_play scale(:Fs3, :minor_pentatonic).choose, decay: 2
+  midi_play scale(:Fs3, :minor_pentatonic).choose,
+    dur: 2
   sleep 2
 end

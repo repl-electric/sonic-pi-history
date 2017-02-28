@@ -159,13 +159,14 @@ end
       end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 135, start: 0.8469, finish: 1.0
-        smp fslice, amp: 2.0, rpitch: -2, cutoff: 135, start: 0.8469, finish: 1.0
+        #smp fslice, amp: 2.0, rpitch: -2, cutoff: 135, start: 0.8469, finish: 1.0
+        smp fslice, amp: 2.0, rpitch: 0, cutoff: 135, start: 0.8469, finish: 1.0
 
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

@@ -268,10 +268,10 @@ end
 
 live_loop :drum_layer,sync: :slicing do
   tick
-  smp Dust[/crunchy/,4], amp: 0.5
+  #smp Dust[/crunchy/,4], amp: 0.5
   8.times{
     if ring(1,0,0,0, 1,0,1,0).look == 1
-      smp Junk[/lo/,0], amp: 0.5*1
+      smp Junk[/lo/,0], amp: 0.5*0
     end
     if ring(0,1,0,0,0,0,0,0).look == 1
       smp Fraz[/snap/,2], amp: 0.5*0

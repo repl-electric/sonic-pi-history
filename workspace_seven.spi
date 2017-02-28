@@ -174,7 +174,7 @@ end
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
   synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64,
                            chord(:Fs4,:m)[1],64,  chord(:Cs5,:m)[1],64
-).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+).look, amp: 4.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
 
      if spread(1,64).look

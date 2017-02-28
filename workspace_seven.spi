@@ -101,7 +101,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
       smp Dust[/snare/,1], amp: 0.25
       #smp Dust[/snare/,8], amp: 0.25
     else
-      smp Dust[/snare/,0], amp: 0.25
+      smp Dust[/snare/,2], amp: 0.25
       #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end
   end
@@ -163,7 +163,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

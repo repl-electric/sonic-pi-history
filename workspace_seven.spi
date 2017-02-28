@@ -170,11 +170,11 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
-  synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 1.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+  synth :gpa, note:  knit( chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 1.2, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end
 
      if spread(1,64).look

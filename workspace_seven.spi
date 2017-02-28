@@ -89,7 +89,6 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
       smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
-
       at do
         sleep 1/8.0
         smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
@@ -97,7 +96,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
     end
   end
   if spread(1,8).look
-    smp Dust[/snare/,2], amp: 0.25
+    #smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
       smp Dust[/snare/,1], amp: 0.25
       smp Dust[/snare/,8], amp: 0.25

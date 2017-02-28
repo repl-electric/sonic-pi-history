@@ -140,7 +140,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2wee31) do
     end
     if spread(7,11).look
       fslice = 🍓.slice(:Fs3).drop(1).look
-      smp fslice, amp: 4.0, rpitch:  ring(7,5,5).tick(:i), cutoff: 135, finish_offset: rand(1)*0.0025
+      #smp fslice, amp: 4.0, rpitch:  ring(7,5,5).tick(:i), cutoff: 135, finish_offset: rand(1)*0.0025
     end
 
 
@@ -170,7 +170,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
@@ -178,8 +178,8 @@ if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
 end
 
      if spread(1,64).look
-        #smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
-        #rpitch:  ring(12*1).look, cutoff: 100
+        smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
+        rpitch:  ring(12*1).look, cutoff: 100
       end
     end
     if  spread(8, 16).look

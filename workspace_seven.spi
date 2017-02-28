@@ -162,7 +162,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if !fslice
-  synth :chiplead, note: (knit :FS1,4, :CS2,4).tick(:chip), amp: 0.2
+  synth :dark_sea_horn, note: (knit :FS1,4, :CS2,4).tick(:chip), amp: 0.2
 end
 
 

@@ -150,7 +150,7 @@ comment do
         with_fx :reverb, room: 1.0, mix: 1.0* line(0.0,1.0,128).tick(:in) do
           with_fx :level, amp: 0.8*1.0 do
 #            sample  knit(Vocals[[2,2]].look,1,_,16).look, amp: 0.1*1.0, pan:  line(-0.25,0.25,256).look
-            sample  ring(                    🥁["Fs4/8"][16],🥁["Fs4/8"][17],
+            sample  ring( 🥁["Fs4/8"][16],🥁["Fs4/8"][17],
                     🥁["Fs4/8"][18],🥁["E4/8"][15],
                     🥁["Fs4/8"][20],🥁["Fs4/8"][21]).shuffle.tick(:sop), pan:  line(-0.25,0.25, 256).look, cutoff:  ramp(50, 135, 256/2.0).tick(:sodpit)
           end
@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

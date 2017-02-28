@@ -162,7 +162,7 @@ end
       end
 #puts (fslice[:offset] - fslice[:onset])
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.09
-  synth :dark_ambience, note: :FS1
+  synth :dark_ambience, note: :FS2
 end
 
 

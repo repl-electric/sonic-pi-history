@@ -162,7 +162,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if !fslice
-  synth :chipbass, note: :FS3, amp: 0.1
+  synth :chipbass, note: :FS3, amp: 0.2
 end
 
 

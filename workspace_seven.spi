@@ -162,7 +162,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.18
-  synth :dark_sea_horn, note:  knit(:FS2,4, :B3,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  synth :dark_sea_horn, note: (knit :FS2,4, :B3,4, :Cs4,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 

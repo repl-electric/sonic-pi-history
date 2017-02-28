@@ -222,6 +222,7 @@ end
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
+stop
 n =  ring(         chord(:FS2,:m)[1], chord(:B2, :sus2)[1],
          chord(:B2, :m)[1], chord(:Cs3,:m)[1]).look
 at do

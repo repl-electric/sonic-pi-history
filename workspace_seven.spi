@@ -114,7 +114,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
   if spread(1,32).look
     #synth :dark_sea_horn, note: chord(:FS2, :m11), cutoff: 100, decay: 1.0, attack: 0.0001, amp: 1.0
   end
-    d= spread(7,11).map{|s| s ? :echo : :reverb}
+    d= spread(7,11).map{|s| s ? :echo : :reverb}.shuffle
     with_fx  d.look, decay: 1*2, phase: 0.125, mix: 1, distort:  line(0.0, 0.5,128).look do
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
@@ -165,7 +165,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1

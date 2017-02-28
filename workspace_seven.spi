@@ -163,7 +163,7 @@ end
       end
 puts (fslice[:offset] - fslice[:onset]) if fslice
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-  #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+  #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
 end
 
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
@@ -220,6 +220,7 @@ end
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
 tick
+comment do
 n =  ring(         chord(:FS2,:m)[1], chord(:B2, :sus2)[1],
          chord(:B2, :m)[1], chord(:Cs3,:m)[1]).look
 at do
@@ -230,7 +231,8 @@ with_fx :pitch_shift, time_dis: 0.2 do
 end
 end
 end
-target_chord =  ring(         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]], 
+target_chord =  ring(        
+         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]], 
          [[:B3, 2*16.2], [_,   16.2], [:Fs4,2*16.2]],
          [[_,   16.2],   [:D4, 16.2], [_,   16.2]], 
          [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]).look
@@ -247,6 +249,7 @@ end
   control ds.choose, amp: ((1.0 + rand) / target_chord.count)*0.6
   sleep 1
 }
+end
 end
 end
 

@@ -6,7 +6,7 @@ puts note_inspect(ring
                                chord(:Cs5, :minor),
                                chord(:B4, :M), 
                                chord(:D5, :M)).look
-  synth :dark_ambience, note: (ring 
+  synth :beep, note: (ring 
                                chord(:Fs4, :minor),
                                chord(:Cs5, :minor),
                                chord(:B4, :M), 

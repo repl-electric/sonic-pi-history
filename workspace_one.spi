@@ -13,7 +13,7 @@ puts note_inspect(ring
                                chord(:D5, :M)).look, amp: 0.25
 
 
-play (ring :Fs2, :Cs2).look
+play (ring :Fs2, :Cs2, :B2, :D2).look
 
 sleep 1
   

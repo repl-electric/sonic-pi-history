@@ -1,17 +1,19 @@
 
 live_loop :chordsit do
 tick
-puts note_inspect ring(                                chord(:Fs4, :minor),
+puts note_inspect(ring 
+                               chord(:Fs4, :minor),
                                chord(:Cs5, :minor),
                                chord(:B4, :M), 
                                chord(:D5, :M)).look
-  synth :beep, note:  ring(                                chord(:Fs4, :minor),
-                               chord(:Cs5, :minor),
-                               chord(:B4, :M), #should be minor... D=> D#
-                               chord(:D5, :M)).look, amp: 0.25
+  synth :beep, note: (ring 
+                               [chord(:Fs4, :minor)],
+                               [chord(:Cs5, :minor),
+                               [chord(:B4, :M)], #should be minor... D=> D#
+                               [chord(:D5, :M)]).look, amp: 0.25
 
 
-play  ring(:Fs2, :Cs2, :B1, :D2).look
+play (ring :Fs2, :Cs2, :B1, :D2).look
 
 sleep 1
   

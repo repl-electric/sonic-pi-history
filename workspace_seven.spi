@@ -184,7 +184,7 @@ synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 
 if spread(1,1).look
 synth :prophet, note: knit( :Fs1,64,  :Cs1,64,
                            :b1,64,   :E1,64
-).look, cutoff: 40, decay: (knit 0.25,64, 0.5,64, 0.25,64, 0.25,65).look
+).look, cutoff: 40, release: (knit 0.25,64, 0.5,64, 0.25,64, 0.25,65).look
 end
 end
 

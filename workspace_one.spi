@@ -11,8 +11,7 @@ n =  ring(                                [chord(:Fs4, :minor),1],
                                [chord(:D5, :M),1])
   synth :beep, note: n.look[0], amp: 0.25, decay: n.look[-1]
 
-
-play  ring(:Fs2, :Cs2, :B1, :D2).look
+  play  ring(:Fs2, :Cs2, :B1, :D2).look
 
 sleep n.look[-1]
   

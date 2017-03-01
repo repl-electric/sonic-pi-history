@@ -10,7 +10,7 @@ n = (ring
                                [chord(:Fs4, :minor),1],,
                                [chord(:Cs5, :minor),2],
                                [chord(:B4, :M),1], #should be minor... D=> D#
-                               [chord(:D5, :M)],1)
+                               [chord(:D5, :M),1])
   synth :beep, note: n.look[0], amp: 0.25
 
 

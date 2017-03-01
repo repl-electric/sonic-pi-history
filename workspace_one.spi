@@ -11,7 +11,7 @@ n = (ring
                                [chord(:Cs5, :minor),0.5],
                                [chord(:B4, :M),1], #should be minor... D=> D#
                                [chord(:D5, :M),0.5],
-                               [chord(:E5, :M7),0.25])
+                               [chord(:E4, :M7),0.25])
 with_transpose -12 do
   synth :beep, note: n.look[0], amp: 0.25, decay: n.look[-1]/2.0
 end

@@ -15,7 +15,7 @@ n = (ring
 with_transpose 0 do
   synth :dark_ambience, note: n.look[0], amp: 0.25, decay: n.look[-1]/2.0
 end
-  play (ring :Fs2, :Cs2, :B1, :D2, :E2).look, decay: n.look[-1]/2.0
+  play (ring :Fs2, :Cs2, :B1, :D2, :E2).look, decay: n.look[-1]/2.0, amp: 0.25
 
 sleep n.look[-1]
   

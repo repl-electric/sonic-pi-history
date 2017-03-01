@@ -187,12 +187,12 @@ synth :dsaw, note: knit(:Fs2,64,  :Cs2,64,
                            :Fs1,64,   :E2,64,
                            :Fs1,64,  :Cs1,64,
                            :Fs2,64,   :E1,64
-).look, cutoff: 30, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.8
+).look, cutoff: 30, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
 synth :prophet, note: knit(:Fs2,64,  :Cs2,64,
                            :Fs1,64,   :E2,64,
                            :Fs1,64,  :Cs1,64,
                            :Fs2,64,   :E1,64
-).look, cutoff: 0, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.8
+).look, cutoff: 0, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
 
 end
 end

@@ -7,7 +7,7 @@ puts note_inspect(ring
                                chord(:B4, :M), 
                                chord(:D5, :M)).look
 n = (ring 
-                               [chord(:Fs4, :minor),1],,
+                               [chord(:Fs4, :minor),1],
                                [chord(:Cs5, :minor),2],
                                [chord(:B4, :M),1], #should be minor... D=> D#
                                [chord(:D5, :M),1])

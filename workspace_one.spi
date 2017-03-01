@@ -1,7 +1,8 @@
 
 live_loop :chordsit do
-
-synth :dark_ambience, note: (ring chord(:Fs4, :minor), chord(:Cs5, :minor),
+tick
+synth :dark_ambience, note: (ring chord(:Fs4, :minor), 
+                               chord(:Cs5, :minor),
                                   chord(:B4, :M), chord(:D5, :M)).look, decay: 1, attack: 0.1, amp: 2
 
 

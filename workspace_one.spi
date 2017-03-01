@@ -9,9 +9,11 @@ puts note_inspect(ring
   synth :beep, note: (ring 
                                chord(:Fs4, :minor),
                                chord(:Cs5, :minor),
-                               chord(:B4, :M), 
+                               chord(:B4, :M), #should be minor... D=> D#
                                chord(:D5, :M)).look, amp: 0.25
 
+
+play :DS4
 
 sleep 1
   

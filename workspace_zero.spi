@@ -1,4 +1,4 @@
 require "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 shader :iWave, 0.01
-
-puts (spread 3,8).map{|s| s ? 0.0 : 4.0}.tick(:asdas)
+shader :iR, :iG, :iB, [0,0,0]
+puts  spread(3,8).map{|s| s ? 0.0 : 4.0}.tick(:asdas)

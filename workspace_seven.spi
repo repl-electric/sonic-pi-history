@@ -59,7 +59,7 @@ live_loop :slicing do
   s =  ring(       1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
-       1/8.0,1/8.0,1/8.0,1/8.0, 
+       1/8.0,1/8.0,1/8.0,1/8.0,
        ).look
 with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
@@ -145,7 +145,7 @@ end
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
 
       fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
- 
+
      smp fslice, amp: 4.0, rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
       if spread(7,11*5).look# != 0
 comment do
@@ -176,7 +176,7 @@ x= knit( :Fs4,64,  :Cs5,64,
          :b4,64,   :D5,64
 ).look
 puts x
-synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64, 
+synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64,
                                   chord(:B4, :M), 64, chord(:D5, :M), 64).look, decay: 1, attack: 0.5, amp: 2
   synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                            :b4,64,   :fs4,64/2.0, :a4, 64/2.0
@@ -257,10 +257,10 @@ with_fx :pitch_shift, time_dis: 0.2 do
 end
 end
 end
-target_chord =  ring(        
-         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]], 
+target_chord =  ring(
+         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]],
          [[:B3, 2*16.2], [_,   16.2], [:Fs4,2*16.2]],
-         [[_,   16.2],   [:D4, 16.2], [_,   16.2]], 
+         [[_,   16.2],   [:D4, 16.2], [_,   16.2]],
          [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]).look
 ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
@@ -282,7 +282,7 @@ end
 #with_fx :gverb, mix: 1, room: 50, spread: 0.0, damp: 0.5, ref_level: 1.0 do
 live_loop :soaring_bass_line, sync: :slicing do
 tick
-notes =  knit([:Fs1,4],4,[:GS1,4],1,[:B1,4],3,[:D2,2],8,[:Cs2,2], 8, 
+notes =  knit([:Fs1,4],4,[:GS1,4],1,[:B1,4],3,[:D2,2],8,[:Cs2,2], 8,
               [:Fs2,4],4,[:GS2,4],1,[:B2,4],3,[:D3,2],8,[:Cs2,2], 8).look
 n=notes[0]
 durs=notes[-1]
@@ -310,4 +310,4 @@ live_loop :drum_layer,sync: :slicing do
     tick
     sleep 1/2.0
   }
-end
+end%

@@ -1,1 +1,1 @@
-require "ruby-osc"
+puts note_inspect(chord(:b3, 'sus4'))

@@ -179,7 +179,7 @@ puts x
 synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64, 
                                   chord(:B4, :M), 64, chord(:D5, :M), 64).look, decay: 1, attack: 0.5, amp: 2
   synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
-                           :b4,64,   :E4,64
+                           :b4,64,   :Fs4,64
 ).look, amp: 4.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 if spread(1,2).look
 synth :dsaw, note: knit(:Fs2,64,  :Cs2,64,
@@ -191,7 +191,7 @@ synth :prophet, note: knit(:Fs2,64,  :Cs2,64,
                            :Fs1,64,   :E2,64,
                            :Fs1,64,  :Cs1,64,
                            :Fs2,64,   :E1,64
-).look, cutoff: 30, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7
+).look, cutoff: 0, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7
 
 end
 end

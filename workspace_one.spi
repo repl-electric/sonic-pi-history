@@ -10,9 +10,9 @@ n = (ring
                                [chord(:Fs4, :minor),0.5],
                                [chord(:Cs5, :minor),0.5],
                                [chord(:B4, :M),1], #should be minor... D=> D#
-                               [chord(:D5, :M),0.5])
+                               [chord(:D5, :M),0.25],
+[chord(:D5, :M),0.25])
   synth :beep, note: n.look[0], amp: 0.25, decay: n.look[-1]
-
   play (ring :Fs2, :Cs2, :B1, :D2).look, decay: n.look[-1]/2.0
 
 sleep n.look[-1]

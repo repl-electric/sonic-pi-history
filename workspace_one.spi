@@ -8,7 +8,7 @@ puts note_inspect ring(                                chord(:Fs4, :minor),
   synth :beep, note:  ring(                                chord(:Fs4, :minor),
                                chord(:Cs5, :minor),
                                chord(:B4, :M), 
-                               chord(:D5, :M)).look, decay: 1, attack: 0.1, amp: 0.5
+                               chord(:D5, :M)).look, decay: 1, attack: 0.1, amp: 0.25
 
 
 sleep 2

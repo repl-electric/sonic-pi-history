@@ -6,7 +6,7 @@ puts note_inspect ring(                                chord(:Fs4, :minor),
                                chord(:B4, :M), 
                                chord(:D5, :M)).look
 n =  ring(                                [chord(:Fs4, :minor)],
-                               [chord(:Cs5, :minor),
+                               [chord(:Cs5, :minor)],
                                [chord(:B4, :M)], #should be minor... D=> D#
                                [chord(:D5, :M)])
   synth :beep, note: n.look, amp: 0.25

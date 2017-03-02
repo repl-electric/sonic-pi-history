@@ -147,7 +147,7 @@ end
       fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
 
 puts "rotate: #{(knit 0,24,1,24,2,24,3,24).look}"
-     smp Dust[/hat/,4..8].look, amp: 0.1
+     smp Dust[/hat/,4], amp: 0.1
      smp fslice, amp: 4.0, amp: spread(13, 24, rotate: (knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look,  rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 
       if spread(7,11*5).look# != 0

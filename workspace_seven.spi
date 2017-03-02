@@ -146,7 +146,7 @@ end
 
       fslice =  ((🍓.slice(:Fs3).drop(0).reverse + [])).look
      
-smp fslice, amp: 4.0, amp: (line 2.0, 4, 8).look
+smp fslice, amp: 4.0, amp: (line 4.0, 4, 8).look
 #spread(13, 24, rotate: 0*(knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look,  rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 
       if spread(7,11*5).look# != 0

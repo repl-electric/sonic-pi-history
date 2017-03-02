@@ -149,7 +149,7 @@ end
 puts "rotate: #{(knit 0,24,1,24,2,24,3,24).look}"
 
 if spread(13, 24, rotate: 0*(knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look
-   smp Fra§[/hat/,2..4].look, amp: 0.5
+   smp Fraz[/hat/,2..4].look, amp: 0.5
 end
      
 #smp fslice, amp: 4.0, amp: spread(13, 24, rotate: 0*(knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look,  rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)

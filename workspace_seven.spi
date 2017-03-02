@@ -148,7 +148,7 @@ end
 
 puts "rotate: #{(knit 0,24,1,24,2,24,3,24).look}"
 
-if spread(11, 24, rotate: (knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look
+if spread(13, 24, rotate: (knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look
    smp CineAmbi[/one shot/,/hat/,11], amp: 0.25
 end
      

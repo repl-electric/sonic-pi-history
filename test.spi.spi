@@ -1,45 +1,17 @@
-live_loop :ambient, sync: :slicing do
+live_loop :drum_layer,sync: :slicing do
   tick
-  with_fx :slicer, phase:  ring(1/4.0).look, invert_wave: 1  do
-    #synth :dark_ambience, note:  chord(:Fs4, :m11), amp: 1, decay: 10, attack: 8.0
-    #smp Berry[/gaiazone_9/], amp: 10
-  end
-  #smp Berry[/ataxicone_10/], amp: 2
-  #sample S.slice(:Fs3).look()[:path], amp: 1
-  sleep (1/2.0)*32
-end
-
-with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
-live_loop :harmony, sync: :slicing do
-stop
-tick
-n =  ring(         chord(:FS2,:m)[1], chord(:B2, :sus2)[1],
-         chord(:B2, :m)[1], chord(:Cs3,:m)[1]).look
-at do
-sleep 4
-with_fx :echo, phase: 0.5, decay: 8, wave:0, mix: 0.9 do
-with_fx :pitch_shift, time_dis: 0.2 do
-  #synth :pretty_bell, note: n, amp: 0.5, attack: 0.0
-end
-end
-end
-target_chord =  ring(
-         [[:FS3,16.2],   [:A3, 16.2], [:Cs4,2*16.2]],
-         [[:B3, 2*16.2], [_,   16.2], [:Fs4,2*16.2]],
-         [[_,   16.2],   [:D4, 16.2], [_,   16.2]],
-         [[:CS4,16.2],   [:E4, 16.2], [:Gs4,16.2]]).look
-ds = []
-puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
-synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.25
-target_chord.each do |np|
-if np[0]
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count)*0.5)
-end
-end
-16.times{
-  control g_fx, mix: rand, damp: rand
-  control ds.choose, amp: ((1.0 + rand) / target_chord.count)*0.6
-  sleep 1
-}
-end
+  #smp Dust[/crunchy/,4], amp: 0.5
+  8.times{
+    if ring(1,0,0,0, 1,0,1,0).look == 1
+      smp Junk[/lo/,0], amp: 0.5*0
+    end
+    if ring(0,1,0,0,0,0,0,0).look == 1
+      smp Fraz[/snap/,2], amp: 0.5*0
+    end
+    if ring(0,0,1,0,0,0,0,0).look == 1
+      smp Fraz[/snap/,4], amp: 1*0
+    end
+    tick
+    sleep 1/2.0
+  }
 end

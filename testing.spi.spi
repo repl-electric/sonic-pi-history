@@ -1,5 +1,7 @@
- live_loop :thing do
+with_fx :poop do
+  live_loop :thing do
     tick
-
+    sleep 2
+    puts "HIT"
   end
 end

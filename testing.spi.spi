@@ -1,4 +1,4 @@
-with_fx :poop do
+with_fx :none do
   live_loop :thing do
     tick
     sleep 2

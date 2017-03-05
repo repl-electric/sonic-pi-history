@@ -59,7 +59,6 @@ live_loop :fake_drums, sync: :slicing do
 end
 
 live_loop :slicing do
-  _=nil
   tick
   s =  (ring
     1/8.0,1/8.0,1/8.0,1/8.0,

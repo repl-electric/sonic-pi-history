@@ -1,6 +1,5 @@
 live_loop :test do
   tick
   sleep 2
-  
-  smp Frag[/subkick/,0]
+  smp Frag[/subkick/,0], amp: 2
 end

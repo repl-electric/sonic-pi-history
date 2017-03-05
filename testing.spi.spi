@@ -1,6 +1,0 @@
-live_loop :test do
-  tick
-  puts "thing"
-  sleep 2
-  smp Frag[/subkick/,0], amp: 2
-end

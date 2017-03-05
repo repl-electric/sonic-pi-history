@@ -1,7 +1,5 @@
-with_fx :none do
-  live_loop :thing do
-    tick
-    sleep 2
-  #  puts "HIT"
-  end
+live_loop :test do
+  tick
+  sleep 2
+  smp Frag[/subkick/,0]
 end

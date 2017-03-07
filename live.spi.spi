@@ -1,4 +1,3 @@
-☠=Straw
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick

@@ -61,8 +61,7 @@ end
 
 live_loop :slicing do
   tick
-  s =  (ring
-    1/8.0,1/8.0,1/8.0,1/8.0,
+  s =   ring(    1/8.0,1/8.0,1/8.0,1/8.0,
     1/8.0,1/8.0,1/8.0,1/8.0,
     1/8.0,1/8.0,1/8.0,1/8.0,
     1/8.0,1/8.0,1/8.0,1/8.0,
@@ -121,11 +120,11 @@ live_loop :slicing do
         #synth :dark_sea_horn, note: chord(:FS2, :m11), cutoff: 100, decay: 1.0, attack: 0.0001, amp: 1.0
       end
       d= spread(7,11).map{|s| s ? :echo : :slicer}
-      with_fx d.look, decay: 1*2, phase: 0.125, mix: 0, distort: (line 0.0, 0.5,128).look do
+      with_fx d.look, decay: 1*2, phase: 0.125, mix: 0, distort:  line(0.0, 0.5,128).look do
         #puts (🍓.slice(:Fs3)).take(1)
         ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
         with_fx :hpf, cutoff: 50, mix: 0 do
-          #smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff: (ramp 10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+          #smp ((🍓.slice(:Fs3))).look, amp: 4.0, rpitch: ring(0).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
         end
         #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
         #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
@@ -140,8 +139,8 @@ live_loop :slicing do
       with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
 
         fslice = ((🍓.slice(:Fs3).drop(0).reverse + [_])).look
-        smp fslice, amp: 4.0, amp: (line 2.0, 4.0, 64).tick(:inside)
-        #spread(13, 24, rotate: 0*(knit 0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look,  rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+        smp fslice, amp: 4.0, amp:  line(2.0, 4.0, 64).tick(:inside)
+        #spread(13, 24, rotate: 0* knit(0,128,1,128,2,128,3,128,4,128).look).map{|s| s ? 4.0 : 0.0}.look,  rpitch:  ring(0).look, cutoff: 130#, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 
         if spread(7,11*5).look# != 0
           comment do
@@ -155,24 +154,19 @@ live_loop :slicing do
             end
           end
         end
-        if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
-          #smp fslice, amp: 2.0, rpitch: -5, cutoff: 135, start: 0.8469, finish: 1.0
-          #smp fslice, amp: 2.0, rpitch: -2, cutoff: 135, start: 0.8469, finish: 1.0
+        if s != 1/8.0
           smp fslice, amp: 2.0, rpitch: 0, cutoff: 135, start: 0.8469, finish: 1.0
-
-          #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
         end
         #puts (fslice[:offset] - fslice[:onset]) if fslice
         if fslice && (fslice[:offset] - fslice[:onset]) > 0.129
-          #synth :dark_sea_horn, note: (knit :FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
+          #synth :dark_sea_horn, note:  knit(:FS1,4, :B1,4, :Cs2,4).tick(:chip), amp: 1.0, decay: 0.01, release: 0.01
         end
 
         if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
-          x= knit( :Fs4,64,  :Cs5,64,
-                  :b4,64,   :D5,64
-                  ).look
-          puts x
-          synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64,
+          x=  knit(            :Fs4,64,:Cs5,64,
+            :b4,64, :D5,64
+            ).look
+          synth :dark_ambience, note:  knit(chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64,
             chord(:B4, :M), 64, chord(:D5, :M), 64).look, decay: 1, attack: 0.5, amp: 0
           synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                                   :b4,64,   :fs4,64/2.0, :a4, 64/2.0
@@ -182,12 +176,12 @@ live_loop :slicing do
                                     :Fs1,64,   :E2,64,
                                     :Fs1,64,  :Cs1,64,
                                     :Fs2,64,   :E1,64
-                                    ).look, cutoff: 30, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
+                                    ).look, cutoff: 30, release:  knit(1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
             synth :prophet, note: knit(:Fs2,64,  :Cs2,64,
                                        :Fs1,64,   :E2,64,
                                        :Fs1,64,  :Cs1,64,
                                        :Fs2,64,   :E1,64
-                                       ).look, cutoff: 0, release: (knit 1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
+                                       ).look, cutoff: 0, release:  knit(1.0,64, 1.0,64, 1.0,64, 1.0,65).look*7, amp: 0.0
 
           end
         end
@@ -195,13 +189,6 @@ live_loop :slicing do
         if spread(1,64).look
           #smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
           #rpitch:  ring(12*1).look, cutoff: 100
-        end
-      end
-      if  spread(8, 16).look
-        with_fx :distortion, mix:  line(0.0, 1.0, 128).look do
-          with_fx :bitcrusher, bits:  line(8, 32, 1).look do
-            #          smp (🍓.slice(:D2).take(32)).look, amp: 0.3,rpitch:  knit(-5, 32, 0, 32).look
-          end
         end
       end
     end

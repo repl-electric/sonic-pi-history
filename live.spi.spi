@@ -42,8 +42,6 @@ module Harp
   end
 end
 
-🍓 =Straw;🥁=@slices
-☠ =Straw
 
 live_loop :fit do
   tick

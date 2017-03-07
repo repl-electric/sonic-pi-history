@@ -1,5 +1,5 @@
 live_loop :start do
   tick
-  smp Straw.slice(:Fs3).look, amp: 2.0
+  smp Straw.slice(:Fs3).look, amp: 3.0
   sleep (knit 1/8.0, 31, 8,0).look
 end

@@ -42,11 +42,6 @@ end
 
 🍓 =Straw;🥁=@slices
 ☠ =Straw
-
-
-🍓.take(32)
-
-
 live_loop :fake_drums, sync: :slicing do
   tick
    if spread(1,32).look

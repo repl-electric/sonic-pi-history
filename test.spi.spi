@@ -44,10 +44,12 @@ end
 🍓 =Straw;🥁=@slices
 ☠️=Straw
 
-puts ☠️.slice(:FS3)
-
 live_loop :slicing do
   tick
+
+puts ☠️.slice(:FS3)
+
+
   s = (knit 1/8.0,32, 8, 1).look
   with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
     b = Dust[/perc/,1];a = Dust[/perc/,2]

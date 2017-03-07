@@ -1,5 +1,5 @@
 live_loop :start do
   tick
-  smp Straw.find("Fs3").take(32)
+  smp Straw.slice("Fs3").take(32)
   sleep 1/8.0
 end

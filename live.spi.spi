@@ -1,6 +1,6 @@
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-     ☠.slices(:FS3)
+     smp ☠.slices(:FS3)
   end
 end

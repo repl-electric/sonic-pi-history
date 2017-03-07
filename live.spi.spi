@@ -48,7 +48,7 @@ live_loop :doit do
     tick
 
     #play :FS3
-    smp Straw.slice(:FS3).look, amp: 0.2
+    smp Straw.slice(:FS3).look, amp: 2.2
 
     sleep 1/8.0
 end

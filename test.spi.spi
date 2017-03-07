@@ -41,7 +41,7 @@ module Harp
 end
 
 🍓 =Straw;🥁=@slices
-☠=Straw
+☠ =Straw
 
 live_loop :fake_drums, sync: :slicing do
   tick

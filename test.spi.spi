@@ -42,7 +42,7 @@ module Harp
 end
 
 🍓 =Straw;🥁=@slices
-☠️=Straw
+☠️ =Straw
 
 live_loop :slicing do
   tick

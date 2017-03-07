@@ -40,7 +40,7 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   end
 
 
-    if spread(7,11).look
+    if spread(1,8).look
           smp Straw.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch:(ring 12, -5,5).tick(:ins), finish_offset: rand*0.01
     end
 

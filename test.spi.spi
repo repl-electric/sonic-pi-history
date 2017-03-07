@@ -47,7 +47,7 @@ end
 live_loop :slicing do
   tick
 
-  puts "------>#{Straw.slice(:FS3)}"
+  puts "------>#{Straw.slice(:FS3).look}"
   stop
 
   s = (knit 1/8.0,32, 8, 1).look

@@ -13,6 +13,8 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
     end
   end
   if spread(1,8).look
+      smp Dust[/snare/,[2,1]].tick(:sample), cutoff: 135, amp: 0.7
+
     if spread(1,16).look
       smp Dust[/snare/,[8,8]].tick(:sample), cutoff: 135, amp: 0.7
     else
@@ -23,7 +25,6 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   if spread(1,2).look
     smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
     if spread(1,62).look
-
     at do
       sleep 1/8.0
       smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25

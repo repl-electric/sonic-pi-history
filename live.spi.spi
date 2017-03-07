@@ -44,3 +44,14 @@ end
 
 🍓 =Straw;🥁=@slices
 ☠️ =Straw
+
+
+live_loop :doit do
+  with_fx :none, mix: 0 do
+    tick
+
+    play :FS3
+
+    sleep 1/8.0
+  end
+end

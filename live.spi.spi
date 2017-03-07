@@ -14,7 +14,7 @@ puts @slices.values.flatten.count
 #smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(10, 130, 128).tick(:ram)
 module Straw
   def self.slice(n, size: 1/4.0)
-    @straw_cache ||= {}
+    @straw_cache = {}
     n = n.to_s.gsub(/s/,"#")
     if !@straw_cache.has_key?(n)
       @straw_cache[n] = NoteSlices.find(note: n, max: size, pat: "Straw").take(64)

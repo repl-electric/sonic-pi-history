@@ -9,7 +9,7 @@ live_loop :start do
   end
 
 
-  s = (knit 1/8.0, 31, 8,0).look
+  s =  knit(1/8.0, 31, 8,0).look
   f = spread(7,11).map{|s| s ? :reverb : :bitcrusher}
   with_fx(f.look) do
     if s > 1

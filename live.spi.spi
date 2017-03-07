@@ -48,19 +48,11 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   f = spread(7,11).map{|s| s ? :pitch_shift : :bitcrusher}
     with_fx(f.look) do
 
-
-
-
-
-
-        if f && (f[:offset] - f[:onset]) > 0.1
+      if f && (f[:offset] - f[:onset]) > 0.1
           x= (knit
             :Fs4,64,:Cs5,64,
-            :b4,64, :D5,64
-            ).look
-          synth :dark_ambience, note: (knit chord(:Fs4, :minor), 64, chord(:Cs5, :minor), 64,
-            chord(:B4, :M), 64, chord(:D5, :M), 64).look, decay: 1, attack: 0.5, amp: 0
-          synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
+            :b4,64, :D5,64).look
+        synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                                   :b4,64,   :fs4,64/2.0, :a4, 64/2.0
                                   ).look, amp: 0.0, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 end

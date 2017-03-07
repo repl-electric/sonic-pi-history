@@ -17,6 +17,11 @@ live_loop :start do
     end
   end
 
+  if spread(1,2).look
+    smp Frag[/hat/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+
+  end
+
   s = (knit 1/8.0, 31, 8,0).look
 
   f2 = spread(7,11).map{|s| s ? :echo : :slicer}

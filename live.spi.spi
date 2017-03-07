@@ -1,0 +1,5 @@
+live_loop :slices do
+  tick
+  smp ☠.slice(:FS3).look, amp: 4.0
+  sleep 1
+end

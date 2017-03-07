@@ -16,9 +16,9 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
       smp Dust[/snare/,[2,2]].look, cutoff: 135, amp: 0.7
 
     if spread(1,16).look
-      smp Dust[/snare/,[8,8]].look, cutoff: 135, amp: 0.7
+#      smp Dust[/snare/,[8,8]].look, cutoff: 135, amp: 0.7
     else
-      smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 0.4
+#      smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 0.4
     end
   end
 

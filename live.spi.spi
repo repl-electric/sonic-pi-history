@@ -5,13 +5,11 @@ live_loop :start do
   end
   if spread(1,8).look
     if spread(1,16).look
-      smp Dust[/snare/,[0,0]].tick(:sample), cutoff: 135, amp: 0.4
+      smp Dust[/snare/,[6,6]].tick(:sample), cutoff: 135, amp: 0.4
     else
       smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 0.4
-
     end
   end
-
 
   s = (knit 1/8.0, 31, 8,0).look
   f = spread(7,11).map{|s| s ? :reverb : :bitcrusher}

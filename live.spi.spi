@@ -80,7 +80,7 @@ end
     else
       smp fs, amp: 4.0, finish_offset: 0.1#, amp: (line 4,8,8).look
     end
-    sleep s*2
+    sleep s*4
     end
     end
 end

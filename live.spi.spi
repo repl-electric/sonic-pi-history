@@ -18,10 +18,10 @@ live_loop :start do
   end
 
   if spread(1,2).look
-    smp Frag[/hat/,[0,0,1]].tick(:sample)
+    smp Frag[/hat/,[0,0,1]].look
   end
 
-  s = (knit 1/8.0, 31, 8,0).look
+  s =  knit(1/8.0, 31, 8,0).look
 
   f2 = spread(7,11).map{|s| s ? :echo : :slicer}
   with_fx(f2.look, phase: 0.25, decay: 2) do

@@ -48,13 +48,15 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   f = spread(7,11).map{|s| s ? :pitch_shift : :bitcrusher}
     with_fx(f.look) do
 
-      if f && (f[:offset] - f[:onset]) > 0.1
+fs = Straw.slice(:Fs3).look
+
+      if fs && (fs[:offset] - fs[:onset]) > 0.1
         x= (knit
           :Fs4,64,:Cs5,64,
           :b4,64, :D5,64).look
         synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                                 :b4,64,   :fs4,64/2.0, :a4, 64/2.0
-                                ).look, amp: 0.0, attack: 0.001, decay: f[:offset] - f[:onset], release: 0.001
+                                ).look, amp: 0.0, attack: 0.001, decay: fs[:offset] - fs[:onset], release: 0.001
 end
 
 

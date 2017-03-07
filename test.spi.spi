@@ -47,7 +47,7 @@ end
 
 live_loop :it do
   tick
-  smp S️.slice(:FS3).look, amp: 4.0
+  smp ️.slice(:FS3).look, amp: 4.0
   #play :FS3
   sleep 1
 end

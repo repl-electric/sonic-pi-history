@@ -1,2 +1,6 @@
-smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
-shader :iWave, 1
+live_loop :slices do
+  with_fx :none, mix: 0 do
+    tick
+     ☠.slices(:FS3)
+  end
+end

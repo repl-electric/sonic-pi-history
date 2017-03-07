@@ -45,7 +45,7 @@ end
 
 live_loop :fit do
   tick
-  puts Straw.slice(:FS3).look, amp: 4.0
+  puts Straw.slice(:FS3).look
   #play :FS3
 
   sleep 1

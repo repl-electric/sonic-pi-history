@@ -1,5 +1,5 @@
 live_loop :start do
   tick
-  smp Staw.take(32)
+  smp Straw.take(32)
   sleep 1/8.0
 end

@@ -43,8 +43,6 @@ module Harp
 end
 
 🍓 =Straw;🥁=@slices
-☠️ =Straw
-
 
 live_loop :doit do
   with_fx :none, mix: 0 do

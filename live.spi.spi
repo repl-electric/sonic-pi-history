@@ -23,10 +23,8 @@ live_loop :start do
     if spread(1,62).look
       sleep 1/8.0
       smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
-
     end
-      end
-
+    end
   end
 
   s = (knit 1/8.0, 31, 8,0).look

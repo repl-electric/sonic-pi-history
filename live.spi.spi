@@ -2,8 +2,8 @@ live_loop :start do
   tick
 
   f = spread(7,11).map{|s| s ? :reverb : :bitcrusher}
-  with_fx(f) do
+  with_fx(f.look) do
     smp Straw.slice(:Fs3).look, amp: 4.0
-    sleep  knit(1/8.0, 31, 8,0).look
+    sleep (knit 1/8.0, 31, 8,0).look
   end
 end

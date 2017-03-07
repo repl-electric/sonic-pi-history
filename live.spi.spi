@@ -46,5 +46,7 @@ end
 live_loop :fit do
   tick
   play :FS3
+  smp Straw.slice(:FS3).look
+
   sleep 1
 end

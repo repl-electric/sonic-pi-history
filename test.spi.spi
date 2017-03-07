@@ -1,6 +1,8 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb"
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shader.rb"
+
 _=nil
 set_volume! 1.0
 def note_slices(n, m)
@@ -58,9 +60,6 @@ live_loop :fake_drums, sync: :slicing do
   end
   sleep 1/8.0
 end
-
-
-shader :iWave, 1.0
 
 live_loop :slicing do
   tick

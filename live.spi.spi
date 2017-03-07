@@ -4,7 +4,12 @@ live_loop :start do
     smp Mountain[/subkick/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
   end
   if spread(1,8).look
-    smp Dust[/snare/,[0,0]].tick(:sample), cutoff: 135, amp: 0.4
+    if spread(1,16).look
+      smp Dust[/snare/,[0,0]].tick(:sample), cutoff: 135, amp: 0.4
+    else
+      smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 0.4
+
+    end
   end
 
 

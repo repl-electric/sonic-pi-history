@@ -40,7 +40,7 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   end
 
     if spread(3,8).look
-          smp Straw.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch:(ring 12, -5,5).tick(:ins), finish_offset: rand*0.0025
+#          smp Straw.slice(:Fs3).drop(1).reverse.look, amp: 4.0, rpitch:(ring 12, -5,5).tick(:ins), finish_offset: rand*0.0025
     end
 
 
@@ -57,7 +57,6 @@ fs = Straw.slice(:Fs3).drop(1).reverse.look
                                 :b4,64,   :fs4,64/2.0, :a4, 64/2.0
                                 ).look, amp: 2.0, attack: 0.001, decay: fs[:offset] - fs[:onset], release: 0.001
 end
-
 
         if spread(7,11*5).look# != 0
           uncomment do

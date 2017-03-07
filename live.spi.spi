@@ -31,7 +31,7 @@ live_loop :start do
 
   f2 = spread(7,11).map{|s| s ? :echo : :reverb}
   with_fx(f2.look, phase: 0.25, decay: 2) do
-    smp Straw.slice(:Fs3).drop(0).take(16).look, amp: 4.0
+    smp Straw.slice(:Fs3).drop(0).take(8).look, amp: 4.0
   end
 
   f = spread(7,11).map{|s| s ? :pitch_shift : :bitcrusher}

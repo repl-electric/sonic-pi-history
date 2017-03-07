@@ -43,3 +43,10 @@ end
 
 🍓 =Straw;🥁=@slices
 ☠️=Straw
+
+
+live_loop :it do
+  tick
+  smp ☠️.slice(:FS3).look
+  sleep 1
+end

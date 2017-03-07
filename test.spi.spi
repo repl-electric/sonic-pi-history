@@ -43,23 +43,6 @@ end
 
 🍓 =Straw;🥁=@slices
 ☠️=Straw
-live_loop :fake_drums, sync: :slicing do
-  tick
-   if spread(1,32).look
-    #smp Mountain[/subkick/,1], amp: 2, cutoff: 60
-    #smp Frag[/kick/,6], amp: 2#, cutoff: 60
-    if spread(1,48).tick(:sindie)
-      at do
-        sleep (1/8.0)
-        #smp Frag[/hat/,4], amp: 0.5, rpitch:  ring(0,12,12).tick(:pi)
-        #smp 🥁["Fs3/4"][21], amp: 2
-        #smp Mountain[/subkick/,0], amp: 2.0
-      end
-    end
-  end
-  sleep 1/8.0
-end
-
 live_loop :slicing do
   tick
   s = (knit 1/8.0,32, 8, 1).look

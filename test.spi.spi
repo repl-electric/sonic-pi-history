@@ -61,8 +61,6 @@ live_loop :fake_drums, sync: :slicing do
   sleep 1/8.0
 end
 
-shader :iWave, 1.0
-
 live_loop :slicing do
   tick
   s = (knit 1/8.0,32, 8, 1).look

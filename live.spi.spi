@@ -20,7 +20,7 @@ live_loop :start do
   s = (knit 1/8.0, 31, 8,0).look
 
   f2 = spread(7,11).map{|s| s ? :reverb : :slicer}
-  with_fx(f2.look, phase: 0.25) do
+  with_fx(f2.look, phase: 0.25, decay: 2) do
     smp Straw.slice(:Fs3).drop(0).look, amp: 4.0, rate: -1
   end
 

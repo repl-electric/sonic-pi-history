@@ -48,5 +48,6 @@ end
 live_loop :it do
   tick
   smp ☠️.slice(:FS3).look
+  play :FS3
   sleep 1
 end

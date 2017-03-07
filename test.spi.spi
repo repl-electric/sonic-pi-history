@@ -44,7 +44,7 @@ end
 🍓 =Straw;🥁=@slices
 ☠️=Straw
 
-puts ☠️
+puts ☠️.slice(:FS3)
 
 live_loop :slicing do
   tick

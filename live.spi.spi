@@ -45,9 +45,8 @@ end
 live_loop :fit do
   tick
 
-  
 
-  puts ☠.slice(:FS3)
+  smp ☠.slice(:FS3)
   #play :FS3
 
   sleep 1

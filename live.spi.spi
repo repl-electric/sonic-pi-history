@@ -1,7 +1,7 @@
 live_loop :start do
   tick
 
-with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
+with_fx :hpf, cutoff: 80, mix: 0* ramp(0, 1, 128).tick(:in) do
 
   if spread(1,4).look
     smp Mountain[/subkick/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
@@ -23,20 +23,20 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   end
 
   if spread(1,2).look
-    smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
+    smp Frag[/hat/,[0,0,1]].look, rpitch:  line(0,12,32).look, amp: 0.25
     if spread(1,62).look
     at do
       sleep 1/8.0
-      smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
+      smp Frag[/hat/,[0,0,1]].look, rpitch:  line(0,12,32).look, amp: 0.25
     end
     end
   end
 
-  s = (knit 1/8.0, 31, 8,0).look
+  s =  knit(1/8.0, 31, 8,0).look
 
   f2 = spread(7,11).map{|s| s ? :echo : :reverb}
   with_fx(f2.look, phase: 0.25, decay: 2) do
-    smp Straw.slice(:Fs3).drop(1).look, amp: 4.0, rpitch:(ring 7).shuffle.look
+    smp Straw.slice(:Fs3).drop(1).look, amp: 4.0, rpitch: ring(5).shuffle.look
   end
 
   f = spread(7,11).map{|s| s ? :pitch_shift : :bitcrusher}
@@ -44,7 +44,7 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
     if s > 1
       smp Straw.slice(:Fs3).look, amp: 4.0, finish_offset: 0.15
     else
-      smp Straw.slice(:Fs3).drop(1).look, amp: 4.0, amp: (line 4,8,8).look
+      smp Straw.slice(:Fs3).drop(1).look, amp: 4.0, amp:  line(4,8,8).look
     end
     sleep s
     end

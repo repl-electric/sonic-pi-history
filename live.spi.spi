@@ -1,10 +1,10 @@
 live_loop :start do
   tick
   if spread(1,4).look
-    smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+    smp Mountain[/subkick/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
   end
 
-  s =  knit(1/8.0, 31, 8,1).look
+  s = (knit 1/8.0, 31, 8,1).look
   f = spread(7,11).map{|s| s ? :reverb : :bitcrusher}
   with_fx(f.look) do
     if s > 1

@@ -42,12 +42,13 @@ module Harp
 end
 
 🍓 =Straw;🥁=@slices
+☠️=Straw
 
 live_loop :slicing do
   tick
 
   puts "------>#{Straw.slice(:FS3)}"
-#  stop
+  stop
 
   s = (knit 1/8.0,32, 8, 1).look
   with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do

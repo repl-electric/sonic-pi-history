@@ -48,7 +48,7 @@ with_fx :hpf, cutoff: 80, mix: 0* ramp(0, 1, 128).tick(:in) do
   f = spread(7,11).map{|s| s ? :pitch_shift : :bitcrusher}
     with_fx(f.look) do
 
-fs = Straw.slice(:Fs3).look.drop(1).reverse
+fs = Straw.slice(:Fs3).drop(1).reverse.look
 
       if fs && (fs[:offset] - fs[:onset]) > 0.1
         x=  knit(          :Fs4,64,:Cs5,64,

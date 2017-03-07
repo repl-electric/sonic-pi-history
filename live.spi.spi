@@ -44,7 +44,7 @@ end
 
 live_loop :fit do
   tick
-  puts Straw.slice(:FS3).look
+  puts Straw.slice(:FS3)
   #play :FS3
 
   sleep 1

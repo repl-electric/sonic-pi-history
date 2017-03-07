@@ -40,10 +40,9 @@ module Harp
   end
 end
 
+🍓 =Straw;🥁=@slices
+☠=Straw
 
-
-
-🍓=Straw;🥁=@slices
 live_loop :fake_drums, sync: :slicing do
   tick
    if spread(1,32).look

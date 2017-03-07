@@ -47,7 +47,7 @@ end
 live_loop :slicing do
   tick
 
-puts ☠️.slice(:FS3)
+  puts "#{☠️.slice(:FS3)}"
 
 
   s = (knit 1/8.0,32, 8, 1).look

@@ -55,7 +55,7 @@ fs = Straw.slice(:Fs3).drop(1).reverse.look
           :b4,64, :D5,64).look
         synth :gpa, note:  knit( :Fs4,64,  :Cs5,64,
                                 :b4,64,   :fs4,64/2.0, :a4, 64/2.0
-                                ).look, amp: 1.0, attack: 0.001, decay: fs[:offset] - fs[:onset], release: 0.001
+                                ).look, amp: 2.0, attack: 0.001, decay: fs[:offset] - fs[:onset], release: 0.001
 end
 
 

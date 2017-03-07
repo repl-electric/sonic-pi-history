@@ -23,11 +23,11 @@ with_fx :hpf, cutoff: 80, mix: 0*(ramp 0, 1, 128).tick(:in) do
   end
 
   if spread(1,2).look
-    smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
+#    smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
     if spread(1,62).look
     at do
       sleep 1/8.0
-      smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
+ #     smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.25
     end
     end
   end

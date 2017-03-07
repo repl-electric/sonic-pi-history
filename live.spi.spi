@@ -18,11 +18,18 @@ live_loop :start do
   end
 
   if spread(1,2).look
-    smp Frag[/hat/,[0,0,1]].look, rpitch:  line(0,12,32).look, amp: 0.5
+    smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.5
+    at do
+    if spread(1,62).look
+      sleep 1/8.0
+      smp Frag[/hat/,[0,0,1]].look, rpitch: (line 0,12,32).look, amp: 0.5
+
+    end
+      end
 
   end
 
-  s =  knit(1/8.0, 31, 8,0).look
+  s = (knit 1/8.0, 31, 8,0).look
 
   f2 = spread(7,11).map{|s| s ? :echo : :slicer}
   with_fx(f2.look, phase: 0.25, decay: 2) do

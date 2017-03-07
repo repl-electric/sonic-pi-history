@@ -42,13 +42,10 @@ module Harp
   end
 end
 
-🍓 =Straw;🥁=@slices
-
 live_loop :doit do
     tick
-
     #play :FS3
-    smp Straw.slice(:FS3).look, amp: 8.2
+    smp Straw.slice(:FS3).look, amp: 4.2
 
     sleep 1/8.0
 end

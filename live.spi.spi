@@ -25,8 +25,8 @@ live_loop :slices do
 
      if f[:offset]-f[:onset] < 0.1
        shader :iR, rand*4
-       shader :iB, rand*4
-       shader :iG, rand*4
+#       shader :iB, rand*4
+#       shader :iG, rand*4
      end
   # shader :iR, rand
  #end

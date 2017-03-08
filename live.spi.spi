@@ -8,8 +8,8 @@ def live(name, *args, &block)
 end
 
 
-live :test2, fx: :reverb, mix: 1.0 do
-
+live :test2, fx: :reverb, mix: (ramp 0, 1, 256).tick(:fire)
+1.0 do
   puts "TEST"
   play :FS3, amp: 2
   sleep 1

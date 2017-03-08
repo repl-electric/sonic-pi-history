@@ -8,7 +8,7 @@ def live(name, *args, &block)
 end
 
 
-live :test2, fx: :echo, mix: 1.0 do
+live :test2, fx: :echo, mix: 0.5 do
   puts "TEST"
   play :FS3, amp: 2
   sleep 1

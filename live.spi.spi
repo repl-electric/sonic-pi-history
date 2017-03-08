@@ -1,9 +1,10 @@
-♥️=Straw
-live_loop :thing do
+♥️,☠️=Straw
+🐿=@slices
+live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-    smp ♥️.slice(:FS3).look
+    ♥️.slice(:Fs3).look
 
-    sleep 1
+    sleep 1/8.0
   end
 end

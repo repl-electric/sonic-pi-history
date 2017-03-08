@@ -17,7 +17,7 @@ live_loop :slices do
     #smp ♥️.slice(:Fs3).look, amp: (line 0, 1, 64).look
 
      if spread(1,4).look
-       shader :decay, :iBeat, 2.8, 0.0001
+       shader :decay, :iBeat, 2.8, 0.001
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
 

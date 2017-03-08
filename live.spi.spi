@@ -14,8 +14,8 @@
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-    smp ♥️.slice(:Fs3).look, amp: (line 0, 1, 64).look
+    smp ♥️.slice(:Fs3).look, amp:  line(0, 1, 64).look
 
-    sleep (knit 1/8.0, 32, 8,1).look
+    sleep  knit(1/8.0, 32, 8,1).look
   end
 end

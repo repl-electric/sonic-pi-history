@@ -18,7 +18,7 @@ live_loop :slices do
 
      if spread(1,4).look
    #    shader :decay, :iBeat, 1.0, 0.01
-       smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
+#       smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
     sleep (knit 1/8.0, 32).look

@@ -8,7 +8,7 @@ def live(name, *args, &block)
 end
 
 
-live :test2, fx: :hpf, mix:  ramp(0, 1, 256).tick(:fir2e)
+live :test2, fx: :hpf
 1.0 do
   puts "TEST"
   play :FS5, amp: 2

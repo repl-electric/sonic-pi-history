@@ -1,6 +1,6 @@
 live_loop :test do; with_fx :none, mix: 0 do
     tick
-    smp ♥️️.slice(:FS3).look
+    smp ♥️️.slice(:Fs3).look
     sleep 1
 
   end

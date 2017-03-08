@@ -11,6 +11,6 @@ end
 live :test2, fx: :lpf do
 
   puts "TEST"
-  play :FS3
+  play :FS3, amp: 4
   sleep 1
 end

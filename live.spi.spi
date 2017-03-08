@@ -4,7 +4,7 @@
  shader :iStarMotion, 0.8
  shader :iSpaceLight, 0.4
  shader :iStarLight, 0.8
- shader [:iR, :iB, :iG], 1.0
+ shader [:iR, :iB, :iG], 2.0
  shader :iForm, 1.0
  shader :iMotion, 0.01
  shader :iSize,1.1

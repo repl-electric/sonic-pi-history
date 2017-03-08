@@ -15,7 +15,11 @@ live_loop :slices do
   with_fx :none, mix: 0 do
     tick
      if spread(1,4).look
-#       shader :decay, :iBeat,  ring(0.1, 0.05).look(:sample)
+#       shader :decay, :iBeat, (ring 0.1, 0.05).look(:sample)
+       shader :decay, :iR, rand*4
+       shader :decay, :iB, rand*4
+       shader :decay, :iG, rand*4
+
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
      f =♥️.slice(:Fs3).look
@@ -24,17 +28,14 @@ live_loop :slices do
      #if f[:onset] - f[:offset]]) > 0.1
 
      if f[:offset]-f[:onset] < 0.1
-       shader :decay, :iBeat,  ring(0.1, 0.05).look(:sample)
+       shader :decay, :iBeat, (ring 0.1, 0.05).look(:sample)
 
-       shader :decay, :iR, rand*4
-       shader :decay, :iB, rand*4
-       shader :decay, :iG, rand*4
      end
   # shader :iR, rand
  #end
 
 
 
-    sleep  knit(1/8.0, 32).look
+    sleep (knit 1/8.0, 32).look
   end
 end

@@ -1,15 +1,9 @@
-def live(name, *args, &block)
-  fx = resolve_synth_opts_hash_or_array(args)
-  x = lambda{||
-    with_fx((fx[:fx] || :none), mix: (fx[:mix] || 0)) do
-      block.()
-    end}
-  live_loop(name, *args, &x)
-end
+♥️=Straw
+live_loop :thing do
+  with_fx :none, mix: 0 do
+    tick
+    smp ♥️.slices(:FS3).look
 
-
-live :test2, fx: :lpf, mix: 1.0  do
-  puts "TEST"
-  play :FS3, amp: 2
-  sleep 1
+    sleep 1/8.0
+  end
 end

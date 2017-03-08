@@ -16,3 +16,11 @@ def live(name, *args, &block)
     end}
   live_loop(name, *args, &x)
       end
+
+
+
+live :test2 do
+
+  puts "TEST"
+  sleep 1
+end

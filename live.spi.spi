@@ -4,7 +4,7 @@ shader :iWave, 1.4
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-    smp ♥️.slice(:Fs3).look, amp: (line 2, 4, 128).look
+    smp ♥️.slice(:Fs3).look, amp: (line 2, 5, 128).look
 
     sleep 1/8.0
   end

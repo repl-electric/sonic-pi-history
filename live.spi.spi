@@ -21,13 +21,13 @@ live_loop :slices do
      f =♥️.slice(:Fs3).look
      smp f, amp: 4
 
-     if f[:onset] - f[:offset]]) > 0.1
-     shader :iR, rand
-     shader :iR, rand
-   end
+     #if f[:onset] - f[:offset]]) > 0.1
+   shader :iR, rand
+   shader :iR, rand
+ #end
 
 
 
-    sleep (knit 1/8.0, 32).look
+    sleep  knit(1/8.0, 32).look
   end
 end

@@ -20,11 +20,11 @@ live_loop :slices do
      end
      f =♥️.slice(:Fs3).look
      smp f, amp: 4
-     if (f[:start] - f[:finish]] > 0.1)
-     shader :iR, rand
-     shader :iR, rand
 
-     end
+     if f && (f[:start] - f[:finish]] > 0.1)
+     shader :iR, rand
+     shader :iR, rand
+   end
 
 
 

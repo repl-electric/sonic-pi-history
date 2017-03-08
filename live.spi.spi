@@ -21,6 +21,6 @@ live_loop :slices do
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-    sleep  knit(1/8.0, 32).look
+    sleep (knit 1/8.0, 32).look
   end
 end

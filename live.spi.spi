@@ -8,8 +8,6 @@
 〄=Straw
 ㉿=Straw
 
-
-
 live_loop :test do; with_fx :none, mix: 0 do
     tick
     smp ♥️️.slice(:Fs3).look

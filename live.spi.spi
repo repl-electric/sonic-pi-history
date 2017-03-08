@@ -24,7 +24,7 @@ live_loop :slices do
        shader :decay, :iB, rand*4
        shader  :iG, rand*4
 
-       shader :decay, :iCircleP, 1, 0.00001 #rand
+       #shader :decay, :iCircleP, 1, 0.00001 #rand
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
      f =♥️.slice(:Fs3).look

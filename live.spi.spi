@@ -1,7 +1,7 @@
 ♥️,☠️=Straw
 🐿=@slices
 shader :iWave, 1.4
-shader :shader, "vox.glsl", "bits.vert", "points", 10000
+shader :shader, "wave.glsl", "bits.vert", "points", 10000
 
 
 live_loop :slices do

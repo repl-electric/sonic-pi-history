@@ -28,7 +28,7 @@ live_loop :slices do
      #if f[:onset] - f[:offset]]) > 0.1
 
      if f[:offset]-f[:onset] < 0.1
-       shader :decay, :iBeat, 1.0
+       shader :decay, :iBeat, 1.0, 0.001
 
      end
   # shader :iR, rand

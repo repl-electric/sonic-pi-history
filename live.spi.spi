@@ -18,7 +18,6 @@ live_loop :slices do
 
      if spread(1,4).look
        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
-
      end
 
 

@@ -9,7 +9,7 @@
  shader :iMotion, 0.01
  shader :iSize,1.1
  shader :iDistort, 1.0
-shader :iWave, 5.0
+shader :iWave, 2.0
 
 live_loop :slices do
   with_fx :none, mix: 0 do

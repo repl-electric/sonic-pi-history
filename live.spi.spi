@@ -1,14 +1,3 @@
-live_loop :test do
-  tick
-  #smp ️Straw.slice(:Fs3).look
-#  smp ♥️.slices(:FS3).look
-
-
-  sleep 1
-end
-
-
-
 def live(name, *args, &block)
   fx = resolve_synth_opts_hash_or_array(args)
   x = lambda{||

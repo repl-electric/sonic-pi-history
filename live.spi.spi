@@ -27,7 +27,6 @@ live_loop :slices do
        shader :iR, rand
        shader :iB, rand
        shader :iG, rand
-
      end
   # shader :iR, rand
  #end

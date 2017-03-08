@@ -19,7 +19,7 @@ def live(name, *args, &block)
 
 
 
-live :test2 do
+live :test2, fx: :lpf do
 
   puts "TEST"
   sleep 1

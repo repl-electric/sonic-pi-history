@@ -4,7 +4,6 @@ shader :iWave, 1.4
 shader :shader, "wave.glsl", "bits.vert", "points", 10000
 
 
-
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick

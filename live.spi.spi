@@ -2,6 +2,6 @@ live_loop :test do
     tick
   #smp ️Straw.slice(:Fs3).look
   #play :FS3
-  smp Straw.slice(:FS3).look, amp: 2.2
-    sleep 1
+  smp Straw.slice(:FS3).look, amp: 5.2
+  sleep 1
 end

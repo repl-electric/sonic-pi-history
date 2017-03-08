@@ -19,8 +19,11 @@ live_loop :slices do
        shader :decay, :iBeat, 0.1
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
-
-    smp ♥️.slice(:Fs3).look, amp: 4
+     f = ♥️.slice(:Fs3).look
+     smp f, amp: 4
+     if f[:start] - f[:finish]] > 0.1
+      shader :iR rand
+     end
 
 
 

@@ -10,13 +10,13 @@ end
 
 
 def live(name, *args, &block)
+  fx = resolve_synth_opts_hash_or_array(args)
   x = lambda{||
-    with_fx :none, mix: 0 do
+    with_fx((fx[:fx] || :none), mix: (fx[:mix] || 0)) do
       block.()
     end}
   live_loop(name, *args, &x)
-      end
-
+end
 
 
 live :test2, fx: :lpf do

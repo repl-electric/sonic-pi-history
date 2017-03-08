@@ -8,7 +8,7 @@
  shader :iForm, 1.0
  shader :iMotion, 0.01
  shader :iSize,10.1
- shader :iDistort, 100.0
+ shader :iDistort, 10.0
 
 
 live_loop :slices do

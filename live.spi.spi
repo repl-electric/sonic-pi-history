@@ -1,6 +1,6 @@
 ♥️,☠️=Straw
 🐿=@slices
- shader :shader, "wave.glsl", "bits.vert", "points", 100
+ shader :shader, "wave.glsl", "bits.vert", "points", 1000
  shader :iStarMotion, 0.8
  shader :iSpaceLight, 0.4
  shader :iStarLight, 0.8

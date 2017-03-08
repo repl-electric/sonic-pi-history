@@ -1,5 +1,3 @@
-♥️ =Straw
-
 live_loop :test do; with_fx :none, mix: 0 do
     tick
     smp ️Straw.slice(:Fs3).look

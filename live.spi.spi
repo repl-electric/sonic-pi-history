@@ -9,7 +9,7 @@
  shader :iMotion, 0.01
  shader :iSize,1.1
  shader :iDistort, 1.0
-shader :iWave, 1
+shader :iWave, 1.0
 
 live_loop :slices do
   with_fx :none, mix: 0 do
@@ -21,6 +21,6 @@ live_loop :slices do
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-    sleep  knit(1/8.0, 32).look
+    sleep (knit 1/8.0, 32).look
   end
 end

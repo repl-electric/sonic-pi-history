@@ -4,6 +4,6 @@ live_loop :test do
   #smp ️Straw.slice(:Fs3).look
   #play :FS3
   puts ♥️
-  smp Straw.slice(:FS3).look, amp: 5.2
+  #smp Straw.slice(:FS3).look, amp: 5.2
   sleep 1
 end

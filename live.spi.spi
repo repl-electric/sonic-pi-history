@@ -1,8 +1,6 @@
 ♥️,☠️=Straw
 🐿=@slices
 shader :iWave, 1.4
-set_volume! 4.0
-
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick

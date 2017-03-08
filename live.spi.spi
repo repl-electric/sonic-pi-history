@@ -4,6 +4,6 @@ live_loop :thing do
     tick
     smp ♥️.slice(:FS3).look
 
-    sleep 1/8.0
+    sleep 1
   end
 end

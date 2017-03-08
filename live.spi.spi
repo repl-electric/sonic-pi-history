@@ -1,6 +1,6 @@
 ♥️,☠️=Straw
 🐿=@slices
- shader :shader, "wave.glsl", "/Users/josephwilk/Workspace/c++/of_v0.9.4_RC1_osx_release/apps/myApps/shaderview/bin/data/spikes.vert", "lines", 100000
+ shader :shader, "vox.glsl", "/Users/josephwilk/Workspace/c++/of_v0.9.4_RC1_osx_release/apps/myApps/shaderview/bin/data/spikes.vert", "lines", 100000
  shader :iStarMotion, 0.8
  shader :iSpaceLight, 0.4
  shader :iStarLight, 0.8
@@ -14,13 +14,13 @@ shader :iWave, 1
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-    #smp ♥️.slice(:Fs3).look, amp:  line(0, 1, 64).look
+    #smp ♥️.slice(:Fs3).look, amp: (line 0, 1, 64).look
 
      if spread(1,4).look
        shader :decay, :iBeat, 10.8, 4.9
        smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-    sleep  knit(1/8.0, 32).look
+    sleep (knit 1/8.0, 32).look
   end
 end

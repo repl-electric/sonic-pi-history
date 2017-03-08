@@ -12,7 +12,7 @@
 shader :iWave, 2.0
 
  def spin
-   shader :decay, :iCircleP, 1, 0.00001 #rand
+   #shader :decay, :iCircleP, 1, 0.00001 #rand
  end
 
 live_loop :slices do

@@ -1,6 +1,6 @@
 ♥️,☠️=Straw
 🐿=@slices
- shader :shader, "wave.glsl", "/Users/josephwilk/Workspace/c++/of_v0.9.4_RC1_osx_release/apps/myApps/shaderview/bin/data/spikes.vert", "line_strip", 100000
+ shader :shader, "wave.glsl", "/Users/josephwilk/Workspace/c++/of_v0.9.4_RC1_osx_release/apps/myApps/shaderview/bin/data/blob.vert", "line_strip", 100000
  shader :iStarMotion, 0.8
  shader :iSpaceLight, 0.4
  shader :iStarLight, 0.8

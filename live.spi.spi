@@ -2,7 +2,7 @@
 live_loop :thing do
   with_fx :none, mix: 0 do
     tick
-    smp ♥️.slices(:FS3).look
+    smp ♥️.slice(:FS3).look
 
     sleep 1/8.0
   end

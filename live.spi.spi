@@ -1,8 +1,18 @@
 live_loop :test do
   tick
   #smp ️Straw.slice(:Fs3).look
-  smp ♥️.slices(:FS3).look
+#  smp ♥️.slices(:FS3).look
 
 
   sleep 1
 end
+
+
+
+def live(name, *args, &block)
+  x = lambda{||
+    with_fx :none, mix: 0 do
+      block.()
+    end}
+  live_loop(name, *args, &x)
+      end

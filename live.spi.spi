@@ -16,7 +16,7 @@ shader :iWave, 2.0
  end
 
 live_loop :slices do
-s =  "~/Workspace/music/samples/strawberry/Samples/Mic1/Sustains/Infinite/Oh/f/relvog_strw_sus_oh_f_01_rel.wav"
+   s =  "~/Workspace/music/samples/strawberry/Samples/Mic1/Sustains/Infinite/Oh/f/relvog_strw_sus_oh_f_01_rel.wav"
 
    with_fx :none, mix: 0 do
      tick

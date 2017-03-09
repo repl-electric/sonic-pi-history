@@ -63,8 +63,8 @@ live_loop :slices do
     smp s, amp: 10,
     pitch_stretch: 8.0,
     window_size: 4.0,
-    pitch_dis: 2,
-    time_dis: 2
+    pitch_dis: 4,
+    time_dis: 4
 
      sleep 1/4.0
   end

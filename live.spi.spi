@@ -37,7 +37,7 @@ live_loop :slices do
 
 
      synth :gpa, note:  knit(:Fs3, 64
-       ).look, amp: 1.0, attack: 0.001, decay: fslice[:length], release: 0.001
+       ).look, amp: 1.0, attack: 0.001, decay: f[:length], release: 0.001
 
 
      sleep  knit(1/8.0, 32, 1/4.0,1).look

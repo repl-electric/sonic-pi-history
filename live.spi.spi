@@ -20,6 +20,7 @@ def smp(*args)
   sample_thing = args.first
   if sample_thing
     smp_name = if sample_thing.is_a?(Hash)
+                 puts :in
       sample_file = sample_thing[:path]
       if sample_thing[:onset] && sample_thing[:offset]
         start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)

@@ -45,7 +45,6 @@ def smp(*args)
     shader :decay, :iBeat, 1.0, 0.001
   end
 end
-end
 
 
 live_loop :slices do

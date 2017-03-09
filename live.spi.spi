@@ -20,6 +20,9 @@ live_loop :slices do
      tick
      puts _
      f =(♥️.slice(:Fs3).zip([_].cycle)).look
+
+     puts f
+
      smp f
 
      sleep 1/8.0

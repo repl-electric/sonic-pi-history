@@ -22,11 +22,11 @@ live_loop :slices do
    with_fx :none, mix: 0 do
      tick
 #     f =(♥️.slice(:Fs3).zip([_].cycle).flatten).look
-     f =(♥️.slice(:Fs3).take(1).cycle.to_ring.take(32)+["/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/vog_strw_sus_oh_f_01_rel.wav"]).look
+     f =(ring *♥️.slice(:Fs3).take(1).cycle.to_ring.take(32)+["/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/vog_strw_sus_oh_f_01_rel.wav"]).look
 
      puts f
      smp f, amp: 8
 
-     sleep  knit(1/8.0, 32, 1/4.0,1).look
+     sleep (knit 1/8.0, 32, 1/4.0,1).look
   end
 end

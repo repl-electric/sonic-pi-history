@@ -35,7 +35,7 @@ def smp(*args)
         options
                 end
                  #options.delete(:path)
-                 options.delete(:filename)
+                 #options.delete(:filename)
                  options.delete(:sample_id)
                  options.delete(:collection)
                  options.delete(:note)

@@ -27,6 +27,6 @@ live_loop :slices do
      puts f
      smp f, amp: 8
 
-     sleep  knit(1/8.0, 32, 1/4.0,1).look
+     sleep (knit 1/8.0, 32, 1/4.0,1).look
   end
 end

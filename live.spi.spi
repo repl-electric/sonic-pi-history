@@ -45,7 +45,7 @@ def smp(*args)
                  if options
                    sample([sample_thing])
                  else
-                   sample(sample_thing, [])
+                   sample([sample_thing])
                  end
                  sample_thing
                end

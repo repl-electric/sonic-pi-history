@@ -30,7 +30,7 @@ live_loop :slices do
      #with_fx :krush, mix: (ramp 0, 1, 256).tick(:fire) do
 
      with_fx (knit :none,31, :echo,1).look, decay: 4, phase: 0.125 do
-       smp f, amp: 8
+       smp f, amp: 4
      end
 
      sleep (knit 1/8.0, 32, 1/4.0,1).look

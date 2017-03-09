@@ -43,7 +43,7 @@ def smp(*args)
                  puts "THING:#{sample_thing}"
                  options = args.drop(1)
                  if options
-                   sample(sample_thing)
+                   sample(sample_thing.first)
                  else
                    sample(sample_thing)
                  end

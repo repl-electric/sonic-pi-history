@@ -21,6 +21,6 @@ live_loop :slices do
      f =♥️.slice(:Fs3).look
      smp f
 
-     sleep 8
+     sleep 1
   end
 end

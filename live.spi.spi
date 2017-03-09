@@ -34,16 +34,7 @@ def smp(*args)
       else
         options
                 end
-                 #options.delete(:path)
-                 #options.delete(:filename)
-                 #options.delete(:sample_id)
-                 #options.delete(:collection)
-                 #options.delete(:note)
-                 #options.delete(:octave)
-                 #options.delete(:perc)
-                 #options.delete(:midi)
-                 #options.delete(:length)
-                 #options.delete(:onset)
+                 options.delete(:onset)
                  options.delete(:offset)
       args=([sample_file] + [options])
                  puts options

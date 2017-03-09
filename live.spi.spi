@@ -15,32 +15,44 @@ shader :iWave, 2.0
    #shader :decay, :iCircleP, 1, 0.00001 #rand
  end
 
+
+def smp(*args)
+  sample_thing = args.first
+  if sample_thing
+    smp_name = if sample_thing.is_a?(Hash)
+      sample_file = sample_thing[:path]
+      if sample_thing[:onset] && sample_thing[:offset]
+        start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
+        fini = ratio_off(sample_thing) + (args.last[:finish_offset] || 0)
+      else
+        start = 0
+        fini = 1
+      end
+      options = {start: start, finish: fini}
+      options = if sample_thing.keys.length > 1
+        options.merge(args.last)
+      else
+        options
+      end
+      sample sample_file, *[options]
+      sample_file
+    else
+      sample(*args)
+      sample_thing
+    end
+    if smp_name =~ /kick/
+      shader :decay, :iBeat, 1.0, 0.001
+    end
+  end
+end
+
+
 live_loop :slices do
   with_fx :none, mix: 0 do
     tick
-     if spread(1,4).look
-#       shader :decay, :iBeat,  ring(0.1, 0.05).look(:sample)
-       shader :decay, :iR, rand*4
-       shader :decay, :iB, rand*4
-       shader  :iG, rand*4
-
-       shader :iCircleP, 1.0#, 0.00001 #rand
-       smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 135, amp: 1.0
-     end
      f =♥️.slice(:Fs3).look
      smp f
 
-     #if f[:onset] - f[:offset]]) > 0.1
-
-     if f[:offset]-f[:onset] < 0.1
-       shader :iBeat, 0.0, 0.5
-
-     end
-  # shader :iR, rand
- #end
-
-
-
-    sleep 8
+     sleep 8
   end
 end

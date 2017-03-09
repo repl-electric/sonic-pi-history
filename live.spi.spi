@@ -60,7 +60,11 @@ live_loop :slices do
      puts f
 
      #smp f, amp: 4
-    smp s, amp: 2, pitch_stretch: 4.0, window_size: 2.0, pitch_dis: 2, time_dis: 2
+    smp s, amp: 2,
+    pitch_stretch: 4.0,
+    window_size: 2.0,
+    pitch_dis: 2,
+    time_dis: 2
 
      sleep 1/4.0
   end

@@ -40,8 +40,7 @@ def smp(*args)
                  sample *args
                  sample_file
                else
-                 puts "A:#{args}"
-                 puts sample_thing
+                 puts "THING:#{sample_thing}"
                  options = args.drop(1)
                  if options
                    sample sample_thing, *options

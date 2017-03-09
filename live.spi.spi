@@ -20,7 +20,6 @@ def smp(*args)
   sample_thing = args.first
   if sample_thing
     smp_name = if sample_thing.is_a?(Hash)
-                 puts :in
       sample_file = sample_thing[:path]
       if sample_thing[:onset] && sample_thing[:offset]
         start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
@@ -29,7 +28,8 @@ def smp(*args)
         start = 0
         fini = 1
       end
-      options = {start: start, finish: fini}
+                 options = {start: start, finish: fini}
+                 puts options
       options = if sample_thing.keys.length > 1
         options.merge(args.last)
       else

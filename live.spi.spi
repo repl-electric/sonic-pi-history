@@ -66,7 +66,8 @@ live_loop :slices do
      puts f
 
      #smp f, amp: 4
-     smp s, amp: 0.2
+    smp s, amp: 0.2
+    sample s
 
      sleep 1/8.0
   end

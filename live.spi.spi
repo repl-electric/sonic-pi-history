@@ -40,7 +40,7 @@ def smp(*args)
                  sample *args
                  sample_file
                else
-                 puts args
+                 puts "A:#{args}"
                  sample(*args)
                  sample_thing
                end

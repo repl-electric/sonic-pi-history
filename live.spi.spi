@@ -4,6 +4,6 @@ live_loop :slices do
      f =e.slice(:Fs3).look
      smp f
 
-     sleep 1/4.0
+     sleep 1/8.0
   end
 end

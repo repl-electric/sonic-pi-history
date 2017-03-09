@@ -43,7 +43,7 @@ def smp(*args)
                  options.delete(:perc)
                  options.delete(:midi)
                  options.delete(:length)
-                 options.delete(:onset)
+                 #options.delete(:onset)
       args=([sample_file] + [options])
                  puts options
                  #sample (*([sample_file] + [options]))

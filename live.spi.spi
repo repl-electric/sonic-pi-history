@@ -44,7 +44,7 @@ def smp(*args)
                  puts sample_thing
                  options = args.drop(1)
                  if options
-                   sample *([sample_thing] + options)
+                   sample sample_thing, **options
                  else
                    sample sample_thing
                  end

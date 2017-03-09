@@ -18,6 +18,7 @@ shader :iWave, 2.0
 
 def smp(*args)
   sample_thing = args.first
+  puts sample_thing
   if sample_thing
     smp_name = if sample_thing.is_a?(Hash)
       sample_file = sample_thing[:path]

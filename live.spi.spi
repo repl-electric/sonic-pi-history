@@ -57,14 +57,8 @@ live_loop :slices do
      tick
      f =(♥️.slice(:Fs3).zip([_].cycle).flatten).look
 
-     puts f
+     smp f
 
-     #smp f, amp: 4
-    smp s, amp: 10,
-    pitch_stretch: 8.0,
-    window_size: 0.01,
-    pitch_dis: 0.1,
-    time_dis: 0.1
 
      sleep 1/4.0
   end

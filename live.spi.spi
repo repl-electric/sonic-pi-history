@@ -58,8 +58,6 @@ live_loop :slices do
      f =(♥️.slice(:Fs3).zip([_].cycle).flatten).look
      f =(♥️.slice(:Fs3).look
 
-
-
      smp f, amp: 8
 
      sleep 1/8.0

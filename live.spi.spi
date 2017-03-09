@@ -38,6 +38,7 @@ def smp(*args)
                  options.delete(:filename)
                  options.delete(:sample_id)
                  options.delete(:collection)
+                 options.delete(:note)
       args=([sample_file] + [options])
                  puts options
                  #sample (*([sample_file] + [options]))

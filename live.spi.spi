@@ -29,7 +29,8 @@ live_loop :slices do
      puts f
      #with_fx :krush, mix:  ramp(0, 1, 256).tick(:fire) do
 
-       smp f, amp: 4
+     smp f, amp: 4, rpitch:  ramp(1, 32, 256).tick(:fire)
+
 
      sleep  knit(1/8.0, 32, 1/4.0,1).look
   end

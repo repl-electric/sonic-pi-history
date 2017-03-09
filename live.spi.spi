@@ -43,7 +43,11 @@ def smp(*args)
                  puts "A:#{args}"
                  puts sample_thing
                  options = args.drop(1)
-                 sample *([sample_thing] + options)
+                 if options
+                   sample *([sample_thing] + options)
+                 else
+                   sample sample_thing
+                 end
                  sample_thing
                end
     if smp_name =~ /kick/

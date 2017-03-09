@@ -28,13 +28,13 @@ def smp(*args)
         start = 0
         fini = 1
       end
-                 options = {start: start, finish: fini}
-                 puts options
+      options = {start: start, finish: fini}
       options = if sample_thing.keys.length > 1
         options.merge(args.last)
       else
         options
       end
+      puts options
       sample sample_file, *[options]
       sample_file
     else

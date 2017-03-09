@@ -36,7 +36,7 @@ def smp(*args)
       end
                  puts sample_file
                  puts options
-      sample sample_file, options
+      sample sample_file, start: options[:start]
       sample_file
     else
       sample(*args)

@@ -43,9 +43,9 @@ def smp(*args)
                  puts "THING:#{sample_thing.class}"
                  options = args.drop(1)
                  if options
-                   sample(sample_thing)
+                   sample(sample_thing,[])
                  else
-                   sample(sample_thing)
+                   sample(sample_thing, [])
                  end
                  sample_thing
                end

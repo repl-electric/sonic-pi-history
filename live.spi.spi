@@ -33,8 +33,9 @@ def smp(*args)
         options.merge(args.last)
       else
         options
-      end
-      args=([sample_file] + [options.delete(:path)])
+                end
+                 options.delete(:path)
+      args=([sample_file] + [options])
                  puts options
                  #sample (*([sample_file] + [options]))
       sample *args

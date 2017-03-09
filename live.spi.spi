@@ -18,7 +18,6 @@ shader :iWave, 2.0
 live_loop :slices do
   with_fx :none, mix: 0 do
      tick
-     puts _
      f =(♥️.slice(:Fs3).zip([_].cycle)).look
 
      puts f

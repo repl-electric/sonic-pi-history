@@ -42,7 +42,8 @@ def smp(*args)
                else
                  puts "A:#{args}"
                  puts sample_thing
-                 sample **args
+                 options = args.drop(1)
+                 sample *([sample_thing] + options)
                  sample_thing
                end
     if smp_name =~ /kick/

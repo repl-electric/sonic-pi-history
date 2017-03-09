@@ -37,7 +37,7 @@ def smp(*args)
                  args=([sample_file] + [options])
 #                 puts options
                  #sample (*([sample_file] + [options]))
-                 sample *args
+      sample *args
       sample_file
     else
       sample(*args)

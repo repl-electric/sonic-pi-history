@@ -25,7 +25,9 @@ live_loop :slices do
      f =(♥️.slice(:Fs3).take(4) + ["/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/vog_strw_sus_oh_f_01_rel.wav"]).look
 
      puts f
-     smp f, amp: 8
+     with_fx :krush do
+       smp f, amp: 8
+       end
 
      sleep (knit 1/8.0, 32, 1/4.0,1).look
   end

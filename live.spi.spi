@@ -37,6 +37,7 @@ live_loop :test do
      smp ♥️.slice(:FS3).take(32).look, amp: 4
 
 
+
      #TESTING AUDIO
      #play :FS4, amp: 0.2
      sleep 1/8.0

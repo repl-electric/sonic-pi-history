@@ -25,7 +25,7 @@ live_loop :test do
 
      if spread(1,4).look
 #       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 50, amp: 2.0
-       shader :decay, :iBeat, rand(2), 0.001
+       shader :decay, :iBeat, rand(5), 0.001
        shader :iLineMode, rand(-100.2)
        shader  ring(:iX, :iY).tick(:in),  ring(-0.1,1.0).look(:in)
        #shader  ring(:iX, :iY).tick(:in),  ring(-0.1,1.0).look(:in)

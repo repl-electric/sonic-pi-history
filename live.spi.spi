@@ -20,7 +20,7 @@ shader :iWave, 0.0
 live_loop :test do
    with_fx :none, mix: 0 do
      tick
-#     shader :iVertexCount,  line(0.0, 100000.0, 10000).shuffle.look
+#     shader :iVertexCount, (line 0.0, 100000.0, 10000).shuffle.look
 
 
      if spread(1,4).look
@@ -29,11 +29,11 @@ live_loop :test do
        shader :iLineMode, rand(-100.2)
 
 
-       #shader :iY,  ring(0.0, 1.0).tick(:it)
-       shader :iBits,  ring(0.0, 1.0).tick(:it)
+       #shader :iY, (ring 0.0, 1.0).tick(:it)
+       shader :iBits, (ring 0.0, 1.0).tick(:it)
 
 
-       #shader  ring(:iX, :iY).tick(:in),  ring(-0.1,1.0).look(:in)
+       #shader (ring :iX, :iY).tick(:in), (ring -0.1,1.0).look(:in)
 
      end
 
@@ -51,4 +51,4 @@ live_loop :test do
 
 
  shader :iDistort, 0.001
- shader :iForm, 0.05
+ shader :iForm, 0.005

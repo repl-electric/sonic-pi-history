@@ -20,12 +20,12 @@ shader :iLineMode, 1.0
 live_loop :test do
    with_fx :none, mix: 0 do
      tick
-#     shader :iVertexCount,  line(0.0, 100000.0, 10000).shuffle.look
+#     shader :iVertexCount, (line 0.0, 100000.0, 10000).shuffle.look
 
 
      if spread(1,8).look
        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 2.0
-       shader :decay, :iBeat, rand(2), 0.001
+#       shader :decay, :iBeat, rand(2), 0.001
        shader, :iLineMode, -0.001
 
      end

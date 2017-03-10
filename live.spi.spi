@@ -28,7 +28,8 @@ live_loop :test do
        shader :decay, :iBeat, rand(2), 0.001
        shader :iLineMode, rand(-100.2)
 
-       shader :iY, 0.0
+
+       shader :iY, (ring 0.0, 1.0).look
 
        #shader (ring :iX, :iY).tick(:in), (ring -0.1,1.0).look(:in)
 

@@ -1,7 +1,7 @@
 ♥️,☠️=Straw
 🐿=@slices
 shader :shader, "wave.glsl", "rope.vert", "tri_strip", 100000
-shader :iVertexCount, 100
+shader :iVertexCount, 1000
 shader :iStarMotion, 0.8
 shader :iSpaceLight, 0.4
 shader :iStarLight, 0.8
@@ -28,19 +28,19 @@ live_loop :slices do
 
 
      puts f
-     #with_fx :krush, mix: (ramp 0, 1, 256).tick(:fire) do
+     #with_fx :krush, mix:  ramp(0, 1, 256).tick(:fire) do
 
      if spread(1,4).look
        smp Mountain[/subkick/,[0,1]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-     smp f, amp: 4, rpitch: (ramp 1, 24, 256).tick(:firss)
+     smp f, amp: 4, rpitch:  ramp(1, 24, 256).tick(:firss)
 
 
-     synth :gpa, note: (knit :Fs3, 64
+     synth :gpa, note:  knit(:Fs3, 64
        ).look, amp: 1.0, attack: 0.001, decay: f[:length], release: 0.001
 
 
-     sleep (knit 1/8.0, 32, 1/4.0,1).look
+     sleep  knit(1/8.0, 32, 1/4.0,1).look
   end
 end

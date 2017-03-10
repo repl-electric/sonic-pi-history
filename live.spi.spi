@@ -20,7 +20,13 @@ live_loop :test do
      tick
 #     shader :iVertexCount,  line(0.0, 100000.0, 10000).shuffle.look
 
-     play :FS4, amp: 0.2
+
+     if spread(1,4).look
+       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+
+     end
+
+     #play :FS4, amp: 0.2
      sleep 1/8.0
    end
  end

@@ -19,7 +19,7 @@ shader :iWave, 0.0
 live_loop :test do
    with_fx :none, mix: 0 do
      tick
-        shader :iVertexCount, rand(100000)
+     shader :iVertexCount, (line 0, 100000, 500).look
 
      sleep 1/8.0
    end

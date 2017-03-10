@@ -18,7 +18,7 @@ shader :iWave, 0.0
 
 
 live_loop :slices do
-   shader :iVertexCount, rand_int(100000)
+   shader :iVertexCount, rand(100000)
 
    s =  "~/Workspace/music/samples/strawberry/Samples/Mic1/Sustains/Infinite/Oh/f/rel/vog_strw_sus_oh_f_01_rel.wav"
 
@@ -28,21 +28,20 @@ live_loop :slices do
      f =(♥️.slice(:Fs3).take(2) + ["/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/vog_strw_sus_oh_f_01_rel.wav"]).look
 
 
-
      puts f
-     #with_fx :krush, mix: (ramp 0, 1, 256).tick(:fire) do
+     #with_fx :krush, mix:  ramp(0, 1, 256).tick(:fire) do
 
      if spread(1,4).look
        smp Mountain[/subkick/,[0,1]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-     smp f, amp: 4, rpitch: (ramp 1, 24, 256).tick(:firss)
+     smp f, amp: 4, rpitch:  ramp(1, 24, 256).tick(:firss)
 
 
-     synth :gpa, note: (knit :Fs3, 64
+     synth :gpa, note:  knit(:Fs3, 64
        ).look, amp: 1.0, attack: 0.001, decay: f[:length], release: 0.001
 
 
-     sleep (knit 1/8.0, 32, 1/4.0,1).look
+     sleep  knit(1/8.0, 32, 1/4.0,1).look
   end
 end

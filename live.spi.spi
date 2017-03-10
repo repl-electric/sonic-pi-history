@@ -29,6 +29,9 @@ live_loop :test do
        shader :iLineMode, rand(-100.2)
      end
 
+     smp ♥️.slices(:FS3).take(32).look
+
+     
      #TESTING AUDIO
      #play :FS4, amp: 0.2
      sleep 1/8.0

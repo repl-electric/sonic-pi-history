@@ -50,5 +50,5 @@ live_loop :test do
  end
 
 
- shader :iDistort, 1.0
+ shader :iDistort, 0.01
  shader :iForm, 0.05

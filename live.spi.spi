@@ -27,6 +27,7 @@ live_loop :test do
 #       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 50, amp: 2.0
        shader :decay, :iBeat, rand(2), 0.001
        shader :iLineMode, rand(-100.2)
+       shader (ring :iX, :iY, :iX), [0,1].choose
      end
 
     # smp ♥️.slice(:FS3).take(32).reverse.look, amp: 4

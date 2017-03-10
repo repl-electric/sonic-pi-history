@@ -27,10 +27,9 @@ live_loop :test do
        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 2.0
        shader :decay, :iBeat, rand(2), 0.001
        shader :iLineMode, rand(-100.2)
-
      end
 
-     #play :FS4, amp: 0.2
+     play :FS4, amp: 0.2
      sleep 1/8.0
    end
  end

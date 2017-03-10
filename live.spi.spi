@@ -12,7 +12,7 @@ shader :iSize,1.1
 shader :iDistort, 1.0
 shader :iWave, 0.0
 
-shader :iLineMode, -0.0009
+shader :iLineMode, 0.0
 
  def spin
    #shader :decay, :iCircleP, 1, 0.00001 #rand

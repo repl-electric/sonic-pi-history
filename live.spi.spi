@@ -1,7 +1,7 @@
 ♥️,☠️=Straw
 🐿=@slices
 shader :shader, "wave.glsl", "rope.vert", "tri_strip", 100000
-shader :iVertexCount, 2000
+shader :iVertexCount, 4000
 shader :iStarMotion, 0.8
 shader :iSpaceLight, 0.4
 shader :iStarLight, 0.8

@@ -20,7 +20,7 @@ live_loop :test do
      tick
 #     shader :iVertexCount, (line 0.0, 100000.0, 10000).shuffle.look
 
-     play :FS4, amp: 3
+     play :FS4, amp: 1
      sleep 1/8.0
    end
  end

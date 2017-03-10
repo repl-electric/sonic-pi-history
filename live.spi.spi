@@ -29,7 +29,9 @@ live_loop :test do
        shader :iLineMode, rand(-100.2)
 
 
-       shader :iY, (ring 0.0, 1.0).tick(:it)
+       #shader :iY, (ring 0.0, 1.0).tick(:it)
+       shader :iBits, (ring 0.0, 1.0).tick(:it)
+
 
        #shader (ring :iX, :iY).tick(:in), (ring -0.1,1.0).look(:in)
 

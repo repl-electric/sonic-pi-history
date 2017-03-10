@@ -34,7 +34,7 @@ live_loop :test do
 
     # smp ♥️.slice(:FS3).take(32).reverse.look, amp: 4
 
-    # smp ♥️.slice(:FS3).take(32).look, amp: 4
+     smp ♥️.slice(:FS3).take(32).look, amp: 4
 
 
      #TESTING AUDIO

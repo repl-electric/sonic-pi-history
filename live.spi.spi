@@ -19,7 +19,7 @@ shader :iWave, 0.0
 live_loop :test do
    with_fx :none, mix: 0 do
      tick
-     shader :iVertexCount, (line 0, 100000, step: 1000).look
+     shader :iVertexCount,  line(0.0, 100000.0).look
 
      sleep 1/8.0
    end
@@ -37,19 +37,19 @@ live_loop :slices do
 
 
      puts f
-     #with_fx :krush, mix: (ramp 0, 1, 256).tick(:fire) do
+     #with_fx :krush, mix:  ramp(0, 1, 256).tick(:fire) do
 
      if spread(1,4).look
        smp Mountain[/subkick/,[0,1]].tick(:sample), cutoff: 135, amp: 1.0
      end
 
-     smp f, amp: 4, rpitch: (ramp 1, 24, 256).tick(:firss)
+     smp f, amp: 4, rpitch:  ramp(1, 24, 256).tick(:firss)
 
 
-     synth :gpa, note: (knit :Fs3, 64
+     synth :gpa, note:  knit(:Fs3, 64
        ).look, amp: 1.0, attack: 0.001, decay: f[:length], release: 0.001
 
 
-     sleep (knit 1/8.0, 32, 1/4.0,1).look
+     sleep  knit(1/8.0, 32, 1/4.0,1).look
   end
 end

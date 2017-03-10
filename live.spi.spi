@@ -50,5 +50,5 @@ live_loop :test do
  end
 
 
- shader :decay, :iDistort, 0.
+ shader :decay, :iDistort, 0.1
  shader :iForm, 0.0

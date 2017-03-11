@@ -9,7 +9,7 @@ shader :decay, :iLineMode, 1.0
 
 shader :iWave, 4.0
 live_loop :live do
-  with_fx :hpf, cutoff: 50, mix:  ramp(0, 1,256).tick(:its) do
+  with_fx :hpf, cutoff: 60, mix: (ramp 0, 1,256).tick(:its) do
     tick
 
     if spread(1,1).look
@@ -37,7 +37,7 @@ live_loop :live do
     end
 
     if spread(1,2).look
-      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch:  line(0, 12,16).look
+      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch: (line 0, 12,16).look
       at do
       if spread(1,32).look
 
@@ -48,11 +48,11 @@ live_loop :live do
     end
 
   with_fx(spread(7, 11).map{|s| s ? :echo : :reverb}.look) do
-    smp ♥️ .slice(:Fs3).take(1).look, amp: 4, rpitch:  ring(-2,0,-2).shuffle.look +  ramp(0, 24,128).tick(:riser)
+    smp ♥️ .slice(:Fs3).take(1).look, amp: 4, rpitch: (ring -2,0,-2).shuffle.look + (ramp 0, 24,128).tick(:riser)
   end
 
   with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :krush}.look) do
-    smp ♥️ .slice(:Fs3).reverse.drop(0).take(16).look, amp:  ramp(6, 0,32).tick(:put)
+    smp ♥️ .slice(:Fs3).reverse.drop(0).take(16).look, amp: (ramp 6, 0,32).tick(:put)
   end
 
   sleep 1/8.0

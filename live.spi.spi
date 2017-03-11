@@ -2,3 +2,15 @@
 🐿=@slices
 shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
+
+
+live_loop :live do
+  with_fx :none, mix: 0 do
+    tick
+
+    smp ♥️.slice(:Fs3).take(32).zip([_].cycle)
+
+
+    sleep 1/8.0
+  end
+end

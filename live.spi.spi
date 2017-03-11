@@ -58,9 +58,9 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
 
 
 
-    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :none}.look, mix: 0) do
+    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :none}.look) do
           synth :gpa, note: (knit :Fs4, 64, :B4,64
-      ).look, amp: 1.0, attack: 0.001, decay: fslice[:length], release: 0.001
+        ).look, amp: 1.0, attack: 0.001, decay: fslice[:length], release: 0.001
 
     smp ♥️ .slice(:Fs3).drop(1).reverse.look, amp: (ramp 6, 0,32).tick(:put), amp: 4
   end

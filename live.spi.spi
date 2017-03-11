@@ -15,7 +15,7 @@ live_loop :live do
     if spread(1,4).look
 #      shader :decay, :iLineMode, rand(200.0)
 #      shader :decay, :iBeat, rand*1, 0.001
-      smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 130, amp: 1.0
+      smp Mountain[/subkick/,[0,1]].tick(:sample), cutoff: 130, amp: 1.0
       if spread(1, 64).look
         at do
           sleep (1/8.0)*2

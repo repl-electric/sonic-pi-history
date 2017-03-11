@@ -5,6 +5,8 @@ shader :iVertexCount, 1000000
 
 shader :iR, 10.0
 shader :iG, 10.0
+shader :iB, 10.0
+
 
 
 shader :iWave, 8.0

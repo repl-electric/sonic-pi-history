@@ -8,18 +8,14 @@ live_loop :live do
   with_fx :none, mix: 0 do
     tick
 
-
     if spread(1,4).look
+      shader :decay, :iVertexCount, rand*4, 0.001
       shader :decay, :iBeat, rand*4, 0.001
       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 100, amp: 1.0
-
       at do
-        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
-
         sleep 1/8.0*2
+        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
       end
-
-
     end
 
 

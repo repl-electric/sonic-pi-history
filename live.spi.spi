@@ -30,7 +30,7 @@ live_loop :live do
   #      shader :iB, rand*2
 #        smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 80, amp: 1.0
       else
-      smp Dust[/snare/,[8,8]].tick(:sample), cutoff: 135, amp: 0.8
+      smp Dust[/snare/,[9,9]].tick(:sample), cutoff: 135, amp: 0.8
 
         #        smp Dust[/snare/,[2,2]].tick(:sample), cutoff: 135, amp: 1.0
       end

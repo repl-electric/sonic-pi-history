@@ -80,6 +80,6 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
       finish_offset: (spread 1,8).map{|s| s ? 0.1 : 0.1}.look
   end
 
-  sleep 1/8.0*2
+  sleep 1/8.0*4
 end
 end

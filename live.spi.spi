@@ -56,7 +56,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
       smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch: (ring 12,-5,5).look, finish_offset: rand*0.004
     end
 
-    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :reverb}.look) do
+    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :slicer}.look) do
       synth :gpa, note: (knit
         :Fs4, 64, :B4,64,
         :Cs4,64, :Cs5,64

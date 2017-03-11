@@ -12,6 +12,14 @@ live_loop :live do
     if spread(1,4).look
       shader :decay, :iBeat, rand*4, 0.001
       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 100, amp: 1.0
+
+      at do
+        smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+
+        sleep 1/8.0*2
+      end
+
+
     end
 
 
@@ -19,7 +27,6 @@ live_loop :live do
     with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
       smp ♥️ .slice(:Fs3).take(32).look, amp: 4, cutoff: 90
     end
-
 
     sleep 1/8.0
   end

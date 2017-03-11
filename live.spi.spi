@@ -8,7 +8,7 @@ live_loop :live do
   with_fx :none, mix: 0 do
     tick
 
-    smp ♥️ .slice(:Fs3).take(32).look
+    smp ♥️ .slice(:Fs3).take(32).look, amp: 4
 
 
     sleep 1/8.0

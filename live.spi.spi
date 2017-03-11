@@ -62,8 +62,9 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
 
 
       with_fx(:reverb, room: 0.6, mix: 0.9, damp: 0.5) do |r_fx|
-        smp (knit @slices["Fs4/4"].take(2).look, 64,
-             @slices["B4/4"].take(2).look,64
+        smp (knit
+             @slices["Fs4/4"].take(2).look, 64,
+             @slices["B3/4"].take(2).look,64
 
              ).look
 

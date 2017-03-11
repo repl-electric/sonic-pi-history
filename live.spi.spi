@@ -24,9 +24,9 @@ live_loop :live do
 
     if spread(1,8).look
       if spread(1,16).look
-        shader :iR, rand*0
-        shader :iG, rand*8
-        shader :iB, rand*8
+        shader :iR, rand*2
+        shader :iG, rand*2
+        shader :iB, rand*2
         smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
       else
               smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
@@ -34,11 +34,9 @@ live_loop :live do
     end
   end
 
-
-
-    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
-      smp ♥️ .slice(:Fs3).take(32).look, amp: 4, cutoff: 90
-    end
+  with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
+    smp ♥️ .slice(:Fs3).take(32).look, amp: 4, cutoff: 90
+  end
 
     sleep 1/8.0
   end

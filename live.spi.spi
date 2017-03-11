@@ -23,8 +23,9 @@ live_loop :live do
     end
 
     if spread(1,8).look
-      smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
-
+      if spread(1,16).look
+        smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
+        end
     end
 
 

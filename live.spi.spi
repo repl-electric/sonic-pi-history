@@ -53,7 +53,7 @@ live_loop :live do
     smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch: (ring 5).look
   end
 
-    if spread(1,12).look
+    if spread(1,32).look
       smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch: (ring 12,-5,5).look
     end
 

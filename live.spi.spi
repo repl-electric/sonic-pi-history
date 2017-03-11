@@ -16,11 +16,9 @@ live_loop :live do
 
 
 
-    with_fx(spread(1, 2).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
+    with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
       smp ♥️ .slice(:Fs3).take(32).look, amp: 4
     end
-
-
 
 
     sleep 1/8.0

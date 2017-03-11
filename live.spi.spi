@@ -3,7 +3,7 @@
 shader :shader, "wave.glsl", "rope.vert", "tri_lines", 100000
 shader :iVertexCount, 1000000
 shader :iX, 1.0
-shdaer :iY, 1.0
+shader :iY, 1.0
 
 
 shader :iWave, 8.0

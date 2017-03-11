@@ -62,7 +62,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
 
 
       with_fx(:reverb, room: 0.6, mix: 0.9, damp: 0.5) do |r_fx|
-        puts @slices
+        puts @slices[0]
 
 
 

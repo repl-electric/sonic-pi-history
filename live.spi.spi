@@ -60,6 +60,15 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
           synth :gpa, note: (knit :Fs4, 64, :B4,64
         ).look, amp: 2.0, attack: 0.001, decay: fslice[:length], release: 0.001
 
+
+      with_fx(:reverb, room: 0.6, mix: 0.4, damp: 0.5) do |r_fx|
+
+        smp @notes[:FS3]
+
+
+
+      end
+
     smp ♥️ .slice(:Fs3).drop(1).reverse.look, amp: (ramp 6, 0,32).tick(:put), amp: 4
   end
 

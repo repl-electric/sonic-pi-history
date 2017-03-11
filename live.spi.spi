@@ -9,7 +9,7 @@ shader :decay, :iLineMode, 1.0
 
 shader :iWave, 4.0
 live_loop :live do
-  with_fx :hpf, mix:  ramp(0, 1,256).tick(:its) do
+  with_fx :hpf, cutoff: 50, mix:  ramp(0, 1,256).tick(:its) do
     tick
 
     if spread(1,1).look

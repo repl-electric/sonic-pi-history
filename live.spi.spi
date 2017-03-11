@@ -9,10 +9,10 @@ shader :decay, :iLineMode, 1.0
 
 shader :iWave, 4.0
 live_loop :live do
-  with_fx :hpf, mix: 0 do
+  with_fx :hpf, mix: (ramp 0, 1,256).tick(:its) do
     tick
 
-    if spread(1,2).look
+    if spread(1,1).look
 #      shader :decay, :iLineMode, rand(200.0)
 #      shader :decay, :iBeat, rand*1, 0.001
       smp Mountain[/subkick/,[1,0]].tick(:sample), cutoff: 130, amp: 1.0

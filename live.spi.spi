@@ -48,7 +48,7 @@ live_loop :live do
     end
 
   with_fx(spread(7, 11).map{|s| s ? :echo : :reverb}.look) do
-    smp ♥️ .slice(:Fs3).take(1).look, amp: 4, rpitch: (ring -12*2).shuffle.look + (ramp 0, 24,128).tick(:riser)
+    smp ♥️ .slice(:Fs3).take(1).look, amp: 4, rpitch: (ring -12*4).shuffle.look + (ramp 0, 24,128).tick(:riser)
   end
 
   with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :krush}.look) do

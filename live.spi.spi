@@ -9,7 +9,7 @@ shader :decay, :iLineMode, 1.0
 
 shader :iWave, 4.0
 live_loop :live do
-  with_fx :hpf, cutoff: 60, mix:  ramp(0, 1,256).tick(:its)*0 do
+  with_fx :hpf, cutoff: 60, mix: (ramp 0, 1,256).tick(:its)*0 do
     tick
 
     if spread(1,4).look
@@ -25,9 +25,10 @@ live_loop :live do
     end
 
     if spread(1,8).look
-      smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 1.0
       if spread(1,16).look
-#        shader :iR, rand*2
+      smp Dust[/snare/,[7,7]].tick(:sample), cutoff: 135, amp: 1.0
+
+        #        shader :iR, rand*2
  #       shader :iG, rand*2
   #      shader :iB, rand*2
 #        smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 80, amp: 1.0
@@ -37,7 +38,7 @@ live_loop :live do
     end
 
     if spread(1,2).look
-      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch:  line(0, 12,16).look
+      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch: (line 0, 12,16).look
       at do
       if spread(1,32).look
 
@@ -48,11 +49,11 @@ live_loop :live do
     end
 
   with_fx(spread(7, 11).map{|s| s ? :echo : :reverb}.look) do
-    smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch:  ring(12,12).look
+    smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch: (ring 12,12).look
   end
 
   with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :none}.look, mix: 0) do
-    smp ♥️ .slice(:Fs3).reverse.drop(2).look, amp:  ramp(6, 0,32).tick(:put), amp: 4
+    smp ♥️ .slice(:Fs3).reverse.drop(2).look, amp: (ramp 6, 0,32).tick(:put), amp: 4
   end
 
   sleep 1/8.0

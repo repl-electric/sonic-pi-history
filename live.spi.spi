@@ -9,8 +9,8 @@ live_loop :live do
     tick
 
     if spread(1,4).look
-      shader :decay, :iY, rand(100.0)
-      shader :decay, :iX, rand(100.0)
+      shader :iY, rand(100.0)
+      shader :iX, rand(100.0)
 
       shader :decay, :iLineMode, rand(100.0)
       shader :decay, :iBeat, rand*4, 0.001

@@ -52,7 +52,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
     smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch:  ring(5).look
   end
 
-    if spread(1,8).look
+    if spread(7,11).look
       smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch:  ring(12,-5,5).look, finish_offset:  knit(0.005 ,31,0.01,1).look
     end
 

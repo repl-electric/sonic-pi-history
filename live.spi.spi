@@ -49,7 +49,7 @@ live_loop :live do
 
 
   with_fx(spread(7, 11).map{|s| s ? :reverb : :slicer}.look) do
-    smp ♥️ .slice(:Fs3).reverse.take(16).look, amp: 4, cutoff: 90, phase: 0.25
+    smp ♥️ .slice(:Fs3).reverse.take(8x).look, amp: 4, cutoff: 90, phase: 0.25
   end
 
   with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do

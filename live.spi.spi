@@ -24,7 +24,7 @@ live_loop :live do
 
     if spread(1,8).look
       if spread(1,16).look
-        shader :iR, rand*8
+        shader :iR, rand*0
         shader :iG, rand*8
         shader :iB, rand*8
 

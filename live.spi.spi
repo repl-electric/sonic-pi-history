@@ -69,7 +69,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
              @slices["Fs3/a4"][1],64,
              @slices["Cs4/4"][2], 64,
              @slices["B4/4"][3],  64
-             ).look, amp: 1*0
+             ).look, amp: 1*1
 
 
 

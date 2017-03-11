@@ -23,6 +23,8 @@ live_loop :live do
     end
 
     if spread(1,8).look
+      smp Dust[/snare/,[2,2]].tick(:sample), cutoff: 135, amp: 1.0
+
       if spread(1,16).look
         shader :iR, rand*2
         shader :iG, rand*2

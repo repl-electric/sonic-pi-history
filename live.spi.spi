@@ -3,10 +3,6 @@
 shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
 
-shader :iR, 10.0
-shader :iG, 10.0
-shader :iB, 10.0
-
 
 
 shader :iWave, 8.0
@@ -25,6 +21,12 @@ live_loop :live do
         end
       end
     end
+
+    if spread(1,8).look
+      smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
+
+    end
+
 
 
     with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do

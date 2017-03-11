@@ -6,7 +6,7 @@ shader :iVertexCount, 1000000
 
 shader :iWave, 4.0
 live_loop :live do
-  with_fx :hpf, cutoff: 60, mix:  ramp(0, 1,256).tick(:its)*0 do
+  with_fx :hpf, cutoff: 60, mix: (ramp 0, 1,256).tick(:its)*0 do
     tick
 
     if spread(1,4).look
@@ -37,7 +37,7 @@ live_loop :live do
     end
 
     if spread(3,8).look
-      smp Frag[/hat/,[1,2]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch:  line(0, 12,16).look
+      smp Frag[/hat/,[1,2]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch: (line 0, 12,16).look
       if spread(1,64).look
       at do
         sleep 1/8.0*1
@@ -49,18 +49,18 @@ live_loop :live do
 fslice = ♥️ .slice(:Fs3).drop(1).look
 
   with_fx(spread(7, 11).map{|s| s ? :echo : :reverb}.look, mix: 0) do
-    smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch:  ring(5).look
+    smp ♥️ .slice(:Fs3).drop(1).look, amp: 4, rpitch: (ring 5).look
   end
 
     if spread(1,8).look
-      smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch:  ring(12,-5,5).look
+      smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch: (ring 12,-5,5).look, finish_offset: (knit 0,31,0.01,1).look
     end
 
     with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :none}.look) do
-          synth :gpa, note:  knit(:Fs4, 64, :B4,64
+          synth :gpa, note: (knit :Fs4, 64, :B4,64
         ).look, amp: 2.0, attack: 0.001, decay: fslice[:length], release: 0.001
 
-    smp ♥️ .slice(:Fs3).drop(1).reverse.look, amp:  ramp(6, 0,32).tick(:put), amp: 4
+    smp ♥️ .slice(:Fs3).drop(1).reverse.look, amp: (ramp 6, 0,32).tick(:put), amp: 4
   end
 
   sleep 1/8.0

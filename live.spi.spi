@@ -35,8 +35,7 @@ live_loop :live do
     end
 
     if spread(1,2).look
-      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch: (line 0, 12,32).look
-
+      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch:  line(0, 12,32).look
       if spread(1,32).look
 
       at do

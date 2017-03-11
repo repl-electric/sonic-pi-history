@@ -68,7 +68,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
         smp (knit
              @slices["Fs4/4"][15], 64,
              @slices["B4/4"][17],64
-             ).look
+             ).look, amp: 2
 
 
 

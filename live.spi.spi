@@ -53,7 +53,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
   end
 
     if spread(7,11).look
-      smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch: (ring 12,-5,5).look, finish_offset: rand*0.005
+ #     smp ♥️ .slice(:Fs3).drop(1).look, amp: 5, rpitch: (ring 12,-5,5).look, finish_offset: rand*0.005
     end
 
     with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :slicer}.look) do

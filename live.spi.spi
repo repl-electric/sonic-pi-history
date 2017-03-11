@@ -37,7 +37,7 @@ live_loop :live do
     end
 
     if spread(1,2).look
-      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch: (line 0, 12,16).look
+      smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5, rpitch:  line(0, 12,16).look
       at do
       if spread(1,32).look
 
@@ -53,7 +53,7 @@ live_loop :live do
   end
 
   with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :bitcrusher}.look) do
-    smp ♥️ .slice(:Fs3).drop(2).take(8).look, amp: (line, 4, 8*2,32).look
+    smp ♥️ .slice(:Fs3).drop(2).take(4).look, amp:  line( 4, 8*2,32).look
   end
 
   sleep 1/8.0

@@ -4,6 +4,8 @@ shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
 
 shader :iR, 10.0
+shader :iG, 10.0
+
 
 shader :iWave, 8.0
 live_loop :live do

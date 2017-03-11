@@ -66,7 +66,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
       if spread(7,11*1).look
       with_fx(:reverb, room: 0.6, mix: 0.9, damp: 0.5) do |r_fx|
         smp (knit
-             @slices["Fs3/a4"][1],64,
+             @slices["Fs4/a4"][1],64,
              @slices["Cs4/4"][2], 64
              ).look, amp: 1*0
 

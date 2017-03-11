@@ -59,7 +59,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
     with_fx(spread(7, 11).map{|s| s ? :pitch_shift : :reverb}.look) do
       synth :gpa, note: (knit
         :Fs4, 64, :B4,64,
-        :Cs4,64, :Ds4,64
+        :Cs4,64, :Cs5,64
         ).look, amp: 2.0, attack: 0.001, decay: fslice[:length], release: 0.001
 
 

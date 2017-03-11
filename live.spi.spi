@@ -7,7 +7,7 @@ shader :iY, 1.0
 shader :decay, :iLineMode, 1.0
 
 
-shader :iWave, 8.0
+shader :iWave, 2.0
 live_loop :live do
   with_fx :none, mix: 0 do
     tick

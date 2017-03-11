@@ -10,8 +10,8 @@ live_loop :live do
 
 
     if spread(1,4).look
+      shader :iBeat, rand
       smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 100, amp: 1.0
-
     end
 
 

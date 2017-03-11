@@ -75,7 +75,7 @@ fslice = ♥️ .slice(:Fs3).drop(1).look
 
 
       smp ♥️ .slice(:Fs3).drop(1).reverse.look, amp:  ramp(6, 0,32).tick(:put), amp: 4,
-      finish_offset:  spread(1,16).map{|s| s ? 0.01 : 0.001}.look
+      finish_offset:  spread(1,8).map{|s| s ? 0.01 : 0.001}.look
   end
 
   sleep 1/8.0

@@ -36,10 +36,15 @@ live_loop :live do
 
     if spread(1,2).look
       smp Frag[/hat/,[0,1]].tick(:sample2), cutoff: 135, amp: 0.5
+      if spread(1,64).look
+
+
       at do
         sleep 1/8.0*1
         smp Frag[/hat/,[2,3]].tick(:sample3), cutoff: 135, amp: 0.5
-      end
+        end
+              end
+
 
     end
 

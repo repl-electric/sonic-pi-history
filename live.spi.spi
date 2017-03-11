@@ -3,7 +3,7 @@
 shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
 
-
+shader :iWave, 2.0
 live_loop :live do
   with_fx :none, mix: 0 do
     tick

@@ -1,6 +1,6 @@
 ♥️,☠️=Straw
 🐿=@slices
-shader :shader, "wave.glsl", "rope.vert", "tri_line", 100000
+shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
 shader :iX, 1.0
 shader :iY, 1.0

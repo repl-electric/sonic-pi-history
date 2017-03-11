@@ -3,6 +3,9 @@
 shader :shader, "wave.glsl", "rope.vert", "points", 100000
 shader :iVertexCount, 1000000
 
+shader :iR, 1.0
+shader :iG, 1.0
+shader :iB, 1.0
 
 
 shader :iWave, 8.0
@@ -25,6 +28,7 @@ live_loop :live do
     if spread(1,8).look
       if spread(1,16).look
         smp Dust[/snare/,[1,1]].tick(:sample), cutoff: 135, amp: 1.0
+      else
         end
     end
 

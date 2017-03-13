@@ -1,9 +1,4 @@
 ♥️,☠️=Straw
-🐿=@slices
 #shader :shader, "wave.glsl", "rope.vert", "tri_lines", 100000
 ️
-live_loop :abs do
-    tick
-  play :FS3
-    sleep 1/8.0
-end
+puts "on"

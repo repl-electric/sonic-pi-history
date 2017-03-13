@@ -1,14 +1,10 @@
 ♥️,☠️=Straw
 🐿=@slices
 shader :shader, "wave.glsl", "rope.vert", "tri_lines", 100000
-shader :iVertexCount, 1000000
-shader :iWave, 4.0
 ️
 live_loop :testingbrokekn do
-  with_fx :none, mix: 0 do
     tick
     smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
 
     sleep 1/8.0
-  end
 end

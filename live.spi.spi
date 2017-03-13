@@ -2,9 +2,8 @@
 🐿=@slices
 shader :shader, "wave.glsl", "rope.vert", "tri_lines", 100000
 ️
-live_loop :testingbrokekn do
+live_loop :abs do
     tick
     smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
-
     sleep 1/8.0
 end

@@ -4,6 +4,6 @@ shader :shader, "wave.glsl", "rope.vert", "tri_lines", 100000
 ️
 live_loop :abs do
     tick
-    smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+  play :FS3
     sleep 1/8.0
 end

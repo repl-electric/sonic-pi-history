@@ -1,2 +1,6 @@
 ♥️,☠️=Straw
-puts "on"
+live_loop :test do
+  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+
+  sleep 1/8.0
+end

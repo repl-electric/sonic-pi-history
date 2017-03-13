@@ -1,5 +1,21 @@
-♥️,☠️=Straw
-live_loop :test do
-  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 0asdas
-  sleep (1/8.0)*2
+live_loop :algo do
+  with_fx :none, mix: 0 do
+    tick
+
+
+    fslice = e.slice(:Fs3).look
+
+    if fslice[:length] > 0.1
+      smp fslice, cutoff: 100, finish_offset: 0.17
+      shader :decay, :iVertexCount, 1000000, 1
+    end
+
+    shader  :iR, rand*4
+    shader  :iG, rand*4
+    shader  :iB, rand*4
+
+    smp fslice, cutoff: 100, amp: 4
+
+    sleep  knit(1/8.0, 32, 8,1).look
+  end
 end

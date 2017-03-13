@@ -7,7 +7,8 @@ shader :iWave, 4.0
 live_loop :testingbrokekn do
   with_fx :none, mix: 0 do
     tick
-    puts "argh"
+    smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0
+
     sleep 1/8.0
   end
 end

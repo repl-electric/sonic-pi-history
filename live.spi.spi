@@ -1,5 +1,5 @@
 ♥️,☠️=Straw
 live_loop :test do
-  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 0.5
+  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 0.5asd
   sleep (1/8.0)*2
 end

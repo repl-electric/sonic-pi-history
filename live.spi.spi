@@ -2,6 +2,6 @@ live_loop :name do
   tick
   sleep 1
   shader :shader, "wave.glsl", "rope.vert", "tri", 20000
-  shader :iRotate,  ring(0,1).look
+  shader :iRotate, (ring 0,1).look
 
 end

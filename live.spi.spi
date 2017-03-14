@@ -1,1 +1,4 @@
-    puts Alt[/vog_strw_sus_oh_p_01_rel/]
+live_loop :algo do
+  smp e.slice("Fs3").look
+  sleep 1
+end

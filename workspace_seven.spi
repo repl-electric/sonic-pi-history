@@ -265,7 +265,7 @@ end
 
 
 ]
-).look, amp: 2*1, attack: 0.0001, release: 0.5, decay: 0.5
+).look, amp: 2*1, attack: 0.0001, release: 0.25, decay: 0.5
 
 
 if (sno=(ring *%W{ 

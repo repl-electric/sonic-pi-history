@@ -250,7 +250,7 @@ end
 
 noz =  ring(              [:Fs4, 0.125, 0.1],  "_", [:D4,0.125,0.01], [:D4,0.125,0.01], [:E4,0.25,0.01], "_", "_", "_"     #7!!!!
 ).look
-syn :gpa, note: noz[0], decay: 0.001, decay: 0.25, release: 0.25, amp: 2
+syn :gpa, note: noz[0], decay: 0.001, decay: 0.125, release: 0.25, amp: 2
 
 
 if (sno= ring(*%W{ 

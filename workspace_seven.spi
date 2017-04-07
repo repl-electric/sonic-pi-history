@@ -232,7 +232,7 @@ if noz != "_"
  if noz[1] > 0.25
  dd = syn :fm, note: noz[0], amp: 4*1, attack: 0.1, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70
 else
- dd = syn :gpa, wave: 5, note: noz[0], amp: 4*1, attack: 0.0001, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70
+ dd = syn :gpa, wave: 5, note: noz[0], amp: 8*1, attack: 0.0001, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70
 end
 end
 

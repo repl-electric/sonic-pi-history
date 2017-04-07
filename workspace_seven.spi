@@ -218,7 +218,7 @@ noz = (ring *[[:A3,0.25], "_", "_", "_", "_", "_", "_", "_",
 
 ]
 ).look
- dd = syn :gpa, note: noz, amp: 7*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, release: dd[-1], note_slide: 1.0
+ dd = syn :gpa, note: noz[0], amp: 7*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, release: dd[-1], note_slide: 1.0
 
 if (sno=(ring *%W{ 
  _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]

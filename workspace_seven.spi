@@ -230,7 +230,7 @@ noz = (ring [:A3, 0.5,  0.1],  "_", [:Fs3,0.25,0.01], "_", "_", "_", "_", "_",
 #              [:B3,0.125,0.01], "_", [:Cs4,0.125,0.01], "_", "_", "_", "_", "_",
 ).look
 if noz != "_"
- dd = syn :gpa, note: noz[0], wave:4, amp: 5*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70
+ dd = syn :gpa, note: noz[0], wave:5, amp: 5*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70
 end
 
 if (sno=(ring *%W{ 

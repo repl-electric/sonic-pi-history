@@ -213,8 +213,7 @@ end
 end
 end   
 #A4 B4 Fs4 _ _ _ _ _ _ _ _
- dd = syn :gpa, note: (ring *[
-                              "_", "_", "_", "_", "_", :fs4, "_", "_", 
+ dd = syn :gpa, note: (ring *[:A3, "_", "_", "_", "_", :fs4, "_", "_", 
                               
 
 ]

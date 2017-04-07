@@ -246,7 +246,6 @@ else
  dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70, pan: (ring 0.5, 0.25, -0.25, -0.5).look
 end
  dd = syn :gpa, wave: 2, note: (knit noz[0],1,_,7).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan: (ring 0.5, 0.25, -0.25, -0.5).look
-
 end
 
 noz = (ring 
@@ -256,7 +255,6 @@ noz = (ring
 
 ).look
 syn :gpa, note: noz[0], decay: 0.001, decay: 0.125, release: 0.125, attack: 0.001, amp: 2
-
 
 if (sno=(ring *%W{ 
  _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]
@@ -312,7 +310,7 @@ if (ring *%W{
                                 _   _   _   _
 }
 ).look != "_"
-  smp Junk[/HIT/,1], amp: 0.5
+#  smp Junk[/HIT/,1], amp: 0.5
 end
 
 #control dd, note: :Fs4

@@ -213,11 +213,11 @@ end
 end
 end   
 #A4 B4 Fs4 _ _ _ _ _ _ _ _
- dd = syn :gpa, note: (ring *[:A3, "_", "_", "_", "_", "_", "_", "_", 
+ dd = syn :gpa, note: (ring *[[:A3,0.25], "_", "_", "_", "_", "_", "_", "_", 
                               
 
 ]
-).look, amp: 7*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, release: (ring 0.25, 0.125, 0.25, 0.125).look, note_slide: 1.0
+).look, amp: 7*1, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, release: dd[-1], note_slide: 1.0
 
 if (sno=(ring *%W{ 
  _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]

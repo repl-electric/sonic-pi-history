@@ -245,8 +245,8 @@ if (sno=(ring *%W{
  _ _ _ [:E1,2]   _ _ _ _ 
 
 }).look) != "false"
-#sz = syn :beep, note: (knit :FS1,1).tick(:bassline), attack: 0.001, amp: 5, release: (ring 0.25).look(:bassline)
-ick(:bassline)
+sz = syn :beep, note: (knit :FS1,1).tick(:bassline), attack: 0.001, amp: 5, release: (ring 0.25).look(:bassline)
+tick(:bassline)
 #s1 = syn :prophet, note: (knit :B1,1).look(:bassline), amp: 4, release: 0.25, attack: 0.05, cutoff: 65, cutoff_slide: 0.5
 s1,s2=nil
 fx_sh = with_fx :pitch_shift, time_dis: 0.01, mix: 0.0, mix_slide: 1 do 

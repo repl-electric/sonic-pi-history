@@ -253,7 +253,7 @@ noz = (ring
              [:Fs4, 0.125, 0.1],  "_",  [:B4,0.125,0.01], [:B4,0.125,0.01], [:B4,0.25,0.01], "_", "_", "_"     #7!!!!
 ).look
 
-syn :gpa, note: noz, decay: 0.001
+syn :gpa, note: noz, decay: 0.001, decay: 0.25
 
 
 if (sno=(ring *%W{ 

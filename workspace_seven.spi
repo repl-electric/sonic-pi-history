@@ -393,7 +393,7 @@ end
     if  spread(8, 16).look
       with_fx :distortion, mix:  line(0.0, 1.0, 128).look do
         with_fx :bitcrusher, bits:  line(8, 32, 1).look do
-          smp (🍓.slice(:D2).take(32)).look, amp: 2.3,rpitch:  knit(-5, 32, 0, 32).look
+          smp (🍓.slice(:D2).take(32)).look, amp: 8.3,rpitch:  knit(-5, 32, 0, 32).look
         end
       end
     end

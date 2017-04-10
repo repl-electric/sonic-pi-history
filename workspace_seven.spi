@@ -419,7 +419,7 @@ stop
     #synth :dark_ambience, note:  chord(:Fs4, :m11), amp: 1, decay: 10, attack: 8.0
     #smp Berry[/gaiazone_9/], amp: 10
   end
-  #smp Berry[/ataxicone_10/], amp: 2
+  smp Berry[/ataxicone_10/], amp: 2
   #sample 🍓.slice(:Fs3).look()[:path], amp: 1
   sleep (1/2.0)*32
 end

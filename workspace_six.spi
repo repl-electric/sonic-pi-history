@@ -3,35 +3,36 @@
 
 x = [0.032001, 0.050667, 0.06533, 0.064003, 0.065331, 0.065334, 0.189335, 0.125332, 0.038666, 0.063999, 0.042668, 0.042667, 0.06533, 0.129334, 0.065334, 0.065335, 0.042667, 0.065335, 0.065334, 0.034668, 0.030667, 0.042668, 0.044003, 0.043998, 0.042668, 0.053334, 0.065334, 0.042667, 0.065334, 0.162666, 0.032, 0.033335, 0.031999, 0.032, 0.033333, 0.065334, 0.032, 0.065334, 0.063999, 0.065334, 0.130666, 0.065334, 0.065333, 0.064, 0.065333, 0.065333, 0.065334, 0.129333, 0.065333, 0.086667, 0.042668, 0.042666, 0.065333, 0.044, 0.042667, 0.042667, 0.065333, 0.161333, 0.033334, 0.044, 0.042666, 0.042667, 0.054666]
 
- ring(false, false, false, false, false, false, 
-true,  true, false, false, false, false, 
-false, true, false, false, false, false, 
-false, false, false, false, false, false, 
-false, false, false, false, false, true, 
-false, false, false, false, false, false, 
-false, false, false, false, true, false, 
-false, false, false, false, false, true, 
-false, false, false, false, false, false, 
-false, false, false, true, false, false, 
-false, false, false).look
+(ring false, false, false, false, false, false,
+ true,  true, false, false, false, false,
+ false, true, false, false, false, false,
+ false, false, false, false, false, false,
+ false, false, false, false, false, true,
+ false, false, false, false, false, false,
+ false, false, false, false, true, false,
+ false, false, false, false, false, true,
+ false, false, false, false, false, false,
+ false, false, false, true, false, false,
+ false, false, false).look
 
 
 
 live_loop :testing, sync: :slicing do
-tick
-if  ring( true,  false, false, false, false, false, false, false,
-true,  false, false, false, false, false, false, false,
-true,  false, false, false, false, false, false, false,
-true,  false, false, false, false, false, false, false,
-).look
-syn :plucked, note:  knit(:A1, 4, :B1,4, :Fs1, 4).tick(:insider), amp: 1.0, attack: 0.00001, release: 0.5, decay: 0.125
-end
-
-if spread(1,6).look
-#play :FS2
-end
-
-sleep 0.125
+  tick
+  if (ring
+      true,  false, false, false, false, false, false, false,
+      true,  false, false, false, false, false, false, false,
+      true,  false, false, false, false, false, false, false,
+      true,  false, false, false, false, false, false, false,
+      ).look
+    syn :plucked, note: (knit :A1, 4, :B1,4, :Fs1, 4).tick(:insider), amp: 1.0, attack: 0.00001, release: 0.5, decay: 0.125
+  end
+  
+  if spread(1,6).look
+    #play :FS2
+  end
+  
+  sleep 0.125
   
 end
 

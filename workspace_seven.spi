@@ -403,11 +403,11 @@ end
   end
 end
 
-if fslice && (fslice[:offset] - fslice[:onset]) < 0.1
- sleep 1/8.0
-else
+#if fslice && (fslice[:offset] - fslice[:onset]) < 0.1
+# sleep 1/8.0
+#else
 sleep s
-end
+#end
 end
 end
 live_loop :breath, sync: :slicing do

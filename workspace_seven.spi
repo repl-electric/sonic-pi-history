@@ -405,6 +405,7 @@ else
 sleep s
 end
 end
+end
 live_loop :sop, sync: :slicing do
   tick
   with_fx :echo, room: 0.9 do

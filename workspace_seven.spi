@@ -262,7 +262,7 @@ noz = (ring
              "_",  "_", "_", "_", "_", "_", "_", "_",  
 
 ).look
-syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: 0.125, attack: 0.001, amp: 2*5
+syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: 0.001, amp: 2*5
 
 
 if (sno=(ring *%W{ 

@@ -9,7 +9,7 @@ with_fx :reverb do
            "_",  "_", "_", "_", "_", "_", "_", "_",
            
            ).look
-    synth :dark_ambience, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1
+    synth :dark_ambience, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2
     
     
     sleep 0.5

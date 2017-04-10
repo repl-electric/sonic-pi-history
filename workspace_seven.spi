@@ -114,7 +114,7 @@ shader :decay, :iCrazy, 0.1, 0.1
     end
   end
   if spread(1,8).look
-  #  smp Dust[/snare/,2], amp: 0.25
+    smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
 #shader :fx, :kal
   #  smp Dust[/snare/,1], amp: 0.25

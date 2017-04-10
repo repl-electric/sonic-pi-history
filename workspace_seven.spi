@@ -407,21 +407,6 @@ sleep s
 end
 end
 end
-live_loop :sop, sync: :slicing do
-  tick
-  with_fx :echo, room: 0.9 do
-    with_fx :distortion do
-      #synth :chipbass, note: :Fs4, amp: 0.125, decay: 2, pan:  line(0.25, -0.25, 0.001).look
-    end
-  end
-  with_fx :pitch_shift do
-    #smp Berry[/sustain/,/mm/][14], amp: 1
-  end
-  with_fx :pitch_shift, pitch_dis: 0.2 do
-     #smp Harp.slice("C#3").take(16).look, amp: 4.2
-  end
-  sleep (1/8.0)
-end
 live_loop :breath, sync: :slicing do
   tick
   sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look

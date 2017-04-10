@@ -13,7 +13,7 @@ with_fx :reverb do
     if noz != "_"
       #      synth :pluck, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 3
       
-      midi_play note(:E4), dur: 0.25, amp: 0.5
+      midi_play note(:Fs4), dur: 0.25, amp: 0.5
       
     end
     sleep 0.125

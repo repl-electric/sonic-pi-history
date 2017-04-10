@@ -10,7 +10,7 @@ live_loop :tesing do
          "_",  "_", "_", "_", "_", "_", "_", "_",
          
          ).look
-  synth :sonic_pi_gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*5
+  synth :"sonic_pi-gpa", note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*5
   
   
   sleep 0.125

@@ -259,7 +259,6 @@ noz = (ring
 
 ).look
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*5
-midi_play :FS3
 
 if (sno=(ring *%W{
  _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]

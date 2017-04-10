@@ -95,15 +95,15 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
     #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
   if spread(1,4).look
-  shader :shader, "wave.glsl", "rope.vert", (ring "lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx), (line 10000, 100000, 128).look(:fx)
+  shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)
 shader :fx, :kal
  shader :iSpeed, rand * 0.1
-  shader :iRadius, (line 0,0.25,128*4).look
+  shader :iRadius,  line(0,0.25,128*4).look
 shader :iIntro, 0.0
 shader :decay, :iCrazy, 0.1, 0.1
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
-    pp = (knit -2,8, 0, 8, 2,8).look(:sloopy)
+    pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
 #    smp Mountain[/subkick/,[1,0]].look(:sloppy), amp: 2.0* ring(1.5).tick(:inside2), cutoff:  ring(135).tick(:inside)
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look
@@ -146,7 +146,7 @@ shader :decay, :iCrazy, 0.1, 0.1
   end
 
   if spread(1,16).look
-    as = (ring [1.0,:Fs3], [1.0,_], [0.125, :D3], [0.125, :E3], [0.25, :A3], [0.125, :Cs3], [1.0,_],
+    as =  ring([1.0,:Fs3], [1.0,_], [0.125, :D3], [0.125, :E3], [0.25, :A3], [0.125, :Cs3], [1.0,_],
                [1.0,:Fs3], [0.125, :D3], [0.125, :E3], [0.25, :A4], [0.125, :B2], [1.0,_])
 
   at do
@@ -174,7 +174,7 @@ end
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
 
-#      smp (((🍓.slice(:Fs3))).take(1).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate: (knit 1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+#      smp (((🍓.slice(:Fs3))).take(1).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate:  knit(1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
 
@@ -188,11 +188,11 @@ end
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
 
-    fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look
+    fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look
 
-   future_fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
+   future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
 
-#puts (ring *🍓.slice(:Fs3).drop(1).reverse + []).map{|s| s[:length]}
+#puts  ring(*🍓.slice(:Fs3).drop(1).reverse + []).map{|s| s[:length]}
 
  if future_fslice && future_fslice[:length] > 0.1
 if spread(1,4).look
@@ -213,8 +213,7 @@ end
 end
 end
 #A4 B4 Fs4 _ _ _ _ _ _ _ _
-noz = (ring
-#            [:A3, 0.5,  0.1],  "_", [:Fs3,0.25,0.01], "_", "_", "_", "_", "_",
+noz =  ring(#            [:A3, 0.5,  0.1],  "_", [:Fs3,0.25,0.01], "_", "_", "_", "_", "_",
 #            [:B3,0.125, 0.01], "_", [:Fs3,0.125,0.01], "_", "_", "_", "_", "_",
 
 #            [:Cs4,0.125,0.1],"_",   [:A3,0.125,0.01], "_", "_", "_", "_", "_",
@@ -245,16 +244,15 @@ if noz != "_"
 
 sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs1.wav", amp: 4.0
 
- dd = syn :dark_sea_horn, note: noz[0], amp: 1*1, attack: 0.1, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: (line 60,85,1028).look
+ dd = syn :dark_sea_horn, note: noz[0], amp: 1*1, attack: 0.1, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff:  line(60,85,1028).look
 else
- dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70, pan: (ring 0.5, 0.25, -0.25, -0.5).look
+ dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
 end
- dd = syn :gpa, wave: 2, note: (knit noz[0],1,_,7).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay: (knit 0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan: (ring 0.5, 0.25, -0.25, -0.5).look
+ dd = syn :gpa, wave: 2, note:  knit(noz[0],1,_,7).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay:  knit(0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
 
 end
 
-noz = (ring
-             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],              "_",  "_", "_", "_", "_", "_", "_", "_",
+noz =  ring(             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],              "_",  "_", "_", "_", "_", "_", "_", "_",
              [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],              "_",  "_", "_", "_", "_", "_", "_", "_",
             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],              "_",  "_", "_", "_", "_", "_", "_", "_",
              [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001], "_", "_", "_",
@@ -263,11 +261,11 @@ noz = (ring
 ).look
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*1
 
-if(spread 1, 32*2).look
+if spread(1, 32*2).look
 #sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_f#1.wav", amp: 2.0
 end
 
-if (sno=(ring *%W{
+if (sno= ring(*%W{
  _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]
  _ _ _ [:E1,2]   _ _ _ _
  _ _ _ [:D1,2]   _ _ _ _
@@ -278,9 +276,9 @@ if (sno=(ring *%W{
  _ _ _ [:E1,2]   _ _ _ _
 
 }).look) != "false"
-#sz = syn :beep, note: (knit :FS1,1).tick(:bassline), attack: 0.001, amp: 5, release: (ring 0.25).look(:bassline)
+#sz = syn :beep, note:  knit(:FS1,1).tick(:bassline), attack: 0.001, amp: 5, release:  ring(0.25).look(:bassline)
 tick(:bassline)
-#s1 = syn :prophet, note: (knit :B1,1).look(:bassline), amp: 4, release: 0.25, attack: 0.05, cutoff: 65, cutoff_slide: 0.5
+#s1 = syn :prophet, note:  knit(:B1,1).look(:bassline), amp: 4, release: 0.25, attack: 0.05, cutoff: 65, cutoff_slide: 0.5
 s1,s2=nil
 fx_sh = with_fx :pitch_shift, time_dis: 0.01, mix: 0.0, mix_slide: 1 do
 with_transpose 0 do
@@ -291,7 +289,7 @@ end
 #s2 = syn :dsaw, note: sno, amp: 2, release: 0.25, attack: 0.05, cutoff: 100, cutoff_slide: 0.5
 end
 end
-#s2 = syn :dsaw,    note: sno, amp: 0.5#, release: (knit 0.85,6, 1.5,1,0.85,1).look(:bassline), attack: 0.1, cutoff: (knit 90,1, 80,1, 100,4, 135,1, 100,1).look(:bassline), cutoff_slide: 0.5
+#s2 = syn :dsaw,    note: sno, amp: 0.5#, release:  knit(0.85,6, 1.5,1,0.85,1).look(:bassline), attack: 0.1, cutoff:  knit(90,1, 80,1, 100,4, 135,1, 100,1).look(:bassline), cutoff_slide: 0.5
 at do
 2.times{
 sleep 0.25
@@ -303,7 +301,7 @@ end
 
 end
 
-if (ring *%W{
+if  ring(*%W{
                                 _   _   _   _   _   x
                                 _   _   _   _   _   _
 
@@ -325,38 +323,36 @@ if (ring *%W{
 end
 
 #control dd, note: :Fs4
-if (ring
-true, false, false, false, false, false, false, false,  false, false, false, false,
+if  ring(true, false, false, false, false, false, false, false,  false, false, false, false,
 true, false, false, false, false, false, false, false, false, false, false, false,
 true, false, false, false, false, false, false, false, false, false, false, false,
 true, false, false, false, false, false, false, false, false, false, false, false,
 true, false, false, false, false, false, false, false, false, false, false, false).look
-# synth :dark_ambience, note: (knit
-#:FS2,2,:A2,2, :Cs3,2,:Cs3,2, :E3,2,:E3,2,
+# synth :dark_ambience, note:  knit(#:FS2,2,:A2,2, :Cs3,2,:Cs3,2, :E3,2,:E3,2,
 #:FS3,2,:A3,2, :Cs4,2,:Cs4,2, :E4,2,:E4,2).tick(:sdfsdf), attack: 0.001, decay: 2, amp: 2
  #smp future_fslice, amp: 8, finish_offset: 0.01, rpitch: 3, rate: 0.5
 end
 
 
     if fslice && fslice[:length] > 0.1
-     smp fslice, amp: 1*8.0, rpitch: (knit 3,4, 5,4, 0,4
+     smp fslice, amp: 1*8.0, rpitch:  knit(3,4, 5,4, 0,4
                                          #5,16, 0,16,
                                          #7,16, 3,16
-).tick(:apeg)*1, cutoff: 135, finish_offset: (line 0.001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
-  n = (knit :FS2,2, :D1,2, :E2, 1, :Cs2, 1, _, 1).look(:apeg)
-    #synth :dark_sea_horn, note: (knit :Fs1, 4, :Cs2, 4, :D2, 4, :E2, 4).look(:apeg), decay: 0.125, cutoff: 60, release: fslice[:length], amp: 4.0, attack: 0.00001
+).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
+  n =  knit(:FS2,2, :D1,2, :E2, 1, :Cs2, 1, _, 1).look(:apeg)
+    #synth :dark_sea_horn, note:  knit(:Fs1, 4, :Cs2, 4, :D2, 4, :E2, 4).look(:apeg), decay: 0.125, cutoff: 60, release: fslice[:length], amp: 4.0, attack: 0.00001
 
-if (knit 3,4, 5,4, 0,4
+if  knit(3,4, 5,4, 0,4
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).look(:apeg) != 0
-# synth :dark_ambience, note: (knit :A4,1,  :Cs5,1, _,1,  _,1, :B4,1, :D4,1, :E4,1,  _,1,
+# synth :dark_ambience, note:  knit(:A4,1,  :Cs5,1, _,1,  _,1, :B4,1, :D4,1, :E4,1,  _,1,
 #                                   :GS4,1, :A4,1, _,1,  _,1, :B4,1, :D4,1, :E5,1,  _,1,
 #).look-12, amp: 2.5, attack: 0.5, decay: 0.01, release: 2.0
 
 end
 
- if (knit 3,4, 5,4, 0,4
+ if  knit(3,4, 5,4, 0,4
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).look(:apeg) != 0
@@ -498,7 +494,7 @@ end
 live_loop :drum_layer, sync: :slicing do
 #  tick
 stop
-  s = (ring [0.5,:FS3], [0.125, :A3], [0.25, :Fs3], [1.0,_]).look
+  s =  ring([0.5,:FS3], [0.125, :A3], [0.25, :Fs3], [1.0,_]).look
   if s[-1]
 #    synth :dsaw, note: s[-1],  release: s[0]
   end

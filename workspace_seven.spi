@@ -92,7 +92,7 @@ shader :iIntro, 2.0
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp = (knit -2,8, 0, 8, 2,8).look(:sloopy)
-    smp Mountain[/subkick/,[0,1]].look(:sloppy), amp: 2.0* ring(1.9).tick(:inside2), cutoff:  ring(135).tick(:inside)
+    smp Mountain[/subkick/,[0,1]].look(:sloppy), amp: 2.0* ring(1.8).tick(:inside2), cutoff:  ring(135).tick(:inside)
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0

@@ -243,7 +243,7 @@ if noz != "_"
  if noz[1] > 0.25
 #puts "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_#{noz[0].to_s.downcase.gsub!(/3/,"1")}.wav"
 if spread(1,32).tick(:insider)
-       sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav", amp: 4
+       sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav", amp: 10
 end
 #sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs1.wav", amp: 4.0
 

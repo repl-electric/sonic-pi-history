@@ -15,6 +15,6 @@ with_fx :reverb do
       synth :dark_ambience, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 3
       midi_play noz[0]-12*3, dur: 0.125
     end
-    sleep 0.25
+    sleep 0.125
   end
 end

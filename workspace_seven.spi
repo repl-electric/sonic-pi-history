@@ -70,7 +70,7 @@ fslice = nil
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
-       8
+       
        ).look
 with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]
@@ -92,7 +92,7 @@ shader :iIntro, 1.0
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp = (knit -2,8, 0, 8, 2,8).look(:sloopy)
-    #smp Mountain[/subkick/,[1,0]].look(:sloppy), amp: 2.0* ring(1.5).tick(:inside2), cutoff:  ring(135).tick(:inside)
+    smp Mountain[/subkick/,[1,1]].look(:sloppy), amp: 2.0* ring(1.5).tick(:inside2), cutoff:  ring(135).tick(:inside)
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -162,7 +162,7 @@ end
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
 
-      #smp (((🍓.slice(:Fs3)))).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate: (knit 1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      smp (((🍓.slice(:Fs3)))).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate: (knit 1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 #      smp (((🍓.slice(:Fs3))).take(64).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate: (knit 1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 
       #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)

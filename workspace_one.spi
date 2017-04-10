@@ -1,22 +1,22 @@
 
 live_loop :chordsit do
-tick
-puts note_inspect(ring 
-                               chord(:Fs4, :minor),
-                               chord(:Cs5, :minor),
-                               chord(:B4, :M), 
-                               chord(:D5, :M)).look
-n = (ring 
-                               [chord(:Fs4, :minor),0.5],
-                               [chord(:Cs5, :minor),0.5],
-                               [chord(:B4, :M),1], #should be minor... D=> D#
-                               [chord(:D5, :M, invert: -1),0.5],
-                               [chord(:D5, :M),0.25])
-with_transpose 0 do
-  synth :dark_ambience, note: n.look[0], amp: 1.0, decay: n.look[-1]
-end
+  tick
+  puts note_inspect(ring
+                    chord(:Fs4, :minor),
+                    chord(:Cs5, :minor),
+                    chord(:B4, :M),
+                    chord(:D5, :M)).look
+  n = (ring
+       [chord(:Fs4, :minor),0.5],
+       [chord(:Cs5, :minor),0.5],
+       [chord(:B4, :M),1], #should be minor... D=> D#
+       [chord(:D5, :M, invert: -1),0.5],
+       [chord(:D5, :M),0.25])
+  with_transpose 0 do
+    synth :dark_ambience, note: n.look[0], amp: 1.0, decay: n.look[-1]
+  end
   play (ring :Fs2, :Cs2, :B1, :D2, :E2).look, decay: n.look[-1]/2.0, amp: 0.25
 
 sleep n.look[-1]
-  
+
 end

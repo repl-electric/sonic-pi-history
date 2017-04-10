@@ -93,7 +93,7 @@ shader :decay, :iCrazy, 0.1, 0.1
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end
-     if spread(1,32).tick(:doubletap)
+     if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2
         smp Mountain[/subkick/,1], amp: 0.5*8

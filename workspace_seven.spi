@@ -259,7 +259,7 @@ noz = (ring
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 3*1
 
 if(spread 1, 32*2).look
-sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs1.wav", amp: 2.0
+sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_c#1.wav", amp: 2.0
 end
 
 if (sno=(ring *%W{

@@ -206,7 +206,7 @@ smp MagicDust[/_HI/,0], amp: 1*2
 end
 else
 at do 
-smp MagicDust[/_MID/,49], amp: 1*2
+smp MagicDust[/_MID/,49], amp: 1*0
 sleep 0.125
 smp MagicDust[/_HI/,0], amp: 1*2
 end

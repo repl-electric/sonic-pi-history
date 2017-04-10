@@ -194,7 +194,7 @@ end
 
 #puts (ring *🍓.slice(:Fs3).drop(1).reverse + []).map{|s| s[:length]}
 
- if future_fslice && future_fslice[:length] < 0.1
+ if future_fslice && future_fslice[:length] > 0.1
 if spread(1,4).look
 
 at do 

@@ -172,7 +172,7 @@ end
 
     if spread(3,8).look
       fslicess = 🍓.slice(:Fs3).drop(1).reverse.look
-      #smp fslicess, amp: 8.0, rpitch:  ring(12,0,0).tick(:i), cutoff: 135, finish_offset: rand(1)*0.0025
+      smp fslicess, amp: 8.0, rpitch:  ring(12,0,0).tick(:i), cutoff: 135, finish_offset: rand(1)*0.0025
     end
 
     d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle

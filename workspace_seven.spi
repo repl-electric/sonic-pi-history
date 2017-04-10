@@ -198,7 +198,7 @@ end
 if spread(1,4).look
 
 at do 
-smp MagicDust[/_MID/,49], amp: 1*1
+smp MagicDust[/_MID/,49], amp: 1*2
 sleep 0.125
 smp MagicDust[/_HI/,0], amp: 1*0
 sleep 0.125

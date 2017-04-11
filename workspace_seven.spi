@@ -170,6 +170,7 @@ end
 #puts  ring(*🍓.slice(:Fs3).drop(1).reverse + []).map{|s| s[:length]}
 
  if future_fslice && future_fslice[:length] > 0.1
+comment do
 if spread(1,4).look
 
 at do
@@ -184,6 +185,7 @@ at do
 smp MagicDust[/_MID/,49], amp: 1*0
 sleep 0.125
 smp MagicDust[/_HI/,0], amp: 1*0
+end
 end
 end
 end

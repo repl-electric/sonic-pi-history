@@ -223,7 +223,7 @@ if spread(1,4).tick(:insider)
 end
 #sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs1.wav", amp: 4.0
 
-dd = syn :dark_sea_horn, note: noz[0], amp: 2*1, attack: 0.1, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: (line 60,85,1028).look
+dd = syn :dark_sea_horn, note: noz[0]+12, amp: 2*1, attack: 0.1, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff: (line 60,85,1028).look
 else
 #dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2*(knit 0.01, 31, 0.25,1).look, sustain: noz[1], release: noz[2], note_slide: 1.0, cutoff: 70, pan: (ring 0.5, 0.25, -0.25, -0.5).look
 end

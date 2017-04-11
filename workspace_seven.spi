@@ -388,7 +388,9 @@ tick
 target_chord =  ring(
         [[:FS2,8.2], [:A2, 8.2], [:Cs3,8.2*2]],
         [[:A2,8.2],  [_,   8.2], [:E3,8.2]],
-        [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
+#        [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
+        [[:CS3,8.2],  [:E3, 8.2], [:Gs3,8.2] ],
+
 ).look
 ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
@@ -396,7 +398,7 @@ puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 sample (ring 
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs1.wav"
 ).look, amp: 2.5
 puts target_chord
 target_chord.each do |np|

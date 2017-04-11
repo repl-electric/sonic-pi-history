@@ -122,8 +122,9 @@ shader :iIntro, 0.0
     if spread(1,16).look
 #shader :fx, :kal
 #      smp Dust[/snare/,8], amp: 0.25
-    else
     smp Dust[/snare/,1], amp: 0.25
+
+    else
 
  #     smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end

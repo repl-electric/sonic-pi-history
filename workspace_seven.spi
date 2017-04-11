@@ -110,11 +110,11 @@ shader :iIntro, 4.0
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
-      at do
+     # at do
         sleep 1/8.0
  #       smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
-      end
+     # end
     end
   end
   if spread(1,8).look

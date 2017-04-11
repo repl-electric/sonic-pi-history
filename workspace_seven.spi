@@ -87,7 +87,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
 shader :fx, :kal
 # shader :iSpeed, rand * 0.1
 #  shader :iRadius, (line 0,0.25,128*4).look
-shader :iIntro, 1.0
+shader :iIntro, 0.0
 #shader :decay, :iCrazy, 0.1, 0.1
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)

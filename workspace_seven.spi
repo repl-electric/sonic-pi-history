@@ -156,7 +156,7 @@ end
     end
 
     if spread(7,11).look
-      fslice = 🍓.slice(:Fs3).drop(1).reverse.look
+      fslice = 🍓.slice(:Fs3).drop(0).reverse.look
       #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
 

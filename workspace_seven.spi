@@ -162,7 +162,7 @@ end
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
 
-with_fx :hpf, cutoff: 60 do
+with_fx :hpf, cutoff: 80 do
       smp (((🍓.slice(:Fs3)))).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate:  knit(1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 end
 #      smp (((🍓.slice(:Fs3))).take(64).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate:  knit(1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)

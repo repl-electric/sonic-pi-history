@@ -474,12 +474,3 @@ durs.times {sleep 1}
 end
 #end
 
-live_loop :drum_layer, sync: :slicing do
-#  tick
-stop
-  s = (ring [0.5,:FS3], [0.125, :A3], [0.25, :Fs3], [1.0,_]).look
-  if s[-1]
-#    synth :dsaw, note: s[-1],  release: s[0]
-  end
-#  sleep s[0]
-end

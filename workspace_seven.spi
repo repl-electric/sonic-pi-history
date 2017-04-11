@@ -342,9 +342,7 @@ true, false, false, false, false, false, false, false, false, false, false, fals
 end
 
 
-    if fslice && fslice[:length] > 0.15
-   #synth :dark_sea_horn, note: :FS4, decay: 0.125, cutoff: 70, release: fslice[:length], amp: 5.0, attack: 0.00001
-
+    if fslice && fslice[:length] > 0.16
      smp fslice, amp: 1*8.0, rpitch: 1*(knit 3,4, 5,4, 0,4
                                          #5,16, 0,16,
                                          #7,16, 3,16

@@ -1,5 +1,6 @@
 # Loading previous buffer contents. Please wait...load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #shader :shader, "wave.glsl", "rope.vert", "lines", 100000
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 
 _=nil
 set_volume! 1.0

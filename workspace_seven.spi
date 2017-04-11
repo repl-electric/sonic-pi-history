@@ -407,7 +407,7 @@ synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.se
 puts target_chord
 target_chord.each do |np|
 if np[0]
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count))
+ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 4*(1.5 / target_chord.count))
 end
 end
 16.times{

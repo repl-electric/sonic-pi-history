@@ -344,7 +344,7 @@ end
 #with_fx :hpf, cutoff: 40,mix: 1 do
 puts fslice
 
-fslice = {:sample_id => 91072, :path=>"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav", :collection=>"strawberry", :filename=>"gaiazone_03", :onset=>63.0, :offset=>63.4587, :length=>0.032001, :midi=>54, :note=>"F#", :octave=>3, :perc=>1, :rms_amplitude=>nil} 
+fslice = {:sample_id => 91072, :path=>"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav", :collection=>"strawberry", :filename=>"gaiazone_03", :onset=>62.0, :offset=>63.4587, :length=>0.032001, :midi=>54, :note=>"F#", :octave=>3, :perc=>1, :rms_amplitude=>nil} 
 
   smp fslice, amp: 4.0, rpitch: 0, cutoff: 135, finish_offset: 0.01 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 #end

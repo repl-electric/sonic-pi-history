@@ -135,7 +135,6 @@ shader :iIntro, 4.0
     end
   end
 
-  with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do
   if spread(1,32).look
     #synth :dark_sea_horn, note: chord(:FS2, :m11), cutoff: 100, decay: 1.0, attack: 0.0001, amp: 1.0
   end

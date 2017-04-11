@@ -317,7 +317,7 @@ end
     else
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 50,mix: 1 do
-  smp fslice, amp: 8.0, rpitch: 0, cutoff: 135, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+  #smp fslice, amp: 8.0, rpitch: 0, cutoff: 135, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 end
 end
     end

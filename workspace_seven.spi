@@ -226,7 +226,7 @@ dd = syn :dark_sea_horn, note: noz[0]-12, amp: 2*1, attack: 0.1, decay: 2* knit(
 else
 dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1], release: noz[2], note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
 end
- dd = syn :gpa, wave: 2, note:  knit(noz[0],1,_,6).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay:  knit(0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
+# dd = syn :gpa, wave: 2, note:  knit(noz[0],1,_,6).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay:  knit(0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
 end
 
 #control dd, note: :Fs1
@@ -243,7 +243,7 @@ noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
 
             "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
-syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*1
+#syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2*1
 
 if spread(1, 32*2).look
 #sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d0.wav", amp: 2.0

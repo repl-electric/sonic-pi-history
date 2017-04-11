@@ -374,7 +374,6 @@ end
 #        end
 #      end
     end
-  end
 end
 
 #if fslice && (fslice[:offset] - fslice[:onset]) < 0.1

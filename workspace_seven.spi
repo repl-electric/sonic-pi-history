@@ -133,6 +133,24 @@ shader :decay, :iCrazy, 0.1, 0.1
     end
   end
 
+  if spread(1,16).look
+    as = (ring [1.0,:Fs3], [1.0,_], [0.125, :D3], [0.125, :E3], [0.25, :A3], [0.125, :Cs3], [1.0,_],
+               [1.0,:Fs3], [0.125, :D3], [0.125, :E3], [0.25, :A4], [0.125, :B2], [1.0,_])
+
+  at do
+with_fx :echo, mix_slide: 1.0  do |fx|
+    12.times{
+    a = as.drop(0).tick(:me)
+    if a[-1]
+      #synth :hollow, note: a[-1]+12,  release: a[0], amp: 4.0, cutoff: 135, attack: 0.0001
+    end
+    sleep a[0]
+    control fx, mix: 0
+
+  }
+end
+
+end
 end
 
   with_fx :pitch_shift, pitch_dis: 0.0, mix: 0 do

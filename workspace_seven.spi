@@ -343,7 +343,7 @@ end
 
 
     if fslice && fslice[:length] > 0.1
-  synth :dark_sea_horn, note: :FS3, decay: 0.125, cutoff: 70, release: fslice[:length], amp: 8.0, attack: 0.00001
+   synth :dark_sea_horn, note: :FS3, decay: 0.125, cutoff: 70, release: fslice[:length], amp: 5.0, attack: 0.00001
 
      smp fslice, amp: 1*8.0, rpitch: 1*(knit 3,4, 5,4, 0,4
                                          #5,16, 0,16,

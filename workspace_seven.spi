@@ -289,7 +289,7 @@ end
 #s2 = syn :dsaw, note: sno, amp: 2, release: 0.25, attack: 0.05, cutoff: 100, cutoff_slide: 0.5
 end
 end
-s2 = syn :dsaw,    note: sno, amp: 0.5#, release: (knit 0.85,6, 1.5,1,0.85,1).look(:bassline), attack: 0.1, cutoff: (knit 90,1, 80,1, 100,4, 135,1, 100,1).look(:bassline), cutoff_slide: 0.5
+#s2 = syn :dsaw,    note: sno, amp: 0.5#, release: (knit 0.85,6, 1.5,1,0.85,1).look(:bassline), attack: 0.1, cutoff: (knit 90,1, 80,1, 100,4, 135,1, 100,1).look(:bassline), cutoff_slide: 0.5
 at do
 2.times{
 sleep 0.25

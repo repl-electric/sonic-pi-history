@@ -400,7 +400,7 @@ target_chord =  ring(
 ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 #synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
-sample  ring("/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav",
+sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav"
 ).look, amp: 4.0

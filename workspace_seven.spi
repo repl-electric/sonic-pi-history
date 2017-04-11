@@ -70,7 +70,7 @@ fslice = nil
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
        1/8.0,1/8.0,1/8.0,1/8.0,
-       8
+       #8
        ).look
 with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i231) do
   b = Dust[/perc/,1];a = Dust[/perc/,2]

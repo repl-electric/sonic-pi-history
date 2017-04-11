@@ -410,7 +410,7 @@ if np[0]
 ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 8*(1.5 / target_chord.count))
 end
 end
-16.times{
+8.times{
   control g_fx, mix: rand, damp: rand
   control ds.choose, amp: (2.5 + rand) / target_chord.count
   sleep 1

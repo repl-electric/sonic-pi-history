@@ -92,7 +92,7 @@ shader :decay, :iCrazy, 0.1, 0.1
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp = (knit -2,8, 0, 8, 2,8).look(:sloopy)
-    smp Mountain[/subkick/,[1,0]].look(:sloppy), amp: 2.0* ring(1.5).tick(:inside2), cutoff:  ring(135).tick(:inside)
+   # smp Mountain[/subkick/,[1,0]].look(:sloppy), amp: 2.0* ring(1.5).tick(:inside2), cutoff:  ring(135).tick(:inside)
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -100,25 +100,25 @@ shader :decay, :iCrazy, 0.1, 0.1
      if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2
-        smp Mountain[/subkick/,1], amp: 0.5*2
+  #      smp Mountain[/subkick/,1], amp: 0.5*2
       end
     end
   end
   if spread(1,2, rotate: 0).look
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 2.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+#      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 2.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-        smp MagicDust[/_HI/,5], amp: 0.1
+ #       smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
   end
   if spread(1,8).look
-    smp Dust[/snare/,2], amp: 0.25
+  #  smp Dust[/snare/,2], amp: 0.25
     if spread(1,16).look
 #shader :fx, :kal
     #smp Dust[/snare/,1], amp: 0.25
@@ -339,7 +339,7 @@ end
 
 
     if fslice && fslice[:length] > 0.1
-     smp fslice, amp: 0*8.0, rpitch: 1*(knit 3,4, 5,4, 0,4
+     smp fslice, amp: 0*8.0, rpitch: 0*(knit 3,4, 5,4, 0,4
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset: (line 0.001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01

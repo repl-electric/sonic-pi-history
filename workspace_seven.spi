@@ -407,7 +407,6 @@ synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.se
 sample (ring "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav"
-
 ).look, amp: 1.0
 puts target_chord
 target_chord.each do |np|

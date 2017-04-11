@@ -165,7 +165,7 @@ end
 
     fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look
 
-   future_fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
+#   future_fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
 
 #puts (ring *🍓.slice(:Fs3).drop(1).reverse + []).map{|s| s[:length]}
 

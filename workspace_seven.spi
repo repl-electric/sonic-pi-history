@@ -317,7 +317,7 @@ end
 synth :dark_sea_horn, note:  knit(:A1,4, :B1,4, :FS1,4   # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
-).look(:apeg), release: fslice[:length]
+).look(:apeg), release: fslice[:length], amp: 2
     else
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60,mix: 1 do

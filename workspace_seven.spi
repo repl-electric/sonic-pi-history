@@ -244,7 +244,7 @@ noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
 ).look
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
 at do
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 1, rpitch: -2
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 1, rpitch: 4
 sleep 0.25
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 3
 end

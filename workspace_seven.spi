@@ -160,8 +160,8 @@ end
       #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
 
-    d= spread(3,8).map{|s| s ? :pitch_shift : :bitcrusher}#.shuffle
-    with_fx  d.look, decay: 1, phase: 0.25, mix: 1.0, distort:  line(0.0, 0.5, 128).look do
+    d= spread(3,8).map{|s| s ? :pitch_shift : :krush}#.shuffle
+    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.01, distort:  line(0.0, 0.5, 128).look do
 
     fslice =  (ring *🍓.slice(:Fs3).drop(1).reverse.take(8) + [🍓.slice(:Fs3)[-1]]).look
 

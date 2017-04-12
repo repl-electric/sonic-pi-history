@@ -398,7 +398,7 @@ puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 sample (ring 
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav"
 ).look, amp: 2.5*0.5
 puts target_chord
 target_chord.each do |np|

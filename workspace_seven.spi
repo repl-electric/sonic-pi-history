@@ -248,7 +248,7 @@ if noz[0] == :FS5
 #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 4
 end
 if noz[0] == :B5
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b4.wav", amp: 4
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b4.wav", amp: 2
 end
 
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2.5*1

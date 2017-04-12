@@ -243,7 +243,7 @@ noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
             "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
 if noz[0] == :FS5
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/cs4.wav", amp: 4
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 4
 end
 if noz[0] == :B5
 #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b4.wav", amp: 8, start: 0.1, finish: 1.0

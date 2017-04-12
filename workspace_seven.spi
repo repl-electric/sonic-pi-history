@@ -408,7 +408,7 @@ sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_fs2.wa
 sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d0.wav"
-).look, amp: 2.5*1.0, attack: 1.0
+).look, amp: 2.5*0.0, attack: 1.0
 
 puts target_chord
 target_chord.each do |np|

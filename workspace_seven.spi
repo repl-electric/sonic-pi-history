@@ -306,7 +306,7 @@ if (ring *%W{
                                 _   _   _   _
 }
 ).look != "_"
-  smp Junk[/HIT/,1], amp: 0.2*0
+  smp Junk[/HIT/,1], amp: 0.2*1
 end
 
 #control dd, note: :Fs4

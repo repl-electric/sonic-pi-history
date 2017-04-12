@@ -396,10 +396,9 @@ ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 #synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
 sample (ring 
-"/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_fs2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_fs2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
 ).look, amp: 5.5*0.5
 puts target_chord
 target_chord.each do |np|

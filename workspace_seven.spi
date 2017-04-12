@@ -418,7 +418,7 @@ end
 end
 8.times{
   control g_fx, mix: rand, damp: rand
-  control ds.choose, note:  ring(:FS2, :B2, :D2, :E2).look
+  control ds.choose, note:  ring(:FS3, :B3, :D3, :E3).look
   control ds.choose, amp: (2.5 + rand) / target_chord.count
   sleep 1
 }

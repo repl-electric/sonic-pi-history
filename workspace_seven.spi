@@ -145,7 +145,7 @@ shader :iIntro, 4.0
 
 with_fx :lpf, cutoff: 90, mix: 1 do
 with_fx :hpf, cutoff: 40, mix: 1 do
-      smp (((🍓.slice(:Fs3)))).take(8).shuffle.ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), cutoff: 135 , cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, rate: 1*(knit 1.0,15,-1.0,1).look#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+      smp (((🍓.slice(:Fs3)))).take(4).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), cutoff: 135 , cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, rate: 1*(knit 1.0,15,-1.0,1).look#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 end
 end
 #      smp (((🍓.slice(:Fs3))).take(64).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate: (knit 1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)

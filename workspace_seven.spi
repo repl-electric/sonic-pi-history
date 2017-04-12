@@ -248,7 +248,7 @@ noz = (ring
             "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 3, rpitch: 0
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 2, rpitch: 0
 end
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
 

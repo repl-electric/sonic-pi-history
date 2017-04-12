@@ -402,7 +402,7 @@ sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_fs2.wa
 "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
 ).look, amp: 2.5*0.5, attack: 1.0
 
-sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a1.wav",
+sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs1.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d1.wav"
 ).look, amp: 2.5*0.5, attack: 1.0

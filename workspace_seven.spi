@@ -242,7 +242,7 @@ noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
            #   [:D5,0.125,0.125,0.001], "_", "_" , "_" ,[:Cs5,0.5,0.25,0.001],"_", [:Cs5,0.5,0.25,0.001], "_",
             "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
-if noz[0].to_s[0..2] == "FS"
+if noz[0].to_s[0..1] == "FS"
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 4
 end
 if noz[0] == :B5

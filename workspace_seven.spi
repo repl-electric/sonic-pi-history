@@ -398,6 +398,7 @@ end
 
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
+stop
 tick
 target_chord =  ring(
         [[:FS2,8.2], [:A2, 8.2], [:Cs3,8.2*2]],

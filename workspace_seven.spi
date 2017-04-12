@@ -246,7 +246,7 @@ if noz[0].to_s[0..1] == "FS" && spread(1,4).look
 at do
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 4
 sleep 0.25
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 3
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs4.wav", amp: 2
 end
 end
 syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 2.5*1

@@ -80,7 +80,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
                   0 0 0 0  0 0 0 0  0 0 0 0  b 0 0 0}).look) != "0"
     #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
-  if spread(2,6).look
+  if spread(2,7).look
 #  shader :shader, "wave.glsl", "rope.vert", :points, (line 10000, 100000, 128).look(:fx)
   shader :shader, "wave.glsl", "rope.vert", (ring "lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx), (line 10000, 100000, 128).look(:fx)
 

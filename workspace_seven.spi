@@ -402,7 +402,7 @@ ds = []
 puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 #synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
 
-sample "/Users/josephwilk/Workspace/music/samples/Live/seven/e0_2.wav", amp: 15
+sample "/Users/josephwilk/Workspace/music/samples/Live/seven/fs0_2.wav", amp: 15
 
 
 sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_fs2.wav",

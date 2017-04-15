@@ -77,7 +77,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
   if (x= ring(*%w{0 a 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 a 0 0  0 0 0 0  0 0 0 0  0 0 0 0
                   0 a 0 0  0 0 0 0  0 0 0 0  0 0 0 0
-                  0 0 0 0  0 0 0 0  0 0 0 0  a 0 0 0}).look) != "0"
+                  0 a 0 0  0 0 0 0  0 0 0 0  a 0 0 0}).look) != "0"
     smp eval(x),amp: 2.5, rate:  ring(-1, 1).look
   end
   if (ring *%W{

@@ -64,7 +64,7 @@ shader :iMotion, 0.000001
 #shader :iWave, 8
 #with_fx :reverb do
 live_loop :texture, sync: :slicing do
-sample "~/Workspace/music/samples/MagicDust/NOISE_TEXTURES/MD_TXT_VNYL_WATERY_SCRUNCHES.wav", amp: 0.5
+sample "~/Workspace/music/samples/MagicDust/NOISE_TEXTURES/MD_TXT_VNYL_WATERY_SCRUNCHES.wav", amp: 0.25
 sleep 32
 end
 live_loop :slicing do

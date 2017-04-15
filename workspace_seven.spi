@@ -68,7 +68,6 @@ sample "~/Workspace/music/samples/MagicDust/NOISE_TEXTURES/MD_TXT_VNYL_WATERY_SC
 sleep 64
 end
 live_loop :slicing do
-stop
 fslice = nil
   tick
   s =  ring(       1/8.0,1/8.0,1/8.0,1/8.0,

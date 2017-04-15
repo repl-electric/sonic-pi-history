@@ -73,7 +73,7 @@ fslice = nil
        
        ).look
 with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
-  b = Dust[/perc/,5];a=Dust[/microperc/,6]
+  b = Dust[/perc/,5];a=Dust[/perc/,6]
   if (x= ring(*%w{0 0 a 0  0 0 0 0  0 0 0 0  0 a 0 0
                   0 0 a 0  0 0 0 0  0 0 0 0  0 b 0 0
                   0 0 a 0  0 0 0 0  0 0 0 0  0 a 0 0

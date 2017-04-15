@@ -63,7 +63,7 @@ shader :iSpeed, 0.00001
 shader :iMotion, 0.000001
 #shader :iWave, 8
 #with_fx :reverb do
-live_loop :texturedo
+live_loop :texture do
 sample "~/Workspace/music/samples/MagicDust/NOISE_TEXTURES/MD_TXT_VNYL_WATERY_SCRUNCHES.wav", amp: 1.0
 sleep 64
 end

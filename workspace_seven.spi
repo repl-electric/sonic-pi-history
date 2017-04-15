@@ -431,8 +431,6 @@ target_chord =  ring(
         [[:FS2,8.2], [:A2, 8.2], [:Cs3,8.2*2]],
         [[:A2,8.2],  [_,   8.2], [:E3,8.2]],
         [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
-        [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
-
 #        [[:CS3,8.2],  [:E3, 8.2], [:Gs3,8.2] ],
 
 ).look
@@ -450,21 +448,21 @@ sample (ring
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
 
-"/Users/josephwilk/Workspace/music/samples/Live/seven/f#1_4.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/seven/b1_4.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/seven/d1_4.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/seven/e1_4.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_4_01.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/b-1.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/d0_2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/e0_2.wav",
 
-#"/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_4_01.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/seven/c#0_4.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/seven/d0_2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/seven/e0_2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_4_01.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/c#0_4.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/d0_2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/seven/e0_2.wav",
 
 
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/b2.wav"
-).look, amp: 10.0*1.0, attack: 0.0, decay: 5.0
+).look, amp: 20.0*1.0, attack: 0.0, decay: 5.0
 sample (ring 
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav",

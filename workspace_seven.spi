@@ -128,7 +128,7 @@ shader :iIntro, 4.0
   end
   if (ring *%W{0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
     #smp Fraz[/coil/,38], amp: 1.0, finish: (line 0.01, 0.06,32).look, rate: 1.25
-    smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{(knit "f#",16, "e",16, "a",16).look}.wav", finish: (line 0.01, 0.06,32).look, amp: 1.5
+    smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{(knit "f#",16, "e",16, "a",16).look}.wav", finish: (line 0.01, 0.06,32).look, amp: 3.5
     #smp Fraz[/coil/,52], amp: 1.5, finish: (line 0.01, 0.06,32).look
 
     #smp Dust[/snare/,2], amp: 2.25, cutoff: (line 120, 135,256).look

@@ -127,8 +127,7 @@ shader :iIntro, 4.0
     end
   end
   if (ring *%W{0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
-    smp Fraz[/coil/,38], amp: 0.8, finish: (line 0.01, 0.06,32).look, rate: 1.25
-puts Fraz[/coil/,38]
+    smp Fraz[/coil/,39], amp: 0.8, finish: (line 0.01, 0.06,32).look, rate: 1.25
     #smp Dust[/snare/,2], amp: 2.25, cutoff: (line 120, 135,256).look
     if spread(1,16).look
 #shader :fx, :kal

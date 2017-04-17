@@ -330,7 +330,10 @@ if (ring *%W{
                                 _   _   _   _
 }
 ).look != "_"
-  smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.1*1
+smp (ring "/Users/josephwilk/Workspace/music/samples/melodyne/junk/JP2_ChainHit_01.wav",
+"/Users/josephwilk/Workspace/music/samples/melodyne/junk/JP2_ChainHit_02.wav",
+"/Users/josephwilk/Workspace/music/samples/melodyne/junk/JP2_ChainHit_03.wav").tick(:chain), amp: 0.1
+#  smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.1*1
 end
 
 #control dd, note: :Fs4

@@ -449,7 +449,6 @@ puts "root: #{target_chord.map{|c| c[0]}}"
 sample (ring "/Users/josephwilk/Workspace/music/samples/Live/form/cello/f#.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/form/cello/a.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/form/cello/b.wav"
-
 ).look, amp: 2.5
 
 sample (ring 

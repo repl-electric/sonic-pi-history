@@ -328,8 +328,7 @@ if  ring(*%W{
 }
 ).look != "_"
 
-
-  smp Junk[/ChainHit/,0..2], amp: 0.2*1
+  smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.2*1
 puts Junk[/ChainHit/,0..2]
 end
 

@@ -446,7 +446,7 @@ ds = []
 puts "root: #{target_chord.map{|c| c[0]}}"
 #synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
 
-sample "/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_2.wav", amp: 5, attack: 0.2
+sample "/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_2.wav", amp: 5, attack: 0.1
 #sample (ring "/Users/josephwilk/Workspace/music/samples/Live/form/cello/f#.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/form/cello/a.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/form/cello/b.wav"

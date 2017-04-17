@@ -352,7 +352,7 @@ true, false, false, false, false, false, false, false, false, false, false, fals
 end
 
     if fslice && fslice[:length] > 0.1
-     smp fslice, amp: 1*8.0, rpitch: 1*(knit -2,4, 3,0, 0,4    #(knit 0,7, 3,7 ,5,7
+     smp fslice, amp: 0*8.0, rpitch: 1*(knit -2,4, 3,0, 0,4    #(knit 0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset: (line 0.0001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
@@ -406,7 +406,7 @@ end
 
 live_loop :breath, sync: :slicing do
   tick
-#  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
+  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
   sleep (1/2.0)*6
 end
 
@@ -484,7 +484,7 @@ sample (ring
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/b2.wav"
-).look, amp: 8.0*1.0, attack: 0.0, decay: 5.0
+).look, amp: 8.0*0.0, attack: 0.0, decay: 5.0
 sample (ring 
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav",

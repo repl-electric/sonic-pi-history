@@ -124,7 +124,7 @@ shader :iIntro, 4.0
   end
   if (ring *%W{0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
     #smp Fraz[/coil/,38], amp: 1.15, finish: (line 0.01, 0.06,32).look
-    smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/fs.wav", finish: (line 0.01, 0.06,32).look
+    smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/f#.wav", finish: (line 0.01, 0.06,32).look
 
     #smp Dust[/snare/,2], amp: 2.25, cutoff: (line 120, 135,256).look
     if spread(1,16).look

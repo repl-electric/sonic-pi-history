@@ -445,7 +445,7 @@ puts "root: #{target_chord.select{|c| c[0]}[0][0]}"
 sample "/Users/josephwilk/Workspace/music/samples/Live/form/cello/f#.wav", amp: 1.5
 
 sample (ring 
-"/Users/josephwilk/Workspace/music/samples/Live/floot/v2f#2.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b1.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/floot/floot_d2.wav",

@@ -63,10 +63,6 @@ shader :iSpeed, 0.00001
 shader :iMotion, 0.000001
 #shader :iWave, 8
 #with_fx :reverb do
-live_loop :texture do
-sample "~/Workspace/music/samples/MagicDust/NOISE_TEXTURES/MD_TXT_VNYL_WATERY_SCRUNCHES.wav", amp: 0.8
-sleep 64
-end
 live_loop :slicing do
 fslice = nil
   tick
@@ -77,12 +73,12 @@ fslice = nil
        
        ).look
 with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
-  a=MagicDust[/./].look;b = nil#Dust[/perc/,59];
-  if (x= ring(*%w{0 0 a 0  0 0 0 0  0 0 0 0  0 a 0 0
-                  0 0 a 0  0 0 0 0  0 0 0 0  0 b 0 0
-                  0 0 a 0  0 0 0 0  0 0 0 0  0 a 0 0
-                  0 0 a 0  0 0 0 0  0 0 0 0  0 b 0 0}).look) != "0"
-#    smp eval(x),amp: 0.8, rate:  ring(-1, 1).look
+  b = Dust[/perc/,1];a = Dust[/perc/,2]
+  if (x= ring(*%w{0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
+                  0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
+                  0 0 0 0  0 0 0 0  0 0 0 0  0 0 0 0
+                  0 0 0 0  0 0 0 0  0 0 0 0  b 0 0 0}).look) != "0"
+    #smp eval(x),amp: 0.5, rate:  ring(-1, 1).look
   end
   if  ring(*%W{
 1 0 0 0   0 0 1 0    1 0 0 0   1 0 0 0
@@ -101,7 +97,7 @@ shader :iIntro, 4.0
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
-    smp Mountain[/subkick/,[1,0,0,0]].look(:sloppy), amp: 1.2*ring(1.5).tick(:inside2), cutoff: ring(135).tick(:inside)-rand*10
+    smp Mountain[/subkick/,[1,0,0,0]].look(:sloppy), amp: 2.0*ring(1.5).tick(:inside2), cutoff: ring(135).tick(:inside)-rand*10
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look
      # smp Junk[/tom/,2], amp: 0.8, rpitch: 0
@@ -115,7 +111,7 @@ shader :iIntro, 4.0
   end
   if spread(1,2, rotate: 0).look
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 2.0, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
@@ -127,9 +123,7 @@ shader :iIntro, 4.0
     end
   end
   if  ring(*%W{0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0}).look == "1"
-  #  smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look#, rate: 1.25
-    smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{ knit("f#",32, "e",32).look}.wav", finish:  line(0.01, 0.06,32).look, amp: 1.0
-    #smp Fraz[/coil/,52], amp: 1.5, finish:  line(0.01, 0.06,32).look
+    smp Fraz[/coil/,38], amp: 1.25, finish:  line(0.01, 0.06,32).look
 
     #smp Dust[/snare/,2], amp: 2.25, cutoff:  line(120, 135,256).look
     if spread(1,16).look
@@ -277,8 +271,6 @@ noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
              [:CS5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
 
 #              [:D5,0.125,0.125,0.001], "_", "_" , "_" ,[:B5,0.5,0.25,0.001],"_", [:Cs5,0.5,0.25,0.001], "_",
-             [:E5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", "_", "_", "_", "_",
-
             "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
 
@@ -354,7 +346,7 @@ true, false, false, false, false, false, false, false, false, false, false, fals
 end
 
     if fslice && fslice[:length] > 0.1
-     smp fslice, amp: 1*8.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
+     smp fslice, amp: 1*8.0, rpitch: 1* knit(0,4, 5,4,3,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
@@ -478,7 +470,7 @@ sample  ring( #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_f#2.w
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/b2.wav"
-).look, amp: 9.0*1.0, attack: 0.0, decay: 5.0
+).look, amp: 15.0*1.0, attack: 0.0, decay: 5.0
 sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_a0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs0.wav",

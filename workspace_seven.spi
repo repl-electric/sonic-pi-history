@@ -99,9 +99,10 @@ shader :iIntro, 4.0
     pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
    sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)
 swing =  ring(0.0, 0, 0.0, 0.125/8.0).look(:sloppy)
+aaa = 1.0*ring(1.0,1.2,1.3,1.4).tick(:inside2)
    at do
     sleep swing
-    smp sss, amp: 1.0*ring(1.0,1.2,1.3,1.4).tick(:inside2), cutoff: ring(135).tick(:inside)-rand*10
+    smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
 end
    # at{; sleep kick_drift; smp dd, amp: 4.5, finish: 0.05+rand(0.01), rpitch: pp }
     if spread(1,16*4).look

@@ -80,7 +80,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
                   0 0 [b,0.4] 0  [b,0.4] 0 0 0  0 0 0 [b,0.8]  0 0 [a,0.8] 0
 }).look) != "0"
     data = eval(x)
-    smp data[0],amp: data[1], cutoff: 100 + rand*15#, rate:  ring(-1, 1).look
+    smp data[0],amp: data[1], cutoff: 100 + rand*20#, rate:  ring(-1, 1).look
   end
   if  ring(*%W{
 1 0 0 0   0 0 1 0    1 0 0 0   1 0 0 0

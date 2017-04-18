@@ -98,7 +98,7 @@ shader :iIntro, 4.0
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
    sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)
-swing =  ring(0.005, 0.0).look(:sloppy:)
+swing =  ring(0.005, 0.0).look(:sloppy)
    at do
     sleep swing
     smp sss, amp: 1.0*ring(1.5).tick(:inside2), cutoff: ring(135).tick(:inside)-rand*10

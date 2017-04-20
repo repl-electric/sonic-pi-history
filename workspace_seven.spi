@@ -127,7 +127,7 @@ end
   end
   if spread(1,2, rotate: 0).look
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-      smp MagicDust[/_HI/,[7,4,4,1]].tick(:ma), amp: 2, rpitch: 0#, amp: 1.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+      smp MagicDust[/_HI/,[7,4,4,1]].tick(:ma), amp: 1.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)

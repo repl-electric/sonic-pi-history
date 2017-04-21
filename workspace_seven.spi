@@ -150,7 +150,7 @@ end
 
     else
 
- #     smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
+      smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end
   end
   if spread(16,64).look

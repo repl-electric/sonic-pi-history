@@ -307,6 +307,11 @@ no2z = (ring
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/cs5.wav", amp: 3.0, rpitch: 0, pan: -0.5
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0, pan: -0.5
+
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/e5.wav", amp: 3.0, rpitch: 0, pan: -0.5
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/cs5.wav", amp: 3.0, rpitch: 0, pan: -0.5
+
+
 #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#4.wav", amp: 3.0, rpitch: 0, pan: 0.5
 
 end

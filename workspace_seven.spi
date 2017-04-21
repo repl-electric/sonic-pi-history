@@ -475,7 +475,6 @@ puts "root: #{target_chord.map{|c| c[0]}}"
 #"/Users/josephwilk/Workspace/music/samples/Live/form/cello/a.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/form/cello/b.wav"
 #).look, amp: 8.5
-SevenBass = "/Users/josephwilk/Workspace/music/samples/Live/seven/"
 sample  ring( #"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/b1.wav",
@@ -488,21 +487,20 @@ sample  ring( #"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/f#2.wav"
 
 #"/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_4_01.wav",
 
-"#{SevenBass}f#0_4.wav",
-"#{SevenBass}b0_2.wav",
-#"#{SevenBass}d0_2.wav",
-#"#{SevenBass}e0_2.wav",
+SevenBass[/f#0_4/],
+SevenBass[/b0_2/],
+SevenBass[/d0_2/]
+SevenBass[/e0_2/],
 
-#"#{SevenBass}f#1_4.wav",
-#"#{SevenBass}b0_2.wav",
-#"#{SevenBass}d1_2.wav",
-#"#{SevenBass}e1_2.wav",
+SevenBass[/f#1_4/],
+SevenBass[/b0_2/],
+SevenBass[/d1_2/]
+SevenBass[/e1_2/],
 
 #"/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_4_01.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/seven/c#0_4.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/seven/d0_2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/seven/e0_2.wav",
-
 
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/thicket/a2.wav",

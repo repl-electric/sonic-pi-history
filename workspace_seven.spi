@@ -381,7 +381,7 @@ true, false, false, false, false, false, false, false, false, false, false, fals
 end
 
     if fslice && fslice[:length] > 0.1
-if  spread(1,32).tick(:insideit)
+if  spread(1,16).tick(:insideit)
      smp fslice, amp: 1*8.0, rpitch: 1*(knit 3,4, 3,0, 0,4    #(knit 0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16

@@ -518,7 +518,7 @@ sample  ring( "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_b0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_cs0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d0.wav"
-).look, amp: 1.0*1.5, attack: 0.0*0
+).look, amp: 1.0*2.0, attack: 0.0*0
 
 puts target_chord
 target_chord.each do |np|

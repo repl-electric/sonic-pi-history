@@ -109,7 +109,7 @@ shader :iIntro, 4.0
     pp = (knit -2,8, 0, 8, 2,8).look(:sloopy)
    sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)
 swing = (knit 0.0, 3, 0.125/3.0, 1).look(:sloppy)
-aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
+aaa = 1.0*ring(1.5,1.2,1.9,1.4).tick(:inside2)
    at do
     sleep swing
     smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10

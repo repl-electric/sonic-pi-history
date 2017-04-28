@@ -535,7 +535,6 @@ sample  ring(
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/d2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/e2.wav",
  
-"/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
  
@@ -548,7 +547,11 @@ SevenBass[/f#1_4/],
 SevenBass[/b0_2/],
 SevenBass[/d1_2/],
 SevenBass[/e1_2/],
-).look, amp: 8.0*1.0, attack: 0.0, decay: 5.0
+).look, amp: 8.0*0.0, attack: 0.0, decay: 5.0
+
+if spread(1,4).look
+sample "/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
+end
 
 puts ring( 
 SevenBass[/f#0_4/],

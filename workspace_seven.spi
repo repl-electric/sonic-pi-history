@@ -550,7 +550,7 @@ SevenBass[/e1_2/],
 ).look, amp: 8.0*0.0, attack: 0.0, decay: 5.0
 
 if spread(1,4).look
-synth :hollow, note :FS2 #sample "/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav", amp: 2
+synth :hollow, note :FS2, decay: 32 #sample "/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav", amp: 2
 else
 end
 
@@ -565,7 +565,7 @@ SevenBass[/d1_2/],
 SevenBass[/e1_2/],
 ).look.to_s.split("/").last
 
-sample (ring Suburb[/a0/],
+sample  ring(Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]

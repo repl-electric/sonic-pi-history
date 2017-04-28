@@ -431,7 +431,7 @@ end
     else
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60,mix: 1 do
-  sample Frag[/snap/, 1], amp: (line 1,0, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
+  sample Frag[/snap/, 1], amp: (line 1,0.5, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
   smp fslice, amp: 8.0*1, rpitch: 0, cutoff: 130, finish_offset:  ring(-0.0001,0.0,0.0,0.005).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.02 : 0.0)
 end
 end

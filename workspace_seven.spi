@@ -526,7 +526,7 @@ SevenBass[/f#1_4/],
 SevenBass[/b0_2/],
 SevenBass[/d1_2/],
 SevenBass[/e1_2/],
-).look
+).look.split("/").last
 
 
 sample  ring( Suburb[/a0/],

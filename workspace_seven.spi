@@ -305,7 +305,7 @@ if noz[0].to_s[0..1] == "FS" && spread(1,4).look
 #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
 end
-syn :gpa, note: noz[0], decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
+syn :gpa, note: noz[0]+7, decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
  
 if spread(1, 32*2).look
 #sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d0.wav", amp: 2.0
@@ -518,7 +518,7 @@ SevenBass[/d1_2/],
 SevenBass[/e1_2/],
 ).look.to_s.split("/").last
 
-sample  ring(Suburb[/a0/],
+sample (ring Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]

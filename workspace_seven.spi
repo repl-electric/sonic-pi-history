@@ -133,7 +133,7 @@ end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-        smp MagicDust[/_HI/,5], amp: 0.1
+        #smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
@@ -517,7 +517,7 @@ SevenBass[/d1_2/],
 SevenBass[/e1_2/],
 ).look.to_s.split("/").last
 
-sample  ring(Suburb[/a0/],
+sample (ring Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]

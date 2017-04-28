@@ -570,7 +570,7 @@ SevenBass[/d1_2/],
 SevenBass[/e1_2/],
 ).look.to_s.split("/").last
 
-sample (ring Suburb[/a0/],
+sample  ring(Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]
@@ -585,7 +585,7 @@ end
 4.times{
   control g_fx, mix: rand, damp: rand
   #control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
-  control ds.choose, amp: 0*(1.5 + rand) / target_chord.count
+  control ds.choose, amp: 1*(1.5 + rand) / target_chord.count
   sleep 1
 }
 end

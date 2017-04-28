@@ -393,12 +393,12 @@ end
      smp fslice, amp: 1.0*8.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
-).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
+).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg) , finish_offset: ( spread(7, 11).look ? 0.01
 #end
     else
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60,mix: 1 do
-  #sample Frag[/snap/, 0..12].look, amp: (line 1,0.1, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
+  #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
   smp fslice, amp: 8.0*1, rpitch: 0, cutoff: 130, finish_offset:  ring(-0.0001,0.0,0.0,0.005).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.02 : 0.0)
 end
 end
@@ -516,10 +516,10 @@ if spread(1,4).look
 #@sh = synth :hollow, note: :FS3, sustain: 32, amp: 3 #sample "/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav", amp: 2
 else
 #puts @sh
-#control @sh, note: (ring :B3, :D3, :E3).look
+#control @sh, note:  ring(:B3, :D3, :E3).look
 end
 
-sample (ring Suburb[/a0/],
+sample  ring(Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]
@@ -531,7 +531,7 @@ if np[0]
 ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count))
 end
 end
-((ring 8).look).times{
+( ring(8).look).times{
   control g_fx, mix: rand, damp: rand
   control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
   control ds.choose, amp: 2*(1.5 + rand) / target_chord.count

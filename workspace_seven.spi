@@ -347,11 +347,11 @@ noz2 =  ring(             [:A5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
 ).look
  
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
+#sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
 sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
 end
 if noz[0] != "_"
-syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
+#syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
 end
 
 if spread(1, 32*2).look

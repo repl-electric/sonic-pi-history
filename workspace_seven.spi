@@ -569,7 +569,7 @@ if np[0]
 ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: (1.5 / target_chord.count))
 end
 end
-with_fx :hpf, cutoff: 120, mix: 1.0 do
+with_fx :hpf, cutoff: 40, mix: 1.0 do
 ((ring 8).look).times{
   control g_fx, mix: rand, damp: rand
   #control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)

@@ -431,7 +431,7 @@ if  spread(1,8).tick(:insideit)
 end
     else
 
-with_fx :distortion, mix: 0.03 do
+with_fx :distortion, mix: 0.05 do
 with_fx :krush, mix: 1.0, gain:  line(0, 0.7,32).look do
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60,mix: 0 do

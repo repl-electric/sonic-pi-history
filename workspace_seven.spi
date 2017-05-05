@@ -353,7 +353,7 @@ noz2 =  ring(             [:A5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
 ).look
  
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
-sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 3.0, rpitch: 0
+sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 4.0, rpitch: 0
 #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
 end
 if noz[0] != "_"

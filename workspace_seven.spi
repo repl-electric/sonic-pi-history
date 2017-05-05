@@ -363,7 +363,7 @@ noz = (ring
 #            "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
 
-noz2 = (ring [:B4,0,0,0]).look
+noz2 = (ring [:D4,0,0,0]).look
 
 if noz2[0] != "_"
 syn :gpa, note: note(noz2[0]), decay: 0.001, decay: noz2[1], release: noz2[2], attack: noz2[3], amp: 1.5*4

@@ -14,7 +14,6 @@ def syn(*args)
     synth *args
   end
 end
- 
 module Straw
   def self.slice(n, size: 1/4.0)
     @straw_cache ||= {}

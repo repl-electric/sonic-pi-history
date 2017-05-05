@@ -165,7 +165,7 @@ shader :iIntro, 4.0
   end
   if spread(16,64).look
     with_fx :bitcrusher, bits: 16 do
-      smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
+      #smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
     end
   end
  

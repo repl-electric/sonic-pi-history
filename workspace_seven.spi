@@ -105,7 +105,7 @@ shader :fx, :kal
   shader :iRadius,  line(0,0.25,128*4).look
 shader :iIntro, 4.0
 #shader :decay, :iCrazy, 0.1, 0.1
-    dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
+    dd =  knit(_,3, Corrupt[/One Shots/, /hum/,3],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
     pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
    sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)

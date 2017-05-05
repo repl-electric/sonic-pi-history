@@ -128,7 +128,7 @@ shader :iIntro, 4.0
   end
   if spread(1,2, rotate: 0).look 
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-      #smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.2, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack:  line(0.0, 0.02,128).look(:ma)
+      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.2, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack:  line(0.0, 0.02,128).look(:ma)
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
@@ -351,7 +351,6 @@ noz2 =  ring(             [:A5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0
  
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.4, rpitch: 0
-  #sample "/Users/josephwilk/Workspace/music/samples/Live/organ02/f#5.wav", amp: 1.0, rpitch: 0
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
 end
 if noz[0] != "_"

@@ -559,10 +559,12 @@ sample  (baz=ring(
 #SevenBass[/02\/d0/],
 #SevenBass[/02\/e0/]
 
-SevenBass[/seven\/f#0_4/],
-SevenBass[/b0_2/],
-SevenBass[/d0_2/],
-SevenBass[/e0_2/],
+SevenBass[/beat/],
+
+#SevenBass[/seven\/f#0_4/],
+#SevenBass[/b0_2/],
+#SevenBass[/d0_2/],
+#SevenBass[/e0_2/],
  
 #SevenBass[/f#1_4/],
 #SevenBass[/b0_2/],

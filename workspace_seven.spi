@@ -377,7 +377,7 @@ if noz[0].to_s[0] == "B"
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 8.0, rpitch: 0
 end
 if noz[0].to_s[0] == "D"
-  #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 1.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 1.0, rpitch: 0
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.0, rpitch: 0
 end
 

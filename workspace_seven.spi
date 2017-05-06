@@ -390,7 +390,7 @@ noz = (ring
 ).look
 
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5.wav", amp: 2.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 2.0, rpitch: 0
 #  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
 end
 if noz[0] != "_"

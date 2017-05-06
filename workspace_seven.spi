@@ -388,7 +388,6 @@ noz = (ring
 
 #            "_",  "_", "_", "_", "_", "_", "_", "_",
 ).look
- sample_free_all
 if true#noz[0].to_s[0..1] == "FS" && spread(1,4).look
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 2.0, rpitch: 0
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/e5.wav", amp: 2.0, rpitch: 0

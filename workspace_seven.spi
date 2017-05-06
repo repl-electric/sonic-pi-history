@@ -391,7 +391,6 @@ noz = (ring
  
 if noz[0].to_s[0] == "D" && spread(1,4).look
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 1.4, rpitch: 0
-
 end
  
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look

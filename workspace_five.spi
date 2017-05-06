@@ -1,38 +1,22 @@
 
-
-live_loop :test, sync: :slicing do
-  tick
-  if (ring
-      true, false, false, false, false, false,   #6
-      true, false, false, false, false, false, false, false, false, false,  #10
-      true, false, false, false, false, false, false,                       #7
-      true, false, false, false, false, false, false, false, false, false, false,  #11
-      
-      #34
-      
-      true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, #16
-      true, false, false, false, false, false,  #6
-      true, false, false, false, false, false, false, false #8
-      ).look
-    smp MagicDust[/_HI/,1]
-  end
-  sleep 1/8.0
+live_loop :tune do
+play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
+sleep 1/2.0
 end
 
-live_loop :patterns, sync: :test  do
-  tick
-  if (ring
-      false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, #16
-      false, false, false, false, false, false,  #6
-      false, false, false, false, false, false, false, false, #8
-      
-      false, false, false, false, false, false,   #6
-      false, false, false, false, false, false, false, false, false, false,
-      false, false, false, false, false, false, false,                       #7
-      false, false, false, false, false, false, false, false, false, false, false,  #11
-      
-      ).look  #10
-    smp MagicDust[/_MI/,1], amp: 1
-  end
-  sleep 1/8.0
+
+bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
+bass_notes.tick(:i)
+with_fx :level, amp: 0.00 do
+with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|
+  with_fx :krush, mix: 0.2, mix_slide: 4*1 do |d_fx|
+  synth :hollow, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
+  synth :pluck, note: bass_notes.look(:i)
+  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1,   attack: 0.001, amp: 1.0, wave: 4
+at do
+ sleep 1/8.0; control d_fx, mix: 0
+ 15.times{control r_fx, damp: rand, mix: 1.0; sleep 1/8.0}
+end
+end
+end
 end

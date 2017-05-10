@@ -122,7 +122,7 @@ shader :iIntro, 4.0
      if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2
- #       smp Mountain[/subkick/,1], amp: 0.5*2
+        smp Mountain[/subkick/,1], amp: 0.5*2
       end
     end
   end

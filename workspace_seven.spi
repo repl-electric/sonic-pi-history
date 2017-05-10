@@ -427,7 +427,7 @@ end
  
     if fslice && fslice[:length] > 0.1
 if  spread(1,8).tick(:insideit)
-#     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      smp fslice, amp: 0*8.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16

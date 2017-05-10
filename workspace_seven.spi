@@ -440,7 +440,7 @@ with_fx :hpf, cutoff: 60, mix: 0 do
   #sample Frag[/snap/, 0..12].look, amp: (line 1,0.1, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
 
      if spread(1,2).look
-     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 

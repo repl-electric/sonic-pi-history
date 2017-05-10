@@ -439,9 +439,9 @@ with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60, mix: 1 do
   #sample Frag[/snap/, 0..12].look, amp: (line 1,0.1, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
      if spread(3,8).look
-     fslice[:path] = Berry["gaiazone_04",0]
+     fslice[:path] = ["/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04"]
      else
-     fslice[:path] = Berry["gaiazone_03",0]
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 
      puts fslice[:path]
   smp fslice, amp: 3.0*1, rpitch: 0, finish_offset:  ring(-0.0001,0.0,0.0,0.005).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 , finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)

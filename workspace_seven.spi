@@ -113,7 +113,7 @@ shader :iIntro, 4.0
    aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
    #at do
     #sleep swing
-    #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
+    smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
 #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
     if spread(1,16*4).look
@@ -122,19 +122,19 @@ shader :iIntro, 4.0
      if spread(1,32).tick(:sindie)
       at do
         sleep (1/8.0)*2
-   #     smp Mountain[/subkick/,1], amp: 0.5*1
+        smp Mountain[/subkick/,1], amp: 0.5*1
       end
     end
   end
   if spread(1,2, rotate: 0).look 
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
-  #    smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack: (line 0.0, 0.02,128).look(:ma)
- #     smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+      smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack: (line 0.0, 0.02,128).look(:ma)
+      smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-#        smp MagicDust[/_HI/,5], amp: 0.1
+        smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
@@ -149,7 +149,7 @@ shader :iIntro, 4.0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    1 0 0 0   1 0 0 0}).look == "1"
-    #smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look
+    smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{knit("f#",4,"d",2,"e",2).tick(:snare)}.wav", start: line(0.0, 0.0005,1024).look, finish: line(0.01, 0.06,32).look, amp: 1.25
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{ knit("f#",3,"d",3,"e",2).look}.wav", start: 0.03, finish:  line(0.01, 0.06,32).look, amp: 4.0
     #smp Frag[/FR1_Coil_27_F#m/], start: 0.0, finish:  line(0.01, 0.044,32).look, amp: 0.35, rpitch: 0
@@ -200,7 +200,7 @@ end
      future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
  
  if future_fslice && future_fslice[:length] > 0.1
-comment do
+uncomment do
 if spread(1,4).look
 at do
 smp MagicDust[/_MID/,49], amp: 0.8*1
@@ -373,7 +373,7 @@ if noz[0].to_s[0] == "D"  && spread(1,2).look
 end
 
 if noz[0] != "_"
-#syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
+syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.5*1
 end
 
 if (sno= ring(*%W{
@@ -436,16 +436,16 @@ end
 
 #with_fx :krush, mix: 0.0, gain: (line 0, 0.7,16).look do
 with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do 
-with_fx :lpf, cutoff: 85, mix: 1 do
-with_fx :hpf, cutoff: 60, mix: 1 do
+with_fx :lpf, cutoff: 85, mix: 0 do
+with_fx :hpf, cutoff: 60, mix: 0 do
   #sample Frag[/snap/, 0..12].look, amp: (line 1,0.1, 1024).shuffle.look#, rate: (line 0.5, 2.0,256).look
      if spread(3,8).look
-#     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 
      puts fslice[:path]
-  smp fslice, amp: 3.0*1, rpitch: 0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001, finish_offset: ( spread(7, 11).look ? 0.4 : 0.0)
+  smp fslice, amp: 3.0*1, rpitch: 0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0#, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 end
 end
 end
@@ -487,7 +487,7 @@ end
 #if fslice && (fslice[:offset] - fslice[:onset]) < 0.1
 # sleep 1/8.0
 #else
-sleep s*8
+sleep s
 #end
 end
  
@@ -564,7 +564,7 @@ SevenBass[/f#1_4/],
 SevenBass[/b0_2/],
 SevenBass[/d1_2/],
 SevenBass[/e1_2/],
-).look), amp: 8.0*0.0, attack: 0.0, decay: 5.0
+).look), amp: 0.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 if spread(1,4).look
@@ -577,7 +577,7 @@ sample (ring Suburb[/a0/],
              Suburb[/b0/],
              Suburb[/cs0/],
              Suburb[/d0/]
-).look, amp: 1.0*1, attack: 2.0*1
+).look, amp: 1.0*1, attack: 2.0*0
  
 puts target_chord
 target_chord.each do |np|
@@ -588,7 +588,7 @@ end
 with_fx :hpf, cutoff: 50, mix: 1.0 do
 ((ring 8).look).times{
   control g_fx, mix: rand, damp: rand
-  control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS4, 2).tick(:melo)
+  control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
   control ds.choose, amp: 1.5*(1.5 + rand) / target_chord.count
   sleep 1
 }

@@ -460,7 +460,6 @@ with_fx :hpf, cutoff: 60, mix: 0 do
     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_e2.wav"
 
 
-
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 

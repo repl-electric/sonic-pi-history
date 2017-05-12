@@ -459,8 +459,7 @@ with_fx :hpf, cutoff: 60, mix: 0 do
      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
     #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
     #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Alternity/vor_alto_ambience_gs_24.wav"
-fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
-
+fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_03.wav"
 
 
      else

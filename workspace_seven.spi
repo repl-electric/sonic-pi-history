@@ -387,7 +387,7 @@ mid = (ring [:FS2,0.5,2,0], "_", "_","_", "_", "_","_","_",
 "_","_","_","_"  
 ).look
 if mid[0] != "_"
-syn :piano, note: note(mid[0])+12, decay: mid[1], release: mid[2]*2, attack: mid[3], amp: 1.0*0.8#, detune: 12
+syn :piano, note: note(mid[0])+12, decay: mid[1], release: mid[2]*2, attack: mid[3], amp: 1.0*0.4#, detune: 12
 end
 
 if (sno= ring(*%W{

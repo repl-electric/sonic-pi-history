@@ -456,7 +456,8 @@ with_fx :lpf, cutoff: 85, mix: 0 do
 with_fx :hpf, cutoff: 60, mix: 0 do
   #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
      if spread(3,8).look
-     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
+     #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
+    fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/bbuk-tuned/zf_bbuk_stacc_C#1_1_r1.wav"
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 

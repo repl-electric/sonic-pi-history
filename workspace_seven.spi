@@ -388,7 +388,7 @@ mid = (ring [:FS2,0.5,2,0], "_", "_","_", "_", "_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-sample "/Users/josephwilk/Workspace/music/samples/piano/Samples/notes/#{i}/emo_dn_#{i}_02.wav", amp: 2
+sample "/Users/josephwilk/Workspace/music/samples/piano/Samples/notes/#{i}/emo_dn_#{i}_02.wav", amp: 1.5
 
 syn :piano, note: note(mid[0])+12, decay: mid[1], release: mid[2]*3, attack: mid[3], amp: 1.0*0.4#, detune: 12
 end

@@ -4,6 +4,6 @@ tick
 play (ring chord(:FS2, :m),
       chord(:B2, :m),
       chord(:D2, :M),
-      chord(:E2, :M)).look
-sleep 1
+      chord(:E2, :M)).look, decay: 2
+sleep 2
 end

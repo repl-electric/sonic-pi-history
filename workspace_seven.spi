@@ -554,14 +554,7 @@ SevenBass[/seven\/f#0_4/],
 
 "/Users/josephwilk/Workspace/music/samples/Live/beat_sev/b0.wav".
 
-SevenBass[/d0_2/],
-SevenBass[/e0_2/],
- 
-SevenBass[/f#1_4/],
-SevenBass[/b0_2/],
-SevenBass[/d1_2/],
-SevenBass[/e1_2/],
-).look), amp: 8.0*0.0, attack: 0.0, decay: 5.0
+.look), amp: 8.0*0.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 if spread(1,4).look

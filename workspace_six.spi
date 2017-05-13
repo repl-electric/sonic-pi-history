@@ -7,7 +7,6 @@ play x=(ring
       chord(:B2, :m),
       chord(:D2, :m),
       chord(:A2, :M),
-
       chord(:E2, :M)
 ).look+12, decay: 2
 puts note_inspect(x)

@@ -526,11 +526,6 @@ ds = []
 puts "root: #{target_chord.map{|c| c[0]}}"
 #synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
 
-#sample "/Users/josephwilk/Workspace/music/samples/Live/seven/f#0_2.wav", amp: 5
-#sample  ring("/Users/josephwilk/Workspace/music/samples/Live/form/cello/f#.wav").look
-#"/Users/josephwilk/Workspace/music/samples/Live/form/cello/a.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/form/cello/b.wav"
-#).look, amp: 8.5
 baz = ""
 sample  (baz=ring( 
 #"/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
@@ -561,22 +556,17 @@ SevenBass[/e1_2/],
 ).look), amp: 8.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
-if spread(1,4).look
-#@sh = synth :hollow, note: :FS3, sustain: 32, amp: 3 #sample "/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav", amp: 2
-else
-#puts @sh
-#control @sh, note: (ring :B3, :D3, :E3).look
-end
-sample (ring Suburb[/a0/],
-             Suburb[/b0/],
-             Suburb[/cs0/],
-             Suburb[/d0/]
+sample (ring 
+Suburb[/a0/],
+Suburb[/b0/],
+Suburb[/cs0/],
+Suburb[/d0/]
 ).look, amp: 1.0*1, attack: 2.0*1
- 
+
 puts target_chord
 target_chord.each do |np|
 if np[0]
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 0*(1.5 / target_chord.count))
+ds << (synth :beep, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 0*(1.5 / target_chord.count))
 end
 end
 with_fx :hpf, cutoff: 50, mix: 1.0 do

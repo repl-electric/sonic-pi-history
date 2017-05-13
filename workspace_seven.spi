@@ -148,7 +148,7 @@ shader :iIntro, 4.0
   #  smp Dust[/snare/,2], amp: 0.5, cutoff:  line(120, 135,256).look
     if spread(1,16).look
 #shader :fx, :kal
-    # smp Dust[/snare/,8], amp: 0.25
+     smp Dust[/snare/,8], amp: 0.25
     #smp Dust[/snare/,1], amp: 0.24
  
     else

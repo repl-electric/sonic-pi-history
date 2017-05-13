@@ -453,8 +453,7 @@ with_fx :hpf, cutoff: 60, mix: 0 do
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav" **
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag/FR1_SOUNDS_&_FX/FR1_ATMOSPHERES/FR1_Atmos_37_F#m.wav"
-
-      if spread(1,8).tick(:interference)
+      if spread(7,11).tick(:interference)
       fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav"
       else
       fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/INTERFERENCES/FR2_Interference_25_F#m.wav"

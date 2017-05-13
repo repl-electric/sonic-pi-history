@@ -451,7 +451,7 @@ with_fx :hpf, cutoff: 60, mix: 0 do
      if  knit(spread(3,8).look, 8*8, spread(4,8).look,8*4).look
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
-      fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav"
+      fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_16_F#m.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Juno/Soundiron Crystal/Samples/ambiences/crystal_ambience_03.wav" 
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_12.wav"

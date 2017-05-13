@@ -576,7 +576,7 @@ with_fx :hpf, cutoff: 50, mix: 1.0 do
 ((ring 8).look).times{
   control g_fx, mix: rand, damp: rand
   #control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
-  control ds.choose, amp: 0.1*(1.5 + rand) / target_chord.count
+  control ds.choose, amp: 1*(1.5 + rand) / target_chord.count
   sleep 1
 }
 end

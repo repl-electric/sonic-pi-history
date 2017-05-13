@@ -5,7 +5,8 @@ x=nil
 play x= ring(chord(:FS2, :m),
       chord(:B2, :m),
       chord(:Cs2, :m),
-      chord(:E2, :M)).look, decay: 2
+#      chord(:E2, :M)
+).look, decay: 2
 puts note_inspect(x)
 sleep 2
 end

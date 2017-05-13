@@ -379,7 +379,7 @@ mid =  ring([:FS2,0.5,2,0], "_", "_","_", "_", "_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-with_fx :distortion, mix: 0.8, distort:  line(0.0, 1.0, 32*2).look do
+with_fx :distortion, mix: 0.8, distort:  line(0.0, 1.0, 64*2).look do
 syn :beep, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 1.0*0.8#, detune: 12
 end
 end

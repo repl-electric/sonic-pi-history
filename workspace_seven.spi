@@ -465,8 +465,8 @@ end
  
  
      if spread(1,64).look
-        #smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
-        #rpitch:  ring(12*1).look, cutoff: 100
+        smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
+        rpitch:  ring(12*1).look, cutoff: 100
       end
     end
     if  spread(8, 16).look

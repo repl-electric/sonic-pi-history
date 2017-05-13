@@ -383,34 +383,6 @@ if mid[0] != "_"
 i= rand_i
 #syn :beep, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 1.0*0.8#, detune: 12
 end
-
-if (sno= ring(*%W{
- _ _ _ [:Fs1,2]  _ _ _ [:Fs0,1]
- _ _ _ [:E1,2]   _ _ _ _
- _ _ _ [:D1,2]   _ _ _ _
- _ _ _ [:Cs1,2]  _ _ _ _
- _ _ _ [:Cs1,2]  _ _ _ _
- _ _ _ [:Cs1,2]  _ _ _ _
- _ _ _ [:D1,2]   _ _ _ _
- _ _ _ [:E1,2]   _ _ _ _
- 
-}).look) != "false"
-#sz = syn :beep, note:  knit(:FS1,1).tick(:bassline), attack: 0.001, amp: 5, release:  ring(0.25).look(:bassline)
-tick(:bassline)
-#s1 = syn :prophet, note:  knit(:B1,1).look(:bassline), amp: 4, release: 0.25, attack: 0.05, cutoff: 65, cutoff_slide: 0.5
-s1,s2=nil
-#fx_sh = with_fx :pitch_shift, time_dis: 0.01, mix: 0.0, mix_slide: 1 do
-with_transpose 0 do
-sno = eval(sno)
-if sno
-#s1 = syn :beep, note: sno[0], amp: 4.5, release: sno[-1], attack: 0.01, cutoff_slide: 0.5
-end
-#s2 = syn :dsaw, note: sno, amp: 2, release: 0.25, attack: 0.05, cutoff: 100, cutoff_slide: 0.5
-end
-end
-#s2 = syn :dsaw,    note: sno, amp: 0.5#, release:  knit(0.85,6, 1.5,1,0.85,1).look(:bassline), attack: 0.1, cutoff:  knit(90,1, 80,1, 100,4, 135,1, 100,1).look(:bassline), cutoff_slide: 0.5
- 
-#end
  
 if  ring(*%W{
                                 _   _   _   _   _   x

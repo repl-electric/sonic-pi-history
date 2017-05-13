@@ -416,7 +416,7 @@ if  spread(1,8).tick(:insideit)
 end
     else
 
-with_fx :krush, mix: 0.3, gain: (line 0, 0.7,16).look do
+with_fx :krush, mix: 0.5, gain: (line 0, 0.7,16).look do
 mode = 0
 with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do 
 with_fx :lpf, cutoff: 85, mix: 1 do

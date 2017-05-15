@@ -4,6 +4,7 @@ _=[_,0]
 tick
 x=nil
 x=(ring 
+      _, _, _, _,
       [chord(:FS2, :m),4], _, _, _,                              #F2  A2  C#3
       [chord(:A2, :M, invert: -1),2], _, [chord(:B2, :M, invert: 0),6], _,                   #D2 F2  B2
       _, _, _, _,                   #D2 F2  B2

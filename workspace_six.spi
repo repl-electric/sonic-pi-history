@@ -42,7 +42,7 @@ x=(ring
  #     [chord(:E3, :M),4], _, _, _,
  #     _, _, _, _
 ).look
-synth :dsaw, note: x[0].map{|n| note(n)+0}, release: x[1], amp: 0.5, cutoff: 80
+synth :dsaw, note: x[0].map{|n| note(n)+0}, release: x[1], amp: 1.0, cutoff: 80
 puts note_inspect(x[0].map{|n| note(n)+0}[0])
 sleep 1
 end

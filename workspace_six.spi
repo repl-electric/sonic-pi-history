@@ -37,6 +37,10 @@ x=(ring
       [chord(:B2, :M),4], _, _, _,                               #E   G  B
       [chord(:Ab3, :m),4], _, _, _,                               #E   G  B
       [chord(:B2, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
+
+
 
 ).look
 synth :beep, note: x[0], release: x[1]

@@ -7,7 +7,7 @@ x= ring(       _, _, _, _,
       [chord(:FS2, :m),2], _,  [chord(:B2, :M, invert: 0),2], _,                              #F2  A2  C#3
       [chord(:FS2, :m),8], _, _, _,
       _, _, _, _,
-      [chord(:B2, :M, invert: 0),2], _ [chord(:B2, :M, invert: 0),2],_
+      [chord(:B2, :M, invert: 0),2], _ [chord(:B2, :M, invert: 0),2],_,
       [chord(:FS2, :m),4],_, _, _,
 
       [chord(:B2, :M, invert: 0),6], _,  _, _,                   #D2 F2  B2

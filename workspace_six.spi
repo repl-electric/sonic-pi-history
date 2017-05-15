@@ -4,8 +4,7 @@ tick
 x=nil
 synth :beep, note: x= ring(       chord(:FS3, :m), _, _, _,
       chord(:B3, :m), _, chord(:A3, :m), _,   #B3 D4 F4
-      _, _, _, _,                #A3 C4 E4
-      chord(:D3, :m), _, _, _,   #D3 F3 A3
+      chord(:D3, :m), _, _, _,     #D3 F3 A3
       chord(:E3, :M), _, _, _
 ).look, release: 4
 puts note_inspect(x)

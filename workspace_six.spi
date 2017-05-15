@@ -1,12 +1,13 @@
 
 live_loop :testing do
 _=[_,0]
-stop
 tick
 x=nil
 x=(ring 
       _, _, _, _,
       [chord(:FS2, :m),2], _,  [chord(:B2, :M, invert: 0),2], _,                              #F2  A2  C#3
+
+      [chord(:FS2, :m),4], _, _, _,
       [chord(:B2, :M, invert: 0),6], _,   _, _,                   #D2 F2  B2
       [chord(:B2, :m, invert: -2),4], _, _, _,                   #D2 F2  B2
       [chord(:D2, :M),4], _, _, _,                               #D2  F2 A3
@@ -25,7 +26,7 @@ end
 
 
 live_loop :testing2 do
-#stop
+stop
 _=[_,0]
 tick
 x=nil

@@ -43,7 +43,7 @@ x=(ring
  #     [chord(:E3, :M),4], _, _, _,
  #     _, _, _, _
 ).look
-synth :prophet, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.2, cutoff: 50
+synth :prophet, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.2, cutoff: 60
 puts note_inspect(x[0])
 sleep 1
 end

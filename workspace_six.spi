@@ -44,7 +44,7 @@ x=(ring
  #     _, _, _, _
 ).look
 synth :prophet, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.2, cutoff: 60
-synth :dsaw, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.25, cutoff: 70
+synth :dsaw, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.5, cutoff: 70
 
 puts note_inspect(x[0])
 sleep 1

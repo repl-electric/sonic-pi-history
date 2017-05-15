@@ -20,7 +20,7 @@ sleep 1
 end
 
 
-live_loop :testing do
+live_loop :testing2 do
 stop
 _=[_,0]
 tick

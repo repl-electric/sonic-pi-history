@@ -13,7 +13,6 @@ x= ring(       [chord(:FS2, :m),4], _, _, _,                              #F2  A
       [chord(:D3, :M),4], _, _, _,                               #D3 F3 A3
       [chord(:E3, :M),4], _, _, _,
       _, _, _, _
-
 ).look
 synth :beep, note: x[0], release: x[1]
 puts note_inspect(x[0])

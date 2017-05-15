@@ -31,7 +31,7 @@ x=(ring
 ).look
 synth :dsaw, note: x[0][0], release: x[1]/2.0, amp: 0.2
 puts note_inspect(x[0])
-sleep 1/2.0
+sleep 1/4.0
 end
 
 

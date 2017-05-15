@@ -37,7 +37,7 @@ x= ring(       [chord(:B2, :M),4], _, _, _,                              #F2  A2
       [chord(:B2, :M),4], _, _, _,                               #E   G  B
       [chord(:Eb3, :M),4], _, _, _,                               #E   G  B
       [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
-      [chord(:B3, :M),4], _, _, _,                               #E   G  B
+      [chord(:B2, :M),4], _, _, _,                               #E   G  B
       [chord(:Eb3, :M),4], _, _, _,                               #E   G  B
       [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
       [chord(:Ab3, :m),4], _, _, _,                               #E   G  B

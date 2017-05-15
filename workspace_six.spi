@@ -50,7 +50,7 @@ x=(ring   # B C D (E)-4th
       [chord(:Ab2, :m),4], _, _, _,                               #E   G  B
 
 ).look
-synth :beep, note: x[0], release: x[1]
+synth :dsaw, note: x[0], release: x[1]
 puts note_inspect(x[0])
 sleep 1
 end

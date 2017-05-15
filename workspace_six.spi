@@ -2,8 +2,7 @@
 live_loop :testing do
 tick
 x=nil
-play x=(ring 
-      chord(:FS2, :m), _, _, _,
+play :beep, x= ring(       chord(:FS2, :m), _, _, _,
       chord(:B2, :M), _, _, _,
       chord(:E2, :m), _, _, _,
       chord(:D2, :m), _, _, _,

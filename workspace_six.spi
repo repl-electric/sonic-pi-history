@@ -3,15 +3,14 @@ live_loop :testing do
 _=[_,_]
 tick
 x=nil
-x=(ring 
-      [chord(:FS3, :m),4], _, _, _,
-      [chord(:B3, :m),4], _, [chord(:B3, :m, invert:-1),2], _,   #D3 F3 #B3  
+x= ring(       [chord(:FS3, :m),4], _, _, _,
+      [chord(:B3, :m),4], _, [chord(:B3, :m, invert:-1),2], _,   #F3 #B3 D3   
       [chord(:D3, :M),4], _, _, _,                               #D3 F3 A3
       [chord(:E3, :M),4], _, _, _
 ).look
-synth :beep, note: x[0], release: x[1]
+synth :beep, note: x[0], release: x[1]/2.0
 puts note_inspect(x[0])
-sleep 1
+sleep 1/2.0
 end
 
 

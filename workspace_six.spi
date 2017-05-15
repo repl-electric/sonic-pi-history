@@ -3,7 +3,8 @@ live_loop :testing do
 _=[[],0]
 tick
 x=nil
-x= ring(    #   _, _, _, _,
+x=(ring 
+   #   _, _, _, _,
 #      [chord(:FS2, :m),2], _,  [chord(:B2, :M, invert: 0),2], _,                              #F2  A2  C#3
 #      [chord(:FS2, :m7),8], _, _, _,
   #    _, _, _, _,
@@ -43,7 +44,7 @@ x= ring(    #   _, _, _, _,
  #     _, _, _, _
 ).look
 synth :prophet, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.2, cutoff: 60
-synth :dsaw, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.2, cutoff: 70
+synth :dsaw, note: x[0].map{|n| note(n)+0}[0], release: x[1], amp: 0.25, cutoff: 70
 
 puts note_inspect(x[0])
 sleep 1
@@ -55,7 +56,7 @@ stop
 _=[_,0]
 tick
 x=nil
-x= ring(  # B-C-D-(E)-4th
+x=(ring   # B-C-D-(E)-4th
       _, _, _, _, 
       [chord(:B2, :M),2], _, [chord(:Eb3, :M),2], _,                              #F2  A2  C#3
       [chord(:B2, :M),8], _, _, _,                               #D3  F3  A3

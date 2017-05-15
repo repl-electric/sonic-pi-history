@@ -3,7 +3,8 @@ live_loop :testing do
 _=[[],0]
 tick
 x=nil
-x= ring(    #   _, _, _, _,
+x=(ring 
+   #   _, _, _, _,
 #      [chord(:FS2, :m),2], _,  [chord(:B2, :M, invert: 0),2], _,                              #F2  A2  C#3
 #      [chord(:FS2, :m7),8], _, _, _,
   #    _, _, _, _,
@@ -18,7 +19,7 @@ x= ring(    #   _, _, _, _,
       [chord(:B0, :M, invert: 0),4], _,  _, [chord(:B1, :M, invert: 0),1],                   #D2 F2  B2
       #[chord(:B2, :m, invert: -2),4], _, _, _,                   #D2 F2  B2
       [chord(:D2, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
-      [chord(:E2, :M7),4], _, _, _,                               #E   G  B
+      [chord(:E2, :M7, invert: 1),4], _, _, _,                               #E   G  B
 
 
  #     [chord(:FS3, :m),4], _, _, _,
@@ -38,7 +39,7 @@ stop
 _=[_,0]
 tick
 x=nil
-x= ring(  # B-C-D-(E)-4th
+x=(ring   # B-C-D-(E)-4th
       _, _, _, _, 
       [chord(:B2, :M),2], _, [chord(:Eb3, :M),2], _,                              #F2  A2  C#3
       [chord(:B2, :M),8], _, _, _,                               #D3  F3  A3

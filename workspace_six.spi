@@ -10,7 +10,7 @@ x=(ring
   #    _, _, _, _,
 #      [chord(:B2, :M, invert: 0),2], _, [chord(:B2, :m, invert: 0),2],_,
       [chord(:FS1, :m),4],_, _, _,
-      [chord(:B0, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
+      [chord(:B1, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
       #[chord(:B2, :m, invert: -2),4], _, _, _,                   #D2 F2  B2
       [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
       [chord(:E1, :M),4], _, _, _,                               #E   G  B
@@ -23,7 +23,7 @@ x=(ring
       [chord(:Gs2, :m, invert: 0),4], _, _, _,                               #
       [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
       [chord(:E2, :M, invert: -1),8], _, _, _,                               #
-_,_,_,_
+      _,_,_,_
 
  #     [chord(:FS3, :m),4], _, _, _,
  #     [chord(:B2, :m),4], _, [chord(:B2, :m, invert:1),2], _,    #F3 #B3 D3   

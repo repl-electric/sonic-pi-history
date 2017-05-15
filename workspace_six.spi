@@ -4,7 +4,7 @@ _=[_,_]
 tick
 x=nil
 x= ring(       [chord(:FS3, :m),4], _, _, _,
-      [chord(:B3, :m),4], _, [chord(:B3, :m, invert:-1),1], _,   #F3 #B3 D4 
+      [chord(:B3, :m),4], _, [chord(:B3, :m, invert:-1),2], _,   #F3 #B3 D4 
       [chord(:D3, :m),4], _, _, _,                #D3 F3 A3
       [chord(:E3, :M),4], _, _, _
 ).look

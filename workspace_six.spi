@@ -2,14 +2,13 @@
 live_loop :testing do
 tick
 x=nil
-play x=(ring 
-      chord(:FS2, :m),
+play x= ring(       chord(:FS2, :m),
       chord(:B2, :m),
       chord(:E2, :m),
       chord(:D2, :m),
       chord(:A2, :M),
       chord(:E2, :M),
-).look+12, decay: 2
+).look, decay: 2
 puts note_inspect(x)
 sleep 2
 end

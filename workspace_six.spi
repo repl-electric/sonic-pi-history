@@ -4,7 +4,7 @@ _=[_,0]
 tick
 x=nil
 x= ring(       _, _, _, _,
-      [chord(:FS2, :m),3], _,  [chord(:A2, :M, invert: -1),2], _,                              #F2  A2  C#3
+      [chord(:FS2, :m),2], _,  [chord(:A2, :M, invert: -1),2], _,                              #F2  A2  C#3
       [chord(:B2, :M, invert: 0),6], _,   _, _,                   #D2 F2  B2
       [chord(:B2, :m, invert: -2),4], _, _, _,                   #D2 F2  B2
       [chord(:D2, :M),4], _, _, _,                               #D2  F2 A3

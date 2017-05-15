@@ -2,13 +2,20 @@
 live_loop :testing do
 tick
 x=nil
-play x= ring(       chord(:FS2, :m),
-      chord(:B2, :m),
-      chord(:E2, :m),
-      chord(:D2, :m),
-      chord(:A2, :M),
-      chord(:E2, :M),
+play x=(ring 
+      chord(:FS2, :m), _, _, _,
+      chord(:B2, :m), _, _, _,
+      chord(:E2, :m), _, _, _,
+      chord(:D2, :m), _, _, _,
+      chord(:A2, :M), _, _, _,
+      chord(:E2, :M), _, _, _
 ).look, decay: 2
 puts note_inspect(x)
-sleep 2
+sleep 1
 end
+
+
+#        [[:FS2,8.2*2], [:A2, 8.2], [:Cs3,8.2]],
+#        [[:B2,8.2],  [:D2,  2*8.2],[ _,8.2]],
+#        [[_,8.2],  [:Fs3, 8.2], [:A3,8.2] ],
+#        [[:E2,8.2], [:Gs3, 8.2], [:B3,8.2], [:D3,8.2] ],

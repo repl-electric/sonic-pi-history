@@ -1,6 +1,6 @@
 
 live_loop :testing do
-_=[_,_]
+_=[_,0]
 tick
 x=nil
 x= ring(       [chord(:FS3, :m),4], _, _, _,

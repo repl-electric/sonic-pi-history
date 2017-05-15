@@ -6,7 +6,7 @@ x=nil
 x=(ring 
       [chord(:FS3, :m),4], _, _, _,
       [chord(:B3, :m),4], _, [chord(:B3, :m, invert:-2),2], _,   #D3 F3 #B3  
-      [chord(:D3, :m),4], _, _, _,                               #D3 F3 A3
+      [chord(:D3, :M),4], _, _, _,                               #D3 F3 A3
       [chord(:E3, :M),4], _, _, _
 ).look
 synth :beep, note: x[0], release: x[1]

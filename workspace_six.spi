@@ -8,7 +8,7 @@ synth :beep, note: x=(ring
       [chord(:B3, :m),4], _, [chord(:A3, :m),4], _,   #B3 D4 F4
       [chord(:D3, :m),4], _, _, _,                #D3 F3 A3
       [chord(:E3, :M),4], _, _, _
-).look, release: x[1]
+).look[0], release: x[1]
 puts note_inspect(x[0])
 sleep 1
 end

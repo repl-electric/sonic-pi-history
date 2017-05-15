@@ -44,7 +44,7 @@ x=(ring
  #     _, _, _, _
 ).look
 synth :dsaw, note: x[0].map{|n| note(n)+0}[1], release: x[1], amp: 0.5
-puts note_inspect(x[0])
+puts note_inspect(x[0].map{|n| note(n)+0}[1])
 sleep 1
 end
 

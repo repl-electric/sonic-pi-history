@@ -1,8 +1,10 @@
 
 live_loop :testing do
+_ =[]
 tick
 x=nil
-synth :beep, note: x= ring(       [chord(:FS3, :m),4], _, _, _,
+synth :beep, note: x=(ring 
+      [chord(:FS3, :m),4], _, _, _,
       [chord(:B3, :m),4], _, [chord(:A3, :m),4], _,   #B3 D4 F4
       [chord(:D3, :m),4], _, _, _,                #D3 F3 A3
       [chord(:E3, :M),4], _, _, _

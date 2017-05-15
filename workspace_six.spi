@@ -5,9 +5,7 @@ x=nil
 synth :beep, note: x=(ring 
       chord(:FS2, :m), _, _, _,
       chord(:B2, :m), _, _, _,
-      chord(:E2, :m), _, _, _,
       chord(:D2, :m), _, _, _,
-      chord(:A2, :M), _, _, _,
       chord(:E2, :M), _, _, _
 ).look, release: 4
 puts note_inspect(x)

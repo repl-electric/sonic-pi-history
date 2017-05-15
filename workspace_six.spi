@@ -14,9 +14,9 @@ x= ring(       [chord(:FS2, :m),4], _, _, _,                              #F2  A
  #     [chord(:E3, :M),4], _, _, _,
  #     _, _, _, _
 ).look
-synth :beep, note: x[0], release: x[1]
+synth :beep, note: x[0], release: x[1]/2.0
 puts note_inspect(x[0])
-sleep 1
+sleep 1/2.0
 end
 
 

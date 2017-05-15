@@ -9,7 +9,7 @@ x=(ring
 #      [chord(:FS2, :m7),8], _, _, _,
       _, _, _, _,
 #      [chord(:B2, :M, invert: 0),2], _, [chord(:B2, :m, invert: 0),2],_,
- #     [chord(:FS2, :sus2),4],_, _, _,
+      [chord(:FS2, :sus2),4],_, _, _,
 
       [chord(:B2, :M, invert: 0),6], _,  _, _,                   #D2 F2  B2
       #[chord(:B2, :m, invert: -2),4], _, _, _,                   #D2 F2  B2

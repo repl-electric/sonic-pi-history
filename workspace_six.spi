@@ -1,6 +1,7 @@
 
 live_loop :testing do
 _=[_,0]
+stop
 tick
 x=nil
 x=(ring 
@@ -24,7 +25,7 @@ end
 
 
 live_loop :testing2 do
-stop
+#stop
 _=[_,0]
 tick
 x=nil

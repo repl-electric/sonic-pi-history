@@ -32,6 +32,10 @@ x=(ring
       _, _, _, _,
       [chord(:Eb3, :M),2], _, [chord(:Eb3, :m),2], _,                               #E   G  B
       _, _,  [chord(:B2, :M),4], _,                               #E   G  B
+      _, _, _, _,
+      _, _, _, _,
+
+      
       [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
       [chord(:Ab3, :m),4], _, _, _,                               #E   G  B
       [chord(:B2, :M),4], _, _, _,                               #E   G  B

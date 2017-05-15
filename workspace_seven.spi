@@ -561,7 +561,7 @@ sample  ring( Suburb[/a0/],
 Suburb[/b0/],
 Suburb[/cs0/],
 Suburb[/d0/]
-).look, amp: 1.0*1, attack: 2.0*1
+).look, amp: 1.0*0, attack: 2.0*1
 
 puts target_chord
 target_chord.each do |np|

@@ -555,7 +555,7 @@ SevenBass[/f#1_4/],
 SevenBass[/b0_2/],
 SevenBass[/d1_2/],
 SevenBass[/e1_2/],
-).look), amp: 5.0*1.0#, attack: 0.0, decay: 5.0
+).look), amp: 5.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample  ring( Suburb[/a0/],

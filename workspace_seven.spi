@@ -592,10 +592,12 @@ end
 end
 end
 with_fx :gverb, mix: 0.1 do
+with_fx :pitch_shift do
 live_loop :vocals, sync: :slicing do
  tick
  sleep 8
  sample Alt[/mm/].look
  sleep 8
+end
 end
 end

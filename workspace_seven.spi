@@ -600,6 +600,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :cs4, decay: 4, amp: 0.3, attack: 0.05
  end
 sample Berry[/mm/].reverse.look, amp: 2.0
+#~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav"
 
 #vor_alto_leg_mm_01_u_01
 #vor_alto_leg_mm_01_u_02

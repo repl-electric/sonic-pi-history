@@ -546,15 +546,26 @@ sample  (baz=ring(
 
 #SevenBass[/beat/,2],
 
-SevenBass[/seven\/f#0_4/],
-SevenBass[/b0_2/],
-SevenBass[/d0_2/],
-SevenBass[/e0_2/],
+#SevenBass[/seven\/f#0_4/],
+#SevenBass[/b0_2/],
+#SevenBass[/d0_2/],
+#SevenBass[/e0_2/],
  
-SevenBass[/f#1_4/],
-SevenBass[/b0_2/],
-SevenBass[/d1_2/],
-SevenBass[/e1_2/],
+#SevenBass[/f#1_4/],
+#SevenBass[/b0_2/],
+#SevenBass[/d1_2/],
+#SevenBass[/e1_2/],
+
+"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
+
+"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav"
+"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav"
+
 ).look), amp: 5.0*1.0#, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 

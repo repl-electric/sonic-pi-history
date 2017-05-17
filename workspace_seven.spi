@@ -595,7 +595,7 @@ with_fx :reverb, mix: 0.5 do
 with_fx :pitch_shift do
 live_loop :vocals, sync: :slicing do
  tick
- sleep 8
+ sleep 4
 synth :beep, note: :A3, decay: 8
 #vor_alto_leg_mm_01_u_01
 #vor_alto_leg_mm_01_u_02

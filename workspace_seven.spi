@@ -593,6 +593,6 @@ end
 end
 
 live_loop :vocals, sync: :slicing do
- sample Alt[/legato/,9]
+ sample Alt[/legato/,10]
  sleep 8*2
 end

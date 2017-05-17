@@ -591,3 +591,8 @@ with_fx :hpf, cutoff: 50, mix: 1.0 do
 end
 end
 end
+
+live_loop :vocals, sync :slicing do
+ sample Alt[/legato/,0]
+sleep 16
+end

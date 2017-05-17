@@ -596,7 +596,7 @@ with_fx :pitch_shift do
 live_loop :vocals, sync: :slicing do
  tick
  sleep 3
- with_fx :slicer, phase: 1.0, smooth: 0.25 do
+ with_fx :slicer, phase: 1.0, smooth: 0.5 do
  synth :beep, note: :Cs4, decay: 4, amp: 0.6, attack: 0.05
  end
 #vor_alto_leg_mm_01_u_01

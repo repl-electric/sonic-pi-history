@@ -598,9 +598,9 @@ live_loop :vocals, sync: :slicing do
  sleep 3
  with_fx :slicer, phase: 1.0, smooth: 0.85 do
  #synth :beep, note: :cs4, decay: 4, amp: 0.3, attack: 0.05
+ end
 sample Berry[/mm/].reverse.look, amp: 2.0
 
- end
 #vor_alto_leg_mm_01_u_01
 #vor_alto_leg_mm_01_u_02
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"

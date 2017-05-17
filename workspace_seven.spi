@@ -601,7 +601,7 @@ live_loop :vocals, sync: :slicing do
 # sample Alt[/mm/].look
 sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
-sleep 8
+sleep 8*3
 end
 end
 end

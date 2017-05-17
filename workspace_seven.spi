@@ -602,7 +602,7 @@ synth :beep, note: :A3, decay: 8
 # sample Alt[/mm/].look
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
-sleep 8*3
+sleep 8
 end
 end
 end

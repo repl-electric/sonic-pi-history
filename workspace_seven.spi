@@ -596,7 +596,7 @@ with_fx :pitch_shift do
 live_loop :vocals, sync: :slicing do
  tick
  sleep 5
-synth :beep, note: :Fs3, decay: 8, amp: 0.3
+synth :beep, note: :Fs3, decay: 3, amp: 0.3
 #vor_alto_leg_mm_01_u_01
 #vor_alto_leg_mm_01_u_02
 # sample Alt[/mm/].look

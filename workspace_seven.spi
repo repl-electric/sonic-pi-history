@@ -592,7 +592,7 @@ end
 end
 end
 
-live_loop :vocals, sync :slicing do
+live_loop :vocals, sync: :slicing do
  sample Alt[/legato/,0]
 sleep 16
 end

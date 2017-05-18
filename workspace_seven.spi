@@ -600,10 +600,9 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :cs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
+#sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 
-
-# sample Berry[/mm/].reverse.look, amp: 2.0
+ sample Berry[/mm/].reverse.look, amp: 2.0
 
 #~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav"
 

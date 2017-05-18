@@ -605,8 +605,8 @@ sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural
 ).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/f#4.wav"
-#sample Berry[/mm/].reverse.look, amp: 2.0
-#puts Berry[/mm/].reverse.look
+sample Berry[/mm/].reverse.look, amp: 2.0
+puts Berry[/mm/].reverse.look
 
 #~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav"
 

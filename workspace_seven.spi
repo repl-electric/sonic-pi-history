@@ -605,7 +605,7 @@ live_loop :vocals, sync: :slicing do
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/g#4.wav", amp: 1.4
 
-sample Berry[/./].look, amp: 1.1
+sample Berry[/./].look, amp: 1.2
 
 #sample Berry[/mm/].reverse[0..2].look, amp: 1.1
 #sample Bass[/mm/].reverse.look, amp: 1.0

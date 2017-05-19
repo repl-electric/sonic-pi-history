@@ -614,7 +614,7 @@ sample Berry[/mm/].reverse[0..2].look, amp: 1.1
 #vor_alto_leg_mm_01_u_02
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
-sleep (3+2)+8*3
+sleep (3+2)
 end
 end
 end

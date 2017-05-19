@@ -566,7 +566,7 @@ sample  (baz=ring(
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
 
-).look), amp: 2.0*0.0, attack: 0.0, decay: 5.0
+).look), amp: 2.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample  ring( Suburb[/a0/],
@@ -615,7 +615,7 @@ sample Bass[/mm/].reverse.look, amp: 0.2
 #vor_alto_leg_mm_01_u_02
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
-sleep (3+2)*0
+sleep (3+2)*1
 end
 end
 end

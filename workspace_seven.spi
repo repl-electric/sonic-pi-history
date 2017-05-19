@@ -595,7 +595,7 @@ with_fx :reverb, mix: 0.5, decay: 1 do
 with_fx :pitch_shift do
 live_loop :vocals, sync: :slicing do
  tick
- sleep 3
+ sleep 1
  with_fx :slicer, phase: 1.0, smooth: 0.85 do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end

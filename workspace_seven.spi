@@ -588,11 +588,11 @@ live_loop :vocals, sync: :slicing do
 #sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
-#sample "/Users/josephwilk/Workspace/music/samples/flow/berry/g#4.wav", amp: 1.2
+sample "/Users/josephwilk/Workspace/music/samples/flow/berry/g#4.wav", amp: 1.2
 #chromatin
 #sample Berry[/./].look, amp: 0.6
 
-sample Berry[/mm/].reverse[0..4].look, amp: 1.0
+#sample Berry[/mm/].reverse[0..4].look, amp: 1.0
 #sample Bass[/mm/].reverse.look, amp: 1.0
 #sample Alt[/mm/].reverse.look, amp: 0.3
 #sample Sop[/mm/].reverse.look, amp: 1.0

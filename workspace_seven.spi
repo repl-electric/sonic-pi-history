@@ -431,7 +431,7 @@ end
     else
 
 #with_fx :krush, mix: 0.0, gain:  line(0, 0.7,16).look do
-with_fx :pitch_shift, mix: 0.3, pitch_dis: 0.0  do 
+with_fx :pitch_shift, mix: 0.4, pitch_dis: 0.0  do 
 with_fx :lpf, cutoff: 85-rand, mix: 1 do
 with_fx :hpf, cutoff: 60-rand, mix: 1 do
   #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look

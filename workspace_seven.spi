@@ -367,10 +367,10 @@ if noz[0].to_s[0..1] == "FS" && spread(1,4).look
  # sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
 end
 if noz[0].to_s[0] == "A"
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 2.0, rpitch: 0
 end
 if noz[0].to_s[0] == "B"
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 3.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 2.0, rpitch: 0
 end
 if noz[0].to_s[0] == "D"  && spread(1,2).look
 #  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 2.6, rpitch: 0

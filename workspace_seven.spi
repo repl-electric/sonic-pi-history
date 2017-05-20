@@ -527,15 +527,11 @@ target_chord =  ring(
         [[:B2,8.2],  [:D2,  2*8.2],[ _,8.2]],
         [[_,8.2],  [:Fs3, 8.2], [:A3,8.2] ],
         [[:E2,8.2], [:Gs3, 8.2], [:B3,8.2], [:D3,8.2] ],
-
-
-  
 #        [[:CS3,8.2],  [:E3, 8.2], [:Gs3,8.2] ],
  
 ).look
 ds = []
 puts "root: #{target_chord.map{|c| c[0]}}"
-#synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
 
 baz = ""
 sample  (baz=ring( 
@@ -561,8 +557,6 @@ Suburb[/a0/],
 Suburb[/cs0/],
 Suburb[/e0/],
 Suburb[/gs0/]
-
-
 ).look, amp: 1.0*1, attack: 2.0*1
 
 puts target_chord

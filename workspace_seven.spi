@@ -412,7 +412,7 @@ if  ring(*%W{
                                 _   _   _   _
 }
 ).look != "_"
-  smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.1*1
+  #smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.1*1
 end
  
     if fslice && fslice[:length] > 0.1

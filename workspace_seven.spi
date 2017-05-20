@@ -539,11 +539,11 @@ sample  (baz=ring(
 "/Users/josephwilk/Workspace/music/samples/Live/sven/B-1.wav",   
 "/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",    
 "/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",    
-"/Users/josephwilk/Workspace/music/samples/Live/sven/E1.wav",    
 
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#1.wav",   
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",   
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/C#1.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/sven/E1.wav",    
+"/Users/josephwilk/Workspace/music/samples/Live/sven/F#1.wav",   
+"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",   
+"/Users/josephwilk/Workspace/music/samples/Live/sven/C#1.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
 ).look), amp: 1.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
@@ -591,7 +591,6 @@ live_loop :vocals, sync: :slicing do
 sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.0
 #chromatin
 #sample Berry[/./].look, amp: 0.6
-
 #sample Berry[/mm/].reverse[0..4].look, amp: 1.0
 #sample Bass[/mm/].reverse.look, amp: 1.0
 #sample Alt[/mm/].reverse.look, amp: 0.3

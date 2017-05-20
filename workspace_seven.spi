@@ -501,7 +501,7 @@ end
  
 live_loop :breath, sync: :slicing do
   tick
-  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
+  sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
   sleep (1/2.0)*6
 end
  

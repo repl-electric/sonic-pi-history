@@ -582,7 +582,7 @@ sample  (baz=ring(
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
 
-).look), amp: 1.5*1.0, attack: 0.0, decay: 5.0
+).look), amp: 1.8*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample  ring( Suburb[/a0/],

@@ -87,7 +87,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
 end
  
   if  ring(*%W{
- 1 0 0 0   1 0 0 0 
+ 1 0 0 0   0 0 1 0   1 0 0 0   1 0 0 0  
 }).look == "1"
 #  shader :shader, "wave.glsl", "rope.vert", :points,  line(10000, 100000, 128).look(:fx)
   shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)

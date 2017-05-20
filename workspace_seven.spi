@@ -446,7 +446,7 @@ with_fx :hpf, cutoff: 60-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
     # puts fslice[:path]
-#  smp fslice, amp: 5.0*1, rpitch: line(0, 2, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+  smp fslice, amp: 5.0*1, rpitch: line(0, 2, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 end
 end
 end
@@ -545,7 +545,6 @@ sample  (baz=ring(
 "/Users/josephwilk/Workspace/music/samples/Live/sven/D1.wav",   
 "/Users/josephwilk/Workspace/music/samples/Live/sven/E1.wav",
 
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
 ).look), amp: 1.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
@@ -554,11 +553,6 @@ Suburb[/a0/],
 Suburb[/b0/],
 Suburb[/cs0/],
 Suburb[/d0/],
-
-Suburb[/a0/],
-Suburb[/cs0/],
-Suburb[/e0/],
-Suburb[/gs0/]
 ).look, amp: 1.0*1, attack: 2.0*1
 
 puts target_chord

@@ -567,16 +567,18 @@ sample  (baz=ring(
 #SevenBass[/e1_2/],
 
 "/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
-SevenBass[/b0_2/],
+"/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
+
+
 
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
 
-).look), amp: 3.0*1.0, attack: 0.0, decay: 5.0
+).look), amp: 2.0*1.0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample  ring( Suburb[/a0/],

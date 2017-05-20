@@ -3,7 +3,6 @@ live_loop :testing do
 _=[[],0]
 tick
 x=nil
-stop
 x=(ring 
    #   _, _, _, _,
 #      [chord(:FS2, :m),2], _,  [chord(:B2, :M, invert: 0),2], _,                              #F2  A2  C#3

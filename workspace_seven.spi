@@ -347,7 +347,7 @@ noz =  ring(
              [:E5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
 
  ).look
-comment do
+uncomment do
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.2, rpitch: 0

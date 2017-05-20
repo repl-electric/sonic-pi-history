@@ -535,7 +535,7 @@ puts "root: #{target_chord.map{|c| c[0]}}"
 
 baz = ""
 sample  (baz=ring( 
-"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",   
+"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",   
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/B-1.wav",   
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",    
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",    

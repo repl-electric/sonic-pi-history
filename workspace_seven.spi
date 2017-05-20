@@ -1,6 +1,6 @@
 # Loading previous buffer contents. Please wait...load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #shader :shader, "wave.glsl", "rope.vert", "lines", 100000
-set_volume! 1.0
+set_volume! 2.0
 def note_slices(n, m)
   NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(64)
 end

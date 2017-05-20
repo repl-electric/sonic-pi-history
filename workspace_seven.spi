@@ -351,7 +351,6 @@ if noz[0].to_s[0..1] == "FS" && spread(1,4).look
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
 #  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.2, rpitch: 0
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 3.0, rpitch: 0
-
 end
 if noz[0].to_s[0] == "A"
   sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 6.0, rpitch: 0
@@ -365,7 +364,7 @@ if noz[0].to_s[0] == "D"  && spread(1,2).look
 end
 
 if noz[0] != "_"
-#syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.2*1
+syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.2*1
 end
 end
 
@@ -602,7 +601,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/g#4.wav", amp: 1.4

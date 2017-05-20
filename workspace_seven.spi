@@ -416,7 +416,7 @@ if  ring(*%W{
 end
  
     if fslice && fslice[:length] > 0.1
-if  spread(1,8).tick(:insideit)
+if  spread(1,4).tick(:insideit)
      smp fslice, amp: 1*4.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
@@ -429,7 +429,7 @@ with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do
 with_fx :lpf, cutoff: 85-rand, mix: 1 do
 with_fx :hpf, cutoff: 60-rand, mix: 1 do
   #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
-     if false#spread(7,11).look#  spread(4, 8).look #false#knit(spread(8,8).look, 8*8, spread(8,8).look,8*4).look
+     if false#spread(7,11).look# (spread 4, 8).look #false#knit(spread(8,8).look, 8*8, spread(8,8).look,8*4).look
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav" #**
@@ -580,7 +580,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.0

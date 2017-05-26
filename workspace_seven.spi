@@ -604,7 +604,7 @@ sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural
  "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 ).look
 
-sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4
+#sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4
 
 #sample Berry[/mm/].reverse[0..2].look, amp: 1.5
 #puts Berry[/mm/].reverse.look

@@ -189,7 +189,7 @@ end
     d= spread(3,8).map{|s| s ? :pitch_shift : :none}#.shuffle
     with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
 
-     fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3)[-1]]).take(2).look
+     fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3)[-1]]).take(1).look
 
      future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
  
@@ -602,7 +602,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
  "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 ).look
 

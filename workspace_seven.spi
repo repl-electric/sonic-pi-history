@@ -440,8 +440,9 @@ with_fx :hpf, cutoff: 60-rand, mix: 1 do
      end
     # puts fslice[:path]
 
-     fslice[:path] = (ring "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#0.wav",
+     fslice[:path] = (ring "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",
+
 
 
 ).look

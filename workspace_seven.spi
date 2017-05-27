@@ -439,7 +439,7 @@ with_fx :hpf, cutoff: 60-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
     # puts fslice[:path]
-  smp fslice, amp: 4.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+  smp fslice, amp: 4.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset:  line(0.001,0.01, 32).look #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 end
 end
 end
@@ -602,7 +602,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 

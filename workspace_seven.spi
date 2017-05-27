@@ -420,7 +420,7 @@ with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do
 with_fx :lpf, cutoff: 85-rand, mix: 0 do
 with_fx :hpf, cutoff: 60-rand, mix: 1 do
   #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
-     if  false#knit(spread(8,8).look, 8*8, spread(8,8).look,8*4).look
+     if  knit(spread(8,8).look, 8*8, spread(8,8).look,8*4).look
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav" #**

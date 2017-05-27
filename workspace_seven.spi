@@ -438,10 +438,10 @@ with_fx :hpf, cutoff: 60-rand, mix: 0 do
      end
 
      fslice[:path] = (knit
-"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8,
-"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",8,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
 
 ).look
 

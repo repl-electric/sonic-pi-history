@@ -436,8 +436,7 @@ with_fx :hpf, cutoff: 60-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 comment do
-     fslice[:path] = (knit
- "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
+     fslice[:path] =  knit( "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
@@ -445,8 +444,7 @@ comment do
 end
 
 
-n = (knit
-"cs2", 1*2,
+n =  knit("cs2", 1*2,
 
 "fs2", 1*2,
 "a2",1*2,
@@ -688,7 +686,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4
@@ -702,7 +700,7 @@ sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4
 #vor_alto_leg_mm_01_u_02
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
 #sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
-sleep 3+2
+sleep 3+2+8*2
 end
 end
 end

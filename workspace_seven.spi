@@ -446,7 +446,7 @@ comment do
 end
 
 
-n =  knit("cs3", 1*2,
+n =  knit("cs2", 1*2,
 
 "fs2", 1*2,
 "a2",1*2,

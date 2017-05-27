@@ -448,7 +448,7 @@ with_fx :hpf, cutoff: 60-rand, mix: 0 do
 
 n = (knit
 "fs2", 1*2,
-"b2", 1*2
+"b2", 1*2,
 "fs2",1*2,
 "fs2", 1*2,
 

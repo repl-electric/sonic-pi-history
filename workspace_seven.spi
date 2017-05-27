@@ -442,7 +442,7 @@ uncomment do
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
 ).look
-   fslice[:start] = 0.0
+   fslice[:onset] = 0.0
 end
 
 

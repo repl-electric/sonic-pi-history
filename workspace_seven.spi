@@ -453,7 +453,7 @@ n = (knit
 "e2",8,
 
 ).look
-synth :pluck, note: note(n)+12, attack: 0.01, decay: 0.001, sustain: 0.001, amp: 0.2
+synth :dsaw, note: note(n)+12, attack: 0.01, decay: 0.001, sustain: 0.001, amp: 0.2
 
     # puts fslice[:path]
   smp fslice, amp: 8.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)

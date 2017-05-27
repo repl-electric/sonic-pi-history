@@ -447,7 +447,7 @@ with_fx :hpf, cutoff: 60-rand, mix: 0 do
 
 
 n = (knit
-"fs2",1*2,
+"fs2", 1*2,
 "b2", 1*2
 "fs2",1*2,
 "fs2", 1*2,
@@ -455,8 +455,7 @@ n = (knit
 
 "b2",8*2,
 "d2",8,
-"e2",8,
-
+"e2",8
 ).look
 synth :piano, note: note(n)+12, attack: 0.01, decay: 0.001, sustain: 0.001, amp: 0.2
 

@@ -493,7 +493,7 @@ uncomment do
 ).look
 
      fslice[:path] = (knit "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#3.wav",1*1,
-                           "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#3.wav",1*1).look
+                           "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a3.wav",1*1).look
 
 
 end

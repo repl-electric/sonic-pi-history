@@ -444,7 +444,7 @@ uncomment do
 ).look
 
 if fslice[:path] == "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav" && spread(1,8).look
-  synth :chipbass, note: :FS1
+  synth :chipbass, note: :FS0
 end
 
 comment do

@@ -44,6 +44,7 @@ x=(ring
 #      _,_,
 
 ).look
+synth :dark_ambience, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5#, cutoff: 80
 synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5#, cutoff: 80
 puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])
 

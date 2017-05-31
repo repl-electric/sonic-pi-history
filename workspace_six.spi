@@ -15,7 +15,7 @@ x=(ring
       [chord(:D1, :M,  invert: 0),4],_,_,_,
       [chord(:E1, "M", invert: 0),4], _,_,_,                                #D2  F2 A3
 
-      _,_,_,_,
+      _,_,
 
       [chord(:FS1, :m),4],_,_, _,
       [chord(:FS1, :M),4],_, _, _,   # A#

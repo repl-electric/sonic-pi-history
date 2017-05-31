@@ -49,7 +49,7 @@ synth :dark_ambience, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 1.0, d
 #synth :prophet, note: x[0][0]-12, amp: 0.4, cutoff:65
 puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])
 if spread(1,2).look
-      sample Mountain[/subkick/,1]
+      sample Mountain[/subkick/,0]
 end
 end
 

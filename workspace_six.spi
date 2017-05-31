@@ -18,7 +18,7 @@ x=(ring
       [chord(:B1, "m", invert: -1),6], _,_,_,                   #A C E
       [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
       [chord(:Cs1, :m,  invert: 0),4],_,_,_,
-      [chord(:Fs1, "m", invert: 1),1], [chord(:B1, "M", invert: 0),1], [chord(:D1, "M", invert: 0),1], [chord(:E1, "M", invert: 0),8],                                #D2  F2 A3
+      [chord(:D1, "M", invert: 0),1], [chord(:E1, "M", invert: 0),8],                                #D2  F2 A3
       _,_,_,_,
 
 

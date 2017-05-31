@@ -24,7 +24,7 @@ x=(ring
       _,_,_,_
 
 ).look
-synth :piano, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 1.0, decay: 2.0#, cutoff: 80
+synth :piano, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 1.0, decay: 1.0#, cutoff: 80
 puts note_inspect(x[0].map{|n| note(n)+0}[0])
 sleep 1
 end

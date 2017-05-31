@@ -12,7 +12,7 @@ x=(ring
 #      [chord(:FS1, :m),4],_,_, _,
  #     [chord(:FS1, :M),4],_, _, _,   # A#
  
-      [chord(:B1, "m", invert: 0),6], _,_,_,                   #D2 F2  B2
+      [chord(:B1, "m7", invert: 0),6], _,_,_,                   #D2 F2  B2
       _,_,[chord(:D1, :m,  invert: 0),2],_,                                #D2  F2 A3
       [chord(:D1, :M, invert: 0),4], _,_,_,                                #D2  F2 A3
 #      [chord(:E1, "M",     invert: 0),4], _,_,_,                                #D2  F2 A3

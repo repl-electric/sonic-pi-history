@@ -12,15 +12,12 @@ x=(ring
       [chord(:FS1, :m),4],_,_, _,
       [chord(:FS1, :M),4],_, _, _,   # A#
       [chord(:B0, :m, invert: 0),4], _,[chord(:D1, :M, invert: 0),4],_,                   #D2 F2  B2
-       _,_,_,                                #D2  F2 A3
-
+      _,_,_,                                #D2  F2 A3
       [chord(:Cs1, :m, invert: 0),4], _,_,_,                                #D2  F2 A3
-
       [chord(:E1, :sus2),8], _, _, _,                               #E   G  B
       [chord(:E1, :M),4], _, _, _,                               #E   G  B
       [chord(:E1, :sus4),8], _, _, _,                               #E   G  B
       [chord(:E1, :m),8], _, _, _,                               #E   G  B
-      [chord(:E1, :m7),8], _, _, _,                               #E   G  B
 
 
 #      [chord(:FS2, :m7),4],_, _, _,

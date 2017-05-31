@@ -28,7 +28,6 @@ x=(ring
 #      [chord(:E1, :m),4], _, _, _,                               #E   G  B
 #      [chord(:E1, :M),4], _, _, _,                               #E   G  B
 
-
 #      [chord(:FS2, :m7),4],_, _, _,
 #       [chord(:B0, :m, invert: 0),4], _,  _, [chord(:B1, :m, invert: 0),1], 
 #      [chord(:Gs2, :m, invert: -1),4], _, _, _,                               #
@@ -46,6 +45,8 @@ x=(ring
 ).look
 synth :dark_ambience, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay:1.0
 synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5
+
+synth :prophet, note: x[0][0]-12
 puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])
 
 sleep 1/2.0

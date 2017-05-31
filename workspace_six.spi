@@ -19,8 +19,8 @@ x=(ring
 
       [chord(:E1, :M),4], _, _, _,                               #E   G  B
       [chord(:E1, :sus2),8], _, _, _,                               #E   G  B
+      [chord(:E1, :sus4),8], _, _, _,                               #E   G  B
       [chord(:E1, :m),8], _, _, _,                               #E   G  B
-
       [chord(:E1, :m7),8], _, _, _,                               #E   G  B
 
 

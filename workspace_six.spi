@@ -35,7 +35,7 @@ x=(ring
 #      [chord(:Gs2, :m, invert: 0),4], _, _, _,                               #
 #      [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
 #      [chord(:E2, :M, invert: -1),8], _, [chord(:E2, :M, invert: -2),4], _,
-      _,_,_,_
+      _,_,
 
 ).look
 synth :piano, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 1.0, decay: 0.5#, cutoff: 80

@@ -43,7 +43,7 @@ x=(ring
 #      _,_,
 
 ).look
-with_fx :hpf, cutoff: 40 do
+with_fx :hpf, cutoff: 80 do
 synth :dark_ambience, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 1.8, decay:1.0
 #synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5
 

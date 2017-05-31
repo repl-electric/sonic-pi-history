@@ -19,7 +19,7 @@ x=(ring
 
       [chord(:FS1, :m),4],_,_, _,
       [chord(:FS1, :M),4],_, _, _,   # A#
-      [chord(:A1, "m", invert: -1),6], _,_,_,                   #D2 F2  B2
+      [chord(:A1, "M", invert: -1),6], _,_,_,                   #D2 F2  B2
       [chord(:Cs1, :M,  invert: 0),4],_,_,_,
       [chord(:E1, "M", invert: 0),4], _,_,_,                                #D2  F2 A3
 

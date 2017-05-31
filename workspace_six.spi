@@ -9,11 +9,11 @@ x=(ring
       [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
       [chord(:E1, :M),4], _, _, _,                               #E   G  B
 
-      [chord(:FS2, :m7),4],_, _, _,
-       [chord(:B0, :m, invert: 0),4], _,  _, [chord(:B1, :m, invert: 0),1], 
-      [chord(:Gs2, :m, invert: -1),4], _, _, _,                               #
-      [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
-      [chord(:E2, :M, invert: -1),4], _, _, _,
+#      [chord(:FS2, :m7),4],_, _, _,
+#       [chord(:B0, :m, invert: 0),4], _,  _, [chord(:B1, :m, invert: 0),1], 
+#      [chord(:Gs2, :m, invert: -1),4], _, _, _,                               #
+#      [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
+#      [chord(:E2, :M, invert: -1),4], _, _, _,
 
 #      [chord(:FS2, :m7),4],_, _, _,
 #      [chord(:A1, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2

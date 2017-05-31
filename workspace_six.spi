@@ -16,7 +16,6 @@ x=(ring
       [chord(:E1, "M", invert: 0),8], _,_,_,                    #E G B            #D2  F2 A3
       _,_,_,_,
 
-
       [chord(:B1, "m", invert: -1),6], _,_,_,                   #A C E
       [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
       [chord(:Cs1, :m,  invert: 0),4],_,_,_,
@@ -24,7 +23,6 @@ x=(ring
       [chord(:E1, "M", invert: 0),8*2],
       _,_,_,_,
       _,_,_,_,
-
 
 
 #      [chord(:E1, :m),4], _, _, _,                               #E   G  B
@@ -49,7 +47,7 @@ x=(ring
 synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5#, cutoff: 80
 puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])
 
-sleep 1/4.0
+sleep 1/2.0
 end
 
 

@@ -4,17 +4,17 @@ _=[[],0]
 tick
 x=nil
 x=(ring 
-      [chord(:FS1, :m),4],_, _, _,
-      [chord(:B0, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
-      [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
-      [chord(:E1, :M),4], _, _, _,                               #E   G  B
+     # [chord(:FS1, :m),4],_, _, _,
+    #  [chord(:B0, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
+   #   [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
+  #    [chord(:E1, :M),4], _, _, _,                               #E   G  B
 
       [chord(:FS1, :m),4],_, _, _,
       [chord(:FS1, :M),4],_, _, _,
 
       [chord(:Gs1, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
-      [chord(:Cs1, :m, invert: 0),4], _, _, _,                               #D2  F2 A3
-      [chord(:D1, :M),4], _, _, _,                               #E   G  B
+#      [chord(:Cs1, :m, invert: 0),4], _, _, _,                               #D2  F2 A3
+ #     [chord(:D1, :M),4], _, _, _,                               #E   G  B
 
 
 

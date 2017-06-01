@@ -664,9 +664,27 @@ target_chord =  ring(
  
 
         [[:FS2,8.2*2], [:A2, 8.2], [:Cs3,8.2]],
+        [[:FS2,8.2*2], [:As2, 8.2], [:Cs3,8.2]],
+
+
         [[:B2,8.2],  [:D2,  2*8.2],[ _,8.2]],
         [[_,8.2],  [:Fs3, 8.2], [:A3,8.2] ],
         [[:E2,8.2], [:Gs3, 8.2], [:B3,8.2], [:D3,8.2] ],
+
+#      [chord(:FS1, :m,invert: -1),1],[chord(:FS1, :m),4],_, _,             #A F C   F A C
+#      [chord(:FS1, :M),4],_, _, _,   # A#                       #F A# C
+#      [chord(:B1, "m", invert: -1),6], _,_,_,                   #B D F
+#      [chord(:D1, :M,  invert: 0),4],_,_,_,                     #D F A 
+#      [chord(:E1, "M", invert: 0),8], _,_,_,                    #E G B            #D2  F2 A3
+ #     _,_,_,_,
+
+ #     [chord(:B1, "m", invert: -1),6], _,_,_,                   #A C E
+ #     [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
+ #     [chord(:Cs1, :m,  invert: 0),4],_,_,_,
+ #     [chord(:Cs2, "m7", invert: 0),16],                       #GCE
+ #     [chord(:E1, "M", invert: 0),8*2],
+
+
 
 
   

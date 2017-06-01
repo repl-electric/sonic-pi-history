@@ -596,7 +596,7 @@ end
       if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
 with_fx :lpf, cutoff: 85, mix: 1 do
 with_fx :hpf, cutoff: 60, mix: 1 do
-        smp fslice, amp: 3.0, rpitch: 0, cutoff: 135, start: 0.868, finish: 1.0
+       # smp fslice, amp: 3.0, rpitch: 0, cutoff: 135, start: 0.868, finish: 1.0
 end
 end
         #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0

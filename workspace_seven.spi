@@ -727,7 +727,7 @@ Suburb[/d0/]
 puts target_chord
 target_chord.each do |np|
 if np[0]
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 0*(1.5 / target_chord.count))
+ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 1*(1.5 / target_chord.count))
 end
 end
 with_fx :hpf, cutoff: 50, mix: 1.0 do

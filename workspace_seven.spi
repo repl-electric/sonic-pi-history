@@ -762,9 +762,10 @@ with_fx :hpf, cutoff: 50, mix: 0.0 do
   sleep 1
 }
 end
-end
 else
 sleep 8
+end
+
 end
 
 end

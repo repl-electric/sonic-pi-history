@@ -1,1 +1,1 @@
-puts chord(:Fs3,:M)
+puts chord(:Fs3,:M).map({|n| note_inspect(n)})

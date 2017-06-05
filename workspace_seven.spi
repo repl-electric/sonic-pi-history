@@ -502,7 +502,7 @@ end
 
 end
 
-n =  ring(:Fs3, :G3, :Cs4, :A3
+n =  ring(:Fs3, :A3, :Cs4, :A3
 ).look
 if spread(1,3).look
 with_fx :distortion, mix: 0.1, distort: 0.8 do

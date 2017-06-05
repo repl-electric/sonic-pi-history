@@ -452,7 +452,7 @@ elsif fslice[:path] =~ /b1.wav/
   #synth :chipbass, note: :"B-1"
 end
 
-uncomment do
+comment do
      fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,

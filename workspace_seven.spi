@@ -1,1 +1,795 @@
-# Loading previous buffer contents. Please wait...
+# Loading previous buffer contents. Please wait...load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/dsp.rb";load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
+#shader :shader, "wave.glsl", "rope.vert", "lines", 100000
+set_volume! 1.0
+def note_slices(n, m)
+  NoteSlices.find(note: n, max: m, pat: "sop|alto|bass").select{|s| s[:path] =~ /sop|alto/}.take(64)
+end
+@slices ||= {"Gs2/4" => note_slices("Gs2",1/4.0),"D2/4" => note_slices("D2",1/4.0), "E2/4" => note_slices("E2",1/4.0), "A2/4" => note_slices("A2",1/4.0), "Fs2/4" => note_slices("F#2",1/4.0),"Fs2/8" => note_slices("F#2",1/8.0), "E3/4" => note_slices("E3",1/4.0), "D3/4" => note_slices("D3",1/4.0),"D3/8" => note_slices("D3",1/8.0),"Cs3/4" => note_slices("C#3",1/4.0), "Fs3/8" => note_slices("F#3",1/8.0),"Fs3/4" => note_slices("F#3",1/4.0), "Gs3/4" => note_slices("G#3",1/4.0), "A3/8" => note_slices("A3",1/8.0),"A3/4" => note_slices("A3",1/4.0), "B3/4" => note_slices("B3",1/4.0), "Cs4/4" => note_slices("C#4",1/4.0), "Cs4/8" => note_slices("C#4",1/8.0), "D4/4" => note_slices("D4",1/4.0),"D4/8" => note_slices("D4",1/8.0), "E4/4" => note_slices("E4",1/4.0),"E4/8" => note_slices("E4",1/8.0), "Fs4/4" => note_slices("F#4",1/4.0),"Fs4/8" => note_slices("F#4",1/8.0), "Gs4/4" => note_slices("G#4",1/4.0), "B4/4" => note_slices("B4",1/4.0),"Fs5/4" => note_slices("F#5",1/4.0), "Fs6/4" => note_slices("F#6",1/4.0),"A4/4" => note_slices("A4",1/4.0),"E5/4" => note_slices("E5",1/4.0)}
+@slices.values.flatten.each{|f| load_sample f[:path]}
+puts @slices.values.flatten.count
+#smp Harp.slice(:Fs3).look, amp: 2, cutoff:  ramp(10, 130, 128).tick(:ram)
+def syn(*args)
+  options = args.last
+  if options[:note] != "_"
+    synth *args
+  end
+end
+module Straw
+  def self.slice(n, size: 1/4.0)
+    @straw_cache ||= {}
+    n = n.to_s.gsub(/s/,"#")
+    if !@straw_cache.has_key?(n)
+      @straw_cache[n] = NoteSlices.find(note: n, max: size, pat: "Straw").take(64)
+    end
+    @straw_cache[n]
+  end
+end
+module Berry
+  def self.pick(a)
+    self[a]
+  end
+  def self.[](*a)
+    samples = Dir["/Users/josephwilk/Workspace/music/samples/strawberry/Samples/**/*.wav"]
+    Sample.matches(samples, a)
+  end
+end
+module Harp
+  def self.slice(n, size: 1/4.0)
+    @harp_cache ||= {}
+    n = n.to_s.gsub(/s/,"#")
+    if !@harp_cache.has_key?(n)
+      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "Harp").take(64)
+    end
+    @harp_cache[n]
+  end
+end
+module Piano
+  def self.slice(n, size: 1/4.0)
+    @harp_cache ||= {}
+    n = n.to_s.gsub(/s/,"#")
+    if !@harp_cache.has_key?(n)
+      @harp_cache[n] = NoteSlices.find(note: n, max: size, pat: "samples/piano").take(64)
+    end
+    @harp_cache[n]
+  end
+end
+ 
+🍓=Straw;🥁=@slices
+shader :iIntro, 3
+shader :iSpeed, 0.00001
+shader :iMotion, 0.000001
+#shader :iWave, 8
+#with_fx :reverb do
+live_loop :slicing do
+fslice = nil
+  tick
+  s =  ring(       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       1/8.0,1/8.0,1/8.0,1/8.0,
+       ).look
+with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
+  b = Mountain[/microperc/,6];a = Mountain[/microperc/,5]
+  if (x= ring(*%w{0 0 [b,0.4] 0  [b,0.4] 0 0 0  0 0 0 0        [a,0.4] 0 0 0
+                  0 0 [b,0.4] 0  [b,0.4] 0 0 0  0 0 0 0        [a,0.4] 0 0 0
+                  0 0 [b,0.4] 0  [b,0.4] 0 0 0  0 0 0 0        [a,0.4] 0 0 0
+                  0 0 [b,0.4] 0  [b,0.4] 0 0 0  0 0 0 [b,0.8]  0 0 [a,0.8] 0
+}).look) != "0"
+    data = eval(x)
+    #smp data[0],amp: 1*data[1], cutoff:  line(125+rand*10, 100, 64).tick(:microperc)#, rate:  ring(-1, 1).look
+  end
+  if  ring(*%W{
+1 0 0 0   0 0 
+0 0 0 0   0 0 
+0 0 0 0   0 0 
+}).look == "1"
+#  smp MagicDust[/HI_/,52], amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
+end
+ 
+  if  ring(*%W{
+ 1 0 0 0   0 0 1 0   0 0 0 0  1 0 0 0
+}).look == "1"
+#  shader :shader, "wave.glsl", "rope.vert", :points,  line(10000, 100000, 128).look(:fx)
+  shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)
+ 
+shader :fx, :kal
+ shader :iSpeed, rand * 0.1
+  shader :iRadius,  line(0,0.25,128*4).look
+shader :iIntro, 4.0
+#shader :decay, :iCrazy, 0.1, 0.1
+    dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
+    kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
+    pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
+   sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)
+   swing =  knit(0.0, 3, 0.125/3.0, 1).look(:sloppy)
+   aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
+   #at do
+    #sleep swing
+#    smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
+#end
+    #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
+    if spread(1,16*4).look
+#      smp Junk[/tom/,2], amp: 0.8, rpitch: 0
+    end
+     if spread(1,32).tick(:sindie)
+      at do
+        sleep (1/8.0)*2
+ #       smp Mountain[/subkick/,1], amp: 0.5*1
+      end
+    end
+  end
+  if spread(1,2, rotate: 0).look 
+    with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
+ #     smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack:  line(0.0, 0.02,128).look(:ma)
+      #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
+    end
+     if spread(1,64).tick(:sindie)
+      at do
+        sleep 1/8.0
+        #smp MagicDust[/_HI/,5], amp: 0.1
+        #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
+      end
+    end
+  end
+  if  ring(*%W{
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
+0 0 0 0  1 0 0 0    1 0 0 0   1 0 0 0}).look == "1"
+ #   smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look
+    #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{knit("f#",4,"d",2,"e",2).tick(:snare)}.wav", start: line(0.0, 0.0005,1024).look, finish: line(0.01, 0.06,32).look, amp: 1.25
+    #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{ knit("f#",3,"d",3,"e",2).look}.wav", start: 0.03, finish:  line(0.01, 0.06,32).look, amp: 4.0
+    #smp Frag[/FR1_Coil_27_F#m/], start: 0.0, finish:  line(0.01, 0.044,32).look, amp: 0.35, rpitch: 0
+  #  smp Dust[/snare/,2], amp: 0.5, cutoff:  line(120, 135,256).look
+  end
+    if spread(1,8).look
+#shader :fx, :kal
+     #smp Dust[/snare/,8], amp: 0.5
+    #smp Dust[/snare/,1], amp: 0.24
+ 
+    else
+       #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
+    end
+  if spread(16,64).look
+    with_fx :bitcrusher, bits: 16 do
+      #smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
+    end
+  end
+ 
+  if spread(1,32).look
+    #synth :dark_sea_horn, note: chord(:FS2, :m11), cutoff: 100, decay: 1.0, attack: 0.0001, amp: 1.0
+  end
+    d= spread(7,11).map{|s| s ? :echo : :reverb}
+    with_fx  d.look, decay: 1*2, phase: 0.125, mix: 1, distort:  0*line(0.0, 0.5,128).look do
+#puts (🍓.slice(:Fs3)).take(1)
+      ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
+ 
+with_fx :lpf, cutoff: 90, mix: 1 do
+with_fx :hpf, cutoff: 40, mix: 1 do
+#      smp (((🍓.slice(:Fs3)))).take(32).ring.look, amp: 7.0#, rate: [1.0].choose, rpitch: 0*ring(-2,0,3,5).shuffle.tick(:inner)#, cutoff: 135 , cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, rate: 1* knit(1.0,15,-1.0,1).look#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+end
+end
+#      smp (((🍓.slice(:Fs3))).take(64).cycle.take(15) + [🍓.slice(:Fs4)[25]]).ring.look, amp: 8.0, rpitch: ring(0).shuffle.tick(:inner), rate:  knit(1.0,15,-1.0,1).look, cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
+ 
+      #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(7).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
+      #smp (🍓.slice(:Fs3)).drop(1).look, amp: 4.0, rpitch:  ring(3).shuffle.tick(:inner), cutoff: 135 ,cutoff:  ramp(10, 135, 128).tick(:ra53am)
+ 
+    end
+ 
+    if spread(7,11).look
+      fslice = 🍓.slice(:Fs3).drop(1).reverse.look
+      #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
+    end
+ 
+    d= spread(3,8).map{|s| s ? :pitch_shift : :none}#.shuffle
+    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
+     fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3)[-1]]).look
+     future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
+ 
+ if future_fslice && future_fslice[:length] > 0.1
+comment do
+if spread(1,4).look
+at do
+smp MagicDust[/_MID/,49], amp: 0.8*1
+sleep 0.125
+smp MagicDust[/_HI/,0], amp: 0.8*1
+sleep 0.125
+smp MagicDust[/_HI/,0], amp: 0.8*1
+end
+else
+at do
+smp MagicDust[/_MID/,49], amp: 1.0*1
+sleep 0.125
+smp MagicDust[/_HI/,0], amp: 0.8*1
+end
+end
+end
+end
+
+#A4 B4 Fs4 _ _ _ _ _ _ _ _
+noz =  ring(#            [:A3, 0.5,  0.1],  "_", [:Fs3,0.25,0.01], "_", "_", "_", "_", "_",
+#            [:B3,0.125, 0.01], "_", [:Fs3,0.125,0.01], "_", "_", "_", "_", "_",
+ 
+#            [:Cs4,0.125,0.1],"_",   [:A3,0.125,0.01], "_", "_", "_", "_", "_",
+#            [:D4, 0.125,0.01], "_", [:A3,0.125,0.01], "_", "_", "_", "_", "_",
+ 
+ 
+             "_", [:Fs3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+             "_", [:Fs3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+             "_", [:Fs3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+             "_", [:Fs3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+ 
+             "_", [:D3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+             "_", [:D3, 0.5, 0.1], "_",  [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01],  
+ 
+             "_",[:e3, 0.5, 0.1],"_",    [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01]     ,
+             "_",[:e3, 0.5, 0.1],"_",    [:a3,0.125,0.01], [:b3,0.125,0.01], [:b3,0.25,0.01]     ,
+ 
+ #           [:A4,  0.125,0.01], [:E4,0.25,0.5], "_" , "_", "_", "_", "_", "_",
+ #           [:CS3, 1.0, 0.1],   [:E3,0.5,0.01], [:Gs3,0.5,0.01], "_", "_", "_", "_", "_",
+ #           [:A4,  0.125,0.01], [:E4,0.25,0.5], "_" , "_", "_", "_", "_", "_",
+ 
+ 
+#A  B  Fs
+#3  4  0
+ 
+ 
+#            [:A3, 0.5,  0.1],  "_", [:Fs3,0.25,0.01], "_", "_", "_", "_", "_",
+#            [:B3,0.125, 0.01], "_", [:Fs3,0.125,0.01], "_", "_", "_", "_", "_",
+ 
+#            [:Cs4, 0.125,  0.1],"_",  [:A3, 0.125, 0.01], "_", "_", "_", "_", "_",
+#            [:A4, 0.125, 0.01],       [:A4, 0.25, 0.01],  [:B4,0.125,0.01], "_", [:FS4,0.25,0.01], "_", [:A4,0.125,0.01], "_",
+ 
+#              [:B3, 0.5,1.0],  "_", "_", "_", "_", "_", "_", "_",
+#              [:B3,0.125,0.01], "_", [:Cs4,0.125,0.01], "_", "_", "_", "_", "_",
+).look
+if noz != "_"
+ if noz[1] > 0.25
+#puts "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_#{noz[0].to_s.downcase.gsub!(/3/,"1")}.wav"
+if spread(1,4).tick(:insider)
+# smp "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_d0.wav", amp: 1
+end
+#sample "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs1.wav", amp: 4.0
+ 
+#dd = syn :dark_sea_horn, note: noz[0]-12, amp: 2*1, attack: 0.1, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1],release: noz[2], note_slide: 1.0, cutoff:  line(60,85,1028).look
+else
+#dd = syn :gpa, wave: 0, note: noz[0], amp: 1*1.5, attack: 0.0001, decay: 2* knit(0.01, 31, 0.25,1).look, sustain: noz[1], release: noz[2], note_slide: 1.0, cutoff: 70+ line(-10,10,256).look, pan:  ring(0.5, 0.25, -0.25, -0.5).look
+end
+#dd = syn :gpa, wave: 2, note:  knit(noz[0],1,_,6).tick(:jklsda)+12, amp: 1*1.5, attack: 0.0001, decay:  knit(0.01, 31, 0.25,1).look, sustain: 0.125, release: 0.125, note_slide: 1.0, cutoff: 70, pan:  ring(0.5, 0.25, -0.25, -0.5).look
+end
+
+noz =  ring(             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+              "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+
+             [:CS5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
+             [:E5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", "_", "_", "_", "_",
+#            "_",  "_", "_", "_", "_", "_", "_", "_",
+).look
+ 
+noz =  ring( [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:A5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.25,0.25,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              
+             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.25, 0.25,0.001], [:D5,0.125,0.125,0.001], [:Cs5,0.25,0.25,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:D5,0.25, 0.25,0.001], [:D5,0.125,0.125,0.001], [:Cs5,0.25,0.25,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+
+             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:E5,0.25, 0.25,0.001], [:D5,0.125,0.125,0.001], [:E5,0.25,0.25,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+              "_", "_", "_", "_", "_", "_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_"
+
+).look
+
+noz2 =  ring(             [:FS5, 0.125/1.0, 0.125/1.0,0.001], "_",  [:A5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_",  "_",
+             "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:A5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+              "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:A5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+
+             [:CS5, 0.125, 0.125,0.001], "_", [:E5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
+             [:fs5, 0.125, 0.125,0.001], "_", "_", [:D5, 0.125, 0.125,0.001], "_","_", "_", "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+
+             [:FS5, 0.125/2.0, 0.125/2.0,0.001], "_",  [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_",  "_",
+              "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+              "_", "_", "_", "_", "_", "_", "_", "_",
+             [:FS5, 0.125, 0.125,0.001],  "_", [:B5,0.125, 0.125,0.001], [:D5,0.125,0.125,0.001], [:E5,0.125,0.125,0.001],  "_",  "_", "_",  
+
+             [:CS5, 0.125, 0.125,0.001], "_", [:E5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
+             [:E5, 0.125, 0.125,0.001], "_", [:D5, 0.125, 0.125,0.001], "_", [:Fs5, 0.125, 0.125,0.001], "_", "_", "_",
+             "_", "_", "_", "_", "_", "_", "_", "_",
+
+ ).look
+comment do
+if noz[0].to_s[0..1] == "FS" && spread(1,4).look
+  #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 2.0, rpitch: 0
+end
+if noz[0].to_s[0] == "A"
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 6.0, rpitch: 0
+end
+if noz[0].to_s[0] == "B"
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 6.0, rpitch: 0
+end
+if noz[0].to_s[0] == "D"  && spread(1,2).look
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 2.6, rpitch: 0
+  #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.0, rpitch: 0
+end
+
+if noz[0] != "_"
+syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.2*1
+end
+end
+
+mid =  ring([:FS2,0.5,2,0], "_", "_","_", "_", "_","_","_",
+            [:A2,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:B2,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:Cs3,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:D3,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:D3,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:Cs3,0.25,0,0], "_", "_","_",  "_", "_","_","_",
+            [:B2,0.125,0,0], "_", "_", "_","_","_",
+            [:A2,0.25,0,0], "_","_","_",  "_","_" ,
+            "_","_","_","_"  
+).look
+if mid[0] != "_"
+i= rand_i
+#with_fx :distortion, mix: 0.5, distort:  line(0.0, 0.2, 64*2).look do
+#syn :beep, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 1.0*0.8#, detune: 12
+#end
+end
+ 
+if  ring(*%W{
+                                _   _   _   _   _   x
+                                _   _   _   _   _   _
+ 
+                                _   _   _   _   _   _
+                                _   _   _   _   _   _
+ 
+                                _   _   _   _   _   _
+                                _   _   _   _   _   _
+ 
+                                _   _   _   _   _   _
+                                _   _   _   _   _   _
+ 
+                                _   _   _   _   _   _
+                                _   _   _   _   _   _
+                                _   _   _   _
+}
+).look != "_"
+ # smp Junk[/ChainHit/,0..2].tick(:chain), amp: 0.1*1
+end
+ 
+    if fslice && fslice[:length] > 0.1
+if  spread(1,8).tick(:insideit)
+     smp fslice, amp: 0*8.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
+                                         #5,16, 0,16,
+                                         #7,16, 3,16
+).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
+end
+    else
+
+#with_fx :krush, mix: 0.0, gain:  line(0, 0.7,16).look do
+with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do 
+with_fx :lpf, cutoff: 85-rand, mix: 1 do
+with_fx :hpf, cutoff: 45-rand, mix: 1 do
+  #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
+     if false#knit(spread(3,8).look, 8*8, spread(4,8).look,8*4).look
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/swell/f#mvocal.wav"
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
+      #fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav" #**
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag/FR1_SOUNDS_&_FX/FR1_ATMOSPHERES/FR1_Atmos_37_F#m.wav"
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/INTERFERENCES/FR2_Interference_25_F#m.wav"
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
+      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_12.wav"
+      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
+     else
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
+     end 
+     if spread(1,64).look
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
+     end
+comment do
+     fslice[:path] = (knit
+"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
+).look
+
+if fslice[:path] == "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav" && spread(1,8).look
+  #synth :chipbass, note: :FS0
+elsif fslice[:path] == "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav"
+  #synth :chipbass, note: :E0, attack: 0.01
+elsif fslice[:path] =~ /d1.wav/
+  #synth :chipbass, note: :D0
+elsif fslice[:path] =~ /b1.wav/
+  #synth :chipbass, note: :"B-1"
+end
+
+comment do
+     fslice[:path] = (knit
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+
+
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+
+
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
+
+
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
+
+
+).look
+end
+
+end
+
+
+n = (knit
+"cs2", 1*2,
+
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+"fs2", 1*2,
+"a2",1*2,
+
+"fs3", 1*2,
+
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+"b2", 1*2,
+"d2",1*2,
+
+
+"a2", 1*2,
+
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+"d2", 1*2,
+"fs2",1*2,
+
+"b1", 1*2,
+
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+"e2", 1*2,
+"gs2",1*2,
+
+
+#"b2",8*2,
+#"d2",8,
+#"e2",8
+).look
+synth :piano, note: note(n)+24, attack: 0.01, decay: 0.01, release: 0.5, sustain: 0.2, amp: 0.0, sustain_level: 2
+    # puts fslice[:path]
+  #smp fslice, amp: 5.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #finish_offset: 0.0035 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+end
+end
+end
+end
+#end
+ 
+      if s != 1/8.0  # B-7-C#-5-D-4-E-2-F#-2-G#-3-A-5-B-7-C#-8-D-10-E-12-F#
+with_fx :lpf, cutoff: 85, mix: 1 do
+with_fx :hpf, cutoff: 60, mix: 1 do
+        smp fslice, amp: 3.0, rpitch: 0, cutoff: 135, start: 0.868, finish: 1.0
+end
+end
+        #smp fslice, amp: 2.0, rpitch: -5, cutoff: 100, start: 0.7, finish: 1.0
+      end
+#puts (fslice[:offset] - fslice[:onset])
+if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
+  #smp MagicDust[/_HI/,4], amp: 1
+  #synth :gpa, note:  knit(chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 2.4, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+else
+#if spread(1,2).tick(:myown)
+#  smp MagicDust[/_LO/,6..7].tick(:ohyeah), amp: 1
+#end
+end
+ 
+ 
+     if spread(1,64).look
+        #smp (🍓.slice(:Fs3)).reverse.drop(12).take(12).reverse.look, amp: 4.0,
+        #rpitch:  ring(12*1).look, cutoff: 100
+      end
+    end
+    if  spread(8, 16).look
+#      with_fx :distortion, mix:  line(0.0, 1.0, 128).look do
+#        with_fx :bitcrusher, bits:  line(8, 32, 1).look do
+ #         smp (🍓.slice(:D2).take(32)).look, amp: 8.3,rpitch:  knit(-5, 32, -5, 32).look
+#        end
+#      end
+    end
+  end
+ 
+#if fslice && (fslice[:offset] - fslice[:onset]) < 0.1
+# sleep 1/8.0
+#else
+sleep s
+#end
+end
+ 
+live_loop :breath, sync: :slicing do
+  tick
+  #sample Vocals[[2,2,2, 2,2,6]].look, amp: 0.05*1.0, pan:  line(-0.25,0.25,256).look
+  sleep (1/2.0)*6
+end
+ 
+comment do
+live_loop :ambient, sync: :slicing do
+stop
+  tick
+  with_fx :slicer, phase:  ring(1/4.0).look, invert_wave: 1  do
+    #synth :dark_ambience, note:  chord(:Fs4, :m11), amp: 1, decay: 10, attack: 8.0
+    #smp Berry[/gaiazone_9/], amp: 10
+  end
+  #smp Berry[/ataxicone_10/], amp: 2
+  #sample 🍓.slice(:Fs3).look()[:path], amp: 1
+  sleep (1/2.0)*32
+end
+end
+ 
+@sh||=nil
+with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
+live_loop :harmony, sync: :slicing do
+tick
+target_chord =  ring(
+#        [[:FS2,8.2], [:A2, 8.2], [:Cs3,8.2*2]],
+#        [[:A2,8.2],  [_,   8.2], [:E3,8.2]],
+#        [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
+
+        [[:FS2,2*8.2], [:A2, 8.2],  [:Cs3,8.2*2]],
+        [[_,8.2],     [:As2, 8.2], [_,8.2]],
+        [[:FS1,8.2], [:B2,8.2],   [:D3, 1*8.2]],
+        [[:D2,8.2],    [:Fs2, 8.2], [:A2,8.2] ],
+        [[:E2,8.2],  [:Gs2, 8.2], [:B2,8.2*2]],
+
+        [[:Fs2,8.2], [_,8.2],   [:D3, 8.2]],
+        [[:A2,8.2], [:Cs3,8.2], [:E3, 8.2]],
+        [[:Cs2,8.2], [:E2,8.2], [:Gs3, 8.2*2]],
+        [[:Cs3,8.2], [:E3,8.2], [_, 8.2], [:B3, 8.2]],
+        [[:E2,8.2*3], [:Gs3,8.2*2], [:B3, 8.2*3]],
+         _,_,
+
+#      [chord(:FS1, :m,invert: -1),1],[chord(:FS1, :m),4],_, _,             #A F C   F A C
+#      [chord(:FS1, :M),4],_, _, _,   # A#                       #F A# C
+#      [chord(:B1, "m", invert: -1),6], _,_,_,                   #B D F
+#      [chord(:D1, :M,  invert: 0),4],_,_,_,                     #D F A 
+#      [chord(:E1, "M", invert: 0),8], _,_,_,                    #E G B            #D2  F2 A3
+ #     _,_,_,_,
+
+ #     [chord(:B1, "m", invert: -1),6], _,_,_,                   #A C E
+ #     [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
+ #     [chord(:Cs1, :m,  invert: 0),4],_,_,_,
+ #     [chord(:Cs2, "m7", invert: 0),16],                       #GCE
+ #     [chord(:E1, "M", invert: 0),8*2],
+
+
+
+
+  
+#        [[:CS3,8.2],  [:E3, 8.2], [:Gs3,8.2] ],
+ 
+).look
+ds = []
+puts "root: #{target_chord.map{|c| c[0]}}" if target_chord
+#synth :plucked, attack: 0.0001, release: 0.25, decay: 2.0, note: target_chord.select{|c| c[0]}[0][0], amp: 0.2
+
+baz = ""
+sample  (baz=ring( 
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/b1.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/d2.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/e2.wav",
+ 
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
+ 
+#SevenBass[/02\/f#0/],
+#SevenBass[/02\/b0/],
+#SevenBass[/02\/d0/],
+#SevenBass[/02\/e0/]
+
+#SevenBass[/beat/,2],
+
+#SevenBass[/seven\/f#0_4/],
+#SevenBass[/b0_2/],
+#SevenBass[/d0_2/],
+#SevenBass[/e0_2/],
+ 
+#SevenBass[/f#1_4/],
+#SevenBass[/b0_2/],
+#SevenBass[/d1_2/],
+#SevenBass[/e1_2/],
+
+"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",
+"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
+
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
+
+).look), amp: 2.0*0, attack: 0.0, decay: 5.0
+puts baz.to_s.split("\/")[-1]
+
+sample  ring( Suburb[/a0/],
+Suburb[/b0/],
+Suburb[/cs0/],
+Suburb[/d0/]
+).look, amp: 1.0*0, attack: 2.0*1
+
+puts target_chord
+if target_chord
+target_chord.each do |np|
+if np[0]
+ds << (synth :dsaw, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 0.25*(1.5 / target_chord.count))
+end
+end
+with_fx :hpf, cutoff: 50, mix: 0.0 do
+( ring(8).look).times{
+  control g_fx, mix: rand, damp: rand
+  #control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
+  control ds.choose, amp: 0.5*(1.5 + rand) / target_chord.count
+  sleep 1
+}
+end
+else
+sleep 8
+end
+end
+end
+with_fx :reverb, mix: 0.5, decay: 1 do
+with_fx :pitch_shift do
+live_loop :vocals, sync: :slicing do
+ tick
+ sleep 3
+ with_fx :slicer, phase: 1.0, smooth: 0.85 do
+ #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
+ end
+
+#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+# "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
+#).look
+#sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4
+
+#sample Berry[/mm/].reverse[0..2].look, amp: 1.5
+#puts Berry[/mm/].reverse.look
+
+#~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav"
+
+#vor_alto_leg_mm_01_u_01
+#vor_alto_leg_mm_01_u_02
+#sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_04.wav"
+#sample "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_07.wav"
+sleep 3+2+8*2
+end
+end
+end

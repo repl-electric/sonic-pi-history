@@ -381,7 +381,7 @@ mid =  ring([:FS2,0.5,2,0], "_", "_","_", "_", "_","_","_",
 if mid[0] != "_"
 i= rand_i
 with_fx :distortion, mix: 0.9, distort:  line(0.0, 0.9, 64*2).look do
-syn :dark_sea_horn, note: note(mid[0])+12, decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 0.3*1, detune: 12, cutoff: 80
+syn :dark_sea_horn, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 0.3*1, detune: 12, cutoff: 80
 end
 end
  

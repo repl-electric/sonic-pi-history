@@ -346,19 +346,19 @@ noz2 =  ring(             [:FS5, 0.125/1.0, 0.125/1.0,0.001], "_",  [:A5,0.125, 
              "_", "_", "_", "_", "_", "_", "_", "_",
 
  ).look
-uncomment do
+comment do
 if noz[0].to_s[0..1] == "FS" && spread(1,4).look
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/f#5.wav", amp: 1.0, rpitch: 0
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 2.0, rpitch: 0
 end
 if noz[0].to_s[0] == "A"
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 2.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/a5.wav", amp: 6.0, rpitch: 0
 end
 if noz[0].to_s[0] == "B"
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 2.0, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/b5.wav", amp: 6.0, rpitch: 0
 end
 if noz[0].to_s[0] == "D"  && spread(1,2).look
-  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 1.6, rpitch: 0
+  sample "/Users/josephwilk/Workspace/music/samples/Live/organ/d5_02.wav", amp: 2.6, rpitch: 0
   #sample "/Users/josephwilk/Workspace/music/samples/Live/organ/fs5_0#{[1,2,3].choose}.wav", amp: 1.0, rpitch: 0
 end
 
@@ -416,7 +416,7 @@ end
     else
 
 #with_fx :krush, mix: 0.0, gain:  line(0, 0.7,16).look do
-with_fx :pitch_shift, mix: 1.0, pitch_dis: 0.0  do 
+with_fx :pitch_shift, mix: 0.0, pitch_dis: 0.0  do 
 with_fx :lpf, cutoff: 85-rand, mix: 1 do
 with_fx :hpf, cutoff: 45-rand, mix: 1 do
   #sample Frag[/snap/, 0..12].look, amp:  line(1,0.1, 1024).shuffle.look#, rate:  line(0.5, 2.0,256).look
@@ -489,6 +489,7 @@ comment do
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
 
+
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
@@ -499,12 +500,14 @@ comment do
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/g#1.wav",1*2,
 
+
 ).look
 end
 
 end
 
-n = (ring
+
+n = (knit
 "cs2", 1*2,
 
 "fs2", 1*2,
@@ -576,13 +579,14 @@ n = (ring
 "e2", 1*2,
 "gs2",1*2,
 
+
 #"b2",8*2,
 #"d2",8,
 #"e2",8
 ).look
-synth :piano, note: note(n)+24, attack: 0.001, decay: 0.01, release: 0.5, sustain: 0.2, amp: 1.0, sustain_level: 2
+synth :piano, note: note(n)+24, attack: 0.01, decay: 0.01, release: 0.5, sustain: 0.2, amp: 0.0, sustain_level: 2
     # puts fslice[:path]
-  smp fslice, amp: 3.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #finish_offset: 0.0035 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
+  #smp fslice, amp: 5.0*1, rpitch: line(0, 1, 64).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #finish_offset: 0.0035 #, finish_offset: ( spread(7, 11).look ? 0.01 : 0.0)
 end
 end
 end
@@ -600,9 +604,7 @@ end
 #puts (fslice[:offset] - fslice[:onset])
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
   #smp MagicDust[/_HI/,4], amp: 1
-#  synth :gpa, note:  knit(chord(:Fs4,:m)[0],64, 
- #                         chord(:A4,:m)[0],64,  
-  #                        chord(:Cs5,:m)[0],64).look, amp: 1.8, attack: 0.001, decay: (fslice[:offset] - fslice[:onset])+(knit 0.1,1,0.001,1).tick(:inititti), release: 0.001
+  #synth :gpa, note:  knit(chord(:Fs4,:m)[0],64,  chord(:Cs5,:m)[0],64).look, amp: 2.4, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 else
 #if spread(1,2).tick(:myown)
 #  smp MagicDust[/_LO/,6..7].tick(:ohyeah), amp: 1
@@ -660,10 +662,10 @@ target_chord =  ring(
 #        [[:A2,8.2],  [_,   8.2], [:E3,8.2]],
 #        [[:B2,8.2],  [:D3, 8.2], [:Fs3,8.2] ],
 
-        [[:FS2,2*8.2], [:A2, 6.0],  [:Cs3,8.2*2]],
-        [[_,8.2],     [:As2, 8.0], [_,8.2]],
+        [[:FS2,2*8.2], [:A2, 8.2],  [:Cs3,8.2*2]],
+        [[_,8.2],     [:As2, 8.2], [_,8.2]],
         [[:FS1,8.2], [:B2,8.2],   [:D3, 1*8.2]],
-        [[:D2,8.2],  [:Fs2, 8.2], [:A2,8.2] ],
+        [[:D2,8.2],    [:Fs2, 8.2], [:A2,8.2] ],
         [[:E2,8.2],  [:Gs2, 8.2], [:B2,8.2*2]],
 
         [[:Fs2,8.2], [_,8.2],   [:D3, 8.2]],
@@ -685,6 +687,8 @@ target_chord =  ring(
  #     [chord(:Cs1, :m,  invert: 0),4],_,_,_,
  #     [chord(:Cs2, "m7", invert: 0),16],                       #GCE
  #     [chord(:E1, "M", invert: 0),8*2],
+
+
 
 
   
@@ -728,12 +732,12 @@ sample  (baz=ring(
 "/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
 
-"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
 
-).look), amp: 2.0*1, attack: 0.0, decay: 5.0
+).look), amp: 2.0*0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample  ring( Suburb[/a0/],
@@ -746,14 +750,14 @@ puts target_chord
 if target_chord
 target_chord.each do |np|
 if np[0]
-ds << (synth :dark_ambience, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack_level: rand*1.0 ,attack: 1, amp: 1.0*(1.5 / target_chord.count))
+ds << (synth :dsaw, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack: 1, amp: 0.25*(1.5 / target_chord.count))
 end
 end
 with_fx :hpf, cutoff: 50, mix: 0.0 do
 ( ring(8).look).times{
   control g_fx, mix: rand, damp: rand
   #control ds.choose, note:  knit(:FS3,3, :B3,1, :D3,1, :E3,1, :FS3, 2).tick(:melo)
-  control ds.choose, amp: 1.0*(1.5 + rand) / target_chord.count
+  control ds.choose, amp: 0.5*(1.5 + rand) / target_chord.count
   sleep 1
 }
 end

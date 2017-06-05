@@ -436,7 +436,8 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 comment do
-     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
+     fslice[:path] = (knit
+"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
@@ -453,7 +454,8 @@ elsif fslice[:path] =~ /b1.wav/
 end
 
 comment do
-     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
+     fslice[:path] = (knit
+"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
@@ -505,7 +507,8 @@ end
 end
 
 
-n =  knit("cs2", 1*2,
+n = (knit
+"cs2", 1*2,
 
 "fs2", 1*2,
 "a2",1*2,
@@ -602,7 +605,7 @@ end
 if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
   smp MagicDust[/_HI/,4], amp: 1
   synth :gpa, note:  knit(chord(:Fs4,:m)[0],64,  
-                          chord(:B5,:M)[0],64).look, amp: 2.4, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
+                          chord(:B4,:M)[0],64).look, amp: 2.4, attack: 0.001, decay: fslice[:offset] - fslice[:onset], release: 0.001
 else
 #if spread(1,2).tick(:myown)
 #  smp MagicDust[/_LO/,6..7].tick(:ohyeah), amp: 1
@@ -773,7 +776,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4

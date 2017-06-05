@@ -20,7 +20,7 @@ x=(ring
       [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
       [chord(:Cs2, :m,  invert: 0),4],_,_,_,
       [chord(:Cs2, "m7", invert: 0),16],                       #GCE
-      [chord(:Fs1, "m", invert: 0),8*2],
+      [chord(:Fs2, "m", invert: 0),8*2],
       _,_,_,_,
       _,_,_,_,
 

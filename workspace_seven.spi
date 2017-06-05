@@ -432,7 +432,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 
-     if spread(1,32).look
+     if spread(1,16).look
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 comment do

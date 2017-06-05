@@ -363,7 +363,7 @@ if noz[0].to_s[0] == "D"  && spread(1,2).look
 end
 
 if noz[0] != "_"
-#syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.2*1
+syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], attack: noz[3], amp: 1.2*1
 end
 end
 

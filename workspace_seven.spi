@@ -505,7 +505,7 @@ end
 end
 
 n = (ring
-:Fs4, :B3, :A3, :B3, :B3, :A3, :B3
+:Gs4, :B3, :A3, :B3, :B3, :A3, :B3
 
 ).look
 if spread(1,3).look

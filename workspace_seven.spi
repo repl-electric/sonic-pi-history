@@ -747,7 +747,7 @@ puts target_chord
 if target_chord
 target_chord.each do |np|
 if np[0]
-ds << (synth :dsaw, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack_level: rand*0.2 ,attack: 1, amp: 0.25*(1.5 / target_chord.count))
+ds << (synth :dsaw, amp_slide: 2, reverb_time: 16, attack: 1.0, detune1: 12, note: np[0], decay: np[-1], attack_level: rand*0.1 ,attack: 1, amp: 0.25*(1.5 / target_chord.count))
 end
 end
 with_fx :hpf, cutoff: 50, mix: 0.0 do

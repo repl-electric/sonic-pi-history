@@ -603,7 +603,7 @@ if fslice && (fslice[:offset] - fslice[:onset]) > 0.1
   smp MagicDust[/_HI/,4], amp: 1
   synth :gpa, note:  knit(chord(:Fs4,:m)[0],64, 
                           chord(:A4,:m)[0],64,  
-                          chord(:Cs5,:m)[0],64).look, amp: 1.8, attack: 0.001, decay: (fslice[:offset] - fslice[:onset])+0.005, release: 0.001
+                          chord(:Cs5,:m)[0],64).look, amp: 1.8, attack: 0.001, decay: (fslice[:offset] - fslice[:onset])+0.01, release: 0.001
 else
 #if spread(1,2).tick(:myown)
 #  smp MagicDust[/_LO/,6..7].tick(:ohyeah), amp: 1

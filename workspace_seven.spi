@@ -413,7 +413,7 @@ if  spread(8,8).tick(:insideit)
      smp fslice, amp: 1*8.0, rpitch: 1* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
-).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg) #, finish_offset: ( spread(7, 11).look ? 0.01
+).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg)+0.1 #, finish_offset: ( spread(7, 11).look ? 0.01
 end
     else
 

@@ -380,7 +380,7 @@ mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-syn :dark_ambience, note: (ring (chord :FS2, :m), (chord :A2, :m), (chord :B2, :m), (chord :Cs3, :m), (chord :E2, :M)).tick(:inmememem), amp: 1.25
+syn :dark_ambience, note: (ring (chord :FS2, :m), (chord :A2, :m), (chord :B2, :m), (chord :Cs3, :m), (chord :E2, :M)).tick(:inmememem), amp: 2.25
 #with_fx :distortion, mix: 0.9, distort:  line(0.0, 0.9, 64*2).look do
 syn :dark_sea_horn, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 0.3*1, detune: 12, cutoff: 80
 #end

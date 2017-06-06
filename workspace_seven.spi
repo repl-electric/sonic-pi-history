@@ -181,7 +181,7 @@ end
  
     end
  
-    if spread(1,6).look
+    if (ring 1,0,0,0,0,1,0).look
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end

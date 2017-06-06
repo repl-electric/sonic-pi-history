@@ -130,7 +130,7 @@ shader :iIntro, 4.0
       at do
         sleep 1/8.0
         #smp MagicDust[/_HI/,5], amp: 0.1
-        #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
+        smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     end
   end

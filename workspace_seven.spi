@@ -181,7 +181,7 @@ end
  
     end
  
-    if (ring 1,0,0,0,0,1,0).look
+    if  ring(1,0,0,0,0,1,0).look
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       #smp fslice, amp: 4.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
@@ -380,14 +380,13 @@ mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-syn :dark_ambience, note: (ring 
-                       (chord :FS3, :m), 
+syn :dark_ambience, note:  ring(                         chord(:FS3, :m), 
                        _, 
                        _, 
-                       (chord :Cs4, :m), 
-                       (chord :D4, :M),
-                       (chord :D4, :M),
-                       (chord :Cs4, :m),
+                        chord(:Cs4, :m), 
+                        chord(:D4, :M),
+                        chord(:D4, :M),
+                        chord(:Cs4, :m),
                        _,
                        _
 ).tick(:inmememem), amp: 2.25, decay: 0.5*2, release: 2.0
@@ -422,7 +421,7 @@ if  spread(1,8).tick(:insideit)
       fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
-      smp fslice, amp: 1*8.0, rpitch: 0* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
+      smp fslice, amp: 0*8.0, rpitch: 0* knit(0,4, 3,4, 5,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset:  line(0.0001, 0.0001,16).look(:apeg)#+0.5, start: 0, finish: 0.05 #, finish_offset: ( spread(7, 11).look ? 0.01
@@ -451,8 +450,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 comment do
-     fslice[:path] = (knit
-"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
+     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
@@ -469,8 +467,7 @@ elsif fslice[:path] =~ /b1.wav/
 end
 
 comment do
-     fslice[:path] = (knit
-"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
+     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
@@ -522,8 +519,7 @@ end
 end
 
 
-n = (knit
-"cs2", 1*2,
+n =  knit("cs2", 1*2,
 
 "fs2", 1*2,
 "a2",1*2,
@@ -795,7 +791,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4

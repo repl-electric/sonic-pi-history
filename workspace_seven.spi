@@ -383,7 +383,7 @@ i= rand_i
 syn :dark_ambience, note: (ring 
                        (chord :FS3, :m), 
                        _, 
-                       (chord :B3, :m), 
+                       _, 
                        (chord :Cs4, :m), 
                        (chord :D4, :M),
                        (chord :D4, :M),

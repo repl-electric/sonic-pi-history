@@ -105,7 +105,7 @@ shader :iIntro, 4.0
    aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
    #at do
     #sleep swing
-    #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
+    smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10
 #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
     if spread(1,16*4).look

@@ -417,7 +417,7 @@ if  ring(*%W{
 end
  
     if fslice && fslice[:length] > 0.1
-if  spread(8,8).tick(:insideit)
+if  spread(1,8).tick(:insideit)
       fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"

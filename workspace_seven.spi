@@ -186,7 +186,7 @@ end
  
     if  ring(1,0,0,0,0,1,0).look
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
-      smp fslice, amp: 2.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
+      smp fslice, amp: 3.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
  
     d= spread(3,8).map{|s| s ? :pitch_shift : :none}#.shuffle

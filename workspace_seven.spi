@@ -704,7 +704,7 @@ end
 #if fslice && (fslice[:offset] - fslice[:onset]) < 0.1
 # sleep 1/8.0
 #else
-sleep s*4*2
+sleep s*4*2*2
 #end
 end
  

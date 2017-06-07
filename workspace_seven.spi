@@ -476,11 +476,11 @@ if  ring(*%W{
 end
  
     if fslice && fslice[:length] > 0.1
-if  spread(8,8).tick(:insideit)
+if  spread(1,8).tick(:insideit)
       fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
-      smp fslice, amp: 1*3.0, rpitch: 1*  knit(0,4,3,4,5,4                 #knit(0,4, 3,2, 5,2, -4,4, -2,4    # knit(0,7, 3,7 ,5,7
+      smp fslice, amp: 1*3.0, rpitch: 1*  knit(0,4, 3,4, 5,4                 #knit(0,4, 3,2, 5,2, -4,4, -2,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset: line(0.0001, 0.0001,16).look(:apeg)#+0.5, start: 0, finish: 0.05 #, finish_offset: ( spread(7, 11).look ? 0.01

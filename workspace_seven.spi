@@ -144,7 +144,7 @@ shader :iIntro, 4.0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    1 0 0 0   1 0 0 0}).look == "1"
-    #smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12*-2, pan: (line 0.125,-0.125,32).look
+    #smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12*-2, pan:  line(0.125,-0.125,32).look
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{knit("f#",4,"d",2,"e",2).tick(:snare)}.wav", start: line(0.0, 0.0005,1024).look, finish: line(0.01, 0.06,32).look, amp: 1.25
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{ knit("f#",3,"d",3,"e",2).look}.wav", start: 0.03, finish:  line(0.01, 0.06,32).look, amp: 4.0
     #smp Frag[/FR1_Coil_27_F#m/], start: 0.0, finish:  line(0.01, 0.044,32).look, amp: 0.35, rpitch: 0
@@ -184,7 +184,7 @@ end
  
     end
  
-    if (ring 1,0,0,0,0,1,0).look
+    if  ring(1,0,0,0,0,1,0).look
       fslice = 🍓.slice(:Fs3).drop(1).reverse.look
       #smp fslice, amp: 3.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
     end
@@ -412,41 +412,40 @@ mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-syn :dark_ambience, note: (ring 
-                       (chord :FS4, :m), 
+syn :dark_ambience, note:  ring(                         chord(:FS4, :m), 
                         _,                       _, 
-                       (chord :Cs4, :m), 
-                       (chord :D4, :M),
-                       (chord :D4, :M),
-                       (chord :Cs4, :m, invert: -1),
-                       (chord :Cs4, :m, invert: 0),
+                        chord(:Cs4, :m), 
+                        chord(:D4, :M),
+                        chord(:D4, :M),
+                        chord(:Cs4, :m, invert: -1),
+                        chord(:Cs4, :m, invert: 0),
                        _,
 
-                       (chord :B4, :m), 
+                        chord(:B4, :m), 
                         _,                       _, 
-                       (chord :Cs4, :m), 
-                       (chord :D4, :M),
-                       (chord :D4, :M),
-                       (chord :Cs4, :m, invert: -1),
-                       (chord :Cs4, :m, invert: 0),
+                        chord(:Cs4, :m), 
+                        chord(:D4, :M),
+                        chord(:D4, :M),
+                        chord(:Cs4, :m, invert: -1),
+                        chord(:Cs4, :m, invert: 0),
                        _,
 
-                       (chord :D4, :M), 
+                        chord(:D4, :M), 
                         _,                       _, 
-                       (chord :Cs4, :m), 
-                       (chord :D4, :M),
-                       (chord :D4, :M),
-                       (chord :Cs4, :m, invert: -1),
-                       (chord :Cs4, :m, invert: 0),
+                        chord(:Cs4, :m), 
+                        chord(:D4, :M),
+                        chord(:D4, :M),
+                        chord(:Cs4, :m, invert: -1),
+                        chord(:Cs4, :m, invert: 0),
                        _,
 
-                       (chord :E4, :M), 
+                        chord(:E4, :M), 
                         _,                       _, 
-                       (chord :Cs4, :m), 
-                       (chord :D4, :M),
-                       (chord :D4, :M),
-                       (chord :Cs4, :m, invert: -1),
-                       (chord :Cs4, :m, invert: 0),
+                        chord(:Cs4, :m), 
+                        chord(:D4, :M),
+                        chord(:D4, :M),
+                        chord(:Cs4, :m, invert: -1),
+                        chord(:Cs4, :m, invert: 0),
                        _
 
 ).tick(:inmememem), amp: 0*2.25, decay: 0.5*1, release: 0.5
@@ -481,7 +480,7 @@ if  spread(1,8).tick(:insideit)
       fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Alto/Samples/Ambiences/Neimbiences/vor_alto_ambience_sn_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
-      smp fslice, amp: 1*3.0, rpitch: 1* (knit 0,4, 3,4, 5,4                 #knit(0,4, 3,2, 5,2, -4,4, -2,4    # knit(0,7, 3,7 ,5,7
+      smp fslice, amp: 1*3.0, rpitch: 1*  knit(0,4, 3,4, 5,4                 #knit(0,4, 3,2, 5,2, -4,4, -2,4    # knit(0,7, 3,7 ,5,7
                                          #5,16, 0,16,
                                          #7,16, 3,16
 ).tick(:apeg)*1, cutoff: 135, finish_offset: line(0.0001, 0.0001,16).look(:apeg)#+0.5, start: 0, finish: 0.05 #, finish_offset: ( spread(7, 11).look ? 0.01
@@ -510,8 +509,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 comment do
-     fslice[:path] = (knit
-"/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
+     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d1.wav",8,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav",8,
@@ -528,8 +526,7 @@ elsif fslice[:path] =~ /b1.wav/
 end
 
 comment do
-     fslice[:path] = (knit
-"/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
+     fslice[:path] =  knit("/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/c#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav",1*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/f#1.wav",1*2,
@@ -581,8 +578,7 @@ end
 end
 
 
-n = (knit
-"cs2", 1*2,
+n =  knit("cs2", 1*2,
 
 "fs2", 1*2,
 "a2",1*2,
@@ -660,8 +656,8 @@ n = (knit
 ).look
 #synth :piano, note: note(n)+24, attack: 0.01, decay: 0.01, release: 0.5, sustain: 0.2, amp: 0.0, sustain_level: 2
     # puts fslice[:path]
-#(ring fslice, _, _, fslice, fslice, _, fslice, _).look
-  smp fslice, amp: 3.0*1, rpitch: line(0, 0.5, 64*1).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 , finish_offset: (ring 0.0025, 0.0025,0.0025, 0.0035, 0.0, 0.0, 0.0).look, finish_offset: 0.0035, finish_offset: ( spread(7, 11).look ? 0.001 : 0.0)
+# ring(fslice, _, _, fslice, fslice, _, fslice, _).look
+  smp fslice, amp: 3.0*1, rpitch: line(0, 0.5, 64*1).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 , finish_offset:  ring(0.0025, 0.0025,0.0025, 0.0035, 0.0, 0.0, 0.0).look, finish_offset: 0.0035, finish_offset: ( spread(7, 11).look ? 0.002 : 0.0)
 end
 end
 end
@@ -856,7 +852,7 @@ live_loop :vocals, sync: :slicing do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
 
-#sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
+#sample  ring("~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
 #sample "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav", amp: 1.4

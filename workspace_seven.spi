@@ -195,7 +195,7 @@ end
      future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
  
  if future_fslice && future_fslice[:length] > 0.1
-comment do
+uncomment do
 if spread(1,4).look
 at do
 smp MagicDust[/_MID/,49], amp: 0.8*1

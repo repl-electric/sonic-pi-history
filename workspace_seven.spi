@@ -172,7 +172,7 @@ shader :iIntro, 4.0
 #puts (🍓.slice(:Fs3)).take(1)
       ons=[ratio_on((🍓.slice(:Fs3)).look()), ratio_off((🍓.slice(:Fs3)).look())].shuffle
  
-with_fx :lpf, cutoff: 90, mix: 1 do
+with_fx :lpf, cutoff: 90, mix: 0 do
 with_fx :hpf, cutoff: 40, mix: 0 do
 #      smp (((🍓.slice(:Fs3)))).take(32).ring.look, amp: 7.0#, rate: [1.0].choose, rpitch: 0*ring(-2,0,3,5).shuffle.tick(:inner)#, cutoff: 135 , cutoff:  ramp(10, 135, 128).tick(:ras5s3am)#, rate: 1* knit(1.0,15,-1.0,1).look#, finish: ons[0], start: ons[1]-  knit(0,31,0.01,1).tick(:spand)
 end

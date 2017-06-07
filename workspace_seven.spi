@@ -815,7 +815,8 @@ sample  (baz=ring(
 ).look), amp: 2.0*1, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
-sample  ring( Suburb[/a0/],
+sample ring( 
+Suburb[/a0/],
 Suburb[/b0/],
 Suburb[/cs0/],
 Suburb[/d0/]

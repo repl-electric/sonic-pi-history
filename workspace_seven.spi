@@ -83,7 +83,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
 0 0 0 0   0 0 
 0 0 0 0   0 0 
 }).look == "1"
-  smp (MagicDust[/HI_/,52..69]+["/Users/josephwilk/Workspace/music/samples/Live/dust/MD_ORGANIC_HIT_HI_053-02.wav"]).tick(:click), amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
+  smp (MagicDust[/HI_/,52..53]+["/Users/josephwilk/Workspace/music/samples/Live/dust/MD_ORGANIC_HIT_HI_053-02.wav"]).tick(:click), amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
 
 end
  

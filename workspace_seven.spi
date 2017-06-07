@@ -144,7 +144,7 @@ shader :iIntro, 4.0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0
 0 0 0 0  1 0 0 0    1 0 0 0   1 0 0 0}).look == "1"
-    smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12
+    smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12, pan: 0.25
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{knit("f#",4,"d",2,"e",2).tick(:snare)}.wav", start: line(0.0, 0.0005,1024).look, finish: line(0.01, 0.06,32).look, amp: 1.25
     #smp "/Users/josephwilk/Workspace/music/samples/melodyne/coil/#{ knit("f#",3,"d",3,"e",2).look}.wav", start: 0.03, finish:  line(0.01, 0.06,32).look, amp: 4.0
     #smp Frag[/FR1_Coil_27_F#m/], start: 0.0, finish:  line(0.01, 0.044,32).look, amp: 0.35, rpitch: 0

@@ -412,7 +412,7 @@ mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",
 ).look
 if mid[0] != "_"
 i= rand_i
-syn :dark_ambience, note: (ring 
+syn :dark_ambience, amp:0,note: (ring 
                        (chord :FS4, :m), 
                         _,                       _, 
                        (chord :Cs4, :m), 

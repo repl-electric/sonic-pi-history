@@ -154,6 +154,7 @@ shader :iIntro, 4.0
 #shader :fx, :kal
      #smp Dust[/snare/,8], amp: 0.5
      #smp Dust[/snare/,1], amp: 0.24
+     smp Frag[/snare/,8], amp: 0.5
  
     else
        #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look

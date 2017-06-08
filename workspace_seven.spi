@@ -151,7 +151,7 @@ shader :iIntro, 4.0
     #smp Dust[/snare/,2], amp: 0.5, cutoff:  line(120, 135,256).look
   end
 
-    if spread(1,64).look
+    if spread(1,128).look
       smp Frag[/coil/,0], finish: 0.1, amp: 0.5
     end
 

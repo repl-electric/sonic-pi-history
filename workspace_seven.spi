@@ -150,7 +150,7 @@ shader :iIntro, 4.0
     #smp Frag[/FR1_Coil_27_F#m/], start: 0.0, finish:  line(0.01, 0.044,32).look, amp: 0.35, rpitch: 0
     #smp Dust[/snare/,2], amp: 0.5, cutoff:  line(120, 135,256).look
   end
-     smp Frag[/snare/,8], amp: 0.5
+     smp Frag[/noise/,8], amp: 0.5
 
     if spread(1,8).look
 #shader :fx, :kal

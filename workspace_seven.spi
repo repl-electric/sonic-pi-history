@@ -152,9 +152,7 @@ shader :iIntro, 4.0
   end
 
     if spread(1,128).look
-      with_fx :reverb, decay: 8 do
-      smp Frag[/coil/,0], finish: 0.1, amp: 0.5
-      end
+      smp Frag[/coil/,22], finish: 0.1, amp: 0.5
     end
 
     if spread(1,8).look

@@ -152,7 +152,7 @@ shader :iIntro, 4.0
   end
 
     if spread(1,8).look
-     smp Frag[/coil/,10], finish: 0.05, amp: 0.5
+     smp Frag[/coil/,11], finish: 0.05, amp: 0.5
 
 #shader :fx, :kal
      #smp Dust[/snare/,8], amp: 0.5

@@ -152,7 +152,7 @@ shader :iIntro, 4.0
   end
 
 #    if spread(1,64).look
-     smp Frag[/coil/,47], finish: 0.05, amp: 0.5
+     smp Frag[/coil/,48], finish: 0.05, amp: 0.5
  #   end
 
     if spread(1,8).look

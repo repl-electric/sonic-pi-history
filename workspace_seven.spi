@@ -157,6 +157,8 @@ shader :iIntro, 4.0
      # smp Frag[/coil/,21],amp: 1#, finish: 0.1, amp: 0.5
      smp "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_DRUM_HITS/FR2_SNAPS/FR2_Snap_01.wav", pan: 1,amp: 0.5
      smp "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_DRUM_HITS/FR2_SNAPS/FR2_Snap_01.wav", pan: -1,amp: 0.5
+     smp "/Users/josephwilk/Workspace/music/samples/Frag/FR1_SOUNDS_&_FX/FR1_DRUM_HITS/FR1_SNAPS/FR1_Snap_09.wav"
+
     end
 
     if spread(1,8).look

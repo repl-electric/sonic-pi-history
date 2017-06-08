@@ -152,7 +152,7 @@ shader :iIntro, 4.0
   end
     if spread(1,8).look
 #shader :fx, :kal
-     smp Dust[/snare/,8], amp: 0.5
+     #smp Dust[/snare/,8], amp: 0.5
      #smp Dust[/snare/,1], amp: 0.24
  
     else

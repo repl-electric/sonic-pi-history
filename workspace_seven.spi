@@ -152,7 +152,9 @@ shader :iIntro, 4.0
   end
 
     if spread(1,128).look
+with_fx :reverb do
       smp Frag[/coil/,0], finish: 0.1, amp: 0.5
+end
     end
 
     if spread(1,8).look

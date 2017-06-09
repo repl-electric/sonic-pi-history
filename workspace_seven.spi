@@ -381,7 +381,7 @@ syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], atta
 end
 end
 
-if (n=(ring :fs5,_,_,:a4,:cs4,_,_,_,
+if (n=(ring :fs5,_,_,:cs4,:cs4,_,_,_,
             :a4,_,_, :cs4,:a4,_,_,_
 ).look) != _
 syn :gpa, note: n, decay: 0.001, release: (knit 1.0,3, 0.5,2).look, attack: 0.001, amp: 2.0

@@ -108,7 +108,7 @@ end
   #at do
    #sleep swing
     #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
-    smp (ring sss, Fraz[/FR2_Coil_25/]).look, amp: 1, rpitch: -12
+    smp (ring sss, Fraz[/FR2_Coil_25/]).look, amp: 1, rpitch: 1
   #end
  #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }

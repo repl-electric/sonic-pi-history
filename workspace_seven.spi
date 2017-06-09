@@ -521,7 +521,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
 
-fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/a1.wav"
+fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav"
 
 
 comment do

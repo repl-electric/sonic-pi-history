@@ -88,6 +88,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
 
 end
  
+  #with_fx :hpf, cutoff: 60 do
   if  ring(*%W{
  1 0 0 0   0 0 1 0   1 0 0 0  1 0 0 0
 }).look == "1"
@@ -106,7 +107,6 @@ end
   aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
   #at do
    #sleep swing
-  #with_fx :hpf, cutoff: 60 do
     #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
     smp (ring sss, Fraz[/FR2_Coil_25/]).look, amp: 1
   #end
@@ -121,6 +121,7 @@ end
      #   smp Mountain[/subkick/,1], amp: 0.5*1
       end
     end
+  end
   end
 
   if spread(1,2, rotate: 0).look 

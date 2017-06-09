@@ -92,24 +92,24 @@ end
 }).look == "1"
 #  shader :shader, "wave.glsl", "rope.vert", :points,  line(10000, 100000, 128).look(:fx)
   shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)
- 
-shader :fx, :kal
- shader :iSpeed, rand * 0.1
+  shader :fx, :kal
+  shader :iSpeed, rand * 0.1
   shader :iRadius,  line(0,0.25,128*4).look
-shader :iIntro, 4.0
-#shader :decay, :iCrazy, 0.1, 0.1
-    dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
-    kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
-    pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
-   sss = Mountain[/subkick/,[1,0,0,0,0]].look(:sloppy)
-   swing =  knit(0.0, 3, 0.125/3.0, 1).look(:sloppy)
-   aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
-   #at do
-    #sleep swing
-with_fx :hpf, cutoff: 60 do
+  shader :iIntro, 4.0
+  #shader :decay, :iCrazy, 0.1, 0.1
+  dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
+  kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
+  pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
+  sss = Mountain[/subkick/,[1,0,0,0,0]].look(:sloppy)
+  swing =  knit(0.0, 3, 0.125/3.0, 1).look(:sloppy)
+  aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
+  #at do
+   #sleep swing
+  with_fx :hpf, cutoff: 60 do
     #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
- sample (ring sss, Fraz[/FR2_Coil_25/]).look, amp: 2
-end
+    smp (ring sss, Fraz[/FR2_Coil_25/]).look, amp: 2
+  end
+
 #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
     if spread(1,16*4).look
@@ -122,6 +122,8 @@ end
       end
     end
   end
+
+
   if spread(1,2, rotate: 0).look 
     with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
     #  smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack:  line(0.0, 0.02,128).look(:ma)

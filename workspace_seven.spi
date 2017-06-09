@@ -102,7 +102,7 @@ end
   dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
   kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
   pp =  knit(-2,8, 0, 8, 2,8).look(:sloopy)
-  sss = Mountain[/subkick/,[1,0,0,0]].look(:sloppy)
+  sss = Mountain[/subkick/,[1,0,0,0,0]].look(:sloppy)
   swing =  knit(0.0, 3, 0.125/3.0, 1).look(:sloppy)
   aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
   #at do

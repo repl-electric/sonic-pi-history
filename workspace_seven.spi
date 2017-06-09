@@ -105,10 +105,10 @@ end
   aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
   #at do
    #sleep swing
-  with_fx :hpf, cutoff: 60 do
+  #with_fx :hpf, cutoff: 60 do
     #smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
     smp  ring(sss, Fraz[/FR2_Coil_25/]).look, amp: 1
-  end
+  #end
  #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
     if spread(1,16*4).look

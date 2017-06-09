@@ -535,7 +535,7 @@ comment do
 ).look
 
 if fslice[:path] == "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav" && spread(1,8).look
-  synth :chipbass, note: :FS0
+  #synth :chipbass, note: :FS0
 elsif fslice[:path] == "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/e1.wav"
   #synth :chipbass, note: :E0, attack: 0.01
 elsif fslice[:path] =~ /d1.wav/

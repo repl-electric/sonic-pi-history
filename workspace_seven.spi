@@ -382,7 +382,7 @@ end
 end
 
 if spread(1,8).look
-syn :gpa, note: :fs4, decay: 0.001, release: 0.5
+syn :gpa, note: :fs4, decay: 0.001, release: 0.5, attack: 0.001
 end
 
 

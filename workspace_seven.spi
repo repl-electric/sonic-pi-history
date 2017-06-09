@@ -88,7 +88,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
 
 end
  
-  with_fx :hpf, cutoff: 60, mix:1 do
+  with_fx :hpf, cutoff: 40, mix:1 do
   if  ring(*%W{
  1 0 0 0  1 0 0 0  1 0 0 0   1 1 0 0 
 }).look == "1"

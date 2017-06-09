@@ -474,7 +474,7 @@ syn :dark_ambience, note: (ring
                        _
 ).tick(:inmememem), amp: 0*2.25, decay: 0.5*1, release: 0.5
 with_fx :distortion, mix: 0.5, distort:  line(0.0, 0.9, 64*2).look do
-#syn :dark_sea_horn, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 0.2*1, cutoff: 80
+syn :dark_sea_horn, note: note(mid[0]), decay: mid[1]*4, release: mid[2]*3, attack: mid[3], amp: 0.2*1, cutoff: 80
 end
 end
  

@@ -515,10 +515,10 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
       #fslice[:path] =  "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_ATMOSPHERES/FR2_Atmos_30_F#m.wav" #**
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag/FR1_SOUNDS_&_FX/FR1_ATMOSPHERES/FR1_Atmos_37_F#m.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/INTERFERENCES/FR2_Interference_25_F#m.wav"
-      #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
+      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/DeviantAcoustics/One Shots/Instrument FX/F#_KalimbaTextureFX_SP_02.wav"
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_12.wav"
       #smp Frag[/hat/,0]
-      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
+    #  fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 

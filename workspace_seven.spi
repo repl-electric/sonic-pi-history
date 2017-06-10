@@ -370,7 +370,7 @@ end
 end
 
 if n=(ring [:fs4,0.5],_,[:fs4,0.5],_,_,_,[:b4,1.0],_).look
-  syn :piano, note: n[0], release: n[1], attack: 0.001, amp: 0.2
+  syn :piano, note: n[0], release: n[1], attack: 0.001, amp: 0.3
 end
 
 mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",

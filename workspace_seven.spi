@@ -392,7 +392,7 @@ if (n=(ring [:fs3,0.5],_,[:fs3,0.5],_,_, [:cs4,1.0],_,_,
 
 ).look) != _
 #syn :gpa, note: n, decay: 0.001, release: (knit 1.0,3, 0.5,2).look, attack: 0.001, amp: 2.0
-syn :gpa, note: n[0], decay: 0.001, release: n[1], attack: 0.025, amp: 0.5, wave: 4
+syn :gpa, note: n[0], decay: 0.001, release: n[1], attack: 0.025, amp: 0.25, wave: 4
 
 end
 

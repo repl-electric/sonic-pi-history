@@ -527,7 +527,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/urthen_12.wav"
       #smp Frag[/hat/,0]
       #fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_05.wav"
-     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/d2.wav",8
+     fslice[:path] = "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/fs2.wav",8
      else
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav"
      end 

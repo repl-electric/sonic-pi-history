@@ -369,7 +369,7 @@ syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], atta
 end
 end
 
-if pi=(ring [:fs4,0.5],_,[:fs4,0.25],_,_,_,[:b4,1.0],_).look
+if pi=(ring [:fs4,0.25],_,[:fs4,0.25],_,_,_,[:b4,1.0],_).look
   syn :piano, note: pi[0], release: pi[1], attack: 0.001, amp: 0.3
 end
 

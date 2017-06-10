@@ -6,8 +6,12 @@ tick
 _=nil
 #E A♭ m E♭m G♭ B D♭m D
 
-  play  ring(chord(:E,:M), 
+  play (ring chord(:E3,:M), 
              chord(:Gs,:m), 
-             chord(:Ds, :m), chord(:Fs,:M), chord(:B3, :M), chord(:Cs, :m), chord(:D,:M), _).look 
+             chord(:Ds, :m), 
+             chord(:Fs,:M), 
+             chord(:B3, :M), 
+             chord(:Cs, :m), 
+             chord(:D,:M), _).look 
   sleep 1
 end

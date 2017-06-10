@@ -369,7 +369,7 @@ syn :gpa, note: note(noz[0]), decay: 0.001, decay: noz[1], release: noz[2], atta
 end
 end
 
-if n=(ring :fs3,_,_,_,_,_,_,_).look
+if n=(ring :fs4,_,_,_,_,_,_,_).look
   syn :gpa, note: n, release: (knit 0.5,3, 1.0,2).look(:insiderit), attack: 0.001
 end
 

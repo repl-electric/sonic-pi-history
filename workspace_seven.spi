@@ -370,7 +370,7 @@ end
 end
 
 if spread(1,8).look
-syn :gpa, note: :b4
+syn :gpa, note: :b3
 end
 
 mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",

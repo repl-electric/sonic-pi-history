@@ -659,7 +659,7 @@ n =  knit("cs2", 1*2,
 #synth :piano, note: note(n)+24, attack: 0.01, decay: 0.01, release: 0.5, sustain: 0.2, amp: 0.0, sustain_level: 2
     # puts fslice[:path]
 # ring(fslice, _, _, fslice, fslice, _, fslice, _).look
-  smp fslice, amp: 2.0*1, rpitch: line(0, 0.5, 64*1).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset:  ring(0.0025, 0.0025,0.0025, 0.0035, 0.0, 0.0, 0.0).look, finish_offset: 0.0035, finish_offset: ( spread(7, 11).look ? 0.3 : 0.001)
+  smp fslice, amp: 2.0*1, rpitch: line(0, 0.5, 64*1).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: -1.0, finish_offset: 0.001 #, finish_offset:  ring(0.0025, 0.0025,0.0025, 0.0035, 0.0, 0.0, 0.0).look, finish_offset: 0.0035, finish_offset: ( spread(7, 11).look ? 0.3 : 0.001)
 end
 end
 end

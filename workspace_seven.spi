@@ -370,7 +370,7 @@ end
 end
 
 if spread(1,8).look
-syn :gpa, note: :b3, release:  knit(0.5,3, 1.0,2).look
+syn :gpa, note: :b3, release:  knit(0.5,3, 1.0,2).look(:insiderit)
 end
 
 mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",

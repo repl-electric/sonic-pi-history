@@ -201,7 +201,7 @@ end
     end
  
     d= spread(3,8).map{|s| s ? :pitch_shift : :none}#.shuffle
-    with_fx  d.look, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
+    with_fx  :none, decay: 1, phase: 0.25, mix: 0.0, distort:  line(0.0, 0.5, 128).look do
      fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3)[-1]]).look
      future_fslice =   ring(*🍓.slice(:Fs3).drop(1).reverse + [🍓.slice(:Fs3).drop(1)[-1]]).look(offset: -4)
  

@@ -512,7 +512,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      if spread(1,64).look
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
-comment do
+uncomment do
      fslice[:path] = (knit
 "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_03.wav",8*2,
 "/Users/josephwilk/Workspace/music/samples/melodyne/strawberry/berry/gaia/b1.wav",8*2,

@@ -393,7 +393,6 @@ if pi=(ring [:fs4,0.25,0.25],_,[:fs4,0.25,0.25],_,_,_,[:cs5,2.0,1.0],_,
 
              [:cs5,0.25],_,[:cs5,0.25],_,_,_,[:e4,2.0],_,
              _,_,_,_,   _,_,_,_,
-
 ).look
 puts pi
   syn :piano, note: pi[0], release: pi[1], attack: 0.1, amp: 0.3, decay: (p && p.count==3 ? p[2] : 0.25)

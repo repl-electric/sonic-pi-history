@@ -408,7 +408,7 @@ if pi=(ring [:fs4,0.125,0.125,0.05],_,[:fs4,0.125,0.125,0.1],_,_,_,[:cs5,2.0,1.0
        #      _,_,_,_,   _,_,_,_,
 ).look
 puts pi
-  synth :beep, note: pi[0], sustain: 1, release: pi[1], attack: pi[3], amp: 0.3, decay: (p && p.count==3 ? p[2] : 0.25)
+  synth :beep, note: pi[0], sustain: 0.5, release: pi[1], attack: pi[3], amp: 0.3, decay: (p && p.count==3 ? p[2] : 0.25)
 end
 
 mid =  ring([:FS2,0.5,2,0],  "_","_","_",   "_","_","_","_",

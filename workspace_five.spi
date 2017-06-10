@@ -1,22 +1,12 @@
 
-live_loop :tune do
-play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
-sleep 1/2.0
-end
+
+live_loop :ch do
 
 
-bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
-bass_notes.tick(:i)
-with_fx :level, amp: 0.00 do
-with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|
-  with_fx :krush, mix: 0.2, mix_slide: 4*1 do |d_fx|
-  synth :hollow, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
-  synth :pluck, note: bass_notes.look(:i)
-  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1,   attack: 0.001, amp: 1.0, wave: 4
-at do
- sleep 1/8.0; control d_fx, mix: 0
- 15.times{control r_fx, damp: rand, mix: 1.0; sleep 1/8.0}
+
+#E A♭ m E♭m G♭ B D♭m D
+
+  play (chord(:E,:M), chord(:Ab,:m), chord(:Eb, :m), chord(:Gb,:M), chord(:B, :M), chord(:Db, :m), chord(:D,:M)).look 
+  sleep 1
 end
-end
-end
-end
+play 

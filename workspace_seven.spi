@@ -107,7 +107,7 @@ shader :iIntro, 4.0
    #at do
     #sleep swing
     smp (ring sss,
-"/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/COILS/FR2_Coil_25.wav",
+"/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/COILS/FR2_Coil_44_Em.wav",
 "/Users/josephwilk/Workspace/music/samples/Frag2/FR2_SOUNDS_&_FX/FR2_INTERFERENCES_AND_COILS/COILS/FR2_Coil_25.wav").look, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
 #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }

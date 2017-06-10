@@ -7,5 +7,5 @@ tick
 #E A♭ m E♭m G♭ B D♭m D
 
   play  ring(chord(:E,:M), chord(:Ab,:m), chord(:Eb, :m), chord(:Gb,:M), chord(:B, :M), chord(:Db, :m), chord(:D,:M)).look 
-  sleep 1
+  sleep 1/2.0
 end

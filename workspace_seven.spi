@@ -392,7 +392,7 @@ if (n=(ring [:cs3,0.25],_,[:cs3,0.25],_,   _, [:e3,0.5],_,_,
 
 ).look) != _
 #syn :gpa, note: n, decay: 0.001, release: (knit 1.0,3, 0.5,2).look, attack: 0.001, amp: 2.0
-syn :prophet, note: n[0]+12, decay: 0.25, release: n[1], attack: 0.001, amp: 0.15, cutoff: 80
+syn :prophet, note: n[0]+12, decay: 0.25, release: n[1], attack: 0.0001, amp: 0.15, cutoff: 80
 
 end
 

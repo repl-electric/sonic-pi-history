@@ -3,7 +3,7 @@
 live_loop :ch do
 tick
 
-
+_=nil
 #E A♭ m E♭m G♭ B D♭m D
 
   play  ring(chord(:E,:M), chord(:Ab,:m), chord(:Eb, :m), chord(:Gb,:M), chord(:B, :M), chord(:Db, :m), chord(:D,:M), _).look 

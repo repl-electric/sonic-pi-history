@@ -370,7 +370,7 @@ end
 end
 
 if pi=(ring [:fs4,0.25],_,[:fs4,0.25],_,_,_,[:b4,1.0],_
-             _,_,_,_,   _,_,_,
+             _,_,_,_,   _,_,_
 
 ).look
   syn :piano, note: pi[0], sustain: pi[1], attack: 0.1, amp: 0.3

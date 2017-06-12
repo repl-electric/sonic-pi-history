@@ -40,7 +40,7 @@ _=nil
                chord(:B3, :m, invert: -1),   #F# B D 
                chord(:E3,  :M),
                chord(:Cs4, :m, invert: -2),   # E G  C
-              (chord :D3, :sus4, invert: 1),
+              (chord :D3, :sus2, invert: 1),
               (chord :D3, :M),
               (chord :B2, :m, invert: 1),  #D
               (chord :A3, :M, invert: -1), #E

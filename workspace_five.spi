@@ -9,7 +9,7 @@ _=nil
   play  ring(chord(:E3,:M),      #-
              chord(:Gs3,:m),     #-       C D E F G -> D
              chord(:Ds3, :m),    #-
-             chord(:Fs3,:M),     #m
+             chord(:Fs3,:m),     #m
              chord(:B3, :M),     #m
              chord(:Cs3, :m), 
              chord(:D3,:M), _).look , amp: 1

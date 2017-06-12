@@ -6,7 +6,7 @@ tick
 _=nil
 #E A♭ m E♭m G♭ B D♭m D
 
-  play  ring(chord(:E3,:M),      #-
+  play (ring chord(:E3,:M),      #-
              chord(:Gs3,:m),     #-       C D E F G -> D
              chord(:Ds3, :m),    #-
              chord(:Fs3,:M),     #m
@@ -14,36 +14,36 @@ _=nil
              chord(:Cs3, :m), 
              chord(:D3,:M),_ ).look , amp: 1*0
  
-  play  ring(  chord(:fs3, :m),
+  play (ring  (chord :fs3, :m),
                chord(:A3, :M),
                chord(:E3,  :M),
-               chord(:Gs3, :m),
-               chord(:D3, :M),
-               chord(:E3, :M),
-               chord(:E3, :M),
-               chord(:B2, :m, invert: 1),  #D
-               chord(:A3, :M, invert: -1), #E
+              (chord :Gs3, :m),
+              (chord :D3, :M),
+              (chord :E3, :M),
+              (chord :E3, :M),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
              _
   ).look, amp: 0.5*0
 
-  play  ring(  chord(:fs3, :m),
+  play (ring  (chord :fs3, :m),
                chord(:B3, :m, invert: -1),   #F# B D 
                chord(:E3,  :M),
                chord(:Cs4, :m, invert: -2),   # E G  C
-               chord(:D3, :M),
-               chord(:D3, :M),
-               chord(:B2, :m, invert: 1),  #D
-               chord(:A3, :M, invert: -1), #E
+              (chord :D3, :M),
+              (chord :D3, :M),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
              [_]
   ).look[0]-12, amp: 1.0*0
-  play  ring(  chord(:fs3, :m),
+  play (ring  (chord :fs3, :m),
                chord(:B3, :m, invert: -1),   #F# B D 
                chord(:E3,  :M),
                chord(:Cs4, :m, invert: -2),   # E G  C
-               chord(:D3, :sus4),
-               chord(:D3, :M),
-               chord(:B2, :m, invert: 1),  #D
-               chord(:A3, :M, invert: -1), #E
+              (chord :D3, :sus2),
+              (chord :D3, :M),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
              [_]
   ).look, amp: 1.0*1
 

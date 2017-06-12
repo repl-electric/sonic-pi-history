@@ -19,12 +19,9 @@ _=nil
                chord(:E3,  :M),
               (chord :Gs3, :m),
 
-              #(chord :E3, :M),
-             #(chord :Gs3, :m),
-             
-             (chord :Cs4, :m),
-             (chord :D4, :M),
-             (chord :D4, :M),
+#             (chord :Cs4, :m),
+#             (chord :D4, :M),
+#             (chord :D4, :M),
              (chord :B3, :m),
              (chord :A3, :M),
              _

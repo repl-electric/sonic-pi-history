@@ -12,7 +12,7 @@ _=nil
              chord(:Fs3,:M),     #m
              chord(:B3, :M),     #m
              chord(:Cs3, :m), 
-             chord(:D3,:M), _).look , amp: 0
+             chord(:D3,:M), _).look , amp: 1
  
   play (ring  (chord :fs3, :m),
                chord(:A3, :M),
@@ -21,10 +21,10 @@ _=nil
               (chord :D3, :M),
               (chord :E3, :M),
               (chord :E3, :M),
-              (chord :B2, :m, invert: 1),
-              (chord :A3, :M, invert: -1),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
              _
-  ).look, amp: 0.5
+  ).look, amp: 0.5*0
 
 
  sleep 1

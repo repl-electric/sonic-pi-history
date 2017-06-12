@@ -31,8 +31,8 @@ _=nil
                chord(:E3,  :M),
                chord(:Cs4, :m, invert: -2),   # E G  C
                chord(:D3, :M),
+               chord(:D3, :M),
 
-#               chord(:D3, :M),
  #              chord(:E3, :M),
   #             chord(:E3, :M),
    #            chord(:B2, :m, invert: 1),  #D

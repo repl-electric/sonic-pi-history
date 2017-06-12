@@ -14,8 +14,8 @@ _=nil
              chord(:Cs3, :m), 
              chord(:D3,:M), _).look 
  
-  play (ring (chord :E3, :m),
-             (chord :gs3, :m),
+  play (ring (chord :E3, :M),
+             (chord :Gs3, :m),
              (chord :B3, :m),
              (chord :Cs4, :m),
              (chord :D4, :M),

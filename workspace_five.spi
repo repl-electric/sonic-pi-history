@@ -12,7 +12,7 @@ _=nil
              chord(:Fs3,:M),     #m
              chord(:B3, :M),     #m
              chord(:Cs3, :m), 
-             chord(:D3,:M),_ ).look , amp: 1*1
+             chord(:D3,:M),_ ).look , amp: 0.5*1
  
   play (ring  (chord :fs3, :m),
                chord(:A3, :M),

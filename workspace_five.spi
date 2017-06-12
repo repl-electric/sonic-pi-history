@@ -15,7 +15,7 @@ _=nil
 #             chord(:D3,:M), _).look 
  
 
-  play (ring (chord :FS, :m) ).look
+  play (ring (chord :FS3, :m) ).look
 
 
  sleep 1

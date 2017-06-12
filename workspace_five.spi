@@ -10,7 +10,7 @@ _=nil
              chord(:Gs3,:m),     #-
              chord(:Ds3, :m),    #-
              chord(:Fs3,:M),     #m
-             chord(:B2, :M),     #m
+             chord(:B3, :M),     #m
              chord(:Cs3, :m), 
              chord(:D3,:M), _).look 
   sleep 1

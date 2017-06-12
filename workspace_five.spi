@@ -25,7 +25,7 @@ _=nil
                chord(:B2, :m, invert: 1),
                chord(:A3, :M, invert: -1),
              _
-  ).look, amp: 1.0
+  ).look, amp: 0.5
 
 
  sleep 1

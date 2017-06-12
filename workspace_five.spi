@@ -23,7 +23,7 @@ _=nil
                chord(:E3, :M),
                chord(:E3, :M),
                chord(:B2, :m, invert: 1),
-               chord(:A3, :M, invert: -1),
+               chord(:A3, :M7, invert: -1),
              _
   ).look, amp: 1.0
 

@@ -16,7 +16,9 @@ _=nil
  
 
   play  ring( chord(:FS3, :m),
-              chord(:A3, :m)
+              chord(:A3, :m),
+              chord(:B3, :m)
+
   ).look
 
 

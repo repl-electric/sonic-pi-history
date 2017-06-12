@@ -29,7 +29,7 @@ _=nil
   play (ring  (chord :fs3, :m),
                chord(:B3, :m, invert: -1),   #F# B D 
                chord(:E3,  :M),
-               chord(:Cs3, :m, invert: 0),   #F# B D 
+               chord(:Cs4, :m, invert: 0),   #F# B D 
 
               (chord :Gs3, :m),
               (chord :D3, :M),

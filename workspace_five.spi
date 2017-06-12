@@ -6,7 +6,7 @@ tick
 _=nil
 #E A♭ m E♭m G♭ B D♭m D
 
-  synth :beep, note: (ring chord(:E3,:M),      #-
+  play (ring chord(:E3,:M),      #-
              chord(:Gs3,:m),     #-       C D E F G -> D
              chord(:Ds3, :m),    #-
              chord(:Fs3,:M),     #m

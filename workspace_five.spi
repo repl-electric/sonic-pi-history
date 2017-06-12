@@ -22,10 +22,10 @@ _=nil
                chord(:E3, :M),
                chord(:Fs3, :m),
 
-               chord(:D4, :M),
-               chord(:D4, :M),
-               chord(:B3, :m),
-               chord(:A3, :M),
+#               chord(:D4, :M),
+ #              chord(:D4, :M),
+  #             chord(:B3, :m),
+   #            chord(:A3, :M),
 #             _
   ).look, amp: 1.0
 

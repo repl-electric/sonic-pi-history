@@ -21,6 +21,8 @@ _=nil
                chord(:D3, :M),
                chord(:E3, :M),
                chord(:Fs3, :m),
+               chord(:A3, :M),
+
 
                chord(:Cs4, :m),
                chord(:D4, :M),

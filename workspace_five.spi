@@ -36,7 +36,7 @@ _=nil
               (chord :B2, :m, invert: 1),  #D
               (chord :A3, :M, invert: -1), #E
              _
-  ).look, amp: 0.5*0
+  ).look, amp: 0.5*1
 
 
 

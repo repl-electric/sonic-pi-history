@@ -21,8 +21,10 @@ _=nil
 
                chord(:D3, :M),
                chord(:E3, :M),
-
                chord(:E3, :M),
+               chord(:B3, :M),
+               chord(:A3, :M),
+
              _
   ).look, amp: 1.0
 

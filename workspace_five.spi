@@ -22,7 +22,7 @@ _=nil
                chord(:D3, :M),
                chord(:E3, :M),
                chord(:E3, :M),
-               chord(:B2, :m7),
+               chord(:B2, :m, invert: 1),
                chord(:A2, :M),
 
              _

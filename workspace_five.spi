@@ -31,7 +31,7 @@ _=nil
               (chord :B3, :m),
               (chord :E3, :M),
              _
-  ).look, amp: 0.0
+  ).look, amp: 1.0
 
 
  sleep 1

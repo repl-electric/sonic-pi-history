@@ -46,7 +46,7 @@ _=nil
               (chord :B2, :m, invert: 1),  #D F B
               (chord :A3, :M, invert: -1), #E A C 
              [_]
-  ).look, amp: 0.3*1, release: 0.125, decay: 0.125
+  ).look, amp: 0.3*1, release: 0.25, decay: 0.125
 
  sleep 1
 end

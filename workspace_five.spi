@@ -21,7 +21,8 @@ _=nil
 
                chord(:D3, :M),
                chord(:E3, :M),
-               chord(:E3, :M),
+               chord(:E3, :m),
+_,
                chord(:B2, :m, invert: 1),
                chord(:A3, :M, invert: -1),
              _

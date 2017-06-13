@@ -71,7 +71,7 @@ _=nil
                       (chord :b3, :sus4, invert: -2),  # B (D)E F# 
                       (chord :gs3, :m, invert: 0),  # G  B  D
                       (chord :cs4, :m, invert: -1), # C  E  G  
-                      (chord :D3, :m, invert: -1)
+                      (chord :D3, :m, invert: -1),
 
              [_]
   ).look, amp: 1.0*1, release: 0.5, decay: 0.5

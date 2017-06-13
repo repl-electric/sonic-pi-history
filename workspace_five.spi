@@ -68,7 +68,7 @@ _=nil
 
   synth :beep, note: (ring  
                       (chord :fs2, :m, invert: 2),
-                      (chord :fs2, :m, invert: 0),
+                      (chord :fs3, :m, invert: 0),
 
              [_]
   ).look, amp: 1.0*1, release: 0.5, decay: 0.5

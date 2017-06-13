@@ -65,7 +65,7 @@ n=nil
                        chord(:E3, '7sus4', invert: 0), # E (F)G B D#  
                        chord(:fs3, :m, invert: 0),
                       [_]
-  ).look, amp: 1.0*1, release: 0.5, decay: 0.5
+  ).look, amp: 2.0*1, release: 0.5, decay: 0.5
 
 puts n.map{|s| note_inspect(s)}
 

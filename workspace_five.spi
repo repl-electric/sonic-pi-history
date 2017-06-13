@@ -68,7 +68,6 @@ n=nil
                       (chord :fs3, :m, invert: 0),
                       [_],
 
-
                       (chord :fs3, :m, invert: 0),  
                       (chord :b3, :sus4, invert: -1),  # B (D)E F# 
                       (chord :gs3, :m, invert: 0),  # G  B  D
@@ -79,9 +78,7 @@ n=nil
                       (chord :Cs3, '7sus4', invert: 0), # E (F)G B D#  
                       (chord :fs3, :m, invert: 0),
                       [_]
-
-
-  ).look, amp: 2.0*1, release: 0.5, decay: 0.75
+  ).look, amp: 2.0*1, release: 0.5, decay: 0.75*2
 
 puts n.map{|s| note_inspect(s)}
 
@@ -89,5 +86,5 @@ puts n.map{|s| note_inspect(s)}
 
 
 
- sleep 1
+ sleep 1*2
 end

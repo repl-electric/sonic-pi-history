@@ -56,7 +56,7 @@ _=nil
 
 
 n=nil
-  synth :beep, note: n=(ring  
+  synth :growl, note: n=(ring  
                       (chord :fs3, :m, invert: 0),  
                       (chord :b3, :sus4, invert: -1),  # B (D)E F# 
                       (chord :gs3, :m, invert: 0),  # G  B  D

@@ -65,8 +65,8 @@ _=nil
 
 
 
-  synth :beep, note:  ring(                         chord(:fs3, :m, invert: 0),
-                       chord(:b3, :sus4, invert: 0),  # B (D)E F# 
+  synth :beep, note:  ring(                         chord(:fs3, :m, invert: 0),  
+                       chord(:b3, :sus4, invert: -1),  # B (D)E F# 
 
 
              [_]

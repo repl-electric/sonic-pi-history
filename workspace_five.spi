@@ -73,13 +73,13 @@ n=nil
                       (chord :cs4, :m, invert: -1), # C  E  G  
                       (chord :D3, :M, invert: 0),   # D F A
                       (chord :E3, :M, invert: 0),
-                      (chord :E3, :M7, invert: -1), # C# E G A  
+                      (chord :E3, :M7, invert: -1), # E G B D#  
                       (chord :fs3, :m, invert: 0),
              [_]
   ).look, amp: 1.0*1, release: 0.5, decay: 0.5
 
 
-puts  n.map{|s| note_inspect(s)}
+puts n.map{|s| note_inspect(s)}
 
 
 

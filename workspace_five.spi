@@ -60,7 +60,7 @@ n=nil
                       (chord :fs3, :m, invert: 0),  
                       (chord :b3, :sus4, invert: -1),  # B (D)E F# 
                       (chord :gs3, :m, invert: 0),  # G  B  D
-                      (chord :cs4, :m, invert: 0), # C  E  G  
+                      (chord :cs4, :m, invert: -1), # C  E  G  
                       (chord :D3, :M,  invert: 0),   # D F A
                       (chord :E3, :M,  invert: 0),
                       (chord :E3, '7sus4', invert: 0), # E (F)G B D#  

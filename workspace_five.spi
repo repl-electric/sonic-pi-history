@@ -68,7 +68,6 @@ n=nil
                       [_]
   ).look, amp: 1.0*1, release: 0.5, decay: 0.5
 
-
 #puts (chord :D3, '7').map{|s| note_inspect(s)}
 
 

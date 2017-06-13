@@ -68,7 +68,8 @@ _=nil
 
   synth :beep, note: (ring  
                       (chord :fs3, :m, invert: 0),
-                      (chord :b3, :m, invert: -1),
+                      (chord :b3, :m, invert: -1),  # F B D 
+                      (chord :b3, :m, invert: 0),  # F B D 
 
 
              [_]

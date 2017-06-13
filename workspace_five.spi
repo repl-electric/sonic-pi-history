@@ -52,7 +52,7 @@ _=nil
                chord(:E3,  :M),
                chord(:Cs4, :m, invert: -2),   # E G  C
                chord(:D3, :M),
-               chord(:D3, :M7),   # D  F  G   B
+               chord(:D3, '7'),   # D  F  G   B
                chord(:B2, :m, invert: 1),  #D F B
                chord(:Cs3, :m, invert: 1), #E A C    C E G
              [_]

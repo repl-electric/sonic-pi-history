@@ -58,5 +58,31 @@ _=nil
               (chord :Cs3, :m, invert: 1), #E A C    C E G
              [_]
   ).look, amp: 0.0*1, release: 0.5, decay: 0.5
+
+
+
+
+
+
+
+
+  synth :beep, note: (ring  (chord :fs3, :m)
+             [_]
+  ).look, amp: 0.0*1, release: 0.5, decay: 0.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  sleep 1
 end

@@ -1,22 +1,81 @@
 
-live_loop :tune do
-play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
-sleep 1/2.0
-end
+
+live_loop :ch do
+tick
+
+_=nil
+#E A♭ m E♭m G♭ B D♭m D
+
+  play (ring chord(:E3,:M),      #-
+             chord(:Gs3,:m),     #-       C D E F G -> D
+             chord(:Ds3, :m),    #-
+             chord(:Fs3,:M),     #m
+             chord(:B3, :M),     #m
+             chord(:Cs3, :m), 
+             chord(:D3,:M),_ ).look , amp: 1.5*0, release: 0.5, decay: 0.5
+ 
+  play (ring  (chord :fs3, :m),
+               chord(:A3, :M),
+               chord(:E3,  :M),
+              (chord :Gs3, :m),
+              (chord :D3, :M),
+              (chord :E3, :M),
+              (chord :E3, :M),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
+             _
+  ).look, amp: 0.5*0
+
+  play (ring  (chord :fs3, :m),
+               chord(:B3, :m, invert: -1),   #F# B D 
+               chord(:E3,  :M),
+               chord(:Cs4, :m, invert: -2),   # E G  C
+              (chord :D3, :M),
+              (chord :D3, :M),
+              (chord :B2, :m, invert: 1),  #D
+              (chord :A3, :M, invert: -1), #E
+             [_]
+  ).look[0]-12, amp: 1.0*0
+
+  synth :beep, note: (ring  
+              (chord :fs3, :m),
+              (chord :B3, :m, invert: -1),     #F# B D 
+              (chord :E3,  :M),
+              (chord :Cs4, :m, invert: -2),   # E G  C
+              (chord :D3, :M),
+              (chord :D3, 'M7'),   # D  F  G   B
+              (chord :B2, :m, invert: 1),  #D F B
+              (chord :Cs3, :m, invert: 1), #E A C    C E G
+             [_],
+  ).look, amp: 1.0*1, release: 0.5, decay: 0.5
 
 
-bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
-bass_notes.tick(:i)
-with_fx :level, amp: 0.00 do
-with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|
-  with_fx :krush, mix: 0.2, mix_slide: 4*1 do |d_fx|
-  synth :hollow, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
-  synth :pluck, note: bass_notes.look(:i)
-  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1,   attack: 0.001, amp: 1.0, wave: 4
-at do
- sleep 1/8.0; control d_fx, mix: 0
- 15.times{control r_fx, damp: rand, mix: 1.0; sleep 1/8.0}
-end
-end
-end
+n=nil
+  synth :beep, note: n=(ring  
+                      (chord :fs3, :m, invert: 0),  
+                     (chord :b3, :sus4, invert: -1),  # B (D)E F# 
+                      (chord :gs3, :m, invert: 0),  # G  B  D
+                      (chord :cs4, :m, invert: -1), # C  E  G  
+                     (chord :D3, :M,  invert: 0),   # D F A
+                      (chord :E3, 'sus4', invert: 0), # E (F)G B D#  
+                      (chord :E3, :M,  invert: 0),
+                      (chord :E3, '7sus4', invert: 0), # E (F)G B D#  
+                      (chord :fs3, :m, invert: 0),
+                      [_],
+
+                      (chord :fs3, :m, invert: 0),  
+                      (chord :b3, :sus4, invert: -1),  # B (D)E F# 
+                      (chord :gs3, :m, invert: 0),  # G  B  D
+                      (chord :cs4, :m, invert: -1), # C  E  G  
+                      (chord :D3, :M,  invert: 0),   # D F A
+                      (chord :Cs3, 'sus4', invert: 0), # E (F)G B D#  
+                      (chord :Cs3, :M,  invert: 0),
+                      (chord :Cs3, '7sus4', invert: 0), # E (F)G B D#  
+                      (chord :fs3, :m, invert: 0),
+                      [_]
+  ).look, amp: 1.0*0, release: 0.5*1, decay: 0.75*1
+
+puts n.map{|s| note_inspect(s)}
+
+ sleep 1*1
 end

@@ -1,14 +1,102 @@
 
 live_loop :testing do
+_=[[],0]
 tick
 x=nil
-play x= ring(       chord(:FS2, :m),
-      chord(:B2, :m),
-      chord(:E2, :m),
-      chord(:D2, :m),
-      chord(:A2, :M),
-      chord(:E2, :M),
-).look+12, decay: 2
-puts note_inspect(x)
-sleep 2
+x=(ring 
+     # [chord(:FS1, :m),4],_, _, _,
+    #  [chord(:B0, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
+   #   [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
+  #    [chord(:E1, :M),4], _, _, _,                               #E   G  B
+
+      [chord(:FS1, :m,invert: -1),1],[chord(:FS1, :m),4],_, _,             #A F C   F A C
+      [chord(:FS1, :M),4],_, _, _,   # A#                       #F A# C
+      [chord(:B1, "m", invert: -1),6], _,_,_,                   #B D F
+      [chord(:D1, :M,  invert: 0),4],_,_,_,                     #D F A 
+      [chord(:E1, "M", invert: 0),8], _,_,_,                    #E G B            #D2  F2 A3
+      _,_,_,_,
+
+      [chord(:B1, "m", invert: -1),1], [chord(:B1, "m", invert: -1),4],_,_,                   #A C E
+      [chord(:A1, "M", invert: 0),6], _,_,_,                   #A C E
+      [chord(:Cs2, :m,  invert: 0),4],_,_,_,
+      [chord(:Cs2, "m7", invert: 0),16],                       #GCE
+      [chord(:Fs1, "m", invert: 0),8*2],
+      _,_,_,_,
+      _,_,_,_,
+
+
+#      [chord(:E1, :m),4], _, _, _,                               #E   G  B
+#      [chord(:E1, :M),4], _, _, _,                               #E   G  B
+
+#      [chord(:FS2, :m7),4],_, _, _,
+#       [chord(:B0, :m, invert: 0),4], _,  _, [chord(:B1, :m, invert: 0),1], 
+#      [chord(:Gs2, :m, invert: -1),4], _, _, _,                               #
+#      [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
+#      [chord(:E2, :M, invert: -1),4], _, _, _,
+
+#      [chord(:FS2, :m7),4],_, _, _,
+#      [chord(:A1, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
+#      [chord(:CS2, :m, invert: 0),4], _, _, _,                               #D2  F2 A3
+#      [chord(:Gs2, :m, invert: 0),4], _, _, _,                               #
+#      [chord(:E2, :M7, invert: 0),4], _, _, _,                               #
+#      [chord(:E2, :M, invert: -1),8], _, [chord(:E2, :M, invert: -2),4], _,
+#      _,_,
+
+).look
+synth :hollow, note: x[0][0], release: x[1], amp: 1.5, decay: 1.0
+with_fx :hpf, cutoff: 60 do
+synth :dsaw, note: x[0].map{|n| note(n)+12}, release: x[1]/2.0, amp: 0.5, decay:1.0/2.0
+#synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5
+#synth :prophet, note: x[0][0]-12, amp: 0.4, cutoff:65
+puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])
+if spread(1,6).look
+#      sample Mountain[/subkick/,0]
 end
+end
+
+sleep 1/2.0
+end
+
+
+live_loop :testing2 do
+_=[_,0]
+tick
+
+x=nil
+stop
+x=(ring   # B-C-D-(E)-4th
+      _, _, _, _, 
+      [chord(:B2, :M),2], _, [chord(:Eb3, :M),2], _,                              #F2  A2  C#3
+      [chord(:B2, :M),8], _, _, _,                               #D3  F3  A3
+      _, _, _, _,
+      [chord(:Eb3, :M),2], _, [chord(:Eb3, :m),2], _,                               #E   G  B
+      _, _,  [chord(:B2, :M),4], _,                               #E   G  B
+      _, _, _, _,
+      [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
+      [chord(:Ab2, :m),4], _, _, _,                               #E   G  B
+      [chord(:B2, :M),4], _, _, _,                               #E   G  B
+      [chord(:Ab2, :m),4], _, _, _,                               #E   G  B
+      [chord(:B2, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
+      [chord(:B2, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :M),4], _, _, _,                               #E   G  B
+      [chord(:Eb3, :m),4], _, _, _,                               #E   G  B
+      [chord(:Ab2, :m),4], _, _, _,                               #E   G  B
+
+).look
+synth :dsaw, note: x[0], release: x[1], amp: 0.5
+puts note_inspect(x[0])
+sleep 1
+end
+
+
+
+#        [[:FS2,8.2*2], [:A2, 8.2], [:Cs3,8.2]],
+#        [[:B2,8.2],  [:D2,  2*8.2],[ _,8.2]],
+#        [[_,8.2],  [:Fs3, 8.2], [:A3,8.2] ],
+#        [[:E2,8.2], [:Gs3, 8.2], [:B3,8.2], [:D3,8.2] ],
+
+
+puts note_inspect(chord(:Eb3, :M))
+puts note_inspect(chord(:Eb3, :m))

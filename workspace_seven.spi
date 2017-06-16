@@ -1,4 +1,4 @@
 require "osc-ruby.rb"
 
 @zz ||= SonicPi::OSC::UDPClient.new('localhost', 9000)
-@zz.send("/1/fader1","" )
+@zz.send("/1/fader1""" )

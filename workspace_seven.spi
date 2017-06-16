@@ -1,4 +1,3 @@
-$LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
 require "osc-ruby.rb"
 
 @zz ||= OSC::Client.new('localhost', 9000)

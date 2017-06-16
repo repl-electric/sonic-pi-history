@@ -1,1 +1,3 @@
-shader "/1/fader1"
+@zz ||= OSC::Client.new('localhost', 9000)
+args = [1].map{|a| a.is_a?(Symbol) ? a.to_s : a}
+@zz.send(OSC::Message.new(endpoint, *args))

@@ -1,5 +1,5 @@
 require "osc-ruby.rb"
 
-@zz ||= SonicPi::OSC::UDPClient.new('localhost', 9000)
+@zz = SonicPi::OSC::UDPClient.new('localhost', 9000)
 #args = [1].map{|a| a.is_a?(Symbol) ? a.to_s : a}
 @zz.send("/1/fader1", [1,1,2,2])

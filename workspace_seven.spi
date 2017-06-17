@@ -9,6 +9,6 @@ tick
   @zz.send("/stars/mix", (ring 1.0, 0.0).look)
   sleep 0.5
   @zz.send("/astro/mix", 0.0)
-sleep 0.5
+  sleep 0.5
 
 end

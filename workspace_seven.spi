@@ -3,8 +3,7 @@ require "osc-ruby.rb"
 
 
 live_loop :loopey do
-sample Mountain[/subkick/,0]
-@zz.send("/stars/amp", 0.01)
-
+  sample Mountain[/subkick/,0]
+  @zz.send("/stars/mix", 0.01)
 sleep 1  
 end

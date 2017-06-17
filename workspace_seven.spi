@@ -3,7 +3,7 @@ require "osc-ruby.rb"
 
 live_loop :loopey do
 tick
-  sample Mountain[/subkick/,0]
+  sample Mountain[/subkick/,1]
   #@zz.send("/astro/mix", (ring 1.0, 0.0).look)
   @zz.send("/astro/scale", (line 1.0, 90.0,100000).look)
   @zz.send("/stars/mix", (ring 1.0, 0.0).look)

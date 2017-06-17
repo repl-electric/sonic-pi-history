@@ -5,8 +5,8 @@ live_loop :loopey do
   tick
   sample Mountain[/subkick/,1]
   @unity.send("/astro/mix", 1.0)
-  @unity.send("/astro/scale", 0.5)
-  @unity.send("/stars/mix", (ring 0.0, 1.0).look)
+  @unity.send("/astro/scale", 0.01)
+  @unity.send("/stars/mix",  ring(0.0, 1.0).look)
   sleep 1
   @unity.send("/astro/mix", 0.0)
   @unity.send("/stars/mix", 0.0)

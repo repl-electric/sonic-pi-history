@@ -1,5 +1,5 @@
 require "osc-ruby.rb"
-@zz ||= OSC::UDPClient.new('localhost', 9000)
+@zz = OSC::UDPClient.new('localhost', 9000)
 
 
 live_loop :loopey do

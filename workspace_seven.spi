@@ -2,7 +2,8 @@ require "osc-ruby.rb"
 @zz ||= OSC::UDPClient.new('localhost', 9000)
 
 live_loop :loopey do
+tick
   sample Mountain[/subkick/,0]
-  @zz.send("/stars/mix", 1.0)
-  sleep 1  
+  @zz.send("/stars/mix", (ring 1.0, 0.0).look)
+  sleep 4  
 end

@@ -5,7 +5,7 @@ live_loop :loopey do
 tick
   sample Mountain[/subkick/,0]
   @zz.send("/astro/mix", (ring 1.0, 0.0).look)
-  @zz.send("/astro/scale", 0.05)
+  @zz.send("/astro/scale", 0.08)
   @zz.send("/stars/mix", (ring 1.0, 0.0).look)
   sleep 2  
 end

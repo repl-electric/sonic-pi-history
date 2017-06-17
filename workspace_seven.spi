@@ -7,5 +7,5 @@ tick
   @zz.send("/astro/mix", (ring 1.0, 0.0).look)
   @zz.send("/astro/scale", (line 0.08, 1.0,256).look)
   @zz.send("/stars/mix", (ring 1.0, 0.0).look)
-  sleep 2  
+  sleep 1  
 end

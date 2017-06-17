@@ -4,6 +4,6 @@ require "osc-ruby.rb"
 
 live_loop :loopey do
   sample Mountain[/subkick/,0]
-  @zz.send("/stars/mix", 0.01)
+  @zz.send("/stars/mix", 1.0)
 sleep 1  
 end

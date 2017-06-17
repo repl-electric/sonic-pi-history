@@ -1,5 +1,5 @@
 require "osc-ruby.rb"
-include SonicPi::OSC
+include self SonicPi::OSC
 @zz ||= OSC::UDPClient.new('localhost', 9000)
 OSC::Message
 

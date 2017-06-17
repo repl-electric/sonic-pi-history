@@ -1,3 +1,3 @@
 require "osc-ruby.rb"
 @zz ||= OSC::UDPClient.new('localhost', 9000)
-@zz.send("/fader1", 0)
+@zz.send("/fader1", 1)

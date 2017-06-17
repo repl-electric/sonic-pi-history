@@ -1,10 +1,8 @@
-require "osc-ruby.rb"
-@zz ||= OSC::UDPClient.new('localhost', 9000)
 
 live_loop :loopey do
   tick
   sample Mountain[/subkick/,1]
-  @zz.send("/astro/mix", 0.0)
+  @zz.send("/astro/mix", 1.0)
   @zz.send("/astro/scale", 0.001)
   @zz.send("/stars/mix",  ring(1.0, 0.0).look)
   sleep 1

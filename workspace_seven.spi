@@ -5,5 +5,5 @@ live_loop :loopey do
 tick
   sample Mountain[/subkick/,0]
   @zz.send("/stars/mix", (ring 1.0, 0.0).look)
-  sleep 4  
+  sleep 2  
 end

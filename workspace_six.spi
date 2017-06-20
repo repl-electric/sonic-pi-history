@@ -99,9 +99,11 @@ end
 live_loop :twentyoff do
 tick
   play (ring (chord :Fs3, :m),
-(chord :Fs3, :m),
-(chord :Fs3, :m),
-             (chord :A3, :m)
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :A3, :m),
+             (chord :D3, :M)
+
 ).look
   sleep 1
 end

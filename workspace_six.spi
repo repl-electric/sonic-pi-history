@@ -117,6 +117,8 @@ tick
 puts note_inspect(x), amp: 0.2
 if spread(1,2).look
   sample Frag[/kick/,3], amp: 0.5
+else
+  sample Frag[/coil/,3], amp: 0.5
 end
   sleep 1/2.0
 end

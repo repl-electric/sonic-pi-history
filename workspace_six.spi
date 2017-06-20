@@ -104,7 +104,7 @@ tick
              (chord :A3, :m),
              (chord :D3, '7'),
               _
-).look, release: 0.5# decay: 1
+).look, release: 1.0# decay: 1
 puts note_inspect(x)
 
   sleep 1

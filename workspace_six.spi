@@ -98,7 +98,9 @@ end
 
 live_loop :twentyoff do
 tick
-  play (ring (chord :Fs2, :m)).look
+  play (ring (chord :Fs3, :m),
+(chord :Fs2, :m)
+).look
   sleep 1
 end
 

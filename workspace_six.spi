@@ -57,10 +57,9 @@ sleep 1/2.0
 end
 
 
-live_loop :testing2 do
+live_loop :testing4 do
 _=[_,0]
 tick
-
 x=nil
 #stop
 x= ring(  # B-C-D-(E)-4th

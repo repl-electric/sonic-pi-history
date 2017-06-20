@@ -115,7 +115,7 @@ tick
 ).look, release: 1.1# decay: 1
 puts note_inspect(x)
 
-  sleep 1
+  sleep 1/2.0
 end
 
 

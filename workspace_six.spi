@@ -98,7 +98,7 @@ end
 
 live_loop :twentyoff do
 tick
-  synth :hollow, note: x=(ring 
+  synth :dark_ambience, note: x=(ring 
              (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :Fs3, :m),

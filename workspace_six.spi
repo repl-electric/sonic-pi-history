@@ -104,7 +104,7 @@ tick
              (chord :A3, :m),
              (chord :D3, 'M7')
 ).look
-puts note_inspect(x[0])
+puts note_inspect(x)
 
   sleep 1
 end

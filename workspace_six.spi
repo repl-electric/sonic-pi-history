@@ -110,7 +110,7 @@ tick
              (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :A3, :M),
-             (chord :B3, 'M', invert: -2),
+             (chord :B3, 'M', invert: 1),
 #             (chord :D3, :M),
               _,  _,
 ).look, release: 0.6, decay: 0.1,  amp: 0.5

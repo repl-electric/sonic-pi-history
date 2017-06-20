@@ -112,7 +112,7 @@ tick
              (chord :A3, :m),
              (chord :B3, :M),
 #             (chord :D3, :M),
-              _
+              _,              _,
 ).look, release: 0.6, decay: 0.1
 puts note_inspect(x), amp: 0.2
 

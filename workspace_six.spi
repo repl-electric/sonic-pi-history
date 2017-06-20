@@ -102,7 +102,7 @@ tick
              (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :A3, :m),
-             (chord :D3, 'M7')
+             (chord :D3, 'M11')
 ).look
   sleep 1
 end

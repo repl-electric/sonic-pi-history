@@ -126,7 +126,7 @@ tick
              (chord :Gs3, :m, invert: -1),
              (chord :E3,  'M',invert:  0),
               _,
-             (chord :E3,  '7',invert: -1),
+             (chord :E3,  '7',invert: -2),
                _,
 
 ).look, release: 0.6, decay: 0.1,  amp: 0.5

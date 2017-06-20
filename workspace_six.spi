@@ -85,7 +85,7 @@ x=(ring   # B-C-D-(E)-4th
       [chord(:Ab2, :m),4], _, _, _,                               #E   G  B
 
 ).look
-synth :piano, note: x[0], release: x[1], amp: 0.5
+synth :piano, note: x[0], release: x[1], amp: 1.5
 puts note_inspect(x[0])
 sleep 1
 end

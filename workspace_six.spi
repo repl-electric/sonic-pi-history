@@ -3,7 +3,8 @@ live_loop :testing do
 _=[[],0]
 tick
 x=nil
-x= ring(      # [chord(:FS1, :m),4],_, _, _,
+x=(ring 
+     # [chord(:FS1, :m),4],_, _, _,
     #  [chord(:B0, :m, invert: 0),4], _,  _, _,                   #D2 F2  B2
    #   [chord(:D1, :M, invert: 0),4], _, _, _,                               #D2  F2 A3
   #    [chord(:E1, :M),4], _, _, _,                               #E   G  B
@@ -62,7 +63,7 @@ _=[_,0]
 tick
 x=nil
 #stop
-x= ring(  # B-C-D-(E)-4th
+x=(ring   # B-C-D-(E)-4th
       _, _, _, _, 
       [chord(:B2, :M),2], _, [chord(:Eb3, :M),2], _,                              #F2  A2  C#3
       [chord(:B2, :M),8], _, _, _,                               #D3  F3  A3
@@ -97,19 +98,20 @@ end
 
 live_loop :twentyoff do
 tick
-  play x= ring(               chord(:Fs3, :m),
-              chord(:Fs3, :m),
-              chord(:Fs3, :m),
-              chord(:A3, :M),
-              chord(:G3, :m, invert: 0),
+  play x=(ring 
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :A3, :M),
+             (chord :G3, :M, invert: 0),
               _,  _,
 
-              chord(:Fs3, :m),
-              chord(:Fs3, :m),
-              chord(:Fs3, :m),
-              chord(:A3, :M),
-              chord(:B3, :M),
-#              chord(:D3, :M),
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :A3, :M),
+             (chord :B3, :M),
+#             (chord :D3, :M),
               _,  _,
 ).look, release: 0.6, decay: 0.1
 puts note_inspect(x), amp: 0.2

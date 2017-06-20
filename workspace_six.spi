@@ -115,7 +115,7 @@ tick
               _,  _,
 ).look, release: 0.6, decay: 0.1
 puts note_inspect(x), amp: 0.2
-  sample Frag[/kick/,0], amp: 0.3
+  sample Frag[/kick/,1], amp: 0.3
   sleep 1/2.0
 end
 

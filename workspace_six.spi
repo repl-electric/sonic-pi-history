@@ -98,15 +98,19 @@ end
 
 live_loop :twentyoff do
 tick
-  play x=(ring (chord :Fs3, :m),
+  play x=(ring 
+             (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :A3, :m),
              (chord :B3, :M),
               _,
 
-             (chord :Cs4, :m),
-             (chord :D4, '7'),
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :Fs3, :m),
+             (chord :A3, :m),
+             (chord :B3, :M),
               _
 ).look, release: 1.1# decay: 1
 puts note_inspect(x)

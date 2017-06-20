@@ -101,7 +101,7 @@ tick
               chord(:Fs3, :m),
               chord(:Fs3, :m),
               chord(:A3, :M),
-              chord(:G3, :M, invert: 1),
+              chord(:G3, :M, invert: 0),
               _,  _,
 
               chord(:Fs3, :m),

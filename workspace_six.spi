@@ -118,7 +118,7 @@ tick
              (chord :Fs3, :m, invert: 1),
              (chord :A3, :M),
             (chord :Cs4, 'm7', invert: -1),
-            _,(chord :Fs3, 'm', invert: 0),_,
+            _,(chord :Fs3, 'm', invert: 1),_,
 
              (chord :Fs3, :m, invert: -1),
              (chord :Fs3, :m, invert: -1),

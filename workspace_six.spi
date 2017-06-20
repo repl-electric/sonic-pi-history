@@ -110,7 +110,7 @@ tick
               chord(:B3, :M),
 #              chord(:D3, :M),
               _
-).look, release: 0.6, decay: 0.2
+).look, release: 0.6, decay: 0.3
 puts note_inspect(x)
 
   sleep 1/2.0

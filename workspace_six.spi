@@ -129,7 +129,7 @@ tick
              (chord :E3,  '7',invert: -2),
                _,
 
-).look, release: 0.6, decay: 0.1,  amp: 1.0
+).look, release: 0.6, decay: 0.5,  amp: 1.0
 puts note_inspect(x)
 if spread(1,2).look
   sample Frag[/kick/,6], amp: (line 0.8,1.0,32).look

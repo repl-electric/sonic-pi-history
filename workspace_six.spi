@@ -118,7 +118,7 @@ puts note_inspect(x)
 if spread(1,2).look
   sample Frag[/kick/,6], amp: 1.0
 else
-  sample Fraz[/coil/,45], amp: 0.125, start: rand#, pan: 0
+  sample Fraz[/coil/,45], amp: 0.125, start: rrand#, pan: 0
 end
   sleep 1/2.0
 end

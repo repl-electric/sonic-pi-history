@@ -103,7 +103,7 @@ tick
              (chord :Fs3, :m),
              (chord :Fs3, :m),
              (chord :A3, :M),
-             (chord :Gs3, :m, invert: 0),
+             (chord :Gs3, :M, invert: 0),
               _,  _,_,
 
              (chord :Fs3, :m),

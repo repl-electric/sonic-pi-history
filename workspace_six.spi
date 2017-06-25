@@ -45,7 +45,7 @@ x=(ring
 ).look
 synth :hollow, note: x[0][0], release: x[1], amp: 1*1.5, decay: 1.0
 with_fx :hpf, cutoff: 60 do
-synth :piano, note: x[0].map{|n| note(n)+12}, release: x[1]/2.0, amp: 0.5*0, decay:1.0/2.0
+synth :piano, note: x[0].map{|n| note(n)+12}, release: x[1]/2.0, amp: 0.5*1, decay:1.0/2.0
 #synth :plucked, note: x[0].map{|n| note(n)+12}, release: x[1], amp: 0.8, decay: 0.5
 #synth :prophet, note: x[0][0]-12, amp: 0.4, cutoff:65
 #puts note_inspect(x[0].map{|n| note(n)+0}[0]) unless (!x[0][0])

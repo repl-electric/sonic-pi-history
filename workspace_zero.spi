@@ -1,1 +1,4 @@
- smp "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav", amp: 2
+live_loop :test do
+  sample :bd_808
+  sleep 1
+end

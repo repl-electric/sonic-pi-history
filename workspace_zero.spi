@@ -1,1 +1,1 @@
-puts note_inspect(chord(:b3, 'sus4'))
+ smp "/Users/josephwilk/Workspace/music/samples/Live/suburban/suburban_fs0.wav", amp: 2

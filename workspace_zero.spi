@@ -1,6 +1,6 @@
 midi_local_control_on
 midi_start
 live_loop :test do
-  midi "0-coast" :Fs3
+  midi :"0-coast" :Fs3
   sleep 1
 end

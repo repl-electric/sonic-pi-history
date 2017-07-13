@@ -1,4 +1,4 @@
 live_loop :test do
   midi :FS3
-  sleep 1
+  sleep 1/2.0
 end

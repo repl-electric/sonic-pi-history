@@ -1,4 +1,4 @@
 live_loop :test do
-  midi :fire
+  midi :s4
   sleep 1
 end

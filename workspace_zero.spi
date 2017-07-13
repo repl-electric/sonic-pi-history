@@ -1,5 +1,5 @@
 midi_local_control_on
 live_loop :test do
-  midi :Fs3
+  midi_note_on :Fs3
   sleep 1/2.0
 end

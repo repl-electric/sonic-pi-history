@@ -1,4 +1,4 @@
 live_loop :test do
-  midi :FS3, sustain: 0.2, velocity: 0.1
+  midi :FS3, sustain: 0.2, velocity: 0.01
   sleep 1/2.0
 end

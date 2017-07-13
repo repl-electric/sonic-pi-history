@@ -1,4 +1,4 @@
 live_loop :test do
-  midi :e3, port: 3
+  midi :e3, port: 4
   sleep 1
 end

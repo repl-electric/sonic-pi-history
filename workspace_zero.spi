@@ -3,5 +3,4 @@ midi_start
 live_loop :test do
   midi :Fs3
   sleep 1
-  midi_note_off
 end

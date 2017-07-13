@@ -1,4 +1,4 @@
 live_loop :test do
   midi :c4
-  sleep 1
+  sleep 2
 end

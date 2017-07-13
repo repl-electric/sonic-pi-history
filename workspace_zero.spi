@@ -1,4 +1,4 @@
 live_loop :test do
-  sample :bd_808
+ midi :Fs3
   sleep 1
 end

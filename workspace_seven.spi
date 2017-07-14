@@ -2,8 +2,8 @@ require "osc-ruby.rb"
 @unity ||= OSC::UDPClient.new('localhost', 9000)
 
 live_loop :loopey do
-  tick
- # sample Mountain[/subkick/,1]
+ # tick
+  # sample Mountain[/subkick/,1]
   play :FS3
   #  @unity.send("/astro/mix", 1.0)
   #  @unity.send("/astro/scale", 0.01)

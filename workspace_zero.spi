@@ -1,5 +1,5 @@
 live_loop :test do
   tick
-  midi  scale(:fs3,:minor).shuffle.look, sustain: 0.25, port: :blofeld
+  midi  scale(:fs2,:minor).shuffle.look, sustain: 0.25, port: :blofeld
   sleep 1/4.0
 end

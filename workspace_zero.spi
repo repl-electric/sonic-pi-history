@@ -1,4 +1,4 @@
 live_loop :test do
   midi  :fs4, sustain: 1.0, port: :blofeld
-  sleep 2
+  sleep 1
 end

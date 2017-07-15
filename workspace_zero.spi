@@ -1,1 +1,9 @@
-puts note_inspect(chord(:b3, 'sus4'))
+def blofeld(*args)
+  midi *args, port: :blofeld
+end
+
+live_loop :test do
+  tick
+  blofeld scale(:fs2,:minor_pentatonic).shuffle.look, sustain: 0.125
+  sleep 1/4.0
+end

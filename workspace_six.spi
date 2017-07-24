@@ -53,7 +53,7 @@ live_loop :testing do
     end
   end
   
-  sleep 1/2.0*2
+  sleep 1/2.0*1
 end
 
 

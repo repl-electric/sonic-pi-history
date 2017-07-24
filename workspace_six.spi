@@ -58,6 +58,7 @@ end
 
 
 live_loop :testing4 do
+stop
   _=[_,0]
   tick
   x=nil

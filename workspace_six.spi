@@ -97,6 +97,7 @@ end
 
 
 live_loop :twentyoff do
+stop
   tick
   synth :piano, note: x= ring(               chord(:Fs3, :m),
                                              chord(:Fs3, :m),

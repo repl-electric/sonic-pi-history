@@ -45,7 +45,7 @@ live_loop :testing do
   synth :hollow, note: x[0][0], release: x[1], amp: 0*1.5, decay: 1.0
   with_fx :hpf, cutoff: 60, mix:0 do
 #(note(x[0].map{|n| note(n)+12})||[]).each do |n| 
-with_tranpose 12 do
+tranpose 12 do
     play x[0], sustain: x[1]/2.0, amp: 0.5*1, decay:1.0/1.0 #, sustain: x[1]/2.0, amp: 0.5*1, decay:1.0/1.0
 end
     #midi x[0][1]+12 , sustain: x[1]/2.0, amp: 0.5*1, decay:1.0/1.0

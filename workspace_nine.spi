@@ -94,12 +94,12 @@ end
  1 0 0 0   0 0 1 0   1 0 0 0  1 0 0 0
 }).look == "1"
 #  shader :shader, "wave.glsl", "rope.vert", :points,  line(10000, 100000, 128).look(:fx)
-  shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)
+#  shader :shader, "wave.glsl", "rope.vert",  ring("lines","lines", "line_strips","line_strips", "line_loops","line_loops").tick(:fx),  line(10000, 100000, 128).look(:fx)
  
-shader :fx, :kal
- shader :iSpeed, rand * 0.1
-  shader :iRadius,  line(0,0.25,128*4).look
-shader :iIntro, 4.0
+#shader :fx, :kal
+# shader :iSpeed, rand * 0.1
+#  shader :iRadius,  line(0,0.25,128*4).look
+#shader :iIntro, 4.0
 #shader :decay, :iCrazy, 0.1, 0.1
     dd =  knit(_,3, Corrupt[/One Shots/, /hum/,2],1).tick(:loopy)
     kick_drift =  line(0.0,1/16.0,8).tick(:sloppy)
@@ -123,7 +123,7 @@ shader :iIntro, 4.0
     end
   end
   if spread(1,2, rotate: 0).look 
-    with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
+    #with_fx :reverb, mix: 0.2, room:  line(0.0, 0.9, 32).look do
     #  smp MagicDust[/_HI/,[7,4]].tick(:ma), amp: 1.5, rpitch:  ring(0,12*4,12).look(:ma), cutoff:  line(110, 135, 32).look, attack:  line(0.0, 0.02,128).look(:ma)
       #smp Frag[/hat/,[3,5]].look, amp: 0.3, rpitch:  ring(0,12*4,12).tick(:pi), cutoff:  line(110, 135, 32).look
     end
@@ -133,7 +133,7 @@ shader :iIntro, 4.0
         #smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
-    end
+    #end
   end
   if  ring(*%W{
 0 0 0 0  1 0 0 0    0 0 0 0   1 0 0 0

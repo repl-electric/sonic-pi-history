@@ -1,4 +1,5 @@
 
-live_loop do
+live_loop :a do
 midi :FS2
+sleep 2
 end

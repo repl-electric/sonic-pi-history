@@ -55,7 +55,7 @@ module Piano
 end
 
 live_loop :test do
-   smp fslice, amp: 3.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
+   smp @slices, amp: 3.0, rpitch:  ring(12,-5,5).tick(:i), cutoff: 135#, finish_offset: rand(1)*0.0025
 
   sleep 2
 end

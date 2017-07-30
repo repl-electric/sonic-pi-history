@@ -1,5 +1,5 @@
 
 live_loop :a do
-midi :FS2
+midi :FS3
 sleep 2
 end

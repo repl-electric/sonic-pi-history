@@ -888,7 +888,9 @@ live_loop :vocals, sync: :slicing do
  sync :slicing
  tick
  midi :FS3#, sustain: 0.25
+with_fx :slicer do
  sample Berry[/mm/].reverse[0..2].look, amp: 0.25
+end
  sleep 1
 end
 

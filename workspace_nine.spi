@@ -84,7 +84,7 @@ with_fx :hpf, mix: 0, cutoff:  ramp(0,90,128).tick(:i2ss31) do
 0 0 0 0   0 0 
 0 0 0 0   0 0 
 }).look == "1"
-  smp (MagicDust[/HI_/,52..69]+["/Users/josephwilk/Workspace/music/samples/Live/dust/MD_ORGANIC_HIT_HI_053.wav"]).tick(:click), amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
+#  smp (MagicDust[/HI_/,52..69]+["/Users/josephwilk/Workspace/music/samples/Live/dust/MD_ORGANIC_HIT_HI_053.wav"]).tick(:click), amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
 end
  
   if  ring(*%W{
@@ -109,7 +109,7 @@ shader :iIntro, 4.0
    aaa = 1.0*ring(1.5,1.2,0.9,1.4).tick(:inside2)
    #at do
     #sleep swing
-    smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
+ #   smp sss, amp: aaa, cutoff: ring(135).tick(:inside)-rand*10#, pan: 0.65
 #end
     #at{; sleep kick_drift; smp dd, amp: 4.0, finish: 0.01+rand(0.05), rpitch: pp }
     if spread(1,16*4).look

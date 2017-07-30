@@ -1,6 +1,6 @@
 live_loop :test do
   tick
-  midi scale(:fs2,:minor_pentatonic).shuffle.look, sustain: 0.125
+#  midi scale(:fs2,:minor_pentatonic).shuffle.look, sustain: 0.125
   sleep 1
 end
 

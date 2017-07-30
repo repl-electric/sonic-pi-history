@@ -2,7 +2,7 @@
 #shader :shader, "wave.glsl", "rope.vert", "lines", 100000
 set_volume! 1.0
 
-live_loop :vocals, sync: :slicing do
+live_loop :vocals do
  tick
 
 sample Berry[/mm/].reverse[0..2].look, amp: 1.5

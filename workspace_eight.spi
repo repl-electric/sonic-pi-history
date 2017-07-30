@@ -8,3 +8,7 @@ live_loop :vocals do
  sample Berry[/mm/].reverse[0..2].look, amp: 1.5
  sleep 1
 end
+
+live_loop :beat, sync: :vocals do
+  smp Mountain[/subkick/]
+end

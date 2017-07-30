@@ -1,5 +1,5 @@
 
 live_loop :a do
-midi :FS4
+midi :FS4, amp: 2
 sleep 2
 end

@@ -1,5 +1,5 @@
 
 live_loop :a do
-midi scale(:FS4, :minor).choose, amp: 2
-sleep 2
+midi scale(:FS4, :minor).choose, sustain: 2
+sleep 5
 end

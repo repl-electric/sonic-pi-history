@@ -3,3 +3,6 @@ live_loop :test do
   midi scale(:fs2,:minor_pentatonic).shuffle.look, sustain: 0.125
   sleep 1
 end
+
+
+midi_stop_all

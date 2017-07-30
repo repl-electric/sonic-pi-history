@@ -1,5 +1,1 @@
 
-live_loop :a do
-midi scale(:FS3, :minor).tick, sustain: 1/2.0
-sleep 1/2.0
-end

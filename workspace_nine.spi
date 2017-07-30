@@ -160,9 +160,9 @@ shader :iIntro, 4.0
        #smp Dust[/snare/,8], amp: 0.25, rpitch:  line(0,0.5,32).look
     end
   if spread(16,64).look
-    with_fx :bitcrusher, bits: 16 do
+    #with_fx :bitcrusher, bits: 16 do
       #smp Junk[/perc_hit/,/_click_/].take(8).tick(:sn), amp: 0.2, rpitch: 0
-    end
+    #end
   end
  
   if spread(1,32).look

@@ -10,5 +10,6 @@ live_loop :vocals do
 end
 
 live_loop :beat, sync: :vocals do
-  smp Mountain[/subkick/,-]
+  smp Mountain[/subkick/,0]
+sleep 1
 end

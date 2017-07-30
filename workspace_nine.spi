@@ -884,7 +884,8 @@ end
 
 
 
-live_loop :vocals do
+live_loop :vocals, sync: :slicing do
+sync :slicing
  tick
  #midi :FS0#, sustain: 0.25
  sample Berry[/mm/].reverse[0..2].look, amp: 1.5

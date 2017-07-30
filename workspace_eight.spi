@@ -6,6 +6,5 @@ live_loop :vocals do
  tick
 midi :FS2, sustain: 0.1
  sample Berry[/mm/].reverse[0..2].look, amp: 1.5
- sleep 3+2+8*2
+ sleep 1
 end
-midi

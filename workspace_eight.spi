@@ -53,4 +53,7 @@ module Piano
     @harp_cache[n]
   end
 end
- 
+
+live_loop :test do
+  sleep 2
+end

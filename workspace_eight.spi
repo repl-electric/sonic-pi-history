@@ -10,6 +10,6 @@ live_loop :vocals do
 end
 
 live_loop :beat, sync: :vocals do
-  smp Mountain[/subkick/,1], cutoff: 100
+  smp Mountain[/subkick/,1], cutoff: 80
   sleep 1
 end

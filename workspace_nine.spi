@@ -587,7 +587,8 @@ synth :beep, note: (knit :A4,2,
                          :Cs4,2).look, sustain: 4, amp: 0.15
 synth :piano, note: (knit chord(:Fs4,:m),1, 
                           chord(:Gs4, :m),1,
-                          chord(:A4, :m),1).look
+                          chord(:A4, :m),1,
+                          chord(:Gs4, :m),1).look
 
 sample ring( 
 Suburb[/a0/],

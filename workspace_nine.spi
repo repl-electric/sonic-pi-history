@@ -4,6 +4,7 @@ def syn(*args)
     synth *args
   end
 end
+🍓=Straw;🥁=@slices
 live_loop :slicing do
 fslice = nil
   tick

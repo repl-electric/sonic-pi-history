@@ -585,7 +585,7 @@ puts baz.to_s.split("\/")[-1]
 synth :beep, note: (knit :A4,2, 
                          :B4,2,
                          :Cs4,2).look, sustain: 4, amp: 0.15
-sample Piano[/A4/,0]
+synth :piano, note: Piano[/A4/,0]
 
 sample ring( 
 Suburb[/a0/],

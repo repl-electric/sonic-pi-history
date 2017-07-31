@@ -732,7 +732,6 @@ stop
 end
 end
 
-comment do 
 @sh||=nil
 with_fx :reverb, mix_slide: 2, damp_slide: 2, mix: 1 do |g_fx|
 live_loop :harmony, sync: :slicing do
@@ -880,7 +879,6 @@ end
 end
 end
 
-end
 
 
 

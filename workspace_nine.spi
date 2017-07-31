@@ -581,7 +581,7 @@ sample  (baz=ring(
 amp: 2.0*0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
-midi (ring :FS1, :GS0, :A0, :GS0).look, sustain: 7
+midi (ring :FS1, :GS1, :A0, :GS0).look, sustain: 7
 
 sample ring( 
 Suburb[/a0/],

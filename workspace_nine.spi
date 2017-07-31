@@ -835,7 +835,7 @@ end
 live_loop :vocals, sync: :slicing do
  sync :slicing
  tick
- #midi :FS1#, sustain: 0.5
+ midi :FS1#, sustain: 0.5
  #with_fx :slicer, phase: (ring 0.5,0.5,0.25).look, invert: (ring 1,0).look do
    #sample Berry[/mm/].reverse[0..2].look, amp: 0.25
  #end

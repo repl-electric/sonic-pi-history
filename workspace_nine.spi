@@ -585,10 +585,6 @@ midi (ring :FS1, :GS1, :A1, :GS1, :B1, :FS1, :A1, :Cs1).look, sustain: 7
 synth :beep, note: (knit :A4,2, 
                          :B4,2,
                          :Cs4,2).look, sustain: 4, amp: 0.15
-synth :piano, note: (knit chord(:Fs4,:m),1, 
-                          chord(:Gs4, :m),1,
-                          chord(:A4, :M),1,
-                          chord(:Gs4, :m),1).look
 
 sample ring( 
 Suburb[/a0/],
@@ -649,7 +645,7 @@ end
 live_loop :BAsssssssssssssssssssssss, sync: :slicing do
 # sync :slicing
  tick
-# midi :Fs1, sustain: 2.0
+ midi :Fs1, sustain: 2.0
  #with_fx :slicer, phase: (ring 0.5,0.5,0.25).look, invert: (ring 1,0).look do
    #sample Berry[/mm/].reverse[0..2].look, amp: 0.25
  #end

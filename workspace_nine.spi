@@ -59,10 +59,10 @@ end
 #      smp Junk[/tom/,2], amp: 0.8, rpitch: 0
     end
      if spread(1,32).tick(:sindie)
-  #    at do
-   #     sleep (1/8.0)*2
-     #   smp Mountain[/subkick/,1], amp: 0.5*1
-   #   end
+      at do
+        sleep (1/8.0)*2
+        smp Mountain[/subkick/,1], amp: 0.5*1
+      end
     end
   end
   if spread(1,2, rotate: 0).look 

@@ -687,3 +687,4 @@ live_loop :BAsssssssssssssssssssssss, sync: :slicing do
  sleep 2
 end
 
+midi_stop

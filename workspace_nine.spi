@@ -475,7 +475,7 @@ elsif fslice[:path] == "/Users/josephwilk/Workspace/music/samples/melodyne/straw
 elsif fslice[:path] =~ /d1.wav/
   synth :chipbass, note: :D0
 elsif fslice[:path] =~ /b1.wav/
-  #synth :chipbass, note: :"B-1"
+  synth :chipbass, note: :"B-1"
 end
 
     # puts fslice[:path]

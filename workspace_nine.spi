@@ -585,7 +585,7 @@ puts baz.to_s.split("\/")[-1]
 synth :beep, note: (knit :A4,2, 
                          :B4,2,
                          :Cs4,2).look, sustain: 4, amp: 0.15
-synth :piano, note: :(knit chord(:Fs4,:m),2, 
+synth :piano, note: (knit chord(:Fs4,:m),2, 
                          :B4,2,
                          :Cs4,2).look
 

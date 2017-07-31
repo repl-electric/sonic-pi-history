@@ -1,11 +1,9 @@
-#shader :shader, "wave.glsl", "rope.vert", "lines", 100000
 def syn(*args)
   options = args.last
   if options[:note] != "_"
     synth *args
   end
 end
-🍓=Straw;🥁=@slices
 live_loop :slicing do
 fslice = nil
   tick

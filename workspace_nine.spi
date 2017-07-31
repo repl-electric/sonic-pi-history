@@ -582,9 +582,9 @@ amp: 2.0*0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 midi (ring :FS1, :GS1, :A1, :GS1, :B1, :FS1, :A1, :Cs1).look, sustain: 7
-synth :beep, note: (knit :Fs4,2, 
-                         :GS4,2,
-                         :A4,2).look, sustain: 4, amp: 0.2
+synth :beep, note: (knit :A4,2, 
+                         :B4,2,
+                         :Cs4,2).look, sustain: 4, amp: 0.2
 
 sample ring( 
 Suburb[/a0/],

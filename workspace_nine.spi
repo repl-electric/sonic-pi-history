@@ -570,32 +570,6 @@ puts "root: #{target_chord.map{|c| c[0]}}" if target_chord
 
 baz = ""
 sample  (baz=ring( 
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/complex_floot_f#2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/b1.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/d2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/v2/e2.wav",
- 
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_a2.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/floot/floot_b2.wav"
- 
-#SevenBass[/02\/f#0/],
-#SevenBass[/02\/b0/],
-#SevenBass[/02\/d0/],
-#SevenBass[/02\/e0/]
-
-#SevenBass[/beat/,2],
-
-#SevenBass[/seven\/f#0_4/],
-#SevenBass[/b0_2/],
-#SevenBass[/d0_2/],
-#SevenBass[/e0_2/],
- 
-#SevenBass[/f#0_4/],
-#SevenBass[/b0_2/],
-#SevenBass[/d1_2/],
-#SevenBass[/e1_2/],
-
 "/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/G#0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
@@ -603,23 +577,8 @@ sample  (baz=ring(
 "/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
 "/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
-"/Users/josephwilk/Workspace/music/samples/Live/sven/C#1.wav",
-
-
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",
-
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#1.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/D1.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/E1.wav",
-
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/A0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/C#0.wav",
-#"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav"
-
-).look), amp: 2.0*1, attack: 0.0, decay: 5.0
+"/Users/josephwilk/Workspace/music/samples/Live/sven/C#1.wav").look), 
+amp: 2.0*1, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
 sample ring( 

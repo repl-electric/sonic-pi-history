@@ -460,7 +460,7 @@ with_fx :hpf, cutoff: 45-rand, mix: 1 do
      if spread(1,64).look
      fslice[:path] = "/Users/josephwilk/Workspace/music/samples/strawberry/Samples/Ambiences/gaiazone_04.wav"
      end
-with_fx :krush, mix: (line 0.1, 0.3, 256).look do
+with_fx :krush, mix: (line 0.1, 0.2, 256).look do
   smp fslice, amp: 2.0*1, rpitch: line(0, 0.5, 64*1).look*0, finish_offset:  ring(0.005, 0, 0).tick(:yes), pan:  line(0.25, -0.25, 12).tick(:itsathing), rate: 1.0, finish_offset: 0.001 #, finish_offset: (ring 0.0025, 0.0025,0.0025, 0.0035, 0.0, 0.0, 0.0).look, finish_offset: 0.0035, finish_offset: ( spread(7, 11).look ? 0.3 : 0.001)
 end
 end

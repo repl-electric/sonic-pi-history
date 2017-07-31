@@ -593,7 +593,7 @@ sample  (baz=ring(
 
 #SevenBass[/beat/,2],
 
-#SevenBass[/seven\/f#0_4/],
+SevenBass[/seven\/f#0_4/],
 #SevenBass[/b0_2/],
 #SevenBass[/d0_2/],
 #SevenBass[/e0_2/],
@@ -603,7 +603,7 @@ sample  (baz=ring(
 #SevenBass[/d1_2/],
 #SevenBass[/e1_2/],
 
-"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
+#"/Users/josephwilk/Workspace/music/samples/Live/sven/F#0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/B0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/D0.wav",
 #"/Users/josephwilk/Workspace/music/samples/Live/sven/E0.wav",

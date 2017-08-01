@@ -643,7 +643,7 @@ end
 live_loop :BAsssssssssssssssssssssss, sync: :slicing do
  tick
 #smp Frag[/kick/,1],amp:2
- midi_note_off :Fs3
+ midi_note_off :Fs4
  #midi (ring :Fs3, :Gs2, :A2, :Gs2).look 
 #with_fx :slicer, phase: (ring 0.5,0.5,0.25).look, invert: (ring 1,0).look do
    #sample Berry[/mm/].reverse[0..2].look, amp: 0.25

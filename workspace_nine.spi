@@ -73,7 +73,7 @@ end
      if spread(1,64).tick(:sindie)
       at do
         sleep 1/8.0
-        smp MagicDust[/_HI/,5], amp: 0.1
+        #smp MagicDust[/_HI/,5], amp: 0.1
         #smp Frag[/hat/,4], amp: 0.25, rpitch:  ring(0,12,12).tick(:pi)
       end
     #end
@@ -581,7 +581,7 @@ sample  (baz=ring(
 amp: 2.0*0, attack: 0.0, decay: 5.0
 puts baz.to_s.split("\/")[-1]
 
-midi (ring :FS1, :GS1, :A1, :GS1, :B1, :FS1, :A1, :Cs1).look, sustain: 7
+#midi (ring :FS1, :GS1, :A1, :GS1, :B1, :FS1, :A1, :Cs1).look, sustain: 7
 #synth :beep, note: (knit :A4,2, 
 #                         :B4,2,
 #                         :Cs4,2).look, sustain: 4, amp: 0.15

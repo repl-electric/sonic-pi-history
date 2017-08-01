@@ -643,7 +643,7 @@ end
 
 
 live_loop :BAsssssssssssssssssssssss, sync: :slicing do
-16.times{ sync :slicing}
+2.times{ sync :slicing}
  tick
 smp Frag[/kick/,1],amp:2
  #midi_note_off :Fs3

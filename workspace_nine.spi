@@ -643,7 +643,7 @@ end
 
 
 live_loop :BAsssssssssssssssssssssss, sync: :slicing do
-8.times{ sync :slicing}
+16.times{ sync :slicing}
  tick
  midi (ring :Fs3, :Gs2, :A2, :Gs2).look 
 #with_fx :slicer, phase: (ring 0.5,0.5,0.25).look, invert: (ring 1,0).look do

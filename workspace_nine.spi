@@ -621,7 +621,6 @@ live_loop :vocals, sync: :slicing do
  with_fx :slicer, phase: 1.0, smooth: 0.85 do
  #synth :beep, note: :fs4, decay: 4, amp: 0.3, attack: 0.05
  end
-
 #sample (ring "~/Workspace/music/samples/strawberry/Samples/Mic2/Sustains/Natural/Mm/vog_strw_sus_mm_02_b.wav",
 # "/Users/josephwilk/Workspace/music/samples/flow/berry/f#4.wav"
 #).look
@@ -641,14 +640,13 @@ end
 end
 end
 
-
 live_loop :BAsssssssssssssssssssssss, sync: :slicing do
-64.times{ sync :slicing}
  tick
-smp Frag[/kick/,1],amp:2
- #midi_note_off :Fs3
+#smp Frag[/kick/,1],amp:2
+ midi_note_off :Fs3
  #midi (ring :Fs3, :Gs2, :A2, :Gs2).look 
 #with_fx :slicer, phase: (ring 0.5,0.5,0.25).look, invert: (ring 1,0).look do
    #sample Berry[/mm/].reverse[0..2].look, amp: 0.25
  #end
+sleep 3+2+8*2
 end

@@ -5,6 +5,6 @@ use_bpm 120
 
 
 live_loop :ass do
-midi :fs3, port: :reaktor_6_virtual_input
+midi :fs2, port: :reaktor_6_virtual_input
 sleep 4  
 end

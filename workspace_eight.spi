@@ -23,5 +23,5 @@ live_loop :two, sync: :ass do
     smp Mountain[/subkick/,0..2].look, amp: 4
   end
   form :fs1, sustain: 1.0
-  sleep 2
+  sleep 1
 end

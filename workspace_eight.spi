@@ -34,7 +34,7 @@ sleep 2
 end
 
 live_loop :dust, sync: :ass do
-  smp Corrupt[/loop/,/120/,/beat/,0]
+  smp Corrupt[/loop/,/120/,/beat/,1]
   sleep 8
 end
 

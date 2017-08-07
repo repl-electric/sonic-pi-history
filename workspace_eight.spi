@@ -8,7 +8,7 @@ end
 
 live_loop :ass do
 form :fs5, sustain: 3.0
-sleep 1  
+sleep 0.5  
 form :a5, sustain: 3.0
 sleep 2  
 form :cs6, sustain: 3.0

@@ -19,6 +19,6 @@ sleep 2
 end
 
 live_loop :two, sync: :ass do
-  form :d1, sustain: 1.0
+  form :d2, sustain: 1.0
   sleep 2
 end

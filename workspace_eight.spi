@@ -5,6 +5,6 @@ use_bpm 120
 
 
 live_loop :test do
-midi :fs3#, channel: 16
+midi :fs4#, channel: 16
 sleep 2  
 end

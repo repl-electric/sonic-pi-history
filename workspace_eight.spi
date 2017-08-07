@@ -4,7 +4,7 @@ set_volume! 1.0
 use_bpm 120
 
 
-live_loop :test do
-midi :fs4, sustain: 2#, channel: 16
+live_loop :ass do
+midi :fs4, sustain: 2, channel: 16
 sleep 4  
 end

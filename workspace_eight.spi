@@ -6,6 +6,6 @@ use_bpm 120
 
 live_loop :ass do
 midi :fs2, port: :reaktor_6_virtual_input, sustain: 2.5
-smp Mountain[/subkick/,0]
+smp Mountain[/subkick/,0], amp: 2
 sleep 4  
 end

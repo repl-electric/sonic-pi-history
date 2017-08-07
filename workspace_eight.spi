@@ -38,6 +38,6 @@ live_loop :two, sync: :ass do
   if (ring *%W{1 0 0 1  0 0 1 0  1 0 1 0}).look == "1"
     smp Mountain[/subkick/,1], amp: 4
   end
-  form :fs3, sustain: 2.0
+  form :fs3, sustain: (knit 2.0,3, 1.0,1).look
   sleep 1/2.0
 end

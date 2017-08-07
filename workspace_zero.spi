@@ -1,2 +1,4 @@
 midi_note_off port: :reaktor_6_virtual_input
 midi_stop port: :reaktor_6_virtual_input
+
+midi_stop

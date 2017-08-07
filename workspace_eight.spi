@@ -13,5 +13,5 @@ form :a5, sustain: 3.0
 sleep 1  
 form :cs6, sustain: 3.0
 smp Mountain[/subkick/,1], amp: 4
-sleep 1 
+sleep 2 
 end

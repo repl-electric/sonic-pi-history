@@ -6,9 +6,9 @@ def form(*args)midi *args, port: :reaktor_6_virtual_input;end
 
 live_loop :ass do
 tick
-form :fs6, sustain: 0.5
+form :fs6, sustain: 0.25
 sleep 1/2.0
-form :fs6, sustain: 0.5
+form :fs6, sustain: 0.25
 sleep 1/2.0
 
 form :a5, sustain: 1.0

@@ -29,7 +29,6 @@ sleep 1
 form :gs6, sustain: 2.0
 sleep 2 
 
-
 end
 
 live_loop :two, sync: :ass do

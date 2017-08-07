@@ -3,6 +3,10 @@
 set_volume! 1.0
 use_bpm 120
 
+def form(*args)
+midi args port: :reaktor_6_virtual_input
+end
+
 
 live_loop :ass do
 midi :fs2, port: :reaktor_6_virtual_input, sustain: 2.5

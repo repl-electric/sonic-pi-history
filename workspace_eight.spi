@@ -8,7 +8,9 @@ end
 
 live_loop :ass do
 tick
+
 smp Mountain[/subkick/,0..2].look, amp: 4
+
 form :fs5, sustain: 1.0
 sleep 1  
 form :a5, sustain: 1.0

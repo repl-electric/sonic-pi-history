@@ -7,7 +7,7 @@ midi *args, port: :reaktor_6_virtual_input
 end
 
 live_loop :ass do
-form :fs1, sustain: 2.5
+form :fs5, sustain: 2.5
 smp Mountain[/subkick/,1], amp: 4
 sleep 4  
 end

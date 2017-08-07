@@ -3,4 +3,4 @@ midi_stop port: :reaktor_6_virtual_input
 
 midi_stop
 
-midi_reset
+midi_reset, :reaktor_6_virtual_input

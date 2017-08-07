@@ -7,7 +7,7 @@ midi *args, port: :reaktor_6_virtual_input
 end
 
 live_loop :ass do
-form :fs5, sustain: 3.0
+form :fs5, sustain: 1.0
 sleep 0.5  
 form :a5, sustain: 3.0
 sleep 2  

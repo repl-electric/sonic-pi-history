@@ -4,4 +4,7 @@ set_volume! 1.0
 use_bpm 120
 
 
+live_loop :test do
 midi :fs3
+sleep 2  
+end

@@ -16,5 +16,7 @@ sleep 1
 form :a5, sustain: 1.0
 sleep 1  
 form :cs6, sustain: 2.0
+form :gs6, sustain: 1.0
+
 sleep 2 
 end

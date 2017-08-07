@@ -37,7 +37,7 @@ end
 
 live_loop :dust, sync: :ass do
   smp Corrupt[/loop/,/120/,/beat/,255], amp: 4
-  sleep 32
+  sleep 16
 end
 
 live_loop :two, sync: :ass do

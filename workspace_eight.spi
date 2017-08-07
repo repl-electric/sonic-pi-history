@@ -33,6 +33,11 @@ form :gs6, sustain: 0.5
 sleep 2 
 end
 
+live_loop :dust, sync: :ass do
+  smp Corrupt[/loop/,/120/,0]
+  sleep 8
+end
+
 live_loop :two, sync: :ass do
   tick
   if spread(1,2).look

@@ -7,6 +7,7 @@ def moog(*args)midi *args, port: :minitar;end
 
 live_loop :ass do
 tick
+comment do
 form :fs6, sustain: 4.0
 sleep 1/2.0
 form :fs6, sustain: 5.5
@@ -30,6 +31,7 @@ sleep 1
 form :e6, sustain: 1.0
 sleep 1  
 form :gs6, sustain: 0.5
+end
 sleep 2 
 end
 

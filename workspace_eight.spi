@@ -19,7 +19,7 @@ end
 
 live_loop :two, sync: :ass do
   tick
-  if (ring *%W{1 0 1 1}).look == "1"
+  if (ring *%W{1 0 0 0   1 0 0 0}).look == "1"
     smp Mountain[/subkick/,0..2].look, amp: 4
   end
   form :fs1, sustain: 1.0

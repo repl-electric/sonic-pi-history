@@ -2,8 +2,7 @@
 #shader :shader, "wave.glsl", "rope.vert", "lines", 100000
 set_volume! 1.0
 use_bpm 120
-def form(*args)
-  midi *args, port: :reaktor_6_virtual_input;end
+def form(*args)  midi *args, port: :reaktor_6_virtual_input;end
 
 live_loop :ass do
 tick

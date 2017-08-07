@@ -5,6 +5,6 @@ use_bpm 120
 
 
 live_loop :ass do
-midi :fs4
+midi :fs4, channel: :device_port_1
 sleep 4  
 end

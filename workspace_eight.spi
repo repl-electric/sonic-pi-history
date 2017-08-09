@@ -2,7 +2,6 @@ set_volume! 1.0
 use_bpm 120
 
 live_loop :ass do
-stop
 tick
 form :fs6, sustain: 4.0
 sleep 1/2.0

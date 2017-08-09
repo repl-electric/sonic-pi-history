@@ -52,6 +52,6 @@ live_loop :two, sync: :ass do
   if spread(1,6).look
   #  smp MagicDust[/click/,14..18].look, amp: 4
   end
-  form :gs3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
+  form :a3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
   sleep 1/2.0
 end

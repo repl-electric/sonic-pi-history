@@ -36,7 +36,7 @@ end
 
 live_loop :dust, sync: :ass do
   smp Mountain[/subkick/,1], cutoff: 120
-  smp Corrupt[/loop/,/120/,/beat/,257], amp: 1, cutoff: 100, slice: 2
+  smp Corrupt[/loop/,/120/,/beat/,257], amp: 1, cutoff: 100, slice: 4
   sleep 1
 end
 

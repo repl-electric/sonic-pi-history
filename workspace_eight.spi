@@ -8,6 +8,8 @@ live_loop :ass do
 tick
 form :fs6, sustain: 4.0
 sleep 1/2.0
+
+comment do
 form :fs6, sustain: 5.5
 sleep 1/2.0
 
@@ -32,18 +34,19 @@ sleep 1
 form :gs6, sustain: 0.5
 comment do
 end
+end
 sleep 2 
 end
 
 live_loop :dust, sync: :ass do
   tick
-  smp Mountain[/subkick/,1], cutoff: 100
+  smp Mountain[/subkick/,1], cutoff: 80
   smp Corrupt[/loop/,/120/,/beat/,257], amp: 1, cutoff: 100, slice: (line, 0,16,32).reverse.look
   sleep 1
 end
 
 live_loop :two, sync: :ass do
   tick
-  form :d3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
+  #form :d3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
   sleep 1/2.0#*2
 end

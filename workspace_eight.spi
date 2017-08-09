@@ -4,7 +4,6 @@ def form(*args)midi *args, port: :reaktor_6_virtual_input ;end
 def blo(*args)midi *args, port: :blofeld;end
 def moog(*args)midi *args, port: :minitar;end
 
-
 live_loop :ass do
 tick
 comment do
@@ -37,7 +36,7 @@ end
 
 live_loop :dust, sync: :ass do
   smp Mountain[/subkick/,1], cutoff: 100
-  smp Corrupt[/loop/,/120/,/beat/,257], amp: 1, cutoff: 10
+  smp Corrupt[/loop/,/120/,/beat/,257], amp: 1, cutoff: 100
   sleep 16
 end
 

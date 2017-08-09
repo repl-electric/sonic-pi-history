@@ -29,7 +29,7 @@ form :cs6, sustain: 1.0
 sleep 1  
 form :e6, sustain: 1.0
 sleep 1  
-form :gs6, sustain: 0.5
+form :gs6, sustain: 0.5+4
 sleep 2 + 4 
 end
 

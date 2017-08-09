@@ -36,7 +36,7 @@ end
 live_loop :dust, sync: :ass do
   tick
   smp Mountain[/subkick/,1], cutoff: 135
-  smp Corrupt[/loop/,/120/,/beat/,255], cutoff: 120, slice: (line, 0,16,32).look
+  smp Corrupt[/loop/,/120/,/beat/,255], cutoff: 130, slice: (line, 0,16,32).look
   sleep 1
 end
 

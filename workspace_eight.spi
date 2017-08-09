@@ -39,4 +39,4 @@ live_loop :two, sync: :ass do
   sleep 1/2.0#*2
 end
 
-midi 40, channel: 16, port: "reaktor_6_virtual_input"
+midi 20, channel: 16, port: "reaktor_6_virtual_input"

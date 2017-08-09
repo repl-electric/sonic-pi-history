@@ -42,4 +42,7 @@ stop
   sleep 1/2.0#*2
 end
 
-midi 50, channel: 16, port: "reaktor_6_virtual_input"
+live_loop :testing do
+midi scale(:fs3, :minor).choose, channel: 16, port: "reaktor_6_virtual_input"
+  sleep 1
+end

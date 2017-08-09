@@ -9,7 +9,7 @@ live_loop :ass do
 tick
 with_transpose -32 do 
 mass :fs3, sustain: 4.0
-sleep 1/2.0
+sleep 1
 end
 end
 

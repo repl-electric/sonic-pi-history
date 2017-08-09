@@ -10,23 +10,6 @@ tick
 with_transpose -32 do 
 mass :fs6, sustain: 4.0
 sleep 1/2.0
-mass :fs6, sustain: 5.5
-sleep 1/2.0
-mass :a5, sustain: 1.0
-sleep 2  
-mass :gs5, sustain: 1.0
-sleep 2 
-mass :a5, sustain: 1.0
-sleep 2 
-mass :gs5, sustain: 1.0
-sleep 2 
-mass :a5, sustain: 1.0
-sleep 2 
-form :cs5, sustain: 6.0
-sleep 2 
-mass :e5, sustain: 1.0
-sleep 2 
-mass :e5, sustain: 1.0
 end
 sleep 1 
 end

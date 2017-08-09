@@ -1,6 +1,6 @@
 set_volume! 1.0
 use_bpm 120
-def form(*args)midi *args, port: :device_port_2;midi *args, port: :device_port_1;midi *args;end
+def form(*args)midi *args;end
 def blo(*args)midi *args, port: :blofeld;end
 def moog(*args)midi *args, port: :minitar;end
 

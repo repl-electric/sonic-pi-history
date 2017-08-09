@@ -38,3 +38,5 @@ live_loop :two, sync: :ass do
   form :fs3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
   sleep 1/2.0#*2
 end
+
+midi :channel 16, port: "reaktor_6_virtual_input"

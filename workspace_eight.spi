@@ -42,4 +42,4 @@ stop
   sleep 1/2.0#*2
 end
 
-midi :note, 50, channel: 16, port: "reaktor_6_virtual_input"
+midi note: 50, channel: 16, port: "reaktor_6_virtual_input"

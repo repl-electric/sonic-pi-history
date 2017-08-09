@@ -26,7 +26,7 @@ form :cs5, sustain: 6.0
 sleep 2 
 mass :e5, sustain: 1.0
 sleep 2 
-form :e5, sustain: 1.0
+mass :e5, sustain: 1.0
 end
 sleep 1 
 end

@@ -2,7 +2,7 @@ set_volume! 1.0
 use_bpm 120
 def form(*args)midi *args, port: :reaktor_6_virtual_input ;end
 def mass(*args)midi *args, port: :massive_virtual_input ;end
-def blo(*args)midi *args, port: :blofeld;end
+def blof(*args)midi *args, port: :blofeld;end
 def moog(*args)midi *args, port: :minitar;end
 
 live_loop :ass do

@@ -43,6 +43,6 @@ stop
 end
 
 live_loop :testing do
-midi_cc 1, channel: 16, port: "reaktor_6_virtual_input"
+midi_cc 2, channel: 16, port: "reaktor_6_virtual_input"
   sleep 2
 end

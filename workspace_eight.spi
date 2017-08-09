@@ -17,7 +17,6 @@ sleep 1
 form :cs5, sustain: 2.0
 form :gs5, sustain: 1.0
 sleep 2 
-comment do
 
 form :a5, sustain: 1.0
 sleep 1  
@@ -31,8 +30,6 @@ sleep 1
 form :e6, sustain: 1.0
 sleep 1  
 form :gs6, sustain: 0.5
-comment do
-end
 end
 sleep 2 
 end

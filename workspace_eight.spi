@@ -25,7 +25,7 @@ sleep 2
 form :e5, sustain: 1.0
 sleep 2 
 form :e5, sustain: 1.0
-sleep 2 
+sleep 1 
 end
 
 live_loop :dust, sync: :ass do

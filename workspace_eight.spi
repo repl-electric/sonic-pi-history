@@ -29,7 +29,7 @@ sleep 2
 end
 
 live_loop :dust, sync: :ass do
-sync :ass
+  sync :ass
   tick
   smp Mountain[/subkick/,1], cutoff: rand_i(110..135), start: rand(0.00125)
   smp Corrupt[/loop/,/120/,/beat/,255]#, cutoff: 135, slice: (line, 0,16,32).reverse.look

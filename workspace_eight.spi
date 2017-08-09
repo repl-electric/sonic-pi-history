@@ -8,7 +8,7 @@ def moog(*args)midi *args, port: :minitar;end
 live_loop :ass do
 tick
 with_transpose -32 do 
-mass :fs6, sustain: 4.0
+mass :fs3, sustain: 4.0
 sleep 1/2.0
 end
 end

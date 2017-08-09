@@ -30,7 +30,7 @@ sleep 1
 form :e6, sustain: 1.0
 sleep 1  
 form :gs6, sustain: 0.5
-sleep 2 
+sleep 2 + 4 
 end
 
 live_loop :dust, sync: :ass do

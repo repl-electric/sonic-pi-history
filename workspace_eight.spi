@@ -37,7 +37,7 @@ end
 
 live_loop :two do
   tick
-  form 10, sustain: (knit 0.25, 3, 1.0/2.0,1).look#, channel: 16
+  form 54, sustain: (knit 0.25, 3, 1.0/2.0,1).look#, channel: 16
   sleep 1/2.0#*2
 end
 

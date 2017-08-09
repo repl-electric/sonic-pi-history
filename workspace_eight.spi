@@ -42,6 +42,6 @@ end
 
 live_loop :two, sync: :ass do
   tick
-  form :d3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
+  form :gs3, sustain: (knit 0.25, 3, 1.0/2.0,1).look
   sleep 1/2.0#*2
 end

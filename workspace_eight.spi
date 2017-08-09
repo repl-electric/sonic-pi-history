@@ -12,7 +12,7 @@ mass :fs6, sustain: 4.0
 sleep 1/2.0
 mass :fs6, sustain: 5.5
 sleep 1/2.0
-form :a5, sustain: 1.0
+mass :a5, sustain: 1.0
 sleep 2  
 form :gs5, sustain: 1.0
 sleep 2 

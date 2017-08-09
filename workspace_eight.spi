@@ -40,7 +40,7 @@ live_loop :dust, sync: :ass do
   tick
   smp Mountain[/subkick/,1], cutoff: 120
   smp Corrupt[/loop/,/120/,/beat/,255], amp: 1#, cutoff: 100, slice: (line, 0,16,32).shuffle.look
-  sleep 1
+  sleep 16
 end
 
 live_loop :two, sync: :ass do

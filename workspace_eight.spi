@@ -7,17 +7,33 @@ def moog(*args)midi *args, port: :minitar;end
 
 live_loop :ass do
 tick
-with_transpose -32 do 
-mass :fs1, sustain: 4.0
-sleep 2
-end
+form :fs6, sustain: 4.0
+sleep 1/2.0
+form :fs6, sustain: 5.5
+sleep 1/2.0
+form :a5, sustain: 1.0
+sleep 2  
+form :gs5, sustain: 1.0
+sleep 2 
+form :a5, sustain: 1.0
+sleep 2 
+form :gs5, sustain: 1.0
+sleep 2 
+form :a5, sustain: 1.0
+sleep 2 
+form :cs5, sustain: 6.0
+sleep 2 
+form :e5, sustain: 1.0
+sleep 2 
+form :e5, sustain: 1.0
+sleep 1 
 end
 
 live_loop :dust, sync: :ass do
   sync :ass
   tick
   smp Mountain[/subkick/,1], cutoff: rand_i(110..135), start: rand(0.00125)
-  #smp Corrupt[/loop/,/120/,/beat/,257]#, cutoff: 135, slice: (line, 0,16,32).reverse.look
+  smp Corrupt[/loop/,/120/,/beat/,257]#, cutoff: 135, slice: (line, 0,16,32).reverse.look
   #sleep 16
 end
 

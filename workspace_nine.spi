@@ -5,6 +5,11 @@ live_loop :testtest do
   sleep score[1]
 end
 
+live_loop :harmony, sync: :testtest do
+  form :fs3
+  sleep 2
+end
+
 live_loop :drums, sync: :testtest do
   tick
   if (ring *%W{1 0 0 1   0 1 0 0}).look == "1"

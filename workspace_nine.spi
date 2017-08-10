@@ -1,5 +1,5 @@
 live_loop :testtest do
   tick
-  moog (ring :fs1, :gs1, :a1).look, 120
+  moog (ring :fs1, :gs1, :a1).look, 0
   sleep 2
 end

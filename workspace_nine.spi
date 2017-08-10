@@ -1,6 +1,6 @@
 
 live_loop :testtest do
   tick
-  midi (ring :fs1, :gs1, :a1, :gs1).look, 10
+  midi (ring :fs1, :gs1, :a1).look, 10
   sleep 2
 end

@@ -13,8 +13,8 @@ live_loop :harmony, sync: :testtest do
 end
 
 live_loop :izt, sync: :testtest do
-  mass :fs4, 1, sustain: 1
-  sleep 2
+  mass :fs4, 1, sustain: 12
+  sleep 12
 end
 
 live_loop :drums, sync: :testtest do

@@ -1,5 +1,5 @@
 
 live_loop :test do
-midi :fs3, 100  
+midi :fs3, 20  
 sleep 2
 end

@@ -1,5 +1,1 @@
-midi_stop port: :reaktor_6_virtual_input
-midi_stop port:  :reaktor_6_virtual_input
-midi_reset port: :reaktor_6_virtual_input
-midi_stop
-#midi_note_off port: :reaktor_6_virtual_input
+puts note_inspect(chord(:b3, 'sus4'))

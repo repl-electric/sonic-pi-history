@@ -6,9 +6,8 @@ live_loop :testtest do
 end
 
 live_loop :drums, sync: :testtest do
-  if (ring *%W{1 0 0 0   0 0 0 0}).look == 1
- smp Mountain[/subkick/,0], amp: 2
-end
+  if (ring *%W{1 0 0 0   1 0 0 0}).look == 1
+    smp Mountain[/subkick/,0], amp: 2
+  end
   sleep 1
-
 end

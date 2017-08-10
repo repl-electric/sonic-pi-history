@@ -7,7 +7,7 @@ end
 
 live_loop :harmony, sync: :testtest do
   tick
-  score = (ring [:a3, 2],           [:d3,4],            [:fs3,2],  [:cs3,1], [:a1,1], [:cs2,2]).look
+  score = (ring [:a3, 2],           [:d3,4],            [:fs3,2], [:cs3,1], [:d4,1], [:cs2,2]).look
   form score[0], 1, sustain: score[1]
   sleep score[1]
 end

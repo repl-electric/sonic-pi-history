@@ -6,8 +6,8 @@ live_loop :testtest do
 end
 
 live_loop :harmony, sync: :testtest do
-  form :fs3, 1
-  sleep 2
+  form :fs3, 1, sustain
+  sleep 6
 end
 
 live_loop :drums, sync: :testtest do

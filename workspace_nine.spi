@@ -1,4 +1,4 @@
 
-live_audio :testtest do
+live_loop :testtest do
   midi :fs1, 100
 end

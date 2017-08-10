@@ -1,5 +1,5 @@
 
 live_audio :test do
-  midi :fs2, 100
+  midi :fs1, 100
   sleep 2
 end

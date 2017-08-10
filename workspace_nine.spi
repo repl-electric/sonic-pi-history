@@ -1,1 +1,5 @@
-midi :fs3, 5
+
+live_loop :test do
+midi :fs3, 5  
+sleep 2
+end

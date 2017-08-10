@@ -1,7 +1,5 @@
-def moog(*args)midi *args, port: :moog_minitaur;end
-
 live_loop :testtest do
   tick
-  moog (ring :fs1, :gs1, :a1).look, 1
+  moog (ring :fs1, :gs1, :a1).look, 2
   sleep 2
 end

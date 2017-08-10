@@ -6,7 +6,7 @@ live_loop :testtest do
 end
 
 live_loop :harmony, sync: :testtest do
-  form :fs4, 1, sustain: 6
+  form :a4, 1, sustain: 6
   sleep 6
 end
 

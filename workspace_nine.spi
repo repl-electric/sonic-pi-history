@@ -1,5 +1,5 @@
 
-live_loop :test do
-midi :fs3, 2  
-sleep 2
+live_audio :test do
+  midi :fs3, 2
+  sleep 2
 end

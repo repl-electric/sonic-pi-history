@@ -1,6 +1,6 @@
 live_loop :testtest do
   tick
-  score = (ring [:fs1, 1], [:fs1,1], [:gs1,2], [:a1,2], [:gs1,2], [:a1,1], [:a1,1], [:cs2,2]).look
+  score = (ring [:fs1, 0.5], [:fs1,1], [:gs1,2], [:a1,2], [:gs1,2], [:a1,1], [:a1,1], [:cs2,2]).look
   moog score[0], 100, sustain: score[1]
   sleep score[1]
 end

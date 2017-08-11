@@ -4,6 +4,6 @@ i = 16
 live_audio "please_do_something#{i}", input: i
 
 live_loop :testssssssz, input: 0 do
-midi :fs3, port: "moog_minitaur", channel: 4
+midi :fs3, port: "moog_minitaur", channel: 2
 sleep 1 
 end

@@ -1,10 +1,9 @@
-32.times do |i|
-  live_audio "moog#{i}", :stop
+with_fx :reverb, room: 1 do
+  live_audio :moog
 end
 
 live_audio :moog_trigger do
-16.times do |i|
-  midi :FS3, port: "moog_minitaur", channel: i
-end
-  sleep 0.5
+  use_real_time
+  midi (octs :e1, 3).tick, sustain: 0.1
+  sleep 0.125
 end

@@ -5,7 +5,7 @@ live_loop :testtest do
   sleep score[1]
 end
 
-live_audio :testing
+live_audio :testing, channel: 1
 
 live_loop :harmony, sync: :testtest do
   tick

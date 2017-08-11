@@ -1,4 +1,4 @@
-  live_audio :moogzz_minisssssssdddtaur, :stop
+  live_audio :moogzz_minisssssssdddtaur, room: 1
 
 live_loop :moog_trigger do
   puts "ALUIVE"

@@ -1,7 +1,7 @@
 #midi_note_off :e3, channel: 3
 
 live_audio "please_do_something1", input: 2
-live_audio "please_do_something0", input: 0
+live_audio "please_do_something0", :stop, input: 0
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10

@@ -11,6 +11,11 @@ live_loop :lead do
   sleep 1
 end
 
+live_loop :snap, sync: :lead do
+  smp Corrupt[/loop/,/beat/, /120/, 36], slice: 0
+sleep 0.5
+end
+
 live_loop :bass, sync: :lead do
   tick
   moog (ring :Fs1, :Gs1, :A1, :Gs1, :A1, :B1, :Cs2).look, sustain: 1.9

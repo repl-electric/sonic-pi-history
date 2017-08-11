@@ -3,6 +3,6 @@ live_audio "moog", input: 2
 live_loop :testssssssz do
 tick
 smp Mountain[/subkick/,1], amp: 10
-form [:d4, :gs3, :b3],(ring 1,5).look, sustain: 5.8
+form [:d4, :gs3, :b3],(ring 1,10).look, sustain: 5.8
 sleep 1
 end

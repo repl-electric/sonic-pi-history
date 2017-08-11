@@ -21,6 +21,6 @@ def moog(*args)play_midi args << {port: :moog_minitaur};end
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
-form [:fs3, :gs3, :b4], sustain: 5.8
+form [:fs3, :gs3, :b3], sustain: 5.8
 sleep 1
 end

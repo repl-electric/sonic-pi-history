@@ -1,5 +1,5 @@
 with_fx :reverb, room: 1 do
-  live_audio :moog
+  live_audio :moog, input: 1
 end
 
 live_audio :moog_trigger do

@@ -3,6 +3,8 @@
 #16.times do |i|
 live_audio "arse2", input: 2
 live_audio "arse4", input: 4
+live_audio "arse4", input: 5
+
 #end
 #live_audio "moog7",input: 7
 

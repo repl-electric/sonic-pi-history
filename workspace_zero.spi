@@ -6,8 +6,7 @@ live_loop :lead do
   smp Mountain[/subkick/,0], amp: 10-rand
   form (knit chord(:fs4,:m).look,3,
 chord(:fs4,:sus2).look,3,
-chord(:fs4,:sus4).look,3,
-
+chord(:fs4,:sus4).look,3
 ),1*(line 1,128,128).look, sustain: 1.0
   sleep 1
 end

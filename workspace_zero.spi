@@ -9,4 +9,4 @@ end
 
 
 
-puts chord(:Fs3, :m).type
+puts chord(:Fs3, :m).class

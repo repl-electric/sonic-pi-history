@@ -4,6 +4,6 @@
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
-moog :fs1
+moog :fs2
 sleep 1 
 end

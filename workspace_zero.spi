@@ -1,1 +1,1 @@
-midi_note_on :e3, port: "moog_minitaur"
+midi_note_off :e3, port: "moog_minitaur"

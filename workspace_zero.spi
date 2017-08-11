@@ -1,5 +1,5 @@
 
-12.times do |i|
+13.times do |i|
   live_audio "moogzz_minisssssssdddtaur#{i}", input: i
 end
 

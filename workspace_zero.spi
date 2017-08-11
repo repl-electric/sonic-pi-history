@@ -10,6 +10,6 @@ end
 
 live_loop :bass, sync: :lead do
   tick
-  moog (ring :Fs1, :Gs1, :A1, :Gs1, :A1).look, sutain: 3.9
+  moog (ring :Fs1, :Gs1, :A1, :Gs1, :A1, :Cs2).look, sutain: 3.9
   sleep 4
 end

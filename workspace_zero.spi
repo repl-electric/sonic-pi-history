@@ -1,6 +1,6 @@
 #midi_note_off :e3, channel: 3
 
-live_audio :testz, input: 1 do
+live_audio :testz, input: 0 do
 midi :fs3, port: "moog_minitaur", channel: 1
 sleep 1  
 end

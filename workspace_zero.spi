@@ -2,7 +2,7 @@
 #live_audio "moog",input: 2
 #live_audio "moog7",input: 7
 
-i=1
+i=4
 live_audio "moog#{i}",input: i
 
 

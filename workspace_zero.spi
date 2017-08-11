@@ -1,6 +1,6 @@
 
 
-12.times do |i|
+16.times do |i|
 live_audio "arse#{i}",input: i
 end
 #live_audio "moog7",input: 7

@@ -9,4 +9,4 @@ puts "ALUIVE"
   sleep 0.125
 end
 
-moog :gs3, 0
+moog :gs3, 0, channel: 1

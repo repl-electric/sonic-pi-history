@@ -8,6 +8,6 @@ end
 
 live_loop :bass, sync: :lead do
   tick
-  moog (ring :Fs1).look,127
+  moog (ring :Fs2).look,127
   sleep 4
 end

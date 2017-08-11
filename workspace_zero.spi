@@ -13,7 +13,7 @@ puts notes
   end
 end
 
-def form(*args)play_midi args << [port: :reaktor_6_virtual_input];end
+def form(*args)play_midi args << port: :reaktor_6_virtual_input;end
 def mass(*args)play_midi args << {port: :massive_virtual_input} ;end
 def blof(*args)play_midi args << {port: :blofeld};end
 def moog(*args)play_midi args << {port: :moog_minitaur};end

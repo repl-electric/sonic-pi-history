@@ -22,7 +22,7 @@ live_loop :drums, sync: :testtest do
   if (ring *%W{1 0 0 1   0 1 0 0     1 0 0 1   0 1 0 0
                1 0 0 1   0 1 0 0     1 1 0 1   0 1 0 0
 }).look == "1"
-    smp Mountain[/subkick/,1], amp: 2
+    smp Mountain[/subkick/,1], amp: 4
   end
   if (ring *%W{0 0 0 0   1 0 0 0     0 0 0 0   1 0 0 0
                0 0 0 0   1 0 0 0     0 0 0 0   0 0 1 0

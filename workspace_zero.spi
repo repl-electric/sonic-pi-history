@@ -1,1 +1,9 @@
-puts note_inspect(chord(:b3, 'sus4'))
+with_fx :reverb, room: 1 do
+  live_audio :moog
+end
+
+live_audio :moog_trigger do
+  use_real_time
+  midi (octs :e1, 3).tick, sustain: 0.1
+  sleep 0.125
+end

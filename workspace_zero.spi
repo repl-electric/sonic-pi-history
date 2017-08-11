@@ -7,6 +7,7 @@ live_loop :lead do
 end
 
 live_loop :bass, sync: :lead do
-  moog :Fs2,1
+tick
+  moog (ring :Fs2).look,1
   sleep 4
 end

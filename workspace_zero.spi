@@ -1,12 +1,10 @@
-with_fx :reverb, room: 1 do
-  live_audio :moog_minitaur
-end
+  live_audio :moog_minitaur, input: 1
 
 live_audio :moog_trigger do
   use_real_time
 puts "ALUIVE"
-  midi (octs :e1, 3).tick, 0, sustain: 0.1
+  midi (octs :e1, 3).tick, 0, sustain: 0.1, channel: 1
   sleep 0.125
 end
 
-moog :gs3, 0, channel: 1
+#moog :gs3, 0, channel: 1

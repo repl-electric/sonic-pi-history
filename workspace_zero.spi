@@ -2,9 +2,9 @@
 #live_audio "moog",input: 2
 #live_audio "moog7",input: 7
 
-1000.times do |i|
-live_audio "moog#{i}",input: i
-end
+#1000.times do |i|
+#live_audio "moog#{i}",input: i
+#end
 live_loop :lead do
   tick
   #smp Mountain[/subkick/,0], amp: 10-rand

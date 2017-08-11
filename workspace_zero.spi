@@ -7,7 +7,7 @@ live_loop :lead do
   form (ring chord(:fs4,:m),
              chord(:fs4,:m),
              chord(:fs4,:sus2),
-             chord(:fs4,:sus4)).look,0.5*(line 1,128,128).look, sustain: 1.0
+             chord(:fs4,:sus4)).look,0.25*(line 1,128,128).look, sustain: 1.0
   sleep 1
 end
 

@@ -2,5 +2,5 @@
 
 live_loop :testssssssz, input: 0 do
 midi :fs3, port: "moog_minitaur", channel: 1
-sleep 1  
+sleep 12 
 end

@@ -1,1 +1,2 @@
-midi_note_off :e3, channel: 3
+#midi_note_off :e3, channel: 3
+midi_note_on :e3, port: "moog_minitaur", channel: 5

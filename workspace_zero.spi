@@ -1,8 +1,5 @@
 
-live_audio "moog",input: 2
-128.times do |i|
-live_audio "ass{i}",input: i
-end
+#live_audio "moog",input: 2
 
 live_loop :lead do
   tick

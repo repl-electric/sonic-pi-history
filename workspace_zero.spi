@@ -1,4 +1,4 @@
-16.times do |i|
+32.times do |i|
   live_audio "moog#{i}", input: i
 end
 

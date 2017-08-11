@@ -3,8 +3,8 @@
 live_audio "moog", input: 2
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
-form :fs3, sustain: 0.8
-#form :b4, sustain: 4
+form :fs4, sustain: 0.8
+form :b4, sustain: 4
 #form :cs5, sustain: 4
 
 sleep 1

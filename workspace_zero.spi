@@ -3,8 +3,9 @@
 #live_audio "moog7",input: 7
 
 i=2
+with_fx :slicer do
 live_audio "moog#{i}",input: i
-
+end
 
 live_loop :lead do
   tick

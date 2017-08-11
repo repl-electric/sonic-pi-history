@@ -5,7 +5,7 @@ end
 
 live_loop :moog_trigger do
   puts "ALUIVE"
-  12.times do |i|
+  13.times do |i|
   midi :Fs3, channel: i, port: "moog_minitaur"
 end
   sleep 0.5

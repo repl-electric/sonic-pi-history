@@ -3,6 +3,7 @@
 live_audio "please_do_something1", input: 2
 
 live_loop :testssssssz do
+smp Mountain[/subkick/,1]
 midi :fs3, port: "moog_minitaur", channel: 0
 sleep 1 
 end

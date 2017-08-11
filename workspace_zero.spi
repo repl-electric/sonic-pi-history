@@ -6,7 +6,7 @@ live_loop :testssssssz do
   sleep 1
 end
 
-live_loop :bass, sync :testsssssz do
+live_loop :bass, sync: :testsssssz do
     moog :Fs2, sustain: 4
   sleep 2
 end

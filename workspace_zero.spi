@@ -8,3 +8,5 @@ puts "ALUIVE"
   midi (octs :e1, 3).tick, 0, sustain: 0.1
   sleep 0.125
 end
+
+moog :gs2

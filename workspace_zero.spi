@@ -1,4 +1,7 @@
-  live_audio :moogzz_minisssssssdddtaur, room: 1
+
+12.do times |i|
+  live_audio "moogzz_minisssssssdddtaur#{i}", input: i
+end
 
 live_loop :moog_trigger do
   puts "ALUIVE"

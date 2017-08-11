@@ -1,7 +1,7 @@
 #midi_note_off :e3, channel: 3
 def form(*args)
   notes = args.first
-puts notes.is_a?(:Array)
+puts notes.is_a?(Array)
   if notes.is_a?(Array)
     notes.map{|n|
       midi [n]+args[1..-1], port: :reaktor_6_virtual_input

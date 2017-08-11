@@ -1,5 +1,5 @@
 
-live_audio "moog", input: 0
+live_audio "moog", :stop, input: 0
 
 live_loop :lead do
   tick

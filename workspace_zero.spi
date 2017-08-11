@@ -1,6 +1,6 @@
 
 live_audio "moog",input: 2
-live_audio "moog",input: 1
+live_audio "moog1",input: 1
 
 
 live_loop :lead do

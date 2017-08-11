@@ -4,6 +4,6 @@ live_audio "moog", :stop#, input: 2
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
-moog :fs1#,channel: 0
+moog :fs1
 sleep 1 
 end

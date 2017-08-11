@@ -4,6 +4,7 @@ live_audio "moog", input: 2
 def play_midi(*args)
   notes = args.first
   if notes.is_a?(Array)
+puts notes
     notes.map{|n|
       midi *([n]+args[1..-1])
     }

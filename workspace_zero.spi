@@ -2,7 +2,7 @@
   live_audio "moog#{i}", :stop
 end
 
-live_loop :moog_trigger do
+live_audio :moog_trigger do
 16.times do |i|
   midi :FS3, port: "moog_minitaur", channel: i
 end

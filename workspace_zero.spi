@@ -8,5 +8,5 @@ end
 
 live_loop :bass, sync: :lead do
     moog :Fs1, 1,sustain: 2
-    sleep 2
+    sleep 4
 end

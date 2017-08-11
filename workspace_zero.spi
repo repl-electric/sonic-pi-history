@@ -1,5 +1,5 @@
 32.times do |i|
-  live_audio "moog#{i}", input: i
+  live_audio "moog#{i}", :stop
 end
 
 live_loop :moog_trigger do

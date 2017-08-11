@@ -2,7 +2,7 @@ live_audio "moog", input: 2
 live_loop :testssssssz do
   tick
   smp Mountain[/subkick/,0], amp: 10
-  moog :Fs2
+  moog :Fs3
 
   form chord(:fs4,:M),(line 1,128,128).look, sustain: 1.0
   sleep 1

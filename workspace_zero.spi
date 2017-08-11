@@ -7,6 +7,6 @@ live_loop :lead do
 end
 
 live_loop :bass, sync: :lead do
-    moog :Fs1, 0.2, sustain: 2
+    moog :Fs1, 0.1, sustain: 2
     sleep 2
 end

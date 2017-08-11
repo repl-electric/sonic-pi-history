@@ -1,8 +1,8 @@
 
 
-16.times do |i|
-live_audio "arse#{i}", input: i
-end
+#16.times do |i|
+#live_audio "arse#{i}", input: i
+#end
 #live_audio "moog7",input: 7
 
 #1000.times do |i|

@@ -6,3 +6,7 @@ smp Mountain[/subkick/,1], amp: 10
 form chord(:Fs3, :m),(line 1,128,128).look, sustain: 5.8
 sleep 1
 end
+
+
+
+puts chord(:Fs3, :m).is_a?(Vector)

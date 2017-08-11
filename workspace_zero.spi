@@ -2,7 +2,7 @@
 
 live_loop :moog_trigger do
   puts "ALUIVE"
-  midi (octs :e1, 3).tick, 0, sustain: 0.1, channel: 1
+  midi (octs :e1, 3).tick, 0, sustain: 0.1, channel: 1, port: "moog_minitaur"
   sleep 0.5
 end
 

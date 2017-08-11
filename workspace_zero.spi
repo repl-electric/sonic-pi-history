@@ -14,7 +14,7 @@ live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
 
 
-form [:fs4, :a4, :cs4], sustain: 5.8
+form [:fs3, :a3, :cs4], sustain: 5.8
 
 sleep 1
 end

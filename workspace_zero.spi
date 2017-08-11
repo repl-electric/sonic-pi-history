@@ -5,10 +5,10 @@ def play_midi(*args)
   notes = args.first
   if notes.is_a?(Array)
     notes.map{|n|
-      midi *([n]+args[1..-1]), port: port
+      midi *([n]+args[1..-1])
     }
   else
-    midi *args, port: port
+    midi *args
   end
 end
 

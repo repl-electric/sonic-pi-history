@@ -1,4 +1,4 @@
-with_fx :reverb, room: 2 do
+with_fx :reverb, room: 3 do
   live_audio :moog_minitaur
 end
 

@@ -1,6 +1,7 @@
 #midi_note_off :e3, channel: 3
 
-live_audio "please_do_something#{2}", input: 2
+i = 3
+live_audio "please_do_something#{i}", input: i
 
 live_loop :testssssssz, input: 0 do
 midi :fs3, port: "moog_minitaur", channel: 4

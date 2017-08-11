@@ -9,4 +9,4 @@ end
 
 
 
-puts chord(:Fs3, :m).is_a?(Vector)
+puts chord(:Fs3, :m).is_a?(Ring)

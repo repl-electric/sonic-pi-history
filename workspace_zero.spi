@@ -6,6 +6,6 @@ live_audio "please_do_something0", :stop#, input: 0
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
-midi :fs3, port: "moog_minitaur", channel: 0
+midi :fs2, port: "moog_minitaur", channel: 0
 sleep 1 
 end

@@ -14,7 +14,9 @@ end
 live_loop :snap, sync: :lead do
   tick
   smp Corrupt[/loop/,/beat/, /120/, 25], slice:
-  (knit (ring 1,4).look,4).look, amp: 4.0
+  (knit (ring 1,4).look,4,
+        (ring 1,8).look,8
+).look, amp: 4.0
   sleep 0.5
 end
 

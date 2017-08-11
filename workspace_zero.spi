@@ -5,8 +5,8 @@ live_loop :lead do
   tick
   smp Mountain[/subkick/,0], amp: 10-rand
   form (ring chord(:fs4,:m),
-             chord(:fs4,:sus2).look,3,
-             chord(:fs4,:sus4).look,3),1*(line 1,128,128).look, sustain: 1.0
+             chord(:fs4,:sus2).look
+             chord(:fs4,:sus4).look),1*(line 1,128,128).look, sustain: 1.0
   sleep 1
 end
 

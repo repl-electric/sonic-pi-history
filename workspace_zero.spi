@@ -1,5 +1,14 @@
 #midi_note_off :e3, channel: 3
-
+def form(*args)
+  notes = args.first
+  if notes.is_a?(Array)
+    notes.map{|n|
+      midi [n]+args[1..-1], port: :reaktor_6_virtual_input
+    }
+  else
+    midi *args, port: :reaktor_6_virtual_input
+  end
+end
 live_audio "moog", input: 2
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10

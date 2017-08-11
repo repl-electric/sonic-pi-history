@@ -2,10 +2,8 @@
 live_audio "moog", input: 2
 
 def play_midi(*args)
-puts args
   notes = args.first
   if notes.is_a?(Array)
-puts notes
     notes.map{|n|
       midi *([n]+args[1..-1])
     }
@@ -15,9 +13,9 @@ puts notes
 end
 
 def form(*args)play_midi *(args << {port: :reaktor_6_virtual_input});end
-def mass(*args)play_midi args << {port: :massive_virtual_input} ;end
-def blof(*args)play_midi args << {port: :blofeld};end
-def moog(*args)play_midi args << {port: :moog_minitaur};end
+def mass(*args)play_midi *(args << {port: :massive_virtual_input});end
+def blof(*args)play_midi *(args << {port: :blofeld});end
+def moog(*args)play_midi *(args << {port: :moog_minitaur});end
 
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10

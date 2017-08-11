@@ -6,7 +6,7 @@ end
 
 live_loop :lead do
   tick
-  #smp Mountain[/subkick/,0], amp: 10-rand
+  smp Mountain[/subkick/,0], amp: 10-rand
   form (ring chord(:fs4,:m),
              chord(:fs4,:m),
              chord(:fs4,:sus2),

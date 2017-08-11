@@ -1,4 +1,15 @@
 #midi_note_off :e3, channel: 3
+def play_midi(*args)
+  notes = args.first
+  if notes.is_a?(SonicPi::Core::RingVector)||notes.is_a?(Array)
+    notes.map{|n|
+      midi *([n]+args[1..-1])
+    }
+  else
+    midi *args
+  end
+end
+
 live_audio "moog", input: 2
 live_loop :testssssssz do
 tick

@@ -5,5 +5,5 @@ end
 live_audio :moog_trigger do
   use_real_time
   midi (octs :e1, 3).tick, sustain: 0.1, port: "moog_minitaur"
-  sleep 0.125
+  sleep 0.5
 end

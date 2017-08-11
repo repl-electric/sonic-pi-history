@@ -1,6 +1,5 @@
 #midi_note_off :e3, channel: 3
 live_audio "moog", input: 2
-
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10
 form [:d4, :gs3, :b3],0, sustain: 5.8

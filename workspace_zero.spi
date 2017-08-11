@@ -1,2 +1,6 @@
 #midi_note_off :e3, channel: 3
-midi_note_off :e3, port: "moog_minitaur", channel: 1
+
+live_loop :testing do
+midi :e3, port: "moog_minitaur", channel: 1
+sleep 2  
+end

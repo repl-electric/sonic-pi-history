@@ -1,17 +1,4 @@
 #midi_note_off :e3, channel: 3
-def play_midi(port, *args)
-  notes = args.first
-  if notes.is_a?(Array)
-    notes.map{|n|
-      midi *([n]+args[1..-1]), port: port
-    }
-  else
-    midi *args, port: port
-  end
-end
-
-def form(*args)
-end
 live_audio "moog", input: 2
 live_loop :testssssssz do
 smp Mountain[/subkick/,1], amp: 10

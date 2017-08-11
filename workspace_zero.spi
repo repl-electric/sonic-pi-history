@@ -3,7 +3,7 @@
 #live_audio "moog7",input: 7
 
 i=1
-live_audio "moog#{7}",input: i
+live_audio "moog#{i}",input: i
 
 
 live_loop :lead do

@@ -12,7 +12,7 @@ live_loop :lead do
 end
 
 live_loop :snap, sync: :lead do
-  smp Corrupt[/loop/,/beat/, /120/, 36], slice: 1, amp: 4.0
+  smp Corrupt[/loop/,/beat/, /120/, 34], slice: 1, amp: 4.0
   sleep 0.5
 end
 

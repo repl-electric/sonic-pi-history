@@ -2,7 +2,7 @@
 
 live_audio :moog_trigger do
   use_real_time
-puts "ALUIVE"
+  puts "ALUIVE"
   midi (octs :e1, 3).tick, 0, sustain: 0.1, channel: 1
   sleep 0.125
 end

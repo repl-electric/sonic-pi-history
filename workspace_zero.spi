@@ -3,6 +3,8 @@
 end
 
 live_loop :moog_trigger do
-  midi :FS3, port: "moog_minitaur", channel: 1
+16.times do |i|
+  midi :FS3, port: "moog_minitaur", channel: i
+end
   sleep 0.5
 end

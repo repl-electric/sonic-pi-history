@@ -1,6 +1,6 @@
 #midi_note_off :e3, channel: 3
 
-live_audio "please_do_something1", input: 2, stereo: true
+live_audio "please_do_something1", input: 3, stereo: true
 live_loop :testssssssz do
 midi :fs3, port: "moog_minitaur", channel: 0
 sleep 1 

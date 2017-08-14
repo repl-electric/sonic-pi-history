@@ -62,10 +62,8 @@ end
 live_loop :click, sync: :chord_practice do
   tick
   if spread(1,8).look
-    smp MagicDust[/click/,28], start: rand*(line 0.1,0.5,128).look
+    smp MagicDust[/click/,29], start: rand*(line 0.1,0.5,128).look
     #smp MagicDust[/click/,46], amp: 1
-  else
-    #smp MagicDust[/click/,38], rate: (knit 1,8,2,3).tick(:insider), amp: 0.7
   end
   sleep 1/4.0
 end

@@ -4,11 +4,6 @@ live_loop :chord_practice do
   form (chord :A3, :M),10, sustain: 1.0    # ACE
   sleep 1
   form (chord :E3, 'M'),10, sustain: 2   # B EF
-  sleep 2
-  form (chord :D3, 'M'),10, sustain: 1.0
   sleep 1
-  form (chord :B3, 'm'),10, sustain: 1.0
-  sleep 1
-  form (chord :Cs4, 'm'),10, sustain: 1.0
-  sleep 1
+
 end

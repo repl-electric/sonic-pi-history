@@ -6,7 +6,7 @@ live_loop :testing do
 end
 
 live_loop :iter, sync: :testing do
-tick
-  midi :E2, (line 10, 100).look, port: :iac_driver_iac_bus_1, channel: 1
+  tick
+  midi :E2, (line 10, 100,128).look, port: :iac_driver_iac_bus_1, channel: 1
   sleep 1/4.0
 end

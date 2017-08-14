@@ -52,5 +52,6 @@ live_loop :chord_practice do
 end
 
 live_loop :beat, sync: :chord_practice do
+  smp Mountain[/ice/,1]
   sleep 1
 end

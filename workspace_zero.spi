@@ -1,1 +1,1 @@
-puts note_inspect(chord(:b3, 'sus4'))
+midi :Fs2, :iac_driver_iac_bus_!

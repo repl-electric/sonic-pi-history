@@ -5,7 +5,6 @@ live_loop :chord_practice do
   form (chord :Fs2, :m),10, sustain: 10
 
   sleep 10
-comment do
   form (chord :Fs3, :m),127, sustain: 1.0  #FAC
   sleep 1
   form (chord :Gs3, :m ), sustain: 1.0    #GBD

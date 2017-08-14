@@ -2,9 +2,7 @@
 use_bpm 120
 #Amaj	Bmin	C#min	Dmaj	Emaj	F#min	G#dim
 live_loop :chord_practice do
-
   form (chord :E2, :M, invert: 0),25, sustain: 20  # A C E
-
 
   form (chord :A3, :M, invert: -1),25, sustain: 20  # A C E
   sleep 1
@@ -57,7 +55,7 @@ end
 
 live_loop :beat, sync: :chord_practice do
   with_fx :pan, pan: (line -1, 1, 1024).look do
-    smp MagicDust[/click/,2], amp: 0.3
+    smp MagicDust[/click/,2], amp: 0.4
   end
   sleep 2
 end

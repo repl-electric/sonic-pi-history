@@ -3,7 +3,6 @@ use_bpm 120
 live_loop :chord_practice do
   
   form (chord :Fs2, :m),10, sustain: 10
-
   sleep 10
   form (chord :Fs3, :m),127, sustain: 1.0  #FAC
   sleep 1
@@ -23,5 +22,4 @@ live_loop :chord_practice do
   sleep 1
   form (chord :E4, 'M'), sustain: 0.8
   sleep 1
-end
 end

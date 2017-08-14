@@ -53,6 +53,11 @@ live_loop :chord_practice do
   sleep 1
 end
 
+live_loop :click, sync: :chord_practice do
+  smp Mountain[/click/,0]
+  sleep 1
+end
+
 live_loop :beat, sync: :chord_practice do
   tick
   with_fx :pan, pan: (line -1, 1, 4).look do

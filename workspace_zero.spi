@@ -1,1 +1,42 @@
-puts note_inspect(chord(:b3, 'sus4'))
+
+
+with_fx :slicer do
+live_audio "arse2", input: 2
+end
+#live_audio "arse4", input: 4
+#live_audio "arse5", input: 5
+
+32.times do |i|
+live_audio "arsezzz#{i}", input: i
+end
+#live_audio "moog7",input: 7
+
+#1000.times do |i|ak
+#live_audio "moog#{i}",input: i
+#end
+live_loop :lead do
+  tick
+  #smp Mountain[/subkick/,0], amp: 10-rand
+  form (ring chord(:fs4,:m),
+             chord(:fs4,:m),
+             chord(:fs4,:sus2),
+             chord(:fs4,:sus4)).look,1*(line 1,128,128).look, sustain: 1.0, channel: 1
+  sleep 1
+end
+
+live_loop :snap, sync: :lead do
+  tick
+comment do
+  smp Corrupt[/loop/,/beat/, /120/, 25], slice:
+  (knit (ring 1,4).look,4,
+        (ring 1,8).look,8
+).look, amp: 4.0
+end
+  sleep 0.5
+end
+
+live_loop :bass, sync: :lead do
+  tick
+  #moog (ring :Fs1, :Gs1, :A1, :Gs1, :A1, :B1, :Cs2).look, sustain: 1.9
+  sleep 2
+end

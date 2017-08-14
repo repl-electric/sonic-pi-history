@@ -54,8 +54,9 @@ live_loop :chord_practice do
 end
 
 live_loop :beat, sync: :chord_practice do
+  tick
   with_fx :pan, pan: (line -1, 1, 1024).look do
-    smp MagicDust[/click/,2], amp: 0.4
+    smp MagicDust[/click/,2..4].look, amp: 0.4
   end
   sleep 2
 end

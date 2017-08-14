@@ -5,7 +5,7 @@ live_loop :chord_practice do
   form (chord :E1,'M', invert: 0),25, sustain: 20  # A C E
   #sleep 24
 
-uncomment do
+comment do
   form (chord :A3, :M, invert: -1),25, sustain: 20  # A C E
   sleep 1
   form (chord :E3, 'M'),15, sustain: 2   # E G B

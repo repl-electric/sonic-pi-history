@@ -54,7 +54,7 @@ live_loop :chord_practice do
 end
 
 live_loop :click, sync: :chord_practice do
-  smp MagicDust[/snap/,1]
+  smp Dust[/snap/,1]
   sleep 6
 end
 live_loop :click12, sync: :chord_practice do

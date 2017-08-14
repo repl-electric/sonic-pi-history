@@ -1,6 +1,6 @@
 
 live_loop :testing do
   midi :Fs2, 10, port: :iac_driver_iac_bus_1, channel: 1
-  midi :Fs3,10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2
+  midi :Fs3, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2
   sleep 1
 end

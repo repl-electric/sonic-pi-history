@@ -58,7 +58,7 @@ end
 
 live_loop :click, sync: :chord_practice do
   tick
-  smp MagicDust[/click/,48], amp: 4
+  smp MagicDust[/click/,47], amp: 4
   sleep 1
 end
 live_loop :click12, sync: :chord_practice do

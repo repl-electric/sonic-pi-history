@@ -1,2 +1,2 @@
 #midi :Fs2, port: :iac_driver_iac_bus_1, channel: 1
-midi :Fs2, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2
+midi :Fs3, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2

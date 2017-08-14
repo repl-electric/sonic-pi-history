@@ -62,7 +62,7 @@ end
 live_loop :click, sync: :chord_practice do
   tick
   if spread(1,8).look
-    smp Mountain[/subkick/,1], start: (line 0.0,0.1,128).look
+    #smp Mountain[/subkick/,1], start: (line 0.0,0.1,128).look
   end
   if spread(1,3).look
     smp MagicDust[/snap/,2]

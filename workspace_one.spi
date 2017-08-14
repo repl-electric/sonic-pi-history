@@ -6,17 +6,17 @@ live_loop :chord_practice do
 
   sleep 10
 comment do
-  form (chord :Fs3, :m),127, sustain: 1.0
+  form (chord :Fs3, :m),127, sustain: 1.0  #FAC
   sleep 1
-  form (chord :Gs3, :m), sustain: 1.0
+  form (chord :Gs3, :m ), sustain: 1.0    #GBD
   sleep 1
-  form (chord :A3, :M), sustain: 0.8
+  form (chord :A3, :M), sustain: 0.8      #ACE
   sleep 1
-  form (chord :Gs3, :m), sustain: 0.8
+  form (chord :Gs3, :m), sustain: 0.8     #GBD
   sleep 1
-  form (chord :A3, :M), sustain: 0.8
+  form (chord :A3, :M), sustain: 0.8     # ACE
   sleep 1
-  form (chord :B3, 'sus4'), sustain: 2
+  form (chord :B3, 'sus4'), sustain: 2   # B EF
   sleep 2
   form (chord :B3, 'm'), sustain: 0.8
   sleep 1

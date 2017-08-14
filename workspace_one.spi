@@ -29,7 +29,7 @@ uncomment do
   form (chord :Cs4, :m, invert: -1),10, sustain: 1.0 # E G C 
   sleep 1/2.0
 
-  form (chord :Cs4, :m, invert: 1),10, sustain: 1.0 # E G C 
+  form (chord :Cs4, :m, invert: 0),10, sustain: 1.0 # E G C 
   sleep 1/2.0
 
 

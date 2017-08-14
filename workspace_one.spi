@@ -51,10 +51,11 @@ live_loop :chord_practice do
   sleep 1
   form (chord :E3, 'M'),10, sustain: 2   # E G B
   sleep 1
+#23
 end
 
 live_loop :click, sync: :chord_practice do
-  smp Dust[/snap/,2]
+  smp MagicDust[/snap/,2]
   sleep 6
 end
 live_loop :click12, sync: :chord_practice do

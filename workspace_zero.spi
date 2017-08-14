@@ -1,6 +1,9 @@
 
 with_fx :slicer do
-live_audio :live, input: 2
+live_audio :live, input: 1
+
+sdfsdfsdfsdfsdf sdf s       
+
 end
 
 live_loop :testing do

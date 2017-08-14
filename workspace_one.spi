@@ -2,7 +2,7 @@
 use_bpm 120
 #Amaj	Bmin	C#min	Dmaj	Emaj	F#min	G#dim
 live_loop :chord_practice do
-  form (chord :e2,'M', invert: 0),30, sustain: 18  # A C E
+  form (chord :a2,'M', invert: 0),30, sustain: 18  # A C E
   #sleep 24
 
 uncomment do

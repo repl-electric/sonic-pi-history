@@ -1,7 +1,5 @@
 
-with_fx :slicer do
-live_audio :livez, input: 1
-end
+live_audio :livez, :stop, input: 1
 
 live_loop :testing do
   midi :Fs2, 10, port: :iac_driver_iac_bus_1, channel: 1

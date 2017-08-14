@@ -6,9 +6,9 @@ end
 #live_audio "arse4", input: 4
 #live_audio "arse5", input: 5
 
-#32.times do |i|
-#live_audio "arsezzz#{i}", input: i
-#end
+32.times do |i|
+live_audio "arsezzz#{i}", input: i
+end
 #live_audio "moog7",input: 7
 
 #1000.times do |i|ak

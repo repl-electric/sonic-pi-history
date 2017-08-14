@@ -79,7 +79,7 @@ live_loop :click12, sync: :chord_practice do
   smp (MagicDust[/HI_/,52..69]+["/Users/josephwilk/Workspace/music/samples/Live/dust/MD_ORGANIC_HIT_HI_053.wav"]).tick(:click), amp: 0.3, cutoff: 120 + rand*10, rate:  ring(1.0, -1.0).look
 
 end
-  sleep 1/2.0
+  sleep 1/4.0
 end
 live_loop :beat, sync: :chord_practice do
   tick

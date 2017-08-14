@@ -1,5 +1,6 @@
 
 use_bpm 120
+#Amaj	Bmin	C#min	Dmaj	Emaj	F#min	G#dim
 live_loop :chord_practice do
   form (chord :A3, :M, invert: -1),10, sustain: 1.0  # A C E
   sleep 1
@@ -27,4 +28,33 @@ live_loop :chord_practice do
   sleep 1
   form (chord :E3, 'M'),10, sustain: 2   # E G B
   sleep 1
+
+
+  form (chord :A3, :M, invert: -1),10, sustain: 1.0  # A C E
+  sleep 1
+  form (chord :E3, 'M'),10, sustain: 2   # E G B
+  sleep 1
+  form (chord :A3, :M, invert: -1),10, sustain: 1.0  # A C E
+  sleep 1
+  form (chord :E3, 'M'),10, sustain: 2   # E G B
+  sleep 1
+
+  form (chord :A3, :M, invert: 0),10, sustain: 1.0   # A C E
+  sleep 1
+  form (chord :E3, 'M'),10, sustain: 2               # E G B   
+  sleep 1
+  form (chord :Cs4, :m, invert: -2),10, sustain: 1.0 # E G C 
+  sleep 1
+
+  form (chord :A3, :M, invert: 0),10, sustain: 1.0   # A C E
+  sleep 1
+  form (chord :E3, 'M'),10, sustain: 2               # E G B   
+
+  form (chord :Cs4, :m, invert: -1),10, sustain: 1.0 # E G C 
+  sleep 1
+  form (chord :Cs4, '7', invert: 0),10, sustain: 1.0 # E G C 
+  sleep 1
+  form (chord :E3, 'M'),10, sustain: 2   # E G B
+  sleep 1
+
 end

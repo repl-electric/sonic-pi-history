@@ -54,7 +54,7 @@ uncomment do
   form (chord :E3, 'M'),10, sustain: 2               # E G B   
   sleep 1
 
-  form (chord :E4, :m, invert: -1),10, sustain: 1.0 # E G C 
+  form (chord :E4, :M, invert: -1),10, sustain: 1.0 # E G C 
   sleep 1/2.0
 
   form (chord :E4, :m, invert: 0),10, sustain: 1.0 # E G C 

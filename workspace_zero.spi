@@ -9,7 +9,7 @@
 #end
 #live_audio "moog7",input: 7
 
-#1000.times do |i|
+#1000.times do |i|ak
 #live_audio "moog#{i}",input: i
 #end
 live_loop :lead do

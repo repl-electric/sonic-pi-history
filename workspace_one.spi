@@ -52,6 +52,6 @@ live_loop :chord_practice do
 end
 
 live_loop :beat, sync: :chord_practice do
-  smp MagicDust[/click/,2]
+  smp MagicDust[/click/,2], amp: 0.25
   sleep 2
 end

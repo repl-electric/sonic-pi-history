@@ -22,7 +22,6 @@ uncomment do
   sleep 1
   form (chord :A3, :M, invert: 0),10, sustain: 1.0   # A C E
   sleep 1
-  puts :HERE
   form (chord :E3, 'M'),10, sustain: 2               # E G B   
   sleep 1
   form (chord :Cs4, :m, invert: -1),10, sustain: 1.0 # E G C 

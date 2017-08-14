@@ -22,6 +22,4 @@ live_loop :chord_practice do
   sleep 1
   form (chord :E4, 'M'), sustain: 0.8
   sleep 1
-
-
 end

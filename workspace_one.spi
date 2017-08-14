@@ -2,7 +2,7 @@
 use_bpm 120
 live_loop :chord_practice do
   
-
+  form (chord :Fs3, :m)
 
 
 sleep 1

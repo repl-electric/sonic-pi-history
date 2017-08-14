@@ -6,11 +6,11 @@ live_loop :chord_practice do
   sleep 2
   form (chord :Fs3, :m),127, sustain: 1.0
   sleep 1
-  form (chord :G3, :m), sustain: 1.0
+  form (chord :Gs3, :m), sustain: 1.0
   sleep 1
   form (chord :A3, :M), sustain: 0.8
   sleep 1
-  form (chord :Gs3, :m), sustain: 0.8
+  form (chord :G3, :m), sustain: 0.8
   sleep 1
   form (chord :A3, :M), sustain: 0.8
   sleep 1

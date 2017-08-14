@@ -3,8 +3,8 @@
 #https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
 _=nil
 
-live_loop :drums do
-  with_fx :level, sync: :chord_practice, amp: 1.0 do
+live_loop :drums, sync: :chord_practice do
+  with_fx :level, amp: 1.0 do
     with_bpm 120 do
       k1 = Mountain[/Subkick/,1]
       h1,h2 = (knit @slices["Fs3/4"][8],6*2, @slices["A3/4"][1],2).look,  Frag[/hats/,8]

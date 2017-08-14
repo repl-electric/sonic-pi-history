@@ -3,6 +3,6 @@ live_audio :livez, input: 0
 
 live_loop :testing do
   midi :Fs2, 10, port: :iac_driver_iac_bus_1, channel: 1
-  midi :Fs4, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2
+  midi :A4, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 2
   sleep 1
 end

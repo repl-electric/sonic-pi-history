@@ -1,6 +1,8 @@
 
 
+with_fx :slicer do
 live_audio "arse2", input: 2
+end
 #live_audio "arse4", input: 4
 #live_audio "arse5", input: 5
 

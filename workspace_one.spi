@@ -2,10 +2,10 @@
 use_bpm 120
 live_loop :chord_practice do
   
-  form (chord :Fs3, :m), sustain: 1.0
-  sleep 1
-  form (chord :Fs3, :m), sustain: 1.0
-  sleep 1
+  form (chord :Fs3, :m), sustain: 2.0
+  sleep 2
+  form (chord :Fs3, :m), sustain: 2.0
+  sleep 2
 
   form (chord :Gs3, :m), sustain: 0.5
   sleep 1

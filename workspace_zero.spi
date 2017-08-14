@@ -1,12 +1,12 @@
 live_audio :livez, input: 0
 
-
 live_loop :testing do
   midi :E3, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 0.8
   sleep 1
 end
 
 live_loop :iter, sync: :testing do
-  midi :E2, 10, port: :iac_driver_iac_bus_1, channel: 1
+tick
+  midi :E2, (line 10, 100).look, port: :iac_driver_iac_bus_1, channel: 1
   sleep 1/4.0
 end

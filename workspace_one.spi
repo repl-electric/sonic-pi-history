@@ -4,10 +4,10 @@ live_loop :chord_practice do
   
   form (chord :Fs3, :m), sustain: 0.9
   sleep 1
-  form (chord :Fs3, :m), sustain: 1
+  form (chord :Fs3, :m), sustain: 0.9
   sleep 1
 
-  form (chord :Gs3, :m), sustain: 1
+  form (chord :Gs3, :m),, sustain: 0.9
   sleep 1
 
 end

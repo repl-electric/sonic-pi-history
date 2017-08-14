@@ -67,7 +67,7 @@ live_loop :click, sync: :chord_practice do
   else
     #smp MagicDust[/click/,38], rate: (knit 1,8,2,3).tick(:insider), amp: 0.7
   end
-  sleep 1/4
+  sleep 1/4.0
 end
 live_loop :click12, sync: :chord_practice do
   tick

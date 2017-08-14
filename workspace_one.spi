@@ -58,7 +58,7 @@ end
 
 live_loop :click, sync: :chord_practice do
   tick
-  if spread(1,6).look
+  if spread(1,3).look
     smp MagicDust[/click/,44], amp: 4
   end
   sleep 1

@@ -14,7 +14,7 @@ live_loop :chord_practice do
   sleep 1
   form (chord :E3, 'M'),10, sustain: 2   # E G B
   sleep 1
-  form (chord :Cs4, :m, invert: -1),10, sustain: 1.0  # A C E
+  form (chord :Cs4, :m, invert: -2),10, sustain: 1.0  # C E G
   sleep 1
   form (chord :E3, 'M'),10, sustain: 2   # E G B
   sleep 1

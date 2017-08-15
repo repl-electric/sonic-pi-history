@@ -18,4 +18,4 @@ end
 
 end
 
-  midi :fs0, 0, port: :iac_driver_iac_bus_1, channel: 4
+  midi :fs0, 127, port: :iac_driver_iac_bus_1, channel: 4

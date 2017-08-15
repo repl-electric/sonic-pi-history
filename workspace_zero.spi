@@ -20,7 +20,7 @@ end
 live_loop :bass, sync: :testing do
   #midi_reset
   midi :a2, 2, sustain: 1.0, port: "moog_minitaur"
-  midi_clock_tick, port: "moog_minitaur"
+  midi_clock_tick port: "moog_minitaur"
   sleep 1
   #midi_pitch_bend 0.1, sustain: 1.0, port: "moog_minitaur"
   midi_clock_tick  

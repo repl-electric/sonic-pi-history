@@ -18,7 +18,7 @@ live_loop :beat, sync: :testing do
     smp Mountain[/subkick/,0], amp: args =="1" ? 0.25 : args
   end
   if (ring *%W{1 0 0 0}).look != "0"
-    smp MagicDust[/click/,29]
+    smp MagicDust[/click/,28]
   end
   sleep 1/4.0
 end

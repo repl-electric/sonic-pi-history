@@ -13,7 +13,7 @@ end
 
 live_loop :beat, sync: :testing do
   tick
-  if((args=ring *%W{1 0 0 1   0 1 0 0
+  if(args=(ring *%W{1 0 0 1   0 1 0 0
                     1 0 0 1   0 1 0 0
                     1 0 0 1   0 1 0 0
                     1 0 0 1   0 1 {:amp 0.25} 0

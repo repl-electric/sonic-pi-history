@@ -49,7 +49,6 @@ live_loop :melody, sync: :testing do
               :A3,1,  :D3,1, :E3,1, 
               :E3,1,  :Fs3,1,:D3, 1,
               _,1,    :A2,1, :B2,1,
-          
              ).tick(:no), (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
     sustain: s   
    sleep s#3/4.0

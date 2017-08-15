@@ -11,9 +11,9 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony, sync: :testing do
   tick
-  play_midi (ring chord(:a3, :M),
-                  chord(:cs3, :m),
-                  chord(:e3, :M)
+  play_midi (ring chord(:a2, :M),
+                  chord(:cs2, :m),
+                  chord(:e2, :M)
 ).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: 5.5
   sleep 6
 end

@@ -45,7 +45,7 @@ live_loop :melody, sync: :testing do
               #:A3,1,  _,2,
           
               :A3,3,  :D3,3, :Fs3,3,   # A-C-E
-              :Fs3,1, :Cs4,1, :E3,1,
+              :Fs3,1, :A3,1, :E3,1,
               #:A3,1,  :D3,1, :E3,1, 
               #:E3,1,  :Fs3,1,:D3, 1,
               #:A3,1,  _,2

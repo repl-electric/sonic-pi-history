@@ -21,10 +21,10 @@ live_loop :harmony, sync: :testing do
 
   #E        A           C
   #G        C           E
-#  play_midi (ring chord(:e2,  :M),
-#                  chord(:a2,  :M),
-#                  chord(:cs2, :m)
-#).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: 5.5
+  play_midi (ring chord(:e2,  :M),
+                  chord(:a2,  :M),
+                  chord(:cs2, :m)
+).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: 5.5
   sleep 6
 end
 live_loop :melody, sync: :testing do

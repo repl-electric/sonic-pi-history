@@ -9,10 +9,9 @@ live_loop :iter, sync: :testing do
   sleep 1/4.0
 end
 live_loop :bass, sync: :testing do
-  moog :E0, 3, sustain: 0.5
+  moog :E0, 1, sustain: 0.5
   sleep 1
 end
-
 live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0 1   0 1 0 0

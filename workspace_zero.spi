@@ -16,10 +16,10 @@ live_loop :beat, sync: :testing do
   if(args=(ring *%W{1 0 0 1   0 1 0 0
                     1 0 0 1   0 1 0 0
                     1 0 0 1   0 1 0 0
-                    1 0 0 1   0 1 {amp:0.25} 0
+                    1 0 0 1   0 1 0.25 0
 }).look) != "0"
     puts args
-    smp Mountain[/subkick/,0], amp: 0.25
+    smp Mountain[/subkick/,0], amp: args =="1" ? 0.25 : args
   end
   sleep 1/4.0
 end

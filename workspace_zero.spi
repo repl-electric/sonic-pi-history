@@ -6,12 +6,11 @@ end
 live_loop :iter, sync: :testing do
   tick
   midi (knit :E2,128, :A2, 128).look, (line 10, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1
-
-  
-  midi :Cs4,1,  port: :iac_driver_iac_bus_1, channel: 1
-
-
   sleep 1/4.0
+end
+live_loop :melody, sync: :testing do
+   midi :Cs4,1,  port: :iac_driver_iac_bus_1, channel: 1
+   sleep 1/4.0
 end
 live_loop :bass, sync: :testing do
   moog :"A-1", 1, sustain: 1.0

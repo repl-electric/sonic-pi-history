@@ -66,15 +66,23 @@ end
   #midi_clock_tick port: :moog_minitaur
   }
 end
+
+
+1/2.0, 1/2.0, 2/4 2/4   # 1
+1/4.0, 1/4.0, 2/4 
+1/4.0, 1/4.0, 2/4 #  1 
+1/4.0, 1/4.0, 2/4
+1/8.0, 1/8.0  2/8
+
 live_loop :beat, sync: :testing do
   tick
-  if(args=(ring *%W{1 0 0  0 0 0
+  if(args=(ring *%W{1 0 0   0 0 0
                   }).look) != "0"
     puts args
     smp Mountain[/subkick/,0], amp: args =="1" ? 0.3+rand*0.1 : args
   end
-  if (ring *%W{0 0 1 0   0 0 1 0}).look != "0"
- #   smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)
+  if (ring *%W{0 0 0 0   0 0 0 0}).look != "0"
+    smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)
   end
   if (args=(ring *%W{
                0 0 0 0   0 0 1 0.05  0 0 0 0   0 0 1 0
@@ -90,5 +98,5 @@ live_loop :beat, sync: :testing do
 0 0 0 0   1 0 0 0}).look) != "0"
    # smp Dust[/snare/,11], amp: args =="1" ? 0.125 : args
   end
-  sleep 1/4.0
+  sleep 1/8.0
 end

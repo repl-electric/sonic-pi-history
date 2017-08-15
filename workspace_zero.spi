@@ -13,7 +13,7 @@ live_loop :iter, sync: :testing do
             1/4.0, 1/4.0,
             1/4.0, 1/4.0).look
   midi (knit :E2,128, :A2, 128, :Cs3, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
-  sustain: s
+  sustain: s*2
   sleep s #1/4.0  #7=> 2 beats
 end
 live_loop :harmony, sync: :testing do

@@ -11,8 +11,7 @@ end
 live_loop :melody, sync: :testing do
   tick
   midi (knit :a1,3,
-             :e2,3).look, 
-100, sustain: 1.0, port: "moog_minitaur"
+             :e2,3).look, 100, sustain: 1.0, port: "moog_minitaur"
 
   3.times{
    midi (knit :A3,3, :E3,3, :Fs3,3, 

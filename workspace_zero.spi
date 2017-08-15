@@ -11,7 +11,6 @@ end
 live_loop :melody, sync: :testing do
   tick
   #midi_note_off :a1, port: "moog_minitaur"
-if (spread 1,3).look
   midi (ring :a2,
              :d2,
              :a2,
@@ -19,7 +18,6 @@ if (spread 1,3).look
              :d1, 
              :e1,
 ).look, 1, sustain: 3, port: "moog_minitaur"
-end
   3.times{
    midi (knit :A3,3, :E3,3,:Fs3,3, 
               :Cs3,3,:D3,3,:E3,3).look, (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3

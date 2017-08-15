@@ -29,7 +29,9 @@ tick
                   chord(:e2,  :M)[1],
                   chord(:e2,  :M)[1],
                   chord(:a2,  :M)[1],
-                  chord(:cs2, :m)[1],
+                  chord(:D2, :M)[1],
+                  chord(:E2, :M)[1],
+
 
 
   ).look, 127, port: :iac_driver_iac_bus_1, channel: 5

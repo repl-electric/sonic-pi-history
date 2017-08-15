@@ -25,7 +25,7 @@ live_loop :beat, sync: :testing do
                0 0 0 0   1 0 0 0  0 0 0 0   1 0.08 0 0
                0 0 0 0   1 0 0 0  0 0 0 0   1 0 0 0
 }).look != "0"
-    smp MagicDust[/_HI/,23], amp: args =="1" ? 0.1 : args
+    smp MagicDust[/_HI/,23], amp: args =="1" ? 0.15 : args
   end
 
   sleep 1/4.0

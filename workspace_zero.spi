@@ -33,7 +33,7 @@ live_loop :beat, sync: :testing do
 
   if (args=(ring *%W{
 0 0 0 0   1 0 0 0}).look) != "0"
-    smp Dust[/snare/,3], amp: args =="1" ? 0.5 : args
+    smp Dust[/snare/,4], amp: args =="1" ? 0.5 : args
   end
 
 

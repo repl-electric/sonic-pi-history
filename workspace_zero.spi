@@ -9,7 +9,7 @@ live_loop :iter, sync: :testing do
   sleep 1/4.0
 end
 live_loop :bass, sync: :testing do
-  moog :A1, sustain: 4
+  moog :A1, 10, sustain: 4
   sleep 4
 end
 

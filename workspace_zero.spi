@@ -7,6 +7,11 @@ live_loop :iter, sync: :testing do
   midi (knit :E2,128, :A2, 128).look, (line 10, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1
   sleep 1/4.0
 end
+live_loop :bass, sync: :testing do
+  moog :A1, sustain: 1
+  sleep 4
+end
+
 live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0 1   0 1 0 0
@@ -34,7 +39,5 @@ live_loop :beat, sync: :testing do
 0 0 0 0   1 0 0 0}).look) != "0"
     smp Dust[/snare/,11], amp: args =="1" ? 0.125 : args
   end
-
-
   sleep 1/4.0
 end

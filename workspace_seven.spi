@@ -33,9 +33,12 @@ score = (ring chord(:e3,  :M),
                   chord(:E3, :M),
 
   ).look
+sleepy = (line 0,1,2)
 score.shuffle.each do |n,i|
+  s = sleep sleepy.look
+
  at do
-  sleep i
+  sleep s
   midi n, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
  end
 end

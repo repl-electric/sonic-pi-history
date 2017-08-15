@@ -35,8 +35,8 @@ score = (ring chord(:e2,  :M),
   ).look
 score.shuffle.each do |n|
  at do
-  midi n, 127, port: :iac_driver_iac_bus_1, channel: 5
   sleep 1
+  midi n, 127, port: :iac_driver_iac_bus_1, channel: 5
  end
 end
 4.times do

@@ -21,16 +21,16 @@ end
 live_loop :incit do
 tick
 #  midi :fs5, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
-score = (ring chord(:e2,  :M),
-                  chord(:e2,  :M),
-                  chord(:a2,  :M),
-                  chord(:cs2, :m),
+score = (ring chord(:e3,  :M),
+                  chord(:e3,  :M),
+                  chord(:a3,  :M),
+                  chord(:cs3, :m),
 
-                  chord(:e2,  :M),
-                  chord(:e2,  :M),
-                  chord(:a2,  :M),
-                  chord(:D2, :M),
-                  chord(:E2, :M),
+                  chord(:e3,  :M),
+                  chord(:e3,  :M),
+                  chord(:a3,  :M),
+                  chord(:D3, :M),
+                  chord(:E3, :M),
 
   ).look
 score.shuffle.each do |n|

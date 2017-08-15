@@ -11,7 +11,7 @@ end
 live_loop :melody, sync: :testing do
   tick
   3.times{
-   midi (knit :A3,3,:E3,3,:Fs3,3, :Cs3,3, :D3,3,:E3,3).look, (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3
+   midi (knit :A3,3,:Gs3,3,:Fs3,3, :Cs3,3, :D3,3,:E3,3).look, (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3
    sleep 3/4.0
   }
    sleep 1/4.0

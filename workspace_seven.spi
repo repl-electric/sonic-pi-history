@@ -20,6 +20,11 @@ end
 
 live_loop :incit do
 tick
-  midi :fs5, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
-  sleep 1  
+#  midi :fs5, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
+  
+  play_midi (ring chord(:e2,  :M),
+                  chord(:a2,  :M),
+                  chord(:cs2, :m)
+
+sleep 1  
 end

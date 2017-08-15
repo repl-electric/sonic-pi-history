@@ -10,7 +10,7 @@ live_loop :iter, sync: :testing do
 end
 live_loop :melody, sync: :testing do
   tick
-  midi (ring :fs1, :fs2, :fs3, :fs5).look, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
+  midi (ring :fs1, :fs2, :fs3, :fs4, :fs5).look, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
   #midi :fs2, port: :iac_driver_iac_bus_1, channel: 4 
   3.times{
    midi (knit :A3,3, :E3,3,:Fs3,3, 

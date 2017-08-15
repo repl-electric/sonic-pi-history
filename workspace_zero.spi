@@ -21,7 +21,7 @@ live_loop :bass, sync: :testing do
   tick
   #midi_reset
   midi (ring :a1, :a1, :a1,:a1, 
-             :e2, :e2, :e2,:e2
+             :e2, :e2, :e2,:e2,
              :fs2, :fs2, :fs2,
   #           :cs2, :cs2, 
    #          :d2,  

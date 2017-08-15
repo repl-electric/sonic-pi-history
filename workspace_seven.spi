@@ -41,5 +41,5 @@ score.shuffle.each do |n,i|
   form n, 127#, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
  end
 end
-sleep  1b
+sleep  1
 end

@@ -10,7 +10,7 @@ live_loop :iter, sync: :testing do
   sleep 1/4.0
 end
 live_loop :harmony, sync: :testing do
-   midi chord(:a3, :M)
+  play_midi chord(:a3, :M), port: :iac_driver_iac_bus_1, channel: 5
   sleep 1
 end
 live_loop :melody, sync: :testing do

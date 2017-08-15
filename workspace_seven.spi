@@ -24,7 +24,7 @@ tick
   play_midi (ring chord(:e2,  :M)[0],
                   chord(:e2,  :M)[0],
                   chord(:a2,  :M)[0],
-                  chord(:cs2, :m)[0],
+                  chord(:B2, :M)[0],
 
                   chord(:e2,  :M)[0],
                   chord(:e2,  :M)[0],

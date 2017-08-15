@@ -38,7 +38,6 @@ live_loop :melody, sync: :testing do
   #midi :fs2, port: :iac_driver_iac_bus_1, channel: 4 
   3.times{
   (ring 3/4.0, 3/4.0, 3/4.0).tick(:note_length)
-
    midi (knit :A3,3, :E3,3,:Fs3,3, 
               :Cs3,3,:D3,3,:E3,3).look, (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
     sustain: s   

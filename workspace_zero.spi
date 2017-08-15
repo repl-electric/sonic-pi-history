@@ -18,9 +18,6 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony, sync: :testing do
   tick
-
-  #E        A           C
-  #G        C           E
   play_midi (ring chord(:e2,  :M),
                   chord(:a2,  :M),
                   chord(:cs2, :m)

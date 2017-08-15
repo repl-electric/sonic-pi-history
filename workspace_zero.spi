@@ -18,7 +18,7 @@ live_loop :melody, sync: :testing do
    sleep 1/4.0
 end
 live_loop :bass, sync: :testing do
-  midi_poly_pressure :"a2", 1, sustain: 1.0, port: "Minitar_moog"
+  midi_poly_pressure :"a2", 1, sustain: 1.0, port: "Minitar moog"
   sleep 2
 end
 live_loop :beat, sync: :testing do

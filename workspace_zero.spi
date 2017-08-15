@@ -19,9 +19,9 @@ live_loop :melody, sync: :testing do
 end
 live_loop :bass, sync: :testing do
   #midi_reset
-  midi :a2, 2, sustain: 2.0, port: "moog_minitaur"
+  midi :a2, 2, sustain: 4.0, port: "moog_minitaur"
   midi_clock_tick port: :moog_minitaur
-  8.times{
+  4.times{
   sleep 1/4.0
    smp Mountain[/ice/,1],amp: 0.01
   #midi_pitch_bend 0.1, sustain: 1.0, port: "moog_minitaur"

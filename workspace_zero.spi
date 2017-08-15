@@ -40,7 +40,7 @@ live_loop :melody, sync: :testing do
    s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
    midi (knit #:A3,3, :D3,3,:E3,3, 
               :Fs3,1,:A3,1,:D3,1,
-               _,3
+               _,3,
               :A3,1, :D3,1,:E3,1, 
 
               #:E3,1, :Fs3,1,:Cs3, 1

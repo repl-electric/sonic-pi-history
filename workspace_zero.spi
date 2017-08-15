@@ -15,6 +15,8 @@ live_loop :beat, sync: :testing do
   tick
   if(ring *%W{1 0 0 1   0 1 0 0
               1 0 0 1   0 1 0 0
+              1 0 0 1   0 1 0 0
+              1 0 0 1   0 1 0 0
 }).look == "1"
     smp Mountain[/subkick/,1], amp: 0.1
   end

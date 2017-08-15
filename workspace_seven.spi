@@ -18,4 +18,9 @@ end
 
 end
 
-  midi :fs0, 127, port: :iac_driver_iac_bus_1, channel: 4
+live_loop :incit do
+tick
+  midi :fs0, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
+
+sleep 1  
+end

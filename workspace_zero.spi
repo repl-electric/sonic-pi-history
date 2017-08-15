@@ -18,7 +18,7 @@ if (spread 1,3).look
              :cs1,
              :d1, 
              :e1,
-).look, 1, sustain: 2.5, port: "moog_minitaur"
+).look, 1, sustain: 3, port: "moog_minitaur"
 end
   3.times{
    midi (knit :A3,3, :E3,3, :Fs3,3, 

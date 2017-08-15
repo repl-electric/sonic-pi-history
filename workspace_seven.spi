@@ -27,7 +27,7 @@ score = (ring chord(:e2,  :M),
                   chord(:cs2, :m),
 
                   chord(:e2,  :M),
-                  chord(:e2,  :M)[0],
+                  chord(:e2,  :M),
                   chord(:a2,  :M)[0],
                   chord(:D2, :M)[0],
                   chord(:E2, :M)[0],

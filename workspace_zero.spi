@@ -19,7 +19,7 @@ live_loop :melody, sync: :testing do
          :a1,  :a2, :a3, :a4, :a5,      :a4,
          :fs1, :fs2, :fs3, :fs4, :fs5, :fs4
         ).look, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4, 
-    sustain: (knit, 1,4, 4,1, 1,2).look
+    sustain: (knit, 3,4, 1,1, 1,2).look
   #midi :fs2, port: :iac_driver_iac_bus_1, channel: 4 
   3.times{
    midi (knit :A3,3, :E3,3,:Fs3,3, 

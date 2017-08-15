@@ -33,7 +33,7 @@ score = (ring chord(:e3,  :M),
                   chord(:E3, :M),
 
   ).look
-score.shuffle.each_indexed do |n|
+score.shuffle.map_indexed do |n,i|
  at do
   sleep 2
   midi n, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8

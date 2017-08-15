@@ -38,7 +38,7 @@ score.shuffle.each do |n,i|
   s = sleepy.tick
   at do
   sleep s
-  form :D4, 127#, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
+  form :A3, 127#, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
  end
 end
 sleep  1

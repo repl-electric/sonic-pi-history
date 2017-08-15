@@ -30,7 +30,7 @@ score = (ring chord(:e2,  :M),
                   chord(:e2,  :M),
                   chord(:a2,  :M),
                   chord(:D2, :M),
-                  chord(:E2, :M)[0],
+                  chord(:E2, :M),
 
   ).look
 score.shuffle.each do |n|

@@ -1,16 +1,12 @@
-live_audio :livez2, input: 0
-
 live_loop :testing do
   midi :E3, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 0.8
   sleep 1
 end
-
 live_loop :iter, sync: :testing do
   tick
   midi (knit :E2,128, :A2, 128).look, (line 10, 127,128/8).look, port: :iac_driver_iac_bus_1, channel: 1
   sleep 1/4.0
 end
-
 live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0 1   0 1 0 0

@@ -22,15 +22,15 @@ live_loop :incit do
 tick
 #  midi :fs5, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
 score = (ring chord(:e3,  :M),
-                  chord(:e3,  :M),
-                  chord(:a3,  :M),
-                  chord(:cs3, :m),
+              chord(:e3,  :M),
+              chord(:a3,  :M),
+              chord(:cs3, :m),
 
-                  chord(:e3,  :M),
-                  chord(:e3,  :M),
-                  chord(:a3,  :M),
-                  chord(:D3, :M),
-                  chord(:E3, :M),
+              chord(:e3,  :M),
+              chord(:e3,  :M),
+              chord(:a3,  :M),
+              chord(:D3, :M),
+              chord(:E3, :M),
 
   ).look
 sleepy = (ring 0,0.25,0.5)

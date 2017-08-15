@@ -26,11 +26,11 @@ tick
                   chord(:a2,  :M)[0],
                   chord(:cs2, :m)[0],
 
-                  chord(:e2,  :M)[1],
-                  chord(:e2,  :M)[1],
-                  chord(:a2,  :M)[1],
-                  chord(:D2, :M)[1],
-                  chord(:E2, :M)[1],
+                  chord(:e2,  :M)[0],
+                  chord(:e2,  :M)[0],
+                  chord(:a2,  :M)[0],
+                  chord(:D2, :M)[0],
+                  chord(:E2, :M)[0],
 
 
 

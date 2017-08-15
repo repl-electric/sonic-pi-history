@@ -25,7 +25,9 @@ live_loop :beat, sync: :testing do
 }).look) != "0"
     smp MagicDust[/_HI/,23], amp: args =="1" ? 0.2 : args
   end
-  if (args=(ring *%W{0 0 0 0   0 0 0 1}).look) != "0"
+  if (args=(ring *%W{
+0 0 0 0   0 0 0 0
+0 0 0 0   0 0 0 1}).look) != "0"
     smp MagicDust[/_MI/,23], amp: args =="1" ? 0.2 : args
   end
 

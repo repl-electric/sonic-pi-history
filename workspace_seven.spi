@@ -26,6 +26,9 @@ tick
                   chord(:e2,  :M),
                   chord(:a2,  :M),
                   chord(:cs2, :m)  ).look, 127, port: :iac_driver_iac_bus_1, channel: 5
+4.times do
+  sleep 1/4.0
+
   midi_clock_tick port: :iac_driver_iac_bus_1, channel: 5
-  sleep 1  
+end
 end

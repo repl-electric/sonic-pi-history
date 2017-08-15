@@ -10,7 +10,7 @@ live_loop :iter, sync: :testing do
 end
 live_loop :melody, sync: :testing do
   3.times{
-   midi :A4,10,  port: :iac_driver_iac_bus_1, channel: 3
+   midi :A4,50,  port: :iac_driver_iac_bus_1, channel: 3
    sleep 3/4.0
 }
    sleep 1/4.0

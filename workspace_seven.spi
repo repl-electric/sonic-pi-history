@@ -33,7 +33,7 @@ score = (ring chord(:e3,  :M),
               chord(:E3, :M),
 
   ).look
-sleepy = (ring 0,0.25,0.5)
+sleepy = (ring 0,0.5,1.0)
 score.shuffle.each do |n,i|
   s = sleepy.tick
   at do

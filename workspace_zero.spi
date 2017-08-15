@@ -68,12 +68,12 @@ live_loop :beat, sync: :testing do
    # smp Mountain[/subkick/,0], amp: args =="1" ? 0.3+rand*0.1 : args
   end
   if (ring *%W{0 0 1 0   0 0 1 0}).look != "0"
-    smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)
+#    smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)
   end
   if (args=(ring *%W{
                0 0 0 0   0 0 1 0.05  0 0 0 0   0 0 1 0
 }).look) != "0"
-    smp MagicDust[/_HI/,23], amp: (args =="1" ? 0.1 : args)*1
+ #   smp MagicDust[/_HI/,23], amp: (args =="1" ? 0.1 : args)*1
   end
   if (args=(ring *%W{
 0 0 0 0   0 0 0 0

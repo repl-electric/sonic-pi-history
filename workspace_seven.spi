@@ -39,5 +39,5 @@ score.shuffle.each do |n|
   midi n, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 4
  end
 end
-slee 4
+sleep 4
 end

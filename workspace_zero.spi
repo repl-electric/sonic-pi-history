@@ -41,7 +41,7 @@ live_loop :melody, sync: :testing do
    midi (knit 
               #:A3,3,  :D3,3, :E3,3, 
                #_,1,            
-              :Fs3,1, :A3,1, :D3,1,
+              #:Fs3,1, :A3,1, :D3,1,
               :A3,1,  :D3,1, :E3,1, 
                #_,1,
               :E3,1,  :Fs3,1,:e3, 1,

@@ -18,7 +18,7 @@ live_loop :beat, sync: :testing do
               1 0 0 1   0 1 0 0
               1 0 0 1   0 0 0 0
 }).look == "1"
-    smp Mountain[/subkick/,0], amp: 0.1
+    smp Mountain[/subkick/,0], amp: 0.5
   end
   sleep 1/4.0
 end

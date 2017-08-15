@@ -24,7 +24,7 @@ tick
   puts chord(:e2,  :M)
   play_midi (ring chord(:e2,  :M),
                   chord(:a2,  :M),
-                  chord(:cs2, :m)  ).look
+                  chord(:cs2, :m)  ).look, 127
 
 sleep 1  
 end

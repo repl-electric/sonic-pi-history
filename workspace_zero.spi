@@ -1,7 +1,7 @@
 live_audio :moog, input: 2
 live_loop :testing do
   tick
-  midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 0.8
+  #midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 10, port: :iac_driver_iac_bus_1, channel: 2, sustain: 0.8
   sleep 1
 end
 live_loop :iter, sync: :testing do

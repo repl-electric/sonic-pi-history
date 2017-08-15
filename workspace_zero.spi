@@ -6,14 +6,14 @@ live_loop :testing do
 end
 live_loop :iter, sync: :testing do
   tick
-  midi (knit :E2,128, :A2, 128, :Cs2, 128).look, (line 10, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1
+  midi (knit :E2,128, :A2, 128, :Cs3, 128).look, (line 10, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1
   sleep 1/4.0
 end
 live_loop :melody, sync: :testing do
   tick
   midi (ring 
-         :e1, :e2, :e3, :e4, :e5, :e4,
-         :a1, :a2, :a3, :a4, :a5, :a4,
+         :e1, :e2, :e3, :e4, :e5,      :e4,
+         :a1, :a2, :a3, :a4, :a5,      :a4,
          :fs1, :fs2, :fs3, :fs4, :fs5, :fs4
 ).look, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
   #midi :fs2, port: :iac_driver_iac_bus_1, channel: 4 

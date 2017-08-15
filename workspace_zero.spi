@@ -8,7 +8,7 @@ end
 live_loop :iter, sync: :testing do
   tick
   midi (knit :E2,128, :A2, 128, :Cs3, 128).look, (line 10, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
-  sustain: (ring 1, 1, 1/2.0, 1/2.0).look
+  sustain: (ring 1, 1, 1/2.0, 1/2.0, 1/4.0).look
   sleep 1/4.0
 end
 live_loop :harmony, sync: :testing do

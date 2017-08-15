@@ -25,7 +25,7 @@ end
               :Cs3,3,:D3,3,:E3,3).look, (ring 50,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3
    sleep 3/4.0
   }
-   sleep 2/4.0
+   sleep 3/4.0
 end
 live_loop :bass, sync: :testing do
   tick

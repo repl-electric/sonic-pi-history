@@ -107,7 +107,7 @@ live_loop :beat, sync: :testing do
   end
   if (args=(ring *%W{
 0 0 0 0   1 0 0 0}).look) != "0"
-    smp Dust[/snare/,11], amp: args =="1" ? 0.25 : args
+    smp Dust[/snare/,11], amp: args =="1" ? 0.5 : args
   end
   sleep 1/8.0
 end

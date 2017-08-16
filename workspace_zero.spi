@@ -48,7 +48,7 @@ live_loop :harmony, sync: :testing do
   if note2
     at do
       sleep 0.25
-      play_midi note2[0], 20, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
+      play_midi note2[0], 25, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
     end
   end
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]

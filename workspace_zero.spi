@@ -18,8 +18,8 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony, sync: :testing do
   tick
-  midi :A2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 4.0
-  sleep 3
+  midi :A2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 8.0
+  sleep 8
 end
 live_loop :melody, sync: :testing do
   tick

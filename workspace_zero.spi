@@ -31,7 +31,6 @@ live_loop :harmony, sync: :testing do
                    _, [:E4,2],
                 _, _, _,
                 _, _, _).look
-
   if note2
     sleep_attack = (ring 1/2.0, 1/2.0).tick(:sleepy)
     at do

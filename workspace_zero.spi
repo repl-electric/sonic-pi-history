@@ -19,9 +19,9 @@ end
 live_loop :harmony, sync: :testing do
   tick
              #1    2    -3    -4   -5   -6
-  note =  (ring [:A2,3], [:B2,3],  [:A2,3], 
-               [:D2,3],  [:FS2,3], [:cs2,6],
-                         [:B2,3],  [:Gs2,3],
+  note =  (ring [:A2,3],  [:B2,3],  [:A2,3], 
+                [:D2,3],  [:FS2,3], [:cs2,6],
+                          [:Fs2,3],  [:Gs2,3],
                 [:Fs2,3], [:E2,3],  [:Cs2,3]
                 ).look
   note2 = (ring _, _,  _, 

@@ -35,8 +35,8 @@ live_loop :harmony, sync: :testing do
   note =  (ring 
                [:A2,3],  [:B2,3], [:Fs2,3],  #1 - 2 - 6 
                [:Gs2,3],                     #6
-               [:A2,3],                      #7  
-               [:Cs2,3],                     #3
+               [:A2,3],                      #1  
+               [:Gs2,3],                     #3
                [:Fs2,3],
                [:E2,3],                      #5
 

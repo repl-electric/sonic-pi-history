@@ -56,7 +56,7 @@ live_loop :warm_up do
                   [chord(:Fs2,:m),3], [chord(:Gs2, :m),3],
                   [chord(:Fs2,:m),3], [chord(:E2,:M),3],  [chord(:Cs2,:m),3],
                   [chord(:B2,:M),3],  [chord(:B2,:M),3],  [chord(:E2,:M),3],
-                  [:E2,3]).look
+                  [(chord(:E2,:M),3]).look
 
   play_midi note[0], channel: 5
   sleep 3

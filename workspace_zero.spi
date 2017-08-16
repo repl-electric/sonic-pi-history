@@ -36,11 +36,6 @@ live_loop :harmony, sync: :testing do
                [:E2,3],                     #7
                [:Fs2,3],                     #7
                [:E2,3],                      #5
-
-
- #               [:Fs2,3], [:E2,3],  [:Cs2,3],
-  #              [:B2,3],  [:B2,3],  [:E2,3],
-   #             [:Cs2,3], 
                 ).look
   puts note_inspect(note[0])
   if note2

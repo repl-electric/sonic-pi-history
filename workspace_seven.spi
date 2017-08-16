@@ -46,6 +46,7 @@ sleep  1
 end
 
 live_loop :warm_up do
+tick
     note =  (ring [:A2,3],  [:B2,3],  [:A2,3], 
                 [:D2,3],  
                 [:FS2,3], 
@@ -53,10 +54,10 @@ live_loop :warm_up do
                 [:Fs2,3], [:Gs2,3],
                 [:Fs2,3], [:E2,3],  [:Cs2,3],
                 [:B2,3],  [:B2,3],  [:E2,3],
-                [:E2,3], 
+                [:E2,3]).look
 
   midi note[0]
-sleep 3
+  sleep 3
 end
 
 

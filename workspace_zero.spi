@@ -23,6 +23,7 @@ live_loop :harmony, sync: :testing do
                 _, 
                 [(ring :A2, :B2, :Cs2, :D2, :E2, :fs2, :Gs2).look, 6+3], 
                 _, ).look
+puts (ring :A2, :B2, :Cs2, :D2, :E2, :fs2, :Gs2).look
   note =  (ring  #c d e f g
                [:A2,3], [:D2,3], [:Fs2,3],  #1 - 2 - 6 
                [:E2,3],                     #6

@@ -76,7 +76,7 @@ live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0
                   }).look) != "0"
-    smp Mountain[/subkick/,1], amp: args =="1" ? 0.3+rand*0.1 : args
+    #smp Mountain[/subkick/,1], amp: args =="1" ? 0.3+rand*0.1 : args
   end
   if (ring *%W{0 0 0 0   0 0 0 0}).look != "0"
     smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)

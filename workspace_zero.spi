@@ -12,7 +12,7 @@ live_loop :iter, sync: :testing do
             1/4.0, 1/4.0,  # 1 
             1/4.0, 1/4.0,
             1/4.0, 1/4.0).look
-  midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
+  #midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
   sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
@@ -42,7 +42,7 @@ live_loop :harmony, sync: :testing do
       #puts "HIT-------------------------------------->"
       #play_midi note2[0], 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
   end
-  play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
+  #play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
   sleep note[1]
 end
 @notes = 0
@@ -70,8 +70,8 @@ live_loop :melody, sync: :testing do
              [:E3,3/4.0],1,  [:Fs3,1],1,[:D3,2/4.0], 1,
              [_,3/4.0],1,    [:A2,1],1, [:B2,2/4.0 + 3],1,
              ).tick(:no)
-   midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
-    sustain: s[1]
+   #midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
+   # sustain: s[1]
 @notes += s[1]
    sleep s[1]
   }
@@ -108,7 +108,7 @@ live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0 0    0 0 0 0   1 0 0 0    0 0 0 0
                   }).look) != "0"
-    smp Mountain[/subkick/,0], amp: args =="1" ? 0.3+rand*0.1 : args
+    #smp Mountain[/subkick/,0], amp: args =="1" ? 0.3+rand*0.1 : args
   end
   if (ring *%W{0 0 0 0   0 0 0 0}).look != "0"
    # smp MagicDust[/_HI/,24], amp: 0.15, pan: (ring 0.25,-0.25).tick(:pan)
@@ -116,21 +116,21 @@ live_loop :beat, sync: :testing do
   if (args=(ring *%W{
                0 0 0 0   0 0 1 0.05  0 0 0 0   0 0 1 0
 }).look) != "0"
-    smp MagicDust[/_HI/,23], amp: args =="1" ? 0.1 : args
+    #smp MagicDust[/_HI/,23], amp: args =="1" ? 0.1 : args
   end
   if (args=(ring *%W{
 0 0 0 0   0 0 0 0
 0 0 0 0   0 0 0 1}).look) != "0"
-    smp MagicDust[/_MI/,48], amp: args =="1" ? 0.05 : args
+    #smp MagicDust[/_MI/,48], amp: args =="1" ? 0.05 : args
   end
   if (args=(ring *%W{
                     0 0 0 0   1 0 0 0}).look) != "0"
-    smp Dust[/snare/,11], amp: args =="1" ? 0.25 : args
+    #smp Dust[/snare/,11], amp: args =="1" ? 0.25 : args
   end
   if (ring *%W{1 0 0   0 0 0
                0 0 0   0 0 0
                0 0 0   0 0 0}).look == "1"
-      smp MagicDust[/HI_/,52..69].look, amp: 0.4+rand*0.1
+    #  smp MagicDust[/HI_/,52..69].look, amp: 0.4+rand*0.1
   end
   sleep 1/8.0
 end

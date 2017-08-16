@@ -19,7 +19,7 @@ end
 live_loop :harmony, sync: :testing do
   tick
              #1    2    -3    -4   -5   -6
-  note = (ring [:A2,3], [:B2,3],  [:A2,3], 
+  note = (ring [:A2,1], [:B2,1],  [:A2,1], 
                [:D2,3], [:FS2,3], [:cs2,3] ).look
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
 

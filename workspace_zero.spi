@@ -24,7 +24,7 @@ live_loop :harmony, sync: :testing do
                [:Cs2,3], [:A2,3],  [:Gs2,3]).look
   note2 = (ring _, _,  _, 
                 _, _,  _,
-                _, _,  [chord(:E2,'M7'),6]).look
+                _, _,  [chord(:E2,'M'),6]).look
 
   if note2
     play_midi note2[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]

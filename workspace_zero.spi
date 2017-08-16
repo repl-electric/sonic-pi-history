@@ -99,7 +99,7 @@ live_loop :beat, sync: :testing do
   end
   if (ring *%W{0 0 0   0 0 0
                0 0 0   0 0 1}).look == "1"
-    smp MagicDust[/_HI/,14], amp: 1
+    smp MagicDust[/_HI/,15], amp: 1
   end
   sleep 1/8.0
 end

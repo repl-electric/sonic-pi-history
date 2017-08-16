@@ -65,6 +65,6 @@ end
 
 
 
- play_midi :a2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
+ play_midi :b2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
  
 

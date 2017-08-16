@@ -24,8 +24,6 @@ live_loop :harmony, sync: :testing do
                [:Cs2,3], [:A2,3],  [:Gs2,3] 
 ).look
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
-
-  puts "******START*******" if (ring :A2, :B2, :Gs2, :D2, :E2, :Gs2).look == :A2 #(ring :A2, :B2).look
   sleep note[1]
 end
 live_loop :melody, sync: :testing do

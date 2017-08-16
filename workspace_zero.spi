@@ -21,7 +21,7 @@ live_loop :harmony, sync: :testing do
   note2 = (ring _, _,  _, 
                 _, 
                 _, 
-                [(knit :A2,7, :B2,7, :Cs2,7, :D2,7, :E2,7, :fs2,7, :Gs2,7).look, 6+3], 
+                [(knit :A3,7, :B3,7, :Cs3,7, :D3,7, :E3,7, :fs3,7, :Gs3,7).look, 6+3], 
                 _, ).look
 puts "TAREGET:#{(knit :A2,7, :B2,7, :Cs2,7, :D2,7, :E2,7, :fs2,7, :Gs2,7).look}"
   note =  (ring  #c d e f g

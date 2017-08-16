@@ -53,7 +53,7 @@ live_loop :warm_up do
                   [chord(:D2, :M),3],  
                   [chord(:FS2, :m),3], 
                   [chord(:cs2, :m),6],
-                  [chord(:Fs2,:m),3], [:Gs2,3],
+                  [chord(:Fs2,:m),3], [chord(:Gs2, :m),3],
                   [:Fs2,3], [:E2,3],  [:Cs2,3],
                   [:B2,3],  [:B2,3],  [:E2,3],
                   [:E2,3]).look

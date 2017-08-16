@@ -47,7 +47,8 @@ end
 
 live_loop :warm_up do
   tick
-    note =  (ring [chord(:A2, :M),3],  [:B2,3],  [:A2,3], 
+    note =  (ring [chord(:A2, :M),3],  
+                  [chord(:B2,:M),3],  [:A2,3], 
                   [:D2,3],  
                   [:FS2,3], 
                   [:cs2,6],

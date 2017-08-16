@@ -38,8 +38,8 @@ puts "TAREGET:#{(knit :A2,7, :B2,7, :Cs2,7, :D2,7, :E2,7, :fs2,7, :Gs2,7).look}"
                 ).look
   puts note_inspect(note[0])
   if note2
-      puts "HIT-------------------------------------->"
-      play_midi note2[0], 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
+      #puts "HIT-------------------------------------->"
+      #play_midi note2[0], 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
   end
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
   sleep note[1]

@@ -20,7 +20,7 @@ live_loop :harmony, sync: :testing do
   tick
              #1    2    -3    -4   -5   -6
   midi (ring :A2, :B2, :A2, 
-             :G2, :FS2, :E2).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
+             :G2, :FS2,:E2 ).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
 
   puts "******START*******" if (ring :A2, :B2, :Gs2, :D2, :E2, :Gs2).look == :A2 #(ring :A2, :B2).look
   sleep 3
@@ -76,6 +76,7 @@ end
   }
 end
 
+with_fx :reverb, mix: 0.4, room: 1 do
 live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1  0 0   0 0 0   0 0 0   0 0 0
@@ -102,9 +103,8 @@ live_loop :beat, sync: :testing do
   if (ring *%W{1 0 0   0 0 0
                0 0 0   0 0 0
                0 0 0   0 0 0}).look == "1"
-    with_fx :reverb, mix: 0.4, room: 1 do
       smp MagicDust[/HI_/,52..69].look, amp: 0.4+rand*0.1
-    end
   end
   sleep 1/8.0
+end
 end

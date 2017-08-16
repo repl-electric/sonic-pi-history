@@ -65,6 +65,6 @@ end
 
 
 
- midi_on_note :a2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
+ midi_note_on :a2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
  
 

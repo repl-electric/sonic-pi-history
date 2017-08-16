@@ -20,6 +20,7 @@ end
 
 live_loop :incit do
 tick
+stop
 #  midi :fs5, (line 0,127,127).look, port: :iac_driver_iac_bus_1, channel: 4
 score = (ring chord(:e3,  :M),
               chord(:e3,  :M),
@@ -43,3 +44,19 @@ score.shuffle.each do |n,i|
 end
 sleep  1
 end
+
+live_loop :warm_up do
+    note =  (ring [:A2,3],  [:B2,3],  [:A2,3], 
+                [:D2,3],  
+                [:FS2,3], 
+                [:cs2,6],
+                [:Fs2,3], [:Gs2,3],
+                [:Fs2,3], [:E2,3],  [:Cs2,3],
+                [:B2,3],  [:B2,3],  [:E2,3],
+                [:E2,3], 
+
+  midi note[0]
+sleep 3
+end
+
+

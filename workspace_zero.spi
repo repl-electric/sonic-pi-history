@@ -19,8 +19,9 @@ end
 live_loop :harmony, sync: :testing do
   tick
              #1    2    -3    -4   -5   -6
-  midi (ring :A2, :B2, :A2, 
-             :Gs2, :FS2,:E2 ).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
+
+  midi (ring [:A2,3], [:B2,3], [:A2,3], 
+             [:Gs2,3],  [:FS2,3],    [:E2,3] ).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
 
   puts "******START*******" if (ring :A2, :B2, :Gs2, :D2, :E2, :Gs2).look == :A2 #(ring :A2, :B2).look
   sleep 3

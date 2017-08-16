@@ -47,6 +47,7 @@ live_loop :harmony, sync: :testing do
   puts note_inspect(note[0])
   if note2
     at do
+       puts "HIT-------------------------------------->"
       sleep 0.25
       play_midi note2[0], 25, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
     end

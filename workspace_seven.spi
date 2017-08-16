@@ -46,6 +46,7 @@ sleep  1
 end
 
 live_loop :warm_up do
+stop
   tick
     note =  (ring [chord(:A2, :M),3],  
                   [chord(:B2,:M),3], 
@@ -62,4 +63,8 @@ live_loop :warm_up do
   sleep 2
 end
 
+
+
+ play_midi :a2, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
+ 
 

@@ -19,7 +19,7 @@ end
 live_loop :harmony, sync: :testing do
   tick
   midi (ring :A2, :B2, :Cs3, :E3).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
-  puts (ring :A2, :B2).look
+  #puts (ring :A2, :B2).look
   sleep 3
 end
 live_loop :melody, sync: :testing do

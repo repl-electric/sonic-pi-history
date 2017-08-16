@@ -33,9 +33,9 @@ live_loop :harmony, sync: :testing do
                 [:E2,3], 
 
                 ).look
+  puts note_inspect(note[0])
   if note2
     sleep_attack = (ring 1/2.0, 1/2.0).tick(:sleepy)
-    puts "**************************HIT"
     at do
       sleep sleep_attack
       play_midi note2[0], 20, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]

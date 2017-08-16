@@ -18,10 +18,10 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony, sync: :testing do
   tick
-  note =  (ring #[:A2,3],  [:B2,3],  [:A2,3], 
-                #[:D2,3],  [:FS2,3], [:cs2,6],
-                #          [:Fs2,3], [:Gs2,3],
-                [:Fs5,3], [:E2,3],  [:Cs2,3],
+  note =  (ring [:A2,3],  [:B2,3],  [:A2,3], 
+                [:D2,3],  [:FS2,3], [:cs2,6],
+                          [:Fs2,3], [:Gs2,3],
+                [:Fs2,3], [:E2,3],  [:Cs2,3],
                 [:B2,3], [:B2,3],  [:E2,3]
 
                 ).look

@@ -19,7 +19,7 @@ end
 live_loop :harmony, sync: :testing do
   tick
              #1    2    -3    -4   -5   -6
-  midi (ring :A2, :B2, :E2, :A2).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
+  midi (ring :A2, :B2, :A2).look, 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3.0
 
   puts "******START*******" if (ring :A2, :B2, :Gs2, :D2, :E2, :Gs2).look == :A2 #(ring :A2, :B2).look
   sleep 3
@@ -36,10 +36,10 @@ live_loop :melody, sync: :testing do
   3.times{
    #s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
    s = (knit [:A3,3/4.0],3,  [:D3,1],3, [:E3,2/4.0],3, 
-             [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,
-             [:A3,3/4.0],1,  [:D3,1],1, [:E3,2/4.0],1, 
-             [:E3,3/4.0],1,  [:Fs3,1],1,[:D3,2/4.0], 1,
-             [_,3/4.0],1,    [:A2,1],1, [:B2,3/4.0 + (2/4.0)*2 + 1],1,
+#             [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,
+ #            [:A3,3/4.0],1,  [:D3,1],1, [:E3,2/4.0],1, 
+ #            [:E3,3/4.0],1,  [:Fs3,1],1,[:D3,2/4.0], 1,
+ #            [_,3/4.0],1,    [:A2,1],1, [:B2,3/4.0 + (2/4.0)*2 + 1],1,
           
 #             [:A3,3/4.0],3,  [:D3,1],3, [:Fs3,2/4.0],3,   
 #             [:Fs3,3/4.0],1, [:B3,1],1, [:A3,2/4.0],1,    

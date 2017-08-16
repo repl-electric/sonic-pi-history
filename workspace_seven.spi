@@ -59,7 +59,7 @@ live_loop :warm_up do
                   [chord(:E2,:M),3]).look
 
   play_midi note[0], channel: 5
-  sleep 3
+  sleep 2
 end
 
 

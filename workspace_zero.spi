@@ -18,6 +18,11 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony, sync: :testing do
   tick
+  note2 = (ring _, _,  _, 
+                _, _,  _,
+                   _, [:E4,2],
+                _, _, _,
+                _, _, _).look
   note =  (ring [:A2,3],  [:B2,3],  [:A2,3], 
                 [:D2,3],  [:FS2,3], [:cs2,6],
                           [:Fs2,3], [:Gs2,3],
@@ -25,11 +30,6 @@ live_loop :harmony, sync: :testing do
               #  [:B2,3], [:B2,3],  [:E2,3]
 
                 ).look
-  note2 = (ring _, _,  _, 
-                _, _,  _,
-                   _, [:E4,2],
-                _, _, _,
-                _, _, _).look
   if note2
     sleep_attack = (ring 1/2.0, 1/2.0).tick(:sleepy)
     at do

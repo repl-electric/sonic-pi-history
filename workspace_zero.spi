@@ -27,7 +27,11 @@ live_loop :harmony, sync: :testing do
                 _, _,  [chord(:E2,'M'),6]).look
 
   if note2
-    play_midi note2[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
+    sleep_attack = (ring 0, 1, 1).tick(:sleepy)
+    at do
+      sleep sleep_attack
+      play_midi note2[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
+    end
   end
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
   sleep note[1]

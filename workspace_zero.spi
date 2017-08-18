@@ -33,8 +33,8 @@ live_loop :harmony, sync: :testing do
                [:A2,3], [:B2,3], [:A2,3],  #1 - 2 - 6 
 #               [:E2,3],                     #6
 #               [:D2,3],                     #1  
-#               [:E2,3],                     #7
-#               [:Fs2,3],                     #7
+               [:E2,3],                     #7
+               [:Fs2,3],                     #7
                [:D2,1.0],[:E2,1.0],[:Gs2,1.0]                      #5
                 ).look
   puts note_inspect(note[0])

@@ -38,7 +38,7 @@ end
 live_loop :two do
   tick
   #form 54,0#, channel: 16
-  sleep 1/2.0#*2
+  sleep 2.0#*2
 end
 
 live_loop :testing do

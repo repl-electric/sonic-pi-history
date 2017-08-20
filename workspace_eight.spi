@@ -42,6 +42,6 @@ live_loop :two do
 end
 
 live_loop :testing do
-  midi :Cs0, channel: 1, port: "reaktor_6_virtual_input"
-  sleep 2
+midi :C0, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
+  #midi (ring :C0).look,1  sleep 2
 end

@@ -30,14 +30,14 @@ live_loop :dust, sync: :ass do
 stop
   sync :ass
   tick
-  smp Mountain[/subkick/,1], cutoff: rand_i(110..135), start: rand(0.00125)
-  smp Corrupt[/loop/,/120/,/beat/,0]#, cutoff: 135, slice: (line, 0,16,32).reverse.look
+  #smp Mountain[/subkick/,1], cutoff: rand_i(110..135), start: rand(0.00125)
+  #smp Corrupt[/loop/,/120/,/beat/,0]#, cutoff: 135, slice: (line, 0,16,32).reverse.look
   #sleep 16
 end
 
 live_loop :two do
   tick
-  form 54,0#, channel: 16
+  #form 54,0#, channel: 16
   sleep 1/2.0#*2
 end
 

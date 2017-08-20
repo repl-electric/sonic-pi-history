@@ -42,6 +42,6 @@ live_loop :two do
 end
 
 live_loop :testing do
-  midi 12, channel: 1, port: "reaktor_6_virtual_input"
+  midi 13, channel: 1, port: "reaktor_6_virtual_input"
   sleep 2
 end

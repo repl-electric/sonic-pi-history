@@ -42,6 +42,7 @@ end
 #end
 
 live_loop :mixer do
+  use_real_time
   set_volume! (sync "/midi/midi_fighter_twister/2/1/control_change")[-1]/127.0
 #sleep 1
 end

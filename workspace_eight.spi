@@ -54,7 +54,7 @@ live_loop :testing do
 #smp Mountain[/subkick/,0], amp: 2.9
 #  use_real_time
 #  set_volume! (sync "/midi/midi_fighter_twister/2/1/control_change")[-1]/127.0
-  midi "C3", port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
+  midi "C3", port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
 #  midi "C2", port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
 #  midi "C1", port: :iac_driver_iac_bus_1, channel: , sustain: 1
   #midi (ring :C0).look,1  sleep 2

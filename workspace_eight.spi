@@ -41,7 +41,7 @@ end
 #  sleep 2.0#*2
 #end
 
-set_master_volume 0
+set_volume! 0
 
 live_loop :mixer do
   use_real_time

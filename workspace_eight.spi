@@ -42,7 +42,7 @@ live_loop :two do
 end
 
 live_loop :testing do
-midi "C1", port: :iac_driver_iac_bus_1, channel: 5
+  midi "C1", port: :iac_driver_iac_bus_1, channel: 5
   #midi (ring :C0).look,1  sleep 2
 sleep 2
 end

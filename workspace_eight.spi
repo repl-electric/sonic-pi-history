@@ -58,5 +58,5 @@ smp Mountain[/subkick/,0], amp: 2.9
 #  midi "C2", port: :iac_driver_iac_bus_1, channel: 5, sustain: 1
 #  midi "C1", port: :iac_driver_iac_bus_1, channel: , sustain: 1
   #midi (ring :C0).look,1  sleep 2
-sleep 8
+sleep 8*2
 end

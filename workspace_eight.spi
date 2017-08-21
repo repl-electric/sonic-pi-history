@@ -45,7 +45,7 @@ set_volume! (sync "/midi/midi_fighter_twister/2/1/control_change")[-1]*0.0001
 
 live_loop :testing do
   use_real_time
-  midi "C3", port: :iac_driver_iac_bus_1, channel: 5, sustain: n[-1]
+  midi "C3", port: :iac_driver_iac_bus_1, channel: 5, sustain: 8
   #midi (ring :C0).look,1  sleep 2
 sleep 8
 end

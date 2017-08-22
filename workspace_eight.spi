@@ -71,7 +71,7 @@ live_loop :testing do
             chord_degree(:v,   :A2, :major)[0], 
             chord_degree(:vi,  :A2, :major)[0], 
             chord_degree(:vii, :A2, :major)[0], 
-).look, sustain: 3, port: 3
+).look, sustain: 3, port: 5
 
 sleep 4
 end

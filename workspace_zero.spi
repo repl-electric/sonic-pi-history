@@ -112,7 +112,7 @@ puts "mel:#{@notes}"
 end
 live_loop :bass, sync: :testing do
   tick
-stp[
+stop
   #midi_reset
 comment do  
 midi (ring :a1, :a1, :a1,   :a1, :a1, :a1,

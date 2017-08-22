@@ -55,7 +55,7 @@ stop
   smp Mountain[/subkick/,0], amp: 2.9
 
 #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3
-midi (ring (chord_degree(:i, :major, :A2)).tick
+midi (ring (chord_degree(:i, :major, :A2))).tick
 sleep 4
 end
 stop_midi

@@ -51,7 +51,6 @@ live_loop :mixer do
 end
 
 live_loop :testing do
-stop
   smp Mountain[/subkick/,0], amp: 2.9
 
 #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3

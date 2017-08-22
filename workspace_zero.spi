@@ -7,15 +7,15 @@ live_loop :testing do
   sleep 1
 end
 live_loop :iter, sync: :testing do
-  stop
+  #stop
   tick
   s = (ring 1/4.0, 1/4.0,  # 1
             1/4.0, 1/4.0, 
             1/4.0, 1/4.0,  # 1 
             1/4.0, 1/4.0,
             1/4.0, 1/4.0).look
-  #midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
-  #sustain: s*2.0
+  midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
+  sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
 live_loop :harmony, sync: :testing do

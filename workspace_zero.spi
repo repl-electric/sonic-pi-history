@@ -90,9 +90,10 @@ live_loop :melody, sync: :testing do
   }
 if s[-1] != 2/4.0 + 3
 @notes += 3/4.0
-puts @notes
    sleep 3/4.0
 end
+puts @notes
+
 end
 live_loop :bass, sync: :testing do
   tick

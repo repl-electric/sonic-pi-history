@@ -60,6 +60,7 @@ live_loop :testing do
                  chord_degree(:iv, :A2, :major), 
                  chord_degree(:v, :A2, :major), 
                  chord_degree(:vi, :A2, :major), 
+                 chord_degree(:vii, :A2, :major), 
 
 
 

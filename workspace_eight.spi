@@ -56,6 +56,8 @@ live_loop :testing do
 #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3
  play_midi (ring chord_degree(:i, :A2, :major),
                  chord_degree(:ii, :A2, :major), 
+                 chord_degree(:iii, :A2, :major), 
+
 
 ).tick, sustain: 3
 sleep 4

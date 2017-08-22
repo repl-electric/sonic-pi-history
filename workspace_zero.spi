@@ -57,7 +57,7 @@ live_loop :harmony, sync: :testing do
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]
 @t2+= note[1]
   sleep note[1]
-puts @t2
+puts "harm:#{@t2}"
 
 end
 @t2 = 0
@@ -96,7 +96,7 @@ if s[-1] != 2/4.0 + 3
 @notes += 3/4.0
    sleep 3/4.0
 end
-puts @notes
+puts "mel:#{@notes}"
 
 end
 live_loop :bass, sync: :testing do

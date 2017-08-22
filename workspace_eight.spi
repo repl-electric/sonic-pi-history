@@ -63,7 +63,7 @@ live_loop :testing do
                  chord_degree(:vi,  :A2, :major), 
                  chord_degree(:vii, :A2, :major), 
 
-).tick, sustain: 3
+).look, sustain: 3
 sleep 4
 end
 stop_midi

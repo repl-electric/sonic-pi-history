@@ -18,7 +18,7 @@ live_loop :iter, sync: :testing do
   #sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
-use_bpm 120*2
+set_bpm 120*2
 live_loop :harmony, sync: :testing do
   tick
   note2 = (ring _, _,  _, 

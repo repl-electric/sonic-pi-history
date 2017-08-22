@@ -63,7 +63,7 @@ live_loop :testing do
                  chord_degree(:vi,  :A2, :major), 
                  chord_degree(:vii, :A2, :major), 
 
-).look, sustain: 2
+).look, sustain: 1
 
  play_midi (ring chord_degree(:i,   :A2, :major),
                  chord_degree(:ii,  :A2, :major), 

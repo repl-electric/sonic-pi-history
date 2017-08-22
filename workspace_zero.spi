@@ -59,7 +59,7 @@ live_loop :harmony, sync: :testing do
   sleep note[1]
 end
 @notes = 0
-midi 'C-2', channel: 16
+def stop_midi() midi('C-2', channel: 16);end
 
 live_loop :melody, sync: :testing do
   tick

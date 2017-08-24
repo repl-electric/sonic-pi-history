@@ -48,7 +48,8 @@ live_loop :harmony, sync: :testing do
                [:E2,1], 
                [:D2,3], 
                [:Gs2,1],
-               [:Cs2,2],
+               [:Gs2,1],
+               [:Cs2,1],
                [_,1.25]
 
 

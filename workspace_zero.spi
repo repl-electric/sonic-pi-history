@@ -37,7 +37,7 @@ live_loop :harmony, sync: :testing do
 
              # [:E2,3], [:D2,3],[:Fs2,3],  #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3 
               # [:GS2,3],
-               #[:A2,3], 
+               [:A2,3], 
                [:E2,1], 
                [:D2,2], 
                [:Cs2, 0.5, 80],[:E2, 0.5,100],
@@ -127,7 +127,7 @@ live_loop :beat, sync: :testing do
   tick
   
 
-  if(args=(ring *%W{1 0 0   0 0 0     0 0 0     0 0 0 
+  if(args=(ring *%W{1 0 0 0 0 0 0 0 0 0 0 0 
                   }).look) != "0"
     smp Mountain[/subkick/,0], amp: args =="1" ? 2.2+rand*0.1 : args
   end

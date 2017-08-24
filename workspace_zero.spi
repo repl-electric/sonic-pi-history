@@ -69,13 +69,16 @@ live_loop :harmony, sync: :testing do
       puts "HIT: #{n}"
       midi n[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
     end
+    sleep n[0][1]
+
   else
     play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
+    sleep note[1]
+
   end
   #end
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]
-@t2+= note[1]
-  sleep note[1]
+#@t2+= note[1]
 puts "harm:#{@t2}"
 
 end

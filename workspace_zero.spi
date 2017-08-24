@@ -63,7 +63,7 @@ live_loop :harmony, sync: :testing do
       #play_midi note2[0], 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
   end
   #if note[0]
-  if note[0] == [_, 0.125]
+  if note[0] == [:D1, 0.125]
     puts "NOTES#{note}"
     note.to_a.each do |n|
       #puts "HIT: #{n}"

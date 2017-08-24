@@ -47,13 +47,12 @@ live_loop :harmony, sync: :testing do
                [:A2,3], 
                [:E2,1], 
                [:D2,3], 
-               [:Gs2,   1.0],
+               [:Gs2,   0.25],
                [:D2,    0.5],
                [:Fs2,   0.5],
                [:B2,    1.0],
                [:A1,  3],
                [_,1.25]
-
 
                 ).look
   puts note_inspect(note[0])

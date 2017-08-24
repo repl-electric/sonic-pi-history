@@ -26,14 +26,14 @@ live_loop :harmony, sync: :testing do
                 [(knit :A3,7, :B3,7, :Cs3,7, :D3,7, :E3,7, :fs3,7, :Gs3,7).look, 6+3], 
                 _, ).look
   note =  (ring 
-       #        [:E2,3], [:D2,3],[:B1,3],  #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3 
-      #         [:FS2,3],
-     #          [:A2,3], 
-    #           [:Gs2,1], 
-   #            [:D2,3], 
-  #             [:Cs2,2],
- #              [:B1,1],
-#               [_,1.25],
+               [:E2,3], [:D2,3],[:B1,3],  #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3 
+               [:FS2,3],
+               [:A2,3], 
+               [:Gs2,1], 
+               [:D2,3], 
+               [:Cs2,2],
+               [:B1,1],
+               [_,1.25],
 
               [:E2,3], [:D2,3],[:Fs2,3],  #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3 
                [:GS2,3],
@@ -54,7 +54,7 @@ live_loop :harmony, sync: :testing do
   end
   #if note[0]
     play_midi note[0], note.length > 2 ? note[-1] : 127, port: :iac_driver_iac_bus_1, 
-           channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
+           channel: (note[0] && note[0][0] == :A2) ? 6 : 5, sustain: note[1]
     sleep note[1]
   #end
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]

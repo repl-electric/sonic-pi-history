@@ -62,20 +62,8 @@ live_loop :harmony, sync: :testing do
       #play_midi note2[0], 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: note2[1]
   end
   #if note[0]
-  if note[0] == [:Gs2, 3.0]
-    puts "NOTES#{note}"
-    note.to_a.each do |n|
-      #puts "HIT: #{n}"
-      if n[0]
-        puts n
-        midi n[0], , port: :iac_driver_iac_bus_1, channel: 5, sustain: n[1]
-      end
-    end
-    sleep note[0][1]
-  else
     play_midi note[0], (line 110,127,32).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
     sleep note[1]
-  end
   #end
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]
 #@t2+= note[1]

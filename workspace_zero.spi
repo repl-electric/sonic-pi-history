@@ -70,7 +70,6 @@ live_loop :harmony, sync: :testing do
       midi n[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
     end
     sleep note[0][1]
-
   else
     play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
     sleep note[1]

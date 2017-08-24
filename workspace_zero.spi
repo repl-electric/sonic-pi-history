@@ -64,7 +64,7 @@ live_loop :harmony, sync: :testing do
   end
   #if note[0]
   if note[0] == [:Cs1, 0.125]
-    play_midi [note[0][0]] + [note[1][0]], 127, port: :iac_driver_iac_bus_1, channel: 5#sustain: note[1][0]
+    play_midi note[0][0]] + [note[1][0], 127, port: :iac_driver_iac_bus_1, channel: 5#sustain: note[1][0]
   else
   play_midi note[0], 127, port: :iac_driver_iac_bus_1, channel: 5, sustain: note[1]
   end

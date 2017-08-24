@@ -69,7 +69,7 @@ live_loop :harmony, sync: :testing do
       #puts "HIT: #{n}"
       if n[0]
         puts n
-        midi n[0], (line 100,127).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: n[1]
+        midi n[0], (line 100,127,32).look, port: :iac_driver_iac_bus_1, channel: 5, sustain: n[1]
       end
     end
     sleep note[0][1]

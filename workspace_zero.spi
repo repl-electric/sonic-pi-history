@@ -25,8 +25,7 @@ live_loop :harmony, sync: :testing do
                 _, 
                 [(knit :A3,7, :B3,7, :Cs3,7, :D3,7, :E3,7, :fs3,7, :Gs3,7).look, 6+3], 
                 _, ).look
-  note =  (ring 
-               [:E2,3], [:D2,3],[:B1,3],
+  note = (ring [:E2,3], [:D2,3],[:B1,3],
                [:FS2,3],
                [:A2,3], 
                [:Gs2,1], 

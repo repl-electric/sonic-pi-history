@@ -35,7 +35,7 @@ live_loop :harmony, sync: :testing do
                [:D2,2], 
                [:Cs2, 0.5, 80],[:E2, 0.5,100],
                #[[:A1, :A2], 1+1+1+1.25, 70]
-               [[:A2], 1+1+1+1.25, 70]
+               [[:A1, :A2], 1+1+1+1.25, 70]
                ).look
   puts note_inspect(note[0])
   if note[0] && note[0][0] == :A2
@@ -44,7 +44,7 @@ live_loop :harmony, sync: :testing do
   end
   #if note[0]
     play_midi note[0], note.length > 2 ? note[-1] : 127, port: :iac_driver_iac_bus_1, 
-           channel: (note[0] && note[0][0] == :A2) ? 6 : 5, sustain: note[1]
+           channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
     sleep note[1]
   #end
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]

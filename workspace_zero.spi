@@ -50,6 +50,8 @@ live_loop :harmony, sync: :testing do
                [:G2,0.125],
                [:Fs2,0.125],
                [:Fs2,0.125],
+               [:Fs2,0.125],
+
                [:B1,3],
                [_,1.25]
 

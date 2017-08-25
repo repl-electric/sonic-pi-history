@@ -95,8 +95,8 @@ def bass(*args)
     args = args.drop(1) << {sustain: note[1]}
     args = note[0] + args
   end
-  puts note
-  midi *(args.drop(1) << {port: :iac_bus_1} << {channel: 5})
+  puts args
+  midi *(args << {port: :iac_bus_1} << {channel: 5})
 end
 
 live_loop :moooo do

@@ -91,7 +91,7 @@ end
 live_loop :moooo do
   bass :Fs2
  # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
-  #sleep 32
+  sleep 1
 end
 
 

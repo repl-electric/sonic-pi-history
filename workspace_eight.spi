@@ -88,6 +88,12 @@ uncomment do
 end
 sleep 4
 end
+
+def bass(*args)
+  note = args.first
+  midi *(args << {port: :iac_bus_1} << {channel: (note[0] && note[0][0] == :A1) ? 6 : 5} << {sustain: note[1]})
+end
+
 live_loop :moooo do
   #harp :Fs2
   #midi_stop port: :iac_driver_iac_bus_1, channel: 5

@@ -88,7 +88,10 @@ uncomment do
 end
 sleep 4
 end
-
+live_loop :clock do  # Create a live loop which continually sends out MIDI clock
+  midi_clock_beat    # events at the current BPM
+  sleep 1
+end
 live_loop :moooo do
   #harp :Fs2
   #midi_stop port: :iac_driver_iac_bus_1, channel: 5

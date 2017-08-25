@@ -104,7 +104,7 @@ live_loop :moooo do
   #midi_poly_pressure :FS5, port: :iac_bus_1, channel: 5
 
   
-  bass :Fs3, sustain: 4
+  bass :Fs3, sustain: 8
   #midi_note_off :*, port: :iac_bus_1, channel: 5
   #midi_note_off :e3, channel: 1, port: "foo"
 
@@ -113,7 +113,7 @@ live_loop :moooo do
 #  midi_all_notes_off port: :iac_bus_1, channel: 5
 #          midi_reset channel: 5, port: :iac_bus_1
 
-  sleep 4   
+  sleep 8   
 #  smp Mountain[/subkick/,0], amp: 2
 
 #midi_channel_pressure (ring 10,127).look, 

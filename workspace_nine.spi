@@ -4,5 +4,5 @@ live_loop :stopiot do
   sleep 1
 end
 #bass_x
-midi :FS0, port: :iac_bus_1, channel: 5, sustain: 6
+#midi :FS0, port: :iac_bus_1, channel: 5, sustain: 6
 

@@ -73,7 +73,7 @@ puts "HIT"
             chord_degree(:vi,  :A2, :major)[0], 
             chord_degree(:vii, :A2, :major)[0], 
 
-chord_degree(:i,   :A2, :major)[0],
+            chord_degree(:i,   :A3, :major)[0],
             chord_degree(:ii,  :A3, :major)[0], 
             chord_degree(:iii, :A3, :major)[0], 
             chord_degree(:iv,  :A3, :major)[0], 

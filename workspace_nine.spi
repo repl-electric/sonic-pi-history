@@ -47,6 +47,5 @@ puts "mel:#{@notes}"
 end
 
 
-midi :FS3, port: :iac_bus_1, channel: 4,sustain: 0
-
+midi :FS4, port: :iac_bus_1, channel: 4,sustain: 0
 

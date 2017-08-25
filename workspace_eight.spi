@@ -83,7 +83,7 @@ uncomment do
             chord_degree(:vii, :A3, :major)[0], 
 
 
-).look,80, sustain: 3, channel: 5
+).look,0, sustain: 3, channel: 5
 end
 sleep 4
 end

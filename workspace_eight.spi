@@ -52,7 +52,6 @@ end
 
 live_loop :testing do
   tick
-stop
   smp Mountain[/subkick/,0], amp: 2.9
 
 #5 - 4 - 2 - 6 - 1 - 7 - 4 - 3
@@ -77,9 +76,8 @@ stop
 sleep 4
 end
 live_loop :moooo do
-  midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
-    sustain: 30
-  sleep 32
+ # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
+  #sleep 32
 end
 
 

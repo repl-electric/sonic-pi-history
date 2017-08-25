@@ -1,7 +1,8 @@
 #live_audio :moog, input: 2
 live_loop :testing do
   tick
-  midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
+  midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_driver_iac_bus_1, channel: 2, 
+   sustain: 0.8
   sleep 1
 end
 live_loop :iter, sync: :testing do
@@ -12,7 +13,7 @@ live_loop :iter, sync: :testing do
             1/4.0, 1/4.0,  # 1 
             1/4.0, 1/4.0,
             1/4.0, 1/4.0).look
-  midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_bus_1, channel: 1,
+  midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_driver_iac_bus_1, channel: 1,
   sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
@@ -39,10 +40,11 @@ live_loop :harmony, sync: :testing do
   puts note_inspect(note[0])
   if note[0] && note[0][0] == :A2
       #puts "HIT-------------------------------------->"
-      play_midi :A0, 100, port: :iac_bus_1, channel: 5, sustain: 3
+      play_midi :A0, 100, port: :iac_driver_iac_bus_1, channel: 5, sustain: 3
   end
   #if note[0]
-    bass note[0], note.length > 2 ? note[-1] : 127, channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
+    play_midi note[0], note.length > 2 ? note[-1] : 127, port: :iac_driver_iac_bus_1, 
+           channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
     sleep note[1]
   #end
   #midi (ring :C0).look,127, port: :iac_driver_iac_bus_1, channel: 5#, sustain: note[1]
@@ -75,7 +77,8 @@ live_loop :melody, sync: :testing do
              [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
              [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3],1,
              ).tick(:no)
-   harp s[0], (ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[1]
+   midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3,
+    sustain: s[1]
 @notes += s[1]
    sleep s[1]
   }

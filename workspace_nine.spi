@@ -1,4 +1,4 @@
-#midi_cc 0, port: :iac_bus_1, channel: 16
+midi_cc 0, port: :iac_bus_1, channel: 16
 
-bass :FS0, sustain: 0
+#bass :FS0, sustain: 0
 

@@ -1,8 +1,8 @@
 
 live_loop :stopiot do
-midi_cc 0, channel: 16
+#midi_cc 0, channel: 16
   sleep 1
 end
 #bass_x
-bass :FS0, sustain: 6
+#bass :FS0, sustain: 6
 

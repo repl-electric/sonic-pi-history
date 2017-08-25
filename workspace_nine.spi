@@ -45,3 +45,8 @@ if s[-1] != 2/4.0 + 3
 end
 puts "mel:#{@notes}"
 end
+
+
+midi :FS3, port: :iac_bus_1, channel: 4,sustain: 0
+
+

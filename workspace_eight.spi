@@ -92,7 +92,7 @@ end
 def bass(*args)
   note = args.first
   if note.is_a?(Array)
-    args = args << {sustain: note[1]}
+    args = args.drop(1) << {sustain: note[1]}
     note = note[0]
   end
 puts note

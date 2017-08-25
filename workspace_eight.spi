@@ -90,7 +90,7 @@ sleep 4
 end
 
 
-def zero(*args)
+def zer(*args)
   midi *(args << {port: :iac_bus_1} << {:channel 7})
 end
 

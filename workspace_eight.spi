@@ -89,14 +89,6 @@ end
 sleep 4
 end
 
-def bass(*args)
-  note = args.first
-  if note.is_a?(Array)
-    args = ([note[0]] + args.drop(1)) << {sustain: note[1]}
-  end
-  midi *(args << {port: :iac_bus_1} << {channel: 5})
-end
-
 
 def zero(*args)
   midi *(args << {port: :iac_bus_1} << {:channel 7})

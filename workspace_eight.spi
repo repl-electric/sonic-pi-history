@@ -110,7 +110,7 @@ live_loop :moooo do
   #midi_note_off port: :iac_driver_iac_bus_1, channel: 5
  # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
 
-  16.times{tick;sleep 1;   midi_channel_pressure (line 100,127,32).look, port: :iac_bus_1, channel: 5
+  16.times{tick;sleep 1;   midi_channel_pressure (ring 100,127).look, port: :iac_bus_1, channel: 5
 }
 end
 

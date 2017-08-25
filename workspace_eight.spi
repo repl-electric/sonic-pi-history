@@ -96,6 +96,7 @@ live_loop :clock do  # Create a live loop which continually sends out MIDI clock
 end
 live_loop :moooo do
   #harp :Fs2
+  smp Mountain[/subkick/,0]
   #midi_stop port: :iac_driver_iac_bus_1, channel: 5
   #midi_note_off :FS3,127, port: :iac_bus_1, channel: 5
   #bass :Fs3,100, sustain: 0

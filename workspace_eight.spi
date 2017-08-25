@@ -91,7 +91,8 @@ end
 
 def bass(*args)
   note = args.first
-  midi *(args << {port: :iac_bus_1} << {channel: (note[0] && note[0][0] == :A1) ? 6 : 5} << {sustain: note[1]})
+  sus = args.is_a?(Array) ? args[1] : args[0][:sustain]
+  midi *(args << {port: :iac_bus_1} << {channel: (note[0] && note[0][0] == :A1) ? 6 : 5} << {sustain: sus})
 end
 
 live_loop :moooo do

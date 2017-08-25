@@ -93,9 +93,9 @@ def bass(*args)
   note = args.first
   if note.is_a?(Array)
     args = args << {sustain: note[1]}
-    note = args[0]
+    note = note[0]
   end
-puts note
+  puts note
   midi note#, *(args << {port: :iac_bus_1} << {channel: (note && note[0] == :A1) ? 6 : 5})
 end
 

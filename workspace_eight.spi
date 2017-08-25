@@ -113,9 +113,9 @@ live_loop :moooo do
 #  midi_all_notes_off port: :iac_bus_1, channel: 5
 #          midi_reset channel: 5, port: :iac_bus_1
 
-  8.times{sleep 1 
-          smp Mountain[/subkick/,1], amp: 1
-  }
+  #8.times{sleep 1 
+  #        smp Mountain[/subkick/,1], amp: 1
+  #}
 #  
 
 #midi_channel_pressure (ring 10,127).look, 

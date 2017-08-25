@@ -104,7 +104,7 @@ live_loop :moooo do
   #midi_poly_pressure :FS5, port: :iac_bus_1, channel: 5
 
   
-  bass :Fs3, sustain: 8
+  bass :Fs3, sustain: 16
   #midi_note_off :*, port: :iac_bus_1, channel: 5
   #midi_note_off :e3, channel: 1, port: "foo"
 

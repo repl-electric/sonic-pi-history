@@ -92,6 +92,7 @@ live_loop :moooo do
   #harp :Fs2
   #midi_stop port: :iac_driver_iac_bus_1, channel: 5
   #midi_note_off :FS3,127, port: :iac_bus_1, channel: 5
+stop
   bass :Fs3, sustain: 2
   #midi_note_off port: :iac_driver_iac_bus_1, channel: 5
  # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
@@ -99,5 +100,7 @@ live_loop :moooo do
   sleep 8
 end
 
+
+midi_cc('C-2', channel: 16, port: 'iac-bus-1')
 
 #stop_midi

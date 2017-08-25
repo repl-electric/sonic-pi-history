@@ -4,5 +4,5 @@ midi_cc 0, channel: 16
   sleep 1
 end
 #bass_x
-bass :FS0, sustain: 2
+#bass :FS0, sustain: 2
 

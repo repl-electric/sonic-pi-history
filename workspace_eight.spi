@@ -90,8 +90,9 @@ sleep 4
 end
 
 def bass(*args)
-puts args
   note = args.first
+puts note
+
   if note.is_a?(Array)
     args = args << {sustain: note[1]}
   end

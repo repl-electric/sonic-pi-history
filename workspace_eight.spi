@@ -64,7 +64,7 @@ puts "HIT"
                  chord_degree(:vi,  :A2, :major), 
                  chord_degree(:vii, :A2, :major), 
 
-).look, sustain: 3
+).look, sustain: 2
 uncomment do
  midi (ring chord_degree(:i,   :A2, :major)[0],
             chord_degree(:ii,  :A2, :major)[0], 

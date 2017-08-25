@@ -114,7 +114,7 @@ live_loop :moooo do
 #          midi_reset channel: 5, port: :iac_bus_1
 
   4.times{sleep 1 
-          smp Mountain[/subkick/,0], amp: 4
+          smp Mountain[/subkick/,1], amp: 4
   }
 #  
 

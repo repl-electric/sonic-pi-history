@@ -89,7 +89,7 @@ end
 sleep 4
 end
 live_loop :moooo do
-  harp :Fs2
+  #harp :Fs2
   midi_stop
   #bass :Fs3
   #midi_note_off port: :iac_driver_iac_bus_1, channel: 5

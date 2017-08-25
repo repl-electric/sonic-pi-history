@@ -91,7 +91,7 @@ end
 
 live_loop :clock do
   midi_start if tick == 0 # Send a midi_start event the first time round the live loop only
-  midi_clock_beat  2        # this will not just send a steady clock beat, but also ensure
+  midi_clock_beat  1        # this will not just send a steady clock beat, but also ensure
   sleep 1                 # the clock phase of the MIDI device matches Sonic Pi.
 end
 

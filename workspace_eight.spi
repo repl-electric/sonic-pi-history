@@ -104,14 +104,14 @@ live_loop :moooo do
   #bass :Fs3,100, sustain: 0
   #midi_poly_pressure :FS5, port: :iac_bus_1, channel: 5
 
-  midi_channel_pressure 50
   #midi_note_off :*, port: :iac_bus_1, channel: 5
   #midi_note_off :e3, channel: 1, port: "foo"
 
   #midi_note_off port: :iac_driver_iac_bus_1, channel: 5
  # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
 
-  sleep 8
+  8.times{sleep 1;   midi_channel_pressure 50
+}
 end
 
 #stop_midi

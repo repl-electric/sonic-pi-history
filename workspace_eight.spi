@@ -52,6 +52,7 @@ end
 
 live_loop :testingzzz do
   tick
+stop
 puts "HIT"
   smp Mountain[/subkick/,0], amp: 2.9
 
@@ -88,7 +89,7 @@ end
 sleep 4
 end
 live_loop :moooo do
-stop
+  bass :Fs2
  # midi :FS3, (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_driver_iac_bus_1, channel: 3, sustain: 30
   #sleep 32
 end

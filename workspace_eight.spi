@@ -92,10 +92,8 @@ end
 def bass(*args)
   note = args.first
   if note.is_a?(Array)
-    args = (args.drop(1)) << {sustain: note[1]}
-    args = [note[0]] + args
+    args = [note[0]] << (args.drop(1)) << {sustain: note[1]}
   end
-  puts args
   midi *(args << {port: :iac_bus_1} << {channel: 5})
 end
 

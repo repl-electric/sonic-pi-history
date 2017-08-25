@@ -88,12 +88,13 @@ uncomment do
 end
 sleep 4
 end
-live_loop :clock do  # Create a live loop which continually sends out MIDI clock
-  #midi_clock_beat port: :iac_bus_1, channel: 5    # events at the current BPM
-  midi_clock_beat# port: :iac_bus_1, channel: 5    # events at the current BPM
 
-  sleep 1
+live_loop :clock do
+  midi_start if tick == 0 # Send a midi_start event the first time round the live loop only
+  midi_clock_beat         # this will not just send a steady clock beat, but also ensure
+  sleep 1                 # the clock phase of the MIDI device matches Sonic Pi.
 end
+
 live_loop :moooo do
   #harp :Fs2
   smp Mountain[/subkick/,1]

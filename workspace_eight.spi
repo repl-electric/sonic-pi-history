@@ -101,6 +101,6 @@ stop
 end
 
 
-midi_cc('C-2', channel: 16, port: 'iac-bus-1')
+midi_cc(0, channel: 16, port: 'iac-bus-1')
 
 #stop_midi

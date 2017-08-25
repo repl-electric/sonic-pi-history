@@ -1,4 +1,9 @@
+
+live_loop :stopiot do
 midi_cc 0, channel: 16
+
+  sleep 1
+end
 
 #bass :FS0, sustain: 0
 

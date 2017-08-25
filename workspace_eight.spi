@@ -90,9 +90,8 @@ sleep 4
 end
 
 def bass(*args)
-puts args
   note = args.first
-  sus = note.is_a?(Array) ? note[1] : 1
+  sus = note.is_a?(Array) ? note[1]
   midi *(args << {port: :iac_bus_1} << {channel: (note[0] && note[0][0] == :A1) ? 6 : 5} << {sustain: sus})
 end
 

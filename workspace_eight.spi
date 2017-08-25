@@ -95,6 +95,7 @@ def bass(*args)
     args = args << {sustain: note[1]}
     note = args[0]
   end
+puts notes
   midi note#, *(args << {port: :iac_bus_1} << {channel: (note && note[0] == :A1) ? 6 : 5})
 end
 

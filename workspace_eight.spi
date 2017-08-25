@@ -112,7 +112,7 @@ live_loop :moooo do
 
   8.times{tick;sleep 1;   
 #midi_channel_pressure (ring 10,127).look, 
-midi_pitch_bend 1, port: :iac_bus_1, channel: 5
+midi_pitch_bend 0.5, port: :iac_bus_1, channel: 5
 }
 end
 

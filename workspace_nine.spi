@@ -4,5 +4,5 @@ live_loop :stopiot do
   sleep 1
 end
 
-bass :FS0, sustain: 0
+#bass :FS0, sustain: 0
 

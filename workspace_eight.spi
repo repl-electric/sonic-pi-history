@@ -113,8 +113,10 @@ live_loop :moooo do
 #  midi_all_notes_off port: :iac_bus_1, channel: 5
 #          midi_reset channel: 5, port: :iac_bus_1
 
-  sleep 4   
-#  smp Mountain[/subkick/,0], amp: 2
+  4.times{sleep 1 
+          smp Mountain[/subkick/,0], amp: 2
+  }
+#  
 
 #midi_channel_pressure (ring 10,127).look, 
 #midi_pitch_bend (line 0.0,1.0,8).look, port: :iac_bus_1, channel: 5

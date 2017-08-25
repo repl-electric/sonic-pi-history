@@ -96,7 +96,7 @@ def bass(*args)
     note = note[0]
   end
 puts note
-  midi note, *(args << {port: :iac_bus_1} << {channel: (note && note[0] == :A1) ? 6 : 5})
+  midi note, *(args << {port: :iac_bus_1} << {channel: (note == :A1) ? 6 : 5})
 end
 
 live_loop :moooo do

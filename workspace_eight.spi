@@ -3,6 +3,9 @@ live_loop :dreaming do
 tick
 smp Mountain[/shaker/].look, amp: 1
  
+
+puts Mountain[/shaker/]
+
 #puts Dusty[/shaker/,100]
 
 sleep 1

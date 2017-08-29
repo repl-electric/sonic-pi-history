@@ -1,8 +1,7 @@
 def cho(note)
-  s = if /[[:upper:]]/.match(note.to_s[0]) ? :major : :minor
+  s = /[[:upper:]]/.match(note.to_s[0]) ? :major : :minor
   chord(note, s)
 end
-
 
 live_loop :test do
   #smp Mountain[/subkick/]

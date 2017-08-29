@@ -3,5 +3,5 @@ live_loop :test do
   tick
   smp Mountain[/subkick/]
   bass (ring :A2, :D2, :E2).look, (line 90, 127,32).look, sustain: 0.25
-  sleep 1/8.0
+  sleep 1/2.0
 end

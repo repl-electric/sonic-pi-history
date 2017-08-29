@@ -1,8 +1,8 @@
-def chord(tonic_or_name, *opts)
-end
 
 live_loop :test do
   #smp Mountain[/subkick/]
+def chord(tonic_or_name, *opts)
+end
 
   puts chord(:f3)
 

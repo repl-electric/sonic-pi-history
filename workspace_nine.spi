@@ -1,16 +1,3 @@
-module Mountain
-  @sample_cache = nil
-  @matcher_lookup = {}
-  def self.pick(a)
-    self[a]
-  end
-  def self.[](*a)
-    return @sample_cache[0]
-
-    @sample_cache ||= Dir["/Users/josephwilk/Workspace/music/samples/Mountain/**/*.wav"].sort!
-    #Sample.matches(@@sample_cache, a, @matcher_lookup)
-  end
-end
-
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
 puts Mountain[/subkick/,0]

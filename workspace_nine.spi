@@ -8,6 +8,6 @@ end
 
 live_loop :blah do
 tick
-  midi (ring *0..32).look, channel:0, port: :midi_fighter_twister
+  midi :Fs3, channel:0, port: :midi_fighter_twister
   sleep 0.25
 end

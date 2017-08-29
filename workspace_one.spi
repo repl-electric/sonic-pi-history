@@ -43,7 +43,7 @@ end
 
 
 
-live_loop :melody2 do
+live_loop :melody2, sync: :testing do
   tick
   s = nil
   3.times{

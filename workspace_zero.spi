@@ -86,28 +86,6 @@ if s[-1] != 2/4.0 + 3
 end
 puts "mel:#{@notes}"
 end
-live_loop :bass, sync: :testing do
-  tick
-  stop
-  #midi_reset
-comment do  
-midi (ring :a1, :a1, :a1,   :a1, :a1, :a1,
-             :e2, :e2, :e2,:e2,
-             :fs2, :fs2, :fs2,
-  #           :cs2, :cs2, 
-   #          :d2,  
-    #         :e2,
-     #        :a1, :a1,
- ).look, 
-(ring 1,10,32).look*0, sustain: 1.0, port: "moog_minitaur"
-end
-  4.times{
-  sleep 1/4.0
-   #smp Mountain[/ice/,1],amp: 0.01
-  #midi_pitch_bend 0.1, sustain: 1.0, port: "moog_minitaur"
-  #midi_clock_tick port: :moog_minitaur
-  }
-end
 
 #with_fx :reverb, mix: 0.4, room: 0.1 do
 live_loop :beat, sync: :testing do

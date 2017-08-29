@@ -53,7 +53,7 @@ live_loop :melody2 do
              ).tick(:no)
    midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_bus_1, channel: 8,
     sustain: s[1]
-puts s
+   puts s
    sleep s[1]
   }
 end

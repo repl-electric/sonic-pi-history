@@ -3,7 +3,7 @@ live_loop :dreaming, sync: :testing do
 tick
 if spread(1,2).look
 smp Frag[/hihats/,[10,10,10,10,11]].look, amp: 0.25
-midi (ring :A3,:A3, :D3, :E3).look, 100, sustain: 0.5, channel: 9, port: :iac_bus_1
+midi (ring :A3,:A3, _, :D3, :E3).look, 100, sustain: 0.5, channel: 9, port: :iac_bus_1
 end
 #puts Dusty[/shaker/,100]
 

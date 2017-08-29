@@ -1,6 +1,6 @@
 live_loop :mixer do
   use_real_time
-  data = (sync "/midi/midi_fighter_twister/2/1/control_change")
+  data = (sync "/midi/midi_fighter_twister/3/1/control_change")
   puts data[-1]
   set_volume! data[-1]/127.0 if data[0] == 33
   #sleep 0.25

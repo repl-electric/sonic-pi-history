@@ -5,4 +5,4 @@ live_loop :mixer do
   sleep 0.25
 end
 midi_cc 32,0, channel:0, port: :midi_fighter_twister
-midi_cc 33,120, channel:0, port: :midi_fighter_twister
+midi_cc 33,0, channel:0, port: :midi_fighter_twister

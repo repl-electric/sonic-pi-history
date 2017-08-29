@@ -7,7 +7,7 @@
           #name = tonic_or_name
         else
           #tonic = tonic_or_name
-          name = opts.shift
+          #name = opts.shift
         end
 
         return [] unless tonic

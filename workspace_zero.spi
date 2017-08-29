@@ -112,7 +112,7 @@ end
 with_fx :reverb, mix: 0.4, room: 0.1 do
 live_loop :beat, sync: :testing do
   tick
-  if(args=(ring *%W{1 0 0  0    0 0 0 0  0 0 0 0 
+  if(args=(ring *%W{1 0 0  0   0 0 0 0    0 0 0 0   0 0 0 0 
                   }).look) != "0"
     smp Frag[/kick/,4], amp: args =="1" ? 1.2+rand*0.1 : args
   end

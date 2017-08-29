@@ -1,10 +1,9 @@
 
 live_loop :dreaming do
 tick
-smp Frag[/snap/].look, amp: 1
+smp Frag[/snap/,10].look, amp: 1
  
 
-puts Mountain[/shaker/]
 
 #puts Dusty[/shaker/,100]
 

@@ -4,3 +4,6 @@ live_loop :mixer do
   set_volume! data[-1]/(127.0/2.0) if data[0] == 33
   sleep 0.25
 end
+
+
+midi :CS3, channel:14, port: :midi_fighter_twister

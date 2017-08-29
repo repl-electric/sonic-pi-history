@@ -4,7 +4,7 @@ tick
 if spread(1,2).look
 smp Frag[/hihats/,[10,10,10,10,11]].look, amp: 0.25
 end
-midi (ring :A3,:A3, :D3, :Fs3, _).look, 100, sustain: 0.5, channel: 9, port: :iac_bus_1
+midi (ring :A3,:A3, :D3, :Fs3).look, 100, sustain: 0.5, channel: 9, port: :iac_bus_1
 
 #puts Dusty[/shaker/,100]
 

@@ -4,7 +4,7 @@
         if opts.size == 0
           name = tonic_or_name
         elsif (opts.size == 1) && opts[0].is_a?(Hash)
-          name = tonic_or_name
+          #name = tonic_or_name
         else
           tonic = tonic_or_name
           name = opts.shift

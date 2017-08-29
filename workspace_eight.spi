@@ -8,5 +8,5 @@ midi (ring :A3,:A3, :D3, :Fs3).look, 100, sustain: 0.125, channel: 9, port: :iac
 
 #puts Dusty[/shaker/,100]
 
-sleep 1/4.0
+sleep 1
 end

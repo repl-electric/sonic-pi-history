@@ -3,6 +3,6 @@ live_loop :test do
   tick
   smp Mountain[/subkick/]
   zero :C3, sustain: 3
-  play :C3, sustain: 3, amp: 0.5
+  play :C3, sustain: 3, amp: 0.1
   sleep 8
 end

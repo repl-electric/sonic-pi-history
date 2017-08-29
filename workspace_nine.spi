@@ -12,17 +12,8 @@
 
         puts tonic_or_name
 
-        #return [] unless tonic
-        #opts = resolve_synth_opts_hash_or_array(opts)
-        c = []
-        if is_list_like?(tonic)
-          raise "List passed as parameter to chord needs two elements i.e. (chord [:e3, :minor]), you passed: #{tonic.inspect}" unless tonic.size == 2
-          c = Chord.new(tonic[0], tonic[1], opts[:num_octaves])
-        else
-          c = Chord.new(tonic, name, opts[:num_octaves])
-        end
-        c = chord_invert(c, opts[:i]) if opts[:i]
-        return c.ring
+        return [] unless tonic
+        opts = resolve_synth_opts_hash_or_array(opts)
       end
 
 live_loop :test do

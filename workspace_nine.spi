@@ -12,4 +12,4 @@ module Mountain
 end
 
 
-puts Mountain[/subkick/,0]
+Mountain[/subkick/,0]

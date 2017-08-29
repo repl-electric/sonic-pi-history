@@ -1,3 +1,3 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
-puts Mountain[/subkick/]
+puts Mountain[/subkick/,0]

@@ -7,6 +7,7 @@ end
 
 
 live_loop :blah do
-  midi rand_i(127), channel:14, port: :midi_fighter_twister
+tick
+  midi line(0,127,127).look, channel:14, port: :midi_fighter_twister
   sleep 0.125
 end

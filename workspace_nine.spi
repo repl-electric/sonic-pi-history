@@ -2,7 +2,7 @@ live_loop :test do
   #smp Mountain[/subkick/]
 
 
-  play chord(:A1, :M)
+  play chord(:B1, :m)
 
   sleep 1
 end

@@ -13,7 +13,7 @@
         puts tonic_or_name
 
         #return [] unless tonic
-        opts = resolve_synth_opts_hash_or_array(opts)
+        #opts = resolve_synth_opts_hash_or_array(opts)
         c = []
         if is_list_like?(tonic)
           raise "List passed as parameter to chord needs two elements i.e. (chord [:e3, :minor]), you passed: #{tonic.inspect}" unless tonic.size == 2

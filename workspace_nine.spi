@@ -1,53 +1,98 @@
-live_loop :melody do
-  tick
-  s = nil
-  3.times{
-   #s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
-   s = (knit 
-
-            # [:Fs3,1],1, [:A3,1],1, [:Cs3,1],1,      #3
-            # [:A3,1],1,  [:Cs3,1],1, [:D3,1],1,      #3
-            # [:E3,1],1,  [:Fs3,1],1, [:Cs3,1],1,      #3
-
- [:E4, 1],1
-
-#             [:A3,0.25],1, [:E3,0.125],1, [:Fs3,0.125],1, [:E3, 0.125],1
-# D 
-   
-#B D F
-#C E G
-#F A C
-#G B D
-
-#I ii, iii, IV, V, vi, viio
-
-
-          #   [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,      #3
-           #  [:A3, 3/4.0],1, [:D3,1],1, [:E3,2/4.0],1,      #3
-            # [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,     #3
-            # [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3],1,  #6  #+ 3/4.0 + 1 + 2/4.0
-          
-         #    [:A3, 3],1, [:D3,3],1, [:E3,3],1,   
-         #    [:Fs3,3/4.0],1, [:B3,1],1, [:A3,2/4.0],1,    
-         #    [:A3, 3/4.0],1, [:D3,1],1, [:E3,2/4.0],1, 
-         #    [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
-         #    [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3],1,
-             ).tick(:no)
-   midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_bus_1, channel: 4,
-    sustain: s[1]*9
-
-puts s
-
-@notes += s[1]
-   sleep s[1]*10
-  }
-if s[-1] != 2/4.0 + 3
-@notes += 3/4.0
-   sleep 3/4.0
-end
-puts "mel:#{@notes}"
+require "mysql2"
+module Dsp
+  def self.query(sql)
+    SonicPi::Core::RingVector.new(Dsp.connection.query(sql,:symbolize_keys => true).to_a)
+  end
+  def self.connection()
+    @@connection ||= Mysql2::Client.new(:host => "localhost", :username => "root", :database => "repl_electric_samples", :reconnect => true)
+  end
+  def self.connect!()
+    @@connection = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "repl_electric_samples",:reconnect => true)
+  end
 end
 
+module Samples
+  def self.sql(query="")
+    Dsp.query("select * from samples where #{query}")
+  end
+  def self.find(path: nil, note: nil, max: nil, min: nil)
+    @@cache ||= {}
+    k = "samples[note#{note}path#{path}max#{max}min#{min}]"
+    if !@@cache.has_key?(k)
+      query = []
+      query << "path like '%#{path}%'" if name
+      query << "note1='#{note}'" if note
+      query << "length < #{min}" if min
+      query << "length > #{max}" if max
+      r = Dsp.query("select * from samples where #{query.join(" AND ")}")
+      @@cache[k] = r
+    end
+    @@cache[k]
+  end
+  def self.flush
+    @@cache = {}
+  end
+end
 
-#midi :A1, port: :iac_bus_1, channel: 4,sustain: 0
+module SampleBeats
+  def self.sql(query="")
+    Dsp.query("select * from track where #{query}")
+  end
+  def self.find(path: nil, collection: col, filename: f)
+    @@cache ||= {}
+    k = "path[query]"
+    if !@@cache.has_key?(k)
+      query = []
+      query << "path='#{path}'" if path
+      query << "collection='#{path}'" if collection
+      query << "collection ='#{f}'" if f
+      r = Dsp.query("select * from track where #{query.join(" AND ")} ORDER BY beat")
+      puts "results#{r}"
+      if r && !r.empty?
+        beats = r.map{|r| r[:beat]}
+        r = {beats: beats[1..-1]}.merge(r[0])
+      end
+      @@cache[k] = r
+    end
+    @@cache[k]
+    r
+  end
+  def self.flush
+    @@cache = {}
+  end
+end
 
+module NoteSlices
+  def self.sql(query="")
+    Dsp.query("select * from notes_fine64 where #{query}")
+  end
+  def self.find(root: nil, octave: nil, min: nil, max: nil, note: nil, pat: nil)
+    @@cache = {}
+    octave = if !note.nil?
+      note[-1]
+    else
+      octave
+    end
+    root = if !note.nil?
+      note[0..-2]
+    else
+      root
+    end
+    k = "noteslices[note#{root}octave#{octave}max#{max}min#{min}]"
+    if !@@cache.has_key?(k)
+      query = []
+      query << "note='#{root}'" if root
+      query << "octave=#{octave}" if octave
+      query << "length > #{min}" if min
+      query << "length < #{max}" if max
+      query << "path REGEXP '#{pat}'" if pat
+      query = query.flatten
+      r = Dsp.query("select * from notes_fine64 where #{query.join(" AND ")}")
+      @@cache[k] = r
+    end
+    @@cache[k]
+  end
+  def self.flush
+    @@cache = {}
+  end
+end

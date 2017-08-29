@@ -11,9 +11,6 @@
         end
 
         puts tonic_or_name
-
-        return [] unless tonic
-        opts = resolve_synth_opts_hash_or_array(opts)
       end
 
 live_loop :test do

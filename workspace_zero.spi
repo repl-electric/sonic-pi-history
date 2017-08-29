@@ -19,7 +19,7 @@ live_loop :iter, sync: :testing do
 end
 live_loop :harmony2, sync: :testing do
   tick
-  harp :FS4, channel: 8, sustain: 6, port: :iac_bus_1
+  harp (ring :FS4), 80, channel: 8, sustain: 6, port: :iac_bus_1
   sleep 12
 end
 live_loop :harmony, sync: :testing do

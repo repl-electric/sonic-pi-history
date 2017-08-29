@@ -13,4 +13,4 @@ tick
 end
 
 
-  midi 0, channel:0, port: :midi_fighter_twister
+  midi 0, channel:1, port: :midi_fighter_twister

@@ -8,6 +8,6 @@ end
 
 live_loop :blah do
 tick
-  midi 0, channel:17, port: :midi_fighter_twister
+  midi 0, channel:2, port: :midi_fighter_twister
   sleep 0.25
 end

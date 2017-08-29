@@ -1,7 +1,7 @@
-live_loop :melody_pplay do
+live_loop :melody do
   tick
   s = nil
-stop
+#stop
   3.times{
    #s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
    s = (knit

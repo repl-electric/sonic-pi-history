@@ -3,5 +3,5 @@ live_loop :dreaming do
 smp Dusty[/shaker/,2], amp: 1
   
 
-sleep 2
+sleep 8
 end

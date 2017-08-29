@@ -1,7 +1,7 @@
 
 live_loop :dreaming do
 tick
-smp AmbiElec[/shaker/,8], amp: 1
+smp ElecAmbi[/shaker/,8], amp: 1
  
 #puts Dusty[/shaker/,100]
 

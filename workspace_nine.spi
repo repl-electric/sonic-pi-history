@@ -5,7 +5,7 @@ module Mountain
     self[a]
   end
   def self.[](*a)
-    return Mountain.sample_cache
+    return @@sample_cache
     @sample_cache ||= Dir["/Users/josephwilk/Workspace/music/samples/Mountain/**/*.wav"].sort!
     Sample.matches(@sample_cache, a, @matcher_lookup)
   end

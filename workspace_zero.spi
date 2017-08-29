@@ -94,7 +94,7 @@ live_loop :beat, sync: :testing do
   if(args=(ring *%W{[k1] 0 0  0   0 0 0 0    [k2] 0 0 0   0 0 0 0
                     [k2,0.2] 0 0 0    0 0 0 0
 }).look) != "0"
-    smp eval(args)[1], amp: 2.8+rand*0.1
+    smp eval(args)[0], amp: 2.8+rand*0.1
   end
   if (ring *%W{1 0 1 0   0 0 0 0
                1 0 1 0   0 0 0 0

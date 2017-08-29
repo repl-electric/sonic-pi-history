@@ -6,4 +6,7 @@ live_loop :mixer do
 end
 
 
+live_loop :blah do
 midi :CS3, channel:14, port: :midi_fighter_twister
+  sleep 0.5
+end

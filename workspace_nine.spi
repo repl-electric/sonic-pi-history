@@ -1,7 +1,27 @@
-def cho(note, *args)
-  s = /[[:upper:]]/.match(note.to_s[0]) ? :major : :minor
-  chord(note, s)
-end
+      def chord(tonic_or_name, *opts)
+        tonic = 0
+        name = /[[:upper:]]/.match(tonic_or_name.to_s[0]) ? :major : :minor
+        if opts.size == 0
+          name = tonic_or_name
+        elsif (opts.size == 1) && opts[0].is_a?(Hash)
+          name = tonic_or_name
+        else
+          tonic = tonic_or_name
+          name = opts.shift
+        end
+
+        return [] unless tonic
+        opts = resolve_synth_opts_hash_or_array(opts)
+        c = []
+        if is_list_like?(tonic)
+          raise "List passed as parameter to chord needs two elements i.e. (chord [:e3, :minor]), you passed: #{tonic.inspect}" unless tonic.size == 2
+          c = Chord.new(tonic[0], tonic[1], opts[:num_octaves])
+        else
+          c = Chord.new(tonic, name, opts[:num_octaves])
+        end
+        c = chord_invert(c, opts[:i]) if opts[:i]
+        return c.ring
+      end
 
 live_loop :test do
   #smp Mountain[/subkick/]

@@ -2,6 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb
 live_loop :test do
   tick
   smp Mountain[/subkick/]
-  harp (ring :A3, :D3, :E3).look, (line 90, 127,32).look, sustain: 0.25
-  sleep 1/2.0
+  zero :C3, sustain: 8
+  play :C3, sustain: 8
+  sleep 8
 end

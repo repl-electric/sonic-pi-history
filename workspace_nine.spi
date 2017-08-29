@@ -3,7 +3,7 @@ live_loop :test do
   tick
   smp Mountain[/subkick/]
 
-  bass (ring :A2).look
+  bass (ring :A2, :D2).look
 
   sleep 1
 end

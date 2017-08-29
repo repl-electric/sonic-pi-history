@@ -3,5 +3,5 @@
 
 live_loop :test do
   smp Mountain[/subkick/]
-  sleep 1/8.0
+  sleep 1/12.0
 end

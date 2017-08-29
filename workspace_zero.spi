@@ -17,6 +17,11 @@ live_loop :iter, sync: :testing do
   sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
+live_loop :harmony2, sync: :testing do
+  tick
+  harp :FS3, channel: 8
+
+end
 live_loop :harmony, sync: :testing do
   tick
   note = (ring [:E2,3], [:D2,3],[:B1,3],

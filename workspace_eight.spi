@@ -3,5 +3,8 @@ live_loop :dreaming do
 tick
 smp Dusty[/shaker/], amp: 1
   
+
+puts Dusty[/shaker/]
+
 sleep 1
 end

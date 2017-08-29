@@ -1,4 +1,4 @@
-live_loop :melody do
+live_loop :melody_pplay do
   tick
   s = nil
 stop

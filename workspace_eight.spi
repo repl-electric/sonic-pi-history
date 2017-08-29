@@ -1,7 +1,7 @@
 
 live_loop :dreaming do
 tick
-smp Frag[/snap/,10], amp: 1
+smp Frag[/snap/,11], amp: 1
  
 
 #puts Dusty[/shaker/,100]

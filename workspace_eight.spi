@@ -1,7 +1,7 @@
 
 live_loop :dreaming do
 tick
-smp Mountain[/shaker/,8], amp: 1
+smp Mountain[/shaker/,0], amp: 1
  
 #puts Dusty[/shaker/,100]
 

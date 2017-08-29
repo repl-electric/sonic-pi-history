@@ -1,7 +1,7 @@
 
 live_loop :dreaming do
 tick
-smp Dusty[/shaker/].look, amp: 1
+smp Dusty[/shaker/], amp: 1
   
 sleep 1
 end

@@ -109,7 +109,7 @@ end
   }
 end
 
-with_fx :reverb, mix: 0.4, room: 0.1 do
+#with_fx :reverb, mix: 0.4, room: 0.1 do
 live_loop :beat, sync: :testing do
   tick
   if(args=(ring *%W{1 0 0  0   0 0 0 0    1 0 0 0   0 0 0 0 
@@ -139,4 +139,4 @@ live_loop :beat, sync: :testing do
   end
   sleep 1/8.0
 end
-end
+#end

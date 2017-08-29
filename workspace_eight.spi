@@ -4,7 +4,7 @@ tick
 smp Dusty[/shaker/], amp: 1
   
 
-puts Dusty[/shaker/,0]
+puts Dusty[/shaker/,1]
 
 sleep 1
 end

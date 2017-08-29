@@ -59,11 +59,6 @@ puts s
 @notes += s[1]
    sleep s[1]
   }
-if s[-1] != 2/4.0 + 3
-@notes += 3/4.0
-   sleep 3/4.0
-end
-puts "mel:#{@notes}"
 end
 
 

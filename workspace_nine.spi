@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 live_loop :test do
   smp Mountain[/subkick/]
-  bass chord(:Fs1)[1]
+  bass chord(:fs1)[1]
 
   sleep 1
 end

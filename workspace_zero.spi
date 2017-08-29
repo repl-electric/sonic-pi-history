@@ -20,7 +20,7 @@ end
 live_loop :harmony2, sync: :testing do
   tick
   harp :FS3, channel: 8
-
+  sleep 12
 end
 live_loop :harmony, sync: :testing do
   tick

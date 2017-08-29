@@ -1,8 +1,6 @@
-load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
-live_loop :test do
-  tick
-  smp Mountain[/subkick/]
-  zero :C3, sustain: 8
-  play :C3, sustain: 3, amp: 0.05
-  sleep 8
+live_loop :mixer do
+  use_real_time
+  data = (sync "/midi/midi_fighter_twister/2/1/control_change")
+  set_volume! data[-1]/127.0 if data[0] == 33
+  sleep 0.25
 end

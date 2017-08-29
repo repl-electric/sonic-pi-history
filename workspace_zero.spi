@@ -130,7 +130,7 @@ live_loop :beat, sync: :testing do
   end
   if (args=(ring *%W{0 0 0 0   1 0 0 0}).look) != "0"
     puts "hit(((((((((((((((((((((((((("
-    puts MagicDust[/snare/,2]#, amp: 2
+    puts MagicDust[/snare/,9]#, amp: 2
   end
   if (ring *%W{1 0 0   0 0 0
                0 0 0   0 0 0

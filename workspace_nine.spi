@@ -1,5 +1,4 @@
       def chord(tonic_or_name, *opts)
-        tonic = 0
       end
 
 live_loop :test do

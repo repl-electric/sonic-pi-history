@@ -4,7 +4,7 @@
 live_loop :test do
   #smp Mountain[/subkick/]
 
-  puts chord(:fx3)
+  puts chord(:fs3)
 
   sleep 1
 end

@@ -3,7 +3,6 @@ live_loop :melody do
   s = nil
 #stop
   3.times{
-   #s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
    s = (knit
 
             #OPENING - Minorish.

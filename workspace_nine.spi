@@ -1,4 +1,4 @@
-def cho(note)
+def cho(note, *args)
   s = /[[:upper:]]/.match(note.to_s[0]) ? :major : :minor
   chord(note, s)
 end

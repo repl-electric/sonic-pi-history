@@ -1,6 +1,6 @@
 
 live_loop :test do
   tick
-  smp Mountain[/subkick/, 1]#.look
+  smp Mountain[/subkick/, /house/]#.look
   sleep 1
 end

@@ -24,7 +24,7 @@ live_loop :melody do
              [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
              [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3],1,
              ).tick(:no)
-   midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_bus_1, channel: 3,
+   midi s[0], (ring 20,20,20, 30,40,40, 40,60,80).look,  port: :iac_bus_1, channel: 5,
     sustain: s[1]
 
 puts s

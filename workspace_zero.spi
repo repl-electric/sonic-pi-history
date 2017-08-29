@@ -91,7 +91,9 @@ end
 live_loop :beat, sync: :testing do
   tick
   k1,k2 = Mountain[/subkick/,0], Frag[/kick/,9]
-  if(args=(ring *%W{[k2] 0 0  0   0 0 0 0    [k1] 0 0 0   0 0 0 0}).look) != "0"
+  if(args=(ring *%W{[k2] 0 0  0   0 0 0 0    [k1] 0 0 0   0 0 0 0
+                    [k1] 0 0 0   0 0 0 0
+}).look) != "0"
     smp eval(args), amp: 2.8+rand*0.1
   end
   if (ring *%W{1 0 1 0   0 0 0 0

@@ -1,5 +1,5 @@
 module Mountain
-  @sample_cache = nil
+  sample_cache = nil
   @matcher_lookup = {}
   def self.pick(a)
     self[a]

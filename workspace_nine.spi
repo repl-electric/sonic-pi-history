@@ -1,16 +1,5 @@
       def chord(tonic_or_name, *opts)
         tonic = 0
-        name = :minor#/[[:upper:]]/.match(tonic_or_name.to_s[0]) ? :major : :minor
-        if opts.size == 0
-          #name = tonic_or_name
-        elsif (opts.size == 1) && opts[0].is_a?(Hash)
-          #name = tonic_or_name
-        else
-          #tonic = tonic_or_name
-          #name = opts.shift
-        end
-
-        puts tonic_or_name
       end
 
 live_loop :test do

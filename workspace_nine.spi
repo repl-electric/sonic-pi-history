@@ -2,8 +2,6 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb
 live_loop :test do
   tick
   smp Mountain[/subkick/]
-
   bass (ring :A2, :D2, :E2).look, sustain: 0.25
-
-  sleep 1/4.0
+  sleep 1/8.0
 end

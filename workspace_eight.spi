@@ -1,5 +1,5 @@
 
-live_loop :dreaming do
+live_loop :dreaming, sync: :testing do
 tick
 if spread(1,2).look
 smp Frag[/hihats/,/10/], amp: 1

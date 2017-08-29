@@ -8,6 +8,6 @@ end
 
 live_loop :blah do
 tick
-  midi line(129,400,400).look, channel:14, port: :midi_fighter_twister
+  midi 127, channel:14, port: :midi_fighter_twister
   sleep 0.125
 end

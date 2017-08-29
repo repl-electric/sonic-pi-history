@@ -39,7 +39,7 @@ live_loop :melody do
 puts s
 
 @notes += s[1]
-   sleep s[1]*10
+   sleep s[1]
   }
 if s[-1] != 2/4.0 + 3
 @notes += 3/4.0

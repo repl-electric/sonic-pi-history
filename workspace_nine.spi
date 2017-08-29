@@ -5,5 +5,5 @@ live_loop :test do
 
   bass (ring :A2, :D2, :E2).look, sustain: 0.25
 
-  sleep 1/2.0
+  sleep 1/4.0
 end

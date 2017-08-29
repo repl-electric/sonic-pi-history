@@ -2,7 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb
 live_loop :test do
   tick
   smp Mountain[/subkick/]
-  zero :C3, sustain: 3
+  zero :C3, sustain: 8
   play :C3, sustain: 3, amp: 0.1
   sleep 8
 end

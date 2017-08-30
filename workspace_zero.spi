@@ -50,7 +50,7 @@ live_loop :iter, sync: :metro do
 end
 live_loop :high, sync: :metro do
   tick
-  #harp (ring :A4), (ring 20,30,30).look, channel: 8, sustain: 6, port: :iac_bus_1
+  harp (ring :A4), (ring 20,30,30).look, channel: 8, sustain: 6, port: :iac_bus_1
   sleep 12
 end
 

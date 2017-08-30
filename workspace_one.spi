@@ -1,4 +1,4 @@
-load_snippets
+load_snippets "~/.sonic-pi/snippets"
 live_loop :melody do
   tick
   s = nil

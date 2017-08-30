@@ -134,7 +134,7 @@ live_loop :beat, sync: :metro do
     smp eval(hat.look), amp: 1.0#, rpitch: 0
     smp eval(hat2.look),amp: 1
     #sleep 1/4.0
-}
+  }
   sleep 1/8.0
 end
 #end

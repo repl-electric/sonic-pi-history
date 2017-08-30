@@ -27,6 +27,3 @@ live_loop :soft, sync: :metro do
    sleep s[1]
   }
 end
-
-
-#midi :A1, port: :iac_bus_1, channel: 4,sustain: 0

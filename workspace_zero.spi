@@ -84,6 +84,8 @@ live_loop :beat, sync: :metro do
                     [k2] 0 0 0    0 0 0 0
 }).look) != "0"
     zero :A0
+  smp Dust[/120/,0], part: 0, amp: 6
+
     smp eval(args)[0], amp: 0.8+rand*0.1, cutoff: 100
   end
   if (ring *%W{1 0 1 0   0 0 0 0
@@ -100,7 +102,6 @@ live_loop :beat, sync: :metro do
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0
 }).look) != "0"
-  smp Dust[/120/,0], part: 0, amp: 6
 
     #smp MagicDust[/_HI/,23], amp: args =="1" ? 1.1 : args
   end

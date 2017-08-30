@@ -72,6 +72,8 @@ live_loop :melody, sync: :metro do
              ).tick(:no)
    harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
    @notes += s[1]
+   smp Frag[/hat/], amp: 0.8+rand*0.1
+
    sleep s[1]
   }
   @notes += 3/4.0

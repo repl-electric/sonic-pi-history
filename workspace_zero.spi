@@ -24,7 +24,6 @@ live_loop :soft, sync: :metro do
   3.times{
    s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
    sharp s, (ring 30).look
-   puts s
    sleep s[1]
   }
 end

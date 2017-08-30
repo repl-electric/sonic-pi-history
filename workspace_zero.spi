@@ -84,7 +84,7 @@ live_loop :melody, sync: :testing do
         #     [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
         #     [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3-3/4.0],1,
              ).tick(:no)
-   harp s[0], 1, sustain: s[1]
+   harp s, 1#, sustain: s[1]
 @notes += s[1]
    sleep s[1]
   }

@@ -1,10 +1,10 @@
 #live_audio :moog, input: 2
-live_loop :testing do
+live_loop :metro do
   tick
   #midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
   sleep 1
 end
-live_loop :iter, sync: :testing do
+live_loop :iter, sync: :metro do
   #stop
   tick
   s = (ring 1/4.0, 1/4.0,  # 1
@@ -15,12 +15,12 @@ live_loop :iter, sync: :testing do
   #midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_bus_1, channel: 1, sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
-live_loop :high, sync: :testing do
+live_loop :high, sync: :metro do
   tick
   #harp (ring :A4), (ring 20,30,30).look, channel: 8, sustain: 6, port: :iac_bus_1
   sleep 12
 end
-live_loop :harmony, sync: :testing do
+live_loop :harmony, sync: :metro do
   tick
   note = (ring [:E2,3], [:D2,3],[:B1,3],
                [:FS2,3],
@@ -40,7 +40,7 @@ live_loop :harmony, sync: :testing do
                #[[:A1, :A2], 1+1+1+1.25, 70]
                [[:A1, :A2], 1+1+1+1.25, 70]
                ).look
-  puts note_inspect(note[0])
+  #puts note_inspect(note[0])
   if note[0] && note[0][0] == :A2
      # play_midi :A0, 100, port: :iac_bus_1, channel: 5, sustain: 3
   end
@@ -54,7 +54,7 @@ live_loop :harmony, sync: :testing do
 end
 @t2 = 0
 @notes = 0
-live_loop :melody, sync: :testing do
+live_loop :melody, sync: :metro do
   tick
   #midi (ring 
   #        :e2,  :e2, :e3,   :e4,  :e5,  :e4,
@@ -88,7 +88,7 @@ live_loop :melody, sync: :testing do
 end
 
 #with_fx :reverb, mix: 0.4, room: 0.1 do
-live_loop :beat, sync: :testing do
+live_loop :beat, sync: :metro do
   tick
   k1,k2 = Mountain[/subkick/,0], Frag[/kick/,9]
   if(args=(ring *%W{[k1] 0 0  0   0 0 0 0    [k2] 0 0 0   0 0 0 0

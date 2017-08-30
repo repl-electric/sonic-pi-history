@@ -72,15 +72,15 @@ live_loop :melody, sync: :metro do
   tick
   s = nil
   3.times{
-   s = (knit [:A3, 3-(3/4.0)],3, [:Cs3,3-(3/4.0)],3, [:B2,3-(3/4.0)],3,      
-            # [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,   
-             ).tick(:no)
-   sharp s, (ring 20,20,20, 30,40,40, 40,60,80).look
-   @notes += s[1]
-   sleep s[1]
+    s = (knit [:A3, 3-(3/4.0)],3, [:Cs3,3-(3/4.0)],3, [:B2,3-(3/4.0)],3,
+         # [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,
+         ).tick(:no)
+    sharp s, (ring 20,20,20, 30,40,40, 40,60,80).look
+    @notes += s[1]
+    sleep s[1]
   }
-  @notes += 3/4.0     
-  sleep 3/4.0                      # 1 itr = 23.25 /  46.5  / 69.75 /   93
+  @notes += 3/4.0
+  sleep 3/4.0
   puts "mel:#{@notes}"
 end
 

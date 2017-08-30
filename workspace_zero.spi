@@ -16,7 +16,7 @@ def bass_one
    [:D2,2],
    [:Cs2, 0.5, 80],[:E2, 0.5,100],
    [[:A1, :A2], 1+1+1+1.0, 70])
-  end
+end
 
 #live_audio :moog, input: 2
 live_loop :metro do

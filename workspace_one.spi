@@ -1,3 +1,4 @@
+load_snippets
 live_loop :melody do
   tick
   s = nil
@@ -32,14 +33,11 @@ live_loop :melody do
   }
 end
 
-live_loop :melody2 do#, sync: :testing do
+live_loop :melody2 do
   tick
   s = nil
   3.times{
-   #s = (ring 3/4.0, 1, 2/4.0).tick(:note_length)
-   s = (knit
-             [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1,      #3
-             ).tick(:no)
+   s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
    midi s[0], (ring 30).look,  port: :iac_bus_1, channel: 8, sustain: s[1]
    puts s
    sleep s[1]

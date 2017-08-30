@@ -1,3 +1,27 @@
+module BASSLINE
+def self.one()
+(ring [:E2,3], [:D2,3],[:B1,3],
+               [:FS2,3],
+               [:A2,3], 
+               [:Gs2,1], 
+               [:D2,3], 
+               [:Cs2,2],
+               [:B1,1],
+               [:B1,1.0],
+
+               [:E2,3], [:D2,3],[:Fs2,3],
+               [:GS2,3],
+               [:A2,3], 
+               [:E2,1], 
+               [:D2,2], 
+               [:Cs2, 0.5, 80],[:E2, 0.5,100],
+               [[:A1, :A2], 1+1+1+1.0, 70]
+               )
+end
+end
+
+
+
 #live_audio :moog, input: 2
 live_loop :metro do
   tick
@@ -20,25 +44,11 @@ live_loop :high, sync: :metro do
   #harp (ring :A4), (ring 20,30,30).look, channel: 8, sustain: 6, port: :iac_bus_1
   sleep 12
 end
+
+
 live_loop :harmony, sync: :metro do
   tick
-  note = (ring [:E2,3], [:D2,3],[:B1,3],
-               [:FS2,3],
-               [:A2,3], 
-               [:Gs2,1], 
-               [:D2,3], 
-               [:Cs2,2],
-               [:B1,1],
-               [:B1,1.0],
-
-               [:E2,3], [:D2,3],[:Fs2,3],
-               [:GS2,3],
-               [:A2,3], 
-               [:E2,1], 
-               [:D2,2], 
-               [:Cs2, 0.5, 80],[:E2, 0.5,100],
-               [[:A1, :A2], 1+1+1+1.0, 70]
-               ).look
+  note = .look
   #puts note_inspect(note[0])
 #  if note[0] && note[0][0] == :A2
    play_midi note[0], 100, port: :iac_bus_1, channel: 5, sustain: 3
@@ -66,7 +76,7 @@ live_loop :melody, sync: :metro do
        #      [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
         #     [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3-(3/4.0) - 0.25],1,
              ).tick(:no)
-   harp s[0], (ring 20,20,20, 30,40,40, 40,60,80).look
+   #harp s[0], (ring 20,20,20, 30,40,40, 40,60,80).look
    @notes += s[1]
    sleep s[1]
   }

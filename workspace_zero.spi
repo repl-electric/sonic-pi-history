@@ -83,7 +83,7 @@ live_loop :beat, sync: :metro do
   h1,h2 = (knit @slices["Fs3/4"][8],6*2, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
 
 
-  if(args=(ring *%W{k1 {path:k1,amp:0.2} 0 0  0 0 0 0  [k2] 0 0 0   0 0 0 0
+  if(args=(ring *%W{k1 {path:k1,amp:0.2} 0 0  0 0 0 0  k2 0 0 0   0 0 0 0
                     k2 0 0 0  0 0 0 0
 }).look) != "0"
     #zero :A0

@@ -34,6 +34,12 @@ live_loop :melody do
 end
 
 
+live_loop :bass  do
+  tick
+  bass :A2, sustain: 3
+  sleep 3
+end
+
 live_loop :melody2 do
   tick
   s = nil

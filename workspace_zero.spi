@@ -76,8 +76,8 @@ live_loop :melody, sync: :metro do
 
    sleep s[1]
   }
-  @notes += 3/4.0
-  sleep 3/4.0
+  @notes += 3/4.0     
+  sleep 3/4.0                      # 1 itr = 23.25 /  46.5  / 69.75 / 93
   puts "mel:#{@notes}"
 end
 

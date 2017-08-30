@@ -1,6 +1,6 @@
 module BASSLINE
   def self.one()
-    Ring.new([:E2,3], [:D2,3],[:B1,3],
+    ring([:E2,3], [:D2,3],[:B1,3],
      [:FS2,3],
      [:A2,3],
      [:Gs2,1],

@@ -54,6 +54,18 @@ live_loop :high, sync: :metro do
   sleep 12
 end
 
+live_loop :melody2 do
+  tick
+  s = nil
+  3.times{
+   s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
+   midi s[0], (ring 30).look,  port: :iac_bus_1, channel: 8, sustain: s[1]
+   puts s
+   sleep s[1]
+  }
+end
+
+
 live_loop :harmony, sync: :metro do
   tick
   note = (ring [:A2,3], [:D2,3], [:E2,3]).look

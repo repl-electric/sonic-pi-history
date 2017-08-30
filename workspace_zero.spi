@@ -109,8 +109,6 @@ live_loop :beat, sync: :metro do
                    _ _ h1 _
                    _ _ h1 _})
 
-  smp eval(hat.look), amp: 1.0#, rpitch: 0
-  smp eval(hat2.look),amp: 1
 
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0
@@ -132,6 +130,8 @@ live_loop :beat, sync: :metro do
       smp MagicDust[/HI_/,52..69].look, amp: 0.3+rand*0.1
   end
       (4).times{
+  smp eval(hat.look), amp: 1.0#, rpitch: 0
+  smp eval(hat2.look),amp: 1
 
   sleep 1/4.0
 }

@@ -12,7 +12,7 @@ def bass_one
    [:E2,3], [:D2,3],[:Fs2,3],
    [:GS2,3],
    [:A2,3],
-     [:E2,1],
+   [:E2,1],
    [:D2,2],
    [:Cs2, 0.5, 80],[:E2, 0.5,100],
    [[:A1, :A2], 1+1+1+1.0, 70])
@@ -34,7 +34,7 @@ end
 #live_audio :moog, input: 2
 live_loop :metro do
   tick
-  #midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
+  midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
   sleep 1
 end
 live_loop :iter, sync: :metro do

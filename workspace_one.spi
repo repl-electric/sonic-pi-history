@@ -33,7 +33,7 @@ live_loop :melody do
 end
 live_loop :bass, sync: :melody  do
   tick
-  bass (ring :a2, :cs3, :e2).look, 100, sustain: 3
+  bass (ring :a2, :cs3, :e3).look, 100, sustain: 3
   sleep 6
 end
 live_loop :melody2 do

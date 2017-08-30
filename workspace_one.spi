@@ -36,7 +36,7 @@ end
 
 live_loop :bass, sync: :melody  do
   tick
-  bass :Cs2, 45, sustain: 3
+  bass :E2, 45, sustain: 3
   sleep 3
 end
 

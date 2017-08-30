@@ -1,3 +1,10 @@
+def sharp(note,*args)
+  if note.is_a?(Array)
+    args =  args  << {sustain: note[1]}
+    note = note[0]
+  end
+  midi note, *(args << {port: :iac_bus_1} << {channel: 8})
+end
 def bass_one
   (ring
    [:E2,3], [:D2,3],[:B1,3],
@@ -30,7 +37,6 @@ def melody_one
        [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1,
        [_,   3/4.0],1, [:A2,1],1, [:B2,2/4.0 + 3-(3/4.0) - 0.25],1)
 end
-
 #live_audio :moog, input: 2
 live_loop :metro do
   tick

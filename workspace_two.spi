@@ -6,7 +6,7 @@ end
 
 live_loop :drummers do
   smp Frag[/kick/, 9]
-  sleep 8
+  sleep 1
 end
 
 

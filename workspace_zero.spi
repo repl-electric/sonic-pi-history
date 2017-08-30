@@ -93,6 +93,15 @@ live_loop :melody, sync: :testing do
 puts "mel:#{@notes}"
 end
 
+def harp(*args)
+  note = args.first
+  if note.is_a?(Array)
+    args = (note[0] + args.drop(1)) << {sustain: note[1]}
+  end
+  midi *(args << {port: :iac_bus_1} << {channel: 3})
+end
+
+
 #with_fx :reverb, mix: 0.4, room: 0.1 do
 live_loop :beat, sync: :testing do
   tick

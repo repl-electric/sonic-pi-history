@@ -34,9 +34,9 @@ live_loop :melody do
 end
 
 
-live_loop :bass  do
+live_loop :bass, sync: :melody  do
   tick
-  bass :A2,50, sustain: 3
+  bass :A2, 45, sustain: 3
   sleep 3
 end
 

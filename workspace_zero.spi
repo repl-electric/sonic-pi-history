@@ -100,7 +100,7 @@ live_loop :beat, sync: :metro do
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0
 }).look) != "0"
-  smp Frag[/loop/,/120/,0], part: 1, amp: 2
+  smp Dust[/loop/,/120/,0], part: 1, amp: 2
 
     #smp MagicDust[/_HI/,23], amp: args =="1" ? 1.1 : args
   end

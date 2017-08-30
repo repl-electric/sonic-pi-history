@@ -2,3 +2,11 @@ live_loop :bass do
   bass :A3, sustain: 7
   sleep 8
 end
+
+
+live_loop :drummers do
+  smp Frag[/kick/, 9]
+  sleep 8
+end
+
+

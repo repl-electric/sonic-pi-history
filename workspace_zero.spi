@@ -42,7 +42,7 @@ live_loop :harmony, sync: :testing do
                ).look
   puts note_inspect(note[0])
   if note[0] && note[0][0] == :A2
-      play_midi :A0, 100, port: :iac_bus_1, channel: 5, sustain: 3
+     # play_midi :A0, 100, port: :iac_bus_1, channel: 5, sustain: 3
   end
   #if note[0]
  #   play_midi note[0], note.length > 2 ? note[-1] : 127, port: :iac_bus_1, channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
@@ -94,7 +94,7 @@ live_loop :beat, sync: :testing do
   if(args=(ring *%W{[k1] 0 0  0   0 0 0 0    [k2] 0 0 0   0 0 0 0
                     [k2] 0 0 0    0 0 0 0
 }).look) != "0"
-    smp eval(args)[0], amp: 1.8+rand*0.1
+    smp eval(args)[0], amp: 0.8+rand*0.1
   end
   if (ring *%W{1 0 1 0   0 0 0 0
                1 0 1 0   0 0 0 0

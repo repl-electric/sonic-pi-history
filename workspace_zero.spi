@@ -84,7 +84,7 @@ live_loop :beat, sync: :metro do
                     [k2] 0 0 0    0 0 0 0
 }).look) != "0"
     zero :A0
-    smp @slices['fs4/4'][0]
+    smp @slices['f#4/4'][0]
     #smp Corrupt[/loop/,/120/,3], part: 4, amp: 1
 
     #smp eval(args)[0], amp: 0.8+rand*0.1, cutoff: 100

@@ -89,8 +89,8 @@ live_loop :melody, sync: :metro do
     @notes += s[1]
     sleep s[1]
   }
-  @notes += 3/4.0
-  sleep 3/4.0
+  
+  #sleep 3/4.0;@notes += 3/4.0
   puts "mel:#{@notes}"
 end
 

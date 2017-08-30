@@ -1,23 +1,23 @@
 module BASSLINE
-def self.one
-(ring [:E2,3], [:D2,3],[:B1,3],
-               [:FS2,3],
+  def self.one
+    (ring [:E2,3], [:D2,3],[:B1,3],
+     [:FS2,3],
+     [:A2,3],
+     [:Gs2,1],
+     [:D2,3],
+     [:Cs2,2],
+     [:B1,1],
+     [:B1,1.0],
+     
+     [:E2,3], [:D2,3],[:Fs2,3],
+     [:GS2,3],
                [:A2,3], 
-               [:Gs2,1], 
-               [:D2,3], 
-               [:Cs2,2],
-               [:B1,1],
-               [:B1,1.0],
-
-               [:E2,3], [:D2,3],[:Fs2,3],
-               [:GS2,3],
-               [:A2,3], 
-               [:E2,1], 
-               [:D2,2], 
-               [:Cs2, 0.5, 80],[:E2, 0.5,100],
-               [[:A1, :A2], 1+1+1+1.0, 70]
-               )
-end
+     [:E2,1],
+     [:D2,2],
+     [:Cs2, 0.5, 80],[:E2, 0.5,100],
+     [[:A1, :A2], 1+1+1+1.0, 70]
+     )
+  end
 end
 
 
@@ -48,7 +48,7 @@ end
 
 live_loop :harmony, sync: :metro do
   tick
-  note = BASSLINE.one.look
+  note = BASSLINE.one„.look
   #puts note_inspect(note[0])
 #  if note[0] && note[0][0] == :A2
    play_midi note[0], 100, port: :iac_bus_1, channel: 5, sustain: 3

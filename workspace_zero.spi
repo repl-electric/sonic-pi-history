@@ -85,7 +85,7 @@ live_loop :melody, sync: :metro do
     s = (knit [:A3, 3-(3/4.0)],3, [:Cs3,3-(3/4.0)],3, [:B2,3-(3/4.0)],3,
          # [:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,
          ).tick(:no)
-    sharp s, (ring 20,20,20, 30,40,40, 40,60,80).look
+    harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
     @notes += s[1]
     sleep s[1]
   }

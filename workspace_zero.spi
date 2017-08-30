@@ -83,12 +83,12 @@ live_loop :beat, sync: :metro do
   h1,h2 = (knit @slices["Fs3/4"][8],6*2, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
 
 
-  if(args=(ring *%W{[k1] 0 0 0   [k2] 0 0 0  
-                    [k2] 0 0 0  
+  if(args=(ring *%W{[k1] 0 0 0  0 0 0 0  [k2] 0 0 0   0 0 0 0
+                    [k2] 0 0 0  0 0 0 0
 }).look) != "0"
     #zero :A0
     #smp Corrupt[/loop/,/120/,3], part: 4, amp: 1
-    smp eval(args)[0], amp: 1.8+rand*0.1
+    smp eval(args)[0], amp: 1.8+rand*0.1#, start: 0.1#, cutoff: 135
   end
   if (ring *%W{1 0 1 0   0 0 0 0
                1 0 1 0   0 0 0 0

@@ -109,7 +109,6 @@ live_loop :beat, sync: :metro do
   if spread(1,12).look
     smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
   end
-  end
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _

@@ -1,8 +1,7 @@
 #live_audio :moog, input: 2
 live_loop :testing do
   tick
-  midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2, 
-   sustain: 0.8
+  #midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
   sleep 1
 end
 live_loop :iter, sync: :testing do
@@ -13,8 +12,7 @@ live_loop :iter, sync: :testing do
             1/4.0, 1/4.0,  # 1 
             1/4.0, 1/4.0,
             1/4.0, 1/4.0).look
-  midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_bus_1, channel: 1,
-  sustain: s*2.0
+  #midi (knit :E2,128, :A2, 128, :B2, 128).look, 1*(line 100, 127,128/1).look, port: :iac_bus_1, channel: 1, sustain: s*2.0
   sleep s #1/4.0  #7=> 2 beats
 end
 live_loop :high, sync: :testing do
@@ -58,12 +56,12 @@ end
 @notes = 0
 live_loop :melody, sync: :testing do
   tick
-  midi (ring 
-          :e2,  :e2, :e3,   :e4,  :e5,  :e4,
-          :a2,  :a2, :a3,   :a4,  :a5,  :a4,
-          :fs2, :fs2, :fs3, :fs4, :fs5, :fs4
-        ).look, 1*(line 0,127,127).look, port: :iac_bus_1, channel: 4, 
-    sustain: (knit, 0.25,3, 3,3).look
+  #midi (ring 
+  #        :e2,  :e2, :e3,   :e4,  :e5,  :e4,
+  #        :a2,  :a2, :a3,   :a4,  :a5,  :a4,
+  #        :fs2, :fs2, :fs3, :fs4, :fs5, :fs4
+  #      ).look, 1*(line 0,127,127).look, port: :iac_bus_1, channel: 4, 
+  #  sustain: (knit, 0.25,3, 3,3).look
   #midi :fs2, port: :iac_driver_iac_bus_1, channel: 4 
   s = nil
   3.times{

@@ -85,7 +85,7 @@ live_loop :beat, sync: :metro do
 }).look) != "0"
     #zero :A0
     #smp Corrupt[/loop/,/120/,3], part: 4, amp: 1
-    smp eval(args)[0], amp: 2.8+rand*0.1#, cutoff: 135
+    smp eval(args)[0], amp: 2.8+rand*0.1, start: 0.1#, cutoff: 135
   end
   if (ring *%W{1 0 1 0   0 0 0 0
                1 0 1 0   0 0 0 0
@@ -96,8 +96,7 @@ live_loop :beat, sync: :metro do
                1 0 1 0   0 0 0 0
                1 1 0 1   1 0 1 0}).look != "0"
     smp @slices['A3/4'][0..4].look#, @slices['Cs3/4'].look).look
-
-   #smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
+    #smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
   end
 
 

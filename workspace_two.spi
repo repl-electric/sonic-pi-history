@@ -6,7 +6,7 @@ end
 live_loop :drummers, sync: :bass do
   midi :A1,  port: :iac_bus_1, channel: 4, sustain: 0.1
   smp Frag[/kick/, 9]
-  sleep 1
+  sleep 2
 end
 
 

@@ -1,5 +1,4 @@
-module BASSLINE
-  def one
+def bass_one
     ring([:E2,3], [:D2,3],[:B1,3],
      [:FS2,3],
      [:A2,3],
@@ -17,7 +16,6 @@ module BASSLINE
      [:Cs2, 0.5, 80],[:E2, 0.5,100],
      [[:A1, :A2], 1+1+1+1.0, 70])
   end
-end
 
 
 #live_audio :moog, input: 2

@@ -47,7 +47,7 @@ end
 
 live_loop :harmony, sync: :metro do
   tick
-  note = BASSLINE.one.look
+  note = BASSLINE.one#.look
   #puts note_inspect(note[0])
 #  if note[0] && note[0][0] == :A2
    play_midi note[0], 100, port: :iac_bus_1, channel: 5, sustain: 3

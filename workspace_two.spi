@@ -1,5 +1,5 @@
 live_loop :bass do
-  bass :A1, sustain: 16
+  bass :A0, sustain: 16
   sleep 16
 end
 

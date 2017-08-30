@@ -102,10 +102,10 @@ live_loop :beat, sync: :metro do
   end
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _})  #1/4 1/4 (1/4) 1/4
-  hat2 = (ring *%w{__ __ h1 _
-                   __ __ h1_ {path:h2,amp:0.9}_
-                   __ __ h1_ __
-                   __ __ h1_ __})
+  hat2 = (ring *%w{_ _ _ _ h1 _ _ _
+                   _ _ _ _ h1 _ {path:h2,amp:0.9} _
+                   _ _ _ _ h1 _ _ _
+                   _ _ _ _ h1 _ _ _})
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0
 }).look) != "0"

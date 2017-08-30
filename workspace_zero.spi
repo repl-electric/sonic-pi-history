@@ -47,7 +47,7 @@ live_loop :harmony, sync: :metro do
   note = bass_one.look
   #puts note_inspect(note[0])
 #  if note[0] && note[0][0] == :A2
-   play_midi note, 100, port: :iac_bus_1, channel: 5#, sustain: 3
+   bass note, 100, port: :iac_bus_1, channel: 5#, sustain: 3
  # end
     #play_midi note[0], note.length > 2 ? note[-1] : 127, port: :iac_bus_1, channel: (note[0] && note[0][0] == :A1) ? 6 : 5, sustain: note[1]
     sleep note[1]

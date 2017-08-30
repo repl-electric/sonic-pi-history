@@ -3,7 +3,6 @@ live_loop :bass do
   sleep 8
 end
 
-
 live_loop :drummers, sync: :bass do
   smp Frag[/kick/, 9]
   sleep 1

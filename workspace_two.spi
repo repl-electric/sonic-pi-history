@@ -105,6 +105,8 @@ live_loop :beat, sync: :metro do
     #zero :A0
     smp eval(args), cutoff: 90
   end
+
+  if spread(1,12).look
   if (ring *%W{1 0 1 0   0 0 0 0
                1 0 1 0   0 0 0 0
                
@@ -116,6 +118,7 @@ live_loop :beat, sync: :metro do
     #smp @slices['A3/4'][0..4].look#, @slices['Cs3/4'].look).look
     smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
   end
+end
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _

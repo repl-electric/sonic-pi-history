@@ -131,6 +131,9 @@ live_loop :beat, sync: :metro do
                0 0 0   0 0 0}).look == "1"
       smp MagicDust[/HI_/,52..69].look, amp: 0.3+rand*0.1
   end
+      (4).times{
+
   sleep 1/4.0
+}
 end
 #end

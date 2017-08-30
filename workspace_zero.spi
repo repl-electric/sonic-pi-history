@@ -1,4 +1,9 @@
-live_loop :melody do
+live_loop :metro do
+  tick
+  #midi (ring :Gs3,32, :Cs3, 32, :E3, 32).look, 120, port: :iac_bus_1, channel: 2,  sustain: 0.8
+  sleep 1
+end
+live_loop :melody,sync: :metro do
   tick
   s = nil
 #stop

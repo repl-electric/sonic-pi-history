@@ -137,7 +137,15 @@ live_loop :beat, sync: :metro do
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ {path:h2,amp:0.9} _
                    _ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ _ _})
+                   _ _ _ _ h1 _ _ _
+
+                   _ _ _ _ h1 _ _ _
+                   _ _ _ _ h1 _ {path:h2,amp:0.9} _
+                   _ _ _ _ h1 _ _ _
+                   _ _ _ _ h1 _ _ _
+
+
+})
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0
 }).look) != "0"
@@ -162,10 +170,6 @@ live_loop :beat, sync: :metro do
   smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look
 
 
-  hat2 = (ring *%w{_ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ {path:h2,amp:0.9} _
-                   _ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ _ _})
 
 
   #hat = (ring *%w{_ _ _ _   _ _ _ _   _ _ _ _   Frag[/coil/,1] _ _ _})

@@ -103,6 +103,7 @@ end
 
 
 def smp(*args)
+put sargs
   begin
   sample_thing = args.first
   if sample_thing

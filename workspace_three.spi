@@ -123,7 +123,6 @@ live_loop :beat, sync: :metro do
                    _ _ @slices["B4/4"][30] _
                    _ @slices["B4/4"][32] _ _
                    @slices["B4/4"][34] _ _ _})
-puts perc
   smp eval(perc.look), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 

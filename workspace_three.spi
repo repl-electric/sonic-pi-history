@@ -163,7 +163,6 @@ h3 = @slices["Cs4/4"][9]
       #smp MagicDust[/HI_/,52..69].look, amp: 0.3+rand*0.1
   end
 
-
   smp eval(hat.look), amp: 0.3#, rpitch: 0
   smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look
 

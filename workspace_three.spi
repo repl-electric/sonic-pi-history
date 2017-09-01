@@ -219,8 +219,11 @@ h3="/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/F/vo
 
 
   #smp eval(hat.look), amp: 0.3#, rpitch: 0
+if hat2.look == h3
   smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look
-
+else
+  smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look
+end
 
   #hat = (ring *%w{_ _ _ _   _ _ _ _   _ _ _ _   Frag[/coil/,1] _ _ _})
   #smp eval(hat.look), amp: 0.3, start: (line 0.0,0.1,32).look, finish: 0.15 #, rpitch: 0

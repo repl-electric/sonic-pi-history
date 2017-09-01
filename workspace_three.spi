@@ -141,7 +141,7 @@ h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/
   #h3 = @slices["Cs4/4"][3]
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ {path:h2,amp:0.9,onset:0.0,offset:0.8} _
+                   _ _ _ _ h1 _ {path:h2,amp:0.9,onset:0.0,offset:2.8} _
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _
 

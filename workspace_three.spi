@@ -112,8 +112,7 @@ live_loop :beat, sync: :metro do
     smp eval(args), cutoff: 90
   end
 
-  hi1,hi2 = smp MagicDust[/_HI/,[24,25]]
-
+  hi1,hi2 = MagicDust[/_HI/,[24,25]]
 
   if (ring *%w{_ _ _ _ _ _    1 _ _ _ _ _ 
                _ _ _ _ _ _    _ _ _ _ _ _

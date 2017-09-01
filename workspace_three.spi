@@ -122,8 +122,8 @@ live_loop :beat, sync: :metro do
   i1,i2 = MagicDust[/_HI/,[6,7]]
   m1,m2,m3 = Mountain[/microperc/,[5,13]]
 
-  perc = (ring *%w{_ _ _  _ i1 _  i1 _ _   _ _ _ 
-                   _ i2 _  _ _ _  _ _ i1  _ _ _
+  perc = (ring *%w{_ _ _ _  i1 _ i1 _  _ _ _ _ 
+                   _ _ _ i2  _ _ _ _  i1  _ _ _
 })
   smp eval(perc.look), amp: 0.5, pan: (ring 0.25,-0.25).tick(:pan)
 

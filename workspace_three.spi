@@ -118,7 +118,7 @@ live_loop :beat, sync: :metro do
   perc = (ring *%w{_ _ _  _ i1 _  i1 _ _   _ _ _ 
                    _ m1 _ _  _ _ _ _   m2 _ _ _
 })
-  smp eval(perc.look), amp: 0.9, pan: (ring 0.25,-0.25).tick(:pan)
+  smp eval(perc.look), amp: 1.0, pan: (ring 0.25,-0.25).tick(:pan)
 
   perc = (ring *%w{_ _ _ @slices["B4/2"][31]
                    _ _ @slices["B4/4"][30] _

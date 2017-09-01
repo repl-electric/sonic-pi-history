@@ -145,7 +145,7 @@ h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/
                    _ _ _ _ h1 _ _ _
 
                    _ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ {path:h3,finish:0.1} _
+                   _ _ _ _ h1 _ {path:h3,start:0.0,finish:0.1} _
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _
 })

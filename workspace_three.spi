@@ -112,7 +112,7 @@ live_loop :beat, sync: :metro do
     smp eval(args), cutoff: 90
   end
 
-  if (ring *%w{_ _ _ _ 1 _    1 _ _ _ _ _ 
+  if (ring *%w{_ _ _ _ _ _    1 _ 1 _ _ _ 
                _ _ _ _ _ _    _ _ _ _ _ _
 }).look == "1"
     smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)

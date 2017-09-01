@@ -118,7 +118,7 @@ live_loop :beat, sync: :metro do
     #zero :A0
     smp eval(args), cutoff: 90
   end
-puts h2
+#puts h2
 
   i1,i2 = MagicDust[/_HI/,[6,7]]
 #  m1,m2,m3 = Mountain[/microperc/,[5,13]]

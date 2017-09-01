@@ -7,4 +7,4 @@
 
 
 
-puts @slices["Cs4/4"]
+puts "s#{@slices["Cs4/4"]}"

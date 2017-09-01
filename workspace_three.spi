@@ -128,12 +128,16 @@ puts h2
 })
   smp eval(perc.look), amp: 0.25+rand*0.1, pan: (ring 0.25,-0.25).tick(:pan)
 
+
+h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/vor_sopr_phrase_latin_a_18.wav"
+
+
   perc = (ring *%w{_ _ _ @slices["B4/2"][31]
                    _ _ @slices["B4/4"][30] _
                    _ @slices["B4/4"][32] _ _
                    @slices["B4/4"][34] _ _ _})
 #  smp eval(perc.look), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
-  h3 = @slices["Cs4/4"][3]
+  #h3 = @slices["Cs4/4"][3]
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ {path:h2,amp:0.9} _

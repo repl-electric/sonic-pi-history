@@ -107,6 +107,14 @@ live_loop :beat, sync: :metro do
   h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
   if(args=(ring *%W{k1 0 {path:k1,amp:0.1} 0  0 0 0 0  k2 0 0 0   0 0 0 0
                     k2 0 0 0  0 0 0 0
+                    k1 0 {path:k1,amp:0.1} 0  0 0 0 0  k2 0 0 0   0 0 0 0
+                    k2 0 0 0  0 0 0 0
+                    
+                    k1 0 {path:k1,amp:0.1} 0  0 0 0 0  k2 0 0 0   0 0 0 0
+                    k2 0 0 0  0 0 0 0
+                    k1 0 {path:k1,amp:0.2} 0  0 0 0 0  k2 0 0 0   0 0 0 0
+                    k2 0 0 0  0 0 0 0
+
 }).look) != "0"
     #zero :A0
     smp eval(args), cutoff: 90

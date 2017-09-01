@@ -113,7 +113,7 @@ def smp(*args)
         start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
         fini = ratio_off(sample_thing) + (args.last[:finish_offset] || 0)
       elsif sample_thing[:hack]
-puts args
+puts "ARGS:#{args}"
         start = args.last[:start]
         fini = args.last[:finish]
       else

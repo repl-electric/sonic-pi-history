@@ -112,7 +112,7 @@ live_loop :beat, sync: :metro do
                     
                     k1 0 {path:k1,amp:0.1} 0  0 0 0 0  k2 0 0 0   0 0 0 0
                     k2 0 0 0  0 0 0 0
-                    k1 0 {path:k1,amp:0.2} 0  0 0 0 0  k2 0 0 0   0 0 0 0
+                    k2 0 {path:k2,amp:0.2} 0  0 0 0 0  k2 0 0 0   0 0 0 0
                     k2 0 0 0  0 0 0 0
 
 }).look) != "0"

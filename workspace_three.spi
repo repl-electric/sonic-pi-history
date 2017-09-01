@@ -114,6 +114,7 @@ puts args
         start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
         fini = ratio_off(sample_thing) + (args.last[:finish_offset] || 0)
       elsif sample_thing[:hack]
+puts "ACHKLED"
         start = sample_thing[:start]
         fini = sample_thing[:finish]
       else

@@ -218,7 +218,7 @@ h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/
 
 
   #smp eval(hat.look), amp: 0.3#, rpitch: 0
-  smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look, finish: 2
+  smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look, finish: 4
 
 
   #hat = (ring *%w{_ _ _ _   _ _ _ _   _ _ _ _   Frag[/coil/,1] _ _ _})

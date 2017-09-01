@@ -112,7 +112,7 @@ live_loop :beat, sync: :metro do
     smp eval(args), cutoff: 90
   end
 
-  i1,i2,i3 = MagicDust[/_HI/,[24,25,30]]
+  i1,i2,i3 = MagicDust[/_HI/,[24,25,31]]
 
   perc = (ring *%w{_ _ _ _   i1 _ i1 _  _ i2 i1 _ 
                    _ i2 _ _  _ _ _ _   i3 _ _ _

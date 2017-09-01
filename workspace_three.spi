@@ -131,7 +131,7 @@ puts h2
 
 h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/vor_sopr_phrase_latin_a_18.wav"
 h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/D/vor_sopr_phrase_latin_d_08.wav"
-
+h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/D/vor_sopr_phrase_latin_a_18.wav"
 
 
   perc = (ring *%w{_ _ _ @slices["B4/2"][31]

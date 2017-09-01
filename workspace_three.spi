@@ -119,7 +119,6 @@ live_loop :beat, sync: :metro do
 
                    _ _ _ _   i1 _ i1 _  _ i2 i1 _
                    _ i2 _ _  _ _ _ _   _ _ _ _
-
 }).look
   smp eval(perc), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
   

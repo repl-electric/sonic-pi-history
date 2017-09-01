@@ -132,7 +132,7 @@ live_loop :beat, sync: :metro do
                    _ @slices["B4/4"][32] _ _
                    @slices["B4/4"][34] _ _ _})
 #  smp eval(perc.look), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
-h3 = @slices["Cs4/4"][3]
+  h3 = @slices["Cs4/4"][3]
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ {path:h2,amp:0.9} _
@@ -143,8 +143,6 @@ h3 = @slices["Cs4/4"][3]
                    _ _ _ _ h1 _ {path:h3} _
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _
-
-
 })
 
   if (args=(ring *%W{0 0 0 0   0 0 1 0.25  0 0 0 0   0 0 1 0

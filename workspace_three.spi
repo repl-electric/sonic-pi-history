@@ -115,7 +115,7 @@ live_loop :beat, sync: :metro do
   if (ring *%w{_ _ _ _ _ _    1 _ _ _ _ _ 
                _ _ _ _ _ _    _ _ _ _ _ _
 }).look == "1"
-    smp MagicDust[/_HI/,24], amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
+    smp MagicDust[/_HI/,[24,25]].choose, amp: 0.25, pan: (ring 0.25,-0.25).tick(:pan)
   end
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 

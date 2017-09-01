@@ -122,9 +122,9 @@ live_loop :beat, sync: :metro do
   perc = (ring *%w{_ _ _ m1
                    _ _ m1 _
                    _ m1 _ _
-                   m1 _ _ _}).look
+                   m1 _ _ _})
 
-  smp eval(perc), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
+  smp eval(perc.look), amp: 1.25, pan: (ring 0.25,-0.25).tick(:pan)
   
   hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
   hat2 = (ring *%w{_ _ _ _ h1 _ _ _

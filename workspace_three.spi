@@ -146,7 +146,7 @@ h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/
                    _ _ _ _ h1 _ _ _
 
                    _ _ _ _ h1 _ _ _
-                   _ _ _ _ h1 _ {path:h2,start_offset:-2.2} _
+                   _ _ _ _ h1 _ {path:h2,onset: 0.1, offset: 0.12,start_offset:-2.2} _
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _
 })
@@ -172,8 +172,6 @@ h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/
 
   #smp eval(hat.look), amp: 0.3#, rpitch: 0
   smp eval(hat2.look),amp: 0.5, rate: (ring -1,-1,1).look
-
-
 
 
   #hat = (ring *%w{_ _ _ _   _ _ _ _   _ _ _ _   Frag[/coil/,1] _ _ _})

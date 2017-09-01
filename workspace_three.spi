@@ -126,7 +126,7 @@ puts h2
   perc = (ring *%w{_ _ _ _  i1 _ i1 _  _ _ _ _ 
                    _ _ _ i2  _ _ _ _  i1  _ _ _
 })
-  smp eval(perc.look), amp: 0.25+rand*0.1, pan: (ring 0.25,-0.25).tick(:pan)
+  smp eval(perc.look), amp: 0.125+rand*0.1, pan: (ring 0.25,-0.25).tick(:pan)
 end
 
 h3 = "/Users/josephwilk/Workspace/music/samples/soprano/Samples/Phrases/Latin/A/vor_sopr_phrase_latin_a_18.wav"

@@ -122,7 +122,7 @@ puts h2
 
   i1,i2 = MagicDust[/_HI/,[6,7]]
 #  m1,m2,m3 = Mountain[/microperc/,[5,13]]
-  with_fx :reverb, room: 0.01, mix: 1 do
+  with_fx :echo, room: 0.01, mix: 1 do
   perc = (ring *%w{_ _ _ _  i1 _ i1 _  _ _ _ _ 
                    _ _ _ i2  _ _ _ _  i1  _ _ _
 })

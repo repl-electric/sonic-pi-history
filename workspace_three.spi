@@ -79,7 +79,7 @@ end
 @t2 = 0
 @notes = 0
 live_loop :melody, sync: :metro do
-sync :bass
+  sync :bass
   tick
   s = nil
   3.times{

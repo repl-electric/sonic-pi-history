@@ -126,7 +126,7 @@ puts args
       else
         options
       end
-puts options
+#puts options
       sample sample_file, *[options]
       sample_file
     else

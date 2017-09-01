@@ -142,7 +142,7 @@ live_loop :beat, sync: :metro do
     #smp MagicDust[/_MI/,48], amp: args =="1" ? 0.5 : args
   end
   if (args=(ring *%W{0 0 0 0   0 0 0 0   1 0 0 0   0 0 0 0}).look) != "0"
-    smp Dust[/snare/,10], amp: 1
+    smp Dust[/snare/,11], amp: 1
   end
   if (ring *%W{1 0 0   0 0 0
                0 0 0   0 0 0

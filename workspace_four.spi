@@ -16,13 +16,9 @@ live_loop :thing  do
   tick
   #bass_cc 20
     harp :A3,30, sustain: 8#, cutoff: (ramp 0, 128,128).look
-    harp_cc(:cutoff, 100)
+    harp_cc(:cutoff, 80)
     harp_cc(:phase, 127/2.0)
   
-
-
-
-
   sleep 8
 end
 

@@ -17,7 +17,7 @@ live_loop :harp do
 end
 live_loop :drums, sync: :metro do
   k1 = Mountain[/subkick/,0]
-  if (e=(ring *w{k1 _ _ _   _ _ _ _   _ _ _ _  _ _ _ _}).look) == 1
+  if (e=(ring *%w{k1 _ _ _   _ _ _ _   _ _ _ _  _ _ _ _}).look) == 1
     smp eval(e)
   end
   sleep 1/8.0

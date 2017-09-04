@@ -20,7 +20,7 @@ live_loop :drums, sync: :metro do
   #sync :h
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]
-  h1,h2,h3 = (knit ChillD[/hat/,17],12).look, Ether[/hat/,13],Frag[/hat/,15]
+  h1,h2,h3 = (knit ChillD[/hat/,17],12).look, Ether[/hat/,14],Frag[/hat/,15]
 #Dust[/hat/,4],3
   if (e=(ring *%w{k2 _ k1 _   _ _ _ _   k1 _ _ _  _ _ _ _
                   k1 _ _ _    _ _ _ _}).look) != _

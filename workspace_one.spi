@@ -1,5 +1,3 @@
-live_loop :metro do;tick;sleep(1);end
-
 live_loop :harp, sync: :metro do
   tick;s=nil
   3.times{

@@ -59,7 +59,7 @@ live_loop :soft, sync: :metro do
 #   s = (knit [:E3,1/4.0],1,[:E3,1/4.0],1,[:E3,1/4.0],1,[_,1/2.0],1,[:E4,1/2.0],1,[:E4,1/2.0],1).tick(:no)
     s = (knit :E2,128, :A2, 128, :B2, 128).look
    #sharp s,(ring 20).look
-    midi s, 90, port: :iac_bus_1, channel: 1, sustain: 1/4.0
+    midi s, 100, port: :iac_bus_1, channel: 1, sustain: 1/4.0
    sleep 1/4.0
   }
 end

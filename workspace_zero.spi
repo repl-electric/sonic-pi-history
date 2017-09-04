@@ -1,9 +1,5 @@
 
 #load_snippets "~/.sonic-pi/snippets"
-def bass_cc(vv)
-  #6=>cutoff
-  midi_cc 6, vv*127, port: :iac_bus_1, channel: 5
-end
 live_loop :metro do;tick;sleep(1);end
 live_loop :harp do
   tick

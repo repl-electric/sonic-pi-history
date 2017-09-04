@@ -26,8 +26,8 @@ live_loop :drums, sync: :metro do
     smp eval(e)
   end
 
-  hat = (ring *%w{_ _ _ _   h1 _ _ _ }) 
-  hat2 = (ring *%w{_ _ _ _ h2 _ _ _
+  hat = (ring *%w{_ _ _ _  h1 _ _ _ }) 
+  hat2 = (ring *%w{_ _ _ _ _ _ _ _
                    _ _ _ _ h2 _ {path:h3,amp:0.5} _
                    _ _ _ _ h2 _ _ _
                    _ _ _ _ h2 _ _ _})

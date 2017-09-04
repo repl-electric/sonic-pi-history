@@ -20,7 +20,7 @@ live_loop :drums, sync: :metro do
   #sync :h
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]
-  h1,h2,h3 = Frag[/hat/,9], Frag[/hat/,8],Frag[/hat/,9]
+  h1,h2,h3 = Frag[/hat/,9], Frag[/hat/,8],Frag[/hat/,10]
 
   if (e=(ring *%w{k2 _ k1 _   _ _ _ _   k1 _ _ _  _ _ _ _
                   k1 _ _ _    _ _ _ _}).look) != _

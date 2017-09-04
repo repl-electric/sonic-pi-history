@@ -1,7 +1,7 @@
 
 
 def bass_cc(cc,vv)
-  midi_cc note, vv, port: :iac_bus_1, channel: 5
+  midi_cc cc, vv, port: :iac_bus_1, channel: 5
 end
 
 bass_cc 1, 2

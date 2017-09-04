@@ -10,6 +10,6 @@ live_loop :thing  do
 bass_cc 0, (line 0,128).look
 
 #bass :A2, sustain: 16
-sleep 16
+sleep 1
 end
 

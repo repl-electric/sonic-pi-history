@@ -9,7 +9,6 @@ live_loop :thing  do
   tick
   bass 1, sustain: 16
   bass_cc 0, (line 0,128,32).look
-
   sleep 16
 end
 

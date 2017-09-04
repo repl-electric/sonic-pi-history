@@ -17,6 +17,8 @@ live_loop :thing  do
   #bass_cc 20
     harp :A3,30, sustain: 8#, cutoff: (ramp 0, 128,128).look
     harp_cc(:cutoff, 100)
+    harp_cc(:phase, 0)
+  
 
 
 

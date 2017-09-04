@@ -35,7 +35,7 @@ live_loop :drums, sync: :metro do
 
 if hat2.look == @slices["B3/4"][1]
 with_fx :echo, phase: 0.5,mix:1 do
-  smp eval(hat2.look), amp: 2.0
+  smp eval(hat2.look), amp: 4.0
 end
 else
   smp eval(hat2.look), amp: 0.5

@@ -57,7 +57,7 @@ live_loop :soft, sync: :metro do
   3.times{
    #s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
 
-   s = (knit [:A3,1/4.0],1,[:A3,1/4.0],1,[:A3,1/4.0],1,[_,1/2.0],1/2, [:E3,1/2],1,[:E3,1/2],1).tick(:no)
+   s = (knit [:A3,1/4.0],1,[:A3,1/4.0],1,[:A3,1/4.0],1,[_,1/2.0],1, [:E3,1/2],1,[:E3,1/2],1).tick(:no)
    #sharp s,(ring 20).look
     midi s[0], 100, port: :iac_bus_1, channel: 1, sustain: s[1]
    sleep s[1]

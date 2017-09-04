@@ -52,9 +52,10 @@ live_loop :bass, sync: :metro  do
   sleep 3
 end
 live_loop :soft, sync: :metro do
-  tick
   s = nil
   3.times{
+  tick
+
    #s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
 
    s = (knit [:A3,1/4.0],1,[:A3,1/4.0],1,[:A3,1/4.0],1,[_,1/2.0],1, [:Cs4,1/2],1,[:Cs4,1/2],1).tick(:no)

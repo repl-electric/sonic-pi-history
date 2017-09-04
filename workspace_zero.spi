@@ -37,7 +37,6 @@ if hat2.look == @slices["B3/4"][1]
   smp eval(hat2.look), amp: 0.5
 else
   smp eval(hat2.look), amp: 0.5
-
 end
   smp eval(hat.look), amp: 0.25, rpitch: (line 0,12,128).look, start: (line 0,0.1, 32).look
   

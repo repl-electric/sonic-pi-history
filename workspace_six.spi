@@ -9,3 +9,5 @@ def harp(note,*args)
   end
   midi note, *(args << {port: :iac_bus_1} << {channel: 3})
 end
+
+harp "f2/1"

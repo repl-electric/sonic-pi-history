@@ -1,10 +1,9 @@
 
 #load_snippets "~/.sonic-pi/snippets"
 tick_reset_all
-
 live_loop :metro do;tick;sleep(1);end
 live_loop :harp do
-  tick
+  puts tick
   s = nil
 #stop
   3.times{

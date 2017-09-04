@@ -19,7 +19,7 @@ cue :h, look % 9
 end
 live_loop :drums, sync: :metro do
 #tick_reset_all
-
+  sync :h
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]
   h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][0]

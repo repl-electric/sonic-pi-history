@@ -1,22 +1,10 @@
-def harp_cc(cc,vv)
-  n = case cc
-  when :cutoff; 4
-  when :gain;   5
-  when :drive;  8
-  when :charge; 9
-  when :sound; 12
-  when :phase; 13
-  else
-  end
-  midi_cc n, (vv*127), port: :iac_bus_1, channel: 3
-end
 
 
 live_loop :thing  do
   tick
   #bass_cc 20
     harp :A3,30, sustain: 8#, cutoff: (ramp 0, 128,128).look
-    harp_cc(:cutoff, 1.0)
+    harp_cc(:cutoff, 0.0)
     harp_cc(:phase, 0.0)
   
   sleep 8

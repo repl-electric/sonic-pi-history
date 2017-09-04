@@ -27,13 +27,11 @@ live_loop :drums, sync: :metro do
     smp eval(e)
   end
 
-  if (e=(ring *%w{_ _  _ _   
-                  _ h1 _ _
-                  _ _  _ _
-                  _ _  _ _}).look) != _
-    smp eval(e)
-  end
+  hat = (ring *%w{_ _ _ _ h2 _ _ _}) 
 
+  smp eval(hat.look)
+
+  
 
   sleep 1/8.0
 end

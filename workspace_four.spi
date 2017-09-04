@@ -1,7 +1,7 @@
 live_loop :thing  do
   tick
   #bass_cc 20
-  bass :A2, sustain: 4, cutoff: (line 0, 128).look
-  sleep 4
+  bass :A2, sustain: 2, cutoff: (line 0, 128).look
+  sleep 2
 end
 

@@ -14,7 +14,7 @@ live_loop :harp do
 end
 live_loop :bass, sync: :metro  do
   tick
-  bass (ring :a2, :cs3, :e3).look, 100, sustain: 3
+  #bass (ring :a2, :cs3, :e3).look, 100, sustain: 3
   sleep 6
 end
 live_loop :soft, sync: :metro do
@@ -22,7 +22,7 @@ live_loop :soft, sync: :metro do
   s = nil
   3.times{
    s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
-   sharp s,(ring 30).look
+   #sharp s,(ring 30).look
    sleep s[1]
   }
 end

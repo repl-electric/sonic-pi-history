@@ -1,1 +1,28 @@
-puts note_inspect(chord(:b3, 'sus4'))
+#load_snippets "~/.sonic-pi/snippets"
+live_loop :metro do;tick;sleep(1);end
+live_loop :harp do
+  tick
+  s = nil
+#stop
+  3.times{
+   s = (knit
+         [:A2, 3],1, [:Cs3, 3],1, [:B2, 3],1,
+             ).tick(:no)
+   harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
+   sleep s[1]
+  }
+end
+live_loop :bass, sync: :metro  do
+  tick
+  #bass (ring :a2, :cs3, :e3).look, 100, sustain: 3
+  sleep 6
+end
+live_loop :soft, sync: :metro do
+  tick
+  s = nil
+  3.times{
+   s = (knit [:A3,12],1, [:Cs4,12],1, [:E4,12],1,  [_,12],1, [_,12],1).tick(:no)
+   #sharp s,(ring 30).look
+   sleep s[1]
+  }
+end

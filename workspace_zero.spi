@@ -38,7 +38,7 @@ with_fx :echo, phase: 0.5,mix:1 do
   smp eval(hat2.look), amp: 4.0
 end
 else
-  smp eval(hat2.look), amp: 0.5
+  smp eval(hat2.look), amp: 2.5
 end
   smp eval(hat.look), amp: 0.125, rpitch: (line 0,-12,128).look, finish: (line 0,0.1, 32).look
   

@@ -1,5 +1,7 @@
 
 #load_snippets "~/.sonic-pi/snippets"
+tick_reset_all
+
 live_loop :metro do;tick;sleep(1);end
 live_loop :harp do
   tick
@@ -14,7 +16,6 @@ live_loop :harp do
    sleep s[1]
   }
 #tick_reset_all
-
 end
 live_loop :drums, sync: :metro do
 #tick_reset_all

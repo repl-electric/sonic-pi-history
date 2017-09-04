@@ -4,7 +4,7 @@ def bass_cc(cc,vv)
   midi_cc note, vv, port: :iac_bus_1, channel: 5
 end
 
-bass_cc 0, line(0,127,127).look# sustain: 5
+bass_cc 0, 1# sustain: 5
 
 
 live_loop :thing  do

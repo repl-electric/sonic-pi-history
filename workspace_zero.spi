@@ -31,9 +31,8 @@ live_loop :drums, sync: :metro do
                    _ _ _ _ h2 _ {path:h3,amp:0.5} _
                    _ _ _ _ _ _ _ _
                    _ _ _ _ h2 _ _ _})
-
   smp eval(hat.look), amp: 0.35
-  smp eval(hat2.look)#, amp: 0.5
+  smp eval(hat2.look)
 
   
 

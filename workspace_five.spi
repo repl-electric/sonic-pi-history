@@ -1,22 +1,15 @@
-
-live_loop :tune do
-play (ring :FS3, :Cs3, :B4, :CS4).tick(:thing), amp: 0.4
-sleep 1/2.0
+def bass(note, *args)
+  if note.is_a?(Array)
+    args = args << {sustain: note[1]}
+    note = note[0]
+  end
+  args_h = resolve_synth_opts_hash_or_array(args)
+  if(args_h[:cutoff])
+    bass_cc(args_h[:cutoff])
+  end
+  midi note, *(args << {port: :iac_bus_1} << {channel: 5})
 end
-
-
-bass_notes = (ring :Fs3, :B3, :Cs3, :Cs4)
-bass_notes.tick(:i)
-with_fx :level, amp: 0.00 do
-with_fx(:reverb, room: 0.6, mix: 0.8, damp: 0.5, damp_slide: 1.0, mix_slide: 0.1) do |r_fx|
-  with_fx :krush, mix: 0.2, mix_slide: 4*1 do |d_fx|
-  synth :hollow, note: bass_notes.look(:i), cutoff: 50, decay: 1, attack: 0.001, amp: 1.0, wave: 4
-  synth :pluck, note: bass_notes.look(:i)
-  synth :beep, note: bass_notes.look(:i), cutoff: 50, decay: 1,   attack: 0.001, amp: 1.0, wave: 4
-at do
- sleep 1/8.0; control d_fx, mix: 0
- 15.times{control r_fx, damp: rand, mix: 1.0; sleep 1/8.0}
-end
-end
-end
+def bass_cc(vv)
+  #6=>cutoff
+  midi_cc 6, vv*127, port: :iac_bus_1, channel: 5
 end

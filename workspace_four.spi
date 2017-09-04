@@ -1,6 +1,6 @@
 def harp_cc(cc,vv)
   case cc.to_s
-  when :cutoff 4
+  when "cutoff" 4
   when :gain   5
   when :drive 8
   when :charge 9

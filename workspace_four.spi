@@ -1,4 +1,9 @@
-puts (line 1,2)
+
+
+
+
+
+puts (line 1,2.3)
 
 def bass_cc(cc,vv)
   midi_cc cc, vv, port: :iac_bus_1, channel: 5

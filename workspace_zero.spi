@@ -15,7 +15,6 @@ live_loop :harp do
   }
 end
 
-comment do
 live_loop :drums, sync: :metro do
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]
@@ -24,7 +23,6 @@ live_loop :drums, sync: :metro do
     smp eval(e)
   end
   sleep 1/8.0
-end
 end
 
 live_loop :bass, sync: :metro  do

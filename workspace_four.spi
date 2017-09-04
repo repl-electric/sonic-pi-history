@@ -4,7 +4,7 @@
 def bass_cc(cc,vv)
   midi_cc cc, vv, port: :iac_bus_1, channel: 5
 end
-bass_cc 0, (line 1..127).look
+bass_cc 0, (line 0,128).look
 
 live_loop :thing  do
   tick

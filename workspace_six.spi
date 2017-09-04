@@ -1,14 +1,11 @@
 
-live_loop :testing do
-tick
-x=nil
-play x= ring(       chord(:FS2, :m),
-      chord(:B2, :m),
-      chord(:E2, :m),
-      chord(:D2, :m),
-      chord(:A2, :M),
-      chord(:E2, :M),
-).look+12, decay: 2
-puts note_inspect(x)
-sleep 2
+def harp(note,*args)
+  if note.is_a?(Array)
+    args =  args  << {sustain: note[1]}
+    note = note[0]
+  elsif(note =~ /\//)
+    note, sus = note.split("/")
+    args = args  << {sustain: sus}
+  end
+  midi note, *(args << {port: :iac_bus_1} << {channel: 3})
 end

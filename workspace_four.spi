@@ -1,11 +1,11 @@
 def harp_cc(cc,vv)
   n = case cc
-      :cutoff 4
-      :gain   5
-      :drive 8
-      :charge 9
-      :sound 12
-      :phase 13
+      when :cutoff 4
+      when :gain   5
+      when :drive 8
+      when :charge 9
+      when :sound 12
+      when :phase 13
     end
   midi_cc n, vv, port: :iac_bus_1, channel: 5
 end

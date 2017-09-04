@@ -14,4 +14,4 @@ def bass_cc(vv)
   midi_cc 6, vv, port: :iac_bus_1, channel: 5
 end
 
-bass_cc 127
+bass_cc 0

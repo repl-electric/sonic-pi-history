@@ -6,7 +6,7 @@ live_loop :harp do
 #stop
   3.times{
    s = (knit
-         [:A2, 3],1, [:Cs3, 3],1, [:B2, 3],1,
+         [:A2, 3],1, [:Cs3, 3],1, [:E2, 3],1,
              ).tick(:no)
    harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
    harp_cc(:cutoff, 0.5)

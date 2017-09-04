@@ -19,7 +19,7 @@ live_loop :thing  do
 
 
 
-
+    harp_cc(:cutoff 100)
 
 
 

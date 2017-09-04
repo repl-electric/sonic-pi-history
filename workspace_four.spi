@@ -6,7 +6,8 @@ def harp_cc(cc,vv)
       when :charge 9
       when :sound 12
       when :phase 13
-    end
+  else
+  end
   midi_cc n, vv, port: :iac_bus_1, channel: 5
 end
 

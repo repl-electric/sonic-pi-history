@@ -18,7 +18,6 @@ cue :h, look % 9
 #tick_reset_all
 end
 live_loop :drums, sync: :metro do
-#tick_reset_all
   sync :h
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]

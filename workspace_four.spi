@@ -1,10 +1,3 @@
-
-
-
-def bass_cc(cc,vv)
-  midi_cc cc, vv, port: :iac_bus_1, channel: 5
-end
-
 live_loop :thing  do
   tick
   bass :A2, sustain: 4, cutoff: 10

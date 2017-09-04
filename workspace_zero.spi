@@ -40,7 +40,7 @@ end
 else
   smp eval(hat2.look), amp: 0.5
 end
-  smp eval(hat.look), amp: 0.125, rpitch: (line 0,-12,128).look, start: (line 0,0.1, 32).look
+  smp eval(hat.look), amp: 0.125, rpitch: (line 0,-12,128).look, finish: (line 0,0.1, 32).look
   
 
   sleep 1/8.0

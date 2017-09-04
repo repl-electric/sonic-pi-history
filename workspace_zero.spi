@@ -4,7 +4,7 @@ live_loop :harp, sync: :metro do
   tick;s=nil
   3.times{
     s = (knit
-         [:A2, 3],1, [:Cs3, 3],1, [:E3, 3],1,
+         [:A2, 3],1, [:Cs3, 3],1, [:Fs3, 3],1,
          ).tick(:no)
     harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[1]

@@ -3,7 +3,7 @@
 live_loop :thing  do
   tick
 #  bass :"A-1", line(0,127).look# sustain: 5
-sleep 1
+bass :A2, sustain: 16
+sleep 16
 end
 
-bass :A2, sustain: 16

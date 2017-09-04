@@ -33,13 +33,6 @@ live_loop :drums, sync: :metro do
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _})
 
-if hat2.look == "{path:h2,amp:0.9}"
-with_fx (knit :none, 4, :echo,0).tick(:init), phase: 0.25,mix:1 do
-  sample eval(hat2.look)[:path], slice: 2, num_slices: 12
-end
-else
-  smp eval(hat2.look), amp: 0.5
-end
   smp eval(hat.look), amp: 0.125, rpitch: (line 0,-12,128).look, finish: (line 0,0.1, 32).look
   
 

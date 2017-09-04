@@ -27,6 +27,11 @@ live_loop :drums, sync: :metro do
     smp eval(e)
   end
 
+  if (e=(ring *%w{_ _ _ _   h1 _ _ _   _ _ _  _ _ _ _}).look) != _
+    smp eval(e)
+  end
+
+
   sleep 1/8.0
 end
 
@@ -36,7 +41,6 @@ live_loop :bass, sync: :metro  do
   sleep 6
 end
 live_loop :soft, sync: :metro do
-#tick_reset_all
   tick
   s = nil
   3.times{

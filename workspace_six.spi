@@ -11,4 +11,4 @@ puts sus
   midi note, *(args << {port: :iac_bus_1} << {channel: 3})
 end
 
-puts harp(:f2_3_2)
+puts harp(:f2_1.2)

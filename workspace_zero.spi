@@ -10,6 +10,8 @@ live_loop :harp do
              ).tick(:no)
    harp s, (ring 20,20,20, 30,40,40, 40,60,80).look
    harp_cc(:cutoff, 0.5)
+   harp_cc(:phase, 0.5)
+    
    sleep s[1]
   }
 end

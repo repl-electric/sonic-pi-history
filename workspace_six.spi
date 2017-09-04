@@ -6,7 +6,7 @@ def harp(note,*args)
   elsif(note =~ /_/)
     note, sus = note.to_s.split("_")
     if sus.length > 1
-      h,t = *(sus.split("").map(:to_i))
+      h,t = *(sus.split("").map(&:to_i))
       sus = h / t
     end
     args = args  << {sustain: sus}

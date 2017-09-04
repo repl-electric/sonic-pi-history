@@ -3,7 +3,7 @@ def harp(note,*args)
   if note.is_a?(Array)
     args =  args  << {sustain: note[1]}
     note = note[0]
-  elsif(note =~ /:/)
+  elsif(note =~ /_/)
     note, sus = note.split(":")
     args = args  << {sustain: sus}
   end

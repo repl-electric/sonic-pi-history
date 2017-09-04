@@ -3,7 +3,7 @@
 tick_reset_all
 live_loop :metro do;tick;sleep(1);end
 live_loop :harp do
-  puts tick
+  puts tick % 6
   s = nil
 #stop
   3.times{

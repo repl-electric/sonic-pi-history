@@ -27,8 +27,8 @@ live_loop :drums, sync: :metro do
   end
 
   if(ring *%W{_ _ _ _ _ _ _ _  1 _ _ _   _ _ _ _}).look != _
-  smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12*-2, pan: (line 0.125,-0.125,32).look
-end
+    smp Fraz[/coil/,38], amp: 1.0, finish:  line(0.01, 0.06,32).look, start: line(0.0, 0.0005,1024).look, rpitch: 12*-2, pan: (line 0.125,-0.125,32).look
+  end
 
   hat = (ring *%w{_ _ _ _  h1 _ _ _ }) 
   hat2 = (ring *%w{_ _ _ _ _ _ _ _

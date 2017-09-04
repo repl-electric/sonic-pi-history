@@ -61,6 +61,6 @@ live_loop :soft, sync: :metro do
 s =  (knit :E2,128, :A2, 128, :B2, 128).look
    #sharp s,(ring 20).look
     midi s, 70, port: :iac_bus_1, channel: 1, sustain: 1/4.0
-   sleep s[1]
+   sleep 1/4.0
   }
 end

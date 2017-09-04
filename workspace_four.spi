@@ -1,5 +1,5 @@
 def harp_cc(cc,vv)
-  case cc.to_s
+  case("house")
   when "cutoff" 4
   when :gain   5
   when :drive 8

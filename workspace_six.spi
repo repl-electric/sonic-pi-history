@@ -5,6 +5,7 @@ def harp(note,*args)
     note = note[0]
   elsif(note =~ /_/)
     note, sus = note.to_s.split("_")
+puts sus
     args = args  << {sustain: sus}
   end
   midi note, *(args << {port: :iac_bus_1} << {channel: 3})

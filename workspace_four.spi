@@ -1,7 +1,29 @@
+def harp_cc(cc,vv)
+  n = case cc do
+      :cutoff 4
+      :gain   5
+      :drive 8
+      :charge 9
+      :sound 12
+      :phase 13
+    end
+  midi_cc n, vv, port: :iac_bus_1, channel: 5
+end
+
+
 live_loop :thing  do
   tick
   #bass_cc 20
-  harp :A3,30, sustain: 8#, cutoff: (ramp 0, 128,128).look
+ # harp :A3,30, sustain: 8#, cutoff: (ramp 0, 128,128).look
+
+
+
+
+
+
+
+
+
   sleep 8
 end
 

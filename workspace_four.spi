@@ -3,7 +3,7 @@
 
 
 
-puts (line 0,32,6)
+puts (line 0,12,6)
 
 #def bass_cc(cc,vv)
 #  midi_cc cc, vv, port: :iac_bus_1, channel: 5

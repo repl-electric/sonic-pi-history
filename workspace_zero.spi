@@ -38,7 +38,7 @@ with_fx :bitcrusher, mix: 0.5 do
   smp eval(hat2.look), amp: 0.5
 end
 else
-  smp eval(hat.look), amp: 0.25, rpitch: (line 0, 12,128).look
+  smp eval(hat.look), amp: 0.25, rpitch: (line 0,7,128).look
 end
   
 

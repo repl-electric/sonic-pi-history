@@ -14,7 +14,7 @@ live_loop :harp do
    sleep s[1]
   }
 end
-reset_all_ticks
+reset_ticks
 live_loop :drums, sync: :metro do
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]

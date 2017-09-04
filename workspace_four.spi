@@ -1,5 +1,5 @@
 def harp_cc(cc,vv)
-  n = case cc do
+  n = case cc
       :cutoff 4
       :gain   5
       :drive 8

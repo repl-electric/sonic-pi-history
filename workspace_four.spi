@@ -1,5 +1,7 @@
 def harp_cc(cc,vv)
   case "house"
+  when "moo"
+    puts "a"
   else
   end
   midi_cc n, vv, port: :iac_bus_1, channel: 5

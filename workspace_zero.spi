@@ -20,7 +20,7 @@ live_loop :drums, sync: :metro do
   #sync :h
   tick
   k1,k2 = Mountain[/subkick/,2],Frag[/kick/,9]
-  h1,h2,h3 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look, @slices["B3/4"][1], Frag[/hat/,8]
+  h1,h2,h3 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look, Frag[/hat/,9], Frag[/hat/,8]
 
   if (e=(ring *%w{k2 _ k1 _   _ _ _ _   k1 _ _ _  _ _ _ _
                   k1 _ _ _    _ _ _ _}).look) != _
@@ -33,6 +33,7 @@ live_loop :drums, sync: :metro do
                    _ _ _ _ h1 _ _ _
                    _ _ _ _ h1 _ _ _})
 
+  smp eval(hat.look), amp: 0.5
   smp eval(hat.look), amp: 0.5
   
 

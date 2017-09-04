@@ -1,7 +1,7 @@
 
 
-def bass_cc(cc,*args)
-  midi_cc note, *(args << {port: :iac_bus_1} << {channel: 5})
+def bass_cc(cc,vv)
+  midi_cc note, vv, *({port: :iac_bus_1} << {channel: 5})
 end
 
 live_loop :thing  do

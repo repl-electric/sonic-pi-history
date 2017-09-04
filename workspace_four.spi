@@ -1,9 +1,13 @@
 
 
+def bass_cc(cc,*args)
+  midi_cc note, *(args << {port: :iac_bus_1} << {channel: 5})
+end
+
 live_loop :thing  do
   tick
-#  bass :"A-1", line(0,127).look# sustain: 5
-bass :A2, sustain: 16
+  bass_cc :"A-1", line(0,127).look# sustain: 5
+#bass :A2, sustain: 16
 sleep 16
 end
 

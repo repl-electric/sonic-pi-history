@@ -1,6 +1,6 @@
 live_loop :thing  do
   tick
-  bass_cc 100
+  bass_cc 20
   bass :A2, sustain: 4, cutoff: 10
   sleep 4
 end

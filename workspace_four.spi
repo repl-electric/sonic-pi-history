@@ -1,12 +1,5 @@
 def harp_cc(cc,vv)
   case "house"
-  when "cutoff" 4
-  when :gain   5
-  when :drive 8
-  when :charge 9
-  when :sound 12
-  when :phase 13
-  else
   end
   midi_cc n, vv, port: :iac_bus_1, channel: 5
 end

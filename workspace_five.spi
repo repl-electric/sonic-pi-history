@@ -13,3 +13,5 @@ def bass_cc(vv)
   #6=>cutoff
   midi_cc 6, vv*127, port: :iac_bus_1, channel: 5
 end
+
+bass :A2, cutoff: 0.1

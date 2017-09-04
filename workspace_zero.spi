@@ -4,7 +4,7 @@ tick_reset_all
 live_loop :metro do;tick;sleep(1);end
 live_loop :harp do
    tick
-cue :h, look % 9
+cue :h if(look % 9 == 0)
   s = nil
 #stop
   3.times{

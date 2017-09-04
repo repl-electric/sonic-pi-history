@@ -1,17 +1,3 @@
 
-def harp(note,*args)
-  if note.is_a?(Array)
-    args =  args  << {sustain: note[1]}
-    note = note[0]
-  elsif(note =~ /_/)
-    note, sus = note.to_s.split("_")
-    if sus.length > 1
-      h,t = *(sus.split("").map(&:to_f))
-      sus = h / t
-    end
-    args = args  << {sustain: sus}
-  end
-  midi note, *(args << {port: :iac_bus_1} << {channel: 3})
-end
 
 puts harp(:f2_34)

@@ -8,3 +8,4 @@ and_a_day = 1
 #puts midi_available_ports
 use_midi_logging true
 puts current_midi_channels
+__midi_system_start

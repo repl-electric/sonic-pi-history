@@ -22,7 +22,7 @@ live_loop :name do
     if spread(3,32).look
       if spread(1,64).look
         with_fx(:echo, decay: 12.0, mix: 1.0, phase: 0.5) do |e_fx|
-          smp Mountain[/microperc/, 5], pan: 1.0
+          smp Mountain[/microperc/, 5]
         end
       else
         smp Mountain[/microperc/, 6], pan: (ring -0.25, 0.25).look

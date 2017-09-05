@@ -13,7 +13,7 @@ live_loop :harp, sync: :metro do
   shader :iRadius, 8.0
   shader :iSize, rand(4)
   @points+=1000
-  sleep 6
+  sleep 3
 end
 
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"

@@ -5,7 +5,7 @@ shader :shader, "wave.glsl", "rope.vert", "points", @points
 live_loop :harp, sync: :metro do
   tick
   puts @points
-  shader :iCircle, rand(100000)
+  shader :decay, iCircle, rand(100000)
 
   shader "vertex-settings", "points", @points
   harp (ring [:A2, 3],[:Cs3, 3], [:B2, 3]).look, 10

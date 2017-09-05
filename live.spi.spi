@@ -37,4 +37,4 @@ shader :iWave, 100.0
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points
 
-harp_cc(phase: 0.0, cutoff: 0.5)
+harp_cc(phase: 0.0, cutoff: 0.6)

@@ -22,7 +22,7 @@ live_loop :graphics do
   sleep 1
   puts "1"
 #  shader :shader, "wave.glsl", "rope.vert", "points",
-#shader :shader, "wave.glsl"#, "rope.vert", "line_strip", 100000
+shader :shader, "wave.glsl"#, "rope.vert", "line_strip", 100000
  # shader :iSpeed, rand * 0.1
   shader :iRadius, (line 0,0.25,128*4).look
 

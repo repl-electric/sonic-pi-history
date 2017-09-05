@@ -16,7 +16,7 @@ shader :fx, "kali"
 
 live_loop :graphics do
   # sync :metro
-shader :fx, "kali"
+shader :fx, "bloom"
 
   sleep 1
   puts "1"

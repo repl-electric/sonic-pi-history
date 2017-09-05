@@ -1,5 +1,7 @@
 and_a_day = 1
 
+midi_init
+
 live_loop :name do
   tick
   forever = (knit and_a_day, 32, 0, 0).look

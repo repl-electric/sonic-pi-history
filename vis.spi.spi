@@ -2,7 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #@points = 0
 shader :shader, "wave.glsl", "blob.vert", "line_loop", 10000
 #shader :iIntro, 0.0
-shader :fx, "rgb"
+shader :fx, "kal"
 #shader :iVertexCount, 10000000
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points

@@ -3,7 +3,7 @@ live_loop :git do
   puts "HIT"
 
 
-  midi :Fs3
+  #midi :Fs3
 
 
 

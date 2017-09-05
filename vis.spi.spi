@@ -13,7 +13,8 @@ shader :fx, "kali"
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points
 
-shader :fx, "bloom"
+#shader :fx, "bloom"
+shader :fx, "kali"
 
 live_loop :graphics do
   # sync :metro

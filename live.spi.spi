@@ -7,6 +7,7 @@ live_loop :harp, sync: :metro do
   puts @points
   #shader :decay, :iCircle, rand(100000)
 
+  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   shader "vertex-settings", "points", @points
   harp (ring [:A2, 3],[:Cs3, 3], [:B2, 3]).look, 10
 #  harp_cc(phase: 0.5, cutoff: 1.0)

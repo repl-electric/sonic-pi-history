@@ -1,7 +1,7 @@
 #@osc_server ||=  SonicPi::OSC::UDPServer.new(4559, use_decoder_cache: true)
 #puts @osc_server
 
-comment do
+uncomment do
 live_loop :git do
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   puts "HIT"

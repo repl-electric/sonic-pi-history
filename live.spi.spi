@@ -4,6 +4,6 @@ shader :shader, "wave.glsl", "rope.vert", "lines", 100000
 live_loop :harp, sync: :metro do
   tick
   harp (ring [:A2, 3]).look, 10
-  shader :decay, :iBeat, rand*2, 0.0001
+  shader :decay, :iBeat, rand*2, 0.001
   sleep 3
 end

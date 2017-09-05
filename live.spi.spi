@@ -6,9 +6,7 @@ live_loop :harp, sync: :metro do
   tick
   forever = (knit 3, 32, 0, 0).look
   with_fx :none, mix: 0 do
-
     harp (ring [:A2, 3]).look, 10
-
   end
   sleep forever
 end

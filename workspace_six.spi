@@ -2,7 +2,7 @@
 
 
 live_loop :wait do
-  bass [:FS3, 6], cutoff: 0.2
+  bass [:FS3, 6], cutoff: 0.0
   sleep 6
 end
 

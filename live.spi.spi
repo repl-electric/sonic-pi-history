@@ -22,7 +22,10 @@ end
 shader :iIntro, 3.0
 shader :fx, "kali"
 shader :iR, 8.0
+shader :iG, 8.0
+
 #shader :iVertexCount, 10000000
+
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points
 #shader :iWave, 8.0

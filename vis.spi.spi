@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #@points = 0
-shader :shader, "wave.glsl", "vec.vert", "points", 100000
+shader :shader, "wave.glsl", "voc.vert", "points", 100000
 #shader :iIntro, 0.0
 shader :fx, "pixel"
 #shader :iVertexCount, 10000000

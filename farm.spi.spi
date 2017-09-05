@@ -4,6 +4,20 @@ live_loop :git do
   sleep 3
 end
 
+and_a_day = 1
+live_loop :name do
+  with_fx :none, mix: 0 do
+    tick
+    forever = (knit and_a_day, 32, 0, 0).look
+
+    smp Frag[/kick/,[9,9]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+
+    sleep forever
+  end
+end
+
+
+
 live_loop :high, sync: :git do
   tick
   sharp (ring :A3, :Cs4, :E4, _, _).look, sustain: 12

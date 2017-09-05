@@ -18,7 +18,7 @@ live_loop :harp, sync: :metro do
   sleep 3
 end
 
-shader "vertex-settings", "line_loop", [@points, 10000].min
+shader "vertex-settings", "lines", [@points, 10000].min
 
 
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"

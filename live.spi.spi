@@ -1,1 +1,3 @@
 live_loop :metro do; tick; sleep 1;end
+
+shader :shader, "wave.glsl"#, "rope.vert", "points", 100000

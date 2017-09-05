@@ -1,14 +1,23 @@
 
-live_loop :testing do
-tick
-x=nil
-play x= ring(       chord(:FS2, :m),
-      chord(:B2, :m),
-      chord(:E2, :m),
-      chord(:D2, :m),
-      chord(:A2, :M),
-      chord(:E2, :M),
-).look+12, decay: 2
-puts note_inspect(x)
-sleep 2
+
+
+live_loop :wait do
+  smp Frag[/kick/,9]
+  bass [:FS3, 6]#, cutoff: 0.0
+  sleep 6
 end
+
+
+#bass ['C-1', 0.1]
+uncomment do
+64.times{
+bass_cc (ramp 0.0,0.5,64).tick
+sleep 0.5
+}
+end
+#bass ['D-1', 0.1]
+#bass ['D-1', 0.1], cutoff: 0.8
+
+
+
+#bass_cc 1.0

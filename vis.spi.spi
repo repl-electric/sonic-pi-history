@@ -7,7 +7,7 @@ shader :fx, "kali"
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points
 shader :iWave, 8.0
-shader :iCircle, 1000
+shader :iCircle, 100
 #shader :iSpeed, 0.0
 # @points = 100000
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000

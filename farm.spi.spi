@@ -10,10 +10,10 @@ live_loop :name do
 
     tick
     forever = (knit and_a_day, 32, 0, 0).look
-    if (ring *%W{_ _ _ _    _ _ _ _}).look == 1
+    if (ring *%W{1 _ _ _    _ _ _ _}).look == 1
 
       smp Frag[/kick/,[9,9]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
-      end
+    end
 
     sleep forever
   end

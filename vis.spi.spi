@@ -6,9 +6,9 @@ shader :fx, "kal"
 #shader :iVertexCount, 10000000
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points
-#shader :iWave, 8.0
+shader :iWave, 8.0
 #shader :iCircle, 10000.0
-#shader :iSpeed, 0.0
+shader :iSpeed, 0.0
 # @points = 100000
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points

@@ -12,7 +12,7 @@ shader :iSpeed, 0.1
 # @points = 100000
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points
-shader :iPoint, 9.0
+shader :iPointSize, 9.0
 shader :iBeat, 10.0
 #shader :fx, "bloom"
 #shader :fx, "kali"

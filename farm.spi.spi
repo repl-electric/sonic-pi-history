@@ -1,7 +1,7 @@
 live_loop :git do
   tick
   midi (ring :A2, :Cs3 ).look, channel: 3, port: :iac_bus_1, sustain: 6
-  sleep 3
+  sleep 6
 end
 
 

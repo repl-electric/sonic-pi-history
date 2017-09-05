@@ -10,7 +10,8 @@ live_loop :name do
 
     tick
     forever = (knit and_a_day, 32, 0, 0).look
-    if (ring *%W{1 _ 1 _    _ _ _ _    1 _ _ _   _ _ _ _
+    if (ring *%w{1 _ 1 _    _ _ _ _    1 _ _ _   _ _ _ _
+
 
 }).look == 1
 

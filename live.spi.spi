@@ -10,7 +10,7 @@ live_loop :harp, sync: :metro do
   harp_cc(phase: 0.1, cutoff: 0.25)
   shader :decay, :iForm, 10.0
   shader :iSpeed, rand * 2.1
-  shader :iRadius, 2.0
+  shader :iRadius, 8.0
   shader :iSize, rand(4)
   @points+=100
   sleep 6

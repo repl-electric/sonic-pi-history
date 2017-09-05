@@ -9,7 +9,7 @@ end
 
 #bass ['C-1', 0.1]
 64.times{
-bass ['C-1', 0.1], cutoff: (ramp 0.0,1.0,64).tick
+bass_cc cutoff: (ramp 0.0,1.0,64).tick
 sleep 0.5
 }
 #bass ['D-1', 0.1]

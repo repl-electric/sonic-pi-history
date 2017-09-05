@@ -1,4 +1,4 @@
-@osc_server=  SonicPi::OSC::UDPServer.new(server_port, use_decoder_cache: true)
+@osc_server ||=  SonicPi::OSC::UDPServer.new(4559, use_decoder_cache: true)
 
 
 comment do

@@ -1,6 +1,6 @@
 and_a_day = 1
 
-midi_init
+midi_reset
 
 live_loop :name do
   tick

@@ -20,7 +20,7 @@ live_loop :name do
       smp Frag[/kick/,[9,8,9]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
     end
     if spread(3,32).look
-      smp Mountain[/microperc/, 6], pan: (ring -0.25, 0.25).look
+      smp Mountain[/microperc/, 5], pan: (ring -0.25, 0.25).look
     end
 
     sleep 1/8.0

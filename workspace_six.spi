@@ -10,6 +10,7 @@ end
 32.times{
 tick
 bass ['C-1', 0.1], cutoff: (line 0.0,1.0,32).look
+sleep 0.1
 }
 #bass ['D-1', 0.1]
 #bass ['D-1', 0.1], cutoff: 0.8

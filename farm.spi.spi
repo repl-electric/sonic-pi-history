@@ -1,5 +1,5 @@
 #@osc_server ||=  SonicPi::OSC::UDPServer.new(4559, use_decoder_cache: true)
-puts @osc_server
+#puts @osc_server
 
 comment do
 live_loop :git do

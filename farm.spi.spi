@@ -6,6 +6,6 @@ and_a_day = 1
 #midi :Fs4, port: :iac_bus_1
 
 #puts midi_available_ports
-use_midi_logging true
-puts current_midi_channels
-__midi_system_start
+#use_midi_logging true
+#puts current_midi_channels
+#__midi_system_start

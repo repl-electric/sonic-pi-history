@@ -8,6 +8,13 @@ live_loop :git do
   sleep 1
 end
 
+live_loop :bass do
+
+  bass :A2, sustain: 2
+  sleep 6
+end
+
+
 live_loop :name do
   with_fx :none, mix: 0 do
     and_a_day = 1

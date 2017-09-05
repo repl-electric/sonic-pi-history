@@ -1,7 +1,45 @@
-live_loop :name do
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
+live_loop :metro do; tick; sleep 1;end
+#shader :shader, "wave.glsl", "rope.vert", "points", @points
+#@points = 0
+live_loop :harp, sync: :metro do
   tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
+  puts @points
+  #shader :decay, :iCircle, rand(100000)
 
+  shader "vertex-settings", "points", @points
+  harp (ring [:A2, 3],[:Cs3, 3], [:E3, 3]).look, 10
+  harp_cc(phase: 0.5, cutoff: 1.0)
+  #shader :decay, :iForm, 10.0
+  #shader :iSpeed, rand * 2.1
+ # shader :iRadius, 8.0
+#  shader :iSize, rand(4)
+  @points+=1000
+  sleep 3
 end
+
+#shader "vertex-settings", "lines", [@points, 10000].min
+
+
+#load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
+#@points = 0
+#shader :shader, "wave.glsl", "rope.vert", "points", @points
+shader :iIntro, 0.0
+#shader :fx, "bloom"
+#shader :iR, 0.0
+#shader :iPoint, 100.0
+#shader :iG, 8.0
+#shader :iB, 0.0
+#shader :iWave, 10.0
+#shader :iVertexCount, 10000000
+
+#shader :iCircle, 100
+#shader "vertex-settings", "points", @points
+#shader :iWave, 8.0
+#shader :iCircle, 1000
+#shader :iSpeed, 0.0
+# @points = 100000
+#shader :shader, "wave.glsl", "rope.vert", "points", 1000
+#shader :shader, "wave.glsl", "rope.vert", @mode, @points
+
+#harp_cc(phase: 0.0, cutoff: 1.0)

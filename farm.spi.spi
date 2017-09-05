@@ -5,6 +5,9 @@ live_loop :name do
     tick
     forever = (knit and_a_day, 32, 0, 0).look
 
+
+    bass :Fs2
+
     smp Frag[/kick/,0]
 
     sleep forever

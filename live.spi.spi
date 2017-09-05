@@ -20,11 +20,11 @@ end
 #@points = 0
 #shader :shader, "wave.glsl", "rope.vert", "points", @points
 shader :iIntro, 1.0
-shader :fx, "bloom"
+#shader :fx, "bloom"
 shader :iR, 8.0
 shader :iG, 8.0
 shader :iB, 8.0
-
+shader :iWave, 1.0
 #shader :iVertexCount, 10000000
 
 #shader :iCircle, 1000000

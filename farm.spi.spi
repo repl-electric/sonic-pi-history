@@ -1,0 +1,10 @@
+live_loop :name do
+  with_fx :none, mix: 0 do
+    tick
+    forever = (knit and_a_day, 32, 0, 0).look
+
+    smp Frag[/kick/,0]
+
+    sleep forever
+  end
+end

@@ -8,7 +8,7 @@ live_loop :harp, sync: :metro do
   #shader :decay, :iCircle, rand(100000)
 
   shader "vertex-settings", "points", @points
-#  harp (ring [:A2, 3],[:Cs3, 3], [:E3, 3]).look, 10
+  harp (ring [:A2, 3],[:Cs3, 3], [:E3, 3]).look, 10
 #  harp_cc(phase: 0.5, cutoff: 1.0)
   #shader :decay, :iForm, 10.0
   #shader :iSpeed, rand * 2.1

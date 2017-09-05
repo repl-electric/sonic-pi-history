@@ -5,7 +5,7 @@ and_a_day = 1
 #__midi_system_reset
 #__midi_system_start
 
-midi :Fs4, port: :iac_bus_1
+midi :Fs4, port: :iac_bus_1, channel: 3
 
 live_loop :name do
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look

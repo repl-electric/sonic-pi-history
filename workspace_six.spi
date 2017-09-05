@@ -3,7 +3,6 @@
 
 live_loop :wait do
   bass ['C-1', 0.1], cutoff: 1.0
-  #bass [:FS3, 7], cutoff: 1.0
   bass ['Cs-1', 0.1], cutoff: 1.0
   bass ['D-1', 0.1]
   bass [:FS3, 7], cutoff: 1.0

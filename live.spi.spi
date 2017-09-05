@@ -23,6 +23,7 @@ shader :iIntro, 3.0
 shader :fx, "kali"
 shader :iR, 8.0
 shader :iG, 8.0
+shader :iB, 8.0
 
 #shader :iVertexCount, 10000000
 

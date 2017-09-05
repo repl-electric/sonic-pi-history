@@ -1,4 +1,15 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 live_loop :metro do; tick; sleep 1;end
-
 shader :shader, "wave.glsl", "rope.vert", "points", 100000
+
+live_loop :harp, sync: :metro do
+  tick
+  with_fx :none, mix: 0 do
+    forever = (knit 3, 32, 0, 0).look
+
+    harp (ring [:A2, 3]).look, 10
+
+
+  end
+  sleep forever
+end

@@ -25,7 +25,7 @@ live_loop :name do
           smp Mountain[/microperc/, 5], pan: (ring -0.25, 0.25).look
         end
       else
-        smp Mountain[/microperc/, 5], pan: (ring -0.25, 0.25).look
+        smp Mountain[/microperc/, 4], pan: (ring -0.25, 0.25).look
       end
     end
 

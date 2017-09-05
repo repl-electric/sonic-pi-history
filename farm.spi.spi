@@ -1,4 +1,4 @@
-puts osc_server
+puts @osc_server
 
 live_loop :git do
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look

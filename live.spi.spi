@@ -21,7 +21,7 @@ end
 #shader :shader, "wave.glsl", "rope.vert", "points", @points
 shader :iIntro, 3.0
 shader :fx, "kali"
-shader :iR, 1.0
+shader :iR, 8.0
 #shader :iVertexCount, 10000000
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points

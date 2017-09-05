@@ -14,8 +14,8 @@ live_loop :wait do
   sleep 8
 end
 
-bass ['Cs-1', 0.1]
-bass ['Cs-1', 0.1], cutoff: 0.9
+bass ['C-1', 0.1]
+bass ['C-1', 0.1], cutoff: 0.9
 #bass ['D-1', 0.1]
 #bass ['D-1', 0.1], cutoff: 0.8
 

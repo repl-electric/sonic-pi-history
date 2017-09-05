@@ -6,7 +6,13 @@ and_a_day = 1
 #__midi_system_start
 
 
-midi :Fs4, port: :iac_bus_1
+
+live_loop :name do
+  midi :Fs4, port: :iac_bus_1
+  sleep 4
+end
+
+
 
 #puts midi_available_ports
 #use_midi_logging true

@@ -6,7 +6,7 @@ end
 
 live_loop :high, sync: :git do
   tick
-  sharp (ring :A3, :Cs4, :E4, :D4).look, sustain: 6
+  sharp (ring :A3, :Cs4, :E4).look, sustain: 6
   sleep 12
 end
 

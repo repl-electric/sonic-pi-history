@@ -5,7 +5,7 @@ live_loop :metro do; tick; sleep 1;end
 live_loop :harp, sync: :metro do
   tick
   puts @points
-  shader :decay, :iCircle, rand(100000)
+  #shader :decay, :iCircle, rand(100000)
 
   shader "vertex-settings", "points", @points
   harp (ring [:A2, 3],[:Cs3, 3], [:E3, 3]).look, 10

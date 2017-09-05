@@ -6,7 +6,7 @@ __midi_system_reset
 #__midi_system_start
 
 
-live_loop :name do
+live_loop :git do
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   bass :Fs3
 

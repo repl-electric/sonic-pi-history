@@ -57,7 +57,7 @@ EOS
 # shader "echo", (ring "A","L","G", "O", "F", "I", "V", "E").look, (1200/2) - 200, (800/2)-250
 #  shader "echo", "T"
 
-#  shader "echo", @r.select{|a| a.ascii_only? }.join().strip.scrub.split(" ").shuffle.take(4).join("\n"), 0, rand*1200, 1
+  shader "echo", @r.select{|a| a.ascii_only? }.join().strip.scrub.split(" ").shuffle.take(4).join("\n"), 0, rand*1200, 1
 #  sleep 1
   @points += 1000
 end

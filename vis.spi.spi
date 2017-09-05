@@ -35,7 +35,7 @@ live_loop :graphics do
   #line_strip
 
   #tri_strip 0- SLOCVE
-  #shader "vertex-settings", "line_loop", [@points, MAX_POINTS].min
+  shader "vertex-settings", "line_loop", [@points, MAX_POINTS].min
 #    shader :shader, "wave.glsl", "rope.vert", @mode, @points
   # shader "echo", ["#Algo".shuffle + "\n" + "five".shuffle + "\n", "#wearefive"].choose, 10
   x= <<-EOS

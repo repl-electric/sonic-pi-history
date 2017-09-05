@@ -10,7 +10,7 @@ end
 
 live_loop :bass do
 
-  bass :A2, sustain: 2
+  bass :A2, sustain: 1
   sleep 6
 end
 

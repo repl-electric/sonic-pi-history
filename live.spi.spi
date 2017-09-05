@@ -7,7 +7,7 @@ live_loop :harp, sync: :metro do
   puts @points
   shader "vertex-settings", "points", @points
   harp (ring [:A2, 3],[:Cs3, 3], [:B2, 3]).look, 10
-  harp_cc(phase: 0.0, cutoff: 0.3)
+  harp_cc(phase: 0.0, cutoff: 0.5)
   shader :decay, :iForm, 10.0
   shader :iSpeed, rand * 2.1
   shader :iRadius, 8.0

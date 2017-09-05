@@ -8,7 +8,7 @@ shader :fx, "pixel"
 #shader "vertex-settings", "points", @points
 shader :iWave, 8.0
 #shader :iCircle, 10000.0
-shader :iSpeed, 0.9
+shader :iSpeed, 0.01
 # @points = 100000
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points

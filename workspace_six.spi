@@ -8,4 +8,4 @@ live_loop :wait do
 end
 
 
-bass_cc :cutoff, 0.3
+bass_cc 0.3

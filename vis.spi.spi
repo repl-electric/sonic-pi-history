@@ -54,7 +54,7 @@ live_loop :graphics do
 EOS
  # shader "echo", x, 0,1000,0
  # shader "echo", x.split("\n").shuffle.join("\n").split("\n").shuffle.join("\n"), 350,680.0,0
-# shader "echo", (ring "A","L","G", "O", "F", "I", "V", "E").look, (1200/2) - 200, (800/2)-250
+ shader "echo", (ring "A","L","G", "O", "F", "I", "V", "E").look, (1200/2) - 200, (800/2)-250
 #  shader "echo", "T"
 
 #  shader "echo", @r.select{|a| a.ascii_only? }.join().strip.scrub.split(" ").shuffle.take(4).join("\n"), 0, rand*1200, 1

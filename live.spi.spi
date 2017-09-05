@@ -26,9 +26,9 @@ shader :iPoint, 100.0
 shader :iG, 8.0
 shader :iB, 8.0
 shader :iWave, 100.0
-shader :iVertexCount, 10000000
+#shader :iVertexCount, 10000000
 
-#shader :iCircle, 1000000
+shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points
 #shader :iWave, 8.0
 #shader :iCircle, 1000

@@ -8,6 +8,6 @@ live_loop :name do
 
   #bass :Fs2
 
-  smp Frag[/kick/,8], amp: 2
+  smp Frag[/kick/,7], amp: 2
   sleep forever
 end

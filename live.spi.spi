@@ -22,6 +22,7 @@ end
 shader :iIntro, 1.0
 #shader :fx, "bloom"
 shader :iR, 8.0
+shader :iPoint, 10
 shader :iG, 8.0
 shader :iB, 8.0
 shader :iWave, 100.0

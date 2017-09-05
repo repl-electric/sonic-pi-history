@@ -1,13 +1,13 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #@points = 0
-shader :shader, "wave.glsl", "rope.vert", "points", 100000
-shader :iIntro, 0.0
+#shader :shader, "wave.glsl", "rope.vert", "points", 100000
+#shader :iIntro, 0.0
 shader :fx, "kali"
 #shader :iVertexCount, 10000000
 #shader :iCircle, 1000000
 #shader "vertex-settings", "points", @points
-shader :iWave, 8.0
-shader :iCircle, 10000.0
+#shader :iWave, 8.0
+#shader :iCircle, 10000.0
 #shader :iSpeed, 0.0
 # @points = 100000
 #shader :shader, "wave.glsl", "rope.vert", "points", 1000
@@ -16,6 +16,8 @@ shader :iCircle, 10000.0
 
 live_loop :graphics do
   # sync :metro
+shader :fx, "kali"
+
   sleep 1
   puts "1"
 #  shader :shader, "wave.glsl", "rope.vert", "points",

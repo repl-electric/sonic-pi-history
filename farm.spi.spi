@@ -1,5 +1,5 @@
 live_loop :git do
-  midi :A2, channel: 3, port: iac_bus_1:, sustain: 3
+  midi :A2, channel: 3, port: :iac_bus_1, sustain: 3
   sleep 3
 end
 

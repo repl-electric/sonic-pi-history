@@ -1,3 +1,4 @@
-
-
-puts harp(:f2_10)
+live_loop :wait do
+  bass [:FS3, 4]
+  sleep 8
+end

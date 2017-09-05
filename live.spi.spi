@@ -12,7 +12,7 @@ end
 
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 @points = 0
-shader :shader, "wave.glsl"#, "rope.vert", "points", @points
+shader :shader, "wave.glsl", "rope.vert", "points", @points
 shader :iIntro, 2.0
 shader :fx, "kali"
 #shader :iVertexCount, 10000000

@@ -3,4 +3,6 @@ and_a_day = 1
 #midi_reset
 
 
-midi :Fs4, port: :iac_bus_1
+#midi :Fs4, port: :iac_bus_1
+
+midi_available_ports

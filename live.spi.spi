@@ -6,3 +6,4 @@ live_loop :harp, sync: :metro do
   harp (ring [:A2, 3]).look
   sleep 3
 end
+set_volume! 1.0

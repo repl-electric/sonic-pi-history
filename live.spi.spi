@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 live_loop :metro do; tick; sleep 1;end
-shader :shader, "wave.glsl", "rope.vert", "points", @points
+#shader :shader, "wave.glsl", "rope.vert", "points", @points
 #@points = 0
 live_loop :harp, sync: :metro do
   tick
@@ -30,7 +30,7 @@ shader :iB, 8.0
 shader :iWave, 100.0
 #shader :iVertexCount, 10000000
 
-shader :iCircle, 100
+#shader :iCircle, 100
 #shader "vertex-settings", "points", @points
 #shader :iWave, 8.0
 #shader :iCircle, 1000

@@ -15,7 +15,7 @@ shader :shader, "wave.glsl", "rope.vert", "points", 100000
 
 #shader :fx, "bloom"
 shader :fx, "kali"
-
+shader :iWave, 9.0
 live_loop :graphics do
   # sync :metro
 

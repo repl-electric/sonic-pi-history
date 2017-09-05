@@ -5,7 +5,7 @@ uncomment do
 live_loop :git do
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   puts "HIT"
-  bassi :Fs1
+  bass :Fs1
   sleep 1
   end
 end

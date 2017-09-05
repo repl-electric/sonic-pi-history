@@ -4,5 +4,6 @@ MAX_POINTS = 10
 
 live_loop :graphics do
   shader "vertex-settings", "line_loop", [@points, MAX_POINTS].min
-#sleep 1
+  puts "ALIVE"
+  #sleep 1
 end

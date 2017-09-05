@@ -10,7 +10,7 @@ shader :iWave, 8.0
 #shader :iCircle, 10000.0
 shader :iSpeed, 0.1
 # @points = 100000
-shader :shader, "wave.glsl", "rope.vert", "points", 1000
+#shader :shader, "wave.glsl", "rope.vert", "points", 1000
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points
 
 #shader :fx, "bloom"

@@ -68,7 +68,7 @@ end
 #shader :iCircle, 64
 #shader :iIntro, 0.0
 #shader :iWave, 20.0
-shader [:iR, :iB, :iG], 10.0
+#shader [:iR, :iB, :iG], 10.0
 #shader :iVertexCount, 100000
 #shader :decay, :iVertexCount, 1000000, 1000
 #shader :iVertexCount, 100

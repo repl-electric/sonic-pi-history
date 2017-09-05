@@ -20,7 +20,7 @@ end
 #@points = 0
 #shader :shader, "wave.glsl", "rope.vert", "points", @points
 shader :iIntro, 3.0
-shader :fx, "kali"
+shader :fx, "bloom"
 shader :iR, 8.0
 shader :iG, 8.0
 shader :iB, 8.0

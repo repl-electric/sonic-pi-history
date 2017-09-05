@@ -16,7 +16,7 @@ shader :iWave, 8.0
 
 
 live_loop :graphics do
- sync :algo
+ sync :metro
 #  shader :shader, "wave.glsl", "rope.vert", "points",
 #shader :shader, "wave.glsl"#, "rope.vert", "line_strip", 100000
   shader :iSpeed, rand * 0.01

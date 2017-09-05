@@ -14,7 +14,7 @@ shader :iSpeed, 0.01
 #shader :shader, "wave.glsl", "rope.vert", @mode, @points
 shader :iPointSize, 20.0
 shader :iBeat, 10.0
-shader :iStars, 0.8
+shader :iStars, 0.4
 #shader :fx, "bloom"
 #shader :fx, "kali"
 shader :iWave, 200.0

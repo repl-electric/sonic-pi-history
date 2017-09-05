@@ -1,4 +1,6 @@
 live_loop :git do
+  smp Moutain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+
   midi :A2, channel: 3, port: :iac_bus_1, sustain: 3
   sleep 3
 end

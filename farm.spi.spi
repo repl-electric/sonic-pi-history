@@ -1,15 +1,3 @@
 and_a_day = 1
 
 midi_reset
-
-live_loop :name do
-  tick
-  forever = (knit and_a_day, 32, 0, 0).look
-
-#  midi :FS3
-
-  #bass :Fs2
-
-  smp Frag[/kick/,13], amp: 2
-  sleep forever
-end

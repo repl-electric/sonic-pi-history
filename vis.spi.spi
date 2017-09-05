@@ -19,6 +19,8 @@ shader :iStars, 0.3
 #shader :fx, "kali"
 shader :iWave, 200.0
 live_loop :graphics do
+shader :shader, "dots.glsl"#, "sphere.vert", "lines", 8000
+
   # sync :metro
 
   sleep 1

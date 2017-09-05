@@ -5,5 +5,5 @@ live_loop :harp, sync: :metro do
   tick
   harp (ring [:A2, 3]).look, 10
   shader :decay, :iBeat, rand*2, 0.01
-  sleep 3
+  sleep 6
 end

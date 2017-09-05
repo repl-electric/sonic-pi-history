@@ -4,6 +4,12 @@ live_loop :git do
   sleep 6
 end
 
+live_loop :high do
+  sharp (ring :A3, :Cs4, :E4, :D4).look, sustain: 6
+  sleep 12
+end
+
+
 
 
 #puts midi_available_ports

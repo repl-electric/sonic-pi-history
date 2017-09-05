@@ -12,7 +12,7 @@ live_loop :harp, sync: :metro do
   shader :iSpeed, rand * 2.1
   shader :iRadius, 8.0
   shader :iSize, rand(4)
-  @points+=100
+  @points+=1000
   sleep 6
 end
 

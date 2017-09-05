@@ -1,7 +1,13 @@
+live_loop :git do
+  tick
+  midi (ring :A2, :Cs3, :E3).look, channel: 3, port: :iac_bus_1, sustain: 3
+  sleep 3
+end
+
 live_loop :name do
   with_fx :none, mix: 0 do
     and_a_day = 1
-    
+
     tick
     forever = (knit and_a_day, 32, 0, 0).look
     if (ring *%W{_ _ _ _    _ _ _ _}).look
@@ -12,3 +18,19 @@ live_loop :name do
     sleep forever
   end
 end
+
+
+
+live_loop :high, sync: :git do
+  tick
+  sharp (ring :A3, :Cs4, :E4, _, _).look, sustain: 12
+  sleep 12
+end
+
+
+
+
+#puts midi_available_ports
+#use_midi_logging true
+#puts current_midi_channels
+#__midi_system_start

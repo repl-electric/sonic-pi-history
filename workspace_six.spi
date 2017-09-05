@@ -1,4 +1,4 @@
 live_loop :wait do
-  bass [:FS3, 4]
+  bass [:FS3, 7]
   sleep 8
 end

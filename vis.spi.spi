@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #@points = 0
-shader :shader, "dots.glsl", "spikes.vert", "lines", 1000
+shader :shader, "dots.glsl", "spikes.vert", "lines", 8000
 #shader :iIntro, 0.0
 shader :fx, "bloom"
 #shader :iVertexCount, 10000000

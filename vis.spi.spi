@@ -18,6 +18,7 @@ shader :iStars, 0.3
 #shader :fx, "bloom"
 #shader :fx, "kali"
 shader :iWave, 200.0
+shader :iMotion, 0.1
 live_loop :graphics do
 #shader :shader, "dots.glsl"#, "sphere.vert", "lines", 8000
 #  smp Frag[/kick/,[9,9]].tick(:sample), amp: 2

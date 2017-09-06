@@ -23,7 +23,7 @@ live_loop :graphics do
 #shader :shader, "dots.glsl"#, "sphere.vert", "lines", 8000
 #  smp Frag[/kick/,[9,9]].tick(:sample), amp: 2
   # sync :metro
-  bass :FS1, 1
+  bass :FS1, 2
   sleep 2
   puts "1"
 #  shader :shader, "wave.glsl", "rope.vert", "points",

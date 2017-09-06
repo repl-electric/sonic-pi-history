@@ -20,7 +20,7 @@ shader :iStars, 0.3
 shader :iWave, 200.0
 live_loop :graphics do
 #shader :shader, "dots.glsl"#, "sphere.vert", "lines", 8000
-
+  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   # sync :metro
 
   sleep 1

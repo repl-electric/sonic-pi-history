@@ -30,7 +30,7 @@ live_loop :graphics do
 #shader :shader, "wave.glsl"#, "rope.vert", "line_strip", 100000
   shader :iSpeed, rand * 0.1
   smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
-  shader :decay, :iBeat, 1, 0.1
+  shader :decay, :iBeat, 1, 0.01
   shader :fx, ["bloom","toon"].choose
 
   shader :iRadius, (line 0,0.25,128*4).look

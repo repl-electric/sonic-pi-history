@@ -29,7 +29,9 @@ live_loop :graphics do
 #  shader :shader, "wave.glsl", "rope.vert", "points",
 #shader :shader, "wave.glsl"#, "rope.vert", "line_strip", 100000
   shader :iSpeed, rand * 0.1
-  shader :decay, :iBeat, 1000
+  shader :decay, :iBeat, 1
+  shader :fx, "bloom"
+
   shader :iRadius, (line 0,0.25,128*4).look
 
   # @r ||= `t search all "#algofive"`.split("\n")

@@ -48,7 +48,7 @@ live_loop :kick, sync: :metro do
 
 
   s1 = Mountain[/microperc/,5]
-  if (s=(ring *%W{s1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
+  if (s=(ring *%W{_ _ _ _   s1 _ _ _   s1 _ _ _   _ _ _ _}).look) != _
     smp eval(s)
   end
 

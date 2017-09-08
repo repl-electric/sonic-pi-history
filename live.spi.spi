@@ -34,6 +34,9 @@ end
 
 #sharp_cc(cutoff: 0.8)
 #harp_cc(phase: 0.5)
+def zero(*args)
+  midi *(args << {port: :iac_bus_1} << {channel: 9})
+end
 
 
 def smp(*args)

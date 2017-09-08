@@ -11,7 +11,6 @@ live_loop :melo, sync: :metro do
     [_,3/4.0],1,    [:a2,1.0],1, [:b2,2.5],1,
     )
 
- puts  score.count
 
 #  puts score.count
 
@@ -22,7 +21,10 @@ live_loop :melo, sync: :metro do
                    _   A2 B2
 })
 
-  puts score
+
+
+
+  #puts score
   puts (score.count)
   puts look % 22
   if (look % (score.count)) == 0

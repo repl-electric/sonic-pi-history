@@ -22,7 +22,7 @@ live_loop :melo, sync: :metro do
     #zero s[0]
 
     if(spread 1,6).look
-      puts s
+      puts "S:#{s}"
       sharp s
     end
 

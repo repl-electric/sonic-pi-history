@@ -24,19 +24,17 @@ live_loop :melo, sync: :metro do
             Fs3 A3 D3
             A3 D3 E3
             E3 Fs3 D3
-            _  A2 B2}
+            _ A2 B2}
 
+  puts pat
   score = space(pat)
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
     dshader :iMode, 0
     # dshader [:iR,:iG,:iB].choose, rand*9
-    puts score.tick
-
-    puts note(score.look)
-
     harp s=score.look, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     #zero s[0]
+    puts s
 
     if(spread 1,6).look
       puts "S:#{s}"

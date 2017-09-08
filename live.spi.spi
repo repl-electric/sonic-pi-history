@@ -73,11 +73,13 @@ live_loop :kick, sync: :metro do
      # smp v1, start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5
     end
 
+
+
     hat = (ring *%w{_ _ h2 _})
     hat2 = (ring *%w{_ _ h1 _
-                       _ _ h1 {path:h2,amp:0.5}
-                       _ _ h1 _
-                       _ _ h1 _})
+                     _ _ h1 {path:h2,amp:0.5}
+                     _ _ h1 _
+                     _ _ h1 _})
 
     smp eval(hat.look), amp: 1.0#, rpitch: 0
     smp eval(hat2.look),amp: 1

@@ -21,9 +21,9 @@ live_loop :melo, sync: :metro do
 })
 
   puts score
-  puts (score.count-1)
+  puts (score.count)
   puts look % 22
-  if (look % (score.count-1)) == 0
+  if (look % (score.count)) == 0
     puts "----------------------"
     cue(:m)
   end

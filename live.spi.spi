@@ -88,7 +88,7 @@ live_loop :kick, sync: :metro do
   end
 
   h1,h2,h3 = Frag[/hat/,8], Frag[/hat/,9],  Frag[/hat/,7]
-  if (s=(ring *%W{_ _ h1 _
+  if (s=(ring *%W{_ _ h2 _
                   _ _ h1 {path:h2,amp:0.25}
                   _ _ h1 _
                   _ _ h1 _

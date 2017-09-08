@@ -30,8 +30,6 @@ live_loop :kick, sync: :metro do
     smp eval(s)
   end
 
-
-
   sleep 1/8.0
 end
 

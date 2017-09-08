@@ -1,3 +1,6 @@
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
+
+
 live_loop :metro do
   tick
   sleep 1

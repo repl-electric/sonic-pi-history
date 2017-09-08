@@ -72,6 +72,17 @@ live_loop :kick, sync: :metro do
   sleep 1/8.0
 end
 
+live_loop :thing, sync: :metro do
+  tick
+  sync :m
+
+  smp Frag[/loop/,/120/,0]
+
+  sleep 12
+end
+
+
+
 live_loop :bass, sync: :metro do
   stop
   #sync :m

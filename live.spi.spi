@@ -32,13 +32,13 @@ live_loop :melo, sync: :metro do
   3.times{
     dshader :iMode, 0
     # dshader [:iR,:iG,:iB].choose, rand*9
-    harp s=score.tick, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
+    harp sz=score.tick, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     #zero s[0]
-    puts s
+    puts sz
 
     if(spread 1,6).look
-      puts "S:#{s}"
-      sharp s
+      puts "S:#{sz}"
+      sharp sz
     end
 
 #    sleep s[-1] || 3

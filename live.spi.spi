@@ -25,6 +25,9 @@ live_loop :melo, sync: :metro do
       at {
 
           sharp s, 30
+        sleep 0.5
+        sharp score.look(step:2), 30
+        sleep 0.5
 
         }
     end

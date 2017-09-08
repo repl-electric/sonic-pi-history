@@ -27,7 +27,8 @@ live_loop :melo, sync: :metro do
 end
 
 
-harp :A1, sustain: 12
+
+#harp :A1, sustain: 12
 
 
 

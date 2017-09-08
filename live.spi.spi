@@ -74,7 +74,7 @@ end
 
 live_loop :thing, sync: :metro do
   tick
-  sync :m
+  #sync :m
 
   smp Fraz[/loop/,/120/,0]
 

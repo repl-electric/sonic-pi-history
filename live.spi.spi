@@ -14,6 +14,7 @@ harp_cc(cutoff: 0.7)
 harp_cc(phase: 0.0)
 
 live_loop :bass, sync: :metro do
+  sync :m
   tick
   bass (ring [:A2,3], [:A2,3], [:E2,3]).look,80, cutoff: 0.5
   sleep 6

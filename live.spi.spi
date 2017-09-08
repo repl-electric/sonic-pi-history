@@ -12,7 +12,7 @@ live_loop :melo, sync: :metro do
     )
   #score = space()
 
-  puts  (look % (score.count-1)) == 0
+  puts  (look % (score.count-1))
 
   cue(:m) if (look % (score.count-1)) == 0
   3.times{

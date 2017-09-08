@@ -15,7 +15,7 @@ harp_cc(phase: 0.0)
 live_loop :back, sync: :metro do
   tick
 
-  sharp (ring [:A3, 12], [:CS3, 12]).look,10, sustain: 6
+  sharp (ring [:A3, 12], [:CS4, 12]).look,10, sustain: 6
 
   sleep 12
 end

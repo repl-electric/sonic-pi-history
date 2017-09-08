@@ -27,6 +27,16 @@ live_loop :melo, sync: :metro do
 end
 
 
+
+harp 10
+
+
+
+
+
+
+
+
 live_loop :kick, sync: :metro do
   tick
   #sync :m

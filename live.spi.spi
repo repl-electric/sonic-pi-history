@@ -52,7 +52,7 @@ live_loop :melo, sync: :metro do
       at {
         sharp s, 30
         sleep 0.5
-        sharp score.look(offset:2), 35
+#        sharp score.look(offset:2), 35
         sleep 0.5
         }
     end
@@ -92,7 +92,6 @@ live_loop :kick, sync: :metro do
   if (s=(ring *%W{_ _ h2 _}).look) != _
     smp eval(s), amp: 0.3
   end
-
 
   if (s=(ring *%W{_ _ h1 _
                   _ _ h1 {path:h2,amp:0.25}

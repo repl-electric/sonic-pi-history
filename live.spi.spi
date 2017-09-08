@@ -33,6 +33,14 @@ live_loop :melo, sync: :metro do
   sleep 3/4.0
 end
 
+def zero(n,*args)
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  midi n, *(args << {port: :iac_bus_1} << {channel: 9})
+end
+
 #sharp_cc(cutoff: 0.8)
 #harp_cc(phase: 0.5)
 def zero(*args)

@@ -28,6 +28,12 @@ live_loop :melo, sync: :metro do
 
   puts pat
   score = space(pat)
+
+
+
+  puts score
+  stop
+
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
     dshader :iMode, 0

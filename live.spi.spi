@@ -64,7 +64,7 @@ live_loop :kick, sync: :metro do
       fslice= ♥️.slice(:FS3).look
 
       if fslice[:length] <= 0.1
-        smp fslice, finish_offset: 0.00001
+        smp fslice, finish_offset: 0.0001
       end
     end
 

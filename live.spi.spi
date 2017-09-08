@@ -64,6 +64,8 @@ live_loop :kick, sync: :metro do
     #v1 = Tech[/vocal/,12]
     v1 = Words[/beauty/,0]
 
+    h1,h2 = (knit @slices["Fs3/4"][8],6*2, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
+
     if spread(1,32).look
       smp {path:@slices["B3/4"],amp:0.5}
      # smp v1, start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5

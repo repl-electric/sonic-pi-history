@@ -24,7 +24,7 @@ harp_cc(phase: 0.5)
 
 live_loop :kick, sync: :metro do
   tick
-  k1= Frag[/kick/,[9,9]].tick(:sample)
+  k1= Frag[/kick/,[9,9]]
   if (s=(ring *%W{k1 _ k1 _   _ _ _ _   k1 _ _ _   _ _ _ _
                   k1 _ _ _ _   _ _ _ _}).look) != _
     smp eval(s)

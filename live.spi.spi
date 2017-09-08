@@ -20,8 +20,6 @@ def space(pat)
 end
 
 
-
-
 live_loop :melo, sync: :metro do
   #tick_reset
 #  tick

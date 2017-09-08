@@ -76,10 +76,9 @@ live_loop :kick, sync: :metro do
 
 
     if spread(1,8).look
+      puts
       smp ♥️.slice("FS3/4").look
     end
-
-
 
 
     hat = (ring *%w{_ _ h2 _})

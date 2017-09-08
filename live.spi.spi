@@ -57,7 +57,7 @@ live_loop :thing, sync: :metro do
 end
 
 live_loop :bass, sync: :metro do
-  stop
+  #stop
   #sync :m
   tick
 

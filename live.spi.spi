@@ -81,8 +81,6 @@ live_loop :thing, sync: :metro do
   sleep 1
 end
 
-
-
 live_loop :bass, sync: :metro do
   stop
   #sync :m

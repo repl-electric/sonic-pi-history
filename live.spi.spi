@@ -48,7 +48,14 @@ live_loop :kick, sync: :metro do
 
 
   s1 = Mountain[/microperc/,5]
-  if (s=(ring *%W{_ _ _ _   s1 _ _ _   s1 _ _ _   _ _ _ _}).look) != _
+  if (s=(ring *%W{_ _ _ _   s1 _ _ _   s1 _ _ _   _ _ _ _
+_ _ _ _   s1 _ _ _   s1 _ s1 _   _ _ _ _
+}).look) != _
+
+
+    h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
+
+
 
     puts ♥️.slice("A4/4").look
     smp ♥️.slice("Fs3/4").look

@@ -76,8 +76,12 @@ live_loop :kick, sync: :metro do
 
 
     if spread(1,8).look
-      puts     smp ♥️.slice(:Fs3).look
-      smp ♥️.slice(:FS3).look
+      #puts     smp ♥️.slice(:Fs3).look
+      fslice= ♥️.slice(:FS3).look
+
+      if fslice[:length] > 0.1
+        smp fslice
+      end
     end
 
 

@@ -11,9 +11,9 @@ live_loop :melo, sync: :metro do
     [_,3/4.0],1,    [:a2,1.0],1, [:b2,2.5],1,
     )
 
-  score.count
+ puts  score.count
 
-  puts score.count
+#  puts score.count
 
   score = space(%W{A3 D3 E3
                    FS3 A3 D3

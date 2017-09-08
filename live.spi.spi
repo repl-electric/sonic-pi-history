@@ -1,6 +1,6 @@
 live_loop :melo, sync: :metro do
   tick
-  harp (ring [:A2,3]).look
+  harp (ring [:A2,3]).look, cutoff: 0.1
 
   sleep 3
 end

@@ -18,13 +18,6 @@ live_loop :melo, sync: :metro do
                    A3  D3 E3
                    E3  Fs3 D3
                    _   A2 B2
-
-                   A3  D3 E3
-                   FS3 A3 D3
-                   A3  D3 E3
-                   E3  Fs3 D3
-                   _   A2 B2
-
 })
 
   puts score

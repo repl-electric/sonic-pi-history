@@ -21,7 +21,7 @@ def harp(n,*args)
   else
     velocity = 30
   end
-  shader :decay, :iHarp, (note(n)/69.0), 0.008
+  shader :decay, :iHarp, (note(n)/69.0), 0.005
   shader :iBright, velocity/127.0
   midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 3})
 end

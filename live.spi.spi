@@ -3,11 +3,9 @@ live_loop(:metro)do;tick;sleep 1;end
 live_loop :melo, sync: :metro do
   #  tick
 
-  pat = (ring *%W{
-A3 D3 E3
-                  Fs3 A3 D3
-
-})
+  pat = (ring *%W{A3 D3 E3
+                  Fs3 A3 D3})
+  puts pat
 
 
   #[:Fs3,3/4.0],1, [:A3,1],1, [:D3,2/4.0],1,      #3

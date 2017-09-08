@@ -15,7 +15,7 @@ harp_cc(phase: 0.0)
 
 live_loop :back, sync: :metro do
   tick
-  shader :iMode, (ring 1.0, 2.0).look
+  dshader :iMode, (ring 1.0, 2.0).look
   sharp (ring [:A3, 12], [:CS4, 12], [:E4, 12], [_, 12], [_,12]).look,10, sustain: 6
   sleep 12
 end

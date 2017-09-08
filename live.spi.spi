@@ -15,6 +15,6 @@ end
 live_loop :high, sync: :metro do
   tick
   sharp (ring :A3, :Cs3, :E3,_,_).look, sustain: 6
-  shader :iMode, 1.0
+  shader :iMode, (ring 1.0, 2.0).look
   sleep 12
 end

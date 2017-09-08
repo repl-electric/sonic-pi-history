@@ -11,6 +11,7 @@ live_loop :melo, sync: :metro do
     [_,3/4.0],1,    [:a2,1.0],1, [:b2,2.5],1,
     )
 
+  puts score.count
 
   score = space(%W{A3 D3 E3
                    FS3 A3 D3
@@ -27,7 +28,6 @@ live_loop :melo, sync: :metro do
 })
 
   puts score
-
   puts  (score.count-1)
 
   cue(:m) if (look % (score.count-1)) == 0
@@ -59,12 +59,18 @@ live_loop :bazz, sync: :metro do
     [:FS2,3], [:A2, 3],  [:GS2,1],
     [:D2, 3], [:Cs2, 2], [:B1,1], [_,1.0],
 
-    [:E2,3],  [:D2,3],[:Fs2,3],
-    [:GS2,3], [:A2,3], [:E2,1],
+    [:E2,3],  [:D2,3],   [:Fs2,3],
+    [:GS2,3], [:A2,3],   [:E2,1],
     [:D2,2],  [:Cs2, 0.5],[:E2, 0.5],
-    [[:A1,:A2], 4.0]
+    [:A1, 4.0]
     ).look
-  bass s, 100, cutoff: 0.85, gain: 0.1
+  if s[0][0] == :A1
+    midi s[0][0], 100, cutoff: 0.85, gain: 0.1, port: :iac_bus_1, channel: 6
+
+  else
+    bass s, 100, cutoff: 0.85, gain: 0.1
+  end
+
   puts "IN BASEE:#{s[-1]}"
   sleep s[-1]
 end

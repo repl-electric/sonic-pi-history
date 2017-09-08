@@ -4,7 +4,7 @@ live_loop :melo, sync: :metro do
   tick
 
   score = (knit
-    [:A3, 3/4.0],3, [:D3,1.0],3, [_,2/4.0],3,
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [_,3/4.0],1,   [_,1.0],1, [_,2/4.0],1)
   #score = space()
   cue(:m) if (look % (score.count-1)) == 0

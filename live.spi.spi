@@ -75,6 +75,11 @@ live_loop :kick, sync: :metro do
 
 
 
+    fi
+    ♥️.slice("FS3/4").look
+
+
+
     hat = (ring *%w{_ _ h2 _})
     hat2 = (ring *%w{_ _ h1 _
                      _ _ h1 {path:h2,amp:0.5}

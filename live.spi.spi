@@ -30,7 +30,7 @@ live_loop :melo, sync: :metro do
   puts pat
   score = space(pat)
 
-
+puts pat.length
 
   puts score
 #  stop

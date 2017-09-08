@@ -22,8 +22,6 @@ live_loop :melo, sync: :metro do
 })
 
 
-
-
   #puts score
   puts "START:#{(score.count)}  Looking:#{(look+1) % score.count}"
   puts

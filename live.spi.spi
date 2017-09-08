@@ -33,55 +33,6 @@ live_loop :melo, sync: :metro do
   sleep 3/4.0
 end
 
-def zero(n,*args)
-  if n.is_a?(Array)
-    args =  args  << {sustain: n[1]}
-    n = n[0]
-  end
-  midi n, *(args << {port: :iac_bus_1} << {channel: 9})
-end
-
-#sharp_cc(cutoff: 0.8)
-#harp_cc(phase: 0.5)
-def zero(*args)
-  midi *(args << {port: :iac_bus_1} << {channel: 9})
-end
-
-
-def smp(*args)
-  begin
-    sample_thing = args.first
-    if sample_thing
-      smp_name = if sample_thing.is_a?(Hash)
-                   sample_file = sample_thing[:path]
-                   if sample_thing[:onset] && sample_thing[:offset]
-                     start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
-                     fini = ratio_off(sample_thing) + (args.last[:finish_offset] || 0)
-                   else
-                     start = 0
-                     fini = 1
-                   end
-                   options = {start: start, finish: fini}
-                   options = if sample_thing.keys.length > 1
-                               options.merge(args.last)
-                             else
-                               options
-                             end
-                   sample sample_file, *[options]
-                   sample_file
-                 else
-                   sample(*args)
-                   sample_thing
-                 end
-      if smp_name =~ /kick/i
-        dshader :decay, :iBeat, ((args[-1] && args[-1].is_a?(Hash) && args[-1][:v]) ? args[-1][:v] : 0.3), 0.005
-      end
-    end
-  rescue
-    puts $!
-  end
-end
-
 
 live_loop :kick, sync: :metro do
   tick

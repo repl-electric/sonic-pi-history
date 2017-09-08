@@ -29,6 +29,7 @@ end
 live_loop :bazz, sync: :metro do
   tick
   sync :m
+  tick_reset
   s=(ring
     [:E2,3],  [:D2,3],   [:B1,3], #EDB
     [:FS2,3], [:A2, 3],  [:D2,1],

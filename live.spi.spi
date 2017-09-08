@@ -3,7 +3,7 @@ live_loop(:metro)do;tick;sleep 1;end
 live_loop :melo, sync: :metro do
   #  tick
 
-  pat = %W{A3 D3 E3   Fs3 A3 D3}
+  pat = %W{Cs3 D3 E3   Fs3 A3 D3}
 
   score = (knit
     [pat[0], 3/4.0],3, [pat[1],1],3, [pat[2],2/4.0],3,

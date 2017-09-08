@@ -1,7 +1,8 @@
 live_loop(:metro)do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
-  #tick
+  tick_reset
+  tick
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [:FS3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
@@ -9,7 +10,6 @@ live_loop :melo, sync: :metro do
     [:E3,3/4.0],1,  [:Fs3,1.0],1, [:D3,2/4.0],1,
     [_,3/4.0],1,    [:a2,1.0],1, [:b2,2.5],1,
     )
-  puts (look % (score.count-1))
   #score = space()
   cue(:m) if (look % (score.count-1)) == 0
   3.times{

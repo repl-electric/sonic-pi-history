@@ -18,6 +18,8 @@ live_loop :melo, sync: :metro do
                    E3  Fs3 D3
                    _   A2 B2 })
 
+  puts score
+
   puts  (score.count-1)
 
   cue(:m) if (look % (score.count-1)) == 0

@@ -78,7 +78,7 @@ live_loop :thing, sync: :metro do
   tick
   #sync :m
 
-  smp Corrupt[/loop/,/120/,0]
+  smp Corrupt[/loop/,/120/,1]
 
   sleep 12
 end

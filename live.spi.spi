@@ -77,7 +77,7 @@ live_loop :kick, sync: :metro do
 
     if spread(1,8).look
       puts     smp ♥️.slice(:Fs3).look
-      smp ♥️.slice("FS3/4").look
+      smp ♥️.slice(:FS3).look
     end
 
 

@@ -17,7 +17,7 @@ end
 
 live_loop :bass, sync: :metro do
   tick
-  bass s=(ring [:D2,3]).look, sustain: 1, cutoff: 0.2
+  bass s=(ring [:D2,3]).look,  cutoff: 0.25
   sleep s[-1]
 end
 

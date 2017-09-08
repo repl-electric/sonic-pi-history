@@ -9,4 +9,4 @@ live_loop :melo, sync: :metro do
   sleep 6
 end
 
-harp_cc(cutoff: 0.7
+harp_cc(cutoff: 0.7)

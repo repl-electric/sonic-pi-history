@@ -29,9 +29,6 @@ end
 
 harp :A1, sustain: 12
 
-v1 = "/Users/josephwilk/Dropbox/repl-electric/samples/beauty_and_practical.wav"#Word#Tech[/vocal/,12]
-#smp eval(voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 0.25
-#smp eval(voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
 
 
 
@@ -62,6 +59,13 @@ live_loop :kick, sync: :metro do
  #   puts ♥️.slice("A4/4").look
 #    smp ♥️.slice("Fs3/4").look
     smp eval(s)
+
+
+    v1 = "/Users/josephwilk/Dropbox/repl-electric/samples/beauty_and_practical.wav"#Word#Tech[/vocal/,12]
+    #smp eval(voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 0.25
+    #smp eval(voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
+
+
   end
 
   sleep 1/8.0

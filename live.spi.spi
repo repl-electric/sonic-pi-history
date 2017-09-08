@@ -1,10 +1,9 @@
-
 ♥️=harp
 
 
 
 live_loop :melo, sync: :metro do
   tick
-  harp()
+
   sleep 3
 end

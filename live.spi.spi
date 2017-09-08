@@ -41,7 +41,7 @@ live_loop :kick, sync: :metro do
                  k2 _ _ _    _ _ _ _    k1 _ _ _    _ _ _ _
 }).look) != _
    # puts eval(s)
-    smp eval(s)
+    smp eval(s), :v 0.2
   end
 
     h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]

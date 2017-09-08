@@ -44,11 +44,9 @@ live_loop :melo, sync: :metro do
     puts sz
 
     if(spread 1,3).look
-      puts "S:#{sz}"
       sharp sz
     end
     if(spread 1,6).look
-      puts "S:#{sz}"
       sharp sz
     end
 

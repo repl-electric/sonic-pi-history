@@ -17,7 +17,7 @@ live_loop :bass, sync: :metro do
   #sync :m
   tick
   bass (ring :E2, :D2, :B1).look, 20, sustain: 3
-  sleep 6
+  sleep 3
 end
 
 live_loop :back, sync: :metro do

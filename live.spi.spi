@@ -61,12 +61,13 @@ live_loop :kick, sync: :metro do
 
     if spread(1,8).look
       #    fslice= ♥️.slice(:FS3).look
-      fslice = ring(*♥️.slice(:Fs3).drop(1).reverse +
-                    [♥️.slice(:Fs3)[-1]]).look
-      if fslice[:length] <= 0.1
-        smp fslice, finish_offset: 0.001
-      end
     end
+    fslice = ring(*♥️.slice(:Fs3).drop(1).reverse +
+                  [♥️.slice(:Fs3)[-1]]).look
+    if fslice[:length] <= 0.1
+      smp fslice, finish_offset: 0.001
+    end
+
 
     hat = (ring *%w{_ _ h2 _})
     hat2 = (ring *%w{_ _ h1 _

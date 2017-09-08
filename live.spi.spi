@@ -7,7 +7,7 @@ live_loop :melo, sync: :metro do
                   Fs3 A3 D3
                   A3 D3 E3
                   E3 Fs3 D3
-                  _  A2 B2
+                  r  A2 B2
 })
   puts pat
 

@@ -26,7 +26,8 @@ live_loop :melo, sync: :metro do
 
   #puts score
   puts "START:#{(score.count)}"
-  puts look % 22
+  puts look
+  #puts look % 22
   if (look % (score.count)) == 0
 #    puts "----------------------"
     cue(:m)

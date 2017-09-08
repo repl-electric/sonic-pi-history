@@ -51,7 +51,7 @@ live_loop :kick, sync: :metro do
   if (s=(ring *%W{_ _ _ _   s1 _ _ _   s1 _ _ _   _ _ _ _}).look) != _
 
     puts ♥️.slice("A3/4").look
-    smp ♥️.slice("A3/4").look
+    smp ♥️.slice("Fs3/4").look
     smp eval(s)
   end
 

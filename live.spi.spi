@@ -14,7 +14,7 @@ live_loop :melo, sync: :metro do
     [_,3/4.0],1, [_,1],1, [_,2/4.0],1)
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
- #   harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
    # sleep s[-1]
   }
   sleep 3/4.0

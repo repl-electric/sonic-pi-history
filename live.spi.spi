@@ -70,7 +70,7 @@ end
 
 live_loop :bass, sync: :metro do
   #stop
-#  sync :m
+  sync :m
 #  tick_reset
   tick
 #  [:E2,3], [:D2,3],[:B1,3],

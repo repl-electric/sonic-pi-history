@@ -1,1 +1,10 @@
-live_loop :metro do; tick; sleep 1;end
+
+♥️=harp
+
+
+
+live_loop :melo, sync: :metro do
+  tick
+  harp()
+  sleep 3
+end

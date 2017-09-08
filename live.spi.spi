@@ -51,39 +51,3 @@ live_loop :back, sync: :metro do
   #dshader [:iR,:iB,:iG], rand
   sleep 12
 end
-
-
-def smp(*args)
-  begin
-    sample_thing = args.first
-    if sample_thing
-      smp_name = if sample_thing.is_a?(Hash)
-                   sample_file = sample_thing[:path]
-                   if sample_thing[:onset] && sample_thing[:offset]
-                     start = ratio_on(sample_thing) + (args.last[:start_offset] || 0)
-                     fini = ratio_off(sample_thing) + (args.last[:finish_offset] || 0)
-                   else
-                     start = 0
-                     fini = 1
-                   end
-                   options = {start: start, finish: fini}
-                   options = if sample_thing.keys.length > 1
-                               options.merge(args.last)
-                             else
-                               options
-                             end
-                   sample sample_file, *[options]
-                   sample_file
-                 else
-                   sample(*args)
-                   sample_thing
-                 end
-      if smp_name =~ /kick/i
-        puts args
-        dshader :decay, :iBeat, (args[-1] && args[-1][:v]) ? args[-1][:v] : 0.3, 0.005
-      end
-    end
-  rescue
-    puts $!
-  end
-  end

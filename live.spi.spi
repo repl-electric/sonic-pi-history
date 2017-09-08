@@ -25,13 +25,13 @@ live_loop :melo, sync: :metro do
 
 
   #puts score
-  puts "START:#{(score.count)}  Looking:#{(look+1) % 21}"
+  puts "START:#{(score.count)}  Looking:#{(look+1) % score.count}"
   puts
   #puts look % 22
-  if (look % (score.count)) == 0
-#    puts "----------------------"
-    cue(:m)
-  end
+
+  cue(:m) if ((look+1) % score.count)  == 0
+
+
   3.times{
     s=score.tick
     harp s, 4*(ring 20,20,20, 30,40,40, 40,60,80).look

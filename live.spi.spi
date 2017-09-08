@@ -11,6 +11,9 @@ live_loop :melo, sync: :metro do
     [_,3/4.0],1,    [:a2,1.0],1, [:b2,2.5],1,
     )
   #score = space()
+
+  puts if (look % (score.count-1)) == 0
+
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
     s=score.tick

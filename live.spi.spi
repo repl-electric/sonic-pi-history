@@ -90,7 +90,7 @@ live_loop :bass, sync: :metro do
 end
 
 live_loop :back, sync: :metro do
-  stop
+  #stop
   tick
   #shader :iMode, 0
     dshader :iMode, (ring 1.0, 2.0,3.0).look

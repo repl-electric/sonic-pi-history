@@ -8,3 +8,18 @@ live_loop :melo, sync: :metro do
   harp (ring [:A2,6]).look, cutoff: 0.2
   sleep 6
 end
+
+def harp(n,*args)
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  if args && args[0].is_a?(Numeric)
+    velocity = args[0]
+    args = args[1..-1]
+  else
+    velocity = 30
+  end
+  shader :decay, :iHarp, (note(n)/69.0), 0.1
+  midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 3})
+end

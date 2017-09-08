@@ -32,7 +32,7 @@ live_loop :kick, sync: :metro do
 
   k1,k2 = Frag[/kick/,9], Mountain[/subkick/,0]
 
-  if (s=(ring *%W{k1 _ _ _   _ _ _ _   k2 _ _ _   _ _ _ _
+  if (s=(ring *%W{k1 _ k2 _   _ _ _ _   k2 _ _ _   _ _ _ _
                  k1 _ _ _   _ _ _ _
 
 }).look) != _

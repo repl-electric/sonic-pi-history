@@ -1,10 +1,5 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
-
-
-live_loop :metro do
-  tick
-  sleep 1
-end
+live_loop :metro do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
 #  tick
@@ -54,8 +49,6 @@ live_loop :kick, sync: :metro do
 #    smp ♥️.slice("Fs3/4").look
     smp eval(s)
   end
-
-
 
   sleep 1/8.0
 end

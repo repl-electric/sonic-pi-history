@@ -14,7 +14,7 @@ harp_cc(phase: 0.0)
 
 live_loop :bass, sync: :metro do
   tick
-  bass [:A3,3],20
+  bass [:A3,3],20, cutoff: 0.2
   sleep 6
 end
 

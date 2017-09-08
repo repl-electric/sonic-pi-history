@@ -87,7 +87,7 @@ live_loop :bass, sync: :metro do
     [:D2, 3] ,   [:Cs2,2], [:B1, 1],
     [_,1.0]
 
-    ).look, 100, sustain: 3, cutoff: 1.0
+    ).look, 120, sustain: 3, cutoff: 1.0
   sleep s[-1]
 end
 

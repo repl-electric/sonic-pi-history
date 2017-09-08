@@ -64,7 +64,11 @@ live_loop :kick, sync: :metro do
   #sync :m
   k1,k2=Frag[/kick/,9],Mountain[/subkick/,0]
   if(s=(ring *%W{k2 _ {path:k1,amp:0.4} _   _ _ _ _   k1 _ _ _   _ _ _ _
-                 k1 _ _ _    _ _ _ _}).look) != _
+                 k1 _ _ _    _ _ _ _    k1 _ _ _    _ _ _ _
+                 k1 _ _ _    _ _ _ _    k1 _ _ _    _ _ _ _
+
+
+}).look) != _
    # puts eval(s)
     smp eval(s)
   end

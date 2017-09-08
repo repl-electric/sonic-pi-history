@@ -46,7 +46,7 @@ puts pat.length
     if(spread 1,3).look
       sharp sz
     end
-    if(spread 2,6).look
+    if(spread 1,6).look
       sharp sz
     end
 

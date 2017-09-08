@@ -20,7 +20,7 @@ live_loop :melo, sync: :metro do
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
     dshader :iMode, 0
-    dshader [:iR,:iG,:iB].choose, rand*4
+    dshader [:iR,:iG,:iB].choose, rand*9
     harp s=score.tick, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     #zero s[0]
 

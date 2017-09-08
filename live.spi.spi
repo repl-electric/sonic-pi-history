@@ -18,7 +18,6 @@ def space(p)
 end
 
 
-
 live_loop :melo, sync: :metro do
   #  tick
   pat = *%W{A3 D3 E3

@@ -13,6 +13,18 @@ end
 harp_cc(cutoff: 0.7)
 harp_cc(phase: 0.0)
 
+live_loop :kick, sync: :metro do
+  tick
+
+
+
+  smp Frag[/kick/,[9,9]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+  sleep 4
+end
+
+
+
+
 live_loop :bass, sync: :metro do
   #sync :m
   tick

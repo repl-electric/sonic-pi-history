@@ -54,9 +54,6 @@ live_loop :kick, sync: :metro do
 
 
 
-
-
-
     puts ♥️.slice("A4/4").look
     smp ♥️.slice("Fs3/4").look
     smp eval(s)

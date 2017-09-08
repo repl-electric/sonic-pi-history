@@ -37,7 +37,7 @@ end
 live_loop :kick, sync: :metro do
   tick
   #sync :m
-  k1,k2=Frag[/kick/,9],Frag[/kick/,4]
+  k1,k2=Frag[/kick/,9],Frag[/kick/,13]
   if(s=(ring *%W{k2 _ {path:k1,amp:0.4} _   _ _ _ _   k1 _ _ _   _ _ _ _
                  k2 _ _ _    _ _ _ _    k1 _ _ _    _ _ _ _
                  k2 _ _ _    _ _ _ _    k1 _ _ _    _ _ _ _

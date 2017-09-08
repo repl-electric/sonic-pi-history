@@ -78,7 +78,7 @@ live_loop :kick, sync: :metro do
                   k1 _ _ _   _ _ _ _
 
 }).look) != _
-    smp eval(s)
+    smp eval(s), amp: 1.4
   end
 
   h1,h2,h3 = Frag[/hat/,8], Frag[/hat/,9],  Frag[/hat/,7]

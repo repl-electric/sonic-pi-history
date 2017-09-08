@@ -9,7 +9,7 @@ live_loop :melo, sync: :metro do
             E3 Fs3 D3
             _  A2 B2}.count
 
-  score = space(pat, true)
+  score = space(pat)
   cue(:m) if (look % (score.count-1)) == 0
   3.times{
     dshader :iMode, 0

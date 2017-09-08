@@ -23,12 +23,10 @@ live_loop :melo, sync: :metro do
 
     if (spread 1,3).look
       at {
-
-          sharp s, 30
+        sharp s, 30
         sleep 0.5
-        sharp score.look(step:2), 30
+        sharp score.look(step:3), 30
         sleep 0.5
-
         }
     end
 

@@ -29,15 +29,6 @@ end
 
 harp :A1, sustain: 12
 
-
-
-
-
-
-
-
-
-
 live_loop :kick, sync: :metro do
   tick
   #sync :m

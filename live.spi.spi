@@ -89,7 +89,7 @@ live_loop :kick, sync: :metro do
                      _ _ h1 _})
 
     #smp eval(hat.look), amp: 1.0#, rpitch: 0
-    smp eval(hat2.look),amp: 1
+    #smp eval(hat2.look),amp: 1
 
 
 

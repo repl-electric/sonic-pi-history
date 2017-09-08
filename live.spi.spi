@@ -46,13 +46,14 @@ live_loop :kick, sync: :metro do
     smp eval(s)
   end
 
-
+    h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
   s1 = Mountain[/microperc/,5]
-  if (s=(ring *%W{_ _ _ _   s1 _ _ _   s1 _ _ _   _ _ _ _
+  if (s=(ring *%W{_ _ _ _   h1 _ _ _   s1 _ _ _   _ _ _ _
                   _ _ _ _   s1 _ _ _   _ _ s1 _   _ _ _ _
 }).look) != _
 
-    h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
+
+
 
 
 

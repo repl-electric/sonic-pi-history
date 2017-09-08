@@ -1,7 +1,2 @@
-live_loop :name do
-  tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
-
-end
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
+live_loop :metro do; tick; sleep 1;end

@@ -11,15 +11,12 @@ live_loop :melo, sync: :metro do
     [:A3, 3/4.0],1, [:D3,1],1, [:E3,2/4.0],1,
     [:E3, 3/4.0],1, [:Fs3,1],1,[:D3,2/4.0], 1)
   cue(:m) if (look % score.count) == 0
-
-3.times{
-  harp s=score.look, (ring 30,30,30,40,40,40, 50,50,50).look #, cutoff: 0.3
+  3.times{
+    harp s=score.look, (ring 30,30,30,40,40,40, 50,50,50).look #, cutoff: 0.3
 
     sleep s[-1]
   }
   sleep 3/4.0
-
-
 end
 
 harp_cc(cutoff: 0.7)
@@ -27,8 +24,10 @@ harp_cc(phase: 0.5)
 
 live_loop :kick, sync: :metro do
   tick
+  k1= Frag[/kick/,[9,9]].tick(:sample)
 
-  smp Frag[/kick/,[9,9]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+  if dring
+
   sleep 2
 end
 
@@ -42,7 +41,8 @@ end
 live_loop :back, sync: :metro do
   tick
   #shader :iMode, 0
-  dshader :iMode, (ring 1.0, 2.0,3.0).look
+    dshader :iMode, (ring 1.0, 2.0,3.0).look
+    dshader [:iR,:iG,:iB].choose, rand*2
   #sharp (ring [:A3, 12], [:CS4, 12], [:E4, 12], [_, 12], [_,12]).look,10, sustain: 6
   #dshader [:iR,:iB,:iG], rand
   sleep 12

@@ -21,6 +21,9 @@ live_loop :melo, sync: :metro do
     dshader :iMode, 0
     # dshader [:iR,:iG,:iB].choose, rand*9
     puts score.tick
+
+    puts note(score.look)
+
     harp s=score.look, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     #zero s[0]
 

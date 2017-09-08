@@ -65,14 +65,13 @@ live_loop :kick, sync: :metro do
 
  #   puts ♥️.slice("A4/4").look
 #    smp ♥️.slice("Fs3/4").look
-    smp eval(s)
+#    smp eval(s)
 
 
     #v1 = Tech[/vocal/,12]
     v1 = Words[/beauty/,0]
 
     h1,h2 = (knit @slices["Fs3/4"][8],6*2, @slices["A3/4"][1],2).look,  Frag[/hats/,8]
-
 
     if spread(1,32).look
       puts @slices["B3/4"][0]

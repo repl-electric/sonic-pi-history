@@ -76,7 +76,7 @@ live_loop :thing, sync: :metro do
   tick
   sync :m
 
-  smp Frag[/loop/,/120/,0]
+  smp Fraz[/loop/,/120/,0]
 
   sleep 12
 end

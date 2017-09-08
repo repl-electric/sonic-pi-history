@@ -47,7 +47,9 @@ live_loop :kick, sync: :metro do
   end
 
   h1 = Frag[/hat/,8]
-  if (s=(ring *%W{_ _ _ _   _ _ h1 _   _ _ h1 _   _ _ _ _}).look) != _
+  if (s=(ring *%W{_ _ _ _   _ _ h1 _   _ _ h1 _   _ _ _ _
+                  _ _ _ _   _ _ h1 _   _ _ _ h1   _ _ _ _
+}).look) != _
     smp eval(s), amp: 1
   end
 

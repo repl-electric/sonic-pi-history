@@ -12,7 +12,7 @@ end
 harp_cc(cutoff: 0.7)
 harp_cc(phase: 0.0)
 
-shader :iMode, 1.0
+shader :iMode, 2.0
 
 live_loop :back, sync: :metro do
   tick

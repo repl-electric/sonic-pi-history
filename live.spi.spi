@@ -4,7 +4,6 @@ live_loop :melo, sync: :metro do
   tick
 
 
-
   sleep 3
 end
 

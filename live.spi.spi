@@ -22,6 +22,7 @@ live_loop :melo, sync: :metro do
     dshader :iMode, 1
     dshader [:iR,:iG,:iB].choose, rand*4
     harp s=score.tick, 0*(ring 20,20,20, 30,40,40, 40,60,80).look
+    zero s[0]
 
     if(spread 1,6).look
       sharp s

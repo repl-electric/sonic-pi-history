@@ -25,16 +25,3 @@ live_loop :back, sync: :metro do
   sharp (ring [:A3, 12], [:CS4, 12], [:E4, 12], [_, 12], [_,12]).look,10, sustain: 6
   sleep 12
 end
-
-def bass_cc(cc)
-  cc.keys.each do |k|
-    n = case k
-        when :cutoff; 6
-        else
-          nil
-        end
-    if n
-      midi_cc n, cc[k]*127.0, port: :iac_bus_1, channel: 5
-    end
-  end
-end

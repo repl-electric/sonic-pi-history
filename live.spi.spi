@@ -6,7 +6,7 @@ end
 live_loop :melo, sync: :metro do
   tick
   harp s=(ring [:A2,3],[:Cs3,3],[:B2,3]).look, (ring 20,20,20,30,30,30).look #, cutoff: 0.3
-  cue :m if (look % s) == 0
+  cue(:m) if (look % s) == 0
   sleep 3
 end
 

@@ -7,7 +7,7 @@ live_loop :melo, sync: :metro do
             Fs3 A3 D3
             A3 D3 E3
             E3 Fs3 D3
-            _  A2 B2}
+            _  A2 B2}.count
 
   score = thirds(pat, true)
   cue(:m) if (look % (score.count-1)) == 0
@@ -16,9 +16,6 @@ live_loop :melo, sync: :metro do
    # dshader [:iR,:iG,:iB].choose, rand*9
     harp s=score.tick, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     #zero s[0]
-
-
-
 
     if(spread 1,6).look
       sharp s

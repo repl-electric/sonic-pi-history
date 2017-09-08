@@ -60,7 +60,6 @@ live_loop :bass, sync: :metro do
   #stop
   #sync :m
   tick
-
 #  [:E2,3], [:D2,3],[:B1,3],
  # [:FS2,3],
 #  [:A2,3],
@@ -70,7 +69,11 @@ live_loop :bass, sync: :metro do
 #  [:B1,1],
 #  [_,1.0], #ODD timing
 
-  bass s=(ring [:E2,3], [:D2, 3], [:B1,3] ).look, 100, sustain: 3, cutoff: 0.4
+  bass s=(ring
+    [:E2,3], [:D2, 3], [:B1,3],
+    [:FS2, 3]
+
+    ).look, 100, sustain: 3, cutoff: 0.4
   sleep s[-1]
 end
 

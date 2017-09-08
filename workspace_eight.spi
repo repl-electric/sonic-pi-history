@@ -26,18 +26,15 @@ live_loop :back, sync: :metro do
   sleep 12
 end
 
-def bass_cc(args)
-  args.keys.each do |k|
+def bass_cc(cc)
+  cc.keys.each do |k|
     n = case k
         when :cutoff; 6
         else
           nil
         end
     if n
-      midi_cc n, vv*127.0, port: :iac_bus_1, channel: 5
+      midi_cc n, cc[k]*127.0, port: :iac_bus_1, channel: 5
     end
   end
-end
-def bass_x
-  midi_all_notes_off port: :iac_bus_1, channel: 5
 end

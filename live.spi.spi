@@ -75,8 +75,10 @@ live_loop :kick, sync: :metro do
 
 
 
-    fi
-    ♥️.slice("FS3/4").look
+    if spread(1,8).look
+    smp ♥️.slice("FS3/4").look
+    end
+
 
 
 

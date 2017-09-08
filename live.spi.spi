@@ -14,8 +14,6 @@ live_loop :melo, sync: :metro do
   }
   sleep 3/4.0
 
-
-  sleep 3
 end
 
 live_loop :bass, sync: :metro do

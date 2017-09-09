@@ -22,7 +22,7 @@ end
 live_loop :high, sync: :metro do
   tick
   # sharp (ring :A3, :Cs3, :E3, _, _).look,10, sustain: 6
-  bass :A2
+  bass :A2, cutoff: 0.4
   sleep 12
 end
 

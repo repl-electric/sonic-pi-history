@@ -56,7 +56,7 @@ _ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _
  }).look) != _
-    smp eval(s), amp: 0.3
+    smp eval(s), amp: 2.3
   end
 
   if spread(1,32).look

@@ -30,7 +30,9 @@ live_loop :bass, sync: :metro do
   tick
   #sync :m
   #tick_reset
-  score = b_space(%W{E2, D2, B2}).look
+  score = b_space(%W{E2 D2 B2
+                     Fs2
+}).look
   bass score, 80, cutoff: 0.8
   sleep score[-1]
 end

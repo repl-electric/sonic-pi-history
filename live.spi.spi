@@ -71,4 +71,4 @@ live_loop :high, sync: :metro do
 end
 
 harp_cc phase: 0.5
-harp_cc cutoff: 0.5
+harp_cc cutoff: 0.6

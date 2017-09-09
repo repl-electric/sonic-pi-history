@@ -12,7 +12,7 @@ end
 
 live_loop :bass, sync: :metro do
   tick
-
+  bass (ring :E2).look, 10,sustain:3
 
 
   sleep 3

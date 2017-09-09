@@ -2,7 +2,6 @@ live_loop(:metro)do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
   #shader :iMode, (ring 1.0, 2.0,3.0).look
-  shader :iMode, 5.0
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [:Fs3,3/4.0],1, [:B3,1.0],1, [:D3,2/4.0],1,
@@ -16,8 +15,9 @@ live_loop :melo, sync: :metro do
     if spread(1,6).look
       sharp score.tick
     end
-  }
   sleep 1/4.0
+  }
+
 end
 
 live_loop :bass, sync: :metro do

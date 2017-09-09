@@ -1,7 +1,6 @@
 live_loop(:metro)do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
-  #shader :iMode, (ring 1.0, 2.0,3.0).look
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [:Fs3,3/4.0],1, [:B3,1.0],1, [:D3,2/4.0],1,

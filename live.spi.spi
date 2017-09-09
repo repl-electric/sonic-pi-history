@@ -8,7 +8,8 @@ live_loop :melo, sync: :metro do
 
   harp (ring :A3).look, sustain: 6
 
-  smp Frag[/hat/,9]
+  smp Mountain[/subkick/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+
 
   sleep 6
 end

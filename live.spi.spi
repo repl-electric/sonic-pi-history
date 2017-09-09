@@ -30,8 +30,13 @@ live_loop :drums, sync: :metro do
 
 
 
+
   sleep 3
 end
+
+
+smp Words[/beaut/,0], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5
+
 
 
 live_loop :high, sync: :metro do

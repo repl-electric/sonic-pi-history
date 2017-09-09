@@ -16,7 +16,7 @@ live_loop :melo, sync: :metro do
     sharp s, 10
   end
 
-  sleep 1
+  sleep 1/4.0
 end
 
 live_loop :high, sync: :metro do

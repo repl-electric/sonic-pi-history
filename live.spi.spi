@@ -4,7 +4,7 @@ shader :iMotion, 2.0
 live_loop :melo, sync: :metro do
   tick
 
-  harp (ring [:A3,3], [:D3, 3], [:E3,3]
+  harp (ring [:A3,3], [:D3, 3], [:E3,3],
              [:Fs3, 3], [:A3, 3], [:D3,3]
         ).look
   sleep 3

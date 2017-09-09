@@ -7,6 +7,18 @@ live_loop :melo, sync: :metro do
   sleep 3
 end
 
+live_loop :drums, sync: :metro do
+  tick
+  k1 = Frag[/kick/,9]
+
+  if (s=(ring *%W{k1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
+    smp eval(s), cutoff: 100
+  end
+
+  sleep 3
+end
+
+
 live_loop :high, sync: :metro do
   tick
   sharp (ring :A3, :CS3, :E3, _, _ ,_ ).look, sustain: 6

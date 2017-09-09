@@ -4,6 +4,6 @@ live_loop :name, sync: :metro do
   tick
   harp :Fs3, 90
   sharp :FS3
-  bass :FS1
+  bass :FS2
   sleep 1
 end

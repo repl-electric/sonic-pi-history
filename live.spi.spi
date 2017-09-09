@@ -47,7 +47,7 @@ harp_cc phase: 0.5
 live_loop :drums, sync: :metro do
   tick
   k1 = Frag[/kick/,9]
-  if (s=(ring *%W{k1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
+  if (s=(ring *%W{k1 _ k1 _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
     smp eval(s), v: 1.0
   end
   h1 = Frag[/hat/, 9]

@@ -28,7 +28,7 @@ end
 
 live_loop :bass, sync: :metro do
   tick
-  #sync :m
+  sync :m
   score = (ring
     [:E2,3], [:D2,3], [:Fs2,3],
     [:E2,3], [:D2,3], [:Fs2,3]

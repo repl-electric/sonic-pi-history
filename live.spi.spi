@@ -39,7 +39,7 @@ end
 
 live_loop :drums, sync: :metro do
   tick
-  sync :m
+  #sync :m
   k1,k2 = Frag[/kick/,9], Mountain[/subkick/,0]
 
   if (s=(ring *%W{k1 _ {path:k1,amp:0.2} _   _ _ _ _   k2 _ _ _   _ _ _ _

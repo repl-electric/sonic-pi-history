@@ -14,6 +14,11 @@ live_loop :melo, sync: :metro do
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+
+    if spread(1,6).look
+      harp s
+      end
+
     sleep s[-1]
   }
   sleep 3/4.0

@@ -4,7 +4,7 @@ live_loop :name, sync: :metro do
   tick
 
   shader :iMode, 3
-#  harp :Fs3, 90
+  harp :Fs3, 90
 #  sharp :FS3
 #  bass :FS2
   sleep 1

@@ -6,3 +6,5 @@ live_loop :melo, sync: :metro do
   harp (ring [:A2,3]).look
   sleep 3
 end
+
+harp_cc phase: 0.0

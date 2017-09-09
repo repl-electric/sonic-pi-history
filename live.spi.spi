@@ -76,7 +76,7 @@ _ _ _ _   _ _ _ _
   end
 
   if spread(1,32).look
-    smp Words[/beaut/,0], start: 0.2, finish: 0.5, rate: 1.0, amp:0.5
+    smp Words[/beaut/,0], start: 0.2, finish: 0.5, rate: [1.0,-1.0].chooes, amp:0.5
   end
   sleep 1/8.0
 end

@@ -1,10 +1,8 @@
 live_loop(:metro)do;tick;sleep 1;end
 
-live_loop :name, sync: :metro do
+
+live_loop :melo, sync: :metro do
   tick
-  shader :iMode, 0
-  harp :Fs3, 10
-#  sharp :FS3
-#  bass :FS2
-  sleep 1
+  harp (ring [:A2,3]).look
+  sleep 3
 end

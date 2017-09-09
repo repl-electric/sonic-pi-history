@@ -7,10 +7,13 @@ live_loop :melo, sync: :metro do
   #tick
   #harp (ring :A2, :Cs3, :E3).look
 
+
+
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
-    [:A3,3/4.0],1,   [:D3,1.0],1, [:E3,2/4.0],1
+    [:A3,3/4.0],1,   [:D3,1.0],1, [:E3,2/4.0],1,
+    [:E3,3/4.0],1,   [:Fs3,1.0],1, [:D3,2/4.0],1
 
     )
   #score = space()
@@ -19,7 +22,7 @@ live_loop :melo, sync: :metro do
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
 
     if spread(1,6).look
-      harp s
+      sharp s
       end
 
     sleep s[-1]

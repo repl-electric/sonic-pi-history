@@ -1,3 +1,10 @@
 live_loop(:metro)do;tick;sleep 1;end
 
-smp Words[/beat/,0], start: 0.3, finish: 0.5, rate: 1.0, amp: 2.5
+smp Words[/beat/,0], start: 0.3, finish: 0.5, rate: 1.0, amp: 4.5
+
+
+live_loop :melo, sync: :metro do
+  tick
+  harp (ring :A2).look
+  sleep 3
+end

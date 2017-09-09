@@ -12,3 +12,6 @@ live_loop :high, sync: :metro do
   sharp (ring :A3, :CS3, :E3, _, _ ,_ ).look
   sleep 6
 end
+
+
+harp_cc :phase: 0.0

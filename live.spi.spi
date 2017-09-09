@@ -29,9 +29,10 @@ live_loop :drums, sync: :metro do
   end
 
 
+  if spread(1,32).look
   smp Words[/beaut/,0], start: 0.4, finish: 0.5, rate: 1.0, amp: 1.0
-
-  sleep 3
+end
+  sleep 1/8.0
 end
 
 

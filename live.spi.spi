@@ -60,7 +60,8 @@ live_loop :drums, sync: :metro do
   end
 
   if spread(1,64).look
-        smp Words[/beau/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
+    smp Words[/beau/], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5
+
     end
 
 

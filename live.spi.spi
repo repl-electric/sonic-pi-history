@@ -10,7 +10,10 @@ live_loop :melo, sync: :metro do
     )
   #score = space()
 #  cue(:m) if ((look+1) % score.count)  == 0
-      sharp score.tick[0], sustain: 3
+
+  if spread(1,6).tick
+    sharp score.tick[0], sustain: 3
+    end
   sleep 1/4.0
 end
 

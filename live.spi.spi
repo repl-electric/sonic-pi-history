@@ -33,7 +33,7 @@ live_loop :drums, sync: :metro do
   end
   h1 = Frag[/hat/,9]
   if (s=(ring *%W{_ _ _ h1   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
-    smp eval(s)
+    smp eval(s), amp: 0.4
   end
 
 

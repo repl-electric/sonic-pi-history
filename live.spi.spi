@@ -25,7 +25,7 @@ live_loop :high, sync: :metro do
   sleep 12
 end
 
-live_loop :drums, sync: :metro do
+live_loop :drumzzzzz, sync: :metro do
   tick
   #sync :m
   k1 = Frag[/kick/, 9]

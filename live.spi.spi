@@ -1,7 +1,9 @@
-live_loop :name do
-  tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
+live_loop(:metro)do;tick;sleep 1;end
 
+
+
+live_loop :melo, sync: :metro do
+  tick
+  shader :iMode, 0.0
+  sleep 3
 end

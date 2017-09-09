@@ -13,4 +13,4 @@ live_loop :high, sync: :metro do
   sleep 12
 end
 
-harp_cc phase: 0.01
+harp_cc phase: 0.0

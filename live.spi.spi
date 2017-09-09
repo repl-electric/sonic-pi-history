@@ -10,8 +10,10 @@ live_loop :melo, sync: :metro do
 end
 
 
-live_loop :name, sync: :metro do
+live_loop :bass, sync: :metro do
   tick
+
+
 
   sleep 3
 end
@@ -38,4 +40,4 @@ live_loop :high, sync: :metro do
   sleep 6
 end
 
-harp_cc phase: 0.0
+harp_cc phase: 0.5

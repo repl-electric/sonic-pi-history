@@ -7,4 +7,4 @@ live_loop :melo, sync: :metro do
   sleep 3
 end
 
-harp_cc phase: 0.0
+harp_cc phase: 0.01

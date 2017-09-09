@@ -13,7 +13,7 @@ live_loop :melo, sync: :metro do
     ).look, 0*(ring 20,20,20,30,30,40,40,40).look
 
   if spread(1,6).look
-    sharp s, 5
+    sharp s, 3
   end
 
   sleep 1/4.0

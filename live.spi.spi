@@ -62,7 +62,7 @@ live_loop :drums, sync: :metro do
 
   h1 = Mountain[/microperc/,5]
   if (s=(ring *%W{_ _ _ h1   _ _ _ _  }).look) != _
-#
+#    smp eval(s), cutoff: (line 100, 120, 64).look, amp: 0.8
   end
   h2 = @slices["B3/4"][1]
   if (s=(ring *%W{_ _ _ _   _ _ _ _

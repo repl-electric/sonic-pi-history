@@ -22,7 +22,7 @@ live_loop :melo, sync: :metro do
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
 
     if spread(1,6).look
-      sharp s
+      sharp s, sustain: 20
       end
 
     sleep s[-1]

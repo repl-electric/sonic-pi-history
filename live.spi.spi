@@ -33,6 +33,13 @@ live_loop :bass, sync: :metro do
   score = b_space(%W{E2  D2  B2
                      Fs2 A2  Gs2
                      D2  Cs2 B1 _
+
+
+                     E2  D2  Fs2
+                     Gs2 A2  E2
+                     D2  Cs2 B1 _
+
+
 }).look
   bass score, cutoff: 0.8
   sleep score[-1]

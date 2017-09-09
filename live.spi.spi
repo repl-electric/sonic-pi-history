@@ -10,7 +10,7 @@ end
 live_loop :high, sync: :metro do
   tick
   sharp (ring :A3, :CS3, :E3, _, _ ,_ ).look
-  sleep 6
+  sleep 12
 end
 
 

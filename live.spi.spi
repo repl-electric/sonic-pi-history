@@ -56,7 +56,10 @@ live_loop :drums, sync: :metro do
   end
   if spread(1,12).look
    smp  @slices["B3/4"][1], amp: 3.0, rate: [1,-1].choose
+  smp Words[/beau/,[0,0]].tick(:sample), cutoff: 135, amp: 1.0, rpitch: (ring 0).look
   end
+
+
 
 
   sleep 1/8.0

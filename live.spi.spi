@@ -49,7 +49,13 @@ live_loop :drums, sync: :metro do
     smp eval(s), cutoff: (line 100, 120, 64).look
   end
   h2 = @slices["B3/4"][1]
-  if (s=(ring *%W{_ _ _ h2   _ _ _ _  }).look) != _
+  if (s=(ring *%W{_ _ _ _   _ _ _ _
+                 _ _ _ _   _ _ _ _
+_ _ _ h2   _ _ _ _
+_ _ _ h2   _ _ _ _
+_ _ _ h2   _ _ _ _
+_ _ _ _   _ _ _ _
+ }).look) != _
     smp eval(s)
   end
 

@@ -6,7 +6,7 @@ live_loop :melo, sync: :metro do
   tick
   shader :iMode, 0.0
 
-  harp (ring :A2).look, sustain: 6
+  harp (ring :A3).look, sustain: 6
 
   sleep 6
 end

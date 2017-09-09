@@ -8,3 +8,9 @@ live_loop :melo, sync: :metro do
   harp (ring :A2).look
   sleep 6
 end
+
+live_loop :high, sync: :metro do
+  tick
+  sharp (ring :A3).look
+  sleep 3
+end

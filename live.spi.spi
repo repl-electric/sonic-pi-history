@@ -52,8 +52,8 @@ live_loop :drums, sync: :metro do
   if (s=(ring *%W{_ _ _ _   _ _ _ _
                  _ _ _ _   _ _ _ _
 _ _ _ h2   _ _ _ _
-_ _ _ h2   _ _ _ _
-_ _ _ h2   _ _ _ _
+_ _ _ _   _ _ _ _
+_ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _
  }).look) != _
     smp eval(s)

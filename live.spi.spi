@@ -3,8 +3,15 @@ live_loop(:metro)do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
   tick
-  harp (ring [:A2,3]).look
-  sleep 3
+  harp (ring [:A2,6]).look
+  sleep 6
 end
+
+live_loop :high, sync: :metro do
+  tick
+  sharp (ring :A3, :C3, :E3, _, _).look, sustain: 6
+  sleep 12
+end
+
 
 harp_cc phase: 0.01

@@ -7,5 +7,5 @@ live_loop :name, sync: :metro do
   harp :Fs3, 30
 #  sharp :FS3
 #  bass :FS2
-  sleep 1
+  sleep 6
 end

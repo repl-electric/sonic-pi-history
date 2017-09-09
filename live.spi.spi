@@ -3,5 +3,6 @@ live_loop(:metro)do;tick;sleep 1;end
 live_loop :name, sync: :metro do
   tick
   harp :Fs3, 90
+  sharp :FS3
   sleep 1
 end

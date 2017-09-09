@@ -11,9 +11,10 @@ live_loop :melo, sync: :metro do
   #score = space()
 #  cue(:m) if ((look+1) % score.count)  == 0
   if spread(1,12).tick
-    shader  [:iR,:iB, :iG].choose, rand*10
     sharp score.tick[0], sustain: 12
   end
+  shader  [:iR,:iB, :iG].choose, rand*10
+
   sleep 1/8.0
 end
 

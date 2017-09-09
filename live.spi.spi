@@ -1,73 +1,7 @@
 live_loop(:metro)do;tick;sleep 1;end
 
-live_loop :melo, sync: :metro do
-  score = (knit
-    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1, [:B3,1.0],1, [:D3,2/4.0],1,
-    [:A3,3/4.0],1, [:D3,1.0],1, [:E3,2/4.0],1,
-    [:E3,3/4.0],1, [:Fs3,1.0],1, [:D3,2/4.0],1,
-    [_ ,3/4.0],1,  [:A2,1.0],1, [:B2,2.5],1,
-    )
-  #score = space()
-#  cue(:m) if ((look+1) % score.count)  == 0
-  if spread(1,12).tick
-    sharp score.tick[0], sustain: 12
-  end
-  shader  [:iR,:iB, :iG].choose, rand*10
-
-  sleep 1/8.0
-end
-
-live_loop :bass, sync: :metro do
+live_loop :name, sync: :metro do
   tick
-  #sync :m
-  #tick_reset
-  score = b_space(%W{E2  D2  B2
-                     Fs2 A2  Gs2
-                     D2  Cs2 B1 _
-}).look
- # bass score, cutoff: 0.8
-  sleep score[-1]
+  harp :Fs3
+  sleep 3
 end
-
-live_loop :drums, sync: :metro do
-  tick
-  #sync :m
-  k1,k2 = Frag[/kick/,9], Mountain[/subkick/,0]
-
-  if (s=(ring *%W{k1 _ {path:k1,amp:0.2} _   _ _ _ _   k2 _ _ _   _ _ _ _
-                  k2 _ _ _   _ _ _ _
-}).look) != _
- #   smp eval(s), v: 1.0#, cutoff: 100, amp: 1.0
-  end
-
-  h1 = Mountain[/microperc/,5]
-  if (s=(ring *%W{_ _ _ h1   _ _ _ _  }).look) != _
-#    smp eval(s), cutoff: (line 100, 120, 64).look, amp: 0.8
-  end
-  h2 = @slices["B3/4"][1]
-  if (s=(ring *%W{_ _ _ _   _ _ _ _
-                 _ _ _ _   _ _ _ _
-_ _ _ {path:h2,amp:1.8}   _ _ _ _
-_ _ _ _   _ _ _ _
-_ _ _ _   _ _ _ _
-_ _ _ _   _ _ _ _
- }).look) != _
-    smp eval(s), amp: 0.3, rate: 0.25
-  end
-
-  if spread(1,32).look
-    smp Words[/beaut/,0], start: 0.2, finish: 0.5, rate: [1.0,-1.0].choose, amp:1.0
-  end
-  sleep 1/8.0
-end
-
-
-live_loop :high, sync: :metro do
-  tick
-  #sharp (ring :A3, :CS3, :E3, _, _ ,_ ).look, sustain: 6
-  sleep 6
-end
-
-harp_cc phase: 0.5
-harp_cc cutoff: 0.6

@@ -22,7 +22,7 @@ live_loop :melo, sync: :metro do
     #harp s=score.tick, 0.125*(ring 20,20,20, 30,40,40, 40,60,80).look
     shader [:iR, :iG, :iB].choose, rand
     #if spread(1,6).look
-      sharp s, sustain: 6
+#      sharp s, sustain: 6
      # end
 
 #    sleep s[-1]

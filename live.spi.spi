@@ -15,9 +15,8 @@ live_loop :melo, sync: :metro do
     if spread(1,6).look
       sharp score.tick
     end
-  sleep 1/4.0
+    sleep 1/4.0
   }
-
 end
 
 live_loop :bass, sync: :metro do

@@ -11,7 +11,7 @@ live_loop :melo, sync: :metro do
 
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
+    [:Fs3,3/4.0],1,   [:B3,1.0],1, [:D3,2/4.0],1,
     [:A3,3/4.0],1,   [:D3,1.0],1, [:E3,2/4.0],1,
     [:E3,3/4.0],1,   [:Fs3,1.0],1, [:D3,2/4.0],1
 
@@ -47,6 +47,9 @@ live_loop :drums, sync: :metro do
   if (s=(ring *%W{_ _ h1 _  }).look) != _
     smp eval(s), amp: 0.2
   end
+  if spread(1,64).look
+  end
+
 
 
   sleep 1/8.0

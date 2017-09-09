@@ -3,8 +3,9 @@ live_loop(:metro)do;tick;sleep 1;end
 
 live_loop :melo, sync: :metro do
   tick
-  harp (ring [:A2,6], [:Cs3, 3], [:B2]).look
-  sleep 6
+
+  harp (ring [:A2,3], [:Cs3, 3], [:B2,3]).look
+  sleep 3
 end
 
 live_loop :high, sync: :metro do

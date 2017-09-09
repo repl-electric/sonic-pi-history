@@ -19,6 +19,7 @@ end
 
 live_loop :drums, sync: :metro do
   tick
+  sync :m
   k1 = Frag[/kick/, 9]
   if (s=(ring *%W{k1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
     smp eval(s), cutoff: 100

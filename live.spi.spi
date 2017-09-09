@@ -35,10 +35,9 @@ live_loop :drums, sync: :metro do
   end
 
   h1 = Frag[/hat/,9]
- if (s=(ring *%W{_ _ _ h1   _ _ _ _  }).look) != _
-   smp eval(s)
- end
-
+  if (s=(ring *%W{_ _ _ h1   _ _ _ _  }).look) != _
+    smp eval(s)
+  end
 
   if spread(1,32).look
     smp Words[/beaut/,0], start: 0.2, finish: 0.5, rate: 1.0, amp:0.5

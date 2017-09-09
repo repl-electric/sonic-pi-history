@@ -31,7 +31,7 @@ live_loop :bass, sync: :metro do
   #sync :m
   #tick_reset
   score = b_space(%W{E2 D2 B2
-                     Fs2 A2 Gs1
+                     Fs2 A2 Gs2
                      D3  Cs2 B1 _
 }).look
   bass score, cutoff: 0.8

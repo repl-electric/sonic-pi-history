@@ -3,8 +3,8 @@ live_loop(:metro)do;tick;sleep 1;end
 live_loop :melo, sync: :metro do
   tick
   shader :iMode, 0.0
-  harp (ring :A2, :Cs3, :B2).look, sustain: 6
-  sleep 6
+  harp (ring :A2, :Cs3, :B2).look, sustain: 3
+  sleep 3
 end
 
 live_loop :high, sync: :metro do

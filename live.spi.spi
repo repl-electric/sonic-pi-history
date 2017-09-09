@@ -10,7 +10,7 @@ end
 live_loop :high, sync: :metro do
   tick
   sharp (ring :A3, :CS3, :E3, _, _ ,_ ).look, sustain: 6
-  sleep 12
+  sleep 6
 end
 
 harp_cc phase: 0.0

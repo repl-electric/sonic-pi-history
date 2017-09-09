@@ -4,15 +4,15 @@ shader :iMotion, 2.0
 live_loop :melo, sync: :metro do
   tick
 
-  harp (ring [:A2,3], [:D3, 3], [:E3,3]
-
+  harp (ring [:A3,3], [:D3, 3], [:E3,3]
+             [:Fs3, 3], [:A3, 3], [:D3,3]
         ).look
   sleep 3
 end
 
 live_loop :high, sync: :metro do
   tick
-  sharp (ring :A3, :Cs3, :E3, _, _).look,10, sustain: 6
+ # sharp (ring :A3, :Cs3, :E3, _, _).look,10, sustain: 6
   sleep 12
 end
 
@@ -28,4 +28,4 @@ end
 
 
 
-harp_cc phase: 0.5
+#harp_cc phase: 0.5

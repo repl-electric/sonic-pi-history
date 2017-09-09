@@ -28,7 +28,7 @@ end
 
 live_loop :bass, sync: :metro do
   tick
-  #sync :m
+  sync :m
   #tick_reset
   score = b_space(%W{E2 D2 B2
                      Fs2 A2 Gs1

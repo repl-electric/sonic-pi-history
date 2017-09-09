@@ -1,6 +1,6 @@
 live_loop(:metro)do;tick;sleep 1;end
 
-
+shader :iMotion, 2.0
 live_loop :melo, sync: :metro do
   tick
 

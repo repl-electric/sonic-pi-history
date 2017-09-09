@@ -34,7 +34,7 @@ live_loop :drumzzzzz, sync: :metro do
   end
   h1 = Frag[/hat/,9]
   puts h1
-  if (s=(ring *%W{_ _ _ h1}).look) != _
+  if (s=(ring *%W{_ _ _ h1 _ _ _ _}).look) != _
     smp eval(s), amp: 0.23
   end
 

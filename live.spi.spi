@@ -13,9 +13,6 @@ live_loop :melo, sync: :metro do
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-    shader [:iR, :iG, :iB].choose, rand*2
-    #harp s=score.tick, 2*(ring 20,20,20, 30,40,40, 40,60,80).look
-
     if spread(1,6).look
       sharp score.tick
     end

@@ -30,10 +30,17 @@ live_loop :melo, sync: :metro do
   sleep 3/4.0
 
 
-
   shader :iMode, (ring 1.0, 2.0, 3.0).look
   #sleep 3
 end
+
+
+live_loop :bass, sync: :metro do
+  tick
+  bass :A1
+  sleep 3
+end
+
 
 harp_cc phase: 0.5
 

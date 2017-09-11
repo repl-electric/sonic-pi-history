@@ -5,7 +5,7 @@ live_loop(:metro)do
   puts "ARE YOU ALIVE"
   #sleep 1
   smp Frag[/clap/,0]
-  harp :FS3
+ # harp :FS3
 
 
 #  10.times{harp_cc phase: rand, fx: rand}

@@ -4,4 +4,6 @@ live_loop(:metro)do
   cue("64") if look % 64 == 0
   puts "ARE YOU ALIVE"
   #sleep 1
+
+  play 50
 end

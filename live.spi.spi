@@ -8,7 +8,7 @@ end
 
 live_loop :music, sync: :metro do
   tick
-  sync "16"
+#  sync "16"
   sharp :A2
   bass :E2, sustain: 3
   sleep 3
@@ -18,7 +18,7 @@ harp_cc phase: 0.5
 
 live_loop :pattern, sync: :metro do
   tick
-  sync "16"
+#  sync "16"
   c1 = Dust[/clap/,1]
   k2,k1 = Frag[/kick/,9], Mountain[/subkick/,1]
   s=(ring *%W{

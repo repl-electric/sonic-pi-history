@@ -7,5 +7,6 @@ live_loop(:metro)do
   smp Frag[/clap/,0]
   harp :FS3
 
-harp_cc phase: rand
+
+  10.times{harp_cc phase: rand}
 end

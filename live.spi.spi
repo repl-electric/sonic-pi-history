@@ -5,5 +5,6 @@ live_loop(:metro)do
 
 
   puts "ARE YOU ALIVE"
+  asd
   #sleep 1
 end

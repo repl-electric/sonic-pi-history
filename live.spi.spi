@@ -3,6 +3,6 @@ live_loop(:metro)do
   cue "32" if look % 32 == 0
   cue "64" if look % 64 == 0
 
-asdasd
-  sleep 1
+
+  #sleep 1
 end

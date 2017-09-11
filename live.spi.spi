@@ -29,7 +29,7 @@ live_loop :pattern, sync: :metro do
   smp eval(s)
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
-  s=(ring *%W{_ _ _ _   c2 _ _ _})).look
+  s=(ring *%W{_ _ _ _   c2 _ _ _}).look
 smp eval(s)
 
 

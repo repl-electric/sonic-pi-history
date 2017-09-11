@@ -5,11 +5,10 @@ live_loop(:metro)do
   sleep 1
 end
 
-
 live_loop :music, sync: :metro do
   tick
   sharp :A2
-  bass :A1
+  bass :A1, sustain: 3
   sleep 3
 end
 
@@ -28,7 +27,6 @@ live_loop :pattern, sync: :metro do
 
   p = Dust[/perc/,2]
   s=(ring *%W{
-
 _ p _ _    _ _ _ _
 _ _ p _    _ _ _ _
 _ _ _ p    _ _ _ _

@@ -8,7 +8,7 @@ end
 
 live_loop :music, sync: :metro do
   tick
-  sharp :A1
+  sharp :A2
   sleep 3
 end
 

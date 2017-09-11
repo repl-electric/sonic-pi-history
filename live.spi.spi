@@ -7,6 +7,3 @@ live_loop(:metro)do
   smp Frag[/clap/,0]
   harp :FS3
 end
-
-
-harp_cc phase: 0.5*2

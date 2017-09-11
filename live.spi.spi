@@ -10,7 +10,7 @@ live_loop :pattern, sync: :metro do
   tick
   #sync "32"
   c1 = Dust[/clap/,1]
-  k1,k2 = Frag[/kick/,9], Dust[/kick/,3]
+  k1,k2 = Frag[/kick/,9], Mountain[/subkick/,0]
   s=(ring *%W{
      k1 _ _ _   k1 _ _ _   k2 _ _ _   k2 _ _ _
      k1 _ _ _   k1 _ _ _   k2 _ _ _   k2 _ _ _
@@ -34,11 +34,11 @@ live_loop :pattern, sync: :metro do
   h,h2 = Frag[/hat/,4],Frag[/hat/,6]
 
   s=(ring *%W{
-_ _ h _   _ _ _ _
-_ _ h _   _ _ _ _
-_ _ h {path:h,amp:0.25}   _ _ _ _
-_ _ h _   _ _ _ _
-_ _ h _   {path:h2,amp:0.9} _ _ _
+_ _ h _                     _ _ _ _
+_ _ h _                     _ _ _ _
+_ _ h {path:h,amp:0.25}     _ _ _ _
+_ _ h _                     _ _ _ _
+_ _ h _                     {path:h2,amp:0.9} _ _ _
 
 }).look
   smp eval(s)

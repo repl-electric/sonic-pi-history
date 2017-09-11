@@ -14,7 +14,7 @@ live_loop :pattern, sync: :metro do
   k1,k2 = Frag[/kick/,9], Dust[/kick/,3]
   s=(ring *%W{
 k1 _ _ _   k1 _ _ _   k2 _ _ _   k2 _ _ _
-c1 _ _ _   k1 _ _ _   k2 _ _ _   k2 _ _ _
+[c1,k1] _ _ _   k1 _ _ _   k2 _ _ _   k2 _ _ _
 }).look
   smp eval(s)
 

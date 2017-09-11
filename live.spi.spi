@@ -18,5 +18,15 @@ live_loop :pattern, sync: :metro do
 }).look
   smp eval(s)
 
+  c1 = Dust[/clap/,1]
+  s=(ring *%W{
+_ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+c1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+
+}).look
+  smp eval(s)
+
+
+
   sleep 1/8.0
 end

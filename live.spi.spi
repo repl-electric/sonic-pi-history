@@ -20,6 +20,7 @@ live_loop :pattern, sync: :metro do
 
   p = Dust[/perc/,2]
   s=(ring *%W{
+
 _ p _ _    _ _ _ _
 _ _ p _    _ _ _ _
 _ _ _ p    _ _ _ _
@@ -28,7 +29,7 @@ _ _ _ _    _ p _ _
 _ _ _ _    _ _ p _
 
 }).look
-  smp eval(s), cutoff: (line 80, 120, 128).look
+  smp eval(s), cutoff: (line 80, 120, 32*3).look
 
 
   c1,c2 = Dust[/clap/,1], Dust[/clap/,6]

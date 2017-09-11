@@ -14,7 +14,8 @@ live_loop :pattern, sync: :metro do
   tick
   sync "32"
 
+
   smp Dust[/clap/,1]
 
-  sleep 3
+  sleep 1/8.0
 end

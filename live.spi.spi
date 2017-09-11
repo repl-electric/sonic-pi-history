@@ -35,7 +35,14 @@ live_loop :pattern, sync: :metro do
 
   h = Frag[/hat/,4]
 
-  s=(ring *%W{_ _ h _   _ _ _ _}).look
+  s=(ring *%W{
+_ _ h _   _ _ _ _
+_ _ h _   _ _ _ _
+_ _ h _   _ _ _ _
+_ _ h _   _ _ _ _
+_ _ h _   {path:h2,amp:0.2} _ _ _
+
+}).look
   smp eval(s)
 
 

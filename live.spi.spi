@@ -36,7 +36,7 @@ live_loop :pattern, sync: :metro do
   s=(ring *%W{
 _ _ h _   _ _ _ _
 _ _ h _   _ _ _ _
-_ _ h {path:h,amp:0.2}   _ _ _ _
+_ _ h {path:h,amp:0.25}   _ _ _ _
 _ _ h _   _ _ _ _
 _ _ h _   {path:h2,amp:0.9} _ _ _
 

@@ -33,7 +33,7 @@ live_loop :pattern, sync: :metro do
   smp eval(s), cutoff: (line 80, 120, 128).look
 
 
-  h = Frag[/hat/,6]
+  h = Frag[/hat/,5]
 
   s=(ring *%W{_ _ _ _   h _ _ _}).look
   smp eval(s)

@@ -11,7 +11,8 @@ live_loop :pattern, sync: :metro do
   tick
   #sync "32"
   c1 = Dust[/clap/,1]
-  s=(ring *%W{_ _ _ _   _ _ _ _   c1 _ _ _   _ _ _ _}).look
+  k1 = Frag[/kick/,9]
+  s=(ring *%W{k1 _ _ _   _ _ _ _   c1 _ _ _   _ _ _ _}).look
   smp eval(s)
 
   sleep 1/8.0

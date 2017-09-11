@@ -1,5 +1,6 @@
 live_loop(:metro)do
   tick;
+  cue("16") if look % 32 == 0
   cue("32") if look % 32 == 0
   cue("64") if look % 64 == 0
   sleep 1

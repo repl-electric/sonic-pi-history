@@ -6,6 +6,13 @@ live_loop(:metro)do
 end
 
 
+live_loop :music, sync: :metro do
+  tick
+  harp :Fs3
+  sleep 3
+end
+
+
 live_loop :pattern, sync: :metro do
   tick
   #sync "32"

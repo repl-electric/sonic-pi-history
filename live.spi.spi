@@ -12,12 +12,11 @@ end
 
 live_loop :pattern, sync: :metro do
   tick
-  sync "32"
+  #sync "32"
 
   c1 = Dust[/clap/,1]
   s=(ring *%W{c1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look
   smp eval(s)
-
 
   sleep 1/8.0
 end

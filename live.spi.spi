@@ -9,9 +9,9 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp [:A2,3]
+  harp [:A2,6]
   #bass :E2, sustain: 3
-  sleep 3
+  sleep 6
 end
 
 harp_cc phase: 0.5

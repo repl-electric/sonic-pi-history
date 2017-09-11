@@ -24,6 +24,8 @@ _ p _ _    _ _ _ _
 _ _ p _    _ _ _ _
 _ _ _ p    _ _ _ _
 _ _ _ _    p _ _ _
+_ _ _ _    _ p _ _
+
 
 }).look
   smp eval(s), cutoff: (line 80, 120, 128).look

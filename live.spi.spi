@@ -6,7 +6,7 @@ live_loop(:metro)do
   #sleep 1
 
 
-  smp Dust[/clap/,1]
+#  smp Dust[/clap/,1]
   # harp :FS3
 #  10.times{harp_cc phase: rand, fx: rand}
 end

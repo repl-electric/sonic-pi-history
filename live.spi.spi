@@ -8,7 +8,7 @@ end
 live_loop :music, sync: :metro do
   tick
   sharp :A2
-  bass :E1, sustain: 3
+  bass :E2, sustain: 3
   sleep 3
 end
 

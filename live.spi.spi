@@ -12,6 +12,7 @@ live_loop :music, sync: :metro do
   sleep 3
 end
 
+harp_cc :phase: 0.5
 
 live_loop :pattern, sync: :metro do
   tick

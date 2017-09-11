@@ -4,6 +4,9 @@ live_loop(:metro)do
   cue("64") if look % 64 == 0
   puts "ARE YOU ALIVE"
   #sleep 1
+π> Error: [live.spi] - SonicPi::Lang::Core::ZeroTimeLoopError
+Thread death +--> :live_loop_metro
+ loop did not sleep or sync!
 
 #  smp Dust[/clap/,1]
   # harp :FS3

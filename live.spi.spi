@@ -8,5 +8,5 @@ live_loop(:metro)do
   harp :FS3
 
 
-  10.times{harp_cc phase: rand, fx: rand}
+#  10.times{harp_cc phase: rand, fx: rand}
 end

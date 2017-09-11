@@ -14,8 +14,12 @@ live_loop :pattern, sync: :metro do
   tick
   sync "32"
 
+  c1 = Dust[/clap/,1]
+  if (s=(ring *%W{c1 _ _ _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
+    smp eval(s)
+  end
 
-  smp Dust[/clap/,1]
+  smp
 
   sleep 1/8.0
 end

@@ -6,4 +6,6 @@ live_loop(:metro)do
   #sleep 1
   smp Frag[/clap/,0]
   harp :FS3
+
+harp_cc phase: rand
 end

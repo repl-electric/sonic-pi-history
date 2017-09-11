@@ -1,75 +1,9 @@
-live_loop(:metro)do;tick;sleep 1;end
-
-#smp Words[/beat/,0], start: 0.3, finish: 0.5, rate: 1.0, amp: 8.5
-
-
-live_loop :melo, sync: :metro do
-  #tick
-  #harp (ring :A2, :Cs3, :E3).look
-
-
-
-  score = (knit
-    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
-    [:A3,3/4.0],1,   [:D3,1.0],1, [:E3,2/4.0],1,
-    [:E3,3/4.0],1,   [:Fs3,1.0],1, [:D3,2/4.0],1
-
-    )
-  #score = space()
-  cue(:m) if ((look+1) % score.count)  == 0
-  3.times{
-    #harp s=score.tick, 0.125*(ring 20,20,20, 30,40,40, 40,60,80).look
-    shader [:iR, :iG, :iB].choose, rand
-    #if spread(1,6).look
-#      sharp s, sustain: 6
-     # end
-
-#    sleep s[-1]
-  }
-  sleep 1/8.0
-
-
-  shader :iMode, (ring 1.0, 2.0, 3.0).look
-  #sleep 3
+live_loop(:metro)do
+  tick;
+  cue "32" if look % 32 == 0
+  cue "64" if look % 64 == 0
+  sleep 1
 end
 
 
-live_loop :bass, sync: :metro do
-  tick
-  bass :A1, sustain: 1.0
-  sleep 3
-end
-
-
-harp_cc phase: 0.5
-
-live_loop :drums, sync: :metro do
-  tick
-  k1 = Frag[/kick/,9]
-  if (s=(ring *%W{k1 _ k1 _   _ _ _ _   _ _ _ _   _ _ _ _}).look) != _
-#    smp eval(s), v: 1.0
-  end
-  h1 = Frag[/hat/, 9]
-  if (s=(ring *%W{_ _ h1 _  }).look) != _
-#    smp eval(s), amp: 0.2
-  end
-  if spread(1,12).look
- #  smp  @slices["B3/4"][1], amp: 2.0
-  end
-
-  if spread(1,32).look
-    smp Words[/beau/], start: 0.0, finish: 0.5, rate: 1.0, amp: 0.5
-
-    end
-
-
-  sleep 1/8.0
-end
-
-
-live_loop :high, sync: :metro do
-  tick
-  #sharp (ring :A3, :Cs4, :E4).look, sustain: 6
-  sleep 12
-end
+asdasd

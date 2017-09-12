@@ -22,7 +22,7 @@ live_loop :music, sync: :metro do
 
     #pitch wheel.
 
-    midi 108, 0
+    midi 108, 1
     midi 109, 0
 
 

@@ -11,7 +11,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  midi (ring [:A2,3], [:Cs3,3], [:B2, 3]).look[0], 100, sustain: 2, port: :iac_bus_1, channel: 9
+  midi (ring [:A2,3], [:Cs3,3], [:B2, 3]).look[0], 100, sustain: 8, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3
@@ -19,7 +19,7 @@ live_loop :music, sync: :metro do
 
 
 
-  3.times{sleep 1
+  8.times{sleep 1
     midi_cc (line 0, 127).look,  port: :iac_bus_1, channel: 9
   }
 

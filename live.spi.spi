@@ -44,8 +44,6 @@ _ _ p _
 
 _ _ p _   _ _ p _
 _ _ p _
-
-
 }).look
   smp eval(s)#, cutoff: (line 80, 120, 6*4).look
 
@@ -57,7 +55,7 @@ _ _ p _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 }).look
-#  smp eval(s), amp: 0.8
+  smp eval(s), amp: 0.8
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c2 _ _ _}).look

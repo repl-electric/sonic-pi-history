@@ -38,13 +38,12 @@ with_fx :reverb do
     smp eval(s)
 
     p = Dust[/perc/,2]
-    s=(attr_reader :ing *%W{
+    s=(ring *%W{
 _ _ _ _   _ _ _ _
 _ _ p _
 
 _ _ _ _   _ _ p _
-_ _ p _
-}).look
+_ _ p _}).look
   smp eval(s), cutoff: (line 80, 120, 6*4).look
 
   c1,c2 = Dust[/clap/,1], Dust[/clap/,8]

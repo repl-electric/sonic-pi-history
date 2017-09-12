@@ -18,11 +18,11 @@ live_loop :music, sync: :metro do
   #  harp_cc phase: 1.0
 
   32.times{
-  sleep 1/4.0
+    sleep 1/4.0
 
     #pitch wheel.
 
-    midi_cc 109, (ring 0, 120).shuffle.look,  port: :iac_bus_1, channel: 9
+    midi_cc 109, 0..127.choose,  port: :iac_bus_1, channel: 9
 tick
    # midi_cc 1, 100,  port: :iac_bus_1, channel: 9
 #    tick

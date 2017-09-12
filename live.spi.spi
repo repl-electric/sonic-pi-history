@@ -37,6 +37,12 @@ live_loop :pattern, sync: :metro do
 _ _ p _   _ _ p _
 _ _ _ _
 
+_ _ p _   _ _ p _
+_ _ p _
+
+
+
+
 }).look
   smp eval(s), cutoff: (line 80, 120, 6*4).look
 

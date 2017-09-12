@@ -11,7 +11,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp [:A2,3]
+  harp (ring [:A2,3], [:Cs3]).look
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3

@@ -20,13 +20,12 @@ live_loop :music, sync: :metro do
 end
 
 with_fx :reverb do
-live_loop :pattern, sync: :metro do
-  tick
-  #sync "16"
-  c1 = Dust[/clap/,1]
-    k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,1]
-#    puts k3
-  s=(ring *%W{
+  live_loop :pattern, sync: :metro do
+    tick
+    #sync "16"
+    c1 = Dust[/clap/,1]
+    k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,2]
+    s=(ring *%W{
      k3 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
@@ -36,16 +35,15 @@ live_loop :pattern, sync: :metro do
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ k2 _
   }).look
-  smp eval(s)
+    smp eval(s)
 
-  p = Dust[/perc/,2]
-  s=(ring *%W{
+    p = Dust[/perc/,2]
+    s=(attr_reader :ing *%W{
 _ _ _ _   _ _ _ _
 _ _ p _
 
 _ _ _ _   _ _ p _
 _ _ p _
-
 
 }).look
   smp eval(s), cutoff: (line 80, 120, 6*4).look

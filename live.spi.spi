@@ -16,6 +16,7 @@ end
 
 harp_cc phase: 0.5
 
+with_fx :reverb do
 live_loop :pattern, sync: :metro do
   tick
   #sync "16"
@@ -62,4 +63,5 @@ _ _ h _                     {path:h2,amp:0.9} _ h _
   smp eval(s)
 
   sleep 1/8.0
+end
 end

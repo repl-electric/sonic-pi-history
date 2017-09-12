@@ -90,3 +90,12 @@ _ _ h _                     {path:h2,amp:0.9} _ h _
   sleep 1/8.0
 end
 end
+
+
+
+
+
+
+
+
+  midi_note_on :Fs3, 10, sustain: 1, port: :iac_bus_1, channel: 9

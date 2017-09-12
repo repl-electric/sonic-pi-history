@@ -99,7 +99,7 @@ end
 
 
   midi_note_on :A3, 10, sustain: 1, port: :iac_bus_1, channel: 9
-#  midi_note_on :B3, 10, sustain: 1, port: :iac_bus_1, channel: 9
+  midi_note_on :B3, 10, sustain: 1, port: :iac_bus_1, channel: 9
 #  midi_note_on :Cs3, 10, sustain: 1, port: :iac_bus_1, channel: 9
 #  midi_note_on :D3, 10, sustain: 1, port: :iac_bus_1, channel: 9
   #midi_note_on :E3, 10, sustain: 1, port: :iac_bus_1, channel: 9

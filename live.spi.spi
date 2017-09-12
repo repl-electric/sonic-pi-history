@@ -15,7 +15,8 @@ live_loop :music, sync: :metro do
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3
-#  harp_cc phase: 1.0
+  #  harp_cc phase: 1.0
+  midi_cc 100, sustain: 3, port: :iac_bus_1, channel: 9
   sleep 2
 end
 

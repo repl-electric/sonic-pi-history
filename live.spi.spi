@@ -17,8 +17,8 @@ live_loop :music, sync: :metro do
 #  sleep 3
   #  harp_cc phase: 1.0
 
-  4.times{
-    sleep 1
+  8.times{
+    sleep 1/2.0
 
     #pitch wheel.
 

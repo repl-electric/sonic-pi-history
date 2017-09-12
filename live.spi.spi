@@ -1,6 +1,6 @@
 live_loop(:metro)do
   tick;
-  midi_time
+  clock_midi
   cue("16") if look % 16 == 0
   cue("32") if look % 32 == 0
   cue("64") if look % 64 == 0

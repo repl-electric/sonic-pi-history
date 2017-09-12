@@ -26,7 +26,7 @@ with_fx :reverb do
     c1 = Dust[/clap/,1]
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,2]
     s=(ring *%W{
-     k3 _ _ _   k1 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
      k2 _ _ _   k1 _ _ _   k1 _ _ _

@@ -11,12 +11,12 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  zero (ring [:A2,3], [:Cs3,3], [:B2, 3]).look, 1
+  zero (ring [:A2,3], [:Cs3,3], [:B2, 3]).look, 1, sustain: 6
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3
 #  harp_cc phase: 1.0
-  sleep 3
+  sleep 6
 end
 
 with_fx :reverb do

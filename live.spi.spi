@@ -60,7 +60,7 @@ _ _ p _}).look
   s=(ring *%W{_ _ _ _   c2 _ _ _}).look
  # smp eval(s), cutoff: (line 80, 120, 128).look
 
-  h,h2 = Dust[/hat/,1],Frag[/hat/,6]
+  h,h2 = Dust[/hat/].look,Frag[/hat/,6]
 
   s=(ring *%W{
 _ _ h _                     _ _ h _

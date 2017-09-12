@@ -70,7 +70,7 @@ _ _ h _                     _ _ h _
 _ _ h _                     {path:h2,amp:0.9} _ h _
 
 }).look
-  smp eval(s)
+#  smp eval(s)
 
   sleep 1/8.0
 end

@@ -25,8 +25,10 @@ with_fx :reverb do
     #sync "16"
     c1 = Dust[/clap/,1]
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    opts ||= {}
+    opts[k1] = {amp: 0.5}
     s=(ring *%W{
-     k2 _ _ _   {path:k1,amp:0.5} _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
      k2 _ _ _   k1 _ _ _   k1 _ _ _
@@ -35,7 +37,7 @@ with_fx :reverb do
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k3 _ k2 _
   }).look
-    smp eval(s), amp: (line 0.8, 1.0, 12*6).look
+    smp eval(s), amp: (line 0.8, 1.0, 12*6).look, *opts[eval(s)]
 
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{

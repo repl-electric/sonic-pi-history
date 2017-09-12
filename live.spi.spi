@@ -37,7 +37,7 @@ with_fx :reverb do
   }).look
     smp eval(s), amp: (line 0.8, 1.0, 12*6).look
 
-    p = Dust[/perc/,3]
+    p = Dust[/perc/].look
     s=(ring *%W{
 _ _ _ _   _ _ _ _
 _ _ p _

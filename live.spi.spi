@@ -33,7 +33,7 @@ live_loop :pattern, sync: :metro do
 
   p = Dust[/perc/,2]
   s=(ring *%W{
-_ _ p _   _ _ p _
+_ _ _ _   p _ _ _
 _ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _
 _ _ _ _   _ _ _ _

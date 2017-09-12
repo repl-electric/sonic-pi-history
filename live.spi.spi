@@ -50,6 +50,16 @@ _ _ p _
 
     c = MagicDust[/HI_/, 50..60].look
 
+    if (s=(ring *%W{
+_ _ _  _ _ _
+_ _ _  c _ _
+_ _ _  _ _ _
+
+}).look) != _
+      smp eval(s)
+    end
+
+
 
   c1 = MagicDust[/HI_/].look#, Dust[/clap/].look
   s=(ring *%W{

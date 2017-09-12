@@ -1,30 +1,9 @@
-live_loop(:metro)do
-  tick;
- # clock_midi
-  cue("16") if look % 16 == 0
-  cue("32") if look % 32 == 0
-  cue("64") if look % 64 == 0
-  midi_clock_tick #channel: 3, port: :iac_bus_1
-  sleep 1
-end
-
-live_loop :music, sync: :metro do
-  tick
-  #sync "16"
-  harp [:A2,3]
-  #bass :E2, sustain: 3
-  #harp_cc phase: rand
-#  sleep 3
-#  harp_cc phase: 1.0
-  sleep 3
-end
-
 with_fx :reverb do
   live_loop :pattern, sync: :metro do
     tick
     #sync "16"
     c1 = Dust[/clap/,1]
-    k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,16]
+    k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,17]
     smp k3
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k1 _ _ _
@@ -41,38 +20,3 @@ with_fx :reverb do
     p = Dust[/perc/,2]
     s=(ring *%W{
 _ _ _ _   _ _ _ _
-_ _ p _
-
-_ _ _ _   _ _ p _
-_ _ p _}).look
-  smp eval(s), cutoff: (line 80, 120, 6*4).look
-
-  c1,c2 = Dust[/clap/,1], Dust[/clap/,8]
-  s=(ring *%W{
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
-
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
- _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
-}).look
-#  smp eval(s), amp: 0.8
-
- # = spread(7,11).map{|s| s ? :hit : :miss}
-  s=(ring *%W{_ _ _ _   c2 _ _ _}).look
- # smp eval(s), cutoff: (line 80, 120, 128).look
-
-  h,h2 = Frag[/hat/,4],Frag[/hat/,6]
-
-  s=(ring *%W{
-_ _ h _                     _ _ h _
-_ _ h _                     _ _ h _
-_ _ h {path:h,amp:0.25}     _ _ h _
-_ _ h _                     _ _ h _
-_ _ h _                     {path:h2,amp:0.9} _ h _
-
-}).look
-#  smp eval(s)
-
-  sleep 1/8.0
-end
-end

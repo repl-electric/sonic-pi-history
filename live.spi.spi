@@ -19,7 +19,7 @@ live_loop :music, sync: :metro do
 
   1.times{
     sleep 1/2.0
-    midi_cc 1, 100,  port: :iac_bus_1, channel: 9
+    midi_cc 1, 40,  port: :iac_bus_1, channel: 9
 #    tick
   }
 

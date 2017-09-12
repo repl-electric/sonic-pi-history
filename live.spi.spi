@@ -21,6 +21,7 @@ live_loop :music, sync: :metro do
   16.times{
     sleep 1/2.0
     midi_cc (line 0, 127).look,  port: :iac_bus_1, channel: 9
+    tick
   }
 
 end

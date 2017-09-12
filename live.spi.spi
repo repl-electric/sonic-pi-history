@@ -26,8 +26,8 @@ live_loop :pattern, sync: :metro do
   c1 = Dust[/clap/,1]
   k1,k2 = Frag[/kick/,9], Mountain[/subkick/,0]
   s=(ring *%W{
-     _ _ _ _    k2 _ _ _   k1 _ _ _
-     k2 _ _ _   k1 _ _ _   k1 _ _ _
+     k1 _ _ _    k2 _ _ _   k2 _ _ _
+     k2 _ _ _   k2 _ _ _   k2 _ _ _
 
   }).look
   smp eval(s)

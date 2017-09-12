@@ -22,11 +22,10 @@ live_loop :music, sync: :metro do
 
     #pitch wheel.
 
-    #midi_cc 108, 12, port: :iac_bus_1, channel: 9
-    #midi_cc 109, 12, port: :iac_bus_1, channel: 9
-    #midi_cc 110, 12, port: :iac_bus_1, channel: 9
-    #midi_cc 111, 12, port: :iac_bus_1, channel: 9
-
+    midi_cc 108, 12, port: :iac_bus_1, channel: 9
+    midi_cc 109, 12, port: :iac_bus_1, channel: 9
+    midi_cc 110, 12, port: :iac_bus_1, channel: 9
+    midi_cc 111, 12, port: :iac_bus_1, channel: 9
 
     #midi_cc (line 0, 127).look, 127,  port: :iac_bus_1, channel: 9
     tick

@@ -101,12 +101,6 @@ end
 #  midi_note_on :A2, 10, sustain: 1, port: :iac_bus_1, channel: 9
 #  midi_note_on :B2, 10, sustain: 1, port: :iac_bus_1, channel: 9
 #  midi_note_on :Cs2, 10, sustain: 1, port: :iac_bus_1, channel: 9
-  midi_note_on :D2, 10, sustain: 1, port: :iac_bus_1, channel: 9
-  midi_note_on :E2, 10, sustain: 1, port: :iac_bus_1, channel: 9
-  midi_note_on :Fs2, 10, sustain: 1, port: :iac_bus_1, channel: 9
-midi_note_on :Gs2, 10, sustain: 1, port: :iac_bus_1, channel: 9
+midi_note_on :A2, 10, sustain: 1, port: :iac_bus_1, channel: 9
 midi_note_on :Cs3, 10, sustain: 1, port: :iac_bus_1, channel: 9
-midi_note_on :D3, 10, sustain: 1, port: :iac_bus_1, channel: 9
-midi_note_on :E3, 10, sustain: 1, port: :iac_bus_1, channel: 9
-midi_note_on :Fs3, 10, sustain: 1, port: :iac_bus_1, channel: 9
-midi_note_on :Gs3, 10, sustain: 1, port: :iac_bus_1, channel: 9
+midi_note_on :B2, 10, sustain: 1, port: :iac_bus_1, channel: 9

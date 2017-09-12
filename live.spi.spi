@@ -29,6 +29,9 @@ live_loop :pattern, sync: :metro do
      k2 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
+     k2 _ _ _   k1 _ _ _   k1 _ _ _
+     k1 _ _ _   k1 _ _ _   k1 _ _ _
+
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ k2 _
 

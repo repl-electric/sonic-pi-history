@@ -4,7 +4,7 @@ live_loop(:metro)do
   cue("16") if look % 16 == 0
   cue("32") if look % 32 == 0
   cue("64") if look % 64 == 0
-  midi_clock_tick
+  midi_clock_tick, channel: 3
   sleep 1
 end
 

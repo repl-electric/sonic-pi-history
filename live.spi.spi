@@ -18,7 +18,6 @@ live_loop :music, sync: :metro do
   #  harp_cc phase: 1.0
 
 
-
   8.times{sleep 1
     midi_cc (line 0, 127).look,  port: :iac_bus_1, channel: 9
   }

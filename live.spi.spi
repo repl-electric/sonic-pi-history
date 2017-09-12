@@ -23,6 +23,8 @@ live_loop :music, sync: :metro do
     #pitch wheel.
 
     midi 108, 0
+    midi 109, 0
+
 
     midi_cc (line 0, 127).look, 127,  port: :iac_bus_1, channel: 9
 tick

@@ -39,7 +39,7 @@ with_fx :reverb do
 
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{
-_ _ p _   _ _ p _
+p _ _ _   _ _ p _
 _ _ p _
 
 _ _ p _   _ _ p _

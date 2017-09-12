@@ -16,7 +16,7 @@ live_loop :music, sync: :metro do
   #harp_cc phase: rand
 #  sleep 3
 #  harp_cc phase: 1.0
-  sleep 1/8.0
+  sleep 1/4.0
 end
 
 with_fx :reverb do

@@ -11,7 +11,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp (ring [:A2,3], [:Cs3]).look
+  harp (ring [:A2,3], [:Cs3,3]).look
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3
@@ -43,7 +43,10 @@ p _ _ _   _ _ p _
 _ _ p _
 
 _ _ p _   _ _ p _
-_ _ p _}).look
+_ _ p _
+
+
+}).look
   smp eval(s)#, cutoff: (line 80, 120, 6*4).look
 
   c1,c2 = Dust[/clap/,1], Dust[/clap/,8]

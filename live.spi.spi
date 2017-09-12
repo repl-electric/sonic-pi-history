@@ -25,7 +25,7 @@ with_fx :reverb do
     #sync "16"
     c1 = Dust[/clap/,1]
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], Dust[/kick/,23]
-    smp k3
+#    smp k3
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _

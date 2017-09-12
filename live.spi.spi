@@ -25,7 +25,7 @@ live_loop :music, sync: :metro do
     #midi 108, 0
     #midi 109, 0
     midi 110, 0
-    midi 111, 0
+    midi 111,, 0
 
 
 

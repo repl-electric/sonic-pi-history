@@ -27,7 +27,7 @@ live_loop :pattern, sync: :metro do
      k1 _ _ _   k1 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _   k1 _ _ _
-     k1 _ _ _   k1 _ _ _   k1 _ _ _   _ k1 _ _
+     k1 k2 _ _   k1 _ _ _   k1 _ _ _   _ k1 _ _
 }).look
   smp eval(s)
 

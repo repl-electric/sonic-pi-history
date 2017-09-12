@@ -44,7 +44,7 @@ with_fx :reverb do
     c1 = Dust[/clap/,1]
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     s=(ring *%W{
-     k2 _ _ _   k1 _ _ _   k1 _ _ _
+     k1 _ _ _   k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
      k2 _ _ _   k1 _ _ _   k1 _ _ _
@@ -53,7 +53,7 @@ with_fx :reverb do
      k2 _ {path:k2,amp:1.1} _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   Fraz[/kick/].tick(:kicks) _ k2 _
   }).look
-    smp eval(s), amp: (line 0.8, 1.0, 12*6).look*2
+    smp eval(s), amp: (line 0.8, 1.0, 12*6).look
 
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{

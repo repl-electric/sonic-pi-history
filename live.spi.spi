@@ -35,7 +35,7 @@ with_fx :reverb do
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   k3 _ k2 _
   }).look
-    smp eval(s), amp: (line 0.8, 1.0, 12*6).look
+#    smp eval(s), amp: (line 0.8, 1.0, 12*6).look
 
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{
@@ -47,14 +47,12 @@ _ _ p _
 }).look
   smp eval(s)#, cutoff: (line 80, 120, 6*4).look
 
-
     c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{
 c _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
-
 }).look) != _
       smp eval(s)
     end

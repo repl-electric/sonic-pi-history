@@ -47,7 +47,7 @@ _ _ p _
 }).look
   smp eval(s)#, cutoff: (line 80, 120, 6*4).look
 
-  c1,c1 = MagicDust[/snap/].look#, Dust[/clap/].look
+  c1,c1 = MagicDust[/click/].look#, Dust[/clap/].look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _

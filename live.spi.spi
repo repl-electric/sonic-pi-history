@@ -44,7 +44,7 @@ _ _ p _
 
 _ _ p _   _ _ p _
 _ _ p _}).look
-  smp eval(s), cutoff: (line 80, 120, 6*4).look
+  smp eval(s)#, cutoff: (line 80, 120, 6*4).look
 
   c1,c2 = Dust[/clap/,1], Dust[/clap/,8]
   s=(ring *%W{

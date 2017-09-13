@@ -67,7 +67,7 @@ end
 
 
 
-    p = Dust[/perc/].look
+    p = Dust[/perc/, /tape/].look
     s=(ring *%W{
 p _ _ _   _ _ p _
 _ _ p _

@@ -63,7 +63,7 @@ end
   }).look
  #   smp eval(s), amp: (line 0.8, 1.0, 12*6).look
 
-    p = Dust[/perc/,/conga/,[0,0,1]].look
+    p = Dust[/perc/,/conga/].look
     s=(ring *%W{
 p _ _ _   _ _ p _
 _ _ p _

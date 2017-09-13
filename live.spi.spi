@@ -67,7 +67,7 @@ end
 
 
   p = Dust[/perc/, /tape/].shuffle.look
-  puts p
+#  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _
 _ _ p _

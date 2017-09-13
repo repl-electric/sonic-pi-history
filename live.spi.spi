@@ -35,7 +35,7 @@ live_loop :music, sync: :metro do
   8.times{
     #midi_pitch_bend rand_i(127),2, port: :iac_bus_1, channel: 3
 
-    midi_cc 65, 10
+    midi_cc 65, 127
     midi_cc 5, 10
 
 

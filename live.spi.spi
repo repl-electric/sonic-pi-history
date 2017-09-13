@@ -45,29 +45,13 @@ live_loop :music, sync: :metro do
     midi_cc 112, 127.0*0
     midi_cc 113, 127.0*0
 
-
-#    PitchBendScale CH. A=108 Amount of bend in semitones, centered on active pitch (so 1/2up, 1/2 down)
-#PitchBendScale CH. B=109 Amount of bend in semitones, centered on active pitch (so 1/2up, 1/2 down)
-#AfterScale CH. A=110 Aftertouch in semitones
-#AfterScale CH. B=111 Aftertouch in semitones
-#VelScale CH. A=112 Sets Minimum Velocity value
-#VelScale CH. B=113 Sets Minimum Velocity value
-
-
-
-
-    sleep 1/8.0
     tick
-    #pitch wheel.
 
     # midi_cc 108, 12, port: :iac_bus_1, channel: 9
     # midi_cc 109, 12, port: :iac_bus_1, channel: 9
     # midi_cc 110, 12, port: :iac_bus_1, channel: 9
     # midi_cc 111, 12, port: :iac_bus_1, channel: 9
-
     #midi_cc (line 0, 127).look, 127,  port: :iac_bus_1, channel: 9
-    tick
-
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
 #    tick
   }

@@ -14,7 +14,7 @@ end
 
 live_loop :test, sync: :metro do
   tick
-  zero (ring :A1,:A2,:A3).look,
+  zero (ring :A1,:A2,:A3).look
   sleep 1
 end
 

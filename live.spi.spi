@@ -33,7 +33,7 @@ live_loop :music, sync: :metro do
 #  sleep 3
 
   8.times{
-    midi_pitch_bend 0, port: :iac_bus_1, channel: 3
+    midi_pitch_bend 1, port: :iac_bus_1, channel: 3
 
     midi_cc 65, 127*0
     midi_cc 5, 10*0

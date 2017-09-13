@@ -7,7 +7,7 @@ live_loop(:metro)do
   midi_start if tick == 0
   midi_clock_beat 0.5#, port: :iac_bus_1
   #smp Mountain[/subkick/,1]
-  sleep 1
+  sleep 0.5
 end
 
 live_loop :test, sync: :metro do

@@ -64,6 +64,8 @@ end
    smp eval(s), amp: (line 0.8, 1.0, 12*6).look, v: 1.2
 
   shader :iR, rand*4
+  shader :iG, rand*4
+
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{
 p _ _ _   _ _ p _

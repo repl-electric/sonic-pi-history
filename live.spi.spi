@@ -44,8 +44,8 @@ live_loop :music, sync: :metro do
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
 end
 
-with_fx :reverb do
-  live_loop :pattern, sync: :metro do
+#with_fx :reverb do
+  live_loop :pat, sync: :metro do
     #sync '18'
     tick
     #sync "16"
@@ -111,4 +111,4 @@ _ _ h _                     {path:h2,amp:0.9} _ h _
 
   sleep 1/8.0
 end
-end
+#end

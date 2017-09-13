@@ -19,7 +19,7 @@ end
 
 live_loop :graphics, sync: :metro do
   shader :shader, "dots.glsl", "sphere.vert", "points", 4000
-  shader :iMode, 2
+  shader :iMode, 4
   tick
   #@points += 1000
   sleep 1

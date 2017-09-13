@@ -79,7 +79,7 @@ end
   }).look
 
 
-   smp eval(s), amp: (line 0.8, 1.0, 12*6).look*2, v: 0.2
+   smp eval(s), amp: (line 0.7, 1.0, 12*6).look*2, v: 0.2
 
   p,p2 = Frag[/hat/,8]#*Dust[/perc/, /tape/]
 #  puts p

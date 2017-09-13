@@ -43,7 +43,7 @@ live_loop :music, sync: :metro do
     midi_cc 108, 127.0*0
     midi_cc 109, 127.0*0
     midi_cc 112, 127.0*0
-    midi_cc 113, 127.0
+    midi_cc 113, 127.0*0
 
 
 #    PitchBendScale CH. A=108 Amount of bend in semitones, centered on active pitch (so 1/2up, 1/2 down)

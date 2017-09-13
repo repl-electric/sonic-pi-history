@@ -35,6 +35,7 @@ live_loop :music, sync: :metro do
   8.times{
     midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 9
     sleep 1/4.0
+    tick
     #pitch wheel.
 
     # midi_cc 108, 12, port: :iac_bus_1, channel: 9

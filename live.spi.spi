@@ -40,7 +40,7 @@ live_loop :music, sync: :metro do
     midi_cc 114, 127*0
 
     midi_cc 111, 127.0*0
-    midi_cc 108, 127.0
+    midi_cc 108, 127.0*0
     midi_cc 109, 127.0
     midi_cc 112, 127.0
     midi_cc 113, 127.0

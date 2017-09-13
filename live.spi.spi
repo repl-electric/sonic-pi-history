@@ -65,6 +65,8 @@ end
 
   shader :iR, rand*4
   shader :iG, rand*4
+  shader :iB, rand*4
+
 
     p = Dust[/perc/,/conga/].look
     s=(ring *%W{

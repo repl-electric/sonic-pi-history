@@ -92,7 +92,7 @@ _ _ p _
 _ _ p _   _ _ p _
 _ _ p _
 }).look
-#  smp eval(s), cutoff: (line 80, 120, 6*4).look
+  smp eval(s), cutoff: (line 80, 120, 6*4).look
 
     c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{

@@ -11,7 +11,7 @@ live_loop(:metro)do
 #  smp Mountain[/subkick/,1]
 #  use_real_time
 
-  sleep 1
+  sleep 0.5
 end
 
 live_loop :music, sync: :metro do

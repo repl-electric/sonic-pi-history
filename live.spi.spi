@@ -8,7 +8,7 @@ live_loop(:metro)do
   #  midi_clock_tick port: :iac_bus_1 #channel: 3, port: :iac_bus_1
   midi_start if tick == 0 # Send a midi_start event the first time round the live loop only
   midi_clock_beat 0.5 #port: :iac_bus_1#, chaneel: 1         # this will not just send a steady clock beat, but also ensure
-  smp Mountain[/subkick/,1]
+  #smp Mountain[/subkick/,1]
   sleep 0.5
 end
 

@@ -63,8 +63,7 @@ end
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   Frag[/kick/,0] _ k2 _
   }).look
-#   smp eval(s), amp: (line 0.8, 1.0, 12*6).look, v: 0.8
-
+   smp eval(s), amp: (line 0.8, 1.0, 12*6).look, v: 0.8
 
   p,p2 = *Dust[/perc/, /tape/]
 #  puts p
@@ -79,7 +78,7 @@ _ _ p _
 _ _ p _   _ _ p _
 _ _ p _
 }).look
-  smp eval(s), cutoff: (line 80, 120, 6*4).look
+#  smp eval(s), cutoff: (line 80, 120, 6*4).look
 
     c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{

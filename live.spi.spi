@@ -15,7 +15,7 @@ end
 live_loop :test, sync: :metro do
   tick
   use_real_time
-  zero (scale :A3, :major).shuffle.look
+  midi_note_on (scale :A3, :major).shuffle.look, port: "*"
   sleep 1/2.0
 end
 

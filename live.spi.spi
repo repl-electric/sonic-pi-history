@@ -19,7 +19,6 @@ end
 
 harp_cc phase: 0.0
 
-
 live_loop :music, sync: :metro do
   tick
   #sync "16"

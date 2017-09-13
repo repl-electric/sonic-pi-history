@@ -46,6 +46,7 @@ live_loop :music, sync: :metro do
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
 end
 
+
 #with_fx :reverb do
   live_loop :pat, sync: :metro do
     #sync '18'
@@ -63,7 +64,7 @@ end
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
      k1 _ _ _   k1 _ _ _   Frag[/kick/,0] _ k2 _
   }).look
-   smp eval(s), amp: (line 0.8, 1.0, 12*6).look, v: 0.8
+   smp eval(s), amp: (line 0.8, 1.0, 12*6).look, v: 0.0
 
   p,p2 = *Dust[/perc/, /tape/]
 #  puts p

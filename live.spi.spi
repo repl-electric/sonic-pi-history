@@ -31,7 +31,7 @@ live_loop :music, sync: :metro do
   shader :iR, rand*4
   shader :iG, rand*4
   shader :iB, rand*4
-  shader :iMode, [1.0]
+  shader :iMode, [1.0].choose
 
   comment do
     midi_cc 65,  127*0  # port

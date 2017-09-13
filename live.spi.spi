@@ -46,7 +46,7 @@ end
 
 with_fx :reverb do
   live_loop :pattern, sync: :metro do
-
+    stop
     tick
     #sync "16"
     c1 = Dust[/clap/,1]

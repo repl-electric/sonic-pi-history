@@ -6,7 +6,7 @@ shader [:iR,:iG,:iB], 2.0
 #shader :iMode, 0.0
 shader :iAlien, 0.0
 shader :iMotion, 0.004
-#shader :iZoom, 0.1
+shader :iZoom, 0.1
 shader :fx, :bloom
 live_loop :zoom, sync: :metro do
   tick

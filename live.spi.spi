@@ -62,7 +62,7 @@ end
      k1 _ _ _   k1 _ _ _   k1 _ _ _
 
      k2 _ k2 _  k1 _ _ _   k1 _ _ _
-     k1 _ _ _   k1 _ _ _   Frag[/kick/,1] _ k2 _
+     k1 _ _ _   k1 _ _ _   Frag[/kick/,2] _ k2 _
   }).look
    smp eval(s), amp: (line 0.8, 1.0, 12*6).look*2, v: 0.0
 

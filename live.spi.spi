@@ -74,6 +74,14 @@ _ _ p _
 
 _ _ p _   _ _ p _
 _ _ p _
+
+p2 _ _ _   _ _ p _
+_ _ p _
+
+_ _ p _   _ _ p _
+_ _ p _
+
+
 }).look
   smp eval(s), amp: 0.8#, rpitch: 12#, cutoff: (line 80, 120, 6*4).look
 

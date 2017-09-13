@@ -1,14 +1,11 @@
 live_loop(:metro)do
   tick;
-
-  # clock_midi
   cue("16") if look % 16 == 0
   cue("18") if look % 18 == 0
   cue("32") if look % 32 == 0
   cue("64") if look % 64 == 0
-  #  midi_clock_tick port: :iac_bus_1 #channel: 3, port: :iac_bus_1
-  midi_start if tick == 0 # Send a midi_start event the first time round the live loop only
-  midi_clock_beat 0.5 #port: :iac_bus_1#, chaneel: 1         # this will not just send a steady clock beat, but also ensure
+  midi_start if tick == 0
+  midi_clock_beat 0.5, port: :iac_bus_1
   #smp Mountain[/subkick/,1]
   sleep 1
 end
@@ -39,7 +36,7 @@ comment do
     midi_cc 108, 12.0*0
     midi_cc 109, 127.0*0
     midi_cc 112, 127.0*0
-      midi_cc 113, 127.0*0
+    midi_cc 113, 127.0*0
     end
     #midi_cc (line 0, 127).look, 127,  port: :iac_bus_1, channel: 9
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9

@@ -12,12 +12,19 @@ live_loop(:metro)do
   sleep 0.5
 end
 
+live_loop :test, sync: :metro do
+  tick
+  zero :A1
+
+  sleep 1
+end
+
+
 live_loop :music, sync: :metro do
   tick
   #sync "16"
   use_real_time
   #harp (ring [:A3,3], [:Cs3,3], [:B3, 3]).look, 127.0, sustain: 8.0, port: :iac_bus_1, channel: 9
-  zero :A1
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  sleep 3

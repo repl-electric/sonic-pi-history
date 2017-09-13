@@ -37,6 +37,8 @@ live_loop :music, sync: :metro do
 
 
     midi_cc 65, 0
+    midi_cc 5, 0
+
 
     sleep 1/8.0
     tick

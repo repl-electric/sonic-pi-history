@@ -26,7 +26,7 @@ live_loop :music, sync: :metro do
   harp (ring [:A2,3], [:Cs3,3], [:B2, 3]).look, 10.0, sustain: 8.0, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
-  sleep 3
+  sleep 6
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
 
   comment do

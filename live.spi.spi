@@ -15,7 +15,7 @@ end
 live_loop :test, sync: :metro do
   tick
   use_real_time
-  zero (scale :A3, :major).look
+  zero (scale :A3, :major).shuffle.look
   sleep 1/2.0
 end
 

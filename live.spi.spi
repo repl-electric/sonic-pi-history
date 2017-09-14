@@ -161,7 +161,6 @@ _ _ h _  _ _ h _
 
 }).look
 
-    puts "alive"
     amp = if ((v=eval(s)) != "_")
             puts "v:#{v}" if !v.is_a?(String)
             #v[:amp] || 2.0

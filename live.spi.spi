@@ -62,7 +62,7 @@ end
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
 
      k2 _ k2 _  k1 _ _ _   k2 _ _ _   k1 _ _ _
-     k2 _ _ _   k3   _ k2 _
+     k2 _ _ _   k3  _ k2 _
   }).look
 
     s2=(ring *%W{
@@ -92,7 +92,7 @@ _ _ p _
 _ _ p _   _ _ p _
 _ _ p _
 }).look
-#  smp eval(s), cutoff: (line 110, 120, 6*4).look
+  smp eval(s), cutoff: (line 110, 120, 6*4).look
 
     c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{

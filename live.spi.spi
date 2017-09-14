@@ -104,6 +104,9 @@ _ _ p
 _ _ p
 }).look
 
+  if(s!=_)
+    zero, :A1
+  end
 
 
   #with_swing(0.03) do

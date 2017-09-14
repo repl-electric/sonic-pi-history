@@ -58,7 +58,7 @@ live_loop :music, sync: :metro do
 end
 
 
-with_fx :reverb do
+with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     #sync '18'
     tick

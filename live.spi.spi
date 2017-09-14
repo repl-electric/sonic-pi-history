@@ -89,7 +89,9 @@ with_fx :none, mix: 0 do
   smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
   p= MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
-#  puts p
+  p= Dust[/perc/, [7,7]]
+
+    #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _
 _ _ p _

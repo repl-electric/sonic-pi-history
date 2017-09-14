@@ -78,7 +78,8 @@ end
      _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
 
-   smp eval(s), amp: 2*(line 0.8, 1.0, 12*6).look, v: 0.2, attack: (line 0.0, 0.05,12*12).look
+  #2*(line 0.8, 1.0, 12*6).look
+   smp eval(s), amp: (knit 1.0,4,0.8,4).look , v: 0.2, attack: (line 0.0, 0.05,12*12).look
 
   p,p2 = *Dust[/perc/, /con/]
 #  puts p

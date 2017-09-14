@@ -79,7 +79,7 @@ end
   }).look
 
   #2*(line 0.8, 1.0, 12*6).look
-   smp eval(s), amp: 4*(knit 1.0, 4, 0.82,4, 0.9,4, 0.85,4).look , v: 0.2, attack: (line 0.0, 0.05,12*12).look
+   smp eval(s), amp: 4*(knit 1.0, 4, 0.82,4, 0.9,4, 0.85,4).look , v: 0.2, attack: (line 0.0, 0.01,12*12).look
 
   p,p2 = *Dust[/perc/, /con/]
 #  puts p

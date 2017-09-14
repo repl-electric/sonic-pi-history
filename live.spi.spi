@@ -149,6 +149,6 @@ end
 #end
 live_loop :bells, sync: :metro do
   tick
-  smp MagicDust[/hi/,/chimes/,/_A\./].look
+  smp MagicDust[/hi/,/chimes/,/_A\./].look, amp: 0.5
   sleep 32
 end

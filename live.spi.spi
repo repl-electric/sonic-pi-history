@@ -19,6 +19,8 @@ end
 
 harp_cc phase: 0.5
 
+midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
+
 live_loop :music, sync: :metro do
   tick
   #sync "16"

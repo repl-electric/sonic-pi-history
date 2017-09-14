@@ -135,7 +135,7 @@ _ _ _  _ _ _
   s=(ring *%W{_ _ _ _   c2 _ _ _}).look
  # smp eval(s), cutoff: (line 80, 120, 128).look
 
-  h,h2 = Frag[/hat/,8],Frag[/hat/,7]
+  h,h2 = Magic[/hat/,8],Frag[/hat/,7]
 
   s=(ring *%W{
 _ _ h _  _ _ h _

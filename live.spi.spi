@@ -117,10 +117,12 @@ _ _ p
   if(s!="_")
     zero (knit :A2,24,:E3,24).look,10
   end
-with_fx :reverb, mix: (line 0.2,0.3,32).look do
-  smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
-  amp: 1.0*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
-end
+    with_fx :reverb, mix: (line 0.2,0.3,32).look do
+      smp MagicDust[/_MI,[4..8]].look
+
+      smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
+      amp: 1.0*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+    end
     c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{
 _ _ _ _    _ _

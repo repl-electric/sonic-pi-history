@@ -107,7 +107,7 @@ _ _ p
   if(s!="_")
     zero :A4,10
   end
-with_fx :reverb do
+with_fx :reverb, mix: 0.2 do
   smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
   amp: 1.2*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
 end

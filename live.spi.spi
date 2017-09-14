@@ -33,7 +33,9 @@ live_loop :music, sync: :metro do
   sleep 3
 
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
-  midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
+
+  midi_pitch_bend (line 0.0, 1.0,12).look, port: :iac_bus_1, channel: 9
+
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
 

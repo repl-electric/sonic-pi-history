@@ -105,7 +105,7 @@ _ _ p
 }).look
 
   if(s!="_")
-    zero :A1,10
+    zero :A1,80
   end
 
   smp eval(s), cutoff: (line 110, 120, 6*4).look, attack: (line 0.02, 0.0,6*2).look,

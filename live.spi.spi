@@ -79,7 +79,7 @@ end
   #2*(line 0.8, 1.0, 12*6).look
   smp eval(s), amp: 4*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
-  p,p = *Dust[/perc/, [5,5]]
+  p,p = *Dust[/perc/, [6,6]]
 #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _

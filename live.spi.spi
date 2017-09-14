@@ -163,7 +163,7 @@ _ _ h _  _ _ h _
 
     puts "alive"
     amp = if ((v=eval(s)) != "_")
-            puts "v:#{v}"
+            puts "v:#{v}" if v.is_a?(String)
             #v[:amp] || 2.0
             1.0
           end

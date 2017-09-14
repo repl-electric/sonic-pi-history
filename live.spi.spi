@@ -23,9 +23,9 @@ live_loop :music, sync: :metro do
   tick
   #sync "16"
   use_real_time
-  harp (ring [:A3,3], [:D3,3], [:B3, 3],
-            [:Fs3,3], [:A3,3], [:D3, 3]
-        ).look, 10.0, sustain: 3.0, port: :iac_bus_1, channel: 9
+#  harp (ring [:A3,3], [:D3,3], [:B3, 3],
+#            [:Fs3,3], [:A3,3], [:D3, 3]
+#        ).look, 10.0, sustain: 3.0, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   sleep 3

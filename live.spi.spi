@@ -141,8 +141,7 @@ _ _ h _  _ _ h _
 _ _ h _  _ _ h _
 
 }).look
-  smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.0,0.1,64).look, amp: 0.5
-
+  smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.0,0.05,64).look, amp: 0.5
   sleep 1/8.0
 end
 #end

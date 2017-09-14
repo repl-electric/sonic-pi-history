@@ -162,8 +162,8 @@ _ _ h _  _ _ h _
 
 }).look
 
-    amp = if (eval(s)) != "_"
-            1.0
+    amp = if (v=eval(s)) != "_"
+            v[:amp] || 1.0
           else
             2.0
           end

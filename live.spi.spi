@@ -161,7 +161,7 @@ _ _ h _  _ _ h _
 
 }).look
 
-    amp = if ((v=eval(s)) != "_")
+    amp = if ((v=eval(s)) != "_") && v
             puts v
             puts "v:#{v}" unless v.is_a?(String)
             #v[:amp] || 2.0

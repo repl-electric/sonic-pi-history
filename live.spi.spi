@@ -19,7 +19,7 @@ end
 
 harp_cc phase: 0.5
 
-midi_pitch_bend 0.9, port: :iac_bus_1, channel: 3
+midi_pitch_bend 1.0, port: :iac_bus_1, channel: 3
 
 live_loop :music, sync: :metro do
   tick

@@ -136,7 +136,7 @@ _ _ _  _ _ _
  # smp eval(s), cutoff: (line 80, 120, 128).look
 
   h,h2 = MagicDust[/hi/].look,Frag[/hat/,7]
-
+puts h
   s=(ring *%W{
 _ _ h _  _ _ h _
 _ _ h _  _ _ h _

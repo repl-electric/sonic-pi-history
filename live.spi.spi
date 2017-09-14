@@ -54,7 +54,7 @@ live_loop :music, sync: :metro do
   end
 
   #128.times do
-  #  midi_cc (line 0, 127).look, 127,  port: :iac_bus_1#, channel: 9
+    midi_cc (line 0, 127).look, 127,  port: :iac_bus_1#, channel: 9
    # sleep 0.5
    # tick
   #end

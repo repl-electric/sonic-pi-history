@@ -32,11 +32,6 @@ live_loop :music, sync: :metro do
   midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
-  #midi_cc 114, 127*1 #midi clock
-
-  #midi_cc 65,  127*0  # port
-  #midi_cc 5,   10*0  # port
-
 
   comment do
     midi_cc 65,  127*0  # port

@@ -147,3 +147,8 @@ _ _ h _  _ _ h _
   sleep 1/8.0
 end
 #end
+live_loop :bells, sync: :metro do
+  tick
+  smp MagicDust[/hi/,/chimes/,/_A\./].look
+  sleep 32
+end

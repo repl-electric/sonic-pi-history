@@ -139,7 +139,7 @@ _ _ _  _ _ _
 
   s=(ring *%W{
 _ _ h _  _ _ h _
-_ _ _ _  _ _ _ _
+_ _ h _  _ _ _ _
 
 }).look
   smp eval(s), cutoff: (line 110, 127,32).look

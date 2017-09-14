@@ -162,6 +162,7 @@ _ _ h _  _ _ h _
 
 }).look
 
+    puts "alive"
     amp = if (v=eval(s)) != "_"
             puts "v:#{v}"
             v[:amp] || 2.0

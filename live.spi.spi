@@ -17,7 +17,7 @@ live_loop :test, sync: :metro do
   sleep 1/4.0
 end
 
-harp_cc phase: 0.5
+harp_cc phase: 0.0
 
 midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
@@ -159,7 +159,6 @@ _ _ h _  _ _ h _
 
 }).look
     smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: 0.01, amp: 1.25
-
   sleep 1/8.0
 end
 end

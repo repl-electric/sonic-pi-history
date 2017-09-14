@@ -105,7 +105,7 @@ _ _ p
 }).look
 
   if(s!="_")
-    zero :A2,10
+    zero (knit :A2,24,:Cs3,24).look,10
   end
 with_fx :reverb, mix: (line 0.2,0.3,32).look do
   smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,

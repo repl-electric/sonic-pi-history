@@ -35,7 +35,7 @@ live_loop :music, sync: :metro do
   #midi_cc 114, 127*1 #midi clock
 
   midi_cc 65,  127*0  # port
-  midi_cc 5,   10  # port
+  midi_cc 5,   10*0  # port
 
 
   comment do

@@ -55,7 +55,7 @@ end
     tick
     #sync "16"
     c1 = Dust[/clap/,1]
-    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,1], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
@@ -77,7 +77,8 @@ end
   }).look
 
   #2*(line 0.8, 1.0, 12*6).look
-   smp eval(s), amp: 4*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+  smp eval(s), amp: 4*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+
   p,p = *Dust[/perc/, /con/]
 #  puts p
     s=(ring *%W{

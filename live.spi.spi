@@ -164,7 +164,7 @@ _ _ h _  _ _ h _
     amp = if ((v=eval(s)) != _)
             v.is_a?(String) ? 1.0 : (v[:amp] || 1.0)
           end
-
+    puts amp
     smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: 0.01, amp: amp
 
   sleep 1/8.0

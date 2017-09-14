@@ -163,7 +163,7 @@ _ _ h _  _ _ h _
 }).look
 
     amp = if (v=eval(s)) != "_"
-            puts v
+            puts "v:#{v}"
             v[:amp] || 2.0
           end
 

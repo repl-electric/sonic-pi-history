@@ -79,7 +79,7 @@ end
   #2*(line 0.8, 1.0, 12*6).look
   smp eval(s), amp: 4*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
-  p,p = *Junk[/perc/,99]#*Dust[/perc/, /con/]
+  p,p = *Dust[/perc/, /con/]
 #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _
@@ -105,13 +105,15 @@ _ _ p
 }).look
 
   if(s!="_")
-    zero :A1,80
+    zero :A4,10
   end
 
-  smp eval(s), cutoff: (line 110, 120, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
-  amp: 1.5*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.95,4, 1,(6*4)-4, 0.85,4).look
 
-  c = MagicDust[/HI_/, [54,55]].look
+  with_swing(0.02) do
+    smp eval(s), cutoff: (line 110, 120, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
+    amp: 1.5*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.95,4, 1,(6*4)-4, 0.85,4).look
+  end
+    c = MagicDust[/HI_/, [54,55]].look
     if (s=(ring *%W{
 _ _ _ _    _ _
 _ _ _  _ _ _
@@ -135,7 +137,7 @@ _ _ _  _ _ _
   s=(ring *%W{_ _ _ _   c2 _ _ _}).look
  # smp eval(s), cutoff: (line 80, 120, 128).look
 
-  h,h1 = Frag[/hat/,8],Frag[/hat/,7]
+  h,h2 = Frag[/hat/,8],Frag[/hat/,7]
 
   s=(ring *%W{
 _ _ h _                     _ _ h _
@@ -145,7 +147,7 @@ _ _ h _                     _ _ h _
 _ _ h _                     _  _ h _
 
 }).look
-  smp eval(s), cutoff: (line 110, 127,32).look
+#  smp eval(s), cutoff: (line 110, 127,32).look
 
   sleep 1/8.0
 end

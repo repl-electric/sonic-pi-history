@@ -55,7 +55,7 @@ end
     tick
     #sync "16"
     c1 = Dust[/clap/,1]
-    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,1], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _

@@ -138,7 +138,7 @@ _ _ _  _ _ _
   h,h2 = Dust[/hat/,5],Dust[/hat/,4]
   s=(ring *%W{
 _ _ h _  _ _ h _
-_ _ h _  _ _ h2 _
+_ _ h _  _ _ h _
 
 }).look
   smp eval(s), cutoff: (line 110, 127,32).look

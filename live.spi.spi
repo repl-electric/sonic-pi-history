@@ -37,9 +37,6 @@ live_loop :music, sync: :metro do
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
 
-  #midi_cc 65,  127*1  # port
-  #midi_cc 5,   127*1  # port
-
   comment do
     midi_cc 65,  127*0  # port
     midi_cc 5,   127*0  # port
@@ -77,7 +74,7 @@ with_fx :reverb do
      k2 _ _ _   k3  _ k2 _
   }).look
 
-    s=(ring *%W{
+    s1=(ring *%W{
      k2 _ _ _   _ _ _ _   k1 _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _
 

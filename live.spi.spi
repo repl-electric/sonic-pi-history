@@ -104,7 +104,7 @@ _ _ p
 _ _ p
 }).look
 
-  if(s!=_)
+  if(s!="_")
     zero :A3,10
   end
 

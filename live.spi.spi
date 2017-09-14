@@ -154,7 +154,7 @@ _ _ _  _ _ _
 
   h,h2 = MagicDust[/_HI/,15],Dust[/hat/,4]
   s=(ring *%W{
-_ _ _ h  _ _ h _
+_ _ _ h  _ _ _ _
 
 }).look
     smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: 0.01, amp: 0.3

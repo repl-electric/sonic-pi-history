@@ -145,7 +145,7 @@ _ _ h _                     _ _ h _
 _ _ h _                     _  _ h _
 
 }).look
-#  smp eval(s), cutoff: (line 110, 127,32).look
+  smp eval(s), cutoff: (line 110, 127,32).look
 
   sleep 1/8.0
 end

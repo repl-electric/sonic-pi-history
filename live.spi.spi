@@ -21,10 +21,9 @@ live_loop :moving, sync: :metro do
     (ring [:B2,1/8.0], [_,1/8.0], [:Cs2,1/8.0],[_,1/8.0],[:D2,1/8.0],[_,1/8.0], [_,1/4.0],  [_, 1/2.0], [_, 1/4.0])
     )
 
-  sleep 1/4.0
+  sleep 2/4.0
   score = mega.look
   10.times{
-
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look
     zero s,(line 30,80,9).look if s && s[0]

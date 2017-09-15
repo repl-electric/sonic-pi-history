@@ -99,7 +99,7 @@ with_fx :none, mix: 0 do
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
     p= Dust[/perc/, [7,7]]
-    p =MagicDust[/perc/,/stone/,[4..8]].look
+    p=MagicDust[/perc/,/stone/,[4..8]].look
 
     #  puts p
     s=(ring *%W{
@@ -114,7 +114,7 @@ _ _ _ _   _ _ p _
 _ _ p _
 }).look
 
-    s1=(ring *%W{
+    s=(ring *%W{
 p _
 p _ _ _
 _ p _ _

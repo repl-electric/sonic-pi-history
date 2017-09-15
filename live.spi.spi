@@ -83,7 +83,7 @@ with_fx :none, mix: 0 do
      k2 _ _ _   k3  _ k2 _
   }).look
 
-    s=(ring *%W{
+    s1=(ring *%W{
      k2 _ _ _   _ _ _ _   k1 _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _
 
@@ -165,7 +165,6 @@ _ _ h _  _ _ h {path:h,amp:0.4}
 _ _ h _  _ _ h _
 
 }).look
-
     amp = if ((v=eval(s)) != _)
             v.is_a?(String) ? 0.5 : (v[:amp] || 0.5)
           else

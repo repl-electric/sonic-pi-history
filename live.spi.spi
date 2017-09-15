@@ -133,7 +133,7 @@ _ _ p
         #         0  2  3
         # MD_ORGANIC_HIT_MID_
         smp zz = MagicDust[:clack,[5,5]].look, amp: 1.0*1, pan: 1.0
-        puts zz #exception swallowed
+#        puts zz #exception swallowed
 
 #        puts MagicDust[:clack, 1]
       end

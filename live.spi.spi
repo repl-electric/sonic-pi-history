@@ -1,7 +1,184 @@
-live_loop :name do
-  tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
+live_loop(:metro)do
+  tick;
+  cue("16") if look % 16.0 == 0.0
+  cue("24") if look % 24.0 == 0.0
+  cue("18") if look % 18.0 == 0.0
+  cue("32") if look % 32.0 == 0.0
+  cue("64") if look % 64.0 == 0.0
+#  midi_start if tick == 0
+  #midi_clock_beat 1.0#, port: :iac_bus_1
+  #smp Mountain[/subkick/,1]
+  sleep 1.0
+end
+
+live_loop :test, sync: :metro do
+  tick
+#  use_real_time
+#  midi_note_on (scale :A2, :major, octaves: 3).shuffle.look, port: "*"
+  sleep 1/4.0
+end
+
+#harp_cc phase: 0.0
+
+#midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
+
+live_loop :music, sync: :metro do
+  tick
+#  sync "24"
+  puts "--------------SYNC-----------"
+  #sync "16"
+#  use_real_time
+  harp (ring [:A2,3], [:Cs3,3], [:B2, 3],
+#             [:Fs3,3], [:A3,3], [:D3, 3]
+        ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
+  #bass :E2, sustain: 3
+  #harp_cc phase: rand
+  sleep 3
+
+  #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
+  #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
+  shader [:iR,:iG,:iB].choose, rand*10
+  #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
+
+#  midi_cc 65,  127*1  # port
+#  midi_cc 5,   1*1  # port
+#  midi_cc 114, 1*1 #midi clock
+
+  comment do
+    midi_cc 65,  127*0  # port
+    midi_cc 5,   127*0  # port
+    midi_cc 114, 127*1 #midi clock
+
+    midi_cc 111, 127.0*0
+    midi_cc 108, 12.0*0
+    midi_cc 109, 127.0*0
+    midi_cc 112, 127.0*0
+    midi_cc 113, 127.0*0
+  end
+
+  #128.times do
+  #  midi_cc (line 0, 127).look, 127,  port: :iac_bus_1, channel: 9
+   # sleep 0.5
+   # tick
+  #end
+    #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
+end
+
+
+with_fx :none, mix: 0 do
+  live_loop :pat, sync: :metro do
+    #sync '18'
+    tick
+    #sync "16"
+    c1 = Dust[/clap/,1]
+    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    s=(ring *%W{
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+
+     k2 _ k2 _  k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k3  _ k2 _
+  }).look
+
+    s=(ring *%W{
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _  _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
+  }).look
+
+  #2*(line 0.8, 1.0, 12*6).look
+ # smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+
+  p= MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
+#  p= Dust[/perc/, [7,7]]
+
+    #  puts p
+    s=(ring *%W{
+p _ _ _   _ _ p _
+_ _ p _
+_ _ _ _   _ _ p _
+_ _ p _
+
+p _ _ _   _ _ p _
+_ _ p _
+_ _ _ _   _ _ p _
+_ _ p _
+}).look
+
+    s1=(ring *%W{
+p _
+p _ _ _
+_ p _ _
+_ _ p _
+_ _ _ p
+_ _ p
+_ _ p
+}).look
+
+  if(s!="_")
+    zero (knit :A2,24,:E3,24).look,10
+  end
+    with_fx :reverb, mix: (line 0.2,0.3,32).look do
+      if s!= "_" && spread(1,4).look
+ #       smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.8*1, pan: (ring 0.25,-0.25).look(:inside)
+      end
+      smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
+      amp: 1.0*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+    end
+    c = MagicDust[/HI_/, [54,55,56,57]].look
+    if (s=(ring *%W{
+_ _ _  _ _ _
+c _ _  _ _ _
+_ _ _  _ _ _
+_ _ _  _ _ _
+}).look) != _
+#      smp eval(s), pan: (ring 0.25,-0.25).look
+    end
+
+  c1 = MagicDust[/HI_/].look#, Dust[/clap/].look
+  s=(ring *%W{
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+}).look
+#  smp eval(s), amp: 2.0
+
+ # = spread(7,11).map{|s| s ? :hit : :miss}
+  s=(ring *%W{_ _ _ _   c2 _ _ _}).look
+ # smp eval(s), cutoff: (line 80, 120, 128).look
+
+  h,h2 = MagicDust[/_HI/,18],Dust[/hat/,4]
+  s=(ring *%W{
+_ _ h _  _ _ h _
+_ _ h _  _ _ h _
+_ _ h _  _ _ h {path:h,amp:0.4}
+_ _ h _  _ _ h _
+
+}).look
+
+    amp = if ((v=eval(s)) != _)
+            v.is_a?(String) ? 1.0 : (v[:amp] || 1.0)
+          else
+            0
+          end
+    smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
+
+  sleep 1/8.0
+end
+end
+live_loop :bells, sync: :metro do
+  tick
+  # h,h2 = MagicDust[/MD_BELL_RES/,5],Frag[/hat/,7]
+  #smp MagicDust[/hi/,/chimes/,/_A\./].look, amp: 0.5
+  sleep 32
 end

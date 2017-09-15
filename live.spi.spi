@@ -122,7 +122,7 @@ _ _ p
     zero (knit :A2,24,:E3,24).look,10
   end
     with_fx :reverb, mix: (line 0.2,0.3,32).look do
-      if s!= "_" && spread(1,4).look
+      if s!= "_" && spread(1,2).look
         #21-30
       smp MagicDust[/_MI/,[21,23,24,27]].tick(:init), amp: 0.8
       end

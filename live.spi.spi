@@ -13,6 +13,18 @@ live_loop(:metro)do
   sleep 1.0
 end
 
+live_loop :moving, sync: :metro do
+  tick
+
+  # zero (knit :A2,24,:E3,24).look,5
+  zero (ring :A3,1,:E3,1,:A3,1    ).look,5
+
+
+
+  sleep 1
+end
+
+
 live_loop :test, sync: :metro do
   tick
 #  use_real_time

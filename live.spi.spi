@@ -128,7 +128,7 @@ _ _ p
         #21-30
 
 #puts MagicDust[/MD_ORGANIC_HIT_MID_/, 21..31]
-        smp MagicDust[:clack, [0,2,3,6]].look, amp: 1.0*1, pan: 1.0
+        smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 1.0*1, pan: 1.0
 #        puts zz #exception swallowed
 
 #        puts MagicDust[:clack, 1]

@@ -25,6 +25,7 @@ harp_cc phase: 0.0
 
 live_loop :music, sync: :metro do
   tick
+  stop
   #sync "16"
 #  use_real_time
   harp (ring [:A2,3], [:Cs3,3], [:B2, 3],

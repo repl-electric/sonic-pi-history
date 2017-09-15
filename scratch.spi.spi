@@ -1,1 +1,1 @@
- MagicDust[:clack,[2,2]].each {|c| puts c}
+ MagicDust[:clack,[3,3]].each {|c| puts c}

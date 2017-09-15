@@ -1,3 +1,1 @@
-load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
-
-MagicDust[:clack,[5,5]].each {|c| puts c}
+harp :A3

@@ -1,1 +1,1 @@
-puts MagicDust[/_MID/,[27,27]].tick(:local), amp: 1, pan: -1.0
+puts MagicDust[/_MID/,[27,27]].tick(:local)

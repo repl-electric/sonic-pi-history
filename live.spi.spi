@@ -18,8 +18,8 @@ live_loop :moving, sync: :metro do
   mega = (ring  (ring [:D2,1/8.0], [_,1/8.0], [:E2,1/8.0],[_,1/8.0],[:FS2,1/8.0],[_,1/8.0], [_,1/4.0],  [:B2, 1/2.0], [:B2, 1/4.0])).look
 
   sleep 1/4.0
-  10.times{
     score = mega.look
+  10.times{
 
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look

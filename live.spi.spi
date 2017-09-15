@@ -3,11 +3,11 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb
 live_loop(:metro)do
   tick;
   puts look % 24.0
-  cue("16") if look % 16.0 == 0
-  cue("24") if look % 24.0 == 0
-  cue("18") if look % 18.0 == 0
-  cue("32") if look % 32.0 == 0
-  cue("64") if look % 64.0 == 0
+  cue("16") if look % 16.0 == 0.0
+  cue("24") if look % 24.0 == 0.0
+  cue("18") if look % 18.0 == 0.0
+  cue("32") if look % 32.0 == 0.0
+  cue("64") if look % 64.0 == 0.0
 #  midi_start if tick == 0
   #midi_clock_beat 1.0#, port: :iac_bus_1
   #smp Mountain[/subkick/,1]

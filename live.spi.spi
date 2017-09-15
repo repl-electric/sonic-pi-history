@@ -126,7 +126,7 @@ _ _ p
     with_fx :reverb, mix: (line 0.2,0.3,32).look do
       if s!= "_" && spread(1,4).look
         #21-30
-        smp  zz=MagicDust[/_MID/,[23,23]].tick(:local), amp: 1, pan: -1.0
+#        smp  zz=MagicDust[/_MID/,[23,23]].tick(:local), amp: 1, pan: -1.0
         puts zz
 #        puts  smp MagicDust[:clack]
         #        [22,23,24,27]

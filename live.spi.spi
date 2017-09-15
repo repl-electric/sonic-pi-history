@@ -17,6 +17,8 @@ live_loop :moving, sync: :metro do
   tick
   sync :music
   sleep 3
+
+  10.times{
   score = (ring
     [:D2,1/8.0],  [_,1/8.0], [:E2,1/8.0],[_,1/8.0],[:FS2,1/8.0],[_,1/8.0], [_,1/4.0],
     [:B2, 1/2.0], [:B2, 1/4.0], [_, 2+4.25])
@@ -34,7 +36,8 @@ live_loop :test, sync: :metro do
   tick
 #  use_real_time
 #  midi_note_on (scale :A2, :major, octaves: 3).shuffle.look, port: "*"
-  sleep 1/4.0
+    sleep 1/4.0
+    }
 end
 
 harp_cc phase: 0.5

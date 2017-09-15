@@ -17,12 +17,12 @@ live_loop :moving, sync: :metro do
   tick
 
   score = (ring
-    [:Cs2,1/4.0],[:D2,1/4.0],[:E2,1/4.0], [_,1/2.0],
-    [:D3, 1/2.0], [:D3, 1/2.0], [_, 4.0])
+    [:Cs3,1/4.0],[:D3,1/4.0],[:E3,1/4.0], [_,1/2.0],
+    [:D4, 1/2.0], [:D4, 1/2.0], [_, 4.0])
 
   #zero (knit :A2,24,:E3,24).look,5
   s = score.look
-  zero s , 5 if s && s[0]
+  zero s, 5 if s && s[0]
 
   puts score.map{|z| z[-1] }.reduce(:+)
   sleep s[-1]

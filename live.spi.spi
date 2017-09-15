@@ -16,7 +16,7 @@ end
 live_loop :moving, sync: :metro do
   tick
 
-  score = (ring [:Cs3,1/8.0],[:D3,1/8.0],[:Cs3,1/8.0],
+  score = (ring [:D3,1/8.0],[:Cs3,1/8.0],[:D3,1/8.0],
                 [_,1/4.0],
                [:Fs2, 1/4.0], [:Fs2, 1/4.0], [_, 4.0])
 

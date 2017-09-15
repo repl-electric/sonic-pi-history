@@ -123,6 +123,7 @@ _ _ p
   end
     with_fx :reverb, mix: (line 0.2,0.3,32).look do
       if s!= "_" && spread(1,4).look
+        #21-30
       smp MagicDust[/_MI/,[21,30]].tick(:init), amp: 0.8
       end
  #     smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,

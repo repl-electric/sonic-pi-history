@@ -29,7 +29,8 @@ live_loop :moving, sync: :metro do
   #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
 
   puts score.map{|z| z[-1] }.reduce(:+)
-  sleep s[-1]
+    sleep s[-1]
+    }
 end
 
 live_loop :test, sync: :metro do
@@ -37,7 +38,7 @@ live_loop :test, sync: :metro do
 #  use_real_time
 #  midi_note_on (scale :A2, :major, octaves: 3).shuffle.look, port: "*"
     sleep 1/4.0
-    }
+
 end
 
 harp_cc phase: 0.5

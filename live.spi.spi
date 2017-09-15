@@ -26,7 +26,7 @@ harp_cc phase: 0.0
 
 live_loop :music, sync: :metro do
   tick
-  sync "24"
+#  sync "24"
   puts "--------------SYNC-----------"
   #sync "16"
 #  use_real_time

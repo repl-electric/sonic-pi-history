@@ -15,19 +15,18 @@ end
 
 live_loop :moving, sync: :metro do
   tick
-
   score = (ring
     [:Cs3,1/4.0],[:D3,1/4.0],[:E3,1/4.0], [_,1/4.0],
     [:D3, 1/2.0], [:D3, 1/2.0], [_, 4.0])
 
   #zero (knit :A2,24,:E3,24).look,5
   s = score.look
-  zero s, (line 5,127).look if s && s[0]
+  zero s,(line 5,127).look if s && s[0]
+  midi_pitch_bend 0.0, port: :iac_bus_1, channel: 9
 
   puts score.map{|z| z[-1] }.reduce(:+)
   sleep s[-1]
 end
-
 
 live_loop :test, sync: :metro do
   tick

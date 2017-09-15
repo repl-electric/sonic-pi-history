@@ -19,18 +19,19 @@ live_loop :moving, sync: :metro do
   sleep 3
 
   10.times{
-  score = (ring
-    [:D2,1/8.0],  [_,1/8.0], [:E2,1/8.0],[_,1/8.0],[:FS2,1/8.0],[_,1/8.0], [_,1/4.0],
-    [:B2, 1/2.0], [:B2, 1/4.0], [_, 2+4.25])
+    tick
+    score = ((ring ).look
+      [:D2,1/8.0],  [_,1/8.0], [:E2,1/8.0],[_,1/8.0],[:FS2,1/8.0],[_,1/8.0], [_,1/4.0],
+      [:B2, 1/2.0], [:B2, 1/4.0], [_, 2+4.25])
 
-  #zero (knit :A2,24,:E3,24).look,5
-  s = score.look
-  zero s,(line 30,127,10).look if s && s[0]
+    #zero (knit :A2,24,:E3,24).look,5
+    s = score.look
+    zero s,(line 30,127,10).look if s && s[0]
   #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
 
-  puts score.map{|z| z[-1] }.reduce(:+)
+    puts score.map{|z| z[-1] }.reduce(:+)
     sleep s[-1]
-    }
+  }
 end
 
 live_loop :test, sync: :metro do

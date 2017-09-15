@@ -124,7 +124,7 @@ _ _ p
 }).look
 
   if(s!="_")
-    zero (knit :A2,24,:E3,24).look,10
+    zero (knit :A2,24,:E3,24).look,5
   end
     with_fx :reverb, mix: (line 0.2,0.3,32).look do
       if s!= "_" && spread(1,4).look

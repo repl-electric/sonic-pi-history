@@ -22,7 +22,7 @@ live_loop :moving, sync: :metro do
                [:Fs2, 1/4.0], [:Fs2, 1/4.0], [_, 4.0]
     ).look , 5
 
-  puts zero.reduce(0){|s,a| a[-1] + s}
+  puts zero.reduce({|s,a| a[-1] + s}
   sleep s[-1]
 end
 

@@ -15,7 +15,7 @@ end
 
 live_loop :moving, sync: :metro do
   sync :music
-  sleep 4+2
+  sleep 1
   10.times{
     tick
     score = (ring

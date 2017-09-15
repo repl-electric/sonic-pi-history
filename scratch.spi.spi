@@ -1,1 +1,1 @@
-puts MagicDust[:clack].tick(:local)
+puts MagicDust[:clack]

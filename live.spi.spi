@@ -127,7 +127,7 @@ _ _ p
       if s!= "_" && spread(1,4).look
         #21-30
         smp  zz=MagicDust[/_MID/,[23,23]].tick(:local), amp: 1, pan: -1.0
-        puts zz
+#        puts zz
 #        puts  smp MagicDust[:clack]
         #        [22,23,24,27]
         # MD_ORGANIC_HIT_MID_

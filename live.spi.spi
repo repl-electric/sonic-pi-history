@@ -14,7 +14,6 @@ live_loop(:metro)do
 end
 
 live_loop :moving, sync: :metro do
-  tick
   sync :music
   sleep 3
 

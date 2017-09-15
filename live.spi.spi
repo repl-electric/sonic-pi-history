@@ -131,7 +131,7 @@ _ _ p
 #        puts  smp MagicDust[:clack]
         #        [22,23,24,27]
         # MD_ORGANIC_HIT_MID_
-        smp  MagicDust[:clack,[2,2]].look, amp: 1.5*1, pan: 1.0
+#        smp  MagicDust[:clack,[2,2]].look, amp: 1.5*1, pan: 1.0
 
 #        puts MagicDust[:clack, 1]
       end

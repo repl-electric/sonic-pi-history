@@ -1,1 +1,1 @@
-puts MagicDust[:clack]
+ MagicDust[:clack].each {|c| puts c}

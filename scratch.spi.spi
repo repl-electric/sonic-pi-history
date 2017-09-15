@@ -1,3 +1,3 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
-MagicDust[:clack].each {|c| puts c}
+MagicDust[:clack,[5,5]].each {|c| puts c}

@@ -127,6 +127,7 @@ _ _ p
       if s!= "_" && spread(1,4).look
         #21-30
         #        puts  MagicDust[/_MID/,[22,23,24,27]].tick(:init)
+        puts  smp MagicDust[:clack]
 #        [22,23,24,27]
         smp MagicDust[:clack].tick(:init), amp: 8.5
       end

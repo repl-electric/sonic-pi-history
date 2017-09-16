@@ -233,7 +233,7 @@ live_loop :vocals, sync: :metro do
   with_fx :gverb, room: 300, mix: 1.0 do
   puts "HIT---------------------"
 #  sample @slices["B3/4"].look[:path], amp: 10
-    smp @slices["B3/4"][2]#, amp: 2
+    smp @slices["B3/4"][1]#, amp: 2
     sleep 8
   end
 end

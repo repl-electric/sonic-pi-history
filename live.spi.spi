@@ -25,7 +25,7 @@ live_loop :moving, sync: :metro do
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look
     zero s,(line 0,100,9).look if s && s[0]
-    midi_cc 5,  2, port: :iac_bus_1, channel: 9
+    midi_cc 5, 1, port: :iac_bus_1, channel: 9
   #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
 
     puts score.map{|z| z[-1] }.reduce(:+)

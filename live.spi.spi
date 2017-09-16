@@ -231,7 +231,7 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   tick
-  with_fx :gverb, room: 300, mix: 1.0 do
+  with_fx :gverb, room: 300, mix: 1.0 do |g_fx|
   puts "HIT---------------------"
     #  sample @slices["B3/4"].look[:path], amp: 10
     hz1,hz2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]

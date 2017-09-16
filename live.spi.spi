@@ -234,6 +234,6 @@ live_loop :vocals, sync: :metro do
   puts "HIT---------------------"
 #  sample @slices["B3/4"].look[:path], amp: 10
     smp @slices["B3/4"][1], amp: 2
-    sleep 16
+    sleep 8
   end
 end

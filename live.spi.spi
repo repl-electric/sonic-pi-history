@@ -236,4 +236,4 @@ live_loop :vocals do
 end
 
 
-    smp @slices["B3/4"][1], amp: 8
+puts @slices["B3/4"][1]

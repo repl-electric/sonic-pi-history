@@ -1,5 +1,5 @@
 live_loop :play do
   tick
-  zero scale(:A1, :major, octaves:4).choose
+  zero scale(:A1, :major, octaves:4).choose, rand_i(127)
   sleep 1/2.0
 end

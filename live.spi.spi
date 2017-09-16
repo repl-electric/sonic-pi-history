@@ -215,13 +215,6 @@ _ _ h _  _ _ h _
           end
     smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
 
-
-
- # tick
-#  puts @slices["B3/4"].look
-#  smp @slices["B3/4"][0], amp: 10
-
-
   sleep 1/8.0
 end
 end
@@ -233,6 +226,9 @@ live_loop :bells, sync: :metro do
   sleep 32
 end
 live_loop :vocals do
+
+  puts "HIT---------------------"
+  smp @slices["B3/4"].look, amp: 10
   sleep 1
 
 end

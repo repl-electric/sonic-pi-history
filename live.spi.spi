@@ -49,7 +49,7 @@ harp_cc phase: 2/3.0
 
 module Zero
   extend SonicPi::Lang::Midi
-  extend SonicPi::Lang::Core)
+  extend SonicPi::Lang::Core
 
 #  include SonicPi::Lang::Midi
   def self.midi_clock(state)

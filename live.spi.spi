@@ -233,7 +233,7 @@ live_loop :vocals do
 
   puts "HIT---------------------"
 #  sample @slices["B3/4"].look[:path], amp: 10
-  sample @slices["B3/4"].look[:path], amp: 1
+  smp @slices["B3/4"][1], amp: 1
   sleep 32
 
 end

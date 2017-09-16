@@ -86,8 +86,8 @@ live_loop :music, sync: :metro do
   midi_cc 114, 1
 #  Zero.midi_clock(true)
 
-puts @slices["B3/4"].look[:path]
-  sample @slices["B3/4"].look[:path], amp: 10
+#puts @slices["B3/4"].look[:path]
+
 
 
   comment do
@@ -232,7 +232,8 @@ end
 live_loop :vocals do
 
   puts "HIT---------------------"
-  sample @slices["B3/4"].look[:path], amp: 10
-  sleep 1
+#  sample @slices["B3/4"].look[:path], amp: 10
+  sample @slices["B3/4"].look[:path], amp: 1
+  sleep 32
 
 end

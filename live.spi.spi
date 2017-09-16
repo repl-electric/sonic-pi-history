@@ -86,6 +86,10 @@ live_loop :music, sync: :metro do
   midi_cc 114, 1
 #  Zero.midi_clock(true)
 
+
+  sample @slices["B3/4"].look[:path], amp: 10
+
+
   comment do
     midi_cc 65,  127*0  # port
     midi_cc 5,   127*0  # port

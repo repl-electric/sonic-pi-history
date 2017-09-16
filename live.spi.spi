@@ -230,7 +230,6 @@ live_loop :vocals do
     puts "HIT---------------------"
     smp @slices["B3/4"][1], amp: 8
     4.times{
-      tick
       sleep 1
     }
   end

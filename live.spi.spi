@@ -218,7 +218,7 @@ _ _ h _  _ _ h _
 
 
   tick
-  puts @slices["B3/4"].look
+#  puts @slices["B3/4"].look
   smp @slices["B3/4"].look, amp: 10
 
 

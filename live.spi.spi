@@ -53,7 +53,7 @@ module Zero
   extend SonicPi::Lang::Sound
 #  include SonicPi::Lang::Midi
   def self.midi_clock(state)
-    midi_cc 114, state ? 1 : 0
+   # midi_cc 114, state ? 1 : 0
   end
 end
 
@@ -78,7 +78,8 @@ live_loop :music, sync: :metro do
 
   midi_cc 65,  127*1  # port
   #midi_cc 5,   1*4  # port
-  Zero.midi_clock(true)
+   midi_cc 114, state ? 1 : 0
+#  Zero.midi_clock(true)
 
   comment do
     midi_cc 65,  127*0  # port

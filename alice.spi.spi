@@ -1,0 +1,8 @@
+live_loop :play, sync: :metro do
+  tick
+
+  zero scale(:A3, :major).choose
+
+
+  sleep 1/4.0
+end

@@ -232,11 +232,12 @@ end
 live_loop :vocals, sync: :metro do
   tick
   with_fx :gverb, room: 400, mix: 1.0 do |g_fx|
-    hz1,hz2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
+    hz1,hz2 = (knit
+                    @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
-                       _ _ hz1 {path:hz2,amp:0.5}
-                       _ _ hz1 _
-                       _ _ hz1 _})
+                     _ _ hz1 {path:hz2,amp:0.5}
+                     _ _ hz1 _
+                     _ _ hz1 _})
     smp eval(hat2.look), amp: 2
     4.times{sleep 1; control g_fx, room: rand_i(400)}
   end

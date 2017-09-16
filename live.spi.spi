@@ -234,3 +234,6 @@ live_loop :vocals do
     }
   end
 end
+
+
+    smp @slices["B3/4"][1], amp: 8

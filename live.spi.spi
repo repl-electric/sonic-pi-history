@@ -230,10 +230,11 @@ live_loop :bells, sync: :metro do
   sleep 32
 end
 live_loop :vocals do
-
+  with_fx :gverb do
   puts "HIT---------------------"
 #  sample @slices["B3/4"].look[:path], amp: 10
   smp @slices["B3/4"][1], amp: 1
-  sleep 32
+    sleep 32
+  end
 
 end

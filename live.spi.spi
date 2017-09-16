@@ -226,10 +226,10 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   with_fx :gverb  do
-      smp @slices["B3/4"][0]
+    puts "HIT"
+    smp @slices["B3/4"][0]
     4.times{
       tick
-
       sleep 1
     }
   end

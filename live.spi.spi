@@ -235,9 +235,7 @@ live_loop :vocals, sync: :metro do
     #  sample @slices["B3/4"].look[:path], amp: 10
 
     h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
-
-    s = "{path:h2,amp:0.2}"
-
+    s = "{path:h2,amp:1.2}"
     smp eval(s)#, amp: 1.5
     sleep 8
   end

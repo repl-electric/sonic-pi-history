@@ -237,7 +237,7 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 {path:hz2,amp:0.5}
                      _ _ hz1 _
                      _ _ hz1 _})
-    smp eval(hat2.look), amp: 4
+    smp eval(hat2.look), amp: 8
     8.times{sleep 1/4.0; control g_fx, room: rand_i(400)}
   end
 end

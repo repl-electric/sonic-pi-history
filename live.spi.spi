@@ -242,7 +242,6 @@ live_loop :vocals, sync: :metro do
                        _ _ hz1 _})
 
     smp eval(hat2.look)
-
-    8.times{sleep 1; control g_fx room: rand_int(300)}
+    8.times{sleep 1; control g_fx room: rand_i(300)}
   end
 end

@@ -226,9 +226,8 @@ live_loop :bells, sync: :metro do
   sleep 32
 end
 live_loop :vocals do
-  with_fx :reverb  do
     puts "HIT---------------------"
     smp @slices["B3/4"][1], amp: 2
     sleep 1
-  end
+
 end

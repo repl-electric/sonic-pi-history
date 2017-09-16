@@ -48,7 +48,8 @@ harp_cc phase: 2/3.0
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
 module Zero
-  include SonicPi::Lang::Midi
+  include, SonicPi::Lang::Midi
+#  include SonicPi::Lang::Midi
   def self.midi_clock(state)
     midi_cc 114, state ? 1 : 0
   end

@@ -236,8 +236,10 @@ live_loop :vocals, sync: :metro do
 
     h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
 
+    s = {path:h2,amp:0.2}
 
-    smp h2[:path], amp: 1.5
+
+    smp eval(s), amp: 1.5
     sleep 8
   end
 end

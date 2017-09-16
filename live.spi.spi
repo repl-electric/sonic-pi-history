@@ -219,7 +219,7 @@ _ _ h _  _ _ h _
 
   tick
 #  puts @slices["B3/4"].look
-  smp @slices["B3/4"].look, amp: 10
+  smp @slices["B3/4"][0], amp: 10
 
 
   sleep 1/8.0

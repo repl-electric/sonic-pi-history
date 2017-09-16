@@ -33,8 +33,7 @@ live_loop :moving, sync: :metro do
 
     (ring
       [:A3,1/8.0], [:Cs3,1/8.0], [:E3,1/8.0])
-
-    )
+    ).tick(:mega)
 
   sleep 2/4.0
   score = mega.look

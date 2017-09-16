@@ -240,7 +240,7 @@ live_loop :vocals, sync: :metro do
                        _ _ hz1 _
                        _ _ hz1 _})
 
-    smp eval(hat2)
+    smp eval(hat2.look)
     sleep 8
   end
 end

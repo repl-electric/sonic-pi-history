@@ -1,4 +1,4 @@
-live_loop :playdo
+live_loop :play do
   tick
   zero scale(:A3, :major).choose
   sleep 1/4.0

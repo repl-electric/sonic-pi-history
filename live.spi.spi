@@ -25,7 +25,7 @@ live_loop :moving, sync: :metro do
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look
     zero s,(line 0,100,9).look if s && s[0]
-    midi_cc 5,  (ring 1,2,4,6,8,12).look  # port
+    midi_cc 5,  (line 1,127,60).look  # port
   #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
 
     puts score.map{|z| z[-1] }.reduce(:+)
@@ -47,6 +47,12 @@ harp_cc phase: 2/3.0
 
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
+module Zero
+  def midi_clock(state)
+    midi_cc 114, state ? 1 : 0
+  end
+end
+
 live_loop :music, sync: :metro do
   tick
 #  sync "24"
@@ -67,7 +73,7 @@ live_loop :music, sync: :metro do
 
   midi_cc 65,  127*1  # port
   #midi_cc 5,   1*4  # port
-  midi_cc 114, 1*1 #midi clock
+  Zero.midi_clock(true)
 
   comment do
     midi_cc 65,  127*0  # port

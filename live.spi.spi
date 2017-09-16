@@ -235,6 +235,7 @@ live_loop :vocals, sync: :metro do
     #  sample @slices["B3/4"].look[:path], amp: 10
     h1,h2 = (knit @slices["Fs3/4"][8],1, @slices["A3/4"][1],2).look,  @slices["B3/4"][1]
 
+    puts h1
     hat2 = (ring *%w{_ _ h1 _
                        _ _ h1 {path:h2,amp:0.5}
                        _ _ h1 _

@@ -229,7 +229,7 @@ live_loop :bells, sync: :metro do
   #  smp MagicDust[/hi/,/chimes/,/_A\./].look, amp: 0.5
   sleep 32
 end
-live_loop :vocals do
+live_loop :vocals, sync: :metro do
   with_fx :gverb do
   puts "HIT---------------------"
 #  sample @slices["B3/4"].look[:path], amp: 10

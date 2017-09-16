@@ -228,7 +228,7 @@ end
 live_loop :vocals do
   with_fx :gverb  do
     puts "HIT---------------------"
-    smp @slices["B3/4"][1]
+    smp @slices["B3/4"][1], amp: 3
     4.times{
       tick
       sleep 1

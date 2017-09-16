@@ -229,8 +229,6 @@ live_loop :vocals do
   with_fx :reverb  do
     puts "HIT---------------------"
     smp @slices["B3/4"][1], amp: 20
-    4.times{
       sleep 1
-    }
   end
 end

@@ -21,7 +21,7 @@ live_loop :moving, sync: :metro do
 
   sleep 2/4.0
   score = mega.look
-  midi_cc 5, 4, port: :iac_bus_1, channel: 9
+  midi_cc 5, 8, port: :iac_bus_1, channel: 9
   10.times{
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look

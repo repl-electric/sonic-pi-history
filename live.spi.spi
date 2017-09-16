@@ -56,7 +56,6 @@ module Zero
     midi_cc 114, state ? 1 : 0
   end
 end
-klass.send(:include, Zero)
 
 
 live_loop :music, sync: :metro do

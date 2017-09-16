@@ -238,8 +238,7 @@ live_loop :vocals, sync: :metro do
 
     s = {path:h2,amp:0.2}
 
-
-    smp eval(s), amp: 1.5
+    smp eval(s)#, amp: 1.5
     sleep 8
   end
 end

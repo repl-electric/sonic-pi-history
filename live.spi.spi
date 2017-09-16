@@ -33,10 +33,10 @@ live_loop :moving, sync: :metro do
 
     (ring
       [:A3,1/8.0], [:Cs3,1/8.0], [:E3,1/8.0])
-    ).tick(:mega)
+    )
 
   sleep 2/4.0
-  score = mega.look
+  score = mega.tick(:mega)
   midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9
   score.count.times{
     #zero (knit :A2,24,:E3,24).look,5

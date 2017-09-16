@@ -231,7 +231,7 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   tick
-  with_fx :gverb, room: 500, mix: 1.0, room_slide: 0.5 do |g_fx|
+  with_fx :gverb, room: 600, mix: 1.0, room_slide: 0.5 do |g_fx|
     hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
                      _ _ hz1 {path:hz2,amp:0.25}

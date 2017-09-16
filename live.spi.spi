@@ -158,7 +158,7 @@ _ _ _ _   _ _ p _
 _ _ p _
 }).look
 
-    s=(ring *%W{
+    s1=(ring *%W{
 p _
 p _ _ _
 _ p _ _
@@ -219,8 +219,8 @@ _ _ h _  _ _ h _
           end
     smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
 
-  sleep 1/8.0
-end
+    sleep 1/8.0
+  end
 end
 live_loop :bells, sync: :metro do
   stop

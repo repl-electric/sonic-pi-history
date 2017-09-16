@@ -13,7 +13,7 @@ live_loop(:metro)do
   sleep 1.0
 end
 
-puts chord(:A3, :sus4)
+puts note_inspect(chord(:A3, :sus4))
 
 live_loop :moving, sync: :metro do
   sync :music

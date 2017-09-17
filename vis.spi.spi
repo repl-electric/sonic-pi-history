@@ -10,7 +10,7 @@ shader :iZoom, 0.1
 #shader :fx, :bloom
 live_loop :zoom do#, sync: :metro do
   tick
-  shader :echo, ([1,0]*1000).shuffle,1.0,1.0,1.0
+  shader :echo, "#{([1,0]*1000).shuffle)}", 1.0,1.0,1.0
   #shader :shad5er, "dots.glsl"#, "sphere.vert", "lines", 5000
   #shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   #shader :iZoom, (line 0.0, 32, 12).look

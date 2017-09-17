@@ -8,7 +8,7 @@ shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 #shader :fx, :bloom
-live_loop :zoom, sync: :metro do
+live_loop :zoom do#, sync: :metro do
   tick
   shader :echo, ([1,0]*1000).shuffle,1.0,1.0,1.0
   #shader :shad5er, "dots.glsl"#, "sphere.vert", "lines", 5000

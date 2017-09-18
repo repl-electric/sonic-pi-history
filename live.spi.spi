@@ -33,7 +33,6 @@ live_loop :moving, sync: :metro do
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     puts score.map{|z| z[-1] }.reduce(:+)
     tick
-
     sleep s[-1]
   }
 end

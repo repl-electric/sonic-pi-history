@@ -7,5 +7,6 @@ end
 live_loop :test2 do
   tick
   zero scale(:A2,:major_pentatonic).look
+  harp :A2
   sleep 1
 end

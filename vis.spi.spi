@@ -8,7 +8,7 @@ shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :fx, :bleach
+
 
 live_loop :zoom do#, sync: :metro do
   tick
@@ -17,7 +17,7 @@ live_loop :zoom do#, sync: :metro do
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
   shader [:iR,:iG, :iB].choose, rand*10.0
-
+shader :fx, :bleach
   sleep 1
 end
 

@@ -18,12 +18,9 @@ puts note_inspect(chord(:A2, :sus2))
 live_loop :moving, sync: :metro do
   sync :music
   mega = (ring
-    (ring
-      [:A3,1/8.0], [:D3,1/8.0], [:Cs3,1/8.0]),
-    (ring
-      [:A3,1/8.0], [:B2,1/8.0], [:Cs3,1/8.0]),
-    (ring
-      [:A3,1/8.0], [:Cs3,1/8.0], [:E3,1/8.0])
+    (ring [:A3,1/8.0], [:D3,1/8.0], [:Cs3,1/8.0]),
+    (ring [:A3,1/8.0], [:B2,1/8.0], [:Cs3,1/8.0]),
+    (ring [:A3,1/8.0], [:Cs3,1/8.0], [:E3,1/8.0])
     )
 
   sleep 2/4.0
@@ -32,7 +29,7 @@ live_loop :moving, sync: :metro do
   score.count.times{
     #zero (knit :A2,24,:E3,24).look,5
     s = score.look
-    zero s,(line 0,100,9).look if s && s[0]
+    #zero s,(line 0,100,9).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     puts score.map{|z| z[-1] }.reduce(:+)
     tick

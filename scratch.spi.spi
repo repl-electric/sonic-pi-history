@@ -1,8 +1,6 @@
 live_loop :test do
   tick
-
-
- moog :A2, sustain: 5
+  moog :A2, sustain: 5
   sleep 6
 end
 

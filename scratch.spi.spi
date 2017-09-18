@@ -8,5 +8,5 @@ end
 live_loop :test2 do
   tick
   harp :E2
-  sleep 1/8.0
+  sleep 6.0
 end

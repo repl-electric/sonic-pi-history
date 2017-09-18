@@ -19,11 +19,10 @@ live_loop :zoom do#, sync: :metro do
 #stop
   tick
   shader :echo, "#{([1,0]*1000).shuffle.join}", 1.0,1.0,1.0
-  shader :shad5er, "dots.glsl"#, "sphere.vert", "lines", 5000
+  shader :shader, "dots.glsl"#, "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
   shader [:iR,:iG, :iB].choose, rand*1.0
-
   sleep 1
 end
 

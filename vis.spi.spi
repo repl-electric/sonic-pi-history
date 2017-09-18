@@ -8,7 +8,7 @@ shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :fx, :god
+shader :fx, :zoom
 
 live_loop :zoom do#, sync: :metro do
   tick

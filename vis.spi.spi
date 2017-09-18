@@ -3,7 +3,7 @@
 #@points = 0
 shader :shader, "dots.glsl", "sphere.vert", "points", 5000
 shader [:iR,:iG,:iB], 2.0
-shader :iMode, 1.0
+shader :iMode, 0.0
 shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1

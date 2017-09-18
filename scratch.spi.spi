@@ -5,3 +5,10 @@ live_loop :test do
  moog :A2, sustain: 5
   sleep 6
 end
+
+
+live_loop :test do
+  tick
+  zero :A2
+  sleep 1
+end

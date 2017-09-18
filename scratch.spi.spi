@@ -12,5 +12,5 @@ live_loop :test2 do
     harp :A3, sustain: 3
   end
 
-  sleep 1
+  sleep 3
 end

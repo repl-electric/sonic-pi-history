@@ -63,7 +63,7 @@ end
 live_loop :bass, sync: :metro do
   #sync "16"
   tick
-  bass (ring :A1, :Cs2, :B2).look, sustain: 3, cutoff: 0.25
+
   sleep 3
 end
 
@@ -76,6 +76,9 @@ live_loop :music, sync: :metro do
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
+
+  bass (ring :A1, :Cs2, :B2).look, sustain: 3, cutoff: 0.25
+
   sleep 3
 
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3

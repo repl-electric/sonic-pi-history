@@ -18,7 +18,7 @@ live_loop :zoom do#, sync: :metro do
   tick
   shader :echo, "small", "#{([1,0]*1000).shuffle.join()}", 1.0,1.0,100, 100,100
 
-  shader :shader, "dots.glsl", "sphere.vert", "points", 5000
+  shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
 

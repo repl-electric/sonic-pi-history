@@ -3,7 +3,7 @@
 #@points = 0
 shader :shader, "dots.glsl", "sphere.vert", "points", 5000
 shader [:iR,:iG,:iB], 9.0
-shader :iMode, 0.0
+shader :iMode, 1.0
 shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
@@ -20,7 +20,6 @@ live_loop :zoom do#, sync: :metro do
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
-
   sleep 1
 end
 

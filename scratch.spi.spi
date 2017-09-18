@@ -10,5 +10,5 @@ end
 live_loop :test do
   tick
   zero :A2
-  sleep 1
+  sleep 1/2.-
 end

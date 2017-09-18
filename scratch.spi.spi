@@ -6,7 +6,7 @@ end
 
 live_loop :test2 do
   tick
-  zero (ring :A2, :Cs3, :B2).look
+  zero (ring :A3).look
 
   if spread(1,6).look
     harp :A3, sustain: 6

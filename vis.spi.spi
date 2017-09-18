@@ -15,7 +15,7 @@ shader :iB, 0.99
 
 
 
-shader :fx, :rim
+shader :fx, :vts
 
 live_loop :zoom do#, sync: :metro do
 stop

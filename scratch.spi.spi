@@ -7,7 +7,7 @@ live_loop :test do
 end
 
 
-live_loop :test do
+live_loop :test2 do
   tick
   zero :A2
   sleep 1/2.0

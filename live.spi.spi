@@ -61,7 +61,7 @@ module Zero
 end
 
 live_loop :bass, sync: :metro do
-  sync "16"
+#  sync ""
   tick
   bass :A1
   sleep 3

@@ -8,9 +8,9 @@
 #shader :iMotion, 0.004
 #shader :iZoom, 0.1
 
-#shader :iR, 10.99
-#shader :iG, 0.0
-#shader :iB, 0.99
+shader :iR, 10.99
+shader :iG, 0.0
+shader :iB, 0.99
 
 shader :fx, :bleach
 

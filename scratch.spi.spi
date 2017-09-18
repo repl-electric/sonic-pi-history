@@ -8,5 +8,5 @@ end
 live_loop :test2 do
   tick
   zero :E3
-  sleep 6
+  sleep 1
 end

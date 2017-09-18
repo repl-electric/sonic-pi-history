@@ -11,7 +11,7 @@ shader :iZoom, 0.1
 #shader :iR, 0.99
 #shader :iG, 0.0
 #shader :iB, 0.99
-shader :fx, :bloom
+#shader :fx, :bloom
 
 live_loop :zoom do#, sync: :metro do
 #stop

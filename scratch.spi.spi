@@ -9,6 +9,6 @@ end
 
 live_loop :test2 do
   tick
-  zero :E3
+  zero :E2
   sleep 1/2.0
 end

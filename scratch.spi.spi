@@ -4,9 +4,8 @@ live_loop :test do
   sleep 6
 end
 
-
 live_loop :test2 do
   tick
-  zero scale(:A3,:major_pentatonic).look
+  zero scale(:A2,:major_pentatonic).look
   sleep 1
 end

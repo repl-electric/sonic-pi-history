@@ -9,6 +9,6 @@ end
 
 live_loop :test2 do
   tick
-  zero :A2
+  zero scale(:A2, :major).choose
   sleep 1/2.0
 end

@@ -61,7 +61,7 @@ module Zero
 end
 
 live_loop :bass, sync: :metro do
-  sync "16"
+  #sync "16"
   tick
   bass :A1, sustain: 1
   sleep 3
@@ -69,7 +69,7 @@ end
 
 live_loop :music, sync: :metro do
   tick
-  sync "16"
+  #sync "16"
 #  use_real_time
   harp (ring [:A2,3], [:Cs3,3], [:E3, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]

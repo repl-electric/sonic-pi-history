@@ -18,7 +18,7 @@ shader :iB, 0.99
 shader :fx, :rim
 
 live_loop :zoom do#, sync: :metro do
-stop
+#stop
   tick
   shader :echo, "#{([1,0]*1000).shuffle.join}", 1.0,1.0,1.0
   shader :shad5er, "dots.glsl"#, "sphere.vert", "lines", 5000

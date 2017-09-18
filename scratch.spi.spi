@@ -7,6 +7,10 @@ end
 live_loop :test2 do
   tick
   zero scale(:A2,:major_pentatonic).look
-  harp :A2
+
+  if spread(1,6).look
+    harp :A2
+    end
+
   sleep 1
 end

@@ -7,7 +7,9 @@ shader [:iR,:iG,:iB], 9.0
 shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
-#shader :fx, :bloom
+
+shader :fx, :zoom
+
 live_loop :zoom do#, sync: :metro do
   tick
   shader :echo, "#{([1,0]*1000).shuffle.join}", 1.0,1.0,1.0

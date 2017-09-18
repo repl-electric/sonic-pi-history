@@ -60,6 +60,12 @@ module Zero
   end
 end
 
+live_loop :bass, sync: :metro do
+  tick
+    bass :A1
+  sleep 3
+end
+
 
 live_loop :music, sync: :metro do
   tick
@@ -77,8 +83,6 @@ live_loop :music, sync: :metro do
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
 
-
-  bass :A1
 
   midi_cc 65,  127*1  # port
   #midi_cc 5,   1*4  # port

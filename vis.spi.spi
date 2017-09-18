@@ -23,6 +23,7 @@ stop
 end
 
 live_loop :graphics, sync: :metro do
+  stop
   shader :shader, "dots.glsl", "sphere.vert", "tri", 500
   shader :iMode, 0
   tick

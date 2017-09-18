@@ -1,6 +1,6 @@
 live_loop :play do
   tick
-  moog scale(:A2, :major, octaves:4).choose, rand_i(127)
+  moog scale(:A4, :major, octaves:4).choose, rand_i(127)
 #  midi_pitch_bend rand(1.0)
   sleep 1/2.0
 end

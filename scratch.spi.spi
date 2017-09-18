@@ -9,7 +9,7 @@ live_loop :test2 do
   zero scale(:A2,:major_pentatonic).look
 
   if spread(1,6).look
-    harp :A2
+    harp :A2, sustain: 6
   end
 
   sleep 1

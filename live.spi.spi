@@ -63,7 +63,7 @@ end
 live_loop :bass, sync: :metro do
   #sync "16"
   tick
-  bass :A1, sustain: 1
+  bass :A1, sustain: 3
   sleep 3
 end
 

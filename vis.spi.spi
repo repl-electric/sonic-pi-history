@@ -2,15 +2,15 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 #@points = 0
 shader :shader, "dots.glsl"#, "sphere.vert", "points", 5000
-#shader [:iR,:iG,:iB], 9.0
+shader [:iR,:iG,:iB], 9.0
 shader :iMode, 0.0
 shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :iR, 0.99
-shader :iG, 0.0
-shader :iB, 0.99
+#shader :iR, 0.99
+#shader :iG, 0.0
+#shader :iB, 0.99
 
 #shader :fx, :tube
 

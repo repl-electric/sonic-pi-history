@@ -131,7 +131,7 @@ with_fx :none, mix: 0 do
   }).look
 
     s=(ring *%W{
-     k2 _ _ _
+     k1 _ _ _        k2 _ _ _
   }).look
 
   #2*(line 0.8, 1.0, 12*6).look

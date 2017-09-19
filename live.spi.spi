@@ -1,4 +1,4 @@
-load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
+#load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
 live_loop(:metro)do
   tick;
@@ -133,7 +133,7 @@ with_fx :none, mix: 0 do
     if (ring *%W{_ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _}).look != "_"
       #smp Ambi[/clap/,/^beat/,1], amp: 8
       #smp Vocals[/./,0], amp: 2.5
-      smp Mountain[/clap/].look
+      smp Analogue[/clap/].look
 #      smp Dust[/clap/,/sq/,0], attack: (line 0.0,0.01,16).shuffle.look
 
     end

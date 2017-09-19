@@ -74,19 +74,21 @@ live_loop :music, sync: :metro do
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
-  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: (ramp 0.0,0.8,128/2.0).tick(:hiit)
+  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.2
   3.times{sleep 1; harp_cc phase: (ring 0.5, 0.5 + rand*0.05).tick(:inits)}
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
 
+
   midi_cc 65,  127*1  # port
   #midi_cc 5,   1*4  # port
   midi_cc 114, 1
 #  Zero.midi_clock(true)
 
-  #puts @slices["B3/4"].look[:path]
+#puts @slices["B3/4"].look[:path]
+
 
   comment do
     midi_cc 65,  127*0  # port
@@ -115,7 +117,7 @@ with_fx :none, mix: 0 do
     tick
     #sync "16"
     c1 = Dust[/clap/,1]
-    k2,k1,k3 = Frag[/kick/,5], Mountain[/subkick/,1], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
@@ -126,23 +128,18 @@ with_fx :none, mix: 0 do
   }).look
 
     s=(ring *%W{
-     k1 _ _ _     k1 _ _ _
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _  _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
 
-  smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
-    if s!="_" && spread(1,8+4).look
-      smp Analog[/17 /].tick(:echo), amp: 0.5
-    end
-
-    if (ring *%W{_ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _}).look != "_"
-      #smp Ambi[/clap/,/^beat/,1], amp: 8
-      #smp Vocals[/./,0], amp: 2.5
-      smp Analog[/04/,[0..4]].tick(:clap)
-#      smp Dust[/clap/,/sq/,0], attack: (line 0.0,0.01,16).shuffle.look
-
-    end
-
   #2*(line 0.8, 1.0, 12*6).look
+  #smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 #    p= Dust[/perc/, [7,7]]

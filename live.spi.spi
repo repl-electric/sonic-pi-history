@@ -1,4 +1,4 @@
-#load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
 
 live_loop(:metro)do
   tick;

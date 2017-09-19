@@ -71,9 +71,6 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5
   harp (ring [:A3,3], [:D3,3], [:E3, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]
-        ).look, 30.0, sustain: 2.0#, port: :iac_bus_1, channel: 9
-  sharp (ring [:A3,3], [:D3,3], [:E3, 3],
-#             [:Fs3,3], [:A3,3], [:D3, 3]
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand

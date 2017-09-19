@@ -137,7 +137,7 @@ with_fx :none, mix: 0 do
 
     if spread(1,8).look
       smp Ambi[/clap/,/^beat/,0], amp: 2
-      smp Vocals[0], amp: 2.5
+      smp Vocals[//,0], amp: 2.5
       end
 
   #2*(line 0.8, 1.0, 12*6).look

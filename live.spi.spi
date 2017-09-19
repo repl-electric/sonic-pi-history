@@ -133,7 +133,7 @@ with_fx :none, mix: 0 do
     if (ring *%W{_ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _}).look != "_"
       #smp Ambi[/clap/,/^beat/,1], amp: 8
       #smp Vocals[/./,0], amp: 2.5
-      smp Dust[/clap/,/sq/,0], attack: (ring 0.0,0.01, 0.03).look, sustain: 0.05
+      smp Dust[/clap/,/sq/,0], attack: (ring 0.0,0.01, 0.03).look, sustain: 0.1
     end
 
   #2*(line 0.8, 1.0, 12*6).look

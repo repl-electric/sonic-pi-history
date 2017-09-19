@@ -134,8 +134,13 @@ with_fx :none, mix: 0 do
      k1 _ _ _     k1 _ _ _
   }).look
 
+
+    if spread(1,8).look
+      smp Mountain[/clap/,0]
+      end
+
   #2*(line 0.8, 1.0, 12*6).look
-  smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+#  smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 #    p= Dust[/perc/, [7,7]]

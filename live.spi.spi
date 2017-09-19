@@ -130,7 +130,8 @@ with_fx :none, mix: 0 do
   }).look
 
 
-    if spread(1,8).look
+    if (s=(ring *%W{_ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _}).look) != _
+
       smp Ambi[/clap/,/^beat/,1], amp: 8
       smp Vocals[/./,0], amp: 2.5
       smp Dust[/clap/,/sq/,0]

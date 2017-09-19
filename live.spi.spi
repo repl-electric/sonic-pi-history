@@ -136,7 +136,7 @@ with_fx :none, mix: 0 do
 
 
     if spread(1,8).look
-      smp Fraz[/clap/,1], amp: 2
+      smp Frag[/clap/,1], amp: 2
       end
 
   #2*(line 0.8, 1.0, 12*6).look

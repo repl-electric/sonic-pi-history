@@ -138,6 +138,7 @@ with_fx :none, mix: 0 do
       #smp Ambi[/clap/,/^beat/,1], amp: 8
       #smp Vocals[/./,0], amp: 2.5
       smp Analog[/clap\d+|clapraw/,[0..3]].look
+      puts
 #      smp Dust[/clap/,/sq/,0], attack: (line 0.0,0.01,16).shuffle.look
 
     end

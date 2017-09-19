@@ -136,7 +136,7 @@ with_fx :none, mix: 0 do
 
 
     if spread(1,8).look
-      smp MagicDust[/clap/,0]
+      smp MagicDust[/clap/,1]
       end
 
   #2*(line 0.8, 1.0, 12*6).look

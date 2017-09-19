@@ -81,14 +81,12 @@ live_loop :music, sync: :metro do
   shader [:iR,:iG,:iB].choose, rand*10
   #shader :iMode, (ring 0.0,1.0,2.0,3.0,4.0).look
 
-
   midi_cc 65,  127*1  # port
   #midi_cc 5,   1*4  # port
   midi_cc 114, 1
 #  Zero.midi_clock(true)
 
-#puts @slices["B3/4"].look[:path]
-
+  #puts @slices["B3/4"].look[:path]
 
   comment do
     midi_cc 65,  127*0  # port
@@ -135,6 +133,7 @@ with_fx :none, mix: 0 do
     if spread(1,8).look
       smp Ambi[/clap/,/^beat/,1], amp: 8
       smp Vocals[/./,0], amp: 2.5
+      smp c1
       end
 
   #2*(line 0.8, 1.0, 12*6).look

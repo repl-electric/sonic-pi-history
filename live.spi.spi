@@ -133,7 +133,7 @@ with_fx :none, mix: 0 do
     if spread(1,8).look
       smp Ambi[/clap/,/^beat/,1], amp: 8
       smp Vocals[/./,0], amp: 2.5
-      smp Dust[/clap/,/squash/,0].tick(:initdd)
+      smp Dust[/clap/,/squash/,0]
       end
 
   #2*(line 0.8, 1.0, 12*6).look

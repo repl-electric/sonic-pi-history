@@ -61,7 +61,6 @@ end
 live_loop :bass, sync: :metro do
   #sync "16"
   tick
-
   sleep 3
 end
 
@@ -75,10 +74,8 @@ live_loop :music, sync: :metro do
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
   #bass :E2, sustain: 3
   #harp_cc phase: rand
-
-  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.5
+  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   3.times{sleep 1; harp_cc phase: (ring 0.5, 0.5 + rand*0.05).tick(:inits)}
-
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
   shader [:iR,:iG,:iB].choose, rand*10
@@ -91,7 +88,6 @@ live_loop :music, sync: :metro do
 #  Zero.midi_clock(true)
 
 #puts @slices["B3/4"].look[:path]
-
 
 
   comment do

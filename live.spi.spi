@@ -45,7 +45,6 @@ live_loop :test, sync: :metro do
 
 end
 
-harp_cc phase: 3/4.0
 
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 

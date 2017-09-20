@@ -15,16 +15,12 @@ shader :iZoom, 0.1
 
 
 @x1 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
-@x2 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
-@x3 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
-@x4 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
-@x5 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
 
 
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-  x = [@x1,@x2,@x3,@x4,@x5]
+  x = [@x15]
   nth = rand_i(x.count)
   x[nth] = x[nth].split("").shuffle.join()
   x = x.flatten.join("\n\n")

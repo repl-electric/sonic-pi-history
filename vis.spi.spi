@@ -26,7 +26,7 @@ live_loop :zoom do#, sync: :metro do
   tick
   x = [@x1,@x2,@x3,@x4,@x5]
   nth = rand_i(x.count)
-  puts nths
+  puts nth
   x[nth] = x[nth].split().shuffle.join()
   x = x.flatten.join("\n")
   shader :echo, "small", x, 0.0,1000.0,   255,255,255,255/1.0

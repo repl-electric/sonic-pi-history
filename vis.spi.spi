@@ -14,7 +14,7 @@ shader :iZoom, 0.1
 #shader :fx, :bloom
 
 
-@x1 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"
+@x1 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}\n"
 
 
 live_loop :zoom do#, sync: :metro do

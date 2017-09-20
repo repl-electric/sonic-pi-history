@@ -28,7 +28,7 @@ live_loop :zoom do#, sync: :metro do
   nth = rand_i(x.count)
   x[nth] = x[nth].split("").shuffle.join()
   x = x.flatten.join("\n\n")
-  shader :clear
+  #shader :clear
   shader :echo, "small", x, 0.0,1600.0,   255,255,255,255/3.0
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look

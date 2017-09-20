@@ -17,7 +17,7 @@ shader :iZoom, 0.1
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-  x = "#{((["do","begin","for","loop","why?"]+(0..9).to_a+[" "]*(rand_i 1000))*9).shuffle.join()[0..300]}\n"
+  x = "#{((["do","begin","for","loop","why?"]+(0..9).to_a+[" "]*(rand_i 1000))*9).shuffle.join()[0..300]}"
   #shader :clear
   shader :echo, "small", x, 0.0,1900.0,   255,0,255,255/1.0
   shader :shader, "dots.glsl", "sphere.vert", "lines", 5000

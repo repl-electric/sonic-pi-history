@@ -14,7 +14,7 @@ shader :iZoom, 0.1
 #shader :fx, :bloom
 
 
-  @x1 = "#{((('a'..'z').to_a+[" ",":","{","}"])*9).shuffle.join()}"
+  @x1 = "#{((('a'..'z').to_a+[" ",":","{"])*9).shuffle.join()}"
   @x2 = "#{(('a'..'z').to_a*9).shuffle.join()}"
   @x3 = "#{([1,0]*190).shuffle.join()}"
   @x4 = "#{([1,0]*190).shuffle.join()}"

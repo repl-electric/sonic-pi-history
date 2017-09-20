@@ -18,7 +18,7 @@ shader :iZoom, 0.1
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-  x = ["#{([1,0]*200).shuffle.join()}", ["#{([1,0]*200).shuffle.join()}", ["#{([1,0]*200).shuffle.join()}", ["#{([1,0]*200).shuffle.join()}"], ["#{([1,0]*200).shuffle.join()}"]
+  x = ["#{([1,0]*200).shuffle.join()}", "#{([1,0]*200).shuffle.join()}", "#{([1,0]*200).shuffle.join()}", "#{([1,0]*200).shuffle.join()}"], "#{([1,0]*200).shuffle.join()}"]
   x = x.flatten.join("\n")
   shader :echo, "small", x, 0.0,1000.0,   255,255,255,255/1.0
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000

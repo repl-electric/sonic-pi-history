@@ -11,7 +11,7 @@ shader :iZoom, 0.1
 #shader :iR, 0.99
 #shader :iG, 0.0
 #shader :iB, 0.99
-#shader :fx, :bloom
+shader :fx, :bloom
 
 
 @x1 = "#{((('a'..'z').to_a+[1..9]+[" "," "," "," "," ",":","{"])*9).shuffle.join()}"

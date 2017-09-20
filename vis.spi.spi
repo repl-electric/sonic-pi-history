@@ -19,10 +19,10 @@ live_loop :zoom do#, sync: :metro do
 #stop
   tick
   x1 = "#{([1,0]*200).shuffle.join()}"
-  x2 = "#{([1,0]*200).shuffle.join()}",
-  x3 = "#{([1,0]*200).shuffle.join()}",
-  x4 = "#{([1,0]*200).shuffle.join()}",
-  x5 = "#{([1,0]*200).shuffle.join()}"]
+  x2 = "#{([1,0]*200).shuffle.join()}"
+  x3 = "#{([1,0]*200).shuffle.join()}"
+  x4 = "#{([1,0]*200).shuffle.join()}"
+  x5 = "#{([1,0]*200).shuffle.join()}"
   x = [x1,x2,x3,x4,x5]
   x = x.flatten.join("\n")
   shader :echo, "small", x, 0.0,1000.0,   255,255,255,255/1.0

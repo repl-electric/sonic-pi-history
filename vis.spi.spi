@@ -14,10 +14,10 @@ shader :iZoom, 0.1
 #shader :fx, :bloom
 
 
-  @x1 = "#{([1,0]*200).shuffle.join()}"
-  @x2 = "#{([1,0]*200).shuffle.join()}"
-  @x3 = "#{([1,0]*200).shuffle.join()}"
-  @x4 = "#{([1,0]*200).shuffle.join()}"
+  @x1 = "#{([1,0]*190).shuffle.join()}"
+  @x2 = "#{([1,0]*190).shuffle.join()}"
+  @x3 = "#{([1,0]*190).shuffle.join()}"
+  @x4 = "#{([1,0]*190).shuffle.join()}"
   @x5 = "#{([1,0]*190).shuffle.join()}"
 
 

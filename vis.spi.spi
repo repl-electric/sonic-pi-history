@@ -17,7 +17,7 @@ shader :iZoom, 0.1
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-   x = "#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten+([" "]*1000))).shuffle.join("")[0..300]}"
+   x = "#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten+([" "]*10))).shuffle.join("")[0..300]}"
 #  x = "#{((_.methods.map(&:to_s)+([" "]*(rand_i 10000)))*9).shuffle[0..300].join()}"
   #x = "#{((_.methods.map(&:to_s)+([" "]*(rand_i 2000)))*9).shuffle[0..300].join()}"
  # shader :clear

@@ -21,7 +21,7 @@ live_loop :zoom do#, sync: :metro do
   x = ["#{([1,0]*1000).shuffle.join()}"]
   x *= 1
   x = x.flatten.join("\n")
-  shader :echo, "small", x, 1.0,0.0,255,255,255,255/2.0
+  shader :echo, "small", x, 1.0,1.0,255,255,255,255/2.0
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look

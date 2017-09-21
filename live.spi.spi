@@ -55,8 +55,10 @@ live_loop :moving, sync: :metro do
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)
 
-    sleep s[-1]
-        zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5
+    sleep s[-1]/2.0
+    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5
+        sleep s[-1]/2.0
+
   }
 end
 

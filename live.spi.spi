@@ -36,7 +36,7 @@ live_loop :moving, sync: :metro do
   score = mega#.tick(:mega)
   midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9
   score.count.times{
-    zero (knit :D2,24,:Fs2,24,:D2,24).look,5
+    zero (knit :D2,24,:Fs2,24,:Gs2,24).look,5
     s = score.look
     zero s,(line 0,100,9).look if s && s[0]
     puts "#{s} #{(knit :D2,24,:D2,24,:D2,24).look}"

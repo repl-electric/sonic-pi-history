@@ -48,8 +48,8 @@ live_loop :moving, sync: :metro do
   3.times{
     s2 = ""
     #zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5
-    s =  (ring [:Cs3,1/8.0], [:E3,1/8.0], [:Fs2,1/8.0]).look#,score.look
-    zero s,(line 0,100,9).look if s && s[0]
+    s = (ring [:Cs3,1/8.0], [:E3,1/8.0], [:Fs2,1/8.0]).look#,score.look
+    zero s,(line 0,100,9).look# if s && s[0]
     puts "#{s2} #{s[0]}"
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)

@@ -83,6 +83,10 @@ live_loop :music, sync: :metro do
   harp (ring [:A2,3], [:Cs3,3], [:B2, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
+
+  puts (ring [:A2,3], [:Cs3,3], [:B2, 3],
+#             [:Fs3,3], [:A3,3], [:D3, 3]
+        ).look
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.2

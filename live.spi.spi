@@ -31,6 +31,8 @@ live_loop :moving, sync: :metro do
     #(ring [:A3,1/8.0], [:B2,1/8.0], [:Cs3,1/8.0]),
     #(ring [:A3,1/8.0], [:Cs3,1/8.0], [:E3,1/8.0], [:Gs3, 1/8.0])
 
+  #A  C  B
+
 
   sleep 2/4.0
   score = mega#.tick(:mega)

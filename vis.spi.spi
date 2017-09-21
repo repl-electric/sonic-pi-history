@@ -39,5 +39,5 @@ live_loop :graphics, sync: :metro do
   shader :iMode, 0
   tick
   #@points += 1000
-  sleep 1
+  sleep 1/6.0
 end

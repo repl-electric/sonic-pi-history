@@ -19,7 +19,7 @@ live_loop :zoom do#, sync: :metro do
   tick
    x = "#{([" "]*rand_i(100)).join("")}#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten)).shuffle.join(" "*rand_i(400))[0..300]}"
 
-   x = "#{[" " * rand_i(600)]}#{(self.methods+self.private_methods).choose}#{[" "*rand_i(600)].join}"
+   x = "#{[" " * rand_i(600)].join}#{(self.methods+self.private_methods).choose}#{[" "*rand_i(600)].join}"
 
 
   #  x = "#{((_.methods.map(&:to_s)+([" "]*(rand_i 10000)))*9).shuffle[0..300].join()}"

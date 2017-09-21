@@ -1,7 +1,7 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 #@points = 0
-shader :shader, "dots.glsl"#, "sphere.vert", "lines", 5000
+#shader :shader, "dots.glsl"#, "sphere.vert", "lines", 5000
 shader [:iR,:iG,:iB], 9.0
 shader :iMode, 2.0
 shader :iAlien, 0.0
@@ -27,7 +27,7 @@ live_loop :zoom do#, sync: :metro do
  # shader :clear
 #x = "test"
   shader :echo, "small", x, 0.0,1600,  255,255,255,255
-  shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
+ # shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
   sleep 1.0

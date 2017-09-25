@@ -10,7 +10,7 @@ shader :iZoom, 0.1
 
 shader :fx, :bloom
 
-shader :bloom, 4.9
+#shader :bloom, 4.9
 
 #shader :iR, 0.99
 #shader :iG, 0.0

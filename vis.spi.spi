@@ -11,7 +11,7 @@ shader :iZoom, 0.1
 #shader :iR, 0.99
 #shader :iG, 0.0
 #shader :iB, 0.99
-shader :fx, :tube
+
 
 
 live_loop :zoom do#, sync: :metro do
@@ -28,9 +28,10 @@ live_loop :zoom do#, sync: :metro do
 #x = "test"
   shader :echo, "small", x, 0.0,0,  255,255,255,255
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
+  shader :fx, :tube
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
-  sleep 1.0/12.0
+  sleep 1.0
 end
 
 live_loop :graphics, sync: :metro do

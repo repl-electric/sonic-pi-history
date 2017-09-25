@@ -8,7 +8,7 @@ shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :fx, :bloom, 10
+shader :fx, :bloom
 #shader :bloom, 4.9
 
 #shader :iR, 0.99

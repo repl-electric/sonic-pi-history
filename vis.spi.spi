@@ -9,7 +9,7 @@ shader :iMotion, 0.004
 shader :iZoom, 0.1
 
 #shader :fx, :bloom, 0
-shader :fx, :tube, true
+shader :fx, :tube, "true"
 
 #shader :bloom, 4.9
 

@@ -9,7 +9,7 @@ shader :iMotion, 0.004
 shader :iZoom, 0.1
 #shader :fx, :bloom
 
-shader :bloom, 3
+shader :bloom, 4
 #shader :iR, 0.99
 #shader :iG, 0.0
 #shader :iB, 0.99

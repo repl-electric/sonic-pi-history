@@ -25,7 +25,7 @@ live_loop :zoom do#, sync: :metro do
  # shader :clear
 #x = "test"
   begin
-    shader :shader, "dots.glsl"#, "sphere.vert", "lines", 5000
+    #shader :shader, "dots.glsl"#, "sphere.vert", "lines", 5000
   rescue
     end
 

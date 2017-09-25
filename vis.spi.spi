@@ -9,7 +9,7 @@ shader :iMotion, 0.004
 shader :iZoom, 0.1
 #shader :fx, :bloom
 
-shader :bloom, 4, -0.009
+
 #shader :iR, 0.99
 #shader :iG, 0.0
 #shader :iB, 0.99
@@ -35,6 +35,9 @@ live_loop :zoom do#, sync: :metro do
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
+
+  shader :bloom, 4, (line -0.009, 0.1,256).look
+
   sleep 1.0
 end
 

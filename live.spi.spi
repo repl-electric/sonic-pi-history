@@ -20,9 +20,12 @@ live_loop :moving, sync: :metro do
   mega =
     (ring
 
-    (ring [:A2,1/8.0],  [:Cs3,1/8.0], [:E2,1/8.0]),  #A    #DFG
-    (ring [:Cs3,1/8.0], [:E3,1/8.0], [:A2,1/8.0]),   #C
-    (ring [:B2,1/8.0],  [:D3,1/8.0], [:Cs3,1/8.0]),  #B
+    (ring [:Cs3,1/8.0], [:Fs2,1/8.0], [:E2,1/8.0])
+
+
+  #  (ring [:A2,1/8.0],  [:Cs3,1/8.0], [:E2,1/8.0]),  #A    #DFG
+  #  (ring [:Cs3,1/8.0], [:E3,1/8.0], [:A2,1/8.0]),   #C
+  #  (ring [:B2,1/8.0],  [:D3,1/8.0], [:Cs3,1/8.0]),  #B
 )
   #A  C  B
 
@@ -80,6 +83,11 @@ live_loop :music, sync: :metro do
 
   harp (ring [:A2,3], [:Cs3,3], [:B2, 3],
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
+
+
+
+
+
 
   puts (ring [:A2,3], [:Cs3,3], [:B2, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]

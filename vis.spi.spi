@@ -17,8 +17,7 @@ shader :fx, :pixel, 0
 shader :fx, :rgb, 0
 shader :fx, :rim, 1
 shader :fx, :bleach, 1
-
-
+shader :bloom, 0.1
 
 #shader :iR, 0.99
 #shader :iG, 0.0

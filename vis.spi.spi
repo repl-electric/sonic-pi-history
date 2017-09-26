@@ -12,7 +12,7 @@ shader :iZoom, 0.1
 shader :fx, :bloom, 1
 shader :fx, :vts, 0
 shader :fx, :toon, 1
-shader :fx, :kal, 0
+shader :fx, :kal, 1
 shader :fx, :pixel, 1
 shader :fx, :rgb, 1
 

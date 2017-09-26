@@ -9,14 +9,14 @@ shader :iAlien, 0.
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :fx, :bloom, 0
-shader :fx, :vts, 0
-shader :fx, :toon, 0
-shader :fx, :kal, 0
-shader :fx, :pixel, 0
-shader :fx, :rgb, 0
+shader :fx, :bloom, 1
+shader :fx, :vts, 1
+shader :fx, :toon, 1
+shader :fx, :kal, 1
+shader :fx, :pixel, 1
+shader :fx, :rgb, 1
 shader :fx, :rim, 1
-shader :fx, :bleach, 0
+shader :fx, :bleach, 1
 
 #shader :iR, 0.99
 #shader :iG, 0.0

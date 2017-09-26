@@ -46,7 +46,7 @@ live_loop :moving, sync: :metro do
 )
   #A  C  B
 
-  sleep 1/4.0
+  sleep 1/8.0
   score = mega.tick(:mega)
 #  puts "SCORE:#{score}, #{score.count}"
   midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9

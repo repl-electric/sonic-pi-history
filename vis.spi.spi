@@ -5,7 +5,6 @@ shader :shader, "dots.glsl"#, "sphere.vert", "points", 5000
 shader [:iR,:iG,:iB], 9.0
 
 shader :iMode, .0
-
 shader :iAlien, 0.0
 shader :iMotion, 0.004
 shader :iZoom, 0.1

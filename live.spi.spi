@@ -105,9 +105,8 @@ live_loop :music, sync: :metro do
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
-#    sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    #sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
 
     sleep s[-1]
     harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
@@ -189,7 +188,7 @@ with_fx :none, mix: 0 do
   }).look
 
   #2*(line 0.8, 1.0, 12*6).look
-  smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+#  smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look

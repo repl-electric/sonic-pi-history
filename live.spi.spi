@@ -24,15 +24,12 @@ live_loop :moving, sync: :metro do
     (ring [:E3,1/8.0], [:Cs3,1/8.0], [:A3,1/8.0]),
 
 
-#    (ring [:Cs3,1/8.0], [:Fs2,1/8.0], [:E2,1/8.0]),
-
+    #(ring [:Cs3,1/8.0], [:Fs2,1/8.0], [:E2,1/8.0]),
     #(ring [:A3,1/8.0], [:D3,1/8.0], [:E3,1/8.0]),
-
 
 
     (ring [:B3,1/8.0], [:Gs3,1/8.0], [:E3,1/8.0]),
     (ring [:Gs3,1/8.0], [:E2,1/8.0], [:Cs3,1/8.0]),
-
 
 
     (ring [:A3,1/8.0], [:D3,1/8.0], [:Cs3,1/8.0]),
@@ -276,7 +273,7 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   tick
-  with_fx :gverb, room: 600, mix: (ring 0,0,0,1.0).look, room_slide: 0.5 do |g_fx|
+  with_fx :gverb, room: 700, mix: (ring 0,0,0,1.0).look, room_slide: 0.5 do |g_fx|
     hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
                      _ _ hz1 {path:hz2,amp:0.25}

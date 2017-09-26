@@ -34,7 +34,7 @@ live_loop :moving, sync: :metro do
   3.times{ #-Every 8 switch
     tick
     s2 = ""
-    zero s2=(knit :D3,24,:Fs3,24,:Gs3,24).look,125 #might not get played.
+    zero s2=(knit :D4,24,:Fs4,24,:Gs4,24).look,125 #might not get played.
     s = score.look
     dshader :echo, "small", "#{([" "]*rand_i(50)).join}               #{s[0]}", 0.0,1600,
       rand_i(256), rand_i(256),rand_i(255),255

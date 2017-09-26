@@ -36,7 +36,7 @@ live_loop :zoom do#, sync: :metro do
   #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   #shader :iZoom, (line 0.0, 32, 12).look
-  dshader :bloom, (line 0.5, 1.9,32).look
+  dshader :bloom, (line 0.5, 1.9,8).look
   sleep 1.0
 end
 

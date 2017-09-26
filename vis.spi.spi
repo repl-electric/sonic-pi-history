@@ -9,7 +9,7 @@ shader :iAlien, 0.
 shader :iMotion, 0.004
 shader :iZoom, 0.1
 
-shader :fx, :bloom, 1
+shader :fx, :bloom, 0
 shader :fx, :vts, 0
 shader :fx, :toon, 0
 shader :fx, :kal, 0

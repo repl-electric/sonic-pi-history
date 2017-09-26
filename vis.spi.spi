@@ -14,7 +14,7 @@ shader :fx, :vts, 0
 shader :fx, :toon, 0
 shader :fx, :kal, 0
 shader :fx, :pixel, 0
-shader :fx, :rgb, 0
+shader :fx, :rgb, 1
 
 
 #shader :iR, 0.99

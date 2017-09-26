@@ -249,7 +249,7 @@ _ _ _  _ _ _
      # smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
-  c1 = Analog[/_clap/,4]#MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
+  c1 = Analog[/ clap/,4]#MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _

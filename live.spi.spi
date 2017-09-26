@@ -25,8 +25,8 @@ live_loop :moving, sync: :metro do
 #    (ring [:A2,1/8.0],  [:E2,1/8.0], [:Cs3,1/8.0], [:D3,1/8.0])
 
     (ring [_,1/8.0],  [_, 1/8.0],  [:E2,1/8.0]),  #A    #DFG
-    (ring [_,1/8.0],  [_,1/8.0], [:A2,1/8.0]),   #C
-    (ring [_,1/8.0],  [_,1/8.0], [:Cs2,1/8.0]),  #B
+    (ring [_,1/8.0],  [_,1/8.0],   [:A2,1/8.0]),   #C
+    (ring [_,1/8.0],  [_,1/8.0],   [:Cs2,1/8.0]),  #B
 )
   #A  C  B
 
@@ -38,7 +38,7 @@ live_loop :moving, sync: :metro do
   score.count.times{ #-Every 8 switch
     tick
     s2 = ""
-    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,125 #might not get played.
+    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
     s = score.look
     dshader :echo, "small", "#{([" "]*rand_i(50)).join}               #{s[0]}", 0.0,1600,
       rand_i(256), rand_i(256),rand_i(255),255

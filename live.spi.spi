@@ -16,7 +16,7 @@ end
 puts note_inspect(chord(:A2, :sus2))
 
 live_loop :moving, sync: :metro do
-#  sync :music
+  sync :music
   mega =
     (ring
     (ring [:A3,1/8.0], [:D3,1/8.0], [:Cs3,1/8.0]),
@@ -46,7 +46,7 @@ live_loop :moving, sync: :metro do
 )
   #A  C  B
 
-  sleep 1/8.0
+  sleep 2/4.0
   score = mega.tick(:mega)
 #  puts "SCORE:#{score}, #{score.count}"
   midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9

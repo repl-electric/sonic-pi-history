@@ -249,7 +249,7 @@ _ _ _  _ _ _
      # smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
-  c1 = MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
+  c1 = Analog[/clap/,0]#MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
@@ -257,7 +257,8 @@ _ _ _  _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
 }).look
-  smp eval(s), amp: 0.25
+
+    smp eval(s), amp: 0.25
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c1 _ _ _}).look

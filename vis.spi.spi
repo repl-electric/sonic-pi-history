@@ -14,9 +14,8 @@ shader :fx, :rim, 0
 shader :fx, :vts, 0
 shader :fx, :toon, 0
 shader :fx, :kal, 0
-shader :fx, :pixel, 0
+shader :fx, :pixel, 1
 shader :fx, :rgb, 0
-
 shader :fx, :bleach, 0
 
 #shader :iR, 0.99

@@ -24,9 +24,9 @@ live_loop :moving, sync: :metro do
 #    (ring [:E2,1/8.0],  [:E2,1/8.0], [:D3,1/8.0]),
 #    (ring [:A2,1/8.0],  [:E2,1/8.0], [:Cs3,1/8.0], [:D3,1/8.0])
 
-    (ring [_,1/8.0],  [_, 1/8.0],  [:E1,1/8.0]),  #A    #DFG
-    (ring [_,1/8.0] , [_,1/8.0],   [_,1/8.0]),   #C
-    (ring [_,1/8.0],  [:D1,1/8.0], [:Fs1,1/8.0]),  #B
+    (ring [:A2,1/8.0],  [_, 1/8.0],  [:E2,1/8.0]),  #A    #DFG
+    (ring [:Cs2,1/8.0], [:E2,1/8.0], [:A2,1/8.0]),   #C
+    (ring [:B2,1/8.0],  [:D2,1/8.0], [:Cs2,1/8.0]),  #B
 )
   #A  C  B
 
@@ -38,7 +38,7 @@ live_loop :moving, sync: :metro do
   score.count.times{ #-Every 8 switch
     tick
     s2 = ""
-#    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
+    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,125 #might not get played.
     s = score.look
     dshader :echo, "small", "#{([" "]*rand_i(50)).join}               #{s[0]}", 0.0,1600,
       rand_i(256), rand_i(256),rand_i(255),255
@@ -47,7 +47,7 @@ live_loop :moving, sync: :metro do
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)
 
-    sleep s[-1]
+    sleep s[-1]*4
   }
 end
 
@@ -259,7 +259,7 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   tick
-  with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5 do |g_fx|
+  with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
     hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
                      _ _ hz1 {path:hz2,amp:0.25}

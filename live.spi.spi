@@ -41,7 +41,7 @@ live_loop :moving, sync: :metro do
 #    zero s2=(knit :D2,9,:Fs2,9,:Gs2,9).look,5 #might not get played.
     s = score.look
     puts "#{s2}/#{s}"
-    zero s,(line 0,100,9).look if s && s[0]
+    #zero s,(line 0,100,9).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)
 
@@ -79,15 +79,12 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.5
 
-
-
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     [:FS3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
     [:A3,3/4.0],1,  [:D3,1.0],1, [:E3,2/4.0],1,
     [:E3,3/4.0],1,  [:Fs3,1.0],1, [:D3,2/4.0],1
     )
-
 
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0

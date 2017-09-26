@@ -38,10 +38,8 @@ live_loop :moving, sync: :metro do
   score.count.times{ #-Every 8 switch
     tick
     s2 = ""
-    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
+    zero s2=(knit :D2,9,:Fs2,9,:Gs2,9).look,5 #might not get played.
     s = score.look
-    dshader :echo, "small", "#{([" "]*rand_i(50)).join}               #{s[0]}", 0.0,1600,
-      rand_i(256), rand_i(256),rand_i(255),255
     puts "#{s2}/#{s}"
     zero s,(line 0,100,9).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9

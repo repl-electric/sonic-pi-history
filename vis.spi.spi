@@ -13,7 +13,7 @@ shader :fx, :bloom, 1
 shader :fx, :vts, 1
 shader :fx, :toon, 1
 shader :fx, :kal, 1
-shader :fx, :pixel, 1
+shader :fx, :pixel, 0
 shader :fx, :rgb, 1
 shader :fx, :rim, 1
 shader :fx, :bleach, 1

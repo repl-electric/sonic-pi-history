@@ -92,7 +92,7 @@ live_loop :music, sync: :metro do
   #sync "16"
 #  use_real_time
   harp_cc phase: 0.5
-  harp (ring [:A2,3], [:D3,3], [:E3, 3],
+  harp (ring [:A2,3], [:Cs3,3], [:E3, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]
         ).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
 

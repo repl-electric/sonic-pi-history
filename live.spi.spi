@@ -54,11 +54,10 @@ live_loop :moving, sync: :metro do
     tick
     s2 = ""
     zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
-    puts s2
     s = score.look
     dshader :echo, "small", "#{([" "]*rand_i(50)).join}               #{s[0]}", 0.0,1600,
       rand_i(256), rand_i(256),rand_i(255),255
-    puts s
+    puts "s2/#{s}"
     zero s,(line 0,100,9).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)

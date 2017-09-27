@@ -21,7 +21,7 @@ live_loop :moving, sync: :metro do
     (ring
 
     (ring [:A2,1/8.0],  [:E2,1/8.0],
-      [:B2,1/8.0], [:B2, 1/8.0],
+      [:B2,1/8.0],  [:B2, 1/8.0],
       [:B2, 1/8.0], [:B2, 1/8.0],
       [:B2, 1/8.0]
 
@@ -265,6 +265,8 @@ live_loop :vocals, sync: :metro do
 
       if spread(1,12).look
         sop :B3, 20, sustain: 8
+        midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
+
       end
       #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 

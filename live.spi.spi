@@ -16,7 +16,7 @@ end
 puts note_inspect(chord(:A2, :sus2))
 
 live_loop :moving, sync: :metro do
-  stop
+  #stop
   sync :music
   mega =
     (ring

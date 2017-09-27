@@ -2,7 +2,7 @@ live_loop :mixer do
   use_real_time
   data = (sync "/midi/midi_fighter_twister/3/1/control_change")
   set_volume! data[-1]/(127.0/2.0) if data[0] == 33
-  puts "VOL"
+  puts "VOL#{data[-1]}"
   sleep 0.25
 end
 

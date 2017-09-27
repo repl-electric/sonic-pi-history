@@ -79,10 +79,7 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.5
 
-
-
   harp (ring [:A3,3], [:D3,3], [:E3, 3],).look, 30.0, sustain: 3.0#, port: :iac_bus_1, channel: 9
-
 
   puts (ring [:A2,3], [:Cs3,3], [:B2, 3],
 #             [:Fs3,3], [:A3,3], [:D3, 3]
@@ -257,6 +254,7 @@ live_loop :bells, sync: :metro do
 end
 live_loop :vocals, sync: :metro do
   tick
+  with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do
   with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
     hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
@@ -265,5 +263,6 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 _})
     smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
     8.times{sleep 1/4.0; control g_fx, room: rand_i(800)}
-  end
+    end
+    end
 end

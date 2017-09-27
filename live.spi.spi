@@ -258,8 +258,8 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 _})
       smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
 
-      midi :B3, 20, port: :iac_bus_1, channel: 10
-      midi_cc 1, 100,  port: :iac_bus_1, channel: 10
+      midi :B3, 20,    port: :iac_bus_1, channel: 10
+      midi_cc 2, 120,  port: :iac_bus_1, channel: 10
 
     8.times{sleep 1/4.0; control g_fx, room: rand_i(800)}
     end

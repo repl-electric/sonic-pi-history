@@ -29,7 +29,6 @@ live_loop :moving, sync: :metro do
       [:B2, 1/8.0], [:B2, 1/8.0],
       [:B2, 1/8.0], [:B2, 1/8.0]
 
-
       ),
 #    (ring [:E2,1/8.0],  [:E2,1/8.0], [:D3,1/8.0], [:B2, 1/8.0], [:B2, 1/8.0]),
 #    (ring [:A2,1/8.0],  [:E2,1/8.0], [:Cs3,1/8.0], [:D3,1/8.0], [:B2, 1/8.0])
@@ -269,7 +268,7 @@ live_loop :vocals, sync: :metro do
       #smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
 
       if spread(1,12).look
-        sop :B3, 20, sustain: 8
+        sop :B3, 10, sustain: 8
         midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 
       end

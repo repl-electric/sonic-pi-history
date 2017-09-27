@@ -36,6 +36,7 @@ live_loop :moving, sync: :metro do
   midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9
   puts "---------------------"
   score.count.times{ #-Every 8 switch
+    tick
     s2 = ""
     zero s2=(knit :D2,9,:Fs2,9,:Gs2,9).look,5 #might not get played.
     s = score.look
@@ -43,7 +44,6 @@ live_loop :moving, sync: :metro do
     zero s,(line 0,100,9).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
     #puts score.map{|z| z[-1] }.reduce(:+)
-    tick
     sleep s[-1]
   }
 end

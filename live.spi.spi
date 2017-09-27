@@ -265,7 +265,7 @@ live_loop :vocals, sync: :metro do
 
       8.times{sleep 1/4.0; control g_fx, room: rand_i(800)
 
-      midi_pitch_bend (line 0.0,1.0,256).look,  port: :iac_bus_1, channel: 10
+      midi_pitch_bend (line 0.0,1.0,12).look,  port: :iac_bus_1, channel: 10
       }
     end
   end

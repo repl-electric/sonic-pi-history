@@ -96,7 +96,6 @@ live_loop :music, sync: :metro do
 
 #puts @slices["B3/4"].look[:path]
 
-
   comment do
     midi_cc 65,  127*0  # port
     midi_cc 5,   127*0  # port

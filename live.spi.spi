@@ -258,7 +258,7 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 _})
       smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
 
-      sop :A3,20
+      sop :B3,20
       midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 
 

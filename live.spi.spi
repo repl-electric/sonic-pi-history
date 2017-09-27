@@ -259,13 +259,10 @@ live_loop :vocals, sync: :metro do
       smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
 
       midi :B3, 20,    port: :iac_bus_1, channel: 10
-      #midi_cc 1, 0.5,  port: :iac_bus_1, channel: 10
-
+      midi_cc 1, (line 0,127,12).look,  port: :iac_bus_1, channel: 10
 
 
       8.times{sleep 1/4.0; control g_fx, room: rand_i(800)
-
-      midi_cc 1, (line 0,127,12).look,  port: :iac_bus_1, channel: 10
       }
     end
   end

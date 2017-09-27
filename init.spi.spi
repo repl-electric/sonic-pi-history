@@ -8,3 +8,5 @@ end
 
 midi_cc 0,120, channel:0, port: :midi_fighter_twister
 midi_cc 1,120, channel:0, port: :midi_fighter_twister
+midi_cc 2,120, channel:0, port: :midi_fighter_twister
+midi_cc 3,120, channel:0, port: :midi_fighter_twister

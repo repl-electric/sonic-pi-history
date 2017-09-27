@@ -91,7 +91,7 @@ end
 
 live_loop :music, sync: :metro do
   tick
-  #sync "16"
+  sync "16"
   harp_cc phase: 0.5
   sharp (ring [:A3,3],[:D3,3], [:E3, 3],).look, 30.0
   harp (ring [:A3,3],[:D3,3], [:E3, 3],).look, 30.0
@@ -136,7 +136,7 @@ with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     #sync '18'
     tick
-    #sync "16"
+    sync "16"
     c1 = Dust[/clap/,1]
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     s=(ring *%W{

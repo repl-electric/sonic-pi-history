@@ -1,6 +1,7 @@
 live_loop :name do
   tick
   moog (ring :E1, :D1, :Fs1).look, sustain: 2.0
+  zero (ring :E2, :D2, :Fs2).look, sustain: 2.0
   sleep 3
 end
 
@@ -38,8 +39,5 @@ _ _ h1 _
 
 }))
   smp eval(s.look)
-
-
-
   sleep 1/4.0
 end

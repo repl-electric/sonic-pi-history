@@ -6,7 +6,7 @@ end
 
 live_loop :coast2, sync: :name do
   tick
-  zero (ring :E1,:D1,_,_).look
+  zero (ring :E2,:D2,_,_).look
   sleep 1/8.0
 end
 

@@ -21,7 +21,7 @@ _ _ h1 _
 _ _ h1 _
 
 })) != _
-    smp Dust[/hat/,3], s
+    smp Dust[/hat/,3], *s
   end
 
 

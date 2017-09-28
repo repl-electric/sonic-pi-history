@@ -22,16 +22,15 @@ live_loop :kick, sync: :name do
   end
 
   h1 = Dust[/hat/,3]
-  if (s=(ring *%W{
+  (s=(ring *%W{
 _ _ h1 _
 _ _ h1 _
 _ _ h1 {path:h1,amp:0.5}
 _ _ h1 _
 _ _ h1 _
 
-})) != "_"
+}))
     smp eval(s.look)
-  end
 
 
 

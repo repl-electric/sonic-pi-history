@@ -1,6 +1,16 @@
 live_loop :name do
   tick
   moog (ring :E1, :Fs1, :D1).look, sustain: 2.0
-
   sleep 3
+end
+
+live_loop :kick, sync: :name do
+  tick
+
+  if spread(1,4).look
+    smp Dust[/kick/,0]
+  end
+
+
+  sleep 1
 end

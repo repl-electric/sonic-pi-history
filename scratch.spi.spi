@@ -23,9 +23,8 @@ live_loop :kick, sync: :name do
 
   end
 
-
   if spread(1,8).look
-    smp Dust[/clap/,0]
+    smp Dust[/clap/,1]
   end
 
   if (s=(ring *%W{_ _ h1 _})) != _

@@ -13,7 +13,14 @@ live_loop :kick, sync: :name do
   if (s=(ring *%W{_ _ h1 _})) != _
     smp Dust[/hat/,0]
   end
-  if (s=(ring *%W{_ _ h1 _})) != _
+  if (s=(ring *%W{
+_ _ h1 _
+_ _ h1 _
+_ _ h1 h2
+_ _ h1 _
+_ _ h1 _
+
+})) != _
     smp Dust[/hat/,3]
   end
 

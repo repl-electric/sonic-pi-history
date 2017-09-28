@@ -92,6 +92,8 @@ end
 
 #127 => -100 - 100
 
+def moog(*args) midi *(args << {port: :iac_bus_1, channel: 11});end
+
 live_loop :music, sync: :metro do
   tick
   #sync "16"
@@ -101,7 +103,7 @@ live_loop :music, sync: :metro do
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
-  moog (ring :E2, :D2, :Fs2).look,100, sustain: 0.5
+  midi note: (ring :E2, :D2, :Fs2).look,100, s
   puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
   3.times{sleep 1; harp_cc phase: 0*(ring 0.5, 0.5 + rand*0.05).tick(:inits)}
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3

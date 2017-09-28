@@ -1,5 +1,5 @@
 live_loop :name do
-  moog :Fs3, sustain: 0.1
+  moog (ring :E3, :Fs3), sustain: 0.1
 
   sleep 3
 end

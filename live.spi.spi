@@ -1,5 +1,5 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/samples.rb"
-midi_start
+#midi_start
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0

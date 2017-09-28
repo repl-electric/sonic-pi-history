@@ -1,6 +1,6 @@
 live_loop :name do
   tick
-  moog (ring :E1, :Fs1).look, sustain: 3.0
+  moog (ring :E1, :Fs1).look, sustain: 2.0
 
   sleep 3
 end

@@ -4,9 +4,9 @@ live_loop :name do
   sleep 3
 end
 
-live_loop :coast, sync: :metro do
+live_loop :coast2, sync: :name do
   tick
-  zero :E3,127
+  zero :E1
   sleep 1/4.0
 end
 

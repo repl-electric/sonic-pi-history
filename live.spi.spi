@@ -92,7 +92,9 @@ end
 
 #127 => -100 - 100
 
-def moog(*args) midi *(args << {port: :iac_bus_1, channel: 11});end
+def moog(*args)
+  midi *(args << {port: :iac_bus_1, channel: 11})
+end
 
 live_loop :music, sync: :metro do
   tick

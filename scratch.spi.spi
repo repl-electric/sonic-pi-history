@@ -7,7 +7,7 @@ end
 live_loop :coast2, sync: :name do
   tick
   zero :E1
-  sleep 1/4.0
+  sleep 1/2.0
 end
 
 

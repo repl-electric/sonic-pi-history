@@ -23,7 +23,7 @@ _ _ h1 _
 _ _ h1 _
 
 })) != _
-    smp eval(s)
+    smp eval(s.look)
   end
 
 

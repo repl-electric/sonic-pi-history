@@ -1,4 +1,4 @@
-live_loop :name, sync: :metro do
+live_loop :name do
   moog :Fs3, sustain: 0.1
 
   sleep 3

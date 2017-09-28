@@ -10,11 +10,9 @@ live_loop :kick, sync: :name do
     smp Dust[/kick/,3], amp: 4
   end
 
-
-  if (s=(ring *%W{_ _ h1 _}) != _
+  if (s=(ring *%W{_ _ h1 _})) != _
     smp Dust[/hat/,0]
   end
-
 
 
   sleep 1/4.0

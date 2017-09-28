@@ -13,15 +13,17 @@ live_loop :kick, sync: :name do
   if (s=(ring *%W{_ _ h1 _})) != _
     smp Dust[/hat/,0]
   end
+
+  h1 = Dust[/hat/,3]
   if (s=(ring *%W{
 _ _ h1 _
 _ _ h1 _
-_ _ h1 {:amp 0.2}
+_ _ h1 {path:h1,:amp 0.2}
 _ _ h1 _
 _ _ h1 _
 
 })) != _
-    smp Dust[/hat/,3], *s
+    smp eval(s)
   end
 
 

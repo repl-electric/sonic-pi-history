@@ -7,7 +7,7 @@ end
 live_loop :coast, sync: :metro do
   tick
   zero :E2
-  sleep 3
+  sleep 1
 end
 
 

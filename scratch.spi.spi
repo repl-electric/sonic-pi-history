@@ -15,7 +15,10 @@ live_loop :kick, sync: :name do
   end
 
   if (s=(ring *%W{_ _ h1 _})) != _
-    smp Dust[/hat/,0], amp: 0.4, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look
+    smp Dust[/hat/,0], amp: 0.4,
+    attack: (line 0.02,0.0,64).look,
+    sustain: (knit 0.01,4,0.02,4,0.025,4).look,
+#    cutoff: (line 0
   end
 
   h1 = Dust[/hat/,3]
@@ -26,7 +29,7 @@ _ _ h1 {path:h1,amp:0.5}
 _ _ h1 _
 _ _ h1 _
 
-})) != _
+})) != "_"
     smp eval(s.look)
   end
 

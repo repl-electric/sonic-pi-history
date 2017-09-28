@@ -11,7 +11,7 @@ live_loop :kick, sync: :name do
   end
 
   if (s=(ring *%W{_ _ h1 _})) != _
-    smp Dust[/hat/,0]
+    smp Dust[/hat/,0], amp: 0.2
   end
 
   h1 = Dust[/hat/,3]

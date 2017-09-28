@@ -10,9 +10,8 @@ live_loop :kick, sync: :name do
    if spread(1,8).look
      smp Dust[/kick/,3], amp: 4
    else
-     smp Dust[/kick/,3], amp: 4, sustain: 0.2
+     smp Dust[/kick/,3], amp: 4, sustain: 0.5
    end
-
   end
 
   if (s=(ring *%W{_ _ h1 _})) != _

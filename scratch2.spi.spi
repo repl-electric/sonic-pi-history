@@ -1,0 +1,2 @@
+sop :E3, 30, sustain: 12
+midi_pitch_bend 24*4, port: :iac_bus_1, channel: 10

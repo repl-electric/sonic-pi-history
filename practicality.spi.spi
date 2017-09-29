@@ -136,6 +136,25 @@ end
 #sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
 
+def sop_off(n, *args)
+  if n
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    if args && args[0].is_a?(Numeric)
+      velocity = args[0]
+      args = args[1..-1]
+    else
+      velocity = 30
+    end
+    if n && ((n != "_") && n != :_)
+      midi_note_on n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
+    end
+  end
+end
+
+
 live_loop :fucj, sync: :metro do
   tick
   midi_cc 1, (line 0,127).look,  port: :iac_bus_1, channel: 10

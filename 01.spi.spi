@@ -103,11 +103,13 @@ live_loop :music, sync: :metro do
 
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
+    [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1
+    [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1
+    )
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }
   sleep 3/4.0

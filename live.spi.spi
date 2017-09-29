@@ -313,4 +313,4 @@ live_loop :vocals, sync: :metro do
   end
 end
 
-midi_pitch_bend 0, port: :iac_bus_1, channel: 10
+midi_pitch_bend 12, port: :iac_bus_1, channel: 10

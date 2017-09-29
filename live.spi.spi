@@ -87,6 +87,26 @@ end
 
 #127 => -100 - 100
 
+def harp_cc(cc)
+  cc.keys.each do |k|
+    n = case k
+        when :cutoff; 4
+        when :gain;   5
+        when :drive;  8
+        when :charge; 9
+        when :fx;     12
+        when :sound;  42
+        when :phase;  13
+        when :mod;    1
+        else
+          nil
+        end
+    if n
+      midi_cc n, (cc[k] * 127.0), port: :iac_bus_1, channel: 3
+    end
+
+
+
 live_loop :music, sync: :metro do
   tick
   #sync "16"

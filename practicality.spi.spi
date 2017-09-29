@@ -116,7 +116,7 @@ end
 
 
 #sop :Cs4, 30, sustain: 12
-sop_cc 1, 50
+sop_cc 1, 20
 
 
 live_loop :music, sync: :metro do

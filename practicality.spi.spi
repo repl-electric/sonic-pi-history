@@ -136,7 +136,7 @@ end
 
 #sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
-midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
+midi_cc 1, 10,  port: :iac_bus_1, channel: 10
 
 
 

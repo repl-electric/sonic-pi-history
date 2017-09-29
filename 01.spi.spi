@@ -107,6 +107,14 @@ live_loop :music, sync: :metro do
     ).look,
   (ring 35.0,30,50,30).look
 
+  sharp z=(ring
+    #    [:A2,6], [:Cs3,6], [:B2, 3], [:Gs2, 3]
+    [:A2,3], [:Cs3,3], [:B2, 3]
+
+    ).look,
+  (ring 35.0,30,50,30).look
+
+
 
 
   puts "HARP: #{z}"

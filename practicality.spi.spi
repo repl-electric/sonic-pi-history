@@ -133,19 +133,14 @@ def sop_on(n, *args)
   end
 end
 
-
 #sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
 
 live_loop :fucj, sync: :metro do
   tick
-midi_cc 1, (line 0,127).look,  port: :iac_bus_1, channel: 10
-
+  midi_cc 1, (line 0,127).look,  port: :iac_bus_1, channel: 10
   sleep 1/2.0
 end
-
-
-
 
 live_loop :music, sync: :metro do
   tick
@@ -153,7 +148,7 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.0, mod: 0.0, cutoff: (ramp 0.0, 0.8,128).tick(:fire)
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
   harp z=(ring
-    [:A2,6],  [:Cs3,6], [:B2,1], [:B2, 2], [:Gs2, 2], [_,1] ).look,
+    [:A2,6],  [:Cs3,6], [:C2,1], [:B2, 2], [:Gs2, 2], [_,1] ).look,
   (ring 35.0,30,50,30,20,0).look
 
   puts "HARP: #{z}"

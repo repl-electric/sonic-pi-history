@@ -87,11 +87,7 @@ end
 
 #127 => -100 - 100
 
-def moog(*args)
-  midi *(args << {port: :iac_bus_1, channel: 11})
-end
-
-  harp_cc phase: 0.0
+harp_cc phase: 0.0
 
 live_loop :music, sync: :metro do
   tick

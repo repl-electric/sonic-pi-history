@@ -300,11 +300,12 @@ live_loop :vocals, sync: :metro do
       if spread(1,12).look
         sop :E3, 30, sustain: 12
         sop_cc 1, (ring 30, 40, 50).look
-
       end
       #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 
       8.times{sleep 1/4.0; control g_fx, room: rand_i(800)
+        sop_cc 1, (ring 30, 40, 50,60).look
+
         midi_pitch_bend (line 10,20).look, port: :iac_bus_1, channel: 10
         #        midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
       }

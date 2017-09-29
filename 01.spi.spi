@@ -91,9 +91,12 @@ end
 
 live_loop :fucj, sync: :metro do
   tick
-  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+#  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
   sleep 1/2.0
 end
+
+midi_cc 1, 0,  port: :iac_bus_1, channel: 10
+
 
 live_loop :music, sync: :metro do
   tick

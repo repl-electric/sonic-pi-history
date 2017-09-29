@@ -176,7 +176,7 @@ with_fx :none, mix: 0 do
      k2 _ _ _   k3  _ k2 _
   }).look
 
-    s=(ring *%W{
+    s1=(ring *%W{
      k2 _ _ _   _ _ _ _   k1 _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _
 

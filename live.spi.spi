@@ -94,7 +94,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.5
+  harp_cc phase: 0.0
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
   harp z=(ring  [:A2,3], [:Cs3,3], [:B2, 3],[:GS2,1.0], [:E2, 3], [:Fs2,1]).look, 30.0
   puts "HARP: #{(ring  [:A2,3], [:Cs3,3], [:B2, 3], [:GS2, 3] ).look}"

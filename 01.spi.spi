@@ -95,7 +95,7 @@ live_loop :fucj, sync: :metro do
   sleep 1/2.0
 end
 
-midi_cc 1, 0,  port: :iac_bus_1, channel: 10
+midi_cc 1, 127,  port: :iac_bus_1, channel: 10
 
 
 live_loop :music, sync: :metro do

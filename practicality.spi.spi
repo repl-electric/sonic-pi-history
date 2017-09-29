@@ -134,8 +134,8 @@ def sop_on(n, *args)
 end
 
 
-sop_on :A4, 30, sustain: 12
-#sop_cc 1, 40
+#sop_on :A4, 30, sustain: 12
+sop_cc 1, 0
 
 
 live_loop :music, sync: :metro do

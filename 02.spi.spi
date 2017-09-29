@@ -84,6 +84,7 @@ live_loop :bass, sync: :metro do
   tick
   sleep 3
 end
+
 def sop_off(n, *args)
   midi_note_off n, *(args << {port: :iac_bus_1} << {channel: 10})
 end
@@ -91,7 +92,7 @@ end
 #127 => -100 - 100
 #sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
-#sop_off
+sop_off :B3
 
 live_loop :fucj, sync: :metro do
   tick

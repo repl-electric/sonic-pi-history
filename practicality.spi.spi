@@ -115,8 +115,8 @@ def harp(n,*args)
 end
 
 
-#sop :Cs4, 30, sustain: 12
-sop_cc 1, 40
+sop_on :A4, 30, sustain: 12
+#sop_cc 1, 40
 
 
 live_loop :music, sync: :metro do

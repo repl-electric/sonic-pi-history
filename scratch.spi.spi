@@ -26,7 +26,7 @@ live_loop :kick, sync: :name do
   c1 = Dust[/clap/,2]
   c2 = Analog[/clap/,3]
   if (s=(ring *%W{_ _ _ _   c2 _ _ _   _ _ _ _   c2 _ _ _}).look) != _
-    smp eval(s)
+ #   smp eval(s)
   end
 
   if (s=(ring *%W{_ _ h1 _})) != _

@@ -136,7 +136,14 @@ end
 
 #sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
+
+live_loop :fucj, sync: :metro do
+  tick
 midi_cc 1, 0,  port: :iac_bus_1, channel: 10
+
+  sleep 1
+end
+
 
 
 

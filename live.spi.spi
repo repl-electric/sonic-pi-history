@@ -102,7 +102,7 @@ def harp_cc(cc)
           nil
         end
     if n
-      puts n
+      puts "#{n} => #{(cc[k] * 127.0)}"
       midi_cc n, (cc[k] * 127.0), port: :iac_bus_1, channel: 3
     end
   end

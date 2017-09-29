@@ -52,7 +52,7 @@ live_loop :moving, sync: :metro do
 #    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
     s = score.look
    # puts "#{s2}/#{s}"
-    # zero s,(line 100,0,9).look*0.5 if s && s[0]
+     zero s,(line 100,0,9).look*0.5 if s && s[0]
 #    zero s,(ring 120,20,20,20).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
    # puts score.map{|z| z[-1] }.reduce(:+) + 3/4.0

@@ -51,11 +51,11 @@ live_loop :moving, sync: :metro do
     s2 = ""
 #    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
     s = score.look
-    puts "#{s2}/#{s}"
+   # puts "#{s2}/#{s}"
     # zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero s,(ring 120,20,20,20).look if s && s[0]
     #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
-    puts score.map{|z| z[-1] }.reduce(:+) + 3/4.0
+   # puts score.map{|z| z[-1] }.reduce(:+) + 3/4.0
     sleep s[-1]
   }
 end
@@ -101,7 +101,7 @@ live_loop :music, sync: :metro do
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
-  puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
+  #puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
   3.times{sleep z[-1]/3.0;
   #  harp_cc phase: 0*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }

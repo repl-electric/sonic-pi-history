@@ -98,6 +98,9 @@ live_loop :music, sync: :metro do
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
   harp z=(ring  [:A2,3], [:Cs3,3], [:B2, 3],[:GS2,1.0], [:E2, 3], [:Fs2,1]).look, 30.0
   puts "HARP: #{(ring  [:A2,3], [:Cs3,3], [:B2, 3], [:GS2, 3] ).look}"
+
+  harp_cc :mod 0.1
+
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25

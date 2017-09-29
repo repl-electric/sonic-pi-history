@@ -111,7 +111,7 @@ live_loop :music, sync: :metro do
   (ring 35.0,30,50,30).look
 
   if spread(1,4).look
-  harp z=(ring
+  sharp z=(ring
     #    [:A2,6], [:Cs3,6], [:B2, 3], [:Gs2, 3]
     [:A2,6], [:Cs3,6], [:B2, 3], [:GS2, 3]
 

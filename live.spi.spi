@@ -87,7 +87,7 @@ end
 
 #127 => -100 - 100
 
-harp_cc phase: 0.0
+harp_cc phase: 0.99
 
 live_loop :music, sync: :metro do
   tick

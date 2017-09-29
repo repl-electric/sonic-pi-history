@@ -116,7 +116,7 @@ end
 
 
 #sop :A3, 30, sustain: 12
-sop_cc 1, 24
+sop_cc 1, 44
 
 
 live_loop :music, sync: :metro do

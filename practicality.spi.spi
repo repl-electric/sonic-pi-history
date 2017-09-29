@@ -87,6 +87,32 @@ end
 
 #127 => -100 - 100
 
+def harp(n,*args)
+  begin
+    if n
+      velocity = 30
+      if n.is_a?(Array)
+        args =  args  << {sustain: n[1]}
+        n = n[0]
+      end
+      if args && args[0].is_a?(Numeric)
+        velocity = args[0]
+        args = args[1..-1]
+      end
+      if n && ((n != "_") && n != :_)
+        args_h = resolve_synth_opts_hash_or_array(args)
+        harp_cc(args_h)
+
+        midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 3})
+        dshader(:decay, :iHarp, (note(n)/69.0), 0.0041) if n && note(n)
+        dshader(:iBright, velocity/127.0) if velocity
+      end
+    end
+  rescue
+    puts $!.backtrace
+  end
+end
+
 
 live_loop :music, sync: :metro do
   tick

@@ -297,7 +297,7 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 _
                      _ _ hz1 _})
       #smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
-      if spread(1,12).look
+      if spread(1,24).look
         sop :B3, 30, sustain: 12
         sop_cc 1, (ring 30, 40, 50).look
       end

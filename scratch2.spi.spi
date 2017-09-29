@@ -1,3 +1,3 @@
-sop :A3, 100, sustain: 12
+sop :Cs3, 100, sustain: 12
 
 midi_pitch_bend 0.5, port: :iac_bus_1, channel: 10

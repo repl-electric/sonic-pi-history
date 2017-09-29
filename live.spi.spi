@@ -12,8 +12,6 @@ live_loop(:metro)do
   sleep 1.0
 end
 
-puts note_inspect(chord(:A2, :sus2))
-
 live_loop :moving, sync: :metro do
   #stop
   sync :music
@@ -27,7 +25,7 @@ live_loop :moving, sync: :metro do
       [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],
       [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],
 
-#      [:D3, 1/8.0], [_, 1/8.0],   [_, 1/8.0], [_, 1/8.0],
+      [:D3, 1/8.0], [_, 1/8.0],   [_, 1/8.0], [_, 1/8.0],
 
 
 #      [_, 1/8.0],    [:E2, 1/8.0], [:B2, 1/8.0], [_, 1/8.0],

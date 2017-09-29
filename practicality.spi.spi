@@ -134,7 +134,7 @@ def sop_on(n, *args)
 end
 
 
-sop_on :B3, 30, sustain: 12
+#sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
 midi_cc 1, 127,  port: :iac_bus_1, channel: 10
 

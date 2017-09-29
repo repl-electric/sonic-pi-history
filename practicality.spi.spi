@@ -131,7 +131,7 @@ live_loop :music, sync: :metro do
 
   #bass :E2, sustain: 3
   #harp_cc phase: rand
-  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
+  #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   #puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
   3.times{sleep z[-1]/3.0;
   #  harp_cc phase: 0*(ring 0.5, 0.5 + rand*0.05).tick(:inits)

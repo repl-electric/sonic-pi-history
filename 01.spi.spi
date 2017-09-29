@@ -115,8 +115,6 @@ live_loop :music, sync: :metro do
   (ring 35.0,30,50,30).look
 
 
-
-
   puts "HARP: #{z}"
 
   #bass :E2, sustain: 3

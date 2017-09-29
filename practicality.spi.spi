@@ -135,7 +135,7 @@ end
 
 
 #sop_on :B3, 30, sustain: 12
-sop_cc 1, 40
+sop_cc 1, 127
 
 
 live_loop :music, sync: :metro do

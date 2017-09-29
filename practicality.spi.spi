@@ -154,7 +154,7 @@ def sop_off(n, *args)
   end
 end
 
-sop_off
+sop_off :B3
 
 live_loop :fucj, sync: :metro do
   tick

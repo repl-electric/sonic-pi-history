@@ -100,6 +100,7 @@ def harp(n,*args)
         args = args[1..-1]
       end
       if n && ((n != "_") && n != :_)
+        puts n
         args_h = resolve_synth_opts_hash_or_array(args)
         harp_cc(args_h)
 

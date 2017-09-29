@@ -106,7 +106,6 @@ live_loop :music, sync: :metro do
     [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
     [:A3,3/4.0],1, [:D3,1.0],1, [:E3,2/4.0],1,
     [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
-
     [_,3/4.0],1, [:B2,1.0],1,  [:D2,2/4.0],1
     )
   #score = space()
@@ -295,7 +294,7 @@ live_loop :vocals, sync: :metro do
       smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
       if spread(1,12).look
         sop :A4, 30, sustain: 12
-        #sop_cc 1, (ring 30, 40, 50).look
+        sop_cc 1, (ring 30, 40, 50).look
       end
       #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 

@@ -104,7 +104,9 @@ def harp_cc(cc)
     if n
       midi_cc n, (cc[k] * 127.0), port: :iac_bus_1, channel: 3
     end
+  end
 end
+
 
 
 live_loop :music, sync: :metro do

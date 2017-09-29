@@ -1,2 +1,2 @@
 sop :E3, 30, sustain: 12
-midi_pitch_bend 0, port: :iac_bus_1, channel: 10
+midi_pitch_bend 0.1, port: :iac_bus_1, channel: 10

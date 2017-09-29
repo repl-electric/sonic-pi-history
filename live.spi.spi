@@ -96,13 +96,13 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.5
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
-  harp s=(ring  [:A2,1], [:Cs3,1], [:B2, 1],[:GS2,1/3.0], [:FS2, 1] ).look, 30.0
+  harp z=(ring  [:A2,1], [:Cs3,1], [:B2, 1],[:GS2,1/3.0], [:FS2, 1] ).look, 30.0
   puts "HARP: #{(ring  [:A2,3], [:Cs3,3], [:B2, 3], [:GS2, 3] ).look}"
   #bass :E2, sustain: 3
   #harp_cc phase: rand
   bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
-  3.times{sleep s[-1]; harp_cc phase: 0*(ring 0.5, 0.5 + rand*0.05).tick(:inits)}
+  3.times{sleep z[-1]; harp_cc phase: 0*(ring 0.5, 0.5 + rand*0.05).tick(:inits)}
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
   shader [:iR,:iG,:iB].choose, rand*10

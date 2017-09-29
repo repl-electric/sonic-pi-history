@@ -16,9 +16,9 @@ live_loop :kick, sync: :name do
   tick
   if spread(1,4).look
    if spread(1,8).look
-     smp Dust[/kick/,3], amp: 4, attack: 0.005
+     smp Dust[/kick/,3], amp: 3, attack: 0.005
    else
-     smp Dust[/kick/,3], amp: 4
+     smp Dust[/kick/,3], amp: 3
    end
 
   end

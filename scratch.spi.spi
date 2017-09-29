@@ -1,0 +1,50 @@
+live_loop :name do
+  tick
+ # moog (ring :E1, :D1, :Fs1).look,1, sustain: 0.0
+  zero (ring :E3, :D3, :Fs3).look,127, sustain: 2.0
+  sleep 3
+end
+
+live_loop :coast2, sync: :name do
+  tick
+  zero (ring :E2,_,_,_).look, 1
+  sleep 1/8.0
+end
+
+
+live_loop :kick, sync: :name do
+  tick
+  if spread(1,4).look
+   if spread(1,8).look
+ #    smp Dust[/kick/,3], amp: 2, attack: 0.01
+   else
+#     smp Dust[/kick/,3], amp: 2
+   end
+
+  end
+
+  c1 = Dust[/clap/,2]
+  c2 = Analog[/clap/,3]
+  if (s=(ring *%W{_ _ _ _   c2 _ _ _   _ _ _ _   c2 _ _ _}).look) != _
+ #   smp eval(s)
+  end
+
+  if (s=(ring *%W{_ _ h1 _})) != _
+    smp Dust[/hat/,0], amp: 0.0,
+    attack: (line 0.02,0.0,64).look,
+#    sustain: (knit 0.01,4,0.02,4,0.025,4).look,
+    cutoff: (line 100, 135, 32).look
+  end
+
+  h1 = Dust[/hat/,3]
+  (s=(ring *%W{
+_ _ h1 _
+_ _ h1 _
+_ _ h1 {path:h1,amp:0.5}
+_ _ h1 _
+_ _ h1 _
+
+}))
+  #smp eval(s.look)
+  sleep 1/4.0
+end

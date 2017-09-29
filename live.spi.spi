@@ -1,4 +1,4 @@
-midi_reset
+#midi_reset
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0

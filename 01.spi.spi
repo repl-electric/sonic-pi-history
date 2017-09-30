@@ -265,7 +265,7 @@ _ _ h _  _ _ h _
           else
             0
           end
-    smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
+   # smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
 
     sleep 1/8.0
   end

@@ -125,10 +125,6 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5, mod: 0.1, cutoff: 0.9#(ramp 0.0, 0.8,128).tick(:fire)
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 z= []
-  harp(z=(ring
-         [:A3,3],  [:D3,3], [:E3,3],
-         [:Fs3,3], [:A3,3], [:D3,3]
-         ).look)
 
   if spread(1,3).look
   sharp(z=(ring
@@ -136,6 +132,9 @@ z= []
          [:Fs3,3], [:A3,3], [:D3,3]
           ).look)
     end
+
+
+
 
 
   #bass :E2, sustain: 3

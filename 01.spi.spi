@@ -102,13 +102,8 @@ live_loop :fucj, sync: :metro do
 end
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
-midi_cc 1, 10,  port: :iac_bus_1, channel: 10
-set_volume! 0.5
-live_loop :music, sync: :metro do
-  tick
-  #sync "16"
-  harp_cc phase: 0.5, mod: 0.1, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
- # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
+
+comment do
 
   comment do
   harp z=(ring
@@ -123,6 +118,16 @@ live_loop :music, sync: :metro do
     [:B2,1], [:A2,1],  [:Fs2,1], [_, 1.0]#, [:Fs2, 1.0],[:E2, 1.0],
 
     ).look
+
+end
+
+midi_cc 1, 10,  port: :iac_bus_1, channel: 10
+set_volume! 0.5
+live_loop :music, sync: :metro do
+  tick
+  #sync "16"
+  harp_cc phase: 0.5, mod: 0.1, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
+ # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
 
 

@@ -91,7 +91,7 @@ live_loop :bass, sync: :metro do
 end
 
 #127 => -100 - 100
-#sop_on :A3, 30, sustain: 12
+sop_on :A2, 30, sustain: 12
 sop_off(:A3)
 #sop_cc 1, 1270
 

@@ -91,7 +91,7 @@ live_loop :bass, sync: :metro do
 end
 
 #127 => -100 - 100
-sop_on :E3, 10, sustain: 12
+#sop_on :E3, 10, sustain: 12
 #sop_off(:A3)
 #sop_cc 1, 1270
 
@@ -126,8 +126,8 @@ live_loop :music, sync: :metro do
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
   harp(z=(ring
-         [:A2,6], [:Cs3,6], [:E3,3],
-         [:B2,3]
+         [:A2,6], [:Cs3,6], [:E3,3], [:B2,3],  [:A3,0.25],[:D3,0.25],[:Cs3,0.5],
+         [:A3,6], [:Cs3,6], [:E3,3], [:B2,3]
 
          ).look)
 

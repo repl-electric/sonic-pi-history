@@ -125,7 +125,7 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.0, mod: 0.0, cutoff: 0.2#(ramp 0.0, 0.8,128).tick(:fire)
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
-  harp(z=(ring [:A2,6], [:Cs3,6], [:B2,3]).look)
+  harp(z=(ring [:A2,6], [:Cs3,6], [:B2,3], [:Gs2,3]).look)
 
   #bass :E2, sustain: 3
   #harp_cc phase: rand

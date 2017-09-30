@@ -97,7 +97,7 @@ sop_off(:A3)
 
 live_loop :fucj, sync: :metro do
   tick
-#  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
   sleep 1/2.0
 end
 

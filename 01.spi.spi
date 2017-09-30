@@ -126,7 +126,8 @@ live_loop :music, sync: :metro do
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
   harp(z=(ring
-         [:A3,3], [:D3,3], [:E3,3]
+         [:A3,3], [:D3,3], [:E3,3],
+         [:Fs3,3], [:A3,3], [:D3,3]
          ).look)
 
   #bass :E2, sustain: 3

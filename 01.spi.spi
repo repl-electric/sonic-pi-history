@@ -104,8 +104,6 @@ end
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 
 comment do
-
-  comment do
   harp z=(ring
     [:A2, 3], [:Cs3, 3], [:E3,3],
     [:B2,3],  [_,2.0],   [:A3,0.25],[:D3,0.25],[:Cs3,0.5],

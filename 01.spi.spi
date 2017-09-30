@@ -79,6 +79,10 @@ module Zero
   end
 end
 
+def sop_off(n, *args)
+  midi_note_off n, *(args << {port: :iac_bus_1} << {channel: 10})
+end
+
 live_loop :bass, sync: :metro do
   #sync "16"
   tick

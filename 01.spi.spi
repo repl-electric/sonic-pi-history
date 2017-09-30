@@ -103,7 +103,7 @@ end
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 midi_cc 1, 10,  port: :iac_bus_1, channel: 10
-
+set_volume! 0.5
 live_loop :music, sync: :metro do
   tick
   #sync "16"

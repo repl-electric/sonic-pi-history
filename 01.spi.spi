@@ -130,6 +130,14 @@ live_loop :music, sync: :metro do
          [:Fs3,3], [:A3,3], [:D3,3]
          ).look)
 
+  if spread(1,3).look
+  sharp(z=(ring
+         [:A3,3],  [:D3,3], [:E3,3],
+         [:Fs3,3], [:A3,3], [:D3,3]
+          ).look)
+    end
+
+
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25

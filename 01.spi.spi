@@ -110,12 +110,13 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5, mod: 0.1, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
+  comment do
   harp z=(ring
     [:A2, 3], [:Cs3, 3], [:E3,3],
     [:B2,3],  [_,2.0],   [:A3,0.25],[:D3,0.25],[:Cs3,0.5],
     [:A3, 3], [:D3, 3], [:E3,3],# [:B2,3]
     ).look
-
+    end
 
     harp z=(ring
     [:A2, 3], [:Cs3, 3], [:E3,3],

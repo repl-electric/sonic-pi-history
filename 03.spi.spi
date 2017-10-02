@@ -95,7 +95,7 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5, mod: 0.5, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
   # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
-  midi_note_on (ring :A2, :Cs3, :B2, :GS2).look, port: :iac_bus_1, channel: 11
+  midi (ring :A2, :Cs3, :B2, :GS2).look, port: :iac_bus_1, channel: 11
 
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,

@@ -100,10 +100,10 @@ live_loop :music, sync: :metro do
 
 
   harp z=(ring
-    [:A2,3],  [:C3,3], [:B2,3], [:Gs2,3],
-    [:A2,3],  [:C3,3], [:B2,3], [:Gs2,3]
+    [:A2,3], [:C3,3], [:B2,3], [:Gs2,3],
+    [:A2,3], [:C3,3], [:B2,3], [:Gs2,3]
 
-    ).look
+    ).look, 40
 
 
   #bass :E2, sustain: 3

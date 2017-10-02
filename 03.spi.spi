@@ -69,8 +69,10 @@ end
 
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
+midi_note_on port: :iac_bus_1, note: :A3, channel: 11
+
 live_loop :bass, sync: :metro do
-  moog :Fs2
+
   #sync "16"
   tick
   sleep 3

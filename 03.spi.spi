@@ -69,7 +69,7 @@ end
 
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
-midi_note_on :E3, port: :iac_bus_1, channel: 11
+midi_note_on :Fs3, port: :iac_bus_1, channel: 11
 
 live_loop :bass, sync: :metro do
 

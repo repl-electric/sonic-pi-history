@@ -1,8 +1,4 @@
 #midi_reset
-def sop_off(n, *args)
-  midi_note_off n, *(args << {port: :iac_bus_1} << {channel: 10})
-end
-
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0
@@ -83,17 +79,20 @@ module Zero
   end
 end
 
-
 live_loop :bass, sync: :metro do
   #sync "16"
   tick
   sleep 3
 end
 
+def sop_off(n, *args)
+  midi_note_off n, *(args << {port: :iac_bus_1} << {channel: 10})
+end
+
 #127 => -100 - 100
-sop_on :A4, 10, sustain: 12
-#sop_off(:A3)
+#sop_on :B3, 30, sustain: 12
 #sop_cc 1, 1270
+#sop_off :B3
 
 live_loop :fucj, sync: :metro do
   tick
@@ -101,42 +100,17 @@ live_loop :fucj, sync: :metro do
   sleep 1/2.0
 end
 
-#midi_cc 1, 10, port: :iac_bus_1, channel: 10
-
-comment do
-  harp z=(ring
-    [:A2, 3], [:Cs3, 3], [:E3,3],
-    [:B2,3],  [_,2.0],   [:A3,0.25],[:D3,0.25],[:Cs3,0.5],
-    [:A3, 3], [:D3, 3], [:E3,3],# [:B2,3]
-    ).look
-    harp z=(ring
-    [:A2,1], [:Cs3,1], [:E3,1],
-    [:B2,1], [:A2,1],  [:Fs2,1], [_, 1.0]#, [:Fs2, 1.0],[:E2, 1.0],
-
-    ).look
-
-end
-
-midi_cc 1, 10,  port: :iac_bus_1, channel: 10
-set_volume! 0.5
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.5, mod: 0.1, cutoff: 0.9#(ramp 0.0, 0.8,128).tick(:fire)
+  harp_cc phase: 0.5, mod: 0.5, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
-z= []
-
-  if spread(1,3).look
-  sharp(z=(ring
-         [:A3,3],  [:D3,3], [:E3,3],
-         [:Fs3,3], [:A3,3], [:D3,3]
-          ).look)
-    end
-
 
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
+    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
+    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1
+    )
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
@@ -146,13 +120,12 @@ z= []
   sleep 3/4.0
 
 
-
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   #puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
 #  3.times{sleep z[-1]/3.0;
-#    harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
+   # harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
 #  }
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
@@ -186,9 +159,9 @@ z= []
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
 end
 
+
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
-#    stop
     #sync '18'
     tick
     #sync "16"
@@ -247,7 +220,7 @@ _ _ _ _   _ _ p _
 _ _ p _
 }).look
 
-    s1=(ring *%W{
+    s=(ring *%W{
 p _
 p _ _ _
 _ p _ _
@@ -263,7 +236,7 @@ _ _ p
   end
     with_fx :none, mix: (line 0.2,0.3,32).look do
       if s!= "_" && spread(1,6).look
-       smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
+       #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
       end
       smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
       amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
@@ -275,7 +248,7 @@ c _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
 }).look) != _
-     # smp eval(s), pan: (ring 0.25,-0.25).look
+#      smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
   c1 = MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
@@ -291,7 +264,7 @@ _ _ _  _ _ _
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c1 _ _ _}).look
-  #smp eval(s), cutoff: (line 80, 120, 128).look
+#  smp eval(s), cutoff: (line 80, 120, 128).look
 
     h,h2 = MagicDust[/_HI/,18],Dust[/hat/,4]
   s=(ring *%W{
@@ -328,10 +301,10 @@ live_loop :vocals, sync: :metro do
                      _ _ hz1 {path:hz2,amp:0.25}
                      _ _ hz1 _
                      _ _ hz1 _})
-      smp eval(hat2.look), amp: 1.5, rate: [-1,1].choose, attack: 0.25
+      smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
       if spread(1,12).look
-#        sop :B3, 10, sustain: 12
- #       sop_cc 1, (ring 30, 40, 50).look
+        #sop :B2, 30, sustain: 12
+        #sop_cc 1, (ring 30, 40, 50).look
       end
       #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 

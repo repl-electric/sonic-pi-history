@@ -99,7 +99,7 @@ live_loop :music, sync: :metro do
   # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
 
-  harp z=(ring [:A2,6])
+  harp z=(ring [:A2,6]).look
 
   harp z=(ring
 #    [:A2,6], [:Cs3,3], [:B2,3],                       [:Gs2,3],

@@ -96,7 +96,7 @@ live_loop :music, sync: :metro do
   # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
   midi   (ring :A3,       :D3,     :E3,     :B3).look, port: :iac_bus_1, channel: 11, sustain: 3
-  harp z=(ring [:A3,3],  [:D3,3], [:E3,3], [:B2,3]).look
+  harp z=(ring [:A3,3],  [:D3,3], [:E3,3], [:Gs3,3]).look
 
   #bass :E2, sustain: 3
   #harp_cc phase: rand

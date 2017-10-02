@@ -71,7 +71,7 @@ end
 
 
 live_loop :bass, sync: :metro do
-  midi_note_on (ring :A2, :Cs3, :B2, :GS2), port: :iac_bus_1, channel: 11
+  midi_note_on (ring :A2, :Cs3, :B2, :GS2).look, port: :iac_bus_1, channel: 11
   #sync "16"
   tick
   sleep 3

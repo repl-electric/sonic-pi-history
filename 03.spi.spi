@@ -159,7 +159,7 @@ live_loop :music, sync: :metro do
     #midi_cc 1, (line 0, 127).look,  port: :iac_bus_1, channel: 9
 end
 
-set_volume! 1.0
+#set_volume! 1.0
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     #stop

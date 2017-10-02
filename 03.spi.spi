@@ -89,7 +89,7 @@ live_loop :fucj, sync: :metro do
   sleep 1/2.0
 end
 
-midi_reset
+midi_start
 midi_note_on  :A3, port: :iac_bus_1, channel: 11
 
 live_loop :music, sync: :metro do

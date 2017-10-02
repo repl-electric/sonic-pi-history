@@ -97,27 +97,17 @@ live_loop :music, sync: :metro do
 
   midi (ring :A1, :Cs2, :B1, :GS1).look, port: :iac_bus_1, channel: 11
 
-  score = (knit
-    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
-    [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1
-    )
-  #score = space()
-  cue(:m) if ((look+1) % score.count)  == 0
-  3.times{
-    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
-    sleep s[-1]
-  }
-  sleep 3/4.0
+  harp (ring [:A3,4]).look
+
 
 
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   #puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
-#  3.times{sleep z[-1]/3.0;
-   # harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
-#  }
+  3.times{sleep z[-1]/3.0;
+    harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
+  }
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3
   #midi_pitch_bend (line 0.0, 0.5,12).look, port: :iac_bus_1, channel: 9
   shader [:iR,:iG,:iB].choose, rand*10

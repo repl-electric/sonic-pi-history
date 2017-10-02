@@ -93,7 +93,6 @@ end
 midi_note_on  :A3, port: :iac_bus_1, channel: 11
 
 live_loop :music, sync: :metro do
-  stop
   tick
   #sync "16"
   harp_cc phase: 0.0, mod: 0.0, cutoff: (ramp 0.0, 0.8,128).tick(:fire)

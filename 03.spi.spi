@@ -97,7 +97,7 @@ live_loop :music, sync: :metro do
 
   midi (ring :A1, :Cs2, :B1, :GS1).look, port: :iac_bus_1, channel: 11
 
-  harp z=(ring [:A3,3]).look
+  harp z=(ring [:A2,6]).look
 
 
   #bass :E2, sustain: 3

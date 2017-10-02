@@ -100,12 +100,12 @@ live_loop :music, sync: :metro do
   harp (ring [:A3,3]).look
 
 
-
   #bass :E2, sustain: 3
   #harp_cc phase: rand
 #  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   #puts "BASS==============>#{(ring :E2, :D2, :Fs2).look}"
-  3.times{sleep z[-1]/3.0;
+  3.times{
+    sleep z[-1]/3.0;
     harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
   #midi_pitch_bend (line 0,127).look, port: :iac_bus_1, channel: 3

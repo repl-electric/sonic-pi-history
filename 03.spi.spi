@@ -97,8 +97,8 @@ live_loop :music, sync: :metro do
 
   bass   (ring :A3,       :D3,     :E3,     :B3).look, sustain: 3
   harp z=(ring
-    [:A2,3],  [:C3,3], [_,1], [:B2,1], [:Gs2,1],
-    [:A2,3],  [:C3,3], [_,1], [:B2,1], [:Gs2,1]
+    [:A2,3],  [:C3,3], [:B2,3], [:Gs2,3],
+    [:A2,3],  [:C3,3], [:B2,3], [:Gs2,3]
 
     ).look
 

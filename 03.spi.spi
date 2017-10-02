@@ -69,16 +69,6 @@ end
 
 #midi_pitch_bend 0.0, port: :iac_bus_1, channel: 3
 
-module Zero
-  extend SonicPi::Lang::Midi
-  extend SonicPi::Lang::Core
-  extend SonicPi::Lang::Sound
-#  include SonicPi::Lang::Midi
-  def self.midi_clock(state)
-   # midi_cc 114, state ? 1 : 0
-  end
-end
-
 live_loop :bass, sync: :metro do
   #sync "16"
   tick
@@ -100,7 +90,7 @@ live_loop :music, sync: :metro do
   tick
   #sync "16"
   harp_cc phase: 0.5, mod: 0.5, cutoff: 1.0#(ramp 0.0, 0.8,128).tick(:fire)
- # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
+  # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,

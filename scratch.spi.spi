@@ -3,7 +3,7 @@ puts "MULTIBALL"
 
 
 chord(:E3, :M).each do |n|
-  harp n, sustain :3
+  harp n, sustain: 3
 end
 
 sleep 3

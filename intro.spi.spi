@@ -82,7 +82,6 @@ end
 #midi_note_on  :A3, port: :iac_bus_1, channel: 11
 
 
-
 live_loop :music, sync: :metro do
   tick
   #sync "16"
@@ -262,4 +261,31 @@ live_loop :bells, sync: :metro do
   # h,h2 = MagicDust[/MD_BELL_RES/,5],Frag[/hat/,7]
   #  smp MagicDust[/hi/,/chimes/,/_A\./].look, amp: 0.5
   sleep 32
+end
+
+live_loop :vocals, sync: :metro do
+  tick
+#  stop
+  with_fx :gverb, room: 400, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do
+    with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
+    hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
+    hat2 = (ring *%w{_ _ hz1 _
+                     _ _ hz1 {path:hz2,amp:0.25}
+                     _ _ hz1 _
+                     _ _ hz1 _})
+     smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25
+      if spread(1,12).look
+        #sop :B2, 30, sustain: 12
+        #sop_cc 1, (ring 30, 40, 50).look
+      end
+      #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
+
+      8.times{sleep 1/4.0; control g_fx, room: rand_i(800)
+        #sop_cc 1, (ring 30,40,50,60,70).look
+
+#        midi_pitch_bend 127, port: :iac_bus_1, channel: 10
+        #        midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
+      }
+    end
+  end
 end

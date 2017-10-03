@@ -10,8 +10,8 @@ live_loop :testing do
 #(I, ii, iii, IV, V, vi, viio
 
   chord(:B2, :m).each do |n|
-    harp n, sustain: 3
-    sleep 0.5
+    harp n, sustain: 12
+    sleep 1
   end
 
 

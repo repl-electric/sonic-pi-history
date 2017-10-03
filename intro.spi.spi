@@ -185,7 +185,7 @@ _ _ _  _ _ _
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c1 _ _ _}).look
-  smp eval(s), cutoff: (line 80, 120, 128).look
+#  smp eval(s), cutoff: (line 80, 120, 128).look
 
     h,h2 = MagicDust[/_HI/,18],Dust[/hat/,4]
   s=(ring *%W{

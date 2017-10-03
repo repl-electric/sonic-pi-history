@@ -40,9 +40,7 @@ live_loop :music, sync: :metro do
   score = (ring
     [:A2, 6], [:Cs3,3], [:B2,3],[:Gs2,3],
     [:A2,3],  [:Cs3,3], [:B2,3], [:Gs2, 3],
-    [:A2,3],  [:CS3,3], [:B2,3], [:Gs2, 3],
-    [:Cs3,3], [:E3,3],  [:B2,3], [:GS2,3.0],
-    )
+    [:Cs3,3], [:E3,3],  [:B2,3], [:GS2,3.0])
 
   z=nil
   puts score.look

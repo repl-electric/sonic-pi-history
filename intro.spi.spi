@@ -38,7 +38,7 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: .5,  mod: .1, cutoff: (ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.08
   score = (ring
-    [:A2, 12]
+    [:A2, 12])
 
   z=nil
   puts score.look

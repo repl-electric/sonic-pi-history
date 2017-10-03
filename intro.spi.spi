@@ -22,7 +22,7 @@ live_loop(:metro)do
 end
 
 
-sop_on :E4
+sop_on :A4
 
 live_loop :moving, sync: :metro do
   #stop

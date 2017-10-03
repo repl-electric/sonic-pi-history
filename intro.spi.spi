@@ -69,7 +69,7 @@ end
 
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
-    stop
+    #stop
     #sync '18'
     tick
     #sync "16"

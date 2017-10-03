@@ -22,6 +22,56 @@ live_loop(:metro)do
 end
 
 
+live_loop :moving, sync: :metro do
+  #stop
+  sync :music
+  mega =
+    (ring
+
+    (ring #1/4     1/4.0
+      [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],   #1/4
+      [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],   #1/4
+
+      [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],
+      [:D3, 1/8.0], [_, 1/8.0],   [:B2, 1/8.0], [_, 1/8.0],
+
+#      [:Cs3, 1/8.0], [:D3, 1/8.0],   [:E3, 1/8.0], [:Fs3, 1/8.0],
+
+
+#      [_, 1/8.0],    [:E2, 1/8.0], [:B2, 1/8.0], [_, 1/8.0],
+#      [:B2, 1/8.0],  [:B2, 1/8.0], [:B2, 1/8.0], [_, 1/8.0],
+
+      ),
+#    (ring [:E2,1/8.0],  [:E2,1/8.0], [:D3,1/8.0], [:B2, 1/8.0], [:B2, 1/8.0]),
+#    (ring [:A2,1/8.0],  [:E2,1/8.0], [:Cs3,1/8.0], [:D3,1/8.0], [:B2, 1/8.0])
+
+#    (ring [_,1/8.0],  [_, 1/8.0],  [:E2,1/8.0]),  #A    #DFG
+#    (ring [_,1/8.0],  [_,1/8.0],   [:A2,1/8.0]),  #C
+#    (ring [_,1/8.0],  [_,1/8.0],   [:B2,1/8.0]),  #B
+)
+  #A  C  B
+
+  sleep 3/4.0
+  score = mega.tick(:mega)
+#  puts "SCORE:#{score}, #{score.count}"
+  midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9
+  puts "---------------------"
+  score.count.times{ #-Every 8 switch
+    tick
+    s2 = ""
+#    zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
+    s = score.look
+   # puts "#{s2}/#{s}"
+     zero s,(line 100,0,9).look*0.5 if s && s[0]
+#    zero s,(ring 120,20,20,20).look if s && s[0]
+    #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
+   # puts score.map{|z| z[-1] }.reduce(:+) + 3/4.0
+    sleep s[-1]
+  }
+end
+
+
+
 live_loop :fucj, sync: :metro do
   tick
   midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10

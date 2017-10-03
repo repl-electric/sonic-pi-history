@@ -193,7 +193,10 @@ with_fx :none, mix: 0 do
      _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
 
-  #2*(line 0.8, 1.0, 12*6).look
+    #2*(line 0.8, 1.0, 12*6).look
+    if eval(s) != "_"
+      midi :A2, port: :iac_bus_1, channel: 12
+    end
   smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
 
     if s!="_" && spread(1,8+4).look

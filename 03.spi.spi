@@ -114,7 +114,7 @@ live_loop :music, sync: :metro do
   z=nil
   puts score.look
 
-  if score.look == [[:E3, 1],[:Gs3, 1],[:B2,3]]
+  if score.look[0].is_a?(Array)
     puts "MULTIBALL"
     harp z=score.look[0][0], 127, sustain: 3
     harp z=score.look[1][0], 127, sustain: 3

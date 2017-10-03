@@ -1,5 +1,5 @@
 #127 => -100 - 100
-#sop_on :B3, 30, sustain: 12
+sop_on :A3, 30, sustain: 12
 #sop_cc 1, 1270
 #sop_off :B3
 

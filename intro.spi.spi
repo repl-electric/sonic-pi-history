@@ -36,7 +36,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: .5,  mod: .0, cutoff: (ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
+  harp_cc phase: .5,  mod: .05, cutoff: (ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
   score = (ring
     [:A2, 6], [:Cs3,3], [:B2,3],[:Gs2,3],
     [:A2,3],  [:Cs3,3], [:B2,3], [:Gs2, 3],

@@ -2,6 +2,16 @@ puts "MULTIBALL"
 
 
 
-chord(:A2, :M).each do |n|
-  harp n, sustain: 3
+
+live_loop :testing do
+  tick
+
+
+  chord(:A2, :M).each do |n|
+    harp n, sustain: 3
+  end
+
+
+
+  sleep 3
 end

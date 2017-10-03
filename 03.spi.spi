@@ -97,7 +97,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: .5,  mod: .0, cutoff: .4, bass: .1 #(ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
+  harp_cc phase: .5,  mod: .0, cutoff: .5, bass: .1 #(ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
   # sharp (ring [:A2,3], [:Cs3,3], [:B2, 3],).look, 30.0
 
   score = (ring

@@ -78,7 +78,7 @@ live_loop :music, sync: :metro do
 
 end
 
-set_volume! 1.5
+set_volume! 2.0
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     #stop

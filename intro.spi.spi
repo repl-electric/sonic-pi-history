@@ -46,8 +46,7 @@ live_loop :music, sync: :metro do
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
-
+    harp s=score.tick, 20
     sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }

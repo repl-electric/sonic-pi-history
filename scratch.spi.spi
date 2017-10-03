@@ -2,7 +2,7 @@ puts "MULTIBALL"
 
 
 
-chord(:A3, :M).each do |n|
+chord(:A2, :M).each do |n|
   harp n, sustain: 3
 end
 

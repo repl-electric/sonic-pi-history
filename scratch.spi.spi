@@ -11,6 +11,7 @@ live_loop :testing do
 
   chord(:B2, :m).each do |n|
     harp n, sustain: 3
+    sleep 0.5
   end
 
 

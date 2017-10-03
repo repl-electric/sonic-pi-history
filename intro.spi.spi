@@ -3,7 +3,7 @@
 
 #sop_on :A3, 30, sustain: 12
 sop_cc 1, 0
-sop_off :B3
+sop_off :A3
 
 #midi_reset
 live_loop(:metro)do

@@ -112,10 +112,8 @@ live_loop :music, sync: :metro do
 
   z=nil
   if score.look == [[:D3,1],[:E3,2]]
-
     harp z=score.look[0], 127
     harp z=score.look[1], 127
-
   else
     harp z=score.look, 127
   end

@@ -22,6 +22,8 @@ live_loop(:metro)do
 end
 
 
+sop_on :A3
+
 live_loop :moving, sync: :metro do
   #stop
   sync :music

@@ -92,7 +92,7 @@ end
 #midi_reset
 #midi_note_on  :A3, port: :iac_bus_1, channel: 11
 
-
+  harp_cc  bass: 0.2 #(ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
 
 live_loop :music, sync: :metro do
   tick

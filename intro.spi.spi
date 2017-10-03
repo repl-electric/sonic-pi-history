@@ -158,7 +158,7 @@ with_fx :none, mix: 0 do
   }).look
 
     #2*(line 0.8, 1.0, 12*6).look
-    if eval(s) == k3
+    if eval(s) == k2 || eval(s) == k1
       puts :kick
       midi :A2, port: :iac_bus_1, channel: 12
     end

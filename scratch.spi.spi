@@ -1,8 +1,10 @@
 puts "MULTIBALL"
 
 
-harp chord(:E3, :M)
 
+chord(:E3, :M).each do |n|
+harp n
+end
 
 sleep 3
 

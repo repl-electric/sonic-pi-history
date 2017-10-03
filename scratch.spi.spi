@@ -10,10 +10,10 @@ live_loop :testing do
 #(I, ii, iii, IV, V, vi, viio
 
   chord(:cs3).shuffle.each do |n|
-    harp n, sustain: 12
+    harp n, sustain: 12*2
     sleep 3#/3.0
   end
 
 
-  sleep 12
+  sleep 12*2
 end

@@ -1,6 +1,6 @@
 puts "MULTIBALL"
 
-harp :E3, 127, sustain: 3
+harp :E2, 127, sustain: 3
 harp :GS3, 127, sustain: 3
 harp :B3, 127, sustain: 3
 

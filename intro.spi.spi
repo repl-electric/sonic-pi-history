@@ -1,0 +1,70 @@
+#127 => -100 - 100
+#sop_on :B3, 30, sustain: 12
+#sop_cc 1, 1270
+#sop_off :B3
+
+#midi_reset
+live_loop(:metro)do
+  tick;
+  cue("16") if look % 16.0 == 0.0
+  cue("24") if look % 24.0 == 0.0
+  cue("18") if look % 18.0 == 0.0
+  cue("32") if look % 32.0 == 0.0
+  cue("64") if look % 64.0 == 0.0
+#  midi_start if tick == 0
+#  midi_clock_beat 1.0, port: :iac_bus_1
+  #smp Mountain[/subkick/,1]
+  sleep 1.0
+end
+
+
+live_loop :fucj, sync: :metro do
+  tick
+  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+  sleep 1/2.0
+end
+
+#midi_reset
+#midi_note_on  :A3, port: :iac_bus_1, channel: 11
+
+
+
+live_loop :music, sync: :metro do
+  tick
+stop
+  #sync "16"
+  harp_cc phase: .0,  mod: .0, cutoff: 0.15,  bass: .0 #(ramp 0.0, 0.85,128/8.0).tick(:fire), bass: 0.0
+  score = (ring
+    [:A2,6],  [:B2,3],  [:A2,3], [:Gs2,3],
+    [:A2,3],  [:Cs3,3], [:B2,3], [:Gs2, 3],
+    [:A2,3],  [:CS3,3], [:B2,3], [:Gs2, 3],
+    [:Cs3,3], [:E3,3],  [:B2,3], [:GS2,1/2.0], [[:E3, 3], [:Gs2, 3],[:B2,3]],
+  #  [:Cs3,3], [:E3,3],  [:B2,3], [:GS2,1/2.0], [[:A3, 3], [:Cs3, 3],[:E3,3]],
+    [:A2,3],  [:B2,3],  [:Gs2,3], [_,3],
+    )
+
+  z=nil
+  puts score.look
+
+  if score.look[0].is_a?(Array)
+    puts "MULTIBALL"
+    score.look.each do |note|
+      puts "multi:#{note}"
+      harp note[0], 20, sustain: 6
+    end
+  else
+    harp z=score.look, 60
+  end
+
+  #bass :E2, sustain: 3
+  #harp_cc phase: rand
+#  bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
+  3.times{
+    sleep score.look.flatten[-1]/(3.0);
+#    harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
+  }
+
+  midi_cc 65,  127*1  # port
+  midi_cc 114, 1
+
+end

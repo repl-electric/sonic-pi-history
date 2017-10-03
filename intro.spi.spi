@@ -1,8 +1,6 @@
 #127 => -100 - 100
 
 
-
-
 sop_on :A3, 30, sustain: 12
 #sop_cc 1, 1270
 #sop_off :B3
@@ -22,7 +20,7 @@ live_loop(:metro)do
 end
 
 
-sop_on :A4
+sop_on :Gs4
 
 live_loop :moving, sync: :metro do
   #stop

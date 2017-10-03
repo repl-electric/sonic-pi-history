@@ -105,7 +105,7 @@ live_loop :music, sync: :metro do
     [:A2,6],  [:B2,3],  [:A2,3], [:Gs2,3],
     [:A2,3],  [:Cs3,3], [:B2,3], [:Gs2, 3],
     [:A2,3],  [:CS3,3], [:B2,3], [:Gs2, 3],
-    [:Cs3,3], [:E3,3],  [:B2,3], [[:E2, 3],[:Gs3, 3],[:B3,3]],
+    [:Cs3,3], [:E3,3],  [:B2,3], [[:E2, 3], [:Gs3, 3],[:B2,3]],
     [:A2,6],  [:B2,3],  [:E2,3], [:Gs2,6],
 
 
@@ -119,9 +119,9 @@ live_loop :music, sync: :metro do
 
   if score.look[0].is_a?(Array)
     puts "MULTIBALL"
-    harp z=score.look[0][0], 127, sustain: 6
-    harp z=score.look[1][0], 127, sustain: 6
-    harp z=score.look[2][0], 127, sustain: 6
+    harp z=score.look[0][0], 60, sustain: 6
+    harp z=score.look[1][0], 60, sustain: 6
+    harp z=score.look[2][0], 60, sustain: 6
   else
     harp z=score.look, 127
   end

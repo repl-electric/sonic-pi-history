@@ -11,9 +11,8 @@ live_loop :testing do
 
   chord(:cs3).shuffle.each do |n|
     harp n, sustain: 12*2
-    sleep 1
+    sleep (ring 0.5,1,1.5).look
   end
-
 
   sleep 12*2
 end

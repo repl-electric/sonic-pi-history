@@ -120,7 +120,7 @@ live_loop :music, sync: :metro do
   if score.look[0].is_a?(Array)
     puts "MULTIBALL"
     harp z=score.look[0][0], 60, sustain: 12
-    harp z=score.look[1][0], 60, sustain: 12
+    harp z=score.look[1][0], 60, sustain: 6
     harp z=score.look[2][0], 60, sustain: 12
   else
     harp z=score.look, 127

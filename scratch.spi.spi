@@ -7,7 +7,7 @@ live_loop :testing do
   tick
 
 
-  chord(:A2, :M).each do |n|
+  chord(:B2, :m).each do |n|
     harp n, sustain: 3
   end
 

@@ -60,12 +60,6 @@ live_loop :moving, sync: :metro do
   }
 end
 
-def sidechain
-  midi :A2, port: :iac_bus_1, channel: 12
-end
-
-
-
 live_loop :test, sync: :metro do
   tick
 #  use_real_time
@@ -301,4 +295,3 @@ live_loop :vocals, sync: :metro do
     end
   end
 end
-in

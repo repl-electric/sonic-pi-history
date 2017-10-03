@@ -119,7 +119,7 @@ live_loop :music, sync: :metro do
 
   if score.look[0].is_a?(Array)
     puts "MULTIBALL"
-    score.look[0].each do |note|
+    score.look.each do |note|
       puts "multi:#{note}"
       sharp note[0], 60, sustain: 6
     end

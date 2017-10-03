@@ -66,3 +66,139 @@ live_loop :music, sync: :metro do
   midi_cc 114, 1
 
 end
+
+with_fx :none, mix: 0 do
+  live_loop :pat, sync: :metro do
+    #stop
+    #sync '18'
+    tick
+    #sync "16"
+    c1 = Dust[/clap/,1]
+    k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    s=(ring *%W{
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+
+     k2 _ k2 _  k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k3  _ k2 _
+  }).look
+
+    s=(ring *%W{
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _   _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _
+
+     k2 _ _ _  _ _ _ _   k1 _ _ _
+     _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
+  }).look
+
+    #2*(line 0.8, 1.0, 12*6).look
+    if eval(s) == k2
+      puts :kick
+      midi :A2, port: :iac_bus_1, channel: 12
+    end
+    smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+    if s!="_" && spread(1,8+4).look
+      if spread(1,32).look
+        at do
+          stop
+          smp Analog[/17 /].tick(:echo), amp: 0.5
+          sleep 0.25
+          smp Analog[/17 /].tick(:echo), amp: 0.3
+        end
+      else
+        #smp Analog[/17 /].tick(:echo), amp: 0.5
+      end
+    end
+
+    p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
+#    p= Dust[/perc/, [7,7]]
+    #p=MagicDust[/perc/,/stone/,[4..8]].look
+
+    #  puts p
+    s=(ring *%W{
+p _ _ _   _ _ p _
+_ _ p _
+_ _ _ _   _ _ p _
+_ _ p _
+
+p _ _ _   _ _ p _
+_ _ p _
+_ _ _ _   _ _ p _
+_ _ p _
+}).look
+
+    s1=(ring *%W{
+p _
+p _ _ _
+_ p _ _
+_ _ p _
+_ _ _ p
+_ _ p
+_ _ p
+}).look
+
+  if(s=="_")
+    # zero (knit :A2,24,:E3,24).look,5
+#    zero (ring :A3,1,:E3,1,:A3,1    ).look,5
+  end
+    with_fx :none, mix: (line 0.2,0.3,32).look do
+      if s!= "_" && spread(1,6).look
+       #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
+      end
+      #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look,
+      #amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+    end
+    c = MagicDust[/HI_/, [54,55,56,57]].look
+    if (s=(ring *%W{
+_ _ _  _ _ _
+c _ _  _ _ _
+_ _ _  _ _ _
+_ _ _  _ _ _
+}).look) != _
+#      smp eval(s), pan: (ring 0.25,-0.25).look
+    end
+
+  c1 = MagicDust[/HI_/,[0..9]].look#, Dust[/clap/].look
+  s=(ring *%W{
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+}).look
+
+#    smp eval(s), amp: 0.25
+
+ # = spread(7,11).map{|s| s ? :hit : :miss}
+  s=(ring *%W{_ _ _ _   c1 _ _ _}).look
+#  smp eval(s), cutoff: (line 80, 120, 128).look
+
+    h,h2 = MagicDust[/_HI/,18],Dust[/hat/,4]
+  s=(ring *%W{
+_ _ h _  _ _ h _
+_ _ h _  _ _ h _
+_ _ h _  _ _ h {path:h,amp:0.4}
+_ _ h _  _ _ h _
+
+}).look
+    amp = if ((v=eval(s)) != _)
+            v.is_a?(String) ? 0.5 : (v[:amp] || 0.5)
+          else
+            0
+          end
+    #smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.02,0.0,64).look, sustain: (knit 0.01,4,0.02,4,0.025,4).look, amp: amp
+
+    sleep 1/8.0
+  end
+end
+live_loop :bells, sync: :metro do
+  stop
+  tick
+  # h,h2 = MagicDust[/MD_BELL_RES/,5],Frag[/hat/,7]
+  #  smp MagicDust[/hi/,/chimes/,/_A\./].look, amp: 0.5
+  sleep 32
+end

@@ -276,7 +276,7 @@ live_loop :vocals, sync: :metro do
     with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
     hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
     hat2 = (ring *%w{_ _ hz1 _
-                     _ _ hz1 {path:hz2,amp:0.25}
+                     _ _ hz1 {path:hz2,amp:0.125}
                      _ _ hz1 _
                      _ _ hz1 _})
      smp eval(hat2.look), amp: 2, rate: [-1,1].choose, attack: 0.25

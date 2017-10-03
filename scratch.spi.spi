@@ -15,5 +15,5 @@ live_loop :testing do
   end
 
 
-  sleep 3
+  sleep 12
 end

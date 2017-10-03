@@ -124,7 +124,7 @@ live_loop :music, sync: :metro do
       sharp n[0], 60, sustain: 6
     end
   else
-    sharp z=score.look, 60
+    sharp z=score.look, 30
   end
 
 #  harp z=(ring

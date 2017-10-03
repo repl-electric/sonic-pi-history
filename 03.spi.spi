@@ -108,7 +108,7 @@ live_loop :music, sync: :metro do
 
     #    [:Cs3,3], [:E3,3],  [:B2,3],  [:Gs2, 3], [:A2, 3],
     #    [:B2,3],  [:Cs3,3], [:D3,3],  [:Cs2, 3], [_,2],
-        ).look
+        )
 
   z=nil
   if score.look == [[:D3,1],[:E3,2]]

@@ -1,3 +1,8 @@
+def sop_mode(mode)
+  sop ['C-1','Cs-1','D-1','Ds-1','E-1', 'F-1'][mode]
+end
+
+
 sop_on :A2, 20, sustain: 12
 sop_mode -1
 musicbox :A3, sustain: 1
@@ -61,7 +66,6 @@ live_loop :music, sync: :metro do
   tick
   #sync "16"
   harp_cc phase: .5,  mod: .0, cutoff: 1.0, bass: .1#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
-
 
   score = (ing
     [:A2 6]  [:Cs3 6] [:B2 3] [:Gs2 3]

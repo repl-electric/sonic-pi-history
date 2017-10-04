@@ -65,8 +65,7 @@ live_loop :music, sync: :metro do
   score = (ing
     [:A2, 6]  [:Cs3, 6] [:B2,3] [:Gs2,3]
     [:A2, 3]  [:Cs3, 3] [:B2,3] [:Gs2,3]
-    [:Cs2, 3] [:E3, 3] [:B2,3] [:Gs2,3]
-
+    [:Cs2, 3] [:E3, 3]  [:B2,3] [:Gs2,3]
     )
 
   puts score.look

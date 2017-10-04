@@ -29,5 +29,5 @@ live_loop :testing do
     sleep (ring 0.5,1,1.5).look
   end
 
-  sleep 12*2
+  sleep 1
 end

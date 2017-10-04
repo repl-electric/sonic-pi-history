@@ -1,7 +1,7 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 #@points = 0
-shader :shader, "dots.glsl", "sphere.vert", "tri", 200
+shader :shader, "dots.glsl", "sphere.vert", "tri", 100
 shader [:iR,:iG,:iB], 9.0
 
 shader :iMode, 0

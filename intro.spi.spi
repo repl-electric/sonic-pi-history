@@ -1,8 +1,3 @@
-def sop_mode(mode)
-  sop ['C-1','Cs-1','D-1','Ds-1','E-1', 'F-1'][mode]
-end
-
-
 sop_on :A2, 20, sustain: 12
 sop_mode -1
 musicbox :A3, sustain: 1

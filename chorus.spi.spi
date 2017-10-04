@@ -62,34 +62,28 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: .5,  mod: .2, cutoff: 1.0, bass: .2#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
+  score = (knit
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    [:FS3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1,
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    )
+  #score = space()
+  cue(:m) if ((look+1) % score.count)  == 0
+  3.times{
+    sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    sleep s[-1]
+  }
+  sleep 3/4.0
+
+
   score = (ing
-    [:A3,6])
+    [:A3 6]
+    )
 
 
   #musicbox score.look, 127
 
-  puts score.look
-  if score.look[0].is_a?(Array)
-    score.look.each do |note|
-      harp note[0], 30, sustain: 6
-    end
-  else
-    if score.look[0] == [:E3]
-      sharp z=score.look, 30, sustain: 12
-    end
-    harp z=score.look, 30
-  end
-
-  bass (ring
-        :A2, :D2, :E2, :B2,
-        :A2, :D2, :E2, :B2,
-        :D2, :E2, :B2, :D2
-        ).look, sustain: 2.5, cutoff: 0.4
-
-  3.times{
-    sleep score.look.flatten[-1]/(3.0);
-    #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
-  }
 end
 
 set_volume! 2.0
@@ -109,7 +103,7 @@ with_fx :none, mix: 0 do
      k2 _ _ _   k3  _ k2 _
   }).look
 
-    s=(ring *%W{
+    s2=(ring *%W{
      k2 _ _ _   _ _ _ _   k1 _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _
 
@@ -135,7 +129,7 @@ with_fx :none, mix: 0 do
     sidechain if eval(s) && spread(1,4).look
 
 
-    #smp eval(s), amp: 3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 1.1, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+    smp eval(s), amp: 3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 1.1, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
     if s!="_" && spread(1,8+4).look
         shader [:iR,:iG,:iB].choose, rand*1.0
       if spread(1,32).look

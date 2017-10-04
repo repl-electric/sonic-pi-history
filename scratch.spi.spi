@@ -22,9 +22,7 @@ live_loop :testing do
   chord(:D3).shuffle.each do |n|
     #    harp n, sustain: 12*2
 
-
-    midi :A2, port: :iac_bus_1, channel: 12
-
+    midi :A3, port: :iac_bus_1, channel: 12
 
     sleep (ring 0.5,1,1.5).look
   end

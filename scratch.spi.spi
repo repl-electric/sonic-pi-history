@@ -6,7 +6,7 @@ puts "MULTIBALL"
 live_loop :testing do
   tick
 
-  midi (ring :A2, :Cs3, :B2).look, port: :iac_bus_1, channel: 12, sustain: 1/8.0
+  midi (ring :A2, :Cs3, :B2).look, port: :iac_bus_1, channel: 12, sustain: 1
 
 #(I, ii, iii, IV, V, vi, viio
 

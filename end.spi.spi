@@ -70,20 +70,18 @@ live_loop :music, sync: :metro do
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-
     #if spread(1,3).look
     s = 3
     #sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     #end
 
-    with_transpose(12+12) do
+    #with_transpose(12+12) do
       #musicbox  score.look, 127
-    end
+    #end
     #harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }
   sleep 3/4.0
-
 
   score = (ing
     [:A3 6]

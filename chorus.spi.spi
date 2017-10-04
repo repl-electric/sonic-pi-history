@@ -76,7 +76,7 @@ live_loop :music, sync: :metro do
     end
   else
     if score.look[0] == [:E3]
-    sharp z=score.look, 30
+      sharp z=score.look, 30, sustain: 12
     end
     harp z=score.look, 30
   end

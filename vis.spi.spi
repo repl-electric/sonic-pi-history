@@ -2,7 +2,7 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 #@points = 0
 shader :shader, "dots.glsl", "sphere.vert", "tri", 100
-shader [:iR,:iG,:iB], rand*9.0
+shader [:iR,:iG,:iB], rand*1.0
 
 shader :iMode, 0
 shader :iAlien, 0.

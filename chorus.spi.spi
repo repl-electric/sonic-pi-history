@@ -61,12 +61,9 @@ live_loop :music, sync: :metro do
   tick
   #sync "16"
   harp_cc phase: .5,  mod: .2, cutoff: 1.0, bass: .2#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
-
+shader :iMode, 1.0
   score = (ing
-    [:A3 3]  [:D3 3]  [:E3 3] [:B2 3]
-    [:A3 3]  [:D3 3]  [:E3 3] [:B2 3]
-    [:D3 3]  [:E3 3]  [:B2 3] [:B2 3]
-    )
+    [:A3,3],[:D3,3],[:E3,3],[:B2,3],[:A3,3],[:D3,3],[:E3,3],[:B2,3],[:D3,3],[:E3,3],[:B2,3],[:B2,3])
   musicbox score.look, 127
 
   puts score.look
@@ -82,7 +79,6 @@ live_loop :music, sync: :metro do
         :A2, :D2, :E2, :B2,
         :A2, :D2, :E2, :B2,
         :D2, :E2, :B2, :D3
-
         ).look, sustain: 2.5, cutoff: 0.4
 
   3.times{

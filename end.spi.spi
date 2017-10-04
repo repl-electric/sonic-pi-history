@@ -1,5 +1,5 @@
 sop_on :A3, 127, sustain: 12
-sop_mode -2
+sop_mode -1
 #musicbox :A3, sustain: 1
 #sop_cc 1, 0
 #sop_off :B3

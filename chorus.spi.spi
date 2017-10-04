@@ -75,7 +75,7 @@ live_loop :music, sync: :metro do
       harp note[0], 30, sustain: 6
     end
   else
-    harp z=score.look, 20
+    harp z=score.look, 30
   end
 
   bass (ring

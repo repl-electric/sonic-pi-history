@@ -67,7 +67,7 @@ live_loop :music, sync: :metro do
     [:A3 3]  [:D3 3]  [:E3 3] [:B2 3]
     [:D3 3]  [:E3 3]  [:B2 3] [:B2 3]
     )
-  #musicbox score.look, 127
+  musicbox score.look, 127
 
   puts score.look
   if score.look[0].is_a?(Array)
@@ -79,6 +79,7 @@ live_loop :music, sync: :metro do
   end
 
   bass (ring :A2, :D2, :E2, :B2).look, sustain: 2.5, cutoff: 0.4
+
   3.times{
     sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)

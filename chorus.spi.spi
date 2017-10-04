@@ -75,7 +75,7 @@ live_loop :music, sync: :metro do
       sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     end
 
-    musicbox :E3
+    musicbox :A3
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }

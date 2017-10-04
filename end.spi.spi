@@ -2,7 +2,7 @@ sop_on :A1, 1, sustain: 12
 sop_mode -1
 #musicbox :A3, sustain: 1
 #sop_cc 1, 0
-#sop_off :B3
+sop_off :B3
 
 midi_cc 65,  127*1  # port
 midi_cc 114, 1

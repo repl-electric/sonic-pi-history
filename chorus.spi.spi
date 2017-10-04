@@ -73,7 +73,6 @@ live_loop :music, sync: :metro do
 
     if spread(1,3).look
       sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
-
     end
 
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look

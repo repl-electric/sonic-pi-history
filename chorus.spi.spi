@@ -63,8 +63,9 @@ live_loop :music, sync: :metro do
   harp_cc phase: .5,  mod: .2, cutoff: 1.0, bass: .2#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:A3,6])
-  musicbox score.look, 127
+    [:A3 6]
+    )
+  #musicbox score.look, 127
 
   puts score.look
   if score.look[0].is_a?(Array)

@@ -77,7 +77,7 @@ live_loop :music, sync: :metro do
 
     with_transpose(12) do
       musicbox  score.look, 127
-      end
+    end
     harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }

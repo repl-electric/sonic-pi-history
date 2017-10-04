@@ -71,9 +71,9 @@ live_loop :music, sync: :metro do
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
 
-    if spread(1,3).look
+    #if spread(1,3).look
       sharp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
-    end
+    #end
 
     with_transpose(12+12) do
       musicbox  score.look, 127

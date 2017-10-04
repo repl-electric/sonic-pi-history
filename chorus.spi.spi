@@ -65,6 +65,8 @@ live_loop :music, sync: :metro do
   score = (ing
     [:A3 6]
     )
+
+
   #musicbox score.look, 127
 
   puts score.look
@@ -151,7 +153,7 @@ with_fx :none, mix: 0 do
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 #    p= Dust[/perc/, [7,7]]
-#    p=MagicDust[/perc/,/stone/,[4..8]].look
+    p=MagicDust[/perc/,/stone/,[4..8]].look
 
     #  puts p
     s=(ring *%W{

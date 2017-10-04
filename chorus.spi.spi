@@ -136,11 +136,12 @@ with_fx :none, mix: 0 do
     sidechain if eval(s) && spread(1,4).look
 
 
-    shader [:iR,:iG,:iB].choose, rand*1.0
+
 
     smp eval(s), amp: 3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 1.1, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
+        shader [:iR,:iG,:iB].choose, rand*1.0
         at do
           smp Analog[/17 /].tick(:echo), amp: 0.5
           sleep 0.25

@@ -5,11 +5,9 @@ puts "MULTIBALL"
 
 live_loop :testing do
   tick
-
   midi (ring :A2, :Cs3, :B2).look, port: :iac_bus_1, channel: 12, sustain: 6
 
 #(I, ii, iii, IV, V, vi, viio
-
   #ACE I
   #BDE ii
   #CEG iii

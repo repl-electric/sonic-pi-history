@@ -2,6 +2,6 @@ live_loop :breaking_the_ruby do
   tick
   puts (ing "No" "No" "Commas").look
   puts (ing .3 .4 .5).look
-  zero :A3, 120
+  zero :A3, 1
   sleep 1
 end

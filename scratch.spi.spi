@@ -1,0 +1,9 @@
+live_loop :breaking_the_ruby do
+  tick
+  puts (ing "No" "No" "Commas").look
+  puts (ing .3 .4 .5).look
+  sleep 1
+end
+
+
+    zero :A3, 100

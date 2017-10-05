@@ -1,7 +1,7 @@
 live_loop :breaking_the_ruby do
   tick
-  puts (ing "No" "No" "Commas").look
-  puts (ing .3 .4 .5).look
-  zero (ring :A3,:B4,:GS3).look, 1
+  puts (ing "No","No","Commas").look
+  puts (ing .3,.4,.5).look
+  zero (ring :A3,:B3,:GS3).look, 1
   sleep 1
 end

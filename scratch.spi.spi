@@ -1,8 +1,6 @@
 live_loop :breaking_the_ruby do
   tick
   zero (ing
-        :A2 :B2 :CS3 :D3 :E3 :fs3 :gs3
-
-        ).look, 40
+        :A2,:B2,:C3,:D3,:E3,:f3,:g3).look, 40
   sleep 1
 end

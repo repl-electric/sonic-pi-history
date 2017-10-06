@@ -59,7 +59,6 @@ end
 
 live_loop :music, sync: :metro do
   tick
-  stop
   #sync "16"
   harp_cc phase: .5,  mod: .2, cutoff: 1.0, bass: .2#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 

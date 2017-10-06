@@ -3,6 +3,6 @@ live_loop :breaking_the_ruby do
   zero (ing
         :A2 :B2 :CS3 :D3 :E3 :fs3 :gs3
 
-        ).look, (ring 10,20,30,40).look
+        ).look, 40
   sleep 1
 end

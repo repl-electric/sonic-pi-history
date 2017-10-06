@@ -78,7 +78,7 @@ live_loop :music, sync: :metro do
 
   puts "zero: #{
 (ing
-    [:Cs3,6],[:E3,6],[:Cs3,3],[:B2,3],[:Cs3,3],[:E3,3],[:Ds3,3],[:B2,3],[:Ds3,3],[:Fs3,3],[:Cs3,3],[:B2,3]).look
+    [:Cs3,6],[:E3,6],[:Cs3,3],[:B2,3],[:Cs3,3],[:E3,3],[:Ds3,3],[:As2,3],[:Ds3,3],[:Fs3,3],[:Cs3,3],[:B2,3]).look
 }"
 
   #musicbox score.look, 127

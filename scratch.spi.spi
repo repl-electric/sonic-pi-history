@@ -4,6 +4,6 @@ live_loop :breaking_the_ruby do
   zero (ing
         :A3 :CS3 :B2 :GS2
         :A3 :Cs3 :B3 :GS2
-        ).look, (ring 1,1,1,127).look
+        ).look, (ring 1,100,1,127).look
   sleep 1
 end

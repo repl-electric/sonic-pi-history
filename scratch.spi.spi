@@ -8,5 +8,5 @@ live_loop :breaking_the_ruby do
         :Cs3 :E3  :B2 :GS2
 
         ).look, (ring 10,20,30,127).look
-  sleep 1/4.0
+  sleep 1/2.0
 end

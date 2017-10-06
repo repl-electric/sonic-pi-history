@@ -86,7 +86,7 @@ live_loop :music, sync: :metro do
 (ing
     [:B2 6]  [:D3 6]   [:Cs3 3] [:A2 3]
     [:B2 3]  [:D3 3]   [:Cs3 3] [:A2 3]
-    [:D3 3]  [:Fs3 3]  [:Cs3 3] [:A2 3])
+    [:D3 3]  [:Fs3 3]  [:Cs3 3] [:A2 3]).look
 }"
 
   #musicbox score.look, 127

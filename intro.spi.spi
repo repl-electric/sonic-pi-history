@@ -1,4 +1,4 @@
-sop_on :A2, 20, sustain: 12, mode: 0
+sop_on :A2, 20, sustain: 12, mode: -2
 #sop_mode 0
 musicbox :A3, sustain: 1
 set_volume! 1.0

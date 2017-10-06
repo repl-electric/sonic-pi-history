@@ -4,5 +4,5 @@ live_loop :breaking_the_ruby do
         :A2 :B2 :CS3 :D3 :E3 :fs3 :gs3
 
         ).look, (ring 10,20,30,40).look
-  sleep 1/2.0
+  sleep 1
 end

@@ -68,19 +68,25 @@ live_loop :music, sync: :metro do
   harp_cc phase: .5,  mod: .0, cutoff: 1.0, bass: .1#(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:A2,6],[:Cs3,6],[:B2,3],[:Gs2,3],[:A2,3],[:Cs3,3],[:B2,3],[:Gs2,3],[:Cs3,3],[:E3,3],[:B2,3],[:Gs2,3])
+    [:A2 6]  [:Cs3 6] [:B2 3] [:Gs2 3]
+    [:A2 3]  [:Cs3 3] [:B2 3] [:Gs2 3]
+    [:Cs3 3] [:E3 3]  [:B2 3] [:Gs2 3]
+    )
 
 #A B  Cs D E  Fs Gs A
 #B Cs Ds E Fs Gs As B
 
   zero (ing
-    [:B2,6],[:D3,6],[:Cs3,3],[:A2,3],[:B2,3],[:D3,3],[:Cs3,3],[:A2,3],[:D3,3],[:Fs3,3],[:Cs3,3],[:A2,3]).look
-
-  puts "zero: #{
     [:B2 6]  [:D3 6]   [:Cs3 3] [:A2 3]
     [:B2 3]  [:D3 3]   [:Cs3 3] [:A2 3]
     [:D3 3]  [:Fs3 3]  [:Cs3 3] [:A2 3]
+    ).look
 
+  puts "zero: #{
+(ing
+    [:B2 6]  [:D3 6]   [:Cs3 3] [:A2 3]
+    [:B2 3]  [:D3 3]   [:Cs3 3] [:A2 3]
+    [:D3 3]  [:Fs3 3]  [:Cs3 3] [:A2 3])
 }"
 
   #musicbox score.look, 127

@@ -1,7 +1,7 @@
 live_loop :breaking_the_ruby do
   tick
   zero (ing
-        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3
+        :B2 :Cs2 :D3 :E3 :Fs3 :Gs3 :A3
 
         ).look, 40
 
@@ -13,3 +13,9 @@ live_loop :breaking_the_ruby do
 
   sleep 1
 end
+
+
+
+#OH GOD OH GOD OH GOD.....
+A B  Cs D E  Fs Gs A
+B Cs Ds E Fs Gs As B

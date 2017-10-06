@@ -1,6 +1,7 @@
 sop_on :A2, 20, sustain: 12
 sop_mode -2
 musicbox :A3, sustain: 1
+set_volume! 1.0
 #sop_cc 1, 0
 #sop_off :B3
 
@@ -87,7 +88,7 @@ live_loop :music, sync: :metro do
   }
 end
 
-set_volume! 1.0
+
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     #sync '18'

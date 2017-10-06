@@ -83,11 +83,6 @@ live_loop :music, sync: :metro do
   sleep 3/4.0
 
 
-  score = (ing
-    [:A3 6]
-    )
-
-
   #musicbox score.look, 127
 
 end

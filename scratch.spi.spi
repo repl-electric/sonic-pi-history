@@ -1,12 +1,6 @@
 live_loop :breaking_the_ruby do
   tick
   zero (ing
-        :A2  :CS3 :B2 :GS2
-        :A2  :CS3 :B2 :GS2
-        :Cs3 :B2  :Fs2 :GS2
-        :A2  :CS3 :B2 :GS2
-        :Cs3 :E3  :B2 :GS2
-
-        ).look, (ring 10,20,30,40).look
+#,:A2,:CS3,:B2,:GS2,#,:A2,:CS3,:B2,:GS2,#,:Cs3,:B2,:Fs2,:GS2,#,:A2,:CS3,:B2,:GS2,#,:Cs3,:E3,:B2,:GS2,:A2,:B2,:CS3,:D3,:E3,:fs3,:gs3).look, (ring 10,20,30,40).look
   sleep 1/2.0
 end

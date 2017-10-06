@@ -5,6 +5,7 @@ live_loop :breaking_the_ruby do
         :A2  :CS3 :B2 :GS2
         :A2  :CS3 :B2 :GS2
         :Cs3 :B2  :Fs2 :GS2
+        :A2  :CS3 :B2 :GS2
         :Cs3 :E3  :B2 :GS2
         ).look, (ring 10,20,30,127).look
   sleep 1/2.0

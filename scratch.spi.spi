@@ -11,8 +11,8 @@ live_loop :breaking_the_ruby do
     #    zero (ring :A0).look, 30
 
 
-    #zero :A0, 100
-    smp "/Users/josephwilk/Workspace/music/samples/0-coast/A0_kick.wav", amp: 4
+    zero :A0, 100
+    #smp "/Users/josephwilk/Workspace/music/samples/0-coast/A0_kick.wav", amp: 4
   end
 
   sleep 1/8.0

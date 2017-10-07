@@ -1,18 +1,14 @@
 live_loop :breaking_the_ruby do
   tick
 #  zero (ing
-#        :A2 :B2 :Cs3 :D3 :E3 :Fs3 :Gs3 :A3
-#
-#        ).look, 40
+#,:A2,:B2,:Cs3,:D3,:E3,:Fs3,:Gs3,:A3,#,#).look, 40
 
 
 #  puts (ing
-#        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3
-
-#        ).look, 40
+#,:A2,:B2,:Cs3,:D3,:E3,:fs3,:gs3,#).look, 40
 
   if spread(1,4).look
-    zero :A0
+    zero (ring :A0, :CS0).look
   end
 
   sleep 1/8.0

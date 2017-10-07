@@ -12,7 +12,7 @@ live_loop :breaking_the_ruby do
 #        ).look, 40
 
   if spread(1,12).look
-    zero (ring :A1).look, 30
+    zero (ring :A0).look, 30
   end
 
   sleep 1/8.0

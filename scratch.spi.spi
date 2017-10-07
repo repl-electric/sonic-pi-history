@@ -11,6 +11,10 @@ live_loop :breaking_the_ruby do
 
 #        ).look, 40
 
+
+
+  zero :Fs0
+
   sleep 1
 end
 

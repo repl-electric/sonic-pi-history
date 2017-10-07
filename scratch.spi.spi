@@ -13,9 +13,12 @@ live_loop :breaking_the_ruby do
 
 
 
+  if spread(1,8).look
   zero :B1
 
-  sleep 1
+  end
+
+  sleep 1/8.0
 end
 
 

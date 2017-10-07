@@ -6,10 +6,10 @@ live_loop :breaking_the_ruby do
 #        ).look, 40
 
 
-  puts (ing
-        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3
+#  puts (ing
+#        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3
 
-        ).look, 40
+#        ).look, 40
 
   sleep 1
 end

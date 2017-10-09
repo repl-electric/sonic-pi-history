@@ -13,7 +13,7 @@ live_loop :breaking_the_ruby do
 
   if spread(1,1).look
     #    zero (ring :A0).look, 30
-    zero :A3, (ing 1, 127).look
+    zero :A3, (ing 1 127).look
     #smp "/Users/josephwilk/Workspace/music/samples/0-coast/A0_kick.wav", amp: 4
     midi_cc 1, (ing 0 127).look, port: :iac_bus_1
 

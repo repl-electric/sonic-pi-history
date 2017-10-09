@@ -80,7 +80,7 @@ live_loop :music, sync: :metro do
     )
   #15
 
-  puts score.reduce {|s,a| s+a[-1]}
+  puts score.reduce 0, {|s,a| s+a[-1]}
 
 # C D E F (G) A (B) C (D) E F G A B C D E
 

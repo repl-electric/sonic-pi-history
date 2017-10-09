@@ -9,8 +9,8 @@ live_loop :breaking_the_ruby do
 
 
   if spread(1,4).look
-    smp Frag[/kick/,0], amp:2
-    end
+    smp Frag[/kick/,1], amp:2
+  end
 
   if spread(1,3).look
     midi :A2, port: :iac_bus_1, channel: 11  #, (ing 0,127).look

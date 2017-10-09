@@ -5,6 +5,11 @@ set_volume! 2.0
 #sop_cc 1, 0
 #sop_off :B3
 
+def zero_cc(*args)
+  midi_cc *(args << {port: :iac_bus_1} << {channel: 9})
+end
+
+
 midi_cc 65,  127*1  # port
 midi_cc 114, 1
 live_loop(:metro)do
@@ -48,6 +53,10 @@ live_loop :moving, sync: :metro do
       s = score.look
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
+
+    midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+
+
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
       #puts score.map{|z| z[-1] }.reduce(:+) + 3/4.0

@@ -85,9 +85,9 @@ live_loop :music, sync: :metro do
 # C D E F (G) A (B) C (D) E F G A B C D E
 
   intervals = (ing
-    [_ 6]  [_ 3] [_ 3] [:B1 0.5]  [:B2 0.5]
+    [_ 6]  [_ 3] [_ 3] [:Gs1 0.5]  [:B2 0.5]
     [_ 3]  [_ 3] [_ 3] [:E3 1]    [:A2 0.5]
-    [_ 3]  [_ 3] [_ 3] [:B1 0.5]  [:B2 0.5]
+    [_ 3]  [_ 3] [_ 3] [:Gs1 0.5]  [:B2 0.5]
     ).look
   sharp intervals
 #18

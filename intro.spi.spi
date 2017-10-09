@@ -78,13 +78,11 @@ live_loop :music, sync: :metro do
     [:Cs3 3] [:E3 3]  [:B2 3] [:Gs2 3]
     )
 
-  intervalscore = (ing
+  sharp (ing
     [_ 6]  [_ 6] [:B1 3] [_ 3]
     [_ 3]  [_ 3] [:E2 3] [_ 3]
     [_ 3]  [_ 3] [:B1 3] [_ 3]
-    )
-
-  sharp intervalscore.look
+    ).look
 
   zero (ing
         [:Cs3 6]   [:E3 6]   [:Cs3 3] [:B2 3]

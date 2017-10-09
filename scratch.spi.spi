@@ -13,7 +13,7 @@ live_loop :breaking_the_ruby do
 
 
   if spread(1,4).look
-    moog :A2#, (ing 0 127).look
+    midi :A2, port: :iac_bus_1, channel: 11  #, (ing 0 127).look
   end
 
   if spread(1,1).look

@@ -18,7 +18,7 @@ live_loop :breaking_the_ruby do
 
       end
     else
-      smp Mountain[/subkick/,1], attack: 0.1
+      smp Mountain[/subkick/,1], attack: 0.01
     end
 
   end

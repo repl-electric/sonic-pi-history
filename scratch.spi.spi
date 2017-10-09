@@ -16,7 +16,7 @@ live_loop :breaking_the_ruby do
     zero :A3, 120
     #smp "/Users/josephwilk/Workspace/music/samples/0-coast/A0_kick.wav", amp: 4
 
-    midi_pitch_bend 0.0, port: :iac_bus_1
+    midi_pitch_bend 0.5, port: :iac_bus_1
 
   end
 

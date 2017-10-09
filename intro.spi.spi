@@ -103,11 +103,10 @@ live_loop :music, sync: :metro do
 #  musicbox itn
 
 itn = (ing
-    [_] [_] [_]
-    [:E3  6]  [_] [_]
-     [_] [_] [:Cs4 12]
-    [_] [_] [_]
-    [_] [:A3  12] [_]
+    [_]      [_]      [_]
+    [:E3 6]  [_]      [_]
+    [_]      [_]      [:Cs4 12]
+    [_]      [:A3 12] [_]
     ).look
   musicbox itn
 

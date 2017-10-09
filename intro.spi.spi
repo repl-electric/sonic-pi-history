@@ -109,7 +109,7 @@ itn = (ing
   puts "score:#{score.look}"
   if score.look[0].is_a?(Array)
     score.look.each do |note|
-      harp note[0], 30, sustain: 6/3.0
+      harp note[0], 30, sustain: 6
     end
   else
     harp z=score.look, 20
@@ -118,7 +118,7 @@ itn = (ing
   #bass :E2, sustain: 3
   #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   3.times{
-    sleep score.look.flatten[-1]/(6.0);
+    sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
 end

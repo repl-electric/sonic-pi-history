@@ -1,11 +1,15 @@
 live_loop :breaking_the_ruby do
   tick
 #  zero (ing
-#,:A2,:B2,:Cs3,:D3,:E3,:Fs3,:Gs3,:A3,#,#).look, 40
+#        :A2 :B2 :Cs3 :D3 :E3 :Fs3 :Gs3 :A3
+#
+#        ).look, 40
 
 
 #  puts (ing
-#,:A2,:B2,:Cs3,:D3,:E3,:fs3,:gs3,#).look, 40
+#        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3
+
+#        ).look, 40
 
   if spread(1,1).look
     #    zero (ring :A0).look, 30
@@ -17,7 +21,7 @@ live_loop :breaking_the_ruby do
     #midi_pitch_bend 0.5, port: :iac_bus_1
 
   end
-    midi_cc 1, (ing 0,1).look, port: :iac_bus_1
+    midi_cc 1, (ing 0 1 2).look, port: :iac_bus_1
   sleep 1/8.0
 end
 

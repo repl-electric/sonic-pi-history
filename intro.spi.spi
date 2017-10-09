@@ -89,9 +89,9 @@ live_loop :music, sync: :metro do
   sharp intervals
 
 itn = (ing
-     [_ 3] [_ 0.25]  [:E3 3]
-     [_ 3] [_ 0.25]  [:Cs4 3]
-     [_ 3] [_ 0.25]  [:E3 3]
+     [_ 3] [_ 0.25]  [:E3 6]
+     [_ 3] [_ 0.25]  [:Cs4 6]
+     [_ 3] [_ 0.25]  [:E3 6]
     ).look
   musicbox itn
 

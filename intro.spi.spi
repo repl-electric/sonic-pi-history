@@ -109,7 +109,7 @@ itn = (ing
     [_]      [_]      [_]
     [:A3 12] [_]      [_]
     ).look
-  puts "ITN:#{itn}"
+  puts "ITN: #{itn}"
   musicbox itn
 
   zero (ing

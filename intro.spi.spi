@@ -91,7 +91,8 @@ live_loop :music, sync: :metro do
     ).look
   sharp intervals
 #18
-itn = (ing
+
+  itn = (ing
      [_ 3] [_ 0.25]  [:E3  6]
      [_ 3] [_ 0.25]  [:D4  1]
      [_ 3] [_ 0.25]  [:A3  12]

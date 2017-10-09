@@ -70,14 +70,13 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
- # harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.1 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
+  harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.1 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
     [:A2 6]  [:Cs3 6] [:B2 3] [:Gs2 3]
     [:A2 3]  [:Cs3 3] [:B2 3] [:Gs2 3]
     [:Cs3 3] [:E3 3]  [:B2 3] [:Gs2 3]
     )
-
 
   intervalscore = (ing
     [_ 6]  [_ 6] [:B1 3] [_ 3]
@@ -86,7 +85,6 @@ live_loop :music, sync: :metro do
     )
 
   sharp intervalscore.look
-
 
   zero (ing
         [:Cs3 6]   [:E3 6]   [:Cs3 3] [:B2 3]

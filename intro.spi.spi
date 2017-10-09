@@ -79,9 +79,9 @@ live_loop :music, sync: :metro do
     )
 
   sharp (ing
-    [_ 6]  [_ 3] [:B2 3] [_ 3]
+    [_ 6]  [_ 3] [:B1 3] [_ 3]
     [_ 3]  [_ 3] [:E3 3] [_ 3]
-    [_ 3]  [_ 3] [:B2 3] [_ 3]
+    [_ 3]  [_ 3] [:B1 3] [_ 3]
     ).look, sustain: 3
 
   zero (ing

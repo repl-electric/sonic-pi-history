@@ -2,7 +2,7 @@ sop_on :A2, 20, sustain: 12, mode: 0
 #sop_mode 0
 musicbox :A3, sustain: 1
 #set_volume! 2.0
-set_volume! 1.0
+set_volume! 0.5
 #sop_cc 1, 0
 #sop_off :B3
 
@@ -67,6 +67,8 @@ live_loop :fucj, sync: :metro do
   sop_cc 1, 1
   sleep 1/2.0
 end
+
+
 
 live_loop :music, sync: :metro do
   tick

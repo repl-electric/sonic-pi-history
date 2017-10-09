@@ -81,7 +81,7 @@ live_loop :music, sync: :metro do
 
   intervalscore = (ing
     [_ 6]  [_ 6] [:B1 3] [_ 3]
-    [_ 3]  [_ 3] [:E3 3] [_ 3]
+    [_ 3]  [_ 3] [:E2 3] [_ 3]
     [_ 3]  [_ 3] [:B1 3] [_ 3]
     )
 

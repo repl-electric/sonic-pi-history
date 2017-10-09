@@ -98,9 +98,17 @@ itn = (ing
      [_ 3] [_ 0.25]  [:E3  6]
      [_ 3] [_ 0.25]  [:Cs4 12]
      [_ 3] [_ 0.25]  [:A3  12]
-
     ).look
   musicbox itn
+
+itn = (ing
+    [_] [_]  [_] [_] [_]
+    ).look
+  musicbox itn
+
+
+
+
 
   zero (ing
         [:Cs3 6]   [:E3 3]   [:Cs3 3] [:B2 3]

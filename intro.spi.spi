@@ -69,7 +69,6 @@ live_loop :fucj, sync: :metro do
 end
 
 
-
 live_loop :music, sync: :metro do
   tick
   #sync "16"
@@ -110,7 +109,7 @@ itn = (ing
     [_] [_] [_] [_] [_]
     [_] [_] [_] [_] [_]
     ).look
-  musicbox itn
+#  musicbox itn
 
 
   zero (ing

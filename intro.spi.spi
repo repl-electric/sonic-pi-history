@@ -100,7 +100,7 @@ live_loop :music, sync: :metro do
     [_ 3] [_ 0.25]  [:Cs4 12]
     [_ 3] [_ 0.25]  [:A3  12]
     ).look
-#  musicbox itn
+  musicbox itn
 
 itn = (ing
     [_]      [_]      [_]
@@ -110,7 +110,7 @@ itn = (ing
     [_ 12]  [_]      [_]
     ).look
   puts "ITN: #{itn}"
-  musicbox itn
+#  musicbox itn
 
   zero (ing
         [:Cs3 6]   [:E3 3]   [:Cs3 3] [:B2 3]

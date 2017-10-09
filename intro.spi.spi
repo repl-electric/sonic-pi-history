@@ -99,7 +99,7 @@ live_loop :music, sync: :metro do
   puts "score:#{score.look}"
   if score.look[0].is_a?(Array)
     score.look.each do |note|
-      harp note[0], 30, sustain: 6
+      harp note[0], 30, sustain: 6/3.0
     end
   else
     harp z=score.look, 20

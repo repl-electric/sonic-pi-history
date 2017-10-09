@@ -11,7 +11,7 @@ live_loop :breaking_the_ruby do
 
 #        ).look, 40
 
-  if spread(1,2).look
+  if spread(1,1).look
     #    zero (ring :A0).look, 30
     zero :A3, 120
     #smp "/Users/josephwilk/Workspace/music/samples/0-coast/A0_kick.wav", amp: 4

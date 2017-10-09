@@ -34,7 +34,9 @@ live_loop :moving, sync: :metro do
 
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],
-      ))
+      )
+
+    )
 
   sleep 3/4.0
   score = mega.tick(:mega)
@@ -47,10 +49,9 @@ live_loop :moving, sync: :metro do
       #zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
       s = score.look
       #puts "#{s2}/#{s}"
-      zero s,(line 100,0,9).look*0.5 if s && s[0]
+      #zero s,(line 100,0,9).look*0.5 if s && s[0]
 
       zero_cc 1, (ing 1 1 1 127).look
-
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9

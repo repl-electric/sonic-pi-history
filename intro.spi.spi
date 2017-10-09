@@ -5,11 +5,6 @@ set_volume! 2.0
 #sop_cc 1, 0
 #sop_off :B3
 
-def zero_cc(*args)
-  midi_cc *(args << {port: :iac_bus_1} << {channel: 9})
-end
-
-
 midi_cc 65,  127*1  # port
 midi_cc 114, 1
 live_loop(:metro)do
@@ -54,7 +49,7 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
 
-    midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+       zero_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
 
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
@@ -77,10 +72,20 @@ live_loop :music, sync: :metro do
  # harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.1 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:A2,6],[:Cs3,6],[:B2,3],[:Gs2,3],[:A2,3],[:Cs3,3],[:B2,3],[:Gs2,3],[:Cs3,3],[:E3,3],[:B2,3],[:Gs2,3])
+    [:A2 6]  [:Cs3 6] [:B2 3] [:Gs2 3]
+    [:A2 3]  [:Cs3 3] [:B2 3] [:Gs2 3]
+    [:Cs3 3] [:E3 3]  [:B2 3] [:Gs2 3]
+    )
 
   zero (ing
-        [:Cs3,6],[:E3,6],[:Cs3,3],[:B2,3],[:Cs3,3],[:E3,3],[:Ds3,3],[:B2,3],[:Ds3,3],[:Fs3,3],[:Cs3,3],[:B2,3],[:Cs3,6],[:E3,6],[:Cs3,3],[:B2,3],[:Cs3,3],[:E3,3],[:Ds3,3],[:B2,3],[:Ds3,3],[:Gs3,3],[:Cs3,3],[:B2,3]).look
+        [:Cs3 6]   [:E3 6]   [:Cs3 3] [:B2 3]
+        [:Cs3 3]   [:E3 3]   [:Ds3 3] [:B2 3]
+        [:Ds3 3]   [:Fs3 3]  [:Cs3 3] [:B2 3]
+
+        [:Cs3 6]   [:E3 6]   [:Cs3 3] [:B2 3]
+        [:Cs3 3]   [:E3 3]   [:Ds3 3] [:B2 3]
+        [:Ds3 3]   [:Gs3 3]  [:Cs3 3] [:B2 3]
+        ).look
 
   #musicbox score.look, 127
 

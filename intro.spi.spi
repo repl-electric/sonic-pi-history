@@ -93,7 +93,7 @@ itn = (ing
     [_ 3]  [_ 3] [_ 3] [_ 0.25] [:B4 1]
     [_ 3]  [_ 3] [_ 3] [_ 0.25] [:B4 1]
     ).look
-  musicbox itn[0], sustain 4
+  musicbox itn[0], sustain: 4
 
   zero (ing
         [:Cs3 6]   [:E3 3]   [:Cs3 3] [:B2 3]

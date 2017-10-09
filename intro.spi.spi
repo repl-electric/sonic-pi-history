@@ -52,7 +52,7 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
 
-      zero_cc 1, (ing 1,127).look
+      zero_cc 1, (ing 1 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -75,7 +75,10 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.0 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:A2,6],[:Cs3,3],[:B2,3],[:Gs2,1],[:Fs2,3],[:A2,3],[:Cs3,3],[:B2,3],[:Gs2,1],[:Fs2,3],[:Cs3,3],[:E3,3],[:B2,3],[:Gs2,1],[:Fs2,3])
+    [:A2 6]  [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
+    [:A2 3]  [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
+    [:Cs3 3] [:E3 3]  [:B2 3] [:Gs2 1] [:Fs2 3]
+    )
   #15
   puts "length: #{score.reduce(0){|s,a| s+a[-1]}}"
 

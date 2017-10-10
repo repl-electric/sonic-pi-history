@@ -214,7 +214,7 @@ _ _ _  _ _ _
       #smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
-  c2,c1 =  Analog[/clap/].look
+  c1 =  Analog[/clap/].look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
@@ -223,7 +223,6 @@ _ _ _  _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
 }).look
 
-    puts s
     smp eval(s), amp: 1.5
 
  # = spread(7,11).map{|s| s ? :hit : :miss}

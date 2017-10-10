@@ -7,8 +7,9 @@
 #sop_off :B3
 
 
-midi_cc 65,  127*1  # port
-midi_cc 114, 1
+#midi_cc 65,  127*1  # port
+#midi_cc 114, 1
+
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0

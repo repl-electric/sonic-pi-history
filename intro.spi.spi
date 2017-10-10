@@ -214,8 +214,7 @@ _ _ _  _ _ _
       #smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
-    c1 =  (knit Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,8).look
-    puts c1 if c1
+    c1 =  (knit Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap4/].look,8).look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _

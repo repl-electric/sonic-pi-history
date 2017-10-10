@@ -116,10 +116,10 @@ itn = (ing
   puts "score:#{score.look}"
   if score.look[0].is_a?(Array)
     score.look.each do |note|
-      harp note[0], 30, sustain: 6
+   #   harp note[0], 30, sustain: 6
     end
   else
-    harp z=score.look[0], 20, sustain: score.look[-1]*2
+   # harp z=score.look[0], 20, sustain: score.look[-1]*2
   end
 
   #bass :E2, sustain: 3

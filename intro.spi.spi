@@ -211,7 +211,7 @@ c _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
 }).look) != _
-      smp eval(s), pan: (ring 0.25,-0.25).look
+      #smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
   c2,c1 =  Analog[/clap /].look

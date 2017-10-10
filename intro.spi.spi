@@ -52,7 +52,7 @@ live_loop :moving, sync: :metro do
       s = score.look
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
-      #zero_cc 1, (ine 1 127).look
+      #zero_cc 1, (ine 1, 127,).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -75,21 +75,21 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.1, bass: 0.1 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:A2 6] # [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
-    #[:A2 6] # [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
-    #[:A2 6] # [:E3 3]  [:B2 3] [:Gs2 1] [:Fs2 3]
+    [:A2, 6], #, [:Cs3, 3], [:B2, 3], [:Gs2, 1], [:Fs2, 3],
+    #[:A2, 6], #, [:Cs3, 3], [:B2, 3], [:Gs2, 1], [:Fs2, 3],
+    #[:A2, 6], #, [:E3, 3],  [:B2, 3], [:Gs2, 1], [:Fs2, 3],
     )
   #15
 
   comment do
   zero (ing
-        [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
-        [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
-        [:Ds3 3] #  [:Fs3 3]  [:Cs3 3] [:B2 3]
+        [:Cs3, 6], #,  [:E3, 3],   [:Cs3, 3], [:B2, 3],
+        [:Cs3, 3], #,  [:E3, 3],   [:Ds3, 3], [:B2, 3],
+        [:Ds3, 3], #,  [:Fs3, 3],  [:Cs3, 3], [:B2, 3],
 
-        [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
-        [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
-        [:Ds3 3] #  [:Gs3 3]  [:Cs3 3] [:B2 3]
+        [:Cs3, 6], #,  [:E3, 3],   [:Cs3, 3], [:B2, 3],
+        [:Cs3, 3], #,  [:E3, 3],   [:Ds3, 3], [:B2, 3],
+        [:Ds3, 3], #,  [:Gs3, 3],  [:Cs3, 3], [:B2, 3],
         ).look
   end
 
@@ -214,7 +214,7 @@ _ _ _  _ _ _
       #smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
-  c1 =  (knit Analog[/clap3/].look,14,Analog[/clap3/].look,4).look
+  c1 =  (knit Analog[/clap3/].look,14,Analog[/clap4/].look,4).look
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _

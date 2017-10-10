@@ -5,9 +5,10 @@ live_loop :breaking_the_ruby do
 
   puts (ing
         1 #3
-        2 3
+        2 #3
         3 #3
-        4 3)
+        4 #3
+        )
 
 #  puts (ing
 #        :A2 :B2 :Cs3 :D3 :E3 :fs3 :gs3

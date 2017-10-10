@@ -1,13 +1,13 @@
-sop_on :A2, 20, sustain: 12, mode: 0
+#sop_on :A2, 20, sustain: 12, mode: 0
 #sop_mode 0
-musicbox :A3, sustain: 1
+#musicbox :A3, sustain: 1
 #set_volume! 2.0
 #set_volume! 0.5
 #sop_cc 1, 0
 #sop_off :B3
 
-midi_cc 65,  127*1  # port
-midi_cc 114, 1
+#midi_cc 65,  127*1  # port
+#midi_cc 114, 1
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0

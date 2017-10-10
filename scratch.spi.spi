@@ -2,7 +2,7 @@ set_volume! 2.0
 live_loop :breaking_the_ruby do
   tick
 
-  zero :A2
+  zero :A1
 
 
   sleep 1

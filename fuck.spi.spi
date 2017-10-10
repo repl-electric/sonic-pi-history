@@ -101,7 +101,7 @@ itn = (ing
   puts "ITN: #{itn}"
 #  musicbox itn
 
-  comment do
+  uncomment do
   zero (ing
         [:Cs3 6]   [:E3 3]   [:Cs3 3] [:B2 3]
         [:Cs3 3]   [:E3 3]   [:Ds3 3] [:B2 3]

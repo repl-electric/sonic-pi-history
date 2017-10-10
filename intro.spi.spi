@@ -74,8 +74,8 @@ live_loop :music, sync: :metro do
 
   score = (ing
     [:A2 6] # [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
-    [:A2 6] # [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
-    [:A2 6] # [:E3 3]  [:B2 3] [:Gs2 1] [:Fs2 3]
+    #[:A2 6] # [:Cs3 3] [:B2 3] [:Gs2 1] [:Fs2 3]
+    #[:A2 6] # [:E3 3]  [:B2 3] [:Gs2 1] [:Fs2 3]
     )
   #15
   puts "length: #{score.reduce(0){|s,a| s+a[-1]}}"

@@ -18,7 +18,7 @@ def zero_on(n, *args)
   end
 end
 
-
+zero_on :A2
 
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10

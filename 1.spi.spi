@@ -251,7 +251,7 @@ end
 
 live_loop :vocals, sync: :metro do
   tick
-  #stop
+  stop
   with_fx :gverb, room: 400, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do
     with_fx :gverb, room: 600, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
       hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]

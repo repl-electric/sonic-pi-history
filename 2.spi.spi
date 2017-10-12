@@ -120,9 +120,8 @@ live_loop :music, sync: :metro do
   cue(:m) if ((look+1) % score.count)  == 0
 
   if spread(1,4).look
-  sharp :A2
+    sharp :A2, sustain: 3
   end
-
 
   s=nil
   3.times{

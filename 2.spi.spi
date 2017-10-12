@@ -118,7 +118,12 @@ live_loop :music, sync: :metro do
     )
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
+
+  if spread(1,4).look
   sharp :A2
+  end
+
+
   s=nil
   3.times{
     harp s=score.tick, 1.0*(ring 20,20,20, 30,40,40, 40,60,80).look

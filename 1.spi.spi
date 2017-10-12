@@ -101,7 +101,7 @@ live_loop :music, sync: :metro do
         ).look
   end
 
-  #sharp z=score.look[0], (ring 30,20,20).look, sustain: score.look[-1]*1
+  sharp z=score.look[0], (ring 30,20,20).look, sustain: score.look[-1]*1
 
   with_transpose 12 do
     midi z, (ring 80,70,70).look, port: :iac_bus_1, channel: 14

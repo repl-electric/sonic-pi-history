@@ -93,7 +93,7 @@ score = (ing
   with_transpose 12 do
     midi :E3, (ring 70,65,55).look*1.2, port: :iac_bus_1, channel: 14
   end
-    sleep 1/8.0
+    sleep 1/4.0
 end
 
 

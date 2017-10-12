@@ -11,7 +11,7 @@
 #set_volume! 2.0
 set_volume! 1.0
 #sop_cc 1, 0
-sop_off :A4
+sop_off :A3
 
 live_loop(:metro)do
   tick;

@@ -97,7 +97,7 @@ score = (ing
   with_transpose 12 do
     #midi :A3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
-    musicbox :A2
+    musicbox :E2
   end
   sleep 1
 end
@@ -125,7 +125,7 @@ live_loop :music, sync: :metro do
 
   s=nil
   3.times{
-    harp s=score.tick, 0.0*(ring 20,20,20, 30,40,40, 40,60,80).look
+    harp s=score.tick, 1.0*(ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }
   sleep 3/4.0

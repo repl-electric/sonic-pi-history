@@ -80,7 +80,6 @@ score = (ing
   with_transpose 12 do
     midi z[0], (ring 80,70,70).look, port: :iac_bus_1, channel: 14
   end
-
   sleep 1
 end
 
@@ -91,13 +90,7 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.7 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (ing
-    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
-    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
-    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
-
-    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
-    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
-    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
+    [:A3,6]
 
 #    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]
 #    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]

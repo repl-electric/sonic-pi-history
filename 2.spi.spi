@@ -130,6 +130,8 @@ live_loop :music, sync: :metro do
   }
   sleep 3/4.0
 
+  bass :A2
+
   if spread(1,3).look
     #sharp s
   end

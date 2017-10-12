@@ -98,7 +98,6 @@ score = (ing
     midi :cS3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
   end
-
   sleep 1
 
 end

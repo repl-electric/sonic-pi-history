@@ -1,5 +1,6 @@
 sop_on :E2, 20, sustain: 12, mode: 0
 sop_on :Gs2, 20, sustain: 12, mode: 0
+sop_on :B2, 20, sustain: 12, mode: 0
 
 zero_on :A2
 

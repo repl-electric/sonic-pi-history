@@ -93,11 +93,11 @@ live_loop :music, sync: :metro do
   zero (ing
         [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
         [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
-        [:Ds3 3] #  [:Fs3 3]  [:Cs3 3] [:B2 3]
+        [:D3 3] #  [:Fs3 3]  [:Cs3 3] [:B2 3]
 
         [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
         [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
-        [:Cs3 3] #  [:Gs3 3]  [:Cs3 3] [:B2 3]
+        [:D3 3] #  [:Gs3 3]  [:Cs3 3] [:B2 3]
         ).look
   end
 

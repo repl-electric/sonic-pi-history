@@ -71,8 +71,8 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5,  mod: 0.05, cutoff: 1.0, bass: 0.25 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
   score = (knit
-    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:A3, 3/4.0],3, [:Cs3,1.0],3, [:E3,2/4.0],3,
+    [:A3, 3/4.0],3, [:D3,1.0],3,  [:E3,2/4.0],3,
+    [:Cs3, 3/4.0],3, [:A3,1.0],3, [:E3,2/4.0],3,
     )
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0

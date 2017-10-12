@@ -1,6 +1,6 @@
-sop_on :E3, 20, sustain: 12, mode: 0
-sop_on :Gs3, 20, sustain: 12, mode: 0
-sop_on :B3, 20, sustain: 12, mode: 0
+sop_on :A3, 20, sustain: 12, mode: 0
+#sop_on :Gs3, 20, sustain: 12, mode: 0
+#sop_on :B3, 20, sustain: 12, mode: 0
 
 zero_on :A2
  midi_cc 1, 127,  port: :iac_bus_1, channel: 10
@@ -157,7 +157,7 @@ end
 
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
-    stop
+    #stop
     #sync '18'
     tick
     #sync "16"
@@ -196,7 +196,7 @@ with_fx :none, mix: 0 do
   }).look
 
     sidechain if eval(s) && spread(1,4).look
-    smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
+    #smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
         at do
@@ -211,8 +211,8 @@ with_fx :none, mix: 0 do
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 #    p= Dust[/perc/, [7,7]]
-    #p=MagicDust[/perc/,/stone/,[4..8]].look
-    p=Analog[/click/].look
+    p=MagicDust[/perc/,/stone/,[4..8]].look
+    #p=Analog[/click/].look
     #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _

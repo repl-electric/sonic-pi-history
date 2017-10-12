@@ -71,7 +71,6 @@ score = (ing
     [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
     [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
     [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
-
     [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
     [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
     [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
@@ -80,7 +79,7 @@ score = (ing
   with_transpose 12 do
     midi z[0], (ring 70,65,55).look, port: :iac_bus_1, channel: 14
   end
-  sleep 1
+  sleep 1/2.0
 end
 
 

@@ -1,5 +1,26 @@
 sop_on :A2, 20, sustain: 12, mode: 0
-zero_on :A2
+
+def zero_on(n, *args)
+  if n
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    if args && args[0].is_a?(Numeric)
+      velocity = args[0]
+      args = args[1..-1]
+    else
+      velocity = 30
+    end
+    if n && ((n != "_") && n != :_)
+      midi_note_on n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
+    end
+  end
+end
+
+
+
+
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 #sop_mode 0
 #musicbox :A3, sustain: 1

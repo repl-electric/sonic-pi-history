@@ -72,6 +72,7 @@ live_loop :music, sync: :metro do
 
   score = (ing
     [:Cs3  0.5]  [:A3  0.5]   [:FS3  0.5]
+    [:Cs3  0.5]  [:A3  0.5]   [:FS3  0.5]
     [:D3  0.5]   [:A3  0.5]   [:Fs3 0.5]
     )
 

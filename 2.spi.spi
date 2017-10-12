@@ -247,7 +247,7 @@ _ _ p
 }).look
 
   if(s=="_")
-     zero (knit :A2,24,:E3,24).look,5
+    # zero (knit :A2,24,:E3,24).look,5
 #    zero (ring :A3,1,:E3,1,:A3,1    ).look,5
   end
     with_fx :none, mix: (line 0.2,0.3,32).look do

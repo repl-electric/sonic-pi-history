@@ -78,9 +78,8 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    midi z, (ring 80,70,70).look, port: :iac_bus_1, channel: 14
+    midi z[0], (ring 80,70,70).look, port: :iac_bus_1, channel: 14
   end
-
 
   sleep 1
 end

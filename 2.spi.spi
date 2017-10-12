@@ -97,7 +97,7 @@ score = (ing
   with_transpose 12 do
     #midi :A3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
-    musicbox :D2
+    musicbox :Cs2
   end
   sleep 1
 end

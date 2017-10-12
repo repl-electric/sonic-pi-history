@@ -1,11 +1,11 @@
-sop_on :A2, 20, sustain: 12, mode: -2
+#sop_on :A4, 20, sustain: 12, mode: -1
+#midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 #sop_mode 0
 #musicbox :A3, sustain: 1
 #set_volume! 2.0
-#set_volume! 0.5
+set_volume! 0.5
 #sop_cc 1, 0
-#sop_off :B3
-
+#sop_off :A4
 
 live_loop(:metro)do
   tick;
@@ -23,15 +23,11 @@ live_loop :moving, sync: :metro do
   #stop
   sync :music
 
-#A B  Cs D E  Fs Gs A
-#B Cs Ds E Fs Gs As B
-
   mega =
     (ring
     (ring #1/4     1/4.0
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],   #1/4
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],   #1/4
-
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],
       [:E3, 1/8.0], [_, 1/8.0],   [:Cs3, 1/8.0], [_, 1/8.0],
       )
@@ -52,7 +48,7 @@ live_loop :moving, sync: :metro do
       s = score.look
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
-      #zero_cc 1, (ine 1, 127,).look
+      #zero_cc 1, (ine 1 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -63,7 +59,7 @@ end
 
 live_loop :fucj, sync: :metro do
   tick
-  midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+ # midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
   sop_cc 1, 1
   sleep 1/2.0
 end
@@ -72,42 +68,50 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.1, bass: 0.1 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
+  harp_cc phase: 0.5,  mod: 0.05, cutoff: 1.0, bass: 0.25 #(ramp 0.0, 0.85,128/8.0).tick(:firey), bass: 0.0
 
-  score = (ing
-    [:A2, 6], #, [:Cs3, 3], [:B2, 3], [:Gs2, 1], [:Fs2, 3],
-    #[:A2, 6], #, [:Cs3, 3], [:B2, 3], [:Gs2, 1], [:Fs2, 3],
-    #[:A2, 6], #, [:E3, 3],  [:B2, 3], [:Gs2, 1], [:Fs2, 3],
+  score = (knit
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    [:E3, 3/4.0],3, [:D3,1.0],3, [:B2,2/4.0],3,
     )
-  #15
+  #score = space()
+  cue(:m) if ((look+1) % score.count)  == 0
+  3.times{
+    harp s=score.tick, 0*(ring 20,20,20, 30,40,40, 40,60,80).look
+    sleep s[-1]
+  }
+  sleep 3/4.0
 
-  comment do
+  at do
+    with_transpose(-12*2) do
+      musicbox :A3, 120, sustain: 12
+      sleep 1
+      musicbox :CS4, 120, sustain: 12
+      sleep 6
+      musicbox :E4, 120, sustain: 12
+    end
+  end
+
+  uncomment do
   zero (ing
-        [:Cs3, 6], #,  [:E3, 3],   [:Cs3, 3], [:B2, 3],
-        [:Cs3, 3], #,  [:E3, 3],   [:Ds3, 3], [:B2, 3],
-        [:Ds3, 3], #,  [:Fs3, 3],  [:Cs3, 3], [:B2, 3],
+        [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
+        [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
+        [:Ds3 3] #  [:Fs3 3]  [:Cs3 3] [:B2 3]
 
-        [:Cs3, 6], #,  [:E3, 3],   [:Cs3, 3], [:B2, 3],
-        [:Cs3, 3], #,  [:E3, 3],   [:Ds3, 3], [:B2, 3],
-        [:Ds3, 3], #,  [:Gs3, 3],  [:Cs3, 3], [:B2, 3],
+        [:Cs3 6] #  [:E3 3]   [:Cs3 3] [:B2 3]
+        [:Cs3 3] #  [:E3 3]   [:Ds3 3] [:B2 3]
+        [:Ds3 3] #  [:Gs3 3]  [:Cs3 3] [:B2 3]
         ).look
   end
 
-  #musicbox score.look, 127
-
-  puts "score:#{score.look}"
-  if score.look[0].is_a?(Array)
-    score.look.each do |note|
-      harp note[0], 30, sustain: 6
-    end
-  else
-    harp z=score.look[0], 20, sustain: score.look[-1]*2
-  end
+#  harp z=score.look[0], 20, sustain: score.look[-1]*2
 
   #bass :E2, sustain: 3
   #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   3.times{
-    sleep score.look.flatten[-1]/(3.0);
+ #   sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
 end
@@ -120,16 +124,18 @@ with_fx :none, mix: 0 do
     #sync "16"
     c1 = Dust[/clap/,1]
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    k4 = Frag[/kick/,3]
+    puts k4
     s=(ring *%W{
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
 
      k2 _ k2 _  k1 _ _ _   k2 _ _ _   k1 _ _ _
-     k2 _ _ _   k3  _ k2 _
+     k2 _ _ _   k4  _ k2 _
   }).look
 
-    s2=(ring *%W{
+    s1=(ring *%W{
      k2 _ _ _   _ _ _ _   k1 _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _
 
@@ -140,7 +146,7 @@ with_fx :none, mix: 0 do
      _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
 
-    s1=(ring *%W{
+    s2=(ring *%W{
      k2 _ _ _   _ _ _ _   _ _ _ _
      k1 _ _ _   _ _ _ _   _ _ _ _
 
@@ -150,26 +156,25 @@ with_fx :none, mix: 0 do
      k2 _ _ _   _ _ _ _   _ _ _ _
      k1 _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
-    puts :kick
 
-    #sidechain if eval(s) && spread(1,4).look
-    #smp eval(s), amp: 3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+    sidechain if eval(s) && spread(1,4).look
+    smp eval(s), amp: 3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
         at do
-       #   smp Analog[/17 /].tick(:echo), amp: 0.5
+          smp Analog[/17 /].tick(:echo), amp: 0.5
           sleep 0.25
-       #   smp Analog[/17 /].tick(:echo), amp: 0.3
+          smp Analog[/17 /].tick(:echo), amp: 0.3
         end
       else
-        #smp Analog[/17 /].tick(:echo), amp: 0.5
+        smp Analog[/17 /].tick(:echo), amp: 0.5
       end
     end
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 #    p= Dust[/perc/, [7,7]]
-#    p=MagicDust[/perc/,/stone/,[4..8]].look
-
+    #p=MagicDust[/perc/,/stone/,[4..8]].look
+    #p=Analog[/click/].look
     #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _
@@ -199,10 +204,10 @@ _ _ p
   end
     with_fx :none, mix: (line 0.2,0.3,32).look do
       if s!= "_" && spread(1,6).look
-     #  smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
+       #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
       end
       #sidechain if eval(s)
-      #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+      smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 2.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
     end
     c = MagicDust[/HI_/, [54,55,56,57]].look
     if (s=(ring *%W{
@@ -211,31 +216,34 @@ c _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
 }).look) != _
-      #smp eval(s), pan: (ring 0.25,-0.25).look
+      smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
     c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
+    c2 =  (knit Analog[/clap/,15],16, Analog[/clap/,16],16, Analog[/clap/,17],16).look
     t1 =  Analog[/click/].look
 
   s=(ring *%W{
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
- _ _ _ _   c1 _ _ _   _ _ _ _   c1 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 }).look
 
-    #smp eval(s), amp: 0.25, cutoff: (ine 127, 110, 1024,).look
+    smp eval(s), amp: 1.25, cutoff: (ine 127 110 1024).look
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c1 _ _ _}).look
   #smp eval(s), cutoff: (line 80, 120, 128).look
 
-    h,h2 = MagicDust[/_HI/,18],Dust[/hat/,4]
+    h,h1,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
+    #h = Dust[/hat/,7]
+
   s=(ring *%W{
+h _ h _  _ _ h _
 _ _ h _  _ _ h _
-_ _ h _  _ _ h _
-_ _ h _  _ _ h {path:h,amp:0.4}
+h _ h _  _ _ h {path:h,amp:0.3}
 _ _ h _  _ _ h _
 
 }).look
@@ -244,8 +252,10 @@ _ _ h _  _ _ h _
           else
             0
           end
-    smp eval(s), cutoff: (line 110, 127,32).look, attack: (line 0.0,0.0,64).look,
-    sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
+    smp eval(s), cutoff: 1*(line 110, 127,32).look,
+    attack: (line 0.001,0.0,64).look,
+    sustain: (knit 0.1,4,0.1,4,1.1,4).look, amp: amp*2
+    #sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
     sleep 1/8.0
   end
 end
@@ -259,22 +269,24 @@ end
 
 live_loop :vocals, sync: :metro do
   tick
-  stop
+  #stop
   with_fx :gverb, room: 400, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do
-    with_fx :gverb, room: 800, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
-    hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
+    with_fx :gverb, room: 600, mix: (ring 0,0,0,1.0).look, room_slide: 0.5, decay: 8.0 do |g_fx|
+      hz1,hz2 = (knit @slices["A3/4"][1],2).look, @slices["B3/4"][1]
+      puts hz2
     hat2 = (ring *%w{_ _ hz1 _
                      _ _ hz1 {path:hz2,amp:0.25}
                      _ _ hz1 _
                      _ _ hz1 _})
-     #smp eval(hat2.look), amp: 1, rate: [-1,1].choose, attack: 0.125
+     smp eval(hat2.look), amp: 1, rate: [-1,1].choose, attack: 0.125
       if spread(1,12).look
         #sop :B2, 30, sustain: 12
         #sop_cc 1, (ring 30, 40, 50).look
       end
       #midi_cc 1, (line 0,80,32).look,  port: :iac_bus_1, channel: 10
 
-      8.times{sleep 1/4.0; control g_fx, room: rand_i(800)
+      8.times{sleep 1/4.0;
+        #control g_fx, room: rand_i(800)
         #sop_cc 1, (ring 30,40,50,60,70).look
 
 #        midi_pitch_bend 127, port: :iac_bus_1, channel: 10

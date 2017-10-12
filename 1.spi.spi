@@ -266,16 +266,15 @@ _ _ _  _ _ _
 h _ h _  _ _ h _
 _ _ h _  _ _ h _
 h _ h _  _ _ h {path:h,amp:0.3}
-_ _ h _  _ _ h _
+_ _ h _  _ _ h _}).look
 
   s=(ring *%W{
 _ _ h _  _ _ h _
 _ _ h _  _ _ h _
 _ _ h _  _ _ h {path:h,amp:0.3}
-_ _ h _  _ _ h _
+_ _ h _  _ _ h _}).look
 
 
-}).look
     amp = if ((v=eval(s)) != _)
             v.is_a?(String) ? 0.5 : (v[:amp] || 0.5)
           else

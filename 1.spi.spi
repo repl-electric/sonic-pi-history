@@ -1,4 +1,4 @@
-sop_on :A3, 20, sustain: 12, mode: -1
+sop_on :A3, 20, sustain: 12, mode: -2
 zero_on :A2
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10

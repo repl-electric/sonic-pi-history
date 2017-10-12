@@ -100,7 +100,7 @@ score = (ing
           :Cs3,:A3,:FS3
           ).look, (ring 70,65,55).look*2.4, port: :iac_bus_1, channel: 14
   end
-    sleep 1/2.0
+    sleep 1
 end
 
 

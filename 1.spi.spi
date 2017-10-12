@@ -91,7 +91,7 @@ live_loop :music, sync: :metro do
         ).look
   end
 
-  harp z=score.look[0], 20, sustain: score.look[-1]*1
+  harp z=score.look[0], (ring 20,20,20).look, sustain: score.look[-1]*1
   midi z, 80, port: :iac_bus_1, channel: 14
 
   #bass :E2, sustain: 3

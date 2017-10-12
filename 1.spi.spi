@@ -238,7 +238,7 @@ c _ _  _ _ _
 _ _ _  _ _ _
 _ _ _  _ _ _
 }).look) != _
-      smp eval(s), pan: (ring 0.25,-0.25).look
+     # smp eval(s), pan: (ring 0.25,-0.25).look
     end
 
     c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look

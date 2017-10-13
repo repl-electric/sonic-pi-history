@@ -183,7 +183,7 @@ live_loop :music, sync: :metro do
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
   sharp :E3, 3
-  musicbox :Gs3, 3
+  musicbox :Gs3, 5
 end
 
 

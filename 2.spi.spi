@@ -280,7 +280,7 @@ _ _ p
     end
 
     c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
-    c2 =  (knit Frag[/coil/,-9],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c2 =  (knit Frag[/coil/,-10],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
     t1 =  Analog[/click/].look
 
   s=(ring *%W{

@@ -7,10 +7,10 @@
 
 live_loop :name, sync: :metro do
   tick
-zero :A3
+  zero :A3
 
 
-zero_cc 1, (ing 1 60 127).look
+  zero_cc 1, (ing 1 60 127).look
 
   sleep 3
 end

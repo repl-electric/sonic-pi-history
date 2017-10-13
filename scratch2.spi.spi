@@ -7,9 +7,9 @@
 
 live_loop :name do
   tick
-  zero :A3, 1
+  zero :A2, 1
 
-  zero_cc 1, (ing 127, 1,).look
+  zero_cc 1, (ing 127 1).look
 
   sleep 1
 end
@@ -23,5 +23,5 @@ end
 
 
 puts (ing
-      "#{1}",
-      2,)
+      "#{1}"
+      2)

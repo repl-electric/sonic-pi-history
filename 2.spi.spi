@@ -291,7 +291,7 @@ _ _ p
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 }).look
 
-  smp eval(s), amp: 0.2, cutoff: (ine 127 110 1024).look, finish: (line 0.05, 0.1, 64).look
+  smp eval(s), amp: 0.5, cutoff: (ine 127 110 1024).look, finish: (line 0.05, 0.1, 64).look
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
   s=(ring *%W{_ _ _ _   c1 _ _ _}).look

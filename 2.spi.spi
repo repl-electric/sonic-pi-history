@@ -44,7 +44,7 @@ live_loop :moving, sync: :metro do
 
   midi_cc 65,  127*1  # port
   midi_cc 114, 1
-  midi_cc 5, (ring 2,4,127).tick(:inside), port: :iac_bus_1, channel: 9
+  midi_cc 5, (ring 2,4).tick(:inside), port: :iac_bus_1, channel: 9
 
   puts "---------------------"
   score.count.times{ #-Every 8 switch

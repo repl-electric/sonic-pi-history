@@ -70,7 +70,9 @@ live_loop :moving, sync: :metro do
       s = score.look
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
-      zero_cc 1, (ing 1 60 127).look
+    zero_cc 1, (ing 1 1 1
+                    1 1 1
+                   1 60 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9

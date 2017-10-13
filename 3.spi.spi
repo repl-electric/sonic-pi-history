@@ -307,7 +307,7 @@ _ _ p
     else
      (line 1.0, 0.99, 2*64).look
     end
-  smp eval(s)#, cutoff: (ine 127 110 1024).look, finish: fin
+  smp eval(s), cutoff: (ine 127 110 1024).look, finish: fin
 
 
     s=(ring *%W{

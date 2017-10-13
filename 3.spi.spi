@@ -309,7 +309,7 @@ _ _ p
     end
 
     amp = if ((v=eval(s)) != _)
-            v.is_a?(String) ? 0.5 : (v[:amp] || 0.5)
+            v.is_a?(String) ? 1.0 : (v[:amp] || 1.0)
           else
             0
           end

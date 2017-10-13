@@ -7,7 +7,7 @@
 
 live_loop :name do
   tick
-  zero :A3, 30
+  zero :A3, 20
 
 
   zero_cc 5, 127

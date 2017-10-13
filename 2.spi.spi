@@ -288,7 +288,7 @@ _ _ p
     c2 =  (knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
     c3 =  (knit Frag[/coil/,-29],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
 
-    t1 =  Analog[/click/].look
+    c2 =  Analog[/click/].look
 
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _

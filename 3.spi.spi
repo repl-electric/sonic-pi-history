@@ -297,6 +297,8 @@ _ _ p
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 
+# _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
+
 }).look
 
     fin= if eval(s) == c2

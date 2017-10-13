@@ -297,25 +297,21 @@ _ _ p
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 
- _ _ _ _   c1 {path:Analog[/clap3/,1],amp:0.125} _ _
+ _ _ _ _   c1 {path:Analog[/clap3/,0],amp:0.125} _ _
 
 }).look
 
-
-   fin= if eval(s) == c2
-     (line 0.05, 0.01, 64).look
-    else
-     (line 1.0, 0.99, 2*64).look
-    end
-
+    fin= if eval(s) == c2
+           (line 0.05, 0.01, 64).look
+         else
+           (line 1.0, 0.99, 2*64).look
+         end
     amp = if ((v=eval(s)) != _)
             v.is_a?(String) ? 1.0 : (v[:amp] || 1.0)
           else
             0
           end
-
     smp eval(s),amp: amp, cutoff: (ine 127 110 1024).look, finish: fin
-
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _

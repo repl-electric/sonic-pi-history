@@ -229,7 +229,7 @@ with_fx :none, mix: 0 do
   }).look
 
     sidechain if eval(s) && spread(1,4).look
-    smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
+    #smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
         at do

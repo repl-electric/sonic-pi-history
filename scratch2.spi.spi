@@ -9,7 +9,7 @@ live_loop :name do
   tick
   zero :A2, 1
 
-  zero_cc 1, 30
+  zero_cc 1, 90
 
   sleep 1
 end

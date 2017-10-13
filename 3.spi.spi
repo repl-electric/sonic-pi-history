@@ -115,7 +115,7 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    #midi :A3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
+    midi :A3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #musicbox :E2
   end
@@ -298,7 +298,6 @@ _ _ p
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 
  _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
-
 }).look
 
     fin= if eval(s) == c2

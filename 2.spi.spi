@@ -308,7 +308,7 @@ _ _ p
  _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
 }).look
 
-  smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.06, rpitch: -12
+  smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.05, rpitch: -12
 
 
  # = spread(7,11).map{|s| s ? :hit : :miss}

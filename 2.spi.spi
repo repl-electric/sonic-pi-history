@@ -172,7 +172,7 @@ end
 
 
 with_fx :none, mix: 0 do
-  live_loop :pata, sync: :metro do
+  live_loop :pat, sync: :metro do
     puts "path"
     #stop
     #sync '18'

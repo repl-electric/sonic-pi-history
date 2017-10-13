@@ -5,12 +5,12 @@
 
 
 
-live_loop :name, sync: :metro do
+live_loop :name do
   tick
   zero :A3
 
 
-  zero_cc 1, (ing 1 60 127).look
+  zero_cc 1, (ing 1, 60, 127,).look
 
   sleep 3
 end
@@ -24,5 +24,5 @@ end
 
 
 puts (ing
-      "#{1}"
-      2)
+      "#{1}",
+      2,)

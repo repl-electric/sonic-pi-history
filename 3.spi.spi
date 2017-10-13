@@ -284,10 +284,10 @@ _ _ p
     c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
 
     c2 =  (knit Frag[/coil/,-31],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
-    c2 =  c2#(knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c2 =  #(knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
     c3 =  (knit Frag[/coil/,-29],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
 
-    #c2 =  Analog[/click/].look
+    c2 =  Analog[/click/].look
 
   s=(ring *%W{
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
@@ -299,7 +299,7 @@ _ _ p
  _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
 }).look
 
-    fin= if eval(s) == c2
+    fin= if eval(s) != c2
            (line 0.05, 0.01, 64).look
          else
            (line 1.0, 0.99, 2*64).look

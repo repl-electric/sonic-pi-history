@@ -264,7 +264,7 @@ _ _ p
        #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
       end
       #sidechain if eval(s)
-      #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.5*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+      smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.5*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
       #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 2.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
     end
 

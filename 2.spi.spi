@@ -282,6 +282,7 @@ _ _ p
     c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
 
     c2 =  (knit Frag[/coil/,-31],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c2 =  (knit Frag[/coil/,-32],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
     c3 =  (knit Frag[/coil/,-29],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
 
     t1 =  Analog[/click/].look
@@ -293,7 +294,6 @@ _ _ p
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
  _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
 }).look
-
 
 
   smp eval(s), amp: 1.5, cutoff: (ine 127 110 1024).look, finish: (line 0.05, 0.01, 64).look

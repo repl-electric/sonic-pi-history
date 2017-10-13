@@ -185,7 +185,7 @@ live_loop :music, sync: :metro do
     sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
-    sharp :E3
+  sharp :E3 10
 end
 
 

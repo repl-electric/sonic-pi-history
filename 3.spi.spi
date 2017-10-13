@@ -115,7 +115,7 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    midi (ring :Cs3, :E3).look, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
+    midi (ring :Cs4, :E4).look, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #musicbox :E2
   end

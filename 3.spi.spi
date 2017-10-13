@@ -115,9 +115,7 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    midi (ring
-          :Cs4, :E4,
-          :B3, :E4).look, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14, sustain: 4
+    midi (ring :Cs4, :E4, :B3, :E4).look, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14, sustain: 4
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #musicbox :E2
   end
@@ -323,7 +321,7 @@ _ _ p
  _ _ _ _    _ _ _ _
 }).look
 
- # smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
+  smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
 
 
  # = spread(7,11).map{|s| s ? :hit : :miss}

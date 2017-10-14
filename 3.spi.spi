@@ -186,6 +186,14 @@ live_loop :music, sync: :metro do
 end
 
 
+
+live_loop :sixteen, sync: :pat do
+  tick
+
+  sleep 1/16.0
+end
+
+
 with_fx :none, mix: 0 do
   live_loop :pat, sync: :metro do
     puts "path"

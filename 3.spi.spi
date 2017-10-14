@@ -197,7 +197,7 @@ live_loop :sixteen, sync: :pat do
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
 
   }).look
-  smp eval(s), amp: 1
+  smp eval(s), amp: 1, rate: 0.99
   sleep 1/16.0
 end
 

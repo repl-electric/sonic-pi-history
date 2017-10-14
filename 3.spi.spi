@@ -198,11 +198,11 @@ live_loop :sixteen, sync: :pat do
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
 
   }).look
-  if eval(2)
+  if eval(s)
     with_fx :reverb do
     smp eval(s), amp: 1, rate: 1.0
     end
-
+  end
   sleep 1/16.0
 end
 

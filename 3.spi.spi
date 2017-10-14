@@ -188,7 +188,7 @@ end
 
 live_loop :sixteen, sync: :pat do
   tick
-  c1 = MagicDust[/MD_ORGANIC_HIT_HI_069/,0]
+  c1 = MagicDust[/tom/,0]
     s=(ring *%W{
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ c1

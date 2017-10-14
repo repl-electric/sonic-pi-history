@@ -298,7 +298,7 @@ _ _ p
  _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
 }).look
 
-    fin= if eval(s) -!= c2
+    fin= if eval(s) != c2
            (line 0.05, 0.01, 64).look
          else
            (line 1.0, 0.99, 2*64).look

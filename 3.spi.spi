@@ -197,7 +197,7 @@ with_fx :none, mix: 0 do
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     k4 = Frag[/kick/,3]
     s=(ring *%W{
-     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
+     k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ k2
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
      k2 _ _ _   k1 _ _ _   k2 _ _ _   k1 _ _ _
 

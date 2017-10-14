@@ -188,7 +188,8 @@ end
 
 live_loop :sixteen, sync: :pat do
   tick
-    c1 = MagicDust[/MI_/,2]
+  c1 = MagicDust[/MI_/,2]
+  puts c1
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     k4 = Frag[/kick/,3]
     s=(ring *%W{

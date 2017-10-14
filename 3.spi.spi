@@ -198,9 +198,8 @@ live_loop :sixteen, sync: :pat do
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
 
-
   }).look
-
+  smp eval(s)
   sleep 1/16.0
 end
 

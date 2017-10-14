@@ -188,7 +188,7 @@ end
 
 live_loop :sixteen, sync: :pat do
   tick
-  c1 = CineAmbi[/One shots/,/tom/,2]
+  c1 = CineAmbi[/One shots/,/reverse/,2]
   puts c1
     s=(ring *%W{
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
@@ -197,7 +197,7 @@ live_loop :sixteen, sync: :pat do
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
 
   }).look
-  smp eval(s), amp: 2, rate: 0.95
+  #smp eval(s), amp: 2, rate: 0.95
   sleep 1/16.0
 end
 

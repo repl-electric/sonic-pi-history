@@ -211,7 +211,7 @@ with_fx :none, mix: 0 do
     #sync '18'
     tick
     #sync "16"
-    c1 = Dust[/clap/,1]
+    c1 = Dust[/tom/,1]
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     k4 = Frag[/kick/,3]
     s=(ring *%W{

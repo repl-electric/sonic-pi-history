@@ -188,7 +188,7 @@ end
 
 live_loop :sixteen, sync: :pat do
   tick
-  c1 = MagicDust[/Dirt/].look
+  c1 = MagicDust[/Dirt/,0].look
   puts c1
     s=(ring *%W{
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _

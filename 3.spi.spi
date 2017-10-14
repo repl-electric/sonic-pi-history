@@ -210,7 +210,7 @@ with_fx :none, mix: 0 do
     #sync '18'
     tick
     #sync "16"
-    c1 = CinAmbi[/tom/,0]
+    c1 = CineAmbi[/tom/,0]
     puts c1
     k2,k1,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     k4 = Frag[/kick/,3]

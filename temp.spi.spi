@@ -23,6 +23,7 @@ live_loop :beat, sync: :beatz do
   )
 
   if s != 0
+    puts s
     smp s.look
   end
 

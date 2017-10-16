@@ -14,11 +14,12 @@ end
 live_loop :beatz, sync: :vocals do
   tick
 
-  c = Tape[/tom/,14]
+  c = Tape[/tom/,15]
   k = Lo[/kick/,12]
   s=(ing k
-    k 0 0 0   0 0 0 0    0 0 0 0      0 0 0 0
-    k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
+    k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0
+    k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c
+    )
 
   if s.look != 0
     smp s.look, amp: 1.0

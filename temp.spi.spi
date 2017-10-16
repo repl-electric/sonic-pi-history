@@ -2,7 +2,7 @@ live_loop :vocals do
   tick
 
 
-  with_fx :reverb, mix: 0.2,decay: 8 do
+  with_fx :reverb, mix: 0.2, room: 1 do
     with_fx :flanger, feedback: 0.1 do
     with_fx :bitcrusher, bits: 9, sample_rate: 20000 do
       with_fx :krush, mix: 0.2 do

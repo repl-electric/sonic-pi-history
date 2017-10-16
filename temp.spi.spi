@@ -7,7 +7,7 @@ live_loop :vocals do
       end
     end
   end
-  smp Words[/happy/], start: 0.3, finish: 0.8
+  smp Words[/happy/], start: 0.2, finish: 0.8
   sleep 16
 end
 

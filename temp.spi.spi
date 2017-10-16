@@ -18,7 +18,7 @@ end
 live_loop :beatz, sync: :vocals do
   tick
 
-  smp Lo[/kick/,5]
+  smp Lo[/kick/,6]
 
   sleep 2
 end

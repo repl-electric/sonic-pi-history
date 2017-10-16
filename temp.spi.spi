@@ -18,7 +18,8 @@ end
 live_loop :beatz, sync: :vocals do
   tick
 
+  if spread(1,4).look
   smp Lo[/kick/,7]
-
-  sleep 2
+  end
+  sleep 1/4.0
 end

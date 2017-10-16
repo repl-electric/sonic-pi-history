@@ -3,7 +3,7 @@ live_loop :vocals do
   with_fx :reverb, mix: 0.5, room: 1 do
     with_fx :flanger, feedback: 0.1 do
       with_fx :krush, mix: 0.2 do
-        smp Words[/beaut/], start: 0.0, finish: 1.0, rate: 1.0, amp: 0.5, rpitch: -2
+#        smp Words[/beaut/], start: 0.0, finish: 1.0, rate: 1.0, amp: 0.5, rpitch: -2
       end
     end
   end

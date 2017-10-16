@@ -39,7 +39,7 @@ live_loop :beatz, sync: :vocals do
   k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
   k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
   k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
-    )
+  )
 
   if s.look != 0
     smp s.look, amp: 1.0

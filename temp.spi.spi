@@ -1,10 +1,9 @@
 live_loop :vocals do
   tick
 
-  smp Words[/beaut/], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5
-
-
-
+  with_fx :bitcrusher do
+    smp Words[/beaut/], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5
+  end
 
   sleep 8
 end

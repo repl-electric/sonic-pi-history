@@ -111,7 +111,7 @@ score = (ing
 
 #    [:E3 0.25]  [:A3 0.125]   [:Gs3  0.125]
 #    [:E3 0.25]  [:B3 0.125]   [:GS3  0.125]
-#    [:E3 0.25]  [:B3 0.125]   [:GS3  0.125]
+11#    [:E3 0.25]  [:B3 0.125]   [:GS3  0.125]
     )
   z = score.look
   with_transpose 12 do
@@ -121,8 +121,6 @@ score = (ing
   end
   sleep 2
 end
-
-
 
 live_loop :music, sync: :metro do
   tick

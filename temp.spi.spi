@@ -23,7 +23,7 @@ live_loop :beat, sync: :beatz do
   ).look
 
   if s != 0
-    smp s, rate: (knit 1, 32*4, 0.85, 32*4).look
+    smp s, amp: 2, rate: (knit 1, 32*4, 0.85, 32*4).look
   end
 
   sleep 1/16.0

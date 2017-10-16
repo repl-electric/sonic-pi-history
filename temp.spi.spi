@@ -3,8 +3,10 @@ live_loop :vocals do
 
 
 
+  with_fx :flanger do:
   with_fx :bitcrusher, bits: 9, sample_rate: 20000 do
     smp Words[/beaut/], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5, rpitch: -2
+  end
   end
 
   sleep 8

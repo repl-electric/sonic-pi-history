@@ -141,7 +141,7 @@ live_loop :music, sync: :metro do
  #   harp s=score.tick, 0.5*(ring 20,20,20, 30,40,40, 40,60,80).look
   #  sleep s[-1]
   #}
-  sleep 3/4.0
+#  sleep 3/4.0
 
   #bass (ring :A2, :D2, :E2).look, 127, sustain: 3, cutoff: 1.0
 

@@ -10,7 +10,7 @@ live_loop :vocals do
     end
   end
 
-  smp Words[/matz/], start: 0.0, finish: 1.0, rate: 1.0, amp: 0.5
+  smp Words[/happy/], start: 0.0, finish: 1.0, rate: 1.0, amp: 0.5
 
   sleep 16
 end

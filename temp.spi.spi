@@ -61,9 +61,6 @@ live_loop :beatz, sync: :vocals do
     smp Tape[/cymbals/,4], cutoff:100, amp: 0.5
   end
 
-
-
-
   if (ing
       0 0 0 0     0 0 0 0
       0 0 0 0     0 0 0 0

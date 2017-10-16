@@ -215,7 +215,9 @@ live_loop :sixteen, sync: :pat do
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
   }).look
   if eval(s)
-    smp eval(s), amp: 0.55, rate: (ring 1.0,0.85).tick(:active)
+    smp eval(s), amp: 0.55, rate:
+
+      rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).tick(:active)
   end
   sleep 1/16.0
 end

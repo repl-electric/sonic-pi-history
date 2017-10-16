@@ -341,8 +341,8 @@ _ _ p
   #smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
-  s=(ring *%W{_ _ _ _   c1 _ _ _}).look
-  #smp eval(s), cutoff: (line 80, 120, 128).look
+    s=(ring *%W{_ _ _ _   c1 _ _ _}).look
+    #smp eval(s), cutoff: (line 80, 120, 128).look
 
     h,h1,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
     #h = Dust[/hat/,7]
@@ -353,7 +353,7 @@ _ _ h _  _ _ h _
 h _ h _  _ _ h {path:h,amp:0.3}
 _ _ h _  _ _ h _}).look
 
-  s=(ring *%W{
+  s1=(ring *%W{
 _ _ h _  _ _ h _
 _ _ h _  _ _ h _
 _ _ h _  _ _ h {path:h,amp:0.3}

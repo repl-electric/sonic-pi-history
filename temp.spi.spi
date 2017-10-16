@@ -33,6 +33,7 @@ end
 live_loop :beatz, sync: :vocals do
   tick
   c = Tape[/tom/,8]
+  puts c
   k = Lo[/kick/,12]
   k1 = Lo[/kick/,13]
   s=(ing

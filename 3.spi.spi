@@ -300,7 +300,7 @@ _ _ p
 
       if eval(s) && spread(1,1).look
         puts Junk[/RedShaker/,20..22].tick(:i)
-        smp Junk[/RedShaker/,20..22].tick(:i)
+        smp Junk[/RedShaker/,19..22].tick(:i)
         end
 
     end

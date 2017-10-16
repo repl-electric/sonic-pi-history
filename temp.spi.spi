@@ -7,7 +7,7 @@ live_loop :vocals do
       end
     end
   end
-  smp Words[/happy/], start: 0.3, finish: 0.8
+  #smp Words[/happy/], start: 0.3, finish: 0.8
   sleep 16
 end
 
@@ -30,6 +30,7 @@ end
 
 live_loop :beatz, sync: :vocals do
   tick
+  stop
   c = Tape[/tom/,10]
   c2 = Tape[/tom/,12]
   k = Lo[/kick/,12]

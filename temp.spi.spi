@@ -20,7 +20,6 @@ live_loop :beatz, sync: :vocals do
     k 0 0   0 0 0 0    0 0 0 0    0 0 0 0
     k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
 
-  puts eval(s.look)
   smp s.look, amp: 1.0, cutoff: 120
 
   if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1

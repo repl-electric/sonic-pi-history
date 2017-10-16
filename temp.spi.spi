@@ -16,26 +16,27 @@ live_loop :beatz, sync: :vocals do
 
   c = Lo[/tom/,0]
   k = Lo[/kick/,12]
-  s=(ing k,
-    k, 0, 0,   0, 0, 0, 0,    0, 0, 0, 0,    0, 0, 0, 0,
-    k, 0, 0, 0,   0, 0, 0, 0,    0, 0, 0, 0,    0, 0, 0, c,)
+  s=(ing k
+    k 0 0   0 0 0 0    0 0 0 0    0 0 0 0
+    k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
 
+  puts s.look
   smp s.look, amp: 1.0 if s != 0
 
-  if (ing 0, 0, 0, 0,   0, 0, 0, 0,    1, 0, 0, 0,    0, 0, 0, 0,).look == 1
+  if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1
     smp Tape[/snare/,12], amp: 1.0, cutoff: 100
   end
 
-  if (ing 0, 0, 1, 0,     0, 0, 1, 0,).look == 1
+  if (ing 0 0 1 0     0 0 1 0).look == 1
     smp Tape[/cymbals/,1], cutoff: 90, amp: (knit 1.0, 5*4, 0.8, 4, 1.0,4).look
   end
 
   if (ing
-      0, 0, 0, 0,     0, 0, 0, 0,
-      0, 0, 0, 0,     0, 0, 0, 0,
-      0, 0, 0, 0,     0, 0, 0, 1,
-      0, 0, 0, 0,     0, 0, 0, 0,
-      0, 0, 0, 0,     0, 0, 0, 0,
+      0 0 0 0     0 0 0 0
+      0 0 0 0     0 0 0 0
+      0 0 0 0     0 0 0 1
+      0 0 0 0     0 0 0 0
+      0 0 0 0     0 0 0 0
       ).look == 1
     smp Words[/happy/], start: 0.9, finish: 1.0, amp: 0.8
   end

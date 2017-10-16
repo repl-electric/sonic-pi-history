@@ -217,7 +217,6 @@ live_loop :sixteen, sync: :pat do
   }).look
   if eval(s)
     with_fx :echo do
-    puts (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)
       smp eval(s), amp: 1.55, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)
      end
   end

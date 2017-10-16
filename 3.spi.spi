@@ -173,9 +173,6 @@ live_loop :music, sync: :metro do
 
     )
 
-
-
-
   puts score.look
   uncomment do
   zero (ing
@@ -199,9 +196,7 @@ live_loop :music, sync: :metro do
   }
 
   sharp :E3, 3, sustain: 6
-
   musicbox :A3, 20
-
 end
 
 live_loop :sixteen, sync: :pat do

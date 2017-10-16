@@ -168,7 +168,9 @@ live_loop :music, sync: :metro do
     )
 
 
-  sharp :Cs3
+  if spread(1,4).look
+    sharp :Cs3
+    end
 
   score3 = (ing
 

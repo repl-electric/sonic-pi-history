@@ -18,8 +18,8 @@ end
 live_loop :beatz, sync: :vocals do
   tick
 
-  if (ing 1 0 0 0   0 0 0 0).look == 1
-    smp Lo[/kick/,12], amp: 0.25, cutoff: 80
+  if (ing 1, 0, 0, 0,   0, 0, 0, 0,).look == 1
+    smp Lo[/kick/,12], amp: 0.5, cutoff: 80
   end
   sleep 1/4.0
 end

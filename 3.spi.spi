@@ -326,7 +326,7 @@ _ _ p
           else
             0
           end
-    smp eval(s),amp: 0*amp, cutoff: (ine 127 110 1024).look, finish: fin
+    #smp eval(s),amp: amp, cutoff: (ine 127 110 1024).look, finish: fin
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _

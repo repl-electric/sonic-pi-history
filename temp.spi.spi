@@ -18,7 +18,7 @@ live_loop :beatz, sync: :vocals do
   end
 
   if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1
-    smp Lo[/snare/,12], amp: 0.5, cutoff: 80
+    smp Lo[/snare/,12], amp: 1.0, cutoff: 80
   end
 
 

@@ -146,7 +146,7 @@ score = (ing
 
     if spread(1,3).look
       with_transpose -12*2 do
-        musicbox z, sustain: 1/4.0*3
+        #musicbox z, sustain: 1/4.0*3
       end
     end
   end

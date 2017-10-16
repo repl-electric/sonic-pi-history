@@ -86,7 +86,9 @@ live_loop :beatz, sync: :vocals do
       0 0 0 0     0 0 0 0
       0 0 0 0     0 0 0 0
       ).look == 1
-    smp Words[/happy/], start: 0.9, finish: 1.0, amp: 1.0
+    with_fx :echo do
+      smp Words[/happy/], start: 0.9, finish: 1.0, amp: 1.0
+      end
   end
 
   sleep 1/8.0

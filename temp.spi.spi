@@ -15,7 +15,7 @@ live_loop :vocals do
   sleep 16
 end
 
-live_loop :beat, sync: :vocals do
+live_loop :beatz, sync: :vocals do
   tick
 
   smp Tape[/kick/,0]

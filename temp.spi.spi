@@ -1,7 +1,9 @@
 live_loop :vocals do
   tick
 
-  with_fx :bitcrusher, bits: 11, sample_rate: 20000 do
+
+
+  with_fx :bitcrusher, bits: 8, sample_rate: 20000 do
     smp Words[/beaut/], start: 0.4, finish: 0.5, rate: 1.0, amp: 0.5, rpitch: -2
   end
 

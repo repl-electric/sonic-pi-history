@@ -34,7 +34,7 @@ live_loop :beatz, sync: :vocals do
   k = Lo[/kick/,12]
   k1 = Lo[/kick/,13]
   k2 = Lo[/kick/,14]
-  k3 = Lo[/kick/,14]
+  k3 = Lo[/kick/,15]
   s=(ing
     k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
     k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0

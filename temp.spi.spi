@@ -58,7 +58,7 @@ live_loop :beatz, sync: :vocals do
       0 0 0 0    0 0 0 0
       0 0 0 0    0 0 0 0
       ).look == 1
-    smp Tape[/cymbals/,4], cutoff:1090, amp: 0.5
+    smp Tape[/cymbals/,4], cutoff:100, amp: 0.5
   end
 
 

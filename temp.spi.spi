@@ -91,5 +91,5 @@ live_loop :beatz, sync: :vocals do
     end
   end
 
-  sleep 1/8.0
+  sleep 1/16.0
 end

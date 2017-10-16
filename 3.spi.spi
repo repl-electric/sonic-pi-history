@@ -168,7 +168,10 @@ live_loop :music, sync: :metro do
     )
 
   if spread(1,3).look
-    harp :Cs4, sustain: (3*3)/3
+    at
+    sleep 1/3.0
+    hearp :Cs4, sustain: (3*3)/3
+    end
   end
 
   score3 = (ing

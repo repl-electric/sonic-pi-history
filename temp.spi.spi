@@ -17,11 +17,11 @@ end
 
 live_loop :beatz, sync: :vocals do
   tick
-  if (ing 1 0 0 0   0 0 0 0).look == 1
+  if (ing 1, 0, 0, 0,   0, 0, 0, 0,    0, 0, 0, 0,    0, 0, 0, 0,).look == 1
     smp Lo[/kick/,12], amp: 0.5, cutoff: 80
   end
 
-  if (ing 0 0 1 0     0 0 1 0).look == 1
+  if (ing 0, 0, 1, 0,     0, 0, 1, 0,).look == 1
     smp Tape[/cymbals/,1], cutoff: 90
   end
 

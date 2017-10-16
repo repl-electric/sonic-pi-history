@@ -1,7 +1,5 @@
 live_loop :vocals do
   tick
-
-
   with_fx :reverb, mix: 0.5, room: 1 do
     with_fx :flanger, feedback: 0.1 do
       with_fx :krush, mix: 0.2 do
@@ -9,9 +7,7 @@ live_loop :vocals do
       end
     end
   end
-
   smp Words[/happy/], start: 0.3, finish: 0.8
-
   sleep 16
 end
 
@@ -20,6 +16,11 @@ live_loop :beatz, sync: :vocals do
   if (ing 1 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0).look == 1
     smp Lo[/kick/,12], amp: 0.5, cutoff: 80
   end
+
+  if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1
+    smp Lo[/snare/,12], amp: 0.5, cutoff: 80
+  end
+
 
   if (ing 0 0 1 0     0 0 1 0).look == 1
     smp Tape[/cymbals/,1], cutoff: 90, amp: (knit 1.0, 5*4, 0.8, 4, 1.0,4).look

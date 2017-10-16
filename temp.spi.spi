@@ -2,15 +2,15 @@ live_loop :vocals do
   tick
 
 
-  with_fx :gverb do
-  with_fx :flanger, feedback: 0.1 do
+  with_fx :gverb, mix: 0.2 do
+    with_fx :flanger, feedback: 0.1 do
     with_fx :bitcrusher, bits: 9, sample_rate: 20000 do
       with_fx :krush, mix: 0.2 do
         smp Words[/beaut/], start: 0.4, finish: 0.5, rate: 0.99, amp: 0.5, rpitch: -2
       end
+      end
     end
-    end
-    end
+  end
 
   sleep 4
 end

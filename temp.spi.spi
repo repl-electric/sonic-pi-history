@@ -87,9 +87,11 @@ live_loop :beatz, sync: :vocals do
       0 0 0 0     0 0 0 0
       ).look == 1
     with_fx :echo, decay: 8 do
+      with_fx :bitcrusher do
       with_fx :krush, mix: 0.2 do
         smp Words[/happy/], start: 0.9, finish: 1.0, amp: 1.0
-      end
+        end
+        end
 
     end
   end

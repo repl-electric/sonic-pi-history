@@ -14,10 +14,10 @@ end
 live_loop :beatz, sync: :vocals do
   tick
 
-  c = Lo[/tom/,12]
+  c = Lo[/tom/,14]
   k = Lo[/kick/,12]
   s=(ing k
-    k 0 0 0   0 0 0 0      0 0 0 0      0 0 0 0
+    k 0 0 0   0 0 0 0    0 0 0 0      0 0 0 0
     k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
 
   if s.look != 0

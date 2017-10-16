@@ -143,7 +143,7 @@ score = (ing
     puts z
     zero z
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
-    musicbox :A4
+    musicbox :A3
   end
   sleep 1/4.0
 end

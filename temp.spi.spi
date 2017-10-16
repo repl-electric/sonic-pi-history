@@ -22,7 +22,7 @@ live_loop :beatz, sync: :vocals do
   end
 
   if (ing 0 0 1 0     0 0 1 0).look == 1
-    smp Lo[/hats/,2]
+    smp Lo[/cymbal/,2]
   end
 
   sleep 1/4.0

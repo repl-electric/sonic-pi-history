@@ -51,7 +51,7 @@ live_loop :beatz, sync: :vocals do
   end
 
   if (ing 0 0 1 0    0 0 1 0).look == 1
-    smp Tape[/cymbals/,2], cutoff: 90, amp: (knit 1.0, 5*4, 0.8, 4, 1.0,4).look
+    smp Tape[/cymbals/,3], cutoff: 90, amp: (knit 1.0, 5*4, 0.8, 4, 1.0,4).look
   end
 
   if (ing

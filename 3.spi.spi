@@ -410,12 +410,12 @@ _ _ p
     #h = Dust[/hat/,7]
 
     s=(ring *%W{
+h _ h _  _ _ h _
 _ _ h _  _ _ h _
-_ _ h _  _ _ h _
-_ _ h _  _ _ h {path:h,amp:0.3}
+h _ h _  _ _ h {path:h,amp:0.3}
 _ _ h _  _ _ h _}).look
 
-  s1=(ring *%W{
+  s=(ring *%W{
 _ _ h _  _ _ h _
 _ _ h _  _ _ h _
 _ _ h _  _ _ h {path:h,amp:0.3}

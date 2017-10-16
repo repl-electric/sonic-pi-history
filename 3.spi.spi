@@ -73,10 +73,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1 1 1 1
-      1 1 60 127
-      1 1 1 1
-      1 1 60 127).look
+      1, 1, 1, 1,
+      1, 1, 60, 127,
+      1, 1, 1, 1,
+      1, 1, 60, 127,).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -119,7 +119,7 @@ score = (ing
   with_transpose 12 do
     piano (ing
            :Cs4 :E4 :B3 :E4
-           :Cs4 :E4 :A3 :D4
+           :Cs4 :Fs4 :A3 :D4
 
            ).look, (ring 70,65,55).look*2.0, sustain: 4
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14

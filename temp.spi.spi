@@ -20,7 +20,7 @@ live_loop :beatz, sync: :vocals do
     k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0
     k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
 
-  smp eval(s.look), amp: 1.0, cutoff: 100
+  smp eval(s.look), amp: 1.0, cutoff: 120
 
   if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1
     smp Tape[/snare/,12], amp: 1.0, cutoff: 100

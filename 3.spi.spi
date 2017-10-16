@@ -139,13 +139,13 @@ score = (ing
 
            :Cs4 :E4 :A3 :Fs4
 
-      ).look, (ring 70,65,55).look*2.0, sustain: 4
+      ).look, (ring 70,65,55).look*0.0, sustain: 4
     puts z
     zero z
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     musicbox :E2
   end
-  sleep 2
+  sleep 1
 end
 
 live_loop :music, sync: :metro do

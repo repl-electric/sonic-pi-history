@@ -300,7 +300,7 @@ _ _ p
 
       if eval(s) && spread(1,6).look
         smp Junk[/RedShaker/,18..22].tick(:i)
-        smp Tape[/tom/].look
+        smp Tape[/shaker/].look
       end
 
     end

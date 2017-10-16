@@ -144,7 +144,7 @@ score = (ing
     zero z
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
 
-    with_transpose 7 do
+    with_transpose 12 do
       musicbox z, sustain: 1
     end
   end

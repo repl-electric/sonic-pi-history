@@ -259,7 +259,7 @@ with_fx :none, mix: 0 do
     end
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
-    p=Junk[/tom/,6]
+    p=Junk[/tom/,7]
 #    p= Dust[/perc/, [7,7]]
     #p=MagicDust[/perc/,/stone/,[4..8]].look
     #p=Analog[/click/].look

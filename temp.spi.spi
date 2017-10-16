@@ -33,9 +33,19 @@ live_loop :beatz, sync: :vocals do
   c = Tape[/tom/,10]
   k = Lo[/kick/,12]
   k1 = Lo[/kick/,13]
+  k2 = Lo[/kick/,14]
   s=(ing
-  k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
-  k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
+    k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
+    k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
+
+    k2 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
+    k2 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
+
+
+    k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
+    k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
+
+
   )
 
   if s.look != 0

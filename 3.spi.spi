@@ -117,7 +117,11 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    piano (ring :Cs4, :E4, :B3, :E4).look, (ring 70,65,55).look*2.0, sustain: 4
+    piano (ring
+           :Cs4, :E4, :B3, :E4
+           :Cs4, :E4, :A3, :E4
+
+           ).look, (ring 70,65,55).look*2.0, sustain: 4
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
     #musicbox :E2
   end
@@ -174,7 +178,6 @@ live_loop :music, sync: :metro do
   end
 
   score3 = (ing
-
 
 #    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]
 #    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]

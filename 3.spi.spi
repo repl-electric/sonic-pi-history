@@ -129,6 +129,10 @@ score = (ing
            :Gs4 :E4 :B3 :E4
            :Gs4 :E4 :B3 :Fs4
 
+           :Gs4 :E4 :B3 :Fs4
+           :Gs4 :E4 :B3 :Fs4
+           :Gs4 :E4 :B3 :Fs4
+
            :Cs4 :E4 :A3 :Fs4
 
       ).look, (ring 70,65,55).look*2.0, sustain: 4

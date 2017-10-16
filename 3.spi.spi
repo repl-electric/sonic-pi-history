@@ -190,7 +190,7 @@ end
 live_loop :sixteen, sync: :pat do
   tick
   c1 = CineElec[/one shots/,/pepper/]
-  c1 = Tape[/_high/,45]
+  c1 = Tape[/_high/,46]
   #puts c1
     s=(ring *%W{
      _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ c1

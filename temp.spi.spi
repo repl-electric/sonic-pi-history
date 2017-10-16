@@ -32,7 +32,7 @@ live_loop :beatz, sync: :vocals do
       0 0 0 0     0 0 0 0
       0 0 0 0     0 0 0 0
       ).look == 1
-    smp Words[/happy/], start: 0.8, finish: 1.0, amp: 0.8
+    smp Words[/happy/], start: 0.9, finish: 1.0, amp: 0.8
   end
 
   sleep 1/8.0

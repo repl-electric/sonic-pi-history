@@ -16,7 +16,8 @@ live_loop :beatz, sync: :vocals do
 
   c = Lo[/tom/,0]
   k = Lo[/kick/,12]
-  s=(ing k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0
+  s=(ing k
+    0 0 0   0 0 0 0    0 0 0 0    0 0 0 0
     k 0 0 0   0 0 0 0    0 0 0 0    0 0 0 c)
 
   puts eval(s.look)

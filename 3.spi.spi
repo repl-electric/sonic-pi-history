@@ -299,7 +299,7 @@ _ _ p
       smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 1.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
 
       if eval(s) && spread(3,7).look
-        smp Junk[/shaker/,20..21].tick(:sh)
+        smp Junk[/shaker/,22]
         end
 
     end

@@ -38,8 +38,6 @@ live_loop :beatz, sync: :vocals do
   s=(ing
   k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 c
   k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
-  k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
-  k 0 0 0   0 0 0 0    k1 0 0 0    0 0 0 0
   )
 
   if s.look != 0

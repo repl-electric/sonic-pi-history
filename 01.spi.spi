@@ -146,7 +146,7 @@ score = (ing
     zero z, 1
 
     if spread(1,2).look
-      with_transpose (12) do
+      with_transpose (7) do
          musicbox z, sustain: 1/4.0*3
       end
     end

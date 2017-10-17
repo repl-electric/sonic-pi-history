@@ -197,7 +197,7 @@ live_loop :music, sync: :metro do
 #  sleep 2
 
   with_transpose 12*1 do
-    musicbox score.look, 20, sustain: 3
+    musicbox z, 20, sustain: 3
   end
 
   #sharp :E3, 3, sustain: 6

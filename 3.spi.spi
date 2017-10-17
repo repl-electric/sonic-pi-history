@@ -254,7 +254,7 @@ live_loop :sixteen, sync: :pat do
   if eval(s)
     smp Vocals[1]
     with_fx (knit :none, 3*128, :echo, 128).look do
-      smp eval(s), amp: 1.0, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active), pan: 0.25
+      smp eval(s), amp: 1.0, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)#, pan: 0.25
      end
   end
   sleep 1/16.0

@@ -157,7 +157,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.5,  mod: 0.0, cutoff: 1, bass: 0.2 #(ramp 0.0, 0.85,128/8.0).tick(:firey)
+  harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.3, bass: 0.2 #(ramp 0.0, 0.85,128/8.0).tick(:firey)
 
   score = (knit
     [:A2, 3],3#,  [:D3,1.0],3, [:E3,2/4.0],3,

@@ -153,7 +153,12 @@ score = (ing
   sleep 2
 end
 
-zero_cc 2, 0.5
+at do
+  8.times do
+    tick
+    zero_cc 2, (line 0.0, 0.5, 8).look
+  end
+end
 
 live_loop :music, sync: :metro do
   tick

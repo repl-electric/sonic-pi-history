@@ -75,10 +75,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1, 1, 1, 1,
-      1, 1, 60, 127,
-      1, 1, 1, 1,
-      1, 1, 60, 127,).look
+      1 1 1 1
+      1 1 60 127
+      1 1 1 1
+      1 1 60 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -293,7 +293,7 @@ with_fx :none, mix: 0 do
      _ _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
   }).look
 
-    s2=(ring *%W{
+    s=(ring *%W{
      k2 _ _ _   _ _ _ _   _ _ _ _
      k1 _ _ _   _ _ _ _   _ _ _ _
 
@@ -305,7 +305,7 @@ with_fx :none, mix: 0 do
   }).look
 
     sidechain if eval(s) && spread(1,4).look
-    #smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
+    smp eval(s), amp: 2*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
         at do

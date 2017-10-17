@@ -193,7 +193,7 @@ live_loop :music, sync: :metro do
 
 #  sleep 2
 
-  with_transpose 12*1 do
+  with_transpose 12*0 do
     musicbox z, 20, sustain: 3
   end
 

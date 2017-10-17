@@ -1,7 +1,7 @@
 live_loop :wedge do
 tick
 
-    zero x=(ing :Fs3, :Gs3, :B3, :Cs4, :D4, :E4, :Fs4,).look
+    zero x=(ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
 puts x
     midi_cc 100, 0, channel: 9, port: :iac_bus_1
     midi_cc 101, 12, channel: 9, port: :iac_bus_1
@@ -13,7 +13,7 @@ puts x
     midi_poly_pressure :Fs4, 32, channel: 9, port: :iac_bus_1
 
   12.times do
-    midi_pitch_bend ((line 0.5, 0.6, 6)+(line 1.0, 0.5, 6)).tick(:slide), channel: 9, port: :iac_bus_1
+    midi_pitch_bend ((line 0.5, 0.6, 8)+(line 0.6, 0.5, 4)).tick(:slide), channel: 9, port: :iac_bus_1
     sleep 0.25
   end
 

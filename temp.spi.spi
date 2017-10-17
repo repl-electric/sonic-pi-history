@@ -54,7 +54,7 @@ live_loop :beatz, sync: :vocals do
   )
 
   if s.look != 0
-    smp s.look, amp: (nit 1.1 8 0.8 8).look#, cutoff: 127
+    smp s.look, amp: (nit 1.1 8 0.8 8).look, cutoff: 127
   end
 
   if (ing 0 0 0 0   0 0 0 0    1 0 0 0    0 0 0 0).look == 1

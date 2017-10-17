@@ -188,7 +188,7 @@ end
 
 live_loop :sixteen, sync: :pat do
   tick
-stop
+
   c1 = CineElec[/one shots/,/pepper/]
   c1 = Tape[/_high/,49]
   #puts c1

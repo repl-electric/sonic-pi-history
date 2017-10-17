@@ -12,6 +12,10 @@ set_volume! 2.0
 sop_cc 1, 0
 #sop_off :A3
 
+
+
+
+
 live_loop(:metro)do
   tick;
   cue("16") if look % 16.0 == 0.0
@@ -153,7 +157,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.0,  mod: 0.0, cutoff: 0.1, bass: 0.0
+  harp_cc phase: 0.0,  mod: 0.0, cutoff: 0.1, bass: 0.0, mode: -1
 #  stop
   score = (knit
     [:A3, 3/4.0],3,  [:D3,1.0],3, [:E3,2/4.0],3,

@@ -166,7 +166,7 @@ live_loop :music, sync: :metro do
   puts score.look
   with_transpose 12 do
     piano score.look[0], (ring 70,65,55).look*2, sustain: 8
-end
+  end
   #score = space()
 
   sleep 2
@@ -175,7 +175,7 @@ end
  #   musicbox score.look, 20, sustain: 3
   end
 
-  sharp :E3, 3, sustain: 6
+  #sharp :E3, 3, sustain: 6
 
 end
 

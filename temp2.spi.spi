@@ -1,8 +1,8 @@
   midi_cc 110, 2*12, channel: 9, port: :iac_bus_1
   midi_cc 111, 2*12, channel: 9, port: :iac_bus_1
 
-  midi_cc 108, 2*12, channel: 9, port: :iac_bus_1
-  midi_cc 109, 2*12, channel: 9, port: :iac_bus_1
+  midi_cc 108, 3*12, channel: 9, port: :iac_bus_1
+  midi_cc 109, 3*12, channel: 9, port: :iac_bus_1
 
 
 live_loop :wedge do

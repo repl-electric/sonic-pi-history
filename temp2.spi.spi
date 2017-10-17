@@ -6,5 +6,6 @@ at do
   8.times do
     tick
     midi_cc 10, (line 0.0, 0.5, 8).look, channel: 14, port: :iac_bus_1
+    sleep 0.25
   end
 end

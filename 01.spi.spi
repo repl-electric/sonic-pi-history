@@ -191,22 +191,16 @@ live_loop :music, sync: :metro do
 
 #  sleep 2
 
-at do
-    sleep 1/4.0
-  with_transpose 12*0 do
-      musicbox :A3, 20, sustain: 3
-    end
-
-    sleep 1/4.0
-      with_transpose 12*1 do
-      musicbox :CS3, 20, sustain: 3
-    end
-
-    sleep 2/4.0
-    with_transpose 12*1 do
-      musicbox :E3, 20, sustain: 3
+  at do
+    with_transpose(-12*2) do
+      musicbox :A3, 120, sustain: 12
+      sleep 1
+      musicbox :CS4, 120, sustain: 12
+      sleep 6
+      musicbox :E4, 120, sustain: 12
     end
   end
+
 
   #sharp :E3, 3, sustain: 6
 

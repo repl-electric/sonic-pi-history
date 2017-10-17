@@ -71,7 +71,7 @@ live_loop :moving, sync: :metro do
       #zero s2=(knit :D2,24,:Fs2,24,:Gs2,24).look,5 #might not get played.
       s = score.look
       #puts "#{s2}/#{s}"
-      zero s,(line 100,0,9).look*0.5 if s && s[0]
+      #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
       1 1 1 1
       1 1 60 127

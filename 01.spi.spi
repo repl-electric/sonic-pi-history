@@ -328,10 +328,10 @@ with_fx :none, mix: 0 do
         at do
           smp Analog[/17 /].tick(:echo), amp: 0.5
           sleep 0.25
-          smp Analog[/17 /].tick(:echo), amp: 0.3
+ #         smp Analog[/17 /].tick(:echo), amp: 0.3
         end
       else
-        smp Analog[/17 /].tick(:echo), amp: 0.5
+#        smp Analog[/17 /].tick(:echo), amp: 0.5
       end
     end
 

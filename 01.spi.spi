@@ -143,7 +143,7 @@ score = (ing
 
       ).look
     #piano z, (ring 70,65,55).look*2, sustain: 4
-    zero z, 1
+    #zero z, 1
 
     if spread(1,2).look
       with_transpose (0) do

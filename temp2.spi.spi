@@ -6,7 +6,7 @@ tick
   midi_cc 110, 2*12, channel: 9, port: :iac_bus_1
   midi_cc 111, 2*12, channel: 9, port: :iac_bus_1
 
-  midi_cc 108, 24, channel: 9, port: :iac_bus_1
+  midi_cc 108, 2*24, channel: 9, port: :iac_bus_1
   midi_cc 109, 24, channel: 9, port: :iac_bus_1
 
 

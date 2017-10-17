@@ -75,10 +75,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1, 1, 1, 1,
-      1, 1, 60, 127,
-      1, 1, 1, 1,
-      1, 1, 60, 127,).look
+      1 1 1 1
+      1 1 60 127
+      1 1 1 1
+      1 1 60 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -159,10 +159,12 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.25 #(ramp 0.0, 0.85,128/8.0).tick(:firey)
 
-
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:FS3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
+    [:FS3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+
+    )
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
@@ -170,7 +172,6 @@ live_loop :music, sync: :metro do
     sleep s[-1]
   }
   sleep 3/4.0
-
 
   scorex = (knit
     [:A2, 3],3#,  [:D3,1.0],3, [:E3,2/4.0],3,

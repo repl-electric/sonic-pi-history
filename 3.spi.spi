@@ -150,7 +150,7 @@ score = (ing
       end
     end
   end
-  sleep 2
+  sleep 1
 end
 
 live_loop :music, sync: :metro do

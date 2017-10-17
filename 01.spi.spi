@@ -201,7 +201,7 @@ at do
 
     sleep 1/4.0
       with_transpose 12*1 do
-      musicbox :CS4, 20, sustain: 3
+      musicbox :CS3, 20, sustain: 3
     end
 
     sleep 2/4.0

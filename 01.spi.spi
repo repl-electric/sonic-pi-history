@@ -9,7 +9,7 @@ sop_on :A2, 20, sustain: 12, mode: 0
 #musicbox :A3, sustain: 1
 #set_volume! 2.0
 set_volume! 2.0
-#sop_cc 1, 0
+sop_cc 1, 0
 #sop_off :A3
 
 live_loop(:metro)do

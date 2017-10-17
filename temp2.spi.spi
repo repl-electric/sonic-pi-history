@@ -12,5 +12,6 @@ at do
   end
 end
 
+  midi_pitch_bend 0.5, channel: 14, port: :iac_bus_1
   sleep 6
   end

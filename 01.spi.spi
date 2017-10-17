@@ -158,7 +158,6 @@ live_loop :music, sync: :metro do
   tick
   #sync "16"
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.25 #(ramp 0.0, 0.85,128/8.0).tick(:firey)
-  piano score.look, (ring 70,65,55).look*3, sustain: 4
   stop
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
@@ -166,10 +165,12 @@ live_loop :music, sync: :metro do
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
 #    [_, 3/4.0],3,   [:FS2,1.0],3, [:CS2,2/4.0],3,
     )
+  piano score.look, (ring 70,65,55).look*3, sustain: 4
+
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
-    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+#    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }
   sleep 3/4.0
@@ -177,7 +178,7 @@ live_loop :music, sync: :metro do
 
 
   with_transpose 12*2 do
-    musicbox score.look, 20, sustain: 3
+ #   musicbox score.look, 20, sustain: 3
   end
 
   sharp :E3, 3, sustain: 6

@@ -1,3 +1,5 @@
+live_loop :wedge do
+
 at do
   midi_cc 100, 0, channel: 14, port: :iac_bus_1
   midi_cc 101, 0, channel: 14, port: :iac_bus_1
@@ -9,3 +11,6 @@ at do
     sleep 0.5
   end
 end
+
+  sleep 6
+  end

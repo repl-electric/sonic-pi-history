@@ -8,7 +8,7 @@ tick
     #midi_cc 6, 2, channel: 14, port: :iac_bus_1
 
   zero :A3,1
-  sleep 2
+  sleep 1
 
 10.times{
   midi_poly_pressure :Fs4, 127, channel: 9, port: :iac_bus_1

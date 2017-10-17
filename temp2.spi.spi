@@ -1,13 +1,15 @@
-live_loop :wedge do
-tick
-
-    #zero x=(ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
-#puts x
   midi_cc 110, 2*12, channel: 9, port: :iac_bus_1
   midi_cc 111, 2*12, channel: 9, port: :iac_bus_1
 
   midi_cc 108, 2*12, channel: 9, port: :iac_bus_1
   midi_cc 109, 2*12, channel: 9, port: :iac_bus_1
+
+
+live_loop :wedge do
+tick
+
+    #zero x=(ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
+#puts x
 
 
 

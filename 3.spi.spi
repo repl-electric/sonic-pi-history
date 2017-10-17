@@ -156,7 +156,7 @@ end
 at do
   8.times do
     tick
-    midi_cc 7, (line 0.0, 0.5, 8).look, channel: 14, port: :iac_bus_1
+    midi_cc 8, (line 0.0, 0.5, 8).look, channel: 14, port: :iac_bus_1
   end
 end
 

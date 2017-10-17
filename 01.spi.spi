@@ -173,7 +173,7 @@ live_loop :music, sync: :metro do
   }
   sleep 3/4.0
 
-  musicbox score.look, 30
+  musicbox score.look#, 30
 
   scorex = (knit
     [:A2, 3],3#,  [:D3,1.0],3, [:E3,2/4.0],3,

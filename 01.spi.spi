@@ -180,19 +180,17 @@ live_loop :music, sync: :metro do
   if spread(1,3).look
     at do
       sleep 1/4.0
-      harp :Cs4,10, sustain: (3*3)#/3
+      harp :Cs4,10, sustain: (3*3)/3
     end
   end
 
   bass (ring :A2, :D2, :E2, :B2, :Fs2, :E2).look, sustain: 1
   #bass :E2, sustain: 3
-  #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
+
   3.times{
     sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
-
-
 
   puts score.look
   with_transpose 12 do

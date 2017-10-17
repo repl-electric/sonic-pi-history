@@ -10,8 +10,6 @@ live_loop :vocals do
   smp Words[/happy/], start: 0.0, finish: 1.0
 
 
-
-
   sleep 16
 end
 

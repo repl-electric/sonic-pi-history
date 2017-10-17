@@ -74,10 +74,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1 1 1 1
-      1 1 60 127
-      1 1 1 1
-      1 1 60 127).look
+      1, 1, 1, 1,
+      1, 1, 60, 127,
+      1, 1, 1, 1,
+      1, 1, 60, 127,).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -308,7 +308,7 @@ with_fx :none, mix: 0 do
     if s!="_" && spread(1,8+4).look
       if spread(1,32).look
         at do
- #         smp Analog[/17 /].tick(:echo), amp: 0.5
+          smp Analog[/17 /].tick(:echo), amp: 0.5
           sleep 0.25
   #        smp Analog[/17 /].tick(:echo), amp: 0.3
         end
@@ -318,7 +318,6 @@ with_fx :none, mix: 0 do
     end
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
-
     p= Dust[/perc/, [7,7]]
     #p=MagicDust[/perc/,/stone/,[4..8]].look
     #p=Analog[/click/].look

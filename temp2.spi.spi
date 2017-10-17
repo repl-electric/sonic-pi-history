@@ -19,7 +19,7 @@ tick
   sleep 0.5
 
     8.times{
-      midi_poly_pressure :A7, 0.0, channel: 9, port: :iac_bus_1
+      midi_poly_pressure :A7, 1.0, channel: 9, port: :iac_bus_1
       sleep 0.25
 }
 

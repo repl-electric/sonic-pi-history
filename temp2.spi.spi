@@ -1,7 +1,7 @@
 live_loop :wedge do
 
 at do
-    piano :Fs2
+    zero :Fs2
 
     midi_cc 100, 0, channel: 14, port: :iac_bus_1
     midi_cc 101, 0, channel: 14, port: :iac_bus_1

@@ -16,7 +16,7 @@ tick
 #    midi_cc 101, 12, channel: 9, port: :iac_bus_1
     #midi_cc 6, 2, channel: 14, port: :iac_bus_1
     zero :A3,1
-  sleep 0.5
+  sleep 1.0
 
     8.times{
       midi_poly_pressure (ing :A1 :A2 :A3 :a4 :A5).tick(:initi), 1.0, channel: 9, port: :iac_bus_1

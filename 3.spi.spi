@@ -153,7 +153,7 @@ score = (ing
   sleep 2
 end
 
-zero_cc 5, 0.0
+zero_cc 1, 0.0
 
 live_loop :music, sync: :metro do
   tick

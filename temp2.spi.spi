@@ -1,13 +1,13 @@
 live_loop :wedge do
 tick
 
-    zero x=(ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
+    zero x=(ing :Fs3, :Gs3, :B3, :Cs4, :D4, :E4, :Fs4,).look
 puts x
     midi_cc 100, 0, channel: 14, port: :iac_bus_1
     midi_cc 101, 12, channel: 14, port: :iac_bus_1
     #midi_cc 6, 2, channel: 14, port: :iac_bus_1
 
-    sleep 1
+    sleep 0.5
 
   12.times do
       midi_pitch_bend ((line 0.5, 1.0, 6)+(line 0.6, 0.5, 2)).tick(:slide), channel: 14, port: :iac_bus_1

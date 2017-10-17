@@ -22,6 +22,6 @@ tick
     sleep 1/16.0
   end
 
-  #midi_pitch_bend 0.5, channel: 9, port: :iac_bus_1
+  midi_pitch_bend 0.5, channel: 9, port: :iac_bus_1
   sleep 1
   end

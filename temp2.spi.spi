@@ -10,7 +10,7 @@ puts x
     sleep 1
 
   12.times do
-      midi_pitch_bend ((line 0.5, 0.6, 6)+(line 0.6, 0.5, 2)).tick(:slide), channel: 14, port: :iac_bus_1
+      midi_pitch_bend ((line 0.5, 1.0, 6)+(line 0.6, 0.5, 2)).tick(:slide), channel: 14, port: :iac_bus_1
       sleep 0.25
   end
 

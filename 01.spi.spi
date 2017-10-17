@@ -173,7 +173,7 @@ stop
   }
   sleep 3/4.0
 
-  piano score.look, (ring 70,65,55).look*2, sustain: 4
+  piano score.look, (ring 70,65,55).look*3, sustain: 4
 
   with_transpose 12*2 do
     musicbox score.look, 20, sustain: 3

@@ -319,9 +319,9 @@ with_fx :none, mix: 0 do
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
 
-#    p= Dust[/perc/, [7,7]]
+    p= Dust[/perc/, [7,7]]
     #p=MagicDust[/perc/,/stone/,[4..8]].look
-    p=Analog[/click/].look
+    #p=Analog[/click/].look
     #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _

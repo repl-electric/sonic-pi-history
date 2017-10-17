@@ -159,14 +159,25 @@ live_loop :music, sync: :metro do
     [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     )
+
+
+
+  #score = space()
+  cue(:m) if ((look+1) % score.count)  == 0
+  3.times{
+    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    sleep s[-1]
+  }
+  sleep 3/4.0
+
   puts score.look
   with_transpose 12 do
     #piano score.look[0], (ring 70,65,55).look*0.5, sustain: 12
-    zero score.look[0],1
+    #zero score.look[0],1
   end
   #score = space()
 
-  sleep 2
+#  sleep 2
 
   with_transpose 12*2 do
  #   musicbox score.look, 20, sustain: 3

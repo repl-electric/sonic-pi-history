@@ -25,7 +25,7 @@ live_loop(:metro)do
 end
 
 
-sop_cc 1, 127
+sop_cc 1, 0
 
 
 live_loop :moving, sync: :metro do

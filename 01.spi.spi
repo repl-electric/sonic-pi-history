@@ -75,10 +75,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1, 1, 1, 1,
-      1, 1, 60, 127,
-      1, 1, 1, 1,
-      1, 1, 60, 127,).look
+      1 1 1 1
+      1 1 60 127
+      1 1 1 1
+      1 1 60 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -401,7 +401,7 @@ _ _ p
           else
             0
           end
-    smp eval(s),amp: 0.4*amp, cutoff: (ine 127 110 1024).look, finish: fin
+    smp eval(s),amp: 0.6*amp, cutoff: (ine 127 110 1024).look, finish: fin
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _

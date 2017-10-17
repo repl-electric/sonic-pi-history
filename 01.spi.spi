@@ -4,7 +4,7 @@
 #zero_on :A2
 # midi_cc 1, 127,  port: :iac_bus_1, channel: 10
 
-sop_on :D3
+sop_on :E3
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 #sop_mode 0

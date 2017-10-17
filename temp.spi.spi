@@ -90,7 +90,7 @@ live_loop :beatz, sync: :vocals do
     with_fx :echo, decay: 8, phase: 6/16.0 do
       with_fx :echo,phase: 1/4.0, decay: 16 do
         with_fx :krush, mix: 0.2 do
-        smp Words[/happy/], start: 0.9, finish: 1.0, amp: 1.0
+#        smp Words[/happy/], start: 0.9, finish: 1.0, amp: 1.0
         end
       end
 

@@ -15,7 +15,7 @@ end
 
 live_loop :beat, sync: :beatz do
   tick
-  T = Tape[/high/,[0,0,0]].look
+  t = Tape[/high/,[0,0,0]].look
   s=(ing
   0 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0     0 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0
   0 0 0 0   0 0 0 0    0 0 0 0    0 0 0 0     0 0 0 0   0 0 0 0    0 0 0 0    0 0 0 t

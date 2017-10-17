@@ -251,7 +251,7 @@ live_loop :music, sync: :metro do
   }
 
   #sharp :E3, 3, sustain: 6
-  musicbox score.look, 20
+  musicbox score.look, 30
 end
 
 live_loop :sixteen, sync: :pat do

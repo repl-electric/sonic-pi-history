@@ -420,7 +420,7 @@ _ _ p
     #smp eval(s), cutoff: (line 80, 120, 128).look
 
     h,h1,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
-    #h = Dust[/hat/,7]
+   h = Dust[/hat/,7]
 
     s=(ring *%W{
 h _ h _  _ _ h _

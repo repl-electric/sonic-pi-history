@@ -117,7 +117,7 @@ score = (ing
     )
   z = score.look
   with_transpose 12 do
-    piano z=(ing
+    z=(ing
            :Cs4 :E4 :B3 :E4
            :Cs4 :E4 :B3 :E4
            :Cs4 :E4 :B3 :E4
@@ -139,8 +139,8 @@ score = (ing
 
            :Cs4 :E4 :A3 :Fs4
 
-      ).look, (ring 70,65,55).look, sustain: 4
-    puts z
+      ).look
+    piano z, (ring 70,65,55).look, sustain: 4
     zero z, 1
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
 

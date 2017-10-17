@@ -8,10 +8,11 @@ tick
     #midi_cc 6, 2, channel: 14, port: :iac_bus_1
 
     zero :A3
-    midi_poly_pressure :Fs4, 127, channel: 9, port: :iac_bus_1
 
+10.times{
+  midi_poly_pressure :Fs4, 127, channel: 9, port: :iac_bus_1
     sleep 0.5
-
+}
 
   12.times do
  #   midi_pitch_bend ((line 0.5, 1.0, 8)+(line 1.0, 0.5, 4)).tick(:slide), channel: 9, port: :iac_bus_1

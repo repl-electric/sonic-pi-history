@@ -1,9 +1,11 @@
 live_loop :wedge do
 
 at do
-  midi_cc 100, 0, channel: 14, port: :iac_bus_1
-  midi_cc 101, 0, channel: 14, port: :iac_bus_1
-  midi_cc 6, 2, channel: 14, port: :iac_bus_1
+    zero :Fs3
+
+    midi_cc 100, 0, channel: 14, port: :iac_bus_1
+    midi_cc 101, 0, channel: 14, port: :iac_bus_1
+    midi_cc 6, 2, channel: 14, port: :iac_bus_1
 
   8.times do
     tick

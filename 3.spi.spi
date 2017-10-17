@@ -142,11 +142,10 @@ score = (ing
       ).look
     #piano z, (ring 70,65,55).look, sustain: 4
     #zero z, 1
-    #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
 
     if spread(1,3).look
       with_transpose (-12*2) do
-#        musicbox z, sustain: 1/4.0*3
+        # musicbox z, sustain: 1/4.0*3
       end
     end
   end

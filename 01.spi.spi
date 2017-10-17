@@ -31,7 +31,6 @@ sop_cc 1, 0
 live_loop :moving, sync: :metro do
   #stop
   sync :music
-
   #ACE    EGA
 
   mega =
@@ -161,12 +160,12 @@ live_loop :music, sync: :metro do
 #  stop
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [:FS3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
+    [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
     )
   puts score.look
   with_transpose 12 do
-  piano score.look[0], (ring 70,65,55).look*1, sustain: 8
+    piano score.look[0], (ring 70,65,55).look*2, sustain: 8
 end
   #score = space()
 

@@ -159,6 +159,19 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.25 #(ramp 0.0, 0.85,128/8.0).tick(:firey)
 
+
+  score = (knit
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    [:FS3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
+  #score = space()
+  cue(:m) if ((look+1) % score.count)  == 0
+  3.times{
+    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
+    sleep s[-1]
+  }
+  sleep 3/4.0
+
+
   score = (knit
     [:A2, 3],3#,  [:D3,1.0],3, [:E3,2/4.0],3,
 
@@ -227,14 +240,14 @@ live_loop :music, sync: :metro do
         ).look
   end
 
-  harp z=score.look[0], 1*(ring 30,20,20).look, sustain: score.look[-1]*2
+#  harp z=score.look[0], 1*(ring 30,20,20).look, sustain: score.look[-1]*2
 
-  bass :A2, sustain: 2
+ # bass :A2, sustain: 2
 
   #bass :E2, sustain: 3
   #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
   3.times{
-    sleep score.look.flatten[-1]/(3.0);
+  #  sleep score.look.flatten[-1]/(3.0);
     #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
   }
 

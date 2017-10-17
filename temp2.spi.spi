@@ -19,7 +19,7 @@ tick
   zero :A3,1
   sleep 0.5
 
-2.times{
+8.times{
   midi_poly_pressure :A4, (ing 127 1).look, channel: 9, port: :iac_bus_1
     sleep 0.25
 }

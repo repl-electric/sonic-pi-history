@@ -156,7 +156,7 @@ end
 at do
   8.times do
     tick
-    zero_cc 100, (line 0.0, 0.5, 8).look
+    midi_cc 100, (line 0.0, 0.5, 8).look, channel: 14
   end
 end
 

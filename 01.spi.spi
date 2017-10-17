@@ -160,6 +160,29 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.0,  mod: 0.0, cutoff: 1.0, bass: 0.1, mode: 0
 #  stop
 
+  score = (ing
+    #,    [:A2, 3], [:G2, 0.5], [:D3, 3], [:E3, 3], [:GS2, 0.5],
+
+    [:A3, 6], [:D3, 3],  [:E3, 3],
+    [:B3, 3], [:Fs3, 3], [:E3, 3],
+
+
+#,    [:E3,  0.125],  [:B2, 0.125],   [:Gs3, 0.125],
+#,    [:E3,  0.125],  [:B2, 0.125],   [:Gs3, 0.125],
+#,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
+
+    #,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
+#,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
+    )
+
+  if spread(1,3).look
+    at do
+      sleep 1/4.0
+      harp :Cs4,10, sustain: (3*3)#/3
+    end
+  end
+
+
   puts score.look
   with_transpose 12 do
     #piano score.look[0], (ring 70,65,55).look*0.5, sustain: 12

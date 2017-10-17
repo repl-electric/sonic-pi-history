@@ -141,6 +141,7 @@ score = (ing
 
       ).look, (ring 70,65,55).look, sustain: 4
     puts z
+    puts z
     zero z
     #midi :E3, (ring 70,65,55).look*2.0, port: :iac_bus_1, channel: 14
 
@@ -151,17 +152,6 @@ score = (ing
     end
   end
   sleep 2
-end
-
-at do
-  midi_cc 100, 0, channel: 14, port: :iac_bus_1
-  midi_cc 101, 0, channel: 14, port: :iac_bus_1
-  midi_cc 6, 2, channel: 14, port: :iac_bus_1
-
-  8.times do
-    tick
-    midi_cc 10, (line 0.0, 0.5, 8).look, channel: 14, port: :iac_bus_1
-  end
 end
 
 live_loop :music, sync: :metro do

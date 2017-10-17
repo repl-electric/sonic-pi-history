@@ -1,5 +1,5 @@
 live_loop :wedge do
-
+tick
 at do
     zero (ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
 

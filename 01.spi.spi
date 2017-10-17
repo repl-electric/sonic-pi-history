@@ -182,6 +182,18 @@ live_loop :music, sync: :metro do
     end
   end
 
+  harp z=score.look[0], 1*(ring 30,20,20).look, sustain: score.look[-1]*2
+
+  #bass :A2, sustain: 4
+
+  #bass :E2, sustain: 3
+  #bass (ring :E2, :D2, :Fs2).look, sustain: 2.5, cutoff: 0.25
+  3.times{
+    sleep score.look.flatten[-1]/(3.0);
+    #harp_cc phase: 1*(ring 0.5, 0.5 + rand*0.05).tick(:inits)
+  }
+
+
 
   puts score.look
   with_transpose 12 do
@@ -189,6 +201,9 @@ live_loop :music, sync: :metro do
     #zero score.look[0],1
   end
   #score = space()
+
+
+
 
 #  sleep 2
 

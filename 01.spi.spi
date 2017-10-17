@@ -147,7 +147,7 @@ score = (ing
 #    zero z, 1
     if spread(1,2).look
       with_transpose (0) do
-#         musicbox z, sustain: 1/4.0*3
+         musicbox z, sustain: 1/4.0*3
       end
     end
   end
@@ -159,19 +159,6 @@ live_loop :music, sync: :metro do
   #sync "16"
   harp_cc phase: 0.0,  mod: 0.0, cutoff: 1.0, bass: 0.1, mode: 0
 #  stop
-  score = (knit
-    [:A3, 3/4.0],3,  [:D3,1.0],3, [:E3,2/4.0],3,
-    [:Fs3,3/4.0],1,  [:A3,1.0],1, [:D3,2/4.0],1,
-    [:A3, 3/4.0],3,  [:D3,1.0],3, [:E3,2/4.0],3,
-    )
-
-  #score = space()
-  cue(:m) if ((look+1) % score.count)  == 0
-  3.times{
-    harp s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look#, sustain: 12
-    sleep s[-1]
-  }
-  sleep 3/4.0
 
   puts score.look
   with_transpose 12 do

@@ -157,7 +157,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.0,  mod: 0.0, cutoff: 0.01, bass: 0.0, mode: 0
+  harp_cc phase: 0.0,  mod: 0.0, cutoff: 0.01, bass: 0.0, mode: 5
 #  stop
   score = (knit
     [:A3, 3/4.0],3,  [:D3,1.0],3, [:E3,2/4.0],3,

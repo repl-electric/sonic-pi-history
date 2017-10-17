@@ -5,7 +5,7 @@ at do
 
   8.times do
     tick
-    midi_pitch_bend ((line 0.5, 0.6, 4)+(line 0.6, 0.5, 4)).look, channel: 14, port: :iac_bus_1
+    midi_pitch_bend ((line 0.5, 0.6, 6)+(line 0.6, 0.5, 2)).look, channel: 14, port: :iac_bus_1
     sleep 0.5
   end
 end

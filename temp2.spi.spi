@@ -20,7 +20,7 @@ tick
 
     8.times{
       midi_poly_pressure (ing :A1 :A2 :A3 :a4 :A5).tick(:initi), 1.0, channel: 9, port: :iac_bus_1
-      sleep 0.25
+      sleep 0.125
 }
 
   12.times do

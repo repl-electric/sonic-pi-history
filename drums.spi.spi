@@ -18,7 +18,7 @@ with_fx :none, mix: 0 do
     k4 = Frag[/kick/,3]
 
     s=(ring *%W{
-     k2 _ _ _   _ _ _ _   _ _ _ k4
+     k2 _ _ _   _ _ _ _   _ _ _ t1
      k1 _ _ _   _ _ _ _   _ _ _ _
 
      k2 _ _ _   _ _ _ _   _ _ _ _

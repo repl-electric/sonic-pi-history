@@ -25,7 +25,7 @@ with_fx :none, mix: 0 do
      k1 _ _ _   _ _ _ _   _ _ _ _
 
      k2 _ _ _   _ _ _ _   _ _ _ _
-     k1 _ _ _   _ _ _ _   Frag[/kick/,3] _ k2 _
+     k1 _ _ _   _ _ _ _   _ _ _ _
   }).look
 
     #sidechain if eval(s) && spread(1,4).look

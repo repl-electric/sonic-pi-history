@@ -153,8 +153,8 @@ score = (ing
            :Cs4 :E4 :A3 :Fs4
 
       ).look
-    piano z, (ring 70,65,55).look*1.5, sustain: 4
-    zero z, 1
+ #   piano z, (ring 70,65,55).look*1.5, sustain: 4
+#    zero z, 1
     zero_cc 1, (ing
       1 1 1 1
       1 1 60 127
@@ -187,11 +187,7 @@ live_loop :music, sync: :metro do
     [:A3, 3/4.0],1, [:D3,1],1,  [:E3,2/4.0],1,
     [:E3, 3/4.0],1, [:Fs3,1],1, [:D3,2/4.0], 1,
     [_,   3/4.0],1, [:E3,1],1,  [:E3,2/4.0 + (3-3/4.0) - 0.25],1,
-
     )
-
-
-
 
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0

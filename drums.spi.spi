@@ -28,20 +28,15 @@ with_fx :none, mix: 0 do
     p=Analog[/click/].look
     #  puts p
     s=(ring *%W{
-p _
-_ _  _
-_ _ _ p
-_ _ _ _
-_ p _ _
-_ p _
+p _ _ _   _ _ p _
+_ _ p _
+_ _ _ _   _ _ p _
+_ _ p _
 
-p _ _ _
- _ _ p _
+p _ _ _   _ _ p _
 _ _ p _
-_ _ _ _
+_ _ _ _   _ _ p _
 _ _ p _
-_ _
-p _
 }).look
 
     s1=(ring *%W{

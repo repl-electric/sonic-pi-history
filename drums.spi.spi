@@ -60,7 +60,7 @@ _  _  p2 _
       end
       #sidechain if eval(s)
 
-      with_swing (knit 0.02,1).look do
+      with_swing 0.1 do
       with_fx :gverb, mix: 0.1 do
       smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.28*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
         end

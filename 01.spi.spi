@@ -1,9 +1,9 @@
-#sop_on :A0, 20, sustain: 12#, mode: 2
+sop_on :A0, 20, sustain: 12#, mode: 2
 #bass :A2
 #zero_on :A2
 # midi_cc 1, 127,  port: :iac_bus_1, channel: 10
 
-midi_cc 1, ((line 0,127,127)+(line 127,0,127)).look,  port: :iac_bus_1, channel: 10
+midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 #sop_mode 0

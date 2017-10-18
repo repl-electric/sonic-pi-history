@@ -172,7 +172,7 @@ end
 
 live_loop :music, sync: :metro do
   tick
-
+stop
   #sync "16"
   harp_cc phase: 0.5,  mod: 0.05, cutoff: 1.0, bass: 0.1, mode: 4
 #  stop
@@ -181,7 +181,7 @@ live_loop :music, sync: :metro do
     [:CS3, 3]
     )
 
-#  score = (knit
+  score = (knit
     [:A3, 3/4.0],3,   [:D3,1.0],3, [:E3,2/4.0],3,
     [:Fs3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
   #score = space()

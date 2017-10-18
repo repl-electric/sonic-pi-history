@@ -8,7 +8,7 @@
 
 
 #midi_cc 1, 0,  port: :iac_bus_1, channel: 10
-sop_mode 4
+sop_mode 1
 
 
 #musicbox :A3, sustain: 1

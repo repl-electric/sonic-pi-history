@@ -7,7 +7,7 @@
 #sop_on :E0
 
 
-#midi_cc 1, 0,  port: :iac_bus_1, channel: 10
+midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 sop_mode 1
 
 

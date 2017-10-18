@@ -201,8 +201,8 @@ live_loop :music, sync: :metro do
 #  sleep 3/4.0
 
   with_transpose -24 do
-        zero z=score.look[0]
-    end
+    zero z=score.look[0]
+  end
   with_transpose -12 do
     bass z=score.look[0], 127, sustain: score.look[-1]*2
   end

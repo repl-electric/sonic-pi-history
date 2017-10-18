@@ -26,7 +26,7 @@ with_fx :none, mix: 0 do
     #p= Dust[/perc/, [7,7]]
     #p=MagicDust[/perc/,/stone/,[4..8]].look
     p=Analog[/click/].look
-    p = Crystal[/stick/,0]
+    p = Crystal[/stick/,1]
     #  puts p
     s=(ring *%W{
 p _ _ _   _ _ p _

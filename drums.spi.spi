@@ -40,7 +40,7 @@ with_fx :none, mix: 0 do
     s=(ring *%W{
 p p p _
 _ _ p _
-p _ p _
+p p p _
 _ _ p _
 
 }).look

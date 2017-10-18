@@ -1,5 +1,6 @@
 sop_on :A1, 20, sustain: 12#, mode: 2
-bass :A2
+bass :A3
+
 #zero_on :A2
 # midi_cc 1, 127,  port: :iac_bus_1, channel: 10
 

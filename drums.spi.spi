@@ -17,18 +17,18 @@ with_fx :none, mix: 0 do
     k4 = Frag[/kick/,3]
 
     s=(ring *%W{
-     k2 _ _ _   _ _ _ _   k1 _ _ _
-     _ _ _ t1    k2 _ _ _   _ _ _ _
-
-     k2 _ _ _   _ _ _ _   k1 _ _ _
-     _ _ _ _    k2 _ _ _  _ _ _ _
+     k2 _ _ _   _ _ _ _
+     k1 _ _ _   _ _ _ t1
+     k2 _ _ _   _ _ _ _
+     k2 _ _ _   _ _ _ _
+     k1 _ _ _   _ _ _ _    k2 _ _ _  _ _ _ _
 
      k2 _ _ _   _ _ _ _   k1 _ _ _
      k1 _ _ _   k2 _ _ _  _ _ _ _
   }).look
 
-    sidechain if eval(s) && spread(1,4).look
-    smp eval(s), amp: 2.3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
+    #sidechain if eval(s) && spread(1,4).look
+    #smp eval(s), amp: 2.3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look, cutoff: 100
 
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
     #p= Dust[/perc/, [7,7]]
@@ -109,7 +109,7 @@ _  _  p2 _
           else
             0
           end
-    smp eval(s),amp: 0.3*amp, cutoff: (ine 127 110 1024).look, finish: fin
+    #smp eval(s),amp: 0.3*amp, cutoff: (ine 127 110 1024).look, finish: fin
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
@@ -150,7 +150,7 @@ _ _ h _  _ _ h _}).look
           end
     smp eval(s), cutoff: 1*(line 110, 127,32).look,
     attack: (line 0.001,0.0,64).look,
-    sustain: (knit 0.01,4,0.1,4,1.0,4).look, amp: amp*0.8*1.2
+    sustain: (knit 0.01,4,0.1,4,1.0,4).look, amp: amp*0.8*0
     #sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
     sleep 1/8.0
   end

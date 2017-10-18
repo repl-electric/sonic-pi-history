@@ -187,10 +187,10 @@ live_loop :music, sync: :metro do
 
   at do
     with_transpose(12*-1) do
-      musicbox melo[0], 20, sustain: 3
-      sleep 1
-      musicbox melo[1], 20, sustain: 2
-      sleep 1
+      musicbox melo[0], 20, sustain: 1
+      #sleep 1
+      musicbox melo[1], 20, sustain: 1
+      #sleep 1
       musicbox melo[2], 20, sustain: 1
     end
   end

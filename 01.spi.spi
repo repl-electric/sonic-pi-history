@@ -80,10 +80,10 @@ live_loop :moving, sync: :metro do
       #puts "#{s2}/#{s}"
       #zero s,(line 100,0,9).look*0.5 if s && s[0]
     zero_cc 1, (ing
-      1, 1, 1, 1,
-      1, 1, 60, 127,
-      1, 1, 1, 1,
-      1, 1, 60, 127,).look
+      1 1 1 1
+      1 1 60 127
+      1 1 1 1
+      1 1 60 127).look
 
       #zero s,(ring 120,20,20,20).look if s && s[0]
       #midi_pitch_bend 0.5, port: :iac_bus_1, channel: 9
@@ -102,49 +102,49 @@ end
 live_loop :pi, sync: :metro do
   tick
 score = (ing
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
 
-    [:D3,  0.25],  [:A3, 0.125],   [:Fs3, 0.125],
-    [:D3,  0.25],  [:A3, 0.125],   [:Fs3, 0.125],
-    [:D3,  0.25],  [:A3, 0.125],   [:Fs3, 0.125],
+    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
+    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
+    [:D3  0.25]  [:A3 0.125]   [:Fs3 0.125]
 
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
-    [:Cs3, 0.25],  [:A3, 0.125],   [:FS3,  0.125],
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
+    [:Cs3 0.25]  [:A3 0.125]   [:FS3  0.125]
 
-    [:D3, 0.25],  [:B3, 0.125],   [:Fs3,  0.125],
-    [:D3, 0.25],  [:B3, 0.125],   [:FS3,  0.125],
-    [:D3, 0.25],  [:B3, 0.125],   [:FS3,  0.125],
+    [:D3 0.25]  [:B3 0.125]   [:Fs3  0.125]
+    [:D3 0.25]  [:B3 0.125]   [:FS3  0.125]
+    [:D3 0.25]  [:B3 0.125]   [:FS3  0.125]
 
-#,    [:E3, 0.25],  [:A3, 0.125],   [:Gs3,  0.125],
-#,    [:E3, 0.25],  [:B3, 0.125],   [:GS3,  0.125],
-11#,    [:E3, 0.25],  [:B3, 0.125],   [:GS3,  0.125],
+#    [:E3 0.25]  [:A3 0.125]   [:Gs3  0.125]
+#    [:E3 0.25]  [:B3 0.125]   [:GS3  0.125]
+11#    [:E3 0.25]  [:B3 0.125]   [:GS3  0.125]
     )
   z = score.look
   with_transpose 12 do
     z=(ing
-           :Cs4, :E4, :B3, :E4,
-           :Cs4, :E4, :B3, :E4,
-           :Cs4, :E4, :B3, :E4,
+           :Cs4 :E4 :B3 :E4
+           :Cs4 :E4 :B3 :E4
+           :Cs4 :E4 :B3 :E4
 
-           :B3, :Cs4, :E3,
-           :B3, :Cs4, :E3,
+           :B3 :Cs4 :E3
+           :B3 :Cs4 :E3
 
-           :Gs4, :E4, :B3, :E4,
-           :Gs4, :E4, :B3, :E4,
-           :Gs4, :E4, :B3, :Fs4,
+           :Gs4 :E4 :B3 :E4
+           :Gs4 :E4 :B3 :E4
+           :Gs4 :E4 :B3 :Fs4
 
-           :Fs4, :E4, :B3, :E4,
-           :Fs4, :E4, :B3, :E4,
-           :Fs4, :E4, :B3, :E4,
+           :Fs4 :E4 :B3 :E4
+           :Fs4 :E4 :B3 :E4
+           :Fs4 :E4 :B3 :E4
 
-           :Fs4, :E4, :A3, :E4,
-           :Fs4, :D4, :A3, :E4,
-           :Fs4, :Cs4, :A3, :E4,
+           :Fs4 :E4 :A3 :E4
+           :Fs4 :D4 :A3 :E4
+           :Fs4 :Cs4 :A3 :E4
 
-           :Cs4, :E4, :A3, :Fs4,
+           :Cs4 :E4 :A3 :Fs4
 
       ).look
     #piano z, (ring 70,65,55).look*1.5, sustain: 4
@@ -165,16 +165,16 @@ live_loop :music, sync: :metro do
 #  stop
   z = nil
   score = (ing
-    #,    [:A2, 3], [:G2, 0.5], [:D3, 3], [:E3, 3], [:GS2, 0.5],
+    #    [:A2 3] [:G2 0.5] [:D3 3] [:E3 3] [:GS2 0.5]
 
-    [:A3, 6], [:D3, 3],  [:E3, 3],
-    [:B3, 3], [:Fs3, 3], [:E3, 3],
+    [:A3 6] [:D3 3]  [:E3 3]
+    [:B3 3] [:Fs3 3] [:E3 3]
 
-#,    [:E3,  0.125],  [:B2, 0.125],   [:Gs3, 0.125],
-#,    [:E3,  0.125],  [:B2, 0.125],   [:Gs3, 0.125],
-#,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
-#,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
-#,    [:Fs3,  0.25],  [:Cs3, 0.125],   [:A3, 0.125],
+#    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]
+#    [:E3  0.125]  [:B2 0.125]   [:Gs3 0.125]
+#    [:Fs3  0.25]  [:Cs3 0.125]   [:A3 0.125]
+#    [:Fs3  0.25]  [:Cs3 0.125]   [:A3 0.125]
+#    [:Fs3  0.25]  [:Cs3 0.125]   [:A3 0.125]
     )
 
   harp z=score.look[0], 1*(ring 30,20,20).look, sustain: score.look[-1]#*2
@@ -190,8 +190,8 @@ live_loop :music, sync: :metro do
   #bass :A2, sustain: 3
 
   melo = (ing
-    [:A3, :CS4, :E4],  [:D3, :Fs3, :A3],  [:E3, :Gs3, :B3],
-    [:B3, :D4, :Fs4],  [:Fs3, :A3, :Cs4], [:E3, :Gs3, :B3],).look
+    [:A3 :CS4 :E4]  [:D3 :Fs3 :A3]  [:E3 :Gs3 :B3]
+    [:B3 :D4 :Fs4]  [:Fs3 :A3 :Cs4] [:E3 :Gs3 :B3]).look
 
 
   #bass :A2
@@ -340,7 +340,7 @@ _ _ p
       #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 1.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
 
       if eval(s) && spread(1,1).look
-        smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25,-0.25,).tick(:ingit)
+        smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25,-0.25).tick(:ingit)
       end
 
     end
@@ -372,7 +372,7 @@ _ _ p
           else
             0
           end
-#    smp eval(s),amp: 0.6*amp, cutoff: (ine 127, 110, 1024,).look, finish: fin
+#    smp eval(s),amp: 0.6*amp, cutoff: (ine 127 110 1024).look, finish: fin
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
@@ -384,7 +384,7 @@ _ _ p
  _ _ _ _    _ _ _ _
 }).look
 
-  #smp eval(s), amp: 1.0, cutoff: (ine 127, 110, 1024,).look, finish: 0.07, rpitch: -7, attack: 0.15
+  #smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
     s=(ring *%W{_ _ _ _   c1 _ _ _}).look

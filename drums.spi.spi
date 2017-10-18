@@ -21,10 +21,10 @@ with_fx :none, mix: 0 do
      k2 _ _ _   _ _ _ _   _ _ _ t1
      k1 _ _ _   _ _ _ _   _ _ _ _
 
-     k2 _ _ _   _ _ _ _   _ _ _ _
+     k2 _ _ _   _ _ _ _   _ _ _ t1
      k1 _ _ _   _ _ _ _   _ _ _ _
 
-     k2 _ _ _   _ _ _ _   _ _ _ _
+     k2 _ _ _   _ _ _ _   _ _ _ t1
      k1 _ _ _   _ _ _ _   _ _ _ _
   }).look
 
@@ -78,7 +78,7 @@ _  _  p2 _
       #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 1.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
 
       if eval(s) && spread(1,1).look
-        smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25,-0.25,).tick(:ingit)
+        smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25,-0.25).tick(:ingit)
       end
 
     end
@@ -110,7 +110,7 @@ _  _  p2 _
           else
             0
           end
-#    smp eval(s),amp: 0.6*amp, cutoff: (ine 127, 110, 1024,).look, finish: fin
+#    smp eval(s),amp: 0.6*amp, cutoff: (ine 127 110 1024).look, finish: fin
 
     s=(ring *%W{
  _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
@@ -122,7 +122,7 @@ _  _  p2 _
  _ _ _ _    _ _ _ _
 }).look
 
-  #smp eval(s), amp: 1.0, cutoff: (ine 127, 110, 1024,).look, finish: 0.07, rpitch: -7, attack: 0.15
+  #smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
 
  # = spread(7,11).map{|s| s ? :hit : :miss}
     s=(ring *%W{_ _ _ _   c1 _ _ _}).look

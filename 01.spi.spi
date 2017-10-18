@@ -149,7 +149,7 @@ end
 live_loop :music, sync: :metro do
   tick
   #sync "16"
-  harp_cc phase: 0.0,  mod: 0.0, cutoff: 1.0, bass: 0.2, mode: 4
+  harp_cc phase: 0.0,  mod: 0.0, cutoff: 1.0, bass: 0.0, mode: 4
 #  stop
   z = nil
   score = (ing

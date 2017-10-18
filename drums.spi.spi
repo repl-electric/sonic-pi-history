@@ -39,9 +39,9 @@ with_fx :none, mix: 0 do
     #  puts p
     s=(ring *%W{
 p1 p2 p2 _
-_ _ p2 _
-p1 _ p2 _
-_ _ p2 _
+_  _  p2 _
+p1 _  p2 _
+_  _  p3 _
 
 }).look
 

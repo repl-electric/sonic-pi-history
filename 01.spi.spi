@@ -11,7 +11,7 @@ midi_cc 1, 0,  port: :iac_bus_1, channel: 10
 sop_mode 4
 #sop_on :A2
 
-live_loop :white, sync: :metro do
+live_loop :ocean, sync: :metro do
   tick
   #synth :pnoise, note: :A3, sustain: 1/8.0,  cutoff: (ramp 30, 40, 32).look, attack_level: 1/4.0, res: 0.9
   sleep 1/2.0

@@ -8,7 +8,7 @@
 live_loop :wedge do
 tick
 
-    #zero x=(ing :Fs3, :Gs3, :B3, :Cs4, :D4, :E4, :Fs4,).look
+    #zero x=(ing :Fs3 :Gs3 :B3 :Cs4 :D4 :E4 :Fs4).look
 #puts x
 
 
@@ -19,7 +19,7 @@ tick
   sleep 1.0
 
     8.times{
-      midi_poly_pressure (ing :A1, :A2, :A3, :a4, :A5,).tick(:initi), 1.0, channel: 9, port: :iac_bus_1
+      midi_poly_pressure (ing :A1 :A2 :A3 :a4 :A5).tick(:initi), 1.0, channel: 9, port: :iac_bus_1
       sleep 0.125
 }
 

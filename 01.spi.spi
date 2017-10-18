@@ -13,7 +13,7 @@ sop_mode 4
 
 live_loop :white, sync: :metro do
   tick
-  pink-noise :A1
+  white-noise :A1
   sleep 3
 end
 

@@ -177,8 +177,8 @@ live_loop :music, sync: :metro do
   harp_cc phase: 0.5,  mod: 0.05, cutoff: 1.0, bass: 0.1, mode: 4
 #  stop
   z = nil
-  score = (ing
-    [:CS3 3]
+  score = (ring
+    [:CS3, 3]
     )
 
 #  score = (knit

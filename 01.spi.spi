@@ -183,7 +183,7 @@ live_loop :music, sync: :metro do
     [:B3, :D4, :Fs4],  [:Fs3, :A3, :Cs4], [:E3, :Gs3, :B3],).look
 
 
-  bass :B2
+  bass :Cs2
 
   at do
     with_transpose(12*0) do

@@ -13,7 +13,7 @@ sop_mode 4
 
 live_loop :white, sync: :metro do
   tick
-  synth :noise, note: :A1, sustain: 1/4.0,  cutoff: 25
+  synth :noise, note: :A1, sustain: 1/4.0,  cutoff: 35
   sleep 1/4.0
 end
 

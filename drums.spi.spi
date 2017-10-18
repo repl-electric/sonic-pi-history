@@ -36,7 +36,7 @@ with_fx :none, mix: 0 do
     #p=MagicDust[/perc/,/stone/,[4..8]].look
     p=Analog[/click/].look
     p1,p2,p3,p4 = *Crystal[/cymbal/,[16,18,12,13]]
-    p1,p2,p3,p4 = *Crystal[/cymbal/,[16,18,12,14]]
+    p1,p2,p3,p4 = *Crystal[/cymbal/,[16,19,12,14]]
     #  puts p
     s=(ring *%W{
 p1 p2 p3 _

@@ -13,7 +13,7 @@ sop_mode 4
 
 live_loop :white, sync: :metro do
   tick
-  white_noise :A1
+  noise :A1
   sleep 3
 end
 

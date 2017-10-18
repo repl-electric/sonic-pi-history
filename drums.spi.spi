@@ -38,7 +38,7 @@ with_fx :none, mix: 0 do
     p = Crystal[/cymbal/,[16,16,19]].look
     #  puts p
     s=(ring *%W{
-p _ p _
+p p p _
 _ _ _ _
 _ _ p _
 _ _ p _

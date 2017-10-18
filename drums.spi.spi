@@ -39,11 +39,11 @@ with_fx :none, mix: 0 do
     #  puts p
     s=(ring *%W{
 p _ _ _
-_ p _ _
-_ _ p _
-_ _ _ p
-_ _ p _
-p _ _ _
+_ _ _ _
+_ _ _ _
+_ _ _ _
+_ _ _ _
+_ _ _ _
 
 }).look
 

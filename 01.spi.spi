@@ -13,7 +13,7 @@ sop_mode 4
 
 live_loop :ocean, sync: :metro do
   tick
-  synth :pnoise, note: :A3, sustain: 1/8.0,  cutoff: (ramp 30, 40, 32).look, attack_level: 1/4.0, res: 0.9
+  synth :pnoise, note: :A3, sustain: 1/8.0,  cutoff: 20, attack_level: 1/4.0, res: 0.9
   sleep 1/2.0
 end
 

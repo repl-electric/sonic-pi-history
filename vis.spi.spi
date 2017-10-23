@@ -4,7 +4,7 @@
 shader :shader, "dots.glsl", "sphere.vert", "tri", 300
 shader [:iR,:iG,:iB].choose, rand*1.0
 
-shader :iMode, 0
+shader :iMode,1
 shader :iAlien, 0.
 shader :iMotion, 0.004
 shader :iZoom, 0.1

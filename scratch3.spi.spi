@@ -1,0 +1,371 @@
+live_loop :test, sync: :metro do
+  tick
+  score = (ing
+    [:A2  :Cs3  :E3]
+    [:E2  :Gs2  :B2]
+    [:D2  :Fs2  :A2]
+    [:B2  :D3   :FS3]
+    [:FS2 :A2   :Cs3]
+    [:E2  :Gs2  :B2]
+    ).look
+  puts score
+  sop score[1],  50, mode: 0, pan: 0, sustain: 1
+  sleep 2
+  sop score[0],  50, mode: 0, pan: 0, sustain: 1
+  sleep 2
+  sop score[2],  50, mode: 2, pan: 0, sustain: 1
+  sleep 2
+  sleep 2
+end
+
+sop_cc  1, 127
+#sop_cc 1, 127
+
+live_loop :ocean, sync: :metro do
+  tick
+  #synth :pnoise, note: :A3, sustain: 1/8.0,  cutoff: 25, attack_level: 1/4.0, res: 0.9, amp: 0.1
+  sleep 1/2.0
+end
+
+#harp :E4,10, sustain: 32
+
+live_loop :fucj, sync: :metro do; tick
+  #sop_cc 1, ((line 0,127,127)+(line 127,0,127)).look
+  #sop_cc 1, 127
+  sleep 1#/2.0
+end
+
+#sharp :E3,100, sustain: 12
+
+live_loop :music, sync: :metro do;tick;z=nil
+  #sync "16"
+  harp_cc phase: 0.5,  mod: 0.2, cutoff: 1.0, bass: 0.2, mode: 0
+  #tick_reset!
+#  score = (ing [:A3 3] [:D3 3] [:e3 3]  [:b3 3] [:Fs3 3] [:e3 3])
+
+  score = (knit
+    [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
+    [:Fs3,3/4.0],1, [:A3,1.0],1, [:D3,2/4.0],1,
+    [:A3,3/4.0],1, [:D3,1.0],1, [:E3,2/4.0],1
+    )
+  #score = space()
+  cue(:m) if ((look+1) % score.count)  == 0
+  3.times{
+    harp s=score.tick, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
+    sleep s[-1]
+  }
+  sleep 3/4.0
+
+  bass (ing :A3 :D4 :E4).look, sustain: 1
+
+  #harp z=score.look[0], 1*(ring 30,20,20).look, sustain: score.look[-1]*2
+  3.times{
+  #  sleep score.look.flatten[-1]/(3.0);
+  }
+  if spread(1,3).look
+    at do
+      sleep 1/4.0
+      #harp :E4, 1, sustain: (3*3)#/3
+    end
+  end
+end
+
+live_loop :pi, sync: :music do
+  tick
+  with_transpose 12*0 do
+    z=(ing
+      :Cs4 :E4 :B3 :E4
+      :Cs4 :E4 :B3 :E4
+      :Cs4 :E4 :B3 :E4
+
+      # :B3 :CS4 :E3
+      # :B3 :CS4 :E3
+
+      # :GS4 :E4 :B3 :E4
+      # :GS4 :E4 :B3 :E4
+      # :GS4 :E4 :B3 :FS4
+
+      # :FS4 :E4 :B3 :E4
+      # :FS4 :E4 :B3 :E4
+      # :FS4 :E4 :B3 :E4
+
+      # :FS4 :E4 :A3 :E4
+      # :FS4 :D4 :A3 :E4
+      # :FS4  :CS4 :A3 :E4
+
+      # :CS4 :E4 :A3 :FS4
+      ).look
+
+    z=(ing :D4  :Cs4 _ :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4).look
+
+    piano z, (ing 70 65 55).look*1.0, sustain: 4
+    zero z,  (ing 30 10 30 10).look
+    if spread(1,3).look
+      with_transpose (1*12) do
+        #musicbox z, sustain: 1/8.0#*3
+      end
+    end
+  end
+  sleep 2
+end
+
+with_fx :none, mix: 0 do
+  live_loop :drums, sync: :metro do
+    with_fx :reverb, mix: 0.2, room: 0.8 do |r_fx|
+        8.times{
+          #sync '18'
+    tick
+    #sync "16"
+    t1 = CineAmbi[/One shots/,/tom/,2]
+    k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+    k4 = Frag[/kick/,3]
+    p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
+
+        k3 = Tape[/tom/,23]
+        k2 = Tape[/tom/,22]
+        k4 = Mountain[/kick/,4]
+        k5 = Lo[/kick/,15]
+
+        #k1 = Tape[/drum/,7]
+
+        s=(ing
+          k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ _
+          k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ t1
+          k1 _ k2 _   k4 _ _ _    k1 _ _ _   k4 _ _ t1
+          k1 _ k2 _   k3 _ _ _    k1 _ _ _   k4 _ _ _
+
+          k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ _
+          k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ t1
+          k3 _ k2 _   k4 _ _ _    k1 _ _ _   k4 _ _ t1
+          k3 _ k3 _   k2 _ _ _    k1 _ _ _   k4 _ _ _
+
+  ).look
+
+    sidechain if s && spread(1,4).look
+    smp s, amp: 1.8*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2#, attack: (knit 0.0,12, 0.02,4, 0.0,8).look#, cutoff: 127
+
+    p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
+    #p= Dust[/perc/, [7,7]]
+    #p=MagicDust[/perc/,/stone/,[4..8]].look
+    #p1,p2,p3,p4=Analog[/click/].look
+        p1,p2,p3,p4 = *Crystal[/cymbal/,[32,18,12,13]]
+        #a,b,p3,p4   = *Crystal[/cymbal/,[32,18,12,13]]
+        d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
+        d5 = Drip[/cymbal/,10]
+        c1 = CineAmbi[/one shot/,/cymbal/,1]
+        c3 = CineAmbi[/one shot/,/cymbal/,3]
+        c2 = CineAmbi[/one shot/,/cymbal/,6]
+        c4 = CineAmbi[/one shot/,/cymbal/,0]
+
+       # puts c4
+        s1,s2 = Mountain[/stick/,[4,2]]
+        #c2,p1 = Dust[/perc/, /conga/]
+        #c1,p2 = Dust[/perc/, /conga/]
+
+    #p1,p2,p3,p4 = *Crystal[/cymbal/,[32,32,32,32]]
+    #p1,p2,p3,p4 = *Crystal[/cymbal/,[4,18,12,14]]
+    #  puts p
+
+          # c3 c3 c2 _   s1 _  s1 _
+          # c3 c2 _  _   s1 _  s1 _
+
+          # c3 c3 c2 _   s1 _  s1 _
+          # c3 c2 _  _   s1 _  s1 _
+
+          # c3 c3 c2 _   s1 _  s1 _
+          # c3 c2 _  _   s1 _  s1 _
+
+          # c3 c3 c2 _   s1 _  s1 _
+          # c3 c2 _  _   s1 d2 s1 _
+
+        c1 = CineAmbi[/one shot/,/cymbal/,8]
+        c4 = CineAmbi[/one shot/,/cymbal/,13]
+        s1 = Tape[/cymbal/,8]
+        c4 = Tape[/cymbal/,11]
+
+        oc1 = CineAmbi[/one shot/,/cymbal/,5]
+
+        t1 = Tape[/tom/,0]
+
+        cd1 =  Drip[/fx/,/12/,1]
+        f1 = Drip[/fx/,/12/,14]
+
+        #58 88  16
+        f1 = Drip[/fx/,/88/].shuffle.look
+#        f1 = Drip[/fx/,/12/].look
+
+        s = (ing _ _ d5 _   _ _ d5 _).look
+          #smp s
+
+        #smp t1
+        t1 = Tape[/tom/,[28,28,22]].look
+
+        if s=(ing
+            p _ _
+            _ p _
+            _ _ p
+            _ _ _).look
+          smp t1, amp: 0.5, rate: (knit 1,3, 0.85,3).look
+        end
+
+        s=(ing
+           d2 d1   _ _  _ d1 _ _    #1
+           _  _ c4 _  s1 _ s1 _    #2
+
+          d2 d1   _ _  _ d1 _ _     #3
+          _  _ c4 _   s1 _  c3 _   #4
+
+          d2 d1   _ _  _ d1  _ _    #5
+          _  _ c4 _ s1 _    s1 _   #6
+
+          d2 d2   _ _  _ d1 _ _     #7
+          f1 _ _ d5    s1 _ d5 _  #8
+
+
+          ).look
+#        puts s if s
+
+#        with_swing -0.02 do
+
+
+          if s == f1
+            puts f1
+          end
+
+
+        if s
+        #  midi 'e4', port: :iac_bus_1, channel: 15
+        end
+
+        if s
+          with_swing -0.02,2 do
+            smp s, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 1.8*(line 1.0,0.9,6*8).look,
+            rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look# rpitch: -12*2
+          end
+        end
+
+        if s && spread(1,6).look
+          smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
+        end
+      #sidechain if eval(s)
+
+          if s
+#            with_swing 0.1,2 do
+      #with_fx :gverb, mix: 0.15 do
+         #     smp s, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look
+ #           end
+          end
+      #end
+      #smp eval(s), cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 1.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+
+          if s && spread(3,7).look
+#            with_swing -0.02,2 do
+              smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25,-0.25).tick(:ingit)
+#            end
+      end
+
+
+    c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
+
+    c2 =  (knit Frag[/coil/,-31],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c2 =  #(knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c3 =  (knit Frag[/coil/,-29],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
+    c2 =  Analog[/click/].look
+
+  s=(ring *%W{
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+ _ _ _ _   c1 _ _ _   _ _ _ _   c2 _ _ _
+
+ _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
+}).look
+
+    fin=  eval(s) != c2 ? (line 0.05, 0.01, 64).look : (line 1.0, 0.99, 2*64).look
+    amp = if ((v=eval(s)) != _)
+            v.is_a?(String) ? 1.0 : (v[:amp] || 1.0)
+          else
+            0
+          end
+#    smp eval(s),amp: 0.25*amp, cutoff: (ine 127 110 1024).look, finish: fin
+
+    s=(ring *%W{
+ _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
+ _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
+
+ _ _ _ _     _ _ _ _   _ _ _ _   _ _ _ _
+ _ _ _ _     _ _ _ _   _ _ _ _   _ _ c3 _
+
+ _ _ _ _    _ _ _ _
+}).look
+
+#    smp eval(s), amp: 1.0, cutoff: (ine 127 110 1024).look, finish: 0.07, rpitch: -7, attack: 0.15
+
+    h,h1,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
+    #h = Dust[/hat/,7]
+        #h = Lo[/ride/,0]
+    h = CineElec[/hat/,3]
+
+    s=(ring *%W{
+h _ h _  _ _ h _
+_ _ h _  _ _ h _
+h _ h _  _ _ h {path:h,amp:0.3}
+_ _ h _  _ _ h _}).look
+
+  s=(ing
+_ _ h _  _ _ h _
+_ _ h _  _ _ h _
+_ _ h _  _ _ h {path:h,amp:0.3}
+_ _ h _  _ _ h _).look
+
+    amp = if ((v=s) != _)
+            v.is_a?(String) ? 0.5 : (v[:amp] || 0.5)
+          else
+            0
+          end
+    smp s, cutoff: 1*(line 110, 127,32).look,
+    attack: (line 0.001,0.0,64).look,
+    sustain: (knit 0.01,4,0.1,4,0.1,4).look, amp: amp*0.8*1
+    #sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
+          sleep 1/8.0
+        control r_fx, mix: 0.1
+
+
+      }
+    end
+  end
+end
+
+
+live_loop(:metro)do
+  tick;
+  cue("16") if look % 16.0 == 0.0
+  cue("24") if look % 24.0 == 0.0
+  cue("18") if look % 18.0 == 0.0
+  cue("32") if look % 32.0 == 0.0
+  cue("64") if look % 64.0 == 0.0
+#  midi_start if tick == 0
+#  midi_clock_beat 1.0, port: :iac_bus_1
+  sleep 1.0
+end
+
+live_loop :sixteen, sync: :drums do
+  tick
+  c1 = CineElec[/one shots/,/pepper/]
+  c1 = Tape[/_high/,49]
+  #puts c1
+    s=(ring *%W{
+     _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ c1
+     _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+     _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+  }).look
+  if eval(s)
+    #smp Vocals[1]
+    with_fx (knit :none, 3*128, :echo, 128).look do
+      smp eval(s), amp: 0.8, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)
+     end
+  end
+  sleep 1/16.0
+end

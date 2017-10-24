@@ -1,7 +1,7 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/monkey.rb"
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 #@points = 0
-shader :shader, "dots.glsl", "sphere.vert", "lines", 10000
+
 shader [:iR,:iG,:iB].choose, 9.0
 
 shader :iMode,4
@@ -26,7 +26,8 @@ shader :fx, :bleach, 1
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-   x = "#{([" "]*rand_i(100)).join("")}#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten)).shuffle.join(" "*rand_i(400))[0..300]}"
+shader :shader, "dots.glsl", "sphere.vert", "lines", 10000
+  x = "#{([" "]*rand_i(100)).join("")}#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten)).shuffle.join(" "*rand_i(400))[0..300]}"
 
    x = "#{[" " * rand_i(600)].join}#{(self.methods+self.private_methods+Object.instance_methods).choose}#{[" "*rand_i(600)].join}"
 

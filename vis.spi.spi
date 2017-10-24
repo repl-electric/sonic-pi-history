@@ -46,7 +46,7 @@ shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :bloom, 0.8#((line 0.25, 1.5,256) + (line 1.5, 0.25,256)).look
   shader :decay, :iHarp, 10
   shader :decay, :iSharp, 10
-  sleep 1.0/8.0
+  sleep 1.0
 end
 
 live_loop :graphics, sync: :metro do

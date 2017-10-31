@@ -101,7 +101,7 @@ live_loop :piano do
     [(chord :E3), 4],
     [(chord :D3), 4],
 
-    [(chord :B3, invert: -1), 4],
+    [(chord :B3,:M, i: -1), 4],
     [(chord :fs3), 4],
 
 

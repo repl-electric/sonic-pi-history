@@ -134,5 +134,5 @@ live_loop :piano do
     piano i, 50,sustain: n[-1] #/3.0
   }
 
-  sleep n[-1] * 3
+  sleep n[-1]
 end

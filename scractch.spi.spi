@@ -12,7 +12,8 @@ live_loop :piano do
     [:A3  :cs4  :E4 ]        #1
     [_ _ _]                   #10
     ).look
+
   piano n
 
-  sleep 3
+  sleep 1
 end

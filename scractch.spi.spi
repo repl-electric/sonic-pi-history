@@ -18,6 +18,7 @@ live_loop :piano do
   n = (ring
 
     [(chord :A2), 3],
+
     [(chord :B2), 3],
     [(chord :b2), 3],
 

@@ -66,8 +66,8 @@ live_loop :piano do
     ).look.to_a
 
   n = (ring
-    [(chord :B2),2],
-    [(chord :b2),2]
+    [(chord :Cs2),2],
+    [(chord :cs2),2]
     ).look.to_a
 
 

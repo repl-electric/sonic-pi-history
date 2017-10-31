@@ -21,7 +21,7 @@ live_loop :piano do
  #   (chord :D3),   #4
  #   (chord :cs3),  #3
 
-    [(chord :E3, :sus4, i: -1), 1],
+    [(chord :E3, :sus2, i: -1), 1],
     [(chord :E3),2],
 
 

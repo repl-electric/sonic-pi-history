@@ -37,5 +37,5 @@ live_loop :piano do
     piano i
   }
 
-  sleep 1
+  sleep 3
 end

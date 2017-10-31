@@ -19,11 +19,13 @@ live_loop :piano do
     (chord :A2),
     (chord :E3),
     (chord :D3),
+    _,
     (chord :b3),
     (chord :fs3),
     (chord :E3),
     (chord :A3, :sus2),
-    (chord :A3)
+    (chord :A3),
+    _
 
     ).look.to_a
 

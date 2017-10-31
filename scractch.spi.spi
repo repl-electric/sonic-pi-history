@@ -133,6 +133,7 @@ live_loop :piano do
 ).look
 
   n[0] = chord(n[0])
+  puts n[0]
 
   #puts note_inspect(n[0])
   (n[0]||[]).each {|i|

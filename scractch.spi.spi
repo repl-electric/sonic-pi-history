@@ -22,11 +22,11 @@ live_loop :piano do
 
     [(chord :D3), 3],
 
-    [(chord :b3), 1],
-    [(chord :fs3),1],
-    [(chord :E3), 1],
+    [(chord :b3), 3],
+    [(chord :fs3),3],
+    [(chord :E3), 3],
     [(chord :A3, :sus2),1],
-    [(chord :A3),1],
+    [(chord :A3),2],
 
     [_, 3]
 

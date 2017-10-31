@@ -21,7 +21,7 @@ live_loop :piano do
     ).look
 
   n.each {|i|
-    puts note_inspect(i)
+    puts note_inspect(i[0])
     piano i[0], sustain:2}
 
   sleep 3

@@ -16,10 +16,10 @@ live_loop :piano do
 
 
   n = (ring
-    (chord :A2),
+#    (chord :A2),
 
     (chord :E3, :sus2, invert: -1),
-    (chord :E3),
+#    (chord :E3),
 
 
 

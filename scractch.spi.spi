@@ -29,5 +29,5 @@
 
 puts  (ing
        chord(:A2)
-       chord):E3)
+       chord(:E3)
        ).look

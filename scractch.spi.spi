@@ -90,7 +90,7 @@ live_loop :piano do
 
     [(chord :A2), 4],
     [(chord :E3), 4],
-    [(chord :D3), 4],
+    [(chord :D3), 4],  #THIS IS KICK ASS CHORD
     [_,2],
 
     [(chord :b3,:m, i: -1), 2],

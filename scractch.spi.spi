@@ -79,7 +79,7 @@ live_loop :piano do
     ).look.to_a
 
 
-  n = (ring
+  n3 = (ring
 #    [(chord :D3),  4],
 #    [(chord :gs3), 4],
 
@@ -90,7 +90,6 @@ live_loop :piano do
 
     [(chord :A2), 4],
     [(chord :cs3, :m, i:1), 4],
-
 
     [(chord :E3), 4],
 

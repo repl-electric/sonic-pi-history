@@ -80,13 +80,13 @@ live_loop :piano do
 
 
   n = (ring
-    [(chord :D3),  4],
-    [(chord :gs3), 4],
+#    [(chord :D3),  4],
+#    [(chord :gs3), 4],
 
     [(chord :cs3),  4],
     [(chord :Cs3), 4],
 
-    [(chord :gs3), 4],
+#    [(chord :gs3), 4],
 
 
 #    [(chord :cs3), 2]

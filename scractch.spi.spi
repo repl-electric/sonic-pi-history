@@ -1,7 +1,8 @@
 live_loop :piano do
   tick
 
-  n = (ing [:A2  :Cs3  :E3 ]        #1
+  n = (ing
+    [:A2  :Cs3  :E3 ]        #1   chord(A2)
     [:E3  :Gs3  :B3 ]        #5
     [:D3  :Fs3  :A3 ]        #4
     [_ _ _]
@@ -13,7 +14,8 @@ live_loop :piano do
     [_ _ _]                   #10
     ).look
 
-  n.each {|i|   piano i, sustain: 2}
+    note_inspect(n)
+  n.each {|i|   piano i, sustain:2}
 
   sleep 3
 end

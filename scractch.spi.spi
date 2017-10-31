@@ -23,6 +23,7 @@ live_loop :piano do
 
     [(chord :E3, :sus4, i: -1), 1],
     [(chord :e3),2],
+    [(chord :E3),3],
 
 
 #    (chord :E3),

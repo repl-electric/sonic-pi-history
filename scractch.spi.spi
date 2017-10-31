@@ -79,6 +79,21 @@ live_loop :piano do
     ).look.to_a
 
 
+  n = (ring
+    [(chord :D3),  4],
+    [(chord :Gs3), 4],
+
+    [(chord :cs3),  4],
+    [(chord :Cs3), 4],
+
+    [(chord :Gs3), 4],
+
+
+#    [(chord :cs3), 2]
+    ).look.to_a
+
+
+
   puts note_inspect(n[0])
   (n[0]||[]).each {|i|
     piano i, 80,sustain: n[-1] #/3.0

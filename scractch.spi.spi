@@ -19,6 +19,8 @@ live_loop :piano do
     (chord :A2),
     (chord :E3),
     (chord :D3)
+    (chord :b3)
+
     ).look.to_a
 
   puts note_inspect(n)

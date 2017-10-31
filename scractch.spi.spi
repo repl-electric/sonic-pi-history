@@ -125,7 +125,7 @@ live_loop :piano do
 
 ).look
 
-  nf[0] = chord(n[0])
+  Fnf[0] = chord(n[0])
   puts n[0]
 
  puts note_inspect(n[0])

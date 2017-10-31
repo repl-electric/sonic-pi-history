@@ -108,7 +108,7 @@ live_loop :piano do
     [(chord :A2, :M,  i:-1), 4],
     [(chord :cs3, :m, i:0),  4],
     [(chord :A2, :M,  i:-1), 4],
-    [(chord :C3, :M, i:0),  4],
+    [(chord :C3, :M,  i:0),  4],
     [(chord :A2, :M,  i:0),  4],
     [(chord :cs3, :m, i:1),  4],
     ).look.to_a

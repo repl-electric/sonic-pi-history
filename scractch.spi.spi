@@ -83,7 +83,7 @@ live_loop :piano do
 #    [(chord :D3),  4],
 #    [(chord :gs3), 4],
 
-    [(chord :A2), 4]
+    [(chord :A2), 4],
 
     [(chord :c3),  4],
     [(chord :C3), 4],

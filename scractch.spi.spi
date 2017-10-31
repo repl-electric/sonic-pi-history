@@ -18,7 +18,9 @@ live_loop :piano do
   n = (ring
     (chord :A2),
     (chord :E3),
-    ).look
+    ).look.to_a
+
+
 
   n.each {|i|
     puts note_inspect(i)

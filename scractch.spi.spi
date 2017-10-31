@@ -15,8 +15,8 @@ live_loop :piano do
     ).look
 
 
-  n = (ring
-    (chord :A2),
+  n = (ing
+    (chord :A2)
     (chord :E3)
     ).look
 

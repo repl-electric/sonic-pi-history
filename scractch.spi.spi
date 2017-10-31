@@ -19,7 +19,8 @@ live_loop :piano do
     (chord :A2),
     (chord :E3),
     (chord :D3),
-    (chord :b3)
+    (chord :b3),
+    (chord :fs3)
 
     ).look.to_a
 

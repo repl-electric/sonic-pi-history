@@ -33,9 +33,9 @@ live_loop :piano do
     [(chord :b3, :m, i: -1), 2],
 
     [(chord :fs3), 2],
-    [(chord :E3),3],
-    [(chord :A3),3],
-    [(chord :A3),3],
+    [(chord :E3),2],
+    [(chord :A3),2],
+    [(chord :A3),2],
 
 
 

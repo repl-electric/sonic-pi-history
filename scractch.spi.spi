@@ -20,8 +20,8 @@ live_loop :piano do
     (chord :E3),
     ).look.to_a
 
+  puts note_inspect(n)
   n.each {|i|
-    puts note_inspect(i)
     piano i, sustain:2}
 
   sleep 3

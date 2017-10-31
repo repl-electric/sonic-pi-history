@@ -18,6 +18,7 @@ live_loop :piano do
   n = (ring
     (chord :A2),
     (chord :E3),
+    (chord :D3)
     ).look.to_a
 
   puts note_inspect(n)

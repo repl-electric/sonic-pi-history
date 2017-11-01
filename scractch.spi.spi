@@ -3,6 +3,7 @@ def sop_mode(mode)
 end
 
 def sop_cc(cc)
+  puts keys
   cc.keys.each do |k|
     n = case k
         when :motion; 1

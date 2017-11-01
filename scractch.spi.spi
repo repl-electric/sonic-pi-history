@@ -193,7 +193,7 @@ live_loop :play do
     [[:A2], 4, 4],
 
     [[:CS3, :Fs3, :Gs3], 4, 4],
-    [[:E3, :Gs3],       4, 4]
+    [[:E3, :Gs3],       4, 4],
     )
 
   score = (ring
@@ -207,7 +207,7 @@ live_loop :play do
 
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: 0.5, mode: [10].choose, formant: (ramp 0.5, 1.0,32).tick(:up)look }
+  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: 0.5, mode: [10].choose, formant: 0.5 }
   sleep (s[-1]*2)
 end
 

@@ -156,7 +156,7 @@ stop
 end
 
 
-live_loop :formant do
+live_loop :for do
   tick
   sop_cc 99, (line 0,127).look
   puts (line 0,127).look

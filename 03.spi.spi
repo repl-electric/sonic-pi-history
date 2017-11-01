@@ -71,7 +71,7 @@ end
 #@debug =""
 sop_on :D5, mode: 8
 live_loop :music, sync: :metro do;z=nil;s=nil
-  sop_cc  formant: (ramp 0.5, 1.0, 64).tick(:progress)
+  sop_cc  formant: (ramp 0.5, 1.0, 64).tick(:progress),
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.2, mode: 0
   score = (ing
     [_ 3.0]

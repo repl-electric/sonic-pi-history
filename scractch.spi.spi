@@ -142,8 +142,13 @@ end
 live_loop :play do
   tick
   score = (ring
+
     [[:Cs3, :E3], 8, 4],
     [[:A2], 4, 4]
+
+    [[:CS3, :E3, :Gs3], 4, 4]
+
+
     )
   s = score.look
   s[0].each{|n|  sop n, sustain: s[1]}

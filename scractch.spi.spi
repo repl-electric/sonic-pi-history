@@ -49,16 +49,16 @@ live_loop :piano do
   tick
   stop
   n = (ing
-    [:A2,  :Cs3,  :E3, ],        #1,
-    [:E3,  :Gs3,  :B3, ],        #5,
-    [:D3,  :Fs3,  :A3, ],        #4,
-    [_, _, _],
-    [:B3,  :D3,   :FS3],        #2,
-    [:FS3, :A3,   :Cs3],        #6,
-    [:E3,  :Gs3,  :B3, ],        #5,
-    [:A3,  :B3,   :E4, ],        #1,
-    [:A3,  :cs4,  :E4, ],        #1,
-    [_, _, _],                   #10,
+    [:A2  :Cs3  :E3 ]        #1
+    [:E3  :Gs3  :B3 ]        #5
+    [:D3  :Fs3  :A3 ]        #4
+    [_ _ _]
+    [:B3  :D3   :FS3]        #2
+    [:FS3 :A3   :Cs3]        #6
+    [:E3  :Gs3  :B3 ]        #5
+    [:A3  :B3   :E4 ]        #1
+    [:A3  :cs4  :E4 ]        #1
+    [_ _ _]                   #10
     ).look
 
 
@@ -197,7 +197,7 @@ live_loop :play do
     )
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: 0.5, mode: [8].choose, formant: 0.5 }
+  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: 0.5, mode: [8].choose, formant: 0.0 }
   sleep (s[-1]*2)
 end
 

@@ -84,7 +84,7 @@ end
 #sharp :E3,100, sustain: 12
 @total =0
 #@debug =""
-sop_on :D5, mode: 10
+sop_on :E5, mode: 10
 live_loop :music, sync: :metro do;z=nil;s=nil
   sop_cc  formant: (ramp 0.5, 1.0, 32).tick(:dprogress)
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 1.0, bass: 0.2, mode: 0

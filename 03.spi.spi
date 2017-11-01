@@ -136,7 +136,6 @@ live_loop :music, sync: :metro do;z=nil;s=nil
   end
   end
 
-
   puts "HARP: #{s}"
   with_transpose -12*2 do
     #bass s[0], sustain: 3
@@ -144,7 +143,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil
   #sleep s[-1]*3
 
   if spread(1,3).look
-    comment do
+    uncomment do
       harp :E4, 1, sustain: (3*3)#/3
     end
   end

@@ -145,7 +145,7 @@ live_loop :play do
     [[:Cs3, :E3], 8, 4],
     [[:A2], 4, 4],
 
-    [[:CS3, :D3, :Gs3], 4, 4],
+    [[:CS3, :Fs3, :Gs3], 4, 4],
     [[:E3, :Gs3],       4, 4]
     )
   s = score.look

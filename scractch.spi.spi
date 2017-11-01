@@ -152,7 +152,6 @@ live_loop :piano do
   sleep n[-1]
 end
 
-stop
 
 live_loop :play do
 #stop

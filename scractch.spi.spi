@@ -192,14 +192,14 @@ stop
     )
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1]*2, formant: (rand(1.0))}
+  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: (rand(1.0)), mode: [9,11].choose }
   sleep s[-1]*2
 end
 
 live_loop :for do
 #  stop
   tick
-  sop_cc formant: (line 0,127).look
+  sop_cc form_amp: (line 0,127).look
   puts (line 0,127).look
   sleep 1/4.0
 end

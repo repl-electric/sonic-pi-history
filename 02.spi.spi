@@ -375,7 +375,7 @@ with_fx :none, mix: 0 do
             ).look
 
           p=Analog[/click/].look
-          p=d1
+          #p=d1
           #  puts p
           s=(ing
             p _ _ _   _ _ p _

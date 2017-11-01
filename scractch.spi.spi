@@ -207,7 +207,7 @@ live_loop :play do
 
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1], form_amp: 0.8, mode: [10].choose, formant: 0.5 }
+  s[0].each{|n|  sop n, sustain: s[1], form_amp: 0.8, mode: [8].choose, formant: 0.5 }
   sleep (s[-1])
 end
 

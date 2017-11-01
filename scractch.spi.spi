@@ -185,7 +185,7 @@ end
 
 
 live_loop :play do
-stop
+#stop
   tick
   score = (ring
     [[:Cs3, :E3], 8, 4],
@@ -201,9 +201,9 @@ stop
 end
 
 live_loop :for do
-#  stop
+  stop
   tick
-  sop_cc formant: (line 0,127).look
+#  sop_cc formant: (line 0,127).look
   puts (line 0,127).look
   sleep 1/8.0
 end

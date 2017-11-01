@@ -1,3 +1,18 @@
+def sop_cc(*args)
+  cc.keys.each do |k|
+    n = case k
+        when :motion; 1
+        when :formant; 99
+        else
+          nil
+        end
+    if n
+      midi_cc n, cc[k]*127.0, port: :iac_bus_1, channel: 10
+    end
+  end
+end
+
+
 # live_loop :piano do
 #   tick
 # stop
@@ -154,6 +169,7 @@
 #   s[0].each{|n|  sop n, sustain: s[1]*2}
 #   sleep s[-1]*2
 # end
+
 
 
 live_loop :for do

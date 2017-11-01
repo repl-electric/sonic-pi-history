@@ -81,7 +81,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil
     [_, 1/4.0], [:A3, 1/4.0], [_, 1/4.0], [_, 1/4.0],  #1.25,
     )
 
-  harp_on :D3
+  harp_off :D3
   #score = (ing [_, 3], [:A3, 3], [:D3, 3], [:E3, 3],)
   score = (ing [:A3, 3], [:D3, 3], [:E3, 3], [:B3, 3], [:FS3, 3], [:E3, 3],)
   #score = (ing [:A2, 3],)

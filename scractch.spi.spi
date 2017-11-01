@@ -158,9 +158,6 @@ end
 
 live_loop :formant do
   tick
-
   sop_cc 99, (line 0,127).look
-
-
   sleep 1
 end

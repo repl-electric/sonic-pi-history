@@ -1,3 +1,7 @@
+def sop_mode(mode)
+  sop ['C-1','Cs-1','D-1','Ds-1','E-1', 'F-1', 'Fs-1', 'G-1', 'Gs-1', 'A-1', 'As-1', 'B-1'][mode]
+end
+
 def sop_cc(cc)
   cc.keys.each do |k|
     n = case k

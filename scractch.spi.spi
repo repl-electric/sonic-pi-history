@@ -141,8 +141,6 @@ end
 
 live_loop :play do
   tick
-
-
   score = (ring [(chord :a2), 8, 4])
   s = score.look
   s[0].each{|n|  sop n, sustain: s[1]}

@@ -310,7 +310,7 @@ with_fx :none, mix: 0 do
             s = s[0]
           end
           if rand(1.0) <= condi
-            with_fx :krush, mix: 0.1 do
+            with_fx :krush, mix: 0.15 do
               smp s, amp: 3.0*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
             end
             # rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look

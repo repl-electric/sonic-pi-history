@@ -1,4 +1,4 @@
-def sop_cc(*args)
+def sop_cc(*cc)
   cc.keys.each do |k|
     n = case k
         when :motion; 1

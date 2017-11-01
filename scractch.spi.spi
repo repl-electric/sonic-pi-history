@@ -205,5 +205,5 @@ live_loop :for do
   tick
   sop_cc formant: (line 0,127).look
   puts (line 0,127).look
-  sleep 1/4.0
+  sleep 1/8.0
 end

@@ -137,7 +137,7 @@ stop
   sleep n[-1]
 end
 
-
+stop
 
 live_loop :play do
   tick

@@ -153,3 +153,14 @@ live_loop :play do
   s[0].each{|n|  sop n, sustain: s[1]*2}
   sleep s[-1]*2
 end
+
+
+
+live_loop :formant do
+  tick
+
+  sop_cc 99, (line 0,127).look
+
+
+  sleep 3
+end

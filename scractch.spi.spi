@@ -15,7 +15,7 @@ end
 
 live_loop :piano do
   tick
-stop
+  stop
   n = (ing
     [:A2  :Cs3  :E3 ]        #1
     [:E3  :Gs3  :B3 ]        #5

@@ -2,7 +2,8 @@ def sop_cc(cc)
   cc.keys.each do |k|
     n = case k
         when :motion; 1
-        when :formant; 99
+        when :form_amp; 99
+        when :formant; 98
         else
           nil
         end
@@ -198,7 +199,7 @@ end
 live_loop :for do
 #  stop
   tick
-  sop_cc 98, (line 0,127).look
+  sop_cc formant: (line 0,127).look
   puts (line 0,127).look
   sleep 1/4.0
 end

@@ -162,5 +162,5 @@ live_loop :formant do
   sop_cc 99, (line 0,127).look
 
 
-  sleep 3
+  sleep 1
 end

@@ -150,6 +150,6 @@ live_loop :play do
     )
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1]}
-  sleep s[-1]
+  s[0].each{|n|  sop n, sustain: s[1]*2}
+  sleep s[-1]*2
 end

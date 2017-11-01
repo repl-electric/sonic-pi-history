@@ -54,7 +54,7 @@ live_loop :test, sync: :metro do
   end
 end
 
-sop_on :E4, mode: 10
+
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2
 #sop_cc  motiona: 0.2
@@ -70,6 +70,7 @@ end
 @total =0
 #@debug =""
 live_loop :music, sync: :metro do;z=nil;s=nil
+  sop_on :E4, mode: 10, formant: (ramp 0.5, 1.0, 64).look
   harp_cc phase: 0.5,  mod: 0.1, cutoff: 1.0, bass: 0.1, mode: 0
   score = (ing
     [_ 3.0]

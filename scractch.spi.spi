@@ -29,7 +29,7 @@ def sop(n,*args)
       sop_mode(args_h[:mode])
     end
     if(args_h[:motion] || args_h[:formant])
-      sop_cc args_h
+      sop_cc *args_h
     end
     if n && ((n != "_") && n != :_)
       midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})

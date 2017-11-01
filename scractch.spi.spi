@@ -12,6 +12,32 @@ def sop_cc(*cc)
   end
 end
 
+def sop(n,*args)
+  if n
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    if args && args[0].is_a?(Numeric)
+      velocity = args[0]
+      args = args[1..-1]
+    else
+      velocity = 30
+    end
+    args_h = resolve_synth_opts_hash_or_array(args)
+    if(args_h[:mode])
+      sop_mode(args_h[:mode])
+    end
+    if(args_h[:motion] || args_h[:formant])
+      sop_cc args_h
+    end
+    if n && ((n != "_") && n != :_)
+      midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
+    end
+  end
+end
+
+
 
 live_loop :piano do
   tick

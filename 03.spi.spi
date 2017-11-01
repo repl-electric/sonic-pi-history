@@ -106,10 +106,9 @@ live_loop :music, sync: :metro do;z=nil;s=nil
   #piano s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
   #  harp s, (ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
 
-
   score = (knit
     [:A3, 3/4.0],3, [:D3,1.0],3, [:E3,2/4.0],3,
-    [_,3/4.0],1,   [_,1.0],1, [_,2/4.0],1)
+    [:FS3,3/4.0],1,   [:A3,1.0],1, [:D3,2/4.0],1)
   #score = space()
   cue(:m) if ((look+1) % score.count)  == 0
   3.times{
@@ -136,7 +135,6 @@ live_loop :music, sync: :metro do;z=nil;s=nil
       end
   end
   end
-
 
 
   puts "HARP: #{s}"

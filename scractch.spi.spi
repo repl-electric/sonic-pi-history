@@ -145,7 +145,7 @@ live_loop :play do
 
   score = (ring [(chord :a2), 8, 4])
   s = score.look
-  s[0].each{|n|  sop s}
+  s[0].each{|n|  sop n}
 
 
 

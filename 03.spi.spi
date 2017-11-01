@@ -103,7 +103,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil
   #score = (ing [:A3 1] [:D4 1] [:E3 1] [:B3 1] [:Fs3 1] [:E3 1])
   #score = (ing [:A2 3])
 
-  s = score.tick
+  s = score.look
   #piano s=score.tick, (ring 20,20,20, 30,40,40, 40,60,80).look
   #  harp s, (ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
 

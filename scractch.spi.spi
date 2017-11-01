@@ -196,9 +196,9 @@ live_loop :play do
     )
   s = score.look
   puts s
-  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: (rand(1.0)), mode: [8].choose, formant: 0.0 }
+  s[0].each{|n|  sop n, sustain: s[1]*2, form_amp: (rand(1.0)), mode: [10].choose, formant: 0.0 }
   4.times{sleep (s[-1]*2)/4.0
-    sop_cc form_amp: (rand(0.5)+0.5), mode: [8].choose, formant: 0.5
+    sop_cc form_amp: (rand(0.5)+0.5), formant: 0.5
   }
 end
 

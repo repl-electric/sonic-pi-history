@@ -1,6 +1,7 @@
 def eek_cc(*args)
   cc = resolve_synth_opts_hash_or_array(args)
   cc.keys.each do |k|
+    puts k
     n = case k
         when :mod; 1
           when :at; :at

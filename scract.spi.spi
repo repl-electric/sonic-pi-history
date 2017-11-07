@@ -1,4 +1,7 @@
 def eek(n,*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
   if n.is_a?(Array)
     args =  args  << {sustain: n[1]}
     n = n[0]

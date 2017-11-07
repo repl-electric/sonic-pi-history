@@ -6,7 +6,6 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  opts = resolve_synth_opts_hash_or_array(args)
   puts opts
   if opts[:attack]
     midi_cc 73, opts[:attack]

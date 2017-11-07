@@ -5,8 +5,6 @@ def eek(*args)
     opts[:sustain] = n[1]
     n = n[0]
   end
-  puts "OPTS:#{opts}"
-
   midi n, 10, opts
 end
 

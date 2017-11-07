@@ -341,7 +341,7 @@ with_fx :none, mix: 0 do
             k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ [f1 0.25]
             ).look
 
-          s=_
+          #s=_
           cue(:sudden) if s
           sidechain if s && spread(1,4).look
           condi = 1

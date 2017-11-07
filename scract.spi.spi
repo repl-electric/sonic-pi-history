@@ -1,6 +1,4 @@
 def eek_cc(*args)
-  puts args[0].class
-
   cc = if args[0].is_a?(SonicPi::Core::SPMap)
          args[0]
        else

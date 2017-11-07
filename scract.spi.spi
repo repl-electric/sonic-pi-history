@@ -3,7 +3,7 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  a = (args << {port: :iac_bus_1} << {channel: 16}
+  a = args << {port: :iac_bus_1} << {channel: 16}
     midi n, *a
 end
 

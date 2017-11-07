@@ -21,11 +21,11 @@ def eek(*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  if opts[:attack]
-    eek_cc attack: opts[:attack]
-  end
   if n
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
+  end
+  if opts[:attack]
+    eek_cc attack: opts[:attack]
   end
 end
 

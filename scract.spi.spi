@@ -8,7 +8,7 @@ def eek(n,*args)
   end
   puts opts
   if opts[:attack]
-    midi_cc 73, opts[:attack]
+    eek_cc attack: opts[:attack]
   end
   if n
     midi n, *(args << {port: :iac_bus_1} << {channel: 16})

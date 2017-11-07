@@ -1,6 +1,10 @@
 def eek_cc(*args)
   puts args
-  cc = resolve_synth_opts_hash_or_array(args)
+  cc = if args[0].is_a?(Map)
+         args[0]
+       else
+         resolve_synth_opts_hash_or_array(args)
+       end
   cc.keys.each do |k|
     puts k
     n = case k

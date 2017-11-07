@@ -252,7 +252,8 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil
         [[_,_,_],4]
         ).tick(:inner)
 
-      bass (ing :A2 :CS2 _ :A2 :E2 :A2 :E2 :D2 :B2 :B2 :fs2 :e2 :a2 :A2 _).look, sustain: 2.0
+      bass (ing :A2 :CS2 _ :A2 :E2
+            :A2 :E2 :D2 :FS2 :B2 :fs2 :e2 :a2 :A2 _).look, sustain: 2.0
 
       #bass :E2
 

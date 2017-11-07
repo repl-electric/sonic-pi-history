@@ -1,7 +1,7 @@
 def eek(*args)
   params, opts = split_params_and_merge_opts_array(args)
   n, vel = *params
-  puts n
+  puts params
   puts vel
   puts opts
   if n.is_a?(Array)

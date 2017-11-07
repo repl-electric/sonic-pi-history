@@ -3,7 +3,7 @@ def eek_cc(*args)
   cc.keys.each do |k|
     n = case k
         when :mod; 1
-        when :attack; 73
+        when :at; 73
         else nil
         end
     if n
@@ -24,8 +24,8 @@ def eek(*args)
   if n
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
   end
-  if opts[:attack]
-    eek_cc attack: opts[:attack]
+  if opts[:at]
+    midi_channel_pressure opts[:at]
   end
 end
 

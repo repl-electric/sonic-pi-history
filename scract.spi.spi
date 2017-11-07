@@ -10,4 +10,4 @@ end
 
 #eek (ring :A2, :Cs3).tick(:in), 120, sustain: 1, attack: 1.0 if spread(1,16).look
 
-midi :A2, 120, sustain: 1, attack: 0.45
+midi :A2, 120, sustain: 1 attack: 0.45

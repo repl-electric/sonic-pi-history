@@ -3,7 +3,6 @@ def eek(*args)
   n, vel = *params
 
   puts n
-  puts params
   puts vel
   puts opts
   if n.is_a?(Array)

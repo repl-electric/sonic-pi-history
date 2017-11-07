@@ -3,7 +3,8 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  midi n, *args
+  params, opts = split_params_and_merge_opts_array(args)
+  midi n, *opts
 end
 
 

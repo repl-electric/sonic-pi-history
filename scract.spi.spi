@@ -1,1 +1,13 @@
-          eek (ring :A2, :Cs3).tick(:in), 120, sustain: 1, attack: 1.0 if spread(1,16).look
+def eek(n,*args)
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  if n
+    midi n, *(args << {port: :iac_bus_1} << {channel: 16})
+  end
+end
+
+
+
+eek (ring :A2, :Cs3).tick(:in), 120, sustain: 1, attack: 1.0 if spread(1,16).look

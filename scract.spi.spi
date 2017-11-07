@@ -1,6 +1,7 @@
 def eek(*args)
   puts args
   n, opts = split_params_and_merge_opts_array(args)
+  puts opts
   if n.is_a?(Array)
     args =  args  << {sustain: n[1]}
     n = n[0]

@@ -7,7 +7,7 @@ def eek(*args)
   end
   puts "OPTS:#{opts}"
 
-  midi n, 10, *opts
+  midi n, 10, opts
 end
 
 

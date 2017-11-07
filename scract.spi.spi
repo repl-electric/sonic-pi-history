@@ -25,7 +25,7 @@ def eek(*args)
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
   end
   if opts[:attack]
-      eek_cc attack: opts[:attack]
+    eek_cc attack: opts[:attack]
   end
 end
 

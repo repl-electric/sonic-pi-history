@@ -567,3 +567,4 @@ live_loop :sixteen, sync: :drums do
   end
   sleep 1/16.0
 end
+ play 60

@@ -1,3 +1,23 @@
+def eek_cc(*args)
+  cc = resolve_synth_opts_hash_or_array(args)
+  cc.keys.each do |k|
+    n = case k
+        when :mod; 1
+          when :at; :at
+        else nil
+        end
+    if n
+      if n == :at
+        midi_channel_pressure cc[k]*127.0, channel: 16, port: :iac_bus_1
+      else
+        midi_cc n, cc[k]*127.0, *(args << {port: :iac_bus_1} <<
+          {channel: 16})
+      end
+    end
+  end
+end
+
+
 def eek(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)

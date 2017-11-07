@@ -6,7 +6,6 @@ def eek(*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  puts n
   if opts[:attack]
     eek_cc attack: opts[:attack]
   end

@@ -1,9 +1,10 @@
 def eek(*args)
+  n, opts = split_params_and_merge_opts_array(args)
   if n.is_a?(Array)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  params, opts = split_params_and_merge_opts_array(args)
+
   midi n, *opts
 end
 

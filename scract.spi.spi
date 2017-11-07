@@ -1,3 +1,18 @@
+def eek(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  if n
+    midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
+  end
+  eek_cc(*args)
+end
+
+
 live_loop :a do
   tick
   eek :A2, 30, sustain: 1, at: rand_i(127)

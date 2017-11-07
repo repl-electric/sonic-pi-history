@@ -38,7 +38,7 @@ end
 
 live_loop :a do
   tick
-  eek :A2, 30, sustain: 1, at: rand_i(127), mod: 0.4
+  eek :A2, 30, sustain: 1, at: 0.8, mod: 0.4
   #eek_cc mod: rand(1.0)
   sleep 3
 end

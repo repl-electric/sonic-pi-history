@@ -3,7 +3,7 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-
+  args = resolve_synth_opts_hash_or_array(args)
   a = args << {port: :iac_bus_1} << {channel: 16}
   puts a
   midi n, *a

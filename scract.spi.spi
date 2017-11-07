@@ -7,7 +7,6 @@ def eek(*args)
     opts =  opts  << {sustain: n[1]}
     n = n[0]
   end
-  puts opts
 
   midi [n,10], 10, *opts
 end

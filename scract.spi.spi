@@ -30,7 +30,6 @@ def eek(*args)
   if n
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
   end
-  puts args
   eek_cc(*args)
 end
 

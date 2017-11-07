@@ -1,7 +1,7 @@
 def eek_cc(*args)
   puts args[0].class
 
-  cc = if args[0].is_a?(Array)
+  cc = if args[0].is_a?(SPMap)
          args[0]
        else
          resolve_synth_opts_hash_or_array(args)

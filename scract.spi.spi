@@ -35,4 +35,4 @@ end
 
 
 #73	01001001	49	Sound Controller 4 (default: Attack Time)	0-127	LSB
-eek :A2, 80, sustain: 1, attack: 0.9
+eek :A2, 80, sustain: 1, attack: 0.1

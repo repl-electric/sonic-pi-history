@@ -16,4 +16,4 @@ def eek(n,*args)
 end
 
 
-eek :A2, 120, sustain: 1, attack: 1.0
+eek :A2, 10, sustain: 1, attack: 1.0

@@ -25,7 +25,7 @@ def eek(*args)
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
   end
   if opts[:at]
-    midi_channel_pressure opts[:at]
+    midi_channel_pressure opts[:at], channel: 16, port: :iac_bus_1
   end
 end
 

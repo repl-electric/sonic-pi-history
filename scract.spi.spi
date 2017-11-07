@@ -1,4 +1,4 @@
-def eek(n,*args)
+def eek(*args)
   if n.is_a?(Array)
     args =  args  << {sustain: n[1]}
     n = n[0]

@@ -15,4 +15,4 @@ def eek(*args)
 end
 
 
-eek :A2, 90, sustain: 1, attack: 1.0
+eek :A2, sustain: 1, attack: 1.0

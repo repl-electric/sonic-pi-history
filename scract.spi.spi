@@ -1,39 +1,5 @@
-def eek_cc(*args)
-  cc = resolve_synth_opts_hash_or_array(args)
-  cc.keys.each do |k|
-    n = case k
-        when :mod; 1
-        when :at; 73
-        else nil
-        end
-    if n
-      midi_cc n, cc[k]*127.0, *(args << {port: :iac_bus_1} <<
-        {channel: 16})
-    end
-  end
-end
-
-def eek(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n.is_a?(Array)
-    args =  args  << {sustain: n[1]}
-    n = n[0]
-  end
-  if n
-    midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
-  end
-  if opts[:at]
-    midi_channel_pressure opts[:at], channel: 16, port: :iac_bus_1
-  end
-end
-
-
-#73	01001001	49	Sound Controller 4 (default: Attack Time)	0-127	LSB
-
 live_loop :a do
   tick
-  eek :A2, 30, sustain: 1, at: 0
+  eek :A2, 30, sustain: 1, at: 127
   sleep 3
 end

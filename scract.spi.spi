@@ -25,9 +25,14 @@ def eek(*args)
     midi n, vel, *(args << {port: :iac_bus_1} << {channel: 16})
   end
   if opts[:attack]
-    eek_cc attack: opts[:attack]
+    at do
+      sleep 0.1
+      eek_cc attack: opts[:attack]
+    end
   end
 end
 
 
+
+#73	01001001	49	Sound Controller 4 (default: Attack Time)	0-127	LSB
 eek :A2, 80, sustain: 1, attack: 0.9

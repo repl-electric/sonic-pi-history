@@ -1,17 +1,3 @@
-def eek(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  n, vel = *params
-  if n.is_a?(Array)
-    opts[:sustain] = n[1]
-    n = n[0]
-  end
-  if opts[:attack]
-    midi_cc 73, opts[:attack]
-  end
-  midi n, 10, opts
-end
-
-
 eek [(ring :A2, :Cs3).tick(:in),10], 120, sustain: 1, attack: 1.0 if spread(1,16).look
 
 #midi :A2, 120, sustain: 1, attack: 0.45

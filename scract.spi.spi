@@ -1,1 +1,17 @@
+def eek(n,*args)
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  opts = resolve_synth_opts_hash_or_array(args)
+  puts opts
+  if opts[:attack]
+    midi_cc 73, opts[:attack]
+  end
+  if n
+    midi n, *(args << {port: :iac_bus_1} << {channel: 16})
+  end
+end
+
+
 eek :A2, 120, sustain: 1, attack: 1.0

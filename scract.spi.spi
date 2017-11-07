@@ -34,6 +34,6 @@ end
 
 live_loop :a do
   tick
-  eek :A2, 80, sustain: 1, at: 1.0
+  eek :A2, 30, sustain: 1, at: 1.0
   sleep 3
 end

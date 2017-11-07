@@ -1,5 +1,5 @@
 live_loop :a do
   tick
-  eek :A2, 30, sustain: 1, at: 100
+  eek :A2, 30, sustain: 1, at: rand_i(127)
   sleep 3
 end

@@ -7,7 +7,7 @@ def eek(*args)
     n = n[0]
   end
 
-  midi n, *opts
+  midi n, 10,*opts
 end
 
 

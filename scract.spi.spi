@@ -1,5 +1,5 @@
 def eek_cc(*args)
-  put args
+  puts args
   cc = resolve_synth_opts_hash_or_array(args)
   cc.keys.each do |k|
     puts k

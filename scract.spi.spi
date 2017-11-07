@@ -6,7 +6,7 @@ def eek(*args)
     n = n[0]
   end
   if opts[:attack]
-    midi_cc 73 opts[:attack]
+    midi_cc 73, opts[:attack]
   end
   midi n, 10, opts
 end

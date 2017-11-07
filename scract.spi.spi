@@ -3,8 +3,6 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  a = resolve_synth_opts_hash_or_array(args)
-    puts a
   midi n, *a
 end
 

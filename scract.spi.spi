@@ -3,6 +3,7 @@ def eek(*args)
   n, vel = *params
   puts n
   puts vel
+  puts opts
   if n.is_a?(Array)
     opts =  opts  << {sustain: n[1]}
     n = n[0]

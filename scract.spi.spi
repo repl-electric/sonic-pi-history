@@ -3,7 +3,7 @@ def eek(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  midi n, *a
+  midi n, *args
 end
 
 

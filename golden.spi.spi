@@ -49,7 +49,7 @@ live_loop :test, sync: :metro do
         [(chord :Cs3, :madd11),4],
         [(chord :A2, :add13),4],
         [(chord :Cs3, :madd13),4]
-        ).look(:inner)
+        )
 
 
   #score = score[0]

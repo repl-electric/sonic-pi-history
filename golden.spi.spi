@@ -328,8 +328,8 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     end
   end
   sleep 1
-  violin z, 1, sustain: 1/4.0
-  sleep 1#/4.0
+  violin z, 2, sustain: 1/4.0
+  sleep 1 #/4.0
 end
 
 with_fx :none, mix: 0 do

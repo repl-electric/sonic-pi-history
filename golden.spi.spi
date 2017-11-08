@@ -319,17 +319,17 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     end
 
     #z=_
-    zero z,  (ing 30 10 30 10).look
-    piano z, (ing 70 65 55).look * 1.0, sustain: 4
+    #zero z,  (ing 30 10 30 10).look
+    #piano z, (ing 70 65 55).look * 1.0, sustain: 4
     if spread(1,3).look
       with_transpose (1*12) do
         musicbox z,10, sustain: 1/8.0#*3
       end
     end
   end
-  sleep 1
-  violin z, 2, sustain: 1.0
-  sleep 1 #/4.0
+  #sleep 1
+  #violin z, 2, sustain: 1.0
+  sleep 1/4.0 #/4.0
 end
 
 with_fx :none, mix: 0 do
@@ -370,7 +370,7 @@ with_fx :none, mix: 0 do
             k3 _ k3 _   k2 _ _ _    k1 _ _ _   k4 _ _ _
             ).look
 
-          s=(ing
+          s3=(ing
             k1 _ _ _    _ _ _ _     k4 _ _ _   _ _ _ _
             k1 _ _ _    _ _ _ _     k4 _ _ _   _ _ _ k7
             k1 _ _ _    _ _ _ _     k4 _ _ _   _ _ _ k7
@@ -394,7 +394,7 @@ with_fx :none, mix: 0 do
           end
           if rand(1.0) <= condi
             with_fx :krush, mix: 0.0 do
-              smp s, amp: 0.0*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+              smp s, amp: 1.5*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
             end
             # rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
           end

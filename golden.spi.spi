@@ -277,7 +277,7 @@ live_loop :you_encounter_a_one  do;z=nil
         piano c[1], 50, sustain: 8
         piano c[2], 55, sustain: 8
         if c[3]
-          piano c[3], 70, sustain: 8
+          piano c[3], 80, sustain: 8
         end
       end
     end

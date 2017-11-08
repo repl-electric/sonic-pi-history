@@ -71,9 +71,8 @@ end
 live_loop :do, sync: :metro do
   tick
   sop_cc motion: (line 0.0,1.0, 8).look
-  sleep 1
+  sleep 1/4.0
 end
-
 
 #sop_cc mode: 0
 

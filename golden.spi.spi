@@ -57,7 +57,7 @@ end
 #sop_cc motion: 0.1
 #sop_cc mode: 0
 
-sop_on :E3, mode: 4
+#sop_on :E3, mode: 4
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2
 #sop_cc  motiona: 0.2

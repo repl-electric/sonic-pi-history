@@ -254,7 +254,7 @@ live_loop :you_encounter_a_one  do;z=nil
 
 
       c = (ring
-        [(chord :A2, :maj9),4]
+        [(chord :A2, :maj9),4],
         [(chord :A2, :M),4]
         ).look(:inner)
 

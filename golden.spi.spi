@@ -269,7 +269,7 @@ live_loop :you_encounter_a_one  do;z=nil
         ).look(:inner)
 
       with_transpose 0*12 do
-        if c[4]
+        if c[3]
           violin c[0].choose, 8*(ing 30, 10, 30, 50,).look(:inner), sustain: 4
         end
       end

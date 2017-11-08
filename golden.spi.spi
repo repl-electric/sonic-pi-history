@@ -114,7 +114,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
     end
   end
 
-  bass :e2
+  bass :e1
 
   #   score = (ing
   #     [:A2  3]

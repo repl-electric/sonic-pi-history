@@ -253,7 +253,7 @@ live_loop :you_encounter_a_one  do;z=nil
         ).tick(:inner)
 
 
-      c = (ring [(chord :A2, :m6),4] )
+      c = (ring [(chord :A2, :M6),4] )
 
       with_transpose 0*12 do
         violin c[0].choose, (ing 30 10 30 50).look(:inner)

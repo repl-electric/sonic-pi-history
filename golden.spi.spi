@@ -62,7 +62,7 @@ live_loop :test, sync: :metro do
   #end
 end
 
-sop_cc mode: 0.0
+sop_cc mode: 0.1
 #violin :B2, 10, sustain: 3
 #sleep 0.25
 #violin :GS2, 10, sustain: 3

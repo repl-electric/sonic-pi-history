@@ -383,8 +383,8 @@ with_fx :none, mix: 0 do
             k1, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, [f1, 0.25],
             ).look
 
-          s=_
-          cue(:sudden) if s
+          #s=_
+          #cue(:sudden) if s
           sidechain if s && spread(1,4).look
           condi = 1
           if s.is_a?(Array)
@@ -393,7 +393,7 @@ with_fx :none, mix: 0 do
           end
           if rand(1.0) <= condi
             with_fx :krush, mix: 0.0 do
-              smp s, amp: 0.0*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
+              smp s, amp: 1.0*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look , v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look
             end
             # rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
           end
@@ -495,7 +495,7 @@ with_fx :none, mix: 0 do
 
           if s && spread(3,7).look
             #            with_swing -0.01, 2 do
-             smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25, -0.25,).tick(:ingit)
+            smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25, -0.25,).tick(:ingit)
             #            end
           end
 

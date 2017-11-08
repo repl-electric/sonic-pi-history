@@ -253,7 +253,7 @@ live_loop :you_encounter_a_one  do;z=nil
         ).tick(:inner)
 
       with_transpose 12 do
-                violin c[0][0], 100
+        violin c[0][0], 100
       end
       with_transpose -12*2 do
 

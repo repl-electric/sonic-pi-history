@@ -143,7 +143,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
 
   1.times{
     s = score.tick
-    #harp s, 0*(ring 20,20,20, 30,40,40, 40,60,80).look
+    harp s, 1*(ring 20,20,20, 30,40,40, 40,60,80).look
     sleep s[-1]
   }
   #sleep 3/4.0

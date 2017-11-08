@@ -38,6 +38,20 @@ live_loop :test, sync: :metro do
     [[:E2, :Gs2],  4,   4],
     )
 
+      score = (ring
+#        [(chord :A2, :add2),4],
+#        [(chord :A2, :M),4],
+        [(chord :A2, :M),4],
+        [(chord :Cs3, :m),4],
+        [(chord :A2, :add9),4],
+        [(chord :Cs3, :madd9),4],
+        [(chord :A2, :add9),4],
+        [(chord :Cs3, :madd11),4],
+        [(chord :A2, :add13),4],
+        [(chord :Cs3, :madd13),4]
+        ).look(:inner)
+
+
   #score = score[0]
   #  stop
   s=score.look

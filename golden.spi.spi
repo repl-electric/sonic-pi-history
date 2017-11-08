@@ -52,7 +52,7 @@ live_loop :test, sync: :metro do
         )
 
   #score = score[0]
-  #  stop
+    stop
   s=score.look
   with_transpose -12*2 do
     s[0].each{|n|tick(:inner);
@@ -62,7 +62,7 @@ live_loop :test, sync: :metro do
   end
 end
 
-sop_cc mode: 1.0
+#sop_cc mode: 1.0
 #violin :B2, 10, sustain: 3
 #sleep 0.25
 #violin :GS2, 10, sustain: 3
@@ -77,7 +77,7 @@ end
 
 #sop_cc mode: 0
 
-#sop_on :E3, mode: 4
+sop_on :A2, mode: 0
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2
 #sop_cc  motiona: 0.2

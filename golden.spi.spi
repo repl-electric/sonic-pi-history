@@ -68,7 +68,7 @@ end
 #sleep 0.25
 #violin :GS2, 10, sustain: 3
 
-sop_cc motion: 0.1
+sop_cc motion: 0.2
 #sop_cc mode: 0
 
 #sop_on :E3, mode: 4

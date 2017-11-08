@@ -71,7 +71,7 @@ live_loop :do, sync: :metro do
   tick
   sop_cc motion: (line 0.0,1.0,16).look
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
-  smp d1
+  smp d2
   sleep 1/4.0
 end
 

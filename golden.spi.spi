@@ -81,7 +81,7 @@ sop_on :A3, mode: 0
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2
 #sop_cc  motiona: 0.2
-harp :E3,5, sustain: 32
+sharp :E3,5, sustain: 32
 
 live_loop :fucj, sync: :metro do; tick
   sop_cc motion: ((line 0,127,127)+(line 127,0,127)).look

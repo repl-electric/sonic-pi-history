@@ -1,18 +1,20 @@
 def piano(n,*args)
   puts "N:#{n}"
-  if n && n.is_a?(Array)
-    at { sleep 1/8.0;
-      midi n[-1],80, *(args << {port: :iac_bus_1} << {channel: 14})
-    }
-    n = n[0]
-  end
-  if n.is_a?(Array)
-    args =  args  << {sustain: n[1]}
-    n = n[0]
-  end
-  puts "N1:#{n}"
   if n
-    midi n, *(args << {port: :iac_bus_1} << {channel: 14})
+    if n && n.is_a?(Array)
+      at { sleep 1/8.0;
+        midi n[-1],80, *(args << {port: :iac_bus_1} << {channel: 14})
+      }
+      n = n[0]
+    end
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    puts "N1:#{n}"
+    if n
+      midi n, *(args << {port: :iac_bus_1} << {channel: 14})
+    end
   end
 end
 

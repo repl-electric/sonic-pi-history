@@ -8,6 +8,7 @@ def piano(n,*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
+  puts "N1:#{n}"
   if n
     midi n, *(args << {port: :iac_bus_1} << {channel: 14})
   end

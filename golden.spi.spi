@@ -71,7 +71,8 @@ live_loop :do, sync: :metro do
   tick
   sop_cc motion: (line 0.0,1.0,16).look
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
-  p = (ing d1 _ _ _).lookp=_
+  p = (ing d1 _ _ _).look
+  p=_
   smp p, amp: 0.5+rand*0.1
 #  smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), _, Tape[/cymbal/].tick(:i),
 #            Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), _, Tape[/cymbal/].tick(:i),

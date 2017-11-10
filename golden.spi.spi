@@ -2,7 +2,7 @@ def piano(n,*args)
 
   if n
     if n && n.is_a?(Array)
-      puts "N:#{n}"
+      puts "N:#{n[0]}"
       at {
         sleep 1/8.0
 

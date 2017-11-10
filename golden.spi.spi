@@ -1,10 +1,11 @@
 def piano(n,*args)
-  puts "N:#{n}"
+
   if n
     if n && n.is_a?(Array)
+      puts "N:#{n}"
       at {
         sleep 1/8.0
-        puts "-1 #{n[-1]}"
+
         midi n[-1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
       }
       n = n[0]

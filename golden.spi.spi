@@ -76,7 +76,7 @@ live_loop :do, sync: :metro do
   smp (ing _ _ Tape[/tom/,10..32].look _).look, amp: 1.0+rand*0.1
   smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].look, Tape[/cymbal/].tick(:i),
             Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/cymbal/].tick(:i), Tape[/cymbal/].tick(:i),
-       Tape[/snare/].tick(:i), _, _, _,    _, _, _, _).look, amp: 1.0+rand*0.1, rate: (knit 1, 2, 0.25,2).look,
+       Tape[/snare/].tick(:i), _, _, _,    _, _, _, _).look, amp: 1.0+rand*0.1, rate: (knit 1, 4, 0.25,2).look,
   pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look
 
   sleep 1/8.0

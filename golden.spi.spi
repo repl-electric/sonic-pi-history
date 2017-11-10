@@ -235,7 +235,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
       :D4  :Cs4 :D5  :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4
       :D4  :Cs4 :E5  :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4
       :D4  :Cs4 :B5  :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4
-      :D4  :Cs4 :B5  :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4
+      :D4  :Cs4 :Cs6  :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4
 
       ).look #12
 

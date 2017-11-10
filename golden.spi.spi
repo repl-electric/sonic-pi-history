@@ -5,7 +5,7 @@ def piano(n,*args)
       puts n
       at {
         sleep 1/8.0
-        midi n[1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
+        #midi n[1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
       }
       n = n[0]
     end

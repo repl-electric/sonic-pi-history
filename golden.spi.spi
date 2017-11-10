@@ -2,13 +2,12 @@ def piano(n,*args)
   if n
     #puts n
     if n.is_a?(Array) && n[1].is_a?(Symbol)
-      at {
-        puts n[1]
-        sleep 1/8.0
-        puts n[1]
-        midi n[1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
-      }
+      bonus = n[1]
       n = n[0]
+      at {
+        sleep 1/8.0
+        midi bonus, 80, *(args << {port: :iac_bus_1} << {channel: 14})
+      }
     end
     if n.is_a?(Array)
       args =  args  << {sustain: n[1]}

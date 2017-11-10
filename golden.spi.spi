@@ -73,7 +73,7 @@ live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
 
   smp (ing d1, _, _, _,).look, amp: 0.5+rand*0.1
-  smp (ing Tape[/cymbal/].look, Tape[/cymbal/].tick, _, Tape[/cymbal/].tick,
+  smp (ing Tape[/cymbal/].look, Tape[/cymbal/].tick, Tape[/snare/].look, Tape[/cymbal/].tick,
            Tape[/cymbal/].look, Tape[/cymbal/].tick, Tape[/cymbal/].tick, Tape[/cymbal/].tick,
            _, _, _, _,    _, _, _, _,).look, amp: 0.5+rand*0.1, rate: (knit 1, 2, 0.85,2).look
 

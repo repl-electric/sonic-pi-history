@@ -357,7 +357,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     end
   end
   sleep 1#/4.0
-  violin z,  sustain: 1.0
+  violin z, 100, sustain: 1.0
   sleep 1#/4.0 #/4.0
 end
 

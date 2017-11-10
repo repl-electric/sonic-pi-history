@@ -1,7 +1,9 @@
 def piano(n,*args)
   puts "N:#{n}"
   if n && n.is_a?(Array)
-    at { sleep 1/8.0; piano n[-1], 80}
+    at { sleep 1/8.0;
+      midi n[-1],80, *(args << {port: :iac_bus_1} << {channel: 14})
+    }
     n = n[0]
   end
   if n.is_a?(Array)

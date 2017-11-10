@@ -3,7 +3,7 @@ def piano(n,*args)
     #puts n
     if n.is_a?(Array) && n[1].is_a?(Symbol)
       at {
-        puts n
+        puts n[1]
         sleep 1/8.0
         midi n[1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
       }

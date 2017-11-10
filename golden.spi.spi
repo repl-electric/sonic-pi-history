@@ -272,7 +272,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
 
 
     if z == :E3
-      zero :E5, 80
+      zero :E4, 80
     end
 
     if spread(1,9).look

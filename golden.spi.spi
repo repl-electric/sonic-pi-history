@@ -69,7 +69,7 @@ sop_on :A2, mode: 0
 #violin :GS2, 10, sustain: 3
 
 live_loop :do, sync: :metro do
-  with_fx :reverb, mix: 0.4 do
+  with_fx :reverb, mix: (ring 0.4+rand*0.1).look do
   8.times{
   tick
   sop_cc motion: (line 0.0,1.0,16).look

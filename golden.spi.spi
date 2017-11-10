@@ -1,3 +1,23 @@
+def piano(n,*args)
+  if n
+    if n.is_a?(Array) && n[-1].is_a?(Symbol)
+      at {
+        sleep 1/8.0
+        midi n[1], 80, *(args << {port: :iac_bus_1} << {channel: 14})
+      }
+      n = n[0]
+    end
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    if n
+      midi n, *(args << {port: :iac_bus_1} << {channel: 14})
+    end
+  end
+end
+
+
 live_loop :test, sync: :metro do
   tick
   score = (ing

@@ -7,7 +7,7 @@ def piano(n,*args)
         sleep 1/8.0
         midi n[0], 80, *(args << {port: :iac_bus_1} << {channel: 14})
       }
-      n = n[0]
+      n = n[-1]
     end
     if n.is_a?(Array)
       args =  args  << {sustain: n[1]}

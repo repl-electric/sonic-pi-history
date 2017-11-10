@@ -412,7 +412,7 @@ with_fx :none, mix: 0 do
             k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ [f1 0.25]
             ).look
 
-         #k=_
+         k=_
           cue(:sudden) if k
           sidechain if k && spread(1,4).look
           condi = 1
@@ -535,7 +535,7 @@ with_fx :none, mix: 0 do
             _ _ _ _   c1 {path:Analog[/clapraw/,0],amp:0.125} _ _
             ).look
 
-         #s=_
+         s=_
           fin=  s != c2 ? (line 0.05, 0.01, 64).look : (line 1.0, 0.99, 2*64).look
           amp = if (s != _)
                   s.is_a?(String) ? 1.0 : (s[:amp] || 1.0)
@@ -567,7 +567,7 @@ with_fx :none, mix: 0 do
                 else
                   0
                 end
-         #p=_
+         p=_
           smp p, cutoff: 1*(line 110, 127,32).look, attack: (line 0.001,0.0,64).look, sustain: (knit 0.01,4,0.1,4,0.1,4).look, amp: amp*0.8*2 #sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
 
           h = Frag[/hat/,8]
@@ -575,7 +575,7 @@ with_fx :none, mix: 0 do
             _  _ h  _   _  _ h  _
             _  _ h  _   _  _ h  {path:h,amp:0.1}
             _  _ h  _   _  _ h  _).look
-         #p=_
+         p=_
           if(p && dice(6) > 1)
 
             amp = if (p != _)

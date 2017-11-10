@@ -274,7 +274,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
 
     if z == :A3
    #   zero :FS5, 80
-      sharp :FS4, 80, sustain: 8
+      sharp :FS4, 1, sustain: 8
     end
 
     if spread(1,9).look

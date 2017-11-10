@@ -1,5 +1,6 @@
 def piano(n,*args)
   if n
+    puts n
     if n.is_a?(Array) && n[-1].is_a?(Symbol)
       puts n
       at {

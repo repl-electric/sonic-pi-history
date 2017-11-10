@@ -236,7 +236,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
       #, :D4,  :Cs4, :E5,  :A3, _, :E4, _,  :A4, :A4, :A4, :A4, :A4,
       #, :D4,  :Cs4, :B5,  :A3, _, :E4, _,  :A4, :A4, :A4, :A4, :A4,
 
-      :D4,  :Cs4, :Cs6,  :A3, :E6, :E4, _,  :A4, :A4, :A4, :A4, :A4,
+      :D4,  :Cs4, :Cs6,  :A3, :E6, :E4, _,  [:A4, :A4], :A4, :A4, :A4, :A4,
       :D4,  :Cs4, :Cs6,  :A3, :E6, :E4, _,  :A4, :A4, :A4, :A4, :A4,
       :D4,  :Cs4, :E6,  :A3, :Gs6, :E4, _,  :A4, :A4, :A4, :A4, :A4,
       :D4,  :Cs4, :B6,  :A3, :Gs6, :E4, _,  :A4, :A4, :A4, :A4, :A4,

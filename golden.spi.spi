@@ -75,7 +75,6 @@ live_loop :do, sync: :metro do
   p = (ring
     Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
     Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
-
     ).look
   #p=_
   smp p, amp: 0.25+rand*0.1

@@ -1,5 +1,5 @@
 def piano(n,*args)
-  puts n
+  puts "N:#{n}"
   if n && n.is_a?(Array)
     at { sleep 1/8.0; piano n[-1], 80}
     n = n[0]

@@ -6,7 +6,7 @@ def piano(n,*args)
       n = n[0]
       at {
         sleep 1/8.0
-        midi bonus, 70, *(args << {port: :iac_bus_1} << {channel: 14})
+        midi bonus, 60, *(args << {port: :iac_bus_1} << {channel: 14})
       }
     end
     if n.is_a?(Array)

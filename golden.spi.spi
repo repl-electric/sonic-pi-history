@@ -489,7 +489,7 @@ with_fx :none, mix: 0 do
             _, _, p1,
             _, _, p1,
             ).look
-        p=_
+       #p=_
           if p
             smp p, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look,
             pan: (ing 0.25, 0.25, -0.25, 0.25,).look, cutoff: 120, cutoff: (ramp 0, 120,128).tick(:t1)
@@ -553,7 +553,7 @@ with_fx :none, mix: 0 do
                 else
                   0
                 end
-        p=_
+       #p=_
           smp p, cutoff: 1*(line 110, 127,32).look, attack: (line 0.001,0.0,64).look, sustain: (knit 0.01,4,0.1,4,0.1,4).look, amp: amp*0.8*2 #sustain: (knit 0.1,4,0.0125,16,0.5,4).look, amp: amp
 
           h = Frag[/hat/,8]
@@ -561,7 +561,7 @@ with_fx :none, mix: 0 do
             _,  _, h,  _,   _,  _, h,  _,
             _,  _, h,  _,   _,  _, h,  {path:h, amp:0.1},
             _,  _, h,  _,   _,  _, h,  _,).look
-        p=_
+       #p=_
           if(p && dice(6) > 1)
 
             amp = if (p != _)

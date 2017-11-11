@@ -126,6 +126,11 @@
       (replace-string "s=_" "s=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
+
+ k=_
+ p=_
+ s=_
+
 (defun snare-on () "Snare on"
   (interactive)
   (progn

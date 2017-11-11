@@ -115,8 +115,8 @@
   (interactive)
   (progn
     (if (eql drum-mode 'drum-on)
-        (setq drum-mode  'drum-off)
-      (setq drum-mode  'drum-on))
+        (setf drum-mode  'drum-off)
+      (setf drum-mode  'drum-on))
     (funcall drum-mode)))
 
 (defun snare-off () "Snare off"
@@ -137,8 +137,8 @@
   (interactive)
   (progn
     (if (eql snare-mode 'snare-on)
-        (setq snare-mode  'snare-off)
-      (setq snare-mode  'snare-on))
+        (setf snare-mode  'snare-off)
+      (setf snare-mode  'snare-on))
     (funcall snare-mode)))
 
 (defun perc-off () "Percussion off"
@@ -159,8 +159,8 @@
   (interactive)
   (progn
     (if (eql perc-mode 'perc-on)
-        (setq perc-mode 'perc-off)
-      (setq perc-mode 'perc-on))
+        (setf perc-mode 'perc-off)
+      (setf perc-mode 'perc-on))
     (funcall perc-mode)))
 
 (defvar perc-mode  'perc-on)

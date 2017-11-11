@@ -94,7 +94,7 @@
     (save-excursion
       (replace-string " k=_" " k=_" nil (point-min) (point-max))
       (replace-string " s=_" " s=_" nil (point-min) (point-max))
-      (replace-string " p=_" " p=_" nil (point-min) (point-max))
+      (replace-string " #p=_" " #p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
 (defun drum-off () "Drums off"
@@ -152,7 +152,7 @@
   (interactive)
   (progn
     (save-excursion
-      (replace-string " p=_" " p=_" nil (point-min) (point-max))
+      (replace-string " #p=_" " #p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
 (defun perc-toggle () "Perc off/on"

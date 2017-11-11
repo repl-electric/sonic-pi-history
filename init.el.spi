@@ -83,7 +83,7 @@
   (interactive)
   (progn
     (save-excursion
-      (replace-string "#k=_" "k=_" nil (point-min) (point-max))
+      (replace-string "k=_" "k=_" nil (point-min) (point-max))
       (replace-string "#s=_" "s=_" nil (point-min) (point-max))
       (replace-string "#p=_" "p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
@@ -92,9 +92,23 @@
   (interactive)
   (progn
     (save-excursion
-      (replace-string " #k=_" " #k=_" nil (point-min) (point-max))
+      (replace-string " k=_" " k=_" nil (point-min) (point-max))
       (replace-string " s=_" " #s=_" nil (point-min) (point-max))
       (replace-string " p=_" " #p=_" nil (point-min) (point-max))
+      (sonic-pi-send-buffer))))
+
+(defun drum-off () "Drums off"
+  (interactive)
+  (progn
+    (save-excursion
+      (replace-string "k=_" "k=_" nil (point-min) (point-max))
+      (sonic-pi-send-buffer))))
+
+(defun drum-on () "Drums on"
+  (interactive)
+  (progn
+    (save-excursion
+      (replace-string " k=_" " k=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
 (defun drum-toggle () "Drums off/on"
@@ -103,22 +117,7 @@
     (if (eql drum-mode 'drum-on)
         (setq drum-mode  'drum-off)
       (setq drum-mode  'drum-on))
-    (funcall drum-mode)
-    ))
-
-(defun drum-off () "Drums off"
-  (interactive)
-  (progn
-    (save-excursion
-      (replace-string "#k=_" "k=_" nil (point-min) (point-max))
-      (sonic-pi-send-buffer))))
-
-(defun drum-on () "Drums on"
-  (interactive)
-  (progn
-    (save-excursion
-      (replace-string " #k=_" " #k=_" nil (point-min) (point-max))
-      (sonic-pi-send-buffer))))
+    (funcall drum-mode)))
 
 (defun snare-off () "Snare off"
   (interactive)
@@ -134,6 +133,14 @@
       (replace-string " s=_" " #s=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
+(defun snare-toogle
+  (interactive)
+  (progn
+    (if (eql snare-mode 'snare-on)
+        (setq snare-mode  'snare-off)
+      (setq snare-mode  'snare-on))
+    (funcall snare-mode)))
+
 (defun perc-off () "Percussion off"
   (interactive)
   (progn
@@ -148,13 +155,21 @@
       (replace-string " p=_" " #p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
-(defvar perc-mode  'perc-on)
-(defvar drum-mode  'drum-toggle)
-(defvar snare-mode 'snare-on)
+(defun perc-toogle
+  (interactive)
+  (progn
+    (if (eql perc-mode 'perc-on)
+        (setq perc-mode  'perc-off)
+      (setq perc-mode  'perc-on))
+    (funcall perc-mode)))
 
-(global-set-key (kbd "<f10>") 'perc-on)
-(global-set-key (kbd "<f11>") 'drum-toggle)
-(global-set-key (kbd "<f12>") 'snare-on)
+(defvar perc-mode  'perc-toggle)
+(defvar drum-mode  'drum-toggle)
+(defvar snare-mode 'snare-toggle)
+
+(global-set-key (kbd "<f10>") 'perc-toggle)
+(global-set-key (kbd "<f11>") 'snare-toggle)
+(global-set-key (kbd "<f12>") 'drum-toggle)
 
 (add-to-list 'package-archives
              '("marmalade" .

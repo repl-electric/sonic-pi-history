@@ -127,9 +127,10 @@
       (sonic-pi-send-buffer))))
 
 
- k=_
- p=_
- s=_
+ #k=_
+ #p=_
+ #s=_
+
 
 (defun snare-on () "Snare on"
   (interactive)

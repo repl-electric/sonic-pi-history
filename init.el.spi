@@ -94,7 +94,7 @@
     (save-excursion
       (replace-string " k=_" " k=_" nil (point-min) (point-max))
       (replace-string " s=_" " s=_" nil (point-min) (point-max))
-      (replace-string " p=_" " #p=_" nil (point-min) (point-max))
+      (replace-string " #p=_" " #p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
 (defun drum-off () "Drums off"
@@ -114,7 +114,7 @@
 (defun drum-toggle () "Drums off/on"
   (interactive)
   (progn
-    (if (eql drum-mode 'drum-on)
+    (if (equal drum-mode 'drum-on)
         (setf drum-mode  'drum-off)
       (setf drum-mode  'drum-on))
     (funcall drum-mode)))
@@ -136,7 +136,7 @@
 (defun snare-toggle () "Snare off/on"
   (interactive)
   (progn
-    (if (eql snare-mode 'snare-on)
+    (if (equal snare-mode 'snare-on)
         (setf snare-mode  'snare-off)
       (setf snare-mode  'snare-on))
     (funcall snare-mode)))
@@ -152,13 +152,13 @@
   (interactive)
   (progn
     (save-excursion
-      (replace-string " p=_" " #p=_" nil (point-min) (point-max))
+      (replace-string " #p=_" " #p=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
 (defun perc-toggle () "Perc off/on"
   (interactive)
   (progn
-    (if (eql perc-mode 'perc-on)
+    (if (equal perc-mode 'perc-on)
         (setf perc-mode 'perc-off)
       (setf perc-mode 'perc-on))
     (funcall perc-mode)))

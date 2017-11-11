@@ -126,12 +126,6 @@
       (replace-string "s=_" "s=_" nil (point-min) (point-max))
       (sonic-pi-send-buffer))))
 
-
- #k=_
- #p=_
- #s=_
-
-
 (defun snare-on () "Snare on"
   (interactive)
   (progn
@@ -164,14 +158,15 @@
 (defun perc-toggle () "Perc off/on"
   (interactive)
   (progn
+    (log (format "%s" perc-mode))
     (if (equal perc-mode 'perc-on)
         (setf perc-mode 'perc-off)
       (setf perc-mode 'perc-on))
     (funcall perc-mode)))
 
-(defvar perc-mode  'perc-on)
-(defvar drum-mode  'drum-on)
-(defvar snare-mode 'snare-on)
+(defvar perc-mode  nil)
+(defvar drum-mode  nil)
+(defvar snare-mode nil)
 
 (global-set-key (kbd "<f10>") 'perc-toggle)
 (global-set-key (kbd "<f11>") 'snare-toggle)

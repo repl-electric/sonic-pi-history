@@ -1,25 +1,5 @@
 live_loop :test, sync: :metro do
   tick
-  score = (ing
-    # [:A2  :Cs3  :E3]
-    # [:E2  :Gs2  :B2]
-    # [:D2  :Fs2  :A2]
-    # [:B2  :D3   :FS3]
-    # [:FS2 :A2   :Cs3]
-    # [:E2  :Gs2  :B2]
-
-    [:A2  :Cs3  :E3 ]        #1
-    [:E3  :Gs3  :B3 ]        #5
-    [:D3  :Fs3  :A3 ]        #4
-    [_ _ _]
-    [:B3  :D3   :FS3]        #2
-    [:FS3 :A3   :Cs3]        #6
-    [:E3  :Gs3  :B3 ]        #5
-    [:A3  :B3   :E4 ]        #1
-    [:A3  :cs4  :E4 ]        #1
-    [_ _ _]                   #10
-    ).look
-
   score=   n = (ring
     [(chord :A2, :M,  i:-1), 4],
     [(chord :cs3, :m, i:0),  4],
@@ -28,7 +8,6 @@ live_loop :test, sync: :metro do
     [(chord :A2, :M,  i:0),  4],
     [(chord :cs3, :m, i:1),  4],
     ).look.to_a
-
   score = (ring
     [[:Cs2, :E2],  4*3, 4],
     [[:A1],        4*2, 4],
@@ -38,7 +17,7 @@ live_loop :test, sync: :metro do
     [[:E2, :Gs2],  4,   4],
     )
 
-      score = (ring
+  score = (ring
 #        [(chord :A2, :add2),4],
 #        [(chord :A2, :M),4],
         [(chord :A1, :M),4],
@@ -69,7 +48,7 @@ sop_on :A2, mode: 0
 #violin :GS2, 10, sustain: 3
 
 live_loop :do, sync: :metro do
-  with_fx :reverb, mix: (ring 0.4+rand*0.1).look do
+  with_fx :echo, mix: (ring 0.05+rand*0.1).look, phase: (ring 1/4.0, 1/8.0).look do
   8.times{
   tick
   sop_cc motion: (line 0.0,1.0,16).look
@@ -78,12 +57,13 @@ live_loop :do, sync: :metro do
     Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
     Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
     ).look
-  #p=_
-  smp p, amp: 0.25+rand*0.1, rate: (knit 1, 4, 0.85,2).look
-#  smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), _, Tape[/cymbal/].tick(:i),
-#            Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), _, Tape[/cymbal/].tick(:i),
-#            _, _, _, _,    _, _, _, _).look, amp: 1.0+rand*0.1, rate: (knit 1, 4, 0.85,2).look,
-#  pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look
+  p=_
+  smp p, amp: 0.25+rand*0.1, rate: (knit 1, 4, 0.85,2).look, pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look#, cutoff: 110
+ # smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),
+ #           Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),
+ #      _, _, _, _,    _, _, _, _
+ #      ).look, amp: 0.5+rand*0.1, rate: (knit 1, 4, 0.85,2).look,
+ # pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look
 
     sleep 1/8.0
     }
@@ -509,7 +489,7 @@ with_fx :none, mix: 0 do
             _ _ p1
             _ _ p1
             ).look
-          #p=_
+          p=_
           if p
             smp p, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: 0.8*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look,
             pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 120, cutoff: (ramp 0, 120,128).tick(:t1)

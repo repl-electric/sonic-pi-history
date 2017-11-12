@@ -1,4 +1,16 @@
-live_loop :learn do
+def violin(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  if n
+    midi n, vel, *(args << {port: :iac_bus_1} << {channel: 15})
+  end
+  violin_cc(opts)
+end live_loop :learn do
   tick
   violin :A3
   sleep 1

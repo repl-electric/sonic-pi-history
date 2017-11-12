@@ -1,5 +1,5 @@
 live_loop :learn do
   tick
-  midi_cc 10,(line 0,127).look), channel: 15, port: iac_bus_1
+  midi_cc 10, (line 0,127).look, channel: 15, port: iac_bus_1
   sleep 3
 end

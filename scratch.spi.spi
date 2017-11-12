@@ -1,6 +1,5 @@
 live_loop :learn do
   tick
-
   violin :A2
   sleep 3
 end

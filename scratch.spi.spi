@@ -24,7 +24,7 @@ end
 live_loop :learn do
   tick
 
-  violin :A2
-  midi_cc 10, (line 0,127).look, channel: 15, port: :iac_bus_1
+#  violin :A2
+  midi_cc 11, (line 0,127).look, channel: 15, port: :iac_bus_1
   sleep 3
 end

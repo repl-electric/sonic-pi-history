@@ -14,6 +14,6 @@ end
 
 live_loop :learn do
   tick
-  violin :A3, form: 0.0, shape: 0.0, mod: 0.1
+  violin :A3, form: 0.0, shape: 0.0, mod: 0.2
   sleep 1
 end

@@ -31,7 +31,6 @@ live_loop :test, sync: :metro do
         )
 
   #score = score[0]
-  stop
   s=score.look
   with_transpose -12*0 do
     s[0].each{|n|tick(:inner);

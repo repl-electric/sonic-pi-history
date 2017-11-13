@@ -7,6 +7,7 @@ def violin(*args)
     n = n[0]
   end
   if(opts[:mode])
+    puts opts
     violin_mode(opts[:mode])
   end
   if n

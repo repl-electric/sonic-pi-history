@@ -59,7 +59,7 @@ live_loop :do, sync: :metro do
           Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
           ).look
 
-        p = (ring
+        p3 = (ring
           Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
           _,_,_,_,  _,_,_,_
           ).look

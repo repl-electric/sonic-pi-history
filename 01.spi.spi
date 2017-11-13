@@ -55,9 +55,15 @@ live_loop :do, sync: :metro do
   #sop_cc motion: (line 0.0,1.0,16).look
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
   p = (ring
-    Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
-    Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
-    ).look
+          Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
+          Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
+          ).look
+
+        p = (ring
+          Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_,
+          Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
+          ).look
+
   #p=_
         smp p, amp: 0.25+rand*0.1, rate: (knit 1, 4, 0.85,2).look, pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look, cutoff: 110
  # smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),

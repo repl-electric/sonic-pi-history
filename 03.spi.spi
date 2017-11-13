@@ -6,8 +6,9 @@ def violin(*args)
     args =  args  << {sustain: n[1]}
     n = n[0]
   end
-  if(opts[:mode])
     puts opts
+  if(opts[:mode])
+
     violin_mode(opts[:mode])
   end
   if n

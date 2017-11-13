@@ -403,7 +403,7 @@ with_fx :none, mix: 0 do
             ).look
 
           #k=_
-          cue(:sudden) if k
+          #cue(:sudden) if k
           sidechain if k && spread(1,4).look
           condi = 1
           if k.is_a?(Array)

@@ -14,6 +14,6 @@ end
 
 live_loop :learn do
   tick
-  violin :A2, form: 0.5, shape: 0.58*0, mul: 4.0
+  violin :A2, form: (ramp 0.0,0.5,256).tick(:osh), shape: 0.58*0, mul: 4.0
   sleep 1
 end

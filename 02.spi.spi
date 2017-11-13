@@ -335,7 +335,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
   #sleep 1#/4.0
   with_transpose -12 do
     violin z, 0.1*100, sustain: 1.0
-    end
+  end
   sleep 1 #/4.0 #/4.0
 end
 
@@ -377,7 +377,7 @@ with_fx :none, mix: 0 do
             k3, _, k3, _,   k2, _, _, _,    k1, _, _, _,   k4, _, _, _,
             ).look
 
-          k=(ing
+          k2=(ing
             k1, _, _, _,    _, _, _, _,     k4, _, _, _,   _, _, _, _,
             k1, _, _, _,    _, _, _, _,     k4, _, _, _,   _, _, _, k7,
             k1, _, _, _,    _, _, _, _,     k4, _, _, _,   _, _, _, k7,
@@ -391,7 +391,7 @@ with_fx :none, mix: 0 do
             k1, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, [f1, 0.25],
             ).look
 
-          #k=_
+          k=_
           cue(:sudden) if k
           sidechain if k && spread(1,4).look
           condi = 1

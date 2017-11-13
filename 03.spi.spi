@@ -1,7 +1,7 @@
 def violin_mode(mode)
+  puts ['C-1','Cs-1','B-1'][mode]
   violin ['C-1','Cs-1','B-1'][mode]
 end
-
 
 def violin(*args)
   params, opts = split_params_and_merge_opts_array(args)

@@ -44,7 +44,8 @@ end
 
 #sop_on :A4, mode: 4
 #sop_cc mode: 3
-violin :A2, 100, sustain: 3, form: 0.5
+violin :A2, 100, sustain: 3, form: 0.5, mode: 2
+
 #violin :GS2, 10, sustain: 3
 
 live_loop :do, sync: :metro do

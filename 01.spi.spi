@@ -54,10 +54,12 @@ live_loop :do, sync: :metro do
       tick
   #sop_cc motion: (line 0.0,1.0,16).look
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
-  p = (ring
+        comment do
+        p = (ring
           Tape[/cymbal/].tick(:i),_,Tape[/cymbal/].tick(:i),_,  _,_,_,_,
           Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
-          ).look
+            ).look
+          end
 
         p = (ring
           Tape[/cymbal/].look(:i),_,_,_,  _,_,_,_,

@@ -22,7 +22,7 @@ def violin(*args)
   violin_cc(opts)
 end
 violin :A2, mode: 2
-
+stop
 
 
 live_loop :test, sync: :metro do

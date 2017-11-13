@@ -37,7 +37,7 @@ live_loop :test, sync: :metro do
     s[0].each{|n|tick(:inner);
       sop n, 80, sustain: s[1]*2, mode: 0*(ring 0, 1, 2).look(:inner) # formant: 0.5, # form_amp: 0.5,
     }
-    violin s[0][1], 2
+    violin s[0][1], 1
     sleep (s[-1])*2
   end
 end

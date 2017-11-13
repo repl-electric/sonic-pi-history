@@ -42,8 +42,8 @@ live_loop :test, sync: :metro do
   end
 end
 
-sop_on :A3, mode: 0
-sop_cc mode: 3
+sop_on :A3, mode: 3
+#sop_cc mode: 3
 #violin :B2, 10, sustain: 3
 #violin :GS2, 10, sustain: 3
 

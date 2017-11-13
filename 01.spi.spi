@@ -62,7 +62,7 @@ live_loop :do, sync: :metro do
           end
 
         p = (ring
-          Tape[/cymbal/].look(:i),_,_,_,  _,_,_,_,
+          Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_,
           _,_,_,_,  _,_,_,_
           ).look
 

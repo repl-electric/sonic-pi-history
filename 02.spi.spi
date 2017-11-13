@@ -292,7 +292,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
 
       with_transpose -1*12 do
         if c[0].count > 3
-          violin c[0][-1], 1*(ing 30 10 30 50).look(:inner), sustain: 4
+          violin c[0][-1], 2*(ing 30 10 30 50).look(:inner), sustain: 4
         end
       end
       with_transpose -12*2 do

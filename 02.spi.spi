@@ -66,13 +66,13 @@ live_loop :do, sync: :metro do
         c2 = Tape[/cymbal/].look(:i)
         c3 = Tape[/cymbal/].tick(:i)
         p = (ing
-          c1 d1 c2 _  d1 _ _ _
+          _ d1 c2 _  d1 _ _ _
 #          _ _ _ _    _ _ _ _
-          c3 _ _ _   d1 _ _ _
+          _ _ _ _   d1 _ _ _
 #          _ _ _ _    _ _ _ _
           ).look
 
-  p=_
+  #p=_
         smp p, amp: 0.25+rand*0.1, rate: (knit 1, 4, 0.85,2).look, pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look
         #cutoff: 110+rand(2)
  # smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),

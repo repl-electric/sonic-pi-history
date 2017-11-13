@@ -491,7 +491,7 @@ with_fx :none, mix: 0 do
 
           if p && spread(3,7).look
             #            with_swing -0.01, 2 do
-            smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25, -0.25,).tick(:ingit), cutoff: 100
+            smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.25, pan: (ing 0.25, -0.25,).tick(:ingit), cutoff: 110
             #            end
           end
 

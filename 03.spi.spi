@@ -21,7 +21,7 @@ def violin(*args)
   end
   violin_cc(opts)
 end
-violin :D3, mode: 2
+violin :E3, mode: 2
 stop
 
 

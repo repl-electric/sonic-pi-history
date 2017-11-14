@@ -1,5 +1,5 @@
 live_loop :learn do
   tick
-  sop_cc cutoff: rand_i(127)
+  sop_cc cutoff: rand(1.0)
   sleep 1/4.0
 end

@@ -1,0 +1,5 @@
+live_loop :learn do
+  tick
+  sop_cc 97, rand_i(127)
+  sleep 1
+end

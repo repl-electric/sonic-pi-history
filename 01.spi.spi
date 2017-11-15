@@ -21,7 +21,7 @@ live_loop :c, sync: :metro do
     [[[:A1  4]  [:CS2 4]  [:E2 4]  [:FS3 4]]  4]
     [[[:GS2 4]  [:CS2 4]  [:E2 4]  [:As3 4]]  4]
     )
-  #stop
+  stop
   s=score.look
   c=s[0]
   with_transpose -12*0 do
@@ -53,8 +53,8 @@ end
 }
 
 sop_cc motion: 0.1
-sop_off :E2, mode: 0
-sop_off :A2, mode: 0
+sop_on :A2, mode: 4
+#sop_off :A2, mode: 0
 
 #sop_cc mode: 1.0
 #violin :d4, 100, sustain: 6#, mode: 2

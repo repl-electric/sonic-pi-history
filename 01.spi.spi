@@ -83,8 +83,8 @@ live_loop :do, sync: :metro do
           #s1 t1 _ _    _ _ _ _
           ).look
 
-        p=_
-        smp p, amp: 0.35+rand*0.1, rate: (knit 1, 4, 0.85,2).look, pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look, cutoff: (ramp 0,127,256).tick(:aaashoo2t)#, cutoff: 100
+        #p=_
+        smp p, amp: 0.35+rand*0.1, rate: (knit 1, 4, 0.85,2).look, pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).look, cutoff: (ramp 0,127,256).tick(:aaashoo2t), cutoff: 100
 #        smp (ring Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),
 #            Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),
 #             _, _, _, _,   _, _, _, _

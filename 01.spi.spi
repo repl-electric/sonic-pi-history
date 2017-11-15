@@ -44,7 +44,7 @@ end
 
 (12*4).times{
   midi (scale :fs2, :minor_pentatonic, octaves: 4).tick, 100, channel: 2
-  sleep 1/2.0
+  sleep 1/8.0
 }
 
 sop_cc motion: 0.01

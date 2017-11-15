@@ -5,7 +5,7 @@ live_loop :fucj, sync: :metro do; tick
 end
 
 #bass   :E2, 100, sustain: 4
-violin :E1, 110, sustain: 4
+violin :E1, 100, sustain: 4
 
 live_loop :c, sync: :metro do
   tick

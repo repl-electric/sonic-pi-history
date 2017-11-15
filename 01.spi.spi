@@ -35,7 +35,7 @@ live_loop :c, sync: :metro do
 
     end
     with_fx :gverb, room: 200.0, mix: 0.8, release: 8, spread: 0.9 do
-      smp Drip[/effect/,1..5].look, amp: 0.2, cutoff: 80, rate: 0.125
+      smp Drip[/effect/,2].look, amp: 0.2, cutoff: 80, rate: 0.125
     end
     puts s[-1]
     sleep s[-1]

@@ -53,7 +53,7 @@ sop_cc motion: 0.1
 sop_on :E2, mode: 0
 #sop_cc mode: 1.0
 #violin :d4, 100, sustain: 6#, mode: 2
-#violin :GS2, 10, sustain: 3
+violin :GS2, 10, sustain: 3
 
 #midi_note_on :A4, channel:15, port: :iac_bus_1
 #violin_cc mode: 2, deform: 1.0, shape: 1.0

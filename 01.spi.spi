@@ -4,7 +4,7 @@ live_loop :fucj, sync: :metro do; tick
   sleep 1#/2.0
 end
 
-bass :E2, 120, sustain: 4
+bass :E2, 100, sustain: 4
 
 live_loop :c, sync: :metro do
   tick

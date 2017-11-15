@@ -6,7 +6,7 @@ end
 
 #bass   :E2, 100, sustain: 4
 
-violin :GS3, 120, sustain: 8, mode: 1, deform: 0.5, shape: 0.58
+#violin :GS3, 120, sustain: 8, mode: 1, deform: 0.5, shape: 0.58
 
 live_loop :c, sync: :metro do
   tick

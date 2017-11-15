@@ -1,5 +1,5 @@
 live_loop :fucj, sync: :metro do; tick
-  sop_cc motion: ((line 0,1.0,127)+(line 1.0,0.0,127)).look
+  #sop_cc motion: ((line 0,1.0,127)+(line 1.0,0.0,127)).look
   #sop_cc 1, 127
   sleep 1#/2.0
 end
@@ -22,6 +22,7 @@ live_loop :c, sync: :metro do
   s=score.look
   c=s[0]
   with_transpose -12*0 do
+    stop
     c.each{|n|tick(:inner);
       sop n[0], (ing 80 70 85 70).look(:inner), sustain: (n[-1])#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }
@@ -48,8 +49,8 @@ end
 #  sleep 1/8.0
 }
 
-#sop_cc motion: 0.05
-#sop_on :A3, mode: 4
+sop_cc motion: 0.05
+sop_on :A2, mode: 4
 #sop_cc mode: 1.0
 #violin :d4, 100, sustain: 6#, mode: 2
 #violin :GS2, 10, sustain: 3

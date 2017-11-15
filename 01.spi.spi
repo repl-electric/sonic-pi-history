@@ -237,7 +237,9 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     #      ).look
 
 
-    eek z, 100, sustain: 1/4.0, at: rand(0.0), mod: rand(0.0)
+    with_transpose 12 do
+      eek z, 100, sustain: 1/4.0, at: rand(0.0), mod: rand(0.0)
+      end
 
     if z == :D4
       #zero :FS5, 80

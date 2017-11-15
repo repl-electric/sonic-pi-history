@@ -77,7 +77,7 @@ live_loop :do, sync: :metro do
         c2 = Tape[/cymbal/].tick(:i)
         c3 = Tape[/cymbal/].tick(:i)
         p = (ing
-          c1 c2 _ _  _ _ _ _
+          c1 c2 d1 _  _ _ _ _
           _ _ _ _    _ _ _ s1
           d1 _ _ _   _ _ _ _
           _ _ _ _    _ _ _ _

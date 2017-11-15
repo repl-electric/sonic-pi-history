@@ -47,7 +47,7 @@ end
   #sleep 1/2.0
 #}
 
-sop_cc motion: 0.0
+sop_cc motion: 0.01
 #sop_on :A3, mode: 4
 #sop_cc mode: 1.0
 #violin :d4, 100, sustain: 6#, mode: 2

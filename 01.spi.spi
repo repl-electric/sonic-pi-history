@@ -237,7 +237,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     #      ).look
 
 
-    eek (ring :D4, :E4).tick(:in), 10, sustain: 1, at: rand(1.0), mod: rand(1.0) if spread(1,16).look
+    eek z, 10, sustain: 1, at: rand(1.0), mod: rand(1.0) if spread(1,16).look
 
     if z == :D4
       #zero :FS5, 80

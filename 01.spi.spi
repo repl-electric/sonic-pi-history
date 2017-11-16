@@ -331,6 +331,7 @@ end
 
 
 live_loop :kick, sync: :drums do
+  8.times{
   tick
   t1 = CineAmbi[/One shots/,/tom/,2]
   k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
@@ -389,8 +390,8 @@ live_loop :kick, sync: :drums do
     end
     # rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
   end
-
-  sleep 1/8.0
+    sleep 1/8.0
+  }
 end
 
 with_fx :none, mix: 0 do

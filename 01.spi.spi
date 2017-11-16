@@ -26,7 +26,7 @@ live_loop :c, sync: :metro do
     [[[:GS2 4]  [:CS2 4]  [:E2 4]  [:As3 4]]  4]
     )
   s=score.look
-#  stop
+  stop
   c=s[0]
   with_transpose -12*0 do
     c.each{|n|tick(:inner);
@@ -48,7 +48,7 @@ live_loop :c, sync: :metro do
   end
 end
 
-violin_on :FS6, 1
+#violin_on :FS6, 1
 #violin_off(:Fs5) if k && spread(1,16).look
 
 #eek :E2, sustain: 4

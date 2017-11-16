@@ -297,7 +297,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
 
       c = c[0]
       #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-      #c = []
+      c = []
       sharp c[0], 3, sustain: 8
       sop c[1], 3, sustain: 8
       sop c[2], 3, sustain: 8
@@ -383,8 +383,8 @@ live_loop :kick, sync: :drums do
     ).look
 
   #k=_
-    cue(:sudden) if k && spread(1,16).look
-    violin_x
+  #  cue(:sudden) if k && spread(1,16).look
+  #  violin_x
   sidechain if k && spread(1,4).look
   condi = 1
   if k.is_a?(Array)

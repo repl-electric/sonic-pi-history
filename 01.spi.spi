@@ -13,7 +13,7 @@ end
 
 live_loop :c, sync: :metro do
   tick
-  stop
+#  stop
   score = (ing
     [[[:A1  4]  [:CS2 4]  [:E2 4]]            4]
     [[[:GS4  0.5]]                            1]

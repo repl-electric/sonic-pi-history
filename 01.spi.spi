@@ -383,7 +383,7 @@ live_loop :kick, sync: :drums do
     ).look
 
   #k=_
-    #cue(:sudden) if k && spread(1,16).look
+    cue(:sudden) if k && spread(1,16).look
 
   sidechain if k && spread(1,4).look
   condi = 1

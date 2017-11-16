@@ -47,8 +47,8 @@ live_loop :c, sync: :metro do
   end
 end
 
-#violin_on :GS5, 1
-violin_x
+violin_on :GS5, 1
+#violin_x
 
 #eek :E2, sustain: 4
 

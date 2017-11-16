@@ -26,7 +26,7 @@ live_loop :c, sync: :metro do
     [[[:GS2 4]  [:CS2 4]  [:E2 4]  [:As3 4]]  4]
     )
   s=score.look
-  stop
+  #stop
   c=s[0]
   with_transpose -12*0 do
     c.each{|n|tick(:inner);
@@ -172,7 +172,7 @@ end
 
 live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
   tick
-  tick_reset
+  #tick_reset
   with_transpose 12*0 do
     z=(ing
       :D4 :D4 :D4 :D4
@@ -249,7 +249,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
     end
 
     if spread(1,9).look
-      tick_reset(:inner)
+      #tick_reset(:inner)
       c = (ring
         [(chord :A2), 4],
         [(chord :cs3), 2],

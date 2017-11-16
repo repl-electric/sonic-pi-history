@@ -70,7 +70,7 @@ sop2_on :A2, mode: 4
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
-  with_fx :gverb, room: 15, release: 0.35, mix: 0.1 do
+  with_fx :gverb, room: 15, release: 0.35, mix: 0.2 do
   with_fx :echo, mix: (ring 0.0).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{
       #sop_cc motion: (line 0.0,1.0,16).look

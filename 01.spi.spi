@@ -468,7 +468,7 @@ with_fx :none, mix: 0 do
           #   # rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
           # end
 
-          eek (ring :A2, :Cs3).tick(:in), 20, sustain: 1, at: rand(1.0), mod: rand(1.0) if spread(1,16).look
+          eek (ring :E2, :Cs3).tick(:in), 20, sustain: 1, at: rand(1.0), mod: rand(1.0) if spread(1,16).look
 
           #p= Dust[/perc/, [7,7]]
           #p=MagicDust[/perc/,/stone/,[4..8]].look

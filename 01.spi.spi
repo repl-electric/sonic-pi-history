@@ -4,6 +4,25 @@ live_loop :fucj, sync: :metro do; tick
   sleep 1#/2.0
 end
 
+def violin(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n.is_a?(Array)
+    args =  args  << {sustain: n[1]}
+    n = n[0]
+  end
+  if(opts[:mode])
+    violin_mode(opts[:mode])
+  end
+  if n
+    midi n, vel, *(args << {port: :iac_bus_1} << {channel: 15})
+    puts "#{n} <- [Violin]" unless note(n) < MODE_NOTE
+  end
+  violin_cc(opts)
+end
+
+
 #bass   :GS1, 120, sustain: 4
 #violin :GS5, 100, sustain: 8, mode: 1, deform: 0.5, shape: 0.8
 

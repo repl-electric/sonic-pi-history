@@ -26,7 +26,6 @@ live_loop :c, sync: :metro do
     [[[:GS2 4]  [:CS2 4]  [:E2 4]  [:As3 4]]  4]
     )
   s=score.look
-  stop
   c=s[0]
   with_transpose -12*0 do
     c.each{|n|tick(:inner);

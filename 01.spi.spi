@@ -49,7 +49,7 @@ live_loop :c, sync: :metro do
 end
 
 #violin_on :FS6, 1
-#violin_off(:Fs5) if k && spread(1,16).look
+violin_off(:Fs5) if k && spread(1,16).look
 
 #eek :E2, sustain: 4
 

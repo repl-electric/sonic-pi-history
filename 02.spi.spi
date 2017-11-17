@@ -42,7 +42,7 @@ live_loop :c, sync: :metro do
 #        smp Drip[/effect/].look, amp: 0.2, cutoff: 100, rate: 0.125, attack: 0.5
       end
     end
-    sleep s[-1]/2.0
+    (sleep s[-1]/2.0)*2
   end
 end
 

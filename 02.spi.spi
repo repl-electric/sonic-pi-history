@@ -86,7 +86,6 @@ live_loop :do, sync: :metro do
         c1 = Tape[/cymbal/].tick(:i)
         c2 = Tape[/cymbal/].tick(:i)
           c3 = Tape[/cymbal/].tick(:i)
-          puts d1
           d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav"
         p = (ing
           d1 d1c _ _  _ _ _ _

@@ -66,7 +66,6 @@ sop_cc motion: 0.0
 #midi_note_on :A4, channel:15, port: :iac_bus_1
 #violin_cc mode: 2, deform: 1.0, shape: 1.0
 
-
 #effects 40
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

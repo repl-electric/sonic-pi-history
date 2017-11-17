@@ -12,11 +12,9 @@ live_loop :c, sync: :metro do
   #stop
   score = (ing
     [[[:A1,  4],  [:CS2, 4],  [:E2, 4]],            4],
-    [[[:GS4,  0.5]],                             1],
+    [[[:GS4,  0.5]],                            1],
     [[[:GS2, 4],  [:CS2, 4],  [:E2, 4]],            4],
     [[[:FS4,  0.5]],                            1],
-#,     [[[:A1,   0.5]],                            1],
-  #,  [[[:CS4,  0.5]],                            1],
     [[[:A1,  4],  [:CS2, 16],  [:E2, 4], [:B2,  4]],  4],
     [[[:GS2, 4],  [_,    4],  [:E2, 4],  [:Ds3, 4]],  4],
     [[[:A1,  4],  [:CS2, 4],  [:E2, 4],  [:B2,  4]],  4],
@@ -52,12 +50,12 @@ end
 #violin_off :gS5, 1
 #eek :E2, sustain: 4
 
-(12*4).times{
+#(12*4).times{
 #  midi (scale :fs2, :minor_pentatonic, octaves: 4).tick, 100, channel: 2
 #  sleep 1/8.0
-}
+#}
 
-sop_cc motion: 0.1
+sop_cc motion: 0.0
 #sop2_on :A2, mode: 4
 #sop_off :A2, mode: 0
 

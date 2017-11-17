@@ -47,8 +47,8 @@ live_loop :c, sync: :metro do
     sleep (s[-1]/2.0)
   end
 end
-
-violin_off :gS5, 1
+#
+#violin_off :gS5, 1
 #eek :E2, sustain: 4
 
 (12*4).times{

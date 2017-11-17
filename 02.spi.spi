@@ -372,7 +372,7 @@ live_loop :kick, sync: :drums do
     f1 = [
       #Drip[/Drip_orig_fx_08/,0],
       "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/D01.wav",
-      "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/A-02.wav"].choose
+      "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/E01.wav"].choose
   k=(ing
     k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ _
     k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ t1

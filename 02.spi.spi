@@ -89,10 +89,11 @@ live_loop :do, sync: :metro do
           d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav"
           d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav"
           d1e = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/e01.wav"
+          d1f = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/f#01.wav"
         p = (ing
           d1 d1d _ _  _ d1e _ _
           _ _ _ _     _ _ _ _
-          d1 _ _ _   _ _ _ _
+          d1f _ _ _   _ _ _ _
           _ _ _ _    _ _ _ _
           #s1 t1 _ _    _ _ _ _
           ).look

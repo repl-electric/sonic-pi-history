@@ -1,5 +1,5 @@
 live_loop :fucj, sync: :metro do; tick
-  #sop_cc motion: ((line 0,1.0,127)+(line 1.0,0.0,127)).look
+  sop_cc motion: ((line 0,1.0,127)+(line 1.0,0.0,127)).look
   #sop_cc 1, 127
   sleep 1#/2.0
 end

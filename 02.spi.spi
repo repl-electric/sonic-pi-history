@@ -56,7 +56,7 @@ violin_on :gS5, 1
 #  sleep 1/8.0
 }
 
-sop_cc motion: 0.0
+sop_cc motion: 0.1
 #sop2_on :A2, mode: 4
 #sop_off :A2, mode: 0
 

@@ -99,7 +99,7 @@ live_loop :do, sync: :metro do
         p = (ing
           d1a d1 _ _  _ d1e _ _
           _ _ _ _     _ _ _ _
-          d1g d1b _ _   _ _ _ _
+          d1g d1g _ _   _ _ _ _
           _ _ _ _    _ _ _ _
           #s1 t1 _ _    _ _ _ _
           ).look

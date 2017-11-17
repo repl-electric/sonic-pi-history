@@ -72,7 +72,18 @@ sop_cc motion: 0.0
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
   with_fx :gverb, room: 10, release: 0.25, mix: 0.0 do
-  with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.0,0.0,0.0).look, phase: (ring 1/4.0, 1/8.0).look do
+    with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.0,0.0,0.0).look, phase: (ring 1/4.0, 1/8.0).look do
+      s1 = Drip[/snare/,/resin/].tick(:i)
+      t1 = Tape[/snare/].tick(:i)
+      c1 = Tape[/cymbal/].tick(:i)
+      c2 = Tape[/cymbal/].tick(:i)
+      c3 = Tape[/cymbal/].tick(:i)
+      d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav"
+      d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav"
+      d1e = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/e01.wav"
+      d1f = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/f#01.wav"
+      d1g = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/g#01.wav"
+
     8.times{
       #sop_cc motion: (line 0.0,1.0,16).look
       with_swing 0.01,2 do
@@ -83,16 +94,6 @@ live_loop :do, sync: :metro do
           Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
             ).look
         end
-        s1 = Drip[/snare/,/resin/].tick(:i)
-        t1 = Tape[/snare/].tick(:i)
-        c1 = Tape[/cymbal/].tick(:i)
-        c2 = Tape[/cymbal/].tick(:i)
-          c3 = Tape[/cymbal/].tick(:i)
-          d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav"
-          d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav"
-          d1e = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/e01.wav"
-          d1f = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/f#01.wav"
-          d1g = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/g#01.wav"
         p = (ing
           d1 d1 _ _  _ d1e _ _
           _ _ _ _     _ _ _ _

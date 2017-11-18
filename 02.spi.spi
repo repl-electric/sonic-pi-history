@@ -1,4 +1,4 @@
-def root(note-seq)
+def root(note_seq)
   note-seq.map{|n| note(n[0])}.compact.sort[0]
 end
 

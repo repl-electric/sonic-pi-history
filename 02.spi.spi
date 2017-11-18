@@ -1,5 +1,5 @@
 def root(note_seq)
-  note-seq.map{|n| note(n[0])}.compact.sort[0]
+  note_seq.map{|n| note(n[0])}.compact.sort[0]
 end
 
 live_loop :fucj, sync: :metro do; tick

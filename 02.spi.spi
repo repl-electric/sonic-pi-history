@@ -13,7 +13,7 @@ end
 
 live_loop :c, sync: :metro do
   tick
-  #stop
+  stop
   score = (ing
     # [[[:A2  8]  [:B3 4]     [:E3 8]]         4]
     # [[[:CS4  4] [:CS5 0.5]  [_ 4]]           1]
@@ -206,7 +206,9 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
   end
 end
 
-live_loop :you_encounter_a_one, sync: :sudden  do;z=nil
+live_loop :you_encounter_a_one do
+#, #sync: :sudden  do
+  ;z=nil
   tick
   live_loop :c {stop}
   #tick_reset

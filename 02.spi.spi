@@ -72,7 +72,7 @@ live_loop :c, sync: :metro do
 end
 
 #
-violin :E5, 5
+#violin :E5, 5
 #eek :E2, sustain: 4
 
 #(12*4).times{

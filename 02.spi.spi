@@ -29,7 +29,7 @@ live_loop :c, sync: :metro do
   c=s[0]
   with_transpose -12*0 do
     c.each{|n|tick(:inner);
-      piano n[0]
+      piano n[0],100
       #sop n[0], (ing 80 70 85 70).look(:inner), sustain: ((n[-1])/2.0)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }
     harp c[-2][0],10, mode: 4 if c[-2]

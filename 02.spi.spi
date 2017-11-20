@@ -314,7 +314,7 @@ live_loop :you_encounter_a_one do
         # [[:A3, :CS5, :E4, :GS4], 2],
 #        [(chord :A3, :add9), 2],
         [[_,_,_],4]
-        ).tick(:inner)
+        ).tick(:inners)
 
 
        c = (ring

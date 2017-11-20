@@ -210,7 +210,7 @@ live_loop :you_encounter_a_one do
 #, #sync: :sudden  do
   ;z=nil
   tick
-  live_loop :c {stop}
+#  live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
     z=(ing

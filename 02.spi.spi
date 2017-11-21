@@ -322,8 +322,8 @@ live_loop :you_encounter_a_one do
 #Em / C / D / Em / Em / G / Am / Bm
 
        c = (ring
- #       [[:A2, :Cs4, :E3],  4],
- #       [[:CS3, :E4, :GS3], 2],
+        [[:A2, :Cs4, :E3],  4],
+        [[:CS3, :E4, :GS3], 2],
  #       [[_,_,_],2],
 
  #       [[:A2, :CS4, :E3], 4],

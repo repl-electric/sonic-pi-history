@@ -329,7 +329,7 @@ live_loop :you_encounter_a_one do
          [[:E3, :Gs3, :B3], 4],                 #E G D          D GS A
          [[:D3, :Gs4, :A3], 4],  # :) CHORD
         [[:D3, :Fs4, :A3], 4],  # :) CHORD
-        [[:D3, :Fs3, :A3], 4],  # :) CHORD
+        [[:D3, :E3, :A3], 4],  # :) CHORD
          [[_,_,_],2],
 
         [[:Fs3, :B3, :D3], 2],   # B D F3      FS3

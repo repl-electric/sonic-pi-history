@@ -340,7 +340,7 @@ live_loop :you_encounter_a_one do
         [[:B3, :Fs4, :D4], 2],
         [[:FS3, :A3, :Cs4], 4],
         [[:E3, :Gs3, :B3], 4],
-        [[:A3, :B4,  :E4], 6],
+        [[:A3, :B3,  :E4], 6],
         [[:A3, :CS4, :E4], 2],
         [[_,_,_],4]
         ).tick(:inner)

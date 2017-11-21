@@ -386,16 +386,16 @@ live_loop :you_encounter_a_one do
         piano c[0], 100, sustain: 8/2.0
         #zero  c[1],  (ing 30 10 30 10).look
 
-
           if @cp && @cp[1] != c[1]
             @cp = c
             with_transpose 0 do
-            moog c[1],10, sustain: 2
-            violin c[1], 100, sustain: 2
+            #moog c[1],10, sustain: 2
+            #violin c[1], 100, sustain: 2
           end
           else
             piano c[1], 100, sustain: 8/2.0
           end
+        piano c[1], 100, sustain: 8/2.0
 
         piano c[2], 105, sustain: 8/2.0
         if c[3]

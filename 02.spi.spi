@@ -305,7 +305,7 @@ live_loop :you_encounter_a_one do
         [[:D3, :Gs4, :A3], 4],  # :) CHORD
         [[:D3, :Fs3, :A3], 4],  # :) CHORD
         # [[_,_,_],2],
-[A
+
         # [(chord :b3,:m, i: -1), 2],
         # [(chord :b3,:m, i: 0), 2],
         # [(chord :fs3), 4],

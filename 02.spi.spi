@@ -389,6 +389,7 @@ live_loop :you_encounter_a_one do
           if cp[1] != c[1]
             sharp c[1], 10, sustain: 8/2.0
           end
+        end
         piano c[2], 105, sustain: 8/2.0
         if c[3]
          piano c[3], 40, sustain: 8/4.0

@@ -334,14 +334,13 @@ live_loop :you_encounter_a_one do
    #     [[:E3, :Fs4, :B3], 4],                 #E G D          D GS A
 
 
-
         [[:E3,  :Fs4, :B3], 4],                 #E G D          D GS A
         [[:Cs3, :E4, :Gs3], 4],  # :) CHORD
-        [[:D3,  :Gs4, :A3], 4],  # :) CHORD
-        [[:E3,  :Fs4, :B3], 4],                 #E G D          D GS A
-        [[:E3,  :Fs4, :B3], 4],                 #E G D          D GS A
-        [[:Gs3, :B4, :D3], 4],                 #E G D          D GS A
-        [[:B3,  :D4,  :Fs3], 4],                 #E G D          D GS A
+#        [[:D3,  :Gs4, :A3], 4],  # :) CHORD
+#        [[:E3,  :Fs4, :B3], 4],                 #E G D          D GS A
+#        [[:E3,  :Fs4, :B3], 4],                 #E G D          D GS A
+#        [[:Gs3, :B4, :D3], 4],                 #E G D          D GS A
+#        [[:B3,  :D4,  :Fs3], 4],                 #E G D          D GS A
 
 
         #   [[:D3, :Fs4, :A3], 4],  # :) CHORD

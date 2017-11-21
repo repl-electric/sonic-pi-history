@@ -343,7 +343,7 @@ live_loop :you_encounter_a_one do
           @cp = c
           with_transpose 0 do
             moog c[1],5, sustain: 8
-            violin c[1], 100, sustain: 2
+            #violin c[1], 100, sustain: 2
           end
         else
           #piano c[1], 100, sustain: 8/2.0

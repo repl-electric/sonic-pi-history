@@ -3,7 +3,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 
 live_loop :name do
   zzk = (ing
-    Cs3 _ Gs3 E3   _ _ _
+    CS3 _ GS3 E3   _ _ _
     _ E3  _ _      _ _ _ _).look
   sleep 1
 end

@@ -5,7 +5,7 @@ live_loop :name do
   zzk = (ing
     CS3, _, GS3, E3,   _, _, _, _,
     _, E3,  _, _,      _, _, _, _,).look
-  midi zzk,10, channel: 2
+  midi zzk,10, channel: 1
   sleep 1/8.0
 end
 #midi :C3

@@ -3,7 +3,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 live_loop :name do
   tick
   zzk = (ing
-    Cs3 _ _ _   _ _ _ _
+    D3 _ _ _   _ _ _ _
     _ _ _ _        _ _ _ _
     ).look
   midi zzk,10, channel: 2

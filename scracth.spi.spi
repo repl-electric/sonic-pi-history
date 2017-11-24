@@ -1,7 +1,7 @@
 live_loop :name do
   zzk = (ing
-    CS3 _ GS3 E3   _ _ _
-    _ E3  _ _      _ _ _ _).look
+    CS3, _, GS3, E3,   _, _, _,
+    _, E3,  _, _,      _, _, _, _,).look
   sleep 1
 end
 #midi :C3

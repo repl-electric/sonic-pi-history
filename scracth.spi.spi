@@ -1,6 +1,7 @@
 CS3=:cs3;GS3=:gs3;E3=:e3
 
 live_loop :name do
+  tick
   zzk = (ing
     CS3 _ GS3 E3   _ _ _
     _ E3  _ _      _ _ _ _).look

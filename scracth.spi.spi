@@ -4,8 +4,8 @@ live_loop :name do
   tick
   zzk = (ing
     CS3 _ FS3 E3   _ _ _ _
-    _ E3  _ _      _ _ _ _
-    _ _ _ _
+    _ E3 _ _      _ _ _ _
+    _ _ _ _         _ _ _ _
     ).look
   midi zzk,10, channel: 2
   sleep 1/8.0

@@ -1,10 +1,10 @@
-CS3=:cs3;GS3=:gs3;E3=:e3;FS3=:fs3
+CS3=:cs3;GS3=:gs3;E3=:e3;FS3=:FS3
 
 live_loop :name do
   tick
   zzk = (ing
-    CS3 _ FS3 E3   _ _ _ _
-    _ E3  _ _      _ _ _ _).look
+    CS3, _, FS3, E3,   _, _, _, _,
+    _, E3,  _, _,      _, _, _, _,).look
   midi zzk,10, channel: 2
   sleep 1/8.0
 end

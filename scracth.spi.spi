@@ -3,14 +3,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 live_loop :name do
   tick
   zzk = (ing
-    FS3 _ _ _   _ _ _ _
-    D3 _ _ _        _ _ _ _
-    DS3 _ _ _        _ _ _ _
     F3 _ _ _        _ _ _ _
-    :g3 _ _ _        _ _ _ _
-    :a3 _ _ _        _ _ _ _
-    :as3 _ _ _        _ _ _ _
-    :b3 _ _ _        _ _ _ _
     ).look
   midi zzk,10, channel: 2
   puts zzk if zzk

@@ -13,7 +13,7 @@ live_loop :name do
     :b3 _ _ _        _ _ _ _
     ).look
   midi zzk,10, channel: 2
-  puts zzk if zsk
+  puts zzk if zzk
   sleep 1/8.0
 end
 #midi :C3

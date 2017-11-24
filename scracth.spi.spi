@@ -1,6 +1,6 @@
 live_loop :name do
   zzk = (ing
-    Cs2 _ Gs3 E3   _ _ _
+    Cs3 _ Gs3 E3   _ _ _
     _ E3  _ _      _ _ _ _).look
   sleep 1
 end

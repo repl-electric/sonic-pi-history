@@ -1,10 +1,7 @@
-D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2; #__nonsave__
-
-
 live_loop :name do
   zzk = (ing
-    CS3, _, GS3, E3,   _, _, _,
-    _, E3,  _, _,      _, _, _, _,).look
+    CS3 _ GS3 E3   _ _ _
+    _ E3  _ _      _ _ _ _).look
   sleep 1
 end
 #midi :C3

@@ -5,7 +5,7 @@ live_loop :name do
   zzk = (ing
     F3 _ _ _
     F3 _ _ _
-    _ F3 _ Ds3
+    _ F3 _ :Ds3
     F3 _ _ _
 
     ).look

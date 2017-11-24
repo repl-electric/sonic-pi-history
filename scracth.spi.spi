@@ -1,6 +1,8 @@
+live_loop :name, sync: :metro do
+
 zzk = (ing
-  Cs3 _ Gs3 E3   _ _ _
-  _ E3  _ _      _ _ _ _).look
+  Cs3, _, Gs3, E3,   _, _, _,
+  _, E3,  _, _,      _, _, _, _,).look
 
-
+end
 #midi :C3

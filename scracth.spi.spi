@@ -11,9 +11,9 @@ live_loop :name do
     :a3 _ _ _        _ _ _ _
     :as3 _ _ _        _ _ _ _
     :b3 _ _ _        _ _ _ _
-
     ).look
   midi zzk,10, channel: 2
+  puts zzk
   sleep 1/8.0
 end
 #midi :C3

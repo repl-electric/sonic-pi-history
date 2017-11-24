@@ -6,6 +6,6 @@ live_loop :name do
     CS3 _ GS3 E3   _ _ _
     _ E3  _ _      _ _ _ _).look
   midi zzk,10, channel: 2
-  sleep 1
+  sleep 1/4.0
 end
 #midi :C3

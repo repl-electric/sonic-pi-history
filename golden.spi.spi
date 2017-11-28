@@ -439,39 +439,8 @@ live_loop :kick, sync: :drums do
       kt[6] _ _   _ _ _
       _ _ _       _ _ _
       _ _ _       _ _ _
-      _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _
+      _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
 
-
-      # kt[3] _ _   _ Drip[/fx/,23] _
-      # Drip[/snare/,20] _ _       _ _ _
-      # kt[6] _ _ _
-      # Drip[/snare/,20] _ Drip[/fx/,/grind/,[21,22]].look   _ d5 _
-      # d5 _
-
-
-      #Drip[/cymbal/,10] _ Drip[/cymbal/,11] _ Drip[/cymbal/,11]
-#      _ Drip[/cymbal/,20] _ Drip[/cymbal/,7]         _ _ _ _
-
-#       km[3] _  Drip[/cymbal/,1] Drip[/cymbal/,10]
-#       _ Drip[/cymbal/,11] _ Drip[/cymbal/,11]
-#       _ Drip[/cymbal/,19] Drip[/cymbal/,6] _
-# #
-
-#      k7 _ _ _   _ _ _ _
-      # kt[1] _  Drip[/cymbal/,8] Drip[/cymbal/,10] _ Drip[/cymbal/,11] _ Drip[/cymbal/,11] _ _ _   k7 _ _ _   _ _ _ _
-      # kt[1] _  Drip[/cymbal/,8] Drip[/cymbal/,10] _ Drip[/cymbal/,11] _ Drip[/cymbal/,11] _ _ _   k7 _ _ _   _ _ _ _
-      # kt[1] _  Drip[/cymbal/,9] Drip[/cymbal/,10] _ Drip[/cymbal/,11] _ Drip[/cymbal/,11] _ _ _   k7 _ _ _   _ _ _ _
-
-
-      #k1 _ _ _      _ _ _ _      k4 _ _ _   _ _ _ k7
-
-      # k1 _ _    _   _ _ _ _    k4 _ _ _   _ _ _ k7
-      # k1 _ _    _   _ _ _ _   k5 _ _ _   _ _ [f1 0.99] _
-      # # kt[4] _ _ _  _ _ _ _    k1 _ _ _   _ _ _ _
-      # k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      # k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      # km _ _ _    _ _ _ _    k5 _ _ _   _ _ [f1 0.99] _
-      )
 
     k=(ing
       k1 _ k3 p    _ k4 d1 _    k3 _ _ _    k7 _ _ _

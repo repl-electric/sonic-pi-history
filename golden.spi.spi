@@ -59,7 +59,9 @@ live_loop :c, sync: :metro do
     #strings c[0][-2], 30
     at{
       sleep s[-1]/2.0
-      eek c[0][-2], 10, sustain: 1,  mode: 1, at: 1
+      with_transpose 12 do
+        eek c[0][-2], 10, sustain: 1,  mode: 1, at: 1
+        end
     }
     if spread(1,3).look
       with_fx :gverb, room: 200.0, mix: 0.8, release: 8, spread: 0.9 do

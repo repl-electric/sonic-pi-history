@@ -3,6 +3,6 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
 live_loop :go do
   tick
   #sop_on :A3
-  eek :A4, sustain: 3,  at: 0.125, mode: 1
+  eek :A4, sustain: 3,  at: 0.9, mode: 1
   sleep 3
 end

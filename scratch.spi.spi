@@ -4,7 +4,7 @@ puts note('Cs0')
 live_loop :go do
   tick
   #sop_on :A3
-  eek :A1
+  eek :A1, sustain: 16
 
   sleep 3
 end

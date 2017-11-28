@@ -125,7 +125,7 @@ live_loop :do, sync: :metro do
 
         accent = (p2.is_a?(Array) ? 0.7 : 0.5)*8
         #puts accent
-      smp p, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
+      smp p2, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
         0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
         0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
         0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,

@@ -1,4 +1,3 @@
-set_volume! 1.0
 sop_cc motion: 0.0
 #sop_on :A2, mode: 4
 #sop_off :A3, mode: 0
@@ -56,10 +55,10 @@ live_loop :c, sync: :metro do
       #violin root(c), 127*1.0, mode: 1#, sustain: 1 #, form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     sleep s[-1]
-    strings c[0][-2], 30
+    #strings c[0][-2], 30
     at{
       sleep s[-1]/2.0
-      eek c[0][-1], 10, sustain: 1, mode: 0, at: rand
+    #  eek c[0][-1], 10, sustain: 1, mode: 0, at: rand
     }
     if spread(1,3).look
       with_fx :gverb, room: 200.0, mix: 0.8, release: 8, spread: 0.9 do

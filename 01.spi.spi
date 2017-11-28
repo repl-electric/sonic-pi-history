@@ -1,6 +1,6 @@
 sop_cc motion: 0.1
 
-sop_on :A3, mode: 5
+sop_on :E3, mode: 5
 
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2

@@ -372,7 +372,6 @@ live_loop :kick, sync: :drums do
       k3, _, k3, _,   k2, _, _, _,    k1, _, _, _,   k4, _, _, _,
       )
 
-
     cs = (0..17).map{|n| Crystal[/cymbal/].tick(:i)}
     c= Crystal[/cymbal/]
     cf= Crystal[/fx/]
@@ -474,7 +473,7 @@ live_loop :kick, sync: :drums do
       #, km, _, _, _,    _, _, _, _,    k5, _, _, _,   _, _, [f1, 0.99], _,
       )
 
-    k2=(ing
+    k=(ing
       k1, _, k3, p,    _, k4, d1, _,    k3, _, _, _,    k7, _, _, _,
       k4, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, t1,
       k1, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, t1,

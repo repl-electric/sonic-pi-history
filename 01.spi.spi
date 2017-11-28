@@ -354,7 +354,7 @@ live_loop :you_encounter_a_one, sync: :sudden  do
   end
   if spread(1,1).look
     with_transpose 0 do
-      violin z, 5, sustain: 1.0, mode: 1, deform: 0.0, mul: 0, shape: 1.0
+      violin z, 5, sustain: 1.0, mode: 1, deform: 0.5, mul: 0, shape: 0.59
     end
   end
   sleep 1#/4.0#/4.0 #/4.0 #/4.0 #/4.0

@@ -483,7 +483,7 @@ live_loop :kick, sync: :drums do
     p=(knit p1.look, p1.count*2, p2.look, p2.count*2, p3.look, p3.count*2).look
     #p=_
     if p
-      with_fx :reverb do
+      with_fx :reverb, mix: 0.5 do
         drum_machine(p)
       end
     end

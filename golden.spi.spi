@@ -592,7 +592,7 @@ with_fx :none, mix: 0 do
           f2 = Drip[/fx/,/88/,0]
           f1 = [Drip[/Drip_orig_fx_08/,0]].choose
 
-          eek (ring :A2, :E3).tick(:in), 20, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 0 if spread(1,16).look
+          eek (ring :A1, :E3).tick(:in), 20, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 0 if spread(1,16).look
 
           #p= Dust[/perc/, [7,7]]
           #p=MagicDust[/perc/,/stone/,[4..8]].look

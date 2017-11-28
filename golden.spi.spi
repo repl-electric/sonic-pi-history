@@ -80,7 +80,7 @@ end
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
 #  with_fx :gverb, room: 10, release: 0.25, mix: 0.2 do
-    with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
+    with_fx :echo, mix: 0*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
       s1 = Drip[/snare/,/resin/].tick(:i)
       t1 = Tape[/snare/].tick(:i)
       c1 = Tape[/cymbal/].tick(:i)

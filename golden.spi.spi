@@ -122,7 +122,7 @@ live_loop :do, sync: :metro do
       if pp.is_a?(Integer)
         midi (pp%(3*12))+(12*4),30, channel: 2 if p
       else
-        accent = (pp.is_a?(Array) ? 0.7 : 0.5)*5
+        accent = (pp.is_a?(Array) ? 0.7 : 0.5)*8
         #puts accent
       smp pp, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
         0.25 0.25 -0.25 -0.25  0.25 -0.25

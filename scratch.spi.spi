@@ -1,6 +1,6 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
 
-include(SonicPi::Lang::Midi)
+self.klass.include(SonicPi::Lang::Midi)
 
 MODE_NOTE = note('Cs0')
 use_midi_defaults port: :iac_bus_1

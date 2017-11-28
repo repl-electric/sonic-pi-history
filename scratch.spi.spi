@@ -3,4 +3,4 @@ puts note('Cs0')
 sop_on :A3
 
 
-midi :A3, port: :iac_bus_1, channel: 2
+midi :A3, port: :iac_bus_1, channel: 2, sustain: 4

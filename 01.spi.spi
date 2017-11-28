@@ -1,6 +1,6 @@
 sop_cc motion: 0.1
 
-sop_on :A3, mode: 4
+sop_on :A3, mode: 5
 
 #sop_off :A3, mode: 0
 #sop_off :D5, mode: -2
@@ -384,7 +384,6 @@ live_loop :kick, sync: :drums do
       k3 _ k2 _   k4 _ _ _    k1 _ _ _   k4 _ _ t1
       k3 _ k3 _   k2 _ _ _    k1 _ _ _   k4 _ _ _
       )
-
 
     cs = (0..17).map{|n| Crystal[/cymbal/].tick(:i)}
     c= Crystal[/cymbal/]

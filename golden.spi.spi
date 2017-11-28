@@ -99,7 +99,7 @@ live_loop :c, sync: :metro do
   end
 end
 
-#eek :A2
+eek :A3, mode: 1
 #strings_on :GS5, 1
 #violin_on  :GS5, 1
 

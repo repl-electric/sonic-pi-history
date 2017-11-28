@@ -113,8 +113,11 @@ live_loop :do, sync: :metro do
           #s1 t1 _ _    _ _ _ _
           ).look
 
-      #p2=_
-      midi :Gs3,2, channel: 2 if p
+      #p2=
+      if p.is?(Symbol)
+        midi :Gs3,2, channel: 2 if p
+      else
+
       accent = (p.is_a?(Array) ? 0.7 : 0.5)*1
       smp p, amp: accent+rand*0.1, rate: (knit 1.0,4, 1.0,2).look, pan: (ing
         0.25 0.25 -0.25 -0.25  0.25 -0.25
@@ -125,7 +128,8 @@ live_loop :do, sync: :metro do
       #            Tape[/cymbal/].tick(:i), Tape[/cymbal/].look(:i), Tape[/snare/].tick(:i), Tape[/cymbal/].tick(:i),
       #             _, _, _, _,   _, _, _, _
       #       ).look, amp: 0.5+rand*0.1, rate: (knit 1, 4, 0.85,2).look
-      # pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).lo
+        # pan: (ing 0.25 0.25 -0.25, -0.25  0.25 -0.25).lo
+      end
       sleep 1/8.0
     #end
     }

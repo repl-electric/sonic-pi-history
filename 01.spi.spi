@@ -157,7 +157,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
 
   with_transpose -12*1 do
     if spread(1,2).look
-#      bass :E3, 120, sustain:
+      bass :E3, 120, sustain:
     end
   end
 

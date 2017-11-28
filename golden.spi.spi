@@ -105,7 +105,7 @@ live_loop :do, sync: :metro do
           Tape[/cymbal/].tick(:i),_,_,_,  _,_,_,_
             ).look
         end
-        p2 = (ing
+        pp = (ing
           d1g [d1a] _ _  _ _ _ _
           _ _ _ _        _ _ _ _
           m1 _ _ _     _ _ _ _
@@ -118,14 +118,14 @@ live_loop :do, sync: :metro do
 
           #s1 t1 _ _    _ _ _ _
           ).look
-      #p2=
-      if p2.is_a?(Integer)
-        midi (p2%(3*12))+(12*4),30, channel: 2 if p
+      #pp=
+      if pp.is_a?(Integer)
+        midi (pp%(3*12))+(12*4),30, channel: 2 if p
       else
 
-        accent = (p2.is_a?(Array) ? 0.7 : 0.5)*3
+        accent = (pp.is_a?(Array) ? 0.7 : 0.5)*3
         #puts accent
-      smp p2, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
+      smp pp, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
         0.25 0.25 -0.25 -0.25  0.25 -0.25
         0.5  0.5  -0.25 -0.25  0.25 -0.5
         0.5  0.5  -0.25 -0.25  0.25 -0.5

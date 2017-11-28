@@ -115,7 +115,7 @@ live_loop :do, sync: :metro do
 
       #p2=
       if p.is_a?(Integer)
-        midi p+7+(12*3),50, channel: 2 if p
+        midi p+8+(12*3),50, channel: 2 if p
       else
 
       accent = (p.is_a?(Array) ? 0.7 : 0.5)*1

@@ -4,7 +4,7 @@ puts note('Cs0')
 live_loop :go do
   tick
   #sop_on :A3
-  midi :A3, port: :iac_bus_1, channel: 16, sustain: 4
+  midi :A1, port: :iac_bus_1, channel: 16, sustain: 4
 
   sleep 3
 end

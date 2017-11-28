@@ -1,4 +1,10 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
 puts note('Cs0')
+
+live_loop :go do
+  tick
 sop_on :A3
 midi :A3, port: :iac_bus_1, channel: 2, sustain: 4
+
+  sleep 3
+end

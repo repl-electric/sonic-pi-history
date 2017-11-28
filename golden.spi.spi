@@ -480,8 +480,12 @@ live_loop :kick, sync: :drums do
       _ _ _            _ _ _
       _ _ _            _ _ _)
 
-    pat=(knit p1.look, p1.count*2, p2.look, p2.count*2, p3.look, p3.count*2).look
-    drum_machine(pat)
+    p=(knit p1.look, p1.count*2, p2.look, p2.count*2, p3.look, p3.count*2).look
+    #p=_
+    if pat
+      with_fx :reverb
+      drum_machine(pat)
+    end
 
     dg=Drip[/fx/,/grind/,8]
 

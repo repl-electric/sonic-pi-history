@@ -1,3 +1,6 @@
 #load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
 puts note('Cs0')
 sop_on :A3
+
+
+midi :A3, port: :iac_bus_1, channel: 2

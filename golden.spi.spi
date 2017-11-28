@@ -441,7 +441,6 @@ live_loop :kick, sync: :drums do
       _, _, _,        _, _, _,
       _, _, _,        [m1[6]], m1[7], _,
       _, _, _,        _, _, _,)
-
     page2=(ing
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,
@@ -449,7 +448,6 @@ live_loop :kick, sync: :drums do
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,)
-
     page3=(ing
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,
@@ -457,12 +455,10 @@ live_loop :kick, sync: :drums do
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,
       _, _, _,            _, _, _,)
-
-    pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
+    pp=(knit p1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
     #pp=_
     if pp
       with_fx :reverb, mix: 0.5 do
-        puts pp
         drum_machine(pp)
       end
     end

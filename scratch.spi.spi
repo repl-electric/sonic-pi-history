@@ -1,6 +1,6 @@
 live_loop :go do
   tick
   #sop_on :A3
-  eek :A5, sustain: 16, at: 0.9
+  eek :A5, sustain: 16, at: 0.0
   sleep 3
 end

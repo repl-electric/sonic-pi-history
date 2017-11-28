@@ -630,7 +630,7 @@ with_fx :none, mix: 0 do
             p1 _ _ _   _ _ [p1] _
             _ _ p1 _
             _ _ _ _   _ _ p1 _
-            _ _ p1 _
+            _ _ [p1] _
             ).look
 
           p1=(ing

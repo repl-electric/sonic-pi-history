@@ -1,4 +1,4 @@
-set_volume! 1.0
+set_volume! 3.0
 #sop_cc motion: 0
 sop_on :A2, mode: 4
 #sop_off :A3, mode: 0

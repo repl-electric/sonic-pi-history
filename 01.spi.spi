@@ -734,7 +734,7 @@ live_loop :sixteen, sync: :drums do
   if s
     #smp Words[/beaut/], start: 0.0, finish: 1.0, rate: 1.0, amp: 1.5
     with_fx (knit :none, 3*128, :echo, 128).look do
-#      smp s, amp: 0.5, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)
+      smp s, amp: 0.5, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).tick(:active)
     end
   end
   sleep 1/16.0

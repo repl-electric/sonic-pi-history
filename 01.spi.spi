@@ -493,7 +493,7 @@ with_fx :none, mix: 0 do
 
           if spread(1,16).look
             accent = spread(1,32).look ? 30 : 20
-            eek (ring :A1, :E3).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
+            eek (ring :A1, :E2).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
           end
 
           s=(ing

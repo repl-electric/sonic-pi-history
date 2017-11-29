@@ -48,8 +48,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :A3, 20, mode: 2, sustain: 4
-#strings_on :FS4, 1
-#violin_on  :FS4, 1
+strings_on :FS4, 1
+violin_on  :FS4, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

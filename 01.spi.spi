@@ -214,9 +214,9 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
       c = c[0]
       #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
       #c=[]
-      #sharp c[0], 2, sustain: 8/2.0
-      #sop c[1], 3, sustain: 8/2.0
-      #sop c[2], 3, sustain: 8/2.0
+      sharp c[0], 2, sustain: 8/2.0
+      sop c[1], 3, sustain: 8/2.0
+      sop c[2], 3, sustain: 8/2.0
       puts "#{Note.resolve_note_name(c[0]) if c[0]} <- [Piano]"
       with_transpose 12*0 do
         #
@@ -267,8 +267,8 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
     z=(ing :D4  :Cs4 _ :A3 _ :E4 _  :A4 :A4 :A4 :A4 :A4).look #12
     #z=_
     puts z if look % 9 == 0
-    piano z, (ing 70 65 55).look * 1.0, sustain: 4/2.0
-    zero z, (ing 30 10 30 10).look
+    #piano z, (ing 70 65 55).look * 1.0, sustain: 4/2.0
+    #zero z, (ing 30 10 30 10).look
 
     if spread(1,3).look
       with_transpose (1*12) do
@@ -280,7 +280,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
   with_transpose 12 do
     #eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0
   end
-  if spread(1,1).look
+  if spread(1,6).look
     with_transpose 0 do
       violin z, 20, sustain: 2.0, mode: 1, deform: 0.5, mul: 0, shape: 0.58
     end

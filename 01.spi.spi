@@ -63,8 +63,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :A3, 20, mode: 2, sustain: 4
-strings_off :GS4, 1
-violin_off  :GS4, 1
+strings_on :Gs5, 1
+violin_on  :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -438,7 +438,7 @@ live_loop :kick, sync: :drums do
       _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
 
     k=k.look
-    k=_
+    #k=_
     #cue(:sudden) if k && spread(1,64).look
     #violin_x  if k && spread(1,64).look
     #strings_x  if k && spread(1,64).look
@@ -455,7 +455,7 @@ live_loop :kick, sync: :drums do
         if k == f1
           r = 0.25
         end
-        smp k, amp: 1*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+        smp k, amp: 1*2.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
       end
 
     end

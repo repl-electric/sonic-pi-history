@@ -249,7 +249,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
           #piano c[1], 100, sustain: 8/2.0
         end
         piano c[1], 50, sustain: 8/2.0
-        piano c[2], 55, sustain: 8/2.0
+        #piano c[2], 55, sustain: 8/2.0
         if c[3]
           piano c[3], 40, sustain: 8/4.0
         end

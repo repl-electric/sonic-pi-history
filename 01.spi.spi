@@ -279,7 +279,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
       :A3,  _, _, _,       _, _, _, _,
       ).look
 
-    z=(ing :Gs4,  :Cs4, _, :A3, _, :E4, _,  :A4, :A4, :A4, :A4, :A4,).look #12
+    z=(ing :D4,  :Cs4, _, :A3, _, :E4, _,  :A4, :A4, :A4, :A4, :A4,).look #12
     #z=_
     puts z if look % 9 == 0
     piano z, (ing 70, 65, 55,).look * 1.0, sustain: 4/2.0

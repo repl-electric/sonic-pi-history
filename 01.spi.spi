@@ -1,4 +1,4 @@
-sop_cc motion: 0.3
+sop_cc motion: 0.0
 #sop2_on :A2, mode: 4
 #sop_cc mode: 1.0
 #sharp :Cs4,2, sustain: 32
@@ -20,8 +20,8 @@ live_loop :c, sync: :metro do
   tick
   #stop
   score =  (ing
-    [[[:A1 2]] 2]
-#    [[[:A1  2]  [:CS3 2]  [:E2 2]]              2]
+#    [[[:A1 2]] 2]
+    [[[:A1  2]  [:CS3 2]  [:E2 2]]              2]
     #[[[:GS4 0.25]]                             0.5]
 #    [[[:CS2 2] [:E3 2] [:GS2 2]]                2]
     #[[[:B4 0.25]]                              0.5]
@@ -62,7 +62,7 @@ live_loop :c, sync: :metro do
   end
 end
 
-eek :A3, 20, mode: 2, sustain: 4
+#eek :A3, 20, mode: 2, sustain: 4
 #strings_on :GS5, 1
 #violin_on  :GS5, 1
 

@@ -376,7 +376,7 @@ live_loop :kick, sync: :drums do
       _, _, _,            _, _, _,
       _, _, [m1[1]],      _, [m1[3]], _,)
     pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
-    #pp=_
+    pp=_
     if pp
       with_fx :reverb, mix: 0.5 do
         drum_machine(pp)
@@ -542,7 +542,7 @@ with_fx :none, mix: 0 do
             _, _, p1,
             _, _, p1,
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25, 0.25, -0.25, 0.25,).look, cutoff: 120#, cutoff: (ramp 0, 120,128).tick(:t54)
@@ -608,7 +608,7 @@ with_fx :none, mix: 0 do
                      0
                    end
           p = p.is_a?(Array) ? p[0] : p
-          #p=_
+          p=_
           if p
             #eek (ing :A2, _, :GS3,).look, (line 1,20).look, sustain: 1/12.0, mode: 1, at: (line 0.0,1.0,128).look
           end

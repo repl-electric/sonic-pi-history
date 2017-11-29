@@ -587,7 +587,7 @@ with_fx :none, mix: 0 do
             _ _ _ _   c3 {path:Analog[/clapraw/,0],amp:0.125} _ _
             ).look
 
-          s=_
+          #s=_
           fin=  s != c2 ? (line 0.05, 0.01, 64).look : (line 1.0, 0.99, 2*64).look
           amp = if (s != _)
                   s.is_a?(String) ? 1.0 : (s[:amp] || 1.0)

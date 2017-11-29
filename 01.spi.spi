@@ -141,7 +141,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
   end
 
   s = score.tick
-  harp s, 0.2*(ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
+  harp s, 0.4*(ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
 
   score = (knit
     [:A3, 3/4.0],3, [:Cs4,1.0],3,

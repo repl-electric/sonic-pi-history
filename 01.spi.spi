@@ -135,7 +135,7 @@ live_loop :do, sync: :metro do
 end
 
 live_loop :music, sync: :metro do;z=nil;s=nil;#tick
-  harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.02, bass: 0.0, mode: 4
+  harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.02, bass: 0.0, mode: 0
   score = (ing
     [_ 3.0]
     [:D3 3.0]     [:A3 3.0]     [:E4 3.0]

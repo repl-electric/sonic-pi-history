@@ -410,7 +410,7 @@ live_loop :kick, sync: :drums do
       k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ t1
       k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ [f1 0.25])
 
-    k=(ing
+    kp=(ing
       kt[3] _ _   _ _ _
       _ _ _       _ _ _
       _ _ _       _ _ _

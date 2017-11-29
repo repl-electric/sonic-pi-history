@@ -24,7 +24,7 @@ live_loop :c, sync: :metro do
     [[[:A3  2]  [:CS5 2]  [:E4 2]]              2]
     [[[:GS4 0.25]]                             0.5]
     [[[:CS4 2] [:E5 2] [:GS4 2]]                2]
-    [[[:Fs4 0.25]]                              0.5]
+    [[[:B4 0.25]]                              0.5]
     # [[[:A2  2]  [:CS3 8]  [:E2 2] [:B2  2]]   2]
     # [[[:GS2 2]  [_    2]  [:E3 2]  [:Ds3 2]]  2]
     # [[[:A2  2]  [:CS3 2]  [:E2 2]  [:B2  2]]  2]
@@ -63,8 +63,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :A3, 20, mode: 2, sustain: 4
-strings_on :FS5, 1
-violin_on  :FS5, 1
+strings_off :FS5, 1
+violin_off  :FS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

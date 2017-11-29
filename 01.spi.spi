@@ -117,7 +117,7 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _).look
         pp2=_
-        pp=_
+        #pp=_
         dripkit pp2,1 if pp2 && pp2.is_a?(Integer)
         if pp
           accent = (pp.is_a?(Array) ? 0.7 : 0.4)*1
@@ -125,7 +125,7 @@ live_loop :do, sync: :metro do
             0.25 0.25 -0.25 -0.25  0.25 -0.25
             0.5  0.5  -0.25 -0.25  0.25 -0.5
             0.5  0.5  -0.25 -0.25  0.25 -0.5
-            ).look, cutoff: (ramp 0,127,256).tick(:aaashoo2t), cutoff: 100
+            ).look, cutoff: (ramp 0,127,256*2).tick(:aaashoo2t)#, cutoff: 100
         end
         sleep 1/8.0
     end

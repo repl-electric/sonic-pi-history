@@ -641,7 +641,7 @@ with_fx :none, mix: 0 do
             _,  _, h,  _,   _,  _, h,  _,
             _,  _, h,  _,   _,  _, h,  {path:h, amp:0.1},
             _,  _, h,  _,   _,  _, h,  _,).look
-          #p=_
+          p=_
           if(p && dice(6) > 1)
 
             amp = if (p != _)

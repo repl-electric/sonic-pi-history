@@ -574,7 +574,7 @@ with_fx :none, mix: 0 do
             ).look
 
           #s=_
-          fin=  s != c2 ? (line 0.8, 0.01, 64).look : (line 1.0, 0.99, 2*64).look
+          fin=  s != c2 ? (line 0.8, 0.1, 64).look : (line 1.0, 0.99, 2*64).look
           amp = if (s != _)
                   s.is_a?(String) ? 1.0 : (s[:amp] || 1.0)
                 else

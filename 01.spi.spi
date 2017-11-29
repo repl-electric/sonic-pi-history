@@ -21,9 +21,9 @@ live_loop :c, sync: :metro do
   #stop
   score =  (ing
 #    [[[:A1 2]] 2]
-    [[[:A1  2]  [:CS3 2]  [:E2 2]]              2]
+    [[[:A2  2]  [:CS4 2]  [:E3 2]]              2]
     #[[[:GS4 0.25]]                             0.5]
-    [[[:CS2 2] [:E3 2] [:GS2 2]]                2]
+    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
     #[[[:B4 0.25]]                              0.5]
     # [[[:A2  2]  [:CS3 8]  [:E2 2] [:B2  2]]   2]
     # [[[:GS2 2]  [_    2]  [:E3 2]  [:Ds3 2]]  2]
@@ -46,7 +46,7 @@ live_loop :c, sync: :metro do
       #violin root(c), 127*1.0, mode: 1#, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     sleep s[-1]
-    #strings c[0][-2], 30
+    strings c[0][-2], 30
     at{
       sleep s[-1]/2.0
       eek c[0][-1], 100, sustain: 1, mode: 0, at: rand
@@ -63,8 +63,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :A3, 20, mode: 2, sustain: 4
-#strings_on :GS5, 1
-#violin_on  :GS5, 1
+strings_on :FS5, 1
+violin_on  :FS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

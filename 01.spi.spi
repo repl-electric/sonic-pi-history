@@ -18,7 +18,7 @@ live_loop :c, sync: :metro do
     #[[[:Fs4 0.25]]                              0.5]
     )
 
-  sp=_=score.look
+  s=score.look
   c=s[0]
   with_transpose -12*0 do
     #piano root(c),(ring 20,25).look*1.7, sustain: c[0][-1] #if c.count == 1

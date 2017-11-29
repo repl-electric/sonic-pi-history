@@ -580,7 +580,7 @@ with_fx :none, mix: 0 do
                 else
                   0
                 end
-          smp s,amp: 1.35*amp, cutoff: (ine 127, 110, 1024,).look#, finish: fin
+          smp s,amp: 1.35*amp, cutoff: (ine 127, 110, 1024,).look, finish: fin
 
           h = Crystal[/high/,4..32].look
           #h = Dust[/hat/,7]

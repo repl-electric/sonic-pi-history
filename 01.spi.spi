@@ -1,4 +1,4 @@
-sop_cc motion: 0.7
+sop_cc motion: 0.0
 #sop2_on :A2, mode: 4
 #sop_cc mode: 1.0
 #sharp :Cs4,2, sustain: 32
@@ -439,9 +439,9 @@ live_loop :kick, sync: :drums do
 
     k=k.look
     #k=_
-    #cue(:sudden) if k && spread(1,64).look
-    #violin_x  if k && spread(1,64).look
-    #strings_x  if k && spread(1,64).look
+    cue(:sudden) if k && spread(1,64).look
+    violin_x  if k && spread(1,64).look
+    strings_x  if k && spread(1,64).look
     sidechain if k && spread(1,4).look
     condi = 1
     r= 1

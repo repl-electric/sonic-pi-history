@@ -128,7 +128,7 @@ live_loop :do, sync: :metro do
           _, _, _, _,   _, _, _, _,
           _, _, _, _,   _, _, _, _,).look
         if pp2 && pp2.is_a?(Integer)
-          midi (pp2%(1*12))+(12*4),1, channel: 2 if pp2
+          midi (pp2%(1*12))+(12*4),1, channel: 2
         end
         if pp
           accent = (pp.is_a?(Array) ? 0.8 : 0.5)*1

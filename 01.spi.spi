@@ -117,7 +117,7 @@ live_loop :do, sync: :metro do
           _ _ _ _        _ _ _ _
           #s1 t1 _ _    _ _ _ _
         ).look
-        pp= (ing #7
+        pp= (ing #7  11
           10 _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _
           ).look

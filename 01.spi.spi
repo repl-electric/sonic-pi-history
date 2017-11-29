@@ -629,7 +629,7 @@ with_fx :none, mix: 0 do
                      0
                    end
           p = p.is_a?(Array) ? p[0] : p
-          p=_
+          #p=_
           if p
             eek (ing :A5 _ :D5).look, (line 1,20).look, sustain: 1/12.0, mode: 1, at: (line 0.0,1.0,128).look
           end
@@ -641,7 +641,7 @@ with_fx :none, mix: 0 do
             _  _ h  _   _  _ h  _
             _  _ h  _   _  _ h  {path:h,amp:0.1}
             _  _ h  _   _  _ h  _).look
-          p=_
+          #p=_
           if(p && dice(6) > 1)
 
             amp = if (p != _)

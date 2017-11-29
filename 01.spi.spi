@@ -454,10 +454,10 @@ live_loop :kick, sync: :drums do
       _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
 
     k=k.look
-    #k=_
-    cue(:sudden) if k && spread(1,64).look
-    violin_x  if k && spread(1,64).look
-    strings_x  if k && spread(1,64).look
+    k=_
+    #cue(:sudden) if k && spread(1,64).look
+    #violin_x  if k && spread(1,64).look
+    #strings_x  if k && spread(1,64).look
     sidechain if k && spread(1,4).look
     condi = 1
     r= 1

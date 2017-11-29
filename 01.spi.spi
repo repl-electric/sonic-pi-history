@@ -148,7 +148,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
   #harp_on :D3
   #score = (ing [_ 3] [:A3 3] [:D3 3] [:E3 3])
   score = (ing [:A3 3] [:D3 3] [:E3 3] [:B3 3] [:FS3 3] [:E3 3])
-  score = (ing [:A2 3])
+  #score = (ing [:A2 3])
 
   with_transpose -12*1 do
     if spread(1,2).look

@@ -560,7 +560,7 @@ with_fx :none, mix: 0 do
           c2 =  (knit Frag[/coil/,-31],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
           c2 =  #(knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
           c3 =  (knit Frag[/coil/,-29],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
-          c3 = Drip[/snare/,43]
+          c3 = Drip[/snare/,45]
           c2 = Analog[/click/].look
 
           s=(ing

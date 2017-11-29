@@ -223,7 +223,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         end
       end
       with_transpose -12*2 do
-        #bass c[0][0], (ring 120,80,117,85).look(:inner), sustain: 2.0
+        bass c[0][0], (ring 120,80,117,85).look(:inner), sustain: 2.0
       end
 
       c = c[0]

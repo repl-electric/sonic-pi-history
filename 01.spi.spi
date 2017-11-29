@@ -156,8 +156,8 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
     end
   end
 
-  s = score.tick
-  harp s, 0.5*(ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
+  #s = score.tick
+  #harp s, 0.5*(ring 20,20,20, 30,40,40, 40,60,80).look, sustain: s[-1]*2
 
   score = (knit
     [:A3, 3/4.0],3, [:Cs4,1.0],3,
@@ -165,14 +165,14 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
     [:A3,1.0],1,    [:E4,2/4.0],1
     )
   #score = space()
-  #s = score.tick
+  s = score.tick
   s1 = (ing
         :A3, :FS4, :E4, :D4, :A4,
         :A3, :FS4, :E4, :D4, :E4,
         :A3, :FS4, :E4, :D4, :D3,
         :B3, :FS4, :E4, :D4, :D4,
         ).tick(:s)
-  #harp s1, (ring 15,25).look(:s), sustain: (ring 1/4.0,1.0).look(:s) #0.1*(ring 20,20,20, 30,40,40, 40,60,80).look
+  harp s1, (ring 15,25).look(:s), sustain: (ring 1/4.0,1.0).look(:s) #0.1*(ring 20,20,20, 30,40,40, 40,60,80).look
   sleep s[-1]
   sleep 3/4.0
 

@@ -127,7 +127,8 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _).look
-      if pp2 && pp2.is_a?(Integer)
+                  puts pp2
+        if pp2 && pp2.is_a?(Integer)
         midi (pp%(1*12))+(12*4),15, channel: 2 if pp2
       end
       if pp

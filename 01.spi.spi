@@ -18,7 +18,7 @@ live_loop :c, sync: :metro do
     #[[[:Fs4 0.25]]                              0.5]
     )
 
-  s=score.look
+  sp=_=score.look
   c=s[0]
   with_transpose -12*0 do
     #piano root(c),(ring 20,25).look*1.7, sustain: c[0][-1] #if c.count == 1
@@ -572,7 +572,7 @@ with_fx :none, mix: 0 do
             _ _ _ _   c3 {path:Analog[/clapraw/,0],amp:0.125} _ _
             ).look
 
-          s=_
+          #s=_
           fin=  s != c2 ? (line 0.05, 0.01, 64).look : (line 1.0, 0.99, 2*64).look
           amp = if (s != _)
                   s.is_a?(String) ? 1.0 : (s[:amp] || 1.0)

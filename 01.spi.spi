@@ -128,17 +128,17 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _).look
         if pp2 && pp2.is_a?(Integer)
-          midi (pp2%(1*12))+(12*4),15, channel: 2 if pp2
+          midi (pp2%(1*12))+(12*4),12, channel: 2 if pp2
         end
-      if pp
-        accent = (pp.is_a?(Array) ? 0.8 : 0.5)*1
-        smp pp, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
+        if pp
+          accent = (pp.is_a?(Array) ? 0.8 : 0.5)*1
+          smp pp, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
             0.25 0.25 -0.25 -0.25  0.25 -0.25
             0.5  0.5  -0.25 -0.25  0.25 -0.5
             0.5  0.5  -0.25 -0.25  0.25 -0.5
             ).look, cutoff: (ramp 0,127,256).tick(:aaashoo2t), cutoff: 100
-      end
-      sleep 1/8.0
+        end
+        sleep 1/8.0
     end
     }
     end

@@ -43,7 +43,7 @@ live_loop :c, sync: :metro do
     #harp c[-2][0],10, mode: 4 if c[-2]
     #sop c[0][0],10, mode: 1
     with_transpose 12*0  do
-      violin root(c), 127*1.0, mode: 1#, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
+      #violin root(c), 127*1.0, mode: 1#, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     sleep s[-1]
     strings c[0][-2], 35

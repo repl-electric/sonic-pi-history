@@ -412,8 +412,7 @@ live_loop :kick, sync: :drums do
       m1[6] _ _        _ _ _
       _ _ _            _ _ _
       _ _ _            _ _ _
-      _ _ [m1[1]]      _ [m1[3]] _
-      )
+      _ _ [m1[1]]      _ [m1[3]] _)
     pp=(knit page1.look, page1.count*0, page2.look, page2.count*0, page3.look, page3.count*2).look
     #pp=_
     if pp

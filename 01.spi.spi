@@ -106,12 +106,12 @@ live_loop :do, sync: :metro do
             ).look
         end
         pp = (ing
-          d1g d1a _ _  _ _ _ _
+          d1g d1a _ _    _ _ _ _
           _ _ _ _        _ _ _ _
           d1 _ _ _       _ _ _ _
           _ _ _ _        _ _ _ _
 
-          d1 d1e _ _  _ _ _ _
+          d1 d1e _ _     _ _ _ _
           _ _ _ _        _ _ _ _
           m1 _ _ _       _ _ _ _
           _ _ _ _        _ _ _ _
@@ -453,7 +453,7 @@ live_loop :kick, sync: :drums do
       _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
 
     k=k.look
-    k=_
+    #k=_
     #cue(:sudden) if k && spread(1,64).look
     #violin_x  if k && spread(1,64).look
     #strings_x  if k && spread(1,64).look

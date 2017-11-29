@@ -62,7 +62,7 @@ live_loop :c, sync: :metro do
   end
 end
 
-eek :A4, 20, mode: 2, sustain: 4
+eek :Gs4, 20, mode: 2, sustain: 4
 #strings_n :GS5, 1
 #violin_on  :GS5, 1
 

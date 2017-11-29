@@ -635,7 +635,7 @@ with_fx :none, mix: 0 do
           p = p.is_a?(Array) ? p[0] : p
           #p=_
           if p
-            eek (ing :A3, :E4,).look, (line 1,20).look, sustain: 1/12.0, mode: 1, at: (line 0.0,1.0,128).look
+            eek (ing :A3, :E4,).look, (line 1,20).look, sustain: 1/8.0, mode: 1, at: (line 0.0,1.0,128).look
           end
           p=_
           smp p, amp: accent, attack: (line 0.001,0.0,64).look, sustain: (knit 0.01,4,0.1,4,0.1,4).look

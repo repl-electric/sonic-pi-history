@@ -1,4 +1,4 @@
-sop_cc motion: 0.4
+sop_cc motion: 0.5
 #sop2_on :A2, mode: 4
 
 live_loop :fucj, sync: :metro do; tick

@@ -589,15 +589,9 @@ with_fx :none, mix: 0 do
           #h,h,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
           h = Mountain[/microperc/,[5,5,5,6]].look
 
-          p2=(ing
-            _, _, h, _,  _, _, h, h,
-            _, _, h, _,  _, _, h, h,
-            _, _, h, _,  _, _, h, h,
-            _, _, h, _,  _, _, h, h,).look
-
           p=(ing
             _, _, h, _,  h, h, [h], h,
-            _, _, h, _,  h, h, [h], h,
+            _, _, h, _,  h, h, h, [h],
             _, _, h, _,  _, _, h, _,
             _, _, h, _,  _, _, h, {path:h, amp:0.3},
             _, _, h, _,  _, _, h, _,

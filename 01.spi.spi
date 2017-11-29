@@ -117,7 +117,7 @@ live_loop :do, sync: :metro do
           _, _, _, _,        _, _, _, _,
           #s1, t1, _, _,    _, _, _, _,
         ).look
-      pp= (ing 28, _, _, _,   _, _, _, _,).look
+      pp= (ing 29, _, _, _,   _, _, _, _,).look
       if pp.is_a?(Integer)
         midi (pp%(3*12))+(12*4),30, channel: 2 if pp
       else

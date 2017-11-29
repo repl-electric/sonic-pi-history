@@ -10,7 +10,7 @@ sop2_on :E3, mode: 5
 #violin :GS5, 100, sustain: 8, mode: 1, deform: 0.5, shape: 0.8
 #eek :E2, sustain: 4
 
-violin :d4, 100, sustain: 6#, mode: 2
+violin :e3, 20, sustain: 3#, mode: 2
 
 #violin :GS2, 10, sustain: 3
 #violin_cc mode: 2, deform: 1.0, shape: 1.0

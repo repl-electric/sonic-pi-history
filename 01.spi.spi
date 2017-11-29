@@ -549,7 +549,7 @@ with_fx :none, mix: 0 do
             _ _ p1 _
             ).look
 
-          zpp=(ing
+          pp=(ing
             [p1] _
             p1 _ _ _
             _ p1 _ _

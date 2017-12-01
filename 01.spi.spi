@@ -40,8 +40,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-strings_on :GS4, 1
-violin_on :GS5, 1
+#strings_on :GS4, 1
+#violin_on :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -442,9 +442,9 @@ live_loop :kick, sync: :drums do
 
     k=k.look
     #k=_
-    #cue(:sudden) if k && spread(1,64).look
-    #violin_x  if k && spread(1,64).look
-    #strings_x  if k && spread(1,64).look
+    cue(:sudden) if k && spread(1,64).look
+    violin_x  if k && spread(1,64).look
+    strings_x  if k && spread(1,64).look
     sidechain if k && spread(1,4).look
     condi = 1
     r= 1

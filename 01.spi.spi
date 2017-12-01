@@ -244,7 +244,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
       end
 
       with_transpose 12*0 do
-        zero  c[0],  (ing 30 10 30 10).look
+        #zero  c[0],  (ing 30 10 30 10).look
         piano c[0], 40, sustain: 8/2.0
 
         if @cp && @cp[1] != c[1]

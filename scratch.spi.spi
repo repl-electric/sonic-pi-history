@@ -1,0 +1,8 @@
+load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
+
+live_loop :go do
+  tick
+  #sop_on :A3
+  violin :A3, sustain: 3, at: 0.0, mode: 2
+  sleep 3
+end

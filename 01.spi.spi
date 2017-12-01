@@ -1,5 +1,5 @@
 sop_cc motion: 0.1
-sop2_on :E3, mode: 4
+#sop2_on :E3, mode: 4
 
 live_loop :c, sync: :metro do
   tick
@@ -280,7 +280,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
     #z=_
     puts z if look % 9 == 0
-    #piano z, (ing 70, 65, 55,).look * 0.8, sustain: 4/2.0
+    piano z, (ing 70, 65, 55,).look * 0.8, sustain: 4/2.0
     #zero z, (ing 30, 10, 30, 10,).look
 
     if spread(1,6).look

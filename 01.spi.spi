@@ -93,7 +93,7 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ 6 _).look
-        pp2=_
+        #pp2=_
         #pp=_
         dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
@@ -395,7 +395,7 @@ live_loop :kick, sync: :drums do
       _ _ _            _ _ _
       _ _ [m1[1]]      _ [m1[3]] _)
     pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
-    pp=_
+    #pp=_
     if pp
       with_fx :reverb, mix: 0.5 do
         drum_machine(pp)

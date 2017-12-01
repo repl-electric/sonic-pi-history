@@ -5,6 +5,6 @@ live_loop :go do
   #sop_on :A3
 
 #violin_on :Gs4, 127, mode: 1
-violin_cc defon: 0.0, at: 1.0
+violin_cc defon: 0.0, at: 0.0
   sleep 3
 end

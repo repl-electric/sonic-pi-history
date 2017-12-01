@@ -149,7 +149,7 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
         :A3 :FS4 :E4 :D4 :D3
         :B3 :FS4 :E4 :D4 :D4
         ).tick(:s)
-  harp s1, 0.01*(ring 15,25).look(:s), sustain: (ring 1/4.0,1.0).look(:s) #0.1*(ring 20,20,20, 30,40,40, 40,60,80).look
+  harp s1, 0.1*(ring 15,25).look(:s), sustain: (ring 1/4.0,1.0).look(:s) #0.1*(ring 20,20,20, 30,40,40, 40,60,80).look
   sleep s[-1]
   sleep 3/4.0
 

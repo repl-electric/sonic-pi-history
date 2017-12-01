@@ -5,6 +5,6 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
   #sop_on :A3
 
 #violin_on :Gs4, 127, mode: 1
-violin_cc at: 0.7
+violin_cc at: 0.8
 #  sleep 3
 #end

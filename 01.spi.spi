@@ -1,4 +1,4 @@
-sop_cc motion: 0.7
+sop_cc motion: 0.8
 #sop2_on :E3, mode: 4
 
 live_loop :c, sync: :metro do

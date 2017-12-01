@@ -301,7 +301,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
       at{sleep 1/2.0;
         violin2 :E3, 1,  sustain: 4.0
         violin  :E3, 10, sustain: 4.0
-        violin_cc at: 0.1
+        #violin_cc at: 0.1
       }
     end
   end

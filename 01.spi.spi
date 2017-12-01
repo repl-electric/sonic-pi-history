@@ -8,7 +8,7 @@ live_loop :c, sync: :metro do
     [[[:A2 2] [:Cs4 2] [:E3 2]] 2]
     [[[:GS4 0.25]]                             0.5]
     [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-    [[[:Fs4 0.25]]                              0.5]
+    [[[:B4 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]
@@ -41,7 +41,7 @@ end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
 #strings_on :GS4, 1
-violin_off :FS4, 1
+violin_on :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

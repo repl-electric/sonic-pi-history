@@ -1,10 +1,10 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/midi.rb"
 
-#live_loop :go do
+live_loop :go do
   tick
   #sop_on :A3
 
 #violin_on :Gs4, 127, mode: 1
-violin_cc at: 1.0
-#  sleep 3
-#end
+violin_cc defon: 1.0
+  sleep 3
+end

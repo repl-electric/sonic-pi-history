@@ -245,7 +245,7 @@ z=nil;tick
         #bass c[0][0], (ring 120,80,117,85).look(:inner), sustain: 2.0
       end
 
-      c = c[0]
+      #c = c[0]
       #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
       #c=[]
       #sharp c[0], 2, sustain: 8/2.0

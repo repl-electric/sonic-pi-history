@@ -168,7 +168,7 @@ z=nil;tick
   live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
-    if spread(1,9).look
+    if spread(1,3).look
       #tick_reset(:inner)
       c = (ring
 
@@ -183,10 +183,9 @@ z=nil;tick
         [[:A2,  :Cs4, :E3],  4],
         [[:CS3, :E4, :GS3], 2],
 
-
-
         [[:A2, :CS3, :E3], 4],
         [[:E3, :Gs4, :CS4], 4],  #E G C
+
         [[:E3, :Fs4, :B3], 4],   #E-F-B
         [[:Cs4, :E4, :Gs3], 4],
         [[_,_,_],2],

@@ -169,7 +169,7 @@ z=nil;tick
   live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
-    if spread(1,9).look #spread(1,4).look  # 4th?
+    if spread(1,4).look #spread(1,4).look  # 4th?
       cp = (ring
         [:A2,  :Cs4, :E3],
         [:CS3, :E4, :GS3],
@@ -290,7 +290,7 @@ z=nil;tick
       end
     end
   end
-  sleep 1
+  #sleep 1
   with_transpose 12 do
     #eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0
   end

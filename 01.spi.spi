@@ -439,7 +439,7 @@ live_loop :kick, sync: :drums do
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k
-      midi :E3, channel: 1
+      midi :Fs3, channel: 1
     end
     #k=_
     cue(:sudden) if k && spread(1,64).look

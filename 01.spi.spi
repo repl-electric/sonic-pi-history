@@ -430,7 +430,16 @@ live_loop :kick, sync: :drums do
       kt[6] _ _   _ _ _
       _ _ _       _ _ _
       _ _ _       _ _ _
-      _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
+      _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _
+
+
+
+      _ _ _       _ _ _
+      _ _ _       _ _ _
+      _ _ _       _ _ _
+      _ _ _       _ _ _
+
+      )
 
     k=k.look
     #k=_

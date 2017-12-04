@@ -217,8 +217,8 @@ z=nil;tick
 
       #zzzs = c[-1]
       @cp ||= c
-      puts "Root: #{c[0] if c && c[0]}"
       if c
+        puts "Root: #{c[0] if c[0]}"
         with_transpose -1*12 do
           if c.count > 3
             #violin c[0][-1], 1*(ing 30 10 30 50).look(:inner), sustain: 4

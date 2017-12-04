@@ -1,4 +1,4 @@
-sop_cc motion: 0.1
+sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 
 #sop2_on :E3, mode: 4
@@ -445,7 +445,6 @@ live_loop :kick, sync: :drums do
       _ _ Tape[/cymbals/,4]  _ Tape[/cymbals/,2] _)
 
     k=k.look
-    puts k
     #k=_
     #cue(:sudden) if k && spread(1,64).look
     #violin_x  if k && spread(1,64).look

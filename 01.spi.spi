@@ -236,7 +236,7 @@ z=nil;tick
       pf=1.0
       with_transpose 12*0 do
         zero  c[0], (ing 30 10 30 10).look
-        with_transpose 9 { eek c[2], 50, sustain: 2,mode: 1 }
+        with_transpose 9 { eek c[2], 50, sustain: 2,mode: 1}
 
         i = (method :piano)
         i.call(c[0], 60*pf, sustain: 4)

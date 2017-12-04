@@ -310,7 +310,7 @@ z=nil;tick
   end
   if spread(1,1).look && (ing 1 1 _   1 _ _   1 _ 1   _ 1 _).look
     with_transpose (ing -5 0 0  0 0 0   0 0 -5  0 0 0 ).look do
-      violin z, 10, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
+      violin z, 15, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
     if false#z==:Cs4
       at{sleep 1/2.0;

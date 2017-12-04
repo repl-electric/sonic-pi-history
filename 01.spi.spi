@@ -321,7 +321,7 @@ z=nil;tick
       }
     end
   end
-  sleep (1/9.0)*3 #/4.0#/4.0 #/4.0 #/4.0 #/4.0
+  sleep (1/9.0)*4 #/4.0#/4.0 #/4.0 #/4.0 #/4.0
 end
 
 live_loop :kick, sync: :drums do

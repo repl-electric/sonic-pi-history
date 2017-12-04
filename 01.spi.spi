@@ -226,19 +226,19 @@ z=nil;tick
       @cp ||= c
       puts "Root: #{c[0] if c[0]}"
       if c
-      with_transpose -1*12 do
-        if c && c.count > 3
-        #violin c[0][-1], 1*(ing 30 10 30 50).look(:inner), sustain: 4
+        with_transpose -1*12 do
+          if c.count > 3
+            #violin c[0][-1], 1*(ing 30 10 30 50).look(:inner), sustain: 4
+          end
         end
-      end
-      with_transpose -12*2 do
-        #bass c[0][0], (ring 120,80,117,85).look(:inner), sustain: 2.0
-      end
+        with_transpose -12*2 do
+          #bass c[0][0], (ring 120,80,117,85).look(:inner), sustain: 2.0
+        end
 
       #c = c[0]
       #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
       #c=[]
-      #sharp c[0], 2, sustain: 8/2.0
+      sharp c[0], 2, sustain: 8/2.0
       #sop c[1], 3, sustain: 8/2.0
       #sop c[2], 3, sustain: 8/2.0
       puts "#{Note.resolve_note_name(c[0]) if c[0]} <- [Piano]"

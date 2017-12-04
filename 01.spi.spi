@@ -284,9 +284,12 @@ z=nil;tick
     #z=_
     puts z if look % 9 == 0
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
+    at{
+      sleep 1
     with_transpose 0 do
       eek z, sustain: 2, mode: 0
-    end
+      end
+      }
     #sop z, sustain: 2
     #harp z
     #zero z, (ing 30 10 30 10).look

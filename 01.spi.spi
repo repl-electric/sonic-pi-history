@@ -266,6 +266,7 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
+        i = (method :piano)
         # sop c[0], 60, sustain: 5.0
         # sop c[1], 55, sustain: 5.0
         # sop c[2], 50, sustain: 5.0

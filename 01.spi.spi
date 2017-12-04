@@ -267,6 +267,7 @@ z=nil;tick
           end
         end
         #piano c[1], 50*pf, sustain: 8/2.0
+        puts c
         sop c[0], 60, sustain: 2.0
         sop c[1], 55, sustain: 2.0
         sop c[2], 50, sustain: 2.0

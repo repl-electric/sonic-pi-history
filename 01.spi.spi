@@ -271,12 +271,6 @@ z=nil;tick
         piano c[1], 40
         sop c[1], 40, sustain: 2.0
 
-        with_transpose 0  do
-          #sop c[2], sustain: 4/2.0
-          #sop2 c[2], sustain: 4/2.0
-        end
-        #end
-
         piano c[2], 55, sustain: 8/2.0
         if c[3]
           piano c[3], 40, sustain: 2

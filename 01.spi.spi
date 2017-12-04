@@ -241,9 +241,9 @@ z=nil;tick
 
         i = (method :piano)
         #i.call(c[0], 60*pf, sustain: 4)
-        i.call(c[1], 50*pf, sustain: 4)
-        i.call(c[2], 55*pf, sustain: 4)
-        i.call(c[3], 40*pf, sustain: 2)
+        #i.call(c[1], 50*pf, sustain: 4)
+        #i.call(c[2], 55*pf, sustain: 4)
+        #i.call(c[3], 40*pf, sustain: 2)
         i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)

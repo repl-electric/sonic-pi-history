@@ -255,9 +255,9 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
-with_transpose 12
+        with_transpose 12do
         piano c[1], 50, sustain: 8/2.0
-        end
+      end
 
         piano c[2], 55, sustain: 8/2.0
         if c[3]

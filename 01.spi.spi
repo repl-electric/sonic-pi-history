@@ -233,7 +233,7 @@ z=nil;tick
       c = c[0]
       #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
 
-      c=[]
+      #c=[]
       #sharp c[0], 2, sustain: 8/2.0
       #sop c[1], 3, sustain: 8/2.0
       #sop c[2], 3, sustain: 8/2.0
@@ -284,7 +284,10 @@ z=nil;tick
     #z=_
     puts z if look % 9 == 0
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
-    zero z, (ing 30 10 30 10).look
+
+
+    sop z
+    #zero z, (ing 30 10 30 10).look
 
     if spread(1,3).look
       with_transpose (1*12) do

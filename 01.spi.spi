@@ -271,8 +271,8 @@ z=nil;tick
         sop c[0], 60, sustain: 6.0
         sop c[1], 55, sustain: 6.0
         sop c[2], 50, sustain: 6.0
-        sop c[3], 40, sustain: 2.0
-        sop c[4], 30, sustain: 2.0
+        sop c[3], 40, sustain: 4.0
+        sop c[4], 30, sustain: 4.0
 
         #piano c[2], 55*pf, sustain: 4
         #piano c[3], 40*pf, sustain: 2

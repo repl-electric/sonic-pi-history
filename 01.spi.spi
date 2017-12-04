@@ -268,7 +268,7 @@ z=nil;tick
           end
         end
 
-        paino c[1], 40
+        piano c[1], 40
         sop c[1], 40, sustain: 2.0
 
         with_transpose 0  do

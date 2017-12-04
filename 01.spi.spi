@@ -274,7 +274,7 @@ z=nil;tick
         # sop c[3], 40, sustain: 4.0
         # sop c[4], 30, sustain: 4.0
 
-        i c[1], 50*pf, sustain: 8/2.0
+        i(c[1], 50*pf, sustain: 8/2.0)
         #piano c[2], 55*pf, sustain: 4
         #piano c[3], 40*pf, sustain: 2
         #piano c[4], 30*pf, sustain: 8

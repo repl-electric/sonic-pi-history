@@ -260,11 +260,9 @@ z=nil;tick
         #violin2 c[1], 1, sustain: 4.0
       end
 
-      eek c[0] if c[0]
-      puts c[0]
       with_transpose 12*0 do
         zero  c[0],  (ing 30, 10, 30, 10,).look
-
+      eek c[0] if c[0]
 
 
 

@@ -268,13 +268,12 @@ z=nil;tick
         end
         i = (method :piano)
 
-        sop_cc motion: (ring 0.2,0.1,0.0).look
         sop c[0], 60, sustain: 4.0
         sop c[1], 55, sustain: 4.0
         sop c[2], 50, sustain: 4.0
         sop c[3], 40, sustain: 2.0
         sop c[4], 30, sustain: 8.0
-
+        sop_cc motion: (ring 0.2,0.1,0.0).look
         #i.call(c[1], 50*pf, sustain: 4)
         #piano c[2], 55*pf, sustain: 4
         #piano c[3], 40*pf, sustain: 2

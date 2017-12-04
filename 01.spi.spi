@@ -250,9 +250,10 @@ z=nil;tick
       #sop c[2], 3, sustain: 8/2.0
       puts "#{Note.resolve_note_name(c[0]) if c[0]} <- [Piano]"
 
+      pf=1.0
       with_transpose 12*0 do
         zero  c[0],  (ing 30 10 30 10).look
-        piano c[0], 60, sustain: 8/2.0
+        piano c[0], 60*pf, sustain: 8/2.0
         with_transpose 9 { eek c[2], 50, sustain: 2 }
 
         if @cp && @cp[1] != c[1]
@@ -263,11 +264,11 @@ z=nil;tick
           end
         end
 
-        piano c[1], 50, sustain: 8/2.0
+        piano c[1], 50*pf, sustain: 8/2.0
         #sop c[1], 40,   sustain: 2.0
-        piano c[2], 55, sustain: 8/2.0
-        piano c[3], 40, sustain: 2 if c[3]
-        piano c[4], 100, sustain: 8 if c[4]
+        piano c[2], 55*pf, sustain: 8/2.0
+        piano c[3], 40*pf, sustain: 2 if c[3]
+        piano c[4], 100*pf, sustain: 8 if c[4]
       end
     end
 

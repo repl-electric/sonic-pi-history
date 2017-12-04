@@ -270,7 +270,8 @@ z=nil;tick
           end
         end
         #with_transpose 12 do
-          piano c[1], 50, sustain: 8/2.0
+        #piano c[1], 50, sustain: 8/2.0
+        sop c[1]
         #end
 
         piano c[2], 55, sustain: 8/2.0

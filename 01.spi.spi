@@ -214,7 +214,7 @@ z=nil;tick
         [:A3, :Cs4, :E3, :B4],
         _
         )
-      tick_reset(:inner)
+      #tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if c

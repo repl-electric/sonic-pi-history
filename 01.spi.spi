@@ -276,7 +276,7 @@ z=nil;tick
         if @cp && @cp[1] != c[1]
           @cp = c
           with_transpose 0 do
-            strings c[1],1, sustain: 8
+            strings c[1],1, sustain: 4
             #violin c[1], 100, sustain: 2
           end
         end

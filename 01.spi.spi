@@ -267,9 +267,9 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
-        #with_transpose 12 do
+        with_transpose 12 do
         sop c[1], 40, sustain: 2.0
-        #end
+        end
 
         with_transpose 0  do
           #sop c[2], sustain: 4/2.0

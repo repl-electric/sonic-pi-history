@@ -268,7 +268,7 @@ z=nil;tick
         #sop c[1],  40,   sustain: 2.0
         piano c[2], 55*pf, sustain: 8/2.0
         piano c[3], 40*pf, sustain: 2 if c[3]
-        piano c[4], 40*pf, sustain: 8 if c[4]
+        piano c[4], 30*pf, sustain: 8 if c[4]
       end
     end
 

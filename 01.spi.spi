@@ -266,21 +266,11 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
-        i = method(:piano)
-
-        # sop c[0], 60, sustain: 5.0
-        # sop c[1], 55, sustain: 5.0
-        # sop c[2], 50, sustain: 5.0
-        # sop c[3], 40, sustain: 4.0
-        # sop c[4], 30, sustain: 4.0
-
+        i = method(:sop)
         i.call(c[1], 50*pf, sustain: 4)
         i.call(c[2], 55*pf, sustain: 4)
         i.call(c[3], 40*pf, sustain: 2)
         i.call(c[4], 30*pf, sustain: 8)
-        #piano c[2], 55*pf, sustain: 4
-        #piano c[3], 40*pf, sustain: 2
-        #piano c[4], 30*pf, sustain: 8
       end
     end
 

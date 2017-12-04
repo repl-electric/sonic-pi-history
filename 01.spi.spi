@@ -267,8 +267,8 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
-        with_transpose 12 do
-        sop c[1], 40, sustain: 2.0
+        with_transpose (ing 0 12).look do
+          sop c[1], 40, sustain: 2.0
         end
 
         with_transpose 0  do

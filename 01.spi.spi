@@ -304,7 +304,7 @@ z=nil;tick
     if z==:Cs4
       at{sleep 1/2.0;
         violin2 :E3, 1,  sustain: 4.0
-        violin  :GS3, 10, sustain: 4.0
+        violin  :GS4, 10, sustain: 4.0
         violin_cc at: 0.1
       }
     end

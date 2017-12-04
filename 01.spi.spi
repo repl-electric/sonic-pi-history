@@ -170,7 +170,7 @@ z=nil;tick
   live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
-    if spread(1,3).look
+    if spread(1,3).look  # 1*3 -> 3 hits.  1/4 * 9  = 2.25
       #tick_reset(:inner)
       c = (ring
 
@@ -180,7 +180,6 @@ z=nil;tick
 
         [[:Cs3, :E4, :A2],  4],
         #        [[:A3,  :Cs4, :E4, :GS4],  4],
-
         [(chord :Cs3, :m, i: 2), 4],
 
         [[_,_,_],2],
@@ -343,7 +342,7 @@ z=nil;tick
       }
     end
   end
-  sleep 1#/4.0#/4.0 #/4.0 #/4.0 #/4.0
+  sleep 1/2.0 #/4.0#/4.0 #/4.0 #/4.0 #/4.0
 end
 
 live_loop :kick, sync: :drums do

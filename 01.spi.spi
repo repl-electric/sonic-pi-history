@@ -172,19 +172,19 @@ z=nil;tick
   with_transpose 12*0 do
     if spread(1,4).look  # 4th?
       #tick_reset(:inner)
+#               [:A2,  :D4,  :E3],
+ #        [:A2,  :Cs4, :E3, :GS3],
+  #       [:A2,  :Cs4, :E3],
+   #      [:Cs3, :E4,  :GS3],
+
       c = (ring
-         # [:A2,  :Cs4, :E3],
-         # [:CS3, :E4, :GS3],
-         # [_,_,_],
-
-         # [:A3,  [:Cs5,:CS4].choose, :E3],
-         # [:CS3, :E4, :GS4],
-         # [_,_,_],
-
-         [:A2,  :D4,  :E3],
-         [:A2,  :Cs4, :E3, :GS3],
          [:A2,  :Cs4, :E3],
-         [:Cs3, :E4,  :GS3],
+         [:CS3, :E4, :GS3],
+         [_,_,_],
+
+         [:A3,  [:Cs5,:CS4].choose, :E3],
+         [:CS3, :E4, :GS4],
+         [_,_,_],
 
         [[_,_,_],2],
 

@@ -272,7 +272,7 @@ z=nil;tick
           end
         end
         with_transpose 12 do
-          sop2 c[1], 50, sustain: 4.0
+          sop2 c[1], 50, sustain: 2.0
         end
 
         with_transpose 0  do

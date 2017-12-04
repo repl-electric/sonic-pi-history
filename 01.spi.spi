@@ -311,7 +311,7 @@ end
 
 live_loop :kick, sync: :drums do
   8.times{
-    tick
+    #tick
     t1 = CineAmbi[/One shots/,/tom/,2]
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]

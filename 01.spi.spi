@@ -422,7 +422,7 @@ live_loop :kick, sync: :drums do
     ts = Tape[/snares/]
     k=(ing
       kt[3], _, k7, _,    ts[8], _, _, _,
-      _, _, _, _,         ts[8], _, _, _,
+      _, _, _, _,         ts[9], _, _, _,
       _, _, _, _,         ts[8], _, tc[1], _,
 
       #, kt[6], _, _,    _, _, _,

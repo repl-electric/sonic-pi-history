@@ -255,7 +255,10 @@ z=nil;tick
             #violin c[1], 100, sustain: 2
           end
         end
+with_transpose 12
         piano c[1], 50, sustain: 8/2.0
+        end
+
         piano c[2], 55, sustain: 8/2.0
         if c[3]
           piano c[3], 40, sustain: 2

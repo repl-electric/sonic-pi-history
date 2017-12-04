@@ -262,8 +262,7 @@ z=nil;tick
 
       with_transpose 12*0 do
         zero  c[0],  (ing 30 10 30 10).look
-        with_transpose 12 {
-        eek c[0] if c[0] }
+        with_transpose 12 { eek c[0] if c[0] }
 
 
 

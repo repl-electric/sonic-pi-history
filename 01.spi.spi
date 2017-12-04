@@ -264,9 +264,9 @@ z=nil;tick
         zero  c[0],  (ing 30 10 30 10).look
         with_transpose 12 { eek c[2] }
 
-        with_transpose -12 do
-        violin  c[0]
-end
+        with_transpose 0 do
+          violin c[0]
+        end
         #violin2 c[0], 5
 
         piano c[0], 60, sustain: 8/2.0

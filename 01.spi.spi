@@ -257,9 +257,9 @@ z=nil;tick
 
       with_transpose 12*0 do
         zero  c[0],  (ing 30 10 30 10).look
+        piano c[0], 60, sustain: 8/2.0
         with_transpose 12 { eek c[2] }
 
-        piano c[0], 60, sustain: 8/2.0
 
         if @cp && @cp[1] != c[1]
           @cp = c

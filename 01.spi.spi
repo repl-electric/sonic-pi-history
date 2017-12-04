@@ -276,8 +276,8 @@ z=nil;tick
       :A3  _ _ _       _ _ _ _
       ).look
 
-    z=(ing :Gs4  :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
-           :Gs4  :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
+    z=(ing :D4  :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
+           :D4  :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
     #z=_

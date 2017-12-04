@@ -285,8 +285,8 @@ z=nil;tick
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     at{
       sleep 1+1/2.0
-    with_transpose 0 do
-      #eek z, sustain: 2, mode: 0
+      with_transpose 0 do
+        eek z, sustain: 2, mode: 0
       end
       }
     #sop z, sustain: 2

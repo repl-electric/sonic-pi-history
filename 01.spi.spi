@@ -170,7 +170,7 @@ z=nil;tick
   live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
-    if spread(1,3).look  # 2 per
+    if spread(1,4).look  # 2 per
       #tick_reset(:inner)
       c = (ring
         [[:A1,  :Cs4, :E3],  4],

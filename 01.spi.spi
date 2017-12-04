@@ -272,7 +272,8 @@ z=nil;tick
           end
         end
         #with_transpose 12 do
-          sop c[1], 5, sustain: 2.0
+        sop c[1], 5, sustain: 2.0
+        violin c[1]
         #end
 
         with_transpose 0  do

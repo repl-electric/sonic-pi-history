@@ -214,7 +214,7 @@ z=nil;tick
         [:A3, :Cs4, :E3, :B4],
         _
         )
-      #tick_reset(:inner)
+      tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if c
@@ -248,7 +248,7 @@ z=nil;tick
         i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
-        #you.call(c[1], 60, sustain: 4.0, mode: 2)
+        you.call(c[1], 60, sustain: 4.0, mode: 2)
         #you.call(c[1], 55, sustain: 4.0)
         #you.call(c[2], 50, sustain: 4.0)
         #you.call(c[3], 40, sustain: 2.0)

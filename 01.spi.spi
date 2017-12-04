@@ -171,7 +171,7 @@ z=nil;tick
   #tick_reset
   with_transpose 12*0 do
     if spread(1,4).look #spread(1,4).look  # 4th?
-      c = (ring
+      cp = (ring
         [:A2,  :Cs4, :E3],
         [:CS3, :E4, :GS3],
         _,
@@ -213,8 +213,9 @@ z=nil;tick
         [:A3, :D3, :E4],
         [:A3, :Cs4, :E3, :B4],
         _
-        ).tick(:inner)
-
+        )
+      tick_reset
+      c=cp.tick(:inner)
       @cp ||= c
       if c
         puts "Root: #{c[0] if c[0]}"

@@ -268,7 +268,7 @@ z=nil;tick
         end
         i = (method :piano)
 
-        sop_cc motion: (ring 0,0.1).look
+        sop_cc motion: (ring 0.1,0.0).look
         sop c[0], 60, sustain: 5.0
         sop c[1], 55, sustain: 5.0
         sop c[2], 50, sustain: 5.0

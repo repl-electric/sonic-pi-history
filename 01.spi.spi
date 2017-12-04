@@ -270,7 +270,7 @@ z=nil;tick
         puts c
         sop c[0], 60, sustain: 4.0
         sop c[1], 55, sustain: 2.0
-        sop c[2], 50, sustain: 2.0
+        sop c[2], 50, sustain: 4.0
         sop c[3], 40, sustain: 2.0
         sop c[4], 30, sustain: 2.0
 

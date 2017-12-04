@@ -264,8 +264,8 @@ z=nil;tick
         zero  c[0],  (ing 30, 10, 30, 10,).look
 with_transpose -12 do
         violin  c[0]
-        violin2 c[0]
 end
+        violin2 c[0]
         piano c[0], 60, sustain: 8/2.0
 
         if @cp && @cp[1] != c[1]

@@ -1,4 +1,4 @@
-sop_cc motion: 0.1
+#sop_cc motion: 0.1
 #sop2_cc motion: 0.2
 
 #sop2_on :E3, mode: 4
@@ -274,7 +274,7 @@ z=nil;tick
         sop c[4], 30, sustain: 2.0
 
         #piano c[2], 55*pf, sustain: 4
-        piano c[3], 40*pf, sustain: 2
+        #piano c[3], 40*pf, sustain: 2
         #piano c[4], 30*pf, sustain: 8
       end
     end

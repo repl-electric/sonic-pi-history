@@ -170,7 +170,7 @@ z=nil;tick
   live_loop :c {stop}
   #tick_reset
   with_transpose 12*0 do
-    if spread(1,4).look  # 4th?
+    if spread(1,9).look #spread(1,4).look  # 4th?
       #tick_reset(:inner)
 #               [:A2,  :D4,  :E3],
  #        [:A2,  :Cs4, :E3, :GS3],

@@ -472,7 +472,7 @@ live_loop :kick, sync: :drums do
     r = 1.0
     if kp && kp.is_a?(Array)
       kp = kp[0]
-      accent=1.5
+      accent=accent*1.5
     end
     if kp && kp.is_a?(Hash)
       fx = kp.values[0]

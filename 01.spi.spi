@@ -444,7 +444,7 @@ live_loop :kick, sync: :drums do
 
     kp=k2.look
     fx=:none
-    if kp && kp.is_a?(Symbol)
+    if kp && kp.is_a?(Hash)
       puts kp
       kp = kp.to_s
       puts kp

@@ -458,6 +458,7 @@ live_loop :kick, sync: :drums do
     end
     if kp==df[5]
       r=-0.125
+      attack = 0.5
     end
     with_fx(fx){ smp kp, amp: accent, rate: r, attack: attack if kp}
 

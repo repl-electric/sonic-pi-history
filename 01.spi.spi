@@ -440,7 +440,7 @@ live_loop :kick, sync: :drums do
 
 
     k2=(ing
-      {tc[0]=>:reverb},  _, tc[2], _,   _, _, _, _,
+      {tc[0]=>:bitcrusher},  _, tc[2], _,   _, _, _, _,
       tc[0], _,          _, tc[2],     _, _, _, _,
       tc[0], _,  tc[2], _,     _, _, _, _,
       )

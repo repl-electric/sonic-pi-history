@@ -451,7 +451,7 @@ live_loop :kick, sync: :drums do
       fx = :krush
     end
 
-    with_fx(fx){ smp kp }
+    with_fx(fx){ smp kp if kp}
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k

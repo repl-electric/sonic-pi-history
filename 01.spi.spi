@@ -437,12 +437,12 @@ live_loop :kick, sync: :drums do
       )
 
     k2=(ing
-      :tc[0] _ tc[2] _    _ _ _ _
+      tc[0].to_sym _ tc[2] _    _ _ _ _
       tc[0] _ _ tc[2]    _ _ _ _
       tc[0] _ tc[2] _    _ _ _ _
       )
 
-    kp = k2.look
+    kp=k2.look
     fx=:none
     if kp && kp.is_a?(Symbol)
       puts kp

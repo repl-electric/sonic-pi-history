@@ -449,7 +449,7 @@ live_loop :kick, sync: :drums do
     k2=(ing
       [tt[6]] ts[7] ts[8] tc[9]             _ {d1=>:krush} _ d1g
       _ _ _ _                               _ _ _ _
-      [tt[6]] ts[9] ts[8] tc[9]             _ {d1=>:krush} _ d1c
+      [tt[6]] ts[9] ts[8] tc[9]             _ {d1a=>:krush} _ d1c
       _ _ _ _                               _ _ _ _
 
 

@@ -446,7 +446,7 @@ live_loop :kick, sync: :drums do
       )
 
     dx = Drip[/fx/,/orig/].look  #24
-    r = (ring d1a,d1d).look
+    r = (ing d1a,d1d).look
     k2=(ing
       [tt[6]] ts[7] ts[8] tc[9]             _ {r=>:krush} _ d1g
       _ _ _ _                               _ _ _ _

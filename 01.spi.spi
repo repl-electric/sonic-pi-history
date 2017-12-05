@@ -450,7 +450,6 @@ live_loop :kick, sync: :drums do
     end
     with_fx fx { smp k2 }
 
-
     k=k.look
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1

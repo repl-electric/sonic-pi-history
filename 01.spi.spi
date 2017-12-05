@@ -461,10 +461,10 @@ live_loop :kick, sync: :drums do
       fx = kp.values[0]
       kp = kp.keys[0]
     end
-    #if kp==df[11]
+    if kp==dx
       r=[-0.125, 0.125].choose
       attack=0.0
-    #end
+    end
     with_fx(fx){ smp kp, amp: accent, rate: r, attack: attack if kp}
 
     k=k.look

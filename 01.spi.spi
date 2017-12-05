@@ -446,6 +446,7 @@ live_loop :kick, sync: :drums do
     kp=k2.look
     fx=:lpf
     accent = 1.0
+    r = 1.0
     if kp && kp.is_a?(Array)
       kp = kp[0]
       accent=1.2
@@ -455,7 +456,7 @@ live_loop :kick, sync: :drums do
       kp = kp.keys[0]
     end
 
-    with_fx(fx){ smp kp, amp: accent if kp}
+    with_fx(fx){ smp kp, amp: accent, rate: r if kp}
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k

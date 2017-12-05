@@ -448,7 +448,7 @@ live_loop :kick, sync: :drums do
       puts kp
       kp = kp.keys[0]
       puts kp
-      fx = kp.vals[0]
+      fx = kp.values[0]
     end
 
     with_fx(fx){ smp kp if kp}

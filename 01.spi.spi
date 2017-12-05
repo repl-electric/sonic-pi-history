@@ -446,9 +446,10 @@ live_loop :kick, sync: :drums do
     fx=:none
     if kp && kp.is_a?(Hash)
       puts kp
+      fx = kp.values[0]
       kp = kp.keys[0]
       puts kp
-      fx = kp.values[0]
+
     end
 
     with_fx(fx){ smp kp if kp}

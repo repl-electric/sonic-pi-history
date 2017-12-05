@@ -445,7 +445,6 @@ live_loop :kick, sync: :drums do
     kp = k2.look
     fx=:none
     if kp && kp.is_a?(String)
-      puts kp
       kp = eval(kp)
       puts kp
       fx = :krush

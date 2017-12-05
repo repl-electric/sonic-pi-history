@@ -440,7 +440,7 @@ live_loop :kick, sync: :drums do
     dx = Drip[/fx/,/orig/].look  #24
     k2=(ing
       _ _ _ _                               _ _ _ _
-      [tt[6]] ts[7] ts[8] tc[9]             _ [d1] _ d1
+      [tt[6]] ts[7] ts[8] tc[9]             _ {d1=>:krush} _ d1
       _ _ _ _                               _ _ _ dx
 
       _ _ _ _                               _ _ _ _

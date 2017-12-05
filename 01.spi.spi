@@ -442,7 +442,13 @@ live_loop :kick, sync: :drums do
       tc[0] _ tc[2] _    _ _ _ _
       )
 
-    smp k2.look
+    k2 = k2.look
+    fx=:none
+    if k2.is_a?(String)
+      k2 = eval(k2)
+      fx = :krush
+    end
+    with_fx fx { smp k2 }
 
 
     k=k.look

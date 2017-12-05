@@ -440,7 +440,7 @@ live_loop :kick, sync: :drums do
     dx = Drip[/fx/,[18,19,20]].look
     k2=(ing
       _ _ _ _                               _ _ _ _
-      ts[1] _ _ _                               _ _ _ _
+      ts[2] _ _ _                               _ _ _ _
       _ _ _ _                               _ _ _ dx
 
       _ _ _ _                               _ _ _ _

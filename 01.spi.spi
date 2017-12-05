@@ -418,13 +418,13 @@ live_loop :kick, sync: :drums do
       k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ t1
       k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ [f1 0.25])
 
-          d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav";
-      d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav";
-      d1e = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/e01.wav";
-      d1f = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/f#01.wav";
-      d1g = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/g#01.wav";
-      d1a = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/a-01.wav";
-      d1b = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/b01.wav";
+    d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav";
+    d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav";
+    d1e = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/e01.wav";
+    d1f = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/f#01.wav";
+    d1g = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/g#01.wav";
+    d1a = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/a-01.wav";
+    d1b = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/b01.wav";
 
     tc = Tape[/cymbals/]
     ts = Tape[/snares/]

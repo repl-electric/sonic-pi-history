@@ -467,7 +467,7 @@ live_loop :kick, sync: :drums do
 
     kp=k2.look
     fx=:lpf
-    accent = (ing 0.3 0.4 0.8 0.8).look
+    accent = (ing 0.3 0.4 0.5 0.8).look
     attack = 0.0
     r = 1.0
     if kp && kp.is_a?(Array)

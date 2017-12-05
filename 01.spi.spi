@@ -445,7 +445,7 @@ live_loop :kick, sync: :drums do
     kp = k2.look
     fx=:none
     if kp.is_a?(String)
-      kp = eval(k2)
+      kp = eval(kp)
       fx = :krush
     end
     with_fx(fx){ smp kp }

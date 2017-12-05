@@ -442,13 +442,13 @@ live_loop :kick, sync: :drums do
       tc[0] _ tc[2] _    _ _ _ _
       )
 
-    k2 = k2.look
+    kp = k2.look
     fx=:none
-    if k2.is_a?(String)
-      k2 = eval(k2)
+    if kp.is_a?(String)
+      kp = eval(k2)
       fx = :krush
     end
-    with_fx(fx){ smp k2 }
+    with_fx(fx){ smp kp }
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k

@@ -440,7 +440,7 @@ live_loop :kick, sync: :drums do
     k2=(ing #18/19
       _ _ _ _        _ _ _ _
       _ _ _ _        _ _ _ _
-      df[19] _ _ _   _ _ _ _
+      df[20] _ _ _   _ _ _ _
       )
 
     kp=k2.look

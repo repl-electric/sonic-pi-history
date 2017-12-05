@@ -447,12 +447,16 @@ live_loop :kick, sync: :drums do
 
     kp=k2.look
     fx=:none
+    accent = 1.0
     if kp && kp.is_a?(Hash)
       fx = kp.values[0]
       kp = kp.keys[0]
+    elsif kp && kp.is_a?(Array)
+      kp = kp[0]
+      accent= 1.1
     end
 
-    with_fx(fx){ smp kp if kp}
+    with_fx(fx){ smp kp, amp: accent if kp}
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k

@@ -255,7 +255,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
           @cp = c
           with_transpose -12 do
               #strings c[1],1, sustain: 2
-              piano2 c[1],55, sustain: 2
+              piano2 c[1],50, sustain: 2
               #violin c[1], 100, sustain: 2
             end
           end

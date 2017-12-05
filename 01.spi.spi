@@ -441,7 +441,6 @@ live_loop :kick, sync: :drums do
       tc[0] _ tc[2] _    _ _ _ _
       tc[0] _ _ tc[2]    _ _ _ _
       tc[0] _ tc[2] _    _ _ _ _
-
       )
 
     smp k2.look

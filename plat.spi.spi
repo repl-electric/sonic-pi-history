@@ -406,7 +406,7 @@ live_loop :kick, sync: :drums do
     #pp=_
     if pp
       with_fx :reverb, mix: 0.5 do
-       #drum_machine(pp)
+       drum_machine(pp)
       end
     end
 

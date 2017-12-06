@@ -4,7 +4,7 @@ sop_cc motion: 0.8
 
 live_loop :c, sync: :metro do
   tick
-stop
+  stop
   score =  (ing
     [[[:A2 2] [:Cs4 2] [:E3 2]] 2]
     [[[:GS4 0.25]]                             0.5]
@@ -413,7 +413,7 @@ live_loop :kick, sync: :drums do
     pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
     #pp=_
     if pp
-      with_fx :reverb, mix: 0.5 do
+      with_fx :reverb, mix: 0.8 do
         drum_machine(pp)
       end
     end

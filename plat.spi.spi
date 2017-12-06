@@ -109,7 +109,6 @@ live_loop :do, sync: :metro do
             pp = pp.keys[0]
           end
           with_fx(fx){
-            puts fx
           smp pp, amp: 2*accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
             0.25 0.25 -0.25 -0.25  0.25 -0.25
             0.5  0.5  -0.25 -0.25  0.25 -0.5

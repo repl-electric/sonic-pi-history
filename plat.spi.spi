@@ -13,6 +13,9 @@ live_loop :c, sync: :metro do
     )
   s=score.look
   c=s[0]
+  if spread(1,6).look
+    eek :GS3
+  end
   with_transpose -12*0 do
     piano  root(c),(ring 35,40).look*1.0, sustain: c[0][-1] #if c.count == 1
     piano2 c[0], 90

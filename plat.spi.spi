@@ -619,7 +619,7 @@ with_fx :none, mix: 0 do
 
           p1=Analog[/click/].look
           p1=d1
-          ffx =(ing :krush, :bitcrusher, :lpf,).look
+          ffx =(ing :krush, :bitcrusher,  :krush,).look
           pp=(ing
             [p1], _, _, _,   _, _, p1, _,
             _, _, p1, _,

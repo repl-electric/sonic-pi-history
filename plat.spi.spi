@@ -194,32 +194,32 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         [:D3,  :Gs4, :A3],
         [:D3,  :Fs4, :A3],
         _,
-        # [:Fs3, :B3, :D4],
-        # [:B3, :Fs4, :D4],
-        # [:FS3, :A3, :Cs4],
-        # [:E3, :Gs3, :B3],
-        # [:A3, :B3,  :E4],
-        # [:A3, :D4, :E4],
-        # _,
-        # [:A2,  :Cs4, :E3],
-        # [:CS3, :E4, :GS3],
-        # _,
-        # [:A2, :CS4, :E3],
-        # [:E3, :Gs4, :CS4],  #E G C
-        # [:E3, :Fs4, :B3],   #E-F-B
-        # [:B3, :E4, :Gs3],
-        # _,
-        # [:E3, :GS4, :B3],
-        # [:D3, :Gs4, :A3],
-        # [:D3, :Fs3, :A3],
-        # _,
-        # [:Fs3, :B3, :D4],
-        # [:B3, :Fs4, :D4],
-        # [:FS3, :B3, :Cs4],
-        # [:E3, :Gs3, :B3],
-        # [:A3, :D3, :E4],
-        # [:A3, :Cs4, :E3, :B4],
-        # _
+        [:Fs3, :B3, :D4],
+        [:B3, :Fs4, :D4],
+        [:FS3, :A3, :Cs4],
+        [:E3, :Gs3, :B3],
+        [:A3, :B3,  :E4],
+        [:A3, :D4, :E4],
+        _,
+        [:A2,  :Cs4, :E3],
+        [:CS3, :E4, :GS3],
+        _,
+        [:A2, :CS4, :E3],
+        [:E3, :Gs4, :CS4],  #E G C
+        [:E3, :Fs4, :B3],   #E-F-B
+        [:B3, :E4, :Gs3],
+        _,
+        [:E3, :GS4, :B3],
+        [:D3, :Gs4, :A3],
+        [:D3, :Fs3, :A3],
+        _,
+        [:Fs3, :B3, :D4],
+        [:B3, :Fs4, :D4],
+        [:FS3, :B3, :Cs4],
+        [:E3, :Gs3, :B3],
+        [:A3, :D3, :E4],
+        [:A3, :Cs4, :E3, :B4],
+        _
         )
       #tick_reset(:inner)
       c=cp.tick(:inner)
@@ -246,7 +246,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         zero  c[0], (ing 30 10 30 10).look
         #with_transpose 9 { eek c[2], 50, sustain: 2,mode: 2}
 
-        i = (method :piano2)
+        i = (method :piano)
         i.call(c[0], 60*pf, sustain: 4)
         i.call(c[1], 50*pf, sustain: 4)
         i.call(c[2], 55*pf, sustain: 4)
@@ -254,22 +254,22 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
-        #you.call(c[0], 60, sustain: 4.0, mode: 2)
-        #you.call(c[1], 55, sustain: 4.0, mode: 2)
-        #you.call(c[2], 50, sustain: 4.0)
-        #you.call(c[3], 40, sustain: 2.0)
-        #you.call(c[4], 30, sustain: 8.0)
-        #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
+        # you.call(c[0], 60, sustain: 4.0, mode: 2)
+        # you.call(c[1], 55, sustain: 4.0)
+        # you.call(c[2], 50, sustain: 4.0)
+        # you.call(c[3], 40, sustain: 2.0)
+        # you.call(c[4], 30, sustain: 8.0)
+        # at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         if @cp && @cp[1] != c[1]
           @cp = c
-          with_transpose 0 do
+          with_transpose -12 do
               #strings c[1],1, sustain: 2
-              with_transpose 0 do
-         #       if spread(1,2).tick(:notall)
-                  #violin  c[0], 70,  sustain: 4.0, mode: 1
-                  #violin2 c[1], 10, sustain: 4.0
-          #      end
+              with_transpose -12 do
+                if spread(1,2).tick(:notall)
+                  #violin  c[1], 1,  sustain: 6.0, mode: 1
+                  #violin2 c[-1], 1, sustain: 6.0
+                end
               end
               piano2 c[1], 100, sustain: 2
               #violin c[1], 100, sustain: 2
@@ -301,7 +301,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
     if spread(1,9).look
       with_transpose (1*12) do
-        musicbox z,10, sustain: 1/8.0#*3
+        #musicbox z,10, sustain: 1/8.0#*3
       end
     end
   end
@@ -402,11 +402,11 @@ live_loop :kick, sync: :drums do
       _ _ _            _ _ _
       _ _ _            _ _ _
       _ _ [m1[1]]      _ [m1[3]] _)
-    pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
-    #pp=_
+    pp=(knit p1.look,1).look#, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
+    pp=_
     if pp
-      with_fx :reverb, mix: 0.6 do
-       drum_machine(pp)
+      with_fx :reverb, mix: 0.5 do
+        #drum_machine(pp)
       end
     end
 
@@ -449,14 +449,14 @@ live_loop :kick, sync: :drums do
     ts = Tape[/snares/]
     tt = Tape[/toms/]
     df = Drip[/fx/]
-    k=(ing
+    k2=(ing
       kt[5] _ k7 _    _ _ _ _
-      ts[4] _ _ _    _ _ _ _
-      kt[5] _ _ _         _ _ tc[1] _
+      tt[23] _ _ _    _ _ _ _
+      _ _ _ _         _ _ tc[1] _
 
       kt[6] _ _ _    _ _ _ _
-      kt[5] _ _ _        _ _ _ _
-      kt[5] _ _ _        tc[4] _ tc[2] _
+      _ _ _ _        _ _ _ _
+      _ _ _ _        tc[4] _ tc[2] _
 
       # _ _ _       _ _ _
       # _ _ _       _ _ _
@@ -485,7 +485,7 @@ live_loop :kick, sync: :drums do
       )
 
     kp=k2.look
-    #kp=_
+    kp=_
     fx=:lpf
     accent = (ing 0.0 0.2 0.3 0.5).look
     attack = 0.0
@@ -499,21 +499,22 @@ live_loop :kick, sync: :drums do
       kp = kp.keys[0]
     end
     if kp==dx
-      #eek :Gs3
+      eek :Gs3
       r=[-0.125, 0.125].choose
       attack=0.1
       fx=:slicer
     end
 
-    #kp=_
+    kp=_
     with_swing 0.01 {
-      with_fx(fx, phase: (ing 1/4.0,1/4.0,1/8.0).look){ smp kp, amp: accent, rate: r, attack: attack if kp}}
+    with_fx(fx, phase: (ing 1/4.0,1/4.0,1/8.0).look){ smp kp, amp: accent, rate: r, attack: attack if kp}
+  }
 
     k=k.look
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    k=_
+    #k=_
     cue(:sudden) if k && spread(1,64).look
     violin_x  if k && spread(1,64).look
     strings_x  if k && spread(1,64).look
@@ -530,7 +531,7 @@ live_loop :kick, sync: :drums do
         if k == f1
           r = 0.25
         end
-        smp k, amp: 1*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+        smp k, amp: 0*2.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
       end
 
     end
@@ -584,7 +585,7 @@ with_fx :none, mix: 0 do
 
           if spread(1,16).look
             accent = spread(1,32).look ? 30 : 20
-            eek (ring :A1, :E2).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
+            #eek (ring :A1, :E2).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
           end
 
           s=(ing
@@ -634,7 +635,7 @@ with_fx :none, mix: 0 do
             _ _ p1
             _ _ p1
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             fx = :none
@@ -643,7 +644,8 @@ with_fx :none, mix: 0 do
               pp = pp.keys[0]
             end
             with_fx(fx){
-            smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 110#, cutoff: (ramp 0, 120,256*3).tick(:t54)
+              puts fx
+            smp pp#, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 110#, cutoff: (ramp 0, 120,256*3).tick(:t54)
             }
             if spread(1,6).look
               #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)

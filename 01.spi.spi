@@ -255,6 +255,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
           @cp = c
           with_transpose -12 do
               #strings c[1],1, sustain: 2
+              violin2 :E3, 1,  sustain: 4.0
               piano2 c[1], 40, sustain: 2
               #violin c[1], 100, sustain: 2
             end
@@ -285,7 +286,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
     if spread(1,9).look
       with_transpose (1*12) do
-        musicbox z,10, sustain: 1/8.0#*3
+        #musicbox z,10, sustain: 1/8.0#*3
       end
     end
   end

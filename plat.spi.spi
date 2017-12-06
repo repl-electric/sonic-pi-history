@@ -308,7 +308,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
     if spread(1,9).look
       with_transpose (1*12) do
-        musicbox z,10, sustain: 1/8.0#*3
+        #musicbox z,10, sustain: 1/8.0#*3
       end
     end
   end

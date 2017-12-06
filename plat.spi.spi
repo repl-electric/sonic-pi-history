@@ -221,7 +221,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         [:A3, :Cs4, :E3, :B4],
         _
         )
-      tick_reset(:inner)
+      #tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if c

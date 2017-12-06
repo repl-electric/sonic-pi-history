@@ -265,7 +265,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         #i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
-          sop2(c[0], 100, sustain: 1.0, mode: 0)
+          sop2(c[0], 100, sustain: 2.0, mode: 0)
 
           you.call(c[1], 15, sustain: 1.0, mode: 0)
           you.call(c[2], 50, sustain: 1.0)

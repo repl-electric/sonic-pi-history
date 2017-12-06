@@ -46,7 +46,7 @@ end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
 #strings_on :GS4, 1
-violin_on :GS5, 1
+#violin_on :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -99,7 +99,7 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ 6 _).look
         pp2=_
-        pp=_
+        #pp=_
         dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
           accent = (pp.is_a?(Array) ? 0.7 : 0.4)*1

@@ -196,9 +196,9 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         [:A3,  [:Cs5,:CS4].choose, :E3],
         [:CS3, :E4, :GS4],
         _,
-        # [:A2, :CS3, :E3],
-        # [:E3, :Gs4, :CS4],  #E G C
-        # [:E3, :Fs4, :B3],   #E-F-B
+        [:A2, :CS3, :E3],
+        [:E3, :Gs4, :CS4],  #E G C
+        [:E3, :Fs4, :B3],   #E-F-B
         # #[:Cs4, :E4, :Gs3],
         # _,
         # [:E3,  :GS4, :B3],

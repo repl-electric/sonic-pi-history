@@ -108,7 +108,7 @@ live_loop :do, sync: :metro do
             kp = pp.keys[0]
           end
           accent = (pp.is_a?(Array) ? 0.7 : 0.4)*1
-          with_fx :fx {
+          with_fx fx {
           smp pp, amp: accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
             0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
             0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,

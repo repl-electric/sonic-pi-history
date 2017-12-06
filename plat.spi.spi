@@ -622,7 +622,7 @@ with_fx :none, mix: 0 do
           pp=(ing
             [p1] _ _ _   _ _ p1 _
             _ _ p1 _
-            _ _ _ _   _ _ {p1=>:ffx} _
+            _ _ _ _   _ _ {p1=>ffx} _
             _ _ [p1] _
             ).look
 

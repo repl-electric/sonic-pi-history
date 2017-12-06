@@ -15,7 +15,7 @@ live_loop :c, sync: :metro do
   c=s[0]
   with_transpose -12*0 do
     piano  root(c),(ring 35,40).look*1.0, sustain: c[0][-1] #if c.count == 1
-    piano2 c[-1],100
+    piano2 c[-1], 50
     c.each{|n|tick(:inner);
       sop n[0],1.0*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*2)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }

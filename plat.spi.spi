@@ -250,14 +250,14 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
         i.call(c[0], 60*pf, sustain: 4)
         #i.call(c[1], 50*pf, sustain: 4)
         #i.call(c[2], 55*pf, sustain: 4)
-        i.call(c[3], 40*pf, sustain: 2)
+        #i.call(c[3], 40*pf, sustain: 2)
         i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
         # you.call(c[0], 60, sustain: 4.0, mode: 2)
         you.call(c[1], 55, sustain: 4.0, mode: 2)
-         you.call(c[2], 50, sustain: 4.0)
-        # you.call(c[3], 40, sustain: 2.0)
+        you.call(c[2], 50, sustain: 4.0)
+         you.call(c[3], 40, sustain: 2.0)
         # you.call(c[4], 30, sustain: 8.0)
         # at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 

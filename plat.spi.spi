@@ -255,7 +255,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
         you = (method :sop)
           # you.call(c[0], 60, sustain: 4.0, mode: 2)
-          with_transpose 12 do
+          with_transpose 0 do
             you.call(c[1], 55, sustain: 4.0, mode: 1)
           end
         # you.call(c[2], 50, sustain: 4.0)

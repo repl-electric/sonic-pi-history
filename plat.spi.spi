@@ -6,10 +6,10 @@ live_loop :c, sync: :metro do
   tick
   stop
   score =  (ing
-    [[[:A2 2] [:Cs4 2] [:E3 2]] 2]
-    [[[:GS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-    [[[:B4 0.25]]                              0.5]
+    [[[:A2, 2], [:Cs4, 2], [:E3, 2]], 2],
+    [[[:GS4, 0.25]],                             0.5],
+    [[[:CS3, 2], [:E4, 2], [:GS3, 2]],                2],
+    [[[:B4, 0.25]],                              0.5],
     )
   s=score.look
   c=s[0]
@@ -20,7 +20,7 @@ live_loop :c, sync: :metro do
     piano root(c),(ring 35,40).look*1.0, sustain: c[0][-1] #if c.count == 1
     #piano2 c[0], 20
     c.each{|n|tick(:inner);
-      sop n[0],1.0*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*2)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
+      sop n[0],1.0*(ing 80, 70, 85, 70,).look(:inner), sustain: ((n[-1])*2)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }
     #harp c[-2][0],10, mode: 4 if c[-2]
     #sop c[0][0],10, mode: 1
@@ -77,38 +77,38 @@ live_loop :do, sync: :metro do
             ).look
         end
         pp = (ing
-           d1g d1a _ _    _ _ _ _
-           _ _ _ _        _ _ _ _
-           d1 _ _ _       _ _ _ _
-           _ _ _ _        _ _ _ _
+           d1g, d1a, _, _,    _, _, _, _,
+           _, _, _, _,        _, _, _, _,
+           d1, _, _, _,       _, _, _, _,
+           _, _, _, _,        _, _, _, _,
 
-           d1 d1e _ _     _ _ _ _
-           _ _ _ _        _ _ _ _
-           m1 _ _ _       _ _ _ _
-          _ _ _ _        _ _ _ _
+           d1, d1e, _, _,     _, _, _, _,
+           _, _, _, _,        _, _, _, _,
+           m1, _, _, _,       _, _, _, _,
+          _, _, _, _,        _, _, _, _,
 
-          d1g d1a _ _    _ _ _ _
-          _ _ _ _        _ _ _ _
-          d1 _ _ _       _ _ _ _
-          _ _ _ _        _ _ _ _
+          d1g, d1a, _, _,    _, _, _, _,
+          _, _, _, _,        _, _, _, _,
+          d1, _, _, _,       _, _, _, _,
+          _, _, _, _,        _, _, _, _,
 
-          d1 d1e _ _     _ _ _ _
-          _ _ _ _        _ _ _ _
-          m1 _ _ _       _ _ _ _
-          _ _ _ _        _ _ _ _
+          d1, d1e, _, _,     _, _, _, _,
+          _, _, _, _,        _, _, _, _,
+          m1, _, _, _,       _, _, _, _,
+          _, _, _, _,        _, _, _, _,
 
-          #s1 t1 _ _    _ _ _ _
+          #s1, t1, _, _,    _, _, _, _,
         ).look
         pp2=(ing
-          7 _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ _ _
-          _ _ _ _   _ _ 6 _).look
+          7, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, _, _,
+          _, _, _, _,   _, _, 6, _,).look
         pp2=_
         pp=_
         dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
@@ -121,9 +121,9 @@ live_loop :do, sync: :metro do
           end
           #with_fx(fx, phase: 1/8.0, decay: 1){
             smp pp, amp: 1*accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
-              0.25 0.25 -0.25 -0.25  0.25 -0.25
-              0.5  0.5  -0.25 -0.25  0.25 -0.5
-              0.5  0.5  -0.25 -0.25  0.25 -0.5
+              0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
+              0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
+              0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
               ).look, cutoff: (ramp 0,127,256*4).tick(:aaashoo2t), cutoff: 80
           #}
         end
@@ -137,18 +137,18 @@ end
 live_loop :music, sync: :metro do;z=nil;s=nil;#tick
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.02, bass: 0.0, mode: 0
   score = (ing
-    [_ 3.0]
-    [:D3 3.0]     [:A3 3.0]     [:E4 3.0]
-    [:A3  1/4.0]  [:A3 1/4.0]   [_,1/4.0]     [:A3 1/4.0]
-    [_,1/4.0]     [:A3  1/4.0]  [:A3 1/4.0]   [_,1/4.0]
-    [:A3 1/4.0]   [_,1/4.0]     [:A3  1/4.0]  [:A3 1/4.0]
-    [_,1/4.0] [:A3 1/4.0] [_,1/4.0] [_,1/4.0]  #1.25
+    [_, 3.0],
+    [:D3, 3.0],     [:A3, 3.0],     [:E4, 3.0],
+    [:A3,  1/4.0],  [:A3, 1/4.0],   [_, 1/4.0],     [:A3, 1/4.0],
+    [_, 1/4.0],     [:A3,  1/4.0],  [:A3, 1/4.0],   [_, 1/4.0],
+    [:A3, 1/4.0],   [_, 1/4.0],     [:A3,  1/4.0],  [:A3, 1/4.0],
+    [_, 1/4.0], [:A3, 1/4.0], [_, 1/4.0], [_, 1/4.0],  #1.25,
     )
 
   #harp_on :D3
-  #score = (ing [_ 3] [:A3 3] [:D3 3] [:E3 3])
-  score = (ing [:A3 3] [:D3 3] [:E3 3] [:B3 3] [:FS3 3] [:E3 3])
-  score = (ing [:A2 3])
+  #score = (ing [_, 3], [:A3, 3], [:D3, 3], [:E3, 3],)
+  score = (ing [:A3, 3], [:D3, 3], [:E3, 3], [:B3, 3], [:FS3, 3], [:E3, 3],)
+  score = (ing [:A2, 3],)
 
   with_transpose -12*1 do
     if spread(1,2).look
@@ -167,10 +167,10 @@ live_loop :music, sync: :metro do;z=nil;s=nil;#tick
   #score = space()
   s = score.tick
   s1 = (ing
-        :A3 :FS4 :E4 :D4 :A4
-        :A3 :FS4 :E4 :D4 :E4
-        :A3 :FS4 :E4 :D4 :D3
-        :B3 :FS4 :E4 :D4 :D4
+        :A3, :FS4, :E4, :D4, :A4,
+        :A3, :FS4, :E4, :D4, :E4,
+        :A3, :FS4, :E4, :D4, :D3,
+        :B3, :FS4, :E4, :D4, :D4,
         ).tick(:s)
   harp s1, 0.1*(ring 15,25).look(:s), sustain: (ring 1/4.0,1.0).look(:s) #0.1*(ring 20,20,20, 30,40,40, 40,60,80).look
   sleep s[-1]
@@ -238,7 +238,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
       if c
         with_transpose -1*12 do
           if c.count > 3
-            #violin c[0][-1], 1*(ing 30 10 30 50).look(:inner), sustain: 4
+            #violin c[0][-1], 1*(ing 30, 10, 30, 50,).look(:inner), sustain: 4
           end
         end
         with_transpose -12*2 do
@@ -254,7 +254,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
 
       pf=1.0
       with_transpose 12*0 do
-        zero  c[0], (ing 30 10 30 10).look
+        zero  c[0], (ing 30, 10, 30, 10,).look
         #with_transpose 9 { eek c[2], 50, sustain: 2,mode: 2}
 
         i = (method :piano)
@@ -289,23 +289,23 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
     end
 
     z=(ing
-      :D4 :D4 :D4 :D4  _ _ _ _
-      :E4  _ _ _       _ _ _ _
-      :D4  _ _ _       _ _ _ _
-      :B4  _ _ _       _ _ _ _
-      :Fs4 _ _ _       _ _ _ _
-      :E4  _ _ _       _ _ _ _
-      :A3  _ _ _       _ _ _ _
-      :A3  _ _ _       _ _ _ _
+      :D4, :D4, :D4, :D4,  _, _, _, _,
+      :E4,  _, _, _,       _, _, _, _,
+      :D4,  _, _, _,       _, _, _, _,
+      :B4,  _, _, _,       _, _, _, _,
+      :Fs4, _, _, _,       _, _, _, _,
+      :E4,  _, _, _,       _, _, _, _,
+      :A3,  _, _, _,       _, _, _, _,
+      :A3,  _, _, _,       _, _, _, _,
       ).look
-    z=(ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
-            :D4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
+    z=(ing :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, :A4,
+            :D4, :Cs4, _, :A3, _, :B3, _, :A4, :A4, :A4, :Fs4, :A4,
       ).look
 
     #z=_
     puts z if look % 9 == 0
-    #piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
-    #zero z, (ing 30 10 30 10).look
+    #piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
+    #zero z, (ing 30, 10, 30, 10,).look
 
     if spread(1,9).look
       with_transpose (1*12) do
@@ -317,8 +317,8 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
   with_transpose 12 do
     #eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0
   end
-  if spread(1,1).look && (ing 1 1 _   1 _ _   1 _ 1   _ 1 _).look
-    with_transpose 1*(ing -5 0 0  0 0 0   0 0 -5  0 0 0 ).look do
+  if spread(1,1).look && (ing 1, 1, _,   1, _, _,   1, _, 1,   _, 1, _,).look
+    with_transpose 1*(ing -5, 0, 0,  0, 0, 0,   0, 0, -5,  0, 0, 0, ).look do
       #violin z, 14, sustain: 2
       #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
@@ -371,45 +371,45 @@ live_loop :kick, sync: :drums do
     cf= Crystal[/fx/]
 
     p1 = (ing
-      1 [2] 3 _   _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 2 3 _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
-      1 _ _ _     _ _ _ _
+      1, [2], 3, _,   _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, 2, 3, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
+      1, _, _, _,     _, _, _, _,
       )
     page1=(ing
-      _ _ _        _ _ _
-      _ _ _        _ _ _
-      m1[1] _ _    _ _ _
-      _ _ _        _ _ _
-      _ _ _        [m1[6]] m1[7] _
-      _ _ _        _ _ _)
+      _, _, _,        _, _, _,
+      _, _, _,        _, _, _,
+      m1[1], _, _,    _, _, _,
+      _, _, _,        _, _, _,
+      _, _, _,        [m1[6]], m1[7], _,
+      _, _, _,        _, _, _,)
     page2=(ing
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      m1[7] _ _        _ _ _
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      _ _ _            _ _ _)
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      m1[7], _, _,        _, _, _,
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,)
     page3=(ing
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      m1[6] _ _        _ _ _
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      _ m1[1] [m1[1]]  m1[1] [m1[3]] _
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      m1[6], _, _,        _, _, _,
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      _, m1[1], [m1[1]],  m1[1], [m1[3]], _,
 
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      m1[6] _ _        _ _ _
-      _ _ _            _ _ _
-      _ _ _            _ _ _
-      _ _ [m1[1]]      _ [m1[3]] _)
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      m1[6], _, _,        _, _, _,
+      _, _, _,            _, _, _,
+      _, _, _,            _, _, _,
+      _, _, [m1[1]],      _, [m1[3]], _,)
     pp=(knit page1.look, page1.count*2, page2.look, page2.count*2, page3.look, page3.count*2).look
     pp=_
     if pp
@@ -419,31 +419,31 @@ live_loop :kick, sync: :drums do
     end
 
     k=(ing
-      k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ _
-      k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ t1
-      k1 _ k2 _   k4 _ _ _    k1 _ _ _   k4 _ _ t1
-      k1 _ k2 _   k3 _ _ _    k1 _ _ _   k4 _ _ _
+      k1, _, _, _,    k4, _, _, _,    k1, _, _, _,   k4, _, _, _,
+      k1, _, _, _,    k4, _, _, _,    k1, _, _, _,   k4, _, _, t1,
+      k1, _, k2, _,   k4, _, _, _,    k1, _, _, _,   k4, _, _, t1,
+      k1, _, k2, _,   k3, _, _, _,    k1, _, _, _,   k4, _, _, _,
 
-      k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ _
-      k1 _ _ _    k4 _ _ _    k1 _ _ _   k4 _ _ t1
-      k3 _ k2 _   k4 _ _ _    k1 _ _ _   k4 _ _ t1
-      k3 _ k3 _   k2 _ _ _    k1 _ _ _   k4 _ _ _)
+      k1, _, _, _,    k4, _, _, _,    k1, _, _, _,   k4, _, _, _,
+      k1, _, _, _,    k4, _, _, _,    k1, _, _, _,   k4, _, _, t1,
+      k3, _, k2, _,   k4, _, _, _,    k1, _, _, _,   k4, _, _, t1,
+      k3, _, k3, _,   k2, _, _, _,    k1, _, _, _,   k4, _, _, _,)
 
     k=(ing
-      kt[1] _ _ _  _ _ _ _    k1 _ _ _   _ _ _ _
-      k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      k1 _ _ _     _ _ _ _    k5 _ _ _   _ _ [f1 0.99] _
-      kt[4] _ _ _  _ _ _ _    k1 _ _ _   _ _ _ _
-      k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      k1 _ _ _     _ _ _ _    k4 _ _ _   _ _ _ k7
-      k1 _ _ _     _ _ _ _    k5 _ _ _   _ _ [f1 0.99] _)
+      kt[1], _, _, _,  _, _, _, _,    k1, _, _, _,   _, _, _, _,
+      k1, _, _, _,     _, _, _, _,    k4, _, _, _,   _, _, _, k7,
+      k1, _, _, _,     _, _, _, _,    k4, _, _, _,   _, _, _, k7,
+      k1, _, _, _,     _, _, _, _,    k5, _, _, _,   _, _, [f1, 0.99], _,
+      kt[4], _, _, _,  _, _, _, _,    k1, _, _, _,   _, _, _, _,
+      k1, _, _, _,     _, _, _, _,    k4, _, _, _,   _, _, _, k7,
+      k1, _, _, _,     _, _, _, _,    k4, _, _, _,   _, _, _, k7,
+      k1, _, _, _,     _, _, _, _,    k5, _, _, _,   _, _, [f1, 0.99], _,)
 
     k2=(ing
-      k1 _ k3 p    _ k4 d1 _    k3 _ _ _    k7 _ _ _
-      k4 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ t1
-      k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ t1
-      k1 _ k3 p    _ k4 d1 _    k2 _ _ _    k7 _ _ [f1 0.25])
+      k1, _, k3, p,    _, k4, d1, _,    k3, _, _, _,    k7, _, _, _,
+      k4, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, t1,
+      k1, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, t1,
+      k1, _, k3, p,    _, k4, d1, _,    k2, _, _, _,    k7, _, _, [f1, 0.25],)
 
     d1c = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/c#01.wav";
     d1d = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/d01.wav";
@@ -458,43 +458,43 @@ live_loop :kick, sync: :drums do
     tt = Tape[/toms/]
     df = Drip[/fx/]
     k=(ing
-      kt[5] _ k7 _    _ _ _ _
-      tt[23] _ _ _    _ _ _ _
-      _ _ _ _         _ _ tc[1] _
+      kt[5], _, k7, _,    _, _, _, _,
+      tt[23], _, _, _,    _, _, _, _,
+      _, _, _, _,         _, _, tc[1], _,
 
-      kt[6] _ _ _    _ _ _ _
-      _ _ _ _        _ _ _ _
-      _ _ _ _        tc[4] _ tc[2] _
+      kt[6], _, _, _,    _, _, _, _,
+      _, _, _, _,        _, _, _, _,
+      _, _, _, _,        tc[4], _, tc[2], _,
 
-      # _ _ _       _ _ _
-      # _ _ _       _ _ _
-      # _ _ _       _ _ _
-      # _ _ _       _ _ _
+      #, _, _, _,       _, _, _,
+      #, _, _, _,       _, _, _,
+      #, _, _, _,       _, _, _,
+      #, _, _, _,       _, _, _,
       )
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24
-    r = (ing d1a,d1d,d1e,d1f).look
+    r = (ing d1a, d1d, d1e, d1f,).look
     k2=(ing
-      _ _ _ _                          _ _ _ _
-      _ _ _ _                          _ _ _ _
-      [ts[49]] _ _ ts[12]              _ _ _ _
+      _, _, _, _,                          _, _, _, _,
+      _, _, _, _,                          _, _, _, _,
+      [ts[49]], _, _, ts[12],              _, _, _, _,
 
-      _ _ _ _                          _ _ _ _
-      _ _ _ _                          _ _ _ _
-      ts[7] _ _ _                      _ _ _ _
+      _, _, _, _,                          _, _, _, _,
+      _, _, _, _,                          _, _, _, _,
+      ts[7], _, _, _,                      _, _, _, _,
 
-      dx _ _ _                         _ _ _ _
-      _ _ _ _                          _ _ _ _
-      tt[49] _ _ ts[12]                _ _ _ _
+      dx, _, _, _,                         _, _, _, _,
+      _, _, _, _,                          _, _, _, _,
+      tt[49], _, _, ts[12],                _, _, _, _,
 
-      _ _ _ _                          _ _ _ _
-      _ _ _ _                          _ _ _ _
-      ts[7] _ _ _                      _ _ _ _
+      _, _, _, _,                          _, _, _, _,
+      _, _, _, _,                          _, _, _, _,
+      ts[7], _, _, _,                      _, _, _, _,
       )
 
     kp=k2.look
     fx=:lpf
-    accent = (ing 0.0 0.2 0.3 0.5).look
+    accent = (ing 0.0, 0.2, 0.3, 0.5,).look
     attack = 0.0
     r = 1.0
     if kp && kp.is_a?(Array)
@@ -512,9 +512,9 @@ live_loop :kick, sync: :drums do
       fx=:slicer
     end
 
-#    kp=_
+    kp=_
 #    with_swing 0.01 {
-    with_fx(fx, phase: (ing 1/4.0,1/4.0,1/8.0).look){ smp kp, amp: accent, rate: r, attack: attack if kp}
+    with_fx(fx, phase: (ing 1/4.0, 1/4.0, 1/8.0,).look){ smp kp, amp: accent, rate: r, attack: attack if kp}
 #  }
 
     k=k.look
@@ -596,51 +596,51 @@ with_fx :none, mix: 0 do
           end
 
           s=(ing
-            d2 d1 _ _    _ d1 _ _   #1
-            c4 _ s1 _    s1 _ _ _  #2
+            d2, d1, _, _,    _, d1, _, _,   #1,
+            c4, _, s1, _,    s1, _, _, _,  #2,
 
-            d2 d1 _ _    _ d1 _ _   #3
-            c4 _ s1 _    c3 _ _ _  #4
+            d2, d1, _, _,    _, d1, _, _,   #3,
+            c4, _, s1, _,    c3, _, _, _,  #4,
 
-            d2 d1 _ _    _ d1 _ _   #5
-            c4 _ s1 _    s1 _ _ _  #6
+            d2, d1, _, _,    _, d1, _, _,   #5,
+            c4, _, s1, _,    s1, _, _, _,  #6,
 
-            d2 d2 _ _    _ d1 _ _   #7
-            f1 _ _ d5    s1 _ d5 _  #8
+            d2, d2, _, _,    _, d1, _, _,   #7,
+            f1, _, _, d5,    s1, _, d5, _,  #8,
             ).look
 
           s=(ing
-            d2 d1  _ _   _ d1 _ _
-            _ _ _ _      _ _ _ _
+            d2, d1,  _, _,   _, d1, _, _,
+            _, _, _, _,      _, _, _, _,
 
-            d2 d1 _ _    _ d1 _ _
-            _ _ _ _      _ _ _ _
+            d2, d1, _, _,    _, d1, _, _,
+            _, _, _, _,      _, _, _, _,
 
-            d2 d1 _ _    _ d1 _ _
-            _ _ _ _      _ _ _ _
+            d2, d1, _, _,    _, d1, _, _,
+            _, _, _, _,      _, _, _, _,
 
-            d2 d1  _ _   _ d1 _ _
-            f1 _ _ _     _ _ _ _
+            d2, d1,  _, _,   _, d1, _, _,
+            f1, _, _, _,     _, _, _, _,
             ).look
 
           p1=Analog[/click/].look
           p1=d1
-          ffx =(ing :hpf).look
+          ffx =(ing :hpf,).look
           pp=(ing
-            [p1] _ _ _   _ _ p1 _
-            _ _ p1 _
-            _ _ _ _   _ _ {p1=>ffx} _
-            _ _ [p1] _
+            [p1], _, _, _,   _, _, p1, _,
+            _, _, p1, _,
+            _, _, _, _,   _, _, {p1=>ffx}, _,
+            _, _, [p1], _,
             ).look
 
           zpp=(ing
-            [p1] _
-            p1 _ _ _
-            _ p1 _ _
-            _ _ p1 _
-            _ _ _ p1
-            _ _ p1
-            _ _ p1
+            [p1], _,
+            p1, _, _, _,
+            _, p1, _, _,
+            _, _, p1, _,
+            _, _, _, p1,
+            _, _, p1,
+            _, _, p1,
             ).look
           pp=_
           if pp
@@ -651,14 +651,14 @@ with_fx :none, mix: 0 do
               pp = pp.keys[0]
             end
             with_fx(fx){
-              smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 100#, cutoff: (ramp 0, 120,256*3).tick(:t54)
+              smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25, 0.25, -0.25, 0.25,).look, cutoff: 100#, cutoff: (ramp 0, 120,256*3).tick(:t54)
             }
             if spread(1,6).look
               #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
             end
           end
           if pp && spread(3,7).look
-            #smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.2, pan: (ing 0.25,-0.25).tick(:ingit)
+            #smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.2, pan: (ing 0.25, -0.25,).tick(:ingit)
           end
 
           c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
@@ -668,13 +668,13 @@ with_fx :none, mix: 0 do
           c2 = Analog[/click/].look
 
           s=(ing
-            _ _ _ _   c3 _ _ _   _ _ _ _   c2 _ _ _
-            _ _ _ _   c3 _ _ _   _ _ _ _   c2 _ _ _
+            _, _, _, _,   c3, _, _, _,   _, _, _, _,   c2, _, _, _,
+            _, _, _, _,   c3, _, _, _,   _, _, _, _,   c2, _, _, _,
 
-            _ _ _ _   c3 _ _ _   _ _ _ _   c2 _ _ _
-            _ _ _ _   c3 _ _ _   _ _ _ _   c2 _ _ _
+            _, _, _, _,   c3, _, _, _,   _, _, _, _,   c2, _, _, _,
+            _, _, _, _,   c3, _, _, _,   _, _, _, _,   c2, _, _, _,
 
-            _ _ _ _   c3 {path:Analog[/clapraw/,0],amp:0.125} _ _
+            _, _, _, _,   c3, {path:Analog[/clapraw/, 0], amp:0.125}, _, _,
             ).look
 
           s=_
@@ -684,7 +684,7 @@ with_fx :none, mix: 0 do
                 else
                   0
                 end
-          smp s,amp: 0.35*amp, cutoff: (ine 127 110 1024).look, finish: fin
+          smp s,amp: 0.35*amp, cutoff: (ine 127, 110, 1024,).look, finish: fin
 
           h = Crystal[/high/,4..32].look
           #h = Dust[/hat/,7]
@@ -695,11 +695,11 @@ with_fx :none, mix: 0 do
           h = Mountain[/microperc/,[5,5,5,6]].look
 
           p=(ing
-            _ _ h _  h h [h] h
-            _ _ h _  h h h [h]
-            _ _ h _  _ _ h _
-            _ _ h _  _ _ h {path:h,amp:0.3}
-            _ _ h _  _ _ h _
+            _, _, h, _,  h, h, [h], h,
+            _, _, h, _,  h, h, h, [h],
+            _, _, h, _,  _, _, h, _,
+            _, _, h, _,  _, _, h, {path:h, amp:0.3},
+            _, _, h, _,  _, _, h, _,
             ).look
 
           accent = if (p != _)
@@ -715,15 +715,15 @@ with_fx :none, mix: 0 do
           p = p.is_a?(Array) ? p[0] : p
           p=_
           if p
-            #eek (ing :A2 _ :GS3).look, (line 1,20).look, sustain: 1/12.0, mode: 1, at: (line 0.0,1.0,128).look
+            #eek (ing :A2, _, :GS3,).look, (line 1,20).look, sustain: 1/12.0, mode: 1, at: (line 0.0,1.0,128).look
           end
           smp p, amp: accent, attack: (line 0.001,0.0,64).look, sustain: (knit 0.01,4,0.1,4,0.1,4).look#, sustain: (knit 0.1,4,0.0125,16,0.5,4).look
 
           h = Frag[/hat/,8]
-          p=(ing _  _ h  _   _  _ h  _
-            _  _ h  _   _  _ h  _
-            _  _ h  _   _  _ h  {path:h,amp:0.1}
-            _  _ h  _   _  _ h  _).look
+          p=(ing _,  _, h,  _,   _,  _, h,  _,
+            _,  _, h,  _,   _,  _, h,  _,
+            _,  _, h,  _,   _,  _, h,  {path:h, amp:0.1},
+            _,  _, h,  _,   _,  _, h,  _,).look
           p=_
           if(p && dice(6) > 1)
             amp = if (p != _)
@@ -761,10 +761,10 @@ live_loop :sixteen, sync: :drums do
   c1 = CineElec[/one shots/,/pepper/]
   c1 = Tape[/_high/,49]
   s=(ing
-    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
-    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ c1
-    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
-    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,             _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,
+    _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,             _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, c1,
+    _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,             _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,
+    _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,             _, _, _, _,   _, _, _, _,   _, _, _, _,   _, _, _, _,
     ).look
   if s
     #smp Words[/beaut/], start: 0.0, finish: 1.0, rate: 1.0, amp: 1.5

@@ -5,10 +5,10 @@ sop_cc motion: 0.1
 live_loop :c, sync: :metro do
   tick
   score =  (ing
-    [[[:A2 2] [:CS4 2] [:E3 2]] 2]
+    [[[:A2 2] [:B3 2] [:E3 2]] 2]
 #    [[[:GS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-#    [[[:B4 0.25]]                              0.5]
+#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:Fs4 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]

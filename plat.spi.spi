@@ -267,7 +267,7 @@ live_loop :you_encounter_a_one, sync: :sudden do;z=nil;tick
               #strings c[1],1, sustain: 2
               with_transpose 0 do
                 if spread(1,2).tick(:notall)
-                  violin  c[1], 40,  sustain: 2.0, mode: 1
+                  violin  c[1], 80,  sustain: 2.0, mode: 1
                   #violin2 c[-1], 1, sustain: 6.0
                 end
               end

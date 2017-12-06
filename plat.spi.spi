@@ -493,7 +493,6 @@ live_loop :kick, sync: :drums do
       )
 
     kp=k2.look
- #   kp=_
     fx=:lpf
     accent = (ing 0.0, 0.2, 0.3, 0.5,).look
     attack = 0.0
@@ -513,7 +512,7 @@ live_loop :kick, sync: :drums do
       fx=:slicer
     end
 
-#    kp=_
+    kp=_
     with_swing 0.01 {
     with_fx(fx, phase: (ing 1/4.0, 1/4.0, 1/8.0,).look){ smp kp, amp: accent, rate: r, attack: attack if kp}
   }

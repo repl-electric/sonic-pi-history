@@ -77,8 +77,8 @@ live_loop :do, sync: :metro do
             ).look
         end
         pp = (ing
-          {d1g=>:flanger} d1a _ _    _ _ _ _
-          d1g _ _ _        _ _ _ _
+          {d1g=>:echo} d1a _ _    _ _ _ _
+           d1g _ _ _        _ _ _ _
           # d1 _ _ _       _ _ _ _
           # _ _ _ _        _ _ _ _
 

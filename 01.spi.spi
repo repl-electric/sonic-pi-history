@@ -270,7 +270,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
           with_transpose -12*1 do
               #strings c[1],1, sustain: 2
               if spread(1,2).tick(:notall)
-                violin  c[0], 10,  sustain: 4.0, mode: 1
+                violin  c[0], 30,  sustain: 4.0, mode: 1
                 #violin2 c[-1], 1, sustain: 6.0
               end
               #piano2 c[1], 40, sustain: 2

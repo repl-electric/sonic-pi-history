@@ -117,7 +117,7 @@ live_loop :do, sync: :metro do
               0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               0.5  0.5  -0.25 -0.25  0.25 -0.5
-              ).look, cutoff: (ramp 0,127,256*2).tick(:aaashoo2t)#, cutoff: 80
+              ).look, cutoff: (ramp 0,127,256*4).tick(:aaashoo2t)#, cutoff: 80
           #}
         end
         puts (ramp 0,127,256*2).tick(:aaashoo2t)

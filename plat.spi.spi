@@ -264,7 +264,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         you.call(c[2], 50, sustain: 2.0)
         you.call(c[3], 40, sustain: 2.0)
         you.call(c[4], 30, sustain: 8.0)
-        #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
+        at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         if @cp && @cp[1] != c[1]
           @cp = c

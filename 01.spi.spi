@@ -662,7 +662,7 @@ with_fx :none, mix: 0 do
             ).look
 
           #s=_
-          accent=(s.is_a?(Array) ? 2.0 : 0.5)
+          accent=(s.is_a?(Array) ? 2.0 : 1.0)
           if s.is_a?(Array)
             s = s[0]
           end

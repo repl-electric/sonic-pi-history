@@ -275,7 +275,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
                 violin  c[0], 10,  sustain: 4.0, mode: 1
                 #violin2 c[-1], 1, sustain: 6.0
               end
-              piano2 c[1], 40, sustain: 2
+              #piano2 c[1], 40, sustain: 2
               #violin c[1], 100, sustain: 2
             end
           end

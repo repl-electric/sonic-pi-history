@@ -7,9 +7,9 @@ live_loop :c, sync: :metro do
   tick
 #  stop
   score =  (ing
-    [[[:A2 2] [:CS4 2] [:E3 2] ]  2]
+    [[[:A2 2] [:b3 2] [:E3 2] ]  2]
 #    [[[:gS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
 #    [[[:fs4 0.25]]                              0.5]
     )
   s=score.look

@@ -617,7 +617,7 @@ with_fx :none, mix: 0 do
             _, _, p1,
             _, _, p1,
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             fx = :none

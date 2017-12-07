@@ -437,7 +437,7 @@ live_loop :kick, sync: :drums do
       k1 _ _ _       _ _ _ _        k4 _ _ _   _ _ _ k7
       k1 _ _ _       _ _ _ _        k5 _ _ _   _ _ [f1 0.99] _)
 
-    k=(ing
+    k3=(ing
       kt[5] _ k7 _    _ _ _ _
       k1 _ _ _        _ _ _ _
       kt[1] _ _ _     _ _ tc[1] _
@@ -497,7 +497,7 @@ live_loop :kick, sync: :drums do
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    #k=_
+    k=_
     uncomment{
       cue(:sudden) if k && spread(1,64).look
       violin_x  if k && spread(1,64).look

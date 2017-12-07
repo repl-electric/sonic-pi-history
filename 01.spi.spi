@@ -259,7 +259,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
 
         you = (method :sop)
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
-        with_transpose (ing 12, 0,).look {you.call(c[1], 15, sustain: 2.0, mode: 0)}
+        with_transpose (ing 12, 0,).look, {you.call(c[1], 15, sustain: 2.0, mode: 0)}
         you.call(c[2], 30, sustain: 2.0)
         you.call(c[3], 30, sustain: 2.0)
         you.call(c[4], 34, sustain: 8.0)

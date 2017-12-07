@@ -5,7 +5,7 @@ sop_cc motion: 0.9
 
 live_loop :c, sync: :metro do
   tick
-#  stop
+  stop
   score =  (ing
     [[[:A2 2] [:cs4 2] [:E3 2]]  2]
     [[[:fS4 0.25]]                             0.5]

@@ -641,7 +641,6 @@ with_fx :none, mix: 0 do
           c2 =  #(knit Frag[/coil/,-46],16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
           c3 =  (knit Frag[/coil/,/f#/,[2,2]].look,16).look#, Analog[/clap/,16],16, Analog[/clap/,17],16).look
           c2 = Analog[/click/].look
-
           c3 = Tape[/snare/,9]
           s=(ing
             _, _, _, _,   c3, _, _, _,   _, _, _, _,   c2, _, _, _,

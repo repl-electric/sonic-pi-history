@@ -297,7 +297,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
            :D4, :Cs4, _, :A3, _, :B3, _, :A4, :A4, :A4, :Fs4, :A4,
       ).look
 
-    #z=_
+    z=_
     puts z if look % 9 == 0
     #piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30, 10, 30, 10,).look

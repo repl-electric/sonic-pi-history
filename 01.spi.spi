@@ -103,7 +103,7 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ 6 _).look
         pp2=_
-        pp=_
+        #pp=_
         dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
           #fx = :none
@@ -118,7 +118,7 @@ live_loop :do, sync: :metro do
               0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               0.5  0.5  -0.25 -0.25  0.25 -0.5
-              ).look, cutoff: 90#, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
+              ).look, cutoff: 90, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
           #}
         end
         sleep 1/8.0

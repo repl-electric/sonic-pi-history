@@ -64,9 +64,9 @@ live_loop :do, sync: :metro do
       d1g = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/g#01.wav";
       d1a = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/a-01.wav";
       d1b = "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_cymbals/b01.wav";
-      m1 = Mountain[/microperc/,[0,0,7,0,0,7]].look;
 
     8.times{
+      m1 = Mountain[/microperc/,[0,0,7,0,0,7]].look;
       #sop_cc motion: (line 0.0,1.0,16).look
       with_swing 0.01,2 do
       tick

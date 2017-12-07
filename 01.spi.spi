@@ -666,7 +666,7 @@ with_fx :none, mix: 0 do
             _ _ _ _   c3 {path:Analog[/clapraw/,0],amp:0.125} _ _
             ).look
 
-          #s=_
+          s=_
           accent=(s.is_a?(Array) ? 1.0 : 0.5)
           if s.is_a?(Array)
             s = s[0]

@@ -268,6 +268,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
 #          sop2(c[0], 120, sustain: 2.0, mode: 0)
           you.call(c[1], 15, sustain: 2.0, mode: 0)
           with_transpose 12{you.call(c[1], 12, sustain: 2.0, mode: 0)}
+          piano2 c[1], 40, sustain: 2
 #          you.call(c[2], 50, sustain: 2.0)
 #          you.call(c[3], 40, sustain: 2.0)
         # you.call(c[4], 30, sustain: 8.0)

@@ -493,7 +493,7 @@ live_loop :kick, sync: :drums do
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    #k=_
+    k=_
     cue(:sudden) if k && spread(1,64).look
     violin_x  if k && spread(1,64).look
     strings_x  if k && spread(1,64).look
@@ -665,11 +665,6 @@ with_fx :none, mix: 0 do
           smp s,amp: 0.35*amp, cutoff: (ine 127 110 1024).look, finish: fin
 
           h = Crystal[/high/,4..32].look
-          #h = Dust[/hat/,7]
-          #h = Lo[/ride/,0]
-          #h = Frag[/hat/,8]
-          #h = Dust[/hat/,7]
-          #h,h,h2 = MagicDust[/_HI/,18], Dust[/hat/,6], Dust[/hat/, 6]
           h = Mountain[/microperc/,[5,5,5,6]].look
 
           p=(ing

@@ -652,7 +652,7 @@ with_fx :none, mix: 0 do
           c2 = Tape[/snare/,10]
           c4 = Tape[/snare/,11]
           c5 = Tape[/cymbal/, 7]
-          smp c5, amp: (ing 0.125  0.5).look
+          smp c5, amp: (ing 0.5 0.5 0.125 0.5).look
           s=(ing
             _ _ _ _   [c3] c3 _ _   _ _ _ _   c4 _ _ _
             _ _ _ _   c3 _ _ _      _ _ _ _   c2 _ _ _

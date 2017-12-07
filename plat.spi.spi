@@ -499,6 +499,11 @@ live_loop :kick, sync: :drums do
     sidechain if k && spread(1,4).look
     condi = 1
     r= 1
+    accent=1
+    if k.is_a?(Array) && k.count == 1
+      accent = 1.1
+      k=k[0]
+    end
     if k.is_a?(Array)
       condi = k[1]
       k = k[0]
@@ -509,7 +514,7 @@ live_loop :kick, sync: :drums do
         if k == f1
           r = 0.25
         end
-        smp k, amp: 1*2.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+        smp k, amp: accent*2.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
       end
     end
     sleep 1/8.0

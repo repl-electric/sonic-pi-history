@@ -325,7 +325,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       }
     end
   end
-  sleep 1#/2.0
+  sleep 1/2.0
 end
 
 live_loop :kick, sync: :drums do

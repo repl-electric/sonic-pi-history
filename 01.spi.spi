@@ -652,7 +652,7 @@ with_fx :none, mix: 0 do
           c2 = Tape[/snare/,10]
           c4 = Tape[/snare/,11]
           s=(ing
-            _ _ _ _   c3 _ _ _   _ _ _ _   c42 _ _ _
+            _ _ _ _   c3 _ _ _   _ _ _ _   c4 _ _ _
             _ _ _ _   c3 _ _ _   _ _ _ _   _ c2 _ _
 
             _ _ _ _   c3 _ _ _   _ _ _ _   _ c2  _ _

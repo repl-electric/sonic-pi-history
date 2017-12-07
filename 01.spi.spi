@@ -113,7 +113,8 @@ live_loop :do, sync: :metro do
             pp = pp.keys[0]
           end
           #with_fx(fx, phase: 1/8.0, decay: 1){
-            smp pp, amp: 1*accent+(rand*0.1), rate: (knit 1.0,4, 1.0,2).look, pan: (ing
+          smp pp, amp: 1*accent+(rand*0.1),
+          rate: (knit 1.1,4, 1.0,2).look, pan: (ing
               0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               0.5  0.5  -0.25 -0.25  0.25 -0.5

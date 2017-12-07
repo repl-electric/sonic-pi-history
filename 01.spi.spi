@@ -186,7 +186,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         [:A2,  :Cs4, :E3],
         [:CS3, :E4, :GS3],
         _,
-        [:A3,  [:Cs5,:CS4].choose, :E3],
+        [:A3,  [:Cs5,:CS5].choose, :E3],
         [:CS3, :E4, :GS4],
         _,
         [:A2, :CS3, :E3],

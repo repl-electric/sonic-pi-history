@@ -1,4 +1,4 @@
-sop_cc motion: 0.1
+sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_on :E3, mode: 4
 
@@ -7,9 +7,9 @@ live_loop :c, sync: :metro do
   #stop
   score =  (ing
     [[[:A2 2] [:Cs4 2] [:E3 2]] 2]
-    [[[:FS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-    [[[:B4 0.25]]                              0.5]
+#    [[[:GS4 0.25]]                             0.5]
+#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:Fs4 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]

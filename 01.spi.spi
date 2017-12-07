@@ -292,16 +292,16 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       :A3,  _, _, _,       _, _, _, _,
       :A3,  _, _, _,       _, _, _, _,
       ).look
-    z=(ing
+    z2=(ing
       :d4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, :A4,
       :d4, :Cs4, _, :A3, _, :B3, _, :A4, :A4, :A4, :Fs4, :A4,
       ).look
 
-    z=_
-    puts z if look % 9 == 0
-    piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
-    #zero z, (ing 30, 10, 30, 10,).look
 
+    puts z if look % 9 == 0
+    piano z, (ing 70, 65, 55,).look * 0.5, sustain: 4/2.0
+    #zero z, (ing 30, 10, 30, 10,).look
+z=_
     if spread(1,9).look
       with_transpose (1*12) do
         #musicbox z,10, sustain: 1/8.0#*3

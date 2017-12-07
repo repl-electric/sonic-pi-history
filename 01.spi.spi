@@ -253,16 +253,16 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         i = (method :piano)
         i.call(c[0], 60*pf, sustain: 4)
         #i.call(c[1], 50*pf, sustain: 4)
-        i.call(c[2], 55*pf, sustain: 4)
-        i.call(c[3], 40*pf, sustain: 2)
+        #i.call(c[2], 55*pf, sustain: 4)
+        #i.call(c[3], 40*pf, sustain: 2)
         i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
         with_transpose((ing 12 7).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
         you.call(c[2], 30, sustain: 2.0)
-        #you.call(c[3], 30, sustain: 2.0)
-        #you.call(c[4], 34, sustain: 8.0)
+        you.call(c[3], 30, sustain: 2.0)
+        you.call(c[4], 34, sustain: 8.0)
         #with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
         #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 

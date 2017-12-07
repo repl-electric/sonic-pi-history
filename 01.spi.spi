@@ -299,7 +299,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
 
     z=_
     puts z if look % 9 == 0
-    piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
+    piano z, (ing 70 65 55).look * 0.4, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
 
     if spread(1,9).look

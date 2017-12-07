@@ -1,15 +1,15 @@
 sop_cc motion: 0.0
 #sop2_cc motion: 0.2
-#sop2_on :A3, mode: 4
+#sop2_on :E3, mode: 4
 
 live_loop :c, sync: :metro do
   tick
-  stop
+#  stop
   score =  (ing
-    [[[:A2 2] [:Cs4 2] [:E3 2]] 2]
-    [[[:fS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-    [[[:b4 0.25]]                              0.5]
+    [[[:A2 2]] 2]
+#    [[[:gS4 0.25]]                             0.5]
+#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:fs4 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]
@@ -17,18 +17,18 @@ live_loop :c, sync: :metro do
     #eek :Gs3, 10
   end
   with_transpose -12*0 do
-    piano root(c),(ring 35,40).look*1.3, sustain: c[0][-1] #if c.count == 1
+    #piano root(c),(ring 35,40).look*1.3, sustain: c[0][-1] #if c.count == 1
     #piano2 c[0], 20
     c.each{|n|tick(:inner);
-      sop n[0],1.0*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*2)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
+      sop n[0],1.0*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*1)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }
     #harp c[-2][0],10, mode: 4 if c[-2]
     #sop c[0][0],10, mode: 1
     with_transpose 12*0  do
-      violin root(c), 127*1.0, mode: 1#, defon: 0.0, at: 0.0 #, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
+      #violin root(c), 127*1.0, mode: 1#, defon: 0.0, at: 0.0 #, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     sleep s[-1]
-    strings c[0][-2], 35
+    #strings c[0][-2], 35
     #at{
       #sleep s[-1]/2.0
       #eek c[0][-1], 100, sustain: 1, mode: 0, at: rand
@@ -36,17 +36,17 @@ live_loop :c, sync: :metro do
     if spread(1,3).look
       with_fx :gverb, room: 200.0, mix: 0.8, release: 8, spread: 0.9 do
         with_fx :slicer, phase: 1/8.0 do
-          smp Drip[/effect/].look, amp: 0.4, cutoff: 100, rate: -0.125, attack: 0.5
+          #smp Drip[/effect/].look, amp: 0.4, cutoff: 100, rate: -0.125, attack: 0.5
         end
       end
     end
-    sleep (s[-1])*2
+    sleep (s[-1])*1
   end
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-#strings_on :gS4, 1
-#violin_on  :gS5, 1
+#strings_off :GS4, 1
+#violin_off  :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -118,7 +118,7 @@ live_loop :do, sync: :metro do
               0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               0.5  0.5  -0.25 -0.25  0.25 -0.5
-              ).look, cutoff: 90, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
+              ).look, cutoff: 90#, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
           #}
         end
         sleep 1/8.0
@@ -186,7 +186,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         [:A2,  :Cs4, :E3],
         [:CS3, :E4, :GS3],
         _,
-        [:A3,  [:Cs5,:CS5].choose, :E3],
+        [:A3,  [:Cs5,:CS4].choose, :E3],
         [:CS3, :E4, :GS4],
         _,
         [:A2, :CS3, :E3],
@@ -194,38 +194,38 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         [:E3, :Fs4, :B3],   #E-F-B
         #[:Cs4, :E4, :Gs3],
         _,
-        # [:E3,  :GS4, :B3],
-        # [:D3,  :Gs4, :A3],
-        # [:D3,  :Fs4, :A3],
-        # _,
-        # [:Fs3, :B3, :D4],
-        # [:B3, :Fs4, :D4],
-        # [:FS3, :A3, :Cs4],
-        # [:E3, :Gs3, :B3],
-        # [:A3, :B3,  :E4],
-        # [:A3, :D4, :E4],
-        # _,
-        # [:A2,  :Cs4, :E3],
-        # [:CS3, :E4, :GS3],
-        # _,
-        # [:A2, :CS4, :E3],
-        # [:E3, :Gs4, :CS4],  #E G C
-        # [:E3, :Fs4, :B3],   #E-F-B
-        # [:B3, :E4, :Gs3],
-        # _,
-        # [:E3, :GS4, :B3],
-        # [:D3, :Gs4, :A3],
-        # [:D3, :Fs3, :A3],
-        # _,
-        # [:Fs3, :B3, :D4],
-        # [:B3, :Fs4, :D4],
-        # [:FS3, :B3, :Cs4],
-        # [:E3, :Gs3, :B3],
-        # [:A3, :D3, :E4],
-        # [:A3, :Cs4, :E3, :B4],
-        #_
+        [:E3,  :GS4, :B3],
+        [:D3,  :Gs4, :A3],
+        [:D3,  :Fs4, :A3],
+        _,
+        [:Fs3, :B3, :D4],
+        [:B3, :Fs4, :D4],
+        [:FS3, :A3, :Cs4],
+        [:E3, :Gs3, :B3],
+        [:A3, :B3,  :E4],
+        [:A3, :D4, :E4],
+        _,
+        [:A2,  :Cs4, :E3],
+        [:CS3, :E4, :GS3],
+        _,
+        [:A2, :CS4, :E3],
+        [:E3, :Gs4, :CS4],  #E G C
+        [:E3, :Fs4, :B3],   #E-F-B
+        [:B3, :E4, :Gs3],
+        _,
+        [:E3, :GS4, :B3],
+        [:D3, :Gs4, :A3],
+        [:D3, :Fs3, :A3],
+        _,
+        [:Fs3, :B3, :D4],
+        [:B3, :Fs4, :D4],
+        [:FS3, :B3, :Cs4],
+        [:E3, :Gs3, :B3],
+        [:A3, :D3, :E4],
+        [:A3, :Cs4, :E3, :B4],
+        _
         )
-      #tick_reset(:inner)
+      tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if c
@@ -239,32 +239,30 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
         end
 
         #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-      #c=[]
+      c=[]
       #sharp c[0], 2, sustain: 4
       #sop c[1], 3, sustain: 4
       #sop c[2], 3, sustain: 4
       puts "#{Note.resolve_note_name(c[0]) if c[0]} <- [Piano]"
 
       pf=1.0
-      with_transpose 12*1 do
+      with_transpose 12*0 do
         zero  c[0], (ing 30 10 30 10).look
         #with_transpose 9 { eek c[2], 50, sustain: 2,mode: 2}
 
         i = (method :piano)
-        i.call(c[0], 40*pf, sustain: 4)
-#        i.call(c[1], 50*pf, sustain: 4)
- #       i.call(c[2], 55*pf, sustain: 4)
-#        i.call(c[3], 40*pf, sustain: 2)
-#        i.call(c[4], 30*pf, sustain: 8)
+        i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
+        i.call(c[3], 40*pf, sustain: 2)
+        i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
-          #sop2(c[0], 120, sustain: 2.0, mode: 0)
-#          you.call(c[], 15, sustain: 2.0, mode: 0)
-
-        you.call(c[1], 15, sustain: 2.0, mode: 0)
-        you.call(c[2], 50, sustain: 2.0)
-        you.call(c[3], 40, sustain: 2.0)
-        you.call(c[4], 30, sustain: 8.0)
+        #sop2(c[0], 120, sustain: 2.0, mode: 0)
+  #      you.call(c[1], 15, sustain: 2.0, mode: 0)
+  #      you.call(c[2], 50, sustain: 2.0)
+ #       you.call(c[3], 40, sustain: 2.0)
+#        you.call(c[4], 30, sustain: 8.0)
         at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         if @cp && @cp[1] != c[1]
@@ -272,7 +270,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
           with_transpose -12*1 do
               #strings c[1],1, sustain: 2
               if spread(1,2).tick(:notall)
-                violin  c[0], 5,  sustain: 4.0, mode: 1
+                #violin  c[0], 10,  sustain: 4.0, mode: 1
                 #violin2 c[-1], 1, sustain: 6.0
               end
               #piano2 c[1], 40, sustain: 2
@@ -293,14 +291,14 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       :A3  _ _ _       _ _ _ _
       :A3  _ _ _       _ _ _ _
       ).look
-    z3=(ing
-      :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
-      :D4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
+    z=(ing
+      :GS4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
+      :Gs4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
-    z=_
+    #z=_
     puts z if look % 9 == 0
-    piano z, (ing 70 65 55).look * 0.5, sustain: 4/2.0
+    piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
 
     if spread(1,9).look
@@ -309,16 +307,16 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       end
     end
   end
-  #sleep 1
+  sleep 1
   with_transpose 12 do
     #eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0
   end
   if spread(1,1).look && (ing 1 1 _   1 _ _   1 _ 1   _ 1 _).look
-    with_transpose 1*(ing -5 0 0  0 0 0   0 0 -5  0 0 0 ).look do
-      violin z, 20, sustain: 2
+    with_transpose 0*(ing -5 0 0  0 0 0   0 0 -5  0 0 0 ).look do
+      #violin z, 1, sustain: 2
       #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
-    if z==:Cs4
+    if false #z==:Cs4
       at{sleep 1/2.0;
         violin2 :E3, 1,  sustain: 4.0
         violin  :E4, 10, sustain: 4.0
@@ -326,7 +324,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       }
     end
   end
-  sleep 1/2.0
+  sleep 1#/2.0
 end
 
 live_loop :kick, sync: :drums do
@@ -437,7 +435,7 @@ live_loop :kick, sync: :drums do
       k1 _ _ _       _ _ _ _        k4 _ _ _   _ _ _ k7
       k1 _ _ _       _ _ _ _        k5 _ _ _   _ _ [f1 0.99] _)
 
-    k=(ing
+    kz=(ing
       kt[5] _ k7 _    _ _ _ _
       tt[23] _ _ _    _ _ _ _
       _ _ _ _         _ _ tc[1] _
@@ -632,7 +630,7 @@ with_fx :none, mix: 0 do
               pp = pp.keys[0]
             end
             with_fx(fx){
-              smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 90, cutoff: (ramp 40, 120,256*3).tick(:fireandice)
+              smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 90#, cutoff: (ramp 40, 120,256*3).tick(:fireandice)
             }
             if spread(1,6).look
               #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)

@@ -1,7 +1,7 @@
 sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 sop2_cc motion: 0.1
-sop2_off :A2, mode: 4
+sop2_off :E2, mode: 4
 
 live_loop :c, sync: :metro do
   tick

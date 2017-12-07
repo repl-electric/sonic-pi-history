@@ -483,7 +483,7 @@ live_loop :kick, sync: :drums do
       fx=:slicer
     end
 
-    kp=_
+    #kp=_
 #    with_swing 0.01 {
     with_fx(fx, phase: (ing 1/4.0,1/4.0,1/8.0).look){ smp kp, amp: accent, rate: r, attack: attack if kp}
 #  }

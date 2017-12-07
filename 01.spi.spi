@@ -7,10 +7,10 @@ live_loop :c, sync: :metro do
   tick
 #  stop
   score =  (ing
-    [[[:A2 2] [:cs4 2] [:E3 2] ]  2]
-#    [[[:fs4 0.25]]                             0.5]
-#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-#    [[[:b4 0.25]]                              0.5]
+    [[[:A2 2] [:CS4 2] [:E3 2] ]  2]
+#    [[[:gS4 0.25]]                             0.5]
+    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:fs4 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]
@@ -46,8 +46,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-strings_off :gS4, 1
-violin_off  :gS5, 1
+#strings_off :GS4, 1
+#violin_off  :GS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -104,7 +104,7 @@ live_loop :do, sync: :metro do
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ 6 _).look
         pp2=_
-        #pp=_
+        pp=_
         dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
           #fx = :none
@@ -496,7 +496,7 @@ live_loop :kick, sync: :drums do
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    #k=_
+    k=_
     uncomment{
       cue(:sudden) if k && spread(1,64).look
       violin_x  if k && spread(1,64).look
@@ -623,7 +623,7 @@ with_fx :none, mix: 0 do
             _ _ p1
             _ _ p1
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             fx = :none

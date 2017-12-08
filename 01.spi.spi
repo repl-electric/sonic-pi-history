@@ -302,7 +302,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
       :B4 :E4 _ :A3 _ :D4 _  :cs4 :cs4 :cs4 :Fs4 :cs4
       ).look
 
-    z3=(ring chord(:A3,:M)).look
+    z3=(ring chord(:A2,:M)).look
 
     #z=_
     puts z if look % 9 == 0

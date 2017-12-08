@@ -2,6 +2,7 @@ sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A4, mode: 4
+piano2 c[1], 40, sustain: 2
 
 live_loop :c, sync: :metro do
   tick

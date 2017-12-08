@@ -316,6 +316,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
     end
   end
 
+
+
   sleep 1
   if (ing _ 1 _  _ _ _   _ _ _   _ _ _).look
     with_transpose 12 do

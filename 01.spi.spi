@@ -318,7 +318,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
              _ :B4 _      _ _ _         :FS4 _ _         _ _ _
       ).look
     with_transpose 0*(ing 0).look do
-      violin zz, 25, sustain: 1
+      #violin zz, 25, sustain: 1
       #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
   end
@@ -333,8 +333,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
   if zz=(ing _ _ _      :E3 _ _         _ _ _         _ _ _
              _ _ _      :D3 _ _         _ _ _         _ _ _
       ).look
-    violin zz, 26, sustain: 1
-    midi zz, 2, channel: 9
+    #violin zz, 26, sustain: 1
+    #midi zz, 2, channel: 9
   end
   if false #z==:Cs4
     at{sleep 1/2.0;
@@ -514,12 +514,12 @@ live_loop :kick, sync: :drums do
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    #k=_
-    #uncomment{
+    k=_
+    comment{
     cue(:sudden) if k && spread(1,64).look
-    #violin_x  if k && spread(1,64).look
-    #strings_x  if k && spread(1,64).look
-    #}
+    violin_x  if k && spread(1,64).look
+    strings_x  if k && spread(1,64).look
+    }
     sidechain if k && spread(1,4).look
     condi = 1
     r= 1

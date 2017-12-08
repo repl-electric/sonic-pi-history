@@ -325,8 +325,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
   if v && zz=(ing _, _, _,      :E3, _, _,         _, _, _,         _, _, _,
                   _, _, _,      :D3, _, _,         _, _, _,         _, _, _,
       ).look
-    #violin zz, 26, sustain: 1
-    #midi zz, 2, channel: 9
+    violin zz, 26, sustain: 1
+    midi zz, 2, channel: 9
   end
   if false #z==:Cs4
     at{sleep 1/2.0;

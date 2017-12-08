@@ -320,7 +320,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2=nil;tick
 
   if (ing _ 1 _   1 _ _   1 _ _   _ 1 _).look
     with_transpose 1*(ing 0 0 0  0 0 0   0 0 0  0 0 0 ).look do
-      violin z, 25, sustain: 2
+      violin z, 55, sustain: 2
       #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
   end

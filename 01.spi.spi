@@ -95,7 +95,7 @@ live_loop :do, sync: :metro do
           #s1 t1 _ _    _ _ _ _
           ).look
         pp2=(ing
-          11 _ _ _   _ _ _ _
+          [9,10].choose _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _
           _ _ _ _   _ _ _ _

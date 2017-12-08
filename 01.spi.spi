@@ -342,7 +342,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
              _ :B4 _      :D3 _ _         :FS4 _ _         _ _ _
       ).look
     with_transpose 12 do
-      #violin :A3, 20, sustain: 4
       violin2 z
     end
 

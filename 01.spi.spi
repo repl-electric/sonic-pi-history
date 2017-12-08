@@ -663,13 +663,12 @@ with_fx :none, mix: 0 do
             accent = 0.8
             s = s[0]
           end
-          puts accent
           #s=_
           smp s, amp: accent*(ing
             0.5 0 0.125 0 0.5 0 0.8 0
             0.5 0 0.125 0 0.8 0 0.125 0
             0.125 0 0.125 0 0.8 0 0.125 0
-            0.125 0 0.125 0 0.125 0 0.8 0).look, pan: 0.0125
+            0.125 0 0.125 0 0.125 0 0.8 0).look, pan: 0.0125, cutoff: (line 120, 127,32).look
 
           s=(ing
             _ _ _ _   [c3] c3 _ _   _ _ _ _   c4 _ _ _

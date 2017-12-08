@@ -297,6 +297,10 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
       :GS4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
       :Gs4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
+    z2=(ing
+      :B4 :E4 _ :A3 _ :Gs4 _ :Cs4 :cs4 :cs4 :cs4 :cs4
+      :B4 :E4 _ :A3 _ :D4 _  :cs4 :cs4 :cs4 :Fs4 :cs4
+      ).look
 
     #z=_
     puts z if look % 9 == 0
@@ -322,7 +326,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
   end
   if (ing _ _ _   1 _ _   1 _ _   _ _ _).look
     with_transpose 1*(ing 12).look do
-      violin2 z, 20, sustain: 2
+      violin2 z2, 20, sustain: 2
       #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
     end
   end

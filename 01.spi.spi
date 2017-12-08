@@ -330,7 +330,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
     #eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0
   end
 #     :gs4 :Cs4 _   :A3 _ :E4    _ :A4 :A4     :A4 :A4 :A4
-  if zz=(ing _ :A4 _      :E3 _ _         :FS4 _ _         _ _ _
+  if zz=(ing _ :A4 _      :E3 _ _         :FS3 _ _         _ _ _
              _ :A4 _      :D3 _ _         :FS4 _ _         _ _ _
       ).look
     with_transpose 0*(ing 0).look do

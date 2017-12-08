@@ -1,4 +1,4 @@
-sop_cc motion: 0.8
+sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4
@@ -8,10 +8,10 @@ live_loop :c, sync: :metro do
   tick
 #  stop
   score =  (ing
-    [[[:A2 2] [:cs4 2] [:e3 2]]  2]
-    [[[:fS4 0.25]]                             0.5]
-    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-    [[[:b3 0.25]]                              0.5]
+    [[[:A2 2]]  2]
+#    [[[:gS4 0.25]]                             0.5]
+#    [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
+#    [[[:fs3 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]
@@ -19,18 +19,18 @@ live_loop :c, sync: :metro do
     #eek :Gs3, 10
   end
   with_transpose -12*0 do
-    piano root(c),(ring 35,40).look*1.3, sustain: c[0][-1] #if c.count == 1
+    #piano root(c),(ring 35,40).look*1.3, sustain: c[0][-1] #if c.count == 1
     #piano2 c[0], 20
     c.each{|n|tick(:inner);
-      sop n[0],1.0*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*1)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
+      sop n[0],0.1*(ing 80 70 85 70).look(:inner), sustain: ((n[-1])*1)+0.5, mode: 0#, mode: 1*(ring 0, 1, 1).look(:inner), cutoff: 1.0 # formant: 0.5, # form_amp: 0.5,
     }
     #harp c[-2][0],10, mode: 4 if c[-2]
     #sop c[0][0],10, mode: 1
     with_transpose 12*0  do
-      violin root(c), 127*1.0, mode: 1#, defon: 0.0, at: 0.0 #, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
+      #violin root(c), 127*1.0, mode: 1#, defon: 0.0, at: 0.0 #, sustain: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     sleep s[-1]
-    strings c[0][-2], 35
+    #strings c[0][-2], 35
     #at{
       #sleep s[-1]/2.0
       #eek c[0][-1], 100, sustain: 1, mode: 0, at: rand
@@ -38,7 +38,7 @@ live_loop :c, sync: :metro do
     if spread(1,3).look
       with_fx :gverb, room: 200.0, mix: 0.8, release: 8, spread: 0.9 do
         with_fx :slicer, phase: 1/8.0 do
-          smp Drip[/effect/].look, amp: 0.4, cutoff: 100, rate: -0.125, attack: 0.5
+          #smp Drip[/effect/].look, amp: 0.4, cutoff: 100, rate: -0.125, attack: 0.5
         end
       end
     end
@@ -47,8 +47,8 @@ live_loop :c, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-#strings_on :gS4, 1
-#violin_on  :gS5, 1
+#strings_on :fS4, 1
+#violin_on  :fS5, 1
 
 live_loop :do, sync: :metro do
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
@@ -94,7 +94,7 @@ live_loop :do, sync: :metro do
 
           #s1 t1 _ _    _ _ _ _
           ).look
-        #pp=_
+        pp=_
         #dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
           #fx = :none
@@ -237,7 +237,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         end
 
         #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-      c=[]
+      #c=[]
       #sharp c[0], 2, sustain: 4
       #sop c[1], 3, sustain: 4
       #sop c[2], 3, sustain: 4
@@ -250,10 +250,10 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
 
         i = (method :piano)
         i.call(c[0], 60*pf, sustain: 4)
-        i.call(c[1], 50*pf, sustain: 4)
-        i.call(c[2], 55*pf, sustain: 4)
-        i.call(c[3], 40*pf, sustain: 2)
-        i.call(c[4], 30*pf, sustain: 8)
+        #i.call(c[1], 50*pf, sustain: 4)
+        #i.call(c[2], 55*pf, sustain: 4)
+        #i.call(c[3], 40*pf, sustain: 2)
+        #i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
@@ -298,7 +298,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       ).look
 
     v=false
-    #z=_;v=false
+    z=_;v=false
     puts z if look % 9 == 0
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
@@ -309,7 +309,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       end
     end
   end
-  sleep 1
+  #sleep 1
   if v && zz=(ing _ :A4 _      _ _ _         :FS3 _ _         _ _ _
                   _ :B4 _      _ _ _         :FS4 _ _         _ _ _
       ).look
@@ -339,7 +339,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       violin_cc at: 0.1
     }
   end
-  sleep 1#/2.0
+  sleep 1/2.0
 end
 
 live_loop :kick, sync: :drums do
@@ -511,8 +511,8 @@ live_loop :kick, sync: :drums do
     if k && k!=kt[3] && kt[6] != k
       #midi :Fs3, channel: 1
     end
-    #k=_
-    uncomment{
+    k=_
+    comment{
     cue(:sudden) if k && spread(1,64).look
     violin_x  if k && spread(1,64).look
     strings_x  if k && spread(1,64).look
@@ -535,7 +535,7 @@ live_loop :kick, sync: :drums do
         if k == f1
           r = 0.25
         end
-        smp k, amp: 0*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+        smp k, amp: 1*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
       end
     end
     sleep 1/8.0
@@ -638,7 +638,7 @@ with_fx :none, mix: 0 do
             _ _ p1
             _ _ p1
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             fx = :none

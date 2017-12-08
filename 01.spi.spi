@@ -240,7 +240,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       puts "#{Note.resolve_note_name(c[0]) if c[0]} <- [Piano]"
 
       pf=1.0
-      with_transpose 12*0 do
+      with_transpose 12*1 do
         zero  c[0], (ing 30 10 30 10).look*0.5
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
@@ -252,7 +252,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         #i.call(c[4], 30*pf, sustain: 8)
 
           you = (method :sop)
-          with_transpose(-12*2){you.call(c[0], 50, sustain: 2.0, mode: 0)}
+          with_transpose(-12*3){you.call(c[0], 50, sustain: 2.0, mode: 0)}
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
         with_transpose((ing 12 7).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
         you.call(c[2], 30, sustain: 2.0)
@@ -261,7 +261,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         #with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
          at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
-        at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
+        #at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
 
         if @cp && @cp[1] != c[1]
           @cp = c

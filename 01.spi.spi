@@ -219,7 +219,7 @@ live_loop :do_not_sync, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A3, :Cs4, :E3, :B4],
         _
         )
-      tick_reset(:inner)
+      #tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if c

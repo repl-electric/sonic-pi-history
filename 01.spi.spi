@@ -241,7 +241,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
 
       pf=1.0
         with_transpose -12 {}
-        you.call(c[0], 30, sustain: 2.0)
+        sop.call(c[0], 30, sustain: 2.0)
         }
         with_transpose 12*1 do
         zero  c[0], (ing 30, 10, 30, 10,).look

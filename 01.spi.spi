@@ -1,7 +1,7 @@
 sop_cc motion: 0.8
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
-#sop2_on :A2, mode: 4
+sop2_on :A2, mode: 4
 #piano2 :A3, 40, sustain: 2
 
 live_loop :c, sync: :metro do
@@ -259,7 +259,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         you.call(c[4], 34, sustain: 8.0)
         #with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
         at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
-
         at{sleep 0.25; with_transpose(-12){violin c[1], 15, sustain: 0.5}}
 
         if @cp && @cp[1] != c[1]

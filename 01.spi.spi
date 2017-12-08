@@ -328,12 +328,12 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
     with_transpose 0 do
       #violin2 zz, 15, sustain: 2.0
     end
-    midi zz, 1, channel: 9, sustain: 4 if  zz == :GS5
+    #midi zz, 1, channel: 9, sustain: 4 if  zz == :GS5
   end
   if zz=(ing _ _ _      :E3 _ _         _ _ _         _ _ _
              _ _ _      :D3 _ _         _ _ _         _ _ _
       ).look
-    violin zz, 26, sustain: 1
+    #violin zz, 26, sustain: 1
     midi zz, 2, channel: 9
   end
   if z==:Cs4

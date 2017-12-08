@@ -346,7 +346,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
     if zz == :GS5
       midi zz, 4, channel: 9
     end
-
   end
   if zz=(ing _, _, _,      :E3, _, _,         _, _, _,         _, _, _,
              _, _, _,      :D3, _, _,         _, _, _,         _, _, _,

@@ -257,9 +257,9 @@ live_loop :do_not_sync, sync: :sudden do;z,z2,z3,v=nil;tick
 with_transpose -12 do
           you.call(c[0], 30, sustain: 2.0)
 end
-          you.call(c[2], 30, sustain: 2.0)
-          you.call(c[3], 30, sustain: 2.0)
-          you.call(c[4], 34, sustain: 8.0)
+         # you.call(c[2], 30, sustain: 2.0)
+         # you.call(c[3], 30, sustain: 2.0)
+         # you.call(c[4], 34, sustain: 8.0)
         #with_transpose 12 {eek c[-2], sustain: (ing 2, 0.125,).look}
          # at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 

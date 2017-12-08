@@ -249,11 +249,11 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
         i = (method :piano)
-        i.call(c[0], 60*pf, sustain: 4)
-        #i.call(c[1], 50*pf, sustain: 4)
-        #i.call(c[2], 55*pf, sustain: 4)
-        #i.call(c[3], 40*pf, sustain: 2)
-        #i.call(c[4], 30*pf, sustain: 8)
+        .call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
+        i.call(c[3], 40*pf, sustain: 2)
+        i.call(c[4], 30*pf, sustain: 8)
 
         you = (method :sop)
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
@@ -298,7 +298,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       ).look
 
     v=false
-    z=_;v=false
+    #z=_;v=false
     puts z if look % 9 == 0
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
@@ -309,7 +309,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       end
     end
   end
-  #sleep 1
+  sleep 1
   if v && zz=(ing _ :A4 _      _ _ _         :FS3 _ _         _ _ _
                   _ :B4 _      _ _ _         :FS4 _ _         _ _ _
       ).look
@@ -339,7 +339,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       violin_cc at: 0.1
     }
   end
-  sleep 1/2.0
+  sleep 1#/2.0
 end
 
 live_loop :kick, sync: :drums do

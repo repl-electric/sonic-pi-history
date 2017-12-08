@@ -311,7 +311,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
   #end
 
   if v && zz=(ing _, :A4, _,      _, _, _,         :FS3, _, _,         _, _, _,
-             _, :B4, _,      _, _, _,         :FS4, _, _,         _, _, _,
+                  _, :B4, _,      _, _, _,         :FS4, _, _,         _, _, _,
       ).look
     with_transpose 0*(ing 0,).look do
       violin zz, 25, sustain: 1
@@ -319,7 +319,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
     end
   end
   if v && zz=(ing _, _, :E5,     _, :GS5, _,      _, _, _,      :cs3, _, _,
-             _, _, :D5,     _, _, _,         _, _, _,      :cs3, _, _,
+                  _, _, :D5,     _, _, _,         _, _, _,      :cs3, _, _,
       ).look
     with_transpose 0 do
       violin2 zz, 15, sustain: 2.0
@@ -327,7 +327,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
     #midi zz, 1, channel: 9, sustain: 4 if  zz == :GS5
   end
   if v && zz=(ing _, _, _,      :E3, _, _,         _, _, _,         _, _, _,
-             _, _, _,      :D3, _, _,         _, _, _,         _, _, _,
+                  _, _, _,      :D3, _, _,         _, _, _,         _, _, _,
       ).look
     violin zz, 26, sustain: 1
     #midi zz, 2, channel: 9
@@ -339,7 +339,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       violin_cc at: 0.1
     }
   end
-  sleep 1/2.0
+  sleep 1#/2.0
 end
 
 live_loop :kick, sync: :drums do

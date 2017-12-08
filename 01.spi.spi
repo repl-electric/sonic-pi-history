@@ -182,8 +182,7 @@ end
 @cp||=nil
 live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2=nil;tick
   live_loop :c {stop}
-  with_transpose 12*0 do
-    if spread(1,6).look #spread(1,4).look  # 4th?   #1/2 * 1-6  3
+  if spread(1,6).look #spread(1,4).look  # 4th?   #1/2 * 1-6  3
       cp = (ring
         [:A2,  :Cs4, :E3],
         [:CS3, :E4, :GS3],
@@ -281,7 +280,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2=nil;tick
           end
         end
       end
-    end
 
     z=(ing
       :D4 :D4 :D4 :D4  _ _ _ _

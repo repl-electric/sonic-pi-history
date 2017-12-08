@@ -2,6 +2,7 @@ sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A4, mode: 4
+piano2 c[1], 40, sustain: 2
 
 live_loop :c, sync: :metro do
   tick
@@ -274,7 +275,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z=nil;tick
                 #violin  c[0], 20,  sustain: 4.0, mode: 1
                 #violin2 c[-1], 1, sustain: 6.0
               end
-              piano2 c[1], 40, sustain: 2
+              #piano2 c[1], 40, sustain: 2
               #violin c[1], 100, sustain: 2
             end
           end

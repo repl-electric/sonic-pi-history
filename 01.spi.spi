@@ -302,7 +302,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3=nil;tick
       :B4, :E4, _, :A3, _, :D4, _,  :cs4, :cs4, :cs4, :Fs4, :cs4,
       ).look
 
-
     z3=(ring chord(:Gs4,:m),chord(:CS4,:m),_,chord(:A3,:M), _)
 
     #z=_

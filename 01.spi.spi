@@ -658,7 +658,7 @@ with_fx :none, mix: 0 do
           c5 = Tape[/cymbal/,[7,7,7,7]].look
 
           s=(ing
-            c5 c5 c5 c5  c5 c5 [c5] c5
+            c5 _ c5 _  c5 _ [c5] _
             c5 c5 c5 c5  c5 c5 c5 c5
             c5 c5 c5 c5  c5 c5 [c5] c5
             ).look

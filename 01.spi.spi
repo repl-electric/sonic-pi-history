@@ -310,6 +310,9 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
     end
   end
 
+
+  violin zz, 25, sustain: 1
+
  # sleep 1
   #with_transpose 12 do
   #  eek z, 20, sustain: 2.0, at: 1.0, mod: 1.0

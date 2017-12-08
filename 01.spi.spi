@@ -1,7 +1,7 @@
 sop_cc motion: 0.8
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
-sop2_on :A2, mode: 4
+#sop2_on :A2, mode: 4
 #piano2 :A3, 40, sustain: 2
 
 live_loop :c, sync: :metro do
@@ -287,15 +287,16 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       :A3  _ _ _       _ _ _ _
       :A3  _ _ _       _ _ _ _
       ).look
-    z=(ing
+    zw=(ing
       :d4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
       :d4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
+    piano z, (ing 70 65 55).look * 0.8, sustain: 4/2.0
     v=true
     z=_;v=false
     puts z if look % 9 == 0
-    piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
+
     #zero z, (ing 30 10 30 10).look
 
     if spread(1,9).look

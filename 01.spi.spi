@@ -230,8 +230,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         end
 
         #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-        #c=[]
-        cue :entry if c
+        c=[]
+        cue :entry unless c.empty?
       #sharp c[0], 2, sustain: 4
       #sop c[1], 3, sustain: 4
       #sop c[2], 3, sustain: 4

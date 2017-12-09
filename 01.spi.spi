@@ -4,8 +4,7 @@ sop_cc motion: 0.0
 #sop2_on :A2, mode: 4
 #piano2 :A3, 40, sustain: 2
 @align=false
-
-live_loop :c, sync: :metro do
+live_loop :The_Sea, sync: :metro do
   tick
   stop
   score =  (ing

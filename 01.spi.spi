@@ -63,7 +63,7 @@ live_loop :percussion, sync: :metro do
 
     8.times{
       m1 = Mountain[/microperc/,[0,0,7,0,0,7]].look;
-      with_swing 0.02,2 do
+#      with_swing 0.02,2 do
         tick
         pp = (ing
            [d1g] d1a _ _    _ _ _ _
@@ -96,11 +96,11 @@ live_loop :percussion, sync: :metro do
 
         pp =(ing  #1.5   12 @ 1/8   -18 / 19   20/21  24  25/26/27
           {dd=>f} _ _ _   _ _ _ _    _ _ _ _
-          dd _ _  _       _ _  _ _   _ _  _ _
-          _ _ _  _        _ _  _ _  _ _ _ _
-          _ _ _  _        _ _  _ _  _ _ _ _
-          zz _ _  _       _ _  _ _   _  _ _ _
-          _ _ _  _        _ _  _ _  _ _ _ _
+          dd _ _ _       _ _  _ _   _ _  _ _
+          _ _ _ _        _ _  _ _  _ _ _ _
+          _ _ _ _        _ _  _ _  _ _ _ _
+          zz _ _ _       _ _  _ _   _  _ _ _
+          _ _ _ _        _ _  _ _  _ _ _ _
 
 
           ).look
@@ -127,7 +127,7 @@ live_loop :percussion, sync: :metro do
           }
         end
         sleep 1/8.0
-    end
+ #   end
     }
     end
 #  end

@@ -3,7 +3,7 @@ sop_cc motion: 0.0
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4
 #piano2 :A3, 40, sustain: 2
-@align=true
+@align=false
 live_loop :drowning_in_the_c, sync: :metro do
   tick
   stop

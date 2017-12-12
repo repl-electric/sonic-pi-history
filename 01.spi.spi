@@ -291,7 +291,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
               #violin2 c[-1], 1, sustain: 6.0
             end
           end
-          with_transpose -12*1{piano2 c[1], 127, sustain: 2 }
+          with_transpose -12*1{midi c[1], 127, sustain: 2,channel: 1 }
           #violin c[1], 100, sustain: 2
           end
         end

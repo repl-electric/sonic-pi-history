@@ -100,7 +100,6 @@ live_loop :percussion, sync: :metro do
           zz _ _          _ _ _   _ _ _   _ _ _
           _ _ _           _ _ _   _ _ _   _ _ _
           ).look
-                puts (ing 20,49,49,50,52,54).look(:pp) if pp
         #pp=_
         #dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp

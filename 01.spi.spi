@@ -502,7 +502,7 @@ live_loop :kick, sync: :drums do
 #  }
 
     k=k.look
-    #k=_
+    k=_
     uncomment{
       if k && spread(1,64).look
         cue(:sudden)

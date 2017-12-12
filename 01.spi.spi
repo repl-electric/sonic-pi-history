@@ -264,7 +264,9 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         zero  c[0], (ing 30, 10, 30, 10,).look
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
-        i = (method :piano2)
+          piano2 :A3
+
+        i = (method :piano)
         i.call(c[0], 60*pf, sustain: 4)
         i.call(c[1], 50*pf, sustain: 4)
         i.call(c[2], 55*pf, sustain: 4)
@@ -282,8 +284,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
 
         at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
 
-          if @cp && @cp[1] != c[1]
-            puts "IN"
+        if @cp && @cp[1] != c[1]
           @cp = c
           with_transpose -12*0 do
             #strings c[1],1, sustain: 2
@@ -292,7 +293,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
               #violin2 c[-1], 1, sustain: 6.0
             end
           end
-          with_transpose -12*0{midi c[1], 127, sustain: 2, channel: 1 }
+          with_transpose -12*1{piano2 c[1], 40, sustain: 2 }
           #violin c[1], 100, sustain: 2
           end
         end

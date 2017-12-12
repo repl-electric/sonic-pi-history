@@ -282,7 +282,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
 
         at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
 
-        if @cp && @cp[1] != c[1]
+          if @cp && @cp[1] != c[1]
+            puts "IN"
           @cp = c
           with_transpose -12*0 do
             #strings c[1],1, sustain: 2

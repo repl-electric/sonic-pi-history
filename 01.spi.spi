@@ -92,7 +92,7 @@ live_loop :percussion, sync: :metro do
         pp = (ing  #1.5   12 @ 1/8   -18 / 19   20/21
            _ _ _ _        _ _ _ _
            _ _ _ _
-           {Drip[/fx/,22]=>:gverb} _ _ _        _ _ _ _
+           {Drip[/fx/,23]=>:gverb} _ _ _        _ _ _ _
            _ _ _ _
            _ _ _ _        _ _ _ _
            _ _ _ _

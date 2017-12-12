@@ -97,11 +97,11 @@ live_loop :percussion, sync: :metro do
         pp =(ing  #1.5,   12, @, 1/8,   -18, /, 19,   20/21,  24,  25/26/27,
           {dd=>f}, _, _, _,   _, _, _, _,    _, _, _, _,
           dd, _, _,  _,       _, _,  _, _,   _, _,  _, _,
-          zz, _, _,          _, _, _,   _, _, _,   _, _, _,
-          _, _, _,           _, _, _,   _, _, _,   _, _, _,
+          zz, _, _,  _,       _, _,  _, _,   _,  _, _, _,
+          _, _, _,   _,       _, _,  _, _,  _, _, _, _,
           ).look
         #pp=_
-        #dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
+        dripkit(pp2,1) if pp2 && pp2.is_a?(Integer)
         if pp
           tick(:pp)
           fx = :none

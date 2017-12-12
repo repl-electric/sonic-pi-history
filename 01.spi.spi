@@ -103,7 +103,6 @@ live_loop :percussion, sync: :metro do
           _ _ _ _        _ _ _ _    _ _ _ _
 
         #:gs4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4   12*1.5 = 18
-
           ).look
         #pp=_
         dripkit(7,1) if pp && pp.is_a?(Integer)

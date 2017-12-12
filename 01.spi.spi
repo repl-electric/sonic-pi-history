@@ -105,7 +105,7 @@ live_loop :percussion, sync: :metro do
             fx = pp.values[0]
             pp = pp.keys[0]
           end
-          with_fx(fx, phase: 1/8.0){
+          with_fx(fx, phase: 1/8.0, release: 12){
             smp pp, rate: 1#0.125*2
             comment do
             smp pp, amp: 1*accent+(rand*0.1),

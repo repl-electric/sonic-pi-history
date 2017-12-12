@@ -97,7 +97,6 @@ live_loop :percussion, sync: :metro do
            _ _ _ _        _ _ _ _
            _ _ _ _
 
-
           #s1 t1 _ _    _ _ _ _
           ).look
 
@@ -111,14 +110,14 @@ live_loop :percussion, sync: :metro do
             #fx = pp.values[0]
             pp = pp.keys[0]
           end
-          #with_fx(fx, phase: 1/8.0, decay: 1){
+          with_fx(fx, phase: 1/8.0, decay: 1){
           smp pp, amp: 1*accent+(rand*0.1),
           rate: (knit 1.1,4, 1.0,2).look, pan: (ing
               0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               0.5  0.5  -0.25 -0.25  0.25 -0.5
               ).look, cutoff: 120#, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
-          #}
+          }
         end
         sleep 1/8.0
     end

@@ -91,7 +91,7 @@ live_loop :percussion, sync: :metro do
 
         zz=Drip[/fx/,[_,_,_,_,_,_,_,_,_,_,_,42]].look(:pp)
         f  =(ing :reverb :reverb :echo).look(:pp)
-        dd = Tape[/_high/,[20,21,26,28,29, 49,49,50]].look(:pp)  #21 22 27 29 30 31
+        dd = Tape[/_high/,[20,21,26,28,29,30, 49,49,50]].look(:pp)
         pp =(ing  #1.5   12 @ 1/8   -18 / 19   20/21  24  25/26/27
           {dd=>f} _ _     _ _ _   _ _ _   _ _ _
           _ _ _           _ _ _   _ _ _   _ _ _

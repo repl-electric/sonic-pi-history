@@ -90,10 +90,10 @@ live_loop :percussion, sync: :metro do
           ).look
 
         pp = (ing  #1.5   12 @ 1/8
-          _ _ _ _        _ _ _ _
-         d1g _ _ _
-          _ _ _ _        _ _ _ _
-          _ _ _ _
+           _ _ _ _        _ _ _ _
+           _ _ _ _
+           d1g _ _ _        _ _ _ _
+           _ _ _ _
 
           #s1 t1 _ _    _ _ _ _
           ).look

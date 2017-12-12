@@ -523,8 +523,8 @@ live_loop :kick, sync: :drums do
 #  }
 
     k=k.look
-    #k=_
-    uncomment{
+    k=_
+    comment{
       if k && spread(1,64).look
         cue(:sudden)
         violin_x

@@ -238,7 +238,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       c=cp.tick(:inner)
       @cp ||= c
       if !c
-        eek (ing :gs3 :e3 #_ _ _ _ _ _ _
+        eek (ing :gs4 :e4 #_ _ _ _ _ _ _
                 ).tick(:missing), (ing 100 120).look(:missing), sustain: 3.0
       end
       if c

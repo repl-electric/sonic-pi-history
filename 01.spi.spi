@@ -237,6 +237,9 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       #tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
+      if !c
+        zero (ing :A4).tick(:missing), sustain: 2.5
+      end
       if c
         with_transpose -1*12 do
           if c.count > 3

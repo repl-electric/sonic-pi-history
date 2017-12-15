@@ -490,10 +490,10 @@ live_loop :kick, sync: :drums do
 
     k=(ing
       [kt[1]] _ k7 _     tc[4] _ tc[1] _   _ _ _ _   _ _ _ _
-      _ _ _ _    _ _ _ _
+      # _ _ _ _    _ _ _ _
 
-      k7 _ _ _   tc[5] _ tc[1] _    _ _ _ _   _ _ _ _
-      _ _ _ _     _ _ _ _
+      # k7 _ _ _   tc[5] _ tc[1] _    _ _ _ _   _ _ _ _
+      # _ _ _ _     _ _ _ _
       )
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24

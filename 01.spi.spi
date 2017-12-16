@@ -565,8 +565,9 @@ live_loop :kick, sync: :drums do
       accent = 1.1
       k=k[0]
     end
-    if kp && kp.is_a?(Hash)
-      fx = kp.values[0]
+    if k && k.is_a?(Hash)
+      fx = k.values[0]
+      k=k.keys[0]
     end
     if k.is_a?(Array)
       condi = k[1]

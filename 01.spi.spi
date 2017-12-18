@@ -507,6 +507,10 @@ live_loop :kick, sync: :drums do
 
       kt[1] _ _ _   _ _ _ {tc[1]=>:lpf}    _ _ _ _  _ _ _ _
       {tc[1]=>:reverb} _ _ _     _ _ {tc[4]=>:lpf} _
+
+      kt[1] _ _ _   _ _ _ {tc[1]=>:lpf}    _ _ _ _  _ _ _ _
+      {tc[1]=>:reverb} _ _ _     _ _ {tc[4]=>:lpf} _
+
       )
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24

@@ -746,7 +746,7 @@ with_fx :none, mix: 0 do
             accent = 0.8
             s = s[0]
           end
-          #s=_
+          s=_
           with_swing 0.02 {
           smp s, amp: accent*(ing
             0.5 0 0.125 0 0.5 0 0.8 0.5

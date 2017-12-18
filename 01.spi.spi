@@ -502,7 +502,7 @@ live_loop :kick, sync: :drums do
       )
 
     k=(ing
-      [kt[6]] _ k7 _   _ _ _ _    _ _ _ _   _ _ _ _
+      kt[6] _ k7 _   _ _ _ _    _ _ _ _   _ _ _ _
       _ _ _ _   _ _ _ _
       )
 

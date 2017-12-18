@@ -504,8 +504,6 @@ live_loop :kick, sync: :drums do
     k=(ing
       [kt[1]] _ k7 _   _ _ _ _    {tc[1]=>:lpf} _ _ _   _ _ _ _
       {tc[2]=>:lpf} _ _ _   _ _ _ _
-      kt[1] _ _ _   _ _ _ _    {tc[1]=>:hpf} _ _ _   _ _ _ _
-      {tc[2]=>:hpf} _ _ _   _ _ _ _
       )
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24

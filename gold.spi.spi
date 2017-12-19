@@ -193,12 +193,12 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         [:D3,  :Fs4, :A3, :E4],
          _)
       cp = (ring
-         [:A2,  :Cs4, :E3],
-         [:CS3, :E4, :GS3],
-         _,
-         [:A3,  [:Cs4,:CS4].choose, :E3],
-         [:CS3, :E4, :GS4],
-         _,
+        [:A2,  :Cs4, :E3],
+        [:CS3, :E4, :GS3],
+        _,
+        [:A3,  [:Cs4,:CS4].choose, :E3],
+        [:CS3, :E4, :GS4],
+        _,
         [:A2, :CS3, :E3],
         [:E3, :Gs4, :CS4],  #E G C
         [:E3, :Fs4, :B3],   #E-F-B
@@ -511,6 +511,7 @@ live_loop :kick, sync: :drums do
       kt[1] _ _ _   _ _ _ _   {tc[23]=>:lpf}  _ _ _  _ _ _ _
       {tc[23]=>:lpf} _ {tc[22]=>:lpf} _     _ _ {tt[[2,6].choose]=>:lpf} _
 
+
       [kt[1]] _ k7 _     _ _ _ _    tc[4] _ tc[1] _    _ _ _ _
       _ _ _ _   _ _ {tc[1]=>:lpf} _
 
@@ -519,6 +520,23 @@ live_loop :kick, sync: :drums do
 
       kt[1] _ _ _   tt[5] _ _ _   {tc[23]=>:lpf}  _ _ _  _ _ _ _
       {tc[23]=>:lpf} _ {tc[22]=>:lpf} _     tc[2] _ {tt[[2,6].choose]=>:lpf} _
+
+
+
+      [kt[1]] _ k7 _     _ _ _ _    tc[4] _ tc[1] _    _ _ _ _
+      _ _ _ _   _ _ {tc[1]=>:lpf} _
+
+      kt[1] _ _ _   _ _ _ {tc[[1,4].choose]=>:lpf}    _ _ _ _  _ _ _ _
+      {tc[1]=>:reverb} _ _ _     _ _ {tc[4]=>:lpf} _
+
+      kt[1] _ _ _   _ _ _ {tc[[1,4].choose]=>:lpf}    _ _ _ _  _ _ _ _
+      {tc[1]=>:reverb} _ _ _     _ _ {tc[4]=>:lpf} _
+
+      kt[1] _ _ _   tt[5] _ _ _   {tc[23]=>:lpf}  _ _ _  _ _ _ _
+      {tc[23]=>:lpf} _ {tc[22]=>:lpf} _     tc[2] _ {tt[[2,6].choose]=>:lpf} _
+
+
+
       )
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24

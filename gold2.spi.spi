@@ -528,9 +528,9 @@ live_loop :kick, sync: :drums do
 
     if spread(1,12).look
       if spread(1,24).look
-        with_fx :lpf {smp tc[1]}
+ #       with_fx :lpf {smp tc[1]}
       else
-        with_fx :lpf {smp tc[4]}
+ #       with_fx :lpf {smp tc[4]}
       end
     end
     k=(ing

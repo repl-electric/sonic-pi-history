@@ -1,5 +1,5 @@
 def smp(*args)
-  sample *args, cutoff: 80
+  sample *args, cutoff: 70
 end
 sop_cc motion: 0.1
 #sop2_cc motion: 0.2

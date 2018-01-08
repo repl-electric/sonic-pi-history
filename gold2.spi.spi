@@ -4,7 +4,7 @@ sop_cc motion: 0.0
 #sop2_on :A2, mode: 4
 #piano2 :A3, 40, sustain: 2
 @align=false
-live_loop :drowning_in_the_c, sync: :metro do
+live_loop :Fall_Into_Your_Screen, sync: :metro do
   tick
   #stop
   score =  (ing
@@ -179,7 +179,7 @@ end
 
 @cp||=nil
 live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
-  live_loop :c {stop}
+  live_loop :Fall_Into_Your_Screen {stop}
   with_transpose 12*0 do
     if spread(1,6).look #spread(1,4).look  # 4th?   #1/2 * 1-6  3
       cp = (ring
@@ -384,7 +384,6 @@ live_loop :kick, sync: :drums do
 
   8.times{
     tick
-
     k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
     kd = Lo[/kick/,/dark/].look
     kk = Lo[/kick/,/clicky/].look

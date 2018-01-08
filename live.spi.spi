@@ -39,8 +39,8 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-strings_off   :gS4, 1
-violin_off    :gS5, 1
+strings_on :fS4, 1
+violin_on  :fS5, 1
 #midi_note_on :A2, channel: 5
 
 live_loop :percussion, sync: :metro do

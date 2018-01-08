@@ -42,7 +42,7 @@ end
 #eek :Cs4, 20, mode: 2, sustain: 4
 #strings_on   :gS4, 1
 #violin_on    :gS5, 1
-midi_note_on :A1, channel: 5
+midi_note_on :A2, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align
@@ -133,7 +133,7 @@ live_loop :percussion, sync: :metro do
     end
     }
     end
-#  end
+  #  end
 end
 
 live_loop :music, sync: :metro do;z=nil;s=nil;#tick
@@ -226,11 +226,10 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
       if !c
         eek (ing
              :gs3 :e3 :b2 _ :gs0
-             :gs3 :fs3 :cs3 _ _
+             :gs3 :fs3 :cs3 _ _ _
              ).tick(:missing), (ing 100 120).look(:missing), sustain: 3.0, at: 0.0, mod: 0.0
         eek_cc at: (ing 0.0, 0.0).look(:missing)
-        violin (ing :gs3 :fs3 :E3 :Fs3 :A3 _ _ _  _ _
-                ).look(:missing)
+        violin (ing :gs3 :fs3 :E3 :Fs3 :A3 _ _ _  _ _ _).look(:missing)
       end
       if c
         with_transpose -1*12 do

@@ -41,7 +41,7 @@ end
 #eek :Cs4, 20, mode: 2, sustain: 4
 #strings_on :e4, 1
 #violin_on  :e5, 1
-midi_note_off :A1, channel: 5
+#midi_note_off :A1, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align
@@ -314,6 +314,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
     v=false
     #z=_;v=false
     puts z if look % 9 == 0
+    harp z
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
 

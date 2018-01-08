@@ -1,7 +1,7 @@
 def smp(*args)
   sample *args, cutoff: 30 if args
 end
-sop_cc motion: 0.0
+sop_cc motion: 1.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4

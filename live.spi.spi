@@ -116,8 +116,8 @@ live_loop :percussion, sync: :metro do
           end
           with_fx(fx, phase: 1/3.0, decay: 1.5, room: 250, spread: 0.8, damp: 0.5,pre_damp:0.5,release:6){
             if ppz
-              smp h1, attack: (ing 0.03, 0.01,).look, rate: (ing 0.25, 0.25, 0.125, 0.125,).look(:pp)
-              end
+              smp h1, amp: 2, attack: (ing 0.03, 0.01,).look, rate: (ing 0.25, 0.25, 0.125, 0.125,).look(:pp)
+            end
 
             uncomment do
               #smp pp, amp: 0.4, attack: 0.0, rate: (knit 1/12.0,1,1/12.0,1).look

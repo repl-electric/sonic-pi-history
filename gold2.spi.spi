@@ -118,11 +118,11 @@ live_loop :percussion, sync: :metro do
             #smp pp, attack: (ing 0.03,0.01).look, rate: (ing 0.25 0.25 0.125 0.125).look(:pp)#0.125*2
             uncomment do
               smp pp, amp: 0.8, attack: 0.025, rate: (knit 1/6.0,1,1/3.0,1).look
-            smp pp, amp: 1*accent+(rand*0.1),
-          rate: (knit 1.1,4, 1.0,2).look, pan: (ing
-              0.25 0.25 -0.25 -0.25  0.25 -0.25
+              smp pp, amp: 1*accent+(rand*0.1),
+              rate: (knit 1.1,4, 1.0,2).look, pan: (ing
+                0.25 0.25 -0.25 -0.25  0.25 -0.25
               0.5  0.5  -0.25 -0.25  0.25 -0.5
-              0.5  0.5  -0.25 -0.25  0.25 -0.5
+                0.5  0.5  -0.25 -0.25  0.25 -0.5
                 ).look, cutoff: (ing 110,80).look #, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
             end
           }

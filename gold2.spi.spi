@@ -43,6 +43,8 @@ end
 #strings_on :gS4, 1
 #violin_on  :gS5, 1
 
+midi_on_note :Gs4, channel: 5
+
 live_loop :percussion, sync: :metro do
   sync :entry if @align
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

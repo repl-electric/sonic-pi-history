@@ -1,7 +1,4 @@
-def smp(*args)
-  sample *args, cutoff: 30 if args
-end
-sop_cc motion: 0.
+sop_cc motion: 0.1
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4
@@ -45,7 +42,7 @@ end
 fn="off"
 method("strings_#{fn}").call(:gs4, 1)
 method("violin_#{fn}").call(:gs5, 1)
-midi_note_on :a2, channel: 5
+midi_note_off :gs2, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align
@@ -109,7 +106,7 @@ live_loop :percussion, sync: :metro do
           ).look
 
         dripkit(7,1) if pp && pp.is_a?(Integer)
-        #pp=_
+        pp=_
         if pp
           tick(:pp)
           fx = :none
@@ -126,7 +123,7 @@ live_loop :percussion, sync: :metro do
               end
             end
 
-            uncomment do
+            comment do
               #smp pp, amp: 0.4, attack: 0.0, rate: (knit 1/12.0,1,1/12.0,1).look
               smp pp, amp: 1*accent+(rand*0.1),
               rate: (knit 1.1,4, 1.0,2).look, pan: (ing
@@ -250,7 +247,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         end
 
         #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-        #c=[]
+        c=[]
         cue :entry unless c.empty?
         #sharp c[0], 2, sustain: 4
         #sop c[1], 3, sustain: 4
@@ -270,20 +267,20 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
         i = (method :piano)
-        #i.call(c[0], 60*pf, sustain: 4)
-        #i.call(c[1], 50*pf, sustain: 4)
-        #i.call(c[2], 55*pf, sustain: 4)
-        #i.call(c[3], 65*pf, sustain: 2)
-        #i.call(c[4], 30*pf, sustain: 8)
-        #i.call(c[5], 30*pf, sustain: 8)
+        i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
+        i.call(c[3], 65*pf, sustain: 2)
+        i.call(c[4], 30*pf, sustain: 8)
+        i.call(c[5], 30*pf, sustain: 8)
 
         puts c
         you = (method :sop)
-        sop2(c[0], 120, sustain: 2.0, mode: 0)
-        #with_transpose((ing 12 7).look){you.call(c[1], 30, sustain: 2.0, mode: 0)}
-        #you.call(c[2], 120, sustain: 2.0)
-        #you.call(c[3], 120, sustain: 2.0)
-        #you.call(c[4], 124, sustain: 8.0)
+        #sop2(c[0], 120, sustain: 2.0, mode: 0)
+        #with_transpose((ing 12 7).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
+        #you.call(c[2], 30, sustain: 2.0)
+        #you.call(c[3], 30, sustain: 2.0)
+        #you.call(c[4], 34, sustain: 8.0)
         #with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
         #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
@@ -294,7 +291,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
           with_transpose -12*0 do
             #strings c[1],1, sustain: 2
             if spread(1,2).tick(:notall)
-              violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
+              #violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
               #violin2 c[-1], 1, sustain: 6.0
             end
           end
@@ -315,13 +312,13 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       :A3  _ _ _       _ _ _ _
       :A3  _ _ _       _ _ _ _
       ).look
-    ze=(ing
+    z=(ing
       :gs4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
       :gs4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
     v=false
-    z=_;v=false
+    #z=_;v=false
     puts z if look % 9 == 0
     harp z
     piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
@@ -333,7 +330,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       end
     end
   end
-  #sleep 1
+  sleep 1
   if v && zz=(ing _ :A4 _      _ _ _         :FS3 _ _         _ _ _
                   _ :B4 _      _ _ _         :FS4 _ _         _ _ _
       ).look
@@ -490,7 +487,7 @@ live_loop :kick, sync: :drums do
       kt[1] _ _ _     tc[4] _ tc[1] _    tc[4] _ _ _   tc[2] _ _ _
       )
 
-    k=(ing
+    kz=(ing
       [kt[6]] _ k7 _   tc[4] _ tc[1] _    tt[23] _ _ _   _ _ _ _
       _ _ _ _    _ _ _ _
       kt[1] _ _ _   _ _ _ _    {kt[1]=>:lpf} _ _ _    _ _ _ _
@@ -506,7 +503,7 @@ live_loop :kick, sync: :drums do
       p2 =tc[1]
     end
 
-    k=(ing
+    kz=(ing
       #1
       [kt[1]] _ k7 _   _ _ _ _              p1 _ p2  _              _ _ _ _    _ _ _ _                            _ _ {tc[1]=>:lpf} _
       kt[1] _ _ _      _ _ _ {tc[1]=>:lpf}  _ _ _ _                 _ _ _ _   {tc[1]=>:lpf} _ _ _                 _ _ {tc[4]=>:lpf} _
@@ -592,7 +589,7 @@ live_loop :kick, sync: :drums do
           r = 0.25
         end
         with_fx fx, phase: 4/8.0 do
-          smp k, amp: 1*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look#,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+          smp k, amp: 0*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look#,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
         end
       end
     end
@@ -697,7 +694,7 @@ with_fx :none, mix: 0 do
             _ _ p1
             _ _ p1
             ).look
-          #pp=_
+          pp=_
           if pp
             accent = pp.is_a?(Array) ? 1.0 : 0.8
             cutoff_bump = rand_i(5)
@@ -710,11 +707,11 @@ with_fx :none, mix: 0 do
               smp pp, cutoff: (line 110, 115, 6*4).look, attack: (line 0.02, 0.0,6*2).look, amp: accent*(line 1.0,0.9,6*8).look, rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look, pan: (ing 0.25 0.25 -0.25 0.25).look, cutoff: 110-cutoff_bump#, cutoff: (ramp 40, 120,256*3).tick(:fireandice)
             }
             if spread(1,6).look
-              smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
+              #smp MagicDust[:clack, [0,2,3,6]].tick(:insider), amp: 0.5*1, pan: (ring 0.25,-0.25).look(:inside)
             end
           end
           if pp && spread(3,7).look
-            smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.2, pan: (ing 0.25,-0.25).tick(:ingit)
+            #smp Junk[/RedShaker/,18..22].tick(:i), amp: 0.2, pan: (ing 0.25,-0.25).tick(:ingit)
           end
 
           c1 =  (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look

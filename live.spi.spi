@@ -109,7 +109,7 @@ live_loop :percussion, sync: :metro do
         if pp
           tick(:pp)
           fx = :none
-          cutoff_bump=(pp.is_a?(Array) ? 10 : rand_i(5))
+          cutoff_bump=(pp.is_a?(Array) ? 10 : rand_i(10))
           accent = (pp.is_a?(Array) ? 0.7 : 0.4)*1
           if pp && pp.is_a?(Hash)
             fx = pp.values[0]

@@ -42,7 +42,7 @@ end
 fn="off"
 method("strings_#{fn}").call(:gs4, 1)
 method("violin_#{fn}").call(:gs5, 1)
-midi_note_off :gs3, channel: 5
+midi_note_off :gs2, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align

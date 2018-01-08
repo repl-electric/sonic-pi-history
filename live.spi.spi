@@ -41,7 +41,7 @@ end
 #eek :Cs4, 20, mode: 2, sustain: 4
 fn="on"
 method("strings_#{fn}").call( :e4, 1)
-violin_off  :e5, 1
+method("violin_#{fn}").call( :e5, 1)
 midi_note_on :cs3, channel: 5
 
 live_loop :percussion, sync: :metro do

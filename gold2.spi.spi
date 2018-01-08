@@ -312,7 +312,7 @@ live_loop :its_dark, sync: :sudden do;z,z2,z3,v=nil;tick
       :gs4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
-    midi channel: 5, :FS3
+    midi :FS3, channel: 5
 
     v=false
     #z=_;v=false

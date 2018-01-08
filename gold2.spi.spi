@@ -9,9 +9,9 @@ live_loop :drowning_in_the_c, sync: :metro do
   #stop
   score =  (ing
     [[[:A2 2] [:Cs4 2] [:E3 2]]  2]
-#    [[[:gS4 0.25]]                             0.5]
+    [[[:gS4 0.25]]                             0.5]
     [[[:CS3 2] [:E4 2] [:GS3 2]]                2]
-#    [[[:fs3 0.25]]                              0.5]
+    [[[:fs3 0.25]]                              0.5]
     )
   s=score.look
   c=s[0]

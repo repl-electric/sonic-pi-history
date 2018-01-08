@@ -295,7 +295,7 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         i.call(c[0], 60*pf, sustain: 4)
         i.call(c[1], 50*pf, sustain: 4)
         i.call(c[2], 55*pf, sustain: 4)
-        i.call(c[3], 120*pf, sustain: 2)
+        i.call(c[3], 65*pf, sustain: 2)
         i.call(c[4], 120*pf, sustain: 8)
         i.call(c[5], 120*pf, sustain: 8)
 

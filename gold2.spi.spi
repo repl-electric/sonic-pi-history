@@ -225,7 +225,8 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
 
 
         [:A3, :D3, :E4],  [:A2, :A3, :Cs4, :E3, :B4],
-        _ _
+        _,
+        _
         )
       #tick_reset(:inner)
       c=cp.tick(:inner)

@@ -503,7 +503,7 @@ live_loop :kick, sync: :drums do
       p2 =tc[1]
     end
 
-    kz=(ing
+    k=(ing
       #1
       [kt[1]] _ k7 _   _ _ _ _              p1 _ p2  _              _ _ _ _    _ _ _ _                            _ _ {tc[1]=>:lpf} _
       kt[1] _ _ _      _ _ _ {tc[1]=>:lpf}  _ _ _ _                 _ _ _ _   {tc[1]=>:lpf} _ _ _                 _ _ {tc[4]=>:lpf} _
@@ -512,7 +512,7 @@ live_loop :kick, sync: :drums do
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24
     r = (ing d1a,d1d,d1e,d1f).look
-    k=(ing
+    k2=(ing
       _ _ _ _                          _ _ _ _
       _ _ _ _                          _ _ _ _
       [ts[49]] _ _ ts[12]              _ _ _ _

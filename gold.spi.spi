@@ -99,10 +99,10 @@ live_loop :percussion, sync: :metro do
           _ _ _ _     _ _ _ _    _ _ _ _   _ _ _ _
           h1 _ _ _    _ _ _ _    dd _ _ _   _ _ _ _
 
-          dd _ _ _     _ _ _ _      dd _ _ _   _ _ _ _
-          _ _ _ _    _ _ _ _      _ _ _ _   _ _ _ _
+          dd _ _ _    _ _ _ _    dd _ _ _   _ _ _ _
+          _ _ _ _     _ _ _ _     _ _ _ _   _ _ _ _
 
-          _ _ _ _   _ _ _ _
+          _ _ _ _     _ _ _ _
 
         #:gs4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4   12*1.5 = 18
           ).look
@@ -203,12 +203,11 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         _,
         [:A3,  [:Cs4,:CS4].choose, :E3],
         [:CS3, :E4, :GS4],
-         _,
+        _,
         [:A2, :CS3, :E3],
         [:E3, :A4, :CS4],   #E-F-B
         [:E3, :Fs4, :B4],  #E G C
         _,
-
         [:E3,  :GS4, :B3],
         [:D3,  :Gs4, :A3],
         [:D3,  :Fs4, :A3],
@@ -227,7 +226,6 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A2,  :Cs4, :E3, :B3],
         [:CS3, :E4, :FS3, :B3],
         _,
-
         [:A2, :CS4, :E3],
         [:E3, :Gs4, :CS4],  #E G C
         [:E3, :Fs4, :B3],   #E-F-B

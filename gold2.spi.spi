@@ -2,7 +2,6 @@ sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4
-#piano2 :A3, 40, sustain: 2
 @align=false
 live_loop :Fall_Into_Your_Screen, sync: :metro do
   tick
@@ -42,7 +41,7 @@ end
 #eek :Cs4, 20, mode: 2, sustain: 4
 #strings_on   :gS4, 1
 #violin_on    :gS5, 1
-midi_note_on :E2, channel: 5
+#midi_note_on :A1, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align

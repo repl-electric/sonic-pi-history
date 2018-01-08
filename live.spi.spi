@@ -1,4 +1,3 @@
-        cue(:sudden)
 sop_cc motion: 0.1
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
@@ -354,7 +353,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     violin zz, 26, sustain: 1
     midi zz, 2, channel: 9
   end
-  if false #z==:Cs4
+  if z==:Cs4
     at{sleep 1/2.0;
       violin2 :E3, 1,  sustain: 4.0
       violin  :E4, 10, sustain: 4.0

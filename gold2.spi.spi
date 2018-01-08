@@ -550,7 +550,7 @@ live_loop :kick, sync: :drums do
 
       #2
 
-      [kt[1]] _ k7 _     _ _ _ _    tc[4] _ tc[1] _    _ _ _ _
+      [kt[1]] _ k7 _     _ _ _ _    p1 _ p2 _    _ _ _ _
       _ _ _ _   _ _ {tc[1]=>:lpf} _
 
       kt[1] _ _ _   _ _ _ {tc[[1,4].choose]=>:lpf}    _ _ _ _  _ _ _ _
@@ -575,7 +575,6 @@ live_loop :kick, sync: :drums do
 
       kt[1] _ _ _   _ _ _ _   {tc[23]=>:lpf}  _ _ _  _ _ _ _
       {tc[23]=>:lpf} _ {tc[22]=>:lpf} _     _ _ {tt[[2,6].choose]=>:lpf} _
-
 
       # #4
       [kt[1]] _ k7 _     _ _ _ _    tc[4] _ tc[1] _    _ _ _ _

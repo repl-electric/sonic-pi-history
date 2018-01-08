@@ -206,9 +206,9 @@ live_loop :do_not_sync_on_sudden, sync: :sudden do;z,z2,z3,v=nil;tick
         # _,
         [:A2, :CS3, :E3],
         [:E3, :Fs4, :B4],  #E G C
-        [:E3,  :A4, :CS4],   #E-F-B
+        [:E3, :A4, :CS4],   #E-F-B
         _,
-        [:E3,  :GS3,  :Cs4],
+        [:E3,  :GS4,  :b3],
         [:D3,  :Gs4, :A3],
         [:D3,  :Fs4, :A3],
         _,

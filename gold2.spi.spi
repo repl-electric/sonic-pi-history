@@ -43,7 +43,7 @@ end
 #strings_on :gS4, 1
 #violin_on  :gS5, 1
 
-midi_note_on :A1, channel: 5
+midi_note_on :Cs2, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align

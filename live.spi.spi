@@ -230,7 +230,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A3, :D3, :E4],  [:A2, :A3, :Cs4, :E3, :B4],
         _,
         )
-      tick_reset(:inner)
+      #tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if !c
@@ -326,7 +326,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     #z=_;v=false
     puts z if look % 9 == 0
     harp z
-    piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
+    #piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30 10 30 10).look
 
     if spread(1,9).look
@@ -335,7 +335,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       end
     end
   end
-  sleep 1
+  #  sleep 1
   if v && zz=(ing _ :A4 _      _ _ _         :FS3 _ _         _ _ _
                   _ :B4 _      _ _ _         :FS4 _ _         _ _ _
       ).look

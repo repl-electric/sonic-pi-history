@@ -127,8 +127,9 @@ live_loop :percussion, sync: :metro do
             end
 
             uncomment do
+              fuzz = rand(0.01)
               smp pp, amp: accent+5.0, attack: 0.0, start: 0.1, rate: (knit -0.5,32,-0.25,32,
-                                                                            -0.51,32,-0.24,32).look if pp != dd
+                                                                            -0.5+fuzz,32,-0.25-fuzz,32).look if pp != dd
               smp pp, amp: 1*accent+(rand*0.1),
               rate: -2*(knit 1.1,4, 1.0,2).look, pan: (ing
                 0.25 0.25 -0.25 -0.25  0.25 -0.25

@@ -1,11 +1,11 @@
-sop_cc motion: 1.0
+sop_cc motion: 0.0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1
 #sop2_on :A2, mode: 4
 @align=false
 live_loop :Fall_Into_Your_Screen, sync: :metro do
   tick
-  stop
+  #stop
   score =  (ing
     [[[:fs3 2] ]  2]
     [[[_ 0.5] ]  2]
@@ -45,9 +45,8 @@ end
 #eek :Cs4, 20, mode: 2, sustain: 4
 fn="off"
 method("strings_#{fn}").call(:e4, 1)
-#method("violin_#{fn}").call(:e5, 1)
-midi_note_on :a1, channel: 5
-
+method("violin_#{fn}").call(:e5, 1)
+midi_note_off :e2, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align
@@ -112,7 +111,7 @@ live_loop :percussion, sync: :metro do
  #       end
 
         dripkit(7,1) if pp && pp.is_a?(Integer)
-        #pp=_
+        pp=_
         if pp
           tick(:pp)
           fx = :none
@@ -130,9 +129,7 @@ live_loop :percussion, sync: :metro do
             end
 
             uncomment do
-              #with_fx :reverb, decay: 8, room: 1 do
-                #smp pp, amp: 2*2.5, attack: 0.0, start: 0.1, rate: (knit -0.5,32,-0.25,32).look if pp != dd
-              #end
+              smp pp, amp: 2.5, attack: 0.0, start: 0.1, rate: (knit -0.5,32,-0.25,32).look if pp != dd
               smp pp, amp: 1*accent+(rand*0.1),
               rate: -2*(knit 1.1,4, 1.0,2).look, pan: (ing
                 0.25 0.25 -0.25 -0.25  0.25 -0.25
@@ -150,7 +147,6 @@ live_loop :percussion, sync: :metro do
 end
 
 live_loop :music, sync: :metro do;z=nil;s=nil;#tick
-  stop
   harp_cc phase: 0.5,  mod: 0.0, cutoff: 0.02, bass: 0.0, mode: 0
   score = (ing
     [_ 3.0]
@@ -194,7 +190,6 @@ end
 
 @cp||=nil
 live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
-  stop
   live_loop :Fall_Into_Your_Screen {stop}
   with_transpose 12*0 do
     if spread(1,6).look #spread(1,4).look  # 4th?   #1/2 * 1-6  3
@@ -277,7 +272,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
         i = (method :harp)
-        #i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[0], 60*pf, sustain: 4)
         #i.call(c[1], 50*pf, sustain: 4)
         #i.call(c[2], 55*pf, sustain: 4)
         #i.call(c[3], 65*pf, sustain: 2)
@@ -336,7 +331,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
 
     if spread(1,9).look
       with_transpose (1*12) do
-        musicbox z,10, sustain: 1/8.0#*3
+        #musicbox z,10, sustain: 1/8.0#*3
       end
     end
   end
@@ -513,7 +508,7 @@ live_loop :kick, sync: :drums do
       p2 =tc[1]
     end
 
-    k=(ing
+    kz=(ing
       #1
       [kt[1]] _ k7 _   _ _ _ _              p1 _ p2  _              _ _ _ _    _ _ _ _                            _ _ {tc[1]=>:lpf} _
       kt[1] _ _ _      _ _ _ {tc[1]=>:lpf}  _ _ _ _                 _ _ _ _   {tc[1]=>:lpf} _ _ _                 _ _ {tc[4]=>:lpf} _
@@ -566,7 +561,7 @@ live_loop :kick, sync: :drums do
 #  }
 
     k=k.look
-    k=_
+    #k=_
     uncomment{
       if k && spread(1,64).look
         cue(:sudden)
@@ -739,10 +734,6 @@ with_fx :none, mix: 0 do
             c5 _ c5 _  c5 _ c5 _
             c5 _ c5 _  c5 _ c5 _
             c5 _ c5 _  c5 _ [c5] _
-            c5 _ _ _  _ _ _ _
-            _ _ _ _   c5 _ _ _
-            c5 _ _ _  _ _ _ _
-            _ _ _ _   c5 _ _ _
             ).look
           accent = 0.5
           if s.is_a?(Array)

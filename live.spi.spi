@@ -48,7 +48,7 @@ fn="on"
 method("strings_#{fn}").call(:e4, 1)
 method("violin_#{fn}").call(:e5, 1)
 end
-#midi_note_on :a1, channel: 5
+#midi_note_on :e1, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align
@@ -109,7 +109,7 @@ live_loop :percussion, sync: :metro do
           ).look
 
         dripkit(7,1) if pp && pp.is_a?(Integer)
-        #pp=_
+        pp=_
         if pp
           tick(:pp)
           fx = :none
@@ -128,14 +128,17 @@ live_loop :percussion, sync: :metro do
             yes do
               fuzz = rand(0.08)
               if (pp != dd && pp != h1)
-                #smp pp, amp: accent+5.0, attack: 0.0, start: 0.1-fuzz, rate: (knit -0.5,32,-0.25,32, -0.5-fuzz, 1,-0.5,31, -0.25-fuzz,1,-0.25,31).look
+              smp pp, amp: accent+5.0, attack: 0.0, start: 0.1-fuzz, rate: (knit
+                -0.5,32,-0.25,32,
+                -0.5-fuzz, 1,-0.5,31,
+                -0.25-fuzz,1,-0.25,31).look
               end
-              smp pp, amp: accent+(rand*0.1),
-              rate: (knit 1.1,4, 1.0,2).look, pan: (ing
+              smp pp, amp: 3+accent+(rand*0.1),
+              rate: -2*(knit 1.1,4, 1.0,2).look, pan: (ing
                 0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
                 0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
                 0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
-                ).look, cutoff: (ing 110, 80,).look+cutoff_bump, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
+                ).look, cutoff: (ing 110, 80,).look+cutoff_bump #, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
             end
           }
         end
@@ -230,7 +233,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A3, :D3, :E4],  [:A2, :A3, :Cs4, :E3, :B4],
         _,
         )
-      #tick_reset(:inner)
+      tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if !c
@@ -252,7 +255,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         end
 
         #sop c[0], mode: 10, formant: 0.7, form_amp: 0.0
-        #c=[]
+        c=[]
         cue :entry unless c.empty?
         #sharp c[0], 2, sustain: 4
         #sop c[1], 3, sustain: 4
@@ -271,22 +274,22 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         #zero c[0], (ing 30, 10, 30, 10,).look
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
-        i = (method :harp)
-        #i.call(c[0], 60*pf, sustain: 4)
-        #i.call(c[1], 50*pf, sustain: 4)
-        #i.call(c[2], 55*pf, sustain: 4)
-        #i.call(c[3], 65*pf, sustain: 2)
-        #i.call(c[4], 30*pf, sustain: 8)
-        #i.call(c[5], 30*pf, sustain: 8)
+        i = (method :piano)
+        i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
+        i.call(c[3], 65*pf, sustain: 2)
+        i.call(c[4], 30*pf, sustain: 8)
+        i.call(c[5], 30*pf, sustain: 8)
 
         puts c
         you = (method :sop)
-        sop2(c[0], 120, sustain: 2.0, mode: 0)
-        with_transpose((ing 12, 7,).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
-        you.call(c[2], 30, sustain: 2.0)
-        you.call(c[3], 30, sustain: 2.0)
-        you.call(c[4], 34, sustain: 8.0)
-        with_transpose 12 {eek c[-2], sustain: (ing 2, 0.125,).look}
+        #sop2(c[0], 120, sustain: 2.0, mode: 0)
+        #with_transpose((ing 12, 7,).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
+        #you.call(c[2], 30, sustain: 2.0)
+        #you.call(c[3], 30, sustain: 2.0)
+        #you.call(c[4], 34, sustain: 8.0)
+        #with_transpose 12 {eek c[-2], sustain: (ing 2, 0.125,).look}
         #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
@@ -296,7 +299,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
           with_transpose -12*0 do
             #strings c[1],1, sustain: 2
             if spread(1,2).tick(:notall)
-              violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
+              #violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
               #violin2 c[-1], 1, sustain: 6.0
             end
           end
@@ -317,7 +320,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       :A3,  _, _, _,       _, _, _, _,
       :A3,  _, _, _,       _, _, _, _,
       ).look
-    zs=(ing
+    z=(ing
       :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, :A4,
       :D4, :Cs4, _, :A3, _, :B3, _, :A4, :A4, :A4, :Fs4, :A4,
       ).look
@@ -325,8 +328,8 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     v=false
     #z=_;v=false
     puts z if look % 9 == 0
-    #harp z
-    #piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
+    harp z
+    piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30, 10, 30, 10,).look
 
     if spread(1,9).look
@@ -335,7 +338,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       end
     end
   end
-  #  sleep 1
+  sleep 1
   if v && zz=(ing _, :A4, _,      _, _, _,         :FS3, _, _,         _, _, _,
                   _, :B4, _,      _, _, _,         :FS4, _, _,         _, _, _,
       ).look
@@ -592,7 +595,7 @@ live_loop :kick, sync: :drums do
           r = 0.25
         end
         with_fx fx, phase: 4/8.0 do
-          smp k, amp: 1*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look#,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
+          smp k, amp: 0*accent*1.1*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, finish: 1.0 , rate: r, v: 0.2, attack: (knit 0.0,12, 0.02,4, 0.0,8).look#,  rate: (knit 1,(6*4)-4, 0.85,4, 1,(6*4)-4, 0.75,4).look
         end
       end
     end

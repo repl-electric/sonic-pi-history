@@ -47,7 +47,7 @@ yes do
 fn="on"
 method("strings_#{fn}").call(:e4, 1)
 method("violin_#{fn}").call(:e5, 1)
-midi_note_on :gs2, channel: 5
+#midi_note_off :gs2, channel: 5
 end
 
 live_loop :percussion, sync: :metro do

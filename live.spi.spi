@@ -131,7 +131,7 @@ live_loop :percussion, sync: :metro do
 
             uncomment do
               #with_fx :reverb, decay: 8, room: 1 do
-                smp pp, amp: 2*2.5, attack: 0.0, start: 0.1, rate: (knit -0.5,32,-0.25,32).look if pp != dd
+                #smp pp, amp: 2*2.5, attack: 0.0, start: 0.1, rate: (knit -0.5,32,-0.25,32).look if pp != dd
               #end
               smp pp, amp: 1*accent+(rand*0.1),
               rate: -2*(knit 1.1,4, 1.0,2).look, pan: (ing

@@ -629,20 +629,15 @@ with_fx :none, mix: 0 do
           f3 = Drip[/fx/,/12/,14]
           f2 = Drip[/fx/,/88/,0]
           f1 = [Drip[/Drip_orig_fx_08/,0]].choose
-
           c1 = CineAmbi[/one shot/,/cymbal/,1]
           c3 = CineAmbi[/one shot/,/cymbal/,3]
           c2 = CineAmbi[/one shot/,/cymbal/,6]
           c4 = CineAmbi[/one shot/,/cymbal/,0]
           s1,s2 = Mountain[/stick/,[4,2]]
           c1 = CineAmbi[/one shot/,/cymbal/,8]
-
           c4 = CineAmbi[/one shot/,/cymbal/,13]
-
           s1 = Tape[/cymbal/,8]
-
           c4 = Tape[/cymbal/,20]
-
           oc1 = CineAmbi[/one shot/,/cymbal/,5]
           t1 = Tape[/tom/,0]
           cd1 =  Drip[/fx/,/12/,1]
@@ -650,7 +645,7 @@ with_fx :none, mix: 0 do
 
           if spread(1,16).look
             accent = spread(1,32).look ? 30 : 20
-            #eek (ring :A1, :E2).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
+            eek (ring :A1, :E2).tick(:in), accent, sustain: 1, at: rand(1.0), mod: rand(1.0), mode: 2
           end
 
           s=(ing

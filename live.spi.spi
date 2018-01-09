@@ -106,7 +106,7 @@ live_loop :percussion, sync: :metro do
           _, _, _, _,     _, _, _, _,
           ).look
 
-        if spread(3,8).look
+        if spread(3,16).look
           smp h1
         end
 

@@ -130,6 +130,7 @@ live_loop :percussion, sync: :metro do
 
             uncomment do
               smp pp, amp: 3.4, attack: 0.0, start: 0.1, rate: -0.25
+              puts pp
               smp pp, amp: 0*accent+(rand*0.1),
               rate: (knit 1.1,4, 1.0,2).look, pan: (ing
                 0.25, 0.25, -0.25, -0.25,  0.25, -0.25,

@@ -48,7 +48,7 @@ method("strings_#{fn}").call(:e4, 1)
 #method("violin_#{fn}").call(:e5, 1)
 midi_note_off :e2, channel: 5
 
-violin_off(:a4, 1)
+violin_x(:a4, 1)
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align

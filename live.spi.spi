@@ -48,6 +48,8 @@ method("strings_#{fn}").call(:e4, 1)
 method("violin_#{fn}").call(:e5, 1)
 midi_note_off :e2, channel: 5
 
+method("violin_on}").call(:a5, 1)
+
 live_loop :percussion, sync: :metro do
   sync :entry if @align
   d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]

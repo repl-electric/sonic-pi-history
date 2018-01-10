@@ -327,8 +327,8 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       ).look
 
     z=(ing
-      _ _ _ _ _ _
-      _ _ _ :A4 _ _
+      _ _ _ _  _  _
+      _ _ _ :Gs4 _ _
       #_ _ _ :A3 _ _
 
       ).look

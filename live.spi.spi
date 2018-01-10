@@ -546,7 +546,7 @@ live_loop :kick, sync: :drums do
     end
     if spread(7,11).look
       (knit true,32,false,0).look ? tick(:i2) : look(:i2)
-      smp tc.take(11).look(:i2), amp: 0.2*(line 0.4, 0.8,128).look, rate: 0.25
+      smp tc.take(11).look(:i2), amp: 0.2*(line 0.4, 0.8,128).look, rate: 0.5
     end
 
     dx = Drip[/fx/,/orig/].shuffle.look  #24

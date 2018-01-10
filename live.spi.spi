@@ -327,7 +327,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       ).look
 
     z=(ing
-      _, _, [:gS4, 3],  [:gS4, 1], _, _,   _, _, [:e4, 3],  _, _, _,
+      _, _, [:GS4, 3],  [:GS4, 1], _, _,   _, _, [:E4, 3],  _, _, _,
       _, _, _,  _, _, _,
       _, _, [:E4, 3],  [:E4, 1], _, _,    _, _, [:CS4, 3],  _, _, _,
       _, _, _,  _, _, _,
@@ -347,8 +347,10 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
 
     v=false
     #z=_;v=false
+    if z
     puts z if look % 9 == 0
-    harp z[0], (ing 60, 60, 60,   50, 50, 40,    60, 60, 60,   50, 50, 40,).look*1, sustain: z[1] if z
+      harp z[0], (ing 60, 60, 60,  50, 50, 40,  60, 60, 60,  50, 50, 40,).look*1, sustain: z[1] if z
+    end
     #piano z, (ing 70, 65, 55,).look * 1.1, sustain: 4/2.0
     #zero z, (ing 30, 10, 30, 10,).look
 

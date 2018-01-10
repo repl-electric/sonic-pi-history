@@ -517,7 +517,7 @@ live_loop :kick, sync: :drums do
       %p{kt[1]} _ _ _   _ _ _ _   tt[8] _ %h{tt[8]} _    %l{tt[8]} _ _ _   %r{tt[8]} _ %h{tt[8]} _   _ _ %l{tt[[2,6].choose]} _)
 
     if k.look == [kt[1]]
-      eek :A3
+      eek :A3, sustain: 0.1
     end
 
     p=_

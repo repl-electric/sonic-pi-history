@@ -547,7 +547,6 @@ live_loop :kick, sync: :drums do
       smp tc.look
     end
 
-
     dx = Drip[/fx/,/orig/].shuffle.look  #24
     r = (ing d1a,d1d,d1e,d1f).look
     k2=(ing

@@ -5,7 +5,7 @@ sop_cc motion: 0.0
 @align=false
 live_loop :Fall_Into_Your_Screen, sync: :metro do
   tick
-  #stop
+  stop
   score =  (ing
     [[[:a2, 2], [:cs4, 2], [:E3, 2], ],  2],
 #,    [[[_, 0.25], ],  2],

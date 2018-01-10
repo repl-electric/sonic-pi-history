@@ -544,7 +544,7 @@ live_loop :kick, sync: :drums do
       smp tt.look
     end
     if spread(7,11).look
-      smp tc.look, rate: -1
+      smp tc.look
     end
 
 

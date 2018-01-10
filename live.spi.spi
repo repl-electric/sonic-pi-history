@@ -50,7 +50,7 @@ method("strings_#{fn}").call(:e4, 1)
 method("violin_#{fn}").call(:e5, 1)
 end
 #midi_note_off :a1, channel: 5
-midi_note_off :fs2, channel: 5
+midi_note_on :fs1, channel: 5
 
 live_loop :percussion, sync: :metro do
   sync :entry if @align

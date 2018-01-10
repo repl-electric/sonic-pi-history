@@ -768,7 +768,7 @@ with_fx :none, mix: 0 do
           end
           #s=_
           with_swing 0.02 {
-          smp s, amp: accent*0.1+(ing
+          smp s, amp: accent*0.2+(ing
             0.5 0 0.125 0 0.5 0 0.8 0.5
             0.5 0 0.125 0 0.8 0 0.125 0
             0.125 0 0.125 0 0.8 0 0.125 0

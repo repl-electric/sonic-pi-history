@@ -300,7 +300,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
           with_transpose -12*0 do
             #strings c[1],1, sustain: 2
             if spread(1,2).tick(:notall)
-              #violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
+              violin note(c[0]-12), 20,  sustain: 4.0, mode: 1
               #violin2 c[-1], 1, sustain: 6.0
             end
           end

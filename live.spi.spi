@@ -540,6 +540,10 @@ live_loop :kick, sync: :drums do
       kt[1] _ _ _      _ _ _ _   _ _ _ _    %l{tt[8]} _ _ _   _ _ _ _   _ _ %l{tt[[2,6].choose]} _
       )
 
+    if spread(1,6).look
+      smp tt[8]
+    end
+
     dx = Drip[/fx/,/orig/].shuffle.look  #24
     r = (ing d1a,d1d,d1e,d1f).look
     k2=(ing

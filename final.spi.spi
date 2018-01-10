@@ -7,7 +7,7 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
   tick
   #stop
   score =  (ing
-    [[[:b2 2] [:D4 2] [:fs3 2] ]  2]
+    [[[:b2 2] [:D4 2] [:fs3 2]]  2]
     [[[_ 0.25] ]  2]
     [[[:fs3 2] [:A4 2] [:Cs3 2]]  2]
     [[[_ 0.25] ]  2]

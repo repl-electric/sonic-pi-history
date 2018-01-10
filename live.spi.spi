@@ -542,7 +542,7 @@ live_loop :kick, sync: :drums do
 
     if spread(3,8).look
       (knit true,48,false,48).look ? tick(:i) : look(:i)
-      smp tt.look(:i), amp: (line 0.9, 1.0,128).look
+      smp tt.look(:i), amp: (line 0.9, 1.0,128).look, rate: 0.8
     end
     if spread(7,11).look
       (knit true,1,false,64).look ? tick(:i) : look(:i)

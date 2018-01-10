@@ -544,7 +544,7 @@ live_loop :kick, sync: :drums do
 
     k=(ing [kt[1]] _ _ _   _ _ _ _   [tt[8]] _ _ _    [tt[8]] _ _ _   %h{tt[8]} _ _ _   _ _ _ f1
            kt[1] _ _ _   _ _ _ _   [tt[8]] _ _ _    [tt[8]] _ _ _   %h{tt[8]} _ _ _   _ _ _ f1)
-      )
+
 
     if spread(7*2,11*3).look
       with_fx :hpf do

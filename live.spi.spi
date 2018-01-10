@@ -203,7 +203,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A3,  [:Cs4,:CS5].choose, :E3, :B4], [:CS3, :E4, :GS4, :D4],
         _,
         [:A2, :CS3, :E3, :A3], [:E3, :Gs4, :CS4, :Fs4], [:E3, :Fs4, :B3, :Fs4],
-        _,
+        #_,
         #[:E3,  :GS4, :B3, :Fs4], [:D3,  :Gs4, :A3, :E4], [:D3,  :Fs4, :A3, :E4],
         _)
       cp2 = (ring

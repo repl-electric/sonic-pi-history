@@ -9,7 +9,7 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
   score =  (ing
     [[[:fs3 2] [:A4 2] [:CS4 2] ]  2]
     [[[_ 0.25] ]  2]
-    [[[:B3 2]  [:D4 2] [:Fs4]]  2]
+    [[[:B3 2]  [:D4 2] [:Fs4 2]]  2]
     [[[_ 0.25] ]  2]
 
  #   [[[:gS4 0.25]]                             0.5]

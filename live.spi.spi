@@ -542,6 +542,7 @@ live_loop :kick, sync: :drums do
       kt[1] _ _ _      _ _ _ _   tt[8] _ %h{tt[8]} _    %l{tt[8]} _ _ _   %r{tt[3]} _ %h{tt[8]} _   _ _ %l{tt[[2,6].choose]} _)
 
     if spread(6,36).look
+      smp tt[8]
       #(knit true,48,false,48).look ? tick(:i) : look(:i)
       #smp tt.look(:i), amp: (line 0.9, 1.0,128).look, rate: 0.25
     end

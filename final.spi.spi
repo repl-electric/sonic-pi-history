@@ -48,7 +48,7 @@ end
 
 eek :Cs4, 20, mode: 2, sustain: 4
 yes do
-fn="on"
+fn="off"
 method("strings_#{fn}").call(:gs4, 1)
 method("violin_#{fn}").call(:gs5, 1)
 end

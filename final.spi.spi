@@ -134,7 +134,7 @@ live_loop :percussion, sync: :metro do
                 -0.5-fuzz, 1,-0.5,31,
                 -0.25-fuzz,1,-0.25,31).look
               end
-              smp pp, amp: (3+accent+(rand*0.1))*1,
+              smp pp, amp: (3+accent+(rand*0.1))*0,
               rate: -2*(knit 1.1,4, 1.0,2).look, pan: (ing
                 0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
                 0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,

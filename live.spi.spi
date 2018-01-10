@@ -332,7 +332,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       _ _ [:E4 3]  [:E4 1] _ _    _ _ [:CS4 3]  _ _ _
       _ _ _  _ _ _
       _ _ [:B4 3]  [:B4 1] _ _    _ _ [:FS4 4]  _ _ _
-      _ _ [:A4]  _ _ _                _ _ _  _ _ _
+      _ _ [:A4 2]  _ _ _                _ _ _  _ _ _
 
       #:GS4 :GS4 :GS4 _ :B4 _
 

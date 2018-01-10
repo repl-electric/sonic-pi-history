@@ -344,7 +344,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     #z=_;v=false
     if z
       puts z if look % 9 == 0
-      harp z[0], (ing 60 60 60  50 50 40  60 60 60  50 50 40).look*1.2, sustain: z[1]
+      harp z[0], (ing 60 60 60  50 50 40  60 60 60  50 50 40).look*1.1, sustain: z[1]
       #piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
       #zero z, (ing 30 10 30 10).look
     end

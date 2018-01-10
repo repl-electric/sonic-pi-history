@@ -550,7 +550,8 @@ live_loop :kick, sync: :drums do
       eek :A3
     end
 
-    if spread(7*2,11*3).look
+    p=_
+    if spread(7*2,11*3).look && p
       with_fx :hpf do
         smp tt[8], amp: 0.125
       end

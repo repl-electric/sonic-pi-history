@@ -547,6 +547,9 @@ live_loop :kick, sync: :drums do
       %p{kt[1]}, _, _, _,   _, _, _, _,   tt[8], _, %h{tt[8]}, _,    %l{tt[8]}, _, _, _,   %r{tt[3]}, _, %h{tt[8]}, _,   _, _, %l{tt[[2, 6].choose]}, _,)
 
 
+    if k.look == [kt[1]]
+      eek :A2
+    end
 
 
     if spread(7*2,11*3).look

@@ -213,7 +213,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         # _,
         [:A2, :CS3, :E3], [:E3, :A4,  :CS4], [:E3, :Fs4, :B4],
           _,
-        [:E3,  :GS3, :B4], [:D3,  :Gs4, :A3], [:D3, :Gs4, :A3],
+        [:E3,  :GS3, :B4], [:D3,  :Gs4, :A3], [:D3, :Fs4, :A3],
         _,
         # [:Fs3, :B3, :D4],  [:B3,  :Fs4, :D4], [:FS3, :A3, :Cs4],
         # [:E3,  :Gs3, :B3], [:A3,  :B3,  :E4], [:A3,  :D4,  :E4],

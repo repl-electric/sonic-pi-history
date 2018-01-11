@@ -47,7 +47,7 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sustain: 4
-yes do
+no do
 fn="on"
 method("strings_#{fn}").call(:e4, 1)
 method("violin_#{fn}").call(:e5, 1)
@@ -844,7 +844,7 @@ with_fx :none, mix: 0 do
   end
 end
 
-live_loop(:metro)do
+live_loop(:metro) do
   tick;
   cue("16") if look % 16.0 == 0.0
   cue("24") if look % 24.0 == 0.0

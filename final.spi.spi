@@ -845,7 +845,7 @@ with_fx :none, mix: 0 do
 end
 
 live_loop(:metro) do
-  tick;
+  tick
   cue("16") if look % 16.0 == 0.0
   cue("24") if look % 24.0 == 0.0
   cue("18") if look % 18.0 == 0.0

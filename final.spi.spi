@@ -298,7 +298,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
-          puts "#{@cp[1]} c[1]"
+          puts "#{@cp[1]} #{c[1]}"
           if @cp && @cp[1] != c[1]
             puts "HIT IT"
           @cp = c

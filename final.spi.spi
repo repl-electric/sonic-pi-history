@@ -524,7 +524,7 @@ live_loop :kick, sync: :drums do
 
 
     k=(ing
-      [kt[1]] _ _ _   tt[8] _ _ _            %l{tt[8]} _ _ _   %l{tt[8]} _ _ f1
+      [kt[1]] _ _ _   tt[8] _ _ _            %l{tt[8]} _ _ _   %h{tt[8]} _ _ f1
       %b{kt[1]} _ _ _    _ _ _ _             _ _ _ _   _ _ _ f1
       )
 

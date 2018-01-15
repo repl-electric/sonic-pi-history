@@ -531,7 +531,7 @@ live_loop :kick, sync: :drums do
       )
 
     if k.look != _
-     eek :a5, 120, sustain: 0.25
+     eek :a5, 120, sustain: 0.5
     end
 
     #p=_

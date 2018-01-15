@@ -238,7 +238,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         [:A3, :D3, :E4],  [:A2, :A3, :Cs4, :E3, :B4],
         _,
         )
-      #tick_reset(:inner)
+      tick_reset(:inner)
       c=cp.tick(:inner)
       @cp ||= c
       if !c
@@ -279,22 +279,22 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
         zero c[0], (ing 30 10 30 10).look
         #with_transpose 12 { eek c[2], 60, sustain: 4,mode: 2}
 
-        i = (method :harp)
-        #i.call(c[0], 100*pf, sustain: 4)
-        #i.call(c[1], 50*pf, sustain: 4)
-        #i.call(c[2], 55*pf, sustain: 4)
-        #i.call(c[3], 65*pf, sustain: 2)
-        #i.call(c[4], 30*pf, sustain: 8)
-        #i.call(c[5], 30*pf, sustain: 8)
+        i = (method :piano)
+        i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
+        i.call(c[3], 65*pf, sustain: 2)
+        i.call(c[4], 30*pf, sustain: 8)
+        i.call(c[5], 30*pf, sustain: 8)
 
         puts c
         you = (method :sop)
         #sop2(c[0], 120, sustain: 2.0, mode: 0)
-        with_transpose((ing 12 7).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
-        you.call(c[2], 30, sustain: 2.0)
-        you.call(c[3], 30, sustain: 2.0)
-        you.call(c[4], 34, sustain: 8.0)
-        with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
+        #with_transpose((ing 12 7).look){you.call(c[1], 15, sustain: 2.0, mode: 0)}
+        #you.call(c[2], 30, sustain: 2.0)
+        #you.call(c[3], 30, sustain: 2.0)
+        #you.call(c[4], 34, sustain: 8.0)
+        #with_transpose 12 {eek c[-2], sustain: (ing 2 0.125).look}
         #at{sleep 1; sop_cc motion: [0.2,0.1,0.0].choose}
 
         at{sleep 0.25; with_transpose(-12){violin c[1], 10, sustain: 0.5}}
@@ -349,8 +349,8 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     #z=_;v=false
     if z
       puts z if look % 9 == 0
-      #harp z[0], (ing 60 60 60  50 50 40  60 60 60  50 50 40).look*1.1, sustain: z[1]
-      #piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
+      harp z#[0], (ing 60 60 60  50 50 40  60 60 60  50 50 40).look*1.1, sustain: z[1]
+      piano z, (ing 70 65 55).look * 1.1, sustain: 4/2.0
       #zero z, (ing 30 10 30 10).look
     end
 
@@ -587,13 +587,13 @@ live_loop :kick, sync: :drums do
 #  }
 
     k=k.look
-    k=_
+    #k=_
     yes{
       if k && spread(1,64).look
         cue(:sudden)
         violin_x
         strings_x
-        #sync :entry
+        sync :entry
       end
     }
     sidechain if k && spread(1,4).look

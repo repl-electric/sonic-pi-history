@@ -618,13 +618,13 @@ live_loop :kick, sync: :drums do
 #  }
 
     k=k.look
-    k=_
+    #k=_
     yes{
       if k && spread(1,64).look
         cue(:sudden)
         violin_x
         strings_x
-        #sync :entry
+        sync :entry
       end
     }
     sidechain if k && spread(1,4).look

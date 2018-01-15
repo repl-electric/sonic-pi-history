@@ -530,7 +530,7 @@ live_loop :kick, sync: :drums do
       %b{kt[1]} _ _ _   _ _ _ _   k1 _ _ _   _ _ _ _
       )
 
-    if s   k.look != _
+    if k.look != _
       piano2 :a5, 40, sustain: 0.125
     end
 

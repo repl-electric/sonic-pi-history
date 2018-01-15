@@ -523,7 +523,7 @@ live_loop :kick, sync: :drums do
       %p{kt[1]} _ _ _   _ _ _ _   tt[8] _ %h{tt[8]} _    %l{tt[8]} _ _ _   %r{tt[8]} _ %h{tt[8]} _   _ _ %l{tt[[2,6].choose]} _)
 
 
-    m = Mountain[/subkick/,0]
+    m = Mountain[/subkick/,1]
     k=(ing
       m _ _ _   _ _ _ _    _ _ _ _   _ _ m _
       )

@@ -345,7 +345,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
       :gs4 :Cs4 _ :A3 _ :B3 _ :A4 :A4 :A4 :Fs4 :A4
       ).look
 
-    v=true
+    v=false
     #z=_;v=false
     if z
       puts z if look % 9 == 0
@@ -361,37 +361,6 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     end
   end
   sleep 1
-
-  if v && zz=(ing _ :A4 _      _ _ _         :FS3 _ _         _ _ _
-                  _ :B4 _      _ _ _         :FS4 _ _         _ _ _
-      ).look
-    with_transpose 0*(ing 0).look do
-      violin zz, 12, sustain: 1
-      #violin2 z, 50, sustain: 1.5, shape: 0.58 #, deform: 0.5, mul: 0, shape: 0.58, at: 0
-    end
-  end
-  if v && zz=(ing _ _ :E5     _ :GS5 _      _ _ _      :cs3 _ _
-                  _ _ :D5     _ _ _         _ _ _      :cs3 _ _
-      ).look
-    with_transpose 0 do
-      violin2 zz, 15, sustain: 2.0
-    end
-    midi zz, 1, channel: 9, sustain: 4 if  zz == :GS5
-  end
-  if v && zz=(ing _ _ _      :E3 _ _         _ _ _         _ _ _
-                  _ _ _      :D3 _ _         _ _ _         _ _ _
-      ).look
-    violin zz, 26, sustain: 1
-    midi zz, 2, channel: 9
-  end
-  if false #z==:Cs4
-    at{sleep 1/2.0;
-      violin2 :E3, 1,  sustain: 4.0
-      violin  :E4, 10, sustain: 4.0
-      violin_cc at: 0.1
-    }
-  end
-
   sleep 1/2.0
 end
 

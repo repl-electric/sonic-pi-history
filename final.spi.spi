@@ -531,7 +531,7 @@ live_loop :kick, sync: :drums do
       )
 
     if k.look != _
-      piano2 :cs2, 120, sustain: 0.125
+      piano2 :b1, 120, sustain: 0.125
     end
 
     #p=_

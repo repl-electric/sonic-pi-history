@@ -3,6 +3,6 @@ live_loop(:metro) do
 
   midi :Fs2,127, channel: 6, port: :iac_bus_1
 
-  sleep 1.0/4.0
+  sleep 1.0
 
 end

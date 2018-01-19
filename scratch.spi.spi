@@ -2,8 +2,7 @@ live_loop(:metro) do
   tick
   4.times{
   midi (ing
-        :C2 :cs2 :d2 :ds2
-            :E2 :f2 :fs2 :g2
+        d2
 
         ).look, 1, channel: 6, port: :iac_bus_1
 

@@ -3,4 +3,5 @@ live_loop(:metro) do
   midi_start if tick == 0
   midi_clock_beat 1.0, port: :iac_bus_1
   sleep 1.0
+  puts "a"
 end

@@ -1,6 +1,6 @@
 live_loop(:metro) do
   tick
-  midi (ing :fs2 :fs2).look, 127, channel: 6, port: :iac_bus_1
+  midi (ing :fs2 :a2).look, 127, channel: 6, port: :iac_bus_1
   4.times{
     sleep 1.0/4.0
   #  midi :as2,127, channel: 6, port: :iac_bus_1

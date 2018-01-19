@@ -2,9 +2,9 @@ live_loop(:metro) do
   tick
   4.times{
   midi (ing
-        :e2
+        :e2,
 
-        ).look, 20, channel: 6, port: :iac_bus_1
+        ).look, 30, channel: 6, port: :iac_bus_1
 
     sleep 1.0/4.0
   #  midi :as2,127, channel: 6, port: :iac_bus_1

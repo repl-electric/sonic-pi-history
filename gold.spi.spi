@@ -412,7 +412,7 @@ live_loop :kick, sync: :drums do
       5, _, [2], 3,    _, [5], 5, 5,       2, _, _, _,    5, _, _, _,
       _, _, _, _,      5, _, _, _,       _, _, _, _,    5, _, _, _,
       ).look
-    accent=100
+    accent=110
     if s && s.is_a?(Array)
       s = s[0]
       eek :gs5, 127, sustain: 1/8.0, mode: 0

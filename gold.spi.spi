@@ -415,7 +415,7 @@ live_loop :kick, sync: :drums do
     accent=80
     if s && s.is_a?(Array)
       s = s[0]
-      eek :gs5, 127, sustain: 1/8.0, mode: 1
+      eek :gs5, 127, sustain: 1/8.0, mode: 0
       accent=100+rand_i(5)
     end
     if spread(1,8).look

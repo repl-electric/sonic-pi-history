@@ -433,7 +433,7 @@ live_loop :kick, sync: :drums do
     #sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
 
     if spread(2,12).rotate(4).look
-      mt (ing 2 3).look,80
+      mt (ing 2 3 2).look, 80
     end
     c5 = Tape[/cymbal/,[7,7,7,7]].look
 

@@ -461,7 +461,7 @@ live_loop :kick, sync: :drums do
             s = s[0]
           end
 
-    s=_
+    #s=_
     with_swing 0.02 {
       smp s, amp: accent*0.5+(ing
         0.5 0 0.125 0 0.5 0 0.8 0.5

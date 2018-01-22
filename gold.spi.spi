@@ -417,8 +417,9 @@ live_loop :kick, sync: :drums do
       s = s[0]
       eek :gs5, 127, sustain: 1/8.0, mode: 1
       accent=100+rand_i(5)
-    else
-      eek_cc mode: 2
+    end
+    if spread(1,32).look
+    eek_cc mode: 2
     end
     if s#spread(2,12).rotate(4).look
       mt (ing s).look, accent

@@ -411,7 +411,6 @@ live_loop :kick, sync: :drums do
     s=(ing
       _ _ 2 3    _ _ _ _       7 _ _ _    5 _ _ _
       _ _ _ _    5 _ _ _       7 _ _ _    5 _ _ _
-
       ).look
 
     if s#spread(2,12).rotate(4).look

@@ -432,7 +432,7 @@ live_loop :kick, sync: :drums do
     k=k.map{|s| look % 32 == 0 ? s : _ }
     #sop_mode (ing 0, 1, 2, 3, 4, 5, 6,).look#, motion: (ing 0.0, 1.0,).look
 
-    if spread(2,12).rotate(4).look
+    if spread(8,12).rotate(4).look
       mt 2,80
     end
     c5 = Tape[/cymbal/,[7,7,7,7]].look

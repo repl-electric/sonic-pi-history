@@ -55,9 +55,8 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sus: 4
-no { vio_shot(:d, "on") }
-strings_x
-violin_x
+no { vioshot(:d, "on") }
+no { vioshot_x }
 #:gs    :b   :d
 
 piano :gs3

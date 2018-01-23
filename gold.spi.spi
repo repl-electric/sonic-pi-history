@@ -57,8 +57,9 @@ end
 #eek :Cs4, 20, mode: 2, sus: 4
 yes do
   fn="off"
+  r="a"
   method("strings_#{fn}").call(:a4, 8)
-  method("violin_#{fn}").call(:a5, 8)
+  with_transpose 12{ method("violin_#{fn}").call(:a5, 8)}
 end
 
 piano :gs3

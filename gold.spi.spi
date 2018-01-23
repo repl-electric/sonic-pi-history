@@ -55,11 +55,9 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sus: 4
-yes do
-  vio_shot(:a, "off")
-end
+yes { vio_shot(:a, "off") }
 
-piano :gs3
+#piano :gs3
 #midi_note_on :a1, channel: 5
 
 live_loop :percussion, sync: :metro do

@@ -55,10 +55,9 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
 end
 
 #eek :Cs4, 20, mode: 2, sus: 4
-no { vioshot(:gs4, "on") }
-no { vioshot(:b4, "on") }
-no { vioshot(:d5, "on") }
-
+yes { vioshot(:gs4, "off") }
+yes { vioshot(:b4, "off") }
+yes { vioshot(:d5, "off") }
 
 #yes { vioshot_x }
 #:gs    :b   :d

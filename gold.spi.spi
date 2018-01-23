@@ -63,7 +63,7 @@ end
 #yes { vioshot_x }
 #:gs    :b   :d
 
-piano :Gs3
+piano Gs3
 #midi_note_on :a1, channel: 5
 
 live_loop :percussion, sync: :metro do

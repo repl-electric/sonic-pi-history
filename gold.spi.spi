@@ -57,8 +57,8 @@ end
 #eek :Cs4, 20, mode: 2, sus: 4
 yes do
   fn="off"
-  method("strings_#{fn}").call(:fs4, 8)
-  method("violin_#{fn}").call(:fs5, 8)
+  method("strings_#{fn}").call(:gs4, 8)
+  method("violin_#{fn}").call(:gs5, 8)
 end
 #midi_note_on :a1, channel: 5
 

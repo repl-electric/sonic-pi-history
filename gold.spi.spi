@@ -56,7 +56,7 @@ end
 
 #eek :Cs4, 20, mode: 2, sus: 4
 yes do
-  vio_shot(:a, "on")
+  vio_shot(:a, "off")
 end
 
 piano :gs3

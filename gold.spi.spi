@@ -60,6 +60,8 @@ yes do
   method("strings_#{fn}").call(:gs4, 8)
   method("violin_#{fn}").call(:gs5, 8)
 end
+
+piano :gs3
 #midi_note_on :a1, channel: 5
 
 live_loop :percussion, sync: :metro do

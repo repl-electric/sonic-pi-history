@@ -56,7 +56,7 @@ end
 
 #eek :Cs4, 20, mode: 2, sus: 4
 yes do
-  fn="off"
+  fn="on"
   r="b"
   method("strings_#{fn}").call("#{r}4", 8)
   with_transpose 12{ method("violin_#{fn}").call("#{r}5", 8)}

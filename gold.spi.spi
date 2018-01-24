@@ -313,7 +313,9 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,z2,z3,v=nil;tick
     end
   end
   sleep 1
-  with_transpose -12 { zero zs.look(offset: -1),1, sustain: 8} if spread(1,2).rotate(1).look
+  if z
+    with_transpose -12 { zero zs.look(offset: -1),1, sustain: 8} if spread(1,2).rotate(1).look
+    end
   #eek z, sus: 6 if spread(1,3).look
   sleep 1/2.0
 end

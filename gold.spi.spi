@@ -327,7 +327,7 @@ end
 
 live_loop :thing, sync: :metro do
   tick
-  harp :a3, 80
+  harp :b2, 80
   sleep 1/2.0
 end
 

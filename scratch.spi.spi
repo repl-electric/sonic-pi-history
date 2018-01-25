@@ -5,7 +5,7 @@ live_loop(:metro) do
 
 
 
-    midi_cc 100, 0.5, port: :iac_bus_1, channel: 9
+    midi_cc 100, (ing 0 50 100).look, port: :iac_bus_1, channel: 9
 
     sleep 1.0
   #  midi :as2,127, channel: 6, port: :iac_bus_1

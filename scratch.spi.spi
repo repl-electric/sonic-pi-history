@@ -1,0 +1,17 @@
+live_loop(:metro) do
+  tick
+
+
+        zero c[0], (ing 30 10 30 10).look
+
+  4.times{
+    #  midi (ing :g2).look, 80, channel: 6, port: :iac_bus_1
+
+
+
+  #  midi_cc 100, (ing 0 50 100).look, port: :iac_bus_1, channel: 9
+
+    sleep 1.0
+  #  midi :as2,127, channel: 6, port: :iac_bus_1
+  }
+end

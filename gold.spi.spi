@@ -312,7 +312,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
     end
   end
   sleep 1/2.0
-  m={:gs4 => :minor, :Cs4 => :minor, :A3 => :major}
+  m={ :gs4 => :minor, :Cs4 => :minor, :A3 => :major}
 
   with_transpose -12  { strings zero chord(zs.look(offset: 1),m[zs.look(offset: 1)])[1],55, sustain: 12} if spread(1,2).rotate(1).look
   #with_transpose  9   { strings zero zs.look(offset: 2),11, sustain: 12} if spread(1,2).rotate(1).look

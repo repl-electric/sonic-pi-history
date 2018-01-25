@@ -325,7 +325,6 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
   sleep 1/2.0
 end
 
-
 live_loop :kick, sync: :drums do
   p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
   k3 = Tape[/tom/,23]

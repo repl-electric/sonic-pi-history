@@ -318,7 +318,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
 #  with_transpose   0 { zero chord(zs.look(offset: 1),m[zs.look(offset: 1)])[0],  1, sustain: 12} if spread(1,2).rotate(1).look
 #  with_transpose   0 { zero :a5, 20, sustain: 12} if spread(1,2).rotate(0).look
 
-  zero_cc more: 0.9, filter: 1.0, shape: 0.7, spread: 0.8
+  zero_cc more: 0.9, filter: 0.0, shape: 0.7, spread: 0.8
 
   if spread(1,2).rotate(1).look
     cue :fuck

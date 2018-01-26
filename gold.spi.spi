@@ -1,7 +1,7 @@
 AM={ :gs => :minor, :cs => :minor, :a => :major, :b => :minor, :e => :major, :fs => :minor, :d => :major}
 def ct(t)
   t=t[0..-2].downcase
-  puts "T:#{t}"
+  puts "T:#{t} #{AM[t]}"
   AM[t]
 end
 

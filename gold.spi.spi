@@ -343,7 +343,6 @@ end
 
 live_loop :sssng, sync: :metro do
   tick
-  if spread(1,2).rotate(1).look
     16.times{
       i=(ing _ 1 1 _ 1 1 _ 1 _  1 1   _ 1 1 _ 1).look
       tick
@@ -352,9 +351,7 @@ live_loop :sssng, sync: :metro do
         smp Tape[/high/,49],amp: 0.5
       end
       sleep 1/8.0
-
     }
-  end
 end
 
 

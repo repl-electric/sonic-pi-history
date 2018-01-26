@@ -1,4 +1,9 @@
-AM={ :Gs4 => :minor, :Cs4 => :minor, :A3 => :major, :B3 => :minor, :E4 => :major, :A4 => :major, :Fs4 => :minor, :D4 => :major}
+AM={ :gs => :minor, :cs => :minor, :a => :major, :b => :minor, :e => :major, :fs => :minor, :d4 => :major}
+def chord_type(t)
+  t=[0..-1].downcase
+  AM[t]
+end
+
 sop_cc motion: 0.0
 #sop_mode 0
 #sop2_cc motion: 0.2

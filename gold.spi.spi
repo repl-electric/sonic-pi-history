@@ -3,7 +3,7 @@ def ct(t)
   am[(t[0..-2].downcase.to_sym)] if t
 end
 
-sop_cc motion: 0.0
+sop_cc motion: 1.0
 #sop_mode 0
 #sop2_cc motion: 0.2
 #sop2_cc motion: 0.1

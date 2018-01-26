@@ -242,9 +242,9 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
 
         pf=1.1
         i= (method :harp)
-        i.call(c[0], 60*pf, sus: 4)
-        i.call(c[1], 50*pf, sus: 4)
-        i.call(c[2], 55*pf, sus: 4)
+        i.call(c[0], 60*pf, sustain: 4)
+        i.call(c[1], 50*pf, sustain: 4)
+        i.call(c[2], 55*pf, sustain: 4)
 
         #piano (ing :Gs6 _ :FS6 _).look(:inner)
 

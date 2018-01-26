@@ -325,9 +325,9 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
       16.times{
         tick
         i=(ing _ 1 1 _ 1 1 _ 1 _ _ 1   1 1 1 1).look
-      if i
-        smp Tape[/lo/,1]
-      end
+        if i
+          smp Tape[/lo/,2]
+        end
         sleep 1/8.0
       }
     }

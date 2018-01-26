@@ -335,7 +335,7 @@ live_loop :sssng do
     tick
     i=(ing 1.0 _ _ 0.5 _ _ 0.25 _ 1.0  _ _   0.5 _ _ 0.125 _).look
     if i
-      smp Dust[/crack/,0], amp: i, pan: (ing -0.25 0.25).look, finish: (ine 0.02 1.0, 100).look, start: (ine 0.0 1.0,100).look
+      smp Dust[/crack/,0], amp: i#, pan: (ing -0.25 0.25).look, finish: (ine 0.02 1.0, 100).look, start: (ine 0.0 1.0,100).look
     end
     sleep 1/8.0
   }

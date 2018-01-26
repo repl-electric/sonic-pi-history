@@ -1,4 +1,4 @@
-AM={ :gs4 => :minor, :Cs4 => :minor, :A3 => :major, :B3 => :minor, :E4 => :major, :A4 => :major, :Fs4 => :minor, :D4 => :major}
+AM={ :Gs4 => :minor, :Cs4 => :minor, :A3 => :major, :B3 => :minor, :E4 => :major, :A4 => :major, :Fs4 => :minor, :D4 => :major}
 sop_cc motion: 0.0
 #sop_mode 0
 #sop2_cc motion: 0.2

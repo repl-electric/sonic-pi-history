@@ -230,7 +230,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
         with_transpose -12 do
           #violin c[1], 88, sus: 2
         end
-        pf=4.0
+        pf=8.0
       with_transpose 12*0 do
         zero c[0], (ing 30 10 30 10).look
         #with_transpose 12 { eek c[2], 60, sus: 4,mode: 2}

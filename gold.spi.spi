@@ -335,7 +335,7 @@ live_loop :sssng do
   sync :zero
   16.times{
     tick
-    i=(ing 1.0 _ _ 0.5 _ _ 0.25 _ 1.0  _ _   0.5 _ _ 0.1 _).look
+    i=(ing 1.0 _ _ 0.5 _ _ 0.25 _ 1.0  _ _   0.5 _ _ 0.125 _).look
     if i
       smp Tape[/high/,49], amp: i
     end

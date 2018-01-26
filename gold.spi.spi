@@ -329,8 +329,8 @@ no{
 #  with_transpose   12 { zero chord(zs.look(offset: 1),ct(zs.look(offset: 1)))[0],  1, sustain: 12} if spread(1,2).rotate(1).look
 #  with_transpose   0 { zero :a5, 20, sustain: 12} if spread(1,2).rotate(0).look
     zero_cc more: 0.5, filter: 0.1, shape: 0.8, spread: 0.8
+    cue :zero if spread(1,2).rotate(0).look
   }
-  cue :zero if spread(1,2).rotate(0).look
 
   #with_transpose -12   { strings zero chord(zs.look(offset: 1),m[zs.look(offset: 1)])[-1], 1, sustain: 12} if spread(1,2).rotate(1).look
   #with_transpose  9   { strings zero zs.look(offset: 2),11, sustain: 12} if spread(1,2).rotate(1).look

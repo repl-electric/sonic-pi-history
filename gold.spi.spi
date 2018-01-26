@@ -1,8 +1,10 @@
 AM={ :gs => :minor, :cs => :minor, :a => :major, :b => :minor, :e => :major, :fs => :minor, :d => :major}
 def ct(t)
-  t=t[0..-2].downcase.to_sym
-  puts "T:#{t} #{AM[t]}"
-  AM[t]
+  if t
+    t=t[0..-2].downcase.to_sym
+    puts "T:#{t} #{AM[t]}"
+    AM[t]
+  end
 end
 
 sop_cc motion: 0.0

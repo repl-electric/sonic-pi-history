@@ -448,7 +448,7 @@ live_loop :kick, sync: :drums do
       _ _ _ _      5 _ _ _       _ _ _ _    5 _ _ _
       ).look
     accent=80
-    s=_
+    #s=_
     if s && s.is_a?(Array)
       s = s[0]
       eek :gs5, 127, sustain: 1/8.0, mode: 0
@@ -507,7 +507,7 @@ live_loop :kick, sync: :drums do
       _ _ _ _       %l{tc[6]} _ _ _   _ _ _ _   _ _ _ k7
       _ _ _ _  _ _ _ _                _ _ %e{tc[6]} _   _ _ [f1 0.99] _)
 
-    #p=_
+    p=_
     if spread(7*2,11*3).look && p
       with_fx :hpf do
         #smp tt[8], amp: 0.125

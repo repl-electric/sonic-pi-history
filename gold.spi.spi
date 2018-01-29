@@ -568,7 +568,7 @@ live_loop :kick, sync: :drums do
 
     k=k.look
     #k=_
-    ye{
+    yes{
       if spread(1,64).rotate(62).look
         midi :c5, 100, sustain: 1, channel: 6
       end

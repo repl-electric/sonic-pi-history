@@ -319,7 +319,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs,z2,z3,v=nil;tick
     end
   end
   sleep 1/2.0
-yes{
+no{
     with_transpose   0 { zero chord(zs.look(offset: 1),ct(zs.look(offset: 1)))[1],  1, sustain: 12 } if spread(1,2).rotate(1).look
     with_transpose -12 { zero chord(zs.look(offset: 1),ct(zs.look(offset: 1)))[2],  1, sustain: 12}  if spread(1,2).rotate(1).look
     #with_transpose   12 { zero chord(zs.look(offset: 1),ct(zs.look(offset: 1)))[0],  1, sustain: 12} if spread(1,2).rotate(1).look
@@ -347,7 +347,6 @@ live_loop :sssng do
     sleep 1/8.0
   }
 end
-
 
 live_loop :kick, sync: :drums do
   p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]

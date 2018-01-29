@@ -571,7 +571,7 @@ live_loop :kick, sync: :drums do
     yes{
       if k && spread(1,64).look
         cue(:sudden)
-        midi :gs5, 5, sustain: 1, channel: 6
+        midi :a5, 5, sustain: 1, channel: 6
         violin_x
         strings_x
         sync :entry

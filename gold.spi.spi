@@ -22,7 +22,7 @@ live_loop :Fall_Into_Your_Screen, sync: :metro do
     # #sop :a5,      sus: 2
      eek :a3,      sus: 12, mode: 2
     # sleep 1
-     eek :cs5,60, sus: 12, mode: 0
+     eek :cs5,     sus: 12, mode: 2
     # sleep 1
     # piano2 :e4,120, sus: 12
     # sleep 1

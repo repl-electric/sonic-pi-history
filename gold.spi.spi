@@ -568,9 +568,9 @@ live_loop :kick, sync: :drums do
 
     k=k.look
     #k=_
-    yes{  #Gs A B C D E F
+    no{  #Gs A B C D E F
       if spread(1,64).rotate(-64+(16)).look   #4*1/8
-        midi :d5,5,sustain: 1/8.0*(16), channel: 6
+        midi :e5,5,sustain: 1/8.0*(16), channel: 6
       end
       if k && spread(1,64).look
         cue(:sudden)

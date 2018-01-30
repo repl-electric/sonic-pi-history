@@ -451,10 +451,8 @@ live_loop :kick, sync: :drums do
       k1 _ _ _       %l{tc[6]} _ _ _  k4 _ _ _   _ _ _ k7
       k1 _ _ _       _ _ _ _          k5 _ %e{tc[6]} _   _ _ [f1 0.99] _)
 
-
-
     k=k.map{|s| look % 32 == 0 ? s : _ }
-    #sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
+    sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
 
     s=(ing
       5 _ [2] 3    _ [5] 5 5       2 _ _ _    5 _ _ _

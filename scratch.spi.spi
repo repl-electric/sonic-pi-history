@@ -4,11 +4,11 @@ live_loop(:metro) do
 
 #  zero :A3, (ing 30 10 30 10).look
 
-  4.times{
+  1.times{
     #  midi (ing :g2).look, 80, channel: 6, port: :iac_bus_1
 
 
-    midi_cc 101, (ing 127 ).look, port: :iac_bus_1, channel: 10
+    midi_cc 101, (ing 0 ).look, port: :iac_bus_1, channel: 10
 
 #    sop :A3, cutoff: 1.0
 

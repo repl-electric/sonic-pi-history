@@ -4,5 +4,5 @@ live_loop :goal do
   piano :A3, sus: 2
 
 
-  sleep 1
+  sleep 4
 end

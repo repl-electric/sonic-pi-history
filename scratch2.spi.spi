@@ -1,8 +1,0 @@
-live_loop :goal do
-  tick
-
-  piano :A3, sus: 1.0
-
-
-  sleep 4
-end

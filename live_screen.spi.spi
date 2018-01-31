@@ -55,7 +55,7 @@ live_loop :zFall_Into_Your_Screen, sync: :metro do
     eek (ing :e4 :gs4 :e4 :b4 _ _).look, (ing 100 120).look(:missing), sus: 3.0, at: 0.0, mod: 0.0
   end
 
-  with_transpose -12 {piano2 c[1], 60, sustain: 2 }
+  with_transpose -12 {piano2 c[1], 60, sus: 2 }
 
   with_transpose -12*0 do
     #harp root(c),10

@@ -30,7 +30,7 @@ live_loop :zFall_Into_Your_Screen, sync: :metro do
   c=s[0]
   if spread(1,1).look
     puts :hit
-    musicbox c[0][0], sustain: 12
+    musicbox c[0][0], sus: 12
   end
   at {
     # #sop :a5,      sus: 2
@@ -48,7 +48,7 @@ live_loop :zFall_Into_Your_Screen, sync: :metro do
   with_transpose 0 {
     #piano3 root(c),(ing 127 120).look,sus: 2
   }
-  #midi :a6, 15, sustain: 12, channel: 6
+  #midi :a6, 15, sus: 12, channel: 6
 
   if !c[0][0]
     puts :hot

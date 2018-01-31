@@ -29,7 +29,7 @@ live_loop :zFall_Into_Your_Screen, sync: :metro do
   s=score.look
   c=s[0]
   if spread(1,2).look
-    zero :B1, sustain: 6
+    zero :B4, sustain: 6
   end
   at {
     # #sop :a5,      sus: 2

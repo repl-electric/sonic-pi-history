@@ -1,7 +1,7 @@
 live_loop :goal do
   tick
 
-  piano :A3, sustain: 4
+  piano :A3, sustain: 1/8.0
 
 
   sleep 4

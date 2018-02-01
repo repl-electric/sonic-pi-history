@@ -1,4 +1,4 @@
-live_loop :Fall_Out_Of_Your_Screen, sync: :metro do
+live_loop :Fall_Out_Of_Your_Screen do
   tick
 #  stop
   score =  (ing

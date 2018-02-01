@@ -4,7 +4,7 @@ live_loop :goal do
 #  piano :A3, sus: 1.0
 
 
-  zero :A3, sus: 4, noise: 0.8, more: 1.0, wet: 0.9, pulse: 0.5
+  zero :A3, sus: 4, noise: 0.9, more: 1.0, wet: 0.9, pulse: 0.5
 
 
   sleep 4

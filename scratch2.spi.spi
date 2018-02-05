@@ -6,8 +6,8 @@ live_loop :goal do
 
 #  zero :A3, sus: 4, noise: 0.9, more: 1.0, wet: 0.9, pulse: 0.5
 
-  midi_cc 101, 10, channel: 2, port: :iac_bus_1
+  midi_cc 101, [10,100].choose, channel: 2, port: :iac_bus_1
 
 
-  sleep 4
+  sleep 1
 end

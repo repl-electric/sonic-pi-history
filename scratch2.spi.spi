@@ -14,7 +14,7 @@ live_loop :drums do
     with_bpm 120 do
       k1 = Mountain[/Subkick/,0]
       #h1,h2 = @slices["Fs3/4"][17],  Frag[/hats/,8]
-      h1,h2 = Frag[/hats/,4], Frag[/hats/,8]
+      h1,h2 = Frag[/hats/,7], Frag[/hats/,8]
       s1,s2,s3 = MagicDust[/Hit_HI/,58],Tech[/Drum_Hits/,/snare/,3],Tech[/Drum_Hits/,/snare/,6]
       p1 = MagicDust[/_HI/,49]
       v1 = "/Users/josephwilk/Dropbox/repl-electric/samples/beauty_and_practical.wav"#Word#Tech[/vocal/,12]

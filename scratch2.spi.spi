@@ -21,17 +21,17 @@ live_loop :drums do
   voice = (ing  _ _ _ _ _ _ _ _
                      _ _ _ _ _ _ v1 _)
   cymbal = (ing _ _ _ _ _ _ _ _
-                     _ _ _ _ _ _ _ _
-                     _ _ _ _ _ _ _ _
-                     _ _ _ r1 _ _ _ _)
+    _ _ _ _ _ _ _ _
+    _ _ _ _ _ _ _ _
+    _ _ _ r1 _ _ _ _)
   perc = (ing _ _ _ p1
-                   _ _ p1 _
-                   _ p1 _ _
-                   _ _ _ _)
+    _ _ p1 _
+    _ p1 _ _
+    _ _ _ _)
   (4).times{
     tick
     #smp eval(kick.look)
-    smp eval(hat.look)
+    smp hat.look
     #smp eval(hat2.look)
     #smp eval(snare.look)
     #smp eval(snare2.look)

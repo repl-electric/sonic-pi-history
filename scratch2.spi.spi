@@ -14,20 +14,20 @@ live_loop :drums do
                   _ _ h1 _
                   _ _ h1 _)
   puts hat
-  hat2 = (ring *%w{_ _ h2 _})
-  snare = (ring *%w{_ _ _ _  s1 _ _ _})
-  snare2 = (ring *%w{_ _ _ _ _ _ _ _
-                     _ _ _ _ _ _ _ s2})
-  voice = (ring *%w{ _ _ _ _ _ _ _ _
-                     _ _ _ _ _ _ v1 _})
-  cymbal = (ring *%w{_ _ _ _ _ _ _ _
+  hat2 = (ing _ _ h2 _)
+  snare = (ing _ _ _ _  s1 _ _ _)
+  snare2 = (ing _ _ _ _ _ _ _ _
+                     _ _ _ _ _ _ _ s2)
+  voice = (ing  _ _ _ _ _ _ _ _
+                     _ _ _ _ _ _ v1 _)
+  cymbal = (ing _ _ _ _ _ _ _ _
                      _ _ _ _ _ _ _ _
                      _ _ _ _ _ _ _ _
-                     _ _ _ r1 _ _ _ _})
-  perc = (ring *%w{_ _ _ p1
+                     _ _ _ r1 _ _ _ _)
+  perc = (ing _ _ _ p1
                    _ _ p1 _
                    _ p1 _ _
-                   _ _ _ _})
+                   _ _ _ _)
   (4).times{
     tick
     #smp eval(kick.look)

@@ -54,7 +54,7 @@ live_loop :drums do
         tick
         smp (kick.look), cutoff: 80, amp: 0.5#, rpitch: (ring 12, 24, 24).look
         smp (hat.look), amp: 1.0# rpitch: 0
-        smp (hat2.look),amp: 1
+        smp (hat2.look),amp: 1.0
 
         smp (snare.look), amp: 0.75
         smp (snare2.look), amp: 0.75

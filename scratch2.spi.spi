@@ -1,46 +1,66 @@
 use_bpm 125
 #sub-zero-minimal-techno
 #https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
-live_loop :drums do
-  k1 = Tech[/Drum_Hits/,/kick/,4]
-  h1,h2 = Tech[/Drum_Hits/,/hat/,0],Tech[/Drum_Hits/,/hat/,1]
-  s1,s2 = Tech[/Drum_Hits/,/snare/,2], Tech[/Drum_Hits/,/snare/,3]
-  p1 = Tech[/Drum_Hits/,/perc/,2]
-  v1 = Tech[/vocal/,10]
-  r1 = Tech[/cymbal/,8]
-  kick = (ing k1 _ _ _)
-  hat =
-    (ing _ _ h1 _
-         _ _ h1 {path:h1,amp:0.25}
-         _ _ h1 _
-         _ _ h1 _)
-  hat2 = (ing _ _ h2 _)
-  snare = (ing
-    _ _ _ _  s1 _ _ _)
-  snare2 = (ing
-    _ _ _ _ _ _ _ _
-    _ _ _ _ _ _ _ s2)
-  voice = (ing  _ _ _ _ _ _ _ _
-                     _ _ _ _ _ _ v1 _)
-  cymbal = (ing
-    _ _ _ _ _ _ _ _
-    _ _ _ _ _ _ _ _
-    _ _ _ _ _ _ _ _
-    _ _ _ r1 _ _ _ _)
-  perc = (ing _ _ _ p1
-    _ _ p1 _
-    _ p1 _ _
-    _ _ _ _)
-  (4).times{
-    tick
-    #smp eval(kick.look)
-    smp hat.look
-    smp hat2.look
-    smp snare.look
-    smp snare2.look
-    smp voice.look, finish: 0.05
-    smp cymbal.look, finish: 0.1
-    smp perc.look
-    sleep 1/4.0
-  }
+
+
+
+#use_bpm 60
+#sub-zero-minimal-techno
+#https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
+_=nil
+
+live_loop :drums, sync: :kick do
+  with_fx :level, amp: 1.0 do
+    with_bpm 120 do
+      k1 = Mountain[/Subkick/,0]
+      h1,h2 = @slices["Fs3/4"][17],  Frag[/hats/,8]
+      #      h1,h2 = @slices["Fs3/8",0] Frag[/hats/,9], Frag[/hats/,8]
+      s1,s2,s3 = MagicDust[/Hit_HI/,58],Tech[/Drum_Hits/,/snare/,3],Tech[/Drum_Hits/,/snare/,6]
+      p1 = MagicDust[/_HI/,49]
+      v1 = "/Users/josephwilk/Dropbox/repl-electric/samples/beauty_and_practical.wav"#Word#Tech[/vocal/,12]
+      r1 = Tech[/cymbal/,10]
+      kick = (ing k1 _ _ _   _  _ _ _)
+      hat = (ing _ _ h1 _})
+      hat2 = (ing _ _ h2 _
+                       _ _ h2 {path:h2,amp:0.05}
+                       _ _ h2 _
+                       _ _ h2 _)
+      snare = (ing _ _ _ _  s1 _ _ _})
+      snare2 = (ing _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ s2
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ s3
+                         )
+      voice = (ing  _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ v1 _)
+      cymbal = (ing _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ r1 _ _ _ _
+                         )
+      perc = (ing _ _ _ p1
+                       _ _ p1 _
+                       _ p1 _ _
+                       _ _ _ _)
+
+      (4).times{
+        tick
+        smp (kick.look), cutoff: 80, amp: 0.5#, rpitch: (ring 12, 24, 24).look
+        smp (hat.look), amp: 5.0# rpitch: 0
+        smp (hat2.look),amp: rand*0.1+0.1
+
+        #smp (snare.look), amp: 0.75
+        #smp (snare2.look), amp: 0.75
+        #smp (voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 1.5
+        #smp (voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
+        #smp (cymbal.look), finish: 0.95, start: 1.0
+        smp (perc.look), amp: rand*0.2
+        sleep 1/4.0
+      }
+    end
+  end
 end

@@ -59,8 +59,8 @@ live_loop :drums do
 
         smp (snare.look), amp: 1.0
         smp (snare2.look), amp: 1.0
-        smp (voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 1.5
-        #smp (voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
+        #smp (voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 1.5
+        smp (voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
         smp (cymbal.look), finish: 0.95, start: 1.0
         smp (perc.look), amp: 1.0
         sleep 1/4.0

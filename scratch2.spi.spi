@@ -1,7 +1,6 @@
 use_bpm 125
 #sub-zero-minimal-techno
 #https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
-_=nil
 live_loop :drums do
   k1 = Tech[/Drum_Hits/,/kick/,4]
   h1,h2 = Tech[/Drum_Hits/,/hat/,0],Tech[/Drum_Hits/,/hat/,1]

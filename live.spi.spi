@@ -182,7 +182,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs=nil
   end
   if zs.look(offset: 1) == :a3 && look % 24 < 12
     n=[:a2, :cs4, :e2]
-    n.each{|n| piano n, 30, sus: 6}
+    n.each{|n| piano n, 35, sus: 6}
   end
   if zs.look(offset: 1) == :a3 && look % 24 >= 12
     n=[:a2, :cs3, :e3]
@@ -207,7 +207,6 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs=nil
     #with_transpose -24 { zero chord(zs.look(offset: 1),ct(zs.look(offset: 1)))[0], r, sus: 12}  if spread(1,2).rotate(1).look
 
     #with_transpose   0 { zero :a5, 20, sus: 12} if spread(1,2).rotate(0).look
-    #zero_cc more: 0.5, filter: 0.2, shape: 0.8, spread: 0.8
     cue :zero if spread(1,2).rotate(0).look
   }
   sleep 1/2.0

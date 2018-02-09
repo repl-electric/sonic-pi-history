@@ -180,10 +180,15 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs=nil
     harp z#[0], (ing 60 60 60  50 50 40  60 60 60  50 50 40).look*1.1, sus: z[1]
     piano z, 0+(ing 70 65 55).look * 1.0, sus: 4/2.0
   end
-  if zs.look(offset: 1) == :a3 #&& look % 24 < 12
+  if zs.look(offset: 1) == :a3 && look % 24 < 12
     n=[:a2, :cs3, :e3]
     n.each{|n| piano n, 35, sus: 6}
   end
+  if zs.look(offset: 1) == :a3 && look % 24 < 12
+    n=[:a2, :cs3, :e3]
+    n.each{|n| piano n, 25, sus: 6}
+  end
+
   if zs.look(offset: 1) == :b3
     n=[:d3, :fs3]
     at{piano n[0], 55, sus: 6; sleep 1/16.0; piano n[1], 55, sus: 6 }
@@ -612,43 +617,40 @@ live_loop :kick, sync: :drums do
   }
 end
 
-with_fx :none, mix: 0 do
-  sync :entry if @align
-  live_loop :drums, sync: :metro do
-    #stop
-    with_fx :level, amp: 0.5 do
-      with_fx :reverb, mix: 0.4, room: 0.5, mix_slide: 0.5 do |r_fx|
-        t1 = CineAmbi[/One shots/,/tom/,2]
-        p=Dust[/perc/, /conga/] #MagicDust[/perc/,/stone/,[4..8]].look #*Dust[/perc/, [7,7]]
-        k3 = Tape[/tom/,23]
-        k2 = Tape[/tom/,22]
-        k7 = Tape[/tom/,24]
-        k4 = Mountain[/kick/,4]
-        k5 = Lo[/kick/,15]
-        k6 = Drip[/orig_fx_12/,0]
-        #k1 = Tape[/drum/,7]
-        p1,p2,p3,p4 = *Crystal[/cymbal/,[32,18,12,13]]
-        d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
-        d5 = Drip[/cymbal/,10]
-        f3 = Drip[/fx/,/12/,14]
-        f2 = Drip[/fx/,/88/,0]
-        c1 = CineAmbi[/one shot/,/cymbal/,1]
-        c3 = CineAmbi[/one shot/,/cymbal/,3]
-        c2 = CineAmbi[/one shot/,/cymbal/,6]
-        c4 = CineAmbi[/one shot/,/cymbal/,0]
-        s1,s2 = Mountain[/stick/,[4,2]]
-        c1 = CineAmbi[/one shot/,/cymbal/,8]
-        c4 = CineAmbi[/one shot/,/cymbal/,13]
-        s1 = Tape[/cymbal/,8]
-        c4 = Tape[/cymbal/,20]
-        oc1 = CineAmbi[/one shot/,/cymbal/,5]
-        t1 = Tape[/tom/,0]
-        cd1 =  Drip[/fx/,/12/,1]
+live_loop :drums, sync: :metro do
+  t1 = CineAmbi[/One shots/,/tom/,2]
+  p=Dust[/perc/, /conga/]
+  k3 = Tape[/tom/,23]
+  k2 = Tape[/tom/,22]
+  k7 = Tape[/tom/,24]
+  k4 = Mountain[/kick/,4]
+  k5 = Lo[/kick/,15]
+  k6 = Drip[/orig_fx_12/,0]
+  #k1 = Tape[/drum/,7]
+  p1,p2,p3,p4 = *Crystal[/cymbal/,[32,18,12,13]]
+  d1,d2,d3,d4 = *Drip[/cymbal/,[0,2,3,4]]
+  d5 = Drip[/cymbal/,10]
+  f3 = Drip[/fx/,/12/,14]
+  f2 = Drip[/fx/,/88/,0]
+  c1 = CineAmbi[/one shot/,/cymbal/,1]
+  c3 = CineAmbi[/one shot/,/cymbal/,3]
+  c2 = CineAmbi[/one shot/,/cymbal/,6]
+  c4 = CineAmbi[/one shot/,/cymbal/,0]
+  s1,s2 = Mountain[/stick/,[4,2]]
+  c1 = CineAmbi[/one shot/,/cymbal/,8]
+  c4 = CineAmbi[/one shot/,/cymbal/,13]
+  s1 = Tape[/cymbal/,8]
+  c4 = Tape[/cymbal/,20]
+  oc1 = CineAmbi[/one shot/,/cymbal/,5]
+  t1 = Tape[/tom/,0]
+  cd1 =  Drip[/fx/,/12/,1]
 
-
-        8.times{
-          tick
-          k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
+  #stop
+  with_fx :level, amp: 0.5 do
+    with_fx :reverb, mix: 0.4, room: 0.5, mix_slide: 0.5 do |r_fx|
+      8.times{
+        tick
+        k1,k2,k3 = Frag[/kick/,9], Mountain[/subkick/,0], (knit Dust[/kick/,24],3, Dust[/kick/,25],3).look
           f1 = [Drip[/Drip_orig_fx_08/,0]].choose
           t1 = Tape[/tom/,[28,28,22]].look
           p1=Analog[/click/].look

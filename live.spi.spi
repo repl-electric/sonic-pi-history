@@ -700,8 +700,8 @@ live_loop :drums, sync: :metro do
           sleep 1/8.0
           control r_fx, mix: rand(0.5)
         }
-      end
     end
+  end
 end
 
 live_loop :sixteen, sync: :drums do

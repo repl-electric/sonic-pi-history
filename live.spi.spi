@@ -182,13 +182,12 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs=nil
   end
   if zs.look(offset: 1) == :a3 && look % 24 < 12
     n=[:a2, :cs3, :e3]
-    n.each{|n| piano n, 35, sus: 6}
+    n.each{|n| piano n, 25, sus: 6}
   end
   if zs.look(offset: 1) == :a3 && look % 24 >= 12
     n=[:a2, :cs3, :e3]
-    n.each{|n| piano n, 25, sus: 6}
+    n.each{|n| piano n, 35, sus: 6}
   end
-
   if zs.look(offset: 1) == :b3
     n=[:d3, :fs3]
     at{piano n[0], 55, sus: 6; sleep 1/16.0; piano n[1], 55, sus: 6 }

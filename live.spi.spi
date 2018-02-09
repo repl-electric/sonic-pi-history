@@ -189,7 +189,7 @@ live_loop :It_is_Dark_in_here, sync: :sudden do;z,zs=nil
     at{piano n[0], 55, sus: 6; sleep 1/16.0; piano n[1], 55, sus: 6 }
   end
   if zs.look(offset: 1) == :e4
-    [:cs3, :fs3].each{|n| piano n, 55, sus: 6}
+    #[:cs3, :fs3].each{|n| piano n, 55, sus: 6}
   end
 
   #musicbox z,1, sus: 4 if spread(1,12*2).look

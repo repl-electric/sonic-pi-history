@@ -702,7 +702,6 @@ live_loop :drums, sync: :metro do
         }
       end
     end
-  end
 end
 
 live_loop :sixteen, sync: :drums do

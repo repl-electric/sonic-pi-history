@@ -25,7 +25,6 @@ _=nil
 
 puts spread(1,128).rot(7*8 + 8).to_a.map{|a| !a ?  _ : a } == s.to_a
 
-puts
 
 #puts s
 

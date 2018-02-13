@@ -23,7 +23,7 @@ _=nil
     )
 
 
-puts spread(1,128).rot(7*8 + 7).to_a.map{|a| !a ?  _ : a } == s.to_a
+puts spread(1,128).rot(7*8 + 6).to_a.map{|a| !a ?  _ : a } == s.to_a
 
 
 #puts s

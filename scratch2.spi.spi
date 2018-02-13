@@ -10,7 +10,28 @@ use_bpm 125
 #https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
 _=nil
 
-mt 13,10#, channel: 2
+
+
+
+
+
+  s=(ing
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ c1
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    ).look
+
+
+puts s
+
+
+
+
+
+
+
+
 
 
 

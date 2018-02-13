@@ -24,12 +24,11 @@ _=nil
 
 
 s = (ing 1 _ _ _   _ _ _ _ ).rot(-8*7)
-puts s
 
 
-puts spread(1,128).rot(-8*8 + 3).to_a.map{|a| !a ?  _ : a } == s.to_a
+puts spread(1,128).rot(-8*7 + 3).to_a.map{|a| !a ?  _ : a } == s.to_a
 
-#puts spread(1,128).rot(8*8 + 1).to_a.map{|a| !a ?  _ : a }
+puts spread(1,128).rot(-8*7 + 3).to_a.map{|a| !a ?  _ : a }
 puts s.to_a
 
 

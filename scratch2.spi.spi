@@ -24,7 +24,7 @@ _=nil
 
 
 s = (ing 1 _ _ _   _ _ _ _ )
-put s
+puts s
 
 
 puts spread(1,128).rot(8*8 + 1).to_a.map{|a| !a ?  _ : a } == s.to_a

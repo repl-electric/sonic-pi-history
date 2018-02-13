@@ -23,7 +23,7 @@ _=nil
     )
 
 
-spread(1,128).rot(7*8) == s
+puts spread(1,128).rot(7*8) == s
 
 puts s
 

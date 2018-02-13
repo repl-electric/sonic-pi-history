@@ -23,7 +23,7 @@ _=nil
   )
 
 
-s = (ing 1 _ _ _   _ _ _ _ ).rot(2)
+s = (ing 1 _ _ _   _ _ _ _ ).rot(1)
 puts s
 
 

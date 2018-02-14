@@ -222,7 +222,7 @@ live_loop :kick, sync: :metro do
       kt[1] _ _ _       _ _ _ t1  _ _ _ _   k1 _ k1 _
       )
 
-    yes{
+    no{
     with_swing 0.08{
       hs=(knit
         (ing [Tape[/hi/,26]] _  _ _   tc[17] _  _ _).look, 8*2,

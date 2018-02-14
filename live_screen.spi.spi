@@ -77,7 +77,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
       end
     end
     #sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
-    yes{
+    no{
     8.times{
       tick(:in2)
       piano (ing

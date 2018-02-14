@@ -55,6 +55,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
 
     #c.each{|n| piano n, (ring 60,60).look*1.3, sus: 2}
     pf=1.2
+
     i=(method :piano)
     i.call(c[0], 60*pf, sus: 4)
     i.call(c[1], 50*pf, sus: 4)
@@ -76,7 +77,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
       end
     end
     #sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
-    no{
+    yes{
     8.times{
       tick(:in2)
       piano (ing

@@ -18,7 +18,6 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
   cue :entry
   s=score.look
   c=s[0]
-  puts :HIT if c[0]
   if spread(1,1).look
     musicbox c[0][0], sus: 12
   end

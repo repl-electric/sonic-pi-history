@@ -351,7 +351,7 @@ live_loop :kick, sync: :drums do
     end
     }
     k=k.look
-    k=_
+    #k=_
     no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :d5, 60

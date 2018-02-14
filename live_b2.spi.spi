@@ -206,7 +206,7 @@ live_loop :kick, sync: :metro do
     #sop_mode (ing 0 1 2 3 4 5 6).look#, motion: (ing 0.0,1.0).look
     #sop_mode(0) if !k
 
-    kz=(ing
+    k=(ing
       [kt[1]] _ _ _   ts[2] _ ts[9] _     k3 _ tt[9] _  ts[3] _ _ _
       k1  _ _ _       ts[2] _ ts[9] _     k3 _ _ _   %h{ts[3]} _ _ t1
       k1  _ _ _       ts[2] _ ts[9] _     k3 _ _ _   %h{ts[3]} _ _ t1
@@ -215,7 +215,7 @@ live_loop :kick, sync: :metro do
 
     kdark = Lo[/kick/,/dark/]
     kphat = Lo[/kick/,/phat/]
-    k=(ing
+    kz=(ing
       [kt[1]] _ _ k1    _ _ _ t1  _ _ _ _   k1 _ k1 _
       kt[1] _ _   k1    _ _ _ t1  _ _ _ _   k1 _ k1 _
       kt[1] _ _   k1    _ _ _ t1  _ _ _ _   k1 _ k1 _

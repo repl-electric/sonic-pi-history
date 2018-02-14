@@ -182,7 +182,7 @@ live_loop :sssng do
   }
 end
 
-live_loop :kick, sync: :drums do
+live_loop :kick, sync: :metro do
   k1,k2,k3,k4 = Frag[/kick/,9], Mountain[/subkick/,0], Mountain[/kick/,4], Lo[/kick/,15];
   p=Dust[/perc/, /conga/]; t1 = Tape[/tom/,24]; km = Lo[/kick/,/mid/]; tc = Tape[/cymbals/]; ts = Tape[/snares/]; tt = Tape[/toms/]; df = Drip[/fx/]; kt = Lo[/kick/,/thin/]; m1 = Mountain[/microperc/]; f1 = ["/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/D-01.wav", "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/D01.wav", "/Users/josephwilk/Workspace/music/samples/Tuned/Drip_effects/E01.wav"][2]; c=Crystal[/cymbal/]; cf=Crystal[/fx/]; c1 = Analog[/clapraw/,0]; c2 = Analog[/04 clap1/,0]; c3 = Analog[/04 clap2/,0]; c4 = Analog[/04 clap3/,0]; c5 = Analog[/13 clap/,0]; c6 = Analog[/13 clap/,1]; c7 = Analog[/13 clap/,2];
   8.times{

@@ -1,17 +1,18 @@
 D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
+use_bpm 63.5;#set_volume! 1.0
 live_loop :Fall_out_of_your_screen, sync: :unsyncable do
   tick
   live_loop :Terminal_cursor{stop}
   pause = [[[_, 0.25]],2]
   #  stop
   score =  (ing  #15.25
-     [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  pause
-      [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  pause
-      [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
-      [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  pause
-      [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
-      [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  pause
-      [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          pause
+    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  pause
+    [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  pause
+    [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
+    [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  pause
+    [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
+    [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  pause
+    [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          pause
     )
   cue :entry
   s=score.look

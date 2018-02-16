@@ -6,7 +6,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
   pause = [[[_, 0.25]],2]
   #  stop
   score =  (ing  #15.25
-    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  pause
+    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  pause pause pause
 #    [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  pause
 #    [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
 #    [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  pause

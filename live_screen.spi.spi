@@ -2,7 +2,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 use_bpm 63.5;#set_volume! 1.0
 live_loop :Fall_out_of_your_screen, sync: :unsyncable do
   tick
-  live_loop :Terminal_cursor{stop}
+  live_loop :Within_the_letters{stop}
   pause = [[[_, 0.25]],2]
   #  stop
   score =  (ing  #15.25,
@@ -14,7 +14,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
 #,    [[[:b2, 2],  [:d5, 2],   [:fs3, 2], [:cs4, 2]],  2],                  pause,
 #,    [[[:fs4, 2], [:A4, 2],   [:Cs3, 2], ],  2],                          pause,
     )
-  cue :entry
+  cue :kernel_panic
   s=score.look
   c=s[0]
   if spread(1,1).look

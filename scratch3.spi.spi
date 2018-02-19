@@ -14,7 +14,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
         #   :C2, :cs2, :d2, :ds2, :e2, :f2, :fs2, :g2,
         #   :C6, :cs6, :d6, :ds6, :e6, :f6, :fs6, :g6][n]
 
-        puts note
+        puts "Note#{note}"
         midi note, vel, channel: 2, port: :iac_bus_1
       end
     end

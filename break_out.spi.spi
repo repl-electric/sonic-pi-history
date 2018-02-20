@@ -6,9 +6,7 @@ no{
   sop2_cc
 }
 
-
-
 8.times{
   midi_cc 102, (line 0.0,1.0,127).look*127.0, port: :iac_bus_1, channel: 4
-  sleep 0.25
+  sleep 0.5
   }

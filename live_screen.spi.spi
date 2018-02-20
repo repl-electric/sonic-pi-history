@@ -25,7 +25,7 @@ live_loop :Fall_out_of_your_screen do
   with_transpose 0 {
     #piano3 root(c),(ing 127 120).look,sus: 2
   }
-  rev c[1], 15, sus: 12
+  rev c[-1], 15, sus: 12
 
   if !c[0][0]
     eek (ing :e4 :gs4 :e4 :b4 _ _).look, (ing 100 120).look(:missing), sus: 3.0, at: 0.0, mod: 0.0

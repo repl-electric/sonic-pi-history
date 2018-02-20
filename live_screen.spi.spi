@@ -62,7 +62,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
     i.call(c[5], 30*pf, sus: 8)
 
     with_transpose 12*0  do
-      violin root(c), 127*1.0, mode: 1, sustain: s[-1]#, defon: 0.0, at: 0.0 #, sus: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
+      violin root(c), 127*1.0, mode: 1, sustain: 3#s[-1]#, defon: 0.0, at: 0.0 #, sus: 1 , form: 0.0, shape: 0.0, mul: 4, at: 1.0
     end
     #sleep s[-1]
     strings c[0][-2], 35

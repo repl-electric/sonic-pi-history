@@ -8,7 +8,7 @@ no{
 
 127.times{
   tick
-  midi_cc 103, (line 0,127,127).look, port: :iac_bus_1, channel: 4
+  midi_cc 104, (line 0,127,127).look, port: :iac_bus_1, channel: 4
   puts  (line 0,127,127).look
   sleep 0.125
   }

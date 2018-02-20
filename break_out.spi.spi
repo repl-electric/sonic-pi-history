@@ -8,4 +8,4 @@ no_entry{
 
 
 
-midi_cc n, cc[k]*127.0, port: :iac_bus_1, channel: 4
+midi_cc 101, cc[k]*127.0, port: :iac_bus_1, channel: 4

@@ -8,4 +8,4 @@ no{
 
 
 
-midi_cc 102, 0.5*127.0, port: :iac_bus_1, channel: 4
+midi_cc 102, 0.6*127.0, port: :iac_bus_1, channel: 4

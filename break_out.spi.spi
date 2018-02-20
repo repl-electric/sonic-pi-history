@@ -7,6 +7,7 @@ no{
 }
 
 127.times{
+  tick
   midi_cc 102, (line 0.0,1.0,127).look*127.0, port: :iac_bus_1, channel: 4
   puts :ping
   sleep 0.5

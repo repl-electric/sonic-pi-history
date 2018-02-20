@@ -41,8 +41,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep (s[-1])*1
 end
 
-#yes { vioshot(:a5, :off) }
-yes { vioshot_x }
+yes { vioshot(:d5, :on) }
+#yes { vioshot_x }
 #midi_note_on :a1, channel: 5
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do

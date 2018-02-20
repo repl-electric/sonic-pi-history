@@ -154,7 +154,7 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
       zero_cc noise: (line 0.0, 1.0,31).tick
       broken (ing :e4 :e4 :e4 :e4).tick(:n), (ing 2 4 6 8).look(:n), sus: 4, mode: 0 if n % 16 == 0
     }
-    #stop
+    stop
   end
   }
   sleep 1/4.0

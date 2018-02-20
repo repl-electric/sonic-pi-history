@@ -7,7 +7,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score =  (ing
-    [[[:b2  2] [:d5 2] [:fs3 2]] 2] REST
+    [[[:b3  2] [:d5 2] [:fs3 2]] 2] REST
     [[[:fs3 2] [:a4 2] [:e3 2]] 2] REST
     )
   s=score.look
@@ -19,7 +19,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     #eek :Gs3, 10
   end
   #with_transpose 0 { piano3 root(c),(ing 127 120).look, sus: 2 }
-  rev :a6, 15, sus: 12
+  #rev :a6, 15, sus: 12
   piano root(c), (ring 35,40).look*1.5, sus: c[0][-1]
   c.each{|n|tick(:inner);
     sop n[0], 2.0*(ing 80 70 85 70).look(:inner), sus: ((n[-1])*1)+0.5, mode: 0, cutoff: (ramp 0.0, 1.0, 12).tick(:innert)#, cutoff: 1.0
@@ -41,7 +41,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep (s[-1])*1
 end
 
-#yes { vioshot(:a5, :on) }
+yes { vioshot(:a5, :on) }
 #yes { vioshot_x }
 #midi_note_on :a1, channel: 5
 

@@ -1,14 +1,19 @@
 D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
 no{
+  sop2_cc :motion
+  sop2_cc :formant
+  sop2_cc :form_amp
+  sop2_cc :cutoff
+  sop2_cc :drive
   sop2_cc :bass
-  sop2_cc :tube
   sop2_cc :fm
-  sop2_cc
+  sop2_cc :mod
+  sop2_cc :mul
+  sop2_cc :atk
+  sop2_cc :wav
+  sop2_cc :oct
+  sop2_cc :charge
 }
 
-127.times{
-  tick
-  midi_cc 109, (line 0,127,127).look, port: :iac_bus_1, channel: 4
-  puts  (line 0,127,127).look
-  sleep 0.125
-  }
+
+  sop2_cc 0.5

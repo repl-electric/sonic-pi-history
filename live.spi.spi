@@ -160,7 +160,7 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
   sleep 1/4.0
 end
 
-zero_cc  pulse: .5, more: .8, noise: .3
+zero_cc  pulse: .5, more: .8, noise: .4
 
 live_loop :Drip do
   sync :zero

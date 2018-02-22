@@ -44,7 +44,7 @@ end
       midi_note_off n, port: :iac_bus_1, channel: 9
     end
 
-zero_off :b5#,  channel: 9
+zero_on :fs5#,  channel: 9
 zero_cc  pulse: .0, more: .0, noise: .4, wet: .5
 
 #yes { vioshot(:a5, :on) }

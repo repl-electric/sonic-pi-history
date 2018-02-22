@@ -41,8 +41,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep (s[-1])*1
 end
 
-zero_on :a5,  channel: 9
-zero_cc  pulse: .0, more: .0, noise: .0, wet: .5
+zero_off :a5,  channel: 9
+#zero_cc  pulse: .0, more: .0, noise: .0, wet: .5
 
 #yes { vioshot(:a5, :on) }
 #yes { vioshot_x }

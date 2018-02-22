@@ -5,6 +5,6 @@ tick
 
 
   midi_cc 101, (line 0,100,32).look, *(args << {port: :iac_bus_1} << {channel: 9})
-
+sleep 0.25
 
   }

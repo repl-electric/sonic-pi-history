@@ -125,7 +125,7 @@ mt_cc morph: 0.0
 
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
   live_loop :Fall_into_your_screen {stop}
-  with_bpm 58 do
+  with_bpm 60 do
   #stop
   zs=(ing
     :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :A4 :A4 :A4

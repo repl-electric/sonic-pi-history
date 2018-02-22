@@ -45,7 +45,7 @@ end
     end
 
 #zero_on :fs5#,  channel: 9
-zero_cc  pulse: .0, more: .0, noise: .4, wet: .5
+zero_cc  pulse: .0, more: .0, noise: .4, wet: .6
 
 #yes { vioshot(:a5, :on) }
 #yes { vioshot_x }

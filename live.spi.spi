@@ -336,14 +336,14 @@ live_loop :Thump, sync: :unsyncable do
     }
     k=k.look
     #k=_
-    yes{
+    no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :d5, 60
       end
       if k && spread(1,64).rot(0).look
         #smp K1, amp: 5
         #sync :Fall_Into_Your_Screen
-        #sop :fs4, sus: 4.0
+        sop :fs4, sus: 4.0
         cue(:light_source)
         violin_x;strings_x;zero_x
         sync :kernel_panic

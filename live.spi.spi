@@ -8,6 +8,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #stop
   score =  (ing  #d f a
     [[[:b3   2] [:d4 2]  [:fs4 2]] 2] REST
+   # [[[:a3   2] [:e5 2]  [:fs3 2]] 2] REST
+
     #REST  REST
     [[[:fs3  2] [:a4 2]  [:cs4 2]] 2] REST
     )
@@ -336,7 +338,7 @@ live_loop :Thump, sync: :unsyncable do
     }
     k=k.look
     #k=_
-    no{
+    yes{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :d5, 60
       end

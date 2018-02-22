@@ -8,7 +8,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #stop
   score =  (ing
     [[[:b3   2] [:d4 2]  [:fs4 2]] 2] REST
-    #[[[:fs3  2] [:a4 2]  [:cs3 2]] 2] REST
+    [[[:fs3  2] [:a4 2]  [:cs3 2]] 2] REST
     # REST  REST
     )
   s=score.look
@@ -125,8 +125,8 @@ end
 mt_cc morph: 0.0
 
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
+  with_bpm 63.5 do #63.5
   live_loop :Fall_into_your_screen {stop}
-  with_bpm 50 do #63.5
   #stop
   zs=(ing
     :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :A4 :A4 :A4
@@ -336,7 +336,7 @@ live_loop :Thump, sync: :unsyncable do
     }
     k=k.look
     #k=_
-    yes{
+    no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :d5, 60
       end

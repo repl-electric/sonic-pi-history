@@ -17,7 +17,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     #rev :b5, 1
     #eek :Gs3, 10
   end
-  #with_transpose 0 { piano3 root(c),(ing 127, 120,).look, sus: 2 }
+  with_transpose 0 { piano3 root(c),(ing 127, 120,).look, sus: 2 }
   #rev :a6, 15, sus: 12
   #piano root(c), (ring 35,40).look*1.5, sus: c[0][-1]
   c.each_tick(:in){|n|

@@ -42,9 +42,6 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   }
   sleep (s[-1])*1
 end
-    def zero_off(n,*args)
-      midi_note_off n, port: :iac_bus_1, channel: 9
-    end
 
 #zero_on :e5#,  channel: 9
 zero_cc  pulse: .0, more: .0, noise: .6, wet: .9
@@ -130,9 +127,9 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
   live_loop :Fall_into_your_screen {stop}
   #stop
   zs=(ing
-    :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :A4 :A4 :A4
-    :d4 :cs4 _ :a3 _ :b3 _ :A4 :A4 :A4 :Fs4 :A4
-    )
+    :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+    :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      )
   z=zs.look
   #z=_
   if z

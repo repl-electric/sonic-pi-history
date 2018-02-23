@@ -8,9 +8,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #stop
   score =  (ing  #d f a
     [[[:b3   2] [:d5 2]  [:fs4 2]] 2] REST
-    [[[:fs3  2] [:a4 2]  [:cs3 2]] 2] REST
+    #[[[:fs3  2] [:a4 2]  [:cs3 2]] 2] REST
     #[[[:a4   2]  [:e5 2]  [_ 2]] 2] REST
-    #REST  REST
+    REST  REST
     )
   s=score.look
   c=s[0]

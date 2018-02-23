@@ -7,12 +7,12 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score =  (ing
-    [[[:a1 2]] 2] REST
+    [[[:a1 2] ] 2] REST
     )
   s=score.look
   c=s[0];zzz=s[-1]
   eek :a1,  sus: 12, mode: 2
-  eek :cs2, sus: 12, mode: 2
+  #eek :cs2, sus: 12, mode: 2
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10

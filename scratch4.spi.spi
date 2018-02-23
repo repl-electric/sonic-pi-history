@@ -2,4 +2,4 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 x = [1,2,4]
 
 (ring 1,2,4).rot(2)
-x.each_tick(:tihng){|t| puts look }
+x.each_tick(:tihng){|t| puts look(:tihng) }

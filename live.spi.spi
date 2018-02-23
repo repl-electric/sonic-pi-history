@@ -348,7 +348,7 @@ live_loop :Thump, sync: :unsyncable do
     end
 
     #midi(:c3, 60+(rand_i 10), channel: 2) if k == [kt[1]] #|| k.look == k3 || k == [kt[1]]
-    kick_machine k, accent: 1.0, amp: 2.9*accent*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
+    kick_machine k, accent: 1.0, amp: 2.5*accent*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
     sidechain if k && spread(1,4).look
     sleep 1/8.0
   }

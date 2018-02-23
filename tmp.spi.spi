@@ -11,4 +11,4 @@ live_loop :name do
 end
 
 
-midi_cc 112, 87, port: :iac_bus_1, channel: 4
+midi_cc 112, 27, port: :iac_bus_1, channel: 4

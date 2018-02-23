@@ -44,7 +44,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
 end
 
 #zero_on :fs6#,  channel: 9
-zero_on :e4#,  channel: 9
+#zero_on :e4#,  channel: 9
 
 zero_cc pulse: 0.00  #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 zero_cc more:  0.00  #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -339,7 +339,7 @@ live_loop :Thump, sync: :unsyncable do
     }
     k=k.look
     #k=_
-    no{
+    yes{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60
       end

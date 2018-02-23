@@ -11,7 +11,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     )
   s=score.look
   c=s[0]
-  (ing :a3 :cs3).each{|n|eek n, sus: 12, mode: 2}
+  eek :a3,  sus: 12, mode: 2
+  eek :cs2, sus: 12, mode: 2
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10

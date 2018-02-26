@@ -5,7 +5,7 @@ live_loop :name do
 
   #sop2 :A3, sus: 2
 
-  midi_cc 111, (line 0,127.0).look, port: :iac_bus_1, channel: 4
+  midi_cc 112, (line 0,127.0).look, port: :iac_bus_1, channel: 4
 
   sleep 0.125
 end

@@ -7,7 +7,7 @@ live_loop :name do
 
   midi_cc 110, (line 0,127.0).look, port: :iac_bus_1, channel: 4
 
-  sleep 0.5
+  sleep 0.125
 end
 
 

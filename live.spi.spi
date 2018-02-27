@@ -3,16 +3,14 @@ load "/Users/josephwilk/Workspace/repl-electric/do_ob/2018/jan/support/sample_ma
 shader :shader, "dark.glsl"#, "bits.vert", "points", 10000
 shader :iWave, 1.0
 
-
-
 sop_cc motion: 1.0
 #sop_mode 0
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
-  score =  (ing
+  score = (ing
     [[[:a1 2]] 2] REST
-    )
+  )
   s=score.look
   c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12, mode: 2

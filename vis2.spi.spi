@@ -7,6 +7,6 @@ shader :fx, :rim, 1
 shader :fx, :vts, 1
 shader :fx, :toon, 1
 shader :fx, :kal, 1
-shader :fx, :pixel, 0
+shader :fx, :pixel, 1
 shader :fx, :rgb, 0
 shader :fx, :bleach, 1

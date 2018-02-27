@@ -4,7 +4,7 @@ shader :shader, "dots.glsl", "clouds.vert", "points", 9999
 shader :iWave, 100.0
 shader :iKP0, 3.0
 shader :iKP1, 100.0
-
+shader :iR, 1.0
 
 sop_cc motion: 1.0
 #sop_mode 0

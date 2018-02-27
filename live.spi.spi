@@ -1,6 +1,6 @@
 D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
 load "/Users/josephwilk/Workspace/repl-electric/do_ob/2018/jan/support/sample_map.rb";use_bpm 63.5
-shader :shader, "wave.glsl", "rain.vert", "triangles", 1000
+shader :shader, "wave.glsl", "clouds.vert", "triangles", 1000
 shader :iWave, 100.0
 shader :iKP0, 3.0
 shader :iKP1, 100.0

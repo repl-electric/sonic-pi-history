@@ -8,9 +8,6 @@ shader :iR, 1.0
 shader :iG, 1.0
 shader :iB, 1.0
 shader :iMode,3.0
-shader :fx, :pixel
-shader :fx, :bloom
-
 
 sop_cc motion: 1.0
 #sop_mode 0

@@ -348,7 +348,7 @@ live_loop :Thump, sync: :unsyncable do
     kick_machine k, accent: 1.0, amp: 3.0*accent*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
     sidechain if k && spread(1,4).look
     if k
-      shader :iKP0, (ring 3.0, 50, 100, 200).look
+      shader :iKP0, (ring 3.0, 50, 100.0, 200.0).look
     end
     sleep 1/8.0
   }

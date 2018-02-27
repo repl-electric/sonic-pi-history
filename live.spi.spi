@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/do_ob/2018/jan/support/sample_ma
 shader :shader, "wave.glsl", "tri.vert", "triangles", 38000
 shader :iWave, 100.0
 shader :iKP0, 3.0
-shader :iKP1, 100.0
+shader :iKP1, 200.0
 
 
 sop_cc motion: 1.0

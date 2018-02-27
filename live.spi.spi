@@ -6,7 +6,7 @@ shader :iKP0, 3.0
 shader :iKP1, 100.0
 shader :iR, 1.0
 shader :iG, 1.0
-shader :iB, 1.0
+shader :iB, 100.0
 shader :iMode,2.0
 
 sop_cc motion: 1.0

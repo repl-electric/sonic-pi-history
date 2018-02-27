@@ -2,7 +2,7 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 #shader :fx, :bloom, 1
 shader :bloom, 0.0
 
-shader :fx, :bloom, 1
+shader :fx, :bloom, 0
 shader :fx, :rim, 1
 shader :fx, :vts, 0
 shader :fx, :toon, 0

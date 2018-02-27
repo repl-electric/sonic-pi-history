@@ -4,7 +4,7 @@ shader :bloom, 0.0
 
 shader :fx, :bloom, 0
 shader :fx, :rim, 1
-shader :fx, :vts, 1
+shader :fx, :vts, 0
 shader :fx, :toon, 0
 shader :fx, :kal, 0
 shader :fx, :pixel, 1

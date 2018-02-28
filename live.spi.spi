@@ -205,7 +205,7 @@ live_loop :Clock, sync: :unsyncable do
       K1  _ _ _       TS[2] _ TS[9] _     K3 _ TS[15] _   %e{TC[6]} _ _ _
       )
 
-    kz=(ing
+    k=(ing
       [KT[1]] _ _ K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
       K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
       K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _

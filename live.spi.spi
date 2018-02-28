@@ -87,7 +87,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
         )
 
       s=(knit s2,16*4,s3,16*4, s1,16*4).look
-      s=_
+      #s=_
       t=_
       mt s.look, accent=(line 90, 100, 16*4).look, 115
       #mt t.look, accent=70,110

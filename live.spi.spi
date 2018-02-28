@@ -221,7 +221,7 @@ live_loop :Clock, sync: :unsyncable do
       mt s, accent=105, 115
     end
     if (s=(ing
-        _ [5] _ 5  _ 3 5).look)
+        [5] _ 5  _ 3 5).look)
       #s=_
       mt s,accent=85, 120 if s
     end

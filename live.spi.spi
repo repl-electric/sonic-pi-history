@@ -240,13 +240,12 @@ live_loop :Clock, sync: :unsyncable do
       #  _ _ _ _   [C5] C5 _ _   _ _ _ _    _ _ _ _
       #  _ _ _ _   _ _ _ _       _ _ _ _    _ _ _ _
       ).look
-
     accent = 0.5
     if s.is_a?(Array)
       accent = 0.8
       s = s[0]
     end
-    yes{
+    no{
       with_swing 0.02 {
         smp s, amp: accent*0.5+(ing
           0.5 0 0.125 0 0.5 0 0.8 0.5

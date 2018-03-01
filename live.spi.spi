@@ -89,7 +89,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
       #t=_
       mt s.look, accent=(ine 90 100 16*4).look, 115
       #mt t.look, accent=70,110
-      mt_cc morph: (ing 1.0 1.0 0.0 0.0).look
+      mt_cc morph: (ing 1.0 1.0 1.0 0.0 0.0).look
 
       s=(ing
         2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _

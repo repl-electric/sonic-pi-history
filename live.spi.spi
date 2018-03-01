@@ -107,8 +107,8 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
     live_loop :Fall_into_your_screen {stop}
     #stop
     zs=(ing
-      :gs4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :gs4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+      :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_
@@ -121,7 +121,7 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
       c = chord(zs.look(offset: 1),ct(zs.look(offset: 1)))
       with_transpose   0 { zero c[1], v,   sus: 12*1} if spread(1,2).rot(1).look
       with_transpose -12 { zero c[2], v+2, sus: 12*1} if spread(1,2).rot(1).look
-      #with_transpose  12 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(0).look
+      with_transpose  12 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(0).look
       with_transpose -24 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(1).look
       #zero :fs5, 5, sus: 12*3 if z == :d4
       cue :zero if spread(1,2).rot(0).look
@@ -147,8 +147,8 @@ end
 
 zero_cc pulse: 0.00
 zero_cc more:  0.00
-zero_cc noise: 0.20
-zero_cc wet:   0.30
+zero_cc noise: 0.40
+zero_cc wet:   0.90
 
 
 live_loop :is_not_alive do

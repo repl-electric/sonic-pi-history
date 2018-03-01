@@ -6,7 +6,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:b3 2]  [:e5 2] [_ 2]] 2] REST
+    [[[:b3 2]  [:d5 2] [_ 2]] 2] REST
     [[[:fs3 2] [:a4 2] [:cs4 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
@@ -144,6 +144,13 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
     sleep 1/4.0
   end
 end
+
+zero_cc pulse: 0.00
+zero_cc more:  0.00
+zero_cc noise: 0.20
+zero_cc wet:   0.80
+
+
 
 live_loop :is_not_alive do
   sync :zero

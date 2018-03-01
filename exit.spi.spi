@@ -39,7 +39,7 @@ live_loop :Fall_out_of_your_screen  do
   }
 
   pf=1.5
-  i=(method :cpu1)
+  i=(method :operator)
   at{
     with_transpose -12 do
     i.call(c[0], 60*pf, sus: 4)

@@ -8,7 +8,6 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   score = (ing
     [[[:b3 2]  [:d5 2] [:fs4 2]] 2] REST
     [[[:fs3 2] [:a4 2] [:cs4 2]] 2] REST
-
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12
@@ -31,7 +30,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep zzz
 end
 
-#zero_on
+zero_on :fs5
 zero_cc pulse: 0.00
 zero_cc more:  0.00
 zero_cc noise: 0.00

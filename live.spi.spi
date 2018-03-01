@@ -108,7 +108,6 @@ end
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
   with_bpm 50.0 do #63.5
     live_loop :Fall_into_your_screen {stop}
-    #stop
     zs=(ing
       :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
       :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4

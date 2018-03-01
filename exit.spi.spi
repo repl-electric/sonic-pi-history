@@ -22,7 +22,7 @@ live_loop :Fall_out_of_your_screen  do
   s=score.look
   c=s[0];zzz=s[-1]
 
-  bistable c[0][0], sus: 12 if spread(1,1).look
+  #bistable c[0][0], sus: 12 if spread(1,1).look
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10

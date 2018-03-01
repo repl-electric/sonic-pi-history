@@ -13,7 +13,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #eek :a1,80,  sus: 12
   #eek :cs2, sus: 12
   if spread(1,6).look
-    #rev :b5, 1
+    rev :b5, 1
     #eek :Gs3, 10
   end
   #with_transpose 0 { cpu3 root(c),(ing 127 120).look, sus: 2 }

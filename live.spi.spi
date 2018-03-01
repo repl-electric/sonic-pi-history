@@ -98,7 +98,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
       accent=110
       #s=_
       if s
-        mt s, accent=102, 115
+        mt s, accent=100, 115
       end
       if (s=(ing
             [5] _   5 _   5   _   5 _

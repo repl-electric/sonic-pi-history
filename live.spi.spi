@@ -287,7 +287,7 @@ live_loop :Clock, sync: :unsyncable do
         #rev :e5, 60
       end
       if k && spread(1,64).rot(0).look
-        bitsea :fs4, sus: 4.0
+        #bitsea :fs4, sus: 4.0
         cue(:light_source)
         null_x;strings_x;zero_x
         sync :kernel_panic

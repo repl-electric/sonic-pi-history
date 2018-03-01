@@ -34,12 +34,6 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
 
   pf=4.2
   i=(method :cpu1)
-  i.call(c[0], 60*pf, sus: 4)
-  i.call(c[1], 50*pf, sus: 4)
-  i.call(c[2], 55*pf, sus: 4)
-  i.call(c[3], 70*pf, sus: 2)
-  i.call(c[4], 30*pf, sus: 8)
-  i.call(c[5], 30*pf, sus: 8)
 
 
 #  null root(c), 127*1.0, mode: 1, sus: s[-1]*2

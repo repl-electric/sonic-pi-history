@@ -32,10 +32,10 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
 end
 
 #zero_on :a5
-zero_cc pulse: 0.00
-zero_cc more:  0.00
-zero_cc noise: 0.10
-zero_cc wet:   0.80
+#zero_cc pulse: 0.00
+#zero_cc more:  0.00
+#zero_cc noise: 0.10
+#zero_cc wet:   0.00
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
@@ -108,12 +108,12 @@ end
 #mt_cc morph: 0.3
 
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
-  with_bpm 40.0 do #63.5
+  with_bpm 55.0 do #63.5
     live_loop :Fall_into_your_screen {stop}
     #stop
     zs=(ing
-      :gs4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :gs4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+      :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_

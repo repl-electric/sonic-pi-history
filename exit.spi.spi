@@ -38,8 +38,8 @@ live_loop :Fall_out_of_your_screen  do
     qbitsea n[0],2.0*(ing 80 70 85 70).look(:inner), sus: ((n[-1])*1)+0.5, mode: 0, cutoff: 1.0, phase: 0, comp: 0
   }
 
-  null :d2, 127*1.0, mode: 2, sus: s[-1]
-  corrupt :d4, motion: 0.5
+  null :fs2, 127*1.0, mode: 2, sus: s[-1]
+  corrupt :fs4, motion: 0.5
 
   pf=0.9
   i=(method :operator)

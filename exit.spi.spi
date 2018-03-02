@@ -39,7 +39,7 @@ live_loop :Fall_out_of_your_screen  do
   }
 
   #null :fs2, 127*1.0, mode: 2, sus: s[-1]
-  sharp (ing :d4   :b3 _  _ :b3 _  :a3 _ ).look, 50, sus: 4
+  sharp root(c), 50, sus: 4
   #corrupt :fs4, motion: 0.5
 
   pf=0.9

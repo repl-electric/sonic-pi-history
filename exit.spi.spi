@@ -39,7 +39,7 @@ live_loop :Fall_out_of_your_screen  do
   }
 
   #null :fs2, 127*1.0, mode: 2, sus: s[-1]
-  exception root(c), 50, sus: 4, wet: 0.0, more: 0.1, shape: 0.1, atk: 0.1
+  exception root(c), 50, sus: 4, wet: 0.0, more: 1.0, shape: 0.1, atk: 0.1
   #corrupt :fs4, motion: 0.5
 
   pf=0.9

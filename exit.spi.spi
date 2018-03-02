@@ -10,7 +10,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
     [[[:d2 2]   [:fs3 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
     [[[:e2 2]   [:gs3 2]  [:b3 2]]  2]  REST
     [[[:cs3 2]  [:a3 2]   [:fs3 2] [_ 2]]  2]                  REST
-    [[[:a2 4]   [:cs3 2]   [:e4 2]  [:b4 4]]  2]                          REST
+    [[[:a2 4]   [:cs3 2]   [:e4 2]  [:b3 4]]  2]                          REST
     )
   cue :kernel_panic
   s=score.look

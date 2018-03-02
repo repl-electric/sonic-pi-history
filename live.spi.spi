@@ -4,7 +4,7 @@ bitsea_cc motion: 0.1
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
-  #stop
+  stop
   score = (ing
     [[[:b3 2] [:d4 2] [:e4 2] ] 2] REST
     [[[:fs3 2] [:a4 2] [:cs4 2]] 2] REST
@@ -109,12 +109,12 @@ end
 #mt_cc morph: 0.3
 
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
-  with_bpm 40.0 do #63.5
+  with_bpm 50.0 do #63.5
     live_loop :Fall_into_your_screen {stop}
     #stop
     zs=(ing
-      :gs4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :gs4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+      :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_
@@ -125,7 +125,7 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
     yes{
       v=1
       c = chord(zs.look(offset: 1),ct(zs.look(offset: 1)))
-      #with_transpose   0 { zero c[1], v,   sus: 12*1} if spread(1,2).rot(1).look
+      with_transpose   0 { zero c[1], v,   sus: 12*1} if spread(1,2).rot(1).look
       #with_transpose -12 { zero c[2], v+2, sus: 12*1} if spread(1,2).rot(1).look
       #with_transpose  12 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(0).look
       #with_transpose -24 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(1).look

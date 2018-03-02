@@ -32,14 +32,14 @@ live_loop :Fall_out_of_your_screen  do
     #eek (ing :e4 :gs4 :e4 :b4 _ _).look, (ing 100 120).look(:missing), sus: 3.0, at: 0.0, mod: 0.0
   end
 
-  #with_transpose -12 {cpu2 c[1], 60, sus: 2 }
+  with_transpose -12 {cpu2 c[1], 60, sus: 2 }
 
   c.each_tick(:inner){|n|
     qbitsea n[0],2.0*(ing 80 70 85 70).look(:inner), sus: ((n[-1])*1)+0.5, mode: 0, cutoff: 1.0, phase: 0, comp: 0
   }
 
   null root(c), 127*1.0, mode: 2, sus: s[-1]
-  exception root(c), 120, sus: 4, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
+  exception root(c), 120, sus: 4#, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
   #corrupt :fs4, motion: 0.5
 
   pf=0.9

@@ -166,7 +166,7 @@ live_loop :Clock, sync: :unsyncable do
   8.times{tick;
     DC = Drip[/cymbal/].look; CS = (0..17).map{|n| Crystal[/cymbal/].tick(:i)};
     C1 = (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
-    smp TC.take(12).look, amp: 0.5+rand*0.1, rate: (ing 0.85,1.0, 1.0).look if spread(1,12*2).look
+    #smp TC.take(12).look, amp: 0.5+rand*0.1, rate: (ing 0.85,1.0, 1.0).look if spread(1,12*2).look
     k=(ing
       [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
       K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1

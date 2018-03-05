@@ -155,7 +155,7 @@ end
 live_loop :is_not_alive do
   sync :zero
   with_bpm 40 do
-  16.times{
+  12.times{
     tick
     i=(ing 1.0 _ _ 0.5  _ _ 0.25 _ 1.0  _ _   0.5 _ _ 0.125 _).look
     smp Tape[/_high/,49], amp: i, pan: (ing -0.125 0.125).look#, finish: (ine 0.2 1.0 100).look, start: (ine 0.0 0.8 100).look, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).look

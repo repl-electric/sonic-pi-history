@@ -20,7 +20,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   end
   #with_transpose 0 { cpu3 root(c),(ing 127 120).look, sus: 2 }
   #rev :a6, 15, sus: 12
-  cpu1 root(c), (ring 35,40).look*1.6, sus: c[0][-1]
+  cpu1 root(c), (ring 35,40).look*1.7, sus: c[0][-1]
   c.each_tick(:in){|n|
     bitsea n[0], 1.0*(ing 80 70 85 70).look(:in), sus: ((n[-1])*1)+0.5, mode: 0, cutoff: (ramp 0.0, 1.1, 16).tick(:in)#, cutoff: 1.0
   }

@@ -162,13 +162,14 @@ live_loop :is_not_alive do
         tick
         #i=(ing _ _ 1.0 _  _ _ _ _).look
         sleep (1+1/4.0)/2.0
+        sleep (1+1/4.0)/2.0
+
         #bitsea :D5,1, sustain: 0.01, mode: 2
         corrupt :d1,60, sus: 0.5, motion: 0.1
         #eek     :D2,    sus: 0.1, mode: 0
         puts Tape[/_high/].look
         smp Tape[/_high/].look, amp: 0.125#, pan: (ing -0.125 0.125).look, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).look#, finish: (ine 0.2 1.0 100).look, start: (ine 0.0 0.8 100).look,
         tick
-        sleep (1+1/4.0)/2.0
         #smp Tape[/_high/].look, amp: 0.1#, pan: (ing -0.125 0.125).look, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).look#, finish: (ine 0.2 1.0 100).look, start: (ine 0.0 0.8 100).look,
 
 

@@ -44,7 +44,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do
     i.call(c[4], 30*pf, sus: 8)
         sleep 0.125
     i.call(c[5], 30*pf, sus: 8)
-        sleep 0.25
+        sleep 0.125
     }
   #exception root(c), 120, sus: 4#, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
 

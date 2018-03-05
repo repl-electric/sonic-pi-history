@@ -4,7 +4,7 @@ bitsea_cc motion: 0.1
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
-  #stop
+  stop
   score = (ing
     [[[:b2 2]  [:d4 2] [:fs3 2]] 2] REST
     [[[:fs2 2] [:a4 2] [:cs3 2]] 2] REST

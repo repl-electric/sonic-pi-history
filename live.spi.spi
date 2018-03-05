@@ -6,9 +6,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:b2 2]  [:d4 2] [:fs3 2]] 2] REST
+    [[[:b2 2]  [:ds4 2]  [:fs3 2]] 2] REST
     [[[:fs2 2] [:as4 2] [:cs3 2]] 2] REST
-    [[[:as2 2]  [:b3 2] [:e3 2]] 2] REST
+    [[[:as2 2] [:b3 2]  [:e3 2]] 2] REST
     [[[:d2 2]  [:fs3 2] [:a2 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]

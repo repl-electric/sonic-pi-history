@@ -226,7 +226,7 @@ live_loop :Clock, sync: :unsyncable do
       }
     }
 
-    s=spread(3,7).map{|x|x==true ? C5 : _}
+    s=spread(3,7*2).map{|x|x==true ? C5 : _}
     sx=(ing
       C5 _ _       _ _ _
 

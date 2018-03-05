@@ -162,7 +162,7 @@ live_loop :is_not_alive do
         tick
         #i=(ing _ _ 1.0 _  _ _ _ _).look
         sleep (1+1/4.0)/2.0
-        bitsea :D5,20, sus: 0.1, mode: 2
+        bitsea :B5,20, sus: 0.1, mode: 2
         corrupt :d1,60, sus: 0.5, motion: 0.1
         #eek     :D2,    sus: 0.1, mode: 0
         sleep (1+1/4.0)/2.0

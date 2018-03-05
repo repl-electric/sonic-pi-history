@@ -153,7 +153,7 @@ live_loop :Within_the_letters do;z,zs=nil;tick
   end
 end
 
-zero_cc amp: 0.4
+zero_cc amp: 0.70
 
 live_loop :is_not_alive do
   sync :zero

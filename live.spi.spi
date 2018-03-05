@@ -160,8 +160,8 @@ live_loop :is_not_alive do
       2.times{
         sleep (1/2.0+1/2.0+1/4.0)/2.0
         tick
-        i=(ing _ _ 1.0 _  _ _ _ _).look
-        smp Tape[/_high/,49], amp: i#, pan: (ing -0.125 0.125).look, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).look#, finish: (ine 0.2 1.0 100).look, start: (ine 0.0 0.8 100).look,
+        #i=(ing _ _ 1.0 _  _ _ _ _).look
+        smp Tape[/_high/,49], amp: 1#, pan: (ing -0.125 0.125).look, rate: (knit 1,2, 0.85,2, 1,2, 0.75,2).look#, finish: (ine 0.2 1.0 100).look, start: (ine 0.0 0.8 100).look,
       }
     end
   end

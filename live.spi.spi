@@ -6,12 +6,12 @@ bitsea_cc motion: 1.0
     def zbitsea(n,*args)
       if n
         params, opts = split_params_and_merge_opts_array(args)
-      opts         = current_midi_defaults.merge(opts)
+        opts         = current_midi_defaults.merge(opts)
 #      n, vel = *params
 
         if n.is_a?(Array)
           args_h = resolve_synth_opts_hash_or_array(args)
-          puts "A:#{args_h}"
+          puts "A:#{opts}"
 
           args =  args << {sus: n[1]+0.5}
           n = n[0]

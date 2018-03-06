@@ -2,6 +2,37 @@ D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
 bitsea_cc motion: 1.0
 
+
+
+
+    def bitsea(n,*args)
+      if n
+        if n.is_a?(Array)
+          args =  args << {sus: n[1]+0.5}
+          n = n[0]
+        end
+        if args && args[0].is_a?(Numeric)
+          velocity = args[0]
+          args = args[1..-1]
+        else
+          velocity = 30
+        end
+        args_h = resolve_synth_opts_hash_or_array(args)
+        if(args_h[:mode])
+          bitsea_mode(args_h[:mode])
+        end
+        if n && ((n != "_") && n != :_)
+          puts args
+          midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
+          puts "#{SonicPi::Note.new(n).midi_string} [Bitsea]" unless note(n) < MODE_NOTE
+        end
+        bitsea_cc args_h
+      end
+    end
+
+
+
+
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop

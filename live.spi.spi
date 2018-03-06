@@ -23,7 +23,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     bitsea_cc cutoff: 0.01
   }
   #null root(c), 127*1.0, mode: 1, sus: 1
-  exception root(c), 127, sus: 4, atk: 0.01, shape: 0.7, more: 1.0, wet: 0.5
+  exception root(c), 127, sus: 2
   strings c[0][-2], 35
   sleep zzz
   #corrupt root(c)[0]+12*0, 10, motion: 0.1, mode: 0
@@ -295,7 +295,7 @@ live_loop :Clock, sync: :unsyncable do
     end
     k=k.look
 
-    k=_
+    #k=_
     no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60

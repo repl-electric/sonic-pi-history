@@ -13,7 +13,7 @@ bitsea_cc motion: 1.0
           args_h = resolve_synth_opts_hash_or_array(args)
           puts "A:#{params}"
 
-          args[0] =  args.merge( {sus: n[1]+0.5})
+          args[0] =  args_h.merge( {sus: n[1]+0.5})
           n = n[0]
         end
 

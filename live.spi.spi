@@ -6,7 +6,7 @@ bitsea_cc motion: 1.0
     def zbitsea(n,*args)
       if n
         if n.is_a?(Array)
-          args_h = resolve_synth_opts_hash_or_array(args)
+#          args_h = resolve_synth_opts_hash_or_array(args)
           args =  args << [{sus: n[1]+0.5}]
           puts "A:#{args}"
           n = n[0]

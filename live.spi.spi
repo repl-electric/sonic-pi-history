@@ -29,7 +29,7 @@ bitsea_cc motion: 1.0
           bitsea_mode(args_h[:mode])
         end
         if n && ((n != "_") && n != :_)
-          puts args
+          puts "AGZS#{args}"
           midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
    #       puts "#{SonicPi::Note.new(n).midi_string} [Bitsea]" unless note(n) < MODE_NOTE
         end

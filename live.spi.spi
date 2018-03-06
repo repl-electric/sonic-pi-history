@@ -4,7 +4,7 @@ bitsea_cc motion: 1.0
 
 
     def zbitsea(*args)
-      if n
+      #if n
         params, opts = split_params_and_merge_opts_array(args)
         opts         = current_midi_defaults.merge(opts)
         n, vel = *params
@@ -37,7 +37,7 @@ bitsea_cc motion: 1.0
    #       puts "#{SonicPi::Note.new(n).midi_string} [Bitsea]" unless note(n) < MODE_NOTE
         end
         bitsea_cc args_h
-      end
+      #end
     end
 
 

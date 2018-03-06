@@ -6,8 +6,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:a2 2]  [:cs4 2] [:e3 2]] 2]         [[[:fs5 0.25]] 0.75]
-    [[[:cs2 2] [:e4 2] [:fs3 2]] 2]         [[[:gs5 0.25]] 0.75]
+    [[[:a2 2]  [:cs4 2] [:e3 2]] 2]         [[[:fs5 0.55]] 0.75]
+    [[[:cs2 2] [:e4 2] [:fs3 2]] 2]         [[[:gs5 0.5]] 0.75]
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12

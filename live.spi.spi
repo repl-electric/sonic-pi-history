@@ -12,7 +12,7 @@ bitsea_cc motion: 1.0
         else
           velocity = 30
         end
-                if n.is_a?(Array)
+        if n.is_a?(Array)
 #          args_h = resolve_synth_opts_hash_or_array(args)
          # args =  [{sus: n[1]+0.5}] << args
           #puts "A:#{args}"

@@ -9,7 +9,7 @@ bitsea_cc motion: 1.0
       if n
         if n.is_a?(Array)
           args_h = resolve_synth_opts_hash_or_array(args)
-          puts args_h
+          puts "A:#{args_h}"
           args =  args << {sus: n[1]+0.5}
           n = n[0]
         end

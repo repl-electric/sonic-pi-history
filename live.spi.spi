@@ -3,7 +3,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 bitsea_cc motion: 1.0
 
 
-    def zbitsea(n,*args)
+    def zbitsea(args)
       if n
         params, opts = split_params_and_merge_opts_array(args)
         opts         = current_midi_defaults.merge(opts)

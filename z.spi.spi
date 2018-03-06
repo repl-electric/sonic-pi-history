@@ -1,6 +1,6 @@
 loop do
 tick
-  bitsea_cc low: 0.84
+  bitsea_cc low: 0.85
 
   sleep 0.25
   end

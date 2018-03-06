@@ -16,7 +16,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
   s=score.look;;c=s[0];zzz=s[-1]
   whitespace c[0][0], sus: 12
   if spread(1,6).look
-    rev :b5, 1
+    rev :b5, 10
     #eek :Gs3, 10
   end
   #rev :a6, 20, sus: 12

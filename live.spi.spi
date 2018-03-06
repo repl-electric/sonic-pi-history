@@ -9,6 +9,7 @@ bitsea_cc motion: 1.0
         opts         = current_midi_defaults.merge(opts)
         n, vel = *params
         puts n
+        puts vel
 
         if n.is_a?(Array)
           args_h = resolve_synth_opts_hash_or_array(args)

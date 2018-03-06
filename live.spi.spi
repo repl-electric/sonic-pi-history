@@ -17,7 +17,7 @@ bitsea_cc motion: 1.0
 
           n = n[0]
         end
-
+        if n
         if args && args[0].is_a?(Numeric)
           velocity = args[0]
           args = args[1..-1]
@@ -33,7 +33,8 @@ bitsea_cc motion: 1.0
           midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
    #       puts "#{SonicPi::Note.new(n).midi_string} [Bitsea]" unless note(n) < MODE_NOTE
         end
-        bitsea_cc args_h
+          bitsea_cc args_h
+        end
       end
     end
 

@@ -13,7 +13,7 @@ bitsea_cc motion: 1.0
           velocity = 30
         end
         if n.is_a?(Array)
-          args = {sus: n[1]+0.5}.merge(args[0])
+          args[0] = {sus: n[1]+0.5}.merge(args[0])
           puts "A:#{args}"
           n = n[0]
         end

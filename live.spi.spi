@@ -6,7 +6,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:a1 2]] 2] REST
+    [[[:a2 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12
@@ -194,9 +194,6 @@ live_loop :Clock, sync: :unsyncable do
     k=k.map{|s| look % 4 == 0 ? _ : s }
     bitsea_mode (ing *0..6).look#, motion: (ing 0.0,1.0).look
     bitsea_mode(0) if !k
-
-
-    puts (ing *0..6)
 
     kz=(ing
       [KT[1]] _ _ _   TS[2] _ TS[9] _     K3 _ TT[9] _  TS[3] _ _ _

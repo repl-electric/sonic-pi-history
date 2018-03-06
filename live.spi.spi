@@ -14,12 +14,10 @@ bitsea_cc motion: 1.0
         end
         if n.is_a?(Array)
 #          args_h = resolve_synth_opts_hash_or_array(args)
-          args = args[0].merge( {sus: n[1]+0.5})
+          args = args[0].reverse_merge( {sus: n[1]+0.5})
           puts "A:#{args}"
           n = n[0]
         end
-
-
         args_h = resolve_synth_opts_hash_or_array(args)
         if(args_h[:mode])
           bitsea_mode(args_h[:mode])

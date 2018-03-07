@@ -193,9 +193,6 @@ live_loop :Clock, sync: :unsyncable do
 
     puts K3
 
-    k1,k3,k4,k5 = Frag[/kick/,9], Mountain[/subkick/,0], Mountain[/kick/,4], Lo[/kick/,15]
-    puts k4
-
     k=k.map{|s| look % 32 == 0 ? s : _ }
 
     #k = (ing K1 _ _ _   _ _ _ _ )

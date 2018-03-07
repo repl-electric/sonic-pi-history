@@ -193,9 +193,9 @@ live_loop :Clock, sync: :unsyncable do
 
     #k=k.map{|s| look % 16 == 0 ? s : _ }
 
-    k = (ing K1 _ _ _   _ _ _ _ )
+    #k = (ing K1 _ _ _   _ _ _ _ )
 
-    midi :d5, channel: 2 if k.look
+   # midi :d5, channel: 2 if k.look
 
     puts k.look
     #bitsea_mode (ing *0..6).look#, motion: (ing 0.0,1.0).look

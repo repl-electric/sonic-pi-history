@@ -1,27 +1,11 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
-
-# bitsea_cc motion: 0.10 #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-# bitsea_cc formant: 0.50
-# bitsea_cc cutoff: 1.00
-# bitsea_cc octave: 0.55 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-
-# #bitsea_on :A2
-# #bitsea_on :Cs4
-# #bitsea_on :E3
-
-# bitsea lo: 0.85 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-# bitsea mi: 0.85 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-# bitsea hi: 0.85 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-bitsea_x
-
-
+bitsea_cc motion: 1.0
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
-  stop
+  #stop
   score = (ing
-    [[[:a2 2]  [:cs4 2] [:e3 2]] 2] REST        #[[[:fs4 0.125]] 0.5]
-    [[[:cs2 2] [:e4 2] [:fs3 2]] 2] REST        #[[[:gs4 0.125]] 0.5]
+    [[[:a1 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12
@@ -34,9 +18,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #rev :a6, 15, sus: 12
   #callstack root(c), (ring 60,68).look
   c.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: (ramp 0.0, 1.1, 12).tick(:oo), lo: 0.85, mi: 0.85, hi: 0.85
+    #bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: (ramp 0.0, 1.1, 12).tick(:oo)#, cutoff: 1.0
   }
-  null root(c), 127*1.0, mode: 1
+  #null root(c), 127*1.0, mode: 1
   #exception root(c), 15
   #strings c[0][-2]
   sleep zzz
@@ -206,14 +190,7 @@ live_loop :Clock, sync: :unsyncable do
       K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _
       )
 
-    #puts K3
-
-    k=k.map{|s| look % 64 == 0 ? s : _ }
-
-    #k = (ing K1 _ _ _   _ _ _ _ )
-
-   # midi :d5, channel: 2 if k.look
-
+    k=k.map{|s| look % 32 == 0 ? s : _ }
     #bitsea_mode (ing *0..6).look#, motion: (ing 0.0,1.0).look
     #bitsea_mode(0) if !k
 
@@ -316,7 +293,7 @@ live_loop :Clock, sync: :unsyncable do
     end
     k=k.look
 
-    #k=_
+    k=_
     no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60

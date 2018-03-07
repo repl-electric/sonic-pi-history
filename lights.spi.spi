@@ -1,4 +1,4 @@
-shader :shader, "explode.glsl", "glitch.vert", "lines", 1000
+shader :shader, "explode.glsl", "glitch.vert", "points", 1000
 shader :fx, :bloom, 0
 shader :fx, :rim, 0
 shader :fx, :vts, 0

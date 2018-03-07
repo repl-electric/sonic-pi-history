@@ -1,4 +1,4 @@
-shader :shader, "wave.glsl", "lines.vert", "points", 4000
+shader :shader, "wave.glsl", "lines.vert", "lines", 4000
 shader :fx, :bloom, 0
 shader :fx, :rim, 0
 shader :fx, :vts, 0

@@ -7,6 +7,7 @@ shader :fx, :kal, 0
 shader :fx, :pixel, 0
 shader :fx, :rgb, 0
 shader :fx, :bleach, 0
+shader :iR, 0.0
 
 live_loop :zoom do#, sync: :metro do
 #stop

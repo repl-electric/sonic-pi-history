@@ -1,6 +1,6 @@
 shader :shader, "alien.glsl"#, "sphere.vert", "points", 8000
  shader :fx, :bloom, 1
- shader :fx, :rim, 0
+ shader :fx, :rim, 1
  shader :fx, :vts, 0
  shader :fx, :toon, 0
  shader :fx, :kal, 0

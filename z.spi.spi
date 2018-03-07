@@ -1,0 +1,5 @@
+live_loop :bladdd do
+  tick
+  qbitsea_cc lo: 0.85
+  sleep 0.25
+end

@@ -1,5 +1,0 @@
-live_loop :bladdd do
-  tick
-  bitsea_cc octave: 0.85
-  sleep 0.25
-end

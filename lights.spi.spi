@@ -1,4 +1,4 @@
-shader :shader, "dots.glsl", "clouds.vert", "points", 1000
+shader :shader, "dots.glsl", "clouds.vert", "points", 9999
 shader :fx, :bloom, 0
 shader :fx, :rim, 0
 shader :fx, :vts, 0

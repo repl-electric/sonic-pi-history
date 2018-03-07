@@ -1,4 +1,4 @@
-shader :shader, "alien.glsl", "sphere.vert", "lines", 8000
+shader :shader, "alien.glsl", "sphere.vert", "points", 8000
 shader :fx, :bloom, 0
 shader :fx, :rim, 0
 shader :fx, :vts, 0

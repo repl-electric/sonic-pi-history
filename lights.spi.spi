@@ -12,7 +12,7 @@ shader :iG, 10.0
 shader :iB, 10.0
 shader :iMode, 0
 shader :iMotion, 0.0
-shader :iHarp, 0.2
+shader :iHarp, 0.0
 
 live_loop :zoom do#, sync: :metro do
 #stop

@@ -18,6 +18,7 @@ shader :fx, :pixel, 0
 shader :fx, :rgb, 0
 shader :fx, :bleach, 1
 
+shader :iHarp, 1.0
 
 #shader :iR, 0.99
 #shader :iG, 0.0

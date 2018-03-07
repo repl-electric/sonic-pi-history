@@ -14,7 +14,7 @@ shader :iMode, 0.0
 #shader :iMotion, 0.01
 #shader :decay, :iHarp, 10.0
 
-operator :FS3, sus: 0.3
+#operator :FS3, sus: 0.3
 
 live_loop :zoom do#, sync: :metro do
 #stop
@@ -33,8 +33,8 @@ live_loop :zoom do#, sync: :metro do
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   shader :iZoom, (line 0.0, 32, 12).look
   shader :bloom, ((line 0.25, 1.5,256) + (line 1.5, 0.25,256)).look
-  shader :decay, :iHarp, 10
-  shader :decay, :iSharp, 10
+  #shader :decay, :iHarp, 10
+  #shader :decay, :iSharp, 10
   sleep 1.0
 end
 

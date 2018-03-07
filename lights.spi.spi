@@ -6,7 +6,7 @@ shader :fx, :toon, 0
 shader :fx, :kal, 0
 shader :fx, :pixel, 0
 shader :fx, :rgb, 0
-shader :fx, :bleach, 1
+shader :fx, :bleach, 0
 shader :iR, 10.0
 shader :iG, 10.0
 shader :iB, 10.0

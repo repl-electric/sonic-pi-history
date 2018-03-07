@@ -1,4 +1,4 @@
-shader :shader, "dots.glsl", "lines.vert", "tri", 4000
+shader :shader, "dots.glsl"#, "lines.vert", "tri", 4000
 shader :fx, :bloom, 1
 shader :fx, :rim, 0
 shader :fx, :vts, 0

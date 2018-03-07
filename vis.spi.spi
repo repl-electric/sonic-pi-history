@@ -26,7 +26,7 @@ shader :fx, :bleach, 1
 live_loop :zoom do#, sync: :metro do
 #stop
   tick
-shader :shader, "dots.glsl", "sphere.vert", "lines", 10000
+  shader :shader, "dots.glsl"#, "sphere.vert", "lines", 10000
   x = "#{([" "]*rand_i(100)).join("")}#{((self.methods.map{|s| s.to_s.split("_").shuffle}.flatten)).shuffle.join(" "*rand_i(400))[0..300]}"
 
    x = "#{[" " * rand_i(600)].join}#{(self.methods+self.private_methods+Object.instance_methods).choose}#{[" "*rand_i(600)].join}"

@@ -4,7 +4,7 @@
 
 shader [:iR,:iG,:iB].choose, 9.0
 
-shader :iMode,0
+shader :iMode,1
 shader :iAlien, 0.
 shader :iMotion, 0.004
 shader :iZoom, 0.1

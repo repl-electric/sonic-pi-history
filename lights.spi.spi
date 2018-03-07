@@ -7,7 +7,7 @@ shader :shader, "alien.glsl"#, "sphere.vert", "points", 8000
  shader :fx, :pixel, 0
  shader :fx, :rgb, 0
  shader :fx, :bleach, 1
-shader :iR, 1.0
+shader :iR, 0.0
 shader :iG, 10.0
 shader :iB, 10.0
 shader :iMode, 0.0

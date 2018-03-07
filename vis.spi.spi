@@ -38,7 +38,7 @@ shader :shader, "dots.glsl", "sphere.vert", "lines", 10000
   #x = "test"
   #smp Mountain[/subkick/,0], v: 1.5
   shader :echo, "small", x, 0.0,0,  255,255,255,255
-  shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
+  #shader :shader, "dots.glsl", "sphere.vert", "lines", 5000
   shader :iAlien, (line 0.0, 1.0, 64/2.0).look
   #shader :iZoom, (line 0.0, 32, 12).look
   shader :bloom, 1.0#((line 0.25, 1.5,256) + (line 1.5, 0.25,256)).look

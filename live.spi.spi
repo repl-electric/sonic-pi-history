@@ -191,7 +191,7 @@ live_loop :Clock, sync: :unsyncable do
       K1, _, _, _,       _, _, _, _,          K1, _, %e{TC[6]}, _,   _, _, [F1, 0.99], _,
       )
 
-    puts K3
+    #puts K3
 
     k=k.map{|s| look % 32 == 0 ? s : _ }
 

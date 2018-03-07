@@ -14,7 +14,9 @@ shader :iMode, 0.0
 #shader :iMotion, 0.01
 #shader :decay, :iHarp, 10.0
 
-operator :FS3, 127.0, sustain: 8
+#operator :FS3, 127.0, sustain: 8
+
+midi :FS3, 100, port: :iac_bus_1, channel: 3
 
 live_loop :zoom do#, sync: :metro do
 #stop

@@ -14,7 +14,7 @@ shader :iMode, 0.0
 #shader :iMotion, 0.01
 #shader :decay, :iHarp, 10.0
 
-operator :FS3, 100, sus: 2
+operator :FS3, 120, sus: 2
 
 live_loop :zoom do#, sync: :metro do
 #stop

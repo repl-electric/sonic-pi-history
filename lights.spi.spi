@@ -1,4 +1,4 @@
-shader :shader, "dots.glsl", "bits.vert", "lines", 9999
+shader :shader, "dots.glsl", "bits.vert", "lines", 100
 shader :fx, :bloom, 1
 shader :fx, :rim, 0
 shader :fx, :vts, 0

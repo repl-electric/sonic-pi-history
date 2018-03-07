@@ -1,4 +1,4 @@
-shader :shader, "explode.glsl", "spikes.vert", "points", 2000
+shader :shader, "explode.glsl", "spikes.vert", "points", 3000
 shader :fx, :bloom, 0
 shader :fx, :rim, 0
 shader :fx, :vts, 0

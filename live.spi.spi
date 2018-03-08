@@ -1,7 +1,14 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
 bitsea_cc motion: 1.0
 
+
+live_loop :blah do
+  tick
 exception :a2, 15
+  sleep 3
+end
+
+
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick

@@ -3,7 +3,7 @@ bitsea_cc motion: 1.0
 bitsea_cc octave: 0.5
 bitsea_cc formant: 0.31
 
-bitsea_on :E3
+bitsea_on :cs4
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick

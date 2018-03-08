@@ -85,7 +85,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
         _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
         )
       s=(knit s2,16*4,s3,16*4, s1,16*4).look
-      s=_
+      #s=_
       mt s.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
@@ -282,7 +282,7 @@ live_loop :Clock, sync: :unsyncable do
     end
     k=k.look
 
-    k=_
+    #k=_
     no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60

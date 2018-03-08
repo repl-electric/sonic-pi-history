@@ -37,11 +37,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep zzz
 end
 
-zero_on :A5
-zero_cc pulse: 0.00
-zero_cc more:  0.00
-zero_cc noise: 0.00
-zero_cc wet:   0.00
+zero_on :cs6
+zero_cc pulse: 0.60
+zero_cc more:  0.40
+zero_cc noise: 0.50
+zero_cc wet:   1.00
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do

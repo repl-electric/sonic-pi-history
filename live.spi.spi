@@ -120,8 +120,8 @@ live_loop :Within_the_letters  do;z,zs=nil;tick
     live_loop :Fall_into_your_screen {stop}
     #stop
     zs=(ing
-      :d4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :d4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      :ds4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+      :ds4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_

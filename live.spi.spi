@@ -14,7 +14,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     [[[:b3 2]  [:ds5 2] [:fs4 2]] 2] REST
     [[[:fs3 2] [:as4 2] [:cS4 2]] 2] REST
     [[[:a3 2]  [:b4 2] [:cS4 2]] 2] REST
-    [[[:d3 2]  [:fs4 2] [:a4 2]] 2] REST
+    [[[:ds3 2]  [:fs4 2] [:a4 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12

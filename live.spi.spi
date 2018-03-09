@@ -11,7 +11,6 @@ bitsea_cc width: 0.77
 
 
 def rooz(note_seq)
-  puts note_seq
       note_seq.map{|n|
         if n[0]
           [note(n[0]), n[-1]]

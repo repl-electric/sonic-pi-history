@@ -1,16 +1,16 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
-bitsea_cc motion: 1.00
-bitsea_cc octave: 0.50
+bitsea_cc motion: 0.50
+bitsea_cc octave: 0.55
 #bitsea_cc formant: 0.35
 
-bitsea_on :CS4
+#bitsea hi: 0.50
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-#,    [[[:a2, 2], [:cs4, 2], [:e3, 2]], 2], REST,
-#,    [[[:cs2, 2], [:E4, 2]], 2], REST,
+    [[[:a2, 2], [:cs4, 2], [:e3, 2]], 2], REST,
+    [[[:cs2, 2], [:E4, 2]], 2], REST,
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12
@@ -21,9 +21,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   end
   #with_transpose 0 { cpu3 root(c),(ing 127, 120,).look, sus: 2 }
   #rev :a6, 15, sus: 12
-  #callstack root(c), (ring 60,68).look
+  callstack root(c), (ring 60,68).look
   c.each_tick(:in){|n|
-    #bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: (ramp 0.0, 1.1, 12).tick(:oo)#, cutoff: 1.0
+    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0#, cutoff: (ramp 0.0, 1.1, 12).tick(:oo)#, cutoff: 1.0
   }
   #exception root(c), 15
   #strings c[0][-2]

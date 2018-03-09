@@ -3,13 +3,13 @@ bitsea_cc motion: 1.00
 bitsea_cc octave: 0.50
 #bitsea_cc formant: 0.35
 
-bitsea_on :CS4
+bitsea_on :A2
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:a2 2] [:cs4 2] [:e3 2]] 2] REST
+#    [[[:a2 2] [:cs4 2] [:e3 2]] 2] REST
 #    [[[:cs2 2] [:E4 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]

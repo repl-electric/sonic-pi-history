@@ -16,7 +16,7 @@ def rooz(note_seq)
         if n[0]
           [note(n[0]), n[-1]]
         else
-          []
+          nil
         end
       }.compact.sort{|n1,n2| n1[0] <=> n2[0] }[0]
     end

@@ -1,4 +1,4 @@
-null :A2, 127*1.0, mode: 1
+null :A2, 127*1.0, mode: 2
 
 use_bpm 63.5; REST=[[[_, 0.25]], 2]
 live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;

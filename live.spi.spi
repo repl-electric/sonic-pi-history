@@ -1,15 +1,15 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
-bitsea_cc motion: 0.50
+bitsea_cc motion: 0.20
 bitsea_cc octave: 0.50
 #bitsea_cc formant: 0.35
 
-#bitsea hi: 0.50
+#bitsea hi: 0.85
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:b3 2] [:d4 2] [:fs3 2]] 2] REST
+    [[[:b3 2] [:d5 2] [:fs3 2]] 2] REST
     [[[:fs3 2] [:a4 2] [:CS3 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]

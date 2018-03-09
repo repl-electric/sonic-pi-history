@@ -9,7 +9,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:b3 2] [:d4 2] [:fs4 2]] 2] REST
+    [[[:b3 2] [_ 2] [:fs4 2]] 2] REST
     [[[:fs3 2] [:a3 2] [:CS4 2]] 2] REST
     [[[:a3 2] [:b3 2] [:cS4 2]] 2] REST
     [[[:d3 2] [:fs3 2] [:a4 2]] 2] REST
@@ -36,12 +36,12 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep zzz
 end
 
-zero_on :A5
-zero_cc pulse: 0.00
-zero_cc more:  0.00
+#zero_on :A5
+zero_cc pulse: 0.60
+zero_cc more:  0.40
 zero_cc noise: 0.00
 zero_cc wet:   0.80
-zero_cc amp: 0.50
+zero_cc amp:   0.50
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
@@ -285,7 +285,7 @@ live_loop :Clock, sync: :unsyncable do
     k=k.look
 
     #k=_
-    no{
+    yes{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60
       end

@@ -9,7 +9,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
-  #stop
+  stop
   score = (ing
     [[[:b3 2]  [_ 2] [:fs4 2]] 2] REST
     [[[:fs3 2] [:a4 2] [:cS4 2]] 2] REST

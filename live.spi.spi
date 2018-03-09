@@ -132,9 +132,9 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
       v=1
       c = chord(zs.look(offset: 1),ct(zs.look(offset: 1)))
       with_transpose   0 { zero c[1], v,   sus: 12*1} if spread(1,2).rot(1).look
-      #with_transpose -12 { zero c[2], v+2, sus: 12*1} if spread(1,2).rot(1).look
+      with_transpose -12 { zero c[2], v+2, sus: 12*1} if spread(1,2).rot(1).look
       #with_transpose  12 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(0).look
-      #with_transpose -24 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(1).look
+      with_transpose -24 { zero c[0], v,   sus: 12*1} if spread(1,2).rot(1).look
       #zero :fs5, 5, sus: 12*3 if z == :d4
     }
     sleep 1/2.0

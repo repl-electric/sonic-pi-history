@@ -121,7 +121,7 @@ live_loop :Within_the_letters  do;z,zs=nil;tick
     #stop
     zs=(ing
       :ds4 :cs4 _ :as3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :ds4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
+      :ds4 :cs4 _ :as3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_

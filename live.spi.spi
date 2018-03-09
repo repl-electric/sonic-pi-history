@@ -1,12 +1,13 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
 bitsea_cc motion: 0.1
 bitsea_cc formant: 0.5
+bit
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:b2 2]  [:Ds3 2] [:fs3 2]] 2] REST
+    [[[:b2 2]  [:D3 2] [:fs3 2]] 2] REST
     [[[:fs2 2] [:As3 2] [:cs3 2]] 2] REST
     [[[:a2 2]  [:b3 2] [:cs4 2]] 2]  REST
     [[[:d2 2]  [:fs3 2] [:a3 2]] 2]  REST

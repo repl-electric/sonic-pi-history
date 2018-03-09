@@ -287,7 +287,7 @@ live_loop :Clock, sync: :unsyncable do
     #k=_
     yes{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
-        rev :e5, 60
+        #rev :e5, 60
       end
       if k && spread(1,64).rot(0).look
         bitsea :fs4, sus: 4.0

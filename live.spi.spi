@@ -36,11 +36,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   sleep zzz
 end
 
-zero_on :FS5
+zero_on :A5
 zero_cc pulse: 0.00
 zero_cc more:  0.00
 zero_cc noise: 0.00
-zero_cc wet:   0.00
+zero_cc wet:   0.50
 zero_cc amp: 0.2
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do

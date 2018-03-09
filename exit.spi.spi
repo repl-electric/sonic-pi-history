@@ -1,5 +1,5 @@
 with_transpose -12 {
-  null :A2, 127*1.0, mode: 2, sus: 2
+  null :A2, 127*1.0, mode: 2, sus: 1
 }
 
 use_bpm 63.5; REST=[[[_, 0.25]], 2]

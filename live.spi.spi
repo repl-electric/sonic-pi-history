@@ -245,7 +245,7 @@ live_loop :Clock, sync: :unsyncable do
           0.5 0 0.125 0 0.8 0 0.125 0
           0.125 0 0.125 0 0.8 0 0.125 0
           0.125 0 0.125 0 0.125 0 0.8 0).look,
-        pan: 0.0125, cutoff: (line 100, 127,64).look, pan: Math.sin(vt*13)/1.5
+        pan: 0.0125, cutoff: (line 100, 127,64).look, pan: Math.sin(vt*13)/1.5, rate: 0.25
       }
     }
 

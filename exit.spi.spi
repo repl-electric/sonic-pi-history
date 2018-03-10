@@ -1,6 +1,6 @@
 REST=[[[_, 0.25]], 1];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
-  live_loop :Within_the_letters{stop}
+ # live_loop :Within_the_letters{stop}
 
   score =  (ing  #15.25
     [[[:b2 0.5]  [:d5 0.5]   [:fs3 0.5]]           1]                  #REST

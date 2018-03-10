@@ -6,9 +6,9 @@ live_loop :Fall_out_of_your_screen do tick;
     [[[:b2 0.5]  [:d5 0.5]   [:fs3 0.5]]           1]                  #REST
     [[[:fs2 0.5] [:a4 0.5]   [:cs3 0.5]]           1]                  #REST
     [[[:a2 0.5]  [:b4 0.5]   [:e4 0.5]]            1]
-    [[[:d3 0.5]  [:fs5 0.5]  [:a3 0.5]  [[:cs5 0.5] [:e4 0.5]].choose] 1]  REST
+    [[[:d3 0.5]  [:fs5 0.5]  [:a3 0.5]  [[:cs5 0.5] [:e4 0.5]].choose] 1]  #REST
     [[[:e2 0.5]    [:gs4 0.5]  [:b3 1]]           1]
-    [[[:b2 0.5]  [:d5 0.5]   [:fs3 0.5] [:cs4 0.5]]  1]                  REST
+    [[[:b2 0.5]  [:d5 0.5]   [:fs3 0.5] [:cs4 0.5]]  1]                  #REST
     [[[:fs4 0.5] [:A4 0.5]   [:Cs3 0.5] ]  1]                          #REST
     )
 #  cue :kernel_panic
@@ -59,7 +59,6 @@ live_loop :Fall_out_of_your_screen do tick;
     with_transpose 0 do
       exception root(c), 127, sus: 1/8.0, sustain: 1/8.0, attack: 0.05#, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
     end
-
 
     sleep (ing  1/4.0).look
 

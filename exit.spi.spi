@@ -3,13 +3,13 @@ live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
 
   score =  (ing  #15.25
-    [[[:b2 1.5]  [:d5 1.5]   [:fs3 1.5]]           2]                  REST
-    [[[:fs2 1.5] [:a4 1.5]   [:cs3 1.5]]           2]                  REST
+    [[[:b2 1.5]  [:d5 1.5]   [:fs3 1.5]]           2]                  #REST
+    [[[:fs2 1.5] [:a4 1.5]   [:cs3 1.5]]           2]                  #REST
     [[[:a2 1.5]  [:b4 1.5]   [:e4 1.5]]            2]
     [[[:d3 1.5]  [:fs5 1.5]  [:a3 1.5]  [[:cs5 1.5] [:e4 1.5]].choose] 2]  REST
     [[[:e2 2]    [:gs4 2]  [:b3 2]]  2]
     [[[:b2 1.5]  [:d5 1.5]   [:fs3 1.5] [:cs4 1.5]]  2]                  REST
-    [[[:fs4 1.5] [:A4 1.5]   [:Cs3 1.5] ]  2]                          REST
+    [[[:fs4 1.5] [:A4 1.5]   [:Cs3 1.5] ]  2]                          #REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]

@@ -6,7 +6,7 @@ live_loop :Fall_out_of_your_screen do tick;
     [[[:b2 1.5]  [:d5 1.5]   [:fs3 1.5]]           2]                  REST
     [[[:fs2 1.5] [:a4 1.5]   [:cs3 1.5]]           2]                  REST
     [[[:a2 1.5]  [:b4 1.5]   [:e4 1.5]]            2]
-    [[[:d3 1.5]  [:fs5 1.5]  [:a3 1.5]  [[:cs5 2] [:e4 2]].choose] 2]  REST
+    [[[:d3 1.5]  [:fs5 1.5]  [:a3 1.5]  [[:cs5 1.5] [:e4 2]].choose] 2]  REST
     [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
     [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
     [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST

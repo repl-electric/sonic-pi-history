@@ -42,8 +42,10 @@ at{
 
   sleep 1/8.0
 
+  with_transpose 12 {
   exception root(c), 127, sus: 2#, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
-  null root(c), 127*0.8, mode: 2
+    null root(c), 127*0.8, mode: 2
+    }
 
   7.times{tick(:in2);
     callstack (ing

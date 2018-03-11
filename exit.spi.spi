@@ -71,9 +71,9 @@ live_loop :ag, sync: :Fall_out_of_your_screen do
 #  smp Mountain[/subkick/,0], amp: 3.0
   if spread(1,2).look
     if spread(1,3).look
-      smp TS[7]
+ #     smp TS[7]
     else
-      smp TS[12]
+  #    smp TS[12]
     end
   end
 

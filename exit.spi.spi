@@ -72,6 +72,7 @@ end
 live_loop :ag, sync: :Fall_out_of_your_screen do
   tick
   bitsea_cc mode: (ing *0..7).look
+  qbitsea_cc mode: (ing *0..7).look
 #  smp Mountain[/subkick/,0], amp: 3.0
   if spread(1,2).look
     if spread(1,3).look

@@ -28,7 +28,7 @@ live_loop :Fall_out_of_your_screen do tick;
   with_transpose -12 {cpu2 c[1], 60, sus: 2 }
 
   at{
-    c.take(2).each_tick(:inner){|n|
+    c.take(1).each_tick(:inner){|n|
       puts "************************************"
       qbitsea n,2.0*(ing 80 70 85 70).look(:inner), mode: 0, cutoff: 1.0, phase: 0, comp: 0
       sleep 0.5

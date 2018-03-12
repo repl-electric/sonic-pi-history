@@ -43,9 +43,10 @@ live_loop :Fall_out_of_your_screen do tick;
   null root(c), 127*0.5, mode: 2
 
   #if spread(1,4).look
-    with_transpose 12 {
-      corrupt c[-1], sus: 2, motion: 0.05, formant: 0.5, octave: 0.5, mode: 1
-    }
+    #with_transpose 12 {
+    corrupt c[-1], sus: 2, motion: 0.05, formant: 0.5, octave: 0.5, mode: 1
+
+    #}
   #  end
 
 

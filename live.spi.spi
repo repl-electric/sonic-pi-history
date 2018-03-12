@@ -307,6 +307,7 @@ end
 
 live_loop :Its_all_just_text_in_a_file, sync: :unsyncable do
   c1,c2,c3,c4 = *Drip[/cymbal/,[0,2,3,4]];
+  stop
   with_fx :level, amp: 0.5 do
     with_fx :reverb, mix: 0.4, room: 0.5, mix_slide: 0.5 do |r_fx|
       8.times{

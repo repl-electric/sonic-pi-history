@@ -35,7 +35,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     at{
       exception :a2, 15, sus: 0.25, sustain: 0.2, atk: 0.01
       sleep 0.25
-      exception :a2, 15, sus: 0.25, sustain: 0.2, atk: 0.01
+      exception :a2, 15, sus: 0.5, sustain: 0.2, atk: 0.01
       }
   end
   strings c[0][-2]

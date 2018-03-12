@@ -29,7 +29,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   c.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: (ramp 0.0, 1.1, 12).tick(:oo), cutoff: 1.0
   }
-  exception root(c), 15
+  if root(c)
+    exception root(c), 15
+  else
+    exception :b2, 15
+  end
   strings c[0][-2]
 #  sleep zzz
   corrupt root(c), 10, motion: 0.3, mode: 0

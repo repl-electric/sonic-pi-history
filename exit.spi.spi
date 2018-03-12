@@ -30,8 +30,9 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
     }
   }
 
+  with_transpose 12{
   corrupt c[-1], sus: 2
-
+}
   pf=2.2
   i=(method :callstack)
   i.call(c[0], 60*pf, sus: 4)

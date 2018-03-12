@@ -36,7 +36,6 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
       exception :a2, 15, sus: 0.125
       sleep 0.25
       exception :a2, 15, sus: 0.125
-
       }
   end
   strings c[0][-2]

@@ -33,9 +33,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     exception root(c), 15
   else
     at{
-      exception :a2, 15, sus: 0.125
+      exception :a3, 15, sus: 0.125
       sleep 0.25
-      exception :a2, 15, sus: 0.125
+      exception :a3, 15, sus: 0.125
       }
   end
   strings c[0][-2]

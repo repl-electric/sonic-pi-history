@@ -3,8 +3,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc formant: 0.50
-bitsea_cc width: 0.5
-
+bitsea_cc width: 0.22
 
 #bitsea_on :Cs4
 
@@ -14,8 +13,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   score = (ing
     [[[:b2 2]  [:ds5 2] [:fs3 2]] 2]  REST
     [[[:fs2 2] [:as4 2] [:cs4 2]] 2] REST
-    [[[_ 2]    [:b3 2] [:e3 2]] 2]   REST
-    [[[:ds2 2] [:e3 2] [_ 2]] 2]  REST
+    [[[_ 2]    [:b3 2]  [:e3 2]] 2]   REST
+    [[[:d2 2] [:e3 2] [_ 2]] 2]  REST
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12

@@ -32,7 +32,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   if root(c)
     exception root(c), 15
   else
-    exception :a2, 15, sus: 0.25
+    exception :a2, 15, sus: 0.125
   end
   strings c[0][-2]
 #  sleep zzz

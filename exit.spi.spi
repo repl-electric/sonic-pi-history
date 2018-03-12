@@ -30,7 +30,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
     }
   }
 
-  corrupt c[-1], sus: 2
+  corrupt c[-2], sus: 2
 
   pf=2.2
   i=(method :callstack)

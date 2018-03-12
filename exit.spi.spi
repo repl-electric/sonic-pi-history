@@ -30,7 +30,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
     }
   }
 
-  exceptionk c[0]
+  exception c[0]
 
   pf=2.2
   i=(method :callstack)

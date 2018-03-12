@@ -30,9 +30,6 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
     }
   }
 
-  with_transpose 0 {
-    corrupt c[-1], sus: 2, motion: 0.10
-  }
   pf=2.2
   i=(method :callstack)
   i.call(c[0], 60*pf, sus: 4)
@@ -61,6 +58,14 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
           :a5 _ :a4 _    :e6 :b5  :a4 _
           ).look(:in2), (ing 90 90 80 80 70 70 60 60).look(:in2)*1.4
     sleep zzz/8.0
+
+    if spread(1,4)
+      with_transpose 0 {
+        corrupt c[-1], sus: 2, motion: 0.10
+      }
+
+    end
+
   }
 end
 

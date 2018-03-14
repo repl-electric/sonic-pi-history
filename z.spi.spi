@@ -12,4 +12,4 @@ $LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
 require "osc-ruby.rb"
 
 
-unity("/re/test1", 0)
+unity("/re/test1", 1)

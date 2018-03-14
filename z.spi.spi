@@ -11,8 +11,8 @@ $LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
 require "osc-ruby.rb"
 
 
-@client ||= OSC::Client.new('localhost', 9000)
-@client.send(OSC::Message.new("/re/test1", []))
+@client ||= SonicPi::OSC::Client.new('localhost', 9000)
+@client.send(SonicPi::OSC::Message.new("/re/test1", []))
 
 
 #shader(:shader, "nil.glsl")

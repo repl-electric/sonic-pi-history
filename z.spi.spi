@@ -15,5 +15,5 @@ require "osc-ruby.rb"
 #unity("/re/logo", 0)
 #unity "/camera/0"
 unity "/alive/length", 2.8
-unity "/alive/spring", 10.0
+unity "/alive/spring", 20.0
 unity "/alive/maxtime", 100.0

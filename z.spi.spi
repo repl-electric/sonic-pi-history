@@ -25,7 +25,7 @@ unity "/alive/rotspeed", 1.0
 live_loop :test do
   puts :HIT
   unity "/alive/light", 0.7
-  unity "/alive/bloat", 2000.0
+  unity "/alive/bloat", 4000.0
 
   sleep 0.5
   unity "/alive/light", 0.34

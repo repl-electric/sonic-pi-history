@@ -7,14 +7,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview.rb"
 
 
-#require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/sonicpi/osc/osc.rb"
-$LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
-require "osc-ruby.rb"
-
-
-@client ||= SonicPi::OSC::UDPClient.new('localhost', 9000)
-@client.send(OSC::Message.new("/re/test1", []))
-
 
 #shader(:shader, "nil.glsl")
 #shader(:uniform, "iColorFactor", 0.0)

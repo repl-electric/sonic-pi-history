@@ -24,7 +24,7 @@ require "osc-ruby.rb"
 
 live_loop :test do
   puts :HIT
-  unity "/1/fader1"#, 1000.0
+  unity "/alive/light"#, 1000.0
 #  sleep 0.5
 #  unity "/1/fader1", 0.4
     sleep 1

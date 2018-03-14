@@ -34,4 +34,4 @@ require "osc-ruby.rb"
 
 # end
 
-unity "/1/fader1", 100.8, 100, 100
+unity "/1/fader1", 0.222

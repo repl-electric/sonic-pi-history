@@ -34,5 +34,5 @@ require "osc-ruby.rb"
 
 # end
 
-unity "/sea/height", 0.5
+unity "/sea/height", 0.6
 unity "/sea/noise", 1.0

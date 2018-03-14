@@ -17,4 +17,4 @@ require "osc-ruby.rb"
 unity "/alive/length", 4.9
 unity "/alive/spring", 10.0
 unity "/alive/damp", 10.1
-#unity "/alive/maxtime", 1.1
+unity "/alive/maxtime", 1.1

@@ -25,7 +25,7 @@ require "osc-ruby.rb"
 live_loop :test do
 
   unity "/1/fader1", 200.0
-  sleep 0.5
+  sleep 0.25
   unity "/1/fader1", 0.0
     sleep 0.5
 

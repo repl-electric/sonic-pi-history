@@ -11,7 +11,7 @@ $LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
 require "osc-ruby.rb"
 
 
-@client ||= SonicPi::OSC::Client.new('localhost', 9000)
+@client ||= SonicPi::OSC::UDPClient.new('localhost', 9000)
 @client.send(SonicPi::OSC::Message.new("/re/test1", []))
 
 

@@ -14,4 +14,4 @@ require "osc-ruby.rb"
 
 #unity("/re/test1", 2     )
 
-unity "/re/camera", 4.0
+unity "/re/camera", 1.0

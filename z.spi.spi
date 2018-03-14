@@ -21,4 +21,4 @@ require "osc-ruby.rb"
 #unity "/alive/rotspeed", 1.0
 #unity "/glitch", 0.85
 
-unity "/1/fader1", 2.9
+unity "/1/fader1", 2.9, 2.9

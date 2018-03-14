@@ -3,4 +3,22 @@
 #corrupt_on :A3
 
 
-corrupt flatpitch: 0.0
+#corrupt flatpitch: 0.0
+
+
+#require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/sonicpi/osc/osc.rb"
+
+@client ||= OSC::Client.new('localhost', 9000)
+@client.send(OSC::Message.new("/re/test1", []))
+
+
+#shader(:shader, "nil.glsl")
+#shader(:uniform, "iColorFactor", 0.0)
+#live_loop :dance do
+#  shader(:suniform, "iColorFactor", 2.0)
+#  sample :drum_heavy_kick
+#  sleep 1
+#end
+
+
+#/re/test1

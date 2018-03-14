@@ -13,4 +13,4 @@ require "osc-ruby.rb"
 
 
 #unity("/re/logo", 1)
-unity "/camera/2"
+unity "/camera/0"

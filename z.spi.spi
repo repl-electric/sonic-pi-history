@@ -8,13 +8,5 @@ load "/Users/josephwilk/Workspace/repl-electric/live-coding-space/lib/shaderview
 
 
 
-#shader(:shader, "nil.glsl")
-#shader(:uniform, "iColorFactor", 0.0)
-#live_loop :dance do
-#  shader(:suniform, "iColorFactor", 2.0)
-#  sample :drum_heavy_kick
-#  sleep 1
-#end
 
-
-#/re/test1
+shader("/re/test1", 1)

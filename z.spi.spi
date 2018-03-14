@@ -12,4 +12,4 @@ $LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
 require "osc-ruby.rb"
 
 
-shader("/re/test1", 1)
+shader("/re/test1", 2)

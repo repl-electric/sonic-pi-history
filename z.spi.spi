@@ -18,4 +18,4 @@ require "osc-ruby.rb"
 # unity "/alive/spring", 200
 # unity "/alive/damp", 30
 # unity "/alive/maxtime", 0.006
-unity "/alive/rotspeed", 1.9
+unity "/alive/rotspeed", 0.9

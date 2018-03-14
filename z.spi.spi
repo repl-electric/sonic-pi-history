@@ -7,6 +7,9 @@
 
 
 #require "/Users/josephwilk/Workspace/josephwilk/c++/sonic-pi/app/server/sonicpi/lib/sonicpi/osc/osc.rb"
+$LOAD_PATH.unshift("/Users/josephwilk/Workspace/ruby/osc-ruby/lib/")
+require "osc-ruby.rb"
+
 
 @client ||= OSC::Client.new('localhost', 9000)
 @client.send(OSC::Message.new("/re/test1", []))

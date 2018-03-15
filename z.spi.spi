@@ -14,7 +14,7 @@ require "osc-ruby.rb"
 
 #unity("/re/logo", 0)
 live_loop :blah do
-unity "/camera/0"
+unity "/camera/1"
 
 unity "/alive/length", 0.03
 unity "/alive/spring", 200

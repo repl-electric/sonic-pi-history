@@ -24,7 +24,7 @@ require "osc-ruby.rb"
 
 # live_loop :test do
 #   puts :HIT
-unity "/alive/light", 2.8
+unity "/alive/light", 1.8
  #  unity "/alive/bloat", 0.0
 
 unity "/ripple/on",0.0

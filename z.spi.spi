@@ -24,7 +24,7 @@ unity "/alive/length", 10.0
 
 # # live_loop :test do
 # #   puts :HIT
-unity "/alive/light", 10.5
+unity "/alive/light", 1.5
 # unity "/alive/bloat", 0.0
 
 # unity "/ripple/on",0.0

@@ -34,7 +34,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
 
   at{
     sleep 0.5
-    20.times{|n|
+    16.times{|n|
       unity "/sea/spacex", n*0.01
       sleep 0.125
     }

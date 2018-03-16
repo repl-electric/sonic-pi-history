@@ -10,8 +10,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do; tick
   #stop
   unity "/camera/1"
   score = (ing
-    [[[:b2 2] [:d5 2] [:fs3 2]] 2]   REST
-    [[[:fs2 2] [:a4 2] [:cs3 2]] 2]   REST
+    [[[:b2 2] [:ds5 2] [:fs3 2]] 2]   REST
+    [[[:fs2 2] [:as4 2] [:cs3 2]] 2]   REST
   )
   s=score.look;c=s[0];zzz=s[-1]
 

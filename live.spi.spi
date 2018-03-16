@@ -16,7 +16,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
   #stop
   score = (ing
-    [[[:A2 2]] 2] REST
+    [[[:A2 2] [:CS4 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
   #eek :a1,  sus: 12

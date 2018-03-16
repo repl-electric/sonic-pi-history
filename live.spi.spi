@@ -18,7 +18,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do; tick
   #stop
 #  unity "/camera/1"
   score = (ing
-    [[[:b2 2]  [_ 2] [:fs3 2]] 2]   REST
+    [[[:b2 2]  [:d5 2] [:fs3 2]] 2]   REST
     [[[:fs2 2] [:a4 2] [:cs3 2]] 2]   REST
   )
   s=score.look;c=s[0];zzz=s[-1]
@@ -27,11 +27,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do; tick
   c.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, lo: 0.85, hi: 0.85
   }
-  dunity "/sea/spacex", rand(1.0)+0.1
-  exception root(c), 15
+  #dunity "/sea/spacex", rand(1.0)+0.1
+  #exception root(c), 15
   #sleep zzz
-  corrupt root(c), 10, motion: 0.1, mode: 0
-  null root(c), 127*0.2, mode: 2, sus: 1
+  #corrupt root(c), 10, motion: 0.1, mode: 0
+  #null root(c), 127*0.2, mode: 2, sus: 1
   #verb_slice Drip[/effect/].look if spread(1,3).look
   sleep zzz
 end
@@ -127,7 +127,7 @@ live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
     #stop
     zs=(ing
       :gs4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
-      :gs4 :cs4 _ :a3 _ :e4 _ :a4 :a4 :a4 :a4 :a4
+      :gs4 :cs4 _ :a3 _ :b3 _ :a4 :a4 :a4 :fs4 :a4
       )
     z=zs.look
     #z=_

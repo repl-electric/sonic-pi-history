@@ -12,11 +12,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do; tick
   unity "/camera/1"
   score = (ing
     [[[:b2 2] [:d4 2] [:fs3 2]] 2] REST
-    [[[:fs2 2] [:a4 2]] 2] REST
+    [[[:fs2 2] [:a4 2]] 2]         REST
   )
   s=score.look;c=s[0];zzz=s[-1]
 
-  callstack root(c)
+  callstack root(c), 15
   c.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
   }

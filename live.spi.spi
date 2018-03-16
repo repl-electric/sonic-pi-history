@@ -15,7 +15,7 @@ zero_cc wet:   0.83 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do; tick
-  #stop
+  stop
 #  unity "/camera/1"
   score = (ing
     [[[:b2 2]  [:d5 2] [:fs3 2]] 2]   REST
@@ -122,7 +122,7 @@ mt_cc morph: 1.0
 
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
   unity "/camera/3"
-  with_bpm 45.125 do #63.5
+  with_bpm 50.0 do #63.5
     live_loop :Fall_into_your_screen {stop}
     #stop
     zs=(ing

@@ -1,14 +1,12 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
 
 bitsea_cc motion: 1.00 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╢
-bitsea_cc octave: 0.57
-
-
-unity "/sea/noise",0.1
-unity "/toon/on", 1.0
+bitsea_cc octave: 0.55
+#unity "/sea/noise",0.1
+#unity "/toon/on", 1.0
 #unity "/camera/0"
 #unity "/glitch/invert", 0.0
-#unity "/logo/person", 0.0
+unity "/logo/person", 0.0
 no{
 unity "/glitch/block", 0.02
 unity "/camera/4"

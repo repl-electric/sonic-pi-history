@@ -11,7 +11,7 @@ unity "/logo/person", 0.0
 #unity "/glitch/block", 0.0
 #unity "/alive/length", 0.1
 no{
-unity "/alive/light",0.5
+
 }
 
 #bitsea_on :E3
@@ -294,7 +294,7 @@ live_loop :Clock, sync: :unsyncable do
     k=k.look
 
     #k=_
-    no{
+    yes{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60
       end

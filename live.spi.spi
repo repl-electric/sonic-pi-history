@@ -2,7 +2,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 bitsea_cc motion: 1.00
 
 unity "/logo/person", 1.0
-unity "/light",0.5
+unity "/alive/light",0.5
 
 bitsea_on :A2
 

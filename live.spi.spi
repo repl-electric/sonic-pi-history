@@ -27,7 +27,7 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   end
   #with_transpose 0 { cpu3 root(c),(ing 127 120).look, sus: 2 }
   #rev :a6, 15, sus: 12
-  unity "/ripple/on",0.0
+  unity "/ripple/on",1.0
 
   callstack root(c), (ring 60,68).look
 

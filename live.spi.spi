@@ -20,14 +20,10 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     [[[:CS2 2] [:E4 2] [:GS3 2]] 2] REST
   )
   s=score.look;c=s[0];zzz=s[-1]
-  #eek :a1,  sus: 12
-  #eek :cs2, sus: 12
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10
   end
-  #with_transpose 0 { cpu3 root(c),(ing 127 120).look, sus: 2 }
-  #rev :a6, 15, sus: 12
   #unity "/ripple/on",1.0
   #unity "/camera/1"
   callstack root(c), (ring 60,68).look

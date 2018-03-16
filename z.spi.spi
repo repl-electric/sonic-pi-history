@@ -15,7 +15,7 @@ require "osc-ruby.rb"
 
 #unity("/logo/re", 1)
 unity("/logo/person", 0)
-unity "/glitch/invert", 0.9
+unity "/glitch/invert", 0.1
 
 unity "/camera/4"
 unity "/alive/length", 0.8

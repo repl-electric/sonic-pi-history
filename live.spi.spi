@@ -118,8 +118,9 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
 end
 
 mt_cc morph: 0.0
-
+unity "/camera/3"
 live_loop :Within_the_letters, sync: :light_source do;z,zs=nil;tick
+  unity "/camera/3"
   with_bpm 45.125 do #63.5
     live_loop :Fall_into_your_screen {stop}
     #stop

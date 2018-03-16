@@ -2,7 +2,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 
 bitsea_cc motion: 0.16 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.57
-unity "/sea/noise",0.1
+unity "/sea/noise",20.1
 #unity "/toon/on", 1.0
 #unity "/camera/0"
 #unity "/glitch/invert", 0.0

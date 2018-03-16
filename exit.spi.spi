@@ -1,6 +1,6 @@
 REST=[[[_, 0.25]], 2];use_bpm 63.5
   unity "/camera/4"
-  unity "/logo/person",0
+  unity "/logo/re",1
 
 
 live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;

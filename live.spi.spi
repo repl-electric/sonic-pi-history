@@ -330,5 +330,5 @@ end
 
 live_loop(:unsyncable) do; sleep 1.0
   unity "/sea/spacex", @space
-  @space+=0.01
+  @space+=0.001
 end

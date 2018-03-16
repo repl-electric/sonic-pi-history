@@ -3,6 +3,7 @@ unity "/logo/person",1.0
 unity "/camera/4",1.0
 unity "/glitch/block",0.01
 unity "/glitch/slice",1.0
+unity "/glitch/invert",1.0
 #unity "/alive/length", 0.1
 
 #smp Mountain[/subkick/,0]

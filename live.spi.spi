@@ -8,7 +8,7 @@ unity "/glitch/invert", 0.0
 unity "/sea/noise", 20.0
 unity "/camera/0"
 bitsea_on :A2
-#bitsea_on :E3
+bitsea_on :E3
 #bitsea_on :E3
 
 

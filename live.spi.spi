@@ -6,7 +6,7 @@ bitsea_on :E3
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
   tick
-  #stop
+  stop
   score = (ing
     [[[:a1 2]] 2] REST
   )

@@ -14,7 +14,7 @@ no{
 unity "/alive/light",0.5
 }
 
-bitsea_on :E3
+#bitsea_on :E3
 
 
 live_loop :Fall_into_your_screen, sync: :unsyncable do
@@ -35,23 +35,9 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
   #rev :a6, 15, sus: 12
   callstack root(c), 60
   #unity "/camera/1"
-  c.each_tick(:in){|n|
-    #bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, lo: 0.85, mi: 0.85, hi: 0.85
-    c.each_tick(:in){|n|
-      bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 0.1
-    }
+  #bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, lo: 0.85, mi: 0.85, hi: 0.85
 
-
-
-  }
-  dunity "/sea/spacex", rand(1.0)
-
-  dunity "/sea/spacex", 0.0
-
-
-  dunity "/sea/spacex", rand(1.0)
   exception root(c), 15
-  #strings c[0][-2]
   sleep zzz
   corrupt root(c), 10, motion: 0.1, mode: 0
   #null root(c), 127*0.2, mode: 2, sus: 1
@@ -63,7 +49,7 @@ end
 zero_cc pulse: 0.00
 zero_cc more:  0.00
 zero_cc noise: 0.00
-zero_cc wet:   0.00
+zero_cc wet:   1.00
 
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do

@@ -17,7 +17,7 @@ unity("/logo/re", 0)
 unity("/logo/person", 1)
 
 
-unity "/camera/0"
+unity "/camera/1"
 unity "/alive/length", 0.8
 #unity "/alive/spring", 200.0
 #unity "/alive/damp", 30.0

@@ -25,7 +25,8 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
     #rev :b5, 1
     #eek :Gs3, 10
   end
-  #unity "/ripple/on",1.0
+  @ripple= @ripple == 1.0 ? 0.0 : 1.0
+  unity "/ripple/on",1.0
   #unity "/camera/1"
   callstack root(c), (ring 60,68).look
 
@@ -328,5 +329,4 @@ live_loop :should_not_loop_and_no, sync: :unsyncable do
   sleep 1/16.0
 end
 
-live_loop(:unsyncable) do; sleep 1.0
-end
+live_loop(:unsyncable) do; sleep 1.0 end

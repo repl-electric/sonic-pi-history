@@ -329,12 +329,6 @@ live_loop :should_not_loop_and_no, sync: :unsyncable do
 end
 
 live_loop(:unsyncable) do; sleep 1.0
-
   unity "/sea/spacex", @space
   @space+=0.01
-    }
-  }
-
-
-
 end

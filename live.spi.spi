@@ -131,9 +131,6 @@ live_loop :Within_the_letters do;z,zs=nil;tick
       )
     z=zs.look
     #z=_
-    if z == d4
-      dunity "/shard", 0.1
-    end
     cue :zero if spread(1,2).rot(0).look
     operator z
     callstack z, 15+(ing 70 65 55).look * 1.0, sus: 4/2.0

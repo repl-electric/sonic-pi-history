@@ -45,6 +45,11 @@ live_loop :Fall_into_your_screen, sync: :unsyncable do
 
   }
   dunity "/sea/spacex", rand(1.0)
+
+  dunity "/sea/spacex", 0.0
+
+
+  dunity "/sea/spacex", rand(1.0)
   exception root(c), 15
   #strings c[0][-2]
   sleep zzz

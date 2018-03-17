@@ -1,16 +1,18 @@
-REST=[[[_, 0.25]], 2];use_bpm 63.5
+REST2=[[[_, 0.25]], 2]
+REST1=[[[_, 0.25]], 1]
+use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
   unity "/camera/4"
 
   score =  (ing  #15.25,
-    [[[:b2, 2],  [:d5, 2],   [:fs3, 2]],           2],                  REST,
-    [[[:fs2, 2], [:a4, 2],   [:cs3, 2]],           2],                  REST,
+    [[[:b2, 2],  [:d5, 2],   [:fs3, 2]],           2],                  REST2,
+    [[[:fs2, 2], [:a4, 2],   [:cs3, 2]],           2],                  REST2,
     [[[:a2, 2],  [:b4, 2],   [:e4, 2]],            2],
-    [[[:d3, 2],  [:fs5, 2],  [:a3, 2],  [[:cs5, 2], [:e4, 2]].choose], 2],  [[[_,  0.25]],  1],
+    [[[:d3, 2],  [:fs5, 2],  [:a3, 2],  [[:cs5, 2], [:e4, 2]].choose], 2],  REST1,
     [[[:e2, 2],  [:gs4, 2],  [:b3, 2]],  2],
-    [[[:b2, 2],  [:d5, 2],   [:fs3, 2], [:cs4, 2]],  2],                  REST,
-    [[[:fs4, 2], [:A4, 2],   [:Cs3, 2], ],  2],                          REST,
+    [[[:b2, 2],  [:d5, 2],   [:fs3, 2], [:cs4, 2]],  2],                  REST2,
+    [[[:fs4, 2], [:A4, 2],   [:Cs3, 2], ],  2],                          REST2,
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]

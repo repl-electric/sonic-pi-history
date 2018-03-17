@@ -43,7 +43,7 @@ live_loop :Fall_out_of_your_screen do tick;
              :b1 :b2
              :fs2 _
              :a2
-             :ds3 _
+             :d3 _
              :e2
              :b2 _
              :fs3 :fs2).look, mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0

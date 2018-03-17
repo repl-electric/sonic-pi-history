@@ -40,7 +40,7 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
 
 
   with_transpose 12{
-    corrupt c[0][1], mode: 0, sus: 2, motion: 0.2
+    corrupt c[0][-1], mode: 0, sus: 2, motion: 0.2
   }
 
   at{

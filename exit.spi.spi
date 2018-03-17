@@ -40,13 +40,13 @@ live_loop :Fall_out_of_your_screen do tick;
 
   with_transpose 0{
     corrupt (ing
-             :b3 :a3
-             :gs3 _
-             :a3
-             :d3 _
-             :e3
-             :b3 _
-             :fs3 :ds3).look, mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0
+             :b4 :a4
+             :gs4 _
+             :a4
+             :d4 _
+             :e4
+             :b4 _
+             :fs4 :d4).look, mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0
   }
 
   at{

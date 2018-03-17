@@ -41,11 +41,11 @@ live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
     with_transpose 0{
     exception root(c)[0], 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
     sleep 0.5
-    exception root(c), 80, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
+    #exception root(c), 80, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
     sleep 0.5
-    exception root(c), 90, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.8
+    #exception root(c), 90, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.8
     sleep 0.5
-      exception root(c), 127, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.9
+     # exception root(c), 127, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.9
       }
 
   } #, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2

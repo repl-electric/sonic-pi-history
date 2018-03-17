@@ -1,19 +1,16 @@
-REST15=[[[_, 0.25]], 1.5]
-REST2=[[[_, 0.25]], 2]
-REST1=[[[_, 0.25]], 1]
-use_bpm 63.5
-live_loop :Fall_out_of_your_screen do tick;
+REST=[[[_, 0.25]], 2];use_bpm 63.5
+live_loop :Fall_out_of_your_screen, sync: :unsyncable do tick;
   live_loop :Within_the_letters{stop}
   unity "/camera/4"
 
   score =  (ing  #15.25
-    [[[:b2 2]  [:ds5 2]   [:fs3 2]]           2]                  REST2
-    [[[:fs2 2] [:as4 2]   [:cs4 2]]           2]                  REST2
-    [[[:a2 4]  [:b4 4]    [:e4 4]]            2]
-    [[[:ds3 2]  [:fs5 2]  [:as3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST2
-    [[[:e2 2]  [:gs5 2]  [:b3 2]]  2]
-    [[[:b2 2]  [:ds5 2]   [:fs3 2] [:cs4 2]]  2]                  REST2
-    [[[:fs4 2] [:As4 2]   [:Cs3 2] ]  2]                          REST2
+    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
+    [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  REST
+    [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
+    [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
+    [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
+    [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
+    [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
@@ -31,23 +28,14 @@ live_loop :Fall_out_of_your_screen do tick;
     qbitsea n,2.0*(ing 80 70 85 70).look(:inner), mode: 0, cutoff: 1.0, phase: 0, comp: 0
   }
 
-
-  pf=4.0
-  i=(method :operator)
-  at{
-    i.call(c[0], 60*pf, sus: 4)
-    sleep 0.5
-    i.call(c[1], 50*pf, sus: 4)
-    sleep 0.25
-    i.call(c[2], 55*pf, sus: 4)
-        sleep 0.25
-    i.call(c[3], 70*pf, sus: 2)
-        sleep 0.25
-    i.call(c[4], 30*pf, sus: 8)
-        sleep 0.25
-    i.call(c[5], 30*pf, sus: 8)
-        sleep 0.25
-  }
+  pf=0.2
+  i=(method :callstack)
+  i.call(c[0], 60*pf, sus: 4)
+  i.call(c[1], 50*pf, sus: 4)
+  i.call(c[2], 55*pf, sus: 4)
+  i.call(c[3], 70*pf, sus: 2)
+  i.call(c[4], 30*pf, sus: 8)
+  i.call(c[5], 30*pf, sus: 8)
 
   exception root(c), 127, sus: 2#, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
   null root(c), 127*0.5, mode: 2
@@ -66,22 +54,22 @@ live_loop :Fall_out_of_your_screen do tick;
           :a5 _ :a4 _    _   :b5  :a4 _
           :a5 _ :a4 _    _   :b5  :a4 _
           :a5 _ :a4 _    :e6 :b5  :a4 _
-          ).look(:in2), (ing 90 90 80 80 70 70 60 60).look(:in2)*0.0
+          ).look(:in2), (ing 90 90 80 80 70 70 60 60).look(:in2)*1.4
     sleep zzz/8.0
   }
 end
 
 no{
-qbitsea_cc oct: 0.50
+qbitsea_cc oct: 0.5
 qbitsea_cc drive: 0.27
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.01
+qbitsea_cc fm: 0.00
 qbitsea_cc wav: 0.00
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83
 qbitsea_cc mod: 0.80
-qbitsea_cc motion: 0.20
-qbitsea_cc formant: 0.50
+qbitsea_cc motion: 0.036
+qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 0.27
 

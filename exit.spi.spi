@@ -41,7 +41,7 @@ live_loop :Fall_out_of_your_screen do tick;
   with_transpose 12{
     corrupt (ing
              :b3 :b3
-             :fs2 _
+             :fs3 _
              :a2
              :d3 _
              :e2

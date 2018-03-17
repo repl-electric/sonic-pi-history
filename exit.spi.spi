@@ -39,7 +39,7 @@ live_loop :Fall_out_of_your_screen do tick;
 
 
   with_transpose 12{
-    corrupt (ing :b2 :fs2 :a2 :d3 :e2 :b2 :fs3).look, mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0
+    corrupt (ing :b2 _ :fs2 _ :a2 :d3 _ :e2 :b2 _ :fs3 _).look, mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0
   }
 
   at{

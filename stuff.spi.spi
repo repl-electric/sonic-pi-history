@@ -1,0 +1,26 @@
+#            unity "/alive/bloat", 0.0
+
+
+#unity "/sea/spacex", 0.
+#unity "/sea/noise", 5.0
+
+
+#unity "/sea/spacex",0.1
+
+
+#sample Mountain[/subkick/,0], amp: 2
+
+#bitsea_x :A3
+
+
+
+
+            # when :at; :at
+            # when :motion; 1
+            # when :formant; 100
+            # when :octave; 101
+            # when :flatpitch; 102
+
+
+
+corrupt :A3, formant: 0.5

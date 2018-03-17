@@ -38,9 +38,9 @@ live_loop :Fall_out_of_your_screen do tick;
   i.call(c[5], 30*pf, sus: 8)
 
 
-#  with_transpose 0{
+  with_transpose 12{
     corrupt root(c), mode: 1, sus: 2, motion: 0.2, flatpitch: 1.0
- # }
+  }
 
   at{
     with_transpose 0{

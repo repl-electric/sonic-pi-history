@@ -71,6 +71,7 @@ def ping(*opts)
       ns = opts[0].to_s
       opts = opts[1..-1]
     end
+    puts opts
     opts[0].keys.map{|k| dunity "/#{ns}/#{k.to_s}", opts[k] }
 #    args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
 #    @uclient.send(OSC::Message.new(endpoint, *args))

@@ -64,7 +64,6 @@ end
 
 def ping(*opts)
   ns="/"
-  @uclient ||= OSC::Client.new('localhost', 9000)
   begin
     if !opts[0].is_a?(Hash)
       ns = "/#{opts[0].to_s}/"
@@ -73,8 +72,6 @@ def ping(*opts)
     if opts
       (opts[0]||{}).keys.map{|k| unity "#{ns}#{k.to_s}", opts[0][k] }
     end
-#    args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
-#    @uclient.send(OSC::Message.new(endpoint, *args))
   rescue Exception
     puts $!
     puts "$!> Graphics not loaded"

@@ -9,8 +9,8 @@ unity "/glitch/slice",0.0
 unity "/glitch/invert",0.0
 #unity "/alive/length", 0.1
 
-unity "/alive/thick",0.03
-unity "/alive/length",0.01
+unity "/alive/thick",0.0144
+unity "/alive/length",0.06
 #unity "/alive/spring", 200.0
 #unity "/alive/damp", 30.0
 #unity "/alive/maxtime", 0.006

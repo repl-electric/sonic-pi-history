@@ -80,7 +80,7 @@ def ping(*opts)
 end
 
 
-ping :test
+ping {}
 
 #mode1
 #modelogo

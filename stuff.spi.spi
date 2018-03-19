@@ -2,12 +2,13 @@
 
 
 
-bitsea_on :A2
+bitsea_on :E3
 
 #bitsea_cc octave: 0.61
-#bitsea_cc octave: 0.61
+#bitsea_cc octave: 0.50
 
 unity "/light", 0.5
+
 
 #unity "/sea/spacex", 0.
 #unity "/sea/noise", 5.0

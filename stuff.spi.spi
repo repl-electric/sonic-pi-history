@@ -2,12 +2,15 @@
 
 
 
-bitsea_on :CS4
+#bitsea_on :CS4
 
+bitsea_cc motion: 0.20
 #bitsea_cc octave: 0.61
 #bitsea_cc octave: 0.50
 
+
 unity "/light", 0.5
+unity "/camera/1", 1.0
 
 
 #unity "/sea/spacex", 0.

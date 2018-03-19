@@ -69,10 +69,10 @@ end
 
 #ping :alive, light: 1.0
 #ping :logo, person: 0.0
-ping postfx: 0.0
+ping postfx: 1.0
 
 #mode0
 #unity "/glitch/invert",0.0
 
-#bitsea_cc motion: 0.20
-mode1
+#bitsea_cc motion: 0.19
+#mode1

@@ -65,7 +65,7 @@ end
 
 
 ping :alive, light: 1.2
-ping :logo, re: 0.0
+ping :logo, re: 1.0
 
 #mode1
 #modelogo

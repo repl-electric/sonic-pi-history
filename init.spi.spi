@@ -62,5 +62,20 @@ def mode1
   unity "/alive/length",0.06
 end
 
+def ping(ns,opts)
+  @uclient ||= OSC::Client.new('localhost', 9000)
+  begin
+
+    args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
+    @uclient.send(OSC::Message.new(endpoint, *args))
+  rescue Exception
+    puts $!
+    puts "$!> Graphics not loaded"
+  end
+end
+
+
+ping :alive, light: 0.1
+
 mode1
 #modelogo

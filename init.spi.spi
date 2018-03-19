@@ -14,7 +14,7 @@
 # #unity "/alive/spring", 200.0
 # #unity "/alive/damp", 30.0
 # #unity "/alive/maxtime", 0.006
- unity "/postfx",1.0
+unity "/postfx",0.0
 
 def modelogo
   unity "/alive/light", 0.3

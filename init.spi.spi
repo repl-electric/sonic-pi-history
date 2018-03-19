@@ -21,7 +21,7 @@ def modelogo(r=nil)
   unity "/logo/re",0.0
   unity "/logo/person", 0.0
   unity "/logo/person", 1.0
-  unity "/camera/4",1.0
+  unity "/camera/4",0.0
   unity "/glitch/block",0.03
   unity "/glitch/slice",0.0
   unity "/glitch/invert",1.0

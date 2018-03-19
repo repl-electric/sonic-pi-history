@@ -36,12 +36,7 @@ def modeend(r=nil)
   unity "/camera/4",1.0
   unity "/glitch/block",0.05
   unity "/glitch/slice",0.0
-  unity "/glitch/invert",0.0
-  if r
-    unity "/alive/rotate", 20.0
-  else
-    unity "/alive/rotate", 0.0
-  end
+  unity "/alive/rotate", 20.0
 end
 
 def mode0

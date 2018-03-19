@@ -62,7 +62,7 @@ def mode1
   unity "/alive/length",0.06
 end
 
-def ping(ns,opts)
+def ping(ns=nil,*opts)
   @uclient ||= OSC::Client.new('localhost', 9000)
   begin
     opts.keys.map{|k| dunity "/#{ns}/#{k.to_s}", opts[k] }

@@ -9,7 +9,7 @@ unity "/glitch/slice",0.0
 unity "/glitch/invert",0.0
 #unity "/alive/length", 0.1
 
-unity "/alive/rotate",10
+unity "/alive/rotate",0.0
 unity "/alive/thick",0.1
 unity "/alive/length",0.9
 #unity "/alive/spring", 200.0

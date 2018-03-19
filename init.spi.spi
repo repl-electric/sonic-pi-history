@@ -52,6 +52,7 @@ def mode0
   unity "/glitch/invert",0.0
   unity "/alive/length",0.06
   unity "/alive/thick", 0.07
+  unity "/alive/rotate", 20.0
 end
 
 def mode1

@@ -66,7 +66,6 @@ def ping(*opts)
   ns="/"
   @uclient ||= OSC::Client.new('localhost', 9000)
   begin
-    puts opts
     if !opts[0].is_a?(Hash)
       ns = "/#{opts[0].to_s}/"
       opts = opts[1..-1]

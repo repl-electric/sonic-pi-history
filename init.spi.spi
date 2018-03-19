@@ -33,3 +33,5 @@ def mode1
   unity "/alive/rotate", 20.0
   unity "/alive/thick", 0.0144
 end
+
+mode1

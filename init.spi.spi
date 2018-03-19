@@ -81,7 +81,7 @@ def ping(*opts)
 end
 
 
-ping :alive, light: 0.1
+ping :alive, light: 0.8
 
 #mode1
 #modelogo

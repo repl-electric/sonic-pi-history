@@ -71,7 +71,6 @@ def ping(*opts)
       ns = "/#{opts[0].to_s}/"
       opts = opts[1..-1]
     end
-    puts "opts:#{opts.inspect}"
     if opts
       (opts[0]||{}).keys.map{|k| unity "#{ns}#{k.to_s}", opts[0][k] }
     end

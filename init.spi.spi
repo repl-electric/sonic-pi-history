@@ -63,7 +63,7 @@ def mode1
 end
 
 
-mode1
+#mode1
 #mode0
 
 ping :alive, light: 0.5

@@ -72,7 +72,9 @@ def ping(*opts)
       opts = opts[1..-1]
     end
     puts "opts:#{opts.inspect}"
-    (opts[0]||{}).keys.map{|k| unity "#{ns}#{k.to_s}", opts[0][k] }
+    if opts
+      (opts[0]||{}).keys.map{|k| unity "#{ns}#{k.to_s}", opts[0][k] }
+    end
 #    args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
 #    @uclient.send(OSC::Message.new(endpoint, *args))
   rescue Exception

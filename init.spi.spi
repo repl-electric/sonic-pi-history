@@ -10,6 +10,6 @@ unity "/glitch/invert",0.0
 #unity "/alive/length", 0.1
 
 unity "/alive/length",2.08
-unity "/alive/spring", 200.0
-unity "/alive/damp", 30.0
-unity "/alive/maxtime", 0.006
+#unity "/alive/spring", 200.0
+#unity "/alive/damp", 30.0
+#unity "/alive/maxtime", 0.006

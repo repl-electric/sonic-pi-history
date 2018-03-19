@@ -69,7 +69,7 @@ mode1
 #ping :alive, light: 1.0
 #ping :logo, person: 0.0
 ping postfx: 1.0
-ping test: 1.00
+ping test: 0.00
 
 #mode0
 #unity "/glitch/invert",0.0

@@ -69,5 +69,5 @@ end
 #ping :alive, light: 1.0
 #ping :logo, person: 0.0
 
-modelogo()
+modelogo(1)
 #unity "/glitch/invert",0.0

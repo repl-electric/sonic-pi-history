@@ -12,7 +12,7 @@
 # unity "/alive/thick",0.0144
 # unity "/alive/length",0.06
 # #unity "/alive/spring", 200.0
-# #unity "/alive/damp", 30.0
+unity "/alive/damp", 30.0
 unity "/alive/maxtime", 0.006
 unity "/postfx",0.0
 

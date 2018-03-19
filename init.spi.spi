@@ -66,8 +66,8 @@ end
 
 mode0
 
-#ping :alive, light: 1.2
+ping :alive, light: 0.2
 #ping :logo, person: 0.0
 
 #mode1
-modelogo(1)
+#modelogo(1)

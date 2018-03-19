@@ -6,7 +6,7 @@ unity "/logo/person", 1.0
 unity "/camera/0",1.0
 unity "/glitch/block",0.1
 unity "/glitch/slice",0.0
-unity "/glitch/invert",0.0
+unity "/glitch/invert",1.0
 #unity "/alive/length", 0.1
 
 unity "/alive/thick",0.0144

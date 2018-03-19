@@ -68,7 +68,7 @@ end
 
 ping :alive, light: 0.5
 #ping :logo, person: 0.0
-ping postfx: 0.0
+ping postfx: 1.0
 ping test: 1.00
 
 #mode0

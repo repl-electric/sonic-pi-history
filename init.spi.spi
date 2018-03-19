@@ -75,7 +75,7 @@ def ping(ns,opts)
 end
 
 
-ping :alive, light: 0.3
+ping :alive, light: 0.4
 
 #mode1
 #modelogo

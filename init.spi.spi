@@ -75,7 +75,7 @@ def ping(ns,opts)
 end
 
 
-ping :postfx:  1.0
+ping postfx:  1.0
 
 #mode1
 #modelogo

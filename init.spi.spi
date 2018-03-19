@@ -66,7 +66,7 @@ def ping(ns,opts)
   @uclient ||= OSC::Client.new('localhost', 9000)
   begin
     puts opt
-    puts opts.keys.reduce{|k| "/#{k}", opts[k] }
+    puts opts.keys.map{|k| "/#{k}", opts[k] }
 #    args = args.map{|a| a.is_a?(Symbol) ? a.to_s : a}
 #    @uclient.send(OSC::Message.new(endpoint, *args))
   rescue Exception

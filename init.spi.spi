@@ -26,6 +26,7 @@ def mode0
   #unity "/alive/length", 0.1
   unity "/alive/thick",0.0144
   unity "/alive/length",0.06
+  unity "/alive/rotate", 0.0
 end
 
 def mode1
@@ -34,4 +35,4 @@ def mode1
   unity "/alive/thick", 0.1
 end
 
-mode0
+mode1

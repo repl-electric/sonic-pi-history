@@ -1,6 +1,11 @@
 #            unity "/alive/bloat", 0.0
 
 
+bitsea_cc octave: 0.61
+bitsea_cc octave: 0.61
+
+unity "/light", 0.5
+
 #unity "/sea/spacex", 0.
 #unity "/sea/noise", 5.0
 
@@ -23,4 +28,4 @@
 
 
 
-corrupt :A3, flatpitch: 0.0
+#corrupt :A3, flatpitch: 0.0

@@ -62,20 +62,6 @@ def mode1
   unity "/alive/length",0.06
 end
 
-def ping(*opts)
-  ns="/"
-  begin
-    if !opts[0].is_a?(Hash)
-      ns = "/#{opts[0].to_s}/"
-      opts = opts[1..-1]
-    end
-    if opts
-      (opts[0]||{}).keys.map{|k| unity "#{ns}#{k.to_s}", opts[0][k] }
-    end
-  rescue Exception
-    puts $!
-  end
-end
 
 
 ping :alive, light: 1.0

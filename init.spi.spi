@@ -64,6 +64,9 @@ def mode1
   unity "/glitch/block",0.0
 end
 
+def mode2
+  viz :alive, light: 0.5
+end
 
 #viz :alive, length: 0.2
 #viz :alive, rotate: 0.1

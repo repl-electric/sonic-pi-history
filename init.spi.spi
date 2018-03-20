@@ -93,24 +93,5 @@ def mode4
   unity "/alive/length",0.06
 end
 
+
 mode0
-
-
-#mode1
-#mode0
-#mode4
-
-#viz :alive, light: 0.5
-#ping :logo, person: 0.0
-#viz postfx: 1.0
-#viz test: 1.00
-#viz camera: 1
-
-#mode0
-#unity "/glitch/invert",0.0
-
-
-#bitsea_cc motion: 0.20
-#bitsea_cc octave: 0.40
-
-mode1

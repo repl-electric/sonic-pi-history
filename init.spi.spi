@@ -99,6 +99,6 @@ viz :glitch, invert: 0.0
 viz :alive, rotate: 0.2
 #viz :alive, deform: 100.1
 #sleep 0.5
-viz :alive, deform: -100.0
+viz :alive, deform: 0.01
 
 #viz :alive, sine: 0.9

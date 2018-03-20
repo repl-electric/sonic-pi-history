@@ -66,6 +66,7 @@ end
 
 def mode2
   viz :alive, light: 0.5
+  viz camera: 1
 end
 
 #viz :alive, length: 0.2

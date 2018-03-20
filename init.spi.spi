@@ -73,8 +73,8 @@ end
 viz :alive, light: 0.5
 #ping :logo, person: 0.0
 viz postfx: 1.0
-#ping test: 1.00
-#ping camera: 3
+#viz test: 1.00
+viz camera: 3
 
 #mode0
 #unity "/glitch/invert",0.0

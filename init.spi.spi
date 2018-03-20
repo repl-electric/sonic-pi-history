@@ -97,7 +97,7 @@ viz :glitch, invert: 0.0
 
 #viz postfx: 0.0
 viz :alive, rotate: 0.2
-viz :alive, deform: 100.1
+#viz :alive, deform: 100.1
 #sleep 0.5
 live_loop :name do
   sleep 1

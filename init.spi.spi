@@ -109,7 +109,7 @@ viz postfx: 1.0
 #sleep 0.5
 live_loop :go do
   tick
-  dviz :alive, deform: (ing 0.1, 10.0+rand).look
+  dviz :alive, deform: (ing 0.2, 10.0+rand).look
   smp Mountain[/subkick/,0]
   sleep 1
 end

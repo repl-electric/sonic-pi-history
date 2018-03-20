@@ -95,7 +95,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-mode2
+mode1
 
 #viz postfx: 0.0
 

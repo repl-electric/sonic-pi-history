@@ -90,11 +90,6 @@ def mode4
   unity "/alive/length",0.06
 end
 
-
-
-#viz :glitch, invert: 0.0
-#viz :alive, rotate: 0.1
-
 mode0
 
 
@@ -111,5 +106,8 @@ mode0
 #mode0
 #unity "/glitch/invert",0.0
 
-#bitsea_cc motion: 0.00
-#mode1
+
+#bitsea_cc motion: 0.20
+#bitsea_cc octave: 0.00
+
+mode1

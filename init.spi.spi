@@ -97,7 +97,7 @@ end
 
 mode0
 
-viz :alive, deformreset: 1.0
+viz :alive, deformreset: 0.0
 
 #viz postfx: 0.0
 

@@ -104,7 +104,7 @@ mode0
 live_loop :go do
   dviz :alive, deform: rand(2.0)+0.1
   smp Mountain[/subkick/,0]
-  sleep 4
+  sleep 1
 end
 
 #viz :alive, deform: rand()+0.1
@@ -116,4 +116,4 @@ end
 bitsea_on :cs4
 
 #bitsea_cc motion: 0.20
-#bitsea_cc octave: 0.48
+#bitsea_cc octave: 0.50

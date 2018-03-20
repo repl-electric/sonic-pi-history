@@ -99,9 +99,9 @@ mode0
 
 #viz shard: 0.1
 
-dviz :alive, deform: 10.0
+#dviz :alive, deform: 10.0
 #viz :alive, deformreset: 1.0
-
+viz rotate: 0.1
 #viz postfx: 0.0
 
 #viz :alive, deform: 100.0

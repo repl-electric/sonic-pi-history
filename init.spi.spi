@@ -109,7 +109,7 @@ mode0
 #viz camera: 0
 
 
-#viz :alive, deform: 100.0
+viz :alive, deform: 100.0
 #sleep 0.5
 live_loop :go do
   tick

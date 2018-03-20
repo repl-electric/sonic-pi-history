@@ -71,7 +71,7 @@ end
 #mode1
 #mode0
 
-viz :alive, light: 0.8
+viz :alive, light: 0.2
 #ping :logo, person: 0.0
 viz postfx: 0.0
 #viz test: 1.00

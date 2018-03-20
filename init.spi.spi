@@ -95,8 +95,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-mode3
-viz :glitch, invert: 0.0
+mode0
 
 #viz postfx: 0.0
 viz :alive, rotate: 0.2

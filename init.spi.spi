@@ -65,7 +65,7 @@ def mode1
 end
 
 
-viz :alive, length: 1.2
+viz :alive, length: 2.2
 viz :alive, rotate: 0.9
 
 #mode1

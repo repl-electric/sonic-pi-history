@@ -42,6 +42,7 @@ def modeend(r=nil)
   unity "/glitch/slice",0.0
   unity "/alive/rotate", 0.0
   unity "/glitch/invert",0.0
+  viz :alive, length: 1.0
 end
 
 def mode0

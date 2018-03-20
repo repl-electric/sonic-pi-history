@@ -91,6 +91,7 @@ end
 
 mode0
 viz :alive, length: 2.8
+viz :alive, thick: 0.01
 
 
 #mode1

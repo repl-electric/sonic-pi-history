@@ -48,7 +48,7 @@ def modeend(r=nil)
   end
   viz :alive, length: 2.2
   viz :alive, spring: 0.001
-  viz :alive, damp: 11000
+  viz :alive, damp: 100
 end
 
 def mode0

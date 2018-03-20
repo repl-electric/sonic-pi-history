@@ -96,7 +96,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-mode0
+mode1
 
 #viz shard: 0.1
 
@@ -125,5 +125,5 @@ end
 
 #bitsea_on :cs4
 
-#bitsea_cc motion: 1.00
-#bitsea_cc octave: 0.55
+#bitsea_cc motion: 0.10
+#bitsea_cc octave: 0.56

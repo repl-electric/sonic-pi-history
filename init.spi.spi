@@ -102,7 +102,7 @@ mode0
 #viz :alive, deform: 100.1
 #sleep 0.5
 live_loop :go do
-  dviz :alive, deform: rand(0.1)+0.1
+  dviz :alive, deform: rand(0.5)+0.1
   smp Mountain[/subkick/,0]
   sleep 4
 end

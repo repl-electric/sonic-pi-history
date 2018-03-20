@@ -110,7 +110,7 @@ viz postfx: 0.0
 #sleep 0.5
 live_loop :go do
   tick
-  dviz :alive, deform: 20
+  dviz :alive, deform: 10
 #  kick_machine K1, accent: 1.0 if spread(1,3).look
 #  smp Mountain[/subkick/,0]
   sleep 0.5

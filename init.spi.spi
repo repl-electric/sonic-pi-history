@@ -26,6 +26,8 @@ def modelogo(r=nil)
   unity "/glitch/block",0.03
   unity "/glitch/slice",0.0
   unity "/glitch/invert",1.0
+  viz :sea, popcolor: 0.0
+  viz :sea, popsize: 1.0
   if r
     unity "/alive/rotate", 20.0
   else
@@ -61,6 +63,8 @@ def mode0
   viz postfx: 0.0
   viz :alive, length: 0.4
   viz :alive, thick: 0.05
+  viz :sea, popcolor: 0.0
+  viz :sea, popsize: 1.0
 end
 
 def mode1

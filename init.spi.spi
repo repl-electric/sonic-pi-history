@@ -95,7 +95,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-#modelogo
+mode0
 
 #viz postfx: 0.0
 
@@ -106,7 +106,7 @@ viz :alive, deform: rand()+0.1
 #viz :alive, deform: 200.0
 #viz :alive, sine: 0.9
 
-bitsea_on :cs4
+#bitsea_on :cs4
 
-bitsea_cc motion: 1.00
-bitsea_cc octave: 0.5
+bitsea_cc motion: 0.98
+bitsea_cc octave: 0.50

@@ -63,7 +63,7 @@ def mode1
 end
 
 
-ping :alive, length: 10.2
+ping :alive, length: 11.2
 
 
 #mode1

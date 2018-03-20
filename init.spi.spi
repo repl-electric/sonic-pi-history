@@ -64,7 +64,7 @@ end
 
 
 ping :alive, length: 1.2
-ping :alive, rotate: 1.8
+ping :alive, rotate: 0.0
 
 #mode1
 #mode0

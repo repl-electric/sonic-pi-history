@@ -111,7 +111,7 @@ live_loop :go do
   tick
   dviz :alive, deform: (ing 1.0, 10.0+rand).look
 
-  kick_machine :as4, accent: 10.0, amp: 2.3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
+  kick_machine :d5, accent: 10.0, amp: 2.3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
 #  smp Mountain[/subkick/,0]
   sleep 1
 end

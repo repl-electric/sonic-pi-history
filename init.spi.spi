@@ -71,7 +71,7 @@ end
 
 def mode3
   viz :alive, light: 0.6
-  viz camera: 5
+  viz camera: 4
 end
 
 #viz :alive, length: 0.2

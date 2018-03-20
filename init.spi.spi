@@ -95,7 +95,7 @@ end
 #mode1
 viz postfx: 0.0
 
-viz :alive, rotate: 0.2
+viz :alive, rotate: 0.3
 viz :alive, deform: 0.1
 sleep 1.0
 viz :alive, deform: 10.0

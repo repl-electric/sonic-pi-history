@@ -42,7 +42,7 @@ def modeend(r=nil)
   unity "/glitch/slice",0.0
   unity "/alive/rotate", 0.0
   if r
-    unity "/glitch/invert",0.0
+    unity "/glitch/invert",1.0
   else
     unity "/glitch/invert",0.0
   end

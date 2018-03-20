@@ -64,7 +64,7 @@ end
 
 
 #mode1
-#mode0
+mode0
 
 ping :alive, light: 0.9
 #ping :logo, person: 0.0

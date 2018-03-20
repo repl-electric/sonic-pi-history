@@ -103,7 +103,7 @@ mode0
 #dviz :alive, deform: 10.0
 #viz :alive, deformreset: 1.0
 #viz :alive, rotate: 0.2
-viz postfx: 0.0
+#viz postfx: 0.0
 #viz postfx: 0.0
 
 #viz :alive, deform: 100.0

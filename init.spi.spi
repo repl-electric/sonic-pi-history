@@ -63,9 +63,9 @@ def mode1
 end
 
 
-  unity "/alive/length",0.1
+unity "/alive/length",0.1
 
-mode1
+#mode1
 #mode0
 
 ping :alive, light: 0.9

@@ -76,6 +76,7 @@ def mode1
   unity "/sea/spacex", 0.2
   unity "/sea/height", 1.3
   unity "/sea/noise", 20.0
+  viz :alive, deform: 0.1
 end
 
 def mode2

@@ -92,7 +92,7 @@ def mode4
   unity "/alive/length",0.06
 end
 
-mode1
+mode0
 
 viz postfx: 0.0
 
@@ -102,4 +102,4 @@ viz :alive, rotate: 0.2
 #viz :alive, deform: 0.1
 #sleep 0.5
 viz :alive, deform: 1001.0
-viz :alive, sine: 0.1
+#viz :alive, sine: 0.1

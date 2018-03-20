@@ -65,7 +65,7 @@ def mode1
 end
 
 def mode2
-  viz :alive, light: 0.8
+  viz :alive, light: 0.7
   viz camera: 1
 end
 

@@ -96,7 +96,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-mode0
+mode1
 
 #viz shard: 0.1
 
@@ -105,6 +105,8 @@ mode0
 viz :alive, rotate: 0.2
 viz postfx: 1.0
 #viz postfx: 0.0
+
+#p
 
 #viz camera: 0
 

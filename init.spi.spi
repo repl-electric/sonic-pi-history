@@ -96,7 +96,7 @@ end
 
 viz postfx: 1.0
 
-viz :alive, rotate: 0.0
+viz :alive, rotate: 0.01
 viz :alive, deform: 0.1
 sleep 0.5
 viz :alive, deform: 1001.0

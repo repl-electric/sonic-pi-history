@@ -100,7 +100,7 @@ mode1
 
 #viz shard: 0.1
 
-viz :sea, pop: 0.8
+viz :sea, pop: 0.0
 
 #dviz :alive, deform: 10.0
 #viz :alive, deformreset: 1.0

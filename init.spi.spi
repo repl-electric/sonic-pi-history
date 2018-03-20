@@ -92,7 +92,7 @@ end
 
 mode0
 viz :alive, length: 0.5
-viz :alive, thick: 0.001
+viz :alive, thick: 0.002
 
 
 #mode1

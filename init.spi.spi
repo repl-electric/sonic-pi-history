@@ -101,7 +101,7 @@ mode2
 
 #viz postfx: 0.0
 
-viz :alive, deform: 100.0
+viz :alive, deform: 10.0
 #sleep 0.5
 live_loop :go do
   dviz :alive, deform: rand+0.1

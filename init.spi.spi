@@ -84,13 +84,12 @@ def mode4
 end
 
 
-#viz :alive, length: 0.2
+viz :alive, length: 0.2
 #viz :alive, rotate: 0.1
 
 #mode1
 #mode0
-
-mode4
+#mode4
 
 #viz :alive, light: 0.5
 #ping :logo, person: 0.0

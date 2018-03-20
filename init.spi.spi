@@ -103,7 +103,7 @@ mode0
 #sleep 0.5
 live_loop :go do
   viz :alive, deform: rand()+0.1
-  kick_machine KT
+  kick_machine K1
   sleep 1
 end
 

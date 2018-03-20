@@ -93,6 +93,7 @@ def mode4
 end
 
 mode0
+viz :glitch, invert: 1.0
 
 #viz postfx: 0.0
 viz :alive, rotate: 0.2

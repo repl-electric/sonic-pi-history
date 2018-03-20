@@ -108,7 +108,7 @@ mode1
 viz :sea, popcolor: 0.0
 viz :sea, popsize: 1.0
 
-#dviz :alive, deform: 10.0
+dviz :alive, deform: 10.0
 #viz :alive, deformreset: 1.0
 viz :alive, rotate: 0.2
 viz postfx: 1.0

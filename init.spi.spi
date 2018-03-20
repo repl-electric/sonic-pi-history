@@ -119,7 +119,7 @@ live_loop :go do
   smp Mountain[/subkick/,0]
   viz :alive, deformrate: 0.1
   sleep 1
-  viz :alive, deformrate: 0.01
+  viz :alive, deformrate: 0.0
   sleep 1
 end
 

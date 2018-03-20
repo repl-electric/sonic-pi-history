@@ -69,6 +69,11 @@ def mode2
   viz camera: 1
 end
 
+def mode3
+  viz :alive, light: 0.6
+  viz camera: 2
+end
+
 #viz :alive, length: 0.2
 #viz :alive, rotate: 0.1
 

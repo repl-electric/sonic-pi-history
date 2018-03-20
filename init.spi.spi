@@ -102,7 +102,7 @@ viz postfx: 1.0
 #viz :alive, deform: 100.1
 #sleep 0.5
 live_loop :go do
-  dviz :alive, deform: rand(2.0)+0.1
+  dviz :alive, deform: 100
   smp Mountain[/subkick/,0]
   sleep 1
 end

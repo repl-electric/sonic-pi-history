@@ -118,7 +118,7 @@ live_loop :go do
   dviz :alive, deformrate: 0.8
   smp Mountain[/subkick/,0]
   sleep 1
-  viz :alive, deformrate: 0.0
+  viz :alive, deformrate: 0.1
   sleep 1
 end
 

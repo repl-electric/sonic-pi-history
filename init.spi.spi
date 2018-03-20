@@ -54,6 +54,7 @@ def mode0
   unity "/glitch/slice",0.0
   unity "/glitch/invert",0.0
   unity "/alive/rotate", 20.0
+  viz postfx: 0.0
   viz :alive, length: 0.4
   viz :alive, thick: 0.05
 end

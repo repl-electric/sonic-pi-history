@@ -101,7 +101,7 @@ def mode4
   viz :alive, deform: 300.0
 end
 
-mode1
+mode0
 
 #viz shard: 0.1
 

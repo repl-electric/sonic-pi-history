@@ -44,7 +44,7 @@ def modeend(r=nil)
   unity "/glitch/invert",0.0
   viz :alive, length: 1.2
   viz :alive, spring: 0.001
-  viz :alive, damp: 100
+  viz :alive, damp: 10
 end
 
 def mode0

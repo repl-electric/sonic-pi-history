@@ -106,7 +106,7 @@ viz :alive, deform: rand()+0.1
 #viz :alive, deform: 200.0
 #viz :alive, sine: 0.9
 
-bitsea_on :e3
+bitsea_on :cs4
 
 bitsea_cc motion: 1.00
 bitsea_cc octave: 0.5

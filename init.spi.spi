@@ -111,7 +111,6 @@ viz postfx: 0.0
 live_loop :go do
   tick
   dviz :alive, deform: (ing 0.5+rand(0.1), 1.0+rand(0.1)).look
-
   kick_machine K1, accent: 1.0
 #  smp Mountain[/subkick/,0]
   sleep 2

@@ -85,6 +85,7 @@ end
 
 
 viz :alive, length: 0.9
+viz :glitch, invert: 1.0
 #viz :alive, rotate: 0.1
 
 #mode1

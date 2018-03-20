@@ -1,6 +1,7 @@
 # unity "/alive/light", 0.5
-unity "/sea/spacex", 0.9
-unity "/sea/noise", 10.0
+unity "/sea/spacex", 0.1
+unity "/sea/noise", 20.0
+
 
 # #unity "/alive/light",0.8
 # unity "/logo/person", 1.0
@@ -96,7 +97,7 @@ mode0
 
 #viz :alive, light: 0.5
 #ping :logo, person: 0.0
-viz postfx: 1.0
+#viz postfx: 1.0
 #viz test: 1.00
 #viz camera: 1
 
@@ -105,6 +106,3 @@ viz postfx: 1.0
 
 #bitsea_cc motion: 0.00
 #mode1
-
-unity "/sea/spacex", 0.1
-unity "/sea/noise", 20.0

@@ -76,6 +76,7 @@ end
 def mode2
   viz :alive, light: 0.6
   viz camera: 1
+  viz :alive, deform: 300.0
 end
 
 def mode3
@@ -83,6 +84,7 @@ def mode3
   viz camera: 3
   unity "/alive/thick",0.0144
   unity "/alive/length",0.06
+  viz :alive, deform: 300.0
 end
 
 def mode4
@@ -90,6 +92,7 @@ def mode4
   viz camera: 4
   unity "/alive/thick",0.0144
   unity "/alive/length",0.06
+  viz :alive, deform: 300.0
 end
 
 mode3

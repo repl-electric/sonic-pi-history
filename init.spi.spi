@@ -74,7 +74,6 @@ def mode3
   viz camera: 3
   unity "/alive/thick",0.0144
   unity "/alive/length",0.06
-
 end
 
 #viz :alive, length: 0.2

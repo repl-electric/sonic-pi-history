@@ -73,7 +73,7 @@ ping :alive, light: 0.9
 #ping :logo, person: 0.0
 ping postfx: 1.0
 ping test: 1.00
-ping camera: 4
+ping camera: 0
 
 #mode0
 #unity "/glitch/invert",0.0

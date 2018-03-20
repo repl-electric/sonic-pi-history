@@ -101,7 +101,13 @@ mode0
 
 #viz :alive, deform: 100.1
 #sleep 0.5
+live_loop :go do
+  viz :alive, deform: rand()+0.1
+  sleep 1
+end
+
 viz :alive, deform: rand()+0.1
+
 #viz :alive, deform: 100.0
 #viz :alive, deform: 200.0
 #viz :alive, sine: 0.9

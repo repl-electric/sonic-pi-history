@@ -84,9 +84,11 @@ def mode4
 end
 
 
-viz :alive, length: 0.9
+#viz :alive, length: 0.9
 #viz :glitch, invert: 0.0
 #viz :alive, rotate: 0.1
+
+mode0
 
 #mode1
 #mode0

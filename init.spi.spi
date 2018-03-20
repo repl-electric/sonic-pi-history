@@ -95,7 +95,7 @@ end
 mode0
 
 #viz postfx: 0.0
-#viz :alive, rotate: 0.2
+viz :alive, rotate: 0.2
 viz :alive, deform: 100.1
 #sleep 0.5
 viz :alive, deform: rand

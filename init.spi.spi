@@ -92,7 +92,7 @@ def mode4
   unity "/alive/length",0.06
 end
 
-mode0
+mode1
 viz :glitch, invert: 0.0
 
 #viz postfx: 0.0

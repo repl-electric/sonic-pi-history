@@ -18,5 +18,5 @@ live_loop :kick do
 
 
   kick_machine (ing K1 _ _ _).look, def: 0.4
-  sleep 1
+  sleep 2
 end

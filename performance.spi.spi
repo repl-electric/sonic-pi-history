@@ -1,9 +1,10 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
+
+bitsea_on :A2
+
 #bitsea_on :cs4
 #viz postfx: 1.0
 
 #unity "/postfx/color",1.0
-
-mode0

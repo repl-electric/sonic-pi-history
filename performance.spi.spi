@@ -16,7 +16,8 @@ live_loop :go do
     [:b2, :d4, :fs3]
     [:d2, :fs4, :a3]
     [:a2, :b3, :cs4]
-    ).look.each{|n| qbitsea n, sus: 2
+    ).look.each{|n|
+    qbitsea n, sus: 2
   }
 
   #kick_machine K1

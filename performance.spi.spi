@@ -61,9 +61,6 @@ live_loop :go do
   sleep 2
 end
 
-
-
-
 live_loop :glitch, sync: :go do
   tick
   p=(ing
@@ -104,8 +101,6 @@ live_loop :glitch, sync: :go do
   end
   sleep 1/8.0
 end
-
-
 
 zero_cc noise: 0.51
 zero_cc dry: 1.00

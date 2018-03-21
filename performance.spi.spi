@@ -60,13 +60,14 @@ live_loop :kick do
   #corrupt (ing :A3 _ ).look, motion: 0.2
 
   viz :sea, popsize: 1.0
-  mt 5, 110, 127
+
 
 
   #sleep 2
   #kick_machine (ing K1).look, def: 0.1
   8.times{
     kick_machine (ing K2 _  K1 _).look, def: 0.1
+    mt 5, 110, 127
     sleep 2/8.0
   }
 end

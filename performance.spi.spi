@@ -43,13 +43,13 @@ live_loop :kick, sync: :go do
 end
 
 
-qbitsea_cc octave: 0.50
-qbitsea_cc fm: 0.37
+qbitsea_cc octave: 0.70
+qbitsea_cc fm: 0.39
 qbitsea_cc charge: 0.34
-qbitsea_cc drive: 0.49
+qbitsea_cc drive: 0.27
 #qbitsea_cc wav: 0.97
 #qbitsea_cc wave_amp: 0.97
-qbitsea_cc wav: 0.01
+qbitsea_cc wav: 1.00
 qbitsea_cc wav_amp: 0.30
 
 

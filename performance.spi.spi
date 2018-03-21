@@ -26,7 +26,7 @@ live_loop :go do
 
   operator score[0]
   zero :b3, sus: 2.1
-  corrupt :fs4, motion: 0.1
+  corrupt score[-1], motion: 0.1
   at{
     8.times{
       tick(:a)
@@ -53,7 +53,7 @@ qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.24
 qbitsea_cc formant: 0.47
 qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.77
+qbitsea_cc bass: 0.80
 
 eq hi: 0.85
 eq lo: 0.85

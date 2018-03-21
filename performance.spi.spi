@@ -106,7 +106,7 @@ zero_cc noise: 0.51
 zero_cc dry: 1.00
 
 viz :alive, rotate: 4.0
-viz :alive, thick: 0.01
+viz :alive, thick: 0.02
 
 
 qbitsea_cc oct: 0.61

@@ -32,7 +32,7 @@ live_loop :go do
   exception score[0]
 
   8.times{tick(:in)
-    kick_machine (ing K1 _ _ _  _ _ _ _).look(:in)
+    kick_machine (ing K1 _ _ _  _ _ _ _).look(:in), def: 8.0
 
     sleep 2.0/8.0
   }

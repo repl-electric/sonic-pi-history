@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
 #bitsea_on :CS4
-mode1
+modelogo
 
 
 
@@ -17,32 +17,32 @@ mode1
 
 #viz camera: 4
 
-viz :alive, rotate: 1.4
-qbitsea_cc drive: 0.36
-qbitsea_cc fm: 0.33
+#viz :alive, rotate: 1.4
+#qbitsea_cc drive: 0.36
+#qbitsea_cc fm: 0.33
 
 
 live_loop :kick do
   tick
   c=(ing
-    [:b2,  :d4, :fs3] [_]
-    [:fs2, :a4, :cs3] [_]
-    [:a2, :b4, :cs3]
-    [:d2, :fs4, :a3]
-    [:e2, :gs4, :b3]  [_]
-    [:fs2, :gs4, :b3] [_]
+    [:b2,   :d4,  :fs3], [_],
+    [:fs2,  :a4,  :cs3], [_],
+    [:a2,  :b4,  :cs3],
+    [:d2,  :fs4,  :a3],
+    [:e2,  :gs4,  :b3],  [_],
+    [:fs2,  :gs4,  :b3], [_],
     ).look
 
   c.each_tick(:in){|n|
-    #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    #qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  #callstack (ing :A2 _).look, 80
+  #callstack (ing :A2, _,).look, 80
 #  exception c[0], 30, atk: 0.8
-  #corrupt (ing :A3 _ ).look, motion: 0.2
+  #corrupt (ing :A3, _, ).look, motion: 0.2
 
-  #kick_machine (ing K1).look, def: 0.04
+  #kick_machine (ing K1,).look, def: 0.04
   #sleep 2
-  #kick_machine (ing K1).look, def: 0.1
+  #kick_machine (ing K1,).look, def: 0.1
   sleep 2
 end

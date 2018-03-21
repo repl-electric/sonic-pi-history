@@ -23,3 +23,6 @@ live_loop :go do
     sleep 2.0/8.0
   }
 end
+
+
+eq hi: 0.85

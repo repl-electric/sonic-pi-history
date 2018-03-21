@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 live_loop :go do
   tick
-  mod4
+#  mod4
   score=(ing
     [:b2  :d5 :fs3]        REST
     [:fs2  :a4 :cs3]       REST
@@ -36,3 +36,16 @@ live_loop :go do
 end
 zero_cc noise: 0.51
 zero_cc dry: 1.00
+
+qbitsea_cc oct: 0.61
+qbitsea_cc drive: 0.36
+qbitsea_cc charge: 0.51
+qbitsea_cc fm: 0.21
+qbitsea_cc wav: 0.01
+qbitsea_cc wav_amp: 0.30
+qbitsea_cc atk: 0.83
+qbitsea_cc mod: 0.80
+qbitsea_cc motion: 0.24
+qbitsea_cc formant: 0.36
+qbitsea_cc mul: 0.00
+qbitsea_cc bass: 0.27

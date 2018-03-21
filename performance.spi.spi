@@ -23,6 +23,6 @@ live_loop :go do
   }
   exception (ing s[0] _).look
   2.times{sleep 1; kick_machine K1, def: 8.0
-    mt 5, 100, 120
+    mt 5, 120, 120
   }
 end

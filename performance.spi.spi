@@ -24,12 +24,12 @@ live_loop :go do
   whitespace s[-1], 1, sus: 12
   exception s[0]
   null s[0],100, sus: 0.5
-  8.times{
+  16.times{
     tick(:in)
     kick_machine (ing KT[1] _ K1 _  _ _ _ _).look(:in), def: 8.0
     mt 3, 100, 120 if spread(7,11).look(:in)
     mt 2, 100, 120 if spread(6,8).look(:in)
-    sleep 2.0/8.0
+    sleep 2.0/16.0
   }
 end
 

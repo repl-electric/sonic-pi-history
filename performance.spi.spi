@@ -105,7 +105,7 @@ end
 zero_cc noise: 0.51
 zero_cc dry: 1.00
 
-viz :alive, rotate: 24.0
+viz :alive, rotate: 4.0
 viz :alive, thick: 0.06
 
 

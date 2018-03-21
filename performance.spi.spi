@@ -13,20 +13,20 @@ live_loop :go do
   tick
 
   (x =(ing
-    [:b3,  :d5, :fs3]
-    [:fs3, :a4, :cs3]
-    [:a3, :cs4, :cs3]
-    [:d3, :fs5, :a3]
-    [:e3, :gs4, :b3]
-    [:fs3, :a5, :cs3]
-    [:a3, :b3, :cs4]
+    [:b3,   :d5,  :fs3],
+    [:fs3,  :a4,  :cs3],
+    [:a3,  :cs4,  :cs3],
+    [:d3,  :fs5,  :a3],
+    [:e3,  :gs4,  :b3],
+    [:fs3,  :a5,  :cs3],
+    [:a3,  :b3,  :cs4],
     ).look).each{|n|
     qbitsea n, sus: 2
   }
   whitespace x[0],1, sus: 12
 
   #kick_machine K1
-  exception x[0],10, sus: 0.1, atk: 0.01
+  exception x[0],10, sus: 0.1, atk: 0.01, form: 0.0
   mt 5, 100, 120
   sleep 2
 end
@@ -34,8 +34,8 @@ end
 live_loop :kick, sync: :go do
   tick
 
-  kick_machine (ing [KT[1]] _ K1 _   K3 _ _ _
-                    K2 _ K2 _   K3 _ _ _
+  kick_machine (ing [KT[1]], _, K1, _,   K3, _, _, _,
+                    K2, _, K2, _,   K3, _, _, _,
                 ).look, def: 10.0
 
   sleep 1/4.0

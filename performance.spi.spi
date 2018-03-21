@@ -12,7 +12,7 @@ bitsea_cc octave: 0.50
 live_loop :go do
   tick
 
-  kick_machine K1
+  #kick_machine K1
   exception :A2
 
   sleep 2

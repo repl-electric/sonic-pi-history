@@ -30,7 +30,7 @@ end
 live_loop :kick, sync: :go do
   tick
 
-  kick_machine (ing [KT[0]] _ K1 _   K3 _ _ _
+  kick_machine (ing [KT[1]] _ K1 _   K3 _ _ _
                     K2 _ K2 _   K3 _ _ _
                 ).look
 

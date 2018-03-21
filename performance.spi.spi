@@ -19,7 +19,7 @@ live_loop :go do
   }
 
   #mod3
-  corrupt :Fs3, motion: 0.1
+  corrupt :Fs3, motion: 0.5
 
   exception score[0]
   null score[0]

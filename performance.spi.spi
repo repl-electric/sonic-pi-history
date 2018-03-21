@@ -35,8 +35,8 @@ live_loop :go do
       }
     }
 
-  #exception score[0]
-  #null score[0]
+  exception score[0]
+  null score[0]
   sleep 2
 end
 zero_cc noise: 0.51

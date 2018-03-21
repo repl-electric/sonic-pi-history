@@ -23,7 +23,7 @@ live_loop :go do
   at{
     operator score[0], 127, reset: 1
     sleep 0.5
-    operator score[1], 90
+    operator score[1], 100
     sleep 0.25
   }
   whitespace score[-1], 1, sus: 12

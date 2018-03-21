@@ -8,7 +8,7 @@ bitsea_cc motion: 0.16
 bitsea_cc octave: 0.50
 #bitsea_cc formant: 0.00
 
-mode4
+#mode4
 live_loop :go do
   tick
 
@@ -22,7 +22,7 @@ live_loop :go do
 
   #kick_machine K1
   exception :A2, sus: 0.1
-
+  mt 5
   sleep 2
 end
 

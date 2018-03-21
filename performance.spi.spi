@@ -48,7 +48,7 @@ live_loop :kick do
 #  exception c[0], 30, atk: 0.8
   #corrupt (ing :A3 _ ).look, motion: 0.2
 
-  kick_machine (ing K1).look, def: 0.02
+  kick_machine (ing K1).look, def: 0.04
   #sleep 2
   #kick_machine (ing K1).look, def: 0.1
   sleep 1

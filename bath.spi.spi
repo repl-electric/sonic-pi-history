@@ -1,5 +1,5 @@
 require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb";use_bpm 63.5
-require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb";use_bpm 6
+require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
 #mode1
 #unity "/postfx/color",1.0
@@ -17,6 +17,6 @@ live_loop :kick do
   exception :A2
   corrupt :A3, motion: 0.4
 
-  kick_machine (ing K1 ).look, def: 0.4
+  kick_machine (ing K1, ).look, def: 0.4
   sleep 2
 end

@@ -12,6 +12,8 @@ live_loop :kick do
 
   exception :cs2
 
+  broken :A2
+
 
   kick_machine (ing K1 _ _ _).look, def: 0.4
   sleep 1

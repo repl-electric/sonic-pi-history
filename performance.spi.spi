@@ -7,7 +7,7 @@ bitsea_cc formant: 0.50
 
 live_loop :go do
   tick
-  viz postfx: 1.0
+  #viz postfx: 1.0
   s=(ing
     [:b2  :d5 :fs3]
     [:fs2 :a4 :cs3]

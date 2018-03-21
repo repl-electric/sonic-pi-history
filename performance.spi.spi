@@ -27,8 +27,9 @@ live_loop :go do
   zero :b3
   corrupt :Fs3, motion: 0.3
   at{
-    tick(:a)
+
     8.times{
+      tick(:a)
       kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8
       sleep 1/4.0
       }

@@ -59,7 +59,7 @@ live_loop :kick do
 #  exception c[0], 30, atk: 0.8
   #corrupt (ing :A3 _ ).look, motion: 0.2
 
-  viz :sea, popsize: 0.2
+  viz :sea, popsize: 0.3
   mt 5, 110, 127
 
 

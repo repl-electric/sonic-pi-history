@@ -12,17 +12,17 @@ live_loop :go do
 #stop
 #    mod4
   score=(ing
-    [:b2,  :d5, :fs3],        REST,
-    [:fs3, :a4, :cs3],       REST,
-    [:a3,  :cs5,  :e4],
-    [:d3,  :fs5, :a3, :e4],   REST,
-    [:e2,  :gs5, :b3],
-    [:b2,  :d5,  :fs3, :cs4],  REST,
-    [:fs4, :a4,  :cs3],       REST,
+    [:b3  :d5 :fs4]        REST
+    [:fs3 :a4 :cs3]       REST
+    [:a3  :cs5  :e4]
+    [:d3  :fs5 :a3 :e4]   REST
+    [:e2  :gs5 :b3]
+    [:b2  :d5  :fs3 :cs4]  REST
+    [:fs4 :a4  :cs3]       REST
 
     ).look
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   pf=2.1
@@ -48,9 +48,9 @@ live_loop :go do
     8.times{
       tick(:a)
       kick_machine (ing
-                    [KT[1]], _, K3, _,   _, _, _, _,
-                    K1, _, K3, _,   _, _, _, _,
-                    K1, _, K3, _,   _, _, _, _,
+                    [KT[1]] _ K3 _   _ _ _ _
+                    K1 _ K3 _   _ _ _ _
+                    K1 _ K3 _   _ _ _ _
                     ).look(:a), def: 1000.0, accent:0
       sleep 1/4.0
       }
@@ -67,27 +67,27 @@ end
 live_loop :glitch, sync: :go do
   tick
   p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  accent = (ing 0.2 0.2 0.3 0.5).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)

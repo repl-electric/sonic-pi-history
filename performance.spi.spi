@@ -12,7 +12,10 @@ bitsea_cc octave: 0.50
 live_loop :go do
   tick
 
-  (ing [:b2, :d4, :fs3]).look.each{|n| qbitsea n}
+  (ing
+    [:b2, :d4, :fs3]
+    [:d2, :fs4, :a3]
+    ).look.each{|n| qbitsea n}
 
   #kick_machine K1
   exception :A2, sus: 0.1

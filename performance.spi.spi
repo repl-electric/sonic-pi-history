@@ -17,5 +17,5 @@ live_loop :go do
   }
   exception (ing s[0] _).look
 
-  sleep 2
+  2.times{sleep 1; kick_machine K1}
 end

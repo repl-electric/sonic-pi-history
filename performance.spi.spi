@@ -23,7 +23,10 @@ live_loop :go do
   }
 
   whitespace score[-1], sus: 12
+
+  zero :a3
   corrupt score[0], motion: 0.3
+
   exception score[0]
   null score[0]
 

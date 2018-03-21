@@ -16,11 +16,12 @@ live_loop :kick do
   tick
 
   qbitsea :A2
+  qbitsea :CS4
   #exception :A2, atk: 0.8
   #corrupt :A3, motion: 0.4
 
-  #kick_machine (ing K1,).look, def: 0.4
+  #kick_machine (ing K1).look, def: 0.4
   sleep 1
-  #kick_machine (ing K1,).look, def: 0.4
+  #kick_machine (ing K1).look, def: 0.4
   sleep 1
 end

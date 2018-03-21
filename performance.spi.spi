@@ -8,14 +8,14 @@ bitsea_cc motion: 0.16
 bitsea_cc octave: 0.50
 #bitsea_cc formant: 0.00
 
-
+mode 4
 live_loop :go do
   tick
 
   (ing
-    [:b2,  :d4,  :fs3],
-    [:d2,  :fs4,  :a3],
-    [:a2,  :b3,  :cs4],
+    [:b2, :d4, :fs3]
+    [:d2, :fs4, :a3]
+    [:a2, :b3, :cs4]
     ).look.each{|n|
     qbitsea n, sus: 2
   }

@@ -28,3 +28,6 @@ live_loop :go do
     mt 5, 120, 120
   }
 end
+
+qbitsea_cc fm: 0.28
+qbitsea_cc drive: 0.1

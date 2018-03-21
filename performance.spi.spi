@@ -23,13 +23,11 @@ live_loop :go do
   }
 
   whitespace score[-1], sus: 12
-
   zero :a4
   corrupt :fs4, motion: 0.3
 
   exception score[0]
-  null score[0]
-
+  null score[0], sus: 0.5
 
   8.times{tick(:in)
     kick_machine (ing K1 _ _ _   _ _ _ _).look(:in), def: 1.0

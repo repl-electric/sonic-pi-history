@@ -1,1 +1,11 @@
 mode0
+
+bitsea_on :A2
+
+live_loop :fall do
+  tick
+
+
+
+  sleep 1
+end

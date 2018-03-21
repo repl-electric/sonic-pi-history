@@ -11,11 +11,13 @@ bitsea_cc octave: 0.50
 
 #bitsea_on :cs4
 
+
+
 live_loop :kick do
   tick
 
   c=(ing
-    [:b2,  :d4, :fs3]
+    [:b2,  :d4, :fs3] [_]
     [:fs2, :a4, :cs3]
     [:a2, :b4, :cs3]
     [:d2, :fs4, :a3]

@@ -37,7 +37,7 @@ live_loop :go do
   }
 end
 
-mode 4
+mode4
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.39
 qbitsea_cc charge: 0.52

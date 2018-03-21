@@ -10,7 +10,7 @@ bitsea_cc octave: 0.50
 live_loop :kick do
   tick
 
-  exception :CS2
+  exception :A2
 
   kick_machine (ing K1 _ _ _).look, def: 0.4
   sleep 1

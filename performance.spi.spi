@@ -15,20 +15,20 @@ live_loop :kick do
   tick
 
   c=(ing
-    [:b2,   :d4,  :fs3],
-    [:fs2,  :a4,  :cs3],
+    [:b2,  :d4, :fs3]
+    [:fs2, :a4, :cs3]
     ).look
 
   c.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.4
   }
 
-  #callstack (ing :A2, _,).look, 80
+  #callstack (ing :A2 _).look, 80
   exception c[0], 30, atk: 0.8
-  #corrupt (ing :A3, _, ).look, motion: 0.2
+  #corrupt (ing :A3 _ ).look, motion: 0.2
 
-  #kick_machine (ing K1,).look, def: 0.04
+  #kick_machine (ing K1).look, def: 0.04
   sleep 1
-  kick_machine (ing K1,).look, def: 0.1
+  kick_machine (ing K1).look, def: 0.1
   sleep 1
 end

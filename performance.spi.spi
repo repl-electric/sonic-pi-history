@@ -11,17 +11,17 @@ live_loop :go do
 stop
   #  mod4
   score=(ing
-    [:b2  :d5 :fs3]        REST
-    [:fs2  :a4 :cs3]       REST
-    [:a2  :b4  :e4]
-    [:d3  :fs5 :a3 :cs5]   REST
-    [:e2  :gs4 :b3]
-    [:b2  :d5  :fs3 :cs4]  REST
-    [:fs4 :a4  :cs3]       REST
+    [:b2,  :d5, :fs3],        REST,
+    [:fs2,  :a4, :cs3],       REST,
+    [:a2,  :b4,  :e4],
+    [:d3,  :fs5, :a3, :cs5],   REST,
+    [:e2,  :gs4, :b3],
+    [:b2,  :d5,  :fs3, :cs4],  REST,
+    [:fs4, :a4,  :cs3],       REST,
 
     ).look
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 1.0
+    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 1.0
   }
 
   operator score[0]
@@ -30,7 +30,7 @@ stop
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ K3 _   _ _ _ _).look(:a), def: 8
+      kick_machine (ing K1, _, K3, _,   _, _, _, _,).look(:a), def: 8
       sleep 1/4.0
       }
     }

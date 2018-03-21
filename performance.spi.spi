@@ -19,7 +19,7 @@ live_loop :go do
   }
 
   #mod3
-  operator score[-1]
+  operator score[0]
   whitespace score[-1], 1, sus: 12
   zero :B3, sus: 4
   corrupt :Fs4, motion: 0.4

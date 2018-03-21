@@ -18,7 +18,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 0.05
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 4.
       sleep 1/4.0
     }
   }

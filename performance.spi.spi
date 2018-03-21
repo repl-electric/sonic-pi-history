@@ -22,7 +22,7 @@ mode4
 
 #viz :alive, rotate: 0.01
 #qbitsea_cc drive: 0.50
-#qbitsea_cc fm: 0.37
+#qbitsea_cc fm: 0.38
 
 
 live_loop :kick do

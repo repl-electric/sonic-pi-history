@@ -1,9 +1,9 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
-bitsea_on :cs4
+#bitsea_on :cs4
 
-bitsea_cc motion: 0.09
+bitsea_cc motion: 0.08
 bitsea_cc octave: 0.50
 bitsea_cc formant: 0.49
 
@@ -13,7 +13,7 @@ bitsea_cc formant: 0.49
 
 mode1
 
-viz :alive, deformrate: 0.1
+viz :alive, deformrate: 0.2
 
 
 ##viz postfx: 1.0

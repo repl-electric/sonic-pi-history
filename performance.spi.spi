@@ -16,11 +16,11 @@ live_loop :kick do
 
 
 
-  exception (ing :A2, _,).look, atk: 0.8
-  corrupt (ing :A3, _, ).look, motion: 0.4
+  exception (ing :A2 _).look, atk: 0.8
+  corrupt (ing :A3 _ ).look, motion: 0.3
 
-  kick_machine (ing K1,).look, def: 0.3
+  kick_machine (ing K1).look, def: 0.3
   sleep 1
-  kick_machine (ing K1,).look, def: 0.4
+  kick_machine (ing K1).look, def: 0.4
   sleep 1
 end

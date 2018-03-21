@@ -138,6 +138,7 @@ live_loop :go do
   sleep 2
 end
 
+mode1
 #viz :alive, deform: rand()+0.1
 
 #viz :alive, deform: 100.0

@@ -30,7 +30,7 @@ qbitsea_cc bass: 0.59
 
 
 unity "/alive/spring", 0.0001
-unity "/alive/damp", 0.0001
+unity "/alive/damp", 0.001
 unity "/alive/maxtime", 0.006
 
 
@@ -40,24 +40,24 @@ unity "/alive/maxtime", 0.006
 live_loop :kick do
   tick
   c=(ing
-    [:b2,   :d4,  :fs3], [_],
-    [:fs2,  :a4,  :cs3], [_],
-    [:a2,  :b4,  :cs3],
-    [:d2,  :fs4,  :a3],
-    [:e2,  :gs4,  :b3],  [_],
-    [:fs2,  :gs4,  :b3], [_],
+    [:b2,  :d4, :fs3] [_]
+    [:fs2, :a4, :cs3] [_]
+    [:a2, :b4, :cs3]
+    [:d2, :fs4, :a3]
+    [:e2, :gs4, :b3]  [_]
+    [:fs2, :gs4, :b3] [_]
     ).look
 
   c.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  #callstack (ing :A2, _,).look, 80
+  #callstack (ing :A2 _).look, 80
   exception c[0], 30, atk: 0.8
-  #corrupt (ing :A3, _, ).look, motion: 0.2
+  #corrupt (ing :A3 _ ).look, motion: 0.2
 
-  #kick_machine (ing K1,).look, def: 0.04
+  #kick_machine (ing K1).look, def: 0.04
   #sleep 2
-  #kick_machine (ing K1,).look, def: 0.1
+  #kick_machine (ing K1).look, def: 0.1
   sleep 2
 end

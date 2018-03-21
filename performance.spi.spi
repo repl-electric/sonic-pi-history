@@ -8,7 +8,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 
 #mode4
 ##viz postfx: 1.0
-viz :alive, thick: 0.001
+viz :alive, thick: 0.01
 
 
 #unity "/alive/spring", 100.0

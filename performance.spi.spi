@@ -17,6 +17,8 @@ live_loop :kick do
   c=(ing
     [:b2,  :d4, :fs3]
     [:fs2, :a4, :cs3]
+    [:a2, :b4, :cs3]
+
     ).look
 
   c.each_tick(:in){|n|

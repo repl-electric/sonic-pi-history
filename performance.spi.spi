@@ -14,11 +14,11 @@ bitsea_cc octave: 0.50
 live_loop :kick do
   tick
 
-  callstack (ing :A2 _).look, 80
+  callstack (:A2 _).look, 80
   exception (ing :A2 _).look, atk: 0.8
   corrupt (ing :A3 _ ).look, motion: 0.2
 
-  kick_machine (ing K1).look, def: 0.04
+  #kick_machine (ing K1).look, def: 0.04
   sleep 1
   kick_machine (ing K1).look, def: 0.1
   sleep 1

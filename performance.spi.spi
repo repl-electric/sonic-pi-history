@@ -32,7 +32,7 @@ live_loop :kick, sync: :go do
 
   kick_machine (ing [KT[1]] _ K1 _   K3 _ _ _
                     K2 _ K2 _   K3 _ _ _
-                ).look
+                ).look, def: 8.0
 
   sleep 1/4.0
 end

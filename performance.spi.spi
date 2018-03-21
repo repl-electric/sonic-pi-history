@@ -23,7 +23,8 @@ live_loop :go do
     )).look.each{|n|
     qbitsea n, sus: 2
   }
-  whitespace root(x)
+  whitespace root(x), sus: 12
+
 
   #kick_machine K1
   exception :A2, sus: 0.1

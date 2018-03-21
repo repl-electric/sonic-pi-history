@@ -17,5 +17,5 @@ live_loop :go do
   }
   exception (ing s[0] _).look
 
-  2.timessleep 2
+  sleep 2
 end

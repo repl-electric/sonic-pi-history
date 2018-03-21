@@ -13,10 +13,10 @@ live_loop :go do
   tick
 
   (ing
-    [:b2,  :d5, :fs3]
-    [:fs2, :a4, :cs3]
-    [:a2, :b3, :cs4]
-    [:d2, :fs3, :a4]
+    [:b2,   :d5,  :fs3],
+    [:fs2,  :a4,  :cs3],
+    [:a2,  :b4,  :cs4],
+    [:d2,  :fs3,  :a4],
     ).look.each{|n|
     qbitsea n, sus: 2
   }

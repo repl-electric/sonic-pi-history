@@ -21,7 +21,7 @@ live_loop :go do
     [:fs3 :a5 :cs3]
     [:a3 :b3 :cs4]
     ).look).each{|n|
-    qbitsea n, sus: 2.5
+    qbitsea n, sus: 2.5, cutoff: 1.0
   }
   whitespace x[0],1, sus: 12
 

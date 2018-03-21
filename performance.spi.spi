@@ -30,7 +30,7 @@ end
 live_loop :kick, sync: :go do
   tick
 
-  kick_machine (ing K1 _ _ _).look
+  kick_machine (ing K1 _ K1 _   _ _ _ _  ).look
 
   sleep 1/4.0
 end

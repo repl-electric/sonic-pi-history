@@ -24,11 +24,10 @@ live_loop :go do
   }
 
 
-  corrupt score[0], motion: 0.3
-
+  zero
+  corrupt :Fs4, motion: 0.3
   exception score[0]
   null score[0]
-
 
   8.times{tick(:in)
     kick_machine (ing K1 _ _ _  _ _ _ _).look(:in), def: 8

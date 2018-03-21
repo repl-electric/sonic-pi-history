@@ -67,7 +67,7 @@ live_loop :kick do
   #kick_machine (ing K1).look, def: 0.1
   8.times{
     kick_machine (ing K2 _  K1 _).look, def: 0.1
-    mt 3, 110, 127
+    mt 5, 110, 127
     sleep 2/8.0
   }
 end

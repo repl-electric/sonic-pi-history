@@ -22,8 +22,8 @@ live_loop :go do
   }
   #mod4
   whitespace score[-1], sus: 12
-  corrupt score[0],100, motion: 0.3, mode: 2
-  zero :e5, sus: 2, dry: 1.0
+  #corrupt score[0],100, motion: 0.3, mode: 2
+  #zero :e5, sus: 2, dry: 1.0
   operator score[0],80, sus: 2
   null score[0]
   exception score[0], 10

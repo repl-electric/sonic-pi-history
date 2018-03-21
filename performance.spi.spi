@@ -13,7 +13,7 @@ bitsea_cc formant: 0.49
 
 mode1
 
-viz :alive, deformrate: 0.0
+viz :alive, deformrate: 0.1
 
 
 ##viz postfx: 1.0

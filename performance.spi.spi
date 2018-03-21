@@ -14,8 +14,9 @@ live_loop :go do
 
   (ing
     [:b2, :d4, :fs3]
-    [:d2, :fs4, :a3]
+    [:fs2, :a4, :cs3]
     [:a2, :b3, :cs4]
+    [:d2, :fs3, :a4]
     ).look.each{|n|
     qbitsea n, sus: 2
   }

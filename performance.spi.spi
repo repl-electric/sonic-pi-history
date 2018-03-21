@@ -5,17 +5,17 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
   score=(ing
-    [:b2,  :d4, :fs3],
-    [:fs2, :a3, :cs4],
+    [:b2  :d4 :fs3]
+    [:fs2 :a3 :cs4]
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 2
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 1
       sleep 1/4.0
     }
   }

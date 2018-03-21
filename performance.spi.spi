@@ -26,7 +26,12 @@ live_loop :go do
   operator score[0]
   zero :b3
   corrupt :Fs3, motion: 0.3
-  kick_machine (ing K1 K2).look, def: 8
+  at{
+    8.times{
+    kick_machine (ing K1 K2).look, def: 8
+      sleep 1/4.0
+      }
+    }
 
   #exception score[0]
   #null score[0]

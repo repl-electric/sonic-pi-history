@@ -15,9 +15,12 @@ mode2
 live_loop :kick do
   tick
 
+
+
   exception :A2
   corrupt :A3, motion: 0.4
 
   kick_machine (ing K1 ).look, def: 0.4
-  sleep 2
+  sleep 1
+  sleep 1
 end

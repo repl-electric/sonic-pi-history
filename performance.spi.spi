@@ -12,7 +12,6 @@ live_loop :go do
     [:e2  :gs4 :b3]
     [:b2  :d5  :fs3 :cs4]  REST
     [:fs4 :a4  :cs3]       REST
-
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0,sus: 2.0

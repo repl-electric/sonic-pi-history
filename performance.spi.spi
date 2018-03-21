@@ -5,7 +5,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
   score=(ing
-    [:b2 :d4 :fs3]
+    [:b2  :d5 :fs3]
     [:fs3 :a4 :cs4]
     ).look
   score.each_tick(:in){|n|

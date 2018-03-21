@@ -13,7 +13,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 #unity "/alive/maxtime", 0.06
 unity "/alive/spring", 200.0
 unity "/alive/damp", 30.0
-unity "/alive/maxtime", 0.006
+unity "/alive/maxtime", 0.0
 
 viz camera: 3
 

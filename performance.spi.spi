@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
 #bitsea_on :CS4
-mode3
+mode4
 
 bitsea_cc motion: 0.10
 bitsea_cc octave: 0.50

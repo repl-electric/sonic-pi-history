@@ -26,7 +26,7 @@ live_loop :go do
   null s[0],100, sus: 0.5
   8.times{
     sleep 2.0/8.0
-    kick_machine (ing KT[1] _ K1 _  _ _ _ _).look, def: 8.0
+    kick_machine (ing KT[1] _ K1 _  K2 _ _ _).look, def: 8.0
     mt 5, 120, 120
   }
 end

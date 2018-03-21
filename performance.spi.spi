@@ -23,7 +23,9 @@ live_loop :go do
   }
 
   corrupt :FS4, motion: 0.3
-  zero :FS4 exception score[0]
+  zero :FS4
+
+  exception score[0]
   null score[0]
 
   8.times{tick(:in)

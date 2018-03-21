@@ -15,8 +15,8 @@ live_loop :kick do
   tick
 
   c=(ing
-    [:b2, :d4, :fs3]
-    [:A2, :CS4, :E3]
+    [:b2,  :d4, :fs3]
+    [:fs2, :a4, :cs3]
     ).look
 
   c.each_tick(:in){|n|

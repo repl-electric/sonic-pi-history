@@ -2,8 +2,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
-bitsea_on :CS4
+#bitsea_on :CS4
 
+unity "/postfx/color",0.0
 #mode0
 
 

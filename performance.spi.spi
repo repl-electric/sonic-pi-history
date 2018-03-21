@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50
 live_loop :go do
   tick
   s=(ing
-    [:a2 :cs4 :e3]
+    [:a2  :cs4 :e3]
     [:cs2 :e4 :gs3]
     ).look
   s.each_tick(:in){|n|

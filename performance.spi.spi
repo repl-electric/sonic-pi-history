@@ -21,8 +21,8 @@ mode4
 #viz camera: 4
 
 #viz :alive, rotate: 0.01
-#qbitsea_cc drive: 0.55
-#qbitsea_cc fm: 0.33
+#qbitsea_cc drive: 0.61
+#qbitsea_cc fm: 0.35
 
 
 live_loop :kick do
@@ -51,5 +51,5 @@ live_loop :kick do
   #kick_machine (ing K1).look, def: 0.04
   #sleep 2
   #kick_machine (ing K1).look, def: 0.1
-  sleep 1
+  sleep 2
 end

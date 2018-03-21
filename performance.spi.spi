@@ -10,7 +10,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
 #stop
-    mod4
+#    mod4
   score=(ing
     [:b3  :d5 :fs4]        REST
     [:fs3 :a4 :cs3]       REST

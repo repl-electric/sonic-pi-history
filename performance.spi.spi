@@ -42,12 +42,19 @@ zero_cc damp: 1.00
 qbitsea_cc oct: 0.60
 qbitsea_cc drive: 0.48
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.29
-qbitsea_cc wav: 0.61
+qbitsea_cc fm: 0.33
+qbitsea_cc wav: 0.90
 qbitsea_cc wav_amp: 0.35
 qbitsea_cc atk: 0.03
-qbitsea_cc mod: 0.80
-qbitsea_cc motion: 0.24
-qbitsea_cc formant: 0.36
+qbitsea_cc mod: 1.00
+qbitsea_cc motion: 0.18
+qbitsea_cc formant: 0.50
 qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.47
+qbitsea_cc bass: 0.67
+
+
+
+eq lo: 0.00
+eq hi: 0.00
+
+modened

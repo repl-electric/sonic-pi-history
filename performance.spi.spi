@@ -4,7 +4,7 @@ REST=[_]
 bitsea_cc motion: 0.16
 bitsea_cc octave: 0.50
 #bitsea_cc formant: 0.00
-bitsea hi: 0.90
+#bitsea hi: 0.90
 
 live_loop :hi do
   mode2

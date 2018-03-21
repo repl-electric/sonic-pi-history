@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
 #bitsea_on :CS4
-mode4
+#mode4
 
 
 #unity "/alive/spring", 100.0
@@ -14,8 +14,8 @@ unity "/alive/damp", 30.0
 unity "/alive/maxtime", 0.006
 
 
-
-
+qbitsea_cc drive: 0.52
+qbitsea_cc fm: 0.30
 
 
 live_loop :kick do

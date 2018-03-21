@@ -8,6 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 live_loop :go do
   tick
+  mode4
   score=(ing
     [:b2 :d4 :fs3]
     [:fs2 :a4 :cs3]
@@ -19,7 +20,6 @@ live_loop :go do
 
   8.times{tick(:in)
     kick_machine (ing K1 _ _ _  _ _ _ _).look(:in)
-
     sleep 2.0/8.0
   }
 end

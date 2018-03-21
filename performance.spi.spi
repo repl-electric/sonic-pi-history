@@ -27,9 +27,9 @@ live_loop :go do
   8.times{
     tick(:in)
     kick_machine (ing KT[1] _ K1 _  K2 _ _ _).look(:in), def: 8.0
+    mt 5, 120, 120
     sleep 2.0/8.0
 
-    mt 5, 120, 120
   }
 end
 

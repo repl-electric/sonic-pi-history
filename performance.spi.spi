@@ -18,8 +18,6 @@ live_loop :hi do
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
   }
 
-
-
   exception :A2, sus: 0.125
   8.times{
     kick_machine (ing K1 _ _ _).look

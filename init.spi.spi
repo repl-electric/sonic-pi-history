@@ -127,7 +127,7 @@ mode0
 live_loop :go do
   tick
   #dviz :alive, deform: 0.02
-#  kick_machine K1, accent: 1.0, def: 0.02 if spread(1,3).look
+  kick_machine K1, accent: 1.0, def: 0.02 if spread(1,3).look
   dviz :postfx, color: 0
 
   #dviz :alive, deformrate: 0.2

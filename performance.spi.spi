@@ -12,6 +12,8 @@ bitsea_cc octave: 0.50
 live_loop :go do
   tick
 
+  qbitsea :A3
+
   #kick_machine K1
   exception :A2, sus: 0.1
 

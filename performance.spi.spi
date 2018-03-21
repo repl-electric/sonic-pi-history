@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50
 
 live_loop :hi do
   tick
-  exception :A2
+  exception :A2, sus: 0.125
   8.times{
     sleep 2.0/8.0
   }

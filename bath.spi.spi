@@ -10,7 +10,7 @@ bitsea_cc octave: 0.50
 live_loop :kick do
   tick
 
-  exception :cs2
+  exception :A2
 
   broken :A2
 

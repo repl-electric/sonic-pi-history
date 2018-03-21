@@ -25,4 +25,4 @@ live_loop :go do
 end
 
 
-eq hi: 0.85
+eq lo: 0.85

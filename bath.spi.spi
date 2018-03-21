@@ -1,13 +1,5 @@
 mode0
-unity "/postfx/color",1.0
+#unity "/postfx/color",1.0
 
 
 #bitsea_on :3
-
-live_loop :fall do
-  tick
-
-
-
-  sleep 1
-end

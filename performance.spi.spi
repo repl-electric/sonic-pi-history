@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support/sample_map.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
-bitsea_on :E3
+bitsea_on :cs4
 
 bitsea_cc motion: 1.00
 bitsea_cc octave: 0.00

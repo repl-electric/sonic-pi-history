@@ -1,3 +1,15 @@
 REST=[_]
 #mode0
-bitsea_on :cs4
+
+bitsea_cc motion: 0.16
+bitsea_cc octave: 0.50
+#bitsea_cc formant: 0.00
+#bitsea hi: 0.70
+
+live_loop :hi do
+  tick
+  exception :A2
+  8.times{
+    sleep 2.0/8.0
+  }
+end

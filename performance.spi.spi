@@ -14,14 +14,14 @@ live_loop :go do
 
   [:b2, :d4, :fs3].each{|n| qbitsea n}
 
-
   #kick_machine K1
   exception :A2, sus: 0.1
 
   sleep 2
 end
 
-
+qbitsea_cc fm: 0.06
+qbitsea_cc charge: 0.06
 
 #bitsea_on :cs4
 #viz postfx: 1.0

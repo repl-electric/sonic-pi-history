@@ -7,7 +7,7 @@ bitsea_cc octave: 0.50
 #bitsea hi: 0.70
 
 live_loop :hi do
-  mode1
+  #mode1
   tick
 
 

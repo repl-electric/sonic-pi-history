@@ -33,7 +33,9 @@ live_loop :go do
       tick(:a)
       kick_machine (ing
                     [KT[1]] _ K3 _   _ _ _ _
+                    K1 _ K3 _   _ _ _ _
                     [K1] _ K3 _   _ _ _ _
+
                     ).look(:a), def: 8, accent: 2
       sleep 1/4.0
       }

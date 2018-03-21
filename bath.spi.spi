@@ -6,3 +6,9 @@
 
 bitsea_cc motion: 0.10
 bitsea_cc octave: 0.50
+
+live_loop :kick do
+  tick
+  kick_machine K1
+  sleep 1
+end

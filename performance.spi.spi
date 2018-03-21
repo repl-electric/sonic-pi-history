@@ -27,6 +27,15 @@ live_loop :go do
   sleep 2
 end
 
+live_loop :kick, sync: :go do
+  tick
+
+  kick_machine (ing K1 _ _ _).look
+
+  sleep 1/4.0
+end
+
+
 qbitsea_cc octave: 0.50
 qbitsea_cc fm: 0.10
 qbitsea_cc charge: 0.34

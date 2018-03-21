@@ -9,7 +9,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 
 live_loop :go do
-  viz :glitch, color: rand
+
   tick
 #stop
   #  mod4
@@ -75,8 +75,9 @@ live_loop :kick, sync: :go do
     end
     if p
       with_swing(0.01) do
-        with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-          smp p, amp: 3*accent, rate: r, attack: attack
+      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+        dviz :glitch, color: rand
+        smp p, amp: 3*accent, rate: r, attack: attack
         }
       end
     end

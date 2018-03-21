@@ -24,8 +24,8 @@ live_loop :go do
   whitespace s[-1], 1, sus: 12
   exception s[0]
   null s[0],100, sus: 0.5
-  4.times{
-    sleep 2.0/4.0
+  8.times{
+    sleep 2.0/8.0
     kick_machine (ing K1 _ K2 _).look, def: 8.0
     mt 5, 120, 120
   }

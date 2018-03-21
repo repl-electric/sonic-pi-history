@@ -23,6 +23,9 @@ live_loop :go do
   at{
     operator score[0]
     sleep 0.5
+    operator score[1]
+    sleep 0.25
+
   }
   whitespace score[-1], 1, sus: 12
   zero :a5, sus: 4

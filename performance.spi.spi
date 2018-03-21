@@ -9,12 +9,12 @@ live_loop :go do
   tick
   #viz postfx: 1.0
   s=(ing
-    [:b2  :d5 :fs3]
-    [:fs2 :a4 :cs3]
+    [:b2,  :d5, :fs3],
+    [:fs2, :a4, :cs3],
     ).look
   s.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
+    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0
   }
-  exception (ing s[0] _).look
+  exception (ing s[0], _,).look
   sleep 2
 end

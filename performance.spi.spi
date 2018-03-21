@@ -13,13 +13,13 @@ live_loop :go do
   tick
 
   (x =(ing
-    [:b3,   :d5,  :fs3],
-    [:fs3,  :a4,  :cs3],
-    [:a3,  :cs4,  :cs3],
-    [:d3,  :fs5,  :a3],
-    [:e3,  :gs4,  :b3],
-    [:fs3,  :a5,  :cs3],
-    [:a3,  :b3,  :cs4],
+    [:b3,  :d5, :fs3]
+    [:fs3, :a4, :cs3]
+    [:a3, :cs4, :cs3]
+    [:d3, :fs5, :a3]
+    [:e3, :gs4, :b3]
+    [:fs3, :a5, :cs3]
+    [:a3, :b3, :cs4]
     ).look).each{|n|
     qbitsea n, sus: 2
   }
@@ -35,8 +35,8 @@ end
 live_loop :kick, sync: :go do
   tick
 
-  kick_machine (ing [KT[1]], _, K1, _,   K3, _, _, _,
-                    K2, _, K2, _,   K3, _, _, _,
+  kick_machine (ing [KT[1]] _ K1 _   K3 _ _ _
+                    K2 _ K2 _   K3 _ _ _
                 ).look, def: 10.0
 
   sleep 1/4.0
@@ -44,9 +44,11 @@ end
 
 
 qbitsea_cc octave: 0.50
-qbitsea_cc fm: 0.10
+qbitsea_cc fm: 0.37
 qbitsea_cc charge: 0.34
-qbitsea_cc drive: 0.31
+qbitsea_cc drive: 0.50
+qbitsea_cc wave: 1.00
+qbitsea_cc wave_amp: 1.00
 
 #bitsea_on :cs4
 #viz postfx: 1.0

@@ -17,7 +17,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 
 #viz camera: 4
 
-viz :alive, rotate: 0.4
+viz :alive, rotate: 100.4
 qbitsea_cc drive: 0.36
 qbitsea_cc fm: 0.33
 

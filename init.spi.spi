@@ -119,6 +119,8 @@ mode0
 
 #viz camera: 0
 
+viz :postfx, color: 0.2
+
 
 #viz :alive, deform: 100.0
 #sleep 0.5

@@ -9,18 +9,19 @@ live_loop :go do
   tick
   mode4
   s=(ing
-    [:b2  :ds5 :fs3]       REST
-    [:fs2  :as4 :cs3]       REST
-    [:a2  :b4  :e4]
-    [:d3  :fs5 :a3 :cs5]   REST
-    [:e2  :gs4 :b3]
-    [:b2  :d5  :fs3 :cs4]  REST
-    [:fs4 :a4 :Cs4]        REST
+    [:b2,  :ds5, :fs3],       REST,
+    [:fs2,  :as4, :cs3],       REST,
+    [:a2,  :b4,  :e4],
+    [:d3,  :fs5, :a3, :cs5],   REST,
+    [:e2,  :gs4, :b3],
+    [:b2,  :d5,  :fs3, :cs4],  REST,
+    [:fs4, :a4, :Cs4],        REST,
     ).look
   s.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
+    puts n
+    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0
   }
-  exception (ing s[0] _).look
+  exception (ing s[0], _,).look
   2.times{sleep 1; kick_machine K1, def: 8.0
     mt 5, 100, 120
   }

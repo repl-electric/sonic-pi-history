@@ -25,7 +25,6 @@ live_loop :go do
     sleep 0.5
     operator score[1], 90
     sleep 0.25
-
   }
   whitespace score[-1], 1, sus: 12
   zero :a5, sus: 4

@@ -29,7 +29,7 @@ live_loop :go do
   at{
     operator score[0], 100
     sleep 0.5
-    operator 100 score[1]
+    operator score[1], 100
     sleep 0.25
     operator 100 score[2]
     sleep 0.25

@@ -147,4 +147,5 @@ end
 #bitsea_on :cs4
 
 #bitsea_cc motion: 0.20
-#bitsea_cc octave: 0.60
+#bitsea_cc octave: 0.57
+viz :alive, length: 0.1

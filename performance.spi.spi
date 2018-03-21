@@ -7,15 +7,12 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
   score=(ing
-    [:b2 :d4 :fs3] REST
+    [:b2 :d4 :fs3]  REST
     [:fs2 :a4 :cs3] REST
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-
-  8.times{tick(:in)
-    sleep 2.0/8.0
-  }
+  sleep 2
 end

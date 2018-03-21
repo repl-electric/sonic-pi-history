@@ -21,8 +21,8 @@ mode4
 #viz camera: 4
 
 #viz :alive, rotate: 1.4
-#qbitsea_cc drive: 0.36
-#qbitsea_cc fm: 0.33
+#qbitsea_cc drive: 0.44
+#qbitsea_cc fm: 0.49
 
 
 live_loop :kick do
@@ -36,8 +36,8 @@ live_loop :kick do
     [:fs2, :gs4, :b3] [_]
     ).look
 
-  callstack :A3, 50
-  operator :A3, 50
+  #callstack :A3, 50
+  #operator :A3, 50
   exception :A2, 10, sus: 0.1, atk: 0.01
   c.each_tick(:in){|n|
     #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

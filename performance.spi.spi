@@ -23,7 +23,7 @@ live_loop :go do
     ).look).each{|n|
     qbitsea n, sus: 2
   }
-  whitespace x[0],10, sus: 12
+  whitespace x[0],1, sus: 12
 
 
   #kick_machine K1

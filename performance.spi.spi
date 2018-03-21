@@ -10,7 +10,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 
 bitsea_cc motion: 0.10
 bitsea_cc octave: 0.50
-mode1
+mode2
 
 live_loop :kick do
   tick

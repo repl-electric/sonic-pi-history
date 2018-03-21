@@ -9,6 +9,6 @@ bitsea_cc octave: 0.50
 
 live_loop :kick do
   tick
-  kick_machine K1
+  kick_machine K1, def: 2.0
   sleep 1
 end

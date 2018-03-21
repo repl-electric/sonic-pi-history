@@ -7,7 +7,7 @@ bitsea_cc octave: 0.50
 #bitsea hi: 0.90
 
 live_loop :hi do
-  mode2
+  mode1
   tick
   score=(ing
     [:b2 :d5 :fs3]

@@ -30,7 +30,7 @@ qbitsea_cc bass: 0.59
 
 
 unity "/alive/spring", 200.0001
-unity "/alive/damp", 0.1
+unity "/alive/damp", 100.1
 #unity "/alive/maxtime", 0.006
 
 

@@ -21,8 +21,8 @@ live_loop :kick do
     [:fs2, :a4, :cs3] [_]
     [:a2, :b4, :cs3]
     [:d2, :fs4, :a3]
-    [:e2, :gs4, :b3]
-    [:fs2, :gs4, :b3]
+    [:e2, :gs4, :b3]  [_]
+    [:fs2, :gs4, :b3] [_]
     ).look
 
   c.each_tick(:in){|n|

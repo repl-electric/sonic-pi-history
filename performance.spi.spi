@@ -34,3 +34,4 @@ live_loop :go do
     sleep 2.0/8.0
   }
 end
+zero_cc damp: 1.0

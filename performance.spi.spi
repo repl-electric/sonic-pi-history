@@ -10,9 +10,10 @@ live_loop :hi do
   mode2
   tick
   score=(ing
-    [:b2 :d4 :fs3]
+    [:b2 :d5 :fs3]
     [:fs2 :a4 :cs3]
     ).look
+
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
   }

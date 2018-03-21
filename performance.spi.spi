@@ -10,13 +10,13 @@ live_loop :go do
   tick
   score=(ing
         [:b2  :ds5 :fs3]       REST
-      [:fs2  :as4 :cs3]       REST
-      [:a2  :b4  :e4]
-      [:d3  :fs5 :a3 :cs5]   REST
-      [:e2  :gs4 :b3]
-      [:b2  :d5  :fs3 :cs4]  REST
-      [:fs4 :a4 :Cs4]        REST
-     ).look
+    [:fs2  :as4 :cs3]       REST
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   REST
+    [:e2  :gs5 :b3]
+    [:b2  :d5  :fs3 :cs4]  REST
+    [:fs4 :a4 :Cs4]        REST
+    ).look
 
   score.each_tick(:in){|n|
     qbitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2
@@ -28,7 +28,7 @@ live_loop :go do
   null score[0]
 
   8.times{tick(:in)
-    kick_machine (ing K1 _ K1 _  _ _ _ _).look(:in), def: 0.02
+    kick_machine (ing K1 _ K1 _    _ _ _ _).look(:in), def: 0.02
     sleep 2.0/8.0
   }
 end
@@ -37,7 +37,7 @@ zero_cc dry: 1.00
 zero_cc dry: 1.00
 #mode4
 
-qbitsea_cc oct: 0.62
+qbitsea_cc oct: 0.60
 qbitsea_cc drive: 0.32
 qbitsea_cc charge: 0.50
 qbitsea_cc fm: 0.63

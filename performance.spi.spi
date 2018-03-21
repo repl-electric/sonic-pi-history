@@ -38,14 +38,14 @@ zero_cc dry: 1.00
 #mode4
 
 qbitsea_cc oct: 0.60
-qbitsea_cc drive: 0.32
+qbitsea_cc drive: 0.36
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.63
+qbitsea_cc fm: 0.39
 qbitsea_cc wav: 1.00
 qbitsea_cc wav_amp: 0.70
-qbitsea_cc atk: 0.83
+qbitsea_cc atk: 0.10
 qbitsea_cc mod: 0.80
-qbitsea_cc motion: 0.24
+qbitsea_cc motion: 0.06
 qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.13
 qbitsea_cc bass: 0.47
@@ -54,3 +54,6 @@ qbitsea_cc bass: 0.47
 bitsea_cc motion: 1.00
 bitsea_cc octave: 0.00
 #bitsea_cc formant: 0.00
+
+
+eq :lo 0.00

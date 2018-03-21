@@ -6,9 +6,13 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 mode4
 
 
-unity "/alive/spring", 100.0
-unity "/alive/damp", 400.8
-unity "/alive/maxtime", 0.6
+#unity "/alive/spring", 100.0
+#unity "/alive/damp", 200.
+#unity "/alive/maxtime", 0.06
+unity "/alive/spring", 200.0
+unity "/alive/damp", 30.0
+unity "/alive/maxtime", 0.006
+
 
 
 

@@ -35,6 +35,8 @@ live_loop :go do
     sleep 0.25
     operator score[3]
     sleep 0.25
+    operator score[4]
+    sleep 0.25
 
     }
 #  zero :b3, sus: 2.1

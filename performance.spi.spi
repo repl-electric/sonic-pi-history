@@ -24,7 +24,7 @@ live_loop :go do
   }
 
 
-  zero
+  zero :b3
   corrupt :Fs4, motion: 0.3
   exception score[0]
   null score[0]

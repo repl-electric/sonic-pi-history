@@ -13,9 +13,9 @@ live_loop :go do
   tick
 
   (ing
-    [:b2,  :d4,  :fs3],
-    [:d2,  :fs4,  :a3],
-    [:a2,  :b3,  :cs4],
+    [:b2, :d4, :fs3]
+    [:d2, :fs4, :a3]
+    [:a2, :b3, :cs4]
     ).look.each{|n|
     qbitsea n, sus: 2
   }
@@ -26,9 +26,10 @@ live_loop :go do
   sleep 2
 end
 
-qbitsea_cc fm: 0.07
-qbitsea_cc charge: 0.06
-qbitsea_cc drive: 0.06
+qbitsea_cc octave: 0.5
+qbitsea_cc fm: 0.10
+qbitsea_cc charge: 0.34
+qbitsea_cc drive: 0.31
 
 #bitsea_on :cs4
 #viz postfx: 1.0

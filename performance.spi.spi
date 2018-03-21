@@ -21,14 +21,14 @@ live_loop :go do
     ).look
 
   score.each_tick(:in){|n|
-#    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
   }
 
   corrupt :Fs4, motion: 0.3
   zero :a5
 
-  null score[0]
-  exception score[0]
+  #null score[0]
+  #exception score[0]
 
   8.times{tick(:in)
     kick_machine (ing K1 _ _ _  _ _ _ _).look(:in)

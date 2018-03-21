@@ -8,13 +8,13 @@ bitsea_cc octave: 0.50
 live_loop :go do
   tick
   s=(ing
-    [:a2  :cs4 :e3]
-    [:cs2 :e4 :gs3]
+    [:a2,  :cs4, :e3],
+    [:cs2, :e4, :gs3],
     ).look
   s.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
+    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0
   }
-  exception (ing :A2 _).look
+  exception (ing s[0], _,).look
 
   sleep 2
 end

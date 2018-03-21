@@ -21,8 +21,8 @@ mode4
 #viz camera: 4
 
 #viz :alive, rotate: 1.4
-#qbitsea_cc drive: 0.44
-#qbitsea_cc fm: 0.49
+#qbitsea_cc drive: 0.45
+#qbitsea_cc fm: 0.39
 
 
 live_loop :kick do

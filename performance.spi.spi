@@ -3,7 +3,7 @@ require "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/init.rb"
 
 #bitsea_on :CS4
-modelogo
+modelogo(1)
 
 bitsea_cc motion: 0.10
 bitsea_cc octave: 0.50
@@ -16,8 +16,8 @@ live_loop :kick do
   #exception :A2, atk: 0.8
   #corrupt :A3, motion: 0.4
 
-  #kick_machine (ing K1).look, def: 0.4
+  #kick_machine (ing K1,).look, def: 0.4
   sleep 1
-  #kick_machine (ing K1).look, def: 0.4
+  #kick_machine (ing K1,).look, def: 0.4
   sleep 1
 end

@@ -36,4 +36,4 @@ live_loop :go do
   }
 end
 
-zero_cc damp: 0.9
+zero_cc damp: 1.00

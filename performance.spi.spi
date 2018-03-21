@@ -22,7 +22,7 @@ live_loop :hi do
 
   exception :A2, sus: 0.125
   8.times{
-    kick_machine (ing K1 _ _ _)
+    kick_machine (ing K1 _ _ _).look
     sleep 2.0/8.0
   }
 end

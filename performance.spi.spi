@@ -9,28 +9,28 @@ bitsea_cc octave: 0.50 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
   score=(ing
-    [:b2,  :ds5, :fs3],       REST,
-      [:fs2,  :as4, :cs3],       REST,
-      [:a2,  :b4,  :e4],
-      [:d3,  :fs5, :a3, :cs5],   REST,
-      [:e2,  :gs4, :b3],
-      [:b2,  :d5,  :fs3, :cs4],  REST,
-      [:fs4, :a4, :Cs4],        REST,
+    [:b2  :ds5 :fs3]       REST
+      [:fs2  :as4 :cs3]       REST
+      [:a2  :b4  :e4]
+      [:d3  :fs5 :a3 :cs5]   REST
+      [:e2  :gs4 :b3]
+      [:b2  :d5  :fs3 :cs4]  REST
+      [:fs4 :a4 :Cs4]        REST
     ).look
 
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0
   }
 
   #whitespace score[-1], sus: 12
-  zero :b5
+  zero :b2
   corrupt :fs4, motion: 0.3
 
   exception score[0]
   null score[0], sus: 0.5
 
   8.times{tick(:in)
-    kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:in), def: 1.0
+    kick_machine (ing K1 _ _ _   _ _ _ _).look(:in), def: 1.0
     sleep 2.0/8.0
   }
 end

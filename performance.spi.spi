@@ -20,7 +20,7 @@ live_loop :go do
     [:e3, :gs5, :b3]
     [:fs3, :a5, :cs3]
     [:a3, :b3, :cs4]
-    )).look.each{|n|
+    ).look).each{|n|
     qbitsea n, sus: 2
   }
   whitespace x[0],10, sus: 12

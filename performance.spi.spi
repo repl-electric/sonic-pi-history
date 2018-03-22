@@ -15,19 +15,19 @@ live_loop :go do
 
     ).look
   score.each_tick(:in){|n|
-    #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  zero :a4, sus: 4, dry: 1.0
+  zero :e5, sus: 4, dry: 1.0
   corrupt :fs4, motion: 0.3, mode: 2
 
-  #null score[-1]
-  #exception score[-1]
+  null score[-1]
+  exception score[-1]
 
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2.0
       sleep 1/4.0
     }
   }

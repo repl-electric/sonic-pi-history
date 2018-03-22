@@ -23,7 +23,7 @@ live_loop :go do
   }
 
 
-  corrupt :Fs3, motion: 0.4, mode: 0
+  corrupt :Fs3, motion: 1.0, mode: 0
 
 
   #null score[0]

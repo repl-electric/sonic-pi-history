@@ -20,9 +20,8 @@ live_loop :go do
 
   corrupt :fs3, motion: 0.3, mode: 0
 
-
-  null score[-1]
-  exception score[-1]
+  #null score[-1]
+  #exception score[-1]
 
   at{
     8.times{

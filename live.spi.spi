@@ -1,8 +1,7 @@
-bitsea_on :3
+live_loop :name do
+  tick
+  sleep 1
+ # shader :shader, "wave.glsl", "rope.vert", "points", 20000
+#  shader :iRotate, (ring 0,1).look
 
-*-9+6-+
-  +yn                   nnhy76gf
-]\098yu[];lkjhn n'\
->,
-\';lkmjnh  ?
-q``-   -  ++    + + + +   yh b  `1      `   0=/410=      /[5~73201    ``        -* -*  -
+end

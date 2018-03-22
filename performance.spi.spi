@@ -19,7 +19,6 @@ live_loop :go do
   }
 
   whitespace score[-1],10, sus: 12
-
   #zero :e5, sus: 4, dry: 1.0
   corrupt :fs4,10, motion: 0.3, mode: 2
 
@@ -36,3 +35,22 @@ live_loop :go do
 
   sleep 2
 end
+
+qbitsea_cc oct: 0.51
+qbitsea_cc drive: 0.46
+qbitsea_cc charge: 0.50
+qbitsea_cc fm: 0.35
+qbitsea_cc wav: 1.00
+qbitsea_cc wav_amp: 0.53
+qbitsea_cc atk: 0.13
+qbitsea_cc mod: 0.80
+qbitsea_cc motion: 0.24
+qbitsea_cc formant: 0.50
+qbitsea_cc mul: 0.00
+qbitsea_cc bass: 0.35
+
+
+eq lo: 0.00
+eq hi: 0.00
+
+modend

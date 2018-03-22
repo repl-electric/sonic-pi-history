@@ -20,7 +20,7 @@ live_loop :go do
   }
 
   corrupt :fs4, motion: 0.2, mode: 0
-  zero :a3, sus: 2
+  zero :a4, sus: 2
   #mod3
 
   #null score[0]

@@ -18,8 +18,8 @@ live_loop :go do
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  zero :e5, sus: 4, dry: 1.0
-  corrupt :fs4, motion: 0.3, mode: 2
+  #zero :e5, sus: 4, dry: 1.0
+  #corrupt :fs4, motion: 0.3, mode: 2
 
   null score[-1]
   exception score[-1]

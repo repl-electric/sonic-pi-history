@@ -6,21 +6,21 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :go do
   tick
   score=(ing
-    [:b2  :d5 :fs3]        Zz
-    [:fs2  :a4 :cs3]       Zz
-    [:a2  :b4  :e4]
-    [:d3  :fs5 :a3 :cs5]   Zz
-    [:e2  :gs4 :b3]
-    [:b2  :d5  :fs3 :cs4]  Zz
-    [:fs4 :a4  :cs3]       Zz
+    [:b2,  :d5, :fs3],        Zz,
+    [:fs2,  :a4, :cs3],       Zz,
+    [:a2,  :b4,  :e4],
+    [:d3,  :fs5, :a3, :cs5],   Zz,
+    [:e2,  :gs4, :b3],
+    [:b2,  :d5,  :fs3, :cs4],  Zz,
+    [:fs4, :a4,  :cs3],       Zz,
 
     ).look
   score.each_tick(:in){|n|
-    #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  zero :a5, sus: 2
-  corrupt :Fs4, motion: 0.1, mode: 0
+  #zero :a5, sus: 2
+  corrupt :Fs4, motion: 0.1, mode: 2
 
   null score[0]
   exception score[0]
@@ -28,11 +28,53 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8
+      kick_machine (ing K1, _, K3, _,   _, _, _, _,).look(:a), def: 8, accent: 2
       sleep 1/4.0
     }
   }
 
 
   sleep 2
+end
+
+
+live_loop :glitch, sync: :go do
+  tick
+  p=(ing
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    [TS[49]], _, _, TS[12],    _, _, _, _,
+
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
+
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TT[49], _, _, TS[12],      _, _, _, _,
+
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
+    )
+
+  p=p.look
+  #p=_
+  fx=:lpf
+  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  attack = 0.0
+  r = 1.0
+  if p && p.is_a?(Array)
+    p = p[0]
+    accent=accent*1.5
+  end
+  if p
+    with_swing(0.01) do
+      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+        dviz :glitch, color: (line 0.0, 1.0, 8).look
+        smp p, amp: 3*accent, rate: r, attack: attack
+      }
+    end
+  end
+  sleep 1/8.0
 end

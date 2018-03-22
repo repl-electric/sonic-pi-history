@@ -27,16 +27,13 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, _, K3, _,   _, _, _, _,).look(:a), def: 8.0, accent: 2
+      kick_machine (ing [K1], _, K3, _,   _, _, _, _,).look(:a), def: 8.0, accent: 2
       sleep 1/4.0
     }
   }
 
-
-
   sleep 2
 end
-
 
 live_loop :glitch, sync: :go do
   tick

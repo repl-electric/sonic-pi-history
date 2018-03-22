@@ -18,14 +18,14 @@ live_loop :go do
 
     ).look
 
-  mod4
+  #mod4
   score.each_tick(:in){|n|
    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
 
   operator :FS3
-  corrupt :Fs4, motion: 0.1, mode: 2
+  #corrupt :Fs4, motion: 0.1, mode: 2
 
 
   null score[0]

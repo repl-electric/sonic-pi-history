@@ -1,5 +1,6 @@
 live_loop :test do
   tick
   bitsea :A2
+  smp Mountain[/subkick/]
   sleep 2
 end

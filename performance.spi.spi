@@ -20,8 +20,7 @@ live_loop :go do
   }
 
   corrupt :Fs4, motion: 0.1, mode: 2
-  zero :A4, sus: 2
-
+  zero :A5, sus: 2
 
   operator score[0]
   #null score[0]

@@ -1,6 +1,1 @@
-live_loop :test do
-  tick
-  smp Mountain[/subkick/]
-  #bitsea :A2
-  sleep 1
-end
+modlogo

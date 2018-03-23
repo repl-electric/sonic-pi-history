@@ -22,8 +22,8 @@ live_loop :go do
   }
 
   operator score[0]
-  corrupt :Fs3, motion: 0.1
-  zero :A4,sus: 2
+  corrupt :Fs3, motion: 0.1, mode: 2
+  zero :A5,sus: 1
 
   #null score[0]
   #exception score[0]

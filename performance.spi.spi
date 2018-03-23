@@ -1,7 +1,7 @@
 modlogo
 live_loop :fo do
   tick
-
+smp Mountain[/subkick/]
   sleep 2
 end
 

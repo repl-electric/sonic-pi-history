@@ -1,7 +1,8 @@
 modlogo
 live_loop :fo do
   tick
-smp Mountain[/subkick/]
+  smp Mountain[/subkick/]
+  bitsea :A2
   sleep 2
 end
 

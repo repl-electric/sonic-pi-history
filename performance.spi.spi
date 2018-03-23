@@ -1,3 +1,9 @@
 modlogo
-smp Mountain[/subkick/]
+live_loop :fo do
+  tick
+
+  sleep 2
+end
+
+
 #bitsea :A2

@@ -1,5 +1,5 @@
 live_loop :test do
   tick
-  smp Moutain[/subkick/]
+  smp Mountain[/subkick/]
   sleep 2
 end

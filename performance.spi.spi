@@ -12,8 +12,8 @@ live_loop :name do
   #viz :alive, deformrate: 0.0
   #dviz :alive, light: 3.9
   #corrupt :FS3
-  operator :A2
-  corrupt :FS3,10
+ # operator :A2
+#  corrupt :FS3,10
 
   #dviz :alive, reset: 1.0
   #dviz :alive, test: 0.3
@@ -21,7 +21,7 @@ live_loop :name do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 K1 _ _   _ _ _ _).look(:a), def: 8.0, accent: 1
+  #    kick_machine (ing K1, K1, _, _,   _, _, _, _,).look(:a), def: 8.0, accent: 1
       #mod4
       sleep 1/4.0
     }

@@ -16,14 +16,14 @@ live_loop :name do
   #operator :A2
 #  corrupt :FS3,10
 
-  dviz :alive, reset: 1.0
+  viz :alive, reset: 1.0
   dviz :alive, thick: 0.1
   #dviz :alive, test: 0.3
 
   at{
     8.times{
       tick(:a)
-      #kick_machine (ing K1, K1, _, _,   _, _, _, _,).look(:a), def: 8.0, accent: 1
+      #kick_machine (ing K1 K1 _ _   _ _ _ _).look(:a), def: 8.0, accent: 1
       #mod4
       sleep 1/4.0
     }

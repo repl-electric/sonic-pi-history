@@ -6,7 +6,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :name do
   tick
   dviz :alive, deformrate: rand*0.1
-  dviz :alive, deform: 1.0
+  dviz :alive, deform: 0.01
   at{
     8.times{
       tick(:a)

@@ -9,9 +9,9 @@ viz :alive, length: 1.0
 live_loop :name do
   #@light = 0.6
   tick
-  viz :alive, deform: 0.1
-  viz :alive, deformrate: 0.0
-  dviz :alive, light: 3.9
+  #viz :alive, deform: 0.1
+  #viz :alive, deformrate: 0.0
+  #dviz :alive, light: 3.9
   corrupt :FS3
   operator :A2
 #  corrupt :FS3,10

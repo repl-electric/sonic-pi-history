@@ -11,6 +11,8 @@ live_loop :name do
   #corrupt :FS3
   operator :A2
 
+  corrupt :FS3
+
   at{
     8.times{
       tick(:a)

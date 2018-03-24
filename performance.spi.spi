@@ -10,10 +10,10 @@ live_loop :name do
   tick
   #viz :alive, deform: 0.1
   #viz :alive, deformrate: 0.0
-  #dviz :alive, light: 1.9
+  dviz :alive, light: 4.9
   #corrupt :FS3
   operator :A2
-  corrupt :FS3,10
+  #corrupt :FS3,10
 
 
   at{

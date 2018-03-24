@@ -16,7 +16,7 @@ live_loop :name do
   operator :A2
 #  corrupt :FS3,10
 
-  dviz :alive, reset: 1.0
+  #dviz :alive, reset: 1.0
   #dviz :alive, test: 0.3
 
   at{

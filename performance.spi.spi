@@ -7,7 +7,7 @@ live_loop :name do
   tick
   #viz :alive, deform: 0.1
   viz :alive, deformrate: rand*10.01
-  dviz :alive, light: 0.8
+  dviz :alive, light: 1.8
 
   at{
     8.times{

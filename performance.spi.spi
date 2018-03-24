@@ -7,7 +7,7 @@ live_loop :name do
   #@light = 2.0
   tick
   viz :alive, deform: 0.1
-  viz :alive, deformrate: rand*1.0
+  viz :alive, deformrate: rand*0.5
   #dviz :alive, light: 1.9
   #corrupt :FS3
   operator :A2

@@ -6,12 +6,12 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :name do
   tick
   #viz :alive, deform: 0.1
-  viz :alive, deformrate: rand*2.01
+  viz :alive, deformrate: rand*10.01
 
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }

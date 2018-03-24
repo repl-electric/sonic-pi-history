@@ -8,8 +8,8 @@ dviz :alive, light: 2.9
 live_loop :name do
   #@light = 0.0
   tick
-  viz :alive, deform: 0.1
-  viz :alive, deformrate: 0.0
+  #viz :alive, deform: 0.1
+  #viz :alive, deformrate: 0.0
   #dviz :alive, light: 1.9
   #corrupt :FS3
   operator :A2
@@ -19,8 +19,8 @@ live_loop :name do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, K1, _, _,   _, _, _, _,).look(:a), def: 0.01, accent: 1
-      mod4
+      kick_machine (ing K1 K1 _ _   _ _ _ _).look(:a), def: 0.01, accent: 1
+      #mod4
       sleep 1/4.0
     }
   }

@@ -11,13 +11,12 @@ live_loop :name do
   #dviz :alive, light: 1.9
   #corrupt :FS3
   operator :A2
-
   corrupt :FS3,10
 
   at{
     8.times{
       tick(:a)
-      #kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 0.01, accent: 1
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 0.01, accent: 1
       sleep 1/4.0
     }
   }

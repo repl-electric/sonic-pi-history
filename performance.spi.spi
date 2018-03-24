@@ -7,5 +7,13 @@ live_loop :name do
   tick
   dviz :alive, deformrate: rand*0.1
   dviz :alive, deform: 1.0
+  at{
+    8.times{
+      tick(:a)
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      sleep 1/4.0
+    }
+  }
+
   sleep 2
 end

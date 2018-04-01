@@ -1,1 +1,7 @@
-viz :ripple, throttle: 0.9
+live_loop :name do
+  tick
+  dviz :ripple, throttle: 0.9
+  sleep 1
+  viz :ripple, throttle: 0.0
+  sleep 1
+end

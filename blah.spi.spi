@@ -8,6 +8,6 @@ live_loop :name do
   sleep 2
 end
 
-viz :alive, light: 0.5
+viz :alive, light: 0.6
 viz :alive, deformrate: 0.0
 #viz shard: 0.0

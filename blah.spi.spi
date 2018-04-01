@@ -1,7 +1,8 @@
 live_loop :name do
   tick
+  #
   smp Mountain[/subkick/]
-  kick_machine K1
+  #kick_machine K1
   dviz :ripple, throttle: 0.9  #dviz :alive, deform: rand
   viz :alive, deform: rand
   sleep 1

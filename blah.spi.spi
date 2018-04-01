@@ -9,6 +9,6 @@ live_loop :name do
 end
 
 mod1
-viz :alive, light: 0.7
-viz :alive, deformrate: 0.0
+#viz :alive, light: 0.7
+#viz :alive, deformrate: 0.0
 #viz shard: 0.0

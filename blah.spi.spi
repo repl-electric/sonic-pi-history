@@ -8,9 +8,9 @@ live_loop :name do
   sleep 2
 end
 
-bitsea_on :A2
+#bitsea_on :A2
 
-mod0
+#mod0
 #viz :alive, light: 0.7
 #viz :alive, deformrate: 0.0
 #viz shard: 0.0

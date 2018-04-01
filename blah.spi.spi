@@ -23,5 +23,5 @@ viz :alive, rotate: 0.5
 #mod0
 viz :alive, light: 0.01
 
-viz :alive, deformrate: 0.01
+viz :alive, deformrate: 0.1
 #viz shard: 0.0

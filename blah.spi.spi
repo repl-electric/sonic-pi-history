@@ -8,5 +8,5 @@ live_loop :name do
 end
 
 viz :alive, light: 0.8
-viz :alive, deform: 1.0
+viz :alive, deform: 0.0
 #viz shard: 0.0

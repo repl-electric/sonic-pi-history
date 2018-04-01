@@ -7,4 +7,4 @@ live_loop :name do
   sleep 2
 end
 
-viz :spark, throttle: 0.0
+viz :dust, throttle: 0.0

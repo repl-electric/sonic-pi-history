@@ -2,6 +2,7 @@ live_loop :name do
   tick
   smp Mountain[/subkick/]
   dviz :ripple, throttle: 0.9  #dviz :alive, deform: rand
+  viz :alive, deform: 1.0
   sleep 1
   viz :ripple, throttle: 0.0
   sleep 2
@@ -18,5 +19,5 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 viz :alive, rotate: 0.5
 #mod0
 #viz :alive, light: 1.1
-viz :alive, deform: 1.0
+
 #viz shard: 0.0

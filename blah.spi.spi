@@ -6,3 +6,5 @@ live_loop :name do
   viz :ripple, throttle: 0.0
   sleep 2
 end
+
+viz :spark, throttle: 0.0

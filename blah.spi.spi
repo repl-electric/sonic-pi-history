@@ -6,5 +6,5 @@ live_loop :name do
   viz :ripple, throttle: 0.0
   sleep 2
 end
-viz orb: 1.0
+viz orb: 1.0, deformrate: 1.0
 viz shard: 0.0

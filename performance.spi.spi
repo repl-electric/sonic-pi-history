@@ -27,7 +27,7 @@ live_loop :go do
 #  stop
   tick
   #operator :Fs2
-  dcam3
+  dcam4
   at{
     16.times{
       tick(:a)

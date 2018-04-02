@@ -12,7 +12,7 @@ live_loop :name do
   sleep 4
 end
 
-#mod1
+mod0
 bitsea_on :cs4
 
 #viz :alive, length: 0.9

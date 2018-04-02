@@ -20,7 +20,7 @@ viz :alive, reset: 1.0
 viz :alive, amp: 5
 viz :alive, freq: 7.21
 
-viz :alive, gravity: 0
+viz :alive, gravity: 1
 
 
 

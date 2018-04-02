@@ -22,8 +22,8 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #viz :alive, gravity: 0
 
-viz :alive, amp: 0
-viz :alive, freq: 0
+viz :alive, amp: 1
+viz :alive, freq: 1
 
 
 

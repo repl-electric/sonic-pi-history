@@ -16,7 +16,7 @@ end
 
 live_loop :animate do
   tick
-  x=[{person: 1.0},{dots: 1.0}]
+  x=[{person: 1.0},{dots: 1.0}].shuffle
   viz :logo, x.choose
   sleep 2
 end

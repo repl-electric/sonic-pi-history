@@ -36,6 +36,9 @@ live_loop :go do
   dviz  :alive, reset: 1.0
 
 
+  cam5
+
+
   #null :A2
   #exception :A2
 

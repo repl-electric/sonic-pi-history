@@ -31,7 +31,7 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #viz :glitch, density: 50.0
 #viz :glitch, crash: 0.83
 
-crashcam3 1
+#crashcam3 1
 #logo 4
 
 #viz :alive, speed: 1.0
@@ -42,7 +42,7 @@ live_loop :go do
 #  stop
   tick
   #operator :Fs2
-  #dcam4
+  dcam4
   at{
     16.times{
       tick(:a)
@@ -55,7 +55,7 @@ live_loop :go do
   }
   dviz :electric
   #@light=0.7
-  corrupt :FS3,100, mode: 2, motion: 0.1
+  #corrupt :FS3,100, mode: 2, motion: 0.1
 #  dviz :alive, thick: 0.15
 #  dviz :alive, length: 0.5
 #  dviz  :alive, reset: 1.0

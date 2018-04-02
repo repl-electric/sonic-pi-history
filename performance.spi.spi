@@ -7,7 +7,6 @@ def vizz(*opts)
       ns = "/#{opts[0].to_s}/"
       opts = opts[1..-1]
     end
-    puts ns
     if opts
       (opts[0]||{}).keys.map{|k|
         if k==:camera
@@ -17,7 +16,7 @@ def vizz(*opts)
         end
       }
     else
-      puts ns
+      puts "->#{ns}"
       unity "#{ns}",1.0 #bang signal
     end
   rescue Exception

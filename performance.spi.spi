@@ -31,7 +31,7 @@ live_loop :go do
   @light=0.1
   #corrupt :FS3, mode: 2
   dviz :alive, thick: 0.09
-  dviz :alive, length: 0.8
+  dviz :alive, length: 0.3
 
 
   #null :A2

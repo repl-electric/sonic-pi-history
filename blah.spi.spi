@@ -12,7 +12,10 @@ live_loop :name do
   sleep 4
 end
 
-modlogo 1
+#modlogo 1
+
+
+viz :logo, dots: 1.0
 
 #bitsea_on :cs4
 

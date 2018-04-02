@@ -13,11 +13,11 @@ live_loop :name do
 end
 
 #mod1
-#bitsea_on :cs4
+bitsea_on :cs4
 
 #viz :alive, length: 0.9
 
-viz :glitch, invert: 0.0
+#viz :glitch, invert: 0.0
 
 
 

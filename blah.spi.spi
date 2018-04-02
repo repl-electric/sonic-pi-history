@@ -37,7 +37,7 @@ viz :glitch, invert: 1.0
 
 #mod2
 
-viz light: 2.0
+viz :alive, light: 1.0
 
 #viz :glitch, invert: 1.0
 viz tri: 1.0

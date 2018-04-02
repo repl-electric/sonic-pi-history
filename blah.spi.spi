@@ -13,7 +13,6 @@ live_loop :name do
 end
 
 modlogo
-
 live_loop :animate do
   tick
   smp Mountain[/subkick/], amp: 2

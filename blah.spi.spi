@@ -17,7 +17,7 @@ live_loop :animate do
   smp Mountain[/subkick/], amp: 2
   x=(ring {dash: 1.0}, {dot: 1.0},{dash: 1.0}, {star: 1.0}).look
   viz postfx: 1.0
-  dviz :glitch, invert: 1.0
+  dviz :glitch, invert: (ing 1.0, 0.0,).look
   sleep 1
 end
 

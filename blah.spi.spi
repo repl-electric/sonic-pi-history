@@ -12,7 +12,6 @@ live_loop :name do
   sleep 4
 end
 
-
 live_loop :animate do
   tick
   smp Mountain[/subkick/], amp: 2
@@ -22,9 +21,11 @@ live_loop :animate do
   sleep 1
 end
 
-modlogo
+#modlogo
 
 #viz :glitch, invert: 0.0
+
+bitsea_on :A2
 
 
 #viz :logo, person: 1.0

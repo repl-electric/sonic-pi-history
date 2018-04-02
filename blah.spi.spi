@@ -1,6 +1,6 @@
 live_loop :name do
   tick
-  dviz tri: 1.0
+  viz tri: 1.0
   #
   smp Mountain[/subkick/], amp: 2
   #kick_machine K1

@@ -21,7 +21,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }
@@ -29,4 +29,44 @@ live_loop :go do
   sleep 2
 end
 
-glitch
+
+live_loop :glitch, sync: :go do
+  tick
+  p=(ing
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
+    )
+
+  p=p.look
+  #p=_
+  fx=:lpf
+  accent = (ing 0.2 0.2 0.3 0.5).look
+  attack = 0.0
+  r = 1.0
+  if p && p.is_a?(Array)
+    p = p[0]
+    accent=accent*1.5
+  end
+  if p
+    with_swing(0.01) do
+      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+        dviz :glitch, color: (line 0.0, 1.0, 8).look
+        smp p, amp: 3*accent, rate: r, attack: attack
+      }
+    end
+  end
+  sleep 1/8.0
+end

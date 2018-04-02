@@ -16,7 +16,7 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #crashcam3
 
-  viz :glitch, width: 0.15
+  viz :glitch, width: 0.2
   viz :glitch, density: 50.0
   viz :glitch, crash: 0.85
 
@@ -29,7 +29,7 @@ live_loop :go do
   at{
     16.times{
       tick(:a)
-     # kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
+     # kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
      # mt 7, (line 80,127,12).look*0.5,100 if spread(7,11).look(:a)
      # mt 1, (line 80,120,12).look*1.9,100 if spread(3,7).look(:a)
       mt_cc morph: 0.1
@@ -60,27 +60,27 @@ live_loop :glitch, sync: :go do
 stop
   tick
   p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  accent = (ing 0.2 0.2 0.3 0.5).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)

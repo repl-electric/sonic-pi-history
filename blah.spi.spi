@@ -11,8 +11,8 @@ live_loop :name do
   sleep 2
 end
 
-mod1
-bitsea_on :A2
+#mod1
+#bitsea_on :A2
 
 
 

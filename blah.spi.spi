@@ -12,7 +12,7 @@ live_loop :name do
   sleep 4
 end
 
-#modlogo 1
+mod0
 
 
 viz :logo, dots: 1.0

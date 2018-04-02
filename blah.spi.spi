@@ -1,8 +1,8 @@
 live_loop :name do
   tick
-#viz tri: 1.0
+  dviz tri: 1.0
   #
-  #smp Mountain[/subkick/], amp: 2
+  smp Mountain[/subkick/], amp: 2
   #kick_machine K1
   #dviz :ripple, throttle: 0.9  #dviz :alive, deform: rand
   #dviz :alive, deform: rand

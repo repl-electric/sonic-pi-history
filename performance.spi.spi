@@ -45,7 +45,7 @@ live_loop :go do
   dviz :alive, amp: 5
   dviz :alive, freq: 7.21
 
-  dcam4
+  #dcam4
 
 
   #null :A2

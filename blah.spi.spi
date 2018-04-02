@@ -22,7 +22,7 @@ live_loop :animate do
 end
 
 
-
+viz :glitch, invert: 0.1
 
 
 #viz :logo, person: 1.0

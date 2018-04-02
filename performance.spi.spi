@@ -28,7 +28,7 @@ live_loop :go do
   viz :electric
   #corrupt :FS3, mode: 2
   dviz :alive, width: 0.1
-  dviz :alive, length: 3.1
+  dviz :alive, length: 2.1
 
 
   #null :A2

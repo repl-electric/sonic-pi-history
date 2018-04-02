@@ -23,7 +23,7 @@ live_loop :go do
       tick(:a)
       #kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       mt 7, (line 80,110).look,100 if spread(7,11).look(:a)
-      mt 6, (line 80,120).look,100 if spread(3,7).look(:a)
+      mt 6, (line 80,120,8).look,100 if spread(3,7).look(:a)
       mt_cc morph: 0.1
       sleep 1/8.0
     }

@@ -26,6 +26,7 @@ live_loop :go do
     }
   }
   viz :electric
+  @light=0.1
   corrupt :FS3, mode: 2
   dviz :alive, thick: 0.2
   dviz :alive, length: 1.1

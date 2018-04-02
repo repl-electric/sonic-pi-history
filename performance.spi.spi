@@ -54,7 +54,7 @@ live_loop :go do
     }
   }
   dviz :electric
-  @light=0.7
+  #@light=0.7
   corrupt :FS3,100, mode: 2, motion: 0.1
 #  dviz :alive, thick: 0.15
 #  dviz :alive, length: 0.5

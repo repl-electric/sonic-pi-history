@@ -30,7 +30,7 @@ live_loop :go do
   corrupt :FS3, mode: 2
   dviz :alive, thick: 0.2
   dviz :alive, length: 1.1
-  mt 3
+  mt 3, 100,100
 
   #null :A2
   #exception :A2

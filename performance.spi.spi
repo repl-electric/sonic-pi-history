@@ -16,6 +16,7 @@ def vizz(*opts)
         end
       }
     else
+      puts ns
       unity "#{ns}",1.0 #bang signal
     end
   rescue Exception

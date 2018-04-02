@@ -26,7 +26,7 @@ cam3
 live_loop :go do
 #  stop
   tick
-  operator :Fs2
+  #operator :Fs2
   #dcam4
   at{
     16.times{

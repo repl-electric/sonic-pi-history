@@ -18,7 +18,7 @@ end
 
 #viz :alive, length: 0.9
 
-viz :glitch, invert: 0.0
+viz :glitch, invert: 1.0
 
 
 

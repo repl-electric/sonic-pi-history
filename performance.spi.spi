@@ -1,7 +1,6 @@
 #camlogo 1
 def vizz(*opts)
   ns="/"
-  puts opts
   begin
     if !opts[0].is_a?(Hash)
       ns = "/#{opts[0].to_s}/"

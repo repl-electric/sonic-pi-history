@@ -33,7 +33,7 @@ viz :alive, gravity: 0
 
 
 live_loop :go do
-  stop
+#  stop
   tick
   #operator :Fs2
   #dcam4

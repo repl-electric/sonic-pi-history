@@ -17,7 +17,7 @@ live_loop :animate do
   smp Mountain[/subkick/], amp: 2
   x=(ring {dash: 1.0}, {dot: 1.0},{dash: 1.0}, {star: 1.0}).look
   dviz :logo, x
-  dviz :glitch, invert: (ing 1.0,0.0).look
+  dviz :glitch, invert: (ing 1.0, 0.0,).look
   sleep 1
 end
 
@@ -43,7 +43,7 @@ viz :glitch, invert: 1.0
 #viz :ripple, throttle: 1.0  #dviz :alive, deform: rand
 
 
-#mod4
+mod4
 
 
 bitsea_cc motion: 0.31  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢

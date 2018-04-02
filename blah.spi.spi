@@ -14,9 +14,9 @@ end
 
 #mod0
 
-viz :logo, dots: 1.0
+viz :logo, person: 1.0
 
-bitsea_on :cs4
+#bitsea_on :cs4
 
 #viz :alive, length: 0.9
 

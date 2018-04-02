@@ -35,7 +35,9 @@ viz :glitch, invert: 1.0
 
 #viz :alive, length: 0.9
 
-mod2
+#mod2
+
+viz light: 1.0
 
 #viz :glitch, invert: 1.0
 viz tri: 1.0

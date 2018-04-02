@@ -14,7 +14,12 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #cam3
 
-crashcam3
+#crashcam3
+
+  viz :glitch, width: 0.5
+  viz :glitch, density: 50.0
+  viz :glitch, crash: 0.85
+
 
 
 live_loop :go do

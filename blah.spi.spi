@@ -21,7 +21,7 @@ live_loop :animate do
   sleep 1
 end
 
-#mod0
+modlogo
 
 #viz :glitch, invert: 0.0
 

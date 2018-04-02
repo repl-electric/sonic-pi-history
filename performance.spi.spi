@@ -25,8 +25,11 @@ live_loop :go do
       sleep 1/4.0
     }
   }
-  null :A2
-  exception :A2
+
+  corrupt :FS3
+
+  #null :A2
+  #exception :A2
 
   sleep 2
 end

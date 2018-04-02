@@ -21,14 +21,14 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      #kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
+      #kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }
   viz :electric
   #corrupt :FS3, mode: 2
   dviz :alive, thick: 0.2
-  dviz :alive, length: 2.1
+  dviz :alive, length: 1.1
 
 
   #null :A2
@@ -41,27 +41,27 @@ end
 live_loop :glitch, sync: :go do
   tick
   p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  accent = (ing 0.2 0.2 0.3 0.5).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)

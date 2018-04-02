@@ -38,7 +38,7 @@ live_loop :go do
       sleep 1/8.0
     }
   }
-  #at{8.times{viz :electric; sleep 0.125}}
+  viz :electric
   #@light=0.7
   #corrupt :FS3,80, mode: 2
 #  dviz :alive, thick: 0.15

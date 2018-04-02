@@ -19,7 +19,7 @@ live_loop :animate do
   tick
   smp Mountain[/subkick/], amp: 2
   x=[{dash: 1.0},{dots: 1.0}].shuffle
-  viz :logo, dash: 1.0
+  viz :logo, x.choose
   sleep 1
 end
 

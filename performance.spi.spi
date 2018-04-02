@@ -22,8 +22,8 @@ live_loop :go do
     8.times{
       tick(:a)
       #kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-      mt 7, 110,100
-      mt_cc morph: 1 if spread(1,4).look(:a)
+      mt 7, 110,100 if spread(1,4).look(:a)
+      mt_cc morph: 1
       sleep 1/8.0
     }
   }

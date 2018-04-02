@@ -23,6 +23,9 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #viz :alive, gravity: 0
 
 
+#viz :alive, amp: 0
+
+
 
 #viz :glitch, width: 0.5
 #viz :glitch, density: 50.0
@@ -31,7 +34,7 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 cam3
 #logo 4
 
-viz :alive, speed: 1.0
+#viz :alive, speed: 1.0
 
 
 

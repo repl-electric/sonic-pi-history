@@ -12,11 +12,12 @@ live_loop :name do
   sleep 4
 end
 
+
 live_loop :animate do
   tick
   smp Mountain[/subkick/], amp: 2
   x=(ring {dash: 1.0}, {dot: 1.0},{dash: 1.0}, {star: 1.0}).look
-  viz :glitch, invert: (ing 1.0 0.0).look
+  dviz :logo, x
   sleep 1
 end
 

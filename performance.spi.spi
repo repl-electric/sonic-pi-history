@@ -39,11 +39,11 @@ live_loop :go do
   viz :electric
   @light=0.1
   corrupt :FS3,80, mode: 2
-  #dviz :alive, thick: 0.15
-  #dviz :alive, length: 0.5
-  #dviz  :alive, reset: 1.0
-  #dviz :alive, amp: 5
-  #dviz :alive, freq: 7.21
+  dviz :alive, thick: 0.15
+  dviz :alive, length: 0.5
+  dviz  :alive, reset: 1.0
+  dviz :alive, amp: 5
+  dviz :alive, freq: 7.21
 
 
   #dcam3

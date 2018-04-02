@@ -12,13 +12,13 @@ live_loop :name do
   sleep 4
 end
 
-#mod
+mod0
 #bitsea_on :cs4
 
 #viz :alive, length: 0.9
 
 
-viz :glitch, invert: 1.0
+#viz :glitch, invert: 1.0
 
 
 bitsea_cc motion: 0.20  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢

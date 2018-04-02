@@ -16,6 +16,8 @@ def vizz(*opts)
           unity "#{ns}#{k.to_s}", opts[0][k]
         end
       }
+    else
+      unity "#{ns}",1.0 #bang signal
     end
   rescue Exception
     puts $!

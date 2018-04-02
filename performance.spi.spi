@@ -24,7 +24,7 @@ bitsea_cc octave: 0.48  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 
 live_loop :go do
-  stop
+#  stop
   tick
   #operator :Fs2
 

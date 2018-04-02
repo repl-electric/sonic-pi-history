@@ -1,3 +1,25 @@
 #camlogo 1
+def vizz(*opts)
+  ns="/"
+  begin
+    if !opts[0].is_a?(Hash)
+      ns = "/#{opts[0].to_s}/"
+      opts = opts[1..-1]
+    end
 
-viz :tri
+    if opts
+      (opts[0]||{}).keys.map{|k|
+        if k==:camera
+          unity "#{ns}camera/#{opts[0][k]}",1
+        else
+          unity "#{ns}#{k.to_s}", opts[0][k]
+        end
+      }
+    end
+  rescue Exception
+    puts $!
+  end
+end
+
+
+vizz :tri

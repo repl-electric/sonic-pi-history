@@ -21,14 +21,15 @@ live_loop :animate do
   sleep 1
 end
 
-mod0
+#mod0
 
-viz :glitch, invert: 1.0
+#viz :glitch, invert: 1.0
 
 
 #viz :logo, person: 1.0
 
-#bitsea_on :cs4
+
+bitsea_on :cs4
 
 #viz :alive, length: 0.9
 

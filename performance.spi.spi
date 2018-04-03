@@ -23,8 +23,9 @@ live_loop :go do
     #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5, :hi: 0.80
   }
 
+  viz :electric
   operator :Fs3
-  corrupt :Fs3
+  corrupt :Fs3, motion: 0.3
 
   #exception score[0]
   #null score[0]

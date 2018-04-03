@@ -25,9 +25,9 @@ live_loop :go do
   }
 #  tick_reset_all
 
-  @light=0.7
+  #@light=0.7
   operator score[0]
-  #corrupt :FS3, motion: 0.2, mode: 2
+  corrupt :FS3, motion: 0.2, mode: 2
   #dviz :electric
   #null score[0]
   #exception score[0]

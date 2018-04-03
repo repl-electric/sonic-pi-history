@@ -35,7 +35,7 @@ live_loop :go do
   if score[0] == :b2
     score[0]= [:a2, :b2].choose
   end
-  exception score[0], atk: 0.2
+  exception score[0], atk: 0.5
 
   at{
     8.times{

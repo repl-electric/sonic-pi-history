@@ -18,6 +18,7 @@ live_loop :go do
   }
 
   exception score[0]
+  null score[0]
 
   at{
     8.times{

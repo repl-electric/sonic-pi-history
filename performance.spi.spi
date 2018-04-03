@@ -2,8 +2,9 @@
 #logo 4
 #cam0
   terrain true
-stop
 cam4
+stop
+
 #viz :logo, dash: 1.0
 #cam0
 #bitsea_on :A2

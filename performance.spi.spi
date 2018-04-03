@@ -10,6 +10,7 @@
 
 #viz :alive, rotate: 0.8
 
+viz :alive, terrain: 1.0
 viz :alive, height: 0.7
 viz :alive, x: 0.8
 viz :alive, z: 0.3

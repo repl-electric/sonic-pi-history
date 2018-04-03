@@ -122,6 +122,6 @@ qbitsea_cc bass: 0.71
 eq lo: 0.00
 eq hi: 0.00
 
-at{32.times{viz :electric;sleep 0.25}}
+at{128.times{viz :electric;sleep 0.25}}
 camend
 viz :alive, color: 0.1

@@ -10,6 +10,8 @@
 
 viz :alive, rotate: 0.8
 
+viz :alive, height: 0.1
+
 
 stop
 #viz :glitch, invert: 1.0

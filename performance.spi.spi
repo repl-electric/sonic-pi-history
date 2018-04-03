@@ -16,7 +16,7 @@ viz :alive, z: -4.0
 
 live_loop :go do
   tick
-  viz :alive, height: (ing -0.0-rand 0.0+rand*0.5).look
+#  viz :alive, height: (ing -0.0-rand 0.0+rand*0.5).look
   sleep 1
 end
 

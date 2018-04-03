@@ -10,7 +10,7 @@ viz :electric
 live_loop :go do
   tick
   score=(ing
-    [:b2 :d4 :fs3]
+    [:b2 :ds4 :fs3]
     [:fs2 :a4 :cs3]
     ).look
   score.each_tick(:in){|n|

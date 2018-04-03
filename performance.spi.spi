@@ -36,7 +36,7 @@ live_loop :go do
     score[0]= [:a2, :b2].choose
   end
   exception score[0], sus: 2
-  terrain 0.5
+  terrain rand
 
   at{
     8.times{

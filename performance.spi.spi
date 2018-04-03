@@ -8,6 +8,7 @@
 
 viz :test
 
+viz :alive, rotate: 0.8
 
 
 stop

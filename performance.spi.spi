@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #viz :glitch, invert: 0.0
 
-cam3
+#cam3
 live_loop :go do
   tick
   #dcam3
@@ -27,7 +27,7 @@ live_loop :go do
   dviz :electric
   #viz :alive, color: 0.3
   #operator :fs2
-  #corrupt :FS3, motion: 0.2, mode: 2
+  corrupt :FS3, motion: 0.2, mode: 2
 
   #null score[0]
   #exception score[0]

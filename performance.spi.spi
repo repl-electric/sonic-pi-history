@@ -46,7 +46,7 @@ live_loop :go do
   end
   null score[0]
   exception score[0], sus: 2
-  terrain -4.9
+  terrain -2.9
   viz :alive, z: rand*-8.9
 
   at{

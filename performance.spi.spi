@@ -1,4 +1,10 @@
 #camlogo
 
+live_loop :name do
+  tick
+
+
 smp Mountain[/subkick/,0]
 bitsea :A2, sus: 4
+  sleep 2
+end

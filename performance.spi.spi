@@ -91,7 +91,7 @@ live_loop :glitch, sync: :go do
   sleep 1/8.0
 end
 
-viz :glitch, invert: 0.0
+#viz :glitch, invert: 0.0
 #invcol
 #colalive 0.1
 alivecol 0.1

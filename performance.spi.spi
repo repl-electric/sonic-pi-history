@@ -41,7 +41,7 @@ cam4
 viz :alive, deformrate: 0.0
 live_loop :name do
   tick
-  viz :alive, deform: 1.0
+  viz :alive, deform: rand
   sleep 2
 end
 

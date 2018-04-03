@@ -1,7 +1,7 @@
 live_loop :test do
   tick
   smp Mountain[/subkick/,0]
-  bitsea :A2
+  #bitsea :A2
 
   sleep 2
 end

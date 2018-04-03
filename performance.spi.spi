@@ -8,25 +8,25 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #viz :glitch, invert: 0.0
 
-cam3
+#cam3
 live_loop :go do
   tick
  # dcam3
   score=(ing
-    [:b2  :d5 :fs3]        Zz
-    [:fs2  :a4 :cs3]       Zz
-    [:a2  :b4  :e4]
-    [:d3  :fs5 :a3 :cs5]   Zz
-    [:e2  :gs4 :b3]
-    [:b2  :d5  :fs3 :cs4]  Zz
-    [:fs4 :a4  :cs3]       Zz
+    [:b2,  :d5, :fs3],        Zz,
+    [:fs2,  :a4, :cs3],       Zz,
+    [:a2,  :b4,  :e4],
+    [:d3,  :fs5, :a3, :cs5],   Zz,
+    [:e2,  :gs4, :b3],
+    [:b2,  :d5,  :fs3, :cs4],  Zz,
+    [:fs4, :a4,  :cs3],       Zz,
     ).look
   score.each_tick(:in){|n|
-    #qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    #qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   dviz :electric
   operator :fs2
-  corrupt :FS3, motion: 0.2, mode: 0
+  corrupt :FS3, motion: 0.2, mode: 2
 
   #null score[0]
   #exception score[0]
@@ -34,7 +34,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 0.5
+      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 0.5
       sleep 1/4.0
     }
   }

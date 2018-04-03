@@ -8,6 +8,12 @@
 
 #viz :test
 
+
+cam0
+
+
+stop
+
 viz :alive, rotate: 0.4
 viz :alive, terrain: 1.0
 viz :alive, height: 0.57

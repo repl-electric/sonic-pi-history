@@ -30,11 +30,13 @@ live_loop :go do
   operator score[0]
   #corrupt :FS3, motion: 0.2, mode: 2
   dviz :electric
-  null score[0]
+
+
 
   if score[0] == :b2
     score[0]= [:a2, :b2].choose
   end
+  null score[0]
   exception score[0], sus: 2
   terrain rand*0.1
 

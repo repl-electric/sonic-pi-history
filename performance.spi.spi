@@ -9,7 +9,7 @@
 #viz :test
 
 
-cam4
+#cam4
 
 #puts $mode
 
@@ -37,7 +37,7 @@ end
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.84
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.35
+qbitsea_cc fm: 0.30
 qbitsea_cc wav: 0.01
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83

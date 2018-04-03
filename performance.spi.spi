@@ -10,9 +10,9 @@
 
 viz :alive, rotate: 0.4
 viz :alive, terrain: 1.0
-viz :alive, height: -0.3
-viz :alive, x: -2.0
-viz :alive, z: -4.0
+viz :alive, height: 0.57
+viz :alive, x: 1.6
+viz :alive, z: 0.63
 
 live_loop :go do
   tick

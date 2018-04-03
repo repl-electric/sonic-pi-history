@@ -5,23 +5,23 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 viz :glitch, color: 0.1
 
-crashcam3 0.5
+crashcam3 0.7
 stop
 
 live_loop :go do
   tick
  # dcam3
   score=(ing
-    [:b2,  :d5, :fs3],        Zz,
-    [:fs2,  :a4, :cs3],       Zz,
-    [:a2,  :b4,  :e4],
-    [:d3,  :fs5, :a3, :cs5],   Zz,
-    [:e2,  :gs4, :b3],
-    [:b2,  :d5,  :fs3, :cs4],  Zz,
-    [:fs4, :a4,  :cs3],       Zz,
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
     ).look
   score.each_tick(:in){|n|
- #   qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+ #   qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 #  tick_reset_all
 
@@ -35,7 +35,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }

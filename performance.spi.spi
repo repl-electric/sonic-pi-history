@@ -8,6 +8,7 @@ viz :electric
 
 live_loop :go do
   tick
+  dcam3
   score=(ing
     [:b2 :d4 :fs3]
     ).look

@@ -12,8 +12,8 @@
 
 viz :alive, terrain: 1.0
 viz :alive, height: -0.3
-viz :alive, x: 1.0
-viz :alive, z: 1.0
+viz :alive, x: -1.0
+viz :alive, z: -1.0
 
 live_loop :go do
   tick

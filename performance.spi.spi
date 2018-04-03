@@ -4,18 +4,18 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 viz :electric
 
-#viz :glitch, invert: 1.0
+viz :glitch, color: 0.1
 
 
 live_loop :go do
   tick
   #dcam3
   score=(ing
-    [:b2 :ds4 :fs3]
-    [:fs2 :as4 :cs3]
+    [:b2, :ds4, :fs3],
+    [:fs2, :as4, :cs3],
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   null score[0]
@@ -24,7 +24,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }

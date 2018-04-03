@@ -19,6 +19,7 @@ live_loop :go do
 
   operator :fS3, 90, sus: 2
 
+  qbitsea :FS4
 
   viz :electric
   sleep 2

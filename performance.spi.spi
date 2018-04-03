@@ -10,7 +10,7 @@ viz :glitch, color: 0.1
 
 live_loop :go do
   tick
-  dcam4
+  dcam3
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz
@@ -21,9 +21,9 @@ live_loop :go do
     [:fs4 :a4  :cs3]       Zz
     ).look
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+ #   qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
-  tick_reset!
+#  tick_reset_all
 
   #@light=0.7
   operator score[0]

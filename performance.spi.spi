@@ -8,8 +8,7 @@
 
 #viz :test
 
-#viz :alive, rotate: 0.8
-
+viz :alive, rotate: 0.1
 viz :alive, terrain: 1.0
 viz :alive, height: -0.3
 viz :alive, x: -2.0

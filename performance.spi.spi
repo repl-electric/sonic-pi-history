@@ -6,6 +6,11 @@
 #cam0
 #bitsea_on :A2
 
+viz :test
+
+
+
+stop
 #viz :glitch, invert: 1.0
 #viz :electric
 bitsea_cc motion: 0.12  #╟▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢

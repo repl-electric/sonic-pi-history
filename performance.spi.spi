@@ -29,10 +29,12 @@ live_loop :go do
     }
   }
 
-
+  terrain
   viz :electric
   sleep 2
 end
+
+
 
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.84

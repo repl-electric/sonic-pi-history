@@ -1,6 +1,9 @@
 camlogo
 
 bitsea :A2, sus: 4
+
+live_loop :name do
+
 at{
   8.times{
     tick(:a)
@@ -8,3 +11,7 @@ at{
     sleep 1/4.0
   }
 }
+  tick
+
+  sleep 2
+end

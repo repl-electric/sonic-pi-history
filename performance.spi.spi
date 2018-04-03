@@ -22,14 +22,23 @@ live_loop :go do
 
   qbitsea :FS4
 
+  at{
+    8.times{
+      tick(:a)
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      sleep 1/4.0
+    }
+  }
+
+
   viz :electric
   sleep 2
 end
 
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.60
+qbitsea_cc drive: 0.84
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.47
+qbitsea_cc fm: 0.35
 qbitsea_cc wav: 0.01
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83

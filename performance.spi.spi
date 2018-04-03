@@ -118,10 +118,10 @@ qbitsea_cc formant: 0.50
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 0.71
 
-viz :alive, gravity: 1.0
+#viz :alive, gravity: 1.0
 eq lo: 0.00
 eq hi: 0.00
 
-at{128.times{viz :electric;sleep 0.25}}
+128.times{viz :electric;sleep 0.5}
 camend
 viz :alive, color: 0.1

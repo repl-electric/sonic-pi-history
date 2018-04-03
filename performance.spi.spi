@@ -90,7 +90,9 @@ live_loop :glitch, sync: :go do
   end
   sleep 1/8.0
 end
-invcol
+
+#invcol
+colalive 0.1
 
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.27

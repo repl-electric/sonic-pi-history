@@ -31,6 +31,10 @@ live_loop :go do
   #corrupt :FS3, motion: 0.2, mode: 2
   dviz :electric
   null score[0]
+
+  if score[0] == :b2
+    score[0]= :a2
+  end
   exception score[0], atk: 0.2
 
   at{

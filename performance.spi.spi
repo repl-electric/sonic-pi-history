@@ -17,7 +17,7 @@ live_loop :go do
   tick
   #corrupt :Fs3, mode: 2
 
-  operator :fS3
+  operator :fS3, 40
 
   viz :electric
   sleep 2

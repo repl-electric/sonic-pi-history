@@ -12,7 +12,7 @@
 
 viz :alive, height: 0.6
 viz :alive, x: 1.0
-viz :alive, y: 1.0
+viz :alive, z: 1.0
 
 
 stop

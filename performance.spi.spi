@@ -15,7 +15,7 @@ cam4
 
 live_loop :go do
   tick
-  corrupt :Fs3
+  corrupt :Fs3, mode: 2
   sleep 2
 end
 

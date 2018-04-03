@@ -28,13 +28,13 @@ live_loop :go do
 
   #@light=0.7
   operator score[0]
+
+
   #corrupt :FS3, motion: 0.2, mode: 2
   dviz :electric
 
-
-
   if score[0] == :b2
-    score[0]= [:a2, :b2].choose
+    score[0]= [:a2, :a3].choose
   end
   null score[0]
   exception score[0], sus: 2

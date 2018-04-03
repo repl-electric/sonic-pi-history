@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 live_loop :go do
   tick
-  dcam3
+  #dcam3
   score=(ing
     [:b2 :d4 :fs3]
     [:fs2 :a4 :cs3]

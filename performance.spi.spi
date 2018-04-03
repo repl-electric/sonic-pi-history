@@ -40,7 +40,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2
+      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 1, accent: 2
       sleep 1/4.0
     }
   }

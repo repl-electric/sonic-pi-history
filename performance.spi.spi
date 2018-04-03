@@ -30,6 +30,9 @@ live_loop :go do
   }
 
   terrain true
+  #viz :alive, x: 1.6
+  viz :alive, z: rand
+
   viz :electric
   sleep 2
 end

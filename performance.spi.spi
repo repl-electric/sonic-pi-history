@@ -39,7 +39,5 @@ live_loop :go do
     }
   }
 
-
-
   sleep 2
 end

@@ -10,7 +10,8 @@ crashcam3 0.9
 
 live_loop :go do
   tick
-  dcam4
+  #  dcam4
+  terrain rand*0.1
   score=(ing
     [:b2,  :d5, :fs3],        Zz,
     [:fs2,  :a4, :cs4],       Zz,
@@ -102,14 +103,14 @@ alivecol 0.1
 terrain rand
 
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.57
+qbitsea_cc drive: 0.58
 qbitsea_cc charge: 0.50
 qbitsea_cc fm: 0.43
-qbitsea_cc wav: 0.01
-qbitsea_cc wav_amp: 0.30
-qbitsea_cc atk: 0.66
+qbitsea_cc wav: 0.78
+qbitsea_cc wav_amp: 0.37
+qbitsea_cc atk: 0.26
 qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.24
-qbitsea_cc formant: 0.36
+qbitsea_cc formant: 0.50
 qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.41
+qbitsea_cc bass: 0.71

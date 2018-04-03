@@ -4,7 +4,7 @@ live_loop :name do
   tick
 
 
-  smp Mountain[/subkick/,0], amp: 4
+  #smp Mountain[/subkick/,0], amp: 4
 
   #exception :A2
 

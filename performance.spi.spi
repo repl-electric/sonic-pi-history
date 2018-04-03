@@ -1,6 +1,1 @@
-live_loop :test do
-  tick
-#  smp Mountain[/subkick/,0], amp: 2
-  bitsea :A2
-  sleep 2
-end
+cam0

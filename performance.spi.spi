@@ -32,7 +32,7 @@ live_loop :go do
   terrain true
   #viz :alive, x: 1.6
   #viz :alive, x: (ing 0.0, -0.5).look
-  viz :alive, z: -0.5- rand*0.2
+  viz :alive, z: -0.2- rand*0.2
   viz :alive, height: 1.0
 
   viz :electric

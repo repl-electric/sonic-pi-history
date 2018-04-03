@@ -36,7 +36,7 @@ live_loop :go do
   #viz :alive, x: 1.6
   #viz :alive, x: (ing 0.0, -0.5).look
   dviz :alive, z: rand
-  viz :alive, height: 0.01
+  dviz :alive, height: 0.01
 
   viz :electric
   sleep 2

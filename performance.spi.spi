@@ -122,5 +122,6 @@ qbitsea_cc bass: 0.71
 eq lo: 0.00
 eq hi: 0.00
 
+32.times{electric}
 camend
 viz :alive, color: 0.1

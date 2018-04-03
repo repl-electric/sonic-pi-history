@@ -16,6 +16,7 @@ cam4
 live_loop :go do
   tick
   corrupt :Fs3, mode: 2
+  viz :electric
   sleep 2
 end
 

@@ -25,7 +25,7 @@ live_loop :go do
   operator :fs3
   viz :electric
 
-  corrupt :FS3, motion: 0.4
+  corrupt :FS3, motion: 0.2
 
   #exception score[0]
   #null score[0]

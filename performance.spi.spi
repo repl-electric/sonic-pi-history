@@ -15,6 +15,13 @@ viz :alive, height: -0.3
 viz :alive, x: 1.0
 viz :alive, z: 1.0
 
+live_loop :go do
+  tick
+  viz :alive, height: (ing -0.3 0.3).look
+  sleep 2
+end
+
+
 
 stop
 #viz :glitch, invert: 1.0

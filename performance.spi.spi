@@ -3,6 +3,7 @@
 #cam0
   terrain true
 stop
+cam4
 #viz :logo, dash: 1.0
 #cam0
 #bitsea_on :A2
@@ -10,7 +11,7 @@ stop
 #viz :test
 
 
-#cam4
+-
 
 #puts $mode
 

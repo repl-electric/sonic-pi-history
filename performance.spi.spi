@@ -1,6 +1,6 @@
 viz :alive, rotate: 0.2
 bitsea_on :a2
-cam1
+cam0
 
 live_loop :name do
   stop

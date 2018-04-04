@@ -13,7 +13,7 @@ viz console: "zesting all the things"
 # cam3
 # viz :alive, length: 0.9
 
-# live_loop :name do
+ live_loop :name do
   tick
   terrain 0
   sleep 2

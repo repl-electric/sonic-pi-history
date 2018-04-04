@@ -20,8 +20,8 @@ def console(msg)
 end
 
 live_loop :name do
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :B, :D, :Fs,)
   smp = Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   console Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   logo rand_i(5)

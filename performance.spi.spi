@@ -15,6 +15,6 @@ viz console: "zesting all the things"
 
  live_loop :name do
   tick
-  terrain 0
+  terrain 0.2
   sleep 2
 end

@@ -13,7 +13,8 @@ viz :cam0, focus: 0.0
 # cam3
 # viz :alive, length: 0.9
 
- live_loop :name do
+live_loop :name do
+  stop
   logo rand_i(5)
   tick
   terrain 0

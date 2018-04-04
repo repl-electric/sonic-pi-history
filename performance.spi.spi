@@ -20,8 +20,8 @@ live_loop :name do
   #null :FS2
   #exception :FS2
   #corrupt :FS2, mode: 2
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  #notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  #notes = (ing :B :D :Fs :A)
   #smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)
@@ -34,7 +34,7 @@ live_loop :name do
   sleep 0.5
 end
 
-viz :alive, length: 0.01
+viz :alive, length: 0.1
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.27
 qbitsea_cc charge: 0.50

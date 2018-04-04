@@ -8,7 +8,7 @@
 
 #viz :cam0, focus: 2.2
 #cam0
-
+viz :alive, rotate: 0.2
 bitsea_on :a2
 
 # #invcol

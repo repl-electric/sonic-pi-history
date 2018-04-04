@@ -21,4 +21,4 @@ live_loop :name do
 end
 
 
-viz :glitch, invert: 1.0
+viz :glitch, invert: 0.0

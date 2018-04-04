@@ -1,11 +1,11 @@
 #viz :alive, rotate: 0.2
 #bitsea_on :a2
 #cam0
-viz :cam0, focus: 8.0
+viz :cam0, focus: 7.0
 #cam1
 #bitsea_on :A2
 
-cam1
+#cam1
 stop
 
 #viz :alive, thick: 0.02
@@ -50,9 +50,9 @@ end
 
 
 # qbitsea_cc oct: 0.50
-# qbitsea_cc drive: 0.76
+# qbitsea_cc drive: 0.77
 # qbitsea_cc charge: 0.50
-# qbitsea_cc fm: 0.60
+# qbitsea_cc fm: 1.00
 # qbitsea_cc wav: 0.02
 # qbitsea_cc wav_amp: 0.30
 # qbitsea_cc atk: 0.77

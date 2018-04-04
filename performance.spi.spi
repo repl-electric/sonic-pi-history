@@ -15,13 +15,15 @@ bitsea_on :a2
 #camlogo
 # cam3
 # viz :alive, length: 0.9
-def console(msg)
-  viz console: msg.to_s
-end
+
+
+
 
 live_loop :name do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   notes = (ing :B :D :Fs)
+
+
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   console x.split("/")[-1]
   logo rand_i(5)

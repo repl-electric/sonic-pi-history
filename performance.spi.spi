@@ -9,11 +9,12 @@ viz console: ">Live!"
 # #invcol
 
 camlogo
-logo1
+
 # cam3
 # viz :alive, length: 0.9
 
  live_loop :name do
+  logo2
   tick
   terrain 0
   sleep 2

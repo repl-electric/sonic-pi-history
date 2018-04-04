@@ -17,7 +17,7 @@ camlogo
 
 live_loop :name do
   #stop
-  smp Mountain[/bow/,/a/].look
+  smp Mountain[/bowed notes/,/a/].look
   puts Mountain[/bow/,/a/]
   logo rand_i(5)
   tick

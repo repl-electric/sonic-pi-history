@@ -1,7 +1,7 @@
 #viz :alive, rotate: 0.2
 #bitsea_on :a2
 #cam0
-viz :cam0, focus: 3.5
+viz :cam0, focus: 3.8
 
 live_loop :name do
   #stop

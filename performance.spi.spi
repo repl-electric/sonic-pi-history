@@ -26,5 +26,9 @@ end
 
 camend
 
+eq lo: 0.00
+eq hi: 0.00
+
+
 #viz :cam0, focus: 0.0
 #viz :glitch, invert: 0.0

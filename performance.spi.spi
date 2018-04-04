@@ -20,12 +20,14 @@ def console(msg)
 end
 
 live_loop :name do
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :A :E :Cs)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :A, :E, :Cs,)
   smp Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   console "#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}"
   logo rand_i(5)
   tick
   terrain 0.5
-  sleep 2
+  sleep 1
+  terrain 0.0
+  sleep 1
 end

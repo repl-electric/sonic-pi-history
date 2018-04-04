@@ -39,12 +39,12 @@ end
 viz :alive, gravity: 1.00
 
 # qbitsea_cc oct: 0.50
-# qbitsea_cc drive: 0.27
+# qbitsea_cc drive: 0.51
 # qbitsea_cc charge: 0.50
-# qbitsea_cc fm: 0.31
+# qbitsea_cc fm: 0.37
 # qbitsea_cc wav: 0.01
 # qbitsea_cc wav_amp: 0.30
-# qbitsea_cc atk: 0.83
+# qbitsea_cc atk: 0.77
 # qbitsea_cc mod: 0.80
 # qbitsea_cc motion: 0.24
 # qbitsea_cc formant: 0.36

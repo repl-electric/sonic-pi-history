@@ -6,7 +6,7 @@ viz :cam0, focus: 4.5
 live_loop :name do
   #stop
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs :A)
+  #notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look
   console x.split("/")[-1]
   #logo rand_i(5)

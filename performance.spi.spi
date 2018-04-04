@@ -10,6 +10,6 @@ cam3
 
 live_loop :name do
   tick
-  terrain 0.1
+  terrain 0.9
   sleep 2
 end

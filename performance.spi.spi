@@ -22,16 +22,16 @@ live_loop :name do
   #null :FS2
   #exception :FS2
   #corrupt :FS2, mode: 2
-  #notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  #notes = (ing :B, :D, :Fs, :A,)
-  #smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :B :D :Fs :A)
+  smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console $mode
   #logo rand_i(5)
   tick
-  #dviz :alive, rotate: 1.0
-  #dterrain 1.0
-  #sleep 3.5
-  #dviz :alive, rotate: 0.0
+  dviz :alive, rotate: 0.5
+  dterrain 1.0
+  sleep 3.5
+  dviz :alive, rotate: 0.0
   dterrain 0.0
   sleep 0.5
 end

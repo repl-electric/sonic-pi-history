@@ -17,8 +17,8 @@ bitsea_on :a2
 # viz :alive, length: 0.9
 
 live_loop :name do
-  notes = ['D','E','F#','G#','A,' 'B', 'C#']
-  smp Mountain[/bowed notes/,/#{notes.join "_|"}/].look
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  smp Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   logo rand_i(5)
   tick
   terrain 0.5

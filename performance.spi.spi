@@ -1,4 +1,4 @@
-viz console: " Mode:#{$mode}"
+viz console: ">Mode:#{$mode}"
 #viz :alive, rotate: 100.9
 #bitsea_on :A2
 #cam0

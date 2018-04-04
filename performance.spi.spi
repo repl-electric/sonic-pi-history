@@ -11,7 +11,7 @@ bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #colinv
 electric
 #invcol
-crashcam3 1.02
+crashcam3 1.03
 live_loop :name do
   cam3
   #stop
@@ -19,8 +19,8 @@ live_loop :name do
   #null :FS2
   #exception :FS2
   corrupt :FS2, mode: 2
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  #notes = (ing :B :D :Fs :A)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  #notes = (ing :B, :D, :Fs, :A,)
   #smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)

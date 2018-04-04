@@ -34,7 +34,7 @@ live_loop :name do
   sleep 0.5
 end
 
-viz :alive, length: 0.1
+viz :alive, length: 0.001
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 0.27
 qbitsea_cc charge: 0.50

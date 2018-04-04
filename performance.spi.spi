@@ -1,11 +1,11 @@
 viz :alive, rotate: 0.2
 bitsea_on :a2
 #cam0
-viz :cam0, focus: 4.0
+viz :cam0, focus: 5.0
 live_loop :name do
   #stop
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :B, :D, :Fs,)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look
   console x.split("/")[-1]
   #logo rand_i(5)

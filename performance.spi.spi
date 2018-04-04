@@ -16,9 +16,9 @@ camlogo
 # viz :alive, length: 0.9
 
 live_loop :name do
-  stop
+  #stop
   logo rand_i(5)
   tick
-  terrain 0
+  #terrain 0
   sleep 2
 end

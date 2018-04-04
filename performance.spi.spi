@@ -20,6 +20,6 @@ live_loop :name do
   smp Mountain[/bowed notes/,/C_|D_|E_|F#|G#|A_|B|C#/].look
   logo rand_i(5)
   tick
-  terrain 0
+  terrain 0.4
   sleep 2
 end

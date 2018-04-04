@@ -21,6 +21,7 @@ end
 
 live_loop :name do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :A :E :Cs)
   smp Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   console "#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}"
   logo rand_i(5)

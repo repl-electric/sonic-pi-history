@@ -6,7 +6,7 @@
 # bitsea_cc octave: 0.46  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 # #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 
-viz :cam0, focus: 2.3
+viz :cam0, focus: 2.2
 #cam0
 
 bitsea_on :a2
@@ -20,8 +20,8 @@ def console(msg)
 end
 
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  notes = (ing :A, :E, :Cs,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :A :E :Cs)
   smp Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
   console "#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}"
   logo rand_i(5)

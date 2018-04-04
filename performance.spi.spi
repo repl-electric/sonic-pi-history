@@ -1,44 +1,15 @@
-#viz :alive, rotate: 0.2
-#bitsea_on :a2
-#cam0
 viz :cam0, focus: 8.0
-#cam1
-#bitsea_on :A2
-
-#cam1
-#stop
-
-#viz :alive, thick: 0.02
 
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#colinv
-#electric
-#alivecol 0.2
-#invcol
-#crashcam3 1.04
-#cam4
-
 unity "/camera/0",1.0
 
-# dviz :alive, rotate: 0.5
-# dterrain 1.0
-# sleep 3.5
-# dviz :alive, rotate: 0.0
-# dterrain 0.0
-
 live_loop :name do
-  #dcam4
-  #stop
-  #operator :FS2
-  #null :FS2
-  #exception :FS2
-  #corrupt :FS2, mode: 2
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
-  console $mode
+  console x
   #logo rand_i(5)
   tick
   dviz :alive, rotate: 0.5
@@ -49,24 +20,5 @@ live_loop :name do
   sleep 0.5
 end
 
-#viz :alive, gravity: 1.00
 
-#eq lo: 0.00
-#eq hi: 0.00
-
-#camend
-
-
-
-# qbitsea_cc oct: 0.50
-# qbitsea_cc drive: 0.77
-# qbitsea_cc charge: 0.50
-# qbitsea_cc fm: 1.00
-# qbitsea_cc wav: 0.02
-# qbitsea_cc wav_amp: 0.30
-# qbitsea_cc atk: 0.77
-# qbitsea_cc mod: 0.80
-# qbitsea_cc motion: 0.24
-# qbitsea_cc formant: 0.36
-# qbitsea_cc mul: 0.00
-# qbitsea_cc bass: 0.27
+viz :alive, color: 1.0

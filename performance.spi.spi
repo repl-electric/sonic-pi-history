@@ -2,6 +2,8 @@
 #bitsea_on :a2
 #cam0
 viz :cam0, focus: 4.4
+cam0
+
 
 live_loop :name do
   #stop

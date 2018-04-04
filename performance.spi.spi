@@ -18,6 +18,14 @@ bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #alivecol 0.2
 #invcol
 #crashcam3 1.04
+cam4
+
+
+dviz :alive, rotate: 0.5
+dterrain 1.0
+sleep 3.5
+dviz :alive, rotate: 0.0
+dterrain 0.0
 
 live_loop :name do
   #dcam4

@@ -20,7 +20,7 @@ bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #crashcam3 1.04
 #cam4
 
-unity "/camera/4",1.0
+unity "/camera/3",1.0
 
 # dviz :alive, rotate: 0.5
 # dterrain 1.0
@@ -35,8 +35,8 @@ live_loop :name do
   #null :FS2
   #exception :FS2
   #corrupt :FS2, mode: 2
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console $mode
   #logo rand_i(5)

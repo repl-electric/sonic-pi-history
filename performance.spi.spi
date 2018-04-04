@@ -17,7 +17,7 @@ bitsea_on :a2
 # viz :alive, length: 0.9
 
 live_loop :name do
-  smp Mountain[/bowed notes/,/D_|E_|F#_|G#_|A_|B|C#/].look
+  smp Mountain[/bowed notes/,/D_|E_|F#_|G#_|A_|B_|C#_/].look
   logo rand_i(5)
   tick
   terrain 0.5

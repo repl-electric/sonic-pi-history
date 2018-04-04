@@ -5,6 +5,7 @@
 #cam1
 #bitsea_on :A2
 
+cam1
 viz :alive, thick: 0.02
 
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -15,6 +16,7 @@ bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #alivecol 0.2
 #invcol
 #crashcam3 1.04
+
 live_loop :name do
   #dcam4
   #stop
@@ -22,8 +24,8 @@ live_loop :name do
   #null :FS2
   #exception :FS2
   #corrupt :FS2, mode: 2
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs :A)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :B, :D, :Fs, :A,)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console $mode
   #logo rand_i(5)

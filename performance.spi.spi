@@ -5,13 +5,13 @@ viz :cam0, focus: 4.3
 
 live_loop :name do
   #stop
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  #notes = (ing :B :D :Fs :A)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  #notes = (ing :B, :D, :Fs, :A,)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look
   console x
   #logo rand_i(5)
   tick
-  dviz :alive, rotate: 0.5
+  dviz :alive, rotate: 1.0
   dterrain 1.0
   sleep 3.5
   dviz :alive, rotate: 0.1

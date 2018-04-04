@@ -23,7 +23,7 @@ live_loop :name do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   notes = (ing :B :D :Fs)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].look
-  console x.split("/")[0]
+  console x.split("/")[-1]
   logo rand_i(5)
   tick
   dterrain 1.0

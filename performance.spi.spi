@@ -3,7 +3,7 @@
 #cam0
 viz :cam0, focus: 2.0
 #cam0
-#bitsea_on :A2
+bitsea_on :A2
 
 
 live_loop :name do

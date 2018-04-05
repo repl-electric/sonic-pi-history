@@ -1,24 +1,20 @@
-viz :alive, light: 8.0
-
-#stop
-
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
-#  dcam4
-stop
+  dcam4
+
   score =  (ing  #15.25
-#    [[[:a2 2]  [:cs3 2]  [:e3 2]]           2]                  REST
-#    [[[:fs2 2] [:a3 2]   [:cs3 2]]           2]                  REST
-    [[[:a2 2]  [:cs3 2]  [:e3 2]]            2]
-  #  [[[:d2 2]  [:fs2 2]  [:a2 2]] 2]  REST
-  #  [[[:e2 2]  [:gs2 2]  [:b2 2]]  2]
-#    [[[:b2 2]  [:d2 2]   [:fs3 2]]  2]                  REST
-#    [[[:fs2 2] [:A2 2]   [:Cs3 2]]  2]                          REST
+    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
+    [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  REST
+    [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
+    [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
+    [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
+    [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
+    [[[:fs4 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
-  #whitespace c[0][0], sus: 12
+  whitespace c[0][0], sus: 12
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10
@@ -29,7 +25,7 @@ stop
   end
   with_transpose -12 {cpu2 c[1], 60, sus: 2 }
   c.each_tick(:inner){|n|
-#    qbitsea n,2.0*(ing 80 70 85 70).look(:inner), mode: 0, cutoff: 1.0, phase: 0, comp: 0
+    qbitsea n,2.0*(ing 80 70 85 70).look(:inner), mode: 0, cutoff: 1.0, phase: 0, comp: 0
   }
 
   pf=0.2
@@ -41,11 +37,20 @@ stop
   i.call(c[4], 30*pf, sus: 8)
   i.call(c[5], 30*pf, sus: 8)
 
-  with_transpose -24{
- #   exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
-  }
+  at{
+    with_transpose 0{
+    exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
+    sleep 0.5
+    #exception root(c), 80, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
+    sleep 0.5
+    #exception root(c), 90, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.8
+    sleep 0.5
+     # exception root(c), 127, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.9
+      }
 
- # null root(c), 127*0.5, mode: 2, sus: 1
+  } #, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
+
+  null root(c), 127*0.5, mode: 2, sus: 1
 
   8.times{tick(:in2);
     callstack (ing
@@ -65,13 +70,15 @@ stop
 
 
     #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+    s=(ing
+      _ 5  _  [5] _   _ 5  _  [5] _
 
-    #}
-
+      ).look(:in2)
+    with_swing -0.1{
+      mt s, 115, 127
+    }
+    mt_cc morph: 1.0#(line 0.01, 0.4, 32).look(:in2)
     sleep zzz/8.0
-
-
-
   }
 end
 
@@ -79,9 +86,9 @@ end
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 1.00
+qbitsea_cc drive: 0.27
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 1.00
+qbitsea_cc fm: 0.00
 qbitsea_cc wav: 0.01
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83
@@ -95,10 +102,7 @@ qbitsea_cc bass: 0.27
 #qbitsea_cc center: 0.15
 #qbitsea_cc head: 0.00
 
-eq lo: 0.00
+eq lo: 0.85
 eq mi: 0.85
-eq hi: 0.00
+eq hi: 0.85
 }
-
-
-#camend

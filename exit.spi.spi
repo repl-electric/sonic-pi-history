@@ -75,7 +75,7 @@ live_loop :Fall_out_of_your_screen do tick;
       ).look(:in2)
     #with_swing 0.01{
       mt s, 105, 127
-      mt_cc morph: 0.5#(line 0.01, 0.4, 32).look(:in2)
+      mt_cc morph: 0.7#(line 0.01, 0.4, 32).look(:in2)
       sleep zzz/8.0
     #}
 

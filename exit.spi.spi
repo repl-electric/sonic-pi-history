@@ -56,10 +56,10 @@ live_loop :Fall_out_of_your_screen do tick;
     16.times{
     tick(:wa?)
     s=(ing
-      _ _ _ _     [4] 4 _ _
+      _ _ _ _   [4] 4 _ _
       ).look(:wa?)
     #with_swing 0.01{
-    mt s, 20, 25
+    mt s, 20, 30
     mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
       sleep 1/16.0
       }

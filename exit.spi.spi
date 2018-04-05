@@ -52,15 +52,6 @@ live_loop :Fall_out_of_your_screen do tick;
 
   null root(c), 127*0.5, mode: 2, sus: 1
 
-  at{
-    8.times{
-    s=(ing
-        4, _, _,
-        _, 4, _,
-        _, _, 4,
-      ).look(:wa?)
-    #with_swing 0.01{
-  }
 
 
   8.times{tick(:in2);

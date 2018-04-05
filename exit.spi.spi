@@ -80,8 +80,9 @@ live_loop :Fall_out_of_your_screen do tick;
     with_swing 0.05,2{
       mt s, 80, 120
       mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
-      }
       sleep zzz/8.0
+    }
+
 
 
   }

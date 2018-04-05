@@ -55,9 +55,6 @@ live_loop :Fall_out_of_your_screen do tick;
   at{
     8.times{
     s=(ing
-        _ _ _
-        _ _ _
-        _ _ _
         5 _ _
         _ 5 _
         _ _ 5

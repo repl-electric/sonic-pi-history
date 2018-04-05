@@ -1,17 +1,7 @@
-def electric_emit(a)
-  at{
-    unity "/electric", a
-    sleep 0.125
-    unity "/electric", 0.0
-  }
+def electric(n=10)
+  unity "/electric/#{n}"
 end
 
-#electric
-
-#electric_emit 0
 
 
-#electric_emit 50.0
-
-
-unity "/electric", 1.0
+electric 10

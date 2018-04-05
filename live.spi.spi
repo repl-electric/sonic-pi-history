@@ -282,7 +282,7 @@ live_loop :Clock, sync: :unsyncable do
     end
     k=k.look
 
-    k=_
+    #k=_
     no{
       if spread(1,64).rot(-64+(8*2)).look   #4*1/8
         rev :e5, 60

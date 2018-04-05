@@ -1,4 +1,4 @@
-viz :cam0, focus: 10.4
+viz :cam0, focus: 20.4
 stop
 
 viz :cam0, focus: 8.0
@@ -12,8 +12,8 @@ unity "/camera/0",1.0
 
 stop
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)

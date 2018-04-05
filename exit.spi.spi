@@ -70,14 +70,19 @@ live_loop :Fall_out_of_your_screen do tick;
 
 
     #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+
+at{
     s=(ing
       _ _ 4 _  #  4 _ _ _
       ).look(:in2)
     #with_swing 0.01{
       mt s, 15, 127
       mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
-      sleep zzz/8.0
+      sleep 1/8.0
+      }
     #}
+
+    sleep zzz/8.0
 
 
 

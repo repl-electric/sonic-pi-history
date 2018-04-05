@@ -96,5 +96,5 @@ eq mi: 0.85
 eq hi: 0.00
 }
 
-viz :alive, light: 0.9
+viz :alive, light: 1.0
 camend

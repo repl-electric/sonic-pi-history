@@ -1,8 +1,12 @@
 def electric_emit(a)
   at{
     unity "/electric", a
+    sleep 0.125
     unity "/electric", 0.0
   }
 end
 
 emit 50.0
+
+
+Ruby.gsub

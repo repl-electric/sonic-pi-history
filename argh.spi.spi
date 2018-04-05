@@ -6,4 +6,6 @@ def electric_emit(a)
   }
 end
 
-electric_emit 50.0
+electric
+
+#electric_emit 50.0

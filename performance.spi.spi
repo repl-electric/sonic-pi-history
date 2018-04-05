@@ -4,7 +4,7 @@ unity "/shard", 0.0
 at{
   8.times{
     tick(:a)
-    kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 4
+    kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 9
     sleep 1/4.0
   }
 }

@@ -1,7 +1,10 @@
+viz :alive, light: 3.0
+
+
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
-  dcam4
+#  dcam4
 
   score =  (ing  #15.25
 #    [[[:a2 2]  [:cs3 2]  [:e3 2]]           2]                  REST
@@ -96,5 +99,5 @@ eq mi: 0.85
 eq hi: 0.00
 }
 
-viz :alive, light: 3.0
+
 #camend

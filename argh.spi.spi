@@ -6,7 +6,4 @@ def electric_emit(a)
   }
 end
 
-emit 50.0
-
-
-Ruby.gsub
+electric_emit 50.0

@@ -1,7 +1,0 @@
-def electric(n=10)
-  unity "/electric/#{n}"
-end
-
-
-
-electric 50

@@ -6,8 +6,8 @@ bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 unity "/camera/0",1.0
 
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)
@@ -25,9 +25,6 @@ end
 
 
 camend
-viz :alive , light: 4.0
-eq lo: 0.00
-eq hi: 0.00
 
 
 #viz :cam0, focus: 0.0

@@ -1,5 +1,5 @@
 viz :cam0, focus: 4.8
-unity "/shard", 0.01
+unity "/shard", 0.02
 stop
 
 viz :cam0, focus: 8.0

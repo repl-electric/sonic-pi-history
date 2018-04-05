@@ -77,7 +77,7 @@ no{
 qbitsea_cc oct: 0.50
 qbitsea_cc drive: 1.00
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.74
+qbitsea_cc fm: 1.00
 qbitsea_cc wav: 0.01
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83
@@ -96,4 +96,5 @@ eq mi: 0.85
 eq hi: 0.00
 }
 
+viz :alive, light: 0.9
 camend

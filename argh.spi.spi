@@ -1,1 +1,9 @@
-unity "/electric", 0.0
+def emit(a)
+  at{
+    unity "/electric", a
+    sleep 0.25
+    unity "/electric", 0.0
+  }
+end
+
+emit 1.0

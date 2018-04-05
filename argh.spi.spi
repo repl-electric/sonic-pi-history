@@ -1,7 +1,7 @@
 def electric_emit(a)
   at{
     unity "/electric", a
-    sleep 0.125/2.0
+    sleep 0.125
     unity "/electric", 0.0
   }
 end

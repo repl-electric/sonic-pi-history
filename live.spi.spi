@@ -207,7 +207,7 @@ live_loop :Clock, sync: :unsyncable do
       K1 _ _ _       _ _ _ T1  _ _ _ _   K1 _ K1 _
       )
 
-    no{
+    yes{
     with_swing 0.08{
       hs=(knit
           (ing [Tape[/hi/,26]] _  _ _   TC[17] _  _ _).look, 8*2,

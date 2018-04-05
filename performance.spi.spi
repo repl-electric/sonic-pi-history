@@ -1,5 +1,5 @@
 viz :cam0, focus: 4.8
-unity "/shard", 0.0
+unity "/shard", 0.1
 stop
 
 viz :cam0, focus: 8.0
@@ -16,8 +16,8 @@ unity "/spark", 0.1
 
 stop
 live_loop :name do
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs :A)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :B, :D, :Fs, :A,)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)

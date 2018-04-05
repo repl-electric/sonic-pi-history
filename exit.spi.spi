@@ -61,7 +61,7 @@ live_loop :Fall_out_of_your_screen do tick;
          #  [4] 4 _ _
       ).look(:wa?)
     #with_swing 0.01{
-    mt s, (ing 100,12,13).look(:wa?), 15
+    mt s, (ing 100,120,13).look(:wa?), 15
       mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
       tick(:wa?)
       sleep 1/8.0

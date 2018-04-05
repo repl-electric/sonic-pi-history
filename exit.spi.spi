@@ -73,7 +73,7 @@ live_loop :Fall_out_of_your_screen do tick;
     s=(ing
       _ _ 9 _ #  4 _ _ _
       _ _ 9 _ #  4 _ _ _
-      _ _ 8 _ #  [4] 4 _ _
+      _ _ 9 _ #  [4] 4 _ _
       _ _ 8 _ #  4 _ _ _
       _ _ 8 _ #  4 _ _ _
       ).look(:in2)

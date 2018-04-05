@@ -264,7 +264,7 @@ live_loop :Clock, sync: :unsyncable do
       )
 
     p=p.look
-    p=_
+    #p=_
     fx=:lpf
     accent = (ing 0.2 0.2 0.3 0.5).look
     attack = 0.0

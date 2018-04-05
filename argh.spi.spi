@@ -1,4 +1,4 @@
-def emit(a)
+def electric_emit(a)
   at{
     unity "/electric", a
     unity "/electric", 0.0

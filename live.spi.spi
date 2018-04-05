@@ -86,7 +86,11 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
       s=(knit s2,16*4,s3,16*4, s1,16*4).look
 
       if s
-        dviz :alive, light: 0.1+rand*0.1
+        if s.look.is_a?(Array)
+          dviz :alive, light: 0.1+rand*0.1
+        else
+          dviz :alive, light: 0.1+rand*0.3
+        end
       end
       #s=_
       mt s.look, accent=(line 75, 85, 16*4).look, 100

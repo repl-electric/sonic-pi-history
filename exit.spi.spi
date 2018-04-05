@@ -38,7 +38,7 @@ live_loop :Fall_out_of_your_screen do tick;
   i.call(c[5], 30*pf, sus: 8)
 
   with_transpose 12{
-  exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
+    exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
   }
 
   null root(c), 127*0.5, mode: 2, sus: 1

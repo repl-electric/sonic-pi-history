@@ -79,7 +79,9 @@ live_loop :Fall_out_of_your_screen do tick;
       pp = (ing
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
-        ).look
+      ).look
+
+    smp pp
 
 
     mt s, 115, 127

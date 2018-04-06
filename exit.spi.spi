@@ -96,7 +96,8 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
     ).look
 
-  smp pp, rate: -0.25
+  smp pp, rate: -0.25, start: 0.1
+
   sleep 1/4.0
 end
 

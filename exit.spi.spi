@@ -110,7 +110,7 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
         _, _, _, _,    _, _, C5, _,    _, _, _, _,   _, _, _, _,
     ).look
   fuzz = rand(0.05)
-  smp pp, amp: 1.6, attack: 0.0
+  smp pp, amp: 1.0, attack: 0.0
   sleep 1/4.0
 end
 

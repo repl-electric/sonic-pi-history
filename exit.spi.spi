@@ -1,3 +1,7 @@
+puts chord(:cs2, :m7)
+
+stop
+
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 cam4
 live_loop :Fall_out_of_your_screen do tick;

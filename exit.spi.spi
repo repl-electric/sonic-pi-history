@@ -1,4 +1,4 @@
-puts chord(:cs2, :m7)
+puts note_inspect(chord(:cs2, :m7))
 
 stop
 

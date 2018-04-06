@@ -95,8 +95,13 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
     ).look
+  fuzz = rand(0.05)
+  smp pp, amp: accent+1.6, attack: 0.0, start: 0.1-fuzz, rate:
+    (knit
+    -0.25,32,-0.25,32,
+    -0.5-fuzz, 1,-0.5,31,
+    -0.25-fuzz,1,-0.25,31).look
 
-  smp pp, rate: -0.25, start: 0.1
 
   sleep 1/4.0
 end

@@ -47,6 +47,18 @@ live_loop :Fall_out_of_your_screen do tick;
 
   #exception root(c), 127, sus: 2#, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
 
+  at{
+    8.times{; tick(:a)
+      kick_machine (ing
+                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
+                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
+                    ).look(:a), def: 8, accent: 2
+#      electric 50
+      sleep 1/4.0
+    }
+  }
+
+
 
   null root(c), 127*0.5, mode: 2
 

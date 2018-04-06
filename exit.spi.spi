@@ -136,7 +136,6 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
     if p
       with_swing(0.01) do
         with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-          delectric 5
           smp p, amp: 3*accent, rate: r, attack: attack
         }
       end

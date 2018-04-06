@@ -42,7 +42,7 @@ live_loop :Fall_out_of_your_screen do tick;
     sleep 1.0
     exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
     sleep 0.5
-    exception root(c), 80, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5  if root(c)
+    exception root(c), 80, sus: 0.25, atk: 0.01, shape: 1.0, wet: 0.5  if root(c)
     #sleep 0.5
     #exception root(c), 90, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.8
     #sleep 0.5

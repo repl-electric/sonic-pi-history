@@ -1,6 +1,6 @@
 puts note_inspect(chord(:cs2, :m7))
 
-stop
+#stop
 
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 cam4

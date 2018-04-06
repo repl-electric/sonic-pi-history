@@ -16,7 +16,6 @@ live_loop :Fall_out_of_your_screen  do tick;
   no{
     qbitsea_cc oct: 0.5
     qbitsea_cc drive: 0.27
-    qbitsea_cc charge: 0.50
     qbitsea_cc fm: 0.00
     qbitsea_cc wav: 0.00
     qbitsea_cc wav_amp: 0.30

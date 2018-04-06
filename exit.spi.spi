@@ -49,8 +49,6 @@ live_loop :Fall_out_of_your_screen do tick;
   }
   #exception root(c), 127, shape: 0.8, wet: 0.0
   at{
-
-    dviz :alive, amp: 1000.0001, freq: 1.0, time: 10.0, gravity: 0
     with_transpose 0{
       sleep 0.5
     dviz :alive, reset: 1.0

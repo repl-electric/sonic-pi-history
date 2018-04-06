@@ -4,13 +4,13 @@ live_loop :Fall_out_of_your_screen do tick;
   dcam4
 
   score =  (ing  #15.25
-    [[[:b2 2]  [:d2 2]   [:fs3 2]]           2]                  REST
-    [[[:fs2 2] [:a2 2]   [:cs2 2]]           2]                  REST
-    [[[:a2 2]  [:cs3 2]   [:e3 2]]            2]
-    [[[:d2 2]  [:fs2 2]  [:a2 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
-    [[[:e2 2]  [:gs2 2]  [:b2 2]]  2]
-    [[[:b2 2]  [:d2 2]   [:fs3 2] [:cs4 2]]  2]                  REST
-    [[[:fs2 2] [:A2 2]   [:Cs3 2] ]  2]                          REST
+    [[[:b2 2]  [:d3 2]   [:fs3 2]]           2]                  REST
+    [[[:fs2 2] [:a3 2]   [:cs3 2]]           2]                  REST
+    [[[:a2 2]  [:b3 2]   [:e4 2]]            2]
+    [[[:d2 2]  [:fs3 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
+    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
+    [[[:b2 2]  [:d3 2]   [:fs3 2] [:cs4 2]]  2]                  REST
+    [[[:fs2 2] [:A3 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
@@ -37,8 +37,18 @@ live_loop :Fall_out_of_your_screen do tick;
   i.call(c[4], 30*pf, sus: 8)
   i.call(c[5], 30*pf, sus: 8)
 
+  at{
+    with_transpose 0{
+    exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
+    sleep 0.5
+    #exception root(c), 80, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
+    sleep 0.5
+    #exception root(c), 90, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.8
+    sleep 0.5
+     # exception root(c), 127, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.9
+      }
 
-  exception root(c), 60, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0 if root(c)
+  } #, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
 
   null root(c), 127*0.5, mode: 2, sus: 1
 
@@ -73,10 +83,10 @@ end
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.40
+qbitsea_cc drive: 0.34
 qbitsea_cc charge: 0.50
 qbitsea_cc fm: 0.30
-qbitsea_cc wav: 0.90
+qbitsea_cc wav: 0.31
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83
 qbitsea_cc mod: 0.80

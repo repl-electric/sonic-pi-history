@@ -79,6 +79,49 @@ live_loop :Fall_out_of_your_screen do tick;
   }
 end
 
+live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
+      p=(ing
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      [TS[49]] _ _ TS[12]    _ _ _ _
+
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
+
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TT[49] _ _ TS[12]      _ _ _ _
+
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
+      )
+
+    p=p.look
+    #p=_
+    fx=:lpf
+    accent = (ing 0.2 0.2 0.3 0.5).look
+    attack = 0.0
+    r = 1.0
+    if p && p.is_a?(Array)
+      p = p[0]
+      accent=accent*1.5
+    end
+  if p
+    with_fx :krush, mix: 1.0 do
+      with_swing(0.01) do
+        with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+          smp p, amp: 2.5*accent, rate: r, attack: attack
+        }
+      end
+    end
+  end
+  sleep 1/8.0
+end
+
+
+
 no{
 qbitsea_cc oct: 0.5
 qbitsea_cc drive: 0.27

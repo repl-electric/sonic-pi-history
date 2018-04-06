@@ -53,14 +53,13 @@ live_loop :Fall_out_of_your_screen do tick;
   null root(c), 127*0.8, mode: 2, sus: 1
 
 
-      at{
-      8.times{
-        tick(:a)
-        kick_machine (ing K1 _ _ _   _ _ _ _     K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-        sleep 1/4.0
-      }
+  at{
+    8.times{
+      tick(:a)
+      kick_machine (ing K1 _ _ _   _ _ _ _     K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      sleep 1/4.0
     }
-
+  }
 
   8.times{tick(:in2);
     callstack (ing

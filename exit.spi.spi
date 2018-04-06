@@ -91,13 +91,12 @@ live_loop :Fall_out_of_your_screen do tick;
 end
 
 live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
-
   pp = (ing
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
-      ).look
+    ).look
 
-    smp pp
+  smp pp
 
 
   sleep 1/4.0

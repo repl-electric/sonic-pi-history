@@ -11,8 +11,8 @@ live_loop :Fall_out_of_your_screen do tick;
 
     [[[:d2 2]  [:fs3 2]  [:a3 2]  [:e4 2]] 2]  REST
     [[[:fs3 2]  [:a3 2]  [:cs4 2] ] 2]    REST
-    [[[:a2 2]  [:d4 2]  [:e3 2] ] 2]    REST
-    [[[:a2 2]  [:cs4 2]  [:e3 2] ] 2]    REST
+    [[[:a2 2]  [:d3 2]  [:e3 2] ] 2]    REST
+    [[[:a2 2]  [:cs3 2]  [:e3 2] ] 2]    REST
 
     #    [[[:gs3 2]  [:b3 2]  [:d4 2] ] 2]    REST
 

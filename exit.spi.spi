@@ -8,8 +8,8 @@ live_loop :Fall_out_of_your_screen do tick;
 #    [[[:fs2 2] [:a3 2]   [:cs4 2]]           2]                  REST
     [[[:a2 2]  [:cs3 2]    [:e4 2]]            2]
     [[[:d2 2]  [:fs3 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
-    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
-    [[[:a2 2]  [:cs3 2]   [:e3 2] ]  2]                  REST
+#    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
+#    [[[:a2 2]  [:cs3 2]   [:e3 2] ]  2]                  REST
 #    [[[:fs4 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic

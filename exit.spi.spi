@@ -6,8 +6,8 @@ live_loop :Fall_out_of_your_screen  do tick;
   score =  (ing  #15.25
 #    [[[:b2 2]  [:ds4 2]   [:fs3 2]]           2]                  REST
 #    [[[:fs2 2] [:as4 2]   [:cs4 2]]           2]                  REST
-    [[[:a2 2]  [:cs3 2]  [:e3 2]]            2]           #      REST
-    [[[:d2 2]  [:fs2 2]  [:a2 2]  [[:e3] [:e3 2]].choose] 2]  REST
+    [[[:a2 2]  [:cs5 2]  [:e3 2]]            2]           #      REST
+    [[[:d2 2]  [:fs2 2]  [:a2 2]  [[:e4] [:e4 2]].choose] 2]  REST
 #    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]  REST
 #    [[[:a2 2]  [:cs4 2]   [:e3 2]]  2]                  REST
 #    [[[:fs3 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
@@ -91,6 +91,21 @@ live_loop :Fall_out_of_your_screen  do tick;
     sleep zzz/8.0
   }
 end
+
+qbitsea_cc oct: 0.50
+qbitsea_cc drive: 0.43
+qbitsea_cc charge: 0.50
+qbitsea_cc fm: 0.29
+qbitsea_cc wav: 0.60
+qbitsea_cc wav_amp: 0.30
+qbitsea_cc atk: 0.18
+qbitsea_cc mod: 0.80
+qbitsea_cc motion: 0.24
+qbitsea_cc formant: 0.50
+qbitsea_cc mul: 0.00
+qbitsea_cc bass: 0.47
+
+
 
 live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
       p=(ing

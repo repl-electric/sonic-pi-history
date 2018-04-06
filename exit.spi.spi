@@ -139,12 +139,14 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
       p = p[0]
       accent=accent*1.5
     end
-    if p
+  if p
+    with_fx :reverb do
       with_swing(0.01) do
         with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
           smp p, amp: 3*accent, rate: r, attack: attack
         }
       end
+    end
     end
   sleep 1/8.0
 end

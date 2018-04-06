@@ -62,7 +62,7 @@ live_loop :Fall_out_of_your_screen do tick;
 
   } #, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
 
-  null root(c), 127*1.0, mode: 2, sus: 2
+  null root(c), 127*1.0, mode: 2, sus: 4
 
   #dcam4
   at{
@@ -153,17 +153,17 @@ logo 0
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.46
-qbitsea_cc charge: 0.71
-qbitsea_cc fm: 0.40
-qbitsea_cc wav: 0.81
+qbitsea_cc drive: 0.30
+qbitsea_cc charge: 0.30
+qbitsea_cc fm: 0.30
+qbitsea_cc wav: 1.00
 qbitsea_cc wav_amp: 1.00
-qbitsea_cc atk: 0.00
+qbitsea_cc atk: 0.30
 qbitsea_cc mod: 1.00
 qbitsea_cc motion: 0.10
-qbitsea_cc formant: 0.50
-qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.55
+qbitsea_cc formant: 0.00
+qbitsea_cc mul: 0.50
+qbitsea_cc bass: 0.00
 
 qbitsea_cc width: 1.00
 qbitsea_cc center: 0.00

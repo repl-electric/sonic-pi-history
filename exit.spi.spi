@@ -134,12 +134,6 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
       end
     end
 
-  pp = (ing
-    _ _ _ _   [C5] C5 _ _   _ _ _ _    _ _ _ _
-    _ _ _ _   _ _ _ _       _ _ _ _    _ _ _ _
-    ).look
-  fuzz = rand(0.05)
-  smp pp, amp: 0.8, attack: 0.0
   sleep 1/4.0
 end
 

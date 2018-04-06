@@ -4,13 +4,13 @@ live_loop :Fall_out_of_your_screen do tick;
   dcam4
 
   score =  (ing  #15.25
-    [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
-    [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  REST
+    #[[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
+    #[[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  REST
     [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
     [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
     [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
     [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
-    [[[:fs4 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
+    #[[[:fs4 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
@@ -141,7 +141,7 @@ end
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.27
+qbitsea_cc drive: 0.25
 qbitsea_cc charge: 0.50
 qbitsea_cc fm: 0.00
 qbitsea_cc wav: 0.01
@@ -151,11 +151,11 @@ qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.24
 qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.27
+qbitsea_cc bass: 0.15
 
-#qbitsea_cc width: 0.50
-#qbitsea_cc center: 0.15
-#qbitsea_cc head: 0.00
+qbitsea_cc width: 1.00
+qbitsea_cc center: 0.00
+qbitsea_cc head: 0.61
 
 eq lo: 0.85
 eq mi: 0.85

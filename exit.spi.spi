@@ -67,7 +67,7 @@ live_loop :Fall_out_of_your_screen do tick;
   }
 
 
-  with_transpose 12*1{
+  with_transpose 12*0.5{
     corrupt c[0],127, mode: 2, sus: 8
     }
   #dcam4

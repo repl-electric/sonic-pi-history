@@ -7,9 +7,9 @@ live_loop :Fall_out_of_your_screen do tick;
  #   [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
  #   [[[:fs2 2] [:a4 2]   [:cs3 2]]           2]                  REST
     [[[:a2 2]  [:cs3 2]   [:e4 2]]            2]
-    [[[:d2 2]  [:fs3 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
-    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
-    [[[:a2 2]  [:cs3 2]   [:e3 2] ]  2]                  REST
+#    [[[:d2 2]  [:fs3 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
+#    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
+#    [[[:a2 2]  [:cs3 2]   [:e3 2] ]  2]                  REST
 #    [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST
     )
   cue :kernel_panic
@@ -136,12 +136,12 @@ end
 
 no{
 qbitsea_cc oct: 0.60
-qbitsea_cc drive: 0.41
+qbitsea_cc drive: 0.55
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.23
-qbitsea_cc wav: 0.00
+qbitsea_cc fm: 0.34
+qbitsea_cc wav: 0.80
 qbitsea_cc wav_amp: 0.30
-qbitsea_cc atk: 0.83
+qbitsea_cc atk: 0.46
 qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.036
 qbitsea_cc formant: 0.50

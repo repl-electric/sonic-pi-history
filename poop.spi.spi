@@ -4,6 +4,9 @@ unity "/ripple/twist", 300.8
 viz :alive, length: 0.8
 #cam4
 
+puts $mode
+
+
 stop
 
 cam4

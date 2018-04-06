@@ -1,3 +1,7 @@
+unity "/ripple/twist", 0.5
+
+stop
+
 cam4
 
 qbitsea_cc oct: 0.50
@@ -16,4 +20,4 @@ qbitsea_cc bass: 0.27
 
 
 
-alivecol 0.1
+#alivecol 0.1

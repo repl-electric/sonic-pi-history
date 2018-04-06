@@ -90,6 +90,13 @@ live_loop :Fall_out_of_your_screen do tick;
   }
 end
 
+live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
+
+
+
+  sleep 1/4.0
+end
+
 
 
 no{

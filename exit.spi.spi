@@ -67,7 +67,7 @@ live_loop :Fall_out_of_your_screen do tick;
       _ _ _ _ _ _ 1 _
       ).look(:in2)
     #s=_
-    mt s, 95, 127
+    #mt s, 95, 127
     mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
     sleep zzz/8.0
   }
@@ -106,7 +106,7 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
     with_fx :krush, mix: 0.2 do
       with_swing(0.01) do
         with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-          smp p, amp: 1.5*accent, rate: r, attack: attack
+     #     smp p, amp: 1.5*accent, rate: r, attack: attack
         }
       end
     end

@@ -149,6 +149,11 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
 end
 
 
+eq lo: 0.00
+eq hi: 0.00
+
+camend
+
 
 no{
 qbitsea_cc oct: 0.5
@@ -164,8 +169,8 @@ qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 0.27
 
-#qbitsea_cc width: 0.50
-#qbitsea_cc center: 0.15
+#qbitsea_cc width: 0.27
+#qbitsea_cc center: 0.95
 #qbitsea_cc head: 0.00
 
 eq lo: 0.85

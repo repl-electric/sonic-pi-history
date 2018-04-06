@@ -5,13 +5,13 @@ live_loop :Fall_out_of_your_screen do tick;
   #dcam4
 
   score =  (ing  #15.25
-    # [[[:b2 2]  [:d3 2]   [:fs3 2]]           2]                  REST
-    # [[[:fs2 2] [:a3 2]   [:cs4 2]]           2]                  REST
-    # [[[:a2 2]  [:cs3 2]   [:e3 2]]            2] REST
+     [[[:b2 2]  [:d3 2]   [:fs3 2]]           2]                  REST
+     [[[:fs2 2] [:a3 2]   [:cs4 2]]           2]                  REST
+     [[[:a2 2]  [:cs3 2]   [:e3 2]]            2] REST
     [[[:d1 2]  [:fs3 2]  [:a3 2]  [:e4 2]] 2]  REST
-#    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]                    REST
-#    [[[:cs2 2]  [:e3 2]   [:gs3 2] ]  2]                  REST
-#    [[[:a4 2] [:A3 2]   [:Cs4 2] ]  2]                          REST
+    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]                    REST
+    [[[:cs2 2]  [:e3 2]   [:gs3 2] ]  2]                  REST
+    [[[:a4 2] [:A3 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
@@ -65,7 +65,6 @@ live_loop :Fall_out_of_your_screen do tick;
   with_transpose 12{
     null root(c), 127*0.4, mode: 2, sus: 1
   }
-
 
   with_transpose 12*0.5{
     corrupt c[0],127, mode: 2, sus: 8

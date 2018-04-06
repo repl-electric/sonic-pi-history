@@ -102,7 +102,6 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
     -0.5-fuzz, 1,-0.5,31,
     -0.25-fuzz,1,-0.25,31).look
 
-
   sleep 1/4.0
 end
 

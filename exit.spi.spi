@@ -45,7 +45,7 @@ live_loop :Fall_out_of_your_screen do tick;
     i.call(c[5], 30*pf, sus: 8)
         sleep 0.25
   }
-  exception root(c), 127, shape: 0.0
+  exception root(c), 127, shape: 0.0, wet: 1.0
   at{
     with_transpose 0{
     sleep 0.5

@@ -18,7 +18,7 @@ live_loop :Fall_out_of_your_screen do tick;
   whitespace c[0][0], sus: 12
   if spread(1,6).look
     #rev :b5, 1
-    #eek :Gs3, 10
+    eek :Gs3, 10
   end
   #rev :e5, 15, sus: 12
   if !c[0][0]

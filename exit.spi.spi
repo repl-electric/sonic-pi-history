@@ -149,7 +149,7 @@ live_loop :glitch, sync: :Fall_out_of_your_screen do; tick
 end
 
 #camlogo
-logo 1
+logo 0
 
 no{
 qbitsea_cc oct: 0.50

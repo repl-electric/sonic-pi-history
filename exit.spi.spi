@@ -6,7 +6,7 @@ live_loop :Fall_out_of_your_screen  do tick;
   score =  (ing  #15.25
 #    [[[:b2 2]  [:d4 2]   [:fs3 2]]           2]                  REST
 #    [[[:fs2 2] [:a4 2]   [:cs4 2]]           2]                  REST
-    [[[:a2 2]  [:cs5 2]  [:e4 2]]            2]
+    [[[:a2 2]  [:cs4 2]  [:e4 2]]            2]
     [[[:d2 2]  [:fs3 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
     [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
 #    [[[:cs2 2] [:e3 2]   [:gs3 2]]  2]                  REST
@@ -14,12 +14,12 @@ live_loop :Fall_out_of_your_screen  do tick;
     )
 
   no{
-    qbitsea_cc oct: 0.70
+    qbitsea_cc oct: 0.50
     qbitsea_cc drive: 0.47
     qbitsea_cc fm: 0.38
     qbitsea_cc wav: 0.80
     qbitsea_cc wav_amp: 1.00
-    qbitsea_cc atk: 0.83
+    qbitsea_cc atk: 0.00
     qbitsea_cc mod: 0.80
     qbitsea_cc motion: 0.11
     qbitsea_cc formant: 0.36

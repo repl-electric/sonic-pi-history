@@ -1,6 +1,7 @@
 live_loop :name do
   tick
 
+  viz :cam0, focus: 3.8
   unity "/cam0/off",1.0
 
 at{

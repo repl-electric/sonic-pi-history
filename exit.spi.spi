@@ -1,6 +1,6 @@
 cam1
 
-8.times{viz shard: 1.0}
+8.times{viz shard: 1.0; electric 50}
 camend 1
 stop
 #cam0

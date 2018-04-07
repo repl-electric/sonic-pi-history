@@ -1,6 +1,6 @@
 #viz :cam0, focus: 0.0
 
-unity "/cam0/focus", 0.0
+unity "/cam0/focus", 2.0
 unity "/cam0/aperture", 0.09
 terrain 0
 #stop

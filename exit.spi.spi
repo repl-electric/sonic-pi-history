@@ -17,7 +17,7 @@ terrain 0.1+rand*0.1
 terrain 0.1
 cam1
 #kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1.0
-stop
+
 #terraina# 0
 #stop
 #viz :cam0, focus: 44.0
@@ -25,7 +25,7 @@ stop
 
 #cam1
 viz :glitch, invert: 0.0
-
+stop
 #@cam0
 #bitsea_on :A2
 

@@ -1,6 +1,7 @@
 live_loop :name do
   tick
 
+  unity "/cam0/off",1.0
 
 at{
   8.times{

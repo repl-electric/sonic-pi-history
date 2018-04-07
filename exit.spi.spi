@@ -3,7 +3,7 @@ cam0
 #viz :cam0, blur: 0.0
 #unity "cam0/blur", 1.0
 #stop
-#bitsea_on :A1
+bitsea_on :A1
 #viz :sea, on: 1.0
 
 stop

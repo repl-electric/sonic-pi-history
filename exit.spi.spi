@@ -1,5 +1,5 @@
 cam1
-viz :cam0, blur: 1
+viz :cam0, blur: 0
 #unity "cam0/blur", 1.0
 #stop
 bitsea_on :A1

@@ -47,11 +47,12 @@ live_loop :Fall_out_of_your_screen do tick;
   alivecol 0.2
   electric 10
   at{
-    8.times{; tick(:a)
+    8.times{;
       kick_machine (ing
                     K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
                     K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
                     ).look(:a), def: 8.0, accent: 1.5*0, off: 1.0
+      tick(:a)
       sleep 1/4.0
     }
   }

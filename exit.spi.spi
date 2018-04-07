@@ -5,27 +5,28 @@ live_loop :Fall_out_of_your_screen do tick;
   #viz shard: 1.0
   unity "/camera/4"
   score =  (ing  #15.25
-    [[[:a2 2]  [:cs5 2]   [:e3 2]]           2]                  REST
+    [[[:a2 2]  [:cs4 2]   [:e3 2]]           2]                  REST
     [[[:fs2 2] [:a4 2]   [:cs4 2]]           2]                  REST
-    [[[:a2 2]  [:cs5 2]  [:e4 2]]            2]
-    [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
-    [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
-    [[[:cs4 2] [:e4 2]  [:gs4 2] ]  2]                  REST
-    [[[:fs3 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
+    [[[:a2 2]  [:cs4 2]  [:e4 2]]            2]
+    [[[:d3 2]  [:fs4 2]  [:a3 2]  [[:e4 2] [:e4 2]].choose] 2]  REST
+    [[[:e2 2]  [:gs3 2]  [:b3 2]]  2]
+    [[[:cs4 2] [:e3 2]  [:gs4 2] ]  2]                  REST
+    [[[:fs3 2] [:A3 2]   [:Cs4 2] ]  2]                          REST
     )
 
-  qbitsea_cc oct: 0.60
+
+  qbitsea_cc oct: 0.50
   qbitsea_cc drive: 0.30
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.32
-  qbitsea_cc wav: 0.01
+  qbitsea_cc fm: 0.33
+  qbitsea_cc wav: 0.57
   qbitsea_cc wav_amp: 0.30
-  qbitsea_cc atk: 0.83
+  qbitsea_cc atk: 0.23
   qbitsea_cc mod: 0.80
-  qbitsea_cc motion: 0.24
+  qbitsea_cc motion: 0.16
   qbitsea_cc formant: 0.36
   qbitsea_cc mul: 0.00
-  qbitsea_cc bass: 0.27
+  qbitsea_cc bass: 1.00
 
 
   cue :kernel_panic

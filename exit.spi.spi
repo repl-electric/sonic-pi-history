@@ -12,7 +12,7 @@ unity "/cam0/aperture", 0.09
 terrain 0.1+rand*0.1
 #stop
 
-alivecol 0.3
+alivecol 0.4
 viz shard: 0.01
 terrain 0.1
 cam4

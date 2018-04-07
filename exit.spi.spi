@@ -1,7 +1,7 @@
 #viz :cam0, focus: 0.0
 
 unity "/cam0/focus", 3.5
-unity "/cam0/aperture", 0.01
+unity "/cam0/aperture", 0.02
 stop
 #viz :cam0, focus: 10.0
 

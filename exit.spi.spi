@@ -17,7 +17,7 @@ unity "/cam0/aperture", 0.11
 at{
   8.times{
     tick(:a)
-      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 0.1
+      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       viz :alive, light: 0.2+rand*0.1
       dterrain 1.1 if x
       delectric 1

@@ -20,7 +20,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
   live_loop :name do
   tick
-  cam1
+  dcam1
   #dcam3
 
   #viz :alive, rotate: 1.0

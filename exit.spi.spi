@@ -1,4 +1,4 @@
-viz shard: 1.0
+viz shard: 2.0
 stop
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;

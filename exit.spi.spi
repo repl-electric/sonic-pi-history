@@ -1,4 +1,4 @@
-dviz :cam0, focus: 2.0
+dviz :cam0, focus: 1.0
 stop
   live_loop :name do
   tick

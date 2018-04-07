@@ -5,8 +5,8 @@ live_loop :name do
 at{
   8.times{
     tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-      terrain 0.1
+      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+            terrain 0.1 if x
     sleep 1/4.0
   }
 }

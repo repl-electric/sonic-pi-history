@@ -4,7 +4,7 @@ unity "/cam0/blur", 1.0
 #unity "/cam0/aperture", 0.11
 
 unity "/cam0/focus", 9.1
-unity "/cam0/aperture", 0.52
+unity "/cam0/aperture", 0.51
 #kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent:
 terrain 0.1
 stop

@@ -1,5 +1,5 @@
-dviz spark: 1.0
-
+viz spark: 1.0
+stop
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}

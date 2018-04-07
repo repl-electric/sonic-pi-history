@@ -10,7 +10,7 @@ terrain 0
 #bitsea_on :A2
 
 
-stop
+#stop
 
 
   live_loop :name do

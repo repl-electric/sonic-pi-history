@@ -9,8 +9,8 @@ live_loop :Fall_out_of_your_screen do tick;
     [[[:a2 2]  [:b4 2]   [:e4 2]]            2]
     [[[:d3 2]  [:fs5 2]  [:a3 2]  [[:cs5 2] [:e4 2]].choose] 2]  REST
     [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
-    [[[:cs3 2]  [:e4 2]   [:gs3 2] ]  2]                  REST
-    [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST
+    [[[:cs3 2]  [:e4 2]  [:gs3 2] ]  2]                  REST
+    [[[:fs4 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
     )
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]

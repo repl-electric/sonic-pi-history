@@ -9,7 +9,7 @@ unity "/cam0/focus", 50.1
 unity "/cam0/aperture", 0.09
 
 #kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent:1
-terrain 0.1+rand*0.1
+terrain 0.2+rand*0.1
 #stop
 
 alivecol 0.4

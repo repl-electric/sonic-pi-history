@@ -33,10 +33,10 @@ viz shard: 0.0
 #viz :glitch, invert: 0.0
 #viz :sea, on: 0.0
 
-stop
+
 #@cam0
 bitsea_on :CS3
-
+stop
 #viz :bitsea, on: 1.0
 
 bitsea_cc motion: 0.09  #╟▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢

@@ -1,3 +1,4 @@
+cam0
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
@@ -12,6 +13,21 @@ live_loop :Fall_out_of_your_screen do tick;
     [[[:cs4 2] [:e4 2]  [:gs4 2] ]  2]                  REST
     [[[:fs3 2] [:A4 2]   [:Cs4 2] ]  2]                          REST
     )
+
+  qbitsea_cc oct: 0.60
+  qbitsea_cc drive: 0.30
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.33
+  qbitsea_cc wav: 0.01
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.83
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.27
+
+
   cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
   whitespace c[0][0], sus: 12

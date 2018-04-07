@@ -2,6 +2,7 @@
 
 unity "/cam0/focus", 45.0
 unity "/cam0/aperture", 0.09
+terrain 0
 #stop
 #viz :cam0, focus: 10.0
 

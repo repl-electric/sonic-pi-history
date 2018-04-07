@@ -1,7 +1,7 @@
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen do tick;
   live_loop :Within_the_letters{stop}
-  dviz shard: 0.0
+  dviz shard: 1.0
   unity "/camera/4"
   score =  (ing  #15.25
     [[[:b2 2]  [:d5 2]   [:fs3 2]]           2]                  REST
@@ -48,10 +48,10 @@ live_loop :Fall_out_of_your_screen do tick;
   electric 10
   at{
     8.times{; tick(:a)
-#      kick_machine (ing
-#                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-#                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-#                    ).look(:a), def: 8.0, accent: 1.5*0, off: 1.0
+      kick_machine (ing
+                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
+                    K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
+                    ).look(:a), def: 8.0, accent: 1.5*0, off: 1.0
       sleep 1/4.0
     }
   }

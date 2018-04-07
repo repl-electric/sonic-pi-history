@@ -4,10 +4,10 @@ unity "/cam0/blur", 1.0
 #unity "/cam0/aperture", 0.11
 
 unity "/cam0/focus", 3.3
-unity "/cam0/aperture", 0.01
+unity "/cam0/aperture", 0.1
 
 
-viz shard: 0.1
+viz shard: 0.01
 terrain 1.1
 #kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1.0
 stop

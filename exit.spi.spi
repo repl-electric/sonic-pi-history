@@ -24,7 +24,7 @@ stop
 
 
 #cam1
-viz :glitch, invert: 1.0
+viz :glitch, invert: 0.0
 
 #@cam0
 #bitsea_on :A2

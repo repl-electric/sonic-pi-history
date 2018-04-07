@@ -9,6 +9,7 @@ at{
   8.times{
     tick(:a)
       kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      viz :alive, light: 0.2
       terrain 1.0 if x
    #   delectric 20
     sleep 1/4.0

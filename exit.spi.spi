@@ -7,7 +7,7 @@ terrain 0
 #viz :cam0, focus: 10.0
 
 #cam0
-bitsea_on :A2
+#bitsea_on :A2
 
   live_loop :name do
   tick

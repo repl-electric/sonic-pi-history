@@ -1,4 +1,7 @@
-loop do
+live_loop :name do
+  tick
+
+
 at{
   8.times{
     tick(:a)
@@ -6,7 +9,9 @@ at{
     sleep 1/4.0
   }
 }
+  sleep 2
 end
+
 stop
 REST=[[[_, 0.25]], 2];use_bpm 63.5
 live_loop :Fall_out_of_your_screen  do tick;

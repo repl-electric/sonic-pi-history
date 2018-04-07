@@ -32,7 +32,7 @@ cam1
     tick(:a)
       kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 0.1
       dviz :alive, light: 0.5+rand*0.01
-      dterrain 0 if x
+      dterrain 0.1 if x
  #     delectric 10
     sleep 1/4.0
   }

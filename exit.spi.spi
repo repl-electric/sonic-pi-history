@@ -2,7 +2,7 @@
 unity "/cam0/blur", 1.0
 unity "/cam0/focus", 44.0
 unity "/cam0/aperture", 0.11
-
+      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1.0
 stop
 #terraina# 0
 #stop
@@ -32,7 +32,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
   8.times{
     tick(:a)
-      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1.0
+
       dviz :alive, light: 0.5+rand*0.01
       dterrain 0.1 if x
  #     delectric 10

@@ -5,7 +5,7 @@ unity "/cam0/focus", 5.1
 #viz :cam0, focus: 10.0
 
 
-stop
+
   live_loop :name do
   tick
   #dcam3

@@ -29,7 +29,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
   8.times{
     tick(:a)
       kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 3
-      dviz :alive, light: rand
+      dviz :alive, light: 0.5+rand*0.01
       dterrain 1.1 if x
  #     delectric 10
     sleep 1/4.0

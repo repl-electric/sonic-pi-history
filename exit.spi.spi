@@ -6,7 +6,7 @@ terrain 0
 #stop
 #viz :cam0, focus: 10.0
 
-cam1
+cam0
 
   live_loop :name do
   tick

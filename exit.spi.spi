@@ -1,9 +1,9 @@
 live_loop :name do
   tick
 
-  viz :cam0, focus: 3.3
-    viz :alive, rotate: 1.0
-  unity "/cam0/off",1.0
+  #viz :cam0, focus: 3.3
+  #viz :alive, rotate: 1.0
+  #unity "/cam0/off",1.0
 
 at{
   8.times{

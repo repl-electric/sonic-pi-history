@@ -4,7 +4,7 @@
 #unity "/cam0/aperture", 0.11
 #terraina# 0
 #stop
-viz :cam0, focus: 1.0
+viz :cam0, focus: 100.0
 
 #cam0
 #bitsea_on :A2

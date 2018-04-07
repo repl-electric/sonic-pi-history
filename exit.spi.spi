@@ -5,6 +5,8 @@
 
 #bitsea_on :cs4
 
+viz :cam0, blur: 1.0
+
 #cam0
 
 unity "/cam0/focus", 50.1

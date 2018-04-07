@@ -34,7 +34,7 @@ viz shard: 0.0
 
 #viz :glitch, invert: 0.0
 #viz :sea, on: 0.0
-invert0
+invcol 0
 
 #@cam0
 bitsea_on :CS3

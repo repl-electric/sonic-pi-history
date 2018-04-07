@@ -16,15 +16,15 @@ live_loop :Fall_out_of_your_screen do tick;
 
   no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.42
+  qbitsea_cc drive: 0.50
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.40
+  qbitsea_cc fm: 0.47
   qbitsea_cc wav: 0.80
   qbitsea_cc wav_amp: 0.40
   qbitsea_cc atk: 0.00
   qbitsea_cc mod: 0.80
   qbitsea_cc motion: 0.20
-  qbitsea_cc formant: 0.36
+  qbitsea_cc formant: 0.37
   qbitsea_cc mul: 0.00
   qbitsea_cc bass: 1.00
     }
@@ -45,7 +45,7 @@ live_loop :Fall_out_of_your_screen do tick;
     qbitsea n,2.0*(ing 80 70 85 70).look(:inner), mode: 0, cutoff: 1.0, phase: 0, comp: 0
   }
 
-  pf=1.2
+  pf=1.8
   i=(method :callstack)
   i.call(c[0], 60*pf, sus: 4)
   i.call(c[1], 50*pf, sus: 4)

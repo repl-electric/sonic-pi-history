@@ -1,6 +1,6 @@
 #cam0
 
-viz :cam0, blur: 1.0
+viz :cam0, blur: 0.0
 
 #cam1 true
 #viz :cam0, blur: 0.0

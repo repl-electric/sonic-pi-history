@@ -51,7 +51,7 @@ live_loop :Fall_out_of_your_screen do tick;
       kick_machine (ing
                     K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
                     K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-                    ).look(:a), def: 8.0, accent: 1.5*0, off: 1.0
+                    ).look(:a), def: 8.0, accent: 1.5*1
       tick(:a)
       sleep 1/4.0
     }

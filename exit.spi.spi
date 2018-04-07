@@ -30,9 +30,11 @@ viz shard: 0.0
 #cam0
 #electric 5
 #cam1
+
+
 #viz :glitch, invert: 0.0
 #viz :sea, on: 0.0
-
+invert0
 
 #@cam0
 bitsea_on :CS3

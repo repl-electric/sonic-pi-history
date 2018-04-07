@@ -35,7 +35,7 @@ viz shard: 0.0
 
 stop
 #@cam0
-#bitsea_on :A2
+bitsea_on :A2
 
 #viz :bitsea, on: 1.0
 

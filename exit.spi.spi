@@ -5,7 +5,7 @@ unity "/cam0/blur", 1.0
 #unity "/cam0/aperture", 0.11
 #terraina# 0
 #stop
-viz :cam0, focus: 100.0
+viz :cam0, focus: 44.0
 
 #cam0
 #bitsea_on :A2

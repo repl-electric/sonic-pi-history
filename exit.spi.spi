@@ -7,7 +7,7 @@
 
 #viz :cam0, blur: 1.0
 
-#cam0
+cam1
 
 unity "/cam0/focus", 50.1
 unity "/cam0/aperture", 0.09

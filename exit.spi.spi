@@ -19,7 +19,7 @@ bitsea_on :A2
 at{
   8.times{
     tick(:a)
-      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2
 #      viz :alive, light: 0
       dterrain 1.1 if x
  #     delectric 10

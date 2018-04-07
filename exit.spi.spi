@@ -2,7 +2,7 @@ cam1
 
 8.times{viz shard: 1.0; electric 50}
 camend 0
-viz :alive, light: 1.4
+viz :alive, light: 1.8
 stop
 #cam0
 REST=[[[_, 0.25]], 2];use_bpm 63.5

@@ -7,22 +7,22 @@ live_loop :Fall_out_of_your_screen do tick;
 #,    [[[:a2, 2],  [:cs5, 2],   [:e3, 2]],           2],                  REST,
 #,    [[[:fs2, 2], [:a4, 2],   [:cs4, 2]],           2],                  REST,
     [[[:a2, 2],  [:cs5, 2],   [:e4, 2]],            2],
-    [[[:d2, 2],  [:fs4, 2],  [:a3, 2],  [[:e5, 2], [:e3, 2]].choose], 2],  REST,
+    [[[:e2, 2],  [:gs4, 2],  [:b3, 2],  [[:d5, 2], [:d3, 2]].choose], 2],  REST,
 #,    [[[:e2, 2],  [:gs4, 2],  [:b3, 2]],  2],
 #,    [[[:b2, 2],  [:d5, 2],   [:fs3, 2], [:cs4, 2]],  2],                  REST,
 #,    [[[:fs4, 2], [:A4, 2],   [:Cs3, 2], ],  2],                          REST,
     )
 
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.50
+  qbitsea_cc drive: 0.30
   qbitsea_cc charge: 1.00
-  qbitsea_cc fm: 0.31
-  qbitsea_cc wav: 0.90
+  qbitsea_cc fm: 0.26
+  qbitsea_cc wav: 1.00
   qbitsea_cc wav_amp: 1.00
   qbitsea_cc atk: 0.00
   qbitsea_cc mod: 0.80
-  qbitsea_cc motion: 0.24
-  qbitsea_cc formant: 0.36
+  qbitsea_cc motion: 0.20
+  qbitsea_cc formant: 0.32
   qbitsea_cc mul: 0.00
   qbitsea_cc bass: 1.00
 

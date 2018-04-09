@@ -1,6 +1,6 @@
 viz :alive, light: 1.0
 #viz :cam0, blur:  1.0
-focus 50
+focus 50, 1.0
 #camend false
 stop
 

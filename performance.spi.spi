@@ -3,7 +3,16 @@
 
 
 focus 40, 0.11
-terrain 0.8
+
+live_loop :name do
+  tick
+  terrain 0.8
+  sleep 2
+end
+
+
+
+
 
 stop
 live_loop :name do

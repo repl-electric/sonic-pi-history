@@ -28,20 +28,10 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
     8.times{tick;
       pp = (ing
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
-        _ _ _ _    _ _ {D1=>:reverb} _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       #pp=_
-      dust_pat(pp){|accent|
-        fuzz = rand(0.05)
-        with_fx (ing :slicer,:krush,:bitcrusher,:echo).look, mix: 0.5, phase: 1/4.0, decay: 2 {
-          dterrain 0.1
-          smp pp, amp: (accent+10.6)*1, attack: 0.0, start: 0.1-fuzz, rate:
-          (knit
-            -0.25,32,-0.25,32,
-            -0.5-fuzz, 1,-0.5,31,
-            -0.25-fuzz,1,-0.25,31).look
-        }
-      }
+      dust_pat(pp)
       s1 = (ing
         _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
         _ 5   _ _   [5] _   5 _   _ _  _ _  5 _  _ _

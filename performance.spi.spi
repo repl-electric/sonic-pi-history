@@ -8,7 +8,7 @@ bitsea_on :A1
 live_loop :name do
   tick
   #smp Mountain[/subkick/,0], amp: 1
-  kick_machine K1, accent: 1
+  kick_machine K1, accent: 0.5
   dterrain 1.1
 #  dviz :alive, rotate: 0.3
   dviz :alive, z: 9.79-rand*10

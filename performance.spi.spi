@@ -1,7 +1,7 @@
 #focus 40, 0.11
 viz :alive, rotate: 0.0
 live_loop :name do
-stop
+  #stop
   tick
   #smp Mountain[/subkick/,0], amp: 0.5
   kick_machine K1, accent: 0.5
@@ -18,8 +18,8 @@ focus
 
 
 live_loop :namez do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  #notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  #notes = (ing :B :D :Fs :A)
   kick_machine K1, accent: 0.25
   dviz breath: 1.0*0.5
 

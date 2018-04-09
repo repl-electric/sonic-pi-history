@@ -36,7 +36,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
             -0.5-fuzz, 1,-0.5,31,
             -0.25-fuzz,1,-0.25,31).look
         }
-        smp pp, amp: (10+accent+(rand*1.1))*1, rate: -2*(knit 1.1,4, 1.0,2).look, pan:
+        smp pp, amp: (10+accent+(rand*1.1)), rate: -2*(knit 1.1,4, 1.0,2).look, pan:
         (ing
           0.25 0.25 -0.25 -0.25  0.25 -0.25
           0.5  0.5  -0.25 -0.25  0.25 -0.5

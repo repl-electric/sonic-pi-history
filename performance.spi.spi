@@ -6,7 +6,9 @@ at{
   }
 }
 
+
 cam0
+bitsea_on :A2
 stop
 
 #viz :cam0, focus: 2.3

@@ -5,8 +5,10 @@ live_loop :name do
   console x
   #logo rand_i(5)
   tick
+  dviz :alive, rotate: 0.5
   dterrain 1.0
   sleep 3.5
+  dviz :alive, rotate: 0.0
   dterrain 0.0
   sleep 0.5
 end

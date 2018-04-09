@@ -14,7 +14,7 @@ live_loop :go do
     8.times{
       tick(:a)
       kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-      breath 0.1
+      breath 0.8
       sleep 1/4.0
     }
   }

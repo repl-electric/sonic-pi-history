@@ -8,7 +8,7 @@ live_loop :name do
   tick
   terrain 1.0+rand*0.01
   viz :alive, rotate: 0.3
-  viz breath: 0.2
+  viz breath: 0.0
   sleep 2
 end
 

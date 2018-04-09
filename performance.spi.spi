@@ -13,8 +13,8 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-      breath 0.8
+      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      breath 0.8 if x
       sleep 1/4.0
     }
   }

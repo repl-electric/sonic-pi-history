@@ -6,7 +6,7 @@ focus 40, 0.11
 
 live_loop :name do
   tick
-  smp Mountain[/subkick/,0], amp: 1
+  #smp Mountain[/subkick/,0], amp: 1
   kick_machine K1, accent: 1
  # dterrain 1.1
 #  dviz :alive, rotate: 0.3
@@ -24,8 +24,8 @@ focus
 
 stop
 live_loop :name do
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  #notes = (ing :B :D :Fs :A)
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  #notes = (ing :B, :D, :Fs, :A,)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
   console x
   #logo rand_i(5)

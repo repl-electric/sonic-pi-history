@@ -2,6 +2,7 @@
 
 #bitsea_on :a2
 #alive rotate: 0.0
+live_loop(:unsyncable) do; sleep 1.0 end
 
 
 live_loop :go do

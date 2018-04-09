@@ -1,7 +1,7 @@
 at{
   8.times{
     tick(:a)
-    kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 2.0
+
     sleep 1/4.0
   }
 }
@@ -9,6 +9,7 @@ at{
 live_loop :go do
   tick
   terrain 0.1
+  kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2.0
   sleep 1
 end
 
@@ -34,7 +35,7 @@ stop
 at{
   8.times{
     tick(:a)
-    kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 2.0
+    kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2.0
     sleep 1/4.0
   }
 }
@@ -54,8 +55,8 @@ unity "/spark", 0.1
 
 stop
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.2
   console x
   #logo rand_i(5)

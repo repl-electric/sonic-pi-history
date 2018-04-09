@@ -1,59 +1,3 @@
-at{
-  8.times{
-    tick(:a)
-
-    sleep 1/4.0
-  }
-}
-
-live_loop :go do
-  tick
-  dterrain 0.1
-#  kick_machine K1, def: 8, accent: 2.0
-  sleep 2
-end
-
-
-cam3
-
-#bitsea_on :A2
-
-stop
-
-#viz :cam0, focus: 2.3
-#unity "/shard", 0.0
-
-
-
-viz :electric, 0.9
-
-stop
-
-
-
-
-at{
-  8.times{
-    tick(:a)
-    kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2.0
-    sleep 1/4.0
-  }
-}
-
-
-stop
-
-viz :cam0, focus: 8.0
-
-bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-bitsea_cc octave: 0.49  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#bitsea_cc formant: 0.46 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-unity "/camera/0",1.0
-unity "/spark", 0.1
-
-
-
-stop
 live_loop :name do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   notes = (ing :B :D :Fs :A)
@@ -72,9 +16,3 @@ end
 
 
 
-
-camend
-
-
-#viz :cam0, focus: 0.0
-#viz :glitch, invert: 0.0

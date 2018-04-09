@@ -30,9 +30,9 @@ live_loop :namez do
 #  viz :alive, zslow: rand*10
 #  sleep 3.5
   #dviz :alive, rotate: 0.0
-  #dterrain 0.0
   #viz :alive, z: 9.79
   sleep 3-0.25
   dviz :alive, rotate: 0.1
+  dterrain 0.1
   sleep 1
 end

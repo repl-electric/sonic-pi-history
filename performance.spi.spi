@@ -1,7 +1,7 @@
 live_loop :name do
-  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
-  notes = (ing :B :D :Fs :A)
-  smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.5
+  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
+  notes = (ing :B, :D, :Fs, :A,)
+  smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
   console x
   #logo rand_i(5)
   tick

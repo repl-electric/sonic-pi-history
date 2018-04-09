@@ -18,7 +18,7 @@ live_loop :go do
     k=k.map{|cell| look(:k) % 64 == 0 ? cell : _}
     focus if k
     kick_machine x=k.look(:k), def: 8, accent: 1
-    dterrain 0.5 if x
+    dterrain 0.6 if x
     sleep 1/8.0
   }
   #sleep 2

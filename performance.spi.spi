@@ -5,8 +5,8 @@ live_loop :go do
   #verb_slice Drip[/effect/].look if spread(1,3).look
   alive light: rand*0.1
   alivecol 0.2
-  8.times{tick(:a)
-    kick_machine x=(ing
+  8.times{tick(:k)
+    s=(ing
       [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
       K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
       K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
@@ -14,7 +14,9 @@ live_loop :go do
       K1 _ _ _       TS[8] _ _ _      K1 _ _ _   _ _ _ _
       K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
       K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
-      K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _).look(:a), def: 8, accent: 1
+      K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _), def: 8, accent: 1
+
+    kick_machine s.look(:k)
     dterrain 0.0 if x
     breath 0.0 if x
     sleep 1/4.0

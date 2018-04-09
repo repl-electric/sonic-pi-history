@@ -1,55 +1,10 @@
-viz :alive, light: 1.0
-#viz :cam0, blur:  1.0
-focus 50, 3.0
-#camend false
-stop
-
-#focus(40, 0.112)
-unity "/alive/intense", 0.7
-
-
-#bitsea_on :a2
-#alive rotate: 0.0
-live_loop(:unsyncable) do; sleep 1.0 end
-
-bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-
-electric
-
-
-qbitsea_cc oct: 0.60
-qbitsea_cc drive: 1.00
-qbitsea_cc charge: 0.50
-qbitsea_cc fm: 1.00
-qbitsea_cc wav: 0.01
-qbitsea_cc wav_amp: 0.30
-qbitsea_cc atk: 0.83
-qbitsea_cc mod: 0.80
-qbitsea_cc motion: 0.24
-qbitsea_cc formant: 0.45
-qbitsea_cc mul: 0.00
-qbitsea_cc bass: 0.27
-
-
-eq lo: 0.00
-eq hi: 0.00
-
-
-#camend
-
-invcol 0.0
-cam4
 live_loop :go do
+  stop
   tick
   bitsea :A2
-#  verb_slice Drip[/effect/].look if spread(1,3).look
+  #verb_slice Drip[/effect/].look if spread(1,3).look
   alive light: rand*0.1
-
-
   alivecol 0.2
-
   at{
     8.times{
       tick(:a)

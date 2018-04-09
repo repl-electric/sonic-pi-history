@@ -4,7 +4,7 @@
 bitsea_on :A1
 
 #focus 40, 0.11
-viz :alive rotate: 0.1
+viz :alive, rotate: 0.0
 live_loop :name do
   tick
   #smp Mountain[/subkick/,0], amp: 1

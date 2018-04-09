@@ -16,3 +16,6 @@ live_loop :name do
 end
 focus 4,0.1
 invcol 0.0
+
+
+ viz :alive, zslow: rand*10

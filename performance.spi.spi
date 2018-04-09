@@ -9,7 +9,9 @@ live_loop :name do
   dterrain 1.0+rand*0.01
   dviz :alive, rotate: 0.3
   dviz breath: 0.05
-  sleep 2
+  sleep 1
+  dviz breath: 0.0
+  sleep 1
 end
 
 

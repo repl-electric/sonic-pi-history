@@ -6,7 +6,7 @@ focus 40, 0.11
 
 live_loop :name do
   tick
-  terrain 0.8
+  terrain 0.8+rand
   sleep 2
 end
 

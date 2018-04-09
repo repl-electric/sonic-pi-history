@@ -1,3 +1,6 @@
+viz :alive, light: 8.0
+stop
+
 #focus(40, 0.112)
 unity "/alive/intense", 0.7
 
@@ -30,7 +33,7 @@ qbitsea_cc bass: 0.27
 eq lo: 0.00
 eq hi: 0.00
 
-viz :alive, light: 8.0
+
 #camend
 
 invcol 0.0

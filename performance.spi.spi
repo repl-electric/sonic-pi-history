@@ -30,7 +30,7 @@ qbitsea_cc bass: 0.27
 eq lo: 0.00
 eq hi: 0.00
 
-viz lights: 3.0
+viz :alive, light: 3.0
 #camend
 
 invcol 0.0

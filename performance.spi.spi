@@ -1,5 +1,5 @@
 #focus(40, 0.112)
-unity "/alive/intense", 1.0
+unity "/alive/intense", 0.1
 
 
 #bitsea_on :a2
@@ -41,7 +41,7 @@ live_loop :go do
   at{
     8.times{
       tick(:a)
-      kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+      kick_machine x=(ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
       dterrain 0.0 if x
       breath 0.0 if x
       sleep 1/4.0
@@ -54,14 +54,14 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp = (ing
-        _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,     _, _, _, _,    _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
         ).look
       #pp=_
 
       dust_pat(pp){|accent|
         fuzz = rand(0.05)
-        with_fx (ing :slicer,:krush,:bitcrusher,:echo).tick(:pfx), mix: 0.5, phase: 1/4.0, decay: 2 {
+        with_fx (ing :slicer, :krush, :bitcrusher, :echo,).tick(:pfx), mix: 0.5, phase: 1/4.0, decay: 2 {
           dterrain 0.1
           smp pp, amp: accent+1.6, attack: 0.0, start: 0.1-fuzz, rate:
           (knit
@@ -71,36 +71,36 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
         }
         smp pp, amp: (3+accent+(rand*0.1))*1, rate: -2*(knit 1.1,4, 1.0,2).look, pan:
         (ing
-          0.25 0.25 -0.25 -0.25  0.25 -0.25
-          0.5  0.5  -0.25 -0.25  0.25 -0.5
-          0.5  0.5  -0.25 -0.25  0.25 -0.5
+          0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
+          0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
+          0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
           ).look, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
       }
       s1 = (ing
-        _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   5 _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   _ _   5 _  _ _  5 _  _ _
+        _, 5,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   5, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   _, _,   5, _,  _, _,  5, _,  _, _,
        )
       s2 = (ing
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   5 _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   5, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
         )
       s3 = (ing
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
         )
       s=(knit s2,16*4,s3,16*4, s1,16*4).look
       #s=_
   #    mt s.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
-        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
+        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
+        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
         ).look
       accent=110
       s=_
@@ -108,7 +108,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
  #       mt s, accent=70, 75
       end
       if (s=(ing
-            [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
+            [5], _, 5, _, 5, _, 5, _,   5, _, 5, _, 5, [5], 5, _,
             ).look)
         s=_
 #        mt s,accent=(line 85,127,64).look, 120 if s

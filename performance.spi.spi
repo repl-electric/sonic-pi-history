@@ -20,6 +20,7 @@ focus
 live_loop :namez do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   #notes = (ing :B :D :Fs :A)
+  kick_machine K1, accent: 0.5
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
   sleep 0.25
   console x

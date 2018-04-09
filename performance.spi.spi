@@ -12,4 +12,4 @@ live_loop :name do
   dterrain 0.0
   sleep 0.5
 end
-focus, 1,0.1
+focus 2,0.1

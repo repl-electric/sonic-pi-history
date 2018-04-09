@@ -2,13 +2,13 @@
 #unity "/alive/zslow", 10.0*rand
 
 
-focus 40, 0.04
+focus 40, 0.05
 
 
 stop
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  #notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  #notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
   console x
   #logo rand_i(5)

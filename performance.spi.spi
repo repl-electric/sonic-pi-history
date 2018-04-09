@@ -6,8 +6,8 @@ focus 40, 0.11
 
 live_loop :name do
   tick
-  dterrain 1.0
   dviz :alive, rotate: 0.3
+  dviz :alive, z: 9.79
   dviz breath: 0.05
   sleep 1
   dviz breath: 0.0

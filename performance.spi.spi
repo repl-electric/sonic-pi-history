@@ -1,12 +1,18 @@
 #focus(40, 0.112)
 
 #bitsea_on :a2
-alive rotate: 0.0
-
+#alive rotate: 0.0
 
 
 live_loop :go do
   tick
+
+
+
+  verb_slice Drip[/effect/].look if spread(1,3).look
+
+
+
 
   sleep 1
 end

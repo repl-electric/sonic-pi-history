@@ -17,7 +17,6 @@ end
 focus
 
 
-
 live_loop :namez do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   #notes = (ing :B :D :Fs :A)

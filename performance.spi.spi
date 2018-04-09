@@ -30,12 +30,13 @@ live_loop :namez do
   tick
   dviz :alive, rotate: 0.8
   dterrain 0.2
+  sleep 0.25
+  dviz breath: 0.0
 #  viz :alive, zslow: rand*10
 #  sleep 3.5
   #dviz :alive, rotate: 0.0
   #viz :alive, z: 9.79
-  sleep 3-0.25
-  dviz breath: 0.0
+  sleep 3-0.25-0.25
   dviz :alive, rotate: 0.1
   dterrain 0.1
   sleep 1

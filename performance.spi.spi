@@ -28,7 +28,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
     8.times{tick;
       pp = (ing
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
-        _ _ _ _    _ _ {D1=>:krush} _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ {D1=>:reverb} _    _ _ _ _   _ _ _ _
         ).look
       #pp=_
       dust_pat(pp){|accent|

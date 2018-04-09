@@ -15,7 +15,7 @@ live_loop :go do
       K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
       K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
       K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _)
-    k=k.map{|cell| look % 64 == 0 ? s : _}
+    k=k.map{|cell| look % 64 == 0 ? cell : _}
     kick_machine x=k.look(:k), def: 8, accent: 1
     dterrain 0.0 if x
     breath 0.0 if x

@@ -33,6 +33,6 @@ live_loop :namez do
   #dterrain 0.0
   #viz :alive, z: 9.79
   sleep 3
-  dviz :alive, rotate: 0.0
+  dviz :alive, rotate: 0.01
   sleep 1
 end

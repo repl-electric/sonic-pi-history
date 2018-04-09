@@ -77,7 +77,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
             [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
             ).look)
         s=_
-#        mt s,accent=(line 85,127,64).look, 120 if s
+        mt s,accent=(line 85,127,64).look, 120 if s
       end
       sleep 1/8.0
     }

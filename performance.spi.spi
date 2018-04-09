@@ -1,11 +1,7 @@
-#terrain 1.0
-#unity "/alive/zslow", 10.0*rand
-
-#bitsea_on :A1
-
 #focus 40, 0.11
 viz :alive, rotate: 0.0
 live_loop :name do
+stop
   tick
   #smp Mountain[/subkick/,0], amp: 0.5
   kick_machine K1, accent: 0.5
@@ -22,9 +18,7 @@ focus
 
 
 
-
-stop
-live_loop :name do
+live_loop :namez do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   #notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
@@ -33,12 +27,10 @@ live_loop :name do
   tick
 #  dviz :alive, rotate: 0.8
   #dterrain 1.0
-  viz :alive, zslow: rand*10
+#  viz :alive, zslow: rand*10
 #  sleep 3.5
   #dviz :alive, rotate: 0.0
   #dterrain 0.0
   #viz :alive, z: 9.79
   sleep 0.5
 end
-#focus 4,0.1
-#invcol 0.0

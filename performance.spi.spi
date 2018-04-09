@@ -21,7 +21,7 @@ live_loop :namez do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   #notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
-  sleep 1
+  sleep 0.25
   console x
   #logo rand_i(5)
   tick
@@ -32,7 +32,7 @@ live_loop :namez do
   #dviz :alive, rotate: 0.0
   #dterrain 0.0
   #viz :alive, z: 9.79
-  sleep 3
+  sleep 3-0.25
   dviz :alive, rotate: 0.1
   sleep 1
 end

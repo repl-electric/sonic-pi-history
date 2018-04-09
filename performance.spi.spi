@@ -23,7 +23,7 @@ live_loop :go do
       tick(:a)
       kick_machine x=(ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
       dterrain 0.0 if x
-      breath 0.1 if x
+      breath 0.0 if x
       sleep 1/4.0
     }
   }

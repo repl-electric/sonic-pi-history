@@ -13,4 +13,4 @@ live_loop :name do
   sleep 0.5
 end
 focus 4,0.1
-invcol
+invcol 1.0

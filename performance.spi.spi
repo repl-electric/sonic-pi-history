@@ -2,7 +2,7 @@
 #unity "/alive/zslow", 10.0*rand
 
 
-#focus 40, 0.11
+focus 40, 0.11
 
 live_loop :name do
   tick

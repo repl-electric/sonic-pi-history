@@ -1,6 +1,6 @@
 live_loop :name do
-  notes = (ing :D, :E, :Fs, :Gs,  :A, :B, :Cs,)
-  #notes = (ing :B, :D, :Fs, :A,)
+  notes = (ing :D :E :Fs :Gs, :A :B :Cs)
+  #notes = (ing :B :D :Fs :A)
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.8
   console x
   #logo rand_i(5)
@@ -10,6 +10,8 @@ live_loop :name do
   sleep 3.5
   dviz :alive, rotate: 0.0
   #dterrain 0.0
+  viz :alive, z: 9.79
+
   sleep 0.5
 end
 focus 4,0.1

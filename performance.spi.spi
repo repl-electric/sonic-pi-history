@@ -1,1 +1,12 @@
-focus(40, 0.112)
+#focus(40, 0.112)
+
+bitsea_on :a2
+
+
+
+
+live_loop :go do
+  tick
+
+  sleep 1
+end

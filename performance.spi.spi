@@ -3,7 +3,7 @@
 
 
 focus 40, 0.11
-
+terrain 1.0
 
 stop
 live_loop :name do

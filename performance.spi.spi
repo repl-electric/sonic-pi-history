@@ -1,5 +1,5 @@
-viz :alive, light: 0.0
-camend false
+viz :alive, light: 10.0
+#camend false
 stop
 
 #focus(40, 0.112)

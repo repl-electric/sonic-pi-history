@@ -34,7 +34,7 @@ live_loop :go do
   alive light: rand*0.1
 
 
-  alivecol 0.1
+  alivecol 0.15
 
   at{
     8.times{

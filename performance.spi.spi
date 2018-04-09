@@ -25,7 +25,7 @@ live_loop :namez do
   console x
   #logo rand_i(5)
   tick
-#  dviz :alive, rotate: 0.8
+  dviz :alive, rotate: 0.8
   #dterrain 1.0
 #  viz :alive, zslow: rand*10
 #  sleep 3.5

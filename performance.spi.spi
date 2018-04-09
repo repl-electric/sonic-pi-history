@@ -33,7 +33,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
       ).look
       #pp=_
       dterrain 0.1 if pp
-      smp_dust(pp, rate: rand(0.05))
+      smp_dust(pp, rate: rand(0.05), amp: 1.1)
       s1 = (ing
         _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
         _ 5   _ _   [5] _   5 _   _ _  _ _  5 _  _ _

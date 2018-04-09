@@ -11,7 +11,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric
 
 invcol 0.0
-cam1
+cam2
 live_loop :go do
   tick
   bitsea :A2

@@ -1,7 +1,7 @@
 #terrain 1.0
 #unity "/alive/zslow", 10.0*rand
 
-bitsea_on :A1
+#bitsea_on :A1
 
 #focus 40, 0.11
 viz :alive, rotate: 0.0

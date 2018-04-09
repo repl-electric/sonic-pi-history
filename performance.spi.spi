@@ -7,7 +7,7 @@
 viz :alive, rotate: 0.0
 live_loop :name do
   tick
-  smp Mountain[/subkick/,0], amp: 1
+  smp Mountain[/subkick/,0], amp: 0.5
   #kick_machine K1, accent: 0.5
   dterrain 1.1
 #  dviz :alive, rotate: 0.3

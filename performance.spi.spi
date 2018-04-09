@@ -9,7 +9,7 @@ at{
 live_loop :go do
   tick
   terrain 0.1
-  kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 2.0
+  kick_machine K1, def: 8, accent: 2.0
   sleep 1
 end
 

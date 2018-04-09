@@ -21,7 +21,7 @@ live_loop :namez do
   notes = (ing :D :E :Fs :Gs, :A :B :Cs)
   #notes = (ing :B :D :Fs :A)
   kick_machine K1, accent: 0.25
-  dviz breath: 1.0
+  dviz breath: 1.0*0.2
 
   smp x=Mountain[/bowed notes/,/#{notes.map{|s|s.to_s.gsub("s","#")}.join "_|"}/].shuffle.look, amp: 0.5
   sleep 0.25

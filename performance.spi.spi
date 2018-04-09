@@ -41,7 +41,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
           0.25 0.25 -0.25 -0.25  0.25 -0.25
           0.5  0.5  -0.25 -0.25  0.25 -0.5
           0.5  0.5  -0.25 -0.25  0.25 -0.5
-          ).look, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
+          ).look, cutoff: (ramp 100,127,256*4).tick(:aaashoo2t)
       }
       s1 = (ing
         _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _

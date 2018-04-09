@@ -15,7 +15,7 @@ live_loop :name do
   sleep 0.125
   dterrain 0.0
   dviz breath: 0.0
-  sleep 4
+  sleep 1
 end
 
 

@@ -19,4 +19,4 @@ end
 #invcol 0.0
 
 
- viz :alive, zslow: rand*10
+unity "/alive/zslow", 10.0

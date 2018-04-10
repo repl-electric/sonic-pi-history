@@ -3,7 +3,7 @@ cam3 true
 
 live_loop :name do
   tick
-  callstack (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look, sus:2
+  callstack (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look, sus: 1
   operator (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look
   #viz :sea, noise: 10.0-rand*0.005
   #viz :sea, height: look%32*0.025

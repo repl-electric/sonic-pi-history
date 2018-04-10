@@ -1,7 +1,7 @@
 #alive spike: 1.0
 #viz breath: 0.0
 #focus
-stop
+#stop
 live_loop :go do
 #  stop
   tick

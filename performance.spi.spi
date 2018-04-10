@@ -25,7 +25,7 @@ qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
 
-alive gravity: 1.0 #FUN
+#alive gravity: 1.0 #FUN
 
 live_loop :go do
   #  stop
@@ -35,7 +35,7 @@ live_loop :go do
 #    [:a2  :cs5 :e3]        Zz
  #   [:fs2 :a4 :cs4]       Zz
     [:a2  :cs5  :e4]
-    [:d3  :fs4 :a3 :e4]   Zz
+    [:d2  :fs4 :a3 :e4]   Zz
  #   [:e2  :gs4 :b3]
  #   [:a2  :cs5  :e3 ]  Zz
 #    [:fs4 :a4  :cs4]       Zz

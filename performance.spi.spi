@@ -117,7 +117,7 @@ live_loop :pi do
         sleep 0.25/2.0
         corrupt :e5, mode: 2 if x % 8
         sleep 0.25/2.0
-        corrupt :e4, mode: 0
+        corrupt :e4, mode: 0 if x % 16
         sleep 0.5
       }
       stop

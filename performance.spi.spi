@@ -13,7 +13,7 @@ live_loop :go do
   #dcam1
   score=(ing
     [:b2 :d4 :fs3]  [:gs5]
-    [:fs2 :a4 :cs3] [:a5]
+    [:fs2 :a4 :cs3] [:a4]
     ).look
   #invcol 1.0
   callstack score[0], 60

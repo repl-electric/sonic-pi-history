@@ -13,9 +13,9 @@ bitsea_cc octave: 0.57  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #cue :waitforit
 alive thick: 0.02
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.35
+qbitsea_cc drive: 1.00
 qbitsea_cc charge: 0.53
-qbitsea_cc fm: 0.30
+qbitsea_cc fm: 1.00
 qbitsea_cc wav: 0.90
 qbitsea_cc wav_amp: 0.50
 qbitsea_cc atk: 0.00
@@ -24,6 +24,10 @@ qbitsea_cc motion: 0.24
 qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
+
+
+camend
+stop
 
 #alive gravity: 1.0 #FUN
 

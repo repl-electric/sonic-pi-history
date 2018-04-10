@@ -9,23 +9,9 @@ live_loop :name do
   #viz :sea, height: look%32*0.025
   #viz "/alive/reset", 1.0
   viz :alive, height: -1.0
-
-  dviz :alive, deform: 8.2
-  dviz :alive, deformrate: 0.1
   #terrain
   sleep 1/2.0
   viz :alive, height: 0.0
-
-  dviz :alive, deform: 0.9
-  dviz :alive, deformrate: 0.0
-  at{
-    8.times{
-      tick(:a)
-#      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
-      sleep 1/4.0
-    }
-  }
-
-sleep 2.0
+  sleep 2.0
 
 end

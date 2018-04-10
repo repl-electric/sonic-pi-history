@@ -1,6 +1,6 @@
 #cam0
 #cam3 true
-
+terrain 0.0
 live_loop :name do
   tick
   callstack (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look,127, sus: 2

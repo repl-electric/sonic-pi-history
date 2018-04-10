@@ -37,7 +37,7 @@ live_loop :go do
     k=(ing
       [KT[1]] _ _ _   K1 _ T1 _
       KT[1] _ _ _     K1 _ T1 _
-      [KT[1]] _ _ _   K2 _ T1 _
+      KT[1] _ _ _   K2 _ T1 _
       KT[1] _ _ _     K2 _ T1 _
 
 

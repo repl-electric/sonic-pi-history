@@ -10,4 +10,14 @@ live_loop :name do
 end
 
 
+
+def linear_map(x0 x1 y0 y1 x)
+  dydx = (y1 - y0) / (x1- x0)
+  dx = (x- x0)
+  (y0 + (dydx * dx))
+end
 puts [:gs4, :b3, :fs3, :d4, :cs4, :a3, :e4, :A4, :A4, :a4, :A4, :A4].map{|cell| note(cell)}.sort
+
+min=54
+max=69
+puts linear_map(54, 0.0, 69,1.0, 56)

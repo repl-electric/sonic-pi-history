@@ -22,6 +22,9 @@ def camlogo!
   viz :alive, length: 0.4
   viz :alive, thick: 0.05
   viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
+  viz :sea, color: 0.0
+  viz :sea, size: 1.0
+
 end
 
 

@@ -77,7 +77,7 @@ end
 
 #FIX SEA CAM3
 #terrain 0.0
-viz :sea, noise: 0.01
+viz :sea, noise: 0.001
 live_loop :pi, sync: :sshh do
   tick
 #  zero_x

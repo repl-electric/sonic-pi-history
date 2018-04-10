@@ -1,2 +1,7 @@
 cam3
+
+live_loop :name do
+  tick
 callstack :A4
+  sleep 2
+end

@@ -10,7 +10,8 @@ bitsea_on :A2
 
 live_loop :op  do
   tick
-#  stop
+  #  stop
+  alive rotate: 0.0
   operator :D4
   callstack :D4
 

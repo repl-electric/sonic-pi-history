@@ -1,6 +1,6 @@
 cam4 true
-
-
+unity "/alive/length",0.06
+stop
 
 live_loop :op  do
   tick

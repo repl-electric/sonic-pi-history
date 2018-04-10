@@ -35,7 +35,7 @@ live_loop :go do
 
 
   pf= 1.8
-    i=(method :callstack)
+  i=(method :operator)
   i.call(score[0], 60*pf, sus: 4)
   i.call(score[1], 50*pf, sus: 4)
   i.call(score[2], 55*pf, sus: 4)

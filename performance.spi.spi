@@ -97,7 +97,7 @@ live_loop :glitch, sync: :go do
     with_swing(0.01) do
       with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
         dviz :glitch, color: (line 0.0, 1.0, 8).look
-        dviz, :sea, height: rand
+        dviz :sea, height: rand
         smp p, amp: 3*accent, rate: r, attack: attack
       }
     end

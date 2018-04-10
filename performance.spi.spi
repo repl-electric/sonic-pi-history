@@ -25,8 +25,11 @@ qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
 
+eq lo: 0.62
+eq hi: 0.85
 
-camend
+
+cam4
 stop
 
 #alive gravity: 1.0 #FUN

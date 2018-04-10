@@ -136,7 +136,7 @@ live_loop :pi do
     operator n, 70
     callstack n, 10+(ing 70 65 55).look * 1.0, sus: 4/2.0
     if score
-      delectric 5#0 if note == :d4
+     # delectric 5#0 if note == :d4
     end
     sleep 1/2.0
 

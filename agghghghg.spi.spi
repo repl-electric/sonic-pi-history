@@ -6,5 +6,5 @@ live_loop :name do
   viz :sea, noise: 10.0-rand*0.005
   viz :sea, height: look%32*0.025
 
-  sleep 1
+  sleep 2
 end

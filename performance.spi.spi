@@ -15,8 +15,10 @@ def camlogo
   unity "/glitch/block",0.03
   unity "/glitch/slice",0.0
   viz :alive, color: 0.0
-
 end
+
+
+viz :alive, length: 0.4
 
 camlogo
 

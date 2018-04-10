@@ -1,6 +1,5 @@
-  unity "/cam0/focus", 0.1
-  unity "/cam0/aperture", 0.1
   unity "/cam0/blur", 1.0
+  focus
 
 #stop
 stop

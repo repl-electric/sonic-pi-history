@@ -1,6 +1,6 @@
     unity "/glitch/block",0.0
     unity "/glitch/slice",0.0
-
+stop
 xcam4 true
 stop
 live_loop :pi do

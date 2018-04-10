@@ -16,7 +16,6 @@ live_loop :light_source, sync: :go do
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       smp_dust pp
-
     }
   end
 end

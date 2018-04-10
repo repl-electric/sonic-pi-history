@@ -2,7 +2,7 @@ live_loop :pi do
   tick
   dcam3
 
-  operator,10, :d4
+  operator :d4, 100
   callstack :d4
 
   sleep 1/2.0

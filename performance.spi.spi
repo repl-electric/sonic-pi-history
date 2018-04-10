@@ -6,7 +6,12 @@ def zinit!
   unity "/logo/person", 0.0
 end
 
-def camlogo!(s=true)
+def camlogo!(r=false,s=true)
+  if r
+    unity "/glitch/invert",0.0
+  else
+    unity "/glitch/invert",1.0
+  end
   if s
     unity "/shard", 1.0
     unity "/logo/person", 0.0

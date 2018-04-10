@@ -10,6 +10,6 @@ live_loop :name do
   #viz "/alive/reset", 1.0
   dviz :alive, deform: 1.1
   dviz :alive, deformrate: 8.2
-  terrain
+  #terrain
   sleep 1
 end

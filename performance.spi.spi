@@ -10,6 +10,7 @@ invcol 0.0
 
 live_loop :go do
   tick
+  dcam1
   score=(ing
     [:A2 :Cs4 :e3]
     ).look

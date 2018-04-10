@@ -10,4 +10,4 @@ live_loop :name do
 end
 
 
-puts [:gs4, :b3, :fs3, :d4, :cs4, _, :a3, _, :e4, _, :A4, :A4, :a4, :A4, :A4].map{|cell| note(cell)}
+puts [:gs4, :b3, :fs3, :d4, :cs4, :a3, :e4, :A4, :A4, :a4, :A4, :A4].map{|cell| note(cell)}

@@ -88,6 +88,8 @@ live_loop :pi, sync: :sshh do
     score = (ing :D4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :a4 :A4 :A4).look
     operator score, 70
     callstack score,10+(ing 70 65 55).look * 1.0, sus: 4/2.0
+    dviz :sea, noise: 0.201+rand*0.001
+
     sleep 1/2.0
     sleep 1/2.0
     sleep 1/4.0

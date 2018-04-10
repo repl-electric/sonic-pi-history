@@ -17,6 +17,8 @@ def xcam4(f=false)
     #viz :alive, deform: 300.0
   end
 end
+    unity "/glitch/block",0.03
+    unity "/glitch/slice",0.0
 
 xcam4 true
 stop

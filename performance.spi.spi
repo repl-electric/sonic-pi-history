@@ -10,6 +10,8 @@ def camlogo
   unity "/logo/person", 0.0
   unity "/logo/person", 1.0
   unity "/camera/4",1.0
+  unity "/alive/rotate", 0.0
+
 end
 
 camlogo

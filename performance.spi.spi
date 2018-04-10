@@ -35,7 +35,7 @@ def camlogo!(s=true)
     viz :sea, size: 0.0
     viz "/sea/spacex", 0.0
     viz "/sea/height", 0.0
-    unity "/sea/noise", 0.0
+    viz "/sea/noise", 0.0
   end
 end
 

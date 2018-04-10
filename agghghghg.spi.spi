@@ -3,8 +3,8 @@
 
 live_loop :name do
   tick
-  callstack (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look,127, sus: 2
-  operator (ing :D4 :Cs4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 ).look
+  callstack (ing :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, ).look,127, sus: 2
+  operator (ing :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, ).look
   #viz :sea, noise: 10.0-rand*0.005
   #viz :sea, height: look%32*0.025
   #viz "/alive/reset", 1.0
@@ -12,12 +12,12 @@ live_loop :name do
   dviz :alive, deformrate: 0.1
   #terrain
   sleep 1/2.0
-  dviz :alive, deform: 10.1
+  dviz :alive, deform: 0.9
   dviz :alive, deformrate: 0.0
   at{
     8.times{
       tick(:a)
-#      kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+#      kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
       sleep 1/4.0
     }
   }

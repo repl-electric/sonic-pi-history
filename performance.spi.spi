@@ -60,8 +60,6 @@ live_loop :go do
       # K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _
       )
 
-    puts k.look(:k)
-
     #k=k.map{|cell| look(:k) % 32 == 0 ? cell : _}
     #focus if k
     kick_machine x=k.look(:k), def: 8, accent: 2
@@ -166,8 +164,8 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
       ).look
       #pp=_
-      dterrain 0.5 if pp
-      smp_dust(pp, rate: rand(0.025), amp: 1.0)
+ #     dterrain 0.5 if pp
+#      smp_dust(pp, rate: rand(0.025), amp: 1.0)
       s1 = (ing
         _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
         _ 5   _ _   [5] _   5 _   _ _  _ _  5 _  _ _

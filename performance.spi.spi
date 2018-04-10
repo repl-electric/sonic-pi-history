@@ -81,7 +81,7 @@ end
 #terrain 0.0
 viz :sea, noise: 10.001
 viz :sea, spacex: 0.201
-cam3 10
+#cam3 10
 #cam3
 live_loop :pi do
   tick

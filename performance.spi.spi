@@ -115,7 +115,7 @@ live_loop :pi do
     if n == :d4
       64.times{|x|
         sleep 0.25/2.0
-        corrupt :e5,10, mode: 2 if x % 8
+        corrupt :e5,10, mode: 2, sus: 0.125 if x % 8
         sleep 0.25/2.0
         corrupt :e4, mode: 0 if x % 16
         sleep 0.5

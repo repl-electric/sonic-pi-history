@@ -116,7 +116,7 @@ live_loop :pi do
       64.times{
         corrupt :e5, mode: 2
         corrupt :e4, mode: 0
-        sleep 0.25
+        sleep 0.5
       }
     end
 

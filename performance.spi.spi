@@ -1,3 +1,5 @@
+cam4
+stop
 live_loop :pi do
   tick
   #dcam3

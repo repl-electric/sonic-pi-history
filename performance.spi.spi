@@ -1,4 +1,4 @@
-focus 10, 0.1
+focus 1, 0.1
 #stop
 stop
 live_loop :go do

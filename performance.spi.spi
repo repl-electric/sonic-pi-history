@@ -79,7 +79,7 @@ end
 live_loop :pi, sync: :sshh do
   tick
   zero_x
-  score = (ing :D4 :cs4 :E4 :B2 :Fs2 :A2 :a2 ).look
+  score = (ing :D4 :cs4 :E4 :B2 :Fs2 :A2 :a4 :A4 :A4 ).look
     operator score[0], 70
     callstack score[0], 70
 

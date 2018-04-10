@@ -83,7 +83,7 @@ viz :sea, noise: 10.001
 viz :sea, spacex: 0.201
 cam3 10
 #cam3
-live_loop :pi, sync: :sshh do
+live_loop :pi do
   tick
   #  zero_x
   with_bpm 63.5 do

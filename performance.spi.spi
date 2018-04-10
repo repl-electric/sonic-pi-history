@@ -9,7 +9,7 @@ invcol 0.0
 #electric
 #viz :alive, height: 0.0
 #terrain 0.2
-$height=0.1
+$height=0.2
 
 live_loop :go do
   tick

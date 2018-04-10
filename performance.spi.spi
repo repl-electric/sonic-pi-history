@@ -34,7 +34,7 @@ def camlogo!(s=true)
     viz :alive, length: 0.0
     viz :alive, thick: 0.0
     viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
-    viz :sea, color: 0.0, size: 0.4, spacex: 0.0, height: 0.0, noise: 0.0
+    viz :sea, color: 0.0, size: 0.5, spacex: 0.0, height: 0.0, noise: 0.0
   end
 end
 

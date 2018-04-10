@@ -12,7 +12,7 @@ live_loop :go do
   tick
   #dcam1
   score=(ing
-    [:b2 :d4 :fs3]  [:gs5]
+    [:b2 :d4 :fs3]  [:e4]
     [:fs2 :a4 :cs3] [:a4]
     ).look
   #invcol 1.0

@@ -82,8 +82,8 @@ end
 
 #FIX SEA CAM3
 #terrain 0.0
-viz :sea, noise: 10.001
-viz :sea, spacex: 0.201
+#viz :sea, noise: 10.001
+#viz :sea, spacex: 0.201
 #cam3 10
 #crashcam3 0.4
 live_loop :pi do

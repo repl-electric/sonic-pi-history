@@ -10,4 +10,4 @@ live_loop :name do
 end
 
 
-puts [:gs4, :b3, :fs3, :d4, :cs4, :a3, :e4, :A4, :A4, :a4, :A4, :A4].map{|cell| note(cell)}.sort
+puts [:gs4, :b3, :fs3, :d4, :cs4, :a3, :e4, :A4, :A4, :a4, :A4, :A4].map{|cell| note(cell)-54}.sort

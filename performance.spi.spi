@@ -13,40 +13,40 @@ bitsea_cc octave: 0.57  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #cue :waitforit
 alive thick: 0.02
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.28
-qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.24
-qbitsea_cc wav: 0.71
-qbitsea_cc wav_amp: 0.30
+qbitsea_cc drive: 0.35
+qbitsea_cc charge: 0.53
+qbitsea_cc fm: 0.30
+qbitsea_cc wav: 0.90
+qbitsea_cc wav_amp: 0.50
 qbitsea_cc atk: 0.00
 qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.24
 qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
+alive gravity: 0.0 #FUN
 
 live_loop :go do
   #  stop
   tick
   #dcam1
   score=(ing
-#    [:a2  :cs5 :e3]        Zz
- #   [:fs2 :a4 :cs4]       Zz
-    [:a2  :cs5  :e4]
-    [:d3  :fs4 :a3 :e4]   Zz
- #   [:e2  :gs4 :b3]
- #   [:a2  :cs5  :e3 ]  Zz
-#    [:fs4 :a4  :cs4]       Zz
+#,    [:a2,  :cs5, :e3],        Zz,
+ #,   [:fs2, :a4, :cs4],       Zz,
+    [:a2,  :cs5,  :e4],
+    [:d3,  :fs4, :a3, :e4],   Zz,
+ #,   [:e2,  :gs4, :b3],
+ #,   [:a2,  :cs5,  :e3, ],  Zz,
+#,    [:fs4, :a4,  :cs4],       Zz,
 
     ).look
   dcam4
   #invcol 1.0
   #callstack score[0], 60
   score.each_tick(:in){|n|
-    qbitsea n,2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n,2.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   whitespace score[-1],1, sus: 12
-
   pf= 1.8
   i=(method :operator)
   at{
@@ -86,12 +86,12 @@ live_loop :go do
   alivecol 0.2
   16.times{tick(:k);
     k=(ing
-       K1 _ _ _  _ _ _ _
+       K1, _, _, _,  _, _, _, _,
 
-      # [KT[1]] _ _ _  _ _ _ _          K3 _ _ _   _ _ _ T1
-      # K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
-      # K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
-      # K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _
+      #, [KT[1]], _, _, _,  _, _, _, _,          K3, _, _, _,   _, _, _, T1,
+      #, K1, _, _, _,       _, _, _, _,          K3, _, _, _,   _, _, _, T1,
+      #, K1, _, _, _,       %l{TC[6]}, _, _, _,  K3, _, _, _,   _, _, _, T1,
+      #, K1, _, _, _,       _, _, _, _,          K1, _, %e{TC[6]}, _,   _, _, [F1, 0.99], _,
       )
 
     #k=k.map{|cell| look(:k) % 32 == 0 ? cell : _}
@@ -121,12 +121,12 @@ live_loop :pi do
   #  zero_x
   with_bpm 63.49 do
     score = (ing
-      :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :a4 :A4 :A4
-      :d4 :cs4 _ :a3 _ :b3 _ :A4 :A4 :a4 :fs4 :A4
+      :d4, :cs4, _, :a3, _, :e4, _, :A4, :A4, :a4, :A4, :A4,
+      :d4, :cs4, _, :a3, _, :b3, _, :A4, :A4, :a4, :fs4, :A4,
       )
     n = score.look
     operator n, 70
-    callstack n, 10+(ing 70 65 55).look * 1.0, sus: 4/2.0
+    callstack n, 10+(ing 70, 65, 55,).look * 1.0, sus: 4/2.0
     if score
       dviz :sea, noise: 10.0-rand*0.005
       dviz :sea, height: look%32*0.025
@@ -174,27 +174,27 @@ live_loop :glitch, sync: :go do
   tick
   sync :waitforit
   p=(ing
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    [TS[49]] _ _ TS[12]    _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    [TS[49]], _, _, TS[12],    _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TT[49] _ _ TS[12]      _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TT[49], _, _, TS[12],      _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2 0.2 0.3 0.5).look
+  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)
@@ -231,37 +231,37 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
     verb_slice Drip[/effect/].look,amp: 0.1 if spread(1,3).look
     8.times{tick;
       pp = (ing
-        _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,     _, _, _, _,    _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
       ).look
       #pp=_
  #     dterrain 0.5 if pp
 #      smp_dust(pp, rate: rand(0.025), amp: 1.0)
       s1 = (ing
-        _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   5 _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ 5   _ _   [5] _   _ _   5 _  _ _  5 _  _ _
+        _, 5,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   5, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, 5,   _, _,   [5], _,   _, _,   5, _,  _, _,  5, _,  _, _,
        )
       s2 = (ing
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   5 _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _   _ _  _ _  5 _  _ _
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   5, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,   _, _,  _, _,  5, _,  _, _,
         )
       s3 = (ing
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
-        _ _   _ _   [5] _   _ _  5  _  _ _  5 _  _ _
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
+        _, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
         )
       s=(knit s2,16*4,s3,16*4, s1,16*4).look
       #s=_
       #mt s.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
-        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
+        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
+        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
         ).look
       accent=110
       #s=_
@@ -269,7 +269,7 @@ live_loop :By_the_light_of_the_terminal, sync: :go do
        # mt s, accent=120, 127
       end
       if (s=(ing
-            [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
+            [5], _, 5, _, 5, _, 5, _,   5, _, 5, _, 5, [5], 5, _,
             ).look)
         s=_
         #mt s,accent=(line 85,127,64).look, 120 if s

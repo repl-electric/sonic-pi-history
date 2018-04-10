@@ -1,6 +1,9 @@
 cam0
-unity "/alive/length",0.15
+#unity "/alive/length",0.15
+bitsea_on :A2
 stop
+
+
 
 live_loop :op  do
   tick

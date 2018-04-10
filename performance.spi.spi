@@ -101,7 +101,7 @@ live_loop :glitch, sync: :go do
 at{
         dviz :sea, noise: rand
           sleep 0.125
-          dviz :sea, noise: 0
+          dviz :sea, noise: 0.001
 
           }
         smp p, amp: 3*accent, rate: r, attack: attack

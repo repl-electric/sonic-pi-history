@@ -19,6 +19,7 @@ live_loop :go do
     focus if k
     kick_machine x=k.look(:k), def: 8, accent: 1
     dterrain 2.5 if x
+    electric 20
     sleep 1/8.0
   }
   #sleep 2

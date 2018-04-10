@@ -26,20 +26,19 @@ live_loop :go do
       exception score[0], atk: 0.01
       sleep 1/8.0*3
       exception score[0], atk: 0.01
-
       }
   end
 
   16.times{tick(:k)
     kick_machine x=(ing
       [KT[1]] _ _ _   TS[8] _ _ _      K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K1 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K1 _ %l{TC[6]} _   _ _ _ _
-      [KT[1]] _ _ _   TS[8] _ _ _      K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K1 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K1 _ %e{TC[6]} _   _ _ _ _
+      # K1      _ _ _   _ _ _ _      K1 _ _ _   _ _ _ T1
+      # K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
+      # K1      _ _ _   _ _ _ _      K1 _ %l{TC[6]} _   _ _ _ _
+      # [KT[1]] _ _ _   TS[8] _ _ _      K3 _ _ _   _ _ _ _
+      # K1      _ _ _   _ _ _ _      K1 _ _ _   _ _ _ T1
+      # K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
+      # K1      _ _ _   _ _ _ _      K1 _ %e{TC[6]} _   _ _ _ _
       ).map{|cell| look % 32 == 0 ? cell : cell }.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }

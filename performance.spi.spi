@@ -82,7 +82,7 @@ end
 viz :sea, noise: 10.001
 viz :sea, spacex: 0.201
 #cam3 10
-crashcam3 10
+crashcam3 2
 live_loop :pi do
   tick
   #  zero_x

@@ -9,7 +9,7 @@ invcol 0.0
 #electric
 #viz :alive, height: 0.0
 #terrain 0.2
-cam3
+#cam3
 live_loop :go do
   tick
   #dcam1
@@ -78,6 +78,7 @@ end
 #FIX SEA CAM3
 #terrain 0.0
 viz :sea, noise: 0.001
+
 live_loop :pi, sync: :sshh do
   tick
 #  zero_x

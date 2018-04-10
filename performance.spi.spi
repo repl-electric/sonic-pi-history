@@ -3,23 +3,24 @@
 #viz breath: 0.0
 #focus
 #stop
+
 live_loop :go do
 #  stop
   tick
-  bitsea :A2
+#  bitsea :A2
   #verb_slice Drip[/effect/].look if spread(1,3).look
-  alive light: rand*0.1
-  alivecol 0.2
+  #alive light: rand*0.1
+  #alivecol 0.2
   16.times{tick(:k);
     k=(ing
       [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
       K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
       K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
       K1 _ _ _       _ _ _ _          K1 _ %l{TC[6]} _   _ _ [F1 0.99] _)
-    #k=k.map{|cell| look(:k) % 8 == 0 ? cell : _}
+    k=k.map{|cell| look(:k) % 8 == 0 ? _ : _}
     focus if k
-    kick_machine x=k.look(:k), def: 8, accent: 1
-    dterrain 0.5 if x
+    #kick_machine x=k.look(:k), def: 8, accent: 1
+    #dterrain 0.5 if x
     #delectric 50
     sleep 1/8.0
   }

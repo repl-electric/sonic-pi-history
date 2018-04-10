@@ -20,4 +20,4 @@ puts [:gs4, :b3, :fs3, :d4, :cs4, :a3, :e4, :A4, :A4, :a4, :A4, :A4].map{|cell| 
 
 min=54
 max=69
-puts linear_map(54, 0.0, 69,1.0, 56)
+puts linear_map(54, 0.3, 69,1.0, 56)

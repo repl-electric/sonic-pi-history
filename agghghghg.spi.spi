@@ -8,9 +8,6 @@ live_loop :name do
   #viz :sea, noise: 10.0-rand*0.005
   #viz :sea, height: look%32*0.025
   #viz "/alive/reset", 1.0
-  dviz :alive, height: 0.02
-  sleep 1/2.0
-  dviz :alive, height: 0.0
   sleep 2.0
 
 end

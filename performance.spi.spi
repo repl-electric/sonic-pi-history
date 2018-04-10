@@ -128,7 +128,7 @@ end
 #viz :sea, spacex: 0.201
 #cam3 10
 #crashcam3 0.4
-cam3
+cam3 true
 live_loop :pi do
   stop
   tick

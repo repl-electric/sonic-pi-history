@@ -79,7 +79,7 @@ end
 #terrain 0.0
 live_loop :pi, sync: :sshh do
   tick
-  zero_x
+#  zero_x
   with_bpm 45.125 do
     score = (ing :D4 :cs4 _:E4 :B2 :Fs2 :A2 :a4 :A4 :A4 ).look
     operator score[0], 70

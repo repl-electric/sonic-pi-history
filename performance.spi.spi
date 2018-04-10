@@ -11,7 +11,12 @@ live_loop :go do
 
   score=(ing
     [:a2 :cs4 :e3]
+    [:a2 :cs4 :e3]
     ).look
+  score.each_tick(:in){|n|
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+  }
+
 
 
   16.times{tick(:k)

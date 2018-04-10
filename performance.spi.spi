@@ -1,5 +1,5 @@
 #viz breath: 0.9
-
+stop
 live_loop :go do
 #  stop
   tick

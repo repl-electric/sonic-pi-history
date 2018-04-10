@@ -91,8 +91,10 @@ live_loop :pi, sync: :sshh do
       ).look
     operator score, 70
     callstack score,10+(ing 70 65 55).look * 1.0, sus: 4/2.0
-    dviz :sea, noise: 10.0-rand*0.005
-    dviz :sea, height: look%32*0.025
+    if score
+      dviz :sea, noise: 10.0-rand*0.005
+      dviz :sea, height: look%32*0.025
+    end
     delectric look%50
     sleep 1/2.0
 

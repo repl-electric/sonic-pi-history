@@ -19,6 +19,7 @@ def camlogo!(s=true)
     viz :alive, color: 0.0, deform: 1.0, length: 0.4, thick: 0.05
     viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
   else
+    unity "/shard", 0.0
     unity "/logo/person", 0.0
     unity "/alive/rotate", 0.0
     unity "/alive/light", 0.0

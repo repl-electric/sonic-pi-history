@@ -9,7 +9,6 @@ invcol 0.0
 #electric
 
 live_loop :go do
-  stop
   tick
   score=(ing
     [:A2 :Cs4 :e3]

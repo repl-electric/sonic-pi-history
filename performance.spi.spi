@@ -102,8 +102,8 @@ live_loop :pi, sync: :sshh do
     c = chord(score.look(offset: 1),ct(score.look(offset: 1)))
     zero c[1],1, sus: 12  if spread(1,2).rot(1).look
     with_transpose -12 {zero c[2],1, sus: 12  if spread(1,2).rot(1).look}
-    with_transpose -24 {zero c[0],1, sus: 12  if spread(1,2).rot(1).look}
-    with_transpose 0 {zero c[-1],1, sus: 12  if spread(1,2).rot(1).look}
+    with_transpose -24 {zero c[0],1, sus: 12  if spread(1,2).rot(0).look}
+    with_transpose 0   {zero c[-1],1, sus: 12  if spread(1,2).rot(1).look}
 
 
 

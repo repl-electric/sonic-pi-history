@@ -96,8 +96,8 @@ live_loop :glitch, sync: :go do
   if p
     with_swing(0.01) do
       with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-        dviz :glitch, color: (line 0.0, 1.0, 8).look
-        dviz :sea, height: rand
+#        dviz :glitch, color: (line 0.0, 1.0, 8).look
+#        dviz :sea, height: rand
 at{
         dviz :sea, noise: rand
           sleep 0.125

@@ -124,6 +124,7 @@ end
 
 #crashcam3 0.4
 #cam3 true
+cam3
 live_loop :pi do
  # stop
   tick

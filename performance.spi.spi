@@ -17,8 +17,8 @@ live_loop :go do
   tick
   #dcam1
   score=(ing
-    [:b2  :d5 :fs3]        Zz
-    [:fs2  :a4 :cs3]       Zz
+    [:b2  :ds5 :fs3]        Zz
+    [:fs2  :as4 :cs3]       Zz
     [:a2  :b4  :e4]
     [:d3  :fs5 :a3 :cs5]   Zz
     [:e2  :gs4 :b3]

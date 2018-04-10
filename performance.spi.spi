@@ -18,6 +18,7 @@ live_loop :go do
   }
   alive light: 0.3
 
+
   null score[0]
   exception score[0]
 

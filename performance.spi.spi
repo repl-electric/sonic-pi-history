@@ -125,7 +125,7 @@ end
 #crashcam3 0.4
 #cam3 true
 live_loop :pi do
-  stop
+ # stop
   tick
   #  zero_x
   with_bpm 63.49 do

@@ -122,6 +122,8 @@ live_loop :go do
   #sleep 2
 end
 
+stop
+
 #crashcam3 0.4
 #cam3 true
 cam3

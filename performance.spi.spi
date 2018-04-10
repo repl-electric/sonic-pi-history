@@ -39,6 +39,6 @@ def camlogo!(*args)
   end
 end
 
-camlogo!
+camlogo! invert: 1.0
 
 #zinit!

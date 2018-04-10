@@ -74,17 +74,23 @@ live_loop :go do
   }
   #sleep 2
 end
-  cam3
+
+#FIX SEA CAM3
+cam3
 #terrain 0.0
 live_loop :pi, sync: :sshh do
 
   tick
   zero_x
-  score = (ing :D4 :cs4 :E4 :B2 :Fs2 :A2 :a4 :A4 :A4 ).look
+  with_bpm 45.125 do #63.5
+
+  score = (ing :D4 :cs4 _:E4 :B2 :Fs2 :A2 :a4 :A4 :A4 ).look
     operator score[0], 70
     callstack score[0], 70
 
-    sleep 2
+  sleep 1/2.0
+    sleep 1/4.0
+  end
   end
 
 

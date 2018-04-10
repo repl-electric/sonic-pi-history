@@ -96,7 +96,6 @@ live_loop :pi, sync: :sshh do
       dviz :sea, height: look%32*0.025
       delectric look%50 if score == :d4
     end
-
     sleep 1/2.0
 
 

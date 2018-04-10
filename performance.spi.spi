@@ -94,8 +94,9 @@ live_loop :pi, sync: :sshh do
     if score
       dviz :sea, noise: 10.0-rand*0.005
       dviz :sea, height: look%32*0.025
+      delectric look%50
     end
-    delectric look%50
+
     sleep 1/2.0
 
 

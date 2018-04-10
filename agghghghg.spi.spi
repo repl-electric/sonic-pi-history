@@ -5,7 +5,7 @@ live_loop :name do
   tick
   #terrain 0.1
 
-  dviz :alive, z: rand*0.2
+  dviz :alive, z: rand*0.3
   callstack (ing :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, ).look,127, sus: 2
   operator (ing :D4, :Cs4, _, :A3, _, :E4, _, :A4, :A4, :A4, :A4, ).look
   #viz :sea, noise: 10.0-rand*0.005

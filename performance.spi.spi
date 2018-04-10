@@ -2,9 +2,8 @@ live_loop :pi do
   tick
   dcam3
   with_bpm 45.125 do #63.5
-
-  operator :d4
-  callstack :d4,60, sus: 2
+    operator :d4
+    callstack :d4,70, sus: 2
   sleep 1/2.0
   sleep 1/2.0
   sleep 1/4.0

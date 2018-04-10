@@ -26,13 +26,13 @@ def camlogo!(s=true)
     viz :sea, color: 0.0
     viz :sea, size: 1.0
   else
+    unity "/alive/light", 0.0
     viz :alive, deform: 0.0
     viz :alive, length: 0.0
     viz :alive, thick: 0.0
     viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
   end
 end
-
 
 camlogo! false
 

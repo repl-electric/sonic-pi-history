@@ -28,7 +28,7 @@ live_loop :go do
      # exception score[0], atk: 0.01, form: 1.0
     }
   #alive spike: 0.9
-    null score[0],100, sus: 2
+    #null score[0],100, sus: 2
   end
 
   viz :alive, x: 1.0+rand

@@ -14,6 +14,8 @@ live_loop :name do
   dviz :alive, deformrate: 0.1
   #terrain
   sleep 1/2.0
+  viz :alive, height: 0.0
+
   dviz :alive, deform: 0.9
   dviz :alive, deformrate: 0.0
   at{
@@ -24,6 +26,6 @@ live_loop :name do
     }
   }
 
-sleep 1/2.0
+sleep 2.0
 
 end

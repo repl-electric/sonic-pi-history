@@ -16,7 +16,6 @@ live_loop :go do
     [:fs2 :a4 :cs3] [:fs5]
     ).look
   #invcol 1.0
-
   callstack score[0], 60
   score.each_tick(:in){|n|
     bitsea n,2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
@@ -37,9 +36,9 @@ live_loop :go do
   16.times{tick(:k);
     k=(ing
       [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
-      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
-      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
-      K1 _ _ _       _ _ _ _          K1 _ %l{TC[6]} _   _ _ [F1 0.99] _)
+#      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
+#      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+#      K1 _ _ _       _ _ _ _          K1 _ %l{TC[6]} _   _ _ [F1 0.99] _)
     #k=k.map{|cell| look(:k) % 32 == 0 ? cell : _}
     #focus if k
     kick_machine x=k.look(:k), def: 8, accent: 1

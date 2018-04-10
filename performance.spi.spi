@@ -98,6 +98,8 @@ live_loop :pi, sync: :sshh do
     end
     sleep 1/2.0
 
+    c = chord(score.look(offset: 1),ct(score.look(offset: 1)))
+    zero  if spread(1,2).rot(1).look
 
     sleep 1/2.0
     sleep 1/4.0

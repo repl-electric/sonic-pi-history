@@ -8,6 +8,7 @@ end
 
 def camlogo!(s=true)
   if s
+    unity "/shards", 1.0
     unity "/logo/person", 0.0
     unity "/logo/person", 1.0
     unity "/camera/4",1.0

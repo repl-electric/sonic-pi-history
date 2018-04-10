@@ -74,7 +74,7 @@ live_loop :go do
   }
   #sleep 2
 end
-  cam4
+  cam3
 #terrain 0.0
 live_loop :pi, sync: :sshh do
 

@@ -80,7 +80,7 @@ end
 
 live_loop :pi, sync: :sshh do
   tick
-  score = (ing :D4 ).look
+  score = (ing :D4 :cs4 ).look
     operator score[0], 70
     callstack score[0], 70
 

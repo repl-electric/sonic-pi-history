@@ -90,7 +90,7 @@ live_loop :pi, sync: :sshh do
     callstack score,10+(ing 70 65 55).look * 1.0, sus: 4/2.0
     dviz :sea, noise: 10.0-rand*0.005
     dviz :sea, height: look%32*0.02
-    delectric 1
+    delectric 5
 
     sleep 1/2.0
     sleep 1/2.0

@@ -11,7 +11,7 @@ invcol 0.0
 #terrain 0.2
 #cam3
 live_loop :go do
-  stop
+#  stop
   tick
   #dcam1
   score=(ing

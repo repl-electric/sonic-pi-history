@@ -84,10 +84,8 @@ live_loop :pi, sync: :sshh do
   #  zero_x
   with_bpm 45.125 do
     score = (ing :D4 :cs4 _ :E4 :B2 :Fs2 :A2 :a4 :A4 :A4).look
-    if score
-      operator score[0], 70
-      callstack score[0], 70
-    end
+    operator score, 70
+    callstack score, 70
     sleep 1/2.0
     sleep 1/4.0
   end

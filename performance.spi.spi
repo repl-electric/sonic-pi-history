@@ -29,6 +29,6 @@ def camlogo!(s=true)
   end
 end
 
-camlogo! true
+camlogo! false
 
 #zinit!

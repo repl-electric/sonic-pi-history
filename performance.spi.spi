@@ -44,7 +44,7 @@ live_loop :go do
   #alive spike: 0.9
   null score[0],100, sus: 2
   #end
-  alivecol: 0.1
+  alivecol: 0.0
 
   #viz :alive, x: 1.0+rand
 #  bitsea :A2

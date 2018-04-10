@@ -3,8 +3,5 @@ cam3 true
 live_loop :name do
   tick
   callstack :A4
-  viz :sea, noise: 10.0-rand*0.005
-  viz :sea, height: look%32*0.025
-
   sleep 1
 end

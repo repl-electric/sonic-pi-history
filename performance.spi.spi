@@ -10,8 +10,10 @@ invcol 0.0
 #viz :alive, height: 0.0
 #terrain 0.2
 #cam3
+cue :waitforit
 live_loop :go do
-  stop
+  #  stop
+
   tick
   #dcam1
   score=(ing

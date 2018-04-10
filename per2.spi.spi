@@ -6,6 +6,8 @@ live_loop :op  do
   tick
 
   operator :D4
+  callstack :D4
+
 
   sleep 1/2.0
   sleep 1/2.0

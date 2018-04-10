@@ -17,13 +17,14 @@ live_loop :go do
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   alive light: 0.3
+
   16.times{tick(:k)
     kick_machine x=(ing
-      KT[1] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _     K3 _ _ _   _ _ _ _
-      ).map{|cell| look % 32 == 0 ? cell : _}.look(:a), def: 8, accent: 1
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      )..look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
 

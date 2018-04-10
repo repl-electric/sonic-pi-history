@@ -84,7 +84,7 @@ viz :sea, spacex: 0.201
 live_loop :pi, sync: :sshh do
   tick
   #  zero_x
-  with_bpm 50.1 do
+  with_bpm 55.1 do
     score = (ing
       :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :a4 :A4 :A4
       :d4 :cs4 _ :a3 _ :b3 _ :A4 :A4 :a4 :fs4 :A4

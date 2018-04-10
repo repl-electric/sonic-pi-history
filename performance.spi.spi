@@ -51,7 +51,7 @@ live_loop :go do
     puts k.look(:k)
     #k=k.map{|cell| look(:k) % 32 == 0 ? cell : _}
     #focus if k
-    kick_machine x=k.look(:k), def: 8, accent: 2
+    kick_machine x=k.look(:k), def: 8, accent: 1
     #dterrain 0.5 if x
     #delectric 50
     #zero_x

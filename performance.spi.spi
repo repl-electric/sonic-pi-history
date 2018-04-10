@@ -101,7 +101,6 @@ live_loop :glitch, sync: :go do
         at{
           sleep 0.5
           viz :sea, height: 0.3
-
           viz :sea, noise: 10.0
           sleep 0.125
           dviz :sea, height: 0
@@ -115,6 +114,8 @@ live_loop :glitch, sync: :go do
   sleep 1/8.0
 end
 
+
+viz :sea, size: 0.01
 
 live_loop :By_the_light_of_the_terminal, sync: :go do
   with_fx :echo, mix: ring(0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: ring(1/4.0, 1/8.0).look do

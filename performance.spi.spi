@@ -1,6 +1,7 @@
 cam4 true
 viz :sea, on: 0.0
 puts $mode
+terrain 0.0
 
 at{
   8.times{

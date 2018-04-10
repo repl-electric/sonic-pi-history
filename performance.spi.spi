@@ -2,7 +2,10 @@ def focus(f=50.1,a=0.09)
   unity "/cam0/focus", f
   unity "/cam0/aperture", a
 end
-focus 1, 0.01
+  unity "/cam0/focus", f
+  unity "/cam0/aperture", a
+
+
 #stop
 stop
 live_loop :go do

@@ -1,7 +1,7 @@
 #bitsea :A2
 #alive spike: 1.0
 #viz breath: 0.0
-focus 20
+focus 20, 0.1
 #stop
 
 live_loop :go do

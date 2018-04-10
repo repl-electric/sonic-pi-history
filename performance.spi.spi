@@ -3,7 +3,7 @@ live_loop :pi do
   dcam3
 
   operator :d4
-  callstack :d4,100
+  callstack :d4,100, sus: 2
 
   sleep 1/2.0
     sleep 1/2.0

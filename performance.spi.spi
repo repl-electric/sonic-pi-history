@@ -18,7 +18,7 @@ def xcam4(f=false)
   end
 end
 
-xcam4
+xcam4 true
 stop
 live_loop :pi do
   tick

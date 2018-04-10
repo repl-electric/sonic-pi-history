@@ -102,6 +102,7 @@ zero_cc amp: 0.80
 
 live_loop :glitch, sync: :go do
   tick
+  sync :waitforit
   p=(ing
     _ _ _ _                _ _ _ _
     _ _ _ _                _ _ _ _

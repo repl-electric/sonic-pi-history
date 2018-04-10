@@ -22,9 +22,11 @@ live_loop :go do
     bitsea n,2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+  if score.length > 1
   exception score[0], atk: 0.1, form: 1.0
   #alive spike: 0.9
-  null score[0],100, sus: 2
+    null score[0],100, sus: 2
+    end
 
   viz :alive, x: 1.0+rand
 #  bitsea :A2

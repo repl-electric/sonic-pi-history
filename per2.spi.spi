@@ -1,10 +1,10 @@
-cam3 true
+cam4 true
 
 
 
 live_loop :op  do
   tick
-
+  stop
   operator :D4
   callstack :D4
 

@@ -11,7 +11,7 @@ live_loop :name do
   dviz :alive, height: 0.05
   #terrain
   sleep 1/2.0
-  viz :alive, height: 0.0
+  dviz :alive, height: 0.0
   sleep 2.0
 
 end

@@ -5,7 +5,7 @@ viz :sea, on: 0.0
 at{
   8.times{
     tick(:a)
-    kick_machine (ing K1 _ _ _   _ _ _ _).look(:a), def: 8, accent: 1
+    kick_machine (ing K1, _, _, _,   _, _, _, _,).look(:a), def: 8, accent: 1
     sleep 1/4.0
   }
 }

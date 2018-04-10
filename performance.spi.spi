@@ -86,7 +86,7 @@ cam3 10
 live_loop :pi do
   tick
   #  zero_x
-  with_bpm 63.5 do
+  with_bpm 63.49 do
     score = (ing
       :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :a4 :A4 :A4
       :d4 :cs4 _ :a3 _ :b3 _ :A4 :A4 :a4 :fs4 :A4

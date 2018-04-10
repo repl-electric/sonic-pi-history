@@ -15,6 +15,10 @@ def camlogo
   unity "/glitch/block",0.03
   unity "/glitch/slice",0.0
   viz :alive, color: 0.0
+  unity "/sea/spacex", 0.1
+  unity "/sea/height", 1.3
+  unity "/sea/noise", 0.01
+
 end
 
 

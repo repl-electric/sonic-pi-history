@@ -76,10 +76,8 @@ live_loop :go do
 end
 
 #FIX SEA CAM3
-cam3
 #terrain 0.0
 live_loop :pi, sync: :sshh do
-
   tick
   zero_x
   with_bpm 45.125 do #63.5

@@ -1,5 +1,22 @@
 cam3
 
+
+
+live_loop :op  do
+  tick
+
+  operator :D4
+
+  sleep 1/2.0
+  sleep 1/2.0
+  sleep 1/4.0
+end
+
+
+
+
+
+
 stop
 #cam4 true
 #stop
@@ -29,6 +46,20 @@ qbitsea_cc bass: 1.00
 
 eq lo: 0.00
 eq hi: 0.00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 cam4 true

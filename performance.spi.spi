@@ -8,7 +8,7 @@ bitsea_cc octave: 0.55  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 invcol 0.0
 #electric
 #viz :alive, height: 0.0
-terrain 0.2
+#terrain 0.2
 
 
 live_loop :go do

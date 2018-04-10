@@ -12,7 +12,7 @@ live_loop :name do
   dviz :alive, deformrate: 1.0
   #terrain
   sleep 1/2.0
-  dviz :alive, deform: 0.1
+  dviz :alive, deform: 10.1
   dviz :alive, deformrate: 0.0
 sleep 1/2.0
 

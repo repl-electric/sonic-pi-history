@@ -1,8 +1,4 @@
-def focus(f=50.1,a=0.09)
-  unity "/cam0/focus", f
-  unity "/cam0/aperture", a
-end
-  unity "/cam0/focus", f
+  unity "/cam0/focus", 0.1
   unity "/cam0/aperture", a
 
 

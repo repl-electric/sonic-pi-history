@@ -88,13 +88,14 @@ live_loop :pi, sync: :sshh do
     score = (ing
       :d4 :cs4 _ :a3 _ :e4 _ :A4 :A4 :a4 :A4 :A4
       :d4 :cs4 _ :a3 _ :b3 _ :A4 :A4 :a4 :fs4 :A4
-      ).look
-    operator score, 70
-    callstack score,10+(ing 70 65 55).look * 1.0, sus: 4/2.0
+      )
+    note = score.look
+    operator note, 70
+    callstack note,10+(ing 70 65 55).look * 1.0, sus: 4/2.0
     if score
       dviz :sea, noise: 10.0-rand*0.005
       dviz :sea, height: look%32*0.025
-      delectric look%50 if score == :d4
+      delectric look%50 if note == :d4
     end
     sleep 1/2.0
 

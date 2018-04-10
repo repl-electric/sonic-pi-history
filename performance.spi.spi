@@ -100,7 +100,7 @@ live_loop :glitch, sync: :go do
 #        dviz :sea, height: rand
         at{
           sleep 0.5
-          viz :sea, height: rand
+          viz :sea, height: 0.3
 
           viz :sea, noise: 10.0
           sleep 0.125

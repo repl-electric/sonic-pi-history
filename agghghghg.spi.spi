@@ -8,3 +8,6 @@ live_loop :name do
 
   sleep 2
 end
+
+
+[:d4, :cs4, _, :a3, _, :e4, _, :A4, :A4, :a4, :A4, :A4,]

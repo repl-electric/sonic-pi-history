@@ -1,4 +1,4 @@
-def cam4(f=false)
+def xcam4(f=false)
   if $mode != 4 || f
     $mode = 4
     viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
@@ -18,7 +18,7 @@ def cam4(f=false)
   end
 end
 
-cam4
+xcam4
 stop
 live_loop :pi do
   tick

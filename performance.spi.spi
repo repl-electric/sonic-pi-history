@@ -1,4 +1,4 @@
-cam4 true
+#cam4 true
 #stop
 
 #bitsea_on :cs4
@@ -26,12 +26,13 @@ qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
 
-eq lo: 0.62
-eq hi: 0.85
+eq lo: 0.00
+eq hi: 0.00
 
 
 
-cam4
+#cam4
+camend
 stop
 
 #alive gravity: 1.0 #FUN

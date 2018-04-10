@@ -1,7 +1,7 @@
 #smp Mountain[/bowed/,/E_/],amp: 2.0
 #dcamlogo crazy: 0.0, invert: 1.0, off: 1.0
 
-  viz :light, 0.6
+viz :alive, light: 0.6
 
 live_loop :go do
   tick

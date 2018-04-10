@@ -1,9 +1,9 @@
 #cam1
 #camlogo true
-def init!
+def zinit!
   unity "/camera/0",1.0
   unity "/alive/length",0.00
   unity "/logo/person", 0.0
 end
 
-init!
+zinit!

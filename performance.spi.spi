@@ -1,6 +1,6 @@
 #camlogo! invert: 1.0, crazy: 1.0, off: 0
 
-bitsea_on :E3
+bitsea_on :cs4
 
 live_loop :go do
   tick

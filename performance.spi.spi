@@ -25,7 +25,7 @@ qbitsea_cc formant: 0.36
 qbitsea_cc mul: 0.00
 qbitsea_cc bass: 1.00
 
-alive gravity: 0.0 #FUN
+alive gravity: 1.0 #FUN
 
 live_loop :go do
   #  stop

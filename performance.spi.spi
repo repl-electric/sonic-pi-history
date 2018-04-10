@@ -1,6 +1,6 @@
 cam4 true
 viz :sea, on: 0.0
-
+puts $mode
 
 at{
   8.times{

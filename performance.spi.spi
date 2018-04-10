@@ -15,6 +15,7 @@ live_loop :go do
     [:b2 :d4 :fs3]  Zz
     [:fs2 :a4 :cs3] Zz
     ).look
+  invcol 0.0
 
   callstack score[0], 60
   score.each_tick(:in){|n|

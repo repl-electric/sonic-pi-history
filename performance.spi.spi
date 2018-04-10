@@ -107,7 +107,7 @@ live_loop :pi, sync: :sshh do
 
     sleep 1/2.0
     corrupt note-12, 10
-    eek z, sus: 6
+    eek z, sus: 6, mode:2
     sleep 1/4.0
   end
 end

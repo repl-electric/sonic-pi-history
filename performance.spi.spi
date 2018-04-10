@@ -1,3 +1,17 @@
+live_loop :pi do
+  tick
+
+
+  sleep 1/2.0
+    sleep 1/2.0
+  sleep 1/4.0
+
+end
+
+zero_on :fs5
+
+stop
+
 #camlogo! invert: 1.0, crazy: 1.0, off: 0
 
 #bitsea_on :cs4
@@ -43,9 +57,13 @@ live_loop :go do
       #, K1,      _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, T1,
       #, K1,      _, _, _,   _, _, _, _,      K1, _, %e{TC[6]}, _,   _, _, _, _,
       ).look(:k), def: 8, accent: 1
+
     sleep 1/8.0
   }
 end
+
+
+
 
 live_loop :glitch, sync: :go do
   tick

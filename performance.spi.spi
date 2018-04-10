@@ -21,7 +21,7 @@ def camlogo!
   viz :alive, deform: 1.0
   viz :alive, length: 0.4
   viz :alive, thick: 0.05
-
+  viz :alive, gravity: 1, amp: 1, freq: 1, speed: 1
 end
 
 

@@ -8,6 +8,12 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 live_loop :go do
   tick
+
+  score=(ing
+    [:a2 :cs4 :e3]
+    ).look
+
+
   16.times{tick(:k)
     kick_machine x=(ing
       KT[1] _ _ _   _ _ _ _        K3 _ _ _   _ _ _ _
@@ -15,7 +21,6 @@ live_loop :go do
       K1 _ _ _   _ _ _ _        K3 _ _ _   _ _ _ _
       K1 _ _ _   _ _ _ _        K3 _ _ _   _ _ _ _
       ).map{|cell| look % 64== 0 ? s : _  }.look(:k), def: 8, accent: 1
-
     sleep 1/8.0
   }
 

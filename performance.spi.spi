@@ -61,6 +61,7 @@ live_loop :go do
       )
 
     puts k.look(:k)
+
     #k=k.map{|cell| look(:k) % 32 == 0 ? cell : _}
     #focus if k
     kick_machine x=k.look(:k), def: 8, accent: 2
@@ -68,17 +69,34 @@ live_loop :go do
     #delectric 50
     #zero_x
     sleep 1/8.0
+    if k == [KT[1]]
+      cue :sshh
+      sync :waitforit
+    end
   }
   #sleep 2
 end
 
 
+live_loop :pi, sync: :sshh do
+  tick
+  score = (ing :D4 ).look
+    operator score[0], 70
+    callstack score[0], 70
 
-zero_on :fs5
-zero_cc pulse: 0.24
-zero_cc more:  0.22
-zero_cc noise: 0.35
-zero_cc wet:   0.71
+    sleep 2
+  end
+
+
+
+
+
+#zero_on :fs5
+zero_cc pulse: 0.55
+zero_cc more:  0.77
+zero_cc noise: 0.45
+zero_cc wet:   1.00
+zero_cc amp: 0.80
 
 
 

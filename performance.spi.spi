@@ -11,6 +11,20 @@ bitsea_cc octave: 0.57  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #terrain 0.2
 #cam3
 #cue :waitforit
+alive thick: 0.1
+qbitsea_cc oct: 0.50
+qbitsea_cc drive: 0.28
+qbitsea_cc charge: 0.50
+qbitsea_cc fm: 0.24
+qbitsea_cc wav: 0.71
+qbitsea_cc wav_amp: 0.30
+qbitsea_cc atk: 0.00
+qbitsea_cc mod: 0.80
+qbitsea_cc motion: 0.24
+qbitsea_cc formant: 0.36
+qbitsea_cc mul: 0.00
+qbitsea_cc bass: 1.00
+
 live_loop :go do
   #  stop
   tick

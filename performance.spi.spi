@@ -39,6 +39,7 @@ live_loop :go do
   if score == [_]
     exception :Fs2
   end
+  corrupt score[0]
 
   16.times{tick(:k)
     kick_machine x=(ing

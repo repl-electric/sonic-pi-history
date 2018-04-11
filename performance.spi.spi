@@ -36,6 +36,11 @@ live_loop :go do
     null score[0]
     exception score[0], atk: 0.2
   end
+  if score == [_]
+    null :A@
+    exception score[0], atk: 0.2
+  end
+
 
   16.times{tick(:k)
     kick_machine x=(ing

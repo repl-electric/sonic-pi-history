@@ -23,7 +23,7 @@ live_loop :pi do;z,zs=nil;tick
       )
     z=zs.look
     operator z
-    callstack z, (ing 70, 60, 60).look
+    callstack z, (ing 70, 60, 60).look, sus: 2
     sleep 1/2.0
     sleep 1/2.0
     sleep 1/4.0

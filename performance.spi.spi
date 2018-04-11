@@ -19,7 +19,7 @@ live_loop :pi do
   sleep 1/4.0
 end
 
-zero_on :fs4
+zero_on :a4
 
 live_loop :go do
   tick

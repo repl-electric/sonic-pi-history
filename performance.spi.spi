@@ -32,7 +32,7 @@ end
 
 
 live_loop :go do
-  stop
+#  stop
   tick
   score=(ing
     [:b2  :d5 :fs3]        Zz

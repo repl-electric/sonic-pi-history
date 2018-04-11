@@ -1,4 +1,4 @@
-camlogo invert: 0.0, logo: 1.0, rotate: 1.0
+camlogo invert: 0.0, logo: 1.0, rotate: 20.0
 smp Mountain[/bowed/,/a_/,0]
 live_loop :go do
   tick

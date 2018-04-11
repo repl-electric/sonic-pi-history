@@ -24,10 +24,8 @@ live_loop :pi, sync: :hit do;tick
     sleep 1/2.0
 
     64.times{|n|
-      corrupt :E4, sus: 0.25 if n % 8 == 0
-
+      corrupt :E3, sus: 0.25 if n % 8 == 0
     }
-
 
     sleep 1/4.0
   end

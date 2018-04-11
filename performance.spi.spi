@@ -3,22 +3,11 @@
 focus 8, 0.54
 live_loop :go, sync: :unsyncable do
   tick
-  16.times{tick(:k)
-    kick_machine x=(ing
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
-      no{
-      if x && spread(1,64).rot(0).look
-        bitsea :fs4, sus: 4.0
-      end}
-    sleep 1/8.0
-  }
-  #sleep 2
+ # 16.times{tick(:k)
+#    sleep 1/8.0
+ # }
+  sleep 2
 end
-
 
 live_loop :breath, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
@@ -31,6 +20,22 @@ live_loop :breath, sync: :unsyncable do
     }
   end
 end
+live_loop :kicker do
+  tick
+      kick_machine x=(ing
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
+      no{
+      if x && spread(1,64).rot(0).look
+        bitsea :fs4, sus: 4.0
+      end}
+
+  sleep 1/8.0
+end
+
 
 
 

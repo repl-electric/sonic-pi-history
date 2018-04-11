@@ -13,7 +13,7 @@ live_loop :pi do
   #stop
   tick
   cam3
-  score = (ing :D4 :CS4 _ :A3 _ :A4 _ :A4 :A4 :A4 :A4 )
+  score = (ing :D4 :CS4 _ :A3 _ :e4 _ :A4 :A4 :A4 :A4 )
   operator score.look
   callstack score.look,(ing 70, 60, 50).look, sus:2
   sleep 1/2.0

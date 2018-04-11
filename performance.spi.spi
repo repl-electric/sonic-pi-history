@@ -6,6 +6,8 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric
 #invcol 0.0
 
+zero_on :fs4
+
 live_loop :go do
   tick
   score=(ing

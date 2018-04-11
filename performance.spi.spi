@@ -24,7 +24,6 @@ live_loop :pi, sync: :hit do;tick
 
     #puts
 
-
     if spread(1,2).rot.look
  #     chd = find_chord(future_note)
 #      zero chd[1], sus: 12

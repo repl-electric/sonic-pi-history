@@ -23,7 +23,7 @@ live_loop :breaths, sync: :go do
         _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
-      terain 0.4 if pp
+      terrain 0.4 if pp
       smp_dust pp
       sleep 1/8.0
     }

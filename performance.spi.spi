@@ -33,7 +33,6 @@ live_loop :pi, sync: :hit do;tick
         corrupt :E3, sus: 0.25 if n % 16 == 0
         sleep 0.125
         corrupt :E4, sus: 4.0 if n % 8 == 0
-        corrupt :E5, sus: 0.25 if n % 16 == 0
       }
       stop
 

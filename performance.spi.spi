@@ -25,8 +25,8 @@ live_loop :pi, sync: :hit do;tick
     #puts
 
     if spread(1,2).rot(1).look
- #     chd = find_chord(future_note)
-#      zero chd[1], sus: 12
+      chd = find_chord(future_note)
+      zero chd[1], sus: 12
     end
 
     sleep 1/2.0

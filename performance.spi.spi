@@ -26,8 +26,8 @@ live_loop :pi, sync: :hit do;tick
 
     if spread(1,2).rot(1).look
       chd = find_chord(future_note)
-      transpose -12 {zero chd[1], sus: 12}
-      transpose -24 {zero chd[0], sus: 12}
+      with_transpose -12 {zero chd[1], sus: 12}
+      with_transpose -24 {zero chd[0], sus: 12}
 
     end
 

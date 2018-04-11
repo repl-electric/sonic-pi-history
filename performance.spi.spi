@@ -12,8 +12,8 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:b2 :d4 :fs3]  Zz
-    [:fs2 :a4 :cs3] Zz
+    [:b2 :ds4 :fs3]  Zz
+    [:fs2 :as4 :cs3] Zz
     ).look
   #callstack score[0],30
   score.each_tick(:in){|n|

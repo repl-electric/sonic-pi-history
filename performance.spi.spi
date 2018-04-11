@@ -24,7 +24,7 @@ live_loop :go do
     null score[0]
 
     at{
-      sleep 1/8.0*3
+      sleep 1/8.0*4
       exception score[0], atk: 0.1
       sleep 1/8.0*3
       exception score[0], atk: 0.1

@@ -8,7 +8,7 @@ camlogo invert: 1.0
 electric
 
 
-camlogo invert: 0.0, logo: 1.0, rotate: 20.0,crazy: 0.0, off: 1.0
+#camlogo invert: 0.0, logo: 1.0, rotate: 20.0,crazy: 0.0, off: 1.0
 live_loop :go do
   tick
   #smp Mountain[/bowed/,/a_|e_|c#_/].look

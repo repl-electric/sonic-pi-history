@@ -1,4 +1,4 @@
-#bitsea_on :cs4
+bitsea_on :cs4
 
 live_loop :go do
   tick

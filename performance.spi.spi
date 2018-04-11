@@ -15,6 +15,7 @@ zero_cc wet:   1.00 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 
 live_loop :pi do;z,zs=nil;tick
+  sync :hit
   with_bpm 45.125 do #63.5
     zs=(ing
       :D4 :CS4

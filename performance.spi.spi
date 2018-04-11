@@ -2,6 +2,6 @@ smp Mountain[/bow/,/A_/,0]
 
 camlogo invert: 0.0, rot: 20.0, crazy: 1.0
 
-viz :postfx, color: 0.8
+viz :alive, color: 0.8
 
 #camlogo crazy: 0.0, rotate: 0

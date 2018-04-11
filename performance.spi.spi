@@ -64,11 +64,11 @@ zero_cc wet:   0.90
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.43
-qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.26
-qbitsea_cc wav: 0.34
-qbitsea_cc wav_amp: 0.37
+qbitsea_cc drive: 0.47
+qbitsea_cc charge: 1.00
+qbitsea_cc fm: 0.48
+qbitsea_cc wav: 0.80
+qbitsea_cc wav_amp: 0.47
 qbitsea_cc atk: 0.00
 qbitsea_cc mod: 0.80
 qbitsea_cc motion: 0.24
@@ -83,7 +83,7 @@ live_loop :go do
   score=(ing
 #,    [:b2,  :d5, :fs3],        Zz,
 #,    [:fs2,  :a4, :cs4],       Zz,
-    [:a2,  :cs5,  :e4],
+    [:a2,  :cs4,  :e4],
     [:d3,  :fs4, :a3, :e4],   Zz,
 #,    [:e2,  :gs5, :b3],
 #,    [:b2,  :d5,  :fs3, :cs4],  Zz,

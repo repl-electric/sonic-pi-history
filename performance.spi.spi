@@ -8,11 +8,11 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:b2, :d4, :fs3], Zz,
-    [:fs2, :a4, :cs3], Zz,
+    [:b2 :d4 :fs3] Zz
+    [:fs2 :a4 :cs3] Zz
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   null score[0]
@@ -20,11 +20,11 @@ live_loop :go do
 
   16.times{tick(:k)
     kick_machine x=(ing
-      KT[1], _, _, _,   _, _, _, _,  K2, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K2, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K2, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K2, _, _, _,   _, _, _, _,
-      ).map{|c| look % 32 == 0 ? c : _}.look(:k), def: 8, accent: 1
+      KT[1] _ _ _   _ _ _ _  K2 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
+      ).map{|c| look % 12 == 0 ? c : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
 
@@ -36,27 +36,27 @@ end
 live_loop :glitch, sync: :go do
   tick
   p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  accent = (ing 0.2 0.2 0.3 0.5).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)
@@ -86,8 +86,8 @@ live_loop :breath, sync: :go do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp = (ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       terrain 0.3 if pp
       smp_dust pp

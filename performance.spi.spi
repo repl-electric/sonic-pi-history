@@ -96,14 +96,16 @@ live_loop :go do
   }
 
   pf= 1.8
-    i=(method :operator)
-  i.call(score[0], 60*pf, sus: 4)
+  i=(method :operator)
+  at{
+    i.call(score[0], 60*pf, sus: 4)
+    sleep 0.5
   i.call(score[1], 50*pf, sus: 4)
   i.call(score[2], 55*pf, sus: 4)
   i.call(score[3], 70*pf, sus: 2)
   i.call(score[4], 30*pf, sus: 8)
   i.call(score[5], 30*pf, sus: 8)
-
+    }
 
   alivecol 0.2
 

@@ -1,3 +1,6 @@
+camend
+stop
+
 use_bpm 63.5
 #camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #bitsea_on :cs4
@@ -61,12 +64,19 @@ zero_cc more:  0.30
 zero_cc noise: 0.50
 zero_cc wet:   0.90
 
+eq lo: 0.00
+eq hi: 0.00
+
+
+
+
+
 
 no{
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.47
+qbitsea_cc drive: 1.00
 qbitsea_cc charge: 1.00
-qbitsea_cc fm: 0.48
+qbitsea_cc fm: 1.00
 qbitsea_cc wav: 0.80
 qbitsea_cc wav_amp: 0.47
 qbitsea_cc atk: 0.00

@@ -11,11 +11,10 @@ bitsea_cc octave: 0.56  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 invcol 0.0
 electric
 
-
 live_loop :go do
   tick
   score=(ing
-    [:a2 :cs4 :e3] [:gs4]
+    [:a2 :b3 :e3] [:gs4]
     [:cs2 :e4 :gs3] [:fs4]
     ).look
   score.each_tick(:in){|n|

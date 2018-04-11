@@ -24,7 +24,6 @@ live_loop :breath, sync: :unsyncable do
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
 
-
       sleep 1/8.0
     }
   end

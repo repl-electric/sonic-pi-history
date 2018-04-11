@@ -8,9 +8,10 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 invcol 0.0
 electric
 
-crashcam3 0.8
+#crashcam3 0.
 
 live_loop :pi, sync: :hit do;tick
+stop
   with_bpm 50.125 do #63.5
     dcam3
     score=(ing
@@ -64,7 +65,6 @@ zero_cc wet:   0.90
 
 live_loop :go do
   tick
-  stop
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz

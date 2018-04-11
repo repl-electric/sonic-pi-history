@@ -17,7 +17,7 @@ zero_cc wet:   1.00 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :pi, sync: :hit do;z,zs=nil;tick
   with_bpm 45.125 do #63.5
     zs=(ing
-      :D4, :CS4, _, :A3,
+      :D4, :CS4, _, :A3, _,
       )
     z=zs.look
     operator z
@@ -118,6 +118,7 @@ end
 
 live_loop :breath, sync: :go do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
+    stop
     8.times{tick;
       pp = (ing
         _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,

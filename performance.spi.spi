@@ -122,6 +122,7 @@ end
 
 
 live_loop :breath, sync: :go do
+stop
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp=(ing

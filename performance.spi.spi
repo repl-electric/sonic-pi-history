@@ -1,4 +1,4 @@
-puts  mt mt_pat
+puts  mt_pat.look
 
 stop
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do

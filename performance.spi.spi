@@ -41,7 +41,6 @@ live_loop :go do
   # sleep 2
 end
 
-
 live_loop :glitch, sync: :go do
   tick
   p=(ing

@@ -10,11 +10,10 @@ live_loop :go, sync: :unsyncable do
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
-    no{
+      no{
       if x && spread(1,64).rot(0).look
         bitsea :fs4, sus: 4.0
-      end
-    }
+      end}
     sleep 1/8.0
   }
   #sleep 2

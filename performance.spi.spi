@@ -14,6 +14,8 @@ live_loop :go do
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+  null score[0]
+
   #dcamlogo logo: 1.0, crazy: 1.0, invert: 1.0, off: 1.0
   verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 2

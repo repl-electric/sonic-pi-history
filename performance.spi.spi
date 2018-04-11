@@ -17,4 +17,4 @@ live_loop :pi, sync: :hit do;tick
   end
 end
 
-#cue :hit
+cue :hit

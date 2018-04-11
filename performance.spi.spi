@@ -1,3 +1,20 @@
+live_loop :pi, sync: :hit do;tick;dcam3
+  with_bpm 45.125 do #63.5
+    score=(ing
+      :D4
+      )
+    note=score.look
+    future_note=score.look(offset: 1)
+    operator note
+    callstack note,(ing 70 65 60).look, sus: 2
+
+    sleep 1/2.0
+    sleep 1/2.0
+    sleep 1/4.0
+  end
+end
+
+
 camend
 viz camera: 4
 stop

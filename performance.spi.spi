@@ -9,7 +9,7 @@ live_loop :go do
   tick
   score=(ing
     [:A2 :b4 :E3] Zz
-    [:cs2 :e4 :gs3] Zz
+    [:fs2 :a4 :css3] Zz
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

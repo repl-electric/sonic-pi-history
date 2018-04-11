@@ -1,4 +1,5 @@
-camlogo invert: 1.0
+dcamlogo invert: 1.0, logo: 1.0
+bitsea_on :A2
 
 live_loop :go do
   tick

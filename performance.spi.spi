@@ -12,7 +12,9 @@ live_loop :breath do
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
-      s=strpat("5p5p5p5p")
+      s=strpat("[5]p5p5p5p
+                5p5p5[5]5p
+")
 
       puts s
 

@@ -12,6 +12,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :pi do
   #stop
   tick
+  cam3
   score = (ing :D4)
   operator score.look
   sleep 1/2.0

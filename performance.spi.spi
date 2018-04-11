@@ -20,7 +20,7 @@ live_loop :breath, sync: :unsyncable do
     }
   end
 end
-live_loop :kicker do
+live_loop :kicker, sync: :unsyncable do
   tick
       kick_machine x=(ing
       K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
@@ -32,7 +32,6 @@ live_loop :kicker do
       if x && spread(1,64).rot(0).look
         bitsea :fs4, sus: 4.0
       end}
-
   sleep 1/8.0
 end
 

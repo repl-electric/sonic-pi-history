@@ -63,13 +63,15 @@ zero_cc wet:   0.90
 
 
 
+
+
 live_loop :go do
   dcam4
   tick
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz
-    [:a2  :b4  :e4]
+    [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :cs5]   Zz
     [:e2  :gs4 :b3]
     [:b2  :d5  :fs3 :cs4]  Zz

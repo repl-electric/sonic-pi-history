@@ -37,7 +37,7 @@ live_loop :pi, sync: :hit do;tick
     sleep 1/2.0
     eek note, mode: 2, sus: 6 if spread(1,3).look
 
-    #at{
+    at{
       64.times{|n|
         sleep 0.125
         corrupt :E3, mode: 0, sus: 0.25 if n % 8 == 0
@@ -45,7 +45,7 @@ live_loop :pi, sync: :hit do;tick
         corrupt :E4, sus: 0.125, mode: 2 if n % 16 == 0
     }
   #  stop
-    #}
+    }
 
     sleep 1/4.0
   end

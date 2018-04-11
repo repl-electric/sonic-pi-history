@@ -8,7 +8,7 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:A2 :cs4 :E3] Zz
+    [:A2 :b4 :E3] Zz
     [:cs2 :e4 :gs3] Zz
     ).look
   score.each_tick(:in){|n|
@@ -24,7 +24,7 @@ live_loop :go do
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
-      ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
+      ).map{|c| look % 32 == 0 ? c : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
 

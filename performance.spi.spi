@@ -97,8 +97,8 @@ live_loop :go do
       K1      _ _ _   _ _ _ _      K3 _ %e{TC[6]} _   _ _ _ _
       ).map{|c| look % 8 == 0 ? c : c}.look(:k), def: 8, accent: 1
     if x == [KT[1]]
-      cue :hit
-      stop
+ #     cue :hit
+#      stop
       end
     sleep 1/8.0
   }

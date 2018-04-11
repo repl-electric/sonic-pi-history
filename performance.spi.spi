@@ -1,4 +1,5 @@
 camend
+viz camera: 4
 stop
 
 use_bpm 63.5
@@ -52,7 +53,7 @@ stop
       with_transpose -12 {zero chd[2],1, sus: 12}
       with_transpose -24 {zero chd[0],1, sus: 12}
 
-      with_transpose 0 { zero chd[1],1,sus:12 }
+#      with_transpose 0 { zero chd[1],1,sus:12 }
 
 
     else

@@ -9,14 +9,14 @@ live_loop :breath do
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
-        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
+        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
+        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       if (s=(ing
-            [5], _, 5, _, 5, _, 5, _,   5, _, 5, _, 5, [5], 5, _,
+            [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
             ).look)
-        s=_
+        #s=_
         mt s,accent=(line 85,127,64).look, 120 if s
       end
 
@@ -32,14 +32,14 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp = (ing
-        _, _, _, _,    _, _, _, _,     _, _, _, _,    _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       #pp=_
 
       dust_pat(pp){|accent|
         fuzz = rand(0.05)
-        with_fx (ing :slicer, :krush, :bitcrusher, :echo,).tick(:pfx), mix: 0.5, phase: 1/4.0, decay: 2 {
+        with_fx (ing :slicer,:krush,:bitcrusher,:echo).tick(:pfx), mix: 0.5, phase: 1/4.0, decay: 2 {
           dterrain 0.1
           smp pp, amp: accent+1.6, attack: 0.0, start: 0.1-fuzz, rate:
           (knit
@@ -49,17 +49,17 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
         }
         smp pp, amp: (3+accent+(rand*0.1))*1, rate: -2*(knit 1.1,4, 1.0,2).look, pan:
         (ing
-          0.25, 0.25, -0.25, -0.25,  0.25, -0.25,
-          0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
-          0.5,  0.5,  -0.25, -0.25,  0.25, -0.5,
+          0.25 0.25 -0.25 -0.25  0.25 -0.25
+          0.5  0.5  -0.25 -0.25  0.25 -0.5
+          0.5  0.5  -0.25 -0.25  0.25 -0.5
           ).look, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
       }
       #s=_
       mt mt_pat.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
-        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
+        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
+        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       accent=110
       #s=_
@@ -67,7 +67,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
         mt s, accent=75, 80
       end
       if (s=(ing
-            [5], _, 5, _, 5, _, 5, _,   5, _, 5, _, 5, [5], 5, _,
+            [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
             ).look)
         s=_
         mt s,accent=(line 85,127,64).look, 120 if s
@@ -84,35 +84,35 @@ live_loop :Clock, sync: :unsyncable do
   8.times{tick;
     DC = Drip[/cymbal/].look; CS = (0..17).map{|n| Crystal[/cymbal/].tick(:i)};
     C1 = (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
-    #smp TC.take(12).look, amp: 0.5+rand*0.1, rate: (ing 0.85, 1.0,  1.0,).look if spread(1,12*2).look
+    #smp TC.take(12).look, amp: 0.5+rand*0.1, rate: (ing 0.85,1.0, 1.0).look if spread(1,12*2).look
     k=(ing
-      [KT[1]], _, _, _,  TS[8], _, _, _,      K1, _, _, _,   _, _, _, _,
-      K1, _, _, _,       _, _, _, _,          K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,       %l{TC[6]}, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,       _, _, _, _,          K1, _, %l{TC[6]}, _,   _, _, [F1, 0.99], _,
-      K1, _, _, _,       TS[8], _, _, _,      K1, _, _, _,   _, _, _, _,
-      K1, _, _, _,       _, _, _, _,          K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,       %l{TC[6]}, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,       _, _, _, _,          K1, _, %e{TC[6]}, _,   _, _, [F1, 0.99], _,
+      [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
+      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
+      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _       _ _ _ _          K1 _ %l{TC[6]} _   _ _ [F1 0.99] _
+      K1 _ _ _       TS[8] _ _ _      K1 _ _ _   _ _ _ _
+      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
+      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _
       )
 
     k=k.map{|s| look % 64 == 0 ? s : _ }
-    #bitsea_mode (ing *0..6,).look#, motion: (ing 0.0, 1.0,).look
+    #bitsea_mode (ing *0..6).look#, motion: (ing 0.0,1.0).look
     #bitsea_mode(0) if !k
 
     kz=(ing
-      [KT[1]], _, _, K1,    _, _, _, T1,  _, _, _, _,   K1, _, K1, _,
-      K1, _, _,   K1,    _, _, _, T1,  _, _, _, _,   K1, _, K1, _,
-      K1, _, _,   K1,    _, _, _, T1,  _, _, _, _,   K1, _, K1, _,
-      K1, _, _, _,       _, _, _, T1,  _, _, _, _,   K1, _, K1, _,
+      [KT[1]] _ _ K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _ _       _ _ _ T1  _ _ _ _   K1 _ K1 _
       )
 
     no{
     with_swing 0.08{
       hs=(knit
-          (ing [Tape[/hi/, 26]], _,  _, _,   TC[17], _,  _, _,).look, 8*2,
-          (ing Tape[/hi/, 26], _, _, _,      TC[17], _,  _, _,).look, 8*1,
-          (ing TC[17], _,  _,  TC[9],       [Tape[/hi/, 26]], Tape[/hi/, 34],  _, _,).look, 8*1
+          (ing [Tape[/hi/,26]] _  _ _   TC[17] _  _ _).look, 8*2,
+          (ing Tape[/hi/,26] _ _ _      TC[17] _  _ _).look, 8*1,
+          (ing TC[17] _  _  TC[9]       [Tape[/hi/,26]] Tape[/hi/,34]  _ _).look, 8*1
          ).look
       accent=0.4
       if hs && hs.is_a?(Array)
@@ -124,10 +124,10 @@ live_loop :Clock, sync: :unsyncable do
     }
 
     s=(ing
-      #[C5], C5, _,  _, _, _,
-      #C5, _, _,     _, _, _,
-      _, _, _, _,   [C5], C5, _, _,   _, _, _, _,    _, _, _, _,
-      _, _, _, _,   _, _, _, _,       _, _, _, _,    _, _, _, _,
+      #[C5] C5 _  _ _ _
+      #C5 _ _     _ _ _
+      _ _ _ _   [C5] C5 _ _   _ _ _ _    _ _ _ _
+      _ _ _ _   _ _ _ _       _ _ _ _    _ _ _ _
       ).look
     accent = 0.5
     if s.is_a?(Array)
@@ -137,36 +137,36 @@ live_loop :Clock, sync: :unsyncable do
     no{
       with_swing 0.02 {
         smp s, amp: accent*0.1+0.5*(ing
-          0.5, 0, 0.125, 0, 0.5, 0, 0.8, 0.5,
-          0.5, 0, 0.125, 0, 0.8, 0, 0.125, 0,
-          0.125, 0, 0.125, 0, 0.8, 0, 0.125, 0,
-          0.125, 0, 0.125, 0, 0.125, 0, 0.8, 0,).look,
+          0.5 0 0.125 0 0.5 0 0.8 0.5
+          0.5 0 0.125 0 0.8 0 0.125 0
+          0.125 0 0.125 0 0.8 0 0.125 0
+          0.125 0 0.125 0 0.125 0 0.8 0).look,
         pan: 0.0125, cutoff: (line 100, 127,64).look, pan: Math.sin(vt*13)/1.5
       }
     }
 
     p=(ing
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      [TS[49]], _, _, TS[12],    _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      [TS[49]] _ _ TS[12]    _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TS[7], _, _, _,            _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TT[49], _, _, TS[12],      _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TT[49] _ _ TS[12]      _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TS[7], _, _, _,            _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
       )
 
     p=p.look
     #p=_
     fx=:lpf
-    accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+    accent = (ing 0.2 0.2 0.3 0.5).look
     attack = 0.0
     r = 1.0
     if p && p.is_a?(Array)

@@ -1,4 +1,4 @@
-live_loop :pi, sync: :hit do;tick;dcam3
+live_loop :pi, sync: :hit do;tick;dcam3(true)
   with_bpm 45.125 do #63.5
     score=(ing
       :D4

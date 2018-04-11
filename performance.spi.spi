@@ -2,7 +2,7 @@ smp Mountain[/bow/,/A_/,0]
 
 camlogo invert: 0.0, rot: 20.0, crazy: 1.0
 
-    unity "/logo/person", 0.0
+unity "/logo/person", 1.0
 
 
 viz :alive, color: 0.0

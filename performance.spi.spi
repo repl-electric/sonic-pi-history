@@ -3,8 +3,8 @@ use_bpm 63.5
 live_loop :pi, sync: :hit do;tick
   with_bpm 45.125 do #63.5
     score=(ing
-      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
-      D4 Cs4 _ A3 _ B2 _ A4 A4 A4 Fs3 A4
+      D4 CS4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 CS4 _ A3 _ B2 _ A4 A4 A4 Fs3 A4
       )
     note=score.look
     future_note=score.look(offset: 1)

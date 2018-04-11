@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 invcol 0.0
 electric
 
-crashcam3 0.3
+crashcam3 0.8
 
 live_loop :pi, sync: :hit do;tick
   with_bpm 50.125 do #63.5

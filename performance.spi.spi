@@ -12,7 +12,8 @@ live_loop :pi, sync: :hit do;tick
     callstack note,(ing 70 65 60).look, sus: 2
     sleep 1/2.0
     if spread(1,2).rot(1).look
-      zero future_note[0], 1, sus: 12
+      with_transpose -12 {zero future_note[0], 1, sus: 12}
+      with_transpose 12 {zero future_note[1], 1, sus: 12}
       with_transpose 12 {zero future_note[1], 1, sus: 12}
 
     end

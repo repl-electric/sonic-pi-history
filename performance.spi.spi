@@ -18,8 +18,8 @@ live_loop :pi do;z,zs=nil;tick
   dcam3
   with_bpm 45.125 do #63.5
     zs=(ing
-      :D4 :CS4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
-      :D4 :CS4 _ :A3 _ :b3 _ :A4 :A4 :A4 :fs4 :A4
+      :gs4 :CS4 _ :A3 _ :E4 _ :A4 :A4 :A4 :A4 :A4
+      :gs4 :CS4 _ :A3 _ :b3 _ :A4 :A4 :A4 :fs4 :A4
       )
     z=zs.look
     operator z

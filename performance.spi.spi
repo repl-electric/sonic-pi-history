@@ -1,4 +1,11 @@
-smp Mountain[/bow/,/A_/,0]
+live_loop :name do
+  tick
+  verb_slice Drip[/effect/].look if spread(1,3).look
+
+  sleep 2
+end
+
+
 camlogo invert: 1.0#, rot: 20.0, crazy: 1.0
 
 #unity "/logo/person", 1.0

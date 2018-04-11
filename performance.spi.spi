@@ -48,8 +48,6 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   end
 end
 
-
-
 live_loop :Clock, sync: :unsyncable do
   8.times{tick;
     DC = Drip[/cymbal/].look; CS = (0..17).map{|n| Crystal[/cymbal/].tick(:i)};

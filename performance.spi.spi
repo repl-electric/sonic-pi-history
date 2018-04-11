@@ -1,271 +1,129 @@
-live_loop :pi, sync: :hit do;tick;dcam3(true)
-  with_bpm 45.125 do #63.5
-    score=(ing
-      :D4
+live_loop :Clock, sync: :unsyncable do
+  8.times{tick;
+    DC = Drip[/cymbal/].look; CS = (0..17).map{|n| Crystal[/cymbal/].tick(:i)};
+    C1 = (knit Analog[/clapraw/].look,8,Analog[/clap1/].look,8,Analog[/clap2/].look,8,Analog[/clap3/].look,16).look
+    #smp TC.take(12).look, amp: 0.5+rand*0.1, rate: (ing 0.85,1.0, 1.0).look if spread(1,12*2).look
+    k=(ing
+      [KT[1]] _ _ _  TS[8] _ _ _      K1 _ _ _   _ _ _ _
+      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
+      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _       _ _ _ _          K1 _ %l{TC[6]} _   _ _ [F1 0.99] _
+      K1 _ _ _       TS[8] _ _ _      K1 _ _ _   _ _ _ _
+      K1 _ _ _       _ _ _ _          K3 _ _ _   _ _ _ T1
+      K1 _ _ _       %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _       _ _ _ _          K1 _ %e{TC[6]} _   _ _ [F1 0.99] _
       )
-    note=score.look
-    future_note=score.look(offset: 1)
-    operator note
-    callstack note,(ing 70 65 60).look, sus: 2
 
-    sleep 1/2.0
-    sleep 1/2.0
-    at{
-      64.times{|n|
-        sleep 0.125
-        corrupt :E3, sus: 0.25 if n % 8 == 0
-        sleep 0.125
-        corrupt :E4, sus: 4.0 if n % 8 == 0
+    k=k.map{|s| look % 64 == 0 ? s : _ }
+    #bitsea_mode (ing *0..6).look#, motion: (ing 0.0,1.0).look
+    #bitsea_mode(0) if !k
+
+    kz=(ing
+      [KT[1]] _ _ K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _   K1    _ _ _ T1  _ _ _ _   K1 _ K1 _
+      K1 _ _ _       _ _ _ T1  _ _ _ _   K1 _ K1 _
+      )
+
+    no{
+    with_swing 0.08{
+      hs=(knit
+          (ing [Tape[/hi/,26]] _  _ _   TC[17] _  _ _).look, 8*2,
+          (ing Tape[/hi/,26] _ _ _      TC[17] _  _ _).look, 8*1,
+          (ing TC[17] _  _  TC[9]       [Tape[/hi/,26]] Tape[/hi/,34]  _ _).look, 8*1
+         ).look
+      accent=0.4
+      if hs && hs.is_a?(Array)
+        hs = hs[0]
+        accent+=0.1+rand(0.09)
+      end
+      smp hs, amp: accent * 1.1
       }
     }
 
-    sleep 1/4.0
-  end
-end
-cue :hit
+    s=(ing
+      #[C5] C5 _  _ _ _
+      #C5 _ _     _ _ _
+      _ _ _ _   [C5] C5 _ _   _ _ _ _    _ _ _ _
+      _ _ _ _   _ _ _ _       _ _ _ _    _ _ _ _
+      ).look
+    accent = 0.5
+    if s.is_a?(Array)
+      accent = 0.8
+      s = s[0]
+    end
+    no{
+      with_swing 0.02 {
+        smp s, amp: accent*0.1+0.5*(ing
+          0.5 0 0.125 0 0.5 0 0.8 0.5
+          0.5 0 0.125 0 0.8 0 0.125 0
+          0.125 0 0.125 0 0.8 0 0.125 0
+          0.125 0 0.125 0 0.125 0 0.8 0).look,
+        pan: 0.0125, cutoff: (line 100, 127,64).look, pan: Math.sin(vt*13)/1.5
+      }
+    }
 
+    p=(ing
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      [TS[49]] _ _ TS[12]    _ _ _ _
 
-#camend
-viz camera: 3
-stop
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
 
-use_bpm 63.5
-#camlogo logo: 1.0, crazy: 1.0, off: 1.0
-#bitsea_on :cs4
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TT[49] _ _ TS[12]      _ _ _ _
 
-bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-invcol 0.0
-electric
-
-#crashcam3 0.
-
-live_loop :pi, sync: :hit do;tick
-stop
-  with_bpm 50.125 do #63.5
-    dcam3
-    score=(ing
-      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
-      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
       )
-    note=score.look
-    future_note=score.look(offset: 1)
-    operator note
-    callstack note,(ing 70 65 60).look, sus: 2
 
-    sleep 1/2.0
-
-    #puts
-
-    if spread(1,2).rot(1).look
-      chd = find_chord(future_note)
-      zero chd, 1, sus: 12
-    else
-
+    p=p.look
+    #p=_
+    fx=:lpf
+    accent = (ing 0.2 0.2 0.3 0.5).look
+    attack = 0.0
+    r = 1.0
+    if p && p.is_a?(Array)
+      p = p[0]
+      accent=accent*1.5
     end
-
-
-    if spread(1,2).rot(1).look
-
-    else
-
-    end
-
-    trans
-
-    if spread(1,2).rot(1).look
-      chd = find_chord(future_note)
-      with_transpose 0 {zero chd[1],1, sus: 12}
-      with_transpose -12 {zero chd[2],1, sus: 12}
-      with_transpose -24 {zero chd[0],1, sus: 12}
-
-#      with_transpose 0 { zero chd[1],1,sus:12 }
-
-
-    else
-      chd = find_chord(future_note)
-      with_transpose 12 {zero chd[0],1, sus: 12}
-    end
-
-    sleep 1/2.0
-    eek note, mode: 2, sus: 6 if spread(1,3).look
-
-    at{
-      64.times{|n|
-        sleep 0.125
-        corrupt :E2, mode: 0, sus: 0.25 if n % 2 == 0
-        corrupt :E3, mode: 0, sus: 0.25 if n % 8 == 0
-        sleep 0.125
-        corrupt :E4, sus: 4.0, mode: 0 if n % 8 == 0
-    }
-    stop
-    }
-
-    sleep 1/4.0
-  end
-end
-cue :hit
-
-zero_cc pulse: 0.42
-zero_cc more:  0.30
-zero_cc noise: 0.50
-zero_cc wet:   0.90
-
-eq lo: 0.00
-eq hi: 0.00
-
-
-
-
-
-
-no{
-qbitsea_cc oct: 0.50
-qbitsea_cc drive: 1.00
-qbitsea_cc charge: 1.00
-qbitsea_cc fm: 1.00
-qbitsea_cc wav: 0.80
-qbitsea_cc wav_amp: 0.47
-qbitsea_cc atk: 0.00
-qbitsea_cc mod: 0.80
-qbitsea_cc motion: 0.24
-qbitsea_cc formant: 0.36
-qbitsea_cc mul: 0.00
-qbitsea_cc bass: 1.00
-}
-
-live_loop :go do
-  dcam4
-  tick
-  score=(ing
-#    [:b2  :d5 :fs3]        Zz
-#    [:fs2  :a4 :cs4]       Zz
-    [:a2  :cs4  :e4]
-    [:d2  :fs3 :a3 :e4]   Zz
-#    [:e2  :gs5 :b3]
-#    [:b2  :d5  :fs3 :cs4]  Zz
-#    [:fs4 :a4  :cs4]       Zz
-
-
-    ).look
-  score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
-  }
-
-  pf= 1.8
-  i=(method :operator)
-  at{
-    i.call(score[0], 60*pf, sus: 4)
-    sleep 0.5
-    i.call(score[1], 50*pf, sus: 4)
-    sleep 0.25
-    i.call(score[2], 55*pf, sus: 4)
-        sleep 0.25
-
-    i.call(score[3], 70*pf, sus: 2)
-        sleep 0.25
-
-    i.call(score[4], 30*pf, sus: 8)
-        sleep 0.25
-
-    i.call(score[5], 30*pf, sus: 8)
-        sleep 0.25
-    }
-
-  alivecol 0.5
-
-  if score.length > 1
-#  null score[0]
-#  exception score[0], sus: 2
-  end
-  16.times{tick(:k)
-    kick_machine x=(ing
-      [KT[1]] _ TC[8] _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
-            [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-
-  #    K1      _ _ _   _ _ _ _      K3 _ %e{TC[6]} _   _ _ _ _
-      ).map{|c| look % 8 == 0 ? c : c}.look(:k), def: 8, accent: 0
-    if x == [KT[1]]
- #     cue :hit
-#      stop
+    if p
+      with_swing(0.01) do
+        with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+          delectric 5
+          smp p, amp: 3*accent, rate: r, attack: attack
+        }
       end
+    end
+    k=k.look
+
+    #k=_
+    no{
+      if spread(1,64).rot(-64+(8*2)).look   #4*1/8
+        rev :e5, 60
+      end
+      if k && spread(1,64).rot(0).look
+        bitsea :fs4, sus: 4.0
+        cue(:light_source)
+        null_x;strings_x;zero_x
+        sync :kernel_panic
+      end
+    }
+
+    if spread(1,128).rot(-12).look
+      #mt 17, (line 100,127, 128).tick(:blah),127
+    end
+
+    #midi(:c3, 60+(rand_i 10), channel: 2) if k == [KT[1]] #|| k.look == k3 || k == [kt[1]]
+    kick_machine k, accent: 1.0, amp: 1.3*(knit 0.8,4, 0.6,4, 0.7,4, 0.6,4).look, v: 0.2
+    sidechain if k && spread(1,4).look
     sleep 1/8.0
   }
-#  verb_slice Drip[/effect/].look if spread(1,3).look
-  # sleep 2
-end
-
-live_loop :glitch, sync: :go do
-stop
-  tick
-  p=(ing
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    [TS[49]] _ _ TS[12]    _ _ _ _
-
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
-
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TT[49] _ _ TS[12]      _ _ _ _
-
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
-    )
-
-  p=p.look
-  #p=_
-  fx=:lpf
-  accent = (ing 0.2 0.2 0.3 0.5).look
-  attack = 0.0
-  r = 1.0
-  if p && p.is_a?(Array)
-    p = p[0]
-    accent=accent*1.5
-  end
-  if p
-    with_swing(0.01) do
-      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-        at{
-          sleep 0.5
-          viz :sea, height: 0.3
-          viz :sea, noise: 10.0
-          sleep 0.125
-          dviz :sea, height: 0
-          viz :sea, noise: 0.01
-        }
-        smp p, amp: 3*accent, rate: r, attack: attack
-      }
-    end
-  end
-  sleep 1/8.0
 end
 
 
-live_loop :breath, sync: :go do
-stop
-  with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
-    8.times{tick;
-      pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
-
-        ).look
-      if pp
-        terrain 0.2
-      end
-      smp_dust(pp)
-      sleep 1/8.0
-    }
-  end
-end
+live_loop(:unsyncable) do; sleep 1.0 end

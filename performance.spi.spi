@@ -17,7 +17,7 @@ zero_cc wet:   1.00 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :pi, sync: :hit do;z,zs=nil;tick
   with_bpm 45.125 do #63.5
     zs=(ing
-      :D4, :CS4, _, :A3, _,
+      :D4 :CS4 _ :A3 _ :E4 _ :A4
       )
     z=zs.look
     operator z
@@ -34,26 +34,26 @@ live_loop :go do
   stop
   tick
   score=(ing
-    [:b2,  :d5, :fs3],        Zz,
-    [:fs2,  :a4, :cs3],       Zz,
-    [:a2,  :b4,  :e4],
-    [:d3,  :fs5, :a3, :cs5],   Zz,
-    [:e2,  :gs4, :b3],
-    [:b2,  :d5,  :fs3, :cs4],  Zz,
-    [:fs4, :a4,  :cs3],       Zz,
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
     ).look
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   null score[0]
   exception score[0], sus: 2
 
   16.times{tick(:k)
     kick_machine x=(ing
-      KT[1], _, _, _,   _, _, _, _,  K2, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K2, _, _, _,   _, _, _, T1,
-      K1,      _, _, _,   _, _, _, _,      K2, _, _, _,   _, _, _, T1,
-      K1,      _, _, _,   _, _, _, _,      K2, _, %e{TC[6]}, _,   _, _, _, _,
+      KT[1] _ _ _   _ _ _ _  K2 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
+      K1      _ _ _   _ _ _ _      K2 _ %e{TC[6]} _   _ _ _ _
       ).map{|c| look % 8 == 0 ? c : c}.look(:k), def: 8, accent: 1
     if x == KT[1]
       cue  :hit
@@ -70,27 +70,27 @@ end
 live_loop :glitch, sync: :go do
   tick
   p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
 
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+  accent = (ing 0.2 0.2 0.3 0.5).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)
@@ -121,8 +121,8 @@ live_loop :breath, sync: :go do
     stop
     8.times{tick;
       pp = (ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       terrain 0.3 if pp
       smp_dust pp

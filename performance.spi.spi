@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #electric
 
-#invcol 1
+invcol 0
 live_loop :go do
   tick
   score=(ing
@@ -26,8 +26,6 @@ live_loop :go do
       ).map{|x| look % 32 == 0 ? x : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
-
-
   verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 2
 end

@@ -93,7 +93,7 @@ live_loop :breaths, sync: :go do
       accent=110
       #s=_
       if s
-        mt s, accent=70, 75
+        mt s, accent=80, 75
       end
       if (s=(ing
             [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _

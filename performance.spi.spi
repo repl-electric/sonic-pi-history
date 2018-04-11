@@ -42,7 +42,7 @@ live_loop :pi, sync: :hit do;tick
         sleep 0.125
         corrupt :E3, mode: 0, sus: 0.25 if n % 8 == 0
         sleep 0.125
-        corrupt :E4, sus: 4.0 if n % 8 == 0
+        corrupt :E4, sus: 0.5, mode: 2 if n % 8 == 0
       }
     }
 
@@ -50,6 +50,12 @@ live_loop :pi, sync: :hit do;tick
   end
 end
 cue :hit
+
+zero_cc pulse: 0.42
+zero_cc more:  0.30
+zero_cc noise: 0.50
+zero_cc wet:   0.90
+
 
 
 live_loop :go do

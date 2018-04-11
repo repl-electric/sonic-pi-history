@@ -15,7 +15,7 @@ s3 = ring(_, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
   return knit(s2,16*4,s3,16*4, s1,16*4)
 end
 
-mt_pat.look
+puts mt_pat.look
 
 
 

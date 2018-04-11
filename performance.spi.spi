@@ -15,7 +15,7 @@ live_loop :pi do
   cam3
   score = (ing :D4)
   operator score.look
-  callstack score.look,(ing 70, 60, 50).look sus:2
+  callstack score.look,(ing 70, 60, 50).look, sus:2
 
   sleep 1/2.0
   sleep 1/2.0

@@ -13,10 +13,10 @@ live_loop :breath do
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
-      (s=(ing
+      s=(ing
           [5] _ 5 _ 5 _   5 _
           5   _ 5 _ 5 [5] 5 _
-          ).look)
+          ).look
       s=_
       mt s,accent=(line 85,127,64).look, 120 if s
       end

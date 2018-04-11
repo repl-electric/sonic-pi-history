@@ -22,7 +22,12 @@ live_loop :go do
 
   if score.length > 1
     null score[0]
-    exception score[0]
+
+    at{
+      sleep 1/8.0*3
+      exception score[0]
+      }
+
   end
 
   16.times{tick(:k)

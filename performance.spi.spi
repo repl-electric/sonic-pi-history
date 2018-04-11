@@ -1,14 +1,14 @@
 #camlogo logo: 1, off: 1
 #bitsea_on :A2
-focus 8, 0.46
+focus 8, 0.47
 live_loop :go do
   tick
   16.times{tick(:k)
     kick_machine x=(ing
-      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
     no{
       if k && spread(1,64).rot(0).look
@@ -26,7 +26,7 @@ live_loop :breath do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
       sleep 1/8.0

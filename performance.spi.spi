@@ -12,6 +12,7 @@ live_loop :pi, sync: :hit do;z,zs=nil;tick
       :D4 :CS4 _ :A3 _ :E4 _ :A4
       )
     z=zs.look
+    operator z
 
     sleep 1/2.0
     sleep 1/2.0

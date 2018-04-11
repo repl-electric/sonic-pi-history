@@ -1,10 +1,15 @@
+mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
+mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+
+
+
 live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp = (ing
         _ _ _ _    _ _ _ _     _ _ _ _    _ _ _ _
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
-        ).look$0
+        ).look
       #pp=_
 
       dust_pat(pp){|accent|
@@ -25,8 +30,8 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
           ).look, cutoff: (ramp 40,127,256*4).tick(:aaashoo2t)
       }
       #s=_
-      mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
-      mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+      mt mt_pat.look, accent=(line 75, 85, 16*4).look, 100
+      #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
         2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
@@ -34,7 +39,7 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
       accent=110
       #s=_
       if s
-        mt s, accent=75, 85
+        mt s, accent=75, 80
       end
       if (s=(ing
             [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
@@ -47,6 +52,8 @@ live_loop :By_the_light_of_the_terminal, sync: :unsyncable do
     }
   end
 end
+
+
 
 live_loop :Clock, sync: :unsyncable do
   8.times{tick;

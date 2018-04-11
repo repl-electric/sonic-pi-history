@@ -28,7 +28,12 @@ live_loop :go do
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
       K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
       K1      _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
-      ).map{|c| look % 32 == 0 ? c : _}.look(:k), def: 8, accent: 1
+            [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
+      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
+      K1      _ _ _   _ _ _ _      K3 _ %e{TC[6]} _   _ _ _ _
+
+      ).map{|c| look % 8 == 0 ? c : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
   verb_slice Drip[/effect/].look if spread(1,3).look

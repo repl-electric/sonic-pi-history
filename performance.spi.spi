@@ -1,10 +1,5 @@
 use_bpm 63.5
 
-live_loop :name do
-  tick
-
-  sleep 2
-end
 
 
 

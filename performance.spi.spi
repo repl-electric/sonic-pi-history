@@ -25,8 +25,8 @@ live_loop :go do
   16.times{tick(:k)
     kick_machine x=(ing
       K1 _ _ _   _ _ _ _  K2 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
+      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
       ).map{|x| look % 8 == 0 ? x : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0

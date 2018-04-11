@@ -10,6 +10,15 @@ live_loop :pi, sync: :hit do;tick;dcam3
 
     sleep 1/2.0
     sleep 1/2.0
+    at{
+      64.times{|n|
+        sleep 0.125
+        corrupt :E3, sus: 0.25 if n % 8 == 0
+        #sleep 0.125
+        #corrupt :E4, sus: 4.0 if n % 8 == 0
+      }
+    }
+
     sleep 1/4.0
   end
 end

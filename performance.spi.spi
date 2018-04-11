@@ -15,13 +15,13 @@ stop
   with_bpm 50.125 do #63.5
     dcam3
     score=(ing
-      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
-      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
+      D4, Cs4, _, A3, _, E4, _, A4, A4, A4, A4, A4,
+      D4, Cs4, _, A3, _, B3, _, A4, A4, A4, Fs4, A4,
       )
     note=score.look
     future_note=score.look(offset: 1)
     operator note
-    callstack note,(ing 70 65 60).look, sus: 2
+    callstack note,(ing 70, 65, 60,).look, sus: 2
 
     sleep 1/2.0
 
@@ -81,22 +81,22 @@ live_loop :go do
   dcam4
   tick
   score=(ing
-#    [:b2  :d5 :fs3]        Zz
-#    [:fs2  :a4 :cs4]       Zz
-    [:a2  :cs5  :e4]
-    [:d3  :fs5 :a3 :e4]   Zz
-#    [:e2  :gs5 :b3]
-#    [:b2  :d5  :fs3 :cs4]  Zz
-#    [:fs4 :a4  :cs4]       Zz
+#,    [:b2,  :d5, :fs3],        Zz,
+#,    [:fs2,  :a4, :cs4],       Zz,
+    [:a2,  :cs5,  :e4],
+    [:d3,  :fs5, :a3, :e4],   Zz,
+#,    [:e2,  :gs5, :b3],
+#,    [:b2,  :d5,  :fs3, :cs4],  Zz,
+#,    [:fs4, :a4,  :cs4],       Zz,
 
 
     ).look
   score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   pf= 1.8
-    i=(method :callstack)
+    i=(method :operator)
   i.call(score[0], 60*pf, sus: 4)
   i.call(score[1], 50*pf, sus: 4)
   i.call(score[2], 55*pf, sus: 4)
@@ -113,16 +113,16 @@ live_loop :go do
   end
   16.times{tick(:k)
     kick_machine x=(ing
-      [KT[1]] _ TC[8] _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
-            [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
-      K1      _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ T1
+      [KT[1]], _, TC[8], _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, T1,
+      K1,      _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, T1,
+      K1,      _, _, _,   _, _, _, _,      K3, _, %l{TC[6]}, _,   _, _, _, _,
+            [KT[1]], _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, T1,
+      K1,      _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, T1,
+      K1,      _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, T1,
 
-  #    K1      _ _ _   _ _ _ _      K3 _ %e{TC[6]} _   _ _ _ _
+  #,    K1,      _, _, _,   _, _, _, _,      K3, _, %e{TC[6]}, _,   _, _, _, _,
       ).map{|c| look % 8 == 0 ? c : c}.look(:k), def: 8, accent: 1
     if x == [KT[1]]
  #     cue :hit
@@ -138,27 +138,27 @@ live_loop :glitch, sync: :go do
 stop
   tick
   p=(ing
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    [TS[49]] _ _ TS[12]    _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    [TS[49]], _, _, TS[12],    _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TT[49] _ _ TS[12]      _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TT[49], _, _, TS[12],      _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2 0.2 0.3 0.5).look
+  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)
@@ -189,8 +189,8 @@ stop
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
 
         ).look
       if pp

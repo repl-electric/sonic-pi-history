@@ -1,6 +1,6 @@
 #camlogo logo: 1, off: 1
 #bitsea_on :A2
-focus 8, 0.19
+focus 8, 0.2
 live_loop :go do
   tick
   16.times{tick(:k)

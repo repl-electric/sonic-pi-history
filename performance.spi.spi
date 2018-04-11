@@ -2,20 +2,20 @@ live_loop :breath do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
-        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
+        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
+        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       s=
       "[5]p5p5p5p
        5p5p5[5]5p".split('').reduce([]){|ac,x|
-        if x != '[' || x!= "]"
+        if x != '[' || x!= "]" || x!="\n"
           ac << x
         end
       }
@@ -32,7 +32,7 @@ end
 
 
       if (s=(ing
-            [5] _ 5 _ 5 _ 5 _   5 _ 5 _ 5 [5] 5 _
+            [5], _, 5, _, 5, _, 5, _,   5, _, 5, _, 5, [5], 5, _,
             ).look)
         s=_
         mt s,accent=(line 85,127,64).look, 120 if s

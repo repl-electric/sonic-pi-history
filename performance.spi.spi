@@ -16,8 +16,7 @@ live_loop :breath do
       s=(ing
           [5], _, 5, _, 5, _,   5, _,
           5,   _, 5, _, 5, [5], 5, _,
-          ).look
-      s=_
+        ).look
       mt s,accent=(line 85,127,64).look, 120
 
       sleep 1/8.0

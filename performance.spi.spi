@@ -56,6 +56,11 @@ live_loop :go do
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
       K1      _ _ _   _ _ _ _      K2 _ %e{TC[6]} _   _ _ _ _
       ).map{|c| look % 8 == 0 ? c : c}.look(:k), def: 8, accent: 1
+    if x == KT[1]
+      cue  :hit
+      stop
+
+    end
     sleep 1/8.0
   }
   #dcamlogo logo: 1.0, crazy: 1.0, invert: 1.0, off: 1.0

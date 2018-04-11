@@ -25,7 +25,7 @@ live_loop :pi do;z,zs=nil;tick
     operator z
     callstack z, (ing 70, 60, 60).look, sus: 2
     sleep 1/2.0
-    c = find_chord(zs.look(offset: 1))
+    c = find_chord(zs.look(offset: 1.0))
     sleep 1/2.0
     #eek
     sleep 1/4.0

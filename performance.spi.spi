@@ -13,7 +13,7 @@ live_loop :breath do
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       s=
-      "[5]p5p5p5p 5p5p5[5]5p".gsub!(/\s+/).to_s.split('').reduce([]){|ac,x|
+      "[5]p5p5p5p 5p5p5[5]5p".gsub!(/\s+/,'').to_s.split('').reduce([]){|ac,x|
         if x != '[' && x!= "]" && x!= "\n"
           ac << x
         end

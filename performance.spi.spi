@@ -37,7 +37,7 @@ live_loop :go do
     exception score[0], atk: 0.2
   end
   if score == [_]
-    exception :A2
+    exception :B2
   end
 
   16.times{tick(:k)

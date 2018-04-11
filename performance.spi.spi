@@ -8,7 +8,7 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:A2 :b4 :E3] Zz
+    [:b2 :d4 :fs3] Zz
     [:fs2 :a4 :css3] Zz
     ).look
   score.each_tick(:in){|n|

@@ -22,6 +22,13 @@ live_loop :pi, sync: :hit do;tick
       with_transpose 0 {zero chd[0], 1, sus: 12}
     end
     sleep 1/2.0
+
+    64.times{|n|
+      corrupt :E4 if n % 8 == 0
+
+    }
+
+
     sleep 1/4.0
   end
 end

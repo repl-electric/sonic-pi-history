@@ -10,7 +10,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #invcol 0.0
 
 live_loop :pi do
-  stop
+  #stop
   tick
   score = (ing :D4)
   operator score.look
@@ -19,17 +19,24 @@ live_loop :pi do
   sleep 1/4.0
 end
 
-zero_on :fs5
+#zero_on :fs5
 
 live_loop :go do
+  stop
   tick
   score=(ing
-    [:b2 :d4 :fs3]  Zz
-    [:fs2 :a4 :cs3] Zz
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
+
     ).look
   #callstack score[0],30
   score.each_tick(:in){|n|
-    bitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   exception score[0], atk: 0.3, sus: 2
@@ -37,20 +44,14 @@ live_loop :go do
 
   16.times{tick(:k)
     kick_machine x=(ing
-      [KT[1]] _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
       K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K2 _ %l{TC[6]} _   _ _ _ _
-
-      [KT[1]] _ _ _   _ _ _ _      K2 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K2 _ _ _   _ _ _ T1
-      K1      _ _ _   _ _ _ _      K2 _ %e{TC[6]} _   _ _ _ _
       ).map{|cell| look % 16 == 0 ? cell : cell }.look(:k), def: 8, accent: 1.5
     sleep 1/8.0
   }
 
-  verb_slice Drip[/effect/].look if spread(1,3).look
+  #verb_slice Drip[/effect/].look if spread(1,3).look
 #  sleep 2
 end
 

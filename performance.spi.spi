@@ -14,7 +14,7 @@ s3 = ring(_, _,   _, _,   [5], _,   _, _,  5,  _,  _, _,  5, _,  _, _,
 
 MT_PAT=knit(s2,16*4,s3,16*4, s1,16*4)
 
-puts MT_PAT
+#puts MT_PAT
 
 
 

@@ -15,18 +15,20 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:a2 :cs4 :e3]
+    [:a2, :cs4, :e3], Zz,
+    [:cs2, :e4, :gs3], Zz,
+
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   16.times{tick(:k)
     kick_machine x=(ing
-      [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      [KT[1]], _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+      K1,      _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
       ).map{|c| look % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
     sleep 1/8.0
   }
@@ -41,8 +43,8 @@ live_loop :breath, sync: :go do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
 
         ).look
       if pp

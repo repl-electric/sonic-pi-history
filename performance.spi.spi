@@ -1,3 +1,4 @@
+camlogo
 live_loop :go do
   tick
   16.times{tick(:k)

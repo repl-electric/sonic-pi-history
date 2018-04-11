@@ -15,15 +15,17 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:a2 :cs4 :e3] Zz
-    [:cs2 :e4 :gs3] Zz
+    [:a2 :cs4 :e3] [:gs4]
+    [:cs2 :e4 :gs3] [:fs4]
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+
+  if score.length > 1
   null score[0]
   exception score[0], sus: 2
-
+  end
   16.times{tick(:k)
     kick_machine x=(ing
       [KT[1]] _ TC[8] _   _ _ _ _  K3 _ _ _   _ _ _ _

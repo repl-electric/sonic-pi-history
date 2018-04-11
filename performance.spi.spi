@@ -118,8 +118,8 @@ live_loop :go do
   alivecol 0.5
 
   if score.length > 1
-  null score[0]
-  exception score[0], sus: 2
+#  null score[0]
+#  exception score[0], sus: 2
   end
   16.times{tick(:k)
     kick_machine x=(ing

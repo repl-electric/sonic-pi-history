@@ -1,8 +1,5 @@
 use_bpm 63.5
 #camlogo logo: 1.0, crazy: 1.0, off: 1.0
-
-
-
 #bitsea_on :cs4
 
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -24,6 +21,12 @@ live_loop :pi, sync: :hit do;tick
     callstack note,(ing 70 65 60).look, sus: 2
 
     sleep 1/2.0
+
+    if spread(1,2).rot.look
+      zero find_chord(future_note),1, sus: 12
+
+    end
+
     sleep 1/2.0
     sleep 1/4.0
   end

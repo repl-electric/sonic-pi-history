@@ -12,7 +12,7 @@ electric
 live_loop :go do
   tick
   score=(ing
-    [:b2 :d4 :fs3]  [:a4]
+    [:b2 :d4 :fs3]  Zz
     [:fs2 :a4 :cs3] [:fs4]
     ).look
   #callstack score[0],30
@@ -23,7 +23,7 @@ live_loop :go do
   if score.length > 1
     null score[0]
     exception score[0]
-    end
+  end
 
   16.times{tick(:k)
     kick_machine x=(ing

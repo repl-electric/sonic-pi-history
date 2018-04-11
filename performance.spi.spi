@@ -119,7 +119,8 @@ end
 
 live_loop :glitch, sync: :go do
   tick
-  sop
+  stop
+
   p=(ing
     _ _ _ _                _ _ _ _
     _ _ _ _                _ _ _ _

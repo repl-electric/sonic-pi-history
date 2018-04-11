@@ -13,6 +13,7 @@ live_loop :pi, sync: :hit do;z,zs=nil;tick
       )
     z=zs.look
     operator z
+    callstack z
 
     sleep 1/2.0
     sleep 1/2.0

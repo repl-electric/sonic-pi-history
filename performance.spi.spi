@@ -1,7 +1,7 @@
 #camlogo logo: 1, off: 1
 #bitsea_on :A2
 focus 8, 0.54
-live_loop :go do
+live_loop :go, sync: :unsyncable do
   tick
   16.times{tick(:k)
     kick_machine x=(ing

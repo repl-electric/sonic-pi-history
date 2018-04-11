@@ -20,8 +20,8 @@ live_loop :pi do;z,zs=nil;tick
       :D4 :CS4
       )
     z=zs.look
-    operator zs
-    callstack zs
+    operator z
+    callstack z
     sleep 1/2.0
     sleep 1/2.0
     sleep 1/4.0

@@ -31,7 +31,7 @@ live_loop :pi, sync: :hit do;tick
       with_transpose -24 {zero chd[0],1, sus: 12}
     else
       chd = find_chord(future_note)
-      with_transpose 0 {zero chd[0],1, sus: 12}
+      with_transpose 12 {zero chd[0],1, sus: 12}
     end
 
     sleep 1/2.0

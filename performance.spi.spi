@@ -37,8 +37,7 @@ live_loop :go do
     exception score[0], atk: 0.2
   end
   if score == [_]
-    null :A2
-    exception score[0], atk: 0.2
+    exception :A2
   end
 
 

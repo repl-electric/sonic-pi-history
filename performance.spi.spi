@@ -7,13 +7,13 @@ live_loop :pi, sync: :hit do;tick
 #  stop
   with_bpm 45.125 do #63.5
     score=(ing
-      D4, Cs4, _, A3, _, E4, _, A4, A4, A4, A4, A4,
-      D4, Cs4, _, A3, _, B3, _, A4, A4, A4, Fs4, A4,
+      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
       )
     note=score.look
     future_note=score.look(offset: 1)
     operator note
-    callstack note,(ing 70, 65, 60,).look, sus: 2
+    callstack note,(ing 70 65 60).look, sus: 2
     sleep 1/2.0
     chd = find_chord(future_note)
     if spread(1,2).rot(1).look
@@ -35,7 +35,7 @@ live_loop :pi, sync: :hit do;tick
         corrupt :E4, sus: 4.0 if n % 8 == 0
         corrupt :E5, sus: 0.25 if n % 9 == 0
       }
-      stop
+   #   stop
 
 
     sleep 1/4.0

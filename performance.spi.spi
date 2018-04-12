@@ -18,7 +18,7 @@ live_loop :breath, sync: :unsyncable do
     8.times{tick;
       qbitsea :A2 if spread(7,11).look
       qbitsea :e3, sus:0.125 if spread(3,8).look
-      corrupt :a2, mode: 2 if spread(1,12).rot(2).look
+      corrupt :a2, mode: 2 if spread(1,6).rot(2).look
 
       pp=(ing
         _

@@ -81,7 +81,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-        ).map{|c| look(:k) % 64 == 0 ? c : _}.look(:k), def: 8, accent: 1
+        ).map{|c| look(:k) % 64 == 0 ? c : _}.look(:k), def: 8, accent: 2
 
 
     no{

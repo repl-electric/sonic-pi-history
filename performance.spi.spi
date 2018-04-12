@@ -57,6 +57,7 @@ cue :hit
 live_loop :go, sync: :unsyncable do
       #      stop
       dcam4 true
+      viz :breath, throttle: 1.0
       tick
   score=(ing
         [:b2  :d5 :fs3]        Zz

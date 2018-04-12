@@ -1,5 +1,5 @@
 #camlogo logo: 1, crazy: 1, off: 1.0
-bitsea_on :A2
+#bitsea_on :A2
 #focus
 #stop
 live_loop :go, sync: :unsyncable do
@@ -9,6 +9,8 @@ end
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
+
+qbitsea_cc motion: 0.20
 electric
 invcol
 
@@ -16,8 +18,8 @@ invcol
 live_loop :breath, sync: :unsyncable do
   with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{tick;
-      qbitsea :A2 if spread(7,11).look
-      qbitsea :e3, sus:0.125 if spread(3,8).look
+      #qbitsea :A2 if spread(7,11).look
+      #qbitsea :e3, sus:0.125 if spread(3,8).look
       eek :a2, sus: 1.0, mode: 0 if spread(1,12*2).rot(2).look
       corrupt :A2
       pp=(ing
@@ -32,8 +34,9 @@ live_loop :breath, sync: :unsyncable do
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
+
       s=strpat("[5]p5p5p5p 5p5p5[5]5p")
-      #mt s.look,accent=(line 85,127,64).look, 120
+      mt s.look,accent=(line 85,127,64).look, 120
 
       sleep 1/8.0
     }

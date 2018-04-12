@@ -30,13 +30,12 @@
           with_transpose 0 { zero chd[1],1, sus: 12 }
           with_transpose -12 { zero chd[2],1, sus: 12 }
           with_transpose -24 { zero chd[0],1, sus: 12 }
-
-
         else
 
         end
 
         sleep 1/2.0
+        eek score, mode: 2, sus: 3 if spread(1,3).look
         sleep 1/4.0
       end
     end

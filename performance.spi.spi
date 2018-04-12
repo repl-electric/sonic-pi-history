@@ -7,7 +7,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do
   shard 0.1
   sleep 1
   alive rotate: 0.0
-
   shard 0.0
   sleep 1
 end

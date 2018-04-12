@@ -71,7 +71,7 @@ end
 live_loop :kicker, sync: :unsyncable do
   tick
       kick_machine x=(ing
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
       K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ T1
       K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ T1
       K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _

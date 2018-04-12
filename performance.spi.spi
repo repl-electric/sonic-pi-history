@@ -1,4 +1,4 @@
-camlogo logo: 1
+camlogo logo: 1, crazy: 1.0
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do

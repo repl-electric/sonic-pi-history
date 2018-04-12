@@ -66,8 +66,10 @@ cue :hit
       at{
         sleep 0.5
         unity "/glitch/block",1.0
-        sleep 0.25
+        sleep 0.125
         unity "/glitch/block",0.0
+        viz breath: 0.0
+
 
 }
 

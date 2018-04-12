@@ -54,24 +54,11 @@
     end
 cue :hit
 
-#cam3
+cam3
     live_loop :go, sync: :unsyncable do
- #     stop
+      stop
       #      stop
       dcam4
-      dviz breath: 1.0
-      electric
-      unity "/shard", 1.0
-
-      at{
-        sleep 0.5
-        unity "/glitch/block",1.0
-        sleep 0.125
-        unity "/glitch/block",0.0
-        viz breath: 0.0
-
-
-}
 
       tick
   score=(ing

@@ -88,7 +88,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 #qbitsea_cc motion: 0.20
 electric
-invcol
+#invcol
 #bitsea_on :cs5
 
 live_loop :breath, sync: :unsyncable do

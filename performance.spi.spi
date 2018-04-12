@@ -1,7 +1,7 @@
 qbitsea_cc oct: 0.50
-qbitsea_cc drive: 0.27
+qbitsea_cc drive: 1.00
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.31
+qbitsea_cc fm: 1.00
 qbitsea_cc wav: 0.01
 qbitsea_cc wav_amp: 0.30
 qbitsea_cc atk: 0.83
@@ -18,9 +18,9 @@ qbitsea_cc bass: 0.27
 #cue :hit
 #camlogo
 #cam4
-#camend true
-unity "/logo/re",0.0
-invcol 0.0
+camend
+#unity "/logo/re",0.0
+#invcol 0.0
 viz breath: 1.0
 viz shard: 1.0
 alive rotate: 1.0

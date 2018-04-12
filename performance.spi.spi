@@ -17,7 +17,7 @@ live_loop :go, sync: :unsyncable do
   tick
   score=(ing
     [:a2  :b3 :e3] Zz
-    [:cs3 :e4  :gs3] Zz
+    [:fs3 :a4  :cs3] Zz
     ).look
 
       rev :B5, 2 if spread(1,6).look

@@ -12,8 +12,7 @@ invcol
 live_loop :fall_into_your_screen, sync: :unsyncable do
   score=(ing
     [:A2 :cs4 :e3]
-    [:cs2 :e4 :gs3]
-
+    [:cs3 :e4 :gs3]
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

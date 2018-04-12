@@ -17,7 +17,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     dviz breath: 1.0
     alive spike: 1.0
     alive electric: 1.0
-
     alive rotate: 0.09*rand
 
 

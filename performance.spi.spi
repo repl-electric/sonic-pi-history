@@ -20,7 +20,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   }
 
 
-  exception root(score), sus: 2, more: 0, wet: 0, shape: 0.5
+  exception root(score), sus: 2, more: 0, wet: 0.4, shape: 0.5
 
 #      exception root(score), atk: 0.01
 

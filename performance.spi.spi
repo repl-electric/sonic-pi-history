@@ -2,7 +2,7 @@
 live_loop :name, sync: :unsyncable do
   tick
 
-  #exception :A2
+  exception :A2
   corrupt :A1
   sleep 2
   sleep 2

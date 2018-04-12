@@ -5,6 +5,8 @@ viz shard: 1.0
   electric;sleep 0.5
   viz :alive, spike: 1.0
   alive color: rand
+  alive :glitch, slits: rand
+
 }
 
 

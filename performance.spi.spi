@@ -1,6 +1,6 @@
-camlogo logo: 1.0, crazy: 1.0, off: 1.0
+#camlogo logo: 1.0, crazy: 1.0, off: 1.0
 
-#bitsea_on :A2
+bitsea_on :E3
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
   sleep 1

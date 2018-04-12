@@ -1,5 +1,13 @@
 #camlogo
-exception :E2
+live_loop :name, sync: :unsyncable do
+  tick
+
+  exception :E2
+  sleep 1
+  sleep 1
+end
+
+
 
 
 

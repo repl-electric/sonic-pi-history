@@ -1,6 +1,6 @@
 #camlogo logo: 1.0, crazy: 1.0, off: 1.0
 
-#bitsea_on :cs4
+bitsea_on :A2
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
   focus
@@ -47,7 +47,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
       ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
 
     no{
-      if k && spread(1,64).rot(0).look
+      if k && spread(1,32).rot(0).look
         bitsea :fs4, sus: 4.0
       end
     }

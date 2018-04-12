@@ -3,7 +3,7 @@
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   corrupt :A1
-  shards 0.0
+  shard 0.0
   sleep 2
 end
 

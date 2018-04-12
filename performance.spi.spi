@@ -18,18 +18,18 @@ live_loop :breath, sync: :unsyncable do
     8.times{tick;
       qbitsea :A2 if spread(7,11).look
       qbitsea :e3, sus:0.125 if spread(3,8).look
-      corrupt :a2, mode: 1 if spread(1,12*2).rot(2).look
+      corrupt :a2, mode: 0 if spread(1,12*2).rot(2).look
 
       pp=(ing
-        _
+        _,
         ).look
       #0/0.ss
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
-        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
+        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
+        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       s=strpat("[5]p5p5p5p 5p5p5[5]5p")
@@ -42,10 +42,10 @@ end
 live_loop :kicker, sync: :unsyncable do
   tick
       kick_machine x=(ing
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
+      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
       ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
       no{
       if x && spread(1,64).rot(0).look
@@ -54,27 +54,27 @@ live_loop :kicker, sync: :unsyncable do
 
 
     p=(ing
-      _ _ _ _                _ _ _ _
-      _ _ _ _                _ _ _ _
-      [TS[49]] _ _ TS[12]    _ _ _ _
+      _, _, _, _,                _, _, _, _,
+      _, _, _, _,                _, _, _, _,
+      [TS[49]], _, _, TS[12],    _, _, _, _,
 
-      _ _ _ _                _ _ _ _
-      _ _ _ _                _ _ _ _
-      TS[7] _ _ _            _ _ _ _
+      _, _, _, _,                _, _, _, _,
+      _, _, _, _,                _, _, _, _,
+      TS[7], _, _, _,            _, _, _, _,
 
-      _ _ _ _                _ _ _ _
-      _ _ _ _                _ _ _ _
-      TT[49] _ _ TS[12]      _ _ _ _
+      _, _, _, _,                _, _, _, _,
+      _, _, _, _,                _, _, _, _,
+      TT[49], _, _, TS[12],      _, _, _, _,
 
-      _ _ _ _                _ _ _ _
-      _ _ _ _                _ _ _ _
-      TS[7] _ _ _            _ _ _ _
+      _, _, _, _,                _, _, _, _,
+      _, _, _, _,                _, _, _, _,
+      TS[7], _, _, _,            _, _, _, _,
       )
 
     p=p.look
     #p=_
     fx=:lpf
-    accent = (ing 0.2 0.2 0.3 0.5).look
+    accent = (ing 0.2, 0.2, 0.3, 0.5,).look
     attack = 0.0
     r = 1.0
     if p && p.is_a?(Array)

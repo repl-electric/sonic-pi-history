@@ -60,9 +60,14 @@ live_loop :go, sync: :unsyncable do
       dcam4 true
       dviz breath: 1.0
       dviz breath: 1.0
-      unity "/glitch/block",0.03
+at{
+      unity "/glitch/block",0.3
+        unity "/glitch/slice",0.2
+        sleep 0.125
+              unity "/glitch/block",0.0
       unity "/glitch/slice",0.0
 
+}
 
       tick
   score=(ing

@@ -5,7 +5,6 @@ live_loop :name, sync: :unsyncable do
   #exception :A2
   strings :A2, 127
   zero :A2, 127
-  jup :A2
   sleep 2
   sleep 2
 end

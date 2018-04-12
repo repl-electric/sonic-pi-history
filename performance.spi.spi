@@ -58,7 +58,7 @@ cam3
     live_loop :go, sync: :unsyncable do
  #     stop
       #      stop
-      dcam4 true
+      dcam4
       dviz breath: 1.0
       electric
       unity "/shard", 1.0

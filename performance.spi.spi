@@ -11,7 +11,7 @@ cue :hit
 live_loop :pi, sync: :hit do;tick
   zero_x
   #dcam3 true
-  with_bpm 50.125 do #63.5
+  with_bpm 63.5 do #63.5
     score=(ing
       :gs4 :Cs4 _ :A3 _ E4 _ A4 A4 A4 A4 A4
       :gs4 :Cs4 _ :A3 _ B3 _ A4 A4 A4 Fs4 A4

@@ -14,6 +14,8 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
     dviz shard: 1.0
+    dviz breath: 1.0
+
     alive rotate: 0.09*rand
 
 

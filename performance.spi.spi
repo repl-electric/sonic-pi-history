@@ -13,7 +13,7 @@ electric
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     [:b3  :d5 :fs3]  [_]
-    [:fs3 :a4 :cs3] [_]
+    [:fs3 :a4 :cs4] [_]
     ).look
   score.each_tick(:in){|n|
 #    bitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

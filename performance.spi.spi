@@ -102,8 +102,8 @@ live_loop :kicker, sync: :unsyncable do
             viz :sea, height: 0.3
             viz :sea, noise: 10.0
             sleep 0.125
-            #viz :sea, height: 0
-            #viz :sea, noise: 0.01
+            viz :sea, height: 0
+            viz :sea, noise: 0.01
           }
           smp p, amp: 3*accent, rate: r, attack: attack
         }

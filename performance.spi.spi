@@ -45,7 +45,7 @@
     end
 cue :hit
 
-cam3
+crashcam3 0.5
     live_loop :go, sync: :unsyncable do
       stop
       #      stop

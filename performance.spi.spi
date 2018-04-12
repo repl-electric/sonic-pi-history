@@ -54,9 +54,9 @@
     end
 cue :hit
 
-#cam3
+cam3
     live_loop :go, sync: :unsyncable do
- #     stop
+      stop
       #      stop
       dcam4
       dviz breath: 1.0

@@ -11,10 +11,10 @@ invcol
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   score=(ing
-    [:A2, :cs4, :e3],
+    [:A2 :cs4 :e3]
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   logo [0,1,2,3,4].choose
@@ -32,8 +32,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       terrain 0.5 if pp
       smp_dust(pp)
@@ -48,15 +48,15 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   kick_machine k=(ing
-    [KT[1]], _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+    [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
 
-    K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+    K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
 
     ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
 

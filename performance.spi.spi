@@ -37,7 +37,7 @@
         mt 9,120,120
         sleep 0.125
         qbitsea :FS4,50, sus: 0.125 if spread(1,6).look
-             mt 17,100,100
+             mt 0,100,100
 
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125

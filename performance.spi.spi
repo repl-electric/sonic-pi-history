@@ -56,10 +56,16 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
   tick
 
     kick_machine k=(ing
-      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+      K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1      _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+
+          K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+
       ).map{|c| look % 8 == 0 ? c : _}.look, def: 8, accent: 1
 
     no{

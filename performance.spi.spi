@@ -42,7 +42,7 @@ end
 zero_cc pulse: 0.00
 zero_cc more:  0.00
 zero_cc noise: 0.20
-zero_cc wet:   0.90
+zero_cc wet:   1.00
 #zero_cc amp: 0.60
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick

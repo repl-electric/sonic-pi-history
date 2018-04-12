@@ -6,7 +6,7 @@ viz shard: 1.0
   sleep 2.0
   viz :alive, spike: 1.0
   alive color: rand_i(-10..10)*0.5
-  alive :glitch, slits: rand
+  alive :glitch, slice: rand
 
 }
 

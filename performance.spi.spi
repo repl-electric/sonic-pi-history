@@ -3,6 +3,8 @@ camlogo
 live_loop :fall_into_your_screen, sync: :unsyncable do
 
   sleep 1
+  verb_slice Drip[/effect/].look if spread(1,).look
+
   sleep 1
 end
 

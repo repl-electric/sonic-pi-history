@@ -31,7 +31,7 @@ zero_cc pulse: 0.00
 zero_cc more:  0.00
 zero_cc noise: 0.20
 zero_cc wet:   0.90
-
+#zero_cc amp: 0.60
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
  # stop
@@ -95,7 +95,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
       K1      _ _ _   _ _ _ _      K3 _ %e{TC[6]} _   _ _ _ _
       ).map{|c| look % 8 == 0 ? c : c}.look, def: 8, accent: 1
 
-    no{
+    yes{
       if k && spread(1,32).rot(0).look
         bitsea :fs4, sus: 4.0
         cue :hit

@@ -1,5 +1,5 @@
 #camlogo logo: 1, crazy: 1, off: 1.0
-bitsea_on :e3
+bitsea_on :cs4
 #focus
 #stop
 live_loop :go, sync: :unsyncable do

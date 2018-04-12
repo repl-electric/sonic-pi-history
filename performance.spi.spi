@@ -81,7 +81,7 @@ live_loop :kicker, sync: :unsyncable do
       K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ T1
       K1 _ _ _   _ _ _ _  K3 _ %e{TC[6]} _   _ _ _ _
 
-      ).map{|c| look % 64 == 0 ? c : c}.look, def: 8, accent: 1
+      ).map{|c| look % 64 == 0 ? c : c}.look, def: 8, accent: 2
       no{
       if x && spread(1,64).rot(0).look
         bitsea :fs4, sus: 4.0

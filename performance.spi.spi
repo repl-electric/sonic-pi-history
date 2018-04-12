@@ -2,18 +2,9 @@
 #bitsea_on :cs4
 #focus
 #stop
-    def rootz(note_seq)
-      note_seq.map{|n|
-        if n
-          note(n)
-        else
-          nil
-        end
-      }.compact.sort{|n1,n2| n1 <=> n2 }[0]
-    end
 
     live_loop :pi, sync: :hit do;tick
-      stop
+ #     stop
       dcam3
       with_bpm 63.5 do #63.5
         score=(ing

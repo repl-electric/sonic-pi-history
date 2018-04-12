@@ -3,7 +3,7 @@ live_loop :name, sync: :unsyncable do
   tick
 
   #exception :A2
-  string :A2, 127
+  strings :A2, 127
   sleep 2
   sleep 2
 end
@@ -24,7 +24,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

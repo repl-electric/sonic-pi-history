@@ -5,6 +5,8 @@ logo 0
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
+  logo [0,1,2,3,4].choose
+
   corrupt :A1
 #  alive rotate: 1.0
   shard 0.1

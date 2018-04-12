@@ -13,7 +13,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
-    dviz shard: 0.01
+    dviz shard: 0.4
 
     alive rotate: 0.09*rand
 
@@ -22,7 +22,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
     chd = find_chord future_note
     if spread(1,2).rot(1).look
-      dviz shard: 0.4
       with_transpose 0 { zero chd[1],1, sus: 12 }
 
     else

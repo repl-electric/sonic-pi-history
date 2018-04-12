@@ -47,7 +47,7 @@ cue :hit
 
 #crashcam3 0.6
     live_loop :go, sync: :unsyncable do
- #     stop
+     stop
       #      stop
       dcam4
 

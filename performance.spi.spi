@@ -4,10 +4,10 @@ bitsea_on :A2
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   corrupt :A1
-  alive rotate: 1.0
+#  alive rotate: 1.0
   shard 0.1
   sleep 1
-  alive rotate: 0.0
+#  alive rotate: 0.0
   shard 0.0
   sleep 1
 end
@@ -17,8 +17,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       terrain 0.5 if pp
       smp_dust(pp)

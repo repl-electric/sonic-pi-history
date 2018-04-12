@@ -1,6 +1,7 @@
 #cam3
 #viz breath: 0.0
 #viz shard: 1.0
+alive rotate: 0.0
 cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3

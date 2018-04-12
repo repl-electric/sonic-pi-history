@@ -11,13 +11,13 @@
       dcam3
       with_bpm 63.5 do #63.5
         score=(ing
-          D4, Cs4, _, A3, _, E4, _, A4, A4, A4, A4, A4,
-          D4, Cs4, _, A3, _, B3, _, A4, A4, A4, Fs4, A4,
+          D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+          D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
           )
         note=score.look
         future_note=score.look(offset: 1)
         operator note
-        callstack note,(ing 70, 65, 60,).look, sus: 2
+        callstack note,(ing 70 65 60).look, sus: 2
 
         sleep 1/2.0
         chd = find_chord future_note
@@ -36,11 +36,12 @@
           64.times{|n|
         mt 9,120,120
         sleep 0.125
-        qbitsea :FS4,45, sus: 0.125 if spread(1,6).look(:n)
+        #qbitsea :FS4,45, sus: 0.125 if spread(1,6).look(:n)
+        whitespace c[0][0], sus: 12
 
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125
-            corrupt :E4, (ing 2, 4, 6, 8,).tick(:n), sus: 4.0, mode: 0 if n % 16 == 0
+            corrupt :E4, (ing 2 4 6 8).tick(:n), sus: 4.0, mode: 0 if n % 16 == 0
       }
           crashcam3 0.0
           stop
@@ -64,20 +65,20 @@ cue :hit
 
       tick
   score=(ing
-        [:b2,  :d5, :fs3],        Zz,
-        [:fs2,  :a4, :cs3],       Zz,
-        [:a2,  :b4,  :e4],
-        [:d3,  :fs5, :a3, :cs5],   Zz,
-        [:e2,  :gs4, :b3],
-        [:b2,  :d5,  :fs3, :cs4],  Zz,
-        [:fs4, :a4,  :cs3],       Zz,
+        [:b2  :d5 :fs3]        Zz
+        [:fs2  :a4 :cs3]       Zz
+        [:a2  :b4  :e4]
+        [:d3  :fs5 :a3 :cs5]   Zz
+        [:e2  :gs4 :b3]
+        [:b2  :d5  :fs3 :cs4]  Zz
+        [:fs4 :a4  :cs3]       Zz
 
         ).look
 
       rev :B5, 2 if spread(1,6).look
   #callstack rootz(score), (ring 60,68).look
   score.each_tick(:in){|n|
-#    qbitsea n, 2.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+#    qbitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
       exception rootz(score), atk: 0.01, more: 0.0,
                               shape: 1.0, wet: 0.0
@@ -103,15 +104,15 @@ live_loop :breath, sync: :unsyncable do
       #eek :a2, sus: 1.0, mode: 0 if spread(1,12*2).rot(2).look
       #corrupt :A2
       pp=(ing
-        _,
+        _
         ).look
       #0/0.ss
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
-        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
+        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
+        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
 
@@ -126,15 +127,15 @@ end
       stop
   tick
       kick_machine x=(ing
-      [KT[1]], _, TS[8], _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,   %l{TC[6]}, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,   _, _, _, _,  K3, _, %l{TC[6]}, _,   _, _, _, _,
+      [KT[1]] _ TS[8] _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _   %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _   _ _ _ _  K3 _ %l{TC[6]} _   _ _ _ _
 
-      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-      K1, _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,   %l{TC[6]}, _, _, _,  K3, _, _, _,   _, _, _, T1,
-      K1, _, _, _,   _, _, _, _,  K3, _, %e{TC[6]}, _,   _, _, _, _,
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+      K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _   %l{TC[6]} _ _ _  K3 _ _ _   _ _ _ T1
+      K1 _ _ _   _ _ _ _  K3 _ %e{TC[6]} _   _ _ _ _
 
       ).map{|c| look % 64 == 0 ? c : c}.look, def: 8, accent: 2
       yes{
@@ -146,27 +147,27 @@ end
       stop
 
     p=(ing
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      [TS[49]], _, _, TS[12],    _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      [TS[49]] _ _ TS[12]    _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TS[7], _, _, _,            _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TT[49], _, _, TS[12],      _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TT[49] _ _ TS[12]      _ _ _ _
 
-      _, _, _, _,                _, _, _, _,
-      _, _, _, _,                _, _, _, _,
-      TS[7], _, _, _,            _, _, _, _,
+      _ _ _ _                _ _ _ _
+      _ _ _ _                _ _ _ _
+      TS[7] _ _ _            _ _ _ _
       )
 
     p=p.look
     #p=_
     fx=:lpf
-    accent = (ing 0.2, 0.2, 0.3, 0.5,).look
+    accent = (ing 0.2 0.2 0.3 0.5).look
     attack = 0.0
     r = 1.0
     if p && p.is_a?(Array)

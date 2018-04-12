@@ -6,8 +6,27 @@
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#electric
+#electri
+
+#c
 cue :hit
+
+
+no{
+qbitsea_cc oct: 0.50
+qbitsea_cc drive: 0.27
+qbitsea_cc charge: 0.50
+qbitsea_cc fm: 0.00
+qbitsea_cc wav: 0.01
+qbitsea_cc wav_amp: 0.30
+qbitsea_cc atk: 0.83
+qbitsea_cc mod: 0.80
+qbitsea_cc motion: 0.24
+qbitsea_cc formant: 0.36
+qbitsea_cc mul: 0.00
+qbitsea_cc bass: 0.50
+}
+
 live_loop :pi, sync: :hit do;tick
 stop
   #zero_x
@@ -63,7 +82,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
     [:fs2  :a4 :cs3]       Zz
     [:a2  :b4  :e4]
     [:d3  :fs5 :a3 :cs5]   Zz
-    [:e2  :gs4 :b3]
+    [:e2  :gs5 :b3]
     [:b2  :d5  :fs3 :cs4]  Zz
     [:fs4 :a4  :cs3]       Zz
 
@@ -82,7 +101,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
       K1      _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
         ).map{|c| look(:k) % 64 == 0 ? c : _}.look(:k), def: 8, accent: 2
-
 
     no{
       if k && spread(1,64).rot(0).look

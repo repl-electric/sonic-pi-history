@@ -1,11 +1,22 @@
 #cam3
 #viz breath: 0.0
 #viz shard: 1.0
-alive rotate: 0.01
-cue :hit
+#alive rotate: 0.01
+#cue :hit
 
-cam4
+camend
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
 
+
+stop
 
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick

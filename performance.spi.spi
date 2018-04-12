@@ -16,6 +16,8 @@
       with_bpm 45.125 do #63.5
         score=(ing
           D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+          D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
+
           )
         note=score.look
         future_note=score.look(offset: 1)
@@ -57,7 +59,6 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric
 invcol
 #bitsea_on :cs5
-
 
 live_loop :breath, sync: :unsyncable do
       with_fx :echo, mix: 1*(ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do

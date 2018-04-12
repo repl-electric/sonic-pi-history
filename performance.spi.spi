@@ -10,8 +10,8 @@ electric
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
   score=(ing
-    [:a2 :cs3 :e3]  Zz
-    [:cs2 :e3 :gs3] Zz
+    [:a2 :cs4 :e3]  Zz
+    [:cs2 :e4 :gs3] Zz
     ).look
   callstack root(score), 70, sus: 0.125
   score.each_tick(:in){|n|

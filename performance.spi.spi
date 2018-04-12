@@ -1,4 +1,4 @@
-#camlogo
+camlogo
 live_loop :name, sync: :unsyncable do
   tick
 

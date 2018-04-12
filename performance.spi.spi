@@ -9,6 +9,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #electric
 cue :hit
 live_loop :pi, sync: :hit do;tick
+stop
   #zero_x
   #dcam3 true
   with_bpm 63.5 do #63.5
@@ -55,7 +56,8 @@ zero_cc wet:   1.00
 #zero_cc amp: 0.60
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
-  stop
+#  stop
+  dcam4
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz

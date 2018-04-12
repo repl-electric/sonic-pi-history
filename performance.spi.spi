@@ -19,7 +19,7 @@ live_loop :go, sync: :unsyncable do
     [:a2  :cs4 :e3] Zz
     [:cs3 :e4  :gs3] Zz
     ).look
-      puts score
+      puts note(score)
       puts root(score)
 #  callstack root(score), (ring 60,68).look
   score.each_tick(:in){|n|

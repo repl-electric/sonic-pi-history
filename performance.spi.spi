@@ -1,7 +1,8 @@
 camlogo logo: 1.0
 
-live_loop :fall_into_your_screen, sync: :unsyncable do
+bitsea_on :A2
 
+live_loop :fall_into_your_screen, sync: :unsyncable do;tick
   sleep 1
   verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 1

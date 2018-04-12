@@ -36,7 +36,7 @@
           64.times{|n|
         mt 9,120,120
         sleep 0.125
-           qbitsea :A4, sus: 0.125
+           qbitsea :A4, sus: 0.125 if spread(7,11).look
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125
             corrupt :E4, (ing 2 4 6 8).tick(:n), sus: 4.0, mode: 0 if n % 16 == 0

@@ -8,7 +8,7 @@ alive rotate: 1.0
 
   viz :alive, spike: 1.0
   alive color: (rand+0.2*0.8)*-1.0
-  alive :glitch, slices: rand
+  alive :glitch, slice: rand
 
 }
 

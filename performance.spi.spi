@@ -18,7 +18,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+  exception root(score), 30
   sleep 1
+
   null root(score),100
   invcol 1.0
   verb_slice Drip[/effect/].look if spread(1,3).look

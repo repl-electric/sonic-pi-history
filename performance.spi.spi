@@ -3,7 +3,7 @@
 #focus
 #stop
 
-viz :alive, light: 2.0
+viz :alive, light: 1.8
 stop
 #@light =  0.7
     live_loop :pi, sync: :hit do;tick

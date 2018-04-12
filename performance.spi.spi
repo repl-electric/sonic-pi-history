@@ -30,6 +30,7 @@
           with_transpose -12 { zero chd[2],1, sus: 12 }
           with_transpose -24 { zero chd[0],1, sus: 12 }
         else
+          with_transpose 12 { zero chd[0],1,sus: 12 }
 
         end
 

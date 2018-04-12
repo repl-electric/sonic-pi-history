@@ -9,7 +9,15 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
-  focus
+  score=(ing
+    [:a2 :cs3 :e3]
+    ).look
+  score.each_tick(:in){|n|
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+  }
+
+
+
   sleep 1
   verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 1

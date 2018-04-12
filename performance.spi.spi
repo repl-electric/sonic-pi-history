@@ -61,7 +61,7 @@ live_loop :go, sync: :unsyncable do
       dviz breath: 1.0
       dviz breath: 1.0
 at{
-      unity "/glitch/block",0.5
+      unity "/glitch/block",0.9
         unity "/glitch/slice",0.0
         sleep 0.125
               unity "/glitch/block",0.0

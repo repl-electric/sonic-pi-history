@@ -13,7 +13,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
 
-    dviz shard: 0.09
+    dviz shard: 0.1
 
     sleep 1/2.0
     sleep 1/2.0

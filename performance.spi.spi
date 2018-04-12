@@ -9,7 +9,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #electric
 cue :hit
 live_loop :pi, sync: :hit do;tick
-  zero_x
+  #zero_x
   #dcam3 true
   with_bpm 63.5 do #63.5
     score=(ing

@@ -9,10 +9,6 @@ live_loop :name, sync: :unsyncable do
   sleep 2
 end
 
-
-
-
-
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   shard 1.0

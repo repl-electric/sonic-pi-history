@@ -9,7 +9,7 @@ electric
 #invcol
 
 #focus
-live_loop :fall_into_your_screen, sync: :unsyncable do
+live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     [:A2 :cs4 :e3]
     [:cs3 :e4 :gs3]

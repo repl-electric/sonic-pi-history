@@ -60,7 +60,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     [KT[1]] _ _ _   TS[8] _ _ _  K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
-    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ [F1 0.99] _
 
     K1 _ _ _   TS[8] _ _ _  K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ T1

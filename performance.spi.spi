@@ -3,8 +3,6 @@ live_loop :name, sync: :unsyncable do
   tick
 
   #exception :A2
-  strings :A2, 127
-  zero :A2, 127
   corrupt :A1
   sleep 2
   sleep 2

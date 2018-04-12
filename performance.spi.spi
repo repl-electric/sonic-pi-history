@@ -5,7 +5,7 @@
 #cue :hit
 #camlogo
 #cam4
-camend
+camend true
 viz breath: 1.0
 viz shard: 1.0
 alive rotate: 1.0

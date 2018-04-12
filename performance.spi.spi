@@ -1,4 +1,10 @@
 camend
+viz breath: 1.0
+viz shard: 1.0
+12.times{
+  electric;sleep 0.5
+  viz :alive, spike: 1.0
+}
 
 
 

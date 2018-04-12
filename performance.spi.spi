@@ -4,12 +4,12 @@
 alive rotate: 0.01
 cue :hit
 
-#dcam4
+cam4
 
 
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
-  #stop
+  stop
   dcam3
   with_bpm 64.5 do #63.5
     score=(ing

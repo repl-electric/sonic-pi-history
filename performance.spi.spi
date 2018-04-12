@@ -14,7 +14,6 @@
 
     live_loop :pi, sync: :hit do;tick
       stop
-
       dcam3
       with_bpm 63.5 do #63.5
         score=(ing

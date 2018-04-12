@@ -36,7 +36,7 @@
             sleep 0.125
             corrupt :E4, (ing 2 4 6 8).tick(:n), sus: 4.0, mode: 0 if n % 16 == 0
           }
-  #        stop
+          stop
         end
 
 

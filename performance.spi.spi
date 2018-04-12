@@ -34,7 +34,9 @@
 
         if note == D4
           64.times{|n|
-            sleep 0.125
+        sleep 0.125
+        kick_machine K1
+
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125
             corrupt :E4, (ing 2 4 6 8).tick(:n), sus: 4.0, mode: 0 if n % 16 == 0

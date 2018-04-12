@@ -16,7 +16,7 @@
 live_loop :go, sync: :unsyncable do
   tick
   score=(ing
-    [:a2  :cs4 :e3] Zz
+    [:a2  :b3 :e3] Zz
     [:cs3 :e4  :gs3] Zz
     ).look
 

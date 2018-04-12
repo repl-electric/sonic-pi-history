@@ -18,8 +18,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     alive spike: 1.0
     alive electric: 1.0
     alive rotate: 0.09*rand
-
-
     sleep 1/2.0
 
     chd = find_chord future_note

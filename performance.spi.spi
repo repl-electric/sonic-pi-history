@@ -99,8 +99,8 @@ live_loop :kicker, sync: :unsyncable do
         with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
           at{
             sleep 0.5
-            #viz :sea, height: 0.3
-            #viz :sea, noise: 10.0
+            viz :sea, height: 0.3
+            viz :sea, noise: 10.0
             sleep 0.125
             #viz :sea, height: 0
             #viz :sea, noise: 0.01

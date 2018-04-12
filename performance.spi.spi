@@ -1,5 +1,5 @@
 camlogo logo: 1, crazy: 1.0
-null :d3, mode: 1, sus: 2
+null :d3, mode: 2, sus: 2
 #bitsea_on :A2
 
 #focus
@@ -18,8 +18,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
         ).look
       terrain 0.5 if pp
       smp_dust(pp)

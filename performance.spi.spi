@@ -1,6 +1,6 @@
 #camlogo logo: 1, off: 1
 #bitsea_on :A2
-
+focus
 #stop
 live_loop :go, sync: :unsyncable do
   tick

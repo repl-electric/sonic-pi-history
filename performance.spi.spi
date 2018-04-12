@@ -3,7 +3,13 @@
 #viz shard: 1.0
 alive rotate: 0.01
 cue :hit
+
+
+
+
+
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
+  stop
   dcam3
   with_bpm 64.5 do #63.5
     score=(ing

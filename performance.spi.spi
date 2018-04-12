@@ -35,7 +35,7 @@
         if note == D4
           64.times{|n|
         sleep 0.125
-        kick_machine K1
+        mt 5
 
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125

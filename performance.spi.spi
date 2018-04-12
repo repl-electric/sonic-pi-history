@@ -12,7 +12,8 @@
       }.compact.sort{|n1,n2| n1 <=> n2 }[0]
     end
 
- live_loop :pi, sync: :hit do;tick;dcam3
+    live_loop :pi, sync: :hit do;tick;dcam3
+      stop
       with_bpm 63.5 do #63.5
         score=(ing
           D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
@@ -57,14 +58,21 @@ live_loop :go, sync: :unsyncable do
       stop
       tick
   score=(ing
-    [:b3  :d5 :fs3] Zz
-    [:fs3 :a4  :cs3] Zz
-    ).look
+        [:b2  :d5 :fs3]        Zz
+        [:fs2  :a4 :cs3]       Zz
+        [:a2  :b4  :e4]
+        [:d3  :fs5 :a3 :cs5]   Zz
+        [:e2  :gs4 :b3]
+        [:b2  :d5  :fs3 :cs4]  Zz
+        [:fs4 :a4  :cs3]       Zz
+
+
+        ).look
 
       rev :B5, 2 if spread(1,6).look
   #callstack rootz(score), (ring 60,68).look
   score.each_tick(:in){|n|
-    bitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
       exception rootz(score), atk: 0.01, more: 0.0,
                               shape: 1.0, wet: 0.0

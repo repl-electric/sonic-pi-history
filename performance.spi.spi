@@ -4,7 +4,7 @@ viz shard: 1.0
 128.times{
   electric;sleep 0.5
   viz :alive, spike: 1.0
-  alive color: rand_i(-10,10)*0.5
+  alive color: rand_i(-10..10)*0.5
   alive :glitch, slits: rand
 
 }

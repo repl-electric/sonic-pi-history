@@ -4,12 +4,12 @@
 alive rotate: 0.01
 cue :hit
 
-#dcam4
+dcam4
 
 
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
-#  stop
+  stop
   dcam3
   with_bpm 64.5 do #63.5
     score=(ing
@@ -47,7 +47,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
       corrupt (ing :e4 :e4 :e4 :e4).tick(:n), (ing 2 4 6 8).look(:n), sus: 4, mode: 0 if n % 16 == 0
       }
       dviz shard: 1.0
-
       stop
       end
 

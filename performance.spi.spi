@@ -35,7 +35,7 @@
         if note == D4
           64.times{|n|
         sleep 0.125
-        mt 5
+        mt 5,100,120
 
             corrupt :E4,10, sus: 0.125 if n % 8 == 0
             sleep 0.125

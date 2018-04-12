@@ -35,7 +35,7 @@
         end
 
         sleep 1/2.0
-        eek score, mode: 2, sus: 3 if spread(1,3).look
+        #eek score, mode: 2, sus: 3 if spread(1,3).look
 
 
         sleep 1/4.0

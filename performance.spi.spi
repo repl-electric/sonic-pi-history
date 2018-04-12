@@ -34,7 +34,7 @@ zero_cc wet:   0.90
 
 live_loop :fall_into_your_screen, sync: :unsyncable do;tick
   score=(ing
-    [:b3 :d5 :fs3]  Zz
+    [:b3 :d5 :fs4]  Zz
     [:fs3 :a4 :cs4] Zz
     ).look
   callstack root(score), 70, sus: 0.125

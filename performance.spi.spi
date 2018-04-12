@@ -5,8 +5,8 @@
 live_loop :go, sync: :unsyncable do
   tick
   score=(ing
-    [:a2 :cs4 :e3] Zz
-    [:cs2 :e4 :gs3] Zz
+    [:a2  :cs4 :e3] Zz
+    [:cs2 :e4  :gs3] Zz
     ).look
   operator root(score), 70 if score[0]
   score.each_tick(:in){|n|

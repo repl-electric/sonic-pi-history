@@ -58,7 +58,7 @@ cam3
     live_loop :go, sync: :unsyncable do
       stop
       #      stop
-      dcam4
+#      dcam4
 
       tick
   score=(ing

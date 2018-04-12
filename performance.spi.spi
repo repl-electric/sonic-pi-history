@@ -9,7 +9,7 @@
         else
           nil
         end
-      }.compact.sort{|n1,n2| n1[0] <=> n2[0] }[0]
+      }.compact.sort{|n1,n2| n1 <=> n2 }[0]
     end
 
 

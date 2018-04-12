@@ -4,7 +4,7 @@
 #stop
     def rootz(note_seq)
       note_seq.map{|n|
-        if n && n[0]
+        if n
           note(n[0])
         else
           nil

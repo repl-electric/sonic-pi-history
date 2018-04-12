@@ -83,7 +83,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
 #    [:a2  :b4  :e4]
     [:d3  :fs4 :a3 :e4]   Zz
     [:e2  :gs3 :b3]    Zz
-    [:cs2 :e4  :gs3 :b4]  Zz
+    [:cs2 :e5  :gs3 :b4]  Zz
     [:a2  :cs3  :e3]       Zz
 
     ).look

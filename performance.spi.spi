@@ -41,7 +41,7 @@
         sleep 1/4.0
       end
     end
-
+cue :hit
 
 
 live_loop :go, sync: :unsyncable do

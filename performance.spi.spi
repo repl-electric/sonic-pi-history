@@ -1,7 +1,7 @@
 camend
 viz breath: 1.0
 viz shard: 1.0
-alive rotate: 100.0
+alive rotate: 10.0
 128.times{
   electric
   sleep 2.0

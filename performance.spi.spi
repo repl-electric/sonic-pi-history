@@ -18,7 +18,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     bitsea n, 2.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-  exception root(score)
+  if score.length > 1
+    exception root(score)
+  end
 #  logo [0,1,2,3,4].choose
   corrupt :A1
 #  alive rotate: 1.0

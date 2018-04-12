@@ -28,6 +28,8 @@
         chd = find_chord future_note
         if spread(1,2).rot(1).look
           with_transpose 0 { zero chd[1],1, sus: 12 }
+          with_transpose -12 { zero chd[2],1, sus: 12 }
+
 
         else
 

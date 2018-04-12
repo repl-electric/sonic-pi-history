@@ -13,11 +13,15 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
 
         ).look
       smp_dust(pp)
+      mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
+      mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+
+
 
       sleep 1/8.0
     }

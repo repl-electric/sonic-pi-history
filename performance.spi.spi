@@ -2,7 +2,8 @@ camend
 viz breath: 1.0
 viz shard: 1.0
 128.times{
-  electric;sleep 2.0
+  electric
+  sleep 4.0
   viz :alive, spike: 1.0
   alive color: rand_i(-10..10)*0.5
   alive :glitch, slits: rand

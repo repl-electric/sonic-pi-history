@@ -12,8 +12,10 @@
       }.compact.sort{|n1,n2| n1 <=> n2 }[0]
     end
 
-    live_loop :pi, sync: :hit do;tick;dcam3
+    live_loop :pi, sync: :hit do;tick
       stop
+
+      dcam3
       with_bpm 63.5 do #63.5
         score=(ing
           D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4

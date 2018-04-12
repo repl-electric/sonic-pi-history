@@ -91,7 +91,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do;tick
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5, hi: 1.00, mi: 1.00, lo: 1.00
   }
 
-  pf= 1.8
+  pf= 1.9
   electric
   i=(method :operator)
   alivecol 0.4

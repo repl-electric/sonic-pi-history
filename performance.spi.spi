@@ -11,8 +11,8 @@ end
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   shard 1.0
-  sleep 1
-  sleep 1
+#  sleep 1
+#  sleep 1
 end
 
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

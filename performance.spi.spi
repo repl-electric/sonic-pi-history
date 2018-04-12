@@ -3,7 +3,7 @@
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do
   corrupt :A1
-  sparks 0.0
+  shards 0.0
   sleep 2
 end
 
@@ -12,7 +12,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
 

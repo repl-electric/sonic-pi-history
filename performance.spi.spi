@@ -5,8 +5,8 @@
 live_loop :go, sync: :unsyncable do
   tick
   score=(ing
-    [:a2 :cs3 :e3]
-    [:cs2 :e3 :gs3]
+    [:a2 :cs3 :e3] Zz
+    [:cs2 :e3 :gs3] Zz
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

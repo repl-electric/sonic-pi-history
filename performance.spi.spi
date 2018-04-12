@@ -31,7 +31,8 @@
 
 
 live_loop :go, sync: :unsyncable do
-  tick
+stop
+      tick
   score=(ing
     [:b3  :d5 :fs3] Zz
     [:fs3 :a4  :cs3] Zz

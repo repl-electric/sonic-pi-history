@@ -23,7 +23,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   shard 0.1
   sleep 1
   null root(score), 80
-  terrain 0.9 if pp
+  terrain 0.9 if
 
   alive rotate: 0.0
   shard 0.0

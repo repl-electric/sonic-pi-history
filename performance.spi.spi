@@ -11,8 +11,8 @@ electric
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   score=(ing
-    [:d2 :d5 :fs3] Zz
-    [:fs2 :a4 :cs3] Zz
+    [:d3 :d5 :fs3] Zz
+    [:fs3 :a4 :cs3] Zz
     ).look
 #  callstack root(score), 40
   score.each_tick(:in){|n|

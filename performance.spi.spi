@@ -119,7 +119,7 @@ qbitsea_cc bass: 1.00
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #    stop
-    dcam4
+#    dcam4
   score=(ing
 #    [:b2  :d4 :fs3]        Zz
   #  [:fs2 :a4 :cs4]       Zz

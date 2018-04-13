@@ -24,9 +24,11 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
     sleep 1/2.0
 
+    null chd[1], 80, sus: 1
+
     chd = find_chord(future_note)
     if spread(1,2).rot(1).look
-      null chd[1], 80, sus: 1
+     # null chd[1], 80, sus: 1
       with_transpose 0 { zero chd[1], 1, sus: 12 }
       with_transpose -12 { zero chd[2], 1, sus: 12 }
       with_transpose -12*2 { zero chd[0], 1, sus: 12 }

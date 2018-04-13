@@ -1,10 +1,15 @@
 #camlogo logo: 1.0, crazy: 1, off: 1.0
 #null :A3
-bitsea_on :CS4
+#bitsea_on :CS4
 #focus
+bitsea_cc motion: 1.00  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╢
+bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
+#bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
+
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+
   #alive rotate: 1.0
   #shard 0.1
   sleep 1
@@ -27,6 +32,11 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+      s=(ing
+        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
+        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
+        ).look
+      mt s, accent=(line 75, 85, 16*4).look, 100
 
 
       sleep 1/8.0
@@ -36,6 +46,8 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
+
+  
   p=(ing
     _ _ _ _                _ _ _ _
     _ _ _ _                _ _ _ _

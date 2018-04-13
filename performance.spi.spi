@@ -13,6 +13,7 @@
 viz breath: 1.0
 viz shard: 1.0
 alive color: (rand+0.3*0.8)*-1.0
+viz :alive, spike: 1.0
 
 
 #cam4 true

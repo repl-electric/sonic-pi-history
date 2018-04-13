@@ -124,6 +124,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
     }
 
+  at{
   kick_machine k=(ing
     K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
@@ -135,7 +136,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     if k && spread(1,64).rot(0).look
       bitsea :fs4, sus: 4.0
     end
-  }
+    }
+    sleep 2/8.0
+    }
 
   at{
 #    sleep 1/8.0*4

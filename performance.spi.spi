@@ -8,9 +8,11 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric
 
 #focus
-zero_x
+#zero_x
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3
+  viz :breath, 0.0
+
   with_bpm 45.125 do #63.5
     score=(ing
       D3 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4

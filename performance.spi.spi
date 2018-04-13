@@ -9,6 +9,7 @@ electric
 #invcol 0
 cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
+stop
   dcam3
   with_bpm 63.5 do #63.5
     score=(ing

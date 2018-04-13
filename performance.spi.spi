@@ -34,6 +34,7 @@ zero_cc wet:   0.80
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+stop
   rev :e4,10 if spread(1,3).look
   score=(ing
     [:d3 :d5  :fs3] #Zz

@@ -91,7 +91,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #    [:fs4 :a4  :cs4]       Zz
 
     ).look
-#  panic
+  #  panic
+  shard 1.0
   alivecol -2.2
   pf=1.8
   i=(method :operator)

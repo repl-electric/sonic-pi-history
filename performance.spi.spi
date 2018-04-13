@@ -33,6 +33,7 @@ zero_cc noise: 0.00
 zero_cc wet:   1.00
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+stop
   rev :fs4,80 if spread(1,3).look
   score=(ing
     [:b3 :d5 :fs3] Zz

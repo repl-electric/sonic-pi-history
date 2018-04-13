@@ -24,7 +24,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     sleep 1/4.0
   end
 end
-
+zero_x
 
 zero_on :FS4
 zero_cc pulse: 0.00

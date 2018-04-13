@@ -110,9 +110,11 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   i.call(score[5], 30*pf, sus: 8)
 }
 
+  with_transpose 12 {
+
   exception root(score),atk: 0.2
   null root(score), 100
-
+}
   #alive rotate: 1.0
   #shard 0.1
 

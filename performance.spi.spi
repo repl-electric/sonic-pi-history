@@ -79,6 +79,22 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+  at{
+  kick_machine k=(ing
+    K1 _ _ _  TS[8] _ _ _  K1 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K1 _ _ _   _ _ _ _
+    K1    _ _ _   %l{TC[6]} _ _ _      K1 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K1 _ %l{TC[6]} _   _ _ _ _
+    ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
+
+  no{
+    if k && spread(1,64).rot(0).look
+      bitsea :fs4, sus: 4.0
+    end
+    }
+    }
+
+
   exception root(score), sus: 2
 #  corrupt :A1
   sleep 1

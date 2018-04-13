@@ -23,20 +23,20 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
 
         ).look
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
-        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
-        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
+        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
+        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       s=strpat("[5]p5p5p5p 5p5p5[5]5p")
-      #mt s.look,accent=(line 85,127,64).look, 120
+      mt s.look,accent=(line 85,127,64).look, 120
 
 
       sleep 1/8.0
@@ -49,10 +49,10 @@ mt_cc morph: 0
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
   kick_machine k=(ing
-    [KT[1]], _, _, _,   _, _, _, _,  K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+    [KT[1]] _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
 
   no{

@@ -1,6 +1,6 @@
-#camlogo logo: 1.0, crazy: 1
+camlogo logo: 1.0, crazy: 1, off: 1.0
 #null :A3
-bitsea_on :E3
+#bitsea_on :E3
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #alive rotate: 1.0
@@ -18,8 +18,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
 
         ).look
       smp_dust(pp)

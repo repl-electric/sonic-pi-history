@@ -86,12 +86,13 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :e5]   Zz
     [:e2  :gs4 :b3]
-    [:a2  :cs5  :es3 ]  Zz
+    [:a2  :cs5  :e3 ]  Zz
     [:fs4 :a4  :cs4]       Zz
 
 
     ).look
   panic true
+  alivecol 0.2
   pf=1.8
   i=(method :operator)
   at{

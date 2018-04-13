@@ -12,7 +12,7 @@ electric
 cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3
-  dviz :breath, 0.0
+  dviz breath: 0.0
 
   with_bpm 45.125 do #63.5
     score=(ing

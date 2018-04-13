@@ -88,7 +88,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
 #     [:b1  :d2   :fs3]        Zz
  #    [:fs1 :a2   :cs3]       Zz
-     [:a1   :cs2  :e2]        Zz
+     [:a1 ]        Zz
  #   [:d2  :fs3 :a3]   Zz
 #    [:e2  :gs3 :b3]   Zz
  #   [:a2  :e5  :cs3]  Zz

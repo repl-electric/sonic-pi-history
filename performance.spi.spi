@@ -32,7 +32,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
     end
 
-
     sleep 1/2.0
     eek score[0], mode: 2, sus: 6 if spread(1,6).look
     sleep 1/4.0

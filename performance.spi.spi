@@ -10,7 +10,10 @@
 # }
 
 
-cam4 true
+ alive color: (rand+0.3*0.8)*-1.0
+
+
+#cam4 true
 
 #eq lo: 0.00
 #eq hi: 0.00

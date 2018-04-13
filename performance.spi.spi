@@ -3,7 +3,7 @@
 #bitsea_on :e3
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :A1
+  corrupt :A2
   alive rotate: 1.0
   shard 0.1
   sleep 1

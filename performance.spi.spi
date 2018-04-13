@@ -130,7 +130,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-    ).map{|c| look % 64 == 0 ? c : c}.look, def: 8, accent: 2
+    ).map{|c| look(:a) % 64 == 0 ? c : c}.look, def: 8, accent: 2
 
   no{
     if k && spread(1,64).rot(0).look
@@ -142,7 +142,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   at{
 #    sleep 1/8.0*4
-    exception root(score), sus: 1.5, atk: 1.0, shape: 1.0,  more: 1.0, wet: 1.0
+    exception root(score), sus: 2.0, atk: 1.0, shape: 1.0,  more: 1.0, wet: 1.0
  #   sleep 1/8.0*4
   #  exception root(score), sus: 1.5, atk: 0.1, shape: 1.0, more: 0.0
   }

@@ -41,7 +41,9 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     null score[-2],80,sus: 4
 
     if note == :d4
-    with_transpose 0 {
+      with_transpose 0 {
+        null :d4,90,sus: 12
+
       64.times{|n|
       sleep 0.125
       corrupt :e5, sus: 0.125 if n % 8 == 0
@@ -50,7 +52,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
       }
       }
-#      stop
+      stop
    end
 
     sleep 1/4.0

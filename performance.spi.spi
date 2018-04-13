@@ -86,6 +86,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     K1    _ _ _   %l{TC[6]} _ _ _      K1 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K1 _ %l{TC[6]} _   _ _ _ _
     ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 2
+    with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 
   no{
     if k && spread(1,64).rot(0).look

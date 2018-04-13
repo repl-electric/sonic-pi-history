@@ -101,7 +101,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #    [:cs2 :e4  :gs3]  Zz
  #   [:a2 :cs4  :e3]       Zz
         ).look
-  alivecol 0.3
+#  alivecol 0.3
  # with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 #  whitespace score[-1],1, sus: 12
 

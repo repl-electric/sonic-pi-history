@@ -92,7 +92,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
     ).look
   #  panic
-  sharda 1.0
+  shards 1.0
   alivecol -1.8
   pf=1.8
   i=(method :operator)

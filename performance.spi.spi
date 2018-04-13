@@ -51,6 +51,13 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+
+    K1 _ _ _   _ _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+
+
     ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
 
   no{

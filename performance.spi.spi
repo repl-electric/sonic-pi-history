@@ -11,6 +11,7 @@ electric
 #zero_x
 cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
+stop
   dcam3
   dviz breath: 0.0
 

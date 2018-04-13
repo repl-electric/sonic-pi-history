@@ -27,7 +27,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #alive rotate: 0.0
   #shard 0.0
   corrupt :A1
-  verb_slice Drip[/effect/].look if spread(1,3).look
+#  verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 1
 end
 

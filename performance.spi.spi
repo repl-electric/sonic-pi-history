@@ -38,13 +38,16 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     sleep 1/2.0
     eek note, mode:2, sus: 6 if spread(1,3).look
     null score[1],sus: 2
+    with_transpose -12 {
+
     64.times{|n|
       sleep 0.125
       corrupt :e5, sus: 0.125 if n % 8 == 0
       sleep 0.125
       corrupt (ing :e4 :e4 :e4 :e4).tick(:n), (ing 2 4 6 8).look(:n), sus: 4, mode: 0 if n % 16 == 0
 
-    }
+      }
+      }
 #    stop
 
     sleep 1/4.0

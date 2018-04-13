@@ -59,12 +59,29 @@ zero_cc more:  0.00
 zero_cc noise: 0.00
 zero_cc wet:   0.50
 
+
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.38
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.20
+  qbitsea_cc wav: 0.01
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.83
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.27
+}
+
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #stop
   #  rev :fs4,80 if spread(1,3).look
   dcam4
   score=(ing
-    [:b2  :ds5 :fs3]        Zz
+    [:b2  :d5 :fs3]        Zz
     [:fs2  :as4 :cs3]       Zz
     [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :e5]   Zz

@@ -104,7 +104,7 @@ end
 #viz "/logo/blank", 1.0
 
 #viz "/logo/re", 0.0
-panic true
+panic false
 
 
 no{

@@ -3,21 +3,21 @@
 
 #unity "/logo/re", 0.0
 
-panic true
+#panic true
 
 
 
-stop
+#stop
 
 #unity "/alive/light", 0.6
-unity "/logo/re", 0.0
-unity "/logo/re", 0.0
+#unity "/logo/re", 0.0
+#unity "/logo/re", 0.0
 #unity "/logo/blank", 1.0
-stop
+#stop
 
 # camend
-viz breath: 1.0
-viz shard: 1.0
+#viz breath: 1.0
+#viz shard: 1.0
 # alive rotate: 1.0
 # 128.times{
 #   electric
@@ -25,8 +25,8 @@ viz shard: 1.0
 #   viz :alive, spike: 1.0
 #   alive color: (rand+0.3*0.8)*-1.0
 # }
-alive color: (rand+0.5*0.8)*-1.0
-viz :alive, spike: 1.0
+#alive color: (rand+0.5*0.8)*-1.0
+#viz :alive, spike: 1.0
 
 #stop
 #viz breath: 0.0
@@ -106,7 +106,7 @@ no{
 qbitsea_cc oct: 0.60
 qbitsea_cc drive: 1.00
 qbitsea_cc charge: 0.50
-qbitsea_cc fm: 0.23
+qbitsea_cc fm: 0.27
 qbitsea_cc wav: 1.00
 qbitsea_cc wav_amp: 0.60
 qbitsea_cc atk: 0.00

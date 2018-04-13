@@ -24,7 +24,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
     sleep 1/2.0
 
-    with_transpose 12 {
+    with_transpose -12 {
       null note, 60, sus: 2
       }
     chd = find_chord(future_note)

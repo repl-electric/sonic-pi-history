@@ -90,8 +90,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:fs4 :a4  :cs4]       Zz
 
     ).look
-  panic false
-  alivecol 0.2
+#  panic
+  alivecol -2.2
   pf=1.8
   i=(method :operator)
   at{

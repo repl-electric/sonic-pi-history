@@ -13,10 +13,13 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:cs2 :e4 :gs3] Zz
 
     ).look
+
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+
+  null root(score), 100
 
 #  corrupt :A1
   sleep 1
@@ -63,7 +66,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
 
-    ).map{|c| look % 32 == 0 ? c : _}.look, def: 8, accent: 1
+    ).map{|c| look % 8 == 0 ? c : _}.look, def: 8, accent: 1
 
   no{
     if k && spread(1,64).rot(0).look

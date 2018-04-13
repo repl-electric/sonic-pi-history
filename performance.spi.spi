@@ -31,6 +31,25 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
+  kick_machine k=(ing
+    KT[1] _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+    K1 _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
+    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+
+    ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 1
+
+  no{
+    if k && spread(1,64).rot(0).look
+      bitsea :fs4, sus: 4.0
+    end
+  }
+
+
   p=(ing
     _ _ _ _                _ _ _ _
     _ _ _ _                _ _ _ _

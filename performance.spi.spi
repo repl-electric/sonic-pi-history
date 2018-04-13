@@ -83,6 +83,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:a2 :cs4  :e3]       Zz
         ).look
 
+  with_transpose -12 {cpu2 score[1], 60, sus: 2 }
+
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5, hi: 0.85
   }

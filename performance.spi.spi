@@ -89,7 +89,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:a2  :cs5  :e3 ]  Zz
     [:fs4 :a4  :cs4]       Zz
 
-
     ).look
   panic false
   alivecol 0.2

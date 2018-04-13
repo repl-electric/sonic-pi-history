@@ -147,7 +147,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #  exception root(score), sus: 1.5, atk: 0.1, shape: 1.0, more: 0.0
   }
   electric
-  alivecol 2.8
+  alivecol 1.8
 #  corrupt :A2
  # alive rotate: 1.0
   #shard 0.1

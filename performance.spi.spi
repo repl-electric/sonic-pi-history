@@ -19,13 +19,11 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   }
 
 
-
-
-
   corrupt :A2
   alive rotate: 1.0
   shard 0.1
   sleep 1
+  null root(score), 80
   alive rotate: 0.0
   shard 0.0
   #verb_slice Drip[/effect/].look if spread(1,3).look

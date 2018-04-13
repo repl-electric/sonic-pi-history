@@ -149,13 +149,12 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #  corrupt :A2
  # alive rotate: 1.0
   #shard 0.1
-  sleep 1
   with_transpose 12 {
     exception root(score), sus: 2.0, atk: 1.0, shape: 1.0,  more: 0.0, wet: 0.0
-
     null root(score), 120, sus: 2
     }
 #  terrain 0.9
+  sleep 1
 
 #  alive rotate: 0.0
   #shard 0.0

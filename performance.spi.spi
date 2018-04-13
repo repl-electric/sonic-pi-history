@@ -14,11 +14,10 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3
   dviz breath: 0.0
 
-  with_bpm 45.125 do #63.5
+  with_bpm 50.5 do #63.5
     score=(ing
-      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
-      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
-
+      Gs4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      Gs4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
       )
     note=score.look
     future_note=score.look(offset: 1)

@@ -24,13 +24,56 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       #mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
 
-
       sleep 1/8.0
     }
   end
 end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
+
+  p=(ing
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    [TS[49]] _ _ TS[12]    _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TT[49] _ _ TS[12]      _ _ _ _
+
+    _ _ _ _                _ _ _ _
+    _ _ _ _                _ _ _ _
+    TS[7] _ _ _            _ _ _ _
+    )
+
+  p=p.look
+  #p=_
+  fx=:lpf
+  accent = (ing 0.2 0.2 0.3 0.5).look
+  attack = 0.0
+  r = 1.0
+  if p && p.is_a?(Array)
+    p = p[0]
+    accent=accent*1.5
+  end
+  if p
+    with_swing(0.01) do
+      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
+        at{
+          sleep 0.5
+          viz :sea, height: 0.3
+          viz :sea, noise: 10.0
+          sleep 0.125
+          dviz :sea, height: 0
+          viz :sea, noise: 0.01
+        }
+        smp p, amp: 3*accent, rate: r, attack: attack
+      }
+    end
+  end
 
   sleep 1/8.0
 end

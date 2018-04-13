@@ -18,7 +18,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
-
   #alive rotate: 1.0
   #shard 0.1
   sleep 1

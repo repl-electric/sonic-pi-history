@@ -171,7 +171,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-    ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 0
+    ).map{|c| look % 64 == 0 ? c : _}.look, def: 8, accent: 2
 
   no{
     if k && spread(1,64).rot(0).look

@@ -10,7 +10,7 @@ electric
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
-    [:a2 :b3 :e3] Zz
+    [:b2 :d4 :fs3] Zz
     [:fs2 :a4 :cs3] Zz
         ).look
 

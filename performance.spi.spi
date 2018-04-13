@@ -19,7 +19,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
-    shard 0.3
+    shard 0.5
     sleep 1/2.0
 
     chd = find_chord(future_note)

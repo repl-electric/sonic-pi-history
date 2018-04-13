@@ -150,7 +150,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
  # alive rotate: 1.0
   #shard 0.1
   sleep 1
-  with_transpose -12 {
+  with_transpose 12 {
     null root(score), 120, sus: 2
     }
 #  terrain 0.9

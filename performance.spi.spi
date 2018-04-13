@@ -40,7 +40,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     null score[-1],70,sus: 4
     null score[-2],80,sus: 4
 
-
     if note == :d4
     with_transpose 0 {
       64.times{|n|

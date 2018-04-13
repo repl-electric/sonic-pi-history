@@ -27,7 +27,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     sleep 1/4.0
   end
 end
-
+cue :hit
 
 #zero_on :a4
 zero_cc pulse: 0.00

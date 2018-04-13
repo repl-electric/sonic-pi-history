@@ -7,7 +7,7 @@ electric
 #bitsea_on :cs4
 #focus
 invcol 0.0
-
+cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3
   with_bpm 45.125 do #63.5

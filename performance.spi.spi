@@ -192,11 +192,17 @@ breath 1.0
 
 
   sleep 1
+  shard 1.0
+breath 1.0
+
   #alive rotate: 0.0
   #shard 0.0
   #corrupt :A1
 #  verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 1
+  shard 1.0
+breath 1.0
+
 end
 
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

@@ -9,7 +9,7 @@ bitsea_cc octave: 0.56  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 
 electric
-#invcol 1.0
+invcol 0.0
 
 focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

@@ -74,7 +74,7 @@ no{
   qbitsea_cc bass: 0.55
 }
 
-
+panic false
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   shard 1.0
   #  focus

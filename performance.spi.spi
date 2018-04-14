@@ -22,12 +22,13 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
     shard 0.9
-    zero_x
+#    zero_x
 
     sleep 1/2.0
     chd = find_chord future_note
     if spread(1,2).rot(1).look
       with_transpose 0 { zero chd[1],1,sus: 12 }
+      with_transpose -12 { zero chd[2],1,sus: 12 }
       with_transpose -12 { zero chd[2],1,sus: 12 }
 
     else

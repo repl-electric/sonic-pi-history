@@ -28,7 +28,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     spark 0.0
     spark 1.0
 
-
     sleep 1/2.0
 
     chd = find_chord(future_note)

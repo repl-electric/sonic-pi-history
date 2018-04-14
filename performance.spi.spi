@@ -80,10 +80,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz
     [:a2  :cs5  :e4]
-    [:d3  :fs5 :a3 :cs5]   Zz
+    [:d3  :fs5 :a3 :e4]   Zz
     [:e2  :gs4 :b3]
     [:b2  :d5  :fs3 :cs4]  Zz
-    [:fs4 :a4  :cs3]       Zz
+    [:fs4 :a4  :cs4]       Zz
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

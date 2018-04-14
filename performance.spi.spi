@@ -18,7 +18,8 @@ zero_cc wet:   0.40
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
-#  dcam3 true
+  #  dcam3 true
+  stop
   with_bpm 63.5 do #63.5
     score=(ing
       D4 CS4 _ A3 _ E4 _ A4 A4 A4 A4 A4
@@ -72,11 +73,16 @@ zero_cc wet:   0.60
 #zero_on :Fs5
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-stop
-  rev :b4, 11 if spread(1,6).look
   score=(ing
-    [:b3 :d5 :fs3] Zz
-    [:fs3 :a4 :cs4] Zz
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
+
+
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
@@ -85,6 +91,8 @@ stop
   if score.length > 1
     exception root(score), atk: 0.8, form: 1.0
   end
+
+  kick_machine K1
 
   #alive rotate: 1.0
   #shard 0.1

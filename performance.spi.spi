@@ -11,7 +11,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
   dcam3 true
-  with_bpm 50.125 do #63.5
+  with_bpm 63.5 do #63.5
     score=(ing
       D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
       D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4

@@ -75,6 +75,7 @@ zero_cc wet:   0.60
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+dcam4
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz
@@ -91,6 +92,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   if score.length > 1
     exception root(score), atk: 0.8, form: 1.0
   end
+
 
 
 

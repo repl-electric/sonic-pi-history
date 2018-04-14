@@ -92,6 +92,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
 end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
+
   kick_machine k=(ing
     [KT[1]] _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
@@ -104,9 +105,12 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
     ).map{|c| look % 32 == 0 ? c : c}.look, def: 8, accent: 2
 
-  no{
+  yes{
     if k && spread(1,64).rot(0).look
       bitsea :fs4, sus: 4.0
+      rev :a4, 10
+      cue :hit
+      stop
     end
   }
 

@@ -48,7 +48,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
-      mt s, accent=(line 75, 100, 16*4).look, 100
+      mt s, accent=(line 75, 100, 16*4).look, 120
 
     }
   end

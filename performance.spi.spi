@@ -12,7 +12,7 @@ electric
 focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
-    [:b2 :d3  :fs3] Zz
+    [:b2  :d4  :fs3] Zz
     [:fS2 :a4  :cs3] Zz
 
     ).look

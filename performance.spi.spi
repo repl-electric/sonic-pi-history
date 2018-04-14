@@ -16,6 +16,11 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:fs2 :a4 :cs3] Zz
     ).look
 
+  score.each_tick(:in){|n|
+    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+  }
+
+
   exception root(score)
   corrupt :A1
   sleep 1

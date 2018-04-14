@@ -11,6 +11,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   sleep 1
 end
 
+focus
+
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: (ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{

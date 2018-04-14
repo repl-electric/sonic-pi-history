@@ -20,7 +20,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a1
   at{
     sleep 1/8.0*4
-    exception root(score), 80, atk: 0.1
+    exception root(score), atk: 0.1
     sleep 1/8.0*4
     exception root(score), 80, atk: 0.1
 

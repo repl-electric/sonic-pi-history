@@ -29,7 +29,8 @@ end
 
 
 
-zero_on :fs4
+#zero_on :fs4
+
 
 #focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
@@ -94,9 +95,11 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
     ).map{|c| look % 8 == 0 ? c : c}.look, def: 8, accent: 1
 
-  no{
+  yes{
     if k && spread(1,64).rot(0).look
       bitsea :fs4, sus: 4.0
+      cue :hit
+      rev :a4, 1
     end
   }
 

@@ -1,6 +1,6 @@
 camlogo logo: 1.0, crazy: 1.0
-null :a2
-
+#null :a2
+bitsea_on :a2
 
 #focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
@@ -16,7 +16,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
 

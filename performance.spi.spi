@@ -33,7 +33,7 @@ end
 invcol 0.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   if spread(1,6).look
-    rev :a4, 1
+    rev :a4, 2
   end
   #  focus
   score=(ing

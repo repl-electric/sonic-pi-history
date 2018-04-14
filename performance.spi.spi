@@ -72,12 +72,12 @@ zero_cc wet:   0.60
 #zero_cc amp: 0.3
 #zero_on :Fs5
 
-
+shard 1.0
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.45
+  qbitsea_cc drive: 0.50
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.17
+  qbitsea_cc fm: 0.29
   qbitsea_cc wav: 0.57
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.83

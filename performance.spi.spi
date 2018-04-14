@@ -15,7 +15,7 @@ electric
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  rev :b4, 10 if spread(1,6).look
+  rev :b4, 5 if spread(1,6).look
   score=(ing
     [:b3 :d5 :fs3] Zz
     [:fs3 :a4 :cs4] Zz

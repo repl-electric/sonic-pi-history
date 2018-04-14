@@ -98,7 +98,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #    [:b2  :d5 :fs3]        Zz
 #    [:fs2 :a4 :cs3]       Zz
     [:a2  :cs5  :e4]
-    [:d2  :fs3 :a3 :e4]   Zz
+    [:d2  :fs3 :a3]   Zz
 #    [:e2  :gs3 :b3]       Zz
  #   [:a2  :cs5  :e3]  Zz
   #  [:fs3 :a4  :cs4]       Zz

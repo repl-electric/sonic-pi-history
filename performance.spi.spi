@@ -22,7 +22,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   if score.length > 1
     exception root(score)
-    end
+  end
   corrupt :A1
   sleep 1
   verb_slice Drip[/effect/].look if spread(1,3).look

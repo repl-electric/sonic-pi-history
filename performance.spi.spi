@@ -1,4 +1,4 @@
-camlogo logo: 1.0
+camlogo logo: 1.0, crazy: 1.0
 null :a2
 
 
@@ -16,7 +16,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

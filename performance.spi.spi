@@ -77,7 +77,8 @@ no{
 }
 
 panic false
-alivecol -4.8
+alivecol -2.8
+shard 1.0
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #  dcam4 true

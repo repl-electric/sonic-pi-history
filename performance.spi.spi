@@ -72,6 +72,8 @@ zero_cc wet:   0.60
 #zero_cc amp: 0.3
 #zero_on :Fs5
 
+
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     [:b2  :d5 :fs3]        Zz
@@ -90,11 +92,14 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     exception root(score), atk: 0.8, form: 1.0
   end
 
+
+
+
   kick_machine K1, accent: 2
 
   #alive rotate: 1.0
   #shard 0.1
-  corrupt :A1
+  #corrupt :A1
   sleep 1
   null root(score)
   #verb_slice Drip[/effect/].look if spread(1,3).look

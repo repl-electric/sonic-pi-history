@@ -19,11 +19,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   corrupt :a1
   at{
-    sleep 1/8.0*8
+    sleep 1/8.0*4
     exception root(score), atk: 0.01
-    sleep 1/8.0*8
+    sleep 1/8.0*4
     exception root(score), atk: 0.01
-
   }
   sleep 1
   null root(score)

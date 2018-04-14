@@ -29,7 +29,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
-    shard 0.8
+    shard 0.9
     #zero_x
 
     sleep 1/2.0
@@ -37,8 +37,6 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     if spread(1,2).rot(1).look
       with_transpose 0 { zero chd[1],1,sus:12 }
       with_transpose -12 { zero chd[2],1,sus:12 }
-
-
     else
       with_transpose -24 { zero chd[0],1,sus:12 }
     end

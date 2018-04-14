@@ -1,3 +1,23 @@
+eq lo: 0.00
+eq hi: 0.00
+
+camend
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
+stop
+
+
+
+
+
+
 #camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #null :A2
 #bitsea_on :CS4

@@ -11,6 +11,7 @@ electric
 cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
+stop
   dcam3
   with_bpm 63.5 do #63.5
     score=(ing
@@ -56,19 +57,24 @@ end
 #zero_on :A4
 invcol 0.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-stop
-  if spread(1,6).look
-    rev :a4, 2
-  end
   #  focus
   score=(ing
-    [:b3 :d5 :fs3]  Zz
-    [:fs3 :a4 :cs3] Zz
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
+
+
     ).look
 
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+
+  kick_machine K1, accent: 2
 
   if score.length > 1
     exception root(score)

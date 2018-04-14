@@ -92,7 +92,7 @@ no{
 }
 
 #panic false
-alivecol -2.0
+#alivecol -2.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   shard 1.0
   #  focus

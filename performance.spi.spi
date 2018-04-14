@@ -8,6 +8,28 @@ invcol 0.0
 electric
 #focus
 #zero_on :A4
+
+live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
+  live_loop :fall_into_your_screen {stop}
+  dcam3
+  with_bpm 45.125 do #63.5
+    score=(ing
+      D4 CS4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      )
+    note=score.look
+    future_note=score.look(offset: 1)
+    operator note
+    callstack note,(ing 70 65 60).look, sus: 2
+    zero_x
+
+    sleep 1/2.0
+    sleep 1/2.0
+    sleep 1/4.0
+  end
+end
+
+
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     [:b3 :d5 :fs3] Zz
@@ -19,10 +41,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   corrupt :a1
   at{
-    sleep 1/8.0*4
+#    sleep 1/8.0*4
     exception root(score), atk: 0.01
-    sleep 1/8.0*4
-    exception root(score), atk: 0.01
+ #   sleep 1/8.0*4
+  #  exception root(score), atk: 0.01
   }
   sleep 1
   null root(score)

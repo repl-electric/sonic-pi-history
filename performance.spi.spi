@@ -63,9 +63,9 @@ end
 
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.34
+  qbitsea_cc drive: 0.40
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.10
+  qbitsea_cc fm: 0.13
   qbitsea_cc wav: 0.01
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.83
@@ -95,6 +95,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+  alivecol 0.2
+
   kick_machine K1
 
   exception root(score)

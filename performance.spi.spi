@@ -1,8 +1,9 @@
 camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #null :a2
-bitsea_on :e3
+#bitsea_on :e3
 
-invcol 1.0
+electric
+#invcol 1.0
 
 focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

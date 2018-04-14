@@ -28,7 +28,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         ).look
       smp_dust(pp)
       if pp
-        dterrain 0.5
+        dterrain 0.8
       end
       sleep 1/8.0
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100

@@ -95,6 +95,18 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+
+
+  pf=1.8
+    i=(method :callstack)
+  i.call(score[0], 60*pf, sus: 4)
+  i.call(score[1], 50*pf, sus: 4)
+  i.call(score[2], 55*pf, sus: 4)
+  i.call(score[3], 70*pf, sus: 2)
+  i.call(score[4], 30*pf, sus: 8)
+  i.call(score[5], 30*pf, sus: 8)
+
+
   electric
   alivecol 0.2
 

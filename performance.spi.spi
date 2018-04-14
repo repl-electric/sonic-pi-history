@@ -22,7 +22,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
       )
     note=score.look
     future_note=score.look(offset: 1)
-    operator note
+#    operator note
 #    callstack note,(ing 70 65 60).look, sus: 2
     #zero_x
     spark 0.0

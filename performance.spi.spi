@@ -33,12 +33,20 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     #zero_x
 
     sleep 1/2.0
+    chd = find_chord(future_note)
+    if spread(1,2).rot(1).look
+      with_transpose 0 { zero chd[1],1,sus:12 }
+
+    else
+
+    end
+
     sleep 1/2.0
     sleep 1/4.0
   end
 end
 
-
+#zero_cc amp: 0.5
 #zero_on :Fs5
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

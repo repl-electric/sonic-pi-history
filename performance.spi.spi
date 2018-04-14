@@ -11,14 +11,14 @@ electric
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     [:b3 :d5 :fs3] Zz
-    [:fs3 :a4 :cs3] Zz
+    [:fs3 :a4 :cs4] Zz
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   corrupt :a1
-  exception root(score), 80
+  exception root(score), 80, atk: 0.1
   sleep 1
   null root(score)
   #verb_slice Drip[/effect/].look if spread(1,3).look

@@ -19,7 +19,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   }
 
   if score.length > 1
-    exception root(score), atk: 0.8
+    exception root(score), atk: 0.8, form: 1.0
   end
 
 

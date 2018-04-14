@@ -3,7 +3,7 @@
 #null :A2
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  focus
+#  focus
   corrupt :A1
   sleep 1
   verb_slice Drip[/effect/].look if spread(1,3).look

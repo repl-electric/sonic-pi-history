@@ -29,7 +29,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
-    spark 0.9
+    shard 0.9
     #zero_x
 
     sleep 1/2.0

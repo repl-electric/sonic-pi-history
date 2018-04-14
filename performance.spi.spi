@@ -1,3 +1,16 @@
+camend
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
+stop
+
+
 #camlogo logo: 1,crazy: 1.0, off: 1.0
 #bitsea_on :CS4
 #null :A2
@@ -61,10 +74,10 @@ invcol 0.0
 
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.43
-  qbitsea_cc charge: 0.50
+  qbitsea_cc drive: 1.00
+  qbitsea_cc charge: 1.00
   qbitsea_cc fm: 0.28
-  qbitsea_cc wav: 0.61
+  qbitsea_cc wav: 1.00
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.83
   qbitsea_cc mod: 0.80

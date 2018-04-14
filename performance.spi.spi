@@ -8,7 +8,7 @@ invcol 0.0
 electric
 #focus
 #zero_on :FS4
-#cue :hit
+cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
   dcam3

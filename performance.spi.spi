@@ -1,245 +1,25 @@
-eq lo: 0.00
-eq hi: 0.00
-
-
-camend
-viz breath: 1.0
-viz shard: 1.0
-alive rotate: 1.0
-128.times{
-  electric
-  sleep 2.0
-  viz :alive, spike: 1.0
-  alive color: (rand+0.2*0.8)*-1.0
-}
-stop
-
-
-#camlogo logo: 1,crazy: 1.0, off: 1.0
-#bitsea_on :CS4
-#null :A2
-#focus
-
-bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-#bitsea_cc formant: 0.36 #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
-electric
-
-cue :hit
-live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
-stop
-  live_loop :fall_into_your_screen {stop}
-
-  dcam3
-  with_bpm 63.5 do #63.5
-    score=(ing
-      D4, Cs4, _, A3, _, E4, _, A4, A4, A4, A4, A4,
-      D4, Cs4, _, A3, _, B3, _, A4, A4, A4, Fs4, A4,
-      )
-    note=score.look
-    future_note=score.look(offset: 1)
-    operator note
-    callstack note,(ing 70, 65, 60,).look, sus: 2
-    #zero_x
-    shard 0.7
-
-    sleep 1/2.0
-    chd = find_chord(future_note)
-     null note,1, sus: 1
-    if spread(1,2).rot(1).look
-     with_transpose 0 { zero chd[1],1,sus:12 }
-     with_transpose -12 { zero chd[2],1,sus:12 }
-     with_transpose -24 { zero chd[0],1,sus:12 }
-   else
-     with_transpose 0 { zero chd[0],1,sus:12 }
-   end
-
-    sleep 1/2.0
-
-    if note == D4
-    64.times{|n|
-      sleep 0.125
-      corrupt :e5, 10, sus: 0.125 if n % 8 == 0
-      sleep 0.125
-      corrupt (ing :e4, :e4, :e4, :e4,).tick(:n), (ing 2, 4, 6, 8,).look(:n), sus: 4, mode: 0 if n % 16 == 0
-      }
-      stop
-    end
-
-
-    sleep 1/4.0
-  end
-end
-#zero_cc amp: 0.30
-
-#zero_on :A4
-invcol 0.0
-
-
-no{
-  qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 1.00
-  qbitsea_cc charge: 1.00
-  qbitsea_cc fm: 0.28
-  qbitsea_cc wav: 1.00
-  qbitsea_cc wav_amp: 0.30
-  qbitsea_cc atk: 0.83
-  qbitsea_cc mod: 0.80
-  qbitsea_cc motion: 0.24
-  qbitsea_cc formant: 0.36
-  qbitsea_cc mul: 0.00
-  qbitsea_cc bass: 0.55
-}
-
-#panic false
-#alivecol -2.0
+#camlogo
+focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  shard 1.0
-  #  focus
-  score=(ing
-    #[:b2,  :d5, :fs3],        Zz,
-    #[:fs2,  :a4, :cs4],       Zz,
-    [:a2,  :cs3,  :e4],
-    [:d2,  :fs3, :a3, :e4],   Zz,
-    [:e2,  :gs3, :b3],       Zz,
-    #[:b2,  :d5,  :fs3, :cs4],  Zz,
-    #[:fs4, :a4,  :cs4],       Zz,
-    ).look
-#  dcam4 true
-  score.each_tick(:in){|n|
-    qbitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
-  }
-
-  electric
-#  alivecol 0.4
-
-  pf= 1.8
-  i=(method :operator)
-  at{
-    i.call(score[0], 60*pf, sus: 4)
-    sleep 0.5
-    i.call(score[1], 50*pf, sus: 4)
-        sleep 0.25
-
-    i.call(score[2], 55*pf, sus: 4)
-        sleep 0.25
-
-    i.call(score[3], 70*pf, sus: 2)
-        sleep 0.25
-
-    i.call(score[4], 30*pf, sus: 8)
-        sleep 0.25
-
-  i.call(score[5], 30*pf, sus: 8)
-}
-
-#  dcam4
-  kick_machine K1, accent: 2
-
-  if score.length > 1
-    exception root(score)
-  end
-  corrupt :A1
   sleep 1
-  verb_slice Drip[/effect/].look if spread(1,3).look
   sleep 1
 end
-#dterrain 0.01
 
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
-stop
   with_fx :echo, mix: (ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, D4, _,    _, _, _, _,   _, _, _, _,
+        _
         ).look
       smp_dust(pp)
-      if pp
-        dterrain 0.0
-      end
-      sleep 1/8.0
-      mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
-      mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
-      s=(ing
-        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
-        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
-        ).look
-      mt s, accent=(line 100, 120, 16*4).look, 120
 
+      sleep 1/8.0
     }
   end
 end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
-stop
-  kick_machine k=(ing
-    [KT[1]], _, _, _,  TS[8], _, _, _,  K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, %l{TC[6]}, _,   _, _, _, _,
-
-    K1,    _, _, _,  TS[8], _, _, _,  K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, _,
-    K1,    _, _, _,   _, _, _, _,      K3, _, %l{TC[6]}, _,   _, _, _, _,
-    ).map{|c| look % 8 == 0 ? c : c}.look, def: 8, accent: 2
-
-  yes{
-    if k && spread(1,64).rot(0).look
-      bitsea :fs4, sus: 4.0
-      rev :D4,1
-      cue :hit
-
-    end
-  }
-
-
-  p=(ing
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    [TS[49]], _, _, TS[12],    _, _, _, _,
-
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
-
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TT[49], _, _, TS[12],      _, _, _, _,
-
-    _, _, _, _,                _, _, _, _,
-    _, _, _, _,                _, _, _, _,
-    TS[7], _, _, _,            _, _, _, _,
-    )
-
-  p=p.look
-  #p=_
-  fx=:lpf
-  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
-  attack = 0.0
-  r = 1.0
-  if p && p.is_a?(Array)
-    p = p[0]
-    accent=accent*1.5
-  end
-  if p
-    with_swing(0.01) do
-      with_fx(fx, phase: (ring 1/4.0,1/4.0,1/8.0).look){
-        at{
-          sleep 0.5
-          viz :sea, height: 0.3
-          viz :sea, noise: 10.0
-          sleep 0.125
-          dviz :sea, height: 0
-          viz :sea, noise: 0.01
-        }
-        smp p, amp: 3*accent, rate: r, attack: attack
-      }
-    end
-  end
-
 
   sleep 1/8.0
 end

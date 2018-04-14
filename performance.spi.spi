@@ -1,4 +1,4 @@
-camlogo logo: 1.0, crazy: 1.0, off: 1.0
+#camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #null :a2
 #bitsea_on :cs4
 bitsea_cc motion: 0.10  #╟▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -14,6 +14,8 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   with_bpm 45.125 do #63.5
     score=(ing
       D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 A4 A4
+
       )
     note=score.look
     future_note=score.look(offset: 1)

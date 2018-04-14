@@ -75,7 +75,7 @@ zero_cc wet:   0.60
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-dcam4
+  #dcam4
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz
@@ -88,6 +88,8 @@ dcam4
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+
+  alivecol 0.1
 
   if score.length > 1
     exception root(score), atk: 0.8, form: 1.0

@@ -1,5 +1,5 @@
 #camlogo logo: 0.0
-viz "/logo/blank", 1.0
+viz "/logo/blank", 0.0
 
 #bitsea_on :A2
 #focus
@@ -15,7 +15,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

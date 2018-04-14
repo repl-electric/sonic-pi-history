@@ -12,7 +12,7 @@ invcol 0.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #  focus
   score=(ing
-    [:b2 :d4 :fs3]  Zz
+    [:b3 :d5 :fs3]  Zz
     [:fs2 :a4 :cs3] Zz
     ).look
 

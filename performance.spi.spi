@@ -2,7 +2,7 @@
 focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #smp Mountain[/subkick/,0]
-  bitssea :a2
+  bitsea :a2
   sleep 1
   sleep 1
 end

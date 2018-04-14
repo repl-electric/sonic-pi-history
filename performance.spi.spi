@@ -91,12 +91,15 @@ no{
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #dcam4
+
+  panic true
+
   score=(ing
 #    [:b2  :d5 :fs3]        Zz
 #    [:fs2 :a4 :cs3]       Zz
     [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :e4]   Zz
-    [:e2  :gs5 :b3] Zz
+    [:e2  :gs5 :b3]       Zz
  #   [:a2  :cs5  :e3]  Zz
   #  [:fs3 :a4  :cs4]       Zz
     ).look

@@ -102,7 +102,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   at{
     i.call(score[0], 60*pf, sus: 4)
     sleep 0.5
-  i.call(score[1], 50*pf, sus: 4)
+    i.call(score[1], 50*pf, sus: 4)
+    sleep 0.25
+
   i.call(score[2], 55*pf, sus: 4)
   i.call(score[3], 70*pf, sus: 2)
   i.call(score[4], 30*pf, sus: 8)

@@ -122,6 +122,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
         sleep 0.25
 
     i.call(score[5], 30*pf, sus: 8)
+    sleep 0.25
 
   }
 

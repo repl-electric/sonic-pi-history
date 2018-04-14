@@ -76,7 +76,7 @@ no{
 
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-shard 1.0
+  shard 1.0
   #  focus
   score=(ing
     [:b2  :d5 :fs3]        Zz

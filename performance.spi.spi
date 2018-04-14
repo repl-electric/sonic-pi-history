@@ -1,5 +1,5 @@
 #camlogo
-focus 7.1, 0.85
+focus 7.2, 0.85
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   sleep 1
   sleep 1

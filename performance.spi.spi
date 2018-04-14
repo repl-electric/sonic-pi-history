@@ -1,5 +1,5 @@
 camlogo
-
+null :a2
 
 
 #focus 7.2, 0.85
@@ -16,7 +16,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
 

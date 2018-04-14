@@ -83,7 +83,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         ).look
       mt s, accent=(line 105, 120, 16*4).look, 120
       s=strpat("[5]5555555 55555[5]55")
-      mt s.look,accent=(line 100,127,64).look, 127
+ #     mt s.look,accent=(line 100,127,64).look, 127
 #
 
       sleep 1/8.0

@@ -114,7 +114,7 @@ no{
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #dcam4
 
-  panic false
+#  panic false
 
   score=(ing
 #    [:b2  :d5 :fs3]        Zz

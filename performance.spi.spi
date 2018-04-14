@@ -98,7 +98,7 @@ stop
         ).look
       smp_dust(pp)
       if pp
-        dterrain 0.8
+        dterrain 0.0
       end
       sleep 1/8.0
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100

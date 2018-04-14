@@ -8,13 +8,15 @@ invcol 0.0
 electric
 #focus
 #zero_on :FS4
-cue :hit
+#cue :hit
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
   dcam3
   with_bpm 45.125 do #63.5
     score=(ing
       D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 A4 A4
+
       )
     note=score.look
     future_note=score.look(offset: 1)

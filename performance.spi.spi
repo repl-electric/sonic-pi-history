@@ -1,7 +1,7 @@
 camlogo
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  smp Mountain[/subkick/,0], amp: 3
+#  smp Mountain[/subkick/,0], amp: 3
   #  kick_machine K1
   #bitsea :A2
   sleep 1

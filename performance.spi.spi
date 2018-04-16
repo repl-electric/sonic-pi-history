@@ -25,6 +25,12 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
       smp_dust(pp)
       mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+      s=(ing
+        2, _, _, _,  5, _, _, _,    5, _, _, _,      _, _, _, _,
+        5, _, _, _,   _, _, _, _,   5, _, [2], 3,    _, [5], 5, 5,
+        ).look
+      mt s, accent=(line 75, 85, 16*4).look, 100
+
 
 
       sleep 1/8.0

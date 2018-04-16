@@ -24,9 +24,9 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   qbitsea :A2,  sus: 1/8.0    if spread(7,11).look
-  qbitsea :b3,  sus: 0.125    if spread(1,6).look
+  #qbitsea :b3,  sus: 0.125    if spread(1,6).look
   qbitsea :d3,  sus: (1/8.0)  if spread(3,7).look
-  qbitsea :fs3,  sus: (1/8.0)  if spread(3,7).look
+  qbitsea :fs3,  sus: (1/8.0) if spread(3,7).look
 
 
   sleep 1/8.0

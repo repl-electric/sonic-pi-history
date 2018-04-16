@@ -1,4 +1,5 @@
 camlogo
+stop
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   smp Mountain[/subkick/,0]
   #  kick_machine K1

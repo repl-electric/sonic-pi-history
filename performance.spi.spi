@@ -1,9 +1,9 @@
 camlogo
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  smp Mountain[/subkick/,0]
+  smp Mountain[/subkick/,0], amp: 3
   #  kick_machine K1
-  bitsea :A2
+  #bitsea :A2
   sleep 1
   sleep 1
 end
@@ -23,9 +23,9 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
 end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
-  qbitsea :A2, sus: 1/8.0    if spread(7,11).look
+  qbitsea :A2,  sus: 1/8.0    if spread(7,11).look
   qbitsea :cs3, sus: 0.5      if spread(1,12*2).look
-  qbitsea :e3, sus: (1/8.0)  if spread(3,7).look
+  qbitsea :e3,  sus: (1/8.0)  if spread(3,7).look
 
   sleep 1/8.0
 end

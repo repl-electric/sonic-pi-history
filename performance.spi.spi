@@ -13,7 +13,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
 
@@ -24,7 +24,7 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   qbitsea :A2, sus: 0.125    if spread(7,11).look
-  qbitsea :cs4,sus: 1.0      if spread(1,12*2).look
+  qbitsea :b3,sus: 1.0      if spread(1,12*2).look
   qbitsea :e3, sus: 0.125*2  if spread(3,7).look
 
   sleep 1/8.0

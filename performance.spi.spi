@@ -23,6 +23,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
 end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
+  smp TC[6], amp: 0.1
   qbitsea :e2,  sus: 1/8.0    if spread(7,11).look
 #  qbitsea :d3,  sus: 1/8.0  if spread(3,7).look
 #  qbitsea :fs3, sus: 1/8.0 if spread(3,7).look

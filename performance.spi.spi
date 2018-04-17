@@ -1,15 +1,6 @@
 camlogo
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-#  smp Mountain[/subkick/,0], amp: 3
-  at{
-
-    8.times{
-      kick_machine (ing K1 _ _ _).tick(:i)
-      sleep 2/8.0
-    }
-  }
-  #bitsea :A2
   sleep 1
   sleep 1
 end
@@ -23,14 +14,6 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
         ).look
       smp_dust(pp)
-      mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
-      mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
-      s=(ing
-        2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _
-        5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
-        ).look
-      mt s, accent=(line 75, 85, 16*4).look, 100
-
       sleep 1/8.0
     }
   end
@@ -38,7 +21,7 @@ end
 
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   #mt 3,10,127 if spread(3,7).look
-  qbitsea :b2,  sus: 1/8.0 if spread(7,11).look
+  qbitsea :a2,  sus: 1/8.0 if spread(7,11).look
   qbitsea :d4,  sus: 1/8.0 if spread(3,7).look
   qbitsea :fs3, sus: 1/8.0 if spread(3,7).look
   #qbitsea :B2,  sus: 1/8.0 if spread(7,8).look

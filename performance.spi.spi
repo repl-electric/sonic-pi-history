@@ -1,7 +1,7 @@
-camlogo
+camlogo logo: 1.0
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :A1
+  corrupt :A2
   sleep 1
   sleep 1
 end

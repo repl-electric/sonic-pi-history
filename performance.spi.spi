@@ -1,6 +1,6 @@
 camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #null :A2
-
+focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   corrupt :A1, motion: 0.1

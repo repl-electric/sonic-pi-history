@@ -31,6 +31,7 @@ end
 #zero_on :fs4
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+  stop
   score=(ing
     [:b3 :d5 :fs4] Zz
     [:fs3 :a4 :cs4] Zz

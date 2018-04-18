@@ -60,11 +60,11 @@ zero_cc wet:   0.51
 
 #null :A2
 #focus
-shard 0.8
+shard 0.9
 no{
   qbitsea_cc oct: 0.50
   qbitsea_cc drive: 0.42
-  qbitsea_cc charge: 0.50
+  qbitsea_cc charge: 0.52
   qbitsea_cc fm: 0.31
   qbitsea_cc wav: 0.93
   qbitsea_cc wav_amp: 0.30

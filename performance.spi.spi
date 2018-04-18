@@ -74,7 +74,7 @@ no{
   qbitsea_cc bass: 0.27
 }
 
-alivecol 0.2
+alivecol 0.25
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #  stop

@@ -76,7 +76,7 @@ no{
   qbitsea_cc bass: 0.60
 }
 
-
+alivecol 0.3
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
  # stop
   score=(ing

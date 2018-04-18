@@ -1,6 +1,6 @@
 #camlogo
 
-puts spread(3,8).look
+puts spread(3,8)
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 

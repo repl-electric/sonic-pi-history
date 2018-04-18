@@ -60,6 +60,23 @@ zero_cc wet:   0.51
 
 #null :A2
 #focus
+
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.32
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.21
+  qbitsea_cc wav: 0.01
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.83
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.27
+}
+
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
  # stop
   score=(ing
@@ -74,7 +91,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5, hi: 0.85
   }
-#  dcam4
+  dcam4 true
   kick_machine K1, accent: 2
 
   if score.length > 1

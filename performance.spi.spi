@@ -11,18 +11,18 @@ electric
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
-    [:a2 :cs4 :e3] Zz
-    [:cs2 :e4 :gs3] Zz
+    [:a2, :cs4, :e3], Zz,
+    [:cs2, :e4, :gs3], Zz,
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    bitsea n, 1.0*(ing 80, 70, 85, 70,).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
 
 
   corrupt :a1
   sleep 1
-  null root(score), 10
+  null root(score), 40
   sleep 1
 end
 
@@ -31,8 +31,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
 
         ).look
       if pp
@@ -52,15 +52,15 @@ end
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
   kick_machine k=(ing
-    [KT[1]] _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
-    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-    K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
-    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+    [KT[1]], _, _, _,  TS[8], _, _, _,  K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   _, _, _, _,      K3, _, %l{TC[6]}, _,   _, _, _, _,
 
-    K1    _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
-    K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
-    K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
-    K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
+    K1,    _, _, _,  TS[8], _, _, _,  K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   _, _, _, _,      K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   %l{TC[6]}, _, _, _,      K3, _, _, _,   _, _, _, _,
+    K1,    _, _, _,   _, _, _, _,      K3, _, %l{TC[6]}, _,   _, _, _, _,
     ).map{|c| look % 16 == 0 ? c : _}.look, def: 8, accent: 1
 
   no{
@@ -71,27 +71,27 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
 
   p=(ing
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    [TS[49]] _ _ TS[12]    _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    [TS[49]], _, _, TS[12],    _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TT[49] _ _ TS[12]      _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TT[49], _, _, TS[12],      _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2 0.2 0.3 0.5).look
+  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)

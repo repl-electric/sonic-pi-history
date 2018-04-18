@@ -109,6 +109,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   i.call(score[5], 30*pf, sus: 8)
   }
   alivecol 0.2
+  electric
 
 
   corrupt :A1

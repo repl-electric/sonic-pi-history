@@ -10,7 +10,7 @@ electric
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
-    [:a2 :cs4 :e3] Zz
+    [:a2 :cs4 :e3] [:gs4]
     [:cs2 :e4 :gs3] Zz
     ).look
   score.each_tick(:in){|n|
@@ -20,7 +20,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   if score.length > 1
     exception root(score)
   end
-
 
   corrupt :A1
   #smp Mountain[/subkick/,0]

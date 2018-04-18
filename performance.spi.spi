@@ -3,7 +3,7 @@
 puts spread(7,11)
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  smp Mountain[/subkick/,0]
+  #smp Mountain[/subkick/,0]
   qbitsea :a2
   sleep 1
   sleep 1

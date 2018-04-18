@@ -38,7 +38,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
 
         ).look
       if pp
-        dterrain rand*0.8
+        dterrain rand*1.8
       end
       shard 1.0
       smp_dust(pp)

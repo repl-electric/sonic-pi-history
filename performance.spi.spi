@@ -98,7 +98,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     exception root(score), sus: 2.4
   end
 
-  pf= 1.8
+  pf= 1.9
   at{
     i=(method :operator)
     i.call(score[0], 60*pf, sus: 4)

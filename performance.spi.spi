@@ -28,10 +28,12 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   p2 = spread(3,8).look
   p3 = spread(1,16).look
 
+  32.times{
+
   qbitsea :A2,  sus: 0.125 if p1
   qbitsea :D3,  sus: 0.125 if p2
   qbitsea :FS3, sus: 0.125 if p3
-  sleep 1/8.0
+  sleep 1/8.0}
 end
 
 live_loop(:unsyncable) do; sleep 1.0 end

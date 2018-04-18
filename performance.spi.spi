@@ -1,5 +1,7 @@
 camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #bitsea_on :E3
+
+
 #null :A2
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
@@ -34,8 +36,8 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
   128.times{
     tick
     qbitsea :A2,  sus: 0.125 if p[0].look
-    qbitsea :D3,  sus: 0.125 if p[1].look
-    qbitsea :FS3, sus: 0.125 if p[2].look
+    qbitsea :cs3,  sus: 0.125 if p[1].look
+    qbitsea :e3, sus: 0.125 if p[2].look
   sleep 1/8.0}
 end
 

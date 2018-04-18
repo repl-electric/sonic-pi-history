@@ -28,9 +28,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
       with_transpose -12 { zero chd[2],1, sus: 12 }
       with_transpose -24 { zero chd[0],1, sus: 12 }
     else
-
     end
-
 
 
     sleep 1/2.0
@@ -38,6 +36,10 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   end
 end
 
+zero_cc pulse: 0.00
+zero_cc more:  0.00
+zero_cc noise: 0.00
+zero_cc wet:   0.51
 
 
 #invcol 0.0

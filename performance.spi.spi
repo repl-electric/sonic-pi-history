@@ -13,8 +13,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
         ).look
       smp_dust(pp)
 
@@ -23,16 +23,16 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   end
 end
 
-live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
-  p1 = spread(7,11).look
-  p2 = spread(3,8).look
-  p3 = spread(1,16).look
+live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
+  p1 = spread(7,11)
+  p2 = spread(3,8)
+  p3 = spread(1,16)
 
   32.times{
-
-  qbitsea :A2,  sus: 0.125 if p1
-  qbitsea :D3,  sus: 0.125 if p2
-  qbitsea :FS3, sus: 0.125 if p3
+    tick
+    qbitsea :A2,  sus: 0.125 if p1.look
+    qbitsea :D3,  sus: 0.125 if p2.look
+    qbitsea :FS3, sus: 0.125 if p3.look
   sleep 1/8.0}
 end
 

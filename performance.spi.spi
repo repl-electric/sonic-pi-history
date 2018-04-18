@@ -70,7 +70,6 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     end
   }
 
-
   p=(ing
     _, _, _, _,                _, _, _, _,
     _, _, _, _,                _, _, _, _,

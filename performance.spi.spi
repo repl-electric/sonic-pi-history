@@ -12,8 +12,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
-        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
         ).look
       smp_dust(pp)
 
@@ -26,7 +26,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do
   p1 = spread(7,11)
   p2 = spread(3,8)
   p3 = spread(1,16)
-  p = (ing p1, p2, p3,).shuffle
+  p = (ing p1 p2 p3).shuffle
   128.times{
     tick
     qbitsea :A2,  sus: 0.125 if p[0].look

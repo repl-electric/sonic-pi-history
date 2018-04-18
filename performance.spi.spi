@@ -1,4 +1,4 @@
-camlogo logo: 1.0, crazy: 1.0, off: 1.0
+#camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #bitsea_on :CS4
 bitsea_cc motion: 0.19  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 bitsea_cc octave: 0.56  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -16,6 +16,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
+    shard 0.1
     zero_x
 
     sleep 1/2.0

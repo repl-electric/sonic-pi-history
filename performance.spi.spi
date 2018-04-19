@@ -1,10 +1,7 @@
-camlogo logo: 1.0, crazy: 1.0
-#null :Cs2
-bitsea_on :a2
+#camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  logo [1,2,3,4].choose
-  corrupt :a1, motion: 0.1
+  corrupt :a1, motion: 0.3
   sleep 1
   sleep 1
 end

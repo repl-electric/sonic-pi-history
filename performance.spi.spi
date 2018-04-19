@@ -21,6 +21,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   with_bpm 45.125 do #63.5
     score=(ing
       D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 A4 A4
       )
     note=score.look
     future_note=score.look(offset: 1)
@@ -43,7 +44,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:fs3 :a4 :cs4] Zz
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
   if score.length > 1

@@ -88,8 +88,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   alivecol 0.1
   score=(ing
-    [:a2  :cs5 :e3]        Zz
-    [:fs2 :a5 :cs4]       Zz
+    [:a3  :cs5 :e3]        Zz
+    [:fs3 :a5 :cs4]       Zz
     [:a2  :b5  :e4]
     [:d3  :fs5 :a3 :cs5]   Zz
     [:e2  :gs5 :b3]

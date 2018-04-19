@@ -90,13 +90,13 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #alivecol 0.1
   score=(ing
-    [:a2  :cs3 :e3]        Zz
-    [:fs2 :a3 :cs4]       Zz
+#    [:a2  :cs3 :e3]        Zz
+#    [:fs2 :a3 :cs4]       Zz
     [:a2  :cs4  :e4]
     [:d2  :fs3 :a3 :e4]   Zz
-    [:e2  :gs3 :b3]
-    [:cs2 :e4  :gs3 :b4]  Zz
-    [:a3  :cs3  :e3]       Zz
+#    [:e2  :gs3 :b3]
+#    [:cs2 :e4  :gs3 :b4]  Zz
+#    [:a3  :cs3  :e3]       Zz
 
     ).look
   score.each_tick(:in){|n|

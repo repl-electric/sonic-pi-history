@@ -14,7 +14,6 @@ live_loop :Fall_out_of_your_screen do tick;
     )
 
 
-
 #  cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
   whitespace c[0][0], sus: 12

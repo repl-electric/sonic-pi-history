@@ -16,7 +16,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         _
         ).look
       smp_dust(pp)
-
+      focus
       sleep 1/8.0
     }
   end

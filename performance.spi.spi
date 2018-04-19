@@ -81,12 +81,13 @@ no{
   qbitsea_cc mul: 0.00
   qbitsea_cc bass: 0.87
 }
-
+panic false #aahahahahahahhahahah
+alivecol -2.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #stop
   #  corrupt :a1, motion: 0.3
   #logo [1,2,3,4,5].choose
-  alivecol 0.1
+  #alivecol 0.1
   score=(ing
     [:a3  :cs4 :e3]        Zz
     [:fs3 :a3 :cs4]       Zz
@@ -101,7 +102,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   dcam4
-  alivecol 0.5
+  #alivecol 0.5
 
   pf= 1.8
   i=(method :operator)

@@ -1,4 +1,4 @@
-#camlogo
+camlogo
 #focus 5.9,0.9
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

@@ -9,7 +9,7 @@ invcol 0.0
 electric
 focus
 
-zero_on :fs4
+zero_on :a4
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing

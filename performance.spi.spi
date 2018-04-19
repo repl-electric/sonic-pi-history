@@ -15,7 +15,7 @@ electric
 # zero_cc wet:   0.80
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
-
+  stop
   live_loop :fall_into_your_screen {stop}
   dcam3
   with_bpm 63.5 do #63.5
@@ -68,18 +68,28 @@ zero_cc wet:   1.00
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-stop
+#stop
   #  corrupt :a1, motion: 0.3
   #logo [1,2,3,4,5].choose
 
   score=(ing
-    [:b3 :d5 :fs4]   Zz
-    [:fs3 :a4 :cs4] Zz
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
+
+
     ).look
   score.each_tick(:in){|n|
-    bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
+    qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
+  dcam4
 #  shard 0.8
+
+  kick_machine K1, accent: 2
 
   if score.length > 1
     exception root(score), sus: 1

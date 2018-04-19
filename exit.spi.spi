@@ -54,7 +54,6 @@ live_loop :Fall_out_of_your_screen do tick;
     sleep 0.25
   }
 
-
   whitespace c[0], sus: 12
   if spread(1,6).look
     rev :b5, 1

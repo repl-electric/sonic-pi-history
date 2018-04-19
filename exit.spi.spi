@@ -93,7 +93,7 @@ live_loop :Fall_out_of_your_screen do tick;
     #s=_
     mt s, 95, 127
     mt_cc morph: 0.0#(line 0.01, 0.4, 32).look(:in2)
-    sleep 1/8.0
+    sleep 2OD/8.0
   }
 end
 

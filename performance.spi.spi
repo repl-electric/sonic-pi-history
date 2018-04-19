@@ -41,7 +41,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         dterrain 0.6* rand
       end
       smp_dust(pp)
-      mt mt_pat.look.look, accent=(line 75, 120, 16*4).look, 120
+      mt mt_pat.look.look, accent=(line 120, 120, 16*4).look, 120
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
       s=(ing
         2 _ _ _  5 _ _ _    5 _ _ _      _ _ _ _

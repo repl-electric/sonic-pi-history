@@ -1,5 +1,6 @@
 camlogo logo: 1.0, crazy: 1.0
 null :e2
+bitsea_on :a2
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a1, motion: 0.1

@@ -1,3 +1,22 @@
+eq lo: 0.00
+eq hi: 0.00
+
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
+
+camend
+
+
+
+
+
 camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #null :e2
 #bitsea_on :cs4
@@ -70,10 +89,10 @@ shard 1.0
 #focus
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.42
-  qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.26
-  qbitsea_cc wav: 0.91
+  qbitsea_cc drive: 1.00
+  qbitsea_cc charge: 1.00
+  qbitsea_cc fm: 0.40
+  qbitsea_cc wav: 1.00
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.10
   qbitsea_cc mod: 0.80

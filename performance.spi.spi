@@ -91,9 +91,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:a3  :cs4 :e3]        Zz
     [:fs3 :a3 :cs4]       Zz
     [:a3  :cs5  :e4]
-    [:d3  :fs4 :a3 :cs5]   Zz
-    [:e3  :gs4 :b3]
-    [:cs3 :e4  :gs3 :b4]  Zz
+    [:d3  :fs3 :a3 :cs5]   Zz
+    [:e3  :gs3 :b3]
+    [:cs2 :e4  :gs3 :b4]  Zz
     [:a3  :cs3  :e3]       Zz
 
     ).look
@@ -129,7 +129,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 
-  whitespace score[-1],1, sus: 12
+  #whitespace score[-1],1, sus: 12
 
   kick_machine K1, accent: 2
 

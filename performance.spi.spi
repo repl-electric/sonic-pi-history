@@ -18,6 +18,9 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
 
         ).look
       smp_dust(pp)
+      if pp
+        dterrain 0.5*rand
+        end
 
       sleep 1/8.0
     }

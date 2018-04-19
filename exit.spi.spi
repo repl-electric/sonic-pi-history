@@ -25,7 +25,7 @@ live_loop :Fall_out_of_your_screen do tick;
 
 #  cue :kernel_panic
   s=score.look;;c=s[0];zzz=s[-1]
-  whitespace c[0], sus: 12
+  whitespace c, sus: 12
   if spread(1,6).look
     #rev :b5, 1
     #eek :Gs3, 10

@@ -2,7 +2,7 @@
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #smp Mountain[/subkick/]
-  qbitsea :a1, sus: 0.125
+  qbitsea :a1, sus: 0.125 if spread(7,11).look
   sleep 1
   sleep 1
 end

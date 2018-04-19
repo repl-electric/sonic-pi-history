@@ -66,13 +66,14 @@ zero_cc more:  0.50
 zero_cc noise: 0.20
 zero_cc wet:   1.00
 
+shard 0.5
 #focus
 no{
   qbitsea_cc oct: 0.50
   qbitsea_cc drive: 0.31
   qbitsea_cc charge: 0.50
   qbitsea_cc fm: 0.25
-  qbitsea_cc wav: 0.71
+  qbitsea_cc wav: 0.91
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.10
   qbitsea_cc mod: 0.80

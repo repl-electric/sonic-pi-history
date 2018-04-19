@@ -6,13 +6,11 @@ live_loop :Fall_out_of_your_screen do tick;
   score =  (ing  #15.25
     #[:a2  :cs5 :e3]        Zz
     #[:fs2 :a4 :cs3]       Zz
-    #[:a2  :cs5  :e4]
+    [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :e4]   Zz
     [:e2  :gs5 :b3]       Zz
     [:cs3 :a4  :fs3]     Zz
-    [:a3 :cs4  :e4 :b5]      Zz
-
-
+    [:a3  :cs4  :e4 :b5]      Zz
 
 
     # [[[:a2 2]  [:cs5 2]   [:e3 2]]           2]                  REST

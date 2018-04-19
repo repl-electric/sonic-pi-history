@@ -89,7 +89,7 @@ live_loop :Fall_out_of_your_screen do tick;
     }
   }
 
-  with_transpose 12 {    null root(c), 127*1.0, mode: 2 }
+  with_transpose 12 {    null root(c), 127*1.0, mode: 2, sus: 2 }
 
 
 

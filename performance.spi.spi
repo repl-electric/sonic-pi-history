@@ -18,9 +18,6 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   end
 end
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
-  qbitsea :a1, sus: 1/8.0 if spread(7,11*8).look
-  qbitsea :e1, sus: 1/8.0*2 if spread(3,8*8).look
-
   sleep 1/8.0
 end
 live_loop(:unsyncable) do; sleep 1.0 end

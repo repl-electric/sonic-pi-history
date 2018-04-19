@@ -67,6 +67,21 @@ zero_cc noise: 0.20
 zero_cc wet:   1.00
 
 #focus
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.31
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.25
+  qbitsea_cc wav: 0.71
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.10
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.87
+}
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 #stop
   #  corrupt :a1, motion: 0.3
@@ -77,10 +92,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:fs2  :a4 :cs3]       Zz
     [:a2  :b4  :e4]
     [:d3  :fs5 :a3 :cs5]   Zz
-    [:e2  :gs4 :b3]
+    [:e2  :gs5 :b3]
     [:b2  :d5  :fs3 :cs4]  Zz
     [:fs4 :a4  :cs3]       Zz
-
 
     ).look
   score.each_tick(:in){|n|

@@ -14,8 +14,8 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   dcam3
   with_bpm 63.5 do #63.5
     score=(ing
-      Gs4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
-      Gs4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
+      D4 Cs4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+      D4 Cs4 _ A3 _ B3 _ A4 A4 A4 Fs4 A4
       )
     note=score.look
     shard 0.1
@@ -26,6 +26,12 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
 
     sleep 1/2.0
 
+    chd = find_chord(future_note)
+    if spread(1,2).rot(1).look
+
+    else
+
+    end
 
 
     sleep 1/2.0

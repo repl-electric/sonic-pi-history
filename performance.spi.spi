@@ -134,7 +134,11 @@ with_transpose 12{
 
   #corrupt :a1, motion: 0.3
   sleep 1
+  with_transpose 0 {
   null root(score)
+  }
+
+
 
   sleep 1
 end

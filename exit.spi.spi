@@ -4,13 +4,24 @@ live_loop :Fall_out_of_your_screen do tick;
   unity "/camera/4"
 
   score =  (ing  #15.25
-    [[[:a2 2]  [:cs5 2]   [:e3 2]]           2]                  REST
-    [[[:fs2 2] [:a4 2]   [:cs4 2]]           2]                  REST
-    [[[:a2 2]  [:cs3 2]   [:e3 2]]            2]
-    [[[:b2 2]   [:d4 2]  [:e3 2]] 2]  REST
-    [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
-    [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
-    [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST
+    [:b2  :d5 :fs3]        Zz
+    [:fs2  :a4 :cs3]       Zz
+    [:a2  :b4  :e4]
+    [:d3  :fs5 :a3 :cs5]   Zz
+    [:e2  :gs4 :b3]
+    [:b2  :d5  :fs3 :cs4]  Zz
+    [:fs4 :a4  :cs3]       Zz
+
+
+
+
+    # [[[:a2 2]  [:cs5 2]   [:e3 2]]           2]                  REST
+    # [[[:fs2 2] [:a4 2]   [:cs4 2]]           2]                  REST
+    # [[[:a2 2]  [:cs3 2]   [:e3 2]]            2]
+    # [[[:b2 2]   [:d4 2]  [:e3 2]] 2]  REST
+    # [[[:e2 2]  [:gs4 2]  [:b3 2]]  2]
+    # [[[:b2 2]  [:d5 2]   [:fs3 2] [:cs4 2]]  2]                  REST
+    # [[[:fs4 2] [:A4 2]   [:Cs3 2] ]  2]                          REST
     )
 
 

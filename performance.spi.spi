@@ -1,6 +1,7 @@
 #camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+  corrupt :a1, motion: 0.8
   sleep 1
   sleep 1
 end
@@ -9,7 +10,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 
@@ -18,6 +19,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   end
 end
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
+
   sleep 1/8.0
 end
 live_loop(:unsyncable) do; sleep 1.0 end

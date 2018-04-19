@@ -70,17 +70,17 @@ shard 1.0
 #focus
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.31
+  qbitsea_cc drive: 0.42
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.25
+  qbitsea_cc fm: 0.26
   qbitsea_cc wav: 0.91
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.10
   qbitsea_cc mod: 0.80
   qbitsea_cc motion: 0.24
-  qbitsea_cc formant: 0.36
+  qbitsea_cc formant: 0.33
   qbitsea_cc mul: 0.00
-  qbitsea_cc bass: 0.87
+  qbitsea_cc bass: 1.00
 }
 panic false #aahahahahahahhahahah
 alivecol -2.0
@@ -144,7 +144,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
       }
     end
   sleep 1
+  with_transpose 12
   null root(score)
+  end
   sleep 1
 end
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

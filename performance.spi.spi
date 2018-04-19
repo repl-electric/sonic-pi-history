@@ -81,7 +81,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
       exception root(score), sus: 1, atk: 0.01
       sleep 1/8.0*4
-      exception root(score), sus: 1
+      exception root(score), sus: 1, atk: 0.1
 
       }
   end

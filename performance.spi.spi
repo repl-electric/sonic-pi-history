@@ -1,6 +1,6 @@
 #camlogo
 #focus 5.9,0.9
-focus 5.86, 0.85
+focus 5.88, 0.85
 shard 0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #alive rotate: 1.0

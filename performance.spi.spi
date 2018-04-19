@@ -2,7 +2,7 @@
 #focus 5.9,0.9
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  smp Mountain[/subkic/,0]
+  smp Mountain[/subkick/,0]
   sleep 1
   sleep 1
 end

@@ -21,6 +21,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+  exception root(score)
   sleep 1
   null root(score)
   sleep 1
@@ -47,7 +48,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
       s=strpat("[5]p5p5p5p 5p5p5[5]5p")
-      mt s.look,accent=(line 85,127,64).look, 120
+      #mt s.look,accent=(line 85,127,64).look, 120
 
 
 
@@ -66,7 +67,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   %l{TC[6]} _ _ _      K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
-    ).map{|c| look % 32 == 0 ? c : _}.look, def: 8, accent: 1
+    ).map{|c| look % 32 == 0 ? c : c}.look, def: 8, accent: 1
 
   no{
     if k && spread(1,64).rot(0).look

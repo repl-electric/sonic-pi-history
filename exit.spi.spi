@@ -9,7 +9,7 @@ live_loop :Fall_out_of_your_screen do tick;
     [:a2  :b3  :e4]
     [:d2  :fs3 :a3 :e4]   Zz
     [:e2  :gs3 :b3]
-    [:cs3 :e3  :gs3]  Zz
+    [:cs2 :e3  :gs3]  Zz
     [:a2  :cs3  :e3 :b4]       Zz
 
     #[:a2  :cs5 :e3]        Zz

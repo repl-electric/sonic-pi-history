@@ -70,7 +70,7 @@ no{
   qbitsea_cc bass: 1.00
 }
 
-alivecol -2.0
+alivecol 2.0
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #stop
   #dcam4

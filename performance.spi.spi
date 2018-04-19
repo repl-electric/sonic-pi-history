@@ -137,9 +137,11 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   if score.length > 1
     at{
+      with_transpose 12 do
       exception root(score), sus: 0.25, atk: 0.01
       sleep 1/8.0*4
-      exception root(score), sus: 0.25, atk: 0.1
+        exception root(score), sus: 0.25, atk: 0.1
+        end
 
       }
     end

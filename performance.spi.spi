@@ -104,7 +104,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   alivecol 0.5
 
   pf= 1.8
-  i=(method :callstack)
+  i=(method :operator)
   at{
     i.call(score[0], 60*pf, sus: 4)
     sleep 0.5

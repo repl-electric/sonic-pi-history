@@ -50,9 +50,9 @@ live_loop :Fall_out_of_your_screen do tick;
 
   at{
     sleep 0.5
-    exception root(c), 127, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0
+    exception root(s), 127, sus: 0.25, atk: 0.01, shape: 1.0, wet: 1.0
     sleep 0.5
-    exception root(c), 40, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
+    exception root(s), 40, sus: 0.25, atk: 0.2, shape: 1.0, wet: 0.5
   }
   #exception root(c), 127, sus: 2#, shape: 1.0, : #, wet: 0.1, more: 0.0, shape: 0.8, atk: 0.2
 

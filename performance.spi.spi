@@ -67,6 +67,22 @@ zero_cc pulse: 0.50
 #zero_cc amp: 0.50
 
 
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.41
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.21
+  qbitsea_cc wav: 0.71
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.10
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.57
+}
+
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #corrupt :a1, motion: 0.3
@@ -81,8 +97,6 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:e2  :gs4 :b3]
     [:b2  :d5  :fs3 :cs4]  Zz
     [:fs4 :a4  :cs3]       Zz
-
-
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
@@ -91,6 +105,18 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
   alivecol 0.1
   electric
+
+  pf=1.8
+  i=(method :callstack)
+  at{
+  i.call(score[0], 60*pf, sus: 4)
+  i.call(score[1], 50*pf, sus: 4)
+  i.call(score[2], 55*pf, sus: 4)
+  i.call(score[3], 70*pf, sus: 2)
+  i.call(score[4], 30*pf, sus: 8)
+  i.call(score[5], 30*pf, sus: 8)
+}
+
 
   if score.length  > 1
     exception root(score), atk: 0.8, sus: 1

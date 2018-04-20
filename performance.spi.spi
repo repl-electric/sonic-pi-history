@@ -79,7 +79,7 @@ no{
 
 panic false #aghghghghghghghgh
 alivecol -2.0
-
+shard 1.0
 #alivecol 0.35
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4].choose

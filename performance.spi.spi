@@ -2,7 +2,7 @@
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   # smp Mountain[/subkick/,0]
-  corrupt :cs0, motion: 0.02
+  corrupt :cs0, motion: 0.05
   sleep 1
   #qbitsea :Cs0, sus: 0.25
   sleep 1

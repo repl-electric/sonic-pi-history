@@ -85,7 +85,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4].choose
   score=(ing
     [:a2  :cs3 :e3]        Zz
-    [:fs2 :a4 :cs3]       Zz
+    [:fs2 :a3 :cs3]       Zz
     [:a2  :cs4  :e4]
     [:d3  :fs4 :a3 :e4]   Zz
     [:e2  :gs4 :b3]

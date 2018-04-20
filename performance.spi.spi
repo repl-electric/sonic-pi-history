@@ -101,7 +101,12 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   alivecol  0.1
   kick_machine K1, accent: 2
   if score.length > 1
-    exception root(score)
+    at{
+      exception root(score)
+      sleep 1/8.0 * 4
+            exception root(score)
+
+      }
   end
   sleep 1
   null root(score)

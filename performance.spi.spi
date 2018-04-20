@@ -63,10 +63,10 @@ zero_cc wet:   0.80
 
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.41
+  qbitsea_cc drive: 0.50
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.31
-  qbitsea_cc wav: 0.01
+  qbitsea_cc fm: 0.39
+  qbitsea_cc wav: 0.87
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.10
   qbitsea_cc mod: 0.80
@@ -86,7 +86,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   score=(ing
     # [:a2  :cs3 :e3]        Zz
     # [:fs2 :a3 :cs3]       Zz
-    [:a2  :cs5  :e3]
+    [:a2  :cs5  :e4]
     [:d3  :fs3 :a3 :e4]   Zz
     [:e2  :gs3 :b3]      Zz
     # [:cs2 :e3  :gs3]  Zz

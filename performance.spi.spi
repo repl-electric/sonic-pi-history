@@ -3,9 +3,9 @@ camlogo
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   # smp Mountain[/subkick/,0]
   corrupt :A1,12, mode: 2
-  sleep 1
+  sleep 2
   corrupt :CS2,25, mode: 0
-  sleep 1
+  sleep 2
 end
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   with_fx :echo, mix: (ring 0.025+rand*0.1,0.055+rand*0.1,0.03,0.02,0.01).look, phase: (ring 1/4.0, 1/8.0).look do

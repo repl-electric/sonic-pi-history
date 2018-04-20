@@ -62,6 +62,21 @@ zero_cc wet:   0.91
 #zero_cc amp: 0.43
 #zero_on :a5
 
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.37
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.24
+  qbitsea_cc wav: 0.71
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.10
+  qbitsea_cc mod: 0.80
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.67
+}
+
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
@@ -75,13 +90,15 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:b2  :d5  :fs3 :cs4]  Zz
     [:fs4 :a4  :cs3]       Zz
 
-
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
   dcam4
+
+
+  alivecol  0.1
   kick_machine K1, accent: 2
   if score.length > 1
     exception root(score)

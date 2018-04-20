@@ -1,3 +1,19 @@
+eq lo: 0.00
+eq hi: 0.00
+camend
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
+stop
+
+
+
 #camlogo logo: 1.0, off: 1.0
 #null :cs1
 #bitsea_on :cs4
@@ -78,7 +94,7 @@ no{
 
 shard 1.0
 panic false #aghghghghghghghgh
-alivecol -2.0
+#alivecol -2.0
 shard 1.0
 #alivecol 0.35
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

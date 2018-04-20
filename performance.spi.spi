@@ -20,7 +20,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
 
+
+
   sleep 1
+  null root(score)
   sleep 1
 end
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

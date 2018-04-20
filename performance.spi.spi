@@ -1,3 +1,4 @@
+$mode=-1
 camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

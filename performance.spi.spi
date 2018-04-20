@@ -62,6 +62,9 @@ zero_cc wet:   0.91
 #zero_cc amp: 0.43
 #zero_on :a5
 
+panic false
+alivecol -2
+
 no{
   qbitsea_cc oct: 0.50
   qbitsea_cc drive: 0.37

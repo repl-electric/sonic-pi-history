@@ -22,7 +22,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   }
 
   if score.length  > 1
-    exception root(score), atk: 0.5
+    exception root(score), atk: 0.5, sus: 1
   end
   sleep 1
   null root(score)

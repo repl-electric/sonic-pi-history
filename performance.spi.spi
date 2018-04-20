@@ -1,5 +1,5 @@
 $mode=-1
-camlogo
+#camlogo
 null :a1
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

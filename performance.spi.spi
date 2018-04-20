@@ -1,4 +1,4 @@
-camlogo logo: 1, off: 1.0
+#camlogo logo: 1, off: 1.0
 #null :e1
 focus
 #bitsea_on :e3
@@ -13,7 +13,9 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+
         ).look
       smp_dust(pp)
 

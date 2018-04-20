@@ -12,8 +12,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #corrupt :a1,80, motion: 0.3
   score=(ing
-    [:a2 :cs4 :e3]  [:fs4]
-    [:cs2 :e4 :gs3] Zz
+    [:a2 :b3 :e3]  Zz
+    [:fs2 :e4 :gs3] Zz
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

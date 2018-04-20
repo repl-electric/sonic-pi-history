@@ -1,6 +1,6 @@
 camlogo logo: 1.0
 #focus
-#null :A1
+null :e1
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   logo [1,2,3,4,5].choose
   corrupt :a0, motion: 0.3
@@ -12,7 +12,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _,
+        _
         ).look
       smp_dust(pp)
 

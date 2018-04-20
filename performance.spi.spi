@@ -1,7 +1,7 @@
-camlogo logo: 1.0
+camlogo logo: 1.0, off: 1.0
 #null :e1
 #focus
-bitsea_on :E3
+#bitsea_on :E3
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a0, motion: 0.3
   logo [1,2,3,4,5].choose
@@ -13,7 +13,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

@@ -1,6 +1,6 @@
 camlogo logo: 1.0, off: 1.0
 #null :e1
-#bitsea_on :e3
+bitsea_on :cs4
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a1, motion: 0.1
@@ -13,8 +13,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
-        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+        _, _, _, _,    _, _, _, _,    _, _, _, _,   _, _, _, _,
+        _, _, _, _,    _, _, D1, _,    _, _, _, _,   _, _, _, _,
 
         ).look
       smp_dust(pp)
@@ -30,27 +30,27 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
 
 
   p=(ing
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    [TS[49]] _ _ TS[12]    _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    [TS[49]], _, _, TS[12],    _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TT[49] _ _ TS[12]      _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TT[49], _, _, TS[12],      _, _, _, _,
 
-    _ _ _ _                _ _ _ _
-    _ _ _ _                _ _ _ _
-    TS[7] _ _ _            _ _ _ _
+    _, _, _, _,                _, _, _, _,
+    _, _, _, _,                _, _, _, _,
+    TS[7], _, _, _,            _, _, _, _,
     )
 
   p=p.look
   #p=_
   fx=:lpf
-  accent = (ing 0.2 0.2 0.3 0.5).look
+  accent = (ing 0.2, 0.2, 0.3, 0.5,).look
   attack = 0.0
   r = 1.0
   if p && p.is_a?(Array)

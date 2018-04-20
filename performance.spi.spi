@@ -5,7 +5,7 @@ at{
   camlogo crazy: 1.0
   }
 #bitsea_on :A2
-#viz "/sea/off",1.0
+viz "/sea/off",1.0
 viz "/sea/on",0.0
 
 
@@ -22,7 +22,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

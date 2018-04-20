@@ -2,7 +2,7 @@
 bitsea_on :A2
 at{
   sleep 0.5
-  camlogo crazy: 1.0
+#  camlogo crazy: 1.0
   }
 #bitsea_on :A2
 #viz "/sea/off",1.0

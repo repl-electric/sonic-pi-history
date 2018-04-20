@@ -1,10 +1,8 @@
-#camlogo
+camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  # smp Mountain[/subkick/,0]
-  corrupt :cs0, motion: 0.05
+
   sleep 1
-  #qbitsea :Cs0, sus: 0.25
   sleep 1
 end
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

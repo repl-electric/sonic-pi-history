@@ -87,13 +87,13 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   shard 1.0
   electric
   score=(ing
-    [:a2  :cs5 :e3]        Zz
-    [:fs2  :a4 :cs3]       Zz
+    [:a3  :cs4 :e3]        Zz
+    [:fs3 :a4 :cs3]       Zz
     [:a2  :cs5  :e4]
     [:d3  :fs5 :a3 :e4]   Zz
     [:e2  :gs5 :b3]
     [:cs2  :e5  :gs3]  Zz
-    [:a3 :cs4  :e3 :b4]       Zz
+    [:a3  :cs4  :e3 :b4]       Zz
 
     ).look
   score.each_tick(:in){|n|

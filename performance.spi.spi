@@ -63,14 +63,14 @@ zero_cc wet:   0.80
 
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.50
+  qbitsea_cc drive: 1.00
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.40
-  qbitsea_cc wav: 0.87
+  qbitsea_cc fm: 0.50
+  qbitsea_cc wav: 1.00
   qbitsea_cc wav_amp: 0.30
-  qbitsea_cc atk: 0.10
+  qbitsea_cc atk: 0.00
   qbitsea_cc mod: 0.80
-  qbitsea_cc motion: 0.24
+  qbitsea_cc motion: 0.10
   qbitsea_cc formant: 0.36
   qbitsea_cc mul: 0.00
   qbitsea_cc bass: 1.00
@@ -88,7 +88,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     # [:fs2 :a3 :cs3]       Zz
     [:a2  :cs5  :e4]
     [:d3  :fs3 :a3 :e4]   Zz
-    [:e2  :gs3 :b3]      Zz
+#    [:e2  :gs3 :b3]      Zz
     # [:cs2 :e3  :gs3]  Zz
     # [:a3  :cs3  :e3]       Zz
 

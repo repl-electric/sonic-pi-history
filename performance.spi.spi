@@ -95,8 +95,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   }
   electric
   whitespace score[-1],1, sus: 12
-
-  with_transpose -12 {cpu2 score[1], 60, sus: 2 }
+  #with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 
   pf=1.9
   i=(method :operator)

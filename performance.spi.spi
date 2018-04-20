@@ -102,8 +102,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   kick_machine K1, accent: 2
-  with_transpose -12 {cpu2 score[1], 60, sus: 2 }
-  alivecol 0.3
+  #with_transpose -12 {cpu2 score[1], 60, sus: 2 }
+  #alivecol 0.3
   electric
 
   pf=1.8
@@ -133,6 +133,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     at{
 
       exception root(score), atk: 0.8, sus: 1
+      sleep 1/8.0*4
+      exception root(score), atk: 0.8, sus: 1
+
       }
   end
   sleep 1

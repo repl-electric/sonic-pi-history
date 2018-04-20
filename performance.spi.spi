@@ -1,6 +1,6 @@
-camlogo logo: 1.0
+camlogo logo: 1.0, off: 1.0
 #null :a1
-bitsea_on :e3
+#bitsea_on :e3
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a1, motion: 0.3

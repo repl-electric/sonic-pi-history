@@ -3,8 +3,7 @@ camlogo
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   # smp Mountain[/subkick/,0]
   corrupt :A0,12, mode: 2
-  corrupt :A0,12, mode: 0
-
+  corrupt :A1,12, mode: 0
   sleep 1
   sleep 1
 end

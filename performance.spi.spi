@@ -1,7 +1,7 @@
-camlogo
+camlogo logo: 1.0
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :a0, mode: 0, motion: 0.6
+  corrupt :a0,100, mode: 0, motion: 0.6
   sleep 2
   sleep 2
 end

@@ -84,7 +84,8 @@ no{
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #corrupt :a1,80, motion: 0.3
-shard 1.0
+  shard 1.0
+  electric
   score=(ing
     [:a2  :cs5 :e3]        Zz
     [:fs2  :a4 :cs3]       Zz

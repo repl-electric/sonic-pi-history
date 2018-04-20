@@ -13,6 +13,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   score=(ing
     [:a2 :cs4 :e3] Zz
+    [:fs2 :a4 :cs3] Zz
+
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
@@ -42,6 +44,9 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         5 _ _ _   _ _ _ _   5 _ [2] 3    _ [5] 5 5
         ).look
       mt s, accent=(line 75, 85, 16*4).look, 100
+      s=strpat("")
+      mt s.look,accent=(line 85,127,64).look, 120
+
 
       sleep 1/8.0
     }

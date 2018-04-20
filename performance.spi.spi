@@ -142,9 +142,9 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
       }
   end
   sleep 1
-  with_transpose 12 {
+  with_transpose 12*2 {
 
-    null root(score)
+    null root(score),120
     }
   sleep 1
 end

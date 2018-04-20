@@ -2,7 +2,7 @@ camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   # smp Mountain[/subkick/,0]
-  corrupt :A2,15, mode: 2
+  corrupt :A2,12, mode: 2
   sleep 1
   sleep 1
 end

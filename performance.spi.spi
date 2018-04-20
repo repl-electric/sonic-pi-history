@@ -109,7 +109,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   pf=1.8
   i=(method :callstack)
   at{
-  i.call(score[0], 60*pf, sus: 4)
+    i.call(score[0], 60*pf, sus: 4)
+    sleep 0.5
   i.call(score[1], 50*pf, sus: 4)
   i.call(score[2], 55*pf, sus: 4)
   i.call(score[3], 70*pf, sus: 2)
@@ -119,7 +120,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
 
   if score.length  > 1
-    exception root(score), atk: 0.8, sus: 1
+    at{
+
+      exception root(score), atk: 0.8, sus: 1
+      }
   end
   sleep 1
   null root(score)

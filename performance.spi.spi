@@ -1,7 +1,7 @@
 #camlogo logo: 1, off: 1.0
 #null :e1
-focus
-bitsea_on :cs4
+#focus
+#bitsea_on :cs4
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #corrupt :a1, motion: 0.3
@@ -21,6 +21,10 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
       if pp
         dterrain 0.55*rand
       end
+      mt mt_pat.look.look, accent=(line 75, 85, 16*4).look, 100
+      mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
+
+
 
       sleep 1/8.0
     }

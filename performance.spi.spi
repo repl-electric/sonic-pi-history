@@ -10,6 +10,8 @@ invcol 0.0
 electric
 shard 0.8
 
+zero_on :a4
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #logo [1,2,3,4,5].choose
   #corrupt :a1, motion: 0.3

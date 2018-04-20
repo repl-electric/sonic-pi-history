@@ -24,12 +24,14 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     #zero_x
 
     sleep 1/2.0
+    null note, 1, sus: 1
     chd = find_chord future_note
     if spread(1,2).look
       with_transpose 0 { zero chd[1],1,sus:12 }
       with_transpose -12 { zero chd[2],1,sus:12 }
       with_transpose -24 { zero chd[0],1,sus:12 }
-
+    else
+      with_transpose -24 { zero chd[0],1,sus:12 }
 
     end
 
@@ -37,6 +39,11 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     sleep 1/4.0
   end
 end
+
+zero_cc pulse: 0.00
+zero_cc more:  0.00
+zero_cc noise: 0.00
+zero_cc wet:   0.70
 
 #zero_cc amp: 0.40
 #zero_on :a5

@@ -86,7 +86,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:a2  :b4  :e4]
     [:d3  :fs5 :a3 :e4]   Zz
     [:e2  :gs5 :b3]
-    [:cs2  :e5  :gs3]  Zz
+    [:cs2 :e5  :gs3]  Zz
     [:a3 :cs4  :e3]       Zz
 
     ).look
@@ -98,7 +98,7 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 
-  pf=1.8
+  pf=1.9
   i=(method :operator)
   at{
     i.call(score[0], 60*pf, sus: 4)

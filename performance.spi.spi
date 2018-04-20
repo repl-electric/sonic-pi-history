@@ -2,7 +2,7 @@
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   # smp Mountain[/subkick/,0]
-  qbitsea :Cs1, sus: 2
+  qbitsea :Cs1, sus: 0.125
   sleep 1
   sleep 1
 end

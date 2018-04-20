@@ -1,5 +1,5 @@
 camlogo
-unity "/glitch/lines", 0.0
+unity "/glitch/line", 0.0
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 

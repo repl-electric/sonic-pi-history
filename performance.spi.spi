@@ -71,9 +71,9 @@ zero_cc pulse: 0.50
 shard 1.0
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.45
+  qbitsea_cc drive: 0.48
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.37
+  qbitsea_cc fm: 0.26
   qbitsea_cc wav: 0.91
   qbitsea_cc wav_amp: 0.57
   qbitsea_cc atk: 0.10
@@ -139,7 +139,10 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
       }
   end
   sleep 1
-  null root(score)
+  with_transpose 0 {
+
+    null root(score)
+    }
   sleep 1
 end
 live_loop :by_the_light_of_the_terminal, sync: :unsyncable do

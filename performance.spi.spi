@@ -14,6 +14,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #corrupt :a1,80, motion: 0.3
   score=(ing
     [:a2 :cs4 :e3] Zz
+    [:cs2 :e4 :gs3] Zz
+
     ).look
 
   score.each_tick(:in){|n|

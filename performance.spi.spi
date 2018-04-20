@@ -1,5 +1,6 @@
 camlogo logo: 1.0
-null :cs1
+#null :cs1
+bitsea_on :a2
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   logo [1,2,3,4].choose

@@ -15,8 +15,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #corrupt :a1, motion: 0.3
   shard 0.6
   score=(ing
-    [:a3 :d4 :fs3] Zz
-    [:fs3 :a4 :cs3] Zz
+    [:b3 :d4 :fs3] Zz
+    [:fs3 :a4 :cs4] Zz
     ).look
   score.each_tick(:in){|n|
     bitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5

@@ -1,11 +1,11 @@
 def nsynth(n,v,*args)
-  midi n,v *[args] << channel: 1, port: :iac_bus_1
+  midi n,v *[args] << [{channel: 1}], port: :iac_bus_1
 end
 
 live_loop :name do
   tick
    nsynth (ing :G4 :E4 :D4
-             :E4 :C3 :A3).look,127, sus: 1, channel: 1, port: :iac_bus_1
+           :E4 :C3 :A3).look,127, sus: 1, channel: 1, port: :iac_bus_1
   midi_cc 50, 127, channel: 1
   sleep 1
 end

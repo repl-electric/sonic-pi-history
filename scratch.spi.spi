@@ -1,11 +1,11 @@
 nsynth_cc x: 0.70, y: 0.80
 live_loop :alive do;tick
-  smp Mountain[/subkick/,0] if (ing 1 1 1 0 1 0 1 0 ).look == 1
-  nsynth_cc x: (line 0, 1.0, 128).look,
+  smp Mountain[/subkick/,0] if (ing 1, 1, 1, 0, 1, 0, 1, 0, ).look == 1
+  nsynth_cc x: (rand_i(127)
             y: rand_i(127)
-  nsynth (ing :G3 :E3 :D3 _
-          :E3 :A3 :F3 _
+  nsynth (ing :G3, :E3, :D3, _,
+          :E3, :A3, :F3, _,
           ).look, sus: 0.5
-  baz :C2,20, mix: 1.0, sus: (ing 0.5 1 0.25 1).look
+  baz :C2,20, mix: 1.0, sus: (ing 0.5, 1, 0.25, 1,).look
   sleep 1.0/2.0
 end

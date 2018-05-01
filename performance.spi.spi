@@ -12,6 +12,9 @@ def nsynth_on(*args)
 end
 
 #stop
+
+midi_cc 10, 127, channel: 1
+
 live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4 :E4 :C3 :A3).look,127, sus: 1

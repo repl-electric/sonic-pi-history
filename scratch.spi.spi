@@ -7,7 +7,7 @@
 
 live_loop :alive do;tick
   #smp Mountain[/subkick/,0] if (ing 1 1 1 0 1 0 1 0 ).look == 1
-  nsynth (ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look, sus: 2.0
+  nsynth (ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look, sus: 2.0, x: 0.5
 
   #baz :C2,20, mix: 1.0, sus: (ing 0.5 1 0.25 1).look
   sleep 2

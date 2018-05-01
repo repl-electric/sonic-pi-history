@@ -38,7 +38,7 @@ end
 #midi_cc 52, 1
 #stop
 
-nsynth_cc x: 1.0, y: 0.5
+nsynth_cc x: 0.1, y: 0.5
 
 
 #stop

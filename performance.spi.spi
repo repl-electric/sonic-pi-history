@@ -1,6 +1,6 @@
 live_loop :name do
   tick
-  midi (ing :G4 :E4 :B3 :A3 :B3 :C4).look,127, sus: 2, channel: 1, port: :iac_bus_1
+  midi (ing :G4 :E4 :D4 :A3 :B3 :C4).look,127, sus: 2, channel: 1, port: :iac_bus_1
   sleep 2
 end
 stop

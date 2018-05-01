@@ -1,8 +1,10 @@
 nsynth_cc x: 0.70, y: 0.80
 live_loop :alive do;tick
+nsynth_cc x: 0.70, y: 0.80
+
   nsynth (ing :G3 :E3 :D3 _
           :E3 :A3 :F3 _
-          ).look, sus: 1
+          ).look, sus: 2
   baz :C2,1
   sleep 1.0
 end

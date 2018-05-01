@@ -12,9 +12,9 @@ def nsynth_on(*args)
 end
 
 
-
+puts :alive
 #nsynth_on :A3
-
+stop
 #stop
 live_loop :example do
   tick

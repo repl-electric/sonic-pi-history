@@ -13,9 +13,9 @@ end
 
 
 
-nsynth_on :A3
+#nsynth_on :A3
 
-stop
+#stop
 live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4 :E4 :C3 :A3).look,127, sus: 1

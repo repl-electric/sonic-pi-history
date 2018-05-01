@@ -13,7 +13,7 @@ end
 
 
 puts :alive
-#nsynth_on :A3
+nsynth_on :A3
 stop
 #stop
 live_loop :example do

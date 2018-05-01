@@ -47,7 +47,7 @@ live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4 _ :E4 :C3 :A3 _).look,127, sus: 2
   smp Mountain[/subkick/,0], amp: 0.2
-  midi :A2,20,  channel: 2
+  midi :C3,20,  channel: 2
   #midi_cc 50, 127, channel: 1
   sleep (knit 1,5, 1,1).look
 end

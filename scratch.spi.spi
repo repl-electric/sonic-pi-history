@@ -2,4 +2,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 use_bpm 127
 
 
+live_loop :go do
+  tick
 nsynth :A2
+  sleep 1
+  sleep 1
+end

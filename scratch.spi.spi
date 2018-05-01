@@ -12,9 +12,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 nsynth_cc x: 0.8, y: 0.8
 live_loop :alive do;tick
-  nsynth_cc x: 0.8, y: rand
+  nsynth_cc x: rand, y: rand
 
-  nsynth (ing :A2 :C3 :E3 :F2).look
+  nsynth (ing :A2, :C3, :E3, :F2,).look
   baz :A2
   sleep 1
 end

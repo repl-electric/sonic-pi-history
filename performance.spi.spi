@@ -11,17 +11,11 @@ def nsynth_on(*args)
   midi_note_on n, vel, *(args << {port: :iac_bus_1} << {channel: 1})
 end
 
-
-nsynth_on :A3, sus: 8
-
-
-
-stop
 #stop
 live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4 :E4 :C3 :A3).look,127, sus: 1
-  midi_cc 50, 127, channel: 1
+  #midi_cc 50, 127, channel: 1
   sleep 1
 end
 

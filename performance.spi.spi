@@ -12,7 +12,7 @@ def nsynth_on(*args)
 end
 
 
-nsynth_on :A3
+nsynth_on :A3, sus: 8
 
 
 

@@ -2,18 +2,20 @@ def nsynth(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
-  midi n, vel, *(args << {port: :iac_bus_1} << {channel: 5})
+  midi n, vel, *(args << {port: :iac_bus_1} << {channel: 1})
 end
 def nsynth_on(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
-  midi_note_on n, vel, *(args << {port: :iac_bus_1} << {channel: 5})
+  midi_note_on n, vel, *(args << {port: :iac_bus_1} << {channel: 1})
 end
 
 
-puts :alive
 nsynth_on :A3
+
+
+
 stop
 #stop
 live_loop :example do

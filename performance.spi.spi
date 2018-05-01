@@ -13,7 +13,7 @@ end
 
 #stop
 
-midi_cc 50, 100
+midi_cc 50, 10
 stop
 
 live_loop :example do

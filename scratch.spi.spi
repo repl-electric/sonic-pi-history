@@ -6,5 +6,4 @@ live_loop :go do
   tick
 nsynth :A2
   sleep 1
-  sleep 1
 end

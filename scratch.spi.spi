@@ -1,2 +1,5 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hello_world/support/midi.rb"
 use_bpm 127
+
+
+nsynth :A2

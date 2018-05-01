@@ -1,7 +1,6 @@
 live_loop :name, sync: :unsyncable do
   tick
-  midi :A3, channel: 1, port: :iac_bus_1
-
+  midi (ing :A3).look, channel: 1, port: :iac_bus_1
   sleep 1
   sleep 1
 end

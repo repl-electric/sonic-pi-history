@@ -13,7 +13,7 @@ end
 
 
 
-nsynth_on :A2
+nsynth_on :A3
 
 stop
 live_loop :example do

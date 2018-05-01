@@ -15,5 +15,5 @@ live_loop :alive do;tick
   y: (line 0.0, 1.0, 128).look
   nsynth (ing :G3, :E3, :D3, _, :E3, :C3, :A2, _,).look
   baz :C2,sus: 0.5
-  sleep 1.0
+  sleep 1.0/2.0
 end

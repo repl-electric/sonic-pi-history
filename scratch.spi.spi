@@ -1,7 +1,7 @@
 #nsynth :A2
 #nsynth_cc x: 0.00, y: 0.70
 live_loop :name do
-midi_cc 51, 100, channel: 1
+midi_cc 53, 100, channel: 1
   sleep 1
   sleep 1
 end

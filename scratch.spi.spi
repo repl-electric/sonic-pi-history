@@ -12,6 +12,6 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 nsynth_cc x: 0.6, y: 0.80
 live_loop :alive do;tick
-  nsynth :A3
+  nsynth :A2
   sleep 2
 end

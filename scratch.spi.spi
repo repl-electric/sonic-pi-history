@@ -15,7 +15,7 @@ live_loop :alive do;tick
   nsynth_cc x: rand, y: rand, mix: 1.0
   nsynth (ing :G4 :E4 :D4 _ :E4 :C3 :A3 _).look,127-rand_i(100), sus: 2
   #nsynth (ing :A2 :C2 :E2 :F2).look
-  baz :F3
+  baz :E3
   baz_cc mix: 1.0
   sleep 1
 end

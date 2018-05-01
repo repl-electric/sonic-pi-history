@@ -6,6 +6,6 @@ live_loop :alive do;tick
   nsynth (ing :G3 :E3 :D3 _
           :E3 :A3 :F3 _
           ).look, sus: 0.5
-  baz :C2,1, mix: 1.0, sus: (ing 0.25 0.5 0.25 1).look
+  baz :C2,1, mix: 1.0, sus: (ing 0.25 1 0.25 1).look
   sleep 1.0/2.0
 end

@@ -38,6 +38,8 @@ end
 #midi_cc 52, 1
 #stop
 
+midi_cc x: 0.2
+
 live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4 :E4 :C3 :A3).look,127, sus: 1

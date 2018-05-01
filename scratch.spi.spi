@@ -13,6 +13,6 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 live_loop :alive do;tick
   nsynth_cc x: (line 0.0, 1.0, 128).look, y: 0.0
   nsynth (ing :G3 :E3 :D3 _ :E3 :C3 :A2 _).look
-  bass :C2,1
+  bas :C2,1
   sleep 1.0
 end

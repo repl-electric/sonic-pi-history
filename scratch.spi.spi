@@ -17,5 +17,5 @@ live_loop :alive do;tick
   #nsynth (ing :A2 :C2 :E2 :F2).look
   #baz :A2
   baz_cc mix: 1.0
-  sleep 1
+  sleep 1/2.0
 end

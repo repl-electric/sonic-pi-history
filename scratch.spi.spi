@@ -1,7 +1,7 @@
 #nsynth :A2
 #nsynth_cc x: 0.00, y: 0.70
 
-synth_cc y: (line 0.0, 1.0, 8).look
+synth_cc y: 1.0
 stop
 live_loop :alive do;tick
   #smp Mountain[/subkick/,0] if (ing 1 1 1 0 1 0 1 0 ).look == 1

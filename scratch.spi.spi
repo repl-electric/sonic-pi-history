@@ -1,4 +1,5 @@
 nsynth_cc x: 0.00, y: 0.00
 live_loop :alive do;tick
-   sleep 1.0
+  nsynth (ing G3).look
+  sleep 1.0
 end

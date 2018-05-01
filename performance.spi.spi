@@ -45,10 +45,10 @@ nsynth_cc x: 0.8, y: 0.8
 
 live_loop :example do
   tick
-  nsynth (ing :G4 :E4 :D4 :E4 :C3 :A3).look,127, sus: 2
+  nsynth (ing :G4 :E4 :D4 _ :E4 :C3 :A3 _).look,127, sus: 2
   smp Mountain[/subkick/,0], amp: 0.2
   #midi_cc 50, 127, channel: 1
-  sleep (knit 1,5, 2,1).look
+  sleep (knit 1,5, 1,1).look
 end
 
 stop

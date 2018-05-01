@@ -1,4 +1,4 @@
-nsynth_cc x: 0.30, y: 0.80
+nsynth_cc x: 0.40, y: 0.80
 live_loop :alive do;tick
   nsynth (ing :G3 :E3 :D3 _
           :E3 :A3 :F3 _

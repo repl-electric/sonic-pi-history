@@ -1,3 +1,5 @@
+midi :A3, channel: 1, port: :iac_bus_1
+
 unity "/sea/rippleheight", 0.5
 unity "/sea/waveheight", 6.8
 

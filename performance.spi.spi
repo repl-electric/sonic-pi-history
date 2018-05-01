@@ -35,8 +35,8 @@ end
 
 #stop
 
-midi_cc 52, 1
-stop
+#midi_cc 52, 1
+#stop
 
 live_loop :example do
   tick

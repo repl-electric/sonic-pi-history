@@ -1,4 +1,4 @@
-nsynth_cc x: 0.80, y: 0.1
+nsynth_cc x: 0.80, y: 0.2
 live_loop :alive do;tick
   nsynth :G3
   sleep 1.0

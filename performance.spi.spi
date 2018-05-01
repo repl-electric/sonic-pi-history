@@ -5,7 +5,7 @@ def nsynth(*args)
   midi n, vel, *(args << {port: :iac_bus_1} << {channel: 5})
 end
 
-live_loop :name do
+live_loop :example do
   tick
   nsynth (ing :G4 :E4 :D4
           :E4 :C3 :A3).look,127, sus: 1
@@ -14,7 +14,6 @@ live_loop :name do
 end
 
 stop
-midi :A3, channel: 1, port: :iac_bus_1
 
 
 unity "/sea/rippleheight", 0.5

@@ -38,7 +38,7 @@ end
 #midi_cc 52, 1
 #stop
 
-midi_cc x: 0.2
+midi_cc x: 0.3
 
 live_loop :example do
   tick

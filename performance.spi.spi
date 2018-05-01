@@ -1,4 +1,4 @@
-midi :A4, channel: 1, port: :iac_bus_1
+midi :A3, channel: 1, port: :iac_bus_1
 
 
 unity "/sea/rippleheight", 0.5

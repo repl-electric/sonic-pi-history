@@ -10,8 +10,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-nsynth_cc x: 0.8, y: 0.8
 live_loop :alive do;tick
+  nsynth_cc x: 0.8, y: 0.0
+
   nsynth (ing :G3 :E3 :D3).look
   sleep 1.0
 end

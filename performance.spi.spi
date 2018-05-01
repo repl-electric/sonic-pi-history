@@ -39,6 +39,9 @@ end
 #stop
 
 nsynth_cc x: 0.0
+
+
+stop
 nsynth_cc y: 1.0
 
 live_loop :example do

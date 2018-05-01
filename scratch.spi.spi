@@ -1,6 +1,6 @@
 #nsynth :A2
 #nsynth_cc x: 0.00, y: 0.70
-midi_cc 53, 100, channel: 1
+midi_cc 53, 1, channel: 1
 #synth_cc y: 1.0
 
 stop

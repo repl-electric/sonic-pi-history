@@ -10,7 +10,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-#nsynth_cc x: 0.0, y: 0.0
+nsynth_cc x: 0.0, y: 0.0
 live_loop :alive do;tick
 
   sleep 1/2.0

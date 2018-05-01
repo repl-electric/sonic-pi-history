@@ -1,5 +1,8 @@
-def nsynth(n,v,*args)
-  midi n,v *[args] << [{channel: 1}], port: :iac_bus_1
+def nsynth(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  midi n, vel, *(args << {port: :iac_bus_1} << {channel: 5})
 end
 
 live_loop :name do

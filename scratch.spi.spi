@@ -1,9 +1,10 @@
 nsynth_cc x: 0.70, y: 0.80
 live_loop :alive do;tick
+  smp Mountain[/subkick/,0]
   nsynth_cc x: (line 0, 1.0, 128).look,
             y: 0.80
-  nsynth (ing :G3 :E3 :D3 _
-          :E3 :A3 :F3 _
+  nsynth (ing :G3, :E3, :D3, _,
+          :E3, :A3, :F3, _,
           ).look, sus: 2
   baz :F2,1
   sleep 1.0

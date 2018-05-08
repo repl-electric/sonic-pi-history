@@ -31,10 +31,12 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-nsynth_cc x: 0.00, y: 0.00
+#nsynth_cc x: 0.00, y: 0.00
+
 
 live_loop :alive do;tick
-  #nsynth (ing :G3, :E3, :D3, _, :E3, :A3, :F3, _,).look, sus: 2.0
-  baz :C2,1, mix: 1.0, sus: (ing 0.5, 1, 0.25, 1,).look
+baz_cc mix: 1.0
+  #nsynth (ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look, sus: 2.0
+#  baz :C2,1, mix: 1.0, sus: (ing 0.5 1 0.25 1).look
   sleep 2
 end

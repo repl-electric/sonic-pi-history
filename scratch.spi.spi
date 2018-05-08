@@ -37,7 +37,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 live_loop :alive do;tick
   #nsynth :C3,127, sus: 1
-  nsynth :C3, n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look,127, sus: 2
+  nsynth n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look,127, sus: 2
   #baz :C2,1, mix: 0.1, sus: (ing 0.5 1 0.25 1).look
   sleep 1
 end

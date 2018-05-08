@@ -32,7 +32,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-#nsynth_cc x: 0.00, y: 0.00
+#nsynth_cc x: 0.00, y: 1.00
 
 live_loop :alive do;tick
   nsynth :C3,127, sus: 1

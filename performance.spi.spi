@@ -8,7 +8,7 @@ bitsea_cc octave: 0.50  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 bitsea_on :cs4
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :a2, motion: 0.3
+  #corrupt :a2, motion: 0.3
   sleep 1
   sleep 1
 end

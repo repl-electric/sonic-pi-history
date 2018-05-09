@@ -39,7 +39,7 @@ live_loop :alive do;tick
   smp Mountain[/subkick/,0] if (ing 1 1 0 1  1 1 1 0).look == 1
   n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look
   nsynth n,(ing 70 55 68 60).look*1.2, sus: 2.0
-  baz n,1, mix: 0.2, sus: 2.0
-  baz :C2,2, mix: 0.2, sus: (ing 0.5 1 0.25 1).look
+  baz n,1, mix: 0.4, sus: 2.0
+  baz :C2,2, mix: 0.4, sus: (ing 0.5 1 0.25 1).look
   sleep 1
 end

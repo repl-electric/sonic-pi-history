@@ -33,7 +33,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-#nsynth_cc x: 0.63, y: 0.70
+#nsynth_cc x: 0.00, y: 0.00
 
 live_loop :alive do;tick
   smp Mountain[/subkick/,0] if (ing 1 1 0 1  1 1 1 0).look == 1

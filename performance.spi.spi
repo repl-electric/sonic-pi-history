@@ -1,7 +1,7 @@
 #camlogo logo: 1.0, crazy: 1.0, off: 1.0
 #focus
 invcol 1.0
-electric 44
+electric 40
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :A2, motion: 0.3
   sleep 1

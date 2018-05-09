@@ -86,7 +86,7 @@ stop
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
     ).map{|c| look % 8 == 0 ? c : c}.look, def: 8, accent: 1
 
-  no{
+  yes{
     if k && spread(1,64).rot(0).look
       bitsea :fs4, sus: 4.0
       cue :hit

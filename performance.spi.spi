@@ -72,13 +72,13 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #corrupt :a2, motion: 0.3
   dcam4
   score=(ing
-    [:b2  :d4 :fs3]        Zz
-    [:fs2  :a4 :cs3]       Zz
+  #  [:b2  :d4 :fs3]        Zz
+  #  [:fs2  :a4 :cs3]       Zz
     [:a2  :cs4  :e4]
     [:d3  :fs4 :a3 :cs5]   Zz
     [:e2  :gs4 :b3]
-    [:cs2  :e4  :gs3]  Zz
-    [:a3 :cs4  :e3 :b4]       Zz
+ #   [:cs2  :e4  :gs3]  Zz
+#    [:a3 :cs4  :e3 :b4]       Zz
 
     ).look
   score.each_tick(:in){|n|

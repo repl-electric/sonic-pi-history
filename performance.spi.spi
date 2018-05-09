@@ -65,8 +65,8 @@ no{
   qbitsea_cc mul: 0.00
   qbitsea_cc bass: 0.56
 }
-alivecol 0.3
-
+alivecol -2.3
+panic false #aghghghghghhghg
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #corrupt :a2, motion: 0.3

@@ -2,8 +2,11 @@
 #focus
 invcol 1.0
 electric 40
+
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :A2, motion: 0.3
+  null :fs3
+
   sleep 1
   sleep 1
 end

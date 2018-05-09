@@ -42,7 +42,7 @@ live_loop :alive do;tick
   8.times{
     at{
       nsynth n,20, sus: 1/4.0
-      sleep 1/2.0
+      sleep 10
       }
     }
   baz :C2,1, mix: 0.0, sus: (ing 0.5 1 0.25 1).look

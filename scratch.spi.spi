@@ -33,12 +33,14 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 
 
 
-#nsynth_cc x: 0.30, y: 0.60
+#nsynth_cc x: 0.60, y: 0.80
 
 live_loop :alive do;tick
   smp Mountain[/subkick/,0] if (ing 1 1 0 1  1 1 1 0).look == 1
   n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look
   nsynth n,(ing 70 55 68 60).look, sus: 2.0
+  baz n,1, mix: 0.0, sus: (ing 0.5 1 0.25 1).look
+
   baz :C2,1, mix: 0.0, sus: (ing 0.5 1 0.25 1).look
   sleep 1
 end

@@ -40,5 +40,5 @@ live_loop :alive do;tick
   n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look
   nsynth n,70, sus: 2.0
   baz :C2,1, mix: 0.0, sus: (ing 0.5 1 0.25 1).look
-  sleep 2
+  sleep 1
 end

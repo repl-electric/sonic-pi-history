@@ -5,8 +5,8 @@ bitsea_cc octave: 0.51  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 #bitsea_cc formant: 0.00 #╟▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
 invcol 0.0
 electric
-bitsea_on :cs4
-zero_on :fs4
+#bitsea_on :cs4
+#zero_on :fs4
 
 live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   live_loop :fall_into_your_screen {stop}
@@ -23,6 +23,13 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
    # zero_x
 
     sleep 1/2.0
+    chd = find_chord future_note
+    if spread(1,2).rot(1).look
+      with_transpose 0 { zero chd[1],1,sus:12 }
+
+    else
+
+    end
 
 
     sleep 1/2.0

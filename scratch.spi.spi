@@ -36,9 +36,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_hel
 #nsynth_cc x: 0.40, y: 0.90
 
 live_loop :alive do;tick
-  smp Mountain[/subkick/,0] if (ing 1, 1, 0, 1,  1, 1, 1, 0,).look == 1
-  n=(ing :G3, :E3, :D3, _, :E3, :A3, :F3, _,).look
-  nsynth n,100, sus: 2.0
-  baz :C2,1, mix: 0.0, sus: (ing 0.5, 1, 0.25, 1,).look
+  smp Mountain[/subkick/,0] if (ing 1 1 0 1  1 1 1 0).look == 1
+  n=(ing :G3 :E3 :D3 _ :E3 :A3 :F3 _).look
+  nsynth n,80, sus: 2.0
+  baz :C2,1, mix: 0.0, sus: (ing 0.5 1 0.25 1).look
   sleep 2
 end

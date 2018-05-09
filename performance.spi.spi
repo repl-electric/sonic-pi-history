@@ -1,7 +1,7 @@
 #camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :fs3smp Mountain[/subkick/,0]
+  corrupt :fs3smp Mountain[/subkick/,0],a mp:2
   sleep 1
   sleep 1
 end

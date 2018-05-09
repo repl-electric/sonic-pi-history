@@ -78,13 +78,26 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     [:d3  :fs5 :a3 :cs5]   Zz
     [:e2  :gs5 :b3]
     [:cs2  :e5  :gs3]  Zz
-    [:fs4 :a4  :cs3]       Zz
+    [:a3 :cs4  :e3 :b4]       Zz
 
     ).look
   score.each_tick(:in){|n|
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   shard 1.0
+
+  pf= 1.0
+    i=(method :callstack)
+  at{
+    i.call(score[0], 60*pf, sus: 4)
+    i.call(score[1], 50*pf, sus: 4)
+    i.call(score[2], 55*pf, sus: 4)
+    i.call(score[3], 70*pf, sus: 2)
+    i.call(score[4], 30*pf, sus: 8)
+    i.call(score[5], 30*pf, sus: 8)
+  }
+
+
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
 
   exception root(score), sus: 2

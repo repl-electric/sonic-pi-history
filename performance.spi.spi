@@ -131,6 +131,13 @@ end
 #baz_cc drive: 0.0
 #pads_cc drive: 0.0
 
+live_loop :snaps, sync: :unsyncable do
+  tick
+  smp Mountain[/hat/],amp: 2
+  sleep 1
+  sleep 1
+end
+
 
 live_loop :name, sync: :unsyncable do
   tick

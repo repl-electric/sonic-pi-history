@@ -133,7 +133,7 @@ end
 
 live_loop :snaps, sync: :unsyncable do
   tick
-  smp Frag[/hat/],amp: 1
+  smp Frag[/hat/],amp: 1 if spread(1,2).look
   sleep 1/4.0
 end
 

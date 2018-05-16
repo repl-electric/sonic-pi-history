@@ -134,7 +134,7 @@ end
 
 live_loop :name, sync: :unsyncable do
   tick
-  kick_machine K1, accent: 1.2 if (ing 1 1 0 1).look == 1
+  kick_machine K1, accent: 1.5 if (ing 1 1 0 1).look == 1
   kick_machine K3, accent: 2.0 if (ing 1 1 0 1).look == 0
 
   x = (ing :A3 :F4 :C3

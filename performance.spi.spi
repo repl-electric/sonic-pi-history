@@ -133,7 +133,7 @@ end
 
 live_loop :snaps, sync: :unsyncable do
   tick
-  with_fx :reverb, room: 1, mix: 0.7 {
+  with_fx (knit :reverb, 32, :echo, 8).look, room: 1, mix: 0.7 {
     smp Dust[/hat/,[1,1]].look, amp: (ing 0.8 0.7 0.2).look*0.5 if spread(1,8).rot(-2).look
     smp Dust[/hat/,[2,2]].look, amp: (ing 0.8 0.7 0.2).look*0.5 if spread(3,8).rot(0).look
     smp Dust[/hat/,[4,4]].look, amp: (ing 0.2 0.2 0.1).look*0.5 if spread(7,11).rot(0).look

@@ -12,7 +12,7 @@ use_bpm 127
  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╢
 
 
-ze :A2
+#ze :A2
 
 
 live_loop :scale, sync: :unsyncable  do  #10...
@@ -28,7 +28,7 @@ live_loop :scale, sync: :unsyncable  do  #10...
     sleep 1/4.0
    }
   #sleep 3
-  sleep 1 + 2
+  sleep 1        # + 2
   # sleep 1/8.0
  end
 

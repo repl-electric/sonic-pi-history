@@ -2,6 +2,8 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
+live_loop(:unsyncable) do; sleep 1.0 end
+
 #create_aura -1
 #sleep 4
 #init!
@@ -194,5 +196,3 @@ mbox2_cc sat: 1.0, drive: 0.1
 #mbox_cc  motion: 0.55
 mbox_cc  motion: 0.1
 mbox2_cc motion: 0.3
-
-live_loop(:unsyncable) do; sleep 1.0 end

@@ -21,7 +21,7 @@ live_loop :scale, sync: :unsyncable  do  #10...
   tick
   12.times{
      tick
-     #ze (ing :A3 :A3 :C3 :F3 :C4).look, 127*0.01 if spread(7,11).look
+     ze (ing :A3 :A3 :C3 :F3 :C4).look, 127*0.01 if spread(7,11).look
      sleep 1/2.0
    }
    12.times{

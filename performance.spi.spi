@@ -16,7 +16,7 @@ live_loop(:unsyncable) do; sleep 1.0 end
 
 #ze :A2
 
-looper (ing :c2).look, 50, motion: 1.0
+looper (ing :c2).look, 50, motion: 0.01
 
 
 stop
@@ -186,7 +186,7 @@ live_loop :name, sync: :unsyncable do
   sleep 1/8.0
 end
 
-mbox2_cc sat: 1.0, drive: 0.1
+#mbox2_cc sat: 1.0, drive: 0.1
 #looper_cc motion: 0.5, fm: 0.0, drive: 0.1
 #looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 #looper_cc fm: 0.2, drive: 1.0, motion: 0.8
@@ -197,5 +197,5 @@ mbox2_cc sat: 1.0, drive: 0.1
 #mbox_cc  motion: 0.1
 #mbox2_cc motion: 0.55
 #mbox_cc  motion: 0.55
-mbox_cc  motion: 0.1
-mbox2_cc motion: 0.3
+#mbox_cc  motion: 0.1
+#mbox2_cc motion: 0.3

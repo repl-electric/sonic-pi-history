@@ -1,4 +1,5 @@
-load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/april/support/midi.rb"
+load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
+
 
 live_loop :name  do
   tick

@@ -115,13 +115,13 @@ live_loop :thing, sync: :unsyncable do
 
   at{
     v=0.7
-    callstack c[0],114*v, sus: 8
+    #callstack c[0],114*v, sus: 8
     sleep 1.0
-    operator c[1],117*v, sus: 6
+    #operator c[1],117*v, sus: 6
     sleep 2
-    operator c[2],105*v, sus: 9
+    #operator c[2],105*v, sus: 9
     sleep 1.0
-    operator c[3],100*v, sus: 9
+    #operator c[3],100*v, sus: 9
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 8 }}

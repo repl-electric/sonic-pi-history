@@ -56,7 +56,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   #mbox :a4, 127-rand*5, sus: 4
   at{
     sleep 0.5
-    mbox2 :g3, 127-rand*5, sus: 4
+    #mbox2 :g3, 127-rand*5, sus: 4
   }
   mbox :a4, 127-rand*5, sus: 4
   looper (ing :g1).look, 1, sus: 4

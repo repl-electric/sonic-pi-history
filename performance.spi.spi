@@ -132,9 +132,9 @@ live_loop :thing, sync: :unsyncable do
     callstack c[0],114*v, sus: 8
     #ze c[0]
     sleep 1.0
-    #operator c[1],117*v, sus: 6
+    operator c[1],117*v, sus: 6
     sleep 2
-    operator c[1],59*v, sus: 6
+    #operator c[1],59*v, sus: 6
     #operator c[2],105*v, sus: 9
     sleep 1.0
     #operator c[3],100*v, sus: 9

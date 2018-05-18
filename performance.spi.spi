@@ -148,6 +148,7 @@ end
 # end
 
 live_loop :name, sync: :unsyncable do
+  stop
   tick
   #kick_machine K1, accent: 1.2 if (ing 1 1 0 1).look == 1
   #kick_machine KT[3], accent: 2.0 if (ing 1 1 0 1).look == 0

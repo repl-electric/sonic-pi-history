@@ -125,12 +125,12 @@ live_loop :thing, sync: :unsyncable do
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 8 }}
-  pads note, 1, sus: 8, drive: 0.0, thick: 0
-  baz note, 1, sus: 12, drive: 0.0
+  pads note, 1, sus: 8, drive: 0.0, thick: 4
+  baz note, 1, sus: 12, drive: 0.00
   sleep 16/2.0
 end
 
-pads_cc amp: 0.60
+pads_cc amp: 0.85
 
 #baz :A2, 30, sus: 12
 #midi :A2,30, sustain: 32, channel: 7

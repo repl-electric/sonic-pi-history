@@ -143,6 +143,8 @@ live_loop :thing, sync: :unsyncable do
   sleep 16/2.0
 end
 
+pads_cc amp: 0.50
+
 #baz :A2, 30, sus: 12
 #midi :A2,30, sustain: 32, channel: 7
 

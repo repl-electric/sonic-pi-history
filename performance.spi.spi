@@ -215,8 +215,8 @@ looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 #start
 
 
-#looper_cc motion: 0.50, drive: 0.00, fm: 0.00, mode: 0
-looper_mode 4
+#looper_cc motion: 0.30, drive: 0.00, fm: 0.00, mode: 0
+looper_mode 0
 looper_cc amp: 0.60
 
 #mbox2_cc motion: 0.20, sat: 0.50, drive: 0.50

@@ -19,7 +19,7 @@ looper_cc motion: 0.50, fm: 0.00, drive: 0.50
 
 live_loop :modes do
   tick
-  looper :g2, 45, sus: 4, mode: (ing 0 0 0 2 0).look
+  looper :g2, 45, sus: 4, mode: (ing 0 0 0 2 1).look
   sleep 4
 end
 

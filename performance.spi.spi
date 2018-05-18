@@ -209,7 +209,11 @@ looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 #mbox_cc  motion: 0.1
 #mbox2_cc motion: 0.2
 #mbox_cc  motion: 0.1
+
+#start
+looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 mbox2_cc motion: 0.55
 mbox_cc  motion: 0.55
+
 #mbox_cc  motion: 0.1
 #mbox2_cc motion: 0.3

@@ -46,7 +46,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
     #mbox2 :g3, 127-rand*5, sus: 4
   }
   #mbox :a4, 127-rand*5, sus: 4
-  looper (ing :g3).look, 10, sus: 4
+  looper (ing :gs3).look, 10, sus: 4
   sleep 1
 
   with_transpose -12*0 {
@@ -67,7 +67,7 @@ end
 live_loop :fast, sync: :unsyncable do
   tick
   #qbitsea :B2, 80,  sus: 1/12.0   if spread(7,11).look
-  qbitsea :G4, 127, sus: 1/12.0     if spread(7,11).look
+  #qbitsea :G4, 127, sus: 1/12.0     if spread(7,11).look
   #mbox2 :E5, 127-rand*5, sus: 1/2.0 if spread(7,11).look
 
   if spread(7,11).look
@@ -115,13 +115,13 @@ live_loop :thing, sync: :unsyncable do
 
   at{
     v=0.7
-    #callstack c[0],114*v, sus: 8
+    callstack c[0],114*v, sus: 8
     sleep 1.0
-    #operator c[1],117*v, sus: 6
+    operator c[1],117*v, sus: 6
     sleep 2
-    #operator c[2],105*v, sus: 9
+    operator c[2],105*v, sus: 9
     sleep 1.0
-    #operator c[3],100*v, sus: 9
+    operator c[3],100*v, sus: 9
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 8 }}
@@ -148,7 +148,7 @@ end
 # end
 
 live_loop :name, sync: :unsyncable do
-  stop
+stop
   tick
   #kick_machine K1, accent: 1.2 if (ing 1 1 0 1).look == 1
   #kick_machine KT[3], accent: 2.0 if (ing 1 1 0 1).look == 0
@@ -159,10 +159,10 @@ live_loop :name, sync: :unsyncable do
   baz x.look, 127, sus: 3, drive: 0.9
 
   pads :E4, 5, sus: 3*2 if spread(1,3).look
-  #looper :c2, 120, sus: 2, motion: 0.4
+  looper :c2, 120, sus: 2, motion: 0.4
   mbox2 :A4, sus: 4
   sleep 2
-  #looper :c2, 120, sus: 2, motion: 0.4
+  looper :c2, 120, sus: 2, motion: 0.4
   mbox2 :G4, 127, sus: 1
 
   sleep 1/8.0

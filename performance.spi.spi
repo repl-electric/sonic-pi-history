@@ -55,7 +55,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   mbox  (ing :a4 :c4 :f4 :c4  :d4 :d4 :c4 :a3).look,(ing 122 110 120 112).look, sus: 4
   #looper_cc drive: 0.0
   sleep 1
-  looper (ing :e3).look, 80, sus: 2#, motion: 0.5
+  looper (ing :c3).look, 80, sus: 2#, motion: 0.5
   #mbox2 :C3, 70-rand*5, sus: 1
 
   mbox2 (ing :c3 :e3 :a3 :e3  :f3 :f3 :c3 :g2).look,(ing 122 110 120 112).look, sus: (ing 2, 2, 4, 2, 4).look

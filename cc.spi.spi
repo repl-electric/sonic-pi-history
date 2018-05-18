@@ -1,3 +1,5 @@
+load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/april/support/midi.rb"
+
 live_loop :name  do
   tick
   puts

@@ -61,6 +61,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   #mbox :a4, 127-rand*5, sus: 4
   looper (ing :g3).look, 40, sus: 4, mode: 0
   sleep 1
+  looper (ing :g3).look, 40, sus: 4, mode: 0
 
   with_transpose -12*0 {
     #ze (knit :g5,4, :A4,4, :E4, 4).look,10 if spread(7,11).look

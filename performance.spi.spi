@@ -184,7 +184,7 @@ stop
 end
 
 #mbox2_cc sat: 1.0, drive: 0.1
-looper_cc motion: 0.6, fm: 0.0, drive: 0.1
+looper_cc motion: 0.3, fm: 0.0, drive: 0.1
 #looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 #looper_cc fm: 0.2, drive: 1.0, motion: 0.8
 #mbox_cc  motion: 0.30

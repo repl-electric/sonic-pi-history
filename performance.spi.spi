@@ -51,7 +51,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     #kick_machine K1, accent: 1.5
   end
-  mbox2  :A4, 127-rand*5, sus: 2
+  mbox2 :A4, 127-rand*5, sus: 2
   #mbox :e2, 127-rand*5, sus: 4
   #mbox :a4, 127-rand*5, sus: 4
   at{
@@ -140,12 +140,12 @@ live_loop :thing, sync: :unsyncable do
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 8 }}
-  pads note, 1, sus: 8, drive: 0.0, thick: 1
+  pads note, 1, sus: 8, drive: 0.0, thick: 3
   #baz note, 1, sus: 12, drive: 0.0
   sleep 16/2.0
 end
 
-pads_cc amp: 0.60
+pads_cc amp: 0.85
 
 #baz :A2, 30, sus: 12
 #midi :A2,30, sustain: 32, channel: 7
@@ -212,8 +212,8 @@ looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 
 #start
 looper_cc motion: 0.6, drive: 0.2, fm: 0.4
-mbox2_cc motion: 0.30, sat: 0.00, drive: 0.00
-mbox_cc  motion: 0.10
+mbox2_cc motion: 0.40, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.30
 
 #mbox_cc  motion: 0.1
 #mbox2_cc motion: 0.3

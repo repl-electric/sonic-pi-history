@@ -158,10 +158,10 @@ live_loop :name, sync: :unsyncable do
   baz x.look, 127, sus: 3, drive: 0.9
 
   pads :E4, 5, sus: 3*2 if spread(1,3).look
-  looper :c2, 120, sus: 2, motion: 0.4
+  #looper :c2, 120, sus: 2, motion: 0.4
   mbox2 :A4, sus: 4
   sleep 2
-  looper :c2, 120, sus: 2, motion: 0.4
+  #looper :c2, 120, sus: 2, motion: 0.4
   mbox2 :G4, 127, sus: 1
 
   sleep 1/8.0

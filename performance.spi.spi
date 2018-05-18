@@ -130,7 +130,7 @@ live_loop :thing, sync: :unsyncable do
   at{
     v=0.7
     callstack c[0],114*v, sus: 8
-    #ze c[0]
+    ze c[0]
     sleep 1.0
     operator c[1],117*v, sus: 6
     sleep 2
@@ -214,12 +214,12 @@ end
 #start
 
 
-#looper_cc motion: 0.30, drive: 0.50, fm: 0.00, mode: 0
+#looper_cc motion: 0.40, drive: 1.00, fm: 0.50, mode: 0
 looper_mode 0
-looper_cc amp: 0.70
+looper_cc amp: 0.85
 
 #mbox2_cc motion: 0.20, sat: 0.60, drive: 0.00
 #mbox_cc  motion: 0.10
 
-mbox_cc  motion: 0.30
-mbox2_cc motion: 0.40
+mbox_cc  motion: 0.10
+mbox2_cc motion: 0.20

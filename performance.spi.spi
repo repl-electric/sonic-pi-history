@@ -14,27 +14,11 @@ live_loop(:unsyncable) do; sleep 1.0 end
  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╢
 
 
-
-#looper_cc motion: 0.40, fm: 0.00, drive: 0.50
-
-live_loop :modes do
-  tick
-  #looper :g2, 45, sus: 4, mode: (ing 0 0 0 0   0 0 0 2).look
-  sleep 4
-end
-
-
-#stop
-
-
-#ze :A2
-
-
 live_loop :scale, sync: :unsyncable  do  #10...
   tick
   12.times{
      tick
-     #ze (ing :A3 :A3 :C3 :F3 :C4).look, 127*0.01 if spread(7,11).look
+     ze (ing :A3 :A3 :C3 :F3 :C4).look, 127*0.01 if spread(7,11).look
      sleep 1/2.0
    }
    12.times{
@@ -214,7 +198,7 @@ end
 #start
 
 
-#looper_cc motion: 0.40, drive: 1.00, fm: 0.50, mode: 0
+#looper_cc motion: 0.40, drive: 0.30, fm: 0.00, mode: 0
 looper_mode 0
 looper_cc amp: 0.85
 

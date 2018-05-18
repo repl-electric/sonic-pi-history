@@ -16,7 +16,15 @@ live_loop(:unsyncable) do; sleep 1.0 end
 
 
 #looper_cc motion: 0.26, fm: 0.00, drive: 0.20
-looper :g1, 45, sus: 4, mode: 3
+
+live_loop :modes do
+  tick
+  looper :g1, 45, sus: 4, mode: 3
+  sleep 1
+  sleep 1
+end
+
+
 
 
 stop

@@ -25,7 +25,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     kick_machine K1, accent: (ing 2.2 2.0 2.1 2.0).look*0.5
   end
-  smp Corrupt[/one shot/, /fx/, /c/,3], slice: 0, num_slices: 8, amp: 4
+  smp Corrupt[/one shot/, /fx/, /c_/,3], slice: 0, num_slices: 8, amp: 4
 
   #  with_fx :slicer, phase: 1/2.0{
   if spread(1,2).look

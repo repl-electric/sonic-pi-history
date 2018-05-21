@@ -35,9 +35,9 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     #kick_machine K1, accent: 1.0
   end
-  #mbox2 :A4, 70-rand*5, sus: 1
-  #mbox2 :e2, 127-rand*5, sus: 4
-  mbox2 :a4, 127-rand*5, sus: 4
+  mbox :f3, 70-rand*5, sus: 1
+  mbox2 :f3, 127-rand*5, sus: 4
+  #mbox2 :a4, 127-rand*5, sus: 4
   at{
     sleep 0.5
     #mbox2 :g3, 127-rand*5, sus: 4
@@ -202,7 +202,7 @@ end
 looper_cc motion: 1.00, drive: 1.00, fm: 0.00, mode: 0
 looper_mode 0
 looper_cc amp: 0.85
-mbox2_cc motion: 0.30, sat: 0.50, drive: 0.50
+mbox2_cc motion: 0.55, sat: 0.80, drive: 0.30
 mbox_cc  motion: 0.55
 
 

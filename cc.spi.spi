@@ -2,7 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 live_loop :swing do
   with_swing 0.08 do
-    smp Mountain[/cym/] if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
+    smp Mountain[/cym/,0] if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
   end
   sleep 0.125
 end

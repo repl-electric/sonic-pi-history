@@ -27,7 +27,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   end
   #mbox2 :f3, 100-rand*5, sus: 4
   #mbox2 :f3, 127-rand*5, sus: 4
-  #mbox2 :a4, 127-rand*5, sus: 4
+  mbox2 :a4, 127-rand*5, sus: 4
   at{
     sleep 0.5
     #mbox2 :g3, 127-rand*5, sus: 4
@@ -134,7 +134,8 @@ def start
 end
 
 
-looper_cc motion: 0.80, drive: 1.00, fm: 0.00, mode: 0
+#looper_cc motion: 0.80, drive: 1.00, fm: 0.00, mode: 0
+looper_cc motion: 0.30, drive: 0.30, fm: 0.00, mode: 0
 
 
 #mbox2_cc sat: 1.0, drive: 0.1

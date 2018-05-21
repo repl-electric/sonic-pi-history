@@ -153,7 +153,7 @@ pads_cc amp: 0.85
 # end
 
 live_loop :name, sync: :unsyncable do
-stop
+#stop
   tick
   #kick_machine K1, accent: 1.2 if (ing 1 1 0 1).look == 1
   #kick_machine KT[3], accent: 2.0 if (ing 1 1 0 1).look == 0
@@ -202,7 +202,7 @@ end
 looper_cc motion: 1.00, drive: 1.00, fm: 0.00, mode: 0
 looper_mode 0
 looper_cc amp: 0.85
-mbox2_cc motion: 0.55, sat: 0.00, drive: 0.00
+mbox2_cc motion: 0.30, sat: 0.50, drive: 0.50
 mbox_cc  motion: 0.55
 
 

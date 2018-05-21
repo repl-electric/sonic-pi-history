@@ -8,12 +8,12 @@ live_loop :scale, sync: :unsyncable  do  #10...
   tick
   12.times{
      tick
-     #ze (ing :A3, :A3, :C3, :F3, :C4,).look, 127*0.01 if spread(7,11).look
+     #ze (ing :A3 :A3 :C3 :F3 :C4).look, 127*0.01 if spread(7,11).look
      sleep 1/2.0
    }
    12.times{
     tick
-    #ze (ing :C3, :C2, :B3, :B3, :D3,).look, 127*0.5 if spread(3,8).look
+    #ze (ing :C3 :C2 :B3 :B3 :D3).look, 127*0.5 if spread(3,8).look
     sleep 1/4.0
    }
   #sleep 3
@@ -22,8 +22,8 @@ live_loop :scale, sync: :unsyncable  do  #10...
  end
 
 live_loop :test, sync: :unsyncable do; tick #2*32
-  if (ing 1, 1, 1, 0, 1, 1, 0, 1,).look == 1
-    kick_machine K1, accent: (ing 2.2, 2.0, 2.1, 2.0,).look
+  if (ing 1 1 1 0 1 1 0 1).look == 1
+    kick_machine K1, accent: (ing 2.2 2.0 2.1 2.0).look
   end
   #mbox2 :f3, 100-rand*5, sus: 4
   #mbox2 :f3, 127-rand*5, sus: 4
@@ -33,7 +33,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
     #mbox2 :g3, 127-rand*5, sus: 4
   }
   mbox :a3, 77-rand*5, sus: 4
-  looper (ing :c3,).look, 100, sus: 1
+  looper (ing :c3).look, 80, sus: 1
   sleep 1
   #mbox :A4, 127, sus: 1 if spread(1,4).rot(2).look
 
@@ -43,13 +43,13 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   }
   sleep 1
   mbox :g4, 71-rand*5, sus: 2
-  #mbox  (ing :a4, :c4, :f4, :c4,  :d4, :d4, :c4, :a3,).look,(ing 122, 110, 120, 112,).look, sus: 4
+  #mbox  (ing :a4 :c4 :f4 :c4  :d4 :d4 :c4 :a3).look,(ing 122 110 120 112).look, sus: 4
   #looper_cc drive: 0.0
   sleep 1
-  looper (ing :e3,).look, 80, sus: 2#, motion: 0.5
+  looper (ing :e3).look, 80, sus: 2#, motion: 0.5
   #mbox2 :C3, 70-rand*5, sus: 1
 
-  #mbox2 (ing :c3, :e3, :a3, :e3,  :f3, :f3, :c3, :g2,).look,(ing 122, 110, 120, 112,).look, sus: (ing 2,  2,  4,  2,  4,).look
+  #mbox2 (ing :c3 :e3 :a3 :e3  :f3 :f3 :c3 :g2).look,(ing 122 110 120 112).look, sus: (ing 2, 2, 4, 2, 4).look
 
   #mbox :G4, 127, sus: 1 if spread(1,4).rot(2).look
 
@@ -79,8 +79,8 @@ live_loop :thing, sync: :unsyncable do
   #stop
   tick
   score = (ing
-    :A3, :F4, :C3,  :A3, :E4, :F3, :C3, _,
-    :A3, :F4, :C3,  :A3, :E4, :G3, :C3, _,)
+    :A3 :F4 :C3  :A3 :E4 :F3 :C3 _
+    :A3 :F4 :C3  :A3 :E4 :G3 :C3 _)
   note = score.look
 
   score = (ring

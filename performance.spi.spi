@@ -31,8 +31,16 @@ live_loop :test, sync: :unsyncable do; tick #2*32
                  #rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress),
 #                 cutoff: 135, amp: 8.0)
 
+    with_fx :slicer, phase: 0.25, wave: 0 do
+        with_fx :pitch_shift, time_dis: 0.9, window_size: 0.9, mix: 0.1, pitch_dis: 0.1  do
+          with_fx :wobble, phase: 32, mix: 1 do
+            with_fx :echo, decay: 16, phase: 0.125 do
     sample_smash(Sop[/sustain/,[0..3]].tick(:sample),[4.0,4.0,4.0,4.0],
                  amp: 9.8, cutoff: 130, pitch: (ring 2, 3, 2, 0).look(:sample))
+          end
+        end
+      end
+    end
 
   end
 #  }

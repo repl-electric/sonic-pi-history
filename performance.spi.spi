@@ -27,6 +27,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   end
   with_fx :slicer, phase: 1/2.0{
     puts sample_smash Corrupt[/one shot/,/fx/,/f/,0]
+    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16].shuffle
   }
   #mbox2 :f3, 100-rand*5, sus: 4
   #mbox2 :f3, 127-rand*5, sus: 4

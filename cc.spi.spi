@@ -1,10 +1,10 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
 
-live_loop :name  do
+live_loop :name, sync: :unsyncable  do
   tick
   puts
   mt 5,rand,120
-  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
+  looper_cc oct: (ing 0.6, 0.35,  0.6,  0.7,).look
   sleep 0.25
 end

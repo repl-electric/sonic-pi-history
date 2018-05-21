@@ -26,8 +26,9 @@ live_loop :test, sync: :unsyncable do; tick #2*32
     kick_machine K1, accent: (ing 2.2 2.0 2.1 2.0).look*0.5
   end
   with_fx :slicer, phase: 1/2.0{
-#    puts sample_smash Corrupt[/one shot/,/fx/,/f/,0]
-    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16].shuffle)
+    #    puts sample_smash Corrupt[/one shot/,/fx/,/f/,0]
+    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16].shuffle,
+                 rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress), cutoff: 135, amp: 1.0)
   }
   #mbox2 :f3, 100-rand*5, sus: 4
   #mbox2 :f3, 127-rand*5, sus: 4

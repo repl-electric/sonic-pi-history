@@ -29,7 +29,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   if spread(1,8).look
     sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16],
                  #rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress),
-                 cutoff: 135, amp: 2.0)
+                 cutoff: 135, amp: 8.0)
 
     sample_smash(Sop[/sustain/,[0..3]].tick(:sample),[4.0,4.0,4.0,4.0], amp: 0.8, cutoff: 130, pitch: (ring 2, 3, 2, 0).look(:sample))
 

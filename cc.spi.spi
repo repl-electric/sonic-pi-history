@@ -28,11 +28,11 @@ live_loop :name, sync: :unsyncable  do
   #     ).look,100,120
 
   with_swing -0.02 do
-  # mt (ing
-  #     22 _ 21 _ 21 22 _
-  #     22 _ 21 _ 22 22 _
-  #     22 _ 21 _ 22 22 _
-  #     ).look, 10+rand, 22
+   mt (ing
+       22 _ 21 _ 21 22 _
+       22 _ 21 _ 22 22 _
+       22 _ 21 _ 22 22 _
+       ).look, 10+rand, 22
    end
   #mt_cc morph: 0
   looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look

@@ -67,10 +67,10 @@ live_loop :fast, sync: :unsyncable do
   end
 
   if spread(6,12).look
-     #with_fx :echo,rate: 1.0 do
-       #smp Frag[/coil/,3], start: 0.8, finish: 0.85, amp: 1
+     with_fx :echo,rate: 1.0 do
+       smp Frag[/coil/,3], start: 0.8, finish: 0.85, amp: 1
        #smp Straw.slice(:D4).take(12).look, amp: 2
-     #end
+     end
    end
   sleep 1/8.0
 end
@@ -136,7 +136,7 @@ def deepbase
   looper_cc motion: 1.00, drive: 0.30, fm: 0.00, mode: 0
 end
 
-#looper_cc motion: 0.27, drive: 0.20, fm: 0.00, mode: 0
+#looper_cc motion: 0.25, drive: 0.20, fm: 0.00, mode: 0
 
 #mbox2_cc sat: 1.0, drive: 0.1
 #looper_cc motion: 0.26, fm: 0.00, drive: 0.20, mode: 1

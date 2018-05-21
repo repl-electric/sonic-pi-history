@@ -28,7 +28,7 @@ live_loop :name  do
 
       ).look, 120, 127
 
-  mt 23, 127, 127
+  mt 3, 127, 127
 
 
   mt_cc morph: rand

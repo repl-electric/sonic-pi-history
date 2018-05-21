@@ -17,12 +17,11 @@ live_loop :name, sync: :unsyncable  do
   #     ).look,100,120
 
   mt (ing
-      [_] _ _ _
-      _ [_] _ _
-      _ _ [_] _
+      _ _ _ _
+      _ _ _ _
+      _ _ _ _
       _ _ [18] _
       ).look,100,120
-
 
 
   # mt (ing

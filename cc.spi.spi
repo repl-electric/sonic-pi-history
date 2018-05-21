@@ -5,11 +5,11 @@ live_loop :name, sync: :unsyncable  do
   tick
   puts
   mt (ing
-      [5] 5 5 5
-      5 [5] 5 5
-      5 5 [5] 5
-      5 5 [13] 13
+      [5], 5, 5, 5,
+      5, [5], 5, 5,
+      5, 5, [5], 5,
+      5, 5, [14], 13,
       ).look,100,120
-  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
+  looper_cc oct: (ing 0.6, 0.35,  0.6,  0.7,).look
   sleep 0.25
 end

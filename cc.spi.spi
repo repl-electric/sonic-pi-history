@@ -27,7 +27,7 @@ live_loop :name, sync: :unsyncable  do
       5 _ 5 _ 5 5 _
 
       ).look, 120, 127
-  mt_cc morph: 1.0
+  mt_cc morph: (line 0,1,128).look
 
   looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
   sleep 0.25

@@ -29,9 +29,9 @@ live_loop :name, sync: :unsyncable  do
 
   with_swing -0.02 do
   mt (ing
-      22 _ 21 _ 21 20  _
-      22 _ 21 _ 20 20 _
-      22 _ 21 _ 20 20 _
+      22 _ 21 _ 21 20 _
+      22 _ 21 _ 22 20 _
+      22 _ 21 _ 22 20 _
       ).look, 10+rand, 22
   end
   mt_cc morph: 0

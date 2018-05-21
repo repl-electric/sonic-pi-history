@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
 live_loop :swing do
-  with_swing -0.02 do
+  with_swing -0.06 do
     smp Dust[/hat/,1..3].look if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
   end
   sleep 0.125

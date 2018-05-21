@@ -123,7 +123,6 @@ live_loop :thing, sync: :unsyncable do
   sleep 16/2.0
 end
 
-
 #start
 def start
   looper_cc motion: 0.6, drive: 0.20, fm: 0.00, mode: 0

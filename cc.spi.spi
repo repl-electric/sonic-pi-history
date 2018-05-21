@@ -20,10 +20,10 @@ live_loop :name, sync: :unsyncable  do
   #     _ _ [18] 2
   #     ).look,100,120
 
-  mt (ing 5 _ 5 _ 5 5 _)
+  mt (ing 5 _ 5 _ 5 5 _), 127, 100
 
 
 
-looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
+  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
   sleep 0.25
 end

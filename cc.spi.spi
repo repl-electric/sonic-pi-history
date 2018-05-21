@@ -10,9 +10,6 @@ end
 
 
 
-stop
-
-
 live_loop :name, sync: :unsyncable  do
   tick
   puts

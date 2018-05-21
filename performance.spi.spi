@@ -135,7 +135,7 @@ end
 
 
 #looper_cc motion: 0.80, drive: 1.00, fm: 0.00, mode: 0
-looper_cc motion: 0.30, drive: 0.30, fm: 0.00, mode: 0
+looper_cc motion: 1.00, drive: 0.30, fm: 0.00, mode: 0
 
 
 #mbox2_cc sat: 1.0, drive: 0.1

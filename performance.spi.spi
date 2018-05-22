@@ -87,7 +87,7 @@ live_loop :fast, sync: :unsyncable do
   #mbox2 :E5, 127-rand*5, sus: 1/2.0 if spread(7,11).look
 
   if spread(7,11).look
-    smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing 15 3 2 1
+    smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing 0 0 0 0
                                                            0 0 0 0
       ).look, num_slices: 16, amp: 1
     #operator :e5, 127, sus: 1/8.0

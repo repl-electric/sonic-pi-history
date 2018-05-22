@@ -139,7 +139,7 @@ live_loop :thing, sync: :unsyncable do
 
   at{
     v=0.7
-    callstack c[0],114*v, sus: 8
+    #callstack c[0],114*v, sus: 8
     sleep 1.0
     #operator c[1],117*v, sus: 6
     sleep 2

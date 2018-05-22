@@ -92,7 +92,6 @@ live_loop :fast, sync: :unsyncable do
 
   if spread(6,12).look
     with_fx :echo,rate: 1.0 do
-
     smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing
       1 1 1
       4 4 4

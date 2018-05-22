@@ -58,7 +58,6 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   }
   #mbox :a3, 77-rand*5, sus: 4
   looper (ing :c3 :g2).look, 30, sus: 2
-  kal :C3, 127, sus: 4
   sleep 1
   #mbox :A4, 127, sus: 1 if spread(1,4).rot(2).look
 
@@ -190,3 +189,5 @@ end
 
 #mbox_cc  motion: 0.40
 #mbox2_cc motion: 0.40
+
+  kal :C3, 127, sus: 16

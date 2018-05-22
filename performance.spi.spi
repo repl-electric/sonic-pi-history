@@ -91,12 +91,14 @@ live_loop :fast, sync: :unsyncable do
   end
 
   if spread(6,12).look
+    with_fx :echo,rate: 1.0 do
+
     smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing
       1 1 1
       4 4 4
       3 3 3
       ).look, num_slices: 16, amp: 1
-
+    end
     #with_fx :echo,rate: 1.0 do
        #smp Frag[/coil/,3], start: 0.8, finish: 0.85, amp: 1
        #smp Straw.slice(:D4).take(12).look, amp: 2

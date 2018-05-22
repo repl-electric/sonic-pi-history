@@ -91,8 +91,8 @@ live_loop :fast, sync: :unsyncable do
   end
 
   if spread(6,12).look
-    smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing 1 1 1 1
-                                                           0 0 0 0
+    smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing 1 1 1
+                                                           0 0 0
       ).look, num_slices: 16, amp: 1
 
     #with_fx :echo,rate: 1.0 do

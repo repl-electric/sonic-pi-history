@@ -91,7 +91,7 @@ live_loop :fast, sync: :unsyncable do
   end
 
   if spread(6,12*2).look
-    with_fx (knit :reverb, 32-6, :echo,6).look,rate: 1.0, decay: 0.1 do
+    with_fx (knit :reverb, 32-6, :echo,6).tick(:inner),rate: 1.0, decay: 0.1 do
       smp Corrupt[/kalimba/, /fx/, /\/c_/].look, slice: (ing
         1 1 1
         4 4 4

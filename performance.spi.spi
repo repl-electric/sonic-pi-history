@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 
-kalodd :c2, sus: 12
+#kalodd :c2, sus: 12
 
 stop
 live_loop(:unsyncable) do; sleep 1.0 end

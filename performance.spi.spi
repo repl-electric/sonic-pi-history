@@ -96,7 +96,7 @@ live_loop :fast, sync: :unsyncable do
         1, 1, 1,
         4, 4, 4,
         3, 3, 3,
-        ).look, num_slices: 32, amp: (ing 1, 0.6, 1, 0.8, 0.7,).look(:inner)
+        ).look, num_slices: 64, amp: (ing 1, 0.6, 1, 0.8, 0.7,).look(:inner)
     end
     #with_fx :echo,rate: 1.0 do
        #smp Frag[/coil/,3], start: 0.8, finish: 0.85, amp: 1

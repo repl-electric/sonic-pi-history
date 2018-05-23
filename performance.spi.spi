@@ -6,7 +6,7 @@ init!
 
 #kalshot :c2, sus: 3
 create_light
-create_cube 10
+#create_cube 10
 live_loop :test do
   tick
 #  world :lightning
@@ -15,7 +15,7 @@ live_loop :test do
 
   at{
     sleep 0.5
-    unity "/burst", 0.0
+#    unity "/burst", 0.0
     create_cube 4
     #unity "/roots", 1.0
     unity "/world/lightning",1.0

@@ -60,7 +60,7 @@ live_loop :name, sync: :unsyncable  do
        22 _ 21 _ 22 22 _
        ).look, 30+rand, 52
   end
-  mt_cc morph: rand(0.2)
+  mt_cc morph: rand(1.0)
   looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
 
   if (ing 0.6,0.35, 0.6, 0.7).look == 0.6

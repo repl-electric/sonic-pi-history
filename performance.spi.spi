@@ -12,7 +12,7 @@ create_aura
 
 
 #unity "/rockcircle/on", 1.0
-rocks -
+rocks 0
 unity ""
 stop
 

@@ -16,7 +16,7 @@ live_loop :test do
   at{
     sleep 0.5
     unity "/burst", 0.2
-    create_cube 10
+    create_cube 4
     #unity "/roots", 1.0
     unity "/world/lightning",1.0
     }

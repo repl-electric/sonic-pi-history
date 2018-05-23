@@ -6,7 +6,7 @@ init!
 
 #kalshot :c2, sus: 3
 create_light
-
+create_cube
 live_loop :test do
   tick
 #  world :lightning

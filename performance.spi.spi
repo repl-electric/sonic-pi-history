@@ -11,6 +11,7 @@ use_bpm 127
 create_aura
 
 
+unity "/rockcircle/on", 1.0
 unity "/rocks/on", 1.0
 stop
 

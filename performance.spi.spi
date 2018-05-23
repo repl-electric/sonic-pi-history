@@ -10,7 +10,7 @@ init!
 live_loop :test do
   tick
 #  world :lightning
-  puts :hit
+ # puts :hit
   kick_machine K1
   unity "/rock/throttle", 1.0
   at{

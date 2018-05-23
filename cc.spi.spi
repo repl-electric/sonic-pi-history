@@ -62,8 +62,5 @@ live_loop :name, sync: :unsyncable  do
   end
   mt_cc morph: rand(0.2)
     looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
-    if (ing 0.6 0.35 0.6 0.7).look == 0.6
-      #bass :C1, 1, sus: 1
-    end
   sleep 0.25
 end

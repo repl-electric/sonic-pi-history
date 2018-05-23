@@ -9,7 +9,7 @@ end
 
 live_loop :name, sync: :unsyncable  do
   tick
-  with_swing -0.02 do
+  with_swing -0.05 do
     mt (ing
         [5] 5 5 5
         5 [5] 5 5

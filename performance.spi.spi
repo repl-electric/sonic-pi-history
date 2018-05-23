@@ -12,7 +12,7 @@ create_aura
 
 
 #unity "/rockcircle/on", 1.0
-unity "/rockcircle/pos", 4.0
+unity "/rockcircle/y", 4.0
 stop
 
 live_loop :test do

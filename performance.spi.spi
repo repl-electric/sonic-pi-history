@@ -2,7 +2,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
-init!
+#init!
 
 #kalshot :c2, sus: 3
 #create_light

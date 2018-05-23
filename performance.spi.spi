@@ -15,7 +15,7 @@ live_loop :test do
 
   at{
     sleep 0.5
-    unity "/burst", 1.0
+    unity "/burst", 0.2
     unity "/world/lightning",1.0
     }
   sleep 1

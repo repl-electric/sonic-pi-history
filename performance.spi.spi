@@ -15,10 +15,10 @@ live_loop :test do
 at{  sleep 0.5
     unity "/world/lightning",1.0
     }
-  sleep 4
+  sleep 1
 #  unity "/world/lightning",0.0
 
-  sleep 4
+  sleep 1
 end
 
 

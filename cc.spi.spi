@@ -24,13 +24,13 @@ live_loop :name, sync: :unsyncable  do
         5 5 [18] _
         ).look,122,120
 #  end
-  with_swing -0.02 do
+#  with_swing -0.02 do
    mt (ing
        [22] _ 21 _ 21 22 _
        22 _ 21 _ 22 22 _
        22 _ 21 _ 22 22 _
        ).look, 30+rand, 52
-  end
+#  end
 
   mt (ing
       _ _ _ _  _ _ _ _

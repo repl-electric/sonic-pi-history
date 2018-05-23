@@ -5,9 +5,6 @@ lfo on: true
 #midi_cc 20, 0, channel: 1, port: :iac_bus_1
 lfo cutoff: 0.30
 
-stop
-
-
 
 #live_loop :swing, sync: :unsyncable do
  # with_swing -0.02 do

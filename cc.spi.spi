@@ -2,6 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 
 fiz on: false
+midi_cc 20, 127, channel: 1, port: :iac_bus_1
 
 
 stop

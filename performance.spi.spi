@@ -19,7 +19,7 @@ use_bpm 127
 #unity "/explode4"
 #explode_cube
 
-world time: 0.01
+world time: 0.001
 
 stop
 

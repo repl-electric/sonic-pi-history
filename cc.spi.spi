@@ -1,9 +1,9 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
 
-lfo on: true
+lfo on: false
 #midi_cc 20, 0, channel: 1, port: :iac_bus_1
-lfo cutoff: 0.30
+#lfo cutoff: 0.40
 
 
 #live_loop :swing, sync: :unsyncable do
@@ -77,8 +77,8 @@ live_loop :name, sync: :unsyncable  do
   at{
   8.times{
     tick
-  looper_cc oct: (ing 0.6,  0.35, 0.6,  0.7).look
-   sleep 1/4.0
+      looper_cc oct: (ing 0.6,  0.35, 0.6,  0.7).look
+      sleep 1/4.0
     }
     }
 

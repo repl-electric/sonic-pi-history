@@ -10,7 +10,7 @@ use_bpm 127
 #create_tree 4
 #create_aura
 
-rocks 1.0, orbit: 10.1, noise: 0.9
+rocks 1.0, orbit: 10.1, noise: 1.9
 
 stop
 

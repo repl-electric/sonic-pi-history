@@ -9,9 +9,10 @@ create_light
 
 live_loop :test do
   tick
-  world :lightning
+#  world :lightning
   puts :hit
   kick_machine K1
+  unity "/world/lightning",1.0
   sleep 4
   sleep 4
 end

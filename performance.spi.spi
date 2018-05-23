@@ -14,6 +14,8 @@ live_loop :test do
   kick_machine K1
   unity "/world/lightning",1.0
   sleep 4
+  unity "/world/lightning",0.0
+
   sleep 4
 end
 

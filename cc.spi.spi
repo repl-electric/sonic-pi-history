@@ -65,7 +65,7 @@ live_loop :name, sync: :unsyncable  do
 
   if (ing 0.6,0.35, 0.6, 0.7).look == 0.6
     if spread(1,2).tick(:in)
-      baz :A2, 127, sus: 1.0
+      baz :F2, 127, sus: 1.0
     end
   end
 

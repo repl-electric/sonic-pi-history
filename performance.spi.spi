@@ -11,7 +11,7 @@ use_bpm 127
 create_aura
 
 
-unity "/rocks"
+unity "/rocks/on", 1.0
 stop
 
 live_loop :test do

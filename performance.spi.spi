@@ -7,7 +7,8 @@ use_bpm 127
 #kalshot :c2, sus: 3
 #create_light
 #create_cube 10
-create_tree
+create_tree 10
+
 live_loop :test do
   tick
 #  world :lightning

@@ -1,24 +1,13 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
 
-fiz on: true
+lfo on: true
 #midi_cc 20, 0, channel: 1, port: :iac_bus_1
-
+lfo cutoff: 0.30
 
 stop
 
 
-filter on: true
-live_loop :name do
-  tick
-
-  sleep 1
-#  filter on: true
-  sleep 1
-
-end
-
-  stop
 
 #live_loop :swing, sync: :unsyncable do
  # with_swing -0.02 do
@@ -105,4 +94,4 @@ end
 
 
 
-filter freq: 0.00
+#filter freq: 0.00

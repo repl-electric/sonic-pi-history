@@ -12,7 +12,7 @@ use_bpm 127
 
 rocks 1.0, orbit: 10.1, noise: 4.9, rot: 1000.0, freq: 0.1
 #explode_rocks
-unity "/explode3/"
+unity "/explode2"
 
 stop
 

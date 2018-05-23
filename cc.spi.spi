@@ -7,6 +7,8 @@ live_loop :swing, sync: :unsyncable do
   sleep 0.125
 end
 
+live_loop :swinz {}
+
 live_loop :name, sync: :unsyncable  do
   tick
   with_swing -0.0125 do

@@ -12,7 +12,7 @@ live_loop :test do
 #  world :lightning
  # puts :hit
   kick_machine K1
-  unity "/rock/throttle", 1.0
+  unity "/burst", 1.0
   at{
     sleep 0.25
     unity "/world/lightning",1.0

@@ -37,7 +37,6 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   #  with_fx :slicer, phase: 1/2.0{
   if spread(1,2).look
 
-
 #    sample_smash(Alt[/vor_alto_leg_oo_05_d_08/,0], [8,16,16,16,16].shuffle,
                  #rpitch: (ring 12, 5, 5+2.0,0).tick(:progrress),
  #                cutoff: 135, amp: 8.0)
@@ -82,13 +81,13 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   if spread(3,8).look
     if spread(1,4).look
       at{
-      #  mbox2 n, 127, sus: 0.25
+        mbox2 n, 127, sus: 0.25
         sleep 0.5
-     #   mbox2 n, 120, sus: 0.25
+        mbox2 n, 120, sus: 0.25
       }
     end
   else
-    #mbox2 n, 127, sus: 2
+    mbox2 n, 127, sus: 2
   end
   #ze :G5, 5 if spread(1,8).look
   #looper (ing :c6).look, 20, sus: 2#, motion: 0.5

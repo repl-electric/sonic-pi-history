@@ -2,7 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 live_loop :name do
   tick
-  filter on: false
+ # filter on: false
   sleep 1
 #  filter on: true
   sleep 1

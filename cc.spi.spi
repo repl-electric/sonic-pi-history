@@ -1,5 +1,5 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
- filter on: false
+ filter on: true
 live_loop :name do
   tick
 

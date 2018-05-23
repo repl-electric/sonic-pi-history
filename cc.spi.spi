@@ -2,7 +2,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 live_loop :swing, sync: :unsyncable do
   with_swing -0.02 do
-    smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
+    #smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
   end
     sleep 0.125
 end

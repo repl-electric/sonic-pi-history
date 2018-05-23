@@ -10,6 +10,7 @@ use_bpm 127
 live_loop :test do
   tick
   world :lightning
+  puts :hit
   kick_machine K1
   sleep 1
   sleep 1

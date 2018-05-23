@@ -7,7 +7,12 @@ live_loop :swing, sync: :unsyncable do
     sleep 0.125
 end
 
-#live_loop :swing {}
+live_loop :swinggo, sync: :unsyncable {
+
+  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
+  sleep (ong 0.125 0.125 0.125 0.125 0.25 0.25).look
+
+}
 
 live_loop :name, sync: :unsyncable  do
   tick
@@ -65,7 +70,7 @@ live_loop :name, sync: :unsyncable  do
 
   #8.times{
   #  tick
-    looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
+  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
  #   sleep 1/4.0
   #}
 

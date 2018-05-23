@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-filter on: true
+filter on: false
 stop
 
 #live_loop :swing, sync: :unsyncable do

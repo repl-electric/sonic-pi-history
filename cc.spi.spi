@@ -64,7 +64,7 @@ live_loop :name, sync: :unsyncable  do
   looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
 
   if (ing 0.6,0.35, 0.6, 0.7).look == 0.6
-    baz :C2, 120, sus: 1/4.0
+    baz :C3, 120, sus: 1/4.0
   end
 
   sleep 0.25

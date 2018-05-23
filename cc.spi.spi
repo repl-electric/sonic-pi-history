@@ -4,7 +4,7 @@ live_loop :name do
   tick
   filter on: false
   sleep 1
-  filter on: true
+#  filter on: true
   sleep 1
 
 end

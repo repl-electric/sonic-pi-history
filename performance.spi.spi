@@ -19,7 +19,7 @@ init!
 #unity "/explode4"
 #explode_cube
 
-unity "/world/time",0.01
+unity "/world/time",1.0
 #world time: 1.00
 
 stop

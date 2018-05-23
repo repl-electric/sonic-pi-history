@@ -12,8 +12,8 @@ live_loop :test do
   world :lightning
   puts :hit
   kick_machine K1
-  sleep 1
-  sleep 1
+  sleep 4
+  sleep 4
 end
 
 

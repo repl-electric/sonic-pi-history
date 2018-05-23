@@ -28,7 +28,7 @@ live_loop :name, sync: :unsyncable  do
         5 [5] 5 5
         5 5 [5] 5
         5 5 [18] _
-        ).look,(line 100, 122, 64).look,120
+        ).look,(line 90, 122, 64).look,120
 #  end
 #  with_swing -0.02 do
    mt (ing

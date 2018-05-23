@@ -17,7 +17,7 @@ init!
 #rocks 1.0, orbit: 10.1, noise: 4.9, rot: 1000.0, freq: 0.1
 #explode_rocks
 #unity "/explode4"
-#explode_cube
+explode_cube
 
 unity "/world/time",0.1
 #world time: 1.00

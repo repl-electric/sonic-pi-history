@@ -4,10 +4,6 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 
 
-
-
-
-
 #kalshot :c2, sus: 3
 
 
@@ -181,7 +177,7 @@ live_loop :thing, sync: :unsyncable do
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 5 }}
-  pads note, 1, sus: 8, drive: 0.0, thick: 6
+  #pads note, 1, sus: 8, drive: 0.0, thick: 6
   #baz note, 1, sus: 12, drive: 0.00
   sleep 16/2.0
 end

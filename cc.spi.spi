@@ -63,11 +63,11 @@ live_loop :name, sync: :unsyncable  do
 
   mt_cc morph: (ing 0.0 0.0).look#rand(1.0)
 
-  8.times{
-    tick
+  #8.times{
+  #  tick
     looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
-    sleep 1/4.0
-  }
+ #   sleep 1/4.0
+  #}
 
   if (ing 0.6,0.35, 0.6, 0.7).look == 0.6
     if spread(1,4).tick(:in)

@@ -13,7 +13,7 @@ create_aura
 
 #unity "/rockcircle/on", 1.0
 rocks 0
-unity ""
+
 stop
 
 live_loop :test do

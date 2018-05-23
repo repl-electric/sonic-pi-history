@@ -9,7 +9,7 @@ init!
 
 live_loop :test do
   tick
-  world :angry
+  world :lightning
   kick_machine K1
   sleep 1
   sleep 1

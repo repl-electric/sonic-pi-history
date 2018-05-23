@@ -16,13 +16,13 @@ live_loop :test do
   at{
     sleep 0.5
     unity "/burst", 2.0
-    unity "/roots", 1.0
+    #unity "/roots", 1.0
     unity "/world/lightning",1.0
     }
   sleep 1
 #  unity "/world/lightning",0.0
   unity "/burst", 0.001
-  unity "/roots", 0.0
+  #unity "/roots", 0.0
   sleep 1
 end
 

@@ -12,7 +12,7 @@ live_loop :fund, sync: :unsyncable do
   tick
   unity "/color1", 0
   unity "/color2", 0
-  unity "/color3", 100
+  unity "/color3", rand
 
 #  unity "/color1", rand*10
 #  unity "/color2", rand*10

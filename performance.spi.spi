@@ -4,7 +4,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 #init!
 
-world time: 0.01
+world time: 0.1
 #create_sea
 
 #sea wave: 0.0, ripple: 0.0

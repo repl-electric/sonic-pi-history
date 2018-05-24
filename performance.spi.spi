@@ -7,10 +7,10 @@ use_bpm 127
 world time: 1.0
 #create_sea
 
-sea wave: 0.0, ripple: 0.0
+#sea wave: 0.0, ripple: 0.0
 
 
-stop
+#stop
 #kalshot :c2, sus: 3
 #create_light
 #create_cube 10

@@ -21,26 +21,26 @@ use_bpm 127
 #rocks 1.0, orbit: 10.1, noise: 4.9, rot: 1000.0, freq: 0.1
 
 
-live_loop :test do
-  tick
-  # world :lightning
- # puts :hit
-  kick_machine K1, accent: 2
-  at{
-    sleep 0.5
-    #world lightning: 1.0
-    #    unity "/burst", 0.0
-    create_cube 4.0
-    #unity "/roots", 1.0
-    unity "/world/lightning",1.0
-    }
-  sleep 2
-#  unity "/world/lightning",0.0
-  unity "/burst", 0.001
-  create_cube 2
-  #unity "/roots", 0.0
-  sleep 2
-end
+# live_loop :test do
+#   tick
+#   # world :lightning
+#  # puts :hit
+#   kick_machine K1, accent: 2
+#   at{
+#     sleep 0.5
+#     #world lightning: 1.0
+#     #    unity "/burst", 0.0
+#     create_cube 4.0
+#     #unity "/roots", 1.0
+
+#     }
+#   sleep 2
+# #  unity "/world/lightning",0.0
+#   unity "/burst", 0.001
+#   create_cube 2
+#   #unity "/roots", 0.0
+#   sleep 2
+# end
 
 
 live_loop(:unsyncable) do; sleep 1.0 end
@@ -64,8 +64,9 @@ live_loop :scale, sync: :unsyncable  do  #10...
 
 live_loop :test, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
-    #kick_machine K1, accent: (ing 2.2 2.0 2.1 2.0).look*1.0
+    kick_machine K1, accent: (ing 2.2 2.0 2.1 2.0).look*1.0
     #kal (ing :F3 :A3 :A3 :A3 :A3 :C3).look, 80, sus: 2
+    unity "/world/lightning",1.0
     world(lightning: true)
   else
     #kalshot :d2,10, sus: 3*1

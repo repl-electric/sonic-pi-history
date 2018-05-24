@@ -103,7 +103,12 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   #mbox :a3, 77-rand*5, sus: 4
   #looper (ing :c3 :g2).look, 120, sus: 2
   looper (ing :a3).look, 40, sus: 2
-  risingrocks on: true, vortex: 100.0, radius: 1.0
+  #  risingrocks on: true, vortex: 100.0, radius: 1.0
+      unity "/rocks/vortex",1.0
+      unity "/rocks/vortex/force",o
+
+
+
 
   sleep 1
   #mbox :A4, 127, sus: 1 if spread(1,4).rot(2).look

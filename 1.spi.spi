@@ -1,5 +1,5 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
-#defaultcolor
+defaultcolor
 world time: 1.0
 
 live_loop :test do

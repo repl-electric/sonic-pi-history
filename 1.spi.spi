@@ -6,7 +6,7 @@ live_loop :test do
   tick
 
   #  linecolor
-    unity "/linecolor/s",8.0
+    unity "/linecolor/s",10.0
     unity "/linecolor/b",8.0
     unity "/linecolor/h",rand
 

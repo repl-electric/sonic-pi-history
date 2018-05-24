@@ -24,7 +24,7 @@ live_loop :test do
   # world :lightning
  # puts :hit
   kick_machine K1
-  deep :B3
+  deep :E4
   at{
     sleep 0.5
     #world lightning: 1.0

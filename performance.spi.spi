@@ -18,7 +18,7 @@ live_loop :fund, sync: :unsyncable do
 #  unity "/color2", rand*10
 #  unity "/color3", rand*10
 #  smp Mountain[/subkick/,0]
-  sleep 1
+  sleep 8
 end
 stop
 

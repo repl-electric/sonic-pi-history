@@ -7,7 +7,7 @@ live_loop :test do
 
   #  linecolor
     unity "/linecolor/s",1.0
-    unity "/linecolor/b",2.0
+    unity "/linecolor/b",4.0
     unity "/linecolor/h",rand
 
 

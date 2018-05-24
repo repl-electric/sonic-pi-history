@@ -15,7 +15,7 @@ world time: 1.0
 #unity "/color2", 0.0
 #unity "/rockshard",1.0
 #unity "/rocks",1.0
-
+defaultcolor
 risingrocks on: 1.0, turbulence: 0.0
 #unity "/rocks/vortex/radius", 10.0
 #unity "/rocks/vortex/force", 20.0

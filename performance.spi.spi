@@ -4,7 +4,10 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 #init!
 
-world time: 1.0
+#world time: 1.0
+create_sea
+
+
 stop
 #kalshot :c2, sus: 3
 #create_light

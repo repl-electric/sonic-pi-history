@@ -7,10 +7,9 @@ use_bpm 127
 world time: 1.0
 #create_sea
 
-unity "/color2", 360 / 328.0
 
 
-stop
+
 
 #sea wave: 0.0, ripple: 0.0
 live_loop :fund do

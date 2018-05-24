@@ -4,31 +4,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 #init!
 
-world time: 1.0
 #create_sea
-
-
-
-
-
-#sea wave: 0.0, ripple: 0.0
-live_loop :fund do
-  tick
-  kick_machine K1, accent: 2
-  #deep :A2, 127
- # at{
-#    sleep 0.5
-    puts :hit
-  color
-  #}
-
-#  unity "/color1", rand*10
-#  unity "/color2", rand*10
-#  unity "/color3", rand*10
-#  smp Mountain[/subkick/,0]
-  sleep 8
-end
-stop
 
 #stop
 

@@ -17,7 +17,7 @@ unity "/color1", rand
 
 #risingrocks on: 1.0, turbulence: 0.0
 unity "/rocks/vortex/radius", 1000.0
-unity "/rocks/vortex/force", 20.0
+unity "/rocks/vortex/force", 2000.0
 unity "/rocks/vortex", 1.0
 
 

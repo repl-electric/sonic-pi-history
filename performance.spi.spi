@@ -4,25 +4,15 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 init!
 
+world time: 1.0
+
 #kalshot :c2, sus: 3
 #create_light
 #create_cube 10
 #create_tree 4
 #create_aura
-
-
-
-
-
 #rocks 1.0, orbit: 10.1, noise: 4.9, rot: 1000.0, freq: 0.1
-#explode_rocks
-#unity "/explode4"
-#explode_cube
 
-unity "/world/time",4.1
-#world time: 1.00
-
-stop
 
 live_loop :test do
   tick

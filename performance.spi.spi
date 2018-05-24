@@ -37,7 +37,7 @@ live_loop :test do
     sleep 0.5
     #world lightning: 1.0
     #    unity "/burst", 0.0
-    create_cube 4.0
+    create_cube 8.0
     #unity "/roots", 1.0
     unity "/world/lightning",1.0
     }

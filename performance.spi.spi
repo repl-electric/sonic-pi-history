@@ -111,7 +111,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   unity "/rocks/pos",5.0
 
   rocks 1.0
-  rocks 1.0, orbit: -1.0, rot: -100, noise: 1.8
+  rocks 1.0, orbit: -10.0, rot: -100, noise: 1.8
 
 
   sleep 1

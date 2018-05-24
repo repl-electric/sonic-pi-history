@@ -32,7 +32,7 @@ live_loop :test do
   tick
   # world :lightning
  # puts :hit
-  #kick_machine K1
+  kick_machine K1
   at{
     sleep 0.5
     #world lightning: 1.0

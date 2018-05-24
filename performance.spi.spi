@@ -110,7 +110,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   unity "/rocks/vortex/radius",100.0
   unity "/rocks/pos",5.0
 
-
+  unity "/rocks",1.0
 
 
   sleep 1

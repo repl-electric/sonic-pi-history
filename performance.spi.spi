@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 
-unity "/explode1"
+explode_cube
 
 
 

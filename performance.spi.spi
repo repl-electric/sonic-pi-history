@@ -16,7 +16,7 @@ live_loop :fund do
     puts :hit
     unity "/color1", rand*2
     unity "/color2", rand*2
-    unity "/color3", rand
+    unity "/color3", rand*2
   }
 
 #  unity "/color1", rand*10

@@ -8,10 +8,16 @@ world time: 1.0
 #create_sea
 
 #sea wave: 0.0, ripple: 0.0
-
+live_loop :fund, sync: :unsyncable do
+  tick
 unity "/color1", rand*10
 unity "/color2", rand*10
 unity "/color3", rand*10
+
+  sleep 1
+  sleep 1
+end
+
 
 stop
 

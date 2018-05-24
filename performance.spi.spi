@@ -18,9 +18,10 @@ live_loop :fund do
  # at{
 #    sleep 0.5
     puts :hit
-    unity "/color1", rand
+  unity "/color1", rand
+  unity "/color2", rand
 
-    unity "/color3", rand
+  unity "/color3", rand
   #}
 
 #  unity "/color1", rand*10

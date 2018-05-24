@@ -11,7 +11,7 @@ world time: 1.0
 live_loop :fund, sync: :unsyncable do
   tick
   unity "/color1", 0
-  unity "/color2", 0
+  unity "/color2", 1
   unity "/color3", 0
 
 #  unity "/color1", rand*10

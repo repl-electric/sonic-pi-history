@@ -11,9 +11,12 @@ world time: 1.0
 live_loop :fund, sync: :unsyncable do
   tick
   kick_machine K1
+  at{
+    sleep 0.5
   unity "/color1", rand
   unity "/color2", rand
-  unity "/color3", rand
+    unity "/color3", rand
+    }
 
 #  unity "/color1", rand*10
 #  unity "/color2", rand*10

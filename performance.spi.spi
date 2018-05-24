@@ -11,13 +11,13 @@ world time: 1.0
 live_loop :fund do
   tick
   kick_machine K1
-  at{
-    sleep 0.5
+ # at{
+#    sleep 0.5
     puts :hit
     unity "/color1", rand*2
     unity "/color2", rand*2
     unity "/color3", rand*2
-  }
+  #}
 
 #  unity "/color1", rand*10
 #  unity "/color2", rand*10

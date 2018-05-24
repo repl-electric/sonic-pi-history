@@ -5,7 +5,12 @@ world time: 1.0
 live_loop :test do
   tick
 
-  linecolor
+  #  linecolor
+    unity "/linecolor/s",1.0
+    unity "/linecolor/b",1.0
+    unity "/linecolor/h",rand
+
+
   sleep 1
   sleep 1
 end

@@ -1,2 +1,10 @@
 defaultcolor
 world time: 1.0
+
+live_loop :test do
+  tick
+
+  linecolor
+  sleep 1
+  sleep 1
+end

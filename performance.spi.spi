@@ -15,6 +15,7 @@ world time: 1.0
 live_loop :fund do
   tick
   kick_machine K1, accent: 2
+  deep :A2
  # at{
 #    sleep 0.5
     puts :hit

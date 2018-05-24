@@ -33,7 +33,7 @@ world time: 1.0
 
 live_loop :test do
   tick
-  unity "/color3", rand*10
+  unity "/color1", rand*10
   # world :lightning
  # puts :hit
   kick_machine K1

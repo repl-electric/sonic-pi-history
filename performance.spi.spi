@@ -8,7 +8,7 @@ world time: 1.0
 #create_sea
 
 #sea wave: 0.0, ripple: 0.0
-live_loop :fund, sync: :unsyncable do
+live_loop :fund do
   tick
   kick_machine K1
   at{

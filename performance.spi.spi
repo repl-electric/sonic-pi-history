@@ -7,7 +7,7 @@ use_bpm 127
 world time: 1.0
 #create_sea
 
-unity "/color2", rand
+unity "/color2", 0.1
 
 
 stop

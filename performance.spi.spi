@@ -10,16 +10,16 @@ world time: 1.0
 #sea wave: 0.0, ripple: 0.0
 live_loop :fund, sync: :unsyncable do
   tick
-  unity "/color1", rand*10
-  unity "/color2", rand*10
-  unity "/color3", rand*10
-  smp Mountain[/subkick/,0]
+#  unity "/color1", rand*10
+#  unity "/color2", rand*10
+#  unity "/color3", rand*10
+#  smp Mountain[/subkick/,0]
   sleep 1
   sleep 1
 end
 
 
-stop
+#stop
 
 #unity "/color2", 0.0
 #unity "/rockshard",1.0

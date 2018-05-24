@@ -21,7 +21,7 @@ stop
 
 live_loop :test do
   tick
-#  world :lightning
+  # world :lightning
  # puts :hit
   kick_machine K1
 

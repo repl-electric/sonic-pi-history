@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 #init!
-risingrocks on: true, vortex: 100.0
+risingrocks on: true, vortex: 1000.0
 
 #create_sea
 #unity "/color2", 0.0

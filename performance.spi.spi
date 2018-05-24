@@ -33,7 +33,7 @@ stop
 
 live_loop :test do
   tick
-unity "/color1", rand
+  unity "/color1", rand
   # world :lightning
  # puts :hit
   kick_machine K1

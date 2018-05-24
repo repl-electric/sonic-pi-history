@@ -24,7 +24,7 @@ live_loop :test do
   # world :lightning
  # puts :hit
   kick_machine K1
-
+  deep :A1
   at{
     sleep 0.5
     #world lightning: 1.0
@@ -38,10 +38,10 @@ live_loop :test do
   unity "/burst", 0.001
   create_cube 3
 
+
   #unity "/roots", 0.0
   sleep 2
 end
-
 
 stop
 

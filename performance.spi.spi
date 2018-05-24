@@ -4,6 +4,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 #init!
 risingrocks on: true, vortex: 1.0
+unity "/rocks", 1.0
 #create_sea
 #unity "/color2", 0.0
 #unity "/rockshard",1.0

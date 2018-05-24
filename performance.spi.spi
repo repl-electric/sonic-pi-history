@@ -10,16 +10,9 @@ world time: 1.0
 #sea wave: 0.0, ripple: 0.0
 live_loop :fund, sync: :unsyncable do
   tick
-  if dice(6) > 2
-    unity "/color1", rand*1
-  end
-
-  if dice(6) > 2
-    unity "/color2", rand*1
-  end
-    if dice(6) > 2
-      unity "/color3", rand*1
-    end
+  unity "/color1", 1
+  unity "/color2", 1
+  unity "/color3", 1
 
 #  unity "/color1", rand*10
 #  unity "/color2", rand*10

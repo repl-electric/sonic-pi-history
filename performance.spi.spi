@@ -14,7 +14,7 @@ world time: 1.0
 #sea wave: 0.0, ripple: 0.0
 live_loop :fund do
   tick
-  kick_machine K1
+  kick_machine K1, accent: 2
  # at{
 #    sleep 0.5
     puts :hit

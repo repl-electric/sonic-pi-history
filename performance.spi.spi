@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 #init!
-risingrocks on: true, vortex: 0.1
+#risingrocks on: true, vortex: 0.1
 
 #create_sea
 #unity "/color2", 0.0
@@ -103,7 +103,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   #mbox :a3, 77-rand*5, sus: 4
   #looper (ing :c3 :g2).look, 120, sus: 2
   looper (ing :a3).look, 40, sus: 2
-  risingrocks on: true, vortex: 1.0
+  risingrocks on: true, vortex: 10.0
 
   sleep 1
   #mbox :A4, 127, sus: 1 if spread(1,4).rot(2).look

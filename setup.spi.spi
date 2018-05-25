@@ -1,3 +1,4 @@
+midi_note_on n, velocity, *(args << {port: :iac_bus_2} << {channel: 1})
 live_loop :name do
   tick
   with_swing -0.125 do

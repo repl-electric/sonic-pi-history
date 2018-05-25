@@ -16,10 +16,10 @@ live_loop :name do
 end
 
 
-  mbox_on :C3, sus: 16
-  mbox_on :E4, sus: 16
-  mbox_on :G3, sus: 16
-
+#  mbox_on :C3, sus: 16
+#  mbox_on :E4, sus: 16
+#  mbox_on :G3, sus: 16
+mbox_off :C3
 
 
 mbox_cc  motion: 0.45, sat: 0.50, drive: 0.60

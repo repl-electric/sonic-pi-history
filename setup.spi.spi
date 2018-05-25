@@ -1,4 +1,5 @@
-midi_note_on :A4, 127, port: :iac_bus_2, channel: 1
+midi_note_on :C3, 127, port: :iac_bus_2, channel: 1
+
 
 live_loop :name do
 stop

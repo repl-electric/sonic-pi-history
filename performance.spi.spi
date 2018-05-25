@@ -274,8 +274,8 @@ live_loop :thing, sync: :unsyncable do
  # mbox2 c[0], sus: 12
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 5 }}
-  pads note, 1, sus: 8, drive: 0.0, pad: 0
-  deep note, 1, sus: 4, drive: 0.00
+  #pads note, 1, sus: 8, drive: 0.0, pad: 0
+  #deep note, 1, sus: 4, drive: 0.00
   #sea wave: -1.0
   sleep 8/2.0
 end

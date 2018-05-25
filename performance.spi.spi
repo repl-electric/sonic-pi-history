@@ -7,7 +7,7 @@ use_bpm 127
 #explode_cube
 world time: 1.0
 risingrocks on: 1.0, vortex: 1000.0, y: 6.0, radius: 10.0
-cam :top
+cam :main
 
 live_loop :test do
   tick

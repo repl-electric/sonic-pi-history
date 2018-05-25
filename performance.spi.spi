@@ -299,7 +299,7 @@ def deepbase
 end
 #deepbase
 #looper_cc motion: 0.30, drive: 0.20, fm: 0.00, mode: 4
-#lfo cutoff: 0.60, on: 0.0
+lfo cutoff: 0.60, on: 0.0
 #mbox2_cc sat: 0.00, drive: 0.00
 #looper_cc motion: 0.26, fm: 0.00, drive: 0.20, mode: 1
 #looper_cc motion: 0.6, drive: 0.2, fm: 0.4

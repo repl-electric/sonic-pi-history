@@ -260,7 +260,7 @@ live_loop :thing, sync: :unsyncable do
       mbox2 c[0],127, sus: s
       mbox2 c[1],127, sus: s
       with_transpose 12{
-        qbitsea c[1],40, sus: s
+        qbitsea c[1],30, sus: s
       }
 
       mbox2 c[2],127, sus: s

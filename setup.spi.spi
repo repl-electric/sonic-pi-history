@@ -7,14 +7,10 @@
 live_loop :name do
 
   tick
-  mbox :A3, sus: 4
-  mbox :F4, sus: 4
-  mbox :C4, sus: 4
-  sleep 1
-
-  sleep 1
-  sleep 1
-  sleep 1
+  mbox :A3, sus: 16
+  mbox :F4, sus: 16
+  mbox :C4, sus: 16
+  sleep 16
 end
 
 

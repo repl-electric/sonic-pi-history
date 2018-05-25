@@ -6,6 +6,8 @@ use_bpm 127
 #unity "/scene/1"
 #explode_cube
 world time: 1.0
+
+unity "/bird/fly",1.0
 stop
 
 

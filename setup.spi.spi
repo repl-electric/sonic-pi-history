@@ -2,7 +2,8 @@ live_loop :name do
   tick
   mbox :A3, sus: 2
   sleep 1
-  mbox :F4
+  mbox :F4, sus: 2
+  sleep 1
   sleep 1
 end
 

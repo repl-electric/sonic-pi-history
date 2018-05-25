@@ -4,6 +4,9 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 use_bpm 127
 
 deep :A2
+
+midi :A2, channel: 7, port: :iac_bus_2
+
 stop
 #unity "/scene/1"
 #explode_cube

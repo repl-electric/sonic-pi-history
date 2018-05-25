@@ -9,10 +9,10 @@ world time: 1.0
 risingrocks on: false#, vortex: 1000.0, y: 6.0, radius: 10.0
 
 
-unity "/bird/run",1
-unity "/rockcircle/orbit",50.0
+#unity "/bird/run",1
+#unity "/rockcircle/orbit",50.0
 #unity "/rocks",0.0
-cam
+cam :bird
 
 
 live_loop :test do

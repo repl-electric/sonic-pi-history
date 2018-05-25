@@ -4,15 +4,16 @@ live_loop :name do
     mbox :A3, sus: 4
   end
   sleep 1
-  mbox :F4, sus: 2
+  mbox :F4, sus: 4
   sleep 1
   sleep 1
-  mbox :C4, sus: 1
+  mbox :C4, sus: 4
   sleep 1
+  sleep 2
 
 end
 
 
 
-mbox_cc  motion: 0.50, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.20, sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

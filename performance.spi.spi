@@ -289,7 +289,7 @@ def deepbase
   looper_cc motion: 1.00, drive: 0.30, fm: 0.00, mode: 0
 end
 deepbase
-#looper_cc motion: 0.50, drive: 0.60, fm: 0.00, mode: 4
+#looper_cc motion: 0.50, drive: 0.80, fm: 0.00, mode: 4
 
 
 #mbox2_cc sat: 0.50, drive: 0.00

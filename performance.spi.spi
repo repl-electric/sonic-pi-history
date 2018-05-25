@@ -238,9 +238,10 @@ live_loop :thing, sync: :unsyncable do
 
     [:A3, :C5, :E4],
     [:G3, :C5, :F4],
-    [:F3, :C5, :F4],
 
+    [:F3, :C5, :F4],
     [:F3, :Cs5, :F4],
+    [:F3, :C5, :F4],
 
 
 

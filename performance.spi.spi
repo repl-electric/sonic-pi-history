@@ -271,7 +271,7 @@ live_loop :thing, sync: :unsyncable do
     sleep 1.0
     #operator c[3],100*v, sus: 9
   }
-  mbox2 c[0]
+  mbox2 c[0], sus: 12
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 5 }}
   pads note, 1, sus: 8, drive: 0.0, pad: 0

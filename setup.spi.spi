@@ -1,5 +1,7 @@
 midi_note_on :A4, 127, *(args << {port: :iac_bus_2} << {channel: 1})
+
 live_loop :name do
+stop
   tick
   with_swing -0.125 do
     mbox :A3, sus: 4

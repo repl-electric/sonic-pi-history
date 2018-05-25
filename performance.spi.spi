@@ -276,8 +276,8 @@ live_loop :thing, sync: :unsyncable do
   }
 
   #at{ sleep 8/2.0; with_transpose -12*2 { qbitsea c[1], 20+rand_i(5), sus: 5 }}
-  pads note, 1, sus: 1, drive: 0.0, thick: 6
-  deep note, 1, sus: 1, drive: 0.0
+#  pads note, 1, sus: 1, drive: 0.0, thick: 6
+#  deep note, 1, sus: 1, drive: 0.0
   #sea wave: -1.0
   sleep 1/4.0
 end

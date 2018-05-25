@@ -23,12 +23,12 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 live_loop :name, sync: :unsyncable  do
   tick
 #  with_swing -0.0125 do
-    mt (ing
-        [5], 5, 5, 5,
-        5, [5], 5, 5,
-        5, 5, [5], 5,
-        5, 5, [18], _,
-        ).look,(line 90, 110, 64).look,127
+    # mt (ing
+    #,     [5], 5, 5, 5,
+    #,     5, [5], 5, 5,
+    #,     5, 5, [5], 5,
+    #,     5, 5, [18], _,
+    #,     ).look,(line 90, 110, 64).look,127
 #  end
 #  with_swing -0.02 do
    mt (ing

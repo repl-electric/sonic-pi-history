@@ -1,3 +1,5 @@
+load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
+
 #midi_note_on :E4, 127, port: :iac_bus_2, channel: 1
 
 

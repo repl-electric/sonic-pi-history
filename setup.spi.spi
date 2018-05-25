@@ -2,10 +2,11 @@ live_loop :name do
   tick
   mbox :A3
   sleep 1
-#  sleep 1
+  mbox :F4
+  sleep 1
 end
 
 
 
-mbox_cc  motion: 0.50, sat: 0.50, drive: 0.81
-mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.00
+mbox_cc  motion: 0.50, sat: 0.50, drive: 0.50
+mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

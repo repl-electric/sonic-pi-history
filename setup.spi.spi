@@ -5,8 +5,7 @@ live_loop :name do
   mbox :F4, sus: 2
   sleep 1
   sleep 1
-  mbox :C4, sus: 2
-
+  mbox :C4, sus: 1
   sleep 1
 end
 

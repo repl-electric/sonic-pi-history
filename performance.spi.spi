@@ -249,7 +249,7 @@ live_loop :thing, sync: :unsyncable do
     )
     c = score.look
     note = root(c)
-
+s = (knit 3,6,16,1).look
   at{
     v=1.1
     callstack c[0],114*v, sus: 8
@@ -257,7 +257,7 @@ live_loop :thing, sync: :unsyncable do
     unity "/linecolor/b",0.0
     sleep 1.0
     with_transpose 0{
-      mbox2 c[1],127, sus: (knit 3,6,16,1).look
+      mbox2 c[1],127, sus: s
     }
     #operator c[1],117*v, sus: 6
     #color c[1]

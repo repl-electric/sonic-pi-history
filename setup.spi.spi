@@ -19,7 +19,7 @@ end
 #  mbox_on :C3, sus: 16
 #  mbox_on :E4, sus: 16
 #  mbox_on :G3, sus: 16
-mbox_off :G3
+mbox_of :G3
 
 
 mbox_cc  motion: 0.35, sat: 1.00, drive: 0.80

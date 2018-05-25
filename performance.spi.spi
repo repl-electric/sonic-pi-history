@@ -264,7 +264,7 @@ live_loop :thing, sync: :unsyncable do
         qbitsea c[1],30, sus: s
       }
 
-      mbox2 c[2],127, sus: s
+      mbox2 c[2],127-20, sus: s
     }
     #operator c[1],117*v, sus: 6
     #color c[1]

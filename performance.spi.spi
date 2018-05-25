@@ -10,7 +10,7 @@ risingrocks on: 1.0, vortex: 4000.0, y: 5.0, radius: 4.0
 
 live_loop :test do
   tick
-  risingrocks y: (line 0, 5, 32).look
+#  risingrocks y: (line 0, 5, 32).look
   sleep 1
   sleep 1
 end

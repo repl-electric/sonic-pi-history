@@ -295,7 +295,7 @@ end
 def deepbase
   looper_cc motion: 1.00, drive: 0.30, fm: 0.00, mode: 0
 end
-#deepbase
+deepbase
 #looper_cc motion: 0.50, drive: 0.50, fm: 0.00, mode: 4
 
 

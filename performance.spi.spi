@@ -250,7 +250,7 @@ live_loop :thing, sync: :unsyncable do
     )
     c = score.look
     note = root(c)
-  s = (knit 2,5, 2,1, 1,1).look
+  s = (knit 1,5, 1,1, 1,1).look
   at{
     v=1.1
     #callstack c[0],114*v, sus: 8

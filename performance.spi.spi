@@ -259,6 +259,8 @@ live_loop :thing, sync: :unsyncable do
     with_transpose 0{
       mbox2 c[0],127, sus: s
       mbox2 c[1],127, sus: s
+      bisea c[1],127, sus: s
+
       mbox2 c[2],127, sus: s
     }
     #operator c[1],117*v, sus: 6

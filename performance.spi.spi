@@ -5,7 +5,7 @@ use_bpm 127
 
 #unity "/scene/1"
 #explode_cube
-unity "/rocks/throttle", 100.1
+unity "/rocks/throttle", 0.1
 
 
 world time: 1.0

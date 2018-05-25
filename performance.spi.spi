@@ -67,7 +67,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
 #  unity "/explode1"
 
   sleep 1
-  mbox :A4, 80, sus: 1 if spread(1,4).rot(2).look
+  mbox :G4, 80, sus: 1 if spread(1,4).rot(2).look
 
   with_transpose -12*0 {
     ze (nit :g5 4 :A4 4 :E4 4).look,10                 if spread(7,11).look

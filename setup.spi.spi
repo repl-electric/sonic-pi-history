@@ -1,4 +1,4 @@
-live_loop :name, sync: :unsyncable do
+live_loop :name do
   tick
   mbox :A3
   sleep 1

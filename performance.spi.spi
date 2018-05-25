@@ -5,7 +5,7 @@ use_bpm 127
 
 #unity "/scene/1"
 #explode_cube
-risingrocks on: 1.0, throttle: 0.1
+risingrocks on: 1.0, throttle: 0.2
 
 
 world time: 1.0

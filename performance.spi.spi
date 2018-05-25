@@ -257,9 +257,9 @@ live_loop :thing, sync: :unsyncable do
     unity "/linecolor/b",0.0
     sleep 1.0
     with_transpose 0{
-      mbox c[0],127, sus: s
-      mbox c[1],127, sus: s
-      mbox c[2],127, sus: s
+      mbox2 c[0],127, sus: s
+      mbox2 c[1],127, sus: s
+      mbox2 c[2],127, sus: s
     }
     #operator c[1],117*v, sus: 6
     #color c[1]

@@ -63,11 +63,9 @@ live_loop :test, sync: :unsyncable do; tick #2*32
   looper :a3, 50, sus: 2#(ing :c3 _ :c2).look, 120, sus: 2
   #looper (ing :a3).look, 40, sus: 2
   #  risingrocks on: true, vortex: 100.0, radius: 1.0
-
 #  unity "/explode1"
-
   sleep 1
-  mbox :G4, 80, sus: 1 if spread(1,4).rot(2).look
+  #mbox :G4, 80, sus: 1 if spread(1,4).rot(2).look
 
   with_transpose -12*0 {
     ze (nit :g5 4 :A4 4 :E4 4).look,10                 if spread(7,11).look

@@ -279,7 +279,7 @@ live_loop :thing, sync: :unsyncable do
   pads note, 1, sus: 2, drive: 0.0, thick: 6
   deep note, 1, sus: 2, drive: 0.0
   #sea wave: -1.0
-  sleep 8/4.0
+  sleep 1
 end
 
 

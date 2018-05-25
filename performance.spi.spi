@@ -217,7 +217,7 @@ live_loop :thing, sync: :unsyncable do
     :A3 :F4 :C3  :A3 :E4 :G3 :C3 _)
   note = score.look
 
-  tick_reset_all
+#  tick_reset_all
   score = (ring
     [:A3, :C5, :E4],
     [:F4, :A6, :C5],

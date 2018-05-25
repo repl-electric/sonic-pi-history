@@ -7,6 +7,14 @@ use_bpm 127
 #explode_cube
 world time: 0.5
 risingrocks on: 1.0, vortex: 1000.0, y: 5.0, radius: 4.0
+
+live_loop :test do
+  tick
+  risingrocks y: (line 0, 5, 32).look
+  sleep 1
+  sleep 1
+end
+
 #unity "/bird/run",1.0
 #defaultcolor
 stop

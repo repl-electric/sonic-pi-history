@@ -265,7 +265,7 @@ live_loop :thing, sync: :unsyncable do
     #color c[1]
     sleep 2
     #operator c[1],59*v, sus: 6
-    operator c[2],105*v, sus: 9
+    #operator c[2],105*v, sus: 9
     sleep 1.0
     #operator c[3],100*v, sus: 9
   }

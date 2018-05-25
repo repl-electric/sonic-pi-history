@@ -1,4 +1,4 @@
-midi_note_on :C3, 127, port: :iac_bus_2, channel: 1
+midi_note_on :E4, 127, port: :iac_bus_2, channel: 1
 
 
 live_loop :name do
@@ -23,5 +23,5 @@ end
 
 
 
-mbox_cc  motion: 0.40, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.33, sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

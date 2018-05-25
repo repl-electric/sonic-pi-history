@@ -74,7 +74,7 @@ live_loop :test, sync: :unsyncable do; tick #2*32
     ze (nit :g4, 4, :A4, 4, :E4, 4, :a4, 4, :e4, 4, :c5, 4,).look, 5   if spread(3,8).look
   }
   sleep 1
-  #mbox :g4, 71-rand*5, sus: 2
+  mbox :g4, 71-rand*5, sus: 2
   #mbox  (ing :a4, :c4, :f4, :c4,  :d4, :d4, :c4, :a3,).look,(ing 122, 110, 120, 112,).look, sus: 4
   #looper_cc drive: 0.0
   sleep 1

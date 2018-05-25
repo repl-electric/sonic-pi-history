@@ -12,7 +12,7 @@ risingrocks on: false#, vortex: 1000.0, y: 6.0, radius: 10.0
 #unity "/rockcircle/orbit",50.0
 #unity "/rocks",0.0
 cam :top
-sea ripple: 20.0
+sea ripple: 100.0
 
 live_loop :test do
   tick

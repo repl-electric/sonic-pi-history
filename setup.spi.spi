@@ -1,27 +1,24 @@
-midi_note_on :E4, 127, port: :iac_bus_2, channel: 1
+#midi_note_on :E4, 127, port: :iac_bus_2, channel: 1
 
+
+
+#stop
 
 live_loop :name do
 stop
   tick
-  with_swing -0.125 do
-    mbox :A3, sus: 4
-    mbox_cc  motion: 0.40
-  end
-  sleep 1
+  mbox :A3, sus: 4
   mbox :F4, sus: 4
-  mbox_cc  motion: 0.20
-  sleep 1
-  sleep 1
   mbox :C4, sus: 4
-  mbox_cc  motion: 0.60
   sleep 1
-  sleep 2
 
+  sleep 1
+  sleep 1
+  sleep 1
 end
 
 
 
 
-mbox_cc  motion: 0.33, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.30, sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

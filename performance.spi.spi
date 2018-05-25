@@ -241,7 +241,7 @@ live_loop :thing, sync: :unsyncable do
     [:C3, :E5, :G3],
     [:A3, :C5, :E4],
     [:E4, :G5, :B4],
-    [:G4, :B6, :D5],
+    [:G4, :B5, :D5],
     [:C3, :E5, :G3],
     [_],
 

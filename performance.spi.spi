@@ -7,7 +7,7 @@ use_bpm 127
 #explode_cube
 world time: 1.0
 
-unity "/bird/run",1.0
+unity "/bird/hover",1.0
 #defaultcolor
 stop
 

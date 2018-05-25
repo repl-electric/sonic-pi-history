@@ -1,7 +1,8 @@
 live_loop :name do
   tick
   with_swing -0.01 do
-  mbox :A3, sus: 4
+    mbox :A3, sus: 4
+  end
   sleep 1
   mbox :F4, sus: 2
   sleep 1

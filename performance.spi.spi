@@ -298,7 +298,7 @@ end
 #deepbase
 #looper_cc motion: 1.00, drive: 0.50, fm: 0.00, mode: 4
 
-#mbox2_cc sat: 1.0, drive: 0.1
+#mbox2_cc sat: 0.50, drive: 0.00
 #looper_cc motion: 0.26, fm: 0.00, drive: 0.20, mode: 1
 #looper_cc motion: 0.6, drive: 0.2, fm: 0.4
 #looper_cc fm: 0.2, drive: 1.0, motion: 0.8
@@ -307,7 +307,7 @@ end
 #mbox_cc  motion: 0.1
 #mbox2_cc motion: 0.2
 #mbox_cc  motion: 0.1
-
+lfo cutoff: 0.00, on: 1.0
 
 #mbox2_cc motion: 0.20, sat: 0.00, drive: 0.00
 #mbox_cc  motion: 0.10

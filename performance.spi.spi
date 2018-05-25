@@ -210,7 +210,7 @@ def start
   pads_cc amp: 0.85
   looper_cc amp: 0.85
 end
-#start
+start
 def deepbase
   looper_cc motion: 1.00, drive: 0.30, fm: 0.00, mode: 0
 end

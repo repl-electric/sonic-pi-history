@@ -5,7 +5,7 @@ use_bpm 127
 
 #unity "/scene/1"
 #explode_cube
-world time: 1.0
+world time: 0.2
 risingrocks on: 1.0, vortex: 1000.0, y: 5.0, radius: 4.0
 
 live_loop :test do

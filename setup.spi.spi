@@ -5,7 +5,7 @@
 #stop
 
 live_loop :name do
-stop
+
   tick
   mbox :A3, sus: 4
   mbox :F4, sus: 4

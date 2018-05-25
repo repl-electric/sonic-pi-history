@@ -6,7 +6,7 @@ use_bpm 127
 #unity "/scene/1"
 #explode_cube
 world time: 0.5
-risingrocks on: 1.0, vortex: 500.0, y: 5.0, radius: 4.0
+risingrocks on: 1.0, vortex: 1000.0, y: 5.0, radius: 4.0
 #unity "/bird/run",1.0
 #defaultcolor
 stop

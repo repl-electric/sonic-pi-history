@@ -3,6 +3,8 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 
+deep :A2
+
 #unity "/scene/1"
 #explode_cube
 #risingrocks on: 1.0, throttle: 0.1, vortex: 0.0

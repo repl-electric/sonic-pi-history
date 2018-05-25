@@ -11,7 +11,7 @@ risingrocks on: false#, vortex: 1000.0, y: 6.0, radius: 10.0
 #unity "/bird/hover",1
 #unity "/rockcircle/orbit",50.0
 #unity "/rocks",0.0
-#cam :bird
+cam :top
 
 
 live_loop :test do

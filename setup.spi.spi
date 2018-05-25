@@ -7,12 +7,18 @@
 live_loop :name do
 
   tick
-  mbox :C3, sus: 16
-  mbox :E4, sus: 16
-  mbox :G3, sus: 16
+#  mbox :C3, sus: 16
+#  mbox :E4, sus: 16
+#  mbox :G3, sus: 16
   sleep 16
 end
 
 
-mbox_cc  motion: 0.35, sat: 0.50, drive: 0.60
+  mbox_on :C3, sus: 16
+  mbox_on :E4, sus: 16
+  mbox_on :G3, sus: 16
+
+
+
+mbox_cc  motion: 0.45, sat: 0.50, drive: 0.60
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

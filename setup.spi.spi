@@ -1,6 +1,6 @@
 live_loop :name, sync: :unsyncable do
   tick
-mbox :A3
+  mbox :A3
   sleep 1
 #  sleep 1
 end

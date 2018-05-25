@@ -5,7 +5,7 @@ use_bpm 127
 
 #unity "/scene/1"
 #explode_cube
-unity "/rocks/throttle", 1000.0
+unity "/rocks/throttle", 1.0
 
 stop
 world time: 1.0

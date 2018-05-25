@@ -1,6 +1,6 @@
 live_loop :name do
   tick
-  mbox :A3
+  mbox :A3, sus: 2
   sleep 1
   mbox :F4
   sleep 1

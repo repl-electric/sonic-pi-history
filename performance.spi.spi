@@ -3,7 +3,6 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 use_bpm 127
 
-deep :A2
 
 midi :A2, channel: 7, port: :iac_bus_2
 

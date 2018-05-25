@@ -258,7 +258,7 @@ live_loop :thing, sync: :unsyncable do
     unity "/linecolor/b",0.0
     sleep 1.0
     with_transpose 0{
-      mbox2 c[0],127, sus: s
+      mbox2 c[0],127, sus: s*2
       mbox2 c[1],127, sus: s
       with_transpose 0{
         qbitsea c[1],30, sus: s

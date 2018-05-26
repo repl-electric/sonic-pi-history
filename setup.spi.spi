@@ -33,7 +33,7 @@ live_loop :name do
   at{
     8.times{
       mbox2 :A3,127, sus: 1
-      mbox (ing :A4 :G4 :F4).tick(:inner), 127, sus: 0.5
+      mbox (ing :A4 :G4 :F3).tick(:inner), 127, sus: 0.5
       sleep 0.25}
   }
   mbox :G4,127, sus: 2

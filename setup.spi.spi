@@ -17,7 +17,7 @@ live_loop :name do
 
   looper :E3,127, sus: 8
   sleep 0.125
-  looper :G4,126, sus: 8
+  looper :G5,126, sus: 8
   sleep 0.125
   looper :B4,126, sus: 8
 

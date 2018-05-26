@@ -45,7 +45,7 @@ live_loop :name do
   mbox :G3,127, sus: 2
   deep :A2,1, sus: 8
 
-  looper_cc oct: (ing oct: 0.6 0.5 0.2 0.6).look
+  looper_cc oct: (ing 0.6 0.5 0.2 0.6).look
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16

@@ -25,9 +25,9 @@ live_loop :name do
   looper (ing :A3,).look, 127, sus: 8
   sleep 0.125
   looper :C3,126, sus: 8
-  sopsea :C4, 50, sus: 8
+  #sopsea :C4, 50, sus: 8
   sleep 0.125
-  sopsea :E4, 50, sus: 8
+  #sopsea :E4, 50, sus: 8
   looper :E3,126, sus: 8
 
   at{

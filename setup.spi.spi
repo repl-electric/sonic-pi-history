@@ -58,6 +58,7 @@ end
 #  mbox_on :G3, sus: 16
 #mbox_x :G3
 
+lfo cutoff: 0.31, on: false
 
 looper_cc motion: 0.25, fm: 0.00, drive: 0.00, mode: 1, oct: 0
 

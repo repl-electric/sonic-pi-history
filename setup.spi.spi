@@ -9,11 +9,11 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 live_loop :name do
   puts :A
   tick
-  looper :A3,127, sus: 8
+  looper :C3,127, sus: 8
   sleep 0.125
-  looper :F4,126, sus: 8
+  looper :C4,126, sus: 8
   sleep 0.125
-  looper :F3,126, sus: 8
+  looper :C3,126, sus: 8
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16

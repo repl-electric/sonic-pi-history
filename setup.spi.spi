@@ -36,7 +36,7 @@ live_loop :name do
       mbox2 :A3,127, sus: 1
       mbox (ing
             :G3 :F4 :D3
-            :G3 :F4 :E3
+            :G3 :F4 :D3
             :E3 :F4 :A3
             ).tick(:inner), 127,
       sus: (ing 0.5 0.5 8).look(:inner)

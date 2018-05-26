@@ -22,7 +22,7 @@ live_loop :name do
   # looper :B4,126, sus: 8
 
   sopsea :E4,50, sus: 8
-  looper (ing :C3, ).look, 127, sus: 8
+  looper (ing :G3).look, 127, sus: 8
   sleep 0.125
 #  looper :F3,126, sus: 8
   sleep 0.125
@@ -44,7 +44,6 @@ end
 #  mbox_on :E4, sus: 16
 #  mbox_on :G3, sus: 16
 #mbox_x :G3
-
 
 
 looper_cc motion: 1.00, fm: 0.00, drive: 0.00, mode: 1, oct: 0

@@ -21,7 +21,7 @@ live_loop :name do
   # sleep 0.125
   # looper :B4,126, sus: 8
 
-  looper (ing :A3, ).look, 127, sus: 8
+  looper (ing :A3,  ).look, 127, sus: 8
   sleep 0.125
   looper :F3,126, sus: 8
   sleep 0.125
@@ -30,7 +30,7 @@ live_loop :name do
   at{
   8.times{mbox :A4
   sleep 0.25}
-}
+  }
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16

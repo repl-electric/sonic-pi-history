@@ -46,9 +46,9 @@ live_loop :name do
   mbox :G3,127, sus: 2
   deep :C4,1, sus: 4
 
+  pads :A4, sus: 1.0, pad: 0
   pads :A4, sus: 1.0, pad: 1
   pads :A4, sus: 1.0, pad: 2
-  pads :A4, sus: 1.0, pad: 3
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16

@@ -69,7 +69,7 @@ end
 
 lfo cutoff: 0.31, on: false
 
-looper_cc motion: 0.25, fm: 0.00, drive: 0.00, mode: 1, oct: 0.50
+looper_cc motion: 0.60, fm: 0.00, drive: 0.80, mode: 1, oct: 0.00
 
-mbox_cc  motion: 0.50,  sat: 0.75, drive: 0.70
-mbox2_cc  motion: 0.50, sat: 0.75, drive: 0.70
+mbox_cc  motion: 0.50,  sat: 0.75, drive: 0.80
+mbox2_cc  motion: 0.50, sat: 0.75, drive: 0.80

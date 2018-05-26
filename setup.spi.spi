@@ -36,7 +36,7 @@ live_loop :name do
       mbox2 :A4,127, sus: 8
   sleep 0.25}
   }
-  mbox :G4,127, sus: 8
+  mbox :G4,127, sus: 2
 
 
 

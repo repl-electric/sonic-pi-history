@@ -9,7 +9,8 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 live_loop :name do
 
   tick
-#  mbox :C3, sus: 16
+  looper :A3
+  #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16
   sleep 16

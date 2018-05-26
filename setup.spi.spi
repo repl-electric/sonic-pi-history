@@ -36,7 +36,7 @@ live_loop :name do
 
 #  looper :E3,126, sus: 8
 
-  midi :C2, port: iac_bus_2
+  #midi :C2, port: iac_bus_2
 
   at{
     8.times{

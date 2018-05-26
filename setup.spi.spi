@@ -43,7 +43,7 @@ live_loop :name do
       sleep 0.25}
   }
   mbox :G3,127, sus: 2
-  deep :A3,1, sus: 4
+  deep :C3,1, sus: 4
 
   looper_cc oct: (ing 0.6 0.5 0.2 0.6).look
   #  mbox :C3, sus: 16

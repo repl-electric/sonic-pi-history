@@ -21,7 +21,7 @@ live_loop :name do
   # sleep 0.125
   # looper :B4,126, sus: 8
 
-  looper :C3,127, sus: 8
+  looper (ing :C3, :C2).look,127, sus: 8
   sleep 0.125
   #looper :F3,126, sus: 8
   sleep 0.125

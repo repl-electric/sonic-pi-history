@@ -9,11 +9,19 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 live_loop :name do
   puts :A
   tick
-  looper :C2,127, sus: 8
+  # looper :C2,127, sus: 8
+  # sleep 0.125
+  # looper :E4,126, sus: 8
+  # sleep 0.125
+  # looper :G3,126, sus: 8
+
+  looper :E2,127, sus: 8
   sleep 0.125
-  looper :E4,126, sus: 8
+  looper :G4,126, sus: 8
   sleep 0.125
-  looper :G3,126, sus: 8
+  looper :B3,126, sus: 8
+
+
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
@@ -27,7 +35,7 @@ end
 #  mbox_on :G3, sus: 16
 #mbox_x :G3
 
-looper_cc motion: 0.60, fm: 0.65, drive: 0.30, mode: 1
+looper_cc motion: 0.55, fm: 0.00, drive: 0.55, mode: 1
 
 mbox_cc  motion: 0.30, sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

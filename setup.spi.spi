@@ -23,7 +23,7 @@ live_loop :name do
   # looper :B4,126, sus: 8
 
   #sopsea :E4,50, sus: 8
-  looper (ing :A3,).look, 127, sus: 8
+  looper (ing :A3).look, 127, sus: 8
   sleep 0.125
   looper :C3,126, sus: 8
   #sopsea :C4, 50, sus: 8
@@ -35,17 +35,17 @@ live_loop :name do
     8.times{
       mbox2 :A3,127, sus: 1
       mbox (ing
-            :G3, :F4, :D3,
-            :G3, :F4, :D3,
-            :E3, :F4, :A3,
+            :G3 :F4 :D3
+            :G3 :F4 :D3
+            :E3 :F4 :A3
             ).tick(:inner), 127,
-      sus: (ing 0.5, 0.5, 8,).look(:inner)
+      sus: (ing 0.5 0.5 8).look(:inner)
       sleep 0.25}
   }
   mbox :G3,127, sus: 2
-  deep :A2,1, sus: 4
+  deep :A3,1, sus: 4
 
-  looper_cc oct: (ing 0.6, 0.5, 0.2, 0.6,).look
+  looper_cc oct: (ing 0.6 0.5 0.2 0.6).look
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16

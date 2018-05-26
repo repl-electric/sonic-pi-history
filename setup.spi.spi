@@ -21,11 +21,11 @@ live_loop :name do
   # sleep 0.125
   # looper :B4,126, sus: 8
 
-  looper :F3,127, sus: 8
+  looper :F2,127, sus: 8
   sleep 0.125
-  looper :A5,126, sus: 8
+  looper :A4,126, sus: 8
   sleep 0.125
-  looper :C4,126, sus: 8
+  looper :C3,126, sus: 8
 
 
 

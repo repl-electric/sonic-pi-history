@@ -15,11 +15,11 @@ live_loop :name do
   # sleep 0.125
   # looper :G3,126, sus: 8
 
-  looper :E2,127, sus: 8
+  looper :E3,127, sus: 8
   sleep 0.125
   looper :G4,126, sus: 8
   sleep 0.125
-  looper :B3,126, sus: 8
+  looper :B4,126, sus: 8
 
 
 

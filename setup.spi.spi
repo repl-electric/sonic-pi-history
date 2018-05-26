@@ -40,7 +40,7 @@ live_loop :name do
             :E3, :F4, :A3,
             ).tick(:inner), 127,
       sus: (ing 0.5, 0.5, 8,).look(:inner)
-      looper_cc oct: (ing 0.6, 0.5, 0.2, 0.6,).look
+      looper_cc oct: (ing 0.6, 0.5, 0.2, 0.7,).look
       sleep 0.25}
   }
   mbox :G3,127, sus: 2

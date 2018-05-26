@@ -12,10 +12,13 @@ live_loop :name do
   looper :C3
   sleep 0.125
   looper :A2
+  sleep 0.125
+  looper :E2
+
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16
-  sleep 2-0.125
+  sleep 2-0.125*2
 end
 
 

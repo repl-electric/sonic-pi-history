@@ -21,7 +21,7 @@ live_loop :name do
   # sleep 0.125
   # looper :B4,126, sus: 8
 
-  looper (ing :C3, ).look, 127, sus: 8
+  looper (ing :C3,  ).look, 127, sus: 8
   sleep 0.125
 #  looper :F3,126, sus: 8
   sleep 0.125
@@ -46,7 +46,7 @@ end
 
 
 
-looper_cc motion: 1.00, fm: 0.00, drive: 0.00, mode: 1, oct: 0
+looper_cc motion: 1.00, fm: 0.00, drive: 0.00, mode: 1, oct: 12
 
 mbox_cc  motion: 0.60,  sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.60, sat: 0.00, drive: 0.50

@@ -11,7 +11,7 @@ live_loop :name do
   tick
   looper :A2,127, sus: 8
   sleep 0.125
-  looper :F4,126, sus: 8
+  looper :F3,126, sus: 8
   sleep 0.125
   looper :C2,126, sus: 8
 

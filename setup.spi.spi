@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 world time: 1.0
-tree height: 0.0, grow: 2.8
+tree height: 0.0, grow: 2.9
 
 
 #midi_note_on :E4, 127, port: :iac_bus_2, channel: 1

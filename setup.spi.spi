@@ -21,7 +21,7 @@ live_loop :name do
   # looper :G5,126, sus: 8
   # sleep 0.125
   # looper :B4,126, sus: 8
-  mbox :C4,127, sus: 2
+  mbox :C4,127, sus: 8
   #sopsea :E4,50, sus: 8
   looper (ing :A3).look, 127, sus: 8
   mbox :C4,127, sus: 2
@@ -71,5 +71,5 @@ lfo cutoff: 0.31, on: false
 
 looper_cc motion: 0.25, fm: 0.00, drive: 0.00, mode: 1, oct: 0
 
-mbox_cc  motion: 0.60,  sat: 0.50, drive: 0.50
-mbox2_cc  motion: 0.60, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.50,  sat: 0.75, drive: 0.70
+mbox2_cc  motion: 0.50, sat: 0.75, drive: 0.70

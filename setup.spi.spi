@@ -9,16 +9,16 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 live_loop :name do
   puts :A
   tick
-  looper :A2,127, sus: 16
+  looper :A2,127, sus: 8
   sleep 0.125
-  looper :F3,126, sus: 16
+  looper :F3,126, sus: 8
   sleep 0.125
-  looper :C2,126, sus: 16
+  looper :C2,126, sus: 8
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16
-  sleep (16)-0.125*2
+  sleep (8)-0.125*2
 end
 
 

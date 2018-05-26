@@ -32,8 +32,8 @@ live_loop :name do
 
   at{
     8.times{
-      mbox :A4,127, sus: 8
-      mbox2 :A4,127, sus: 8
+      mbox :A4,127, sus: 4
+      mbox2 :A4,127, sus: 4
   sleep 0.25}
   }
   mbox :G4,127, sus: 2

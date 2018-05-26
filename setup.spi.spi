@@ -32,8 +32,8 @@ live_loop :name do
 
   at{
     8.times{
-      mbox :C4,127, sus: 8
-      mbox2 :C4,127, sus: 8
+      mbox :A4,127, sus: 8
+      mbox2 :A4,127, sus: 8
   sleep 0.25}
   }
 
@@ -50,7 +50,7 @@ end
 #mbox_x :G3
 
 
-looper_cc motion: 0.25, fm: 0.00, drive: 0.10, mode: 1, oct: 0
+looper_cc motion: 0.25, fm: 0.00, drive: 0.00, mode: 1, oct: 0
 
-mbox_cc  motion: 0.40,  sat: 0.50, drive: 0.50
-mbox2_cc  motion: 0.50, sat: 0.50, drive: 0.50
+mbox_cc  motion: 0.20,  sat: 0.50, drive: 0.50
+mbox2_cc  motion: 0.20, sat: 0.50, drive: 0.50

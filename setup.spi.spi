@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 world time: 1.0
-tree height: 0.0, grow: 2.0
+tree height: 0.0, grow: 3.0
 
 
 #midi_note_on :E4, 127, port: :iac_bus_2, channel: 1
@@ -25,7 +25,7 @@ live_loop :name do
   # looper :B4,126, sus: 8
   mbox2 :C4,127, sus: 8
   #sopsea :E4,50, sus: 8
-  #looper (ing :A3).look, 127, sus: 8
+  #looper (ing :A3,).look, 127, sus: 8
   mbox :E4,127, sus: 4
   sleep 0.125
   mbox2 :G4,127, sus: 4
@@ -44,12 +44,12 @@ live_loop :name do
     8.times{
       mbox2 :A3,127, sus: 1
       # mbox (ing
-      #       :G3 :F4 :D3
-      #       :G3 :F4 :D3
-      #       :F3 :A3
-      #       ).tick(:inner), 127,
-      # sus: (ing 0.5 0.5 8).look(:inner)
-      looper_cc oct: (ing 0.6 0.5 0.2 0.7).look
+      #,       :G3, :F4, :D3,
+      #,       :G3, :F4, :D3,
+      #,       :F3, :A3,
+      #,       ).tick(:inner), 127,
+      # sus: (ing 0.5, 0.5, 8,).look(:inner)
+      looper_cc oct: (ing 0.6, 0.5, 0.2, 0.7,).look
       sleep 0.25}
   }
   #mbox :G3,127, sus: 2

@@ -49,11 +49,11 @@ live_loop :name do
       sleep 0.25}
   }
   #mbox :G3,127, sus: 2
-  deep :F3,1, sus: 4
+  deep :C3,1, sus: 4
 
-  pads :F4, sus: 6.0, pad: 0
-  pads :F4, sus: 6.0, pad: 1
-  pads :F4, sus: 6.0, pad: 2
+  pads :C4, sus: 6.0, pad: 0
+  pads :C4, sus: 6.0, pad: 1
+  pads :C4, sus: 6.0, pad: 2
 
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16

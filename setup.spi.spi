@@ -10,10 +10,12 @@ live_loop :name do
   puts :A
   tick
   looper :C3
+  sleep 0.125
+  looper :A2
   #  mbox :C3, sus: 16
 #  mbox :E4, sus: 16
 #  mbox :G3, sus: 16
-  sleep 2
+  sleep 2-0.125
 end
 
 
@@ -22,7 +24,7 @@ end
 #  mbox_on :G3, sus: 16
 mbox_x :G3
 
-looper_cc motion: 1.00, fm: 0.00, drive: 0.40, mode: 1
+looper_cc motion: 0.53, fm: 0.00, drive: 0.40, mode: 1
 
 mbox_cc  motion: 0.30, sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.50, sat: 0.00, drive: 0.50

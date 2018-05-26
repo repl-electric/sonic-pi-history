@@ -28,13 +28,13 @@ live_loop :name do
   sleep 0.125
   mbox2 :G4,127, sus: 4
 
-  looper :C3,126, sus: 8
+ # looper :C3,126, sus: 8
   #sopsea :C4, 50, sus: 8
   sleep 0.125
   #sopsea :E4, 50, sus: 8
   mbox :C4,127, sus: 2
 
-  looper :E3,126, sus: 8
+#  looper :E3,126, sus: 8
 
   at{
     8.times{

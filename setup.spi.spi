@@ -44,7 +44,7 @@ end
 #  mbox_on :G3, sus: 16
 #mbox_x :G3
 
-looper_cc motion: 1.00, fm: 0.00, drive: 0.00, mode: 1, oct: 1.0
+looper_cc motion: 1.00, fm: 0.00, drive: 0.00, mode: 1, oct: 0.5
 
 mbox_cc  motion: 0.60,  sat: 0.50, drive: 0.50
 mbox2_cc  motion: 0.60, sat: 0.00, drive: 0.50

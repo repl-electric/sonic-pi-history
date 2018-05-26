@@ -25,7 +25,7 @@ live_loop :name do
   sleep 0.125
   #looper :F3,126, sus: 8
   sleep 0.125
-  #looper :E3,126, sus: 8
+  looper :E3,126, sus: 8
 
 
 

@@ -7,7 +7,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #stop
 
 live_loop :name do
-
+  puts :A
   tick
   looper :A3
   #  mbox :C3, sus: 16

@@ -23,7 +23,7 @@ live_loop :name do
 
   looper :A3,127, sus: 8
   sleep 0.125
-  #looper :E3,126, sus: 8
+  looper :G3,126, sus: 8
   sleep 0.125
   looper :E3,126, sus: 8
 

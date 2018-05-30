@@ -1,5 +1,25 @@
 cam4
 
+
+no{
+  qbitsea_cc oct: 0.50
+  qbitsea_cc drive: 0.45
+  qbitsea_cc charge: 0.50
+  qbitsea_cc fm: 0.23
+  qbitsea_cc wav: 0.01
+  qbitsea_cc wav_amp: 0.30
+  qbitsea_cc atk: 0.83
+  qbitsea_cc mod: 0.81
+  qbitsea_cc motion: 0.24
+  qbitsea_cc formant: 0.36
+  qbitsea_cc mul: 0.00
+  qbitsea_cc bass: 0.27
+}
+
+alivecol -2.0
+
+
+
 stop
 eq lo: 0.20
 eq hi: 0.00

@@ -1,5 +1,8 @@
 ##cam3
 
+unity "/scene/0", 1.0
+
+
 live_loop :name  do
   tick
   exception :A3

@@ -4,6 +4,7 @@ live_loop :name  do
   tick
   exception :A3
   #sleep 1
+  callstack :Fs4
   sleep 1
 end
 

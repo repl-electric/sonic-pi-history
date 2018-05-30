@@ -1,8 +1,8 @@
-cam4
+cam0
 
 
 no{
-  qbitsea_cc oct: 0.50
+  qbitsea_cc oct: 1.00
   qbitsea_cc drive: 0.45
   qbitsea_cc charge: 0.50
   qbitsea_cc fm: 0.23
@@ -17,6 +17,9 @@ no{
 }
 
 alivecol -6.0
+
+
+
 
 
 

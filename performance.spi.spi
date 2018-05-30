@@ -5,6 +5,7 @@ live_loop :name  do
   exception :A3
   sleep 1
   callstack :Fs4
+  operator :F4
   sleep 1
 end
 

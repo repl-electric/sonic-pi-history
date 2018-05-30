@@ -1,6 +1,13 @@
 cam4
 
-exception :A3
+live_loop :name  do
+  tick
+  exception :A3
+  sleep 1
+  sleep 1
+end
+
+
 
 electric 50
 

@@ -18,6 +18,4 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 
 
-world time: 1.0
-#init!
-#split_cube x: 0.0, y: 0.0, z: 0.0, cubes: 0.0
+create_cube 1.5

@@ -22,7 +22,4 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 
 
-
-#init!
-world time: 1.0
-#cam :cube
+create_cube

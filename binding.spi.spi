@@ -1,1 +1,1 @@
-midi_cc 114, 100,  channel: 4, port: :iac_bus_1
+load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb";load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb";use_bpm 127

@@ -24,7 +24,6 @@ live_loop :sea, sync: :unsyncable do; tick #2*32
 
   mbox2 :A4, 30, sus: 1
 
-
   kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*0.5
   with_transpose -12*0{
     if spread(7,11).look

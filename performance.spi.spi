@@ -1,13 +1,13 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127
 #init! && deepbase_init
 #cam :cube
-create_cube
+#create_cube
 star size: 0.25, life: 2.0
 roots throttle: 0.0
 cam :main
 world time: 1.0
 defaultcolor
-
+create_aura
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     #kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*1.0

@@ -12,7 +12,7 @@ live_loop :name, sync: :unsyncable  do
        22 _ 21 _ 22 22 _
        22 _ 21 _ 22 22 _
     ).look
-  s=_
+  #s=_
   mt s, 30+rand, 52
 #  end
   s = (ing

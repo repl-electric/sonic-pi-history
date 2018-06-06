@@ -2,7 +2,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #init! && deepbase_init
 #cam :cube
 #create_cube
-star size: 0.25, life: 2.0
+star size: 0.25, life: 1.0
 roots throttle: 0.0
 cam :main
 world time: 1.0

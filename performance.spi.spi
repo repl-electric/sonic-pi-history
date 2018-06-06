@@ -147,9 +147,9 @@ live_loop :pace, sync: :unsyncable do
 
   sleep 0.25
 end
-cam explode
+
 vortex throttle: 0.0
-explode_world
+explode_cube
 
 roots throttle: 1.0, target: :bird, freq: 0.0 #sorry
 eq lo: 0.85

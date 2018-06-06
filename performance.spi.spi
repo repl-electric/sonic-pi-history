@@ -1,7 +1,7 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127
 init! && deepbase_init
 cam :cube
-
+create_cube
 
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1

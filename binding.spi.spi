@@ -1,1 +1,1 @@
-midi_cc 105, 100,  channel: 10, port: :iac_bus_1
+midi_cc 0, 100,  channel: 1, port: :iac_bus_1

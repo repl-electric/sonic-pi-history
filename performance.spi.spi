@@ -69,7 +69,7 @@ live_loop :wind, sync: :unsyncable do
   qbitsea :d3, 25, sus: 1/8.0     if spread(7,11).look
   qbitsea :c3, 25, sus: 1/2.0     if spread(3,8).look
   qbitsea :b3, 25, sus: 1         if spread(1,8).look
-  spread(7,11).look ? burst(0.02) : burst(0.0)
+  #spread(7,11).look ? burst(0.02) : burst(0.0)
 
   sleep 1/8.0
 end

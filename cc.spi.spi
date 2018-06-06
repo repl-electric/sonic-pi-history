@@ -6,22 +6,16 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #lfo cutoff: 0.40
 
 
-#live_loop :swing, sync: :unsyncable do
- # with_swing -0.02 do
-    #smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
- # end
- #   sleep 0.125
-#end
+live_loop :swing, sync: :unsyncable do
+  with_swing -0.02 do
+    smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
+  end
+    sleep 0.125
+end
 
-#live_loop :swinggo, sync: :unsyncable {
-#  tick
-#  looper_cc oct: (ing 0.6,0.35, 0.6, 0.7).look
-#  sleep (ing 0.125 0.125 0.25 0.5
-#             0.25  0.125 0.125 0.25 0.25).look
-#}
 
 live_loop :name, sync: :unsyncable  do
-#stop
+  #stop
   tick
 #  with_swing -0.0125 do
     # mt (ing

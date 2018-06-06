@@ -5,6 +5,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #star size: 0.0, life: 8.0
 cam :main
 world time: 1.0
+defaultcolor
 
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1

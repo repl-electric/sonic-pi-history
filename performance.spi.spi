@@ -157,7 +157,7 @@ eq hi: 0.85
 sea ripple: 10.0
 
 #looper_cc motion: 0.25
-rocks orbit: 10.0
+rocks orbit: 20.0
 live_loop(:unsyncable) do; sleep 1.0 end
 cam :bird
 world time: 0.9

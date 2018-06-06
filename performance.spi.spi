@@ -10,7 +10,7 @@ defaultcolor
 create_aura
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
-    #kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*1.0
+    kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*1.0
     #kickviz
     kal (ing :F3 :A3 :A3 :A3 :A3 :C3).look, 10, sus: 2
   else
@@ -117,12 +117,12 @@ live_loop :light, sync: :unsyncable do
     #operator c[3],100*v, sus: 9
   }
 
-  pads note, 1, sus: 8, drive: 0.0, pad: 1
+  pads note, 1, sus: 8, drive: 0.0, pad: 3
   #create_tree
   #create_sea
   #create_island
   #create_light
-  #deep note, 1, sus: 12, drive: 0.0
+  deep note, 1, sus: 12, drive: 0.0
   sleep 16/2.0
 end
 
@@ -147,6 +147,11 @@ live_loop :pace, sync: :unsyncable do
 
   sleep 0.25
 end
+
+
+roots throttle: 1.0, target: bird #sorry
+eq lo: 0.85
+eq hi: 0.85
 
 
 #looper_cc motion: 0.25

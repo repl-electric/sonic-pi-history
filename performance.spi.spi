@@ -112,10 +112,10 @@ live_loop :light, sync: :unsyncable do
   }
 
   pads note, 1, sus: 8, drive: 0.0, pad: 1
-  create_tree
-  create_sea
-  create_island
-  create_light
+  #create_tree
+  #create_sea
+  #create_island
+  #create_light
   #deep note, 1, sus: 12, drive: 0.0
   sleep 16/2.0
 end
@@ -142,6 +142,7 @@ live_loop :pace, sync: :unsyncable do
   sleep 0.25
 end
 
-looper_cc motion: 0.25
+
+#looper_cc motion: 0.25
 
 live_loop(:unsyncable) do; sleep 1.0 end

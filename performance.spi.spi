@@ -116,6 +116,7 @@ live_loop :light, sync: :unsyncable do
   sleep 16/2.0
 end
 
+deepbase_init
 #looper_on :C2
 
 live_loop :pace, sync: :unsyncable do

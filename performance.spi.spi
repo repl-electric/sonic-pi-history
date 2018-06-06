@@ -4,7 +4,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #create_cube
 star size: -0.125, life: 0.0
 roots throttle: 0.0
-cam :main
+#cam :main
 world time: 1.0
 defaultcolor
 create_aura

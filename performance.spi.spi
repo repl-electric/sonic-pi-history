@@ -22,8 +22,8 @@ live_loop :sea, sync: :unsyncable do; tick #2*32
 
   sleep 1
 
-  mbox2 :A4, 30, sus: 1
-create_bird
+  mbox :A4, 30, sus: 1
+  create_bird
   #rocksinit
   vortex throttle: 1.0, force: 0.0, pos: 0.0
 

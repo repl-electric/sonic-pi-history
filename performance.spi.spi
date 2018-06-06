@@ -2,7 +2,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #init! && deepbase_init
 #cam :cube
 #create_cube
-star size: 0.0, life: 8.0
+star size: 0.0, life: 3.0
 
 
 live_loop :sea, sync: :unsyncable do; tick #2*32

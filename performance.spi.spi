@@ -9,9 +9,9 @@ live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     #kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*1.0
     #kickviz
-    #kal (ing :F3 :A3 :A3 :A3 :A3 :C3).look, 10, sus: 2
+    kal (ing :F3 :A3 :A3 :A3 :A3 :C3).look, 10, sus: 2
   else
-    kalshot :d2, 10, sus: 3
+    #kalshot :d2, 10, sus: 3
   end
 
   #looper (ing :c3 :g2).look, 120, sus: 2

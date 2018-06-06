@@ -118,7 +118,7 @@ end
 
 #deepbase_init
 looper_on :E3
-roots throttle: 0.0, freq: 100.0, drag: 1.0
+roots throttle: 0.4, freq: 100.0, drag: 1.0
 
 live_loop :pace, sync: :unsyncable do
   tick

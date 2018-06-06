@@ -5,7 +5,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 star size: -0.125, life: 0.0
 roots throttle: 0.0
 #cam :main
-world time: 1.0
+#world time: 1.0
 defaultcolor
 create_aura
 live_loop :sea, sync: :unsyncable do; tick #2*32

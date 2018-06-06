@@ -21,7 +21,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #}
 
 live_loop :name, sync: :unsyncable  do
-stop
+#stop
   tick
 #  with_swing -0.0125 do
     # mt (ing

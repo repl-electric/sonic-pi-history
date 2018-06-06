@@ -3,7 +3,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #cam :cube
 #create_cube
 star size: 0.0, life: 8.0
-
+cam :main
 
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
@@ -111,7 +111,11 @@ live_loop :light, sync: :unsyncable do
     #operator c[3],100*v, sus: 9
   }
 
-  #pads note, 1, sus: 8, drive: 0.0, pad: 1
+  pads note, 1, sus: 8, drive: 0.0, pad: 1
+  create_tree
+  create_sea
+  create_island
+  create_light
   #deep note, 1, sus: 12, drive: 0.0
   sleep 16/2.0
 end
@@ -138,6 +142,6 @@ live_loop :pace, sync: :unsyncable do
   sleep 0.25
 end
 
-looper_cc motion: 0.39
+looper_cc motion: 0.25
 
 live_loop(:unsyncable) do; sleep 1.0 end

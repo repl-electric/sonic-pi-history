@@ -118,6 +118,7 @@ end
 
 #deepbase_init
 looper_on :C3
+roots throttle: 1.0
 
 live_loop :pace, sync: :unsyncable do
   tick

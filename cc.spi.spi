@@ -1,17 +1,8 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-
 #lfo on: false
 #midi_cc 20, 0, channel: 1, port: :iac_bus_1
 #lfo cutoff: 0.40
-
-live_loop :swing, sync: :unsyncable do
-stop
-  with_swing -0.02 do
-    smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
-  end
-    sleep 0.125
-end
 
 
 live_loop :name, sync: :unsyncable  do
@@ -69,7 +60,7 @@ live_loop :name, sync: :unsyncable  do
 
   mt_cc morph: 0
 
-  looper_cc oct: (ing 0.6,  0.35, 0.6,  0.7).look
+  #looper_cc oct: (ing 0.6,  0.35, 0.6,  0.7).look
 
   if (ing 0.6,0.35, 0.6, 0.7).look == 0.6
     if spread(1,4).tick(:in)

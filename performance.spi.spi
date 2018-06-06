@@ -117,12 +117,12 @@ live_loop :light, sync: :unsyncable do
     #operator c[3],100*v, sus: 9
   }
 
-  pads note, 1, sus: 8, drive: 0.0, pad: 3
+  pads note, 1, sus: 8, drive: 0.17, pad: 3
   #create_tree
   #create_sea
   #create_island
   #create_light
-  deep note, 1, sus: 12, drive: 0.0
+  deep note, 1, sus: 12, drive: 0.01
   sleep 16/2.0
 end
 

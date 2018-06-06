@@ -151,7 +151,7 @@ end
 roots throttle: 1.0, target: :bird, freq: 0.0 #sorry
 eq lo: 0.85
 eq hi: 0.85
-sea wave: 2.0
+sea ripple: 2.0
 
 #looper_cc motion: 0.25
 

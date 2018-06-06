@@ -23,7 +23,7 @@ live_loop :sea, sync: :unsyncable do; tick #2*32
   sleep 1
 
   mbox2 :A4, 30, sus: 1
-
+  rocksinit
   rocks throttle: 1.0
 
   kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*0.5

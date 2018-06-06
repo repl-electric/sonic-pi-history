@@ -148,7 +148,7 @@ live_loop :pace, sync: :unsyncable do
   sleep 0.25
 end
 
-roots throttle: 1.0, target: :bird #sorry
+roots throttle: 1.0, target: :bird, freq: 0.0 #sorry
 eq lo: 0.85
 eq hi: 0.85
 

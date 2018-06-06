@@ -1,5 +1,1 @@
-# load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb";load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb";use_bpm 127
-
-# deep_cc sat: 0.2
-
 midi_cc 52, channel: 7, port: iac_bus_2

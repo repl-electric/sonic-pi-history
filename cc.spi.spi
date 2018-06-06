@@ -5,8 +5,8 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #midi_cc 20, 0, channel: 1, port: :iac_bus_1
 #lfo cutoff: 0.40
 
-
 live_loop :swing, sync: :unsyncable do
+stop
   with_swing -0.02 do
     smp Dust[/hat/,1..4].shuffle.look, slice: (ing 1 1 1 2 3 4).tick(:parts), slices: 4, pan: (ing 0.25 0.25 -0.25).look  if (bools 1, 0, 0, 0, 1, 0, 1, 0).tick
   end

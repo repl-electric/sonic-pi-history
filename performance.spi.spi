@@ -6,6 +6,9 @@ world time: 1.0
 #unity "/",-20
 #unity "/y",0.5
 
+
+unity "/cubecam/zoomout", 1.0
+
 cam :cube
 stop
 star size: -0.125, life: 0.0

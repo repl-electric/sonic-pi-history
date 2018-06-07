@@ -4,6 +4,8 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #create_cube
 world time: 1.0
 unity "/",-20
+unity "/y",0.5
+
 cam :cube
 stop
 star size: -0.125, life: 0.0

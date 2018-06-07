@@ -1,8 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-mt 22, 127, 127
-
 live_loop :name, sync: :unsyncable  do
   tick
   s = (ing
@@ -10,7 +8,7 @@ live_loop :name, sync: :unsyncable  do
        22 _ 21 _ 22 22 _
        22 _ 21 _ 22 22 _
     ).look
-  s=_
+  #s=_
   mt s, 30+rand, 52
 
 

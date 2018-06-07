@@ -3,14 +3,14 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 
 
-mt 22, 127, 100
+#mt 22, 12, 100
 
 live_loop :name, sync: :unsyncable  do
   tick
   s = (ing
-       _ _ 21 _ 21 _ _
-       _ _ 21 _ _ _ _
-       _ _ 21 _ _ _ _
+       [22] _ 21 _ 21 22 _
+       22 _ 21 _ 22 22 _
+       22 _ 21 _ 22 22 _
     ).look
   #s=_
   mt s, 30+rand, 52

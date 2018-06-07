@@ -8,9 +8,9 @@ mt 22, 127, 100
 live_loop :name, sync: :unsyncable  do
   tick
   s = (ing
-       [22] _ 21 _ 21 22 _
-       22 _ 21 _ 22 22 _
-       22 _ 21 _ 22 22 _
+       _ _ 21 _ 21 22 _
+       _ _ 21 _ 22 22 _
+       _ _ 21 _ 22 22 _
     ).look
   #s=_
 #  mt s, 30+rand, 52

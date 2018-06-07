@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-mt 18, 100, 100
+mt 22, 100, 100
 
 live_loop :name, sync: :unsyncable  do
   tick
@@ -11,6 +11,10 @@ live_loop :name, sync: :unsyncable  do
     ).look
   s=_
   mt s, 30+rand, 52
+
+
+
+
 
   s = (ing
       _ _ _ _  _ _ _ _
@@ -38,15 +42,8 @@ live_loop :name, sync: :unsyncable  do
       _ _ _ _  _ _ _ _
 
     ).look
-  #s=_
+  s=_
   mt s,100,120
-
-  # mt (ing
-  #     _ _ 18 _
-  #     2 _ _ 18
-  #     _ _ _ _
-  #     _ _ [18] 2
-  #     ).look,100,120
 
   mt_cc morph: 0
 

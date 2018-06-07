@@ -2,11 +2,15 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #init! && deepbase_init
 #cam :cube
 #create_cube
-world time: 0.01
+world time: 1.00
 #unity "/",-20
 #unity "/y",0.5
 
-unity "/cubecam/zoomout", 1.0
+#unity "/cubecam/zoomout", 1.0
+
+
+
+
 
 cam :cube
 stop

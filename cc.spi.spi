@@ -42,7 +42,7 @@ live_loop :name, sync: :unsyncable  do
 
     ).look
   s=_
-  mt s,100,120
+ # mt s,100,120
 
   mt_cc morph: 0
 

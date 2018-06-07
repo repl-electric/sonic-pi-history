@@ -1,6 +1,6 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-mt 18
+mt 18, 100, 100
 
 live_loop :name, sync: :unsyncable  do
   tick

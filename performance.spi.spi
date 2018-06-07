@@ -5,20 +5,15 @@ init! && deepbase_init
 #world time: 1.00
 #unity "/",-20
 #unity "/y",0.5
-cam :cube
-
-
-
-
-cam :cube
-stop
-star size: -0.125, life: 0.0
-roots throttle: 0.0
+#cam :cube
+#star size: -0.125, life: 0.0
+#roots throttle: 0.0
 
 #cam :main
 #world time: 1.0
-defaultcolor
-create_aura
+#defaultcolor
+#create_aura
+
 live_loop :sea, sync: :unsyncable do; tick #2*32
   if (ing 1 1 1 0 1 1 0 1).look == 1
     kick_machine K1, accent: (ing 1.2 1.0 1.1 1.0).look*1.0

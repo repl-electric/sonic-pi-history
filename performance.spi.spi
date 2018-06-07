@@ -6,7 +6,7 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #unity "/",-20
 #unity "/y",0.5
 
-#unity "/cubecam/zoomout", 1.0
+unity "/cubecam/zoomout", 1.0
 cam :main
 
 

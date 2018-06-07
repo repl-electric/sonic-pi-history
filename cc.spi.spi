@@ -3,7 +3,7 @@ load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 
 
 
-mt Z, 120, 100
+mt 21, 120, 100
 
 live_loop :name, sync: :unsyncable  do
   tick

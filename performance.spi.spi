@@ -3,8 +3,8 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoel
 #cam :cube
 #create_cube
 world time: 1.0
-unity "/",-20
-unity "/y",0.5
+#unity "/",-20
+#unity "/y",0.5
 
 cam :cube
 stop

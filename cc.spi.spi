@@ -1,7 +1,7 @@
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/init.rb"
 load "/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/piezoelectric_resonator/support/midi.rb"
 
-mt 22, 100, 127
+mt 22, 127, 127
 
 live_loop :name, sync: :unsyncable  do
   tick

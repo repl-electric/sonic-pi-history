@@ -5,7 +5,7 @@ init! && deepbase_init
 #world time: 1.00
 #unity "/",-20
 #unity "/y",0.5
-cam :main
+cam :cube
 
 
 

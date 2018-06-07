@@ -7,7 +7,7 @@ world time: 1.0
 #unity "/y",0.5
 
 
-unity "/cubecam/zoomout", 1.0
+unity "/cubecam/zoomout", 0.0
 
 cam :cube
 stop

@@ -52,5 +52,5 @@ live_loop :name, sync: :unsyncable  do
 
   sleep 0.25
 end
-
+create_light
 #filter freq: 0.00

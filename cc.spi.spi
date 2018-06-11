@@ -43,7 +43,7 @@ live_loop :name, sync: :unsyncable  do
   mt_cc morph: 0
   looper_cc oct: (ing 0.6,   0.35,  0.6,   0.7,).look
   rocks rot: (ing 10000.0, -10000.0,).look
-  linecolor factor: rand*2 if spread(1,4).look
+  linecolor factor: rand*4 if spread(1,4).look
 
   if (ing 0.6, 0.35,  0.6,  0.7,).look == 0.6
     if spread(1,4).tick(:in)

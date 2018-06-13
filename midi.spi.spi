@@ -1,1 +1,1 @@
-midi_reset
+midi_cc 1, 10, port: :midi_fighter, channel: 1

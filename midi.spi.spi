@@ -1,3 +1,4 @@
 midi_cc 0, 0.85*127, port: :midi_fighter_twister, channel: 0 #mastvol
 midi_cc 7, 0.0*127, port: :midi_fighter_twister, channel: 0 #lo
-midi_cc 8, 0.0*127, port: :midi_fighter_twister, channel: 0 #lo
+midi_cc 8, 0.0*127, port: :midi_fighter_twister, channel: 0 #mi
+midi_cc 9, 0.0*127, port: :midi_fighter_twister, channel: 0 #mi

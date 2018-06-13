@@ -1,1 +1,1 @@
-midi_cc 0, 127, port: :midi_fighter_twister, channel: 0
+midi_cc 0, 0.85*127, port: :midi_fighter_twister, channel: 0

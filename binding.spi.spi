@@ -1,7 +1,5 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-
-
 live_loop :name do
   tick
   ze :A3

@@ -2,8 +2,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #qbitsea_x
 #puts flow_oct(12)
-qbitsea_on :A3
-#qbitsea_cc oct: 12
+#qbitsea_on :A3
+qbitsea_cc oct: 12
 #piano :A3, sus: 12
 
 #operator :A3, sus: 12

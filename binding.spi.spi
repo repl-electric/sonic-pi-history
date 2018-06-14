@@ -2,3 +2,5 @@ load "#{ROOT}/piezoelectric_resonator/support/midi.rb";load "#{ROOT}/piezoelectr
 
 #puts ROOT
 puts Dir.pwd
+
+load_support('/piezoelectric_resonator')

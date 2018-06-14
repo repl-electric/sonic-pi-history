@@ -1,7 +1,5 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 
-
-
-
+ze :A3
 ze_cc solo: 1.0

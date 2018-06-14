@@ -1,5 +1,4 @@
 load "#{ROOT}/piezoelectric_resonator/support/midi.rb";load "#{ROOT}/piezoelectric_resonator/support/init.rb";use_bpm 127
 
 puts ROOT
-
-puts __FILE__
+puts puts __

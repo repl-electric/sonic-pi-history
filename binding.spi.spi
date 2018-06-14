@@ -1,10 +1,13 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
+
+qbitsea :A3
+#qbitsea_cc oct: 0.5
+
+
 #piano :A3, sus: 12
 
-operator :A3, sus: 12
-operator_cc solo: 127
-
-
+#operator :A3, sus: 12
+#operator_cc solo: 127
 
 #ze_cc solo: 1

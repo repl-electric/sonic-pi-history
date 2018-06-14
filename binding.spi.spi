@@ -1,6 +1,1 @@
-load_support('piezoelectric_resonator')
-#puts ROOT
-
-
-
-use_bpm 127
+load_support('piezoelectric_resonator'); use_bpm 127

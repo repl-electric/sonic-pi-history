@@ -1,11 +1,6 @@
-use_bpm 127
-
+load_support('piezoelectric_resonator')
 #puts ROOT
-puts Dir.pwd
 
-def load_support(dir)
-  load "#{ROOT}/#{dir}/support/midi.rb"
-  load "#{ROOT}/#{dir}/support/init.rb";
-end
 
-load_support('/piezoelectric_resonator')
+
+use_bpm 127

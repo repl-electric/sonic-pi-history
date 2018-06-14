@@ -2,5 +2,5 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 piano :A3, sus: 12
 
-operator_cc solo: 127
+operator_cc solo: 0
 #ze_cc solo: 1

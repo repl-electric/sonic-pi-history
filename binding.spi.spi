@@ -8,4 +8,4 @@ live_loop :name do
   sleep 1
 end
 
-ze_cc solo: true
+ze_cc solo: 1

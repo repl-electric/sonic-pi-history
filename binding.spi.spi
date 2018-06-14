@@ -1,6 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 
+puts flow_oct 21
+
 #qbitsea_on :A3
 qbitsea_cc oct: 0.2
 

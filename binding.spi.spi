@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-deep_cc dirt: 1.0, wet: 0.0, tone: 1.0, filter: 0.0
+deep_cc dirt: 1.0, wet: 0.0, tone: 1.0, filter: 1.0
 
 live_loop :go do
   tick

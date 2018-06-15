@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 
-deep_cc dirt: 0
+deep_cc dirt: 1.0
 
 
 #qbitsea_x

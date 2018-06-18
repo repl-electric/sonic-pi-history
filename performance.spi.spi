@@ -8,7 +8,7 @@ world time: 1.0
 live_loop :name do
   tick
   sea dir: (ing 260.0).look
-  sleep 1/8.0
+  sleep 1/4.0
 #  sleep 1
 end
 

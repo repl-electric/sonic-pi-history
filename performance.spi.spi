@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #stop
 #glitch_cc 7
 
-sea wave: 2.5
+sea wave: 5.5
 world time: 1.0
 live_loop :name do
   tick

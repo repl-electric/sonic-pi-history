@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
-tree circle: 10.0
+tree circle: 20.0
 
 
 world time: 1.0

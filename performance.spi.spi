@@ -3,6 +3,11 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #stop
 #glitch_cc 7
 
+world time: 1.0
+
+stop
+
+
 live_loop :go, sync: :unsyncable do
   tick
   if spread(1,8).look

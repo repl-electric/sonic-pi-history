@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
 world time: 1.0
-sea wave: 1.0
+sea wave: 2.0
 sea ripple: 0.0
 sea dir: 0
 

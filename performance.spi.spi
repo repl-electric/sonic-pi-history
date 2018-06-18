@@ -9,7 +9,7 @@ live_loop :name do
   tick
   sea dir: (ing 360.0 0).look, delay: 1
   sea ripple: (ing 0.5).look, delay: 1
-  sea wave: 4.5
+  sea wave: 8.5
 
 
   sleep 2

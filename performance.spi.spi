@@ -4,10 +4,10 @@ defaultcolor
 world time: 1
 #roots throttle: 0.0, drag: 0.9, freq: 0.0000
 #tree circle: 0.0
-roots chase: 0.2
-rocks orbit: 20
+#roots chase: 0.2
+rocks orbit: 0
 
-cube aura: 1.4
+cube aura: 2.4
 stop
 
 

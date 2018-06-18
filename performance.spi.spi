@@ -8,6 +8,8 @@ world time: 1.0
 live_loop :name do
   tick
   sea dir: (ing 360.0 0).look
+  sea ripple: (ing 0.0 4).look
+
   sleep 4
 #  sleep 1
 end

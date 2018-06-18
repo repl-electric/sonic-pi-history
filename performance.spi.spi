@@ -7,6 +7,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #cam :main
 
 live_loop :name do
+  stop
   tick
   world time: 1.0
   sea dir: (ing 360.0 0).look, delay: 1

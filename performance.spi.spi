@@ -7,7 +7,7 @@ sea wave: 2.5
 world time: 1.0
 live_loop :name do
   tick
-  sea dir: (ing 0.1).look
+  sea dir: (ing 0.2).look
   sleep 1
   sleep 1
 end

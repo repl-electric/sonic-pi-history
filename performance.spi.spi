@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
-tree throttle: 0.1
+tree throttle: 0.2
 tree circle: 0.0
 stop
 

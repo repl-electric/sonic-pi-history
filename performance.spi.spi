@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #stop
 #glitch_cc 7
 
-sea wave: 4.3
+sea wave: 0.3
 world time: 1.0
 
 stop

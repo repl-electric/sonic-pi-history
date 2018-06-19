@@ -148,7 +148,7 @@ live_loop :light, sync: :unsyncable do; tick
     v=0.8
     callstack score[0], 114*v, sus: 8
     sleep 1.0
-    #operator score[1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
+    operator score[1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
     sleep 2
     sleep 1.0
   }
@@ -199,7 +199,7 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-overclock_on :E3
+#overclock_on :E3
 
 #deep_cc dirt: 1.0, wet: 1.0, tone: 1.0, filter: 1.0
 #heat_cc solo: 1.0

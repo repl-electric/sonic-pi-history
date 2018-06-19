@@ -39,7 +39,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   # sleep (ing 1/2.0 1 1 1.0
   #            1/2.0 1/2.0 1 1   1 1/2.0).look * 2
 #  sleep 1/2.0
-  mbox (nit :F2,2, :A3 2 :a2 1 :c3 1).look,  127, sus: 4.0  if spread(1,2).rot(1).look
+#  mbox (nit :F2,2, :A3 2 :a2 1 :c3 1).look,  127, sus: 4.0  if spread(1,2).rot(1).look
 #  sleep 1/2.0
   #mbox (nit :G2,7, :A2 3 :e2 1 :C3 1).look, 120, sus: 1.0
   sleep 1

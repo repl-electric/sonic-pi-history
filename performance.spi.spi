@@ -12,7 +12,7 @@ world time: 1
 #roots chase: 0.02, target: :cube, amp: 0.0, drag: 0.3
 
 #roots chase: 0
-roots swirl: 1.0
+roots swirl: 1.0, drag: 6.0
 #cam :top
 
 #explode_world

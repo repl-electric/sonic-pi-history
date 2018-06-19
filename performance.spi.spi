@@ -194,9 +194,12 @@ live_loop :light, sync: :unsyncable do; tick
   #   sleep 0.125/2.0
 
   # }
+
   deep root(score), sleeps*4, sus: sleeps*2, drive: 0.0, sat: 0.0
   sleep sleeps
 end
+
+overclock_on :A3
 
 #deep_cc dirt: 1.0, wet: 1.0, tone: 1.0, filter: 1.0
 #heat_cc solo: 1.0

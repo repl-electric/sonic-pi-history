@@ -11,7 +11,7 @@ world time: 1
 #cube circle: 0.0
 #roots chase: 0.02, target: :cube, amp: 0.0, drag: 0.3
 
-roots chase: 0
+#roots chase: 0
 roots swirl: 0.4
 cam :top
 

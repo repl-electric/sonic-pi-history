@@ -1,26 +1,5 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-live_loop :name do
-  stop
-  tick
-  world time: 1.0
-  sea dir: (ing 360.0 0).look, delay: 1
-  sea ripple: (ing 0.5).look, delay: 1
-  sea wave: 0.5, delay: 1
-
-
-  sleep 2
-  sea wave: 2.5
-  sea ripple: 0
-  sleep 2
-#  sleep 1
-end
-
-
-
-stop
-
-
 live_loop :go, sync: :unsyncable do
   tick
   if spread(1,8).look

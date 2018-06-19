@@ -14,7 +14,7 @@ world time: 1
 #roots chase: 0
 #endit
 roots swirl: 1.0, drag: 6.0
-vortex 0.0
+vortex throttle: 0.0
 #cam :top
 
 #explode_world

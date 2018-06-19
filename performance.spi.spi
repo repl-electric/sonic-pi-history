@@ -23,7 +23,7 @@ overclock_cc motion: 0.25, oct: 0
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   mbox2 :F4, sus: 1/2.0 if spread(1,4).look
   sleep 1
-  #mbox2 :A3, sus: 4
+  mbox2 :A3, sus: 4
   glitch :A3
   # sleep (ing
   #        1/2.0 1 1 1.0

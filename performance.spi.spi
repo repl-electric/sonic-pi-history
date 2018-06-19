@@ -32,8 +32,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #mbox2 (ing :c3 :e3 :a3 :e3  :f3 :f3 :c3 :g2).look,(ing 122 110 120 112).look, sus: (ing 2, 2, 4, 2, 4).look
   #}
   sleep 1
-  #mbox2 (nit :e3   3 :e4   2 :f4     2 :G4   3  :a4    1  _ 1).look, 127,
-  #sus: (nit 1/2.0 3 1/2.0 2 1.0/3.0 2 1/2.0 3   1/2.0 1  _ 1).look
+  mbox2 (nit :e3   3 :e4   2 :f4     2 :G4   3  :a4    1  _ 1).look, 127,
+  sus: (nit 1/2.0 3 1/2.0 2 1.0/3.0 2 1/2.0 3   1/2.0 1  _ 1).look
   #glitch (nit :e3   3 :e4   2 :f4     2 :G4   3  :a4    1  _ 1).look, 100
 
   # sleep (ing 1/2.0 1 1 1.0

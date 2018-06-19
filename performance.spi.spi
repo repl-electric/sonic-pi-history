@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop :go, sync: :unsyncable do
   tick
   if spread(1,8).look
-    #glitch :c3,80
+    glitch :c3,80
   end
   if spread(7,11).look
     #mt S, [100,80,90,70,100].choose, [100,80,90,70,100].choose
@@ -132,10 +132,6 @@ live_loop :light, sync: :unsyncable do; tick
     # [Zz 2]
     # [[:G2 :B5 :D4 :F3] 8*2]  #   # 1 7 5 3  - shell
     # [Zz 2]
-
-
-
-
 
 
     # [[:C4 :E5 :G4] 8]

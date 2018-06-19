@@ -15,7 +15,7 @@ world time: 1
 #roots chase: 0
 #endit
 roots swirl: 0.2, drag: 6.0, amp: 0.0
-#roots alive: 0.0, drag: 0
+roots alive: 1.0, drag: 0
 vortex throttle: 0.0
 #cam :top
 

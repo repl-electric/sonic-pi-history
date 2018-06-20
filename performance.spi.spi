@@ -31,7 +31,7 @@ end
 
 #A B
 
-overclock_on :F3
+overclock_on :E3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1

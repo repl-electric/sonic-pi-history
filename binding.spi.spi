@@ -2,8 +2,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 live_loop :go do
   tick
-  mbox2 :A4, sus: 2
-  mbox2_cc delay: 1.0
+#  mbox :A4, sus: 2
+  mbox_cc delay: 1.0
   sleep 1
   sleep 1
 end

@@ -2,9 +2,11 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 live_loop :go do
   #  stop
-  glitch :c3
+ # glitch :c3
 
-  glitch_cc corode: (ine 0.2, 0.8, 128,).look
+  fx reverb: 0.2
+
+#  glitch_cc corode: (ine 0.2 0.8 128).look
   tick
 #  mbox2 :A4, sus: 2
 #  mbox2_cc delay: 0.30

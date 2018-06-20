@@ -74,7 +74,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     mbox :E4, 127, sus: 1.0/4.0
 
   }
-    glitch (ing :e3 :e3).look, 20
+
     sleep 1
 
 

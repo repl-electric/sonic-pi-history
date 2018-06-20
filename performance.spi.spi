@@ -19,7 +19,7 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-fx reverb: 1.0
+fx reverb: 0.0
 #solo :pad
 
 #overclock_off :G2

@@ -21,7 +21,7 @@ end
 
 fx reverb: 1.0
 
-
+overclock_x
 #solo :pad
 
 #overclock_off :G2
@@ -52,7 +52,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1
   with_bpm 127*1 do
     kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
-
 
     mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0 if spread(2,3).look
     sleep 1/2.0

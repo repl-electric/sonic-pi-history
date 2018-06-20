@@ -31,10 +31,6 @@ end
 #A B
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
-  #mbox2 (ing :G4 :G4 :F4 :E4 :D4 :C4).tick(:i), sus: 2.0# if spread(1,2).look
-  #with_swing -0.2 {
-  #  mbox :A4, (ing 15 25 35 35).look, sus: 1/2.0
-  #}
   kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
   mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0 #if spread(1,2).look

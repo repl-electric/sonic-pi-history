@@ -20,8 +20,8 @@ live_loop :go, sync: :unsyncable do
 end
 
 
-overclock_off :A2
-overclock_on :G2
+overclock_off :G2
+overclock_on :F2
 
 #glitch_cc 5
 #overclock_on :F3

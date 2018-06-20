@@ -20,8 +20,8 @@ live_loop :go, sync: :unsyncable do
 end
 
 
-overclock_off :E3
-overclock_on :D3
+overclock_off :D3
+overclock_on :C3
 
 #glitch_cc 5
 #overclock_on :F3
@@ -38,7 +38,7 @@ overclock_on :D3
 
 #overclock_on :E3
 
-solo :pad
+#solo :pad
 
 fx reverb: 1.00
 #mbox on: 0.0

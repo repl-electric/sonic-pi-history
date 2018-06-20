@@ -2,6 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 live_loop :go do
   #  stop
+  glitch :c3
   glitch_cc corode: 0.2
   tick
 #  mbox2 :A4, sus: 2

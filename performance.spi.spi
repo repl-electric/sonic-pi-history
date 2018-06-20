@@ -50,7 +50,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   }
 
   sleep 1/2.0
-    mbox :a3, 127, sus: 1.0/8.0
+    mbox :a3, 127, sus: 1.0/8.0 if spread(3,8).look
   sleep 1
 
   with_swing -0.1 {

@@ -22,9 +22,6 @@ end
 fx reverb: 1.0
 
 
-overclock_on :F3, to: :G4
-overclock_x
-
 #solo :pad
 
 #overclock_off :G2

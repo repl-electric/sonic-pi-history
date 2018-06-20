@@ -31,6 +31,8 @@ end
 #A B
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
+  ratio = 1
+  with_bpm 127 do
   kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
   mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0 #if spread(1,2).look
@@ -48,12 +50,12 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 #    mbox :G3, 127, sus: 1.0/8.0 if spread(3,8).look
   with_swing -0.1 {
     mbox :f2, 127, sus: 1.0/4.0
-
   }
 
   sleep 1
 
-  sleep 1
+    sleep 1
+  end
 end
 
 #keep

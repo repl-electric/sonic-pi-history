@@ -49,7 +49,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   sleep 1/2.0
 #    mbox :G3, 127, sus: 1.0/8.0 if spread(3,8).look
   with_swing -0.1 {
-    mbox :f2, 127, sus: 1.0/4.0
+    mbox :f2, 127- rand*10, sus: 1.0/4.0
   }
 
     sleep 1

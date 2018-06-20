@@ -18,6 +18,11 @@ live_loop :go, sync: :unsyncable do
   end
   sleep 1/2.0
 end
+
+
+overclock_off :E3
+overclock_on :D3
+
 #glitch_cc 5
 #overclock_on :F3
 #overclock_cc motion: 0.25, oct: 0

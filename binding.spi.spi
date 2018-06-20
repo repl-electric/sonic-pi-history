@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
   solo pad: 1.0
-
+stop
 live_loop :go do
   #  stop
  # glitch :c3

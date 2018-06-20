@@ -5,9 +5,9 @@ live_loop :go do
  # glitch :c3
 
   #  solo :pad
-  fx reverb: 0.1
+  fx reverb: 0.0
 
-#  glitch_cc corode: (ine 0.2, 0.8, 128,).look
+#  glitch_cc corode: (ine 0.2 0.8 128).look
   tick
 #  mbox2 :A4, sus: 2
 #  mbox2_cc delay: 0.30

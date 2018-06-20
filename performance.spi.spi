@@ -9,7 +9,7 @@ live_loop :go, sync: :unsyncable do
 
   end
   if spread(6,12).look
-    #glitch_cc (ing 0 2 3 5).look
+    glitch_cc mode: (ing 0 2 3 5).look
     #mt S, [100,80,90,70,100].choose, [100,80,90,70,100].choose
     #glitch (ing :f3 :g3).look, 90
   end

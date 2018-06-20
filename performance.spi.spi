@@ -55,12 +55,17 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if spread(2,3).look
       mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
+      sleep 1/2.0
+      mbox  :A3, 50, sus: 1.0
+      sleep 1/2.0
+
     else
       mbox2 :C4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
+      sleep 1/2.0
+      #mbox  :A3, 50, sus: 1.0
+      sleep 1/2.0
+
     end
-    sleep 1/2.0
-    mbox  :A3, 50, sus: 1.0
-    sleep 1/2.0
 
     glitch_cc corode: (ine 0.2 0.7 128).look
     glitch (ing :c3 :a3).look, 30 if spread(7,11).look

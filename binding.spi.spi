@@ -1,10 +1,13 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
+
+  solo pad: 1.0
+
 live_loop :go do
   #  stop
  # glitch :c3
 
-  solo pad: 1.0
+
 #  fx reverb: 0.0
 
 #  glitch_cc corode: (ine 0.2 0.8 128).look

@@ -31,6 +31,8 @@ end
 
 #A B
 
+overclock_on :A3
+
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1
   with_bpm 127*1 do

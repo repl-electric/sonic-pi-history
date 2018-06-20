@@ -33,6 +33,8 @@ end
 
 #overclock_on :E3
 
+solo :pad
+
 fx reverb: 1.00
 #mbox on: 0.0
 #mbox2 on: 0.0

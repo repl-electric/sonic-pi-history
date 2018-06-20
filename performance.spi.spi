@@ -50,7 +50,7 @@ fx reverb: 1.00
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1
-  with_bpm 127*2 do
+  with_bpm 127*4 do
     kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
     if spread(7,11).look

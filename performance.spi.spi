@@ -68,8 +68,9 @@ end
 #mbox2_cc sat: 1.00, motion: 0.60, drive: 0.00
 
 #mbox_cc motion: 0.30, drive: 1.00, sat: 1.00
-#mbox2_cc sat: 1.00, motion: 0.50, drive: 0.00
+#mbox2_cc sat: 1.00, motion: 0.50, drive: 0.65
 
+overclock_cc motion: 0.45, drive: 0.60
 
 
 #world time: 1.0

@@ -35,7 +35,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   #with_swing -0.2 {
   #  mbox :A4, (ing 15 25 35 35).look, sus: 1/2.0
   #}
-  kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+  kalshot :B3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
   mbox :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0 if spread(1,2).look
   sleep 1/2.0
@@ -69,6 +69,10 @@ end
 
 #mbox_cc motion: 0.70, drive: 0.00, sat: 0.00
 #mbox2_cc sat: 1.00, motion: 0.60, drive: 0.00
+
+#mbox_cc motion: 0.40, drive: 0.00, sat: 0.00
+#mbox2_cc sat: 1.00, motion: 0.40, drive: 0.00
+
 
 
 #world time: 1.0

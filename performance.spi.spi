@@ -37,7 +37,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   #}
   mbox :B4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
   sleep 1
-  glitch (ing :c3 :e3).look, 20
+  glitch (ing :c3 :a3).look, 20
 
   #mbox2 :A3, sus: 4
   #glitch :A3

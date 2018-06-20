@@ -9,4 +9,4 @@ live_loop :go do
   sleep 1
 end
 
-mbox_cc delay: 1.00
+mbox2_cc delay: 0.90

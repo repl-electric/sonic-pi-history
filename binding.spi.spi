@@ -4,7 +4,7 @@ live_loop :go do
 #  stop
   tick
   mbox :A4, sus: 2
-  mbox_cc delay: rand
+  mbox_cc delay: 1
   sleep 1
   sleep 1
 end

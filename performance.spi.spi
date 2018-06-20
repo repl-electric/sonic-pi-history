@@ -34,7 +34,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   #with_swing -0.2 {
   #  mbox :A4, (ing 15 25 35 35).look, sus: 1/2.0
   #}
-  mbox :C4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
+  mbox :G4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
 
   sleep 1
   #mbox2 :A3, sus: 4

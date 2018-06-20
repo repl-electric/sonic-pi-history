@@ -72,7 +72,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   sleep 1
 
   with_swing -0.1 {
-    mbox :b3, 127, sus: 1.0/4.0
+    mbox :a3, 127, sus: 1.0/4.0
 
   }
 

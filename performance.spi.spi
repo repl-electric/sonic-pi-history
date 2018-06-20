@@ -23,9 +23,9 @@ overclock_cc motion: 0.25, oct: 0
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   #mbox2 (ing :G4 :G4 :F4 :E4 :D4 :C4).tick(:i), sus: 2.0# if spread(1,2).look
   with_swing -0.2 {
-    mbox :G4, (ing 15 25 35 35).look, sus: 1/2.0
+    mbox :A4, (ing 15 25 35 35).look, sus: 1/2.0
   }
-  mbox :G3, (ing 50 60 70 110).look, sus: 1.0/2.0
+  mbox :A3, (ing 50 60 70 110).look, sus: 1.0/2.0
 
   sleep 1
   #mbox2 :A3, sus: 4

@@ -7,7 +7,7 @@ live_loop :go do
   tick
 #  mbox2 :A4, sus: 2
 #  mbox2_cc delay: 0.30
-  sleep 1
+#  sleep 1
   sleep 1
 end
 

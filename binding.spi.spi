@@ -4,8 +4,8 @@ live_loop :go do
   #  stop
  # glitch :c3
 
-  #  solo :pad
-  fx reverb: 0.0
+    solo :pad
+#  fx reverb: 0.0
 
 #  glitch_cc corode: (ine 0.2 0.8 128).look
   tick

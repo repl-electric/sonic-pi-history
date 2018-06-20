@@ -33,6 +33,9 @@ end
 
 #overclock_on :E3
 
+fx reverb: 0.4
+
+
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1
   with_bpm 127*1 do

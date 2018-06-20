@@ -33,7 +33,7 @@ end
 
 #overclock_on :E3
 
-fx reverb: 0.8
+fx reverb: 0.9
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

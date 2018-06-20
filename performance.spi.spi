@@ -28,7 +28,7 @@ fx reverb: 1.0
 #overclock_on :F2
 
 #glitch_cc 5
-overclock_on :A3
+#overclock_on :A3
 #overclock_cc motion: 0.25, oct: 0
 #overclock_on :G3
 
@@ -42,7 +42,7 @@ overclock_on :A3
 
 #overclock_on :E3
 
-solo :pad
+#solo :pad
 
 fx reverb: 1.00
 #mbox on: 0.0

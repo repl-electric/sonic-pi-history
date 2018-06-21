@@ -15,15 +15,15 @@ world time: 1.0
 #star size: 12, life: 5
 
 #explode_world
-create_tree -2
-create_aura -2
+#create_tree -2
+#create_aura -2
 #rocks throttle: 0.0
 #endit
 #end1
-vortex throttle: 0.0
+#vortex throttle: 0.0
 roots chase: 1.0
-rocks orbit: 100.0
-end1
+#rocks orbit: 100.0
+#end1
 stop
 
 live_loop :go, sync: :unsyncable do

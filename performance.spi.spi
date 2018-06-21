@@ -19,7 +19,7 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-fx reverb: 1.0
+fx reverb: 0.0
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   ratio = 1

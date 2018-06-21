@@ -12,8 +12,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_light
 #cam :main
 #roots_init
-cam :main
-
+#cam :main
 cube aura: 2.1
 
 #unity "/cubecam/zoomout", 0.0

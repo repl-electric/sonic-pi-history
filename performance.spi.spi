@@ -34,7 +34,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #   roots_chase radius: 0.01
 # end
 
-glitch_cc mode: 3
+glitch_cc mode: 4
 
 live_loop :go do
   tick

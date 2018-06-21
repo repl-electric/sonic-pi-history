@@ -5,10 +5,10 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #create_cube
 
-#roots chase: 0.02, force: 10, target: :cube
+roots chase: 0.02, force: 10, target: :spiral
 #burst 1.0
 
-roots throttle: 0.1, target: :none, drag: 0, freq: 0.3
+#roots throttle: 0.1, target: :none, drag: 0, freq: 0.3
 
 
 #ccreate_sea

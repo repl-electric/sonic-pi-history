@@ -48,7 +48,7 @@ glitch_cc mode: 10
 live_loop :go do
   tick
 
-  ze :A3
+  ze :A4
   glitch :C3, 80
 
   at{

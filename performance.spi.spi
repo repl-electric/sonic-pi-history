@@ -29,8 +29,7 @@ live_loop :go do
   at{
 
     sleep 0.5
-
-  roots chase: 0.1, target: :spiral, radius: 5.0
+  roots chase: 0.1, target: :spiral, radius: 10.0
   sleep 2
   roots chase: 0.1, radius: 0.01
 

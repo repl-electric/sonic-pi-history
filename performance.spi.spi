@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
 
 world time: 1.0
-roots chase: 0.05, target: :spiral
+roots chase: 0.05, target: :spiral, drag: 0.8
 stop
 
 live_loop :go, sync: :unsyncable do

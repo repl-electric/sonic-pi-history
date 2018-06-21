@@ -3,6 +3,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 fx reverb: 0.4
 
 #overclock_on :F3
+#overclock_cc amp: 0.85
+#overclock_cc motion: 0.25
 
 live_loop :go, sync: :unsyncable do
   tick
@@ -27,7 +29,7 @@ mbox_cc motion: 0.50
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
-    #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+    kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
     if spread(7,11).look
       mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0

@@ -29,7 +29,7 @@ world time: 1.0
 #end2
 #star size: 15
 #rocks orbit: 100.0
-#end1
+end1
 #stop
 
 live_loop :go, sync: :unsyncable do

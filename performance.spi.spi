@@ -11,10 +11,9 @@ def slow_init
   burst 1.0
 end
 
-overclock_cc motion: 0.25
+overclock_cc motion: 0.40
 
-
-cam :cube
+cam :exit
 
 
 #create_cube

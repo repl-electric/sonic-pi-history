@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #defaultcolor
 #explode_cube
 #cam :top
-scene 0
+scene 1
 init!
 #world time: 0.02
 

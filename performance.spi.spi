@@ -10,7 +10,7 @@ cam :main
 #stop
 
 
-roots  chase: 0.2
+roots  chase: 0.2, target: :spiral
 
 
 #create_light

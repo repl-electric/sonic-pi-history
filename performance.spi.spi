@@ -7,6 +7,8 @@ roots chase: 0.0, throttle: 0
 
 rocks throttle: 0.0
 
+roots target: :spiral
+
 
 #explode_world
 vortex throttle: 0.0

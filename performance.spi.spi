@@ -11,7 +11,7 @@ def slow_init
   burst 1.0
 end
 
-
+cam :exit
 
 
 #create_cube

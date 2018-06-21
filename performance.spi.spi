@@ -26,8 +26,10 @@ live_loop :go do
   tick
 
 
-at{
-  sleep 1
+  at{
+
+    #    sleep 0.5
+    kick_machine K1
   roots chase: 0.1, target: :spiral, radius: 5.0
   sleep 2
   roots chase: 0.1, radius: 0.01

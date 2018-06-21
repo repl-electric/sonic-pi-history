@@ -7,6 +7,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #roots chase: 0.02, force: 1, target: :spiral
 
+burst 0.1
+
 #create_aura
 
 

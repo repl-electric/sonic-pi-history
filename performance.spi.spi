@@ -10,7 +10,7 @@ puts $pmode
 
 create_tree
 create_light
-#cam :exit
+cam :main
 
 #cam :exit
 

@@ -11,8 +11,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_tree
 #create_light
 #cam :main
-
-cam :exit
+roots_init
+#cam :exit
 
 #unity "/cubecam/zoomout", 0.0
 #unity "/cubecam/zoomin", 1.0

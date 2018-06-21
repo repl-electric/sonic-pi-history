@@ -7,9 +7,12 @@ load_support('piezoelectric_resonator'); use_bpm 127
 create_cube
 
 
+at{
+  sleep 0.5
 cube rot: 8
 sleep 1
-cube rot: 1
+  cube rot: 1
+  }
 
 
 stop

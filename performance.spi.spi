@@ -95,7 +95,7 @@ live_loop :go do
   tick
 
   ze :A4, z: 1, flash: 1.0
-  glitch :C3, 80
+  #glitch :C3, 80
 
   at{
 

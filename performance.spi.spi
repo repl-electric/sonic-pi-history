@@ -10,7 +10,7 @@ roots chase: 0.02, force: 18, target: :cube
 
 #roots throttle: 0.1, target: :none, drag: 0, freq: 0.3
 
-
+$pmode=0
 cam :exit
 
 #ccreate_sea

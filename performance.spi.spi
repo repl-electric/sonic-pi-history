@@ -12,7 +12,7 @@ roots target: :spiral
 
 #explode_world
 vortex throttle: 0.0
-star size: 10, life: 1
+star size: 10, life: 4
 #endit
 #theend
 

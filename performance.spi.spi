@@ -5,7 +5,7 @@ explode_cube
 #cam :top
 
 star size: 15, life: 5
-world time: 0.02
+#world time: 0.02
 #roots chase: 0.08, target: :spiral, drag: 3.0, amp: 0.06
 #roots chase: 0.0, throttle: 0
 

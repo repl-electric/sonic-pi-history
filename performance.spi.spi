@@ -9,7 +9,7 @@ create_cube
 
 at{
   sleep 0.5
-  cube rot: 10
+  cube rot: 20
   sleep 1
   cube rot: 1
 }

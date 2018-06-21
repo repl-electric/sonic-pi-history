@@ -1,7 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
 #defaultcolor
-explode_cube
+cam :top
+#explode_cube
 star size: 15, life: 5
 world time: 0.0
 #roots chase: 0.08, target: :spiral, drag: 3.0, amp: 0.06

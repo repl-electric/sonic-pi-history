@@ -6,20 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_cube
 
 #roots chase: 0.02, force: 10, target: :cube
-comment do
-at{
-  sleep 0.5
-  roots_chase amp: 1
-  sleep 1
-    roots_chase amp: 0
-
-  }
-end
-
-
-
-
-#burst 0.2
+burst 0.9
 
 #create_aura
 

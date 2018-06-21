@@ -39,7 +39,7 @@ init!
 #end1
 #create_sea -1
 #roots swirl: 1.0, drag: 0.0, amp: 0.1
-roots alive: 1.0, drag: 3.0
+#roots alive: 1.0, drag: 3.0
 #end2
 
 #stop

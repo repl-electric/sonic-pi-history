@@ -8,7 +8,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #roots chase: 0.02, force: 10, target: :cube
 at{
   sleep 0.5
-  roots_chase amp: 10
+  roots_chase amp: 1
   sleep 1
     roots_chase amp: 0
 

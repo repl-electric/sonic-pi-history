@@ -4,12 +4,12 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #explode_cube
 #cam :top
 #init! true
-world time: 1.0
-cube wires: 0
+#world time: 1.0
+#cube wires: 0
 cam :main
-stop
+#stop
 
-
+create_light
 #star size: 2, life: 5
 #world time: 0.02
 #roots chase: 0.08, target: :spiral, drag: 3.0, amp: 0.06

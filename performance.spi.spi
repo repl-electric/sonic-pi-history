@@ -20,7 +20,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #create_sea
 #create_bird
-cube aura: 2.0
+cube aura: 4.0
 def kickvix
   sleep 0.5
   roots chase: 0.1, radius: 10.0

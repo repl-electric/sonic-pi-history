@@ -3,9 +3,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #defaultcolor
 #explode_cube
 #cam :top
-init!
+#init!
 #world time: 1.0
-#$pmode = -1
+puts $pmode
 #cam :exit
 
 #unity "/cubecam/zoomout", 0.0

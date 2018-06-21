@@ -22,7 +22,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_bird
 
 
-roots chase: 0.1, target: :spiral,  radius: 0.0
+roots chase: 0.1, target: :spiral, radius: 0.1
 
 #roots chase: 0.1, target: :cube, force: 18.0, radius: 0.01, drag: 3.0
 

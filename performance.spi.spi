@@ -42,6 +42,7 @@ live_loop :go, sync: :unsyncable do
     #glitch :e3, 127*1.5
     mt 6, 30, 127
   end
+
   sleep 1/2.0
 end
 
@@ -142,7 +143,7 @@ end
 live_loop :pacey, sync: :light do; tick
   #stop
   overclock_cc oct: (ing 0,  -12, 0, 12).look
-  sleep 0.25
+  sleep 0.5
 #  tick
 #  overclock_cc oct: (ing 0,  -12, 0, 19).look
 #  sleep 1

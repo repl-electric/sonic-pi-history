@@ -14,7 +14,7 @@ world time: 1.0
 #linecolor cube: 0.1
 #explode_rocks
 #stop
-create_aura
+create_aura 2
 #roots chase: 0.01
 vortex throttle: 0.0
 

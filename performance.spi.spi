@@ -13,7 +13,7 @@ overclock_cc drive: 0.70
 
 live_loop :go, sync: :unsyncable do
   tick
-  if spread(2,8).look
+  if spread(8,8).look
     if spread(1,16).look
       at{
         glitch_cc corode: 0.0
@@ -139,7 +139,7 @@ live_loop :light, sync: :unsyncable do; tick
   sleeps = scorez.look[-1]
 
   heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
-  deep root(score), 127, sus: sleeps*2, drive: 0.50, sat: 0.0
+  deep root(score), 127, sus: sleeps*2, drive: 1.00, sat: 1.00
 
   sleep sleeps
 end

@@ -4,11 +4,14 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 def slow_init
-vortex throttle: 1.0, y: 1.2, force: 100
-star life: 8, size: 0.125
-roots throttle: 1.0, freq: 0.8
-rocks throttle: 1.0
-burst 1.0
+  vortex throttle: 1.0, y: 1.2, force: 100
+  star life: 8, size: 0.125
+  roots throttle: 1.0, freq: 0.8
+  rocks throttle: 1.0
+  burst 1.0
+end
+
+
 
 
 #create_cube
@@ -50,7 +53,7 @@ glitch_cc mode: 10
 live_loop :go do
   tick
 
-  ze :A4, z: 1
+  ze :A4, z: 1, flash: 1.0
   glitch :C3, 80
 
   at{

@@ -5,11 +5,11 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #cam :top
 #init!
 #world time: 1.0
-puts $pmode
+ $pmode=0
 #create_cube
 
-create_tree
-create_light
+#create_tree
+#create_light
 #cam :main
 
 cam :exit

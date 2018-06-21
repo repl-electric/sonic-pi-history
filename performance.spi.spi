@@ -6,6 +6,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 create_cube
 
+
+cube rot: 2
+
 stop
 
 #overclock_cc motion: 0.25

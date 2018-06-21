@@ -42,12 +42,12 @@ live_loop :go, sync: :unsyncable do
     #glitch :e3, 127*1.5
     mt 6, 30, 127
   end
-  with_swing 0.1{
+  with_swing 0.25{
   if spread(1,64).rot(-12).look
     glitch_cc corode: 0.2
     glitch :As3
   end
-    }
+  }
   sleep 1/2.0
 end
 

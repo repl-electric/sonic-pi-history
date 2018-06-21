@@ -25,7 +25,7 @@ stop
 #create_light
 
 #stop
-cam :main
+cam :exit
 world time: 1.0
 #$pmode = 1
 #cube aura: rand*2

@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-#solo :pad
+solo :pad
 
 #fx reverb: 1.0
 

@@ -157,15 +157,12 @@ live_loop :light, sync: :unsyncable do; tick
     )
   score = scorez.look[0]
   sleeps = scorez.look[-1]
-  puts scorez.reduce(0){|s,a| s+=a[-1]}
-
-  puts score
 
   at{
     v=0.8
-#    callstack score[0], 114*v, sus: 8
+    # callstack score[0], 114*v, sus: 8
     sleep 1.0
- #   operator score[1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
+    #operator score[1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
     sleep 2
     sleep 1.0
   }
@@ -193,10 +190,7 @@ live_loop :light, sync: :unsyncable do; tick
   #   end
   # }
   #qbitsea_cc oct: (ing 0 7 0 12+5).look
-  heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
-  # heat score[1], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [1], sat: 0.0, drive: 0.00
-  # heat score[2], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
-  # heat score[3], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
+  heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0], sat: 0.0, drive: 0.00
 
   # with_transpose 12{
   #   callstack score[0],127, sus: 16
@@ -216,31 +210,13 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-#overclock_on :E3
-
-#deep_cc dirt: 1.0, wet: 1.0, tone: 1.0, filter: 1.0
-#heat_cc solo: 1.0
-
 live_loop :pace, sync: :unsyncable do; tick
-#  overclock_cc oct: (ing 0,  -12, 0, 12).look
+  stop
+  #overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.25
   tick
-#  overclock_cc oct: (ing 0,  -12, 0, 19).look
+  #overclock_cc oct: (ing 0,  -12, 0, 19).look
   sleep 1
 end
 
-#overclock_cc oct: 12
-#overclock_cc motion: 0.00, drive: 1.00, sat: 0.00
-
-live_loop(:unsyncable) do
-  sleep 1.0
-end
-
-#drums on: 1.0
-#lfo on: false, cutoff: 0.10
-#hfp on: true, cutoff: 0.00
-
-#mbox_cc motion: 0.30, drive: 1.00, sat: 1.00
-#mbox2_cc motion: 0.00, drive: 0.00
-
-sea circle: 0.9
+live_loop(:unsyncable) do;  sleep 1.0;end

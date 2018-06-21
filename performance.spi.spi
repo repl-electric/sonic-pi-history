@@ -4,7 +4,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #explode_cube
 #cam :top
 
-world time: 0.05
+world time: 0.02
 
 #star size: 2, life: 5
 #world time: 0.02

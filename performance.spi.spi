@@ -37,7 +37,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop :go do
   tick
 
-  #glitch :C3
+  glitch :C3
   kick_machine K1
   at{
 

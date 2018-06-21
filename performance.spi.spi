@@ -10,7 +10,7 @@ at{
   sleep 0.5
   roots_chase amp: 1
   sleep 1
-    roots_chase amp: 0
+#    roots_chase amp: 0
 
   }
 

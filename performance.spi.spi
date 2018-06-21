@@ -43,7 +43,7 @@ live_loop :go, sync: :unsyncable do
     #mt 6, 30, 127
   end
   with_swing 0.25{
-  if spread(1,64*2).rot(-8 - 2).look
+  if spread(1,64*2).rot(-8 - 1).look
     glitch_cc corode: 0.2
     glitch :gs3
   end

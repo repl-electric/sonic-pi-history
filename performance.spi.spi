@@ -22,6 +22,7 @@ rocks throttle: 0.0
 #end1
 vortex throttle: 0.0
 roots chase: 1.0
+orbit 100
 stop
 
 live_loop :go, sync: :unsyncable do

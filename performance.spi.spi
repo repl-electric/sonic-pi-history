@@ -10,7 +10,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 rocks orbit: 200
 roots alive: 0.0, drag: 6
 roots throttle: 0
-roots swirl: 0.2, drag: 3, amp: 0.0
+roots swirl: 0.1, drag: 3, amp: 0.0
 roots chase: 0.0
 
 

@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #solo :pad
-fx reverb: 0.2
+fx reverb: 0.3
 
 #overclock_on :F3
 

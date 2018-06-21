@@ -42,8 +42,9 @@ live_loop :go, sync: :unsyncable do
     #glitch :e3, 127*1.5
     mt 6, 30, 127
   end
-  if true
+  if spread(1,64).rot(-12).look
     glitch_cc corode: 1.0
+
    glitch :As3
   end
   sleep 1/2.0

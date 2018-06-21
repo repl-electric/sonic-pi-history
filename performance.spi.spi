@@ -39,7 +39,7 @@ glitch_cc mode: 10
 live_loop :go do
   tick
 
-  glitch :C3, 20
+  glitch :C3, 50
   kick_machine K1
   at{
 

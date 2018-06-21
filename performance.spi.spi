@@ -38,7 +38,7 @@ live_loop :go do
   tick
 
   #glitch :C3
-  kick_machine K2
+  kick_machine K1
   at{
 
     sleep 0.5

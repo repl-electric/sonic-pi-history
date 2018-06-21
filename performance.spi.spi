@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #scene 1
-init!
-stop
+#init!
+#stop
 #overclock_x
 #defaultcolor
 #explode_cube
@@ -23,13 +23,14 @@ stop
 
 #create_sea
 #create_bird
-cube aura: 1.0
-def kickvix
-  sleep 0.5
-  roots chase: 0.1, radius: 10.0
-  sleep 2
-  roots chase: 0.1, radius: 0.01
-end
+#cube aura: 1.0
+
+# def kickvix
+#   sleep 0.5
+#   roots_chase radius: 10.0
+#   sleep 2
+#   roots_chase radius: 0.01
+# end
 
 live_loop :go do
   tick

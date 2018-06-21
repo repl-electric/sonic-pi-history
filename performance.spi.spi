@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_x
 #defaultcolor
-#world time: 1.0
+world time: 1.0
 #roots chase: 0.08, target: :spiral, drag: 3.0, amp: 0.06
 #explode_world
 vortex throttle: 0.0

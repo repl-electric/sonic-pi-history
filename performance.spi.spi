@@ -16,7 +16,7 @@ overclock_cc motion: 0.25
 $pmode = 1
 cube aura: rand*2
 
-cam :exit
+#cam :exit
 
 
 

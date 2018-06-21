@@ -26,7 +26,11 @@ live_loop :go, sync: :unsyncable do
         glitch_cc corode: 1.0
       }
     else
-      glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+      if spread(1,64).look
+
+      else
+        glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+      end
     end
     glitch_cc corode: 1.0
   end

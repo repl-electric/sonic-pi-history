@@ -2,6 +2,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #solo :pad
 fx reverb: 0.0
 
+overclock_x
+
 live_loop :go, sync: :unsyncable do
   tick
   if spread(3,8).look
@@ -64,7 +66,7 @@ live_loop :wind, sync: :unsyncable do; tick
   end
 
   s=(knit :A3, 128, _, 128).look
-  qbitsea s, (line 127,50,256*4).look, sus: (knit 1/4.0,32,1/2.0,31, 1, 1).look if spread(7*1,11*4).look
+  #qbitsea s, (line 127,50,256*4).look, sus: (knit 1/4.0,32,1/2.0,31, 1, 1).look if spread(7*1,11*4).look
 
   if spread(7*1,11*4).look
     if spread(7*1,11*4*8).look

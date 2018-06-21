@@ -4,6 +4,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 
+vortex throttle: 1.0
+
+
 roots throttle: 1.0, freq: 0.8
 rocks throttle: 1.0
 

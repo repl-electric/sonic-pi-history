@@ -30,7 +30,7 @@ end2
 #star size: 15
 #rocks orbit: 100.0
 #end1
-stop
+#stop
 
 live_loop :go, sync: :unsyncable do
   tick

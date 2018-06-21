@@ -1,5 +1,5 @@
 load_support('piezoelectric_resonator'); use_bpm 127
-solo :pads
+solo :pad
 
 live_loop :go, sync: :unsyncable do
   tick

@@ -17,7 +17,7 @@ create_tree
 create_sea
 create_light
 
-roots chase: 0.1, force: 1, target: :spiral
+roots chase: 0.1, force: 1, target: :spiral, drag: 3
 
 
 cam :main

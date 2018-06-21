@@ -51,8 +51,8 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-mbox2_cc motion: 0.35
-mbox_cc motion: 0.35
+mbox2_cc motion: 0.45
+mbox_cc motion: 0.45
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

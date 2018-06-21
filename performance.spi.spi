@@ -5,7 +5,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 world time: 1.0
 
 
-cam :exit
+cam :main
 #explode_aura
 
 #create_tree

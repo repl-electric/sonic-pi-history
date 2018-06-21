@@ -22,7 +22,7 @@ live_loop :go, sync: :unsyncable do
         glitch_cc corode: 0.5
         #glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
         sleep 0.25
-        glitch (ing :d3).look , 8.1*(ing 120 90 100 100    100 90 90 90).look
+        glitch (ing :e3).look , 8.1*(ing 120 90 100 100    100 90 90 90).look
         glitch_cc corode: 1.0
       }
     else

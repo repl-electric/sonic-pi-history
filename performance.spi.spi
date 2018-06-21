@@ -3,6 +3,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_on :F3
 #init! true
 world time: 1.0
+
+
+cam :exit
 #explode_aura
 
 #create_tree

@@ -21,7 +21,7 @@ rocks throttle: 0.0
 #endit
 #end1
 vortex throttle: 0.0
-roots swirl: 1.0
+roots spiral: 1.0
 stop
 
 live_loop :go, sync: :unsyncable do

@@ -19,9 +19,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #unity "/cubecam/zoomin", 1.0
 
 #create_sea
-create_bird
+#create_bird
 
-roots chase: 1.0#, target: :spiral, force: 1.0, radius: 0.01, drag: 1.0
+roots chase: 1.0, target: :spiral, force: 1.0, radius: 0.01, drag: 1.0
 
 #stop
 

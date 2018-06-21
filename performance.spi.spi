@@ -5,8 +5,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #world time: 1.0
 
 
-end2
-
+end1
+stop
 
 #cam :main
 #explode_aura

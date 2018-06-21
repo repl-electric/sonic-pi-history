@@ -9,6 +9,7 @@ puts $pmode
 #create_cube
 
 create_tree
+create_light
 #cam :exit
 
 #cam :exit

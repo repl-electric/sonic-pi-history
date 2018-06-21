@@ -6,8 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #init! true
 #world time: 0.02
 
-cam :exit
-stop
+cam :cube stop
 
 
 #star size: 2, life: 5

@@ -45,7 +45,7 @@ live_loop :go, sync: :unsyncable do
   with_swing 0.25{
   if spread(1,64).rot(-12).look
     glitch_cc corode: 0.2
-    glitch :fs3
+    glitch :gs3
   end
   }
   sleep 1/2.0

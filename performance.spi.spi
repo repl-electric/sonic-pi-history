@@ -23,6 +23,7 @@ create_aura -2
 vortex throttle: 0.0
 #roots chase: 1.0
 rocks orbit: 100.0
+end1
 stop
 
 live_loop :go, sync: :unsyncable do

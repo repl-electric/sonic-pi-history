@@ -7,12 +7,15 @@ roots chase: 0.0, throttle: 0
 
 rocks throttle: 0.0
 
-roots target: :spiral
-create_bird -1.0
+roots chase: 1.0
+#create_bird -1.0
 
 #explode_world
 vortex throttle: 0.0
 star size: 12, life: 5
+
+
+
 #endit
 #theend
 

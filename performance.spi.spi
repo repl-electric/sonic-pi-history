@@ -6,7 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #init! true
 #world time: 0.02
 
-cam :cube
+cam :exit
 stop
 
 

@@ -23,7 +23,7 @@ world time: 1.0
 vortex throttle: 0.0
 #roots swirl: 1.0, drag: 4
 #rocks orbit: 100.0
-end1
+#end1
 stop
 
 live_loop :go, sync: :unsyncable do

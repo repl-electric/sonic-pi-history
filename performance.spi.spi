@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_on :F3
 #init! true
 
-linecolor cube: 0.2
+linecolor cube: 0.1
 stop
 
 roots chase: 0.01

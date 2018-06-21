@@ -11,8 +11,13 @@ def slow_init
   burst 1.0
 end
 
-overclock_cc motion: 0.39
-cam :exit
+overclock_cc motion: 0.25
+
+create_tree
+create_sea
+create_light
+
+cam :main
 
 #$pmode = 1
 #cube aura: rand*2

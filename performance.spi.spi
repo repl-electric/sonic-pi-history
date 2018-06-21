@@ -13,13 +13,14 @@ world time: 1.0
 
 #linecolor cube: 0.1
 #explode_rocks
-stop
+#stop
 
-roots chase: 0.01
+#roots chase: 0.01
 
 
 
-cam :exit
+
+#cam :exit
 
 #create_aura
 

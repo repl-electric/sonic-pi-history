@@ -8,7 +8,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #roots chase: 0.02, force: 10, target: :cube
 #burst 1.0
 
-roots throttle: 0.1
+roots throttle: 0.1, target: :cube
 
 #create_aura
 

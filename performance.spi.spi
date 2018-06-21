@@ -3,19 +3,12 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_on :F3
 
 
-def slow_init
-  vortex throttle: 1.0, y: 1.2, force: 100
-  star life: 8, size: 0.125
-  roots throttle: 1.0, freq: 0.8
-  rocks throttle: 1.0
-  burst 1.0
-end
 
 #overclock_cc motion: 0.25
 
-create_tree
-create_sea
-create_light
+#create_tree
+#create_sea
+#create_light
 
 
 cam :main

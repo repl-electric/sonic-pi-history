@@ -10,10 +10,10 @@ live_loop :go, sync: :unsyncable do
     glitch :c3, 0.5*(ing 120 90 100 100    100 90 90 90).look
     #glitch_cc corode: 0.7
   end
-  if spread(7,12).look
+  if spread(7,11).look
     glitch_cc mode: (ing 0 2 3 5).look
     #mt S, [100,80,90,70,100].choose, [100,80,90,70,100].choose
-    #glitch (ing :f3 :g3).look, 90
+    glitch (ing :f3 :g3).look, 90
   end
   if spread(1,8).rot(0).look
     #glitch :e3, 127

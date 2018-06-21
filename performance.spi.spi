@@ -6,11 +6,11 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #init! true
 #world time: 1.0
 #cube wires: 0
-cam :main
+#cam :main
 #stop
 
 
-roots  chase: 0.2, target: :spiral, force: 1
+roots chase: 0.4, target: :spiral, force: 1
 
 
 #create_light

@@ -42,8 +42,8 @@ live_loop :go, sync: :unsyncable do
     #glitch :e3, 127*1.5
     mt 6, 30, 127
   end
-  if
-      glitch :As3
+  if true
+   glitch :As3
   end
   sleep 1/2.0
 end

@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-create_cube
+#create_cube
 #scene 1
 #init!
 #stop
@@ -37,7 +37,7 @@ create_cube
 live_loop :go do
   tick
 
-    #glitch :C3
+   glitch :C3
   at{
 
     sleep 0.5

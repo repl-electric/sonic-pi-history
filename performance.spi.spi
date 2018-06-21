@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #defaultcolor
 #explode_cube
 #cam :top
-#init! true
+init! true
 #world time: 1.0
 #cube wires: 0
 #cam :main
@@ -11,8 +11,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 #roots throttle: 0.0
-vortex throttle: 0
-roots chase: 1.0, target: :spiral, force: 10.0, radius: 0.01, drag: 3.0
+#vortex throttle: 0
+#roots chase: 1.0, target: :spiral, force: 10.0, radius: 0.01, drag: 3.0
 stop
 
 #create_light

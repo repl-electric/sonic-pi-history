@@ -12,13 +12,13 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_light
 #cam :main
 #roots_init
-cam :main
+#cam :main
 #cube aura: 2.0, circle: 0.0
 
 #unity "/cubecam/zoomout", 0.0
 #unity "/cubecam/zoomin", 1.0
 
-#roots chase: 1.0, target: :spiral, force: 1.0, radius: 0.01, drag: 1.0
+roots chase: 1.0#, target: :spiral, force: 1.0, radius: 0.01, drag: 1.0
 
 #stop
 

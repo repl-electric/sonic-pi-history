@@ -123,8 +123,8 @@ live_loop :pace, sync: :unsyncable do; tick
   overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.25
   tick
-  overclock_cc oct: (ing 0,  -12, 0, 19).look
-  sleep 1
+#  overclock_cc oct: (ing 0,  -12, 0, 19).look
+#  sleep 1
 end
 
 live_loop(:unsyncable) do;  sleep 1.0;end

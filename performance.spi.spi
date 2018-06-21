@@ -13,7 +13,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #roots throttle: 0.0
 roots chase: 1.0, target: :spiral, force: 1, radius: 0.01, drag: 3
 
-vortex y: -0.2
+vortex y: -0.5
 #create_light
 #star size: 2, life: 5
 #world time: 0.02

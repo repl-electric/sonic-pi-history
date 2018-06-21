@@ -13,7 +13,7 @@ at{
   sleep 1
   cube rot: 1
 }
-create_aura
+#create_aura
 
 
 stop

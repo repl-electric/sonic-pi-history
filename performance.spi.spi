@@ -5,12 +5,6 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #create_cube
 
-def spincube
-at{
-  sleep 0.5
-  cube rot: 40
-  sleep 1
-  oend
 #create_aura
 
 

@@ -18,9 +18,9 @@ live_loop :go, sync: :unsyncable do
       at{
         glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
         sleep 0.125
-     #   glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
+        #glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
         sleep 0.25
-        glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
+        glitch :a3, 4.1*(ing 120 90 100 100    100 90 90 90).look
       }
     else
       glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look

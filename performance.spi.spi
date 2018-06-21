@@ -21,7 +21,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_sea
 #create_bird
 
-roots chase: 0.04, target: :spiral, force: 1.0, radius: 0.01, drag: 2.0
+roots chase: 0.1, target: :spiral, force: 1.0, radius: 0.01, drag: 2.0
 
 #stop
 

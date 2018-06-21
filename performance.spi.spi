@@ -5,6 +5,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 world time: 1.0
 #explode_aura
 
+create_tree
+
 linecolor cube: 0.1
 explode_rocks
 stop

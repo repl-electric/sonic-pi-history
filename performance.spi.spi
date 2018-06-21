@@ -24,8 +24,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 at{
   sleep 1
-  roots chase: 0.1, target: :spiral, radius: 2.0
-  sleep 1
+  roots chase: 0.1, target: :spiral, radius: 5.0
+  sleep 2
   roots chase: 0.1, radius: 0.01
 
 

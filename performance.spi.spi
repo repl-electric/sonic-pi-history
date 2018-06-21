@@ -18,7 +18,7 @@ create_sea
 create_light
 
 cam :main
-
+world time: 1.0
 #$pmode = 1
 #cube aura: rand*2
 

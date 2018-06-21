@@ -6,9 +6,10 @@ world time: 1.0
 #explode_aura
 
 create_tree
+create_Sea
 
 linecolor cube: 0.1
-explode_rocks
+#explode_rocks
 stop
 
 roots chase: 0.01

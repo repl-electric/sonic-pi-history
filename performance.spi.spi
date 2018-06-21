@@ -6,7 +6,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #init! true
 #world time: 0.02
 
-create_bird
+cam :exit
+
+
 
 #star size: 2, life: 5
 #world time: 0.02

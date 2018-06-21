@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #solo :pad
 fx reverb: 0.0
 
-overclock_x
+overclock_on :A3
 
 live_loop :go, sync: :unsyncable do
   tick

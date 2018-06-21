@@ -1,4 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
+
+create_cube
 #scene 1
 #init!
 #stop

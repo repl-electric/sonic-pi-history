@@ -24,7 +24,7 @@ stop
 #create_sea
 #create_light
 
-stop
+#stop
 cam :main
 world time: 1.0
 #$pmode = 1

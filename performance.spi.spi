@@ -9,7 +9,7 @@ roots chase: 0.02, force: 18, target: :cube
 #burst 1.0
 
 #roots throttle: 0.1, target: :none, drag: 0, freq: 0.3
-cam :cuber
+cam :cube
 
 #ccreate_sea
 create_island
@@ -148,13 +148,13 @@ end
 live_loop :go, sync: :unsyncable do
   tick
   if spread(3,8).look
-    #glitch :c3, (ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    #glitch :c3, (ing 120 90 100 100    100 90 90 90).look
     #glitch_cc corode: 0.7
   end
   if spread(7,12).look
-    glitch_cc mode: (ing 0, 2, 3, 5,).look
+    glitch_cc mode: (ing 0 2 3 5).look
     #mt S, [100,80,90,70,100].choose, [100,80,90,70,100].choose
-    glitch (ing :f3, :g3,).look, 90
+    glitch (ing :f3 :g3).look, 90
   end
   if spread(1,8).rot(0).look
     #glitch :e3, 127
@@ -198,23 +198,23 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
     if spread(7,11).look
-      mbox2 :D4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+      mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
       sleep 1/2.0
  #     mbox  :A3, 50, sus: 1.0
       sleep 1/2.0
 
     else
-#      mbox2 :C4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+#      mbox2 :C4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
       sleep 1/2.0
 #      mbox  :D3, 50, sus: 1.0
       sleep 1/2.0
     end
 
-    glitch_cc corode: (ine 0.2, 0.7, 128,).look
-    glitch (ing :c3, :a3,).look, 30 if spread(7,11).look
+    glitch_cc corode: (ine 0.2 0.7 128).look
+    glitch (ing :c3 :a3).look, 30 if spread(7,11).look
 
     with_swing -0.1 {
- #     mbox2 :E4, 5.5*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+ #     mbox2 :E4, 5.5*(ing 50 60 70 110).look, sus: 1.0/2.0
     }
     sleep 1/2.0
     sleep 1/2.0
@@ -257,73 +257,73 @@ end
 #     end
 #   end
 
-#   # qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0, 1/2.0, 1/4.0,).look if spread(3*4,8*4).look
-#   # qbitsea :E3, 50, sus: (ing 1/2.0, 1, 1,).look if spread(1*4,8*4).look
+#   # qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
+#   # qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
 #   sleep 1/8.0
 # end
 #zero_x
 
 live_loop :light, sync: :unsyncable do; tick
-  scorez = (ing   #64,
-    #, [[:A3, :C5, :E4], 4],
-    #, [[:F4, :A6, :C5], 8],
-    #, [[:C3, :E5, :G4], 4],
-    #, [Zz, 4],
-    #, [[:A3, :C5, :E4], 8],
-    #, [[:E4, :G5, :B3], 8],
-    #, [[:F4, :A5, :C5, :E5], 4],
-    #, [[:F4, :A5, :C5, :E5], 4],
-    #, [[:C3, :E5, :G4], 8],
-    #, [Zz,            8],
+  scorez = (ing   #64
+    # [[:A3 :C5 :E4] 4]
+    # [[:F4 :A6 :C5] 8]
+    # [[:C3 :E5 :G4] 4]
+    # [Zz 4]
+    # [[:A3 :C5 :E4] 8]
+    # [[:E4 :G5 :B3] 8]
+    # [[:F4 :A5 :C5 :E5] 4]
+    # [[:F4 :A5 :C5 :E5] 4]
+    # [[:C3 :E5 :G4] 8]
+    # [Zz            8]
 
-    #, [[:A3, :C5, :E4], 8],
-    #, [[:F4, :A6, :C5], 8],
-    #, [[:C3, :E5, :G4], 8],
-    #, #[Zz,            4],
-    #, [[:A3, :C5, :E4], 8],
-    #, [[:E4, :G5, :B4], 8],
-    #, [[:G4, :C7, :D5], 8],
-    #, [[:G4, :B6, :D5], 4],
-    #, [[:C4, :E5, :G4], 8],
-    #, [Zz,            8],
+    # [[:A3 :C5 :E4] 8]
+    # [[:F4 :A6 :C5] 8]
+    # [[:C3 :E5 :G4] 8]
+    # #[Zz            4]
+    # [[:A3 :C5 :E4] 8]
+    # [[:E4 :G5 :B4] 8]
+    # [[:G4 :C7 :D5] 8]
+    # [[:G4 :B6 :D5] 4]
+    # [[:C4 :E5 :G4] 8]
+    # [Zz            8]
 
-    [[:A3, :C5, :E4], 8],
-    [[:F4, :A6, :C5], 8],
-    [[:C3, :E5, :G4], 4],
-    [Zz, 4],
-    #, [[:A3, :C5, :E4], 8],
-    #, [[:E4, :G5, :B3], 8],
-    #, [[:F4, :A6, :C5, :E5], 8],
-    #, [[:C3, :E5, :G4], 8],
-    #, [Zz, 8],
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 4]
+    [Zz 4]
+    # [[:A3 :C5 :E4] 8]
+    # [[:E4 :G5 :B3] 8]
+    # [[:F4 :A6 :C5 :E5] 8]
+    # [[:C3 :E5 :G4] 8]
+    # [Zz 8]
 
-    #, [[:A3, :C5, :E4], 8],
-    #, [[:F4, :A6, :C5], 8],
-    #, [[:C3, :E5, :G4], 4],
-    #, [Zz, 4],
-    #, [[:A3, :C5, :E4], 4],
-    #, [[:A3, :C5, :E4], 4],
-    #, [[:E4, :G5, :B3], 4],
-    #, [[:E4, :G5, :B3], 4],
-    #, [[:G4, :B6, :D5, :F4], 8],
-    #, [[:C4, :E5, :G4], 8],
-    #, [Zz, 8],
-
-
-    #, [[:G2, :B2, :D3], 8*2],      #,  #, 7thm,
-    #, [Zz, 2],
-    #, [[:G2, :B2, :D3, :F3], 8*2],  #,   #, 7thm,
-    #, [Zz, 2],
-    #, [[:G2, :B3, :D3, :F3], 8*2],  #,   #, 1, 5, 7, 3,  -, 3, on, top,
-    #, [Zz, 2],
-    #, [[:G2, :B3, :D3, :F4], 8*2],  #,   #, 1, 5, 3, 7,  -, 7, on, top,
-    #, [Zz, 2],
-    #, [[:G2, :B5, :D4, :F3], 8*2],  #,   #, 1, 7, 5, 3,  -, shell,
-    #, [Zz, 2],
+    # [[:A3 :C5 :E4] 8]
+    # [[:F4 :A6 :C5] 8]
+    # [[:C3 :E5 :G4] 4]
+    # [Zz 4]
+    # [[:A3 :C5 :E4] 4]
+    # [[:A3 :C5 :E4] 4]
+    # [[:E4 :G5 :B3] 4]
+    # [[:E4 :G5 :B3] 4]
+    # [[:G4 :B6 :D5 :F4] 8]
+    # [[:C4 :E5 :G4] 8]
+    # [Zz 8]
 
 
-    #, [[:C4, :E5, :G4], 8],
-    #, [Zz,            8],
+    # [[:G2 :B2 :D3] 8*2]      #  # 7thm
+    # [Zz 2]
+    # [[:G2 :B2 :D3 :F3] 8*2]  #   # 7thm
+    # [Zz 2]
+    # [[:G2 :B3 :D3 :F3] 8*2]  #   # 1 5 7 3  - 3 on top
+    # [Zz 2]
+    # [[:G2 :B3 :D3 :F4] 8*2]  #   # 1 5 3 7  - 7 on top
+    # [Zz 2]
+    # [[:G2 :B5 :D4 :F3] 8*2]  #   # 1 7 5 3  - shell
+    # [Zz 2]
+
+
+    # [[:C4 :E5 :G4] 8]
+    # [Zz            8]
 
     )
   score = scorez.look[0]
@@ -336,18 +336,18 @@ live_loop :light, sync: :unsyncable do; tick
     v=0.8
 #    callstack score[0], 114*v, sus: 8
     sleep 1.0
- #   operator score[1], (ing 100,  100,  50,  30,).tick(:i), sus: (ing 1, 0.25, 0.25,).tick(:s)
+ #   operator score[1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
     sleep 2
     sleep 1.0
   }
 
   # at{
   #   sleeps.times{
-  #     #operator score[-1], (ing 100,  100,  50,  30,).tick(:i), sus: (ing 1, 0.25, 0.25,).tick(:s)
+  #     #operator score[-1], (ing 100, 100, 50, 30).tick(:i), sus: (ing 1 0.25 0.25).tick(:s)
   #     sleep (ing
-  #,            1/2.0,
-  #,            1/4.0, 1/4.0,
-  #,            ).tick(:n)
+  #            1/2.0
+  #            1/4.0 1/4.0
+  #            ).tick(:n)
   #     #ze score[-1], 25
   #   }
   #   if score[0] == :C3
@@ -363,11 +363,11 @@ live_loop :light, sync: :unsyncable do; tick
   #     #overclock score[0], 100, sus: 1.0
   #   end
   # }
-  #qbitsea_cc oct: (ing 0, 7, 0, 12+5,).look
-  heat score[0], 0.5*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
-  # heat score[1], 2*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [1], sat: 0.0, drive: 0.00
-  # heat score[2], 2*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
-  # heat score[3], 2*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
+  #qbitsea_cc oct: (ing 0 7 0 12+5).look
+  heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
+  # heat score[1], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [1], sat: 0.0, drive: 0.00
+  # heat score[2], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
+  # heat score[3], 2*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [2], sat: 0.0, drive: 0.00
 
   # with_transpose 12{
   #   callstack score[0],127, sus: 16
@@ -393,10 +393,10 @@ end
 #heat_cc solo: 1.0
 
 live_loop :pace, sync: :unsyncable do; tick
-#  overclock_cc oct: (ing 0,   -12,  0,  12,).look
+#  overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.25
   tick
-#  overclock_cc oct: (ing 0,   -12,  0,  19,).look
+#  overclock_cc oct: (ing 0,  -12, 0, 19).look
   sleep 1
 end
 

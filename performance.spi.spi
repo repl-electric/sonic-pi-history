@@ -6,6 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #init!
 #world time: 1.0
 puts $pmode
+create_cube
 #cam :exit
 
 #unity "/cubecam/zoomout", 0.0

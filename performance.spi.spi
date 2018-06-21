@@ -43,6 +43,7 @@ live_loop :go, sync: :unsyncable do
     mt 6, 30, 127
   end
   if true
+    glitch_cc corode: 1.0
    glitch :As3
   end
   sleep 1/2.0

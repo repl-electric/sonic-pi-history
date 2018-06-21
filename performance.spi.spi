@@ -10,8 +10,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #stop
 
 
-roots throttle: 0.0
-roots chase: 0.4, target: :spiral, force: 1
+#roots throttle: 0.0
+roots chase: 1.0, target: :spiral, force: 1
 
 
 #create_light

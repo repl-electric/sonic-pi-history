@@ -8,7 +8,7 @@ roots chase: 0.0, throttle: 0
 rocks throttle: 0.0
 
 roots target: :spiral
-
+create_bird -1.0
 
 #explode_world
 vortex throttle: 0.0

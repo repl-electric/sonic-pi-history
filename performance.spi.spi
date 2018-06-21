@@ -3,16 +3,16 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #overclock_on :F3
 #init! true
 
+#create_cube
 
-create_cube
-
-
+def spincube
 at{
   sleep 0.5
   cube rot: 40
   sleep 1
   cube rot: 1
-}
+  }
+end
 #create_aura
 
 

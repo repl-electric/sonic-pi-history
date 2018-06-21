@@ -11,14 +11,14 @@ world time: 1.0
 #create_bird -1.0
 
 #explode_world
-#vortex throttle: 0.0
+
 #star size: 12, life: 5
 
 #explode_world
 
 #endit
-end1
-
+#end1
+vortex throttle: 0.0
 stop
 
 live_loop :go, sync: :unsyncable do

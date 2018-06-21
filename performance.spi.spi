@@ -36,8 +36,8 @@ live_loop :go do
 
 
   }
-  sleep 1
-  sleep 1
+  sleep 3
+  sleep 3
 end
 
 #roots chase: 0.1, target: :cube, force: 18.0, radius: 0.01, drag: 3.0

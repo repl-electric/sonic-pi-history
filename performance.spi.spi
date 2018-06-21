@@ -1,8 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 #overclock_on :F3
-
-
+init true
+stop
 
 #overclock_cc motion: 0.25
 
@@ -10,7 +10,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_sea
 #create_light
 
-
+stop
 cam :main
 world time: 1.0
 #$pmode = 1

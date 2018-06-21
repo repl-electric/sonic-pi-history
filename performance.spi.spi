@@ -13,7 +13,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #cam :main
 #roots_init
 #cam :main
-cube aura: 1.0, circle: 1.0
+cube aura: 1.0, circle: 0.0
 
 #unity "/cubecam/zoomout", 0.0
 #unity "/cubecam/zoomin", 1.0

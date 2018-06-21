@@ -10,13 +10,14 @@ puts $pmode
 
 create_tree
 create_light
-cam :main
+#cam :main
 
-#cam :exit
+cam :exit
 
 #unity "/cubecam/zoomout", 0.0
 #unity "/cubecam/zoomin", 1.0
 
+#roots chase: 1.0, target: :spiral, force: 10.0, radius: 0.01, drag: 3.0
 
 #stop
 

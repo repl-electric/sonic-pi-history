@@ -33,7 +33,7 @@ world time: 1.0
 #end1
 #create_sea -1
 roots swirl: 1.0, drag: 1.0, amp: 0.2
-#roots alive: 1.0, drag: 0.0
+roots alive: 1.0, drag: 0.0
 
 
 end2

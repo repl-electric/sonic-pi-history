@@ -4,14 +4,14 @@ glitch_cc mode: 0, corode: 0.5
 
 #solo :pad
 #stop
-fx reverb: 0.90
+fx reverb: 0.00
 #stop
 #overclock_x
 overclock_cc drive: 0.70
 
 #overclock_on :F3
 #overclock_cc amp: 0.85
-#overclock_cc motion: 0.30
+#overclock_cc motion: 0.25
 
 live_loop :go, sync: :unsyncable do
   #stop
@@ -20,6 +20,15 @@ live_loop :go, sync: :unsyncable do
     glitch_cc corode: 1
     glitch_cc mode: 0
     glitch :c3, 2*(ing 120 90 100 100    100 90 90 90).look
+    if spread(1,16).look
+      at{
+        sleep 0.25
+        glitch :c3, 2*(ing 120 90 100 100    100 90 90 90).look
+      }
+
+    end
+
+
     # if spread(1,16).look
     #   at{
     #     glitch_cc corode: 0.0
@@ -40,7 +49,6 @@ live_loop :go, sync: :unsyncable do
     glitch_cc corode: 1.0
   else
     glitch :cs4, 1*(ing 120 90 100 100    100 90 90 90).look
-
   end
   if spread(7,11).look
     glitch_cc mode: (ing 0 2 3 5).look

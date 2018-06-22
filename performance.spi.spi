@@ -60,7 +60,7 @@ mbox_cc motion: 0.50
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
-    glitch_cc mode: [5].choose
+    glitch_cc mode: [0].choose
     glitch :fs3, 20
 
     if spread(11,11).look

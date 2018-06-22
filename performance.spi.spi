@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 #solo :pad
 #stop
-fx reverb: 1.00
+fx reverb: 0.00
 #stop
 overclock_x
 overclock_cc drive: 0.70

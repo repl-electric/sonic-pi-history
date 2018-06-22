@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 glitch_cc mode: 0, corode: 0.5
 
-#solo :pad
+solo :pad
 #stop
 fx reverb: 1.00
 #stop

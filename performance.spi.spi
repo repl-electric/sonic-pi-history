@@ -57,7 +57,7 @@ end
 mbox2_cc motion: 0.50
 mbox_cc motion: 0.50
 
-overclock_on :F3
+overclock_on :E3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

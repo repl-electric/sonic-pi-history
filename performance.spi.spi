@@ -4,19 +4,19 @@ glitch_cc mode: 0, corode: 0.5
 
 #solo :pad
 #stop
-fx reverb: 0.00
+fx reverb: 1.00
 #stop
 #overclock_x
 overclock_cc drive: 0.70
 
 
 
-overclock_on :F3
+#overclock_on :F3
 #overclock_cc amp: 0.85
-#overclock_cc motion: 0.50
+#overclock_cc motion: 0.30
 
 live_loop :go, sync: :unsyncable do
-  stop
+  #stop
   tick
   if spread(3,8).look
     if spread(1,16).look

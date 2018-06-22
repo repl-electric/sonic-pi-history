@@ -1,16 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 
-glitch 'cs-1'
+#glitch 'cs-1'
 
-
-stop
-live_loop :argh do
-  glitch_cc mode: 2
-  sleep 1
-end
-
-stop
 
 live_loop :do do
   tick

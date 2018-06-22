@@ -76,6 +76,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
                 :F3 :F3 :F3 :D3 :D3).look, 0.75*(ing 50 60 70 110).look,
           sus: (ing 1/4.0 1/4.0 1/4.0 1.0 1.0).look
         end
+        glitch_cc corode: 0.1
+
         glitch :gs3, 20
         #mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         sleep 1/4.0

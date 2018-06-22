@@ -122,10 +122,10 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #mbox2 :E4, 5.5*(ing 50 60 70 110).look, sus: 1.0/2.0
     }
     sleep 1/2.0
-    glitch :fs3, 20
+    #glitch :fs3, 20
 
     sleep 1/2.0
-    glitch :fs3, 20
+    #glitch :fs3, 20
 
     with_swing -0.1 {
       #mbox :f2, 127-rand*10, sus: 1.0/4.0

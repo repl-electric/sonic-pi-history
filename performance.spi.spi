@@ -6,10 +6,12 @@ glitch_cc mode: 0, corode: 0.5
 #stop
 fx reverb: 0.00
 #stop
-overclock_x
+#overclock_x
 overclock_cc drive: 0.70
 
-#overclock_on :E3
+
+
+overclock_on :A3
 #overclock_cc amp: 0.85
 #overclock_cc motion: 0.60
 
@@ -58,7 +60,7 @@ mbox2_cc motion: 0.50
 mbox_cc motion: 0.50
 
 #overclock_on :E3
-overclock_cc motion: 0.2
+overclock_cc motion: 0.43
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

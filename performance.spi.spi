@@ -16,7 +16,7 @@ overclock_cc drive: 0.70
 live_loop :go, sync: :unsyncable do
   #stop
   tick
-  if spread(8,8).look
+  if spread(4,8).look
     glitch_cc corode: 1
     glitch :c3, 2*(ing 120 90 100 100    100 90 90 90).look
     # if spread(1,16).look

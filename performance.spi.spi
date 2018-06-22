@@ -116,14 +116,17 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     }
 
     sleep 1
+
     glitch :cs3, 5 if spread(3,7).look
 
     #mbox :f2, 127-rand*10, sus: 1.0/8.0
 
-    sleep 1/2.0
+    sleep 1/4.0
     glitch :g3, 20
 
-    sleep 1/2.0
+    sleep 1/4.0
+    sleep 1/4.0
+    sleep 1/4.0
 
 
   end

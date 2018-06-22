@@ -19,23 +19,24 @@ live_loop :go, sync: :unsyncable do
   #stop
   tick
   if spread(3,8).look
-    if spread(1,16).look
-      at{
-        glitch_cc corode: 0.0
-        glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
-        sleep 0.25
-        glitch_cc corode: 0.5
-        #glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
-        sleep 0.25
-        glitch (ing :as3).look , 8.1*(ing 120 90 100 100    100 90 90 90).look
-        glitch_cc corode: 1.0
-      }
-    else
-      if spread(1,32).look
-      else
-        glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
-      end
-    end
+    glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+    # if spread(1,16).look
+    #   at{
+    #     glitch_cc corode: 0.0
+    #     glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+    #     sleep 0.25
+    #     glitch_cc corode: 0.5
+    #     #glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
+    #     sleep 0.25
+    #     glitch (ing :as3).look , 8.1*(ing 120 90 100 100    100 90 90 90).look
+    #     glitch_cc corode: 1.0
+    #   }
+    # else
+    #   if spread(1,32).look
+    #   else
+    #     glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+    #   end
+    # end
     glitch_cc corode: 1.0
   end
   if spread(7,11).look

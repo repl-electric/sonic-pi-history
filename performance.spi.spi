@@ -18,30 +18,30 @@ live_loop :go, sync: :unsyncable do
   tick
   if spread(8,8).look
     glitch_cc corode: 1
-    glitch :c3, 2*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    glitch :cs3, 2*(ing 120 90 100 100    100 90 90 90).look
     # if spread(1,16).look
     #   at{
     #     glitch_cc corode: 0.0
-    #     glitch :c3, 2.1*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    #     glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
     #     sleep 0.25
     #     glitch_cc corode: 0.5
-    #     #glitch :c3, 4.1*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    #     #glitch :c3, 4.1*(ing 120 90 100 100    100 90 90 90).look
     #     sleep 0.25
-    #     glitch (ing :as3,).look , 8.1*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    #     glitch (ing :as3).look , 8.1*(ing 120 90 100 100    100 90 90 90).look
     #     glitch_cc corode: 1.0
     #   }
     # else
     #   if spread(1,32).look
     #   else
-    #     glitch :c3, 2.1*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+    #     glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
     #   end
     # end
     glitch_cc corode: 1.0
   end
   if spread(7,11).look
-    glitch_cc mode: (ing 0, 2, 3, 5,).look
+    glitch_cc mode: (ing 0 2 3 5).look
     #mt S, [100,80,90,70,100].choose, [100,80,90,70,100].choose
-    #glitch (ing :f3, :g3,).look, 90+rand*0.5
+    #glitch (ing :f3 :g3).look, 90+rand*0.5
   end
   if spread(1,8).rot(0).look
     #glitch :e3, 127*1.5
@@ -70,24 +70,24 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if spread(11,11).look
       if spread(4,4).look
-        mbox2 :E3, 1*(ing 50, 60, 70, 110,).look, sus: 1.0/8.0#/2.0
+        mbox2 :E3, 1*(ing 50 60 70 110).look, sus: 1.0/8.0#/2.0
         glitch :fs3, 20
         glitch_cc corode: 0.0
 
 
         sleep 1/4.0
-        with_swing((ing 1.0, 0.125, 0.125, 0.125,).look) do
-          mbox (ing :E3, :E3, :E3,
-                :F3, :F3, :F3, :D3, :D3,).look, 0.75*(ing 50, 60, 70, 110,).look,
-          sus: (ing 1/4.0, 1/4.0, 1/4.0, 1.0, 1.0,).look
+        with_swing((ing 1.0 0.125 0.125 0.125).look) do
+          mbox (ing :E3 :E3 :E3
+                :F3 :F3 :F3 :D3 :D3).look, 0.75*(ing 50 60 70 110).look,
+          sus: (ing 1/4.0 1/4.0 1/4.0 1.0 1.0).look
         end
         glitch_cc corode: 0.2
 
         glitch :gs3, 20
-        #mbox2 :D4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/8.0
+        #mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         sleep 1/4.0
       else
-        mbox2 :D4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+        mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
         sleep 1/2.0
       end
       glitch_cc corode: 0.5
@@ -97,18 +97,18 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       sleep 1/2.0
     else
       glitch :fs3, 20
-      mbox2 :C4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+      mbox2 :C4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
       sleep 1/2.0
       glitch :fs3, 20
       mbox  :D3, 50, sus: 1.0
       sleep 1/2.0
     end
 
-    glitch_cc corode: (ine 0.2, 0.7, 128,).look
-    #glitch (ing :c3, :a3,).look, 30 if spread(7,11).look
+    glitch_cc corode: (ine 0.2 0.7 128).look
+    #glitch (ing :c3 :a3).look, 30 if spread(7,11).look
 
     with_swing -0.1 {
-      #mbox2 :E4, 5.5*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+      #mbox2 :E4, 5.5*(ing 50 60 70 110).look, sus: 1.0/2.0
     }
     sleep 1/2.0
     glitch :fs3, 20
@@ -156,40 +156,40 @@ live_loop :wind, sync: :unsyncable do; tick
     end
   end
 
-  # qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0, 1/2.0, 1/4.0,).look if spread(3*4,8*4).look
-  # qbitsea :E3, 50, sus: (ing 1/2.0, 1, 1,).look if spread(1*4,8*4).look
+  # qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
+  # qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
   sleep 1/8.0
 end
 
 live_loop :light, sync: :unsyncable do; tick
   scorez = (ing
-    [[:A3, :C5, :E4], 8],
-    [[:F4, :A6, :C5], 8],
-    [[:C3, :E5, :G4], 4],
-    [Zz, 4],
-    [[:A3, :C5, :E4], 8],
-    [[:E4, :G5, :B3], 8],
-    [[:F4, :A6, :C5, :E5], 8],
-    [[:C3, :E5, :G4], 8],
-    [Zz, 8],
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 4]
+    [Zz 4]
+    [[:A3 :C5 :E4] 8]
+    [[:E4 :G5 :B3] 8]
+    [[:F4 :A6 :C5 :E5] 8]
+    [[:C3 :E5 :G4] 8]
+    [Zz 8]
 
-    [[:A3, :C5, :E4], 8],
-    [[:F4, :A6, :C5], 8],
-    [[:C3, :E5, :G4], 4],
-    [Zz, 4],
-    [[:A3, :C5, :E4], 4],
-    [[:A3, :C5, :E4], 4],
-    [[:E4, :G5, :B3], 4],
-    [[:E4, :G5, :B3], 4],
-    [[:G4, :B6, :D5, :F4], 8],
-    [[:C4, :E5, :G4], 8],
-    [Zz, 8],
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 4]
+    [Zz 4]
+    [[:A3 :C5 :E4] 4]
+    [[:A3 :C5 :E4] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:G4 :B6 :D5 :F4] 8]
+    [[:C4 :E5 :G4] 8]
+    [Zz 8]
 
     )
   score = scorez.look[0]
   sleeps = scorez.look[-1]
 
-  heat score[0], 0.5*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [0], sat: 0.0, drive: 0.00
+  heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0], sat: 0.0, drive: 0.00
   #deep root(score), 127, sus: sleeps*2, drive: 0.80, sat: 0.00
 
   sleep sleeps
@@ -197,10 +197,10 @@ end
 
 live_loop :pacey, sync: :light do; tick
   #stop
-  overclock_cc oct: (ing 0,   -12,  0,  12,).look
+  overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.5
 #  tick
-#  overclock_cc oct: (ing 0,   -12,  0,  19,).look
+#  overclock_cc oct: (ing 0,  -12, 0, 19).look
 #  sleep 1
 end
 

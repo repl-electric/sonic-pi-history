@@ -4,7 +4,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop :do do
   tick
   glitch :c3#, 0.5*(ing 120 90 100 100    100 90 90 90).look if spread(1,4).look
-glitch :gs3
+  glitch :gs3
   #glitch (ing :fs3 :gs3).look,10 if spread(1,12).rot(1).look || spread(1,12).rot(-1).look
 #  kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
   sleep 1

@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 
-glitch_cc mode: 4
+glitch_cc mode: 5
 
 live_loop :do do
   tick

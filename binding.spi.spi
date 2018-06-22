@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 
-stop
+
 live_loop :go do
 glitch_cc  corode: rand
 

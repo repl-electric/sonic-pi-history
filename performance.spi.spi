@@ -1,6 +1,13 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+live_loop :do do
+  tick
+  kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+  sleep 2
+  sleep 2
+end
+
+
 stop
 
 #solo :pad

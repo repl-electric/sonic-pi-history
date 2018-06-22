@@ -64,9 +64,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if spread(7,11).look
       if spread(1,4).look
-        mbox2 :E4, 1*(ing 50 60 70 110).look, sus: 1.0/8.0
+        mbox2 :E4, 1*(ing 50 60 70 110).look, sus: 1.0/4.0
         sleep 1/4.0
-        mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
+        #mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         sleep 1/4.0
       else
         mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0

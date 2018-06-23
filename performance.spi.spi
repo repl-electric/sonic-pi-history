@@ -117,9 +117,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     glitch :e3,3# if spread(1,4).look
 
     sleep 1/4.0
-    with_swing 0.1{
+#    with_swing 0.0{
       glitch :c3,1# if spread(1,4).look
-    }
+ #   }
     sleep 1/4.0
 
 

@@ -61,6 +61,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
 
+    glitch :C3
+
     if spread(7,11).look
       if spread(1,4).look
         mbox :E3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
@@ -116,7 +118,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/2.0
     glitch :g3,3# if spread(1,4).look
     sleep 1/2.0
-
   end
 end
 glitch_cc mode: 4

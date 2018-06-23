@@ -124,7 +124,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
   end
 end
-glitch_cc mode: 7
+glitch_cc mode: 8
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

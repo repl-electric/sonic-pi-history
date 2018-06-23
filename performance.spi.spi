@@ -118,7 +118,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/4.0
     with_swing 0.2{
       glitch_cc mode: 5
-      glitch :g3,1
+      glitch :g3,10
     }
     sleep 1/4.0
 

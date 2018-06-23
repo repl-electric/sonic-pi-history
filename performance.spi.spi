@@ -117,7 +117,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     glitch :d4,30
     sleep 1/4.0
     with_swing 0.1{
-      glitch :gs3,30
+      glitch :d4,30
     }
     sleep 1/4.0
 

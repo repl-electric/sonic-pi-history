@@ -98,9 +98,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     }
     mbox2_cc motion: 0.45
     sleep 1/2.0
-    mbox2_cc motion: 0.47
 
     sleep 1/2.0
+    mbox2_cc motion: 0.48
 
     with_swing -0.1 {
       #mbox :f2, 127-rand*10, sus: 1.0/4.0

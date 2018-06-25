@@ -4,7 +4,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 glitch_cc mode: 4
 
 
-mbox :A3
+mbox2 :A3
 
 #solo :pad
 #stop

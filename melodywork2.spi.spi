@@ -61,12 +61,12 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     glitch :C3, (ing
-      80 30 35 30
-      40 30 35 30
-      40 30 35 30
-      40 30 35 30
-      40 30 35 30
-      40 30 55 50
+      80 30 35 20
+      40 30 35 20
+      40 30 35 20
+      40 30 35 20
+      40 30 35 20
+      40 30 55 30
       40 30 55 127).look
 
     if spread(7,11).look

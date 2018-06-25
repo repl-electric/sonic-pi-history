@@ -6,13 +6,13 @@ glitch_cc mode: 4
 
 #solo :pad
 #stop
-fx reverb: 0.20
+fx reverb: 0.25
 #stop
 
 #overclock_on :F3
 
 #overclock_x
-overclock_cc drive: 0.60
+overclock_cc drive: 0.70
 
 #overclock_on :E3
 #overclock_cc amp: 0.85

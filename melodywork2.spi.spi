@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 
-eject_cpu_core
+#eject_cpu_core
 
 #glitch_cc tubes: 0.0
 fx reverb: 1.00
@@ -56,8 +56,8 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-flop_cc motion: 0.65,  drive: 0.50
-flip_cc motion: 0.60, drive: 0.30
+flop_cc motion: 0.50,  drive: 0.00
+flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.00
 glitch_cc corode: 0.40
 

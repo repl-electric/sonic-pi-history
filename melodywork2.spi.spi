@@ -88,7 +88,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         sleep 1/4.0
       end
 
-      flip (knit :A5,4 ,:F5,4, :E5,8).look, 127, sus: 4.0
+      flip (knit :A4,4 ,:F4,4, :E4,8).look, 127, sus: 4.0
       sleep 1/2.0
     else
       #glitch :gs3,3# if spread(1,4).look
@@ -180,6 +180,9 @@ live_loop :light, sync: :unsyncable do; tick
     [[:F3 ] 8]
     [[:D4 ] 8]
     [[:G4 ] 8]
+
+
+
 
     [[:F3 ] 8]
     [[:D4 ] 8]

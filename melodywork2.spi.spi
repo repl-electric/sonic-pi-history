@@ -73,7 +73,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       if spread(1,4).look
         #flip :E3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0
-        flop :G4, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
+        flop :A4, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
         #flop :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         #glitch :ds3,2# if spread(1,4).look
         sleep 1/4.0

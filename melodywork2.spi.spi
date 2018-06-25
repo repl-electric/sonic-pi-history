@@ -61,6 +61,7 @@ glitch_cc tubes: 0.61
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+    if spread(3,8).look)
     glitch_cc mode: (ing 0 2 3 5).look
     glitch :c3, 10.5*(ing 65 60 60 60).look
 

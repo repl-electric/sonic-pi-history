@@ -118,13 +118,13 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     }
     mbox2_cc motion: 0.45
     sleep 1/4.0
-    glitch :fs3, 127
+    glitch :fs3, 40
     sleep 1/4.0
 
 
     mbox  :f3, 15, sus: 2.0
     sleep 1/4.0
-    glitch :gs3, 127
+    glitch :gs3, 60
     sleep 1/4.0
 
 

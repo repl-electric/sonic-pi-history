@@ -201,7 +201,7 @@ end
 
 live_loop :pacey, sync: :light do; tick
   #stop
-  #overclock_cc oct: (ing 0,  -12, 0, 12).look
+  overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.5
 #  tick
 #  overclock_cc oct: (ing 0,  -12, 0, 19).look

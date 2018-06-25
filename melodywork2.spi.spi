@@ -180,13 +180,11 @@ live_loop :light, sync: :unsyncable do; tick
     [[:F3 ] 8]
     [[:D4 ] 8]
     [[:G4 ] 8]
-
-
-
-
-    [[:F3 ] 8]
-    [[:D4 ] 8]
     [[:C4 ] 8]
+
+
+
+
 
 
 #    [[:A3 :C5 :E4] 8]

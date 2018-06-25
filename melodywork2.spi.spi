@@ -11,7 +11,7 @@ fx reverb: 0.00
 
 overclock_on :A3
 
-overclock_x
+#overclock_x
 overclock_cc drive: 0.70
 
 #overclock_on :E3

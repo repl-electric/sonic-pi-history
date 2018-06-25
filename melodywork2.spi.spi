@@ -84,7 +84,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         sleep 1/4.0
       end
 
-      flip :C5, 120, sus: 1.0
+      flip :C3, 120, sus: 1.0
       sleep 1/2.0
     else
       #glitch :gs3,3# if spread(1,4).look

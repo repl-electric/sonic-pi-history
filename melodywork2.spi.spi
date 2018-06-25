@@ -65,7 +65,7 @@ glitch_cc corode: 0.40
 #overclock_on :F3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
-  with_bpm 127*1 do
+  with_bpm 127*2 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     if spread(4,8).look
       glitch_cc mode: (ing 0 2 3 5).look

@@ -210,6 +210,9 @@ live_loop :light, sync: :unsyncable do; tick
     deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
     sleep 0.5
     deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
+    sleep 0.5
+    deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
+
   }
 
   sleep sleeps

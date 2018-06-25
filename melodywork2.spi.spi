@@ -3,8 +3,6 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 
-#eject_cpu_core
-
 #glitch_cc tubes: 0.0
 fx reverb: 1.00
 #stop
@@ -177,15 +175,9 @@ end
 
 live_loop :light, sync: :unsyncable do; tick
   scorez = (ing
-    [[:F3 ] 8]
-    [[:D4 ] 8]
-    [[:G4 ] 8]
-    [[:C4 ] 8]
-
-
-#    [[:A3 :C5 :E4] 8]
-#    [[:E4 :A6 :C5] 8]
-#    [[:F4 :E5 :G4] 8]
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 8]
 
 
 

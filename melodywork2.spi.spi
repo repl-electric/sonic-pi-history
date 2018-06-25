@@ -4,10 +4,11 @@ load_support('piezoelectric_resonator'); use_bpm 127
 glitch_cc mode: 4
 
 
-#solo :pad
+solo :pad
+stop
 #stop
 #stop
-fx reverb: 0.00
+fx reverb: 1.00
 #stop
 
 #overclock_on :F3
@@ -60,8 +61,8 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-mbox2_cc motion: 0.50
-mbox_cc motion: 0.50
+mbox2_cc motion: 0.80
+mbox_cc motion: 0.80
 glitch_cc tubes: 0.0
 
 #overclock_on :F3

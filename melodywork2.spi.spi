@@ -200,7 +200,7 @@ live_loop :light, sync: :unsyncable do; tick
   at{
     operator score[1],80, sus:1
     sleep 1/2.0
-    callstack score[1],80, sus:1
+    callstack score[-1],80, sus:1
 
   }
 

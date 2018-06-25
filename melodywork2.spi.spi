@@ -54,10 +54,9 @@ end
 
 flop_cc motion: 0.50
 flip_cc motion: 0.50
-glitch_cc tubes: 0.50
+glitch_cc tubes: 0.61
 
 #overclock_on :F3
-
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

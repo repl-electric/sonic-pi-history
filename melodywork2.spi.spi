@@ -3,12 +3,15 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #glitch_cc mode: 0, corode: 0.5
 glitch_cc mode: 4
 
+
+mbox :A3
+
 #solo :pad
 #stop
 #stop
 #stop
 fx reverb: 0.00
-#stop
+stop
 
 #overclock_on :F3
 

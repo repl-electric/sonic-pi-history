@@ -56,15 +56,15 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-flop_cc motion: 0.55
-flip_cc motion: 0.54
-glitch_cc tubes: 0.86
-glitch_cc corode: 1.0
+flop_cc motion: 0.50
+flip_cc motion: 0.50
+glitch_cc tubes: 0.62
+glitch_cc corode: 0.40
 
 #overclock_on :F3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
-  with_bpm 127*4 do
+  with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     if spread(4,8).look
       glitch_cc mode: (ing 0 2 3 5).look

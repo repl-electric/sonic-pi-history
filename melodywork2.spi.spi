@@ -181,17 +181,17 @@ live_loop :light, sync: :unsyncable do; tick
     [[:C3 :E5 :G4] 8]
     [Zz 8]
 
-    # [[:A3 :C5 :E4] 8]
-    # [[:F4 :A6 :C5] 8]
-    # [[:C3 :E5 :G4] 4]
-    # [Zz 4]
-    # [[:A3 :C5 :E4] 4]
-    # [[:A3 :C5 :E4] 4]
-    # [[:E4 :G5 :B3] 4]
-    # [[:E4 :G5 :B3] 4]
-    # [[:G4 :B6 :D5 :F4] 8]
-    # [[:C4 :E5 :G4] 8]
-    # [Zz 8]
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 4]
+    [Zz 4]
+    [[:A3 :C5 :E4] 4]
+    [[:A3 :C5 :E4] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:G4 :B6 :D5 :F4] 8]
+    [[:C4 :E5 :G4] 8]
+    [Zz 8]
 
     )
   score = scorez.look[0]
@@ -203,7 +203,7 @@ live_loop :light, sync: :unsyncable do; tick
     operator score[1],100, sus:1
   }
 
-  #heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0], sat: 0.0, drive: 0.00
+  heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0], sat: 0.0, drive: 0.00
   deep root(score), 127, sus: sleeps*2, drive: 0.55, sat: 0.00
 
   sleep sleeps

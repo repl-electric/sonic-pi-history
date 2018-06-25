@@ -66,8 +66,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       40 30 35 30
       40 30 35 30
       40 30 35 30
-      40 50 55 50
-      40 50 55 127).look
+      40 30 55 50
+      40 30 55 127).look
 
     if spread(7,11).look
       if spread(1,4).look

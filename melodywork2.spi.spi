@@ -1,6 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-glitch_cc mode: 0, corode: 0.5
+#glitch_cc mode: 0, corode: 0.5
+glitch_cc mode: 4
 
 #solo :pad
 #stop
@@ -57,8 +58,6 @@ end
 mbox2_cc motion: 0.50
 mbox_cc motion: 0.50
 
-
-glitch :cs4, 127
 
 stop
 
@@ -159,7 +158,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/2.0
   end
 end
-glitch_cc mode: 4
+
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

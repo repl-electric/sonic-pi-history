@@ -61,6 +61,13 @@ mbox_cc motion: 0.50
 
 glitch_cc tubes: 0.9
 
+live_loop :pat, sync: :ModularSynthsControlledByCode do
+  tick
+  glitch :cs4, 127
+  sleep 1/8.0
+end
+
+
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
@@ -73,8 +80,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
        30 30 35 20
        30 30 55 30
        30 30 55 30).look
-
-    glitch :cs4, 127
 
     if spread(7,11).look
       if spread(1,4).look

@@ -63,7 +63,7 @@ glitch_cc tubes: 0.62
 
 live_loop :pat, sync: :ModularSynthsControlledByCode do
   tick
-  glitch (knit :cs4,31, :d4,1).look, 127 if spread(7,11).look
+  glitch (knit :cs4,30, :d4,4).look, 127 if spread(7,11).look
   sleep 0.25
 end
 

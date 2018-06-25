@@ -5,7 +5,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 live_loop :go do
 
-  glitch :cs4
+  glitch :cs4, 127
   sleep 1
 end
 

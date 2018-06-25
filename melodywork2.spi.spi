@@ -65,7 +65,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     if spread(4,8).look
       glitch_cc mode: (ing 0 2 3 5).look
     end
+    glitch_cc corode: 1.0
     glitch :c3, 10.5*(ing 65 60 60 60).look
+    glitch_cc corode: 0.8
 
     if true#spread(7,11).look
       if spread(1,4).look

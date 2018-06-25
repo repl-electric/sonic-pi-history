@@ -66,7 +66,7 @@ glitch_cc tubes: 0.0
 #overclock_on :F3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
-  with_bpm 127*3 do
+  with_bpm 127*4 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
      glitch :C3, (ing 65 60 60 60).look
 

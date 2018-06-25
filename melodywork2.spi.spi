@@ -58,7 +58,7 @@ end
 
 flop_cc motion: 0.30,  drive: 0.00
 flip_cc motion: 0.50, drive: 0.00
-glitch_cc tubes: 0.00
+glitch_cc tubes: 0.50
 glitch_cc corode: 0.00
 
 #overclock_on :E3
@@ -144,7 +144,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     flop :c4, 127-rand*10, sus: 2.0
 
     sleep 1/2.0
-    glitch (ing :cs4 :cs4 :cs4 :d4).look,127
+    #glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0
   end
 end

@@ -59,7 +59,7 @@ end
 mbox2_cc motion: 0.50
 mbox_cc motion: 0.50
 
-glitch_cc tubes: 0.0
+glitch_cc tubes: 0.5
 
 live_loop :pat, sync: :ModularSynthsControlledByCode do
   tick

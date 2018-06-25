@@ -58,7 +58,7 @@ mbox2_cc motion: 0.50
 mbox_cc motion: 0.50
 
 
-    glitch :cs4, 127
+glitch :cs4, 127
 
 stop
 

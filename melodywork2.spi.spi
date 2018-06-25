@@ -61,7 +61,7 @@ flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.00
 glitch_cc corode: 0.00
 
-overclock_on :E3
+#overclock_on :E3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
@@ -217,7 +217,7 @@ end
 
 live_loop :pacey, sync: :light do; tick
   #stop
-  overclock_cc oct: (ing 0,  -12, 0, 12).look
+ # overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.5
 #  tick
 #  overclock_cc oct: (ing 0,  -12, 0, 19).look

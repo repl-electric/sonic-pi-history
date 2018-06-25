@@ -198,7 +198,7 @@ live_loop :light, sync: :unsyncable do; tick
   sleeps = scorez.look[-1]
 
   at{
-    operator score[1],80,sus:1
+    operator score[1],80, sus:1
     sleep 1/2.0
   }
 

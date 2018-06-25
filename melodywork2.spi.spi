@@ -124,7 +124,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     mbox  :f3, 15, sus: 2.0
     sleep 1/4.0
-    glitch :d3, 127
+    glitch :ds3, 127
     sleep 1/4.0
 
 

@@ -71,7 +71,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
        30 30 55 30
        30 30 55 30).look
 
-    #glitch :cs4, 127
+    glitch :cs4, 127
 
     if true #spread(7,11).look
 

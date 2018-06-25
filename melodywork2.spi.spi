@@ -63,10 +63,9 @@ glitch_cc tubes: 0.9
 
 live_loop :pat, sync: :ModularSynthsControlledByCode do
   tick
-  glitch :cs4, 127
+  glitch :cs4, 8
   sleep 1.0
 end
-
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

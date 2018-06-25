@@ -79,7 +79,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
       else
         at{
-          glitch :g3,3# if spread(1,4).look
+          glitch :a3,3# if spread(1,4).look
           sleep 1/4.0
           glitch :gs3,2# if spread(1,4).look
           }

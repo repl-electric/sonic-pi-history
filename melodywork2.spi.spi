@@ -77,10 +77,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         #mbox2 :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         sleep 1/4.0
       else
+        glitch :gs3,20# if spread(1,4).look
         mbox2 :F3, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
         sleep 1/2.0
-        glitch :gs3,20# if spread(1,4).look
-
       end
       mbox  :A3, 50, sus: 1.0
       sleep 1/2.0

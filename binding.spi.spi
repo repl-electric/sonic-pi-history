@@ -6,7 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 live_loop :go do
-  glitch_cc tubes: 0.6
+  glitch_cc tubes: 0.65
   sleep 1
 end
 

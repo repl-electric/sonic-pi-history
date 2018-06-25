@@ -208,9 +208,9 @@ live_loop :light, sync: :unsyncable do; tick
   heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
   at{
     deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
-    sleep 0.5
+    sleep 1
     deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
-    sleep 0.5
+    sleep 1
     deep :D4, 127, sus: sleeps*2, drive: 0.55, sat: 0.00
 
   }

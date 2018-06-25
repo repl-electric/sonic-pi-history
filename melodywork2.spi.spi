@@ -61,7 +61,7 @@ flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.00
 glitch_cc corode: 0.00
 
-overclock_on :A3
+overclock_on :E3
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

@@ -18,12 +18,12 @@ fx reverb: 0.00
 #overclock_x
 #overclock_cc drive: 0.20
 
-overclock_on :A3
+#overclock_on :3
 #overclock_cc amp: 0.85
-#overclock_cc motion: 0.30
+#overclock_cc motion: 0.25
 
 live_loop :go, sync: :unsyncable do
-  stop
+#  stop
   tick
   if spread(3,8).look
     if spread(1,16).look

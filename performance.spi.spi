@@ -75,7 +75,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     end
 
     if spread(8,8).look
-      midi :43, 127, channel: 2, port: :iac_bus_1
+      midi :e3, 127, channel: 2, port: :iac_bus_1
     end
 
     glitch_cc corode: 1.0

@@ -153,7 +153,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 end
 
 live_loop :wind, sync: :unsyncable do; tick
-  stop
+  #stop
   if spread(1,128).rot(-2).look
     #mt S, 20, 20
   end

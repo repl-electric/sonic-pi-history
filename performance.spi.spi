@@ -160,7 +160,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #flop_cc motion: 0.52
 
     flop :a4, 127-rand*10, sus: 2.0
-    midi :gs3, 127, channel: 2, port: :iac_bus_1
+    midi :b3, 127, channel: 2, port: :iac_bus_1
     sleep 1/2.0
     flop :c5, 127-rand*10, sus: 1.0/2.0
     flop_cc drive: rand, sat: 1.00

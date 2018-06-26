@@ -9,6 +9,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 fx reverb: 0.00
 #stop
 
+
+overclock_on :a3
+
 #overclock_on :F3
 #overclock_x
 #overclock_cc drive: 0.70

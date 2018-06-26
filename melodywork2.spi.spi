@@ -167,8 +167,8 @@ live_loop :wind, sync: :unsyncable do; tick
     end
   end
 
-  # qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
-  # qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
+   qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
+   qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
   sleep 1/8.0
 end
 

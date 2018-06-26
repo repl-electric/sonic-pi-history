@@ -9,14 +9,13 @@ load_support('piezoelectric_resonator'); use_bpm 127
 fx reverb: 0.00
 #stop
 
-
-overclock_on :f3
+#overclock_on :f3
 
 #overclock_on :F3
 #overclock_x
 #overclock_cc drive: 0.70
 #overclock_cc amp: 0.50
-overclock_cc motion: 0.25
+overclock_cc motion: 0.00
 
 live_loop :go, sync: :unsyncable do
   stop
@@ -217,7 +216,7 @@ live_loop :light, sync: :unsyncable do; tick
 end
 
 live_loop :pacey, sync: :light do; tick
-  #stop
+  stop
  # overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.5
 #  tick

@@ -72,6 +72,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       glitch_cc mode: (ing 0 2 3 5).look
     end
     glitch_cc corode: 1.0
+
+    glitch_cc mode: 0
     glitch :c3, 127
 
     at{

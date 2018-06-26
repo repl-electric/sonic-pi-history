@@ -81,7 +81,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     at{
       sleep 0.25
-      glitch :ds3, 127
+      glitch :c3, 127
       }
 
 

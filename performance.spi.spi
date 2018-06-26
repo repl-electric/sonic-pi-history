@@ -159,9 +159,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       flip :g4, 127-rand*10, sus: 1.0/4.0
       #flip (knit :f4,3,:D4,3,:C4,3).look, 127-rand*20, sus: 1.0#/2.0
     }
-    flip :b4, 127-rand*10, sus: 1.0/4.0
 
     sleep 1/2.0
+    flip :b4, 127-rand*10, sus: 1.0/4.0
     glitch :gs3, 80 if spread(1,8).look
     sleep 1/2.0
     glitch :gs3, 90 if spread(1,8).look

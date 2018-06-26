@@ -139,7 +139,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/4.0
     #glitch :fs3, 40
     sleep 1/4.0
-    midi :e3, 127, channel: 2, port: :iac_bus_1
+    midi :e3, 120, channel: 2, port: :iac_bus_1
     #flip  :f3, 15, sus: 2.0
     sleep 1/4.0
     #glitch :ds3, 127

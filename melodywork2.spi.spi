@@ -163,7 +163,7 @@ live_loop :wind, sync: :unsyncable do; tick
 
   if spread(7*1,11*4).look
     if spread(7*1,11*4*8).look
-      #bitsea :A4, (line 127,100,256).look, sus: 2, hi: 0.85
+      bitsea :A4, (line 127,100,256).look, sus: 2, hi: 0.85
     end
   end
 

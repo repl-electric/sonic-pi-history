@@ -156,7 +156,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     with_swing 0.1 {
       glitch :gs3, 40
-      flip :cs4, 127-rand*10, sus: 1.0/4.0
+      flip :c4, 127-rand*10, sus: 1.0/4.0
       #flip (knit :f4,3,:D4,3,:C4,3).look, 127-rand*20, sus: 1.0#/2.0
     }
 

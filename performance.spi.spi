@@ -172,7 +172,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/2.0
     flop :c4, 127-rand*10, sus: 1.0/2.0
     flop_cc drive: rand, sat: 1.00
-    midi :b3, 100, channel: 2, port: :iac_bus_1
+    midi :e3, 100, channel: 2, port: :iac_bus_1
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0
   end

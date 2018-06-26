@@ -65,7 +65,8 @@ glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 
 #overclock_on :E3
-    midi :c3, 100, channel: 4, port: :iac_bus_1
+midi :c3, 100, channel: 4, port: :iac_bus_1
+
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look

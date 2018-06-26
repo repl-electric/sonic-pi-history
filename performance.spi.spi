@@ -97,7 +97,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     glitch_cc corode: 0.8
 
-    if fakse#spread(7,11).look
+    if false#spread(7,11).look
       if spread(1,4).look
         flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0

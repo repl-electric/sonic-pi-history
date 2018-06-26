@@ -65,7 +65,14 @@ glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 
 #overclock_on :E3
+live_loop :name do
+  tick
 midi :c3, 100, channel: 4, port: :iac_bus_1
+  sleep 1
+  sleep 1
+end
+
+
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

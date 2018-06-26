@@ -15,7 +15,8 @@ fx reverb: 1.00
 #overclock_x
 #overclock_cc drive: 0.70
 #overclock_cc amp: 0.50
-#overclock_cc motion: 0.0
+
+overclock_cc motion: 0.00
 
 live_loop :go, sync: :unsyncable do
   stop
@@ -58,13 +59,10 @@ live_loop :go, sync: :unsyncable do
   sleep 1/2.0
 end
 
-#flop_cc motion: 0.30,  drive: 0.00
-#flip_cc motion: 0.50, drive: 0.00
-#glitch_cc tubes: 0.50
-#glitch_cc corode: 0.30
-
-glitch_cc tubes: 0.62
-glitch_cc corode: 1.00
+flop_cc motion: 0.30,  drive: 0.00
+flip_cc motion: 0.50, drive: 0.00
+glitch_cc tubes: 0.50
+glitch_cc corode: 0.30
 
 #overclock_on :E3
 
@@ -75,13 +73,11 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       glitch_cc mode: (ing 0 2 3 5).look
     end
     glitch_cc corode: 1.0
-
-    glitch_cc mode: 0
-    glitch :c3, 127
+    glitch :c3, 10.5*(ing 65 60 60 60).look
 
     at{
       sleep 0.25
-      glitch :c3, 127
+      glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
       }
 
 

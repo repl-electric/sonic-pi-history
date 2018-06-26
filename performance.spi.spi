@@ -156,7 +156,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     sleep 1/2.0
     flop :c5, 127-rand*10, sus: 1.0/2.0
-    flop_cc drive: 0.7
+    flop_cc drive: 0.8
 
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0

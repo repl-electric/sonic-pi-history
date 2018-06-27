@@ -131,7 +131,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     }
 
     sleep 1/2.0
-    #flip :e3, 127-rand*10, sus: 1.25
+    flip :e3, 127-rand*10, sus: 1.25
     glitch :gs3, 80 if spread(1,8).look
     sleep 1/2.0
     glitch :gs3, 90 if spread(1,8).look

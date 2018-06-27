@@ -110,7 +110,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if false#spread(7,11).look
       if spread(1,4).look
-        flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
+        flip :A3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0
         #flop :E3, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
         #flop :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0

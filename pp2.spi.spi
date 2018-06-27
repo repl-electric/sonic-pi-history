@@ -85,7 +85,6 @@ flip_cc motion: 0.50, drive: 0.80
 glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 
-
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
@@ -97,7 +96,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       dark :e3, 120
       at{
         sleep 0.5
-        dark :e3, 120 if spread(2,4).look
+        dark :e3, 120 if spread(3,4).look
       }
     end
 

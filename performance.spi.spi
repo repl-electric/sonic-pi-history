@@ -89,7 +89,12 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     end
 
     if spread(8,8).look
-      dark :e3, 120
+      if spread(2,4).look
+        dark :e3, 120
+      else
+        dark :e3, 110
+      end
+
       at{
         sleep 0.5
         dark :e3, 120 if spread(2,4).look

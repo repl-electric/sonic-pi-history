@@ -82,7 +82,7 @@ end
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
-    ze :A4
+    ze :A4,127
     operator :A3,127
     callstack :a4, 127
     if spread(4,8).look

@@ -26,7 +26,7 @@ overclock_cc motion: 0.50
 #glitch_cc tubes: 0.50
 #glitch_cc corode: 0.30
 
-#glitch_cc tubes: 0.25
+#glitch_cc tubes: 0.50
 #glitch_cc corode: 1.00
 
 #lovely
@@ -38,7 +38,6 @@ overclock_cc motion: 0.50
 #flip_cc motion: 0.60, drive: 0.90, sat: 0.10
 
 #overclock_on :E3
-
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
@@ -94,7 +93,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop_cc motion: 0.4
 
       bitsea :a4, 80, sus: 2
-      flip :c3, 100, sus: 2.0
+      flip :c3, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0
       glitch :fs3,20# if spread(1,4).look
 

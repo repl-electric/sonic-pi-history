@@ -95,10 +95,12 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         dark :e3, 127
       end
 
+      if spread(2,4).look
       at{
         sleep 0.5
-        dark :e3, 110 if spread(2,4).look
-      }
+        dark :e3, 110
+        }
+      end
     end
 
     glitch_cc corode: 1.0

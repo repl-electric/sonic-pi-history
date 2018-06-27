@@ -6,7 +6,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #eject_cpu_core
 #stop
 #glitch_cc tubes: 0.0
-fx reverb: 0.00
+fx reverb: 0.00, tube: 0.75
 #stop
 
 #overclock_on :f3

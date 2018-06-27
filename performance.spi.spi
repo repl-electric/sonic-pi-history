@@ -84,7 +84,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     ze :A4
     operator :A3
-    callstack :a4. 127
+    callstack :a4, 127
     if spread(4,8).look
       glitch_cc mode: (ing 0 2 3 5).look
     end

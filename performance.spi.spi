@@ -34,8 +34,8 @@ overclock_cc motion: 0.50
 #flip_cc motion: 0.40, drive: 0.90, sat: 1.00
 
 
-#flop_cc motion: 0.60,  drive: 0.90,  sat: 1.00
-#flip_cc motion: 0.60, drive: 0.90, sat: 1.00
+#flop_cc motion: 0.50,  drive: 0.50,  sat: 0.50
+#flip_cc motion: 0.50, drive: 0.50, sat: 0.50
 
 #overclock_on :E3
 
@@ -68,7 +68,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if spread(7,11).look
       if spread(1,4).look
-        #flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
+        flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0
         #flop :E3, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
         #flop :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0

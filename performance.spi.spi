@@ -46,7 +46,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     if spread(4,8).look
       glitch_cc mode: (ing 0 2 3 5).look
     end
-
     if spread(8,8).look
  #     dark :e3, 122
       at{
@@ -56,7 +55,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     end
 
     glitch_cc corode: 1.0
-
     glitch :c3, 10.5*(ing 65 60 60 60).look
 
     at{

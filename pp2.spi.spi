@@ -80,6 +80,11 @@ end
 
 #overclock_on :E3
 
+flop_cc motion: 0.30,  drive: 0.80
+flip_cc motion: 0.50, drive: 0.80
+glitch_cc tubes: 0.50
+glitch_cc corode: 0.30
+
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

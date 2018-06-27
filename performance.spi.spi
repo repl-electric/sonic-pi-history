@@ -90,10 +90,12 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     if spread(8,8).look
       midi :e3, 120, channel: 2, port: :iac_bus_1
+       if spread(2,4).look
       at{
         sleep 0.5
-        midi :e3, 120, channel: 2, port: :iac_bus_1 if spread(2,4).look
-      }
+        midi :e3, 120, channel: 2, port: :iac_bus_1
+        }
+       end
     end
 
     glitch_cc corode: 1.0

@@ -136,9 +136,10 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     glitch :gs3, 90 if spread(1,8).look
     flop_cc motion: 0.52
 
-    flop :a4, 127-rand*10, sus: 2.0
+    #flop :a4, 127-rand*10, sus: 2.0
     #dark :cs3, 122
     sleep 1/2.0
+
     flop :c4, 127-rand*10, sus: 1.0/2.0
     #flop_cc drive: rand, sat: 1.00
 #    dark :e3, 100

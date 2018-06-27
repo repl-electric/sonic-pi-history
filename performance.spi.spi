@@ -135,7 +135,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop_cc motion: 0.4
 
       bitsea :a4, 80, sus: 1
-      flip :c4, 100, sus: 1.0
+      flip   :c4, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0
       glitch :fs3,20# if spread(1,4).look
 
@@ -157,7 +157,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #glitch :fs3, 40
     sleep 1/4.0
 #    dark :e3, 110 if spread(1,2).look
-    #flip  :f3, 15, sus: 2.0
+    flip  :f3, 15, sus: 2.0
     sleep 1/4.0
     #glitch :ds3, 127
     sleep 1/4.0

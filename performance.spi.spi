@@ -179,11 +179,11 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #flop_cc motion: 0.52
 
     flop :g3, 127-rand*10, sus: 2.0
- #   dark :cs3, 122
+    dark :cs3, 122
     sleep 1/2.0
-    flop :b4, 127-rand*10, sus: 1.0/2.0
+    flop :c4, 127-rand*10, sus: 1.0/2.0
     flop_cc drive: rand, sat: 1.00
-#    dark :e3, 100
+    dark :e3, 100
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0
   end

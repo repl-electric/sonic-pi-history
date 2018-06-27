@@ -92,7 +92,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       if spread(2,4).look
         dark :e3, 120
       else
-        #dark :e3, 100
+        dark :e3, 100
       end
 
       if spread(2,4).look

@@ -1,7 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
 live_loop :go do
-  dark_cc corode: 0.5
+  dark_cc corode: rand
   sleep 1
 end
 

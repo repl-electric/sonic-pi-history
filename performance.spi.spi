@@ -261,7 +261,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     glitch :gs3, 90 if spread(1,8).look
     #flop_cc motion: 0.52
 
-    flop :bs3, 100-rand*10, sus: 2.0
+    flop :c3, 100-rand*10, sus: 2.0
 
     sleep 1/2.0
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127

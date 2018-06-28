@@ -108,7 +108,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         #glitch :as3,2# if spread(1,4).look
         sleep 1/4.0
       end
-
+      flip :E3, 50, sus: 1.0 #KEEP
       #flip (knit :A5, 4 ,:F5,4, :E5,8).look, (ing 80 70 60 40).look, sus: 4.0
       sleep 1/2.0
     else
@@ -116,7 +116,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop :A3, 1*(ing 50 60 70 110).look, sus: 1.0/2.0 #lovely with c3
       sleep 1/2.0
       glitch :ds3, 127# if spread(1,4).look
-      flip :E3, 50, sus: 1.0 #KEEP
+      #flip :E3, 50, sus: 1.0 #KEEP
       #flip :g3, 90, sus: 4.0  #lovely riser
       sleep 1/2.0
 

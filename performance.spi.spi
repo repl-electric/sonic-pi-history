@@ -176,7 +176,6 @@ live_loop :wind, sync: :unsyncable do; tick
   sleep 1/8.0
 end
 
-
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
@@ -189,7 +188,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     at{
       sleep 0.25
       glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
-      }
+    }
 
 
     glitch_cc corode: 0.8

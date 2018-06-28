@@ -253,7 +253,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #glitch :fs3, 40
     sleep 1/4.0
 
-    dark :e3, 110 if spread(1,2).look
+    #dark :e3, 110 if spread(1,2).look
     #flip  :f3, 15, sus: 2.0
     sleep 1/4.0
     #glitch :ds3, 127

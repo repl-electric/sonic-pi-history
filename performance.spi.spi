@@ -170,7 +170,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop :c4, 127-rand*10, sus: 2.0
     else
       flop_cc motion: 0.4
-      kal :Fs3, 127
+      kal :gs3, 127
       #flop :f3, 127-rand*10, sus: 2.0
     end
 

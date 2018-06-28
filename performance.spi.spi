@@ -200,7 +200,6 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
     }
 
-
     glitch_cc corode: 0.8
 
     if spread(7,11).look
@@ -212,7 +211,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         #glitch :ds3,2# if spread(1,4).look
         sleep 1/4.0
       else
-        #flop :G4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
+        flop :G4, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
         sleep 1/4.0
         #glitch :as3,2# if spread(1,4).look
         sleep 1/4.0

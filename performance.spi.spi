@@ -240,6 +240,7 @@ live_loop :light, sync: :unsyncable do; tick
   score = scorez.look[0]
   sleeps = scorez.look[-1]
 
+  puts :GOGOGOGOG
   at{
     callstack score[-1],120, sus:1
     sleep 1/2.0

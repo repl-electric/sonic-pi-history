@@ -201,9 +201,9 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     }
 
     sleep 1/2.0
-    #glitch :gs3, 80 if spread(1,8).look
+    glitch :gs3, 80 if spread(1,8).look
     sleep 1/2.0
-    #glitch :gs3, 90 if spread(1,8).look
+    glitch :gs3, 90 if spread(1,8).look
 
     if spread(3,8).look
       flop_cc motion: 0.3

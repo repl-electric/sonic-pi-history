@@ -1,9 +1,9 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 
-#init!
+init!
 
-cam :main
+#cam :main
 
 stop
 

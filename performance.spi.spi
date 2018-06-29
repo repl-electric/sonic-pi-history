@@ -112,7 +112,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       sleep 1/2.0
     else
       #glitch :gs3,3# if spread(1,4).look
-      flop :e3, 1*(ing 50 60 70 110).look, sus: 1.0/2.0 #lovely with c3
+      flop :e4, 1*(ing 50 60 70 110).look, sus: 1.0/2.0 #lovely with c3
       sleep 1/2.0
       glitch :ds3, 127# if spread(1,4).look
       #flip :E3, 50, sus: 1.0 #KEEP

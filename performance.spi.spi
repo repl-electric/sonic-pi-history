@@ -73,11 +73,7 @@ glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 
 live_loop :wind, sync: :unsyncable do; tick
-#  stop
-  if spread(1,128).rot(-2).look
-    #mt S, 20, 20
-  end
-
+  stop
   s=(knit :A4, 128, _, 127, :A5,1).look
   qbitsea s, (line 127,50,256*4).look, sus: (knit 1/4.0,32,1/2.0,31, 1, 1).look if spread(7*1,11*4).look
 

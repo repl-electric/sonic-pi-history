@@ -1,30 +1,31 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
+scene 1
 #create_cube
 #world time: 1.0
 #star life: 5
 #overclock_on :E3
-roots throttle: 0.1, freq: 0.5
+#roots throttle: 0.1, freq: 0.5
 
-roots_chase radius: 1.0, amp: 0.1, freq: 0.0
-roots chase: 0.02, target: :spiral
+#roots_chase radius: 1.0, amp: 0.1, freq: 0.0
+#roots chase: 0.02, target: :spiral
 
 create_tree -2
 
-vortex y: 0.4, force: 0
+#vortex y: 0.4, force: 0
 star life: 3.0, size: 0.56
 star throttle: 1
 shard 0.0
 burst 1.0
 ##create_tree
-color :g1
+#color :g1
 sea wave: 0
 sea dir: 360
 sea circle: 0.9
 sea ripple: 0.0
 
 
-cam :main
+#cam :main
 
 
 
@@ -36,7 +37,8 @@ cam :main
 #world time: 1.0
 #create_cube
 #create_sea
-cam :cube #      unity "/cubecam/zoomout", 0.0
+#cam :cube
+#      unity "/cubecam/zoomout", 0.0
 #      unity "/cubecam/zoomout", 1.0
 
 

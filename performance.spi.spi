@@ -12,7 +12,7 @@ create_sea
 #world time: 1.0
 #star life: 5
 #overclock_on :E3
-roots throttle: 0.1, freq: 0.4, drag: 3, target: cube
+roots throttle: 0.1, freq: 0.1, drag: 3, target: cube
 
 
 

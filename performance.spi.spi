@@ -3,16 +3,16 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 
-#overclock_x
-#stop
+overclock_x
+stop
 live_loop :oneshot, sync: :unsyncable do
   tick
   overclock_on :A3
-  sleep 0.5
+  sleep 1
   overclock_on :E3
-  sleep 0.5
+  sleep 1
   overclock_on :F3
-  sleep 0.5
+  sleep 1
   stop
 end
 

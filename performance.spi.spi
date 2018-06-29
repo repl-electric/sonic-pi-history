@@ -3,7 +3,19 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 
-overclock_x
+live_loop :oneshot, sync: :unsyncable do
+  tick
+  overclock_on :A3
+  sleep 0.125
+  overclock_on :E3
+  sleep 0.125
+  overclock_on :F3
+  sleep 0.125
+
+  stop
+end
+
+
 stop
 
 #eject_cpu_core

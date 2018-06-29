@@ -6,7 +6,9 @@ create_light 1
   unity "/linecolor/b",1.0
 
 #cam :cube
-zoomout
+#zoomout
+cam :exit
+
 stop
 #scene 1
 #init! true

@@ -155,8 +155,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         glitch :gs3, 80 if a
         #flip :c6, 30, sus: 1.0 if a
         #deep :C6, sus: 1
-        ze :C5, sus: 4
-        bitsea :E5, 40, sus:2
+        #ze :C5, sus: 4
+        bitsea :E5, 40, sus: 8
       }
       flip :c4, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0

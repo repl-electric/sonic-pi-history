@@ -1,7 +1,9 @@
 load_support('piezoelectric_resonator'); use_bpm 127
-
+live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
+
+
 
 live_loop :oneshot, sync: :unsyncable do
   tick
@@ -247,5 +249,3 @@ live_loop :pacey, sync: :light do; tick
   #overclock_cc oct: (ing 0,  -12, 0, 19).look
   #sleep 1
 end
-
-live_loop(:unsyncable) do;  sleep 1.0;end

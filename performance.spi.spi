@@ -16,9 +16,9 @@ shard 1.0
 burst 1.0
 create_tree
 color :g8
-sea wave: 0.0
+sea wave: 0.1
 sea circle: 0.0
-sea ripple: 0
+sea ripple: 0.0
 
 #zoomout
 #glitch_cc mode: 0, corode: 0.5

@@ -3,7 +3,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 init!
 
-cam :exit
+cam :main
 
 stop
 

@@ -7,7 +7,7 @@ create_light 1
 
 #cam :cube
 #zoomout
-cam :exit
+cam :main
 
 stop
 #scene 1

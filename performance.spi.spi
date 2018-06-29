@@ -9,11 +9,11 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #create_sea
 #cam :exit
 
-unity "/cubecam/zoomout", 0.0
-unity "/cubecam/zoomout", 1.0
+#      unity "/cubecam/zoomout", 0.0
+#      unity "/cubecam/zoomout", 1.0
 
 
-#create_aura
+create_aura
 
 overclock_x
 
@@ -125,10 +125,10 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     end
 
     glitch_cc corode: 1.0
-    #glitch :c3, 10.5*(ing 65 60 60 60).look
+    glitch :c3, 10.5*(ing 65 60 60 60).look
     at{
       sleep 0.25
-      #glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+      glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
     }
     glitch_cc corode: 0.8
 
@@ -156,7 +156,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #glitch :gs3,3# if spread(1,4).look
       #flop :A3, 1*(ing 50 60 70 110).look, sus: 1.0/2.0 #lovely with c3
       sleep 1/2.0
-      #glitch :ds3, 127# if spread(1,4).look
+      glitch :ds3, 127# if spread(1,4).look
       #flip :E3, 50, sus: 1.0 #KEEP
       #flip :g3, 50, sus: 4.0  #lovely riser
       sleep 1/2.0
@@ -166,16 +166,16 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       qbitsea :a4, 80, sus: 1
       flip :g3, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0
-      #glitch :fs3,20# if spread(1,4).look
+      glitch :fs3,20# if spread(1,4).look
 
       at{
         sleep 1/2.0
-        #glitch :g3, 50# if spread(1,4).look
+        glitch :g3, 50# if spread(1,4).look
         #flop_cc motion: 0.50
         }
     end
 
-    #glitch_cc corode: (ine 0.2 0.7 128).look
+    glitch_cc corode: (ine 0.2 0.7 128).look
     #glitch (ing :c3 :a3).look, 30 if spread(7,11).look
 
     #with_swing -0.1 {
@@ -183,7 +183,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #}
     #flop_cc motion: 0.45
     sleep 1/4.0
-    glitch :fs3, 40
+    #glitch :fs3, 40
     sleep 1/4.0
 
     #dark :e3, 110 if spread(1,2).look
@@ -219,7 +219,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/2.0
     #dark :e3, 100
     #flop :c4, 127-rand*10, sus: 1.0/2.0
-    #glitch (ing :cs4 :cs4 :cs4 :d4).look,127
+    glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0
   end
 end

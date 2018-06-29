@@ -14,7 +14,7 @@ star life: 6.0, size: 0.4
 star throttle: 1
 
 create_tree
-color factor: 2
+color note(:f4)
 sea wave: 0.5
 sea circle: 1.0
 sea ripple: 0

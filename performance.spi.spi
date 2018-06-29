@@ -12,6 +12,10 @@ world time: 1.
 roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 rocks throttle: 1
 
+  unity "/linecolor/h",0.0
+  unity "/linecolor/s",0.0
+  unity "/linecolor/b",0.0
+
 
 roots_chase radius: 1.0, amp: 0.5, freq: 0.2, drag: 3.0
 roots chase: 0.02, target: :cube, drag: 3

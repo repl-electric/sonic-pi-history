@@ -4,7 +4,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 at{
   sleep 0.5
-  unity "/rockcircle/y", 0.1
+  unity "/rockcircle/y", -0.1
   sleep 0.25
   unity "/rockcircle/y", 0.0
   }

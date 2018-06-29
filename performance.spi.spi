@@ -13,7 +13,7 @@ roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 rocks throttle: 1
 
 
-roots_chase radius: 0.0, amp: 0.1, freq: 0.0
+roots_chase radius: 0.0, amp: 0.1, freq: 0.0, drag: 0.2
 roots chase: 0.02, target: :spiral
 
 create_tree
@@ -140,8 +140,8 @@ live_loop :wind, sync: :unsyncable do; tick
   end
 
   #qbitsea :A5
-  #qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0, 1/2.0, 1/4.0,).look if spread(3*4,8*4).look
-  #qbitsea :E3, 50, sus: (ing 1/2.0, 1, 1,).look if spread(1*4,8*4).look
+  #qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
+  #qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
   sleep 1/8.0
 end
 
@@ -155,7 +155,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     if spread(4,8).look
-      glitch_cc mode: (ing 0, 2, 3, 5,).look
+      glitch_cc mode: (ing 0 2 3 5).look
     end
     if spread(8,8).look
       #dark :e3, 122
@@ -168,7 +168,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     end
 
     glitch_cc corode: 1.0
-    glitch :c3, 10.5*(ing 65, 60, 60, 60,).look
+    glitch :c3, 10.5*(ing 65 60 60 60).look
     at{
       sleep 0.5
       linecolor cube: rand*1.5
@@ -177,24 +177,24 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       }
 
     vortex throttle: 0
-    #vortex force: (ing 500,  0,  100,  0,).look
+    #vortex force: (ing 500, 0, 100, 0).look
     at{
       sleep 0.25
-      glitch :c3, 2.1*(ing 120, 90, 100, 100,    100, 90, 90, 90,).look
+      glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
     }
     glitch_cc corode: 0.8
 
     if spread(7,11).look
       if spread(1,4).look
-        #flip :F3, 1*(ing 50, 60, 70, 110,).look, sus: 1.0#/2.0
+        #flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0
-        #flop :E3, 1*(ing 50, 60, 70, 110,).look, sus: 2.0#/2.0
-        #flop :D4, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/8.0
+        #flop :E3, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
+        #flop :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
         #glitch :ds3,2# if spread(1,4).look
         sleep 1/4.0
       else
 #        midi :a4, 100, channel: 16, sus: 2
-        #flop :d3, 2*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+        #flop :d3, 2*(ing 50 60 70 110).look, sus: 1.0/2.0
         #flop :E4, 50, sus: 1.0 #KEEP
         sleep 1/4.0
         #glitch :as3,1# if spread(1,4).look
@@ -202,11 +202,11 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         #glitch :as3,5# if spread(1,4).look
       end
 
-      #flip (knit :A5, 4 ,:F5,4, :E5,8).look, (ing 80, 70, 60, 40,).look, sus: 4.0
+      #flip (knit :A5, 4 ,:F5,4, :E5,8).look, (ing 80 70 60 40).look, sus: 4.0
       sleep 1/2.0
     else
       #glitch :gs3,3# if spread(1,4).look
-      #flop :A3, 1*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0 #lovely with c3
+      #flop :A3, 1*(ing 50 60 70 110).look, sus: 1.0/2.0 #lovely with c3
       sleep 1/2.0
       glitch :ds3, 127# if spread(1,4).look
       #flip :E3, 50, sus: 1.0 #KEEP
@@ -227,11 +227,11 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         }
     end
 
-    glitch_cc corode: (ine 0.2, 0.7, 128,).look
-    #glitch (ing :c3, :a3,).look, 30 if spread(7,11).look
+    glitch_cc corode: (ine 0.2 0.7 128).look
+    #glitch (ing :c3 :a3).look, 30 if spread(7,11).look
 
     #with_swing -0.1 {
-      #flop :E4, 5.5*(ing 50, 60, 70, 110,).look, sus: 1.0/2.0
+      #flop :E4, 5.5*(ing 50 60 70 110).look, sus: 1.0/2.0
     #}
     #flop_cc motion: 0.45
     sleep 1/4.0
@@ -271,35 +271,35 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     sleep 1/2.0
     #dark :e3, 100
     #flop :c4, 127-rand*10, sus: 1.0/2.0
-    glitch (ing :cs4, :cs4, :cs4, :d4,).look,127
+    glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0
   end
 end
 
 live_loop :light, sync: :unsyncable do; tick
   scorez = (ing
-    [[:A3, :C5, :E4], 8],
-    [[:F4, :A6, :C5], 8],
-    [[:C3, :E5, :G4], 8],
-    [Zz, 4],
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 8]
+    [Zz 4]
 
-    [[:A3, :C5, :E4], 8],
-    [[:E4, :G5, :B3], 8],
-    [[:F4, :A6, :C5, :E5], 8],
-    [[:C3, :E5, :G4], 8],
-    [Zz, 8],
+    [[:A3 :C5 :E4] 8]
+    [[:E4 :G5 :B3] 8]
+    [[:F4 :A6 :C5 :E5] 8]
+    [[:C3 :E5 :G4] 8]
+    [Zz 8]
 
-    [[:A3, :C5, :E4], 8],
-    [[:F4, :A6, :C5], 8],
-    [[:C3, :E5, :G4], 4],
-    [Zz, 4],
-    [[:A3, :C5, :E4], 4],
-    [[:A3, :C5, :E4], 4],
-    [[:E4, :G5, :B3], 4],
-    [[:E4, :G5, :B3], 4],
-    [[:G4, :B6, :D5, :F4], 8],
-    [[:C4, :E5, :G4], 8],
-    [Zz, 8],
+    [[:A3 :C5 :E4] 8]
+    [[:F4 :A6 :C5] 8]
+    [[:C3 :E5 :G4] 4]
+    [Zz 4]
+    [[:A3 :C5 :E4] 4]
+    [[:A3 :C5 :E4] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:E4 :G5 :B3] 4]
+    [[:G4 :B6 :D5 :F4] 8]
+    [[:C4 :E5 :G4] 8]
+    [Zz 8]
     )
   score = scorez.look[0]
   sleeps = scorez.look[-1]
@@ -310,16 +310,16 @@ live_loop :light, sync: :unsyncable do; tick
     #operator score[1],100, sus:1
   }
 
-  #heat score[0], 0.5*(ing 10, 30, 50, 10,  10, 30, 40, 50,).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
+  #heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00
   #deep root(score), 1, sus: (sleeps)*2, drive: 0.55, sat: 0.00
   sleep sleeps
 end
 
 live_loop :pacey, sync: :light do; tick
   stop
-  #overclock_cc oct: (ing 0,   -12,  0,  12,).look
+  #overclock_cc oct: (ing 0,  -12, 0, 12).look
   sleep 0.5
   #tick
-  #overclock_cc oct: (ing 0,   -12,  0,  19,).look
+  #overclock_cc oct: (ing 0,  -12, 0, 19).look
   #sleep 1
 end

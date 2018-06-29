@@ -137,7 +137,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     glitch :c3, 10.5*(ing 65 60 60 60).look
     at{
       linecolor cube: rand*1.5
-      sleep 0.4
+      sleep 0.5
       linecolor cube: rand*0
       }
 

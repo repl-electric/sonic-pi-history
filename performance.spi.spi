@@ -2,7 +2,9 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
-scene 1
+#scene 1
+
+world time: 1.0
 
 overclock_x
 

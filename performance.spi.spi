@@ -34,7 +34,7 @@ overclock_cc motion: 0.25
 fx reverb: 1.00, tube: 0.60
 #stop
 
-#overclock_on :f3
+overclock_on :a3
 
 #overclock_on :F3
 #overclock_x
@@ -89,7 +89,7 @@ live_loop :wind, sync: :unsyncable do; tick
   sleep 1/8.0
 end
 
-midi_note_on :a4, 100, channel: 16, sus: 2
+#midi_note_on :a4, 100, channel: 16, sus: 2
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

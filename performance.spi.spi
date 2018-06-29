@@ -1,4 +1,153 @@
-#flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
+load_support('piezoelectric_resonator'); use_bpm 127
+live_loop(:unsyncable) do;  sleep 1.0;end
+#create_cube
+
+star life: 5
+
+#overclock_on :E3
+
+
+roots throttle: 0.2, freq: 0.4
+
+
+vortex y: 0.4, force: 0
+
+#glitch_cc mode: 0, corode: 0.5
+#glitch_cc mode: 0
+#scene 1
+#init!
+#world time: 1.0
+#create_cube
+#create_sea
+#cam :exit
+
+#      unity "/cubecam/zoomout", 0.0
+#      unity "/cubecam/zoomout", 1.0
+
+
+#create_aura
+
+#overclock_x
+
+overclock_cc motion: 0.50
+#stop
+#overclock_on :F3
+
+
+# stop
+# live_loop :oneshot, sync: :unsyncable do
+#   tick
+#   puts :A
+#   overclock_on :A3
+#   sleep 16
+#   puts :E
+#   overclock_on :E3
+#   sleep 16
+#   puts :F
+#   overclock_on :F3
+#   sleep 16
+#   stop
+# end
+
+#cam :exit
+
+
+#stop
+
+#eject_cpu_core
+#stop
+#glitch_cc tubes: 0.0
+fx reverb: 1.00, tube: 0.60
+#stop
+
+#overclock_on :e3
+
+#overclock_on :F3
+#overclock_x
+#overclock_cc drive: 0.70
+#overclock_cc amp: 0.50
+
+#overclock_cc drive: 0.80
+#overclock_cc amp: 0.85
+
+#overclock_cc motion: 0.50
+
+#flop_cc motion: 0.30,  drive: 0.00
+#flip_cc motion: 0.50, drive: 0.00
+
+#glitch_cc tubes: 0.50
+#glitch_cc corode: 0.30
+
+#glitch_cc tubes: 0.50
+#glitch_cc corode: 1.00
+
+#lovely
+#flop_cc motion: 0.30,  drive: 0.90,  sat: 1.00
+#flip_cc motion: 0.40, drive: 0.90, sat: 1.00
+
+
+#flop_cc motion: 0.60,  drive: 0.90,  sat: 0.00
+#flip_cc motion: 0.60, drive: 0.90, sat: 0.10
+
+#overclock_on :G3
+#overclock_cc motion: 0.25
+#overclock_cc amp: 0.50
+
+#flop_cc motion: 0.30,  drive: 0.00
+#flip_cc motion: 0.50, drive: 0.00
+glitch_cc tubes: 0.50
+glitch_cc corode: 0.30
+
+live_loop :wind, sync: :unsyncable do; tick
+  stop
+  s=(knit :A4, 128, _, 127, :A5,1).look
+  qbitsea s, (line 127,50,256*4).look, sus: (knit 1/4.0,32,1/2.0,31, 1, 1).look if spread(7*1,11*4).look
+
+  if spread(7*1,11*4).look
+    if spread(7*1,11*4*8).look
+      #qbitsea :A4, (line 127,100,256).look, sus: 2, hi: 0.85
+    end
+  end
+
+  #qbitsea :A5
+  #qbitsea :G3, ((line 20,40,128)+(line 40,20,128)).look, sus: (ing 1/4.0 1/2.0 1/4.0).look if spread(3*4,8*4).look
+  #qbitsea :E3, 50, sus: (ing 1/2.0 1 1).look if spread(1*4,8*4).look
+  sleep 1/8.0
+end
+
+# in_thread do
+#   sync :ModularSynthsControlledByCode
+#   midi_note_on :a4, 100, channel: 16, sus: 2
+# end
+
+live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
+  stop
+  with_bpm 127*1 do
+    #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
+    if spread(4,8).look
+      glitch_cc mode: (ing 0 2 3 5).look
+    end
+    if spread(8,8).look
+      #dark :e3, 122
+      if spread(3,8).look
+        at{
+          sleep 0.5
+          #dark :e3, 110
+        }
+      end
+    end
+
+    glitch_cc corode: 1.0
+    glitch :c3, 10.5*(ing 65 60 60 60).look
+    at{
+      sleep 0.25
+      glitch :c3, 2.1*(ing 120 90 100 100    100 90 90 90).look
+    }
+    glitch_cc corode: 0.8
+
+    if spread(7,11).look
+      if spread(1,4).look
+        flip :F3, 1*(ing 50 60 70 110).look, sus: 1.0#/2.0
         sleep 1/4.0
         #flop :E3, 1*(ing 50 60 70 110).look, sus: 2.0#/2.0
         #flop :D4, 2*(ing 50 60 70 110).look, sus: 1.0/8.0
@@ -27,8 +176,8 @@
 
       #flop_cc motion: 0.4
 
-      #qbitsea :a4, 80, sus: 1
-      #flip :g3, 100, sus: 1.0
+      qbitsea :a4, 80, sus: 1
+      flip :g3, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0
       glitch :fs3,20# if spread(1,4).look
 
@@ -71,11 +220,11 @@
 
     if spread(3,8).look
       flop_cc motion: 0.3
-      #flop :c4, 110-rand*15, sus: 2.0
+      flop :c4, 110-rand*15, sus: 2.0
     else
       flop_cc motion: 0.4
       #bitsea :d5, 127, sus: 1
-      #flop :e3, 60-rand*10, sus: 1.0
+      flop :e3, 60-rand*10, sus: 1.0
     end
 
     #dark :cs3, 100

@@ -2,17 +2,14 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #scene 1
 #init! true
-
 #create_cube
-zoomout
-
-create_sea
-
+#zoomout
+#create_sea
 #create_cube
 #world time: 1.0
 #star life: 5
 #overclock_on :E3
-roots throttle: 0.1, freq: 0.1, drag: 3, target: cube
+roots throttle: 0.1, freq: 0.1,amp: 0.1 drag: 3, target: cube
 
 
 

@@ -1,5 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
+    create_light 1
+stop
 #scene 1
 #init! true
 #create_cube

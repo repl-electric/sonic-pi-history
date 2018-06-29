@@ -16,14 +16,13 @@ rocks throttle: 1
 
   unity "/cube/linecolor/h",1.0
   unity "/cube/linecolor/s",1.0
-  unity "/cube/linecolor/b",1.0
-
+  unity "/cube/linecolor/b",2.0
 
 roots_chase radius: 1.0, amp: 0.5, freq: 0.2, drag: 3.0
 roots chase: 0.02, target: :cube, drag: 3
 
-create_tree
-create_light
+#create_tree
+#create_light
 #create_sea
 #cam :main
 

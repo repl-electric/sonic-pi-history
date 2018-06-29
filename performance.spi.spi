@@ -94,7 +94,7 @@ fx reverb: 1.00, tube: 0.60
 glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 
-cam :main
+cam :cube
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

@@ -7,9 +7,13 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #world time: 1.0
 #create_cube
 #create_sea
-cam :exit
+#cam :exit
 
-create_aura
+      unity "/cubecam/zoomout", 0.0
+      unity "/cubecam/zoomout", 1.0
+
+
+#create_aura
 
 overclock_x
 

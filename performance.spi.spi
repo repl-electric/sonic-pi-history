@@ -6,7 +6,6 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #overclock_x
 operator :A4, 127
 
-
 midi :A4, port: :iac_bus_1, channel: 14
 
 stop

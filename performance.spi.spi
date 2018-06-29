@@ -98,7 +98,7 @@ glitch_cc corode: 0.30
 shard 1.3
 #zoomout
 #create_sea
-roots target: :cube, drag: 0.2
+roots target: :cube, drag: 0.6
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

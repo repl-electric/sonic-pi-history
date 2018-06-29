@@ -4,6 +4,9 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0
 
 #overclock_x
+operator :A4
+
+stop
 
 overclock_cc motion: 0.25
 

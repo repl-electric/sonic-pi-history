@@ -5,8 +5,8 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #scene 1
 #init!
 #world time: 1.0
-create_cube
-
+#create_cube
+create_sea
 
 overclock_x
 

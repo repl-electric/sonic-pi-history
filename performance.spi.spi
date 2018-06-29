@@ -22,7 +22,7 @@ roots chase: 0.02, target: :cube, drag: 3
 
 create_tree
 
-vortex y: 0.4, force: 0
+vortex y: 0.4, force: 0, throttle: 0.1
 star life: 3.0, size: 0.56
 star throttle: 1
 shard 0.0

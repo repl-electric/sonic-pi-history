@@ -10,7 +10,7 @@ roots_chase radius: 1.0, amp: 0.1, freq: 0.0
 roots chase: 0.02, target: :spiral
 
 vortex y: 0.4, force: 0
-star life: 6.0, size: 0.4
+star life: 3.0, size: 0.4
 star throttle: 1
 shard 0.0
 burst 1.0

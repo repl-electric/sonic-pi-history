@@ -4,13 +4,6 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0
 
 #overclock_x
-#operator :A4, 127
-
-#callstack :A4, 127
-
-#midi :A4, port: :iac_bus_1, channel: 14
-
-#stop
 
 overclock_cc motion: 0.25
 
@@ -247,11 +240,10 @@ live_loop :light, sync: :unsyncable do; tick
   score = scorez.look[0]
   sleeps = scorez.look[-1]
 
-  puts :GOGOGOGOG
   at{
-    callstack score[-1],120, sus:1
+    callstack score[-1],100, sus:1
     sleep 1/2.0
-    operator score[1],120, sus:1
+    operator score[1],100, sus:1
   }
 
   heat score[0], 0.5*(ing 10 30 50 10  10 30 40 50).look, sus: sleeps, pads: [0,1,2], sat: 0.0, drive: 0.00

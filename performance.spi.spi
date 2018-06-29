@@ -3,8 +3,10 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 #scene 1
-init!
+#init!
 #world time: 1.0
+create_cube
+
 
 overclock_x
 

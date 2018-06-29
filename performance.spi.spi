@@ -12,7 +12,7 @@ roots chase: 0.02, target: :spiral
 vortex y: 0.4, force: 0
 star life: 6.0, size: 0.4
 star throttle: 1
-shard 1.0
+shard 0.0
 burst 1.0
 create_tree
 color :g8

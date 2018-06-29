@@ -4,8 +4,10 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 star life: 5
 
+#overclock_on :E3
 
-overclock_on :E3
+
+roots throttle: 0.1
 
 
 vortex y: 0.4, force: 0

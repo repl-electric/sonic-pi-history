@@ -5,11 +5,7 @@ create_light 1
   unity "/linecolor/s",2.0
   unity "/linecolor/b",1.0
 
-
-  unity "/linecolor/h",5.0
-  unity "/linecolor/s",5.0
-  unity "/linecolor/b",5.0
-
+cam :cube
 
 stop
 #scene 1

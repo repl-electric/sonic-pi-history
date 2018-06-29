@@ -135,7 +135,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 
     glitch_cc corode: 1.0
     glitch :c3, 10.5*(ing 65 60 60 60).look
-    linecolor cube: rand*1
+    linecolor cube: rand*0.5
     vortex force: (ing 100, 0).look
     at{
       sleep 0.25

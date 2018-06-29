@@ -5,7 +5,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 #overclock_x
 
-overclock_cc motion: 0.5
+overclock_cc motion: 0.55
 
 
 stop

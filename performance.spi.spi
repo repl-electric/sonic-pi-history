@@ -9,7 +9,7 @@ at{
   unity "/rockcircle/y", 0.0
   }
 
-create_cube 1
+create_cube 0
 cam :cube
 
 #cam :main

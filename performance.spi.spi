@@ -17,7 +17,7 @@ star throttle: 1
 shard 0.0
 burst 1.0
 ##create_tree
-color :g8
+color :g1
 sea wave: 0
 sea dir: 360
 sea circle: 0.9
@@ -25,6 +25,8 @@ sea ripple: 0.0
 
 
 cam :main
+
+
 
 #zoomout
 #glitch_cc mode: 0, corode: 0.5

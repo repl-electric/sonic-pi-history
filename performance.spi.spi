@@ -13,7 +13,7 @@ roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 rocks throttle: 1
 
   unity "/cube/linecolor/h",1.0
-  unity "/linecolor/s",1.0
+  unity "/cube/linecolor/s",1.0
   unity "/linecolor/b",1.0
 
 

@@ -153,7 +153,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       at{
         sleep 1/2.0
         glitch :gs3, 80 if a
-        #flip :c6, 30, sus: 1.0 if a
+        flip :c6, 30, sus: 1.0 if a
         #deep :C6, sus: 1
         #ze :C5, sus: 4
         bitsea :E5, 100, sus: 8

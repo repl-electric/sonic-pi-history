@@ -22,7 +22,7 @@ roots chase: 0.02, target: :cube, drag: 3
 
 create_tree
 create_light
-create_Sea
+create_sea
 cam :main
 
 vortex y: 0.4, force: 0, throttle: 0.1

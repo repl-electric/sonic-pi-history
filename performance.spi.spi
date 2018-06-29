@@ -31,7 +31,7 @@ overclock_cc motion: 0.25
 #eject_cpu_core
 #stop
 #glitch_cc tubes: 0.0
-fx reverb: 1.00, tube: 0.60
+fx reverb: 0.00, tube: 0.60
 #stop
 
 #overclock_on :f3

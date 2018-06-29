@@ -95,7 +95,7 @@ glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 #create_cube
 #cam :cube
-shard 0.3
+shards 0.3
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

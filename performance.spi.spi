@@ -2,7 +2,13 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #rocks rot: -10.0
 
-unity "/rockcircle/y", -1.0
+at{
+  sleep 0.5
+  unity "/rockcircle/y", -1.0
+  sleep 0.25
+  unity "/rockcircle/y", 0.0
+  }
+
 
 #init!
 

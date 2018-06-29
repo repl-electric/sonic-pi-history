@@ -14,7 +14,7 @@ roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 
 
 #roots_chase radius: 1.0, amp: 0.1, freq: 0.0
-#roots chase: 0.02, target: :spiral
+roots chase: 0.02, target: :spiral
 
 create_tree
 

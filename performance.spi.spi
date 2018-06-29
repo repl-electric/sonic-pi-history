@@ -1,12 +1,12 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #create_cube
-world time: 1.0
+#world time: 1.0
 #star life: 5
 #overclock_on :E3
 roots throttle: 0.1, freq: 0.5
 
-roots_chase radius: 1.0
+roots_chase radius: 1.0, amp: 0.1
 roots chase: 0.02
 
 vortex y: 0.4, force: 0

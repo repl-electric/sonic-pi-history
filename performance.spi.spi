@@ -14,10 +14,12 @@ create_sea
 #overclock_on :E3
 roots throttle: 1.0, freq: 0.4, drag: 6
 
+
+
 #roots_chase radius: 1.0, amp: 0.1, freq: 0.0
 #roots chase: 0.02, target: :spiral
 
-create_tree -2
+create_tree
 
 #vortex y: 0.4, force: 0
 star life: 3.0, size: 0.56

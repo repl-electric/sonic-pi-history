@@ -1,8 +1,0 @@
-load_support('piezoelectric_resonator'); use_bpm 127
-
-live_loop :go do
-  dark_cc tubes: rand#, corode: 0.5
-  sleep 1
-end
-
-#mbox2_cc delay: 0.90

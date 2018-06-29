@@ -38,7 +38,7 @@ fx reverb: 1.00, tube: 0.60
 #flop_cc motion: 0.60,  drive: 0.90,  sat: 0.00
 #flip_cc motion: 0.60, drive: 0.90, sat: 0.10
 
-overclock_on :A3
+overclock_on :F3
 
 flop_cc motion: 0.30,  drive: 0.00
 flip_cc motion: 0.50, drive: 0.00

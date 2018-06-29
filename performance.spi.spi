@@ -8,6 +8,8 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #create_cube
 #create_sea
 
+create_aura
+
 overclock_x
 
 overclock_cc motion: 0.25

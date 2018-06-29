@@ -14,7 +14,7 @@ rocks throttle: 1
 
 
 roots_chase radius: 1.0, amp: 0.5, freq: 0.2, drag: 3.0
-roots chase: 0.02, target: :cube
+roots chase: 0.02, target: :cube, drag: 3
 
 create_tree
 

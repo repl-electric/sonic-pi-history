@@ -180,7 +180,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       linecolor cube: rand*0.4
       }
 
-    vortex throttle: 0
+    #vortex throttle: 0
     #vortex force: (ing 500, 0, 100, 0).look
     at{
       sleep 0.25

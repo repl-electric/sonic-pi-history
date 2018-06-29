@@ -9,8 +9,8 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #create_sea
 #cam :exit
 
-      unity "/cubecam/zoomout", 0.0
-      unity "/cubecam/zoomout", 1.0
+unity "/cubecam/zoomout", 0.0
+unity "/cubecam/zoomout", 1.0
 
 
 #create_aura

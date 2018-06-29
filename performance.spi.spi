@@ -56,8 +56,8 @@ fx reverb: 0.00, tube: 0.60
 #glitch_cc corode: 1.00
 
 #lovely
-#flop_cc motion: 0.30,  drive: 0.90,  sat: 1.00
-#flip_cc motion: 0.40, drive: 0.90, sat: 1.00
+flop_cc motion: 0.30,  drive: 0.90,  sat: 1.00
+flip_cc motion: 0.40, drive: 0.90, sat: 1.00
 
 
 #flop_cc motion: 0.60,  drive: 0.90,  sat: 0.00
@@ -67,8 +67,8 @@ fx reverb: 0.00, tube: 0.60
 #overclock_cc motion: 0.25
 #overclock_cc amp: 0.50
 
-flop_cc motion: 0.30,  drive: 0.00
-flip_cc motion: 0.50, drive: 0.00
+#flop_cc motion: 0.30,  drive: 0.00
+#flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 

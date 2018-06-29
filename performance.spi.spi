@@ -1,9 +1,9 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #scene 1
-init! true
+#init! true
 #create_cube
-#zoomout
+zoomout
 #create_sea
 #create_cube
 world time: 1.

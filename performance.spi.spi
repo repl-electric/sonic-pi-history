@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0
 
-looper_x
+overclock_x
 stop
 
 #eject_cpu_core

@@ -97,7 +97,8 @@ glitch_cc corode: 0.30
 #cam :cube
 shard 1.3
 #zoomout
-create_sea
+#create_sea
+create_aura
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

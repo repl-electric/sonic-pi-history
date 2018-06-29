@@ -156,7 +156,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
         #flip :d6, 30, sus: 1.0 if a
         #deep :C6, sus: 1
         #ze :C5,80, sus: 1
-        heat :E5, 127, sus: 8, pads: [0]
+        heat :E6, 127, sus: 8, pads: [0]
       }
       flip :c4, 100, sus: 1.0
       #flop :A4, 15, sus: 4.0

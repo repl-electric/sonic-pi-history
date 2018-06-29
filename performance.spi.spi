@@ -16,11 +16,11 @@ star life: 3.0, size: 0.56
 star throttle: 1
 shard 0.0
 burst 1.0
-#create_tree
+##create_tree
 color :g8
 sea wave: 1.3
 sea dir: 0
-sea circle: 0.0
+sea circle: 0.1
 sea ripple: 0.0
 
 #zoomout

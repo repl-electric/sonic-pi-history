@@ -24,8 +24,8 @@ roots chase: 0.02, target: :cube, drag: 3
 
 create_tree
 create_light
-create_sea
-cam :main
+#create_sea
+#cam :main
 
 vortex y: 0.4, force: 0, throttle: 0.1
 star life: 3.0, size: 0.56

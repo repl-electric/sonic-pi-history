@@ -23,7 +23,7 @@ create_tree -2
 star life: 3.0, size: 0.56
 star throttle: 1
 shard 0.0
-burst 1.0
+burst 0.01
 ##create_tree
 #color :g1
 sea wave: 0

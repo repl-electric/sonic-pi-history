@@ -89,8 +89,10 @@ live_loop :wind, sync: :unsyncable do; tick
   sleep 1/8.0
 end
 
-midi_note_off :a4, 100, channel: 16, sus: 2
-
+thread do
+  sync :ModularSynthsControlledByCode
+  midi_note_on :a4, 100, channel: 16, sus: 2
+end
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

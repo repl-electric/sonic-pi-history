@@ -11,6 +11,8 @@ sea wave: 0.0
 sea sphere: 0.0
 tree sphere: 0.0
 
+unity "/cube/aura/wave", 2.0
+
 
 live_loop :name, sync: :unsyncable do
   tick

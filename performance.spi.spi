@@ -10,7 +10,7 @@ at{
   }
 
 create_cube 0.0
-cam :cube
+#cam :cube
 
 #cam :main
 #stop

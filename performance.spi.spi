@@ -1,10 +1,10 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
-
+init!
 #eject_cpu_core
 #stop
 #glitch_cc tubes: 0.0
-fx reverb: 0.00, tube: 0.60
+fx reverb: 1.00, tube: 0.60
 #stop
 
 #overclock_on :e3
@@ -40,8 +40,8 @@ fx reverb: 0.00, tube: 0.60
 #overclock_cc motion: 0.25
 #overclock_cc amp: 0.50
 
-flop_cc motion: 0.30,  drive: 0.00
-flip_cc motion: 0.50, drive: 0.00
+#flop_cc motion: 0.30,  drive: 0.00
+#flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.50
 glitch_cc corode: 0.30
 #create_cube

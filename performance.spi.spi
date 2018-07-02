@@ -10,7 +10,7 @@ sea ripple: 0.0
 
 live_loop :name, sync: :unsyncable do
   tick
-  sea wave: (ing 0.0002 0.0001).look
+  sea wave: (ing 0.0004 0.0001).look
   sleep 1
   sleep 1
 end

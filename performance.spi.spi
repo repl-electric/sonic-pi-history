@@ -4,7 +4,8 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #defaultcolor
 world time: 1
 
-  sea circle: 1.0
+sea circle: 1.0
+sea dir: 1.0
 
 
 

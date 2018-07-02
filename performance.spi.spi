@@ -13,7 +13,7 @@ create_cube 0.0
 cam :cube
 
 #cam :main
-stop
+#stop
 
 create_light 1
   unity "/linecolor/h",2.0
@@ -36,10 +36,6 @@ world time: 1.
 #overclock_on :E3
 roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 rocks throttle: 1
-
-
-
-
 
 roots_chase radius: 1.0, amp: 0.5, freq: 0.2, drag: 3.0
 roots chase: 0.02, target: :cube, drag: 3

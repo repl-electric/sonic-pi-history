@@ -10,7 +10,7 @@ at{
   }
 
 create_cube 0.0
-cam :cube
+#cam :cube
 
 #cam :main
 #stop
@@ -22,7 +22,7 @@ create_light 1
 
 #cam :cube
 #zoomout
-cam :main
+#cam :main
 
 #stop
 #scene 1

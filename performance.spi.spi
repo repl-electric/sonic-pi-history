@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 world time: 1
 sea wave: 0.0
-sea sphere: 0.0
+sea sphere: 1.0
 sea circle: 0.99
 sea ripple: 2.0
 

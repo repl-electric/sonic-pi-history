@@ -1,5 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
+
+defaultcols
 world time: 1
 
   sea circle: 1.0

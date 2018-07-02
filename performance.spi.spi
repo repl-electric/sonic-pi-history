@@ -5,6 +5,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 world time: 1
 
 sea circle: 1.0
+sea ripple: 0.2
 #sea dir: 0.0
 
 

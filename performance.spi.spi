@@ -24,7 +24,7 @@ create_light 1
 #zoomout
 cam :main
 
-stop
+#stop
 #scene 1
 #init! true
 #create_cube

@@ -6,10 +6,11 @@ world time: 1
 
 sea circle: 0.0
 sea ripple: 1.0
-sea wave: 0.4
+sea wave: 2.4
 
 sea sphere: 1.0
 tree sphere: 1.0
+
 
 live_loop :name, sync: :unsyncable do
   tick

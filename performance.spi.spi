@@ -1,6 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
+live_loop(:unsyncable) do;  sleep 1.0;end
 
-sea sphere: 0.0, circle: 0.0
+#defaultcolor
+
 
 #rocks rot: -10.0
 #init! true
@@ -15,7 +17,7 @@ create_cube 0.0
 #cam :cube
 
 #cam :main
-#stop
+
 
 create_light 1
   unity "/linecolor/h",2.0
@@ -26,7 +28,7 @@ create_light 1
 #zoomout
 #cam :main
 
-#stop
+stop
 #scene 1
 #init! true
 #create_cube
@@ -38,6 +40,10 @@ world time: 1.
 #overclock_on :E3
 roots throttle: 1.0, freq: 0.5, amp: 0.2, drag: 3, target: cube
 rocks throttle: 1
+
+
+
+
 
 roots_chase radius: 1.0, amp: 0.5, freq: 0.2, drag: 3.0
 roots chase: 0.02, target: :cube, drag: 3
@@ -56,7 +62,7 @@ burst 0.02
 #color :g1
 sea wave: 0.5
 #sea dir: 360
-#sea circle: 0.9
+sea circle: 0.9
 sea ripple: 0.0
 
 

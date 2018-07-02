@@ -9,6 +9,7 @@ sea ripple: 1.0
 sea wave: 0.4
 
 sea sphere: 1.0
+tree sphere: 1.0
 
 live_loop :name, sync: :unsyncable do
   tick

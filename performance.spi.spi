@@ -5,7 +5,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 world time: 1
 
 sea wave: 0.0
-sea sphere: 1.0
+sea sphere: 0.0
 sea circle: 0.0
 sea ripple: 0
 
@@ -24,7 +24,6 @@ create_cube 0.0
 cam :cube
 
 #cam :main
-
 stop
 
 create_light 1

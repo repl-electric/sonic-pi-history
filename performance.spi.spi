@@ -1,5 +1,7 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
+sea sphere: 1.0
+
 #rocks rot: -10.0
 #init! true
 at{

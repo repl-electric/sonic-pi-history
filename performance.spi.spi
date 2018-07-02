@@ -2,7 +2,15 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 world time: 1
 
-sea circle: 1.0
+
+live_loop :name, sync: :unsyncable do
+  tick
+  sea circle: (line 1.0, 0.0, 32).look
+  sleep 1
+  sleep 1
+end
+
+
 
 stop
 #rocks rot: -10.0

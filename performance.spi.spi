@@ -101,7 +101,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       roots throttle: 0
       burst 1.0
       roots chase: 0.02
-      flip :g3, 50, sus: 8.0
+      flip :g3, 50, sus: 4.0
       zoomout
       at{
         sleep 0.5

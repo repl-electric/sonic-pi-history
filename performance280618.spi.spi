@@ -42,7 +42,7 @@ fx reverb: 1.00, tube: 1.00
 roots chase: 0.02, target: :cube, drag: 5.0, freq: 0.5
 
 #cube circle: 1
-slice_cube y: 5.0
+cube_slices y: 5.0
 
 roots_chase freq: 1
 

@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #cam :cube
 fx reverb: 1.00, tube: 0.60
-star size: 0.5
+star size: 2.5
 #create_aura
 #create_sea
 #zoomout

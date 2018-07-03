@@ -39,7 +39,7 @@ fx reverb: 1.00, tube: 1.00
 #flip_cc motion: 0.60, drive: 0.90, sat: 0.10
 
 #overclock_on :E3
-#roots chase: 0.02, target: :swirl, drag: 2.0, freq: 0.2
+roots alive: 1
 #create_tree
 #cube circle: 1
 slice_cube  x: 20.0
@@ -47,6 +47,7 @@ slice_cube  x: 20.0
 linecolor cube: 0.4
 
 roots_chase freq: 0.3, amp: 0.5
+
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

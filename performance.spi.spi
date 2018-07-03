@@ -4,7 +4,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 sea sphere: 1, circle: 1
 tree sphere: 1
 #create_sea
-zoomout
+zoomin
 world time: 1
 linecolor cube: 0.3
 stop

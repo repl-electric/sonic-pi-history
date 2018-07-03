@@ -3,7 +3,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 init! true
 sea sphere: 1
 tree sphere: 1
-zoomout
+create_sea
 
 world time: 1
 stop

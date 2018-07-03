@@ -220,7 +220,7 @@ end
 
 end1
 
-roots swirl: 1.0, drag: 0.6, freq: 0.0, amp: 0.0
+roots swirl: 0.1, drag: 0.6, freq: 0.0, amp: 0.0
 
 #roots_swirl
 

@@ -238,7 +238,7 @@ vortex throttle: 0
 roots throttle: 0
 #create_sea -2
 star size: 15, life: 5
-roots swirl: 1.0, drag: 6.0, freq: 0.4, amp: 0.0
+roots swirl: 1.0, drag: 6.0, freq: 0.4, amp: 0.2
 rocks orbit: 100
 #roots_swirl
 

@@ -91,7 +91,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       sleep 1/2.0
       glitch :ds3, 127# if spread(1,4).look
       flip :E3, 50, sus: 1.0 #KEEP
-      #flip :g3, 50, sus: 4.0  #lovely riser
+      flip :g3, 50, sus: 4.0  #lovely riser
       sleep 1/2.0
 
       #flop_cc motion: 0.4
@@ -106,7 +106,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       roots chase: 0.05, drag: 6, target: (knit :spiral, 8, :cube, 8).tick(:inme), freq: 0.8
       rocks orbit: 10
 
-      flip :g3, 50, sus: 4.0
+      flip :c3, 50, sus: 4.0
       zoomout
       at{
         sleep 0.5

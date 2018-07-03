@@ -8,7 +8,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #linecolor cube: 3
 #cam :top
 
-#init! true
+init! true
 
 world time: 1
 #rocks throttle: 100.0

@@ -3,8 +3,8 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 sea sphere: 1
 tree sphere: 1
-cam :cube
-zoomout
+cam :main
+
 world time: 1
 stop
 fx reverb: 1.00, tube: 0.60

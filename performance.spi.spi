@@ -221,7 +221,7 @@ end
 end1
 
 #create_sea -2
-vortex throttle: 2
+vortex throttle: 0
 roots swirl: 0.2, drag: 3.0, freq: 0.0, amp: 0.0
 
 #roots_swirl

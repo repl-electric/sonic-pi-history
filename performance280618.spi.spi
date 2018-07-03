@@ -46,7 +46,7 @@ slice_cube  x: 20.0
 
 linecolor cube: 0.4
 
-roots_chase freq: 0.3, amp: 1
+roots_chase freq: 0.3, amp: 0.2
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick

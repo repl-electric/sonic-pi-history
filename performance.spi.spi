@@ -4,7 +4,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #eject_cpu_core
 #explode_world
 explode_aura
-create_island -2
+#create_island -2
 stop
 #cam :cube
 #fx reverb: 1.00, tube: 0.60

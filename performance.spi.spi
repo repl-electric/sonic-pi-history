@@ -1,5 +1,9 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
+
+explode_cube
+
+stop
 #cam :main
 #eject_cpu_core
 #explode_world
@@ -232,7 +236,7 @@ end
 #end1
 #eject_cpu_core
 world time: 1
-roots alive: 2, freq: 1
+roots alive: 2
 #create_sea -2
 vortex throttle: 0
 roots throttle: 0

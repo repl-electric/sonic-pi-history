@@ -1,7 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 fx reverb: 1.00, tube: 0.60
-
+scene 1
+stop
 init!
 #create_aura
 #create_sea

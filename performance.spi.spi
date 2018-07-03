@@ -217,7 +217,7 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-roots swirl: 1, drag: 6
+roots swirl: 1, drag: 4
 
 #cam :main
 #deep_cc amp: 0.80

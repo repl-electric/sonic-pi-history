@@ -1,5 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
+world time: 1
 create_sea 0.1
 tree sphere: 1
 sea wave: 2, circle: 0.0, sphere: 0.0

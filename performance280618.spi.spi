@@ -44,6 +44,9 @@ roots swirl: 1
 #cube circle: 1
 slice_cube  x: 20.0
 
+sea height: 10
+cam :top
+
 linecolor cube: 0.4
 
 roots_chase freq: 0.3, amp: 0.5

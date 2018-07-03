@@ -8,7 +8,7 @@ roots chase: 0
 create_aura -2
 star size: 0, life: 0
 cam :main
-burst 0.0
+burst 0
 shard 0
 
 stop

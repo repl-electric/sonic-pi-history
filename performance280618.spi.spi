@@ -6,7 +6,8 @@ roots swirl: 1.0, amp: 0.01, drag: 3, twist: 0
 star size: 20, life: 2.0
 roots alive: 1
 #rocks orbit: 300
-roots_chase
+#roots_chase
+end2
 stop
 #glitch_cc mode: 0, corode: 0.5
 #glitch_cc mode: 0

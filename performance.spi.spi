@@ -98,13 +98,13 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop_cc motion: 0.4
 
       #qbitsea :a4, 80, sus: 1
-      roots throttle: 1, target: :cube, drag: 3
+      #roots throttle: 1, target: :cube, drag: 3
       burst 1.0
-      roots swirl: 0.1
+      #roots swirl: 0.1
       #cam :main
       #defaultcolor
       #create_tree
-      roots chase: 0.05, drag: 6, target: (knit :spiral, 8, :cube, 8).tick(:inme), freq: 0.8
+      #roots chase: 0.05, drag: 6, target: (knit :spiral, 8, :cube, 8).tick(:inme), freq: 0.8
       rocks orbit: 10
 
       flip :c3, 50, sus: 4.0
@@ -223,7 +223,7 @@ roots swirl: 1, drag: 6
 #deep_cc amp: 0.80
 
 #overclock_on :F3
-#roots throttle: 1, freq: 0.5
+roots throttle: 1, freq: 0.5
 
 create_aura
 star size: 0.5

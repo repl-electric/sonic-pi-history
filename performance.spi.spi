@@ -5,8 +5,8 @@ fx reverb: 1.00, tube: 0.60
 #create_sea
 #zoomout
 #vortex tub: 0
-#flop_cc motion: 0.30,  drive: 0.00
-#flip_cc motion: 0.30, drive: 0.00
+flop_cc motion: 0.30,  drive: 0.00
+flip_cc motion: 0.30, drive: 0.00
 #vortex y: 1.25, throttle: 0.2, turb: 0, force: 0
 
 live_loop :wind, sync: :unsyncable do; tick

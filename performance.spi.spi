@@ -193,7 +193,7 @@ live_loop :light, sync: :unsyncable do; tick
 end
 
 #overclock_on :F3
-roots throttle: 1, freq: 0.4, amp: 1
+roots throttle: 1, freq: 0.5
 
 
 live_loop :pacey, sync: :light do; tick

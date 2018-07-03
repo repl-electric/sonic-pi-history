@@ -6,7 +6,7 @@ tree sphere: 1
 #create_sea
 zoomout
 world time: 1
-linecolor factor: 8
+linecolor b: 1
 stop
 fx reverb: 1.00, tube: 0.60
 

@@ -232,7 +232,7 @@ end
 #end1
 #eject_cpu_core
 
-roots alive: 1
+roots alive: 0.2
 #create_sea -2
 vortex throttle: 0
 roots throttle: 0

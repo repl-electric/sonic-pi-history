@@ -99,7 +99,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #qbitsea :a4, 80, sus: 1
       roots throttle: 1, target: :cube, drag: 3
       burst 1.0
-      roots chase: 0.05, drag: 6, target: (ing :spiral :cube).look, freq: 0.2
+      roots chase: 0.05, drag: 6, target: (knit :spiral, 8, :cube, 8).look, freq: 0.2
       rocks orbit: 10
 
       flip :g3, 50, sus: 4.0

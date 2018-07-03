@@ -10,7 +10,9 @@ star size: 4.5
 create_tree -2
 create_sea 0.1
 #sea circle: 0, sphere: 0
-cam :cube #explode_cube
+cam :cube
+zoomout
+#explode_cube
 
 rocks orbit: 0
 flop_cc motion: 0.30,  drive: 0.00

@@ -1,6 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 
-
+cube_slice x:0
 roots swirl: 0
 rocks orbit: 300
 roots_chase

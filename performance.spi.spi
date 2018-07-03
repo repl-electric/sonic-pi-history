@@ -29,7 +29,7 @@ end
 
 
 burst 1.0
-star size: 1
+star size: 1.5
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 

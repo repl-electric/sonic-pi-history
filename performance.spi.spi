@@ -4,7 +4,7 @@ fx reverb: 1.00, tube: 0.60
 
 #flop_cc motion: 0.30,  drive: 0.00
 #flip_cc motion: 0.30, drive: 0.00
-flip :g3, sus: 1
+flip :g3,40, sus: 1
 
 stop
 

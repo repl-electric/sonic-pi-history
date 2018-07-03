@@ -102,7 +102,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       roots swirl: 0.1
       cam :main
       #defaultcolor
-      create_life
+      create_island
       roots chase: 0.05, drag: 6, target: (knit :spiral, 8, :cube, 8).tick(:inme), freq: 0.8
       rocks orbit: 10
 

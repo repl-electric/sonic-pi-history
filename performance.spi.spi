@@ -8,6 +8,7 @@ roots chase: 0
 create_aura -2
 star size: 0, life: 0
 cam :main
+burst 0.0
 
 stop
 fx reverb: 1.00, tube: 0.60

@@ -31,8 +31,8 @@ end
 burst 1.0
 star size: 1.5
 overclock_cc motion: 0.25
-glitch_cc tubes: 0.55, corode: 0.8
-dark_cc tubes: 0.55, corode: 1
+glitch_cc tubes: 0.00, corode: 0.8
+dark_cc tubes: 0.00, corode: 0.00
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 

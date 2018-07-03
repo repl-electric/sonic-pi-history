@@ -225,7 +225,7 @@ vortex throttle: 0
 roots throttle: 0
 create_sea -2
 roots swirl: 0.2, drag: 3.0, freq: 0.0, amp: 0.0
-rocks orbit: 0.2
+rocks orbit: 10
 #roots_swirl
 
 

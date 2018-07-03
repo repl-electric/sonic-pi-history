@@ -12,7 +12,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 world time: 1
 #rocks throttle: 0.0
-#explode_rocks
+explode_rocks
 #world time: 1
 
 unity "/rockcircle/rotate/speed", 1.0

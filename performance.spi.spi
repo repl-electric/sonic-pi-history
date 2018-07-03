@@ -6,7 +6,7 @@ tree sphere: 1
 sea wave: 2, circle: 0.0, sphere: 0.0
 #zoomout
 linecolor cube: 3
-cam :top
+cam :main
 stop
 fx reverb: 1.00, tube: 0.60
 

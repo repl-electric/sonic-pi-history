@@ -169,7 +169,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #tree height: rand*10
     #flop :c4, 127-rand*10, sus: 1.0/2.0
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127
-    at{ sleep 0.5; sea circle: 0.0, wave: 1, sphere: rand*0.0}
+#    at{ sleep 0.5; sea circle: 0.0, wave: 1, sphere: rand*0.0}
     sleep 1/2.0
   end
 end

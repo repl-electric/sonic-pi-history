@@ -41,9 +41,9 @@ fx reverb: 1.00, tube: 1.00
 #overclock_on :E3
 roots chase: 0.02, target: :spiral, drag: 5.0, freq: 0.2
 
-sea circle: rand
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
+  sea circle: rand
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     if spread(4,8).look

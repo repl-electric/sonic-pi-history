@@ -1,13 +1,6 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
-#init! true
-sea sphere: 0.0, circle: 0.0
-tree sphere: 0
-#create_sea
-zoomout
-world time: 1
-linecolor cube: 0.3
-#cam :cube
+init! true
 stop
 fx reverb: 1.00, tube: 0.60
 

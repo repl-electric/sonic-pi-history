@@ -118,7 +118,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
     #glitch :fs3, 40
     sleep 1/4.0
 
-    dark :e3, 110 if spread(1,2).look
+    #dark :e3, 110 if spread(1,2).look
     #flip  :f3, 15, sus: 2.0
     sleep 1/4.0
     #glitch :ds3, 127
@@ -146,10 +146,10 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       flop :e3, 60-rand*10, sus: 1.0
     end
 
-    dark :cs3, 100
+    #dark :cs3, 100
 
     sleep 1/2.0
-    dark :e3, 100
+    #dark :e3, 100
     #flop :c4, 127-rand*10, sus: 1.0/2.0
     glitch (ing :cs4 :cs4 :cs4 :d4).look,127
     sleep 1/2.0

@@ -31,8 +31,8 @@ fx reverb: 1.00, tube: 1.00
 #glitch_cc corode: 1.00
 
 #lovely
-#flop_cc motion: 0.30,  drive: 0.90,  sat: 1.00
-#flip_cc motion: 0.40, drive: 0.90, sat: 1.00
+flop_cc motion: 0.30,  drive: 0.90,  sat: 1.00
+flip_cc motion: 0.40, drive: 0.90, sat: 1.00
 
 
 #flop_cc motion: 0.60,  drive: 0.90,  sat: 0.00

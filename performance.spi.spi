@@ -229,17 +229,15 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-end1
+#end1
 #eject_cpu_core
 
 roots alive: 1
-
-
 #create_sea -2
 vortex throttle: 0
 roots throttle: 0
 #create_sea -2
-star size: 20, life: 1
+star size: 10, life: 1
 roots swirl: 1.0, drag: 3.0, freq: 0.0, amp: 0.0
 rocks orbit: 100
 #roots_swirl

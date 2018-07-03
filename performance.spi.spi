@@ -3,7 +3,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #cam :main
 #eject_cpu_core
 #explode_world
-explode_aura
+#explode_aura
 #create_island -2
 
 roots throttle: 0

@@ -60,6 +60,7 @@ roots_chase throttle: 0
 
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
+  stop
   at{
     sleep 0.5
     sea circle: rand

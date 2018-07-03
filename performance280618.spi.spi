@@ -40,7 +40,7 @@ fx reverb: 1.00, tube: 1.00
 #explode_world
 world time: 1
 #cube_slice y: 0
-roots freq: 0
+roots freq: 0, chase:
 create_sea -2
 end1
 

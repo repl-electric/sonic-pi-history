@@ -5,9 +5,11 @@ fx reverb: 1.00, tube: 0.60
 #create_sea
 #zoomout
 #vortex tub: 0
-glitch_cc tubes: 0.50, corode: 0.30
 flop_cc motion: 0.30,  drive: 0.00
-flip_cc motion: 0.30, drive: 0.00
+flip_cc motion: 0.50, drive: 0.00
+glitch_cc tubes: 0.50, corode: 0.30
+#flop_cc motion: 0.30,  drive: 0.00
+#flip_cc motion: 0.30, drive: 0.00
 create_sea
 
 live_loop :wind, sync: :unsyncable do; tick
@@ -97,7 +99,7 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop_cc motion: 0.4
 
       #qbitsea :a4, 80, sus: 1
-      flip :g3, 50, sus: 2.0
+      flip :c3, 50, sus: 2.0
       #flop :A4, 15, sus: 4.0
  #     glitch :fs3,20# if spread(1,4).look
 

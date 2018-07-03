@@ -31,6 +31,7 @@ end
 burst 1.0
 star size: 1.5
 overclock_cc motion: 0.25
+glitch_cc tube: 0
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
 

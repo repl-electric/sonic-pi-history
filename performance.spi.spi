@@ -9,7 +9,7 @@ create_aura -2
 star size: 0, life: 0
 burst 0.0
 shard 0.0
-cam :main
+#cam :main
 stop
 fx reverb: 1.00, tube: 0.60
 

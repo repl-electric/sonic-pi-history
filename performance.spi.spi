@@ -233,7 +233,7 @@ roots swirl: 1.0, drag: 3.0, freq: 0.0, amp: 0.0
 rocks orbit: 100
 #roots_swirl
 
-cam :main
+cam :cube
 
 
 #cam :main

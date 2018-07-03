@@ -5,6 +5,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #cam :main
 vortex throttle: 0
 roots chase: 0
+create_aura -2
 stop
 fx reverb: 1.00, tube: 0.60
 

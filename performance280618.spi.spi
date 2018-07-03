@@ -44,7 +44,7 @@ roots chase: 0.02, target: :cube, drag: 5.0, freq: 0.5
 #cube circle: 1
 slice_cube  x: 20.0
 
-linecolor cube: 0.4
+linecolor cube: 0.3
 
 roots_chase freq: 1
 

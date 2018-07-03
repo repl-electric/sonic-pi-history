@@ -9,6 +9,9 @@ flop_cc motion: 0.30,  drive: 0.00
 flip_cc motion: 0.30, drive: 0.00
 #vortex y: 1.25, throttle: 0.2, turb: 0, force: 0
 
+flip :A3
+
+
 live_loop :wind, sync: :unsyncable do; tick
   stop
   s=(knit :A4, 128, _, 127, :A5,1).look

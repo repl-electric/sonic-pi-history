@@ -218,7 +218,7 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-roots swirl: 0.5, drag: 3, freq: 0.0, amp: 0.0
+roots swirl: 0.5, drag: 0.6, freq: 0.0, amp: 0.0
 
 #roots_swirl
 

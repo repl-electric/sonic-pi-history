@@ -11,7 +11,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #init! true
 
 world time: 1
-rocks throttle: 2.0
+rocks throttle: 100.0
 #explode_rocks
 world time: 1
 

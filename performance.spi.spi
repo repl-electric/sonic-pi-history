@@ -8,11 +8,11 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #linecolor cube: 3
 #cam :top
 
-init! true
+#init! true
 
 world time: 1
 #rocks throttle: 100.0
-#explode_rocks
+explode_rocks
 world time: 1
 
 unity "/rockcircle/rotate/speed", 1.0

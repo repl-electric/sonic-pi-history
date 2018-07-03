@@ -6,7 +6,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 vortex throttle: 0
 roots chase: 0
 create_aura -2
-star size:0
+star size: -1
 stop
 fx reverb: 1.00, tube: 0.60
 

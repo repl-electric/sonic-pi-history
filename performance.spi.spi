@@ -237,7 +237,7 @@ roots alive: 1
 vortex throttle: 0
 roots throttle: 0
 #create_sea -2
-star size: 20, life: 1
+star size: 20, life: 2
 roots swirl: 1.0, drag: 3.0, freq: 0.0, amp: 0.0
 rocks orbit: 100
 #roots_swirl

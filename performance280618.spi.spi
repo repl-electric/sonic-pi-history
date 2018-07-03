@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 
 
 roots throttle: 0
-rocks orbit: 200
+rocks orbit: 300
 
 stop
 #glitch_cc mode: 0, corode: 0.5

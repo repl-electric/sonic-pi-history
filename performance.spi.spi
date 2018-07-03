@@ -154,10 +154,10 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   #  glitch :gs3, 90 if spread(1,8).look
 
     if spread(3,8).look
-      flop_cc motion: 0.3
+     # flop_cc motion: 0.3
    #   flop :c4, 110-rand*15, sus: 2.0
     else
-      flop_cc motion: 0.4
+    #  flop_cc motion: 0.4
       #bitsea :d5, 127, sus: 1
    #   flop :e3, 60-rand*10, sus: 1.0
     end

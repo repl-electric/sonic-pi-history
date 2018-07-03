@@ -3,7 +3,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 #create_tree -2
 #slice_cube x: 0
 roots swirl: 1.3, amp: 0.01, drag: 6, twist: 0
-star size: 10
+star size: 20
 roots alive: 1
 #rocks orbit: 300
 roots_chase

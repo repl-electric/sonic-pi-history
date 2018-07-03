@@ -97,6 +97,8 @@ live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
       #flop_cc motion: 0.4
 
       #qbitsea :a4, 80, sus: 1
+      roots throttle: 0
+      roots chase: 0.02
       flip :g3, 50, sus: 8.0
       zoomout
       at{

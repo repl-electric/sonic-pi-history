@@ -9,7 +9,7 @@ world time: 1
 #cam :top
 
 #init! true
-unity "/rockcircle/rotate/speed", 100.0
+unity "/rockcircle/rotate/speed", 10.0
 
 stop
 fx reverb: 1.00, tube: 0.60

@@ -41,6 +41,8 @@ fx reverb: 1.00, tube: 1.00
 #overclock_on :E3
 roots chase: 0.02, target: :cube, drag: 5.0, freq: 0.5
 
+aura sphere: 1
+
 roots_chase freq: 1
 
 

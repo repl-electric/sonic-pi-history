@@ -39,7 +39,7 @@ fx reverb: 1.00, tube: 1.00
 #flip_cc motion: 0.60, drive: 0.90, sat: 0.10
 
 #overclock_on :E3
-roots chase: 0.02, target: :spiral, drag: 3.0, freq: 0.2
+roots chase: 0.02, target: :spiral, drag: 5.0, freq: 0.2
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
   with_bpm 127*1 do

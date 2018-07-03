@@ -2,7 +2,7 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 
 explode_cube
-world time: 0.1
+world time: 0.0
 eject_cpu_core
 
 stop

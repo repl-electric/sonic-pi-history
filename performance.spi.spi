@@ -4,7 +4,7 @@ init! true
 create_sea 0.1
 #cam :main
 vortex throttle: 0
-roots chase: 0
+roots chase: 1
 create_aura -2
 star size: 0, life: 0
 #cam :main

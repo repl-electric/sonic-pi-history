@@ -37,7 +37,7 @@ fx reverb: 1.00, tube: 1.00
 
 #flop_cc motion: 0.60,  drive: 0.90,  sat: 0.00
 #flip_cc motion: 0.60, drive: 0.90, sat: 0.10
-explode_rocks
+explode_world
 #overclock_on :E3
 roots alive: 1
 #create_tree

@@ -4,9 +4,6 @@ fx reverb: 1.00, tube: 0.60
 
 #flop_cc motion: 0.30,  drive: 0.00
 #flip_cc motion: 0.30, drive: 0.00
-flip :g3,20, sus: 1
-
-stop
 
 live_loop :wind, sync: :unsyncable do; tick
   stop

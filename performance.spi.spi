@@ -216,6 +216,9 @@ live_loop :light, sync: :unsyncable do; tick
   #create_tree -2
   sleep sleeps
 end
+
+roots swirl: 1
+
 #cam :main
 #deep_cc amp: 0.80
 

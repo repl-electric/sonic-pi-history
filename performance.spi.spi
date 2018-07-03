@@ -5,8 +5,10 @@ fx reverb: 1.00, tube: 0.60
 star size: 0.5
 #create_aura
 #create_sea
-zoomout
+#zoomout
 #vortex tub: 0
+
+rocks orbit: 10
 flop_cc motion: 0.30,  drive: 0.00
 flip_cc motion: 0.50, drive: 0.00
 glitch_cc tubes: 0.50, corode: 0.30

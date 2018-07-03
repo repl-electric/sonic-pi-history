@@ -10,7 +10,7 @@ world time: 1
 
 #init! true
 #unity "/rockcircle/rotate/speed", 1.0
-rocks dir: 1
+rocks rot: 1
 
 stop
 fx reverb: 1.00, tube: 0.60

@@ -45,7 +45,7 @@ create_sea -2
 endit
 
 #overclock_on :E3
-roots alive: 1
+roots chase: 0
 #create_tree
 #cube circle: 1
 slice_cube  x: 20.0

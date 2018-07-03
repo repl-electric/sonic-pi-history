@@ -192,8 +192,8 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-overclock_on :E3
-roots throttle: 1, freq: 0.2
+overclock_on :F3
+roots throttle: 1, freq: 0.4
 
 
 live_loop :pacey, sync: :light do; tick

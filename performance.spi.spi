@@ -8,8 +8,8 @@ star size: 4.5
 #zoomout
 #vortex tub: 0
 create_sea 0.1
-sea circle: 0, sphere: 0
-#cam :top
+#sea circle: 0, sphere: 0
+cam :main
 #explode_cube
 
 rocks orbit: 0

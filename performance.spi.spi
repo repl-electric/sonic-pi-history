@@ -3,7 +3,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 
 sea sphere: 1
 tree sphere: 1
-cam :main
+cam :cube
 
 world time: 1
 stop

@@ -1,14 +1,15 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 world time: 1
-create_sea 0.1
-tree sphere: 1
-sea wave: 2, circle: 0.0, sphere: 0.0
+#create_sea 0.1
+#tree sphere: 1
+#sea wave: 2, circle: 0.0, sphere: 0.0
 #zoomout
-linecolor cube: 3
+#linecolor cube: 3
 #cam :top
 
-init! true
+#init! true
+unity "/rockcircle/rotate/speed", 100.0
 
 stop
 fx reverb: 1.00, tube: 0.60

@@ -2,8 +2,8 @@ load_support('piezoelectric_resonator'); use_bpm 127
 live_loop(:unsyncable) do;  sleep 1.0;end
 #init! true
 #create_sea
-cam :main
-
+#cam :main
+vortex throttle: 0
 stop
 fx reverb: 1.00, tube: 0.60
 

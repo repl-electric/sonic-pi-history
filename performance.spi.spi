@@ -218,9 +218,8 @@ live_loop :light, sync: :unsyncable do; tick
   sleep sleeps
 end
 
-end1
-
-create_sea -2
+#end1
+#create_sea -2
 vortex throttle: 0
 roots swirl: 0.2, drag: 3.0, freq: 0.0, amp: 0.0
 

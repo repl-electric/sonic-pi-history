@@ -1,8 +1,8 @@
 load_support('piezoelectric_resonator'); use_bpm 127
 #create_sea -2
-create_tree -2
+#create_tree -2
 #slice_cube x: 0
-roots swirl: 0
+roots swirl: 1
 rocks orbit: 300
 roots_chase
 stop

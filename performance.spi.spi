@@ -5,7 +5,7 @@ live_loop(:unsyncable) do;  sleep 1.0;end
 #flop_cc motion: 0.30,  drive: 0.00
 #flip_cc motion: 0.50, drive: 0.00
 #glitch_cc tubes: 0.50, corode: 0.30
-
+init! true
 live_loop :wind, sync: :unsyncable do; tick
   stop
   s=(knit :A4, 128, _, 127, :A5,1).look
@@ -28,6 +28,7 @@ end
 # end
 
 live_loop :ModularSynthsControlledByCode, sync: :unsyncable do; tick
+  stop
   with_bpm 127*1 do
     #kalshot :G3, [5,10,15,20].choose, sus: 6 if spread(1,12).look
     if spread(4,8).look

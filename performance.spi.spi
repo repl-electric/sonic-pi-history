@@ -209,7 +209,7 @@ end
 #overclock_on :F3
 #roots throttle: 1, freq: 0.5
 create_aura
-star size: 1
+star size: 0.5
 
 live_loop :pacey, sync: :light do; tick
   stop

@@ -95,9 +95,8 @@ live_loop :form do
     }
     sleep 1/2.0
     with_transpose 12{
-      piano score[1],82, sus:1
+      piano score[1],72, sus:1
     }
-
 
     glitch :a3,40
     sleep 1/2.0

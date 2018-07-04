@@ -41,7 +41,7 @@ live_loop :form do
     [:ds5  :ds4]
     [:fs5  :fs4]
     [:e5  :e4]
-    [:e4 :ds4]
+    [:e4 _]
 #    [:as5  :as4]
     #[:e5  :e4]
 

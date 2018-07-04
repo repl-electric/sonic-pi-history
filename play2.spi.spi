@@ -1,6 +1,7 @@
 def glitch(n,v)
   midi n,v, channel: 3
 end
+def piano(n,v)
 
 live_loop :form do
   tick
@@ -15,7 +16,7 @@ live_loop :form do
   midi :g5,82, channel: 1, sus:2
 
   sleep 1/2.0
-  glitch :fs3,40
+  glitch :b3,40
   sleep 1/2.0
 
   glitch :as3,50

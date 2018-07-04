@@ -1,4 +1,4 @@
-use_bpm 127/2.0
+use_bpm 127
 def glitch(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
@@ -47,7 +47,6 @@ live_loop :form do
     [:b3  :ds4  :fs4]
     [:cs3 :e4  :gs4]
     [:b3  :ds4  :fs4]
-
 
 
     #PART 3

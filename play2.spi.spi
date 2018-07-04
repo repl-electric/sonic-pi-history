@@ -20,9 +20,11 @@ end
 
 live_loop :form do
   tick
-  vox :e3, sus:2
-  vox :b3,     sus:2
-  vox :g4,80, sus:2
+  score = (ing [:e3, :b3, :g4],).look
+
+  vox score[0], sus:2
+  vox score[1],     sus:2
+  vox score[2],80, sus:2
   piano :g5,82,sus:2
   sleep 1/2.0
   glitch :a3,40

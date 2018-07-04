@@ -21,14 +21,14 @@ end
 live_loop :form do
   tick
   score = (ing
-    [:e3,  :g4, :b3],
-    [:gs3, :b4, :ds4],
+    [:e3  :g4 :b3]
+    [:gs3 :b4 :ds4]
     ).look
   pscore = (ing
-    [:g5,  :g4],
-    [:ds5,  :ds4],
+    [:g5  :g4]  [:ds5  :ds4]
     ).look
 
+  glitch :C3
 
   vox score[0],     sus:2
   vox score[1],     sus:2

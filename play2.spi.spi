@@ -33,7 +33,7 @@ live_loop :form do
   score = (ing
    # [:e3  :g4 :b3]
 
-    [:e3  :gs4 :b3]
+    [:e3  :gs3 :b3]
     [:fs3 :a4  :cs4]
 
 

@@ -89,6 +89,8 @@ live_loop :form do
 
     ).look
 
+  puts score
+
   glitch :C3, 80
 
   if score[0] == _

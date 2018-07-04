@@ -1,24 +1,20 @@
 live_loop :go do
   tick
-midi  :B2,60,  channel: 1, sustain: 6
-#sleep 0.25
-midi  :Fs3,50, channel: 1, sustain: 6
-#sleep 0.25
-midi  :Ds4,50, channel: 1, sustain: 6
-#sleep 0.5
-midi  :Ds5,50, channel: 1, sustain: 6, sus: 6
-#sleep 0.25
-sleep 3
-midi  :ds3,60,  channel: 1, sustain: 6
-midi  :as3,50, channel: 1, sustain: 6
-midi  :fs4,50, channel: 1, sustain: 6
+  midi  :B2,60,  channel: 1, sustain: 6           #B (D4) F  - open doubles
+  midi  :Fs3,50, channel: 1, sustain: 6
+  midi  :Ds4,50, channel: 1, sustain: 6
+  midi  :Ds5,50, channel: 1, sustain: 6, sus: 6
+
+  sleep 3
+  midi  :ds3,60,  channel: 1, sustain: 6          #D (F) A
+  midi  :as3,50, channel: 1, sustain: 6
+  midi  :fs4,50, channel: 1, sustain: 6
   midi  :fs5,50, channel: 1, sustain: 6
   sleep 3
 
-midi  :fs3,60,  channel: 1, sustain: 6
-midi  :cs4,50, channel: 1, sustain: 6
-midi  :as4,50, channel: 1, sustain: 6
+  midi  :fs3,60,  channel: 1, sustain: 6          #F A C
+  midi  :cs4,50, channel: 1, sustain: 6
+  midi  :as3,50, channel: 1, sustain: 6
   sleep 3
-
 
 end

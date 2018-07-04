@@ -59,9 +59,8 @@ live_loop :form do
   if score[0] == _
     vox :e2, sus:2.0
   else
-
-  with_transpose -12{
-    vox root(score), sus:2.0
+    with_transpose -12{
+      vox root(score), sus:2.0
     }
   end
   #end

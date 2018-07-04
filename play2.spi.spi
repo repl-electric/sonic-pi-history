@@ -23,7 +23,7 @@ def vox(*args)
   end
 end
 
-puts chord(:Cs3, :minor)
+puts chord(:Cs3, :minor).map{|n| note_inspect(n)}
 
 live_loop :form do
   tick

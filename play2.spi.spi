@@ -2,8 +2,12 @@ def glitch(n,v)
   midi n,v, channel: 3
 end
 def piano(n,v)
-  return
-  midi n,v, channel: 1, sus:2
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 1}
+  end
 end
 
 live_loop :form do

@@ -38,6 +38,7 @@ live_loop :form do
     [:a3  :cs4  :e4]
     [:b3  :ds4  :fs4]
     [:cs3  :e4  :gs4]
+    [:e3  :gs4  :gs4]
 
 
     #PART 3

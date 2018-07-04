@@ -37,8 +37,12 @@ live_loop :form do
     ).look
   pscore = (ing
     [:g5  :g4]
+    [:b5  :b4]
     [:ds5  :ds4]
-    [:as5  :as4]
+    [:fs5  :fs4]
+    [:e5  :e4]
+    [:E4 :E4]
+#    [:as5  :as4]
     #[:e5  :e4]
 
     # [:fs5  :fs4]

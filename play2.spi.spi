@@ -21,7 +21,15 @@ def vox(*args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
   if n
-    midi n,vel, sus: 4, port: :iac_bus_1 , channel: 2
+    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 2})
+  end
+end
+def bass(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi n,vel, *(args << {channel: 4})
   end
 end
 

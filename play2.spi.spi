@@ -1,5 +1,10 @@
 def glitch(n,v)
-  midi n,v, channel: 3
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi n,vel, channel: 3
+  end
 end
 def piano(*args)
   params, opts = split_params_and_merge_opts_array(args)
@@ -21,11 +26,11 @@ end
 live_loop :form do
   tick
   score = (ing
-    [:e3  :g4 :b3]
-    [:gs3 :b4 :ds4]
+    [:e3,  :g4, :b3],
+    [:gs3, :b4, :ds4],
     ).look
   pscore = (ing
-    [:g5  :g4]  [:ds5  :ds4]
+    [:g5,  :g4],  [:ds5,  :ds4],
     ).look
 
   glitch :C3, 10

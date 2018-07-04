@@ -1,11 +1,11 @@
-live_loop :go do
+live_loop :go do  #Emajor   E (F) G A (B) C (D)
   tick
   midi  :B2,60,  channel: 1, sustain: 6           #B (D4) F  - open doubles
   midi  :Fs3,50, channel: 1, sustain: 6
   midi  :Ds4,50, channel: 1, sustain: 6
   midi  :Ds5,50, channel: 1, sustain: 6, sus: 6
 
-  sleep 3
+  sleep 4
   midi  :ds3,60,  channel: 1, sustain: 6          #D (F) A
   midi  :as3,50, channel: 1, sustain: 6
   midi  :fs4,50, channel: 1, sustain: 6

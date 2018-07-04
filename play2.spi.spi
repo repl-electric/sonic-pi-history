@@ -25,7 +25,7 @@ def vox(*args)
   end
 end
 
-puts  chord(:A, :major7).map{|x| note_inspect(x)}
+puts  chord(:fs, :minor).map{|x| note_inspect(x)}
 # E, F ♯, G ♯, A, B, C ♯, and D ♯.
 live_loop :form do
   tick

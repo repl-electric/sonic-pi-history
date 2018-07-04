@@ -2,6 +2,7 @@ def glitch(n,v)
   midi n,v, channel: 3
 end
 def piano(n,v)
+end
 
 live_loop :form do
   tick

@@ -8,9 +8,10 @@ midi  :Ds4,50, channel: 1, sustain: 6
 #sleep 0.5
 midi  :Ds5,50, channel: 1, sustain: 6, sus: 6
 #sleep 0.25
-sleep 3
+sleep 6
 midi  :ds3,50,  channel: 1, sustain: 6
 midi  :as3,50, channel: 1, sustain: 6
 midi  :fs4,50, channel: 1, sustain: 6
-midi  :fs5,50, channel: 1, sustain: 6
+  midi  :fs5,50, channel: 1, sustain: 6
+  sleep 6
 end

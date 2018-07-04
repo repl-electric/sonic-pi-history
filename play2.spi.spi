@@ -18,5 +18,5 @@ live_loop :form do
   midi :fs3,70, channel: 3
   sleep 1/4.0
   midi :fs3,70, channel: 3
-    sleep 1/4.0
+  sleep 1/4.0
 end

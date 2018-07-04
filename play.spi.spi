@@ -1,7 +1,7 @@
 midi  :B2,80,  channel: 1, sus: 6
-
+sleep 0.25
 midi  :Fs3,80, channel: 1, sus: 6
-
+sleep 0.25
 midi  :Ds4,80, channel: 1, sus: 6
-
+sleep 0.25
 midi  :Ds5,80, channel: 1, sus: 6

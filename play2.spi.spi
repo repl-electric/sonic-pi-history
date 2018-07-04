@@ -1,4 +1,4 @@
-use_bpm 127
+use_bpm 127/2.0
 def glitch(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)

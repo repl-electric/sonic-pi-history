@@ -9,18 +9,26 @@ def piano(*args)
     midi n,vel, *(args << {port: :iac_bus_1} << {channel: 1})
   end
 end
+def vox(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 2})
+  end
+end
 
 live_loop :form do
   tick
-  midi :e3,    channel: 2, sus:2
-  midi :b3,    channel: 2, sus:2
-  midi :g4,80, channel: 2, sus:2
+  vox :e3, sus:2
+  vox :b3,     sus:2
+  vox :g4,80, sus:2
   piano :g5,82,sus:2
   sleep 1/2.0
   glitch :a3,40
   sleep 1/2.0
-  piano :g4,80, sus:2
-  piano :g5,82, sus:2
+  piano :g4, 80, sus:2
+  piano :g5, 82, sus:2
 
   sleep 1/2.0
   glitch :f3, 60

@@ -22,7 +22,7 @@ live_loop :form do
   tick
   score = (ing
     [:e3, :g4, :b3],
-    [:gs3, :b4, :d3],
+    [:gs3, :b4, :ds3],
     ).look
 
   vox score[0],     sus:2

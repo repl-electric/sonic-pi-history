@@ -1,0 +1,9 @@
+live_loop :form do
+  tick
+
+  midi :A3
+
+
+  sleep 1
+  sleep 1
+end

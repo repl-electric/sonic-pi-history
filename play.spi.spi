@@ -17,6 +17,7 @@ midi  :fs4,50, channel: 1, sustain: 6
 
 midi  :fs4,60,  channel: 1, sustain: 6
 midi  :cs4,50, channel: 1, sustain: 6
+  sleep 3
 
 
 end

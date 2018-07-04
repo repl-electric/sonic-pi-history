@@ -1,4 +1,4 @@
-midi  :B2,80,  channel: 1, sus: 6
+midi  :B2,80,  channel: 1, sustain: 6
 #sleep 0.25
 midi  :Fs3,80, channel: 1, sus: 6
 #sleep 0.25

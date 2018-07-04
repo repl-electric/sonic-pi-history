@@ -20,6 +20,8 @@ live_loop :go do  #Emajor   E (F) G A (B) C (D)
 
   midi  :as2,60,  channel: 1, sustain: 6          #F A C
   midi  :fs3,50, channel: 1, sustain: 6
+  midi  :cs3,50, channel: 1, sustain: 6
+  midi  :cs4,50, channel: 1, sustain: 6
 
 
 

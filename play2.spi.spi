@@ -64,12 +64,12 @@ live_loop :form do
     vox score[2], 80, sus:2
     with_transpose 12{
       piano score[1],82,sus:2
-      }
+    }
     sleep 1/2.0
     glitch :a3,40
     sleep 1/2.0
 
-    piano pscore[1], 80, sus:2 if spread(1,2).look
+    piano score[1], 80, sus:2 if spread(1,2).look
     piano pscore[0], 82, sus:2
 
     sleep 1/2.0

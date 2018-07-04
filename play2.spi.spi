@@ -57,7 +57,7 @@ live_loop :form do
   glitch :C3, 10
 
   if score[0] == _
-    vox score[0],     sus:3.5
+    vox :E2,     sus:3.5
   end
 
 

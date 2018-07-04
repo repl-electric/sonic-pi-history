@@ -6,7 +6,7 @@ def piano(n,v)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
   if n
-    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 1}
+    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 1})
   end
 end
 

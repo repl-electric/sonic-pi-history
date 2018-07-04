@@ -31,8 +31,8 @@ live_loop :form do
     [:e3  :g4 :b3]
     [:gs3 :b4 :ds4]
     [:b3  :ds4 :fs3]
-
     [:cs4 :e4 :gs4]
+    [_]
 
     ).look
   pscore = (ing

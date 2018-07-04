@@ -1,7 +1,7 @@
 def glitch(n,v)
   midi n,v, channel: 3
 end
-def piano(n,v)
+def piano(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params

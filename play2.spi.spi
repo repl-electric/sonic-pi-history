@@ -1,3 +1,7 @@
+def glitch(n,v)
+  midi n,v, channel: 3
+end
+
 live_loop :form do
   tick
   midi :e3,    channel: 2, sus:2
@@ -5,10 +9,12 @@ live_loop :form do
   midi :g4,80, channel: 2, sus:2
   midi :g5,82, channel: 1, sus:2
   sleep 1/2.0
-  midi :a3,40, channel: 3
+  glitch :a3,40
   sleep 1/2.0
   midi :g4,80, channel: 1, sus:2
   midi :g5,82, channel: 1, sus:2
+
+
   sleep 1
   midi :as3,50, channel: 3
   sleep 1/2.0

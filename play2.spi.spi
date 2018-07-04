@@ -83,6 +83,6 @@ live_loop :form do
     piano pscore[1],82, sus:1
     sleep 1/2.0
     glitch :a3,40
-        sleep 1/2.0
+    sleep 1/2.0
   end
 end

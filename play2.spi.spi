@@ -26,18 +26,18 @@ end
 live_loop :form do
   tick
   score = (ing
-    [:e3,  :g4, :b3],
-    [:gs3, :b4, :ds4],
-    [:ds3, :fs4, :as4],
+    [:e3  :g4 :b3]
+    [:gs3 :b4 :ds4]
+    [:ds3 :fs4 :as4]
     ).look
   pscore = (ing
-    [:g5,  :g4],
-    [:ds5,  :ds4],
-    [:as5,  :as4],
+    [:g5  :g4]
+    [:ds5  :ds4]
+    [:as5  :as4]
 
-    [:fs5,  :fs4],
-    [:gs5,  :gs4],
-    [:as5,  :as4],
+    [:fs5  :fs4]
+    [:gs5  :gs4]
+    [:cs6  :cs4]
 
 
     ).look

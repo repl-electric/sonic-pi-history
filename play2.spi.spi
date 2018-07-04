@@ -19,7 +19,7 @@ def vox(*args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
   if n
-    midi n,vel, sus: 2, port: :iac_bus_1 , channel: 2
+    midi n,vel, sus: 4, port: :iac_bus_1 , channel: 2
   end
 end
 

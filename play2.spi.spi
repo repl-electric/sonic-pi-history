@@ -32,20 +32,20 @@ live_loop :form do
 
     [:cs3, :e3, :a3],
 
-    [:gs3, :b4, :ds4],
-    [:b3,  :ds4, :fs3],
-    [:ds3,  :fs4, :as3],
-    [:cs4,  :e4, :gs3],
+    #, [:gs3, :b4, :ds4],
+    #, [:b3,  :ds4, :fs3],
+    #, [:ds3,  :fs4, :as3],
+    #, [:cs4,  :e4, :gs3],
     [_, _, _, _],
 
     ).look
   pscore = (ing
-    [:g5,  :g4],
-    [:b5,  :b4],
-    [:ds5,  :ds4],
-    [:fs5,  :fs4],
-    [:e5,  :e4],
-    [:e6,  _],
+    #, [:g5,  :g4],
+    #, [:b5,  :b4],
+    #, [:ds5,  :ds4],
+    #, [:fs5,  :fs4],
+    #, [:e5,  :e4],
+    #, [:e6,  _],
     ).look
 
   puts score

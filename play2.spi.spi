@@ -4,6 +4,6 @@ live_loop :form do
   midi :A3, channel: 2, sus:2
 
 
-  sleep 1
-  sleep 1
+  sleep 2
+  sleep 2
 end

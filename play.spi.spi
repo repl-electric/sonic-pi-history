@@ -1,2 +1,2 @@
-midi 80, :B2, channel: 1, sus: 6
-midi 80, :Fs3, channel: 1, sus: 6
+midi  :B2, channel: 1, sus: 6
+midi  :Fs3,80, channel: 1, sus: 6

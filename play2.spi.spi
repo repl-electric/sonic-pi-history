@@ -13,8 +13,8 @@ live_loop :form do
   midi :g5,82, channel: 1, sus:2
   sleep 1
   midi :as3,50, channel: 3
-  sleep 1/2.0
-  sleep 1/2.0
+  sleep 1
+  sleep 1
 
   sleep 1/2.0
   midi :fs3,70, channel: 3

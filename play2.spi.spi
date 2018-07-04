@@ -34,6 +34,7 @@ live_loop :form do
     #[:e3  :gs4 :b3]
     [:cs3 :e4 :gs3]
     [:b2 :ds4 :fs3] #long
+    [:b2 :ds4 :fs3] #long
     [:a2 :cs4 :e3]
     [:e3 :gs4 :b3]
     [:cs3 :f4 :gs3]

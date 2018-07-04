@@ -34,11 +34,15 @@ live_loop :form do
    # [:e3  :g4 :b3]
 
     [:e3 :gs4 :b3]
-    [:a3 :cs4 :e4 :gs4]
-    [:b3 :ds4 :fs4]
-    [:e3 :gs4 :b4]
-    [:a3 :cs5 :e4 :gs4]
-    [:b3 :ds4 :fs4]
+
+
+    #PART 3
+    # [:e3 :gs4 :b3]
+    # [:a3 :cs4 :e4 :gs4]
+    # [:b3 :ds4 :fs4]
+    # [:e3 :gs4 :b4]
+    # [:a3 :cs5 :e4 :gs4]
+    # [:b3 :ds4 :fs4]
 
     #PART 2
     # [:e3  :g4 :b3]

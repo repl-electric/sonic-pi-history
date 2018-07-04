@@ -39,7 +39,6 @@ live_loop :form do
     #    [:e3 :gs4 :b3]   #as
     [:cs3 :e4 :gs4]
 
-
     # [:cs3 :e4 :gs3]
     # [:b2 :ds4 :fs3] #long
     # [:b2 :ds4 :fs3] #long
@@ -66,8 +65,8 @@ live_loop :form do
   puts score
   glitch :C3, 10
 
-  #if (ing 1 1 0 0 1 1 0 1).look == 1
-  if (ing 1 1).look == 1
+  if (ing 1 1 0 0 1 1 0 1).look == 1
+  #if (ing 1 1).look == 1
     vox score[0],     sus:2.1
     vox score[1],     sus:2.1
     vox score[2], 80, sus:2.1

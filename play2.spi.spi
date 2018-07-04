@@ -42,16 +42,9 @@ live_loop :form do
     [:fs5  :fs4]
     [:e5  :e4]
     [:e6  _]
-#    [:as5  :as4]
-    #[:e5  :e4]
-
-    # [:fs5  :fs4]
-    # [:gs5  :gs4]
-    # [:cs5  :cs4]
     ).look
 
   puts score
-
   glitch :C3, 10
 
   if (ing 1 0 0 1 0 0).look == 1

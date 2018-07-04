@@ -73,10 +73,10 @@ live_loop :form do
     glitch :fs3,70 if spread(1,4).look
     sleep 1/4.0
   else
-    vox score[0],     sus:2
-    vox score[1],     sus:2
-    vox score[2], 80, sus:2
-    piano pscore[0],82,sus:2
+    vox score[0],     sus:1
+    vox score[1],     sus:1
+    vox score[2], 80, sus:1
+    piano pscore[0],82,sus:1
     sleep 2
   end
 end

@@ -66,8 +66,7 @@ live_loop :form do
   end
   #end
 
-  midi :E2, channel: 4, sus: 2
-
+  midi root(score), channel: 4, sus: 2
 
   if (ing 1 1 0 0 1 1 1 0).look == 1
   #if (ing 1 1).look == 1

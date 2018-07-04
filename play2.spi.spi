@@ -25,13 +25,14 @@ end
 
 live_loop :form do
   tick
-  sleep_ratio = (ing 1 1 1/2.0 1).look
+  sleep_ratio = 1
   score = (ing
     [:e3  :g4 :b3]
     [:gs3 :b4 :ds4]
     [:ds3 :fs4 :as3]
 
     [:cs3 :e4 :gs3]
+
     ).look
   pscore = (ing
     [:g5  :g4]
@@ -50,26 +51,24 @@ live_loop :form do
   vox score[1],     sus:2
   vox score[2], 80, sus:2
   piano pscore[0],82,sus:2
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
   glitch :a3,40
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
 
-  if sleep_ratio == 1.0
-    piano pscore[1], 80, sus:2 if spread(1,2).look
-    piano pscore[0], 82, sus:2
-  end
+  piano pscore[1], 80, sus:2 if spread(1,2).look
+  piano pscore[0], 82, sus:2
 
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
   glitch :f3, 60
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
 
   glitch :as3,50
-  sleep 1/2.0*sleep_ratio
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
+  sleep 1/2.0
 
-  sleep 1/2.0*sleep_ratio
+  sleep 1/2.0
   glitch :fs3,60 if spread(1,4).look
-  sleep 1/4.0*sleep_ratio
+  sleep 1/4.0
   glitch :fs3,70 if spread(1,4).look
-  sleep 1/4.0*sleep_ratio
+  sleep 1/4.0
 end

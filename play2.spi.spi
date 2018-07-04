@@ -16,7 +16,7 @@ live_loop :form do
 
 
   sleep 1
-  midi :as3,50, channel: 3
+  glitch :as3,50
   sleep 1/2.0
   sleep 1/2.0
 

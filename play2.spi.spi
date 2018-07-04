@@ -31,7 +31,6 @@ live_loop :form do
     [:e3  :g4 :b3]
     [:gs3 :b4 :ds4]
     [:b3  :ds4 :fs3]
-    [:e4 :gs4 :b4]
     [_ _ _ _]
 
     ).look

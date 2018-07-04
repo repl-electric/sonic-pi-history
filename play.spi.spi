@@ -17,7 +17,6 @@ live_loop :go do  #Bmajor    (B) C (D) E (F) G A
   midi  :cs4,50, channel: 1, sustain: 6
   sleep 2
 
-
   midi  :as2,60,  channel: 1, sustain: 6          #A
   midi  :f3,50, channel: 1, sustain: 6
   midi  :cs4,50, channel: 1, sustain: 6

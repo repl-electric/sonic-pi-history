@@ -24,7 +24,7 @@ def vox(*args)
   end
 end
 
-echo chord(:A, :M7)
+puts  chord(:A, :M7)
 # E, F ♯, G ♯, A, B, C ♯, and D ♯.
 live_loop :form do
   tick

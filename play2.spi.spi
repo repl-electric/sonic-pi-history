@@ -60,7 +60,6 @@ live_loop :form do
     vox :E2,     sus:4.0
   end
 
-
   if (ing 1 1 0 0 1 1 1 0).look == 1
   #if (ing 1 1).look == 1
     vox score[0],     sus:3.5

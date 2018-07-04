@@ -39,7 +39,7 @@ live_loop :form do
     [_ _ _ _]
 
     ).look
-  pscore = (ing _
+  pscore = (ing [_]
     # [:g5  :g4]
     # [:b5  :b4]
     # [:ds5  :ds4]

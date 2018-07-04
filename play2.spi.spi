@@ -80,7 +80,7 @@ live_loop :form do
     sleep 1/2.0
     glitch :a3,40
     sleep 1/2.0
-    piano pscore[1],82, sus:1
+    piano pscore[0],82, sus:1
     sleep 1/2.0
     glitch :a3,40
     sleep 1/2.0

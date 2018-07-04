@@ -1,7 +1,5 @@
 live_loop :go do
   tick
-
-
 midi  :B2,50,  channel: 1, sustain: 6
 #sleep 0.25
 midi  :Fs3,50, channel: 1, sustain: 6

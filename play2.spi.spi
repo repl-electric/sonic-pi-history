@@ -91,11 +91,13 @@ live_loop :form do
     vox score[0],       sus:2
     vox score[1],       sus:1
     vox score[2], 80,   sus:1
-    piano pscore[1],82, sus:1
+    with_transpose {
+      piano score[1],82, sus:1
+      }
     sleep 1/2.0
     glitch :a3,40
     sleep 1/2.0
-    piano pscore[0],82, sus:1
+    piano score[1],82, sus:1
     sleep 1/2.0
     glitch :fs3,70
     sleep 1/2.0

@@ -24,6 +24,7 @@ def vox(*args)
   end
 end
 
+echo chord(:A, :M7)
 # E, F ♯, G ♯, A, B, C ♯, and D ♯.
 live_loop :form do
   tick
@@ -33,8 +34,6 @@ live_loop :form do
 
     [:e3 :g4 :b3]
     [:a3 :cs5 :e4 :gs4]
-
-
 
 
     #PART 2

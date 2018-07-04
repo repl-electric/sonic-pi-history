@@ -58,8 +58,8 @@ live_loop :form do
   puts score
   glitch :C3, 10
 
-  #if (ing 1 1 0 0 1 0 0).look == 1
-  if (ing 1 1).look == 1
+  if (ing 1 1 0 0 1 0 0 1).look == 1
+  #if (ing 1 1).look == 1
     vox score[0],     sus:2.1
     vox score[1],     sus:2.1
     vox score[2], 80, sus:2.1

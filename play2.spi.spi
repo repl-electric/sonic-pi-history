@@ -95,7 +95,7 @@ live_loop :form do
   #end
 
   with_transpose 0{
-    midi root(score),120, channel: 4, sus: 2
+    midi root(score),120, channel: 4, sus: 4
   }
 
   #if (ing 1 1 0 0 1 1 1 0).look == 1

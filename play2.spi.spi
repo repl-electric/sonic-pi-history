@@ -38,8 +38,6 @@ live_loop :form do
     [:fs5  :fs4]
     [:gs5  :gs4]
     [:cs6  :cs4]
-
-
     ).look
 
   glitch :C3, 10

@@ -6,3 +6,4 @@ midi  :Ds4,50, channel: 1, sustain: 6
 #sleep 0.5
 midi  :Ds5,50, channel: 1, sustain: 6
 #sleep 0.25
+sleep 6

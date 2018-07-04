@@ -17,10 +17,10 @@ live_loop :go do  #Emajor   E (F) G A (B) C (D)
   midi  :cs4,50, channel: 1, sustain: 6
   sleep 2
 
-  midi  :as2,60,  channel: 1, sustain: 6          #As F C
-  midi  :f3,50, channel: 1, sustain: 6
-  midi  :cs3,50, channel: 1, sustain: 6
+  midi  :as3,60,  channel: 1, sustain: 6          #As F C
+  midi  :f4,50, channel: 1, sustain: 6
   midi  :cs4,50, channel: 1, sustain: 6
+  midi  :cs5,50, channel: 1, sustain: 6
   sleep 4
 
 end

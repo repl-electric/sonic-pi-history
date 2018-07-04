@@ -2,8 +2,9 @@ live_loop :form do
   tick
 
   midi :A3, channel: 2, sus:2
- midi :A3, channel: 1, sus:2
-
-  sleep 2
-  sleep 2
+  sleep 1
+    sleep 1
+   midi :A3, channel: 1, sus:2
+  sleep 1
+  sleep 1
 end

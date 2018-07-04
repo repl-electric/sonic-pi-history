@@ -21,20 +21,24 @@ end
 live_loop :form do
   tick
   score = (ing
-    [:e3,  :g4, :b3],
-    [:gs3, :b4, :ds4],
+    [:e3  :g4 :b3]
+    [:gs3 :b4 :ds4]
     ).look
+  pscore = (ing
+    [:g5  :g4]
+    ).look
+
 
   vox score[0],     sus:2
   vox score[1],     sus:2
   vox score[2], 80, sus:2
-  piano :g5,82,sus:2
+  piano pscore[0],82,sus:2
   sleep 1/2.0
   glitch :a3,40
   sleep 1/2.0
 
-  piano :g4, 80, sus:2 if spread(1,2).look
-  piano :g5, 82, sus:2
+  piano pscore[1], 80, sus:2 if spread(1,2).look
+  piano pscore[0], 82, sus:2
 
   sleep 1/2.0
   glitch :f3, 60

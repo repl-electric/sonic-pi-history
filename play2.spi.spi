@@ -10,7 +10,6 @@ live_loop :form do
   sleep 1
   sleep 1/2.0
   sleep 1/2.0
-  midi :fs3,70, channel: 3
   sleep 1/2.0
   midi :fs3,70, channel: 3
   sleep 1/2.0

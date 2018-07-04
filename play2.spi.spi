@@ -29,7 +29,7 @@ live_loop :form do
   sleep_ratio = 1  #E F G A B C D
   score = (ing
     [:e3  :g4 :b3]
-    [:gs3 :b4 :ds3]
+    [:gs3 :b4 :ds4]
     [:as3 :cs4 :e3]
     #[:cs3 :e4 :gs3]
 

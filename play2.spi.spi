@@ -37,6 +37,7 @@ live_loop :form do
     [:b2 :ds4  :fs3]
     [:cs3 :fs4 :gs3]
     [:d3  :fs4  :a3]
+    [:cs3 :e4  :gs3]
 
     #COMPOS 1
     # [:cs3 :e4 :gs3]

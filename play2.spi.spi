@@ -31,55 +31,55 @@ live_loop :form do
   tick
   sleep_ratio = 1  #E F G A B C D
   score = (ing
-   # [:e3  :g4 :b3]
+   #, [:e3,  :g4, :b3],
 
-    #PART 4
-    [:e3  :gs3 :b3]
-    [:fs3 :a4  :cs4]
-    [:a3  :cs4  :e4]
-    [:b3  :ds4  :fs ]
-    [:cs3  :e4  :gs4]
-    [:gs3  :b4  :ds4]
+    #PART, 4,
+    [:e3,  :gs3, :b3],
+    [:fs3, :a4,  :cs4],
+    [:a3,  :cs4,  :e4],
+    [:b3,  :ds4,  :fs, ],
+    [:cs3,  :e4,  :gs4],
+    [:gs3,  :b4,  :ds4],
 
-    [:e3  :gs3 :b3]
-    [:fs3 :a4  :cs4]
-    [:a3  :cs4  :e4 :gs4]
-    [:b3  :ds4  :fs4]
-    [:cs3 :e4  :gs4]
-    [:b3  :ds4  :fs4]
+    [:e3,  :gs3, :b3],
+    [:fs3, :a4,  :cs4],
+    [:a3,  :cs5,  :e4, :gs4],
+    [:b3,  :ds4,  :fs4],
+    [:cs3, :e4,  :gs4],
+    [:b3,  :ds4,  :fs4],
 
 
 
-    #PART 3
-    # [:e3 :gs4 :b3]
-    # [:a3 :cs4 :e4 :gs4]
-    # [:b3 :ds4 :fs4]
-    # [:e3 :gs4 :b4]
-    # [:a3 :cs5 :e4 :gs4]
-    # [:b3 :ds4 :fs4]
+    #PART, 3,
+    #, [:e3, :gs4, :b3],
+    #, [:a3, :cs4, :e4, :gs4],
+    #, [:b3, :ds4, :fs4],
+    #, [:e3, :gs4, :b4],
+    #, [:a3, :cs5, :e4, :gs4],
+    #, [:b3, :ds4, :fs4],
 
-    #PART 2
-    # [:e3  :g4 :b3]
-    # [:b3 :ds4  :fs4]
-    # [:cs3 :e4  :gs3]
-    # [:a2 :cs4  :e3]
-    # [:b2 :ds4  :fs3]
-    # [:cs3 :fs4 :gs3]
-    # [:cs3 :e4  :gs4]
+    #PART, 2,
+    #, [:e3,  :g4, :b3],
+    #, [:b3, :ds4,  :fs4],
+    #, [:cs3, :e4,  :gs3],
+    #, [:a2, :cs4,  :e3],
+    #, [:b2, :ds4,  :fs3],
+    #, [:cs3, :fs4, :gs3],
+    #, [:cs3, :e4,  :gs4],
 
-    #COMPOS 1
-    # [:cs3 :e4 :gs3]
-    # [:b2 :ds4 :fs3] #long
-    # [:b2 :ds4 :fs3] #long
-    # [:a2 :cs4 :e3]
-    # [:e3 :gs4 :b3]
-    # [:cs3 :f4 :gs3]
+    #COMPOS, 1,
+    #, [:cs3, :e4, :gs3],
+    #, [:b2, :ds4, :fs3], #long,
+    #, [:b2, :ds4, :fs3], #long,
+    #, [:a2, :cs4, :e3],
+    #, [:e3, :gs4, :b3],
+    #, [:cs3, :f4, :gs3],
 
-    # [:gs3 :b4 :ds4]
-    # [:b3  :ds4 :fs3]
-    # [:ds3  :fs4 :as3]
-    # [:cs4  :e4 :gs3]
-#    [_ _ _ _]
+    #, [:gs3, :b4, :ds4],
+    #, [:b3,  :ds4, :fs3],
+    #, [:ds3,  :fs4, :as3],
+    #, [:cs4,  :e4, :gs3],
+#,    [_, _, _, _],
 
     ).look
 
@@ -99,8 +99,8 @@ live_loop :form do
     midi root(score),120, channel: 4, sus: 2
   }
 
- # if (ing 1 1 0 0 1 1 1 0).look == 1
-  if (ing 1 1).look == 1
+ # if (ing 1, 1, 0, 0, 1, 1, 1, 0,).look == 1
+  if (ing 1, 1,).look == 1
     vox score[0],     sus:3.5
     vox score[1],     sus:3.5
     vox score[2], 80, sus:3.5

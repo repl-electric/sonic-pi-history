@@ -25,7 +25,7 @@ end
 
 live_loop :form do
   tick
-  sleep_ratio = (ing 1).look
+  sleep_ratio = (ing 1 1/2.0 1/2.0 1).look
   score = (ing
     [:e3  :g4 :b3]
     [:gs3 :b4 :ds4]

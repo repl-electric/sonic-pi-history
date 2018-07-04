@@ -3,10 +3,10 @@ live_loop :form do
 
   midi :e3, channel: 2, sus:2
   midi :b3, channel: 2, sus:2
-
-  sleep 1
-  sleep 1
   midi :g4, channel: 1, sus:2
+  sleep 1
+  sleep 1
+
   sleep 1
   sleep 1
 end

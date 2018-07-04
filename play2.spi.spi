@@ -33,7 +33,7 @@ def bass(*args)
   end
 end
 
-puts chord("cs", :minor).map{|n| note_inspect(n)}
+puts chord("fs", :minor).map{|n| note_inspect(n)}
 # E, F ♯, G ♯, A, B, C ♯, and D ♯.
 live_loop :form do
   tick

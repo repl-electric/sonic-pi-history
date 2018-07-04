@@ -25,7 +25,7 @@ live_loop :go do  #Emajor   E (F) G A (B) C (D)
 
   midi  :gs3,60,  channel: 1, sustain: 6          #G D
   midi  :ds3,50, channel: 1, sustain: 6
-  midi  :b3,50, channel: 1, sustain: 6
+  midi  :b4,50, channel: 1, sustain: 6
 
   sleep 4
 

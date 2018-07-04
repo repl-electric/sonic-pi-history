@@ -57,7 +57,7 @@ live_loop :form do
   glitch :C3, 10
 
   #if score[0] == _
-    vox :E2,    sus:4.0
+  vox root(score),    sus:4.0
   #end
 
   if (ing 1 1 0 0 1 1 1 0).look == 1

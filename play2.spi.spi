@@ -48,7 +48,7 @@ live_loop :form do
 
   puts score
 
-  glitch :C3, 40
+  glitch :C3, 80
 
   if (ing 1, 0, 0, 1, 1,).look == 1
     vox score[0],     sus:2

@@ -28,8 +28,8 @@ live_loop :form do
   glitch :a3,40
   sleep 1/2.0
 
-  piano :g4, 80, sus:2
-  piano :g5, 82, sus:2 if spread(1,2).look
+  piano :g4, 80, sus:2 if spread(1,2).look
+  piano :g5, 82, sus:2
 
   sleep 1/2.0
   glitch :f3, 60

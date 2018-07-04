@@ -23,6 +23,7 @@ def vox(*args)
   end
 end
 
+# E, F ♯, G ♯, A, B, C ♯, and D ♯.
 puts chord(:Cs3, :major).map{|n| note_inspect(n)}
 
 live_loop :form do
@@ -32,11 +33,9 @@ live_loop :form do
     [:e3  :g4 :b3]
     #[:e3  :gs4 :b3]
     [:cs3 :e4 :gs3]
-
     [:b2 :ds4 :fs3]
     [:a2 :cs4 :e3]
     [:e3 :gs4 :b3]
-
     [:cs3 :es4 :gs3]
 
     # [:gs3 :b4 :ds4]

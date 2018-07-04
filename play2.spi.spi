@@ -100,7 +100,6 @@ live_loop :form do
 
     glitch :a3,40
     sleep 1/4.0
-    glitch :cs4,50
     sleep 1/4.0
 
     piano score[1],82, sus:1

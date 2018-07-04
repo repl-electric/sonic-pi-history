@@ -12,9 +12,9 @@ live_loop :go do
   midi  :fs5,50, channel: 1, sustain: 6
   sleep 3
 
-  midi  :fs4,60,  channel: 1, sustain: 6          #F A C
-  midi  :as5,50, channel: 1, sustain: 6
-  midi  :cs5,50, channel: 1, sustain: 6
+  midi  :fs3,60,  channel: 1, sustain: 6          #F A C
+  midi  :as4,50, channel: 1, sustain: 6
+  midi  :cs4,50, channel: 1, sustain: 6
   sleep 3
 
 end

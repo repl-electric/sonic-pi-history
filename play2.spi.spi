@@ -25,6 +25,6 @@ live_loop :form do
   sleep 1/2.0
   glitch :fs3,60 if spread(1,4).look
   sleep 1/4.0
-  glitch :fs3,70
+  glitch :fs3,70  if spread(1,4).look
   sleep 1/4.0
 end

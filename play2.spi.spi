@@ -7,7 +7,6 @@ def glitch(*args)
   end
 end
 def piano(*args)
-  return
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
   n, vel = *params
@@ -28,30 +27,30 @@ live_loop :form do
   tick
   sleep_ratio = 1  #E F G A B C D
   score = (ing
-    [:e3,  :g4, :b3],
-    [:gs3, :b4, :ds4],
-    [:b3,  :ds4, :fs3],
-    [:ds3,  :fs4, :as3],
-    [:cs4,  :e4, :gs3],
-    [_, _, _, _],
+    [:e3  :g4 :b3]
+    [:gs3 :b4 :ds4]
+    [:b3  :ds4 :fs3]
+    [:ds3  :fs4 :as3]
+    [:cs4  :e4 :gs3]
+    [_ _ _ _]
 
     ).look
   pscore = (ing
-    [:g5,  :g4],
-    [:ds5,  :ds4],
-    [:as5,  :as4],
-    #[:e5,  :e4],
+    [:g5  :g4]
+    [:ds5  :ds4]
+    [:as5  :as4]
+    #[:e5  :e4]
 
-    #, [:fs5,  :fs4],
-    #, [:gs5,  :gs4],
-    #, [:cs5,  :cs4],
+    # [:fs5  :fs4]
+    # [:gs5  :gs4]
+    # [:cs5  :cs4]
     ).look
 
   puts score
 
   glitch :C3, 10
 
-  if (ing 1, 0, 0, 1, 0, 0,).look == 1
+  if (ing 1 0 0 1 0 0).look == 1
     vox score[0],     sus:2
     vox score[1],     sus:2
     vox score[2], 80, sus:2

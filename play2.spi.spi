@@ -1,22 +1,22 @@
-use_bpm 127.0
-
 live_loop :form do
   tick
   midi :e3,    channel: 2, sus:2
   midi :b3,    channel: 2, sus:2
   midi :g4,80, channel: 2, sus:2
   midi :g5,82, channel: 1, sus:2
-  sleep 2
+  sleep 1/2.0
   midi :a3,40, channel: 3
-  sleep 2
+  sleep 1/2.0
   midi :g4,80, channel: 1, sus:2
   midi :g5,82, channel: 1, sus:2
-  sleep 2
+  sleep 1
   midi :as3,50, channel: 3
-  sleep 2
-  sleep 2
+  sleep 1/2.0
+  sleep 1/2.0
 
-  sleep 2
+  sleep 1/2.0
   midi :fs3,70, channel: 3
-  sleep 2
+  sleep 1/4.0
+  midi :fs3,70, channel: 3
+  sleep 1/4.0
 end

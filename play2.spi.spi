@@ -79,7 +79,7 @@ live_loop :form do
     [:b2 :ds4 :fs3] #long
     [:a2 :cs4 :e3]
     [:e3 :gs4 :b3]
-    [:cs3 :es4 :gs3 :g5]
+    [:cs3 :es4 :gs3]
 
     # [:gs3 :b4 :ds4]
     # [:b3  :ds4 :fs3]

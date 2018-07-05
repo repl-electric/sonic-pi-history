@@ -117,7 +117,6 @@ live_loop :form do
       [:gs5]
       [:e5]
       ).look
-    puts s
     s.each{|n|
       with_swing -0.01{
         midi n, 80,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)

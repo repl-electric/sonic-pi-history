@@ -42,7 +42,6 @@ def looper(*args)
   end
 end
 
-
 live_loop :form do
   tick
   score = (ing

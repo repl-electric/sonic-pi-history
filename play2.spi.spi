@@ -107,7 +107,11 @@ live_loop :form do
 
       midi :e3, channel: 4, sustain: 4, sus: 2
 
-      sleep 3.5
+      sleep 3.0
+      midi :e3, channel: 4, sustain: 4, sus: 2
+      sleep 0.5
+
+
       bass root(score),105, sus: 0.5
       }
   }

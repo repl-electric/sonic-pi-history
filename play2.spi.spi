@@ -123,7 +123,7 @@ live_loop :form do
       [:cs4 ]
       [:gs4]
       [:es4]
-      [:e4]
+      [:e4 :e4]
       ).look
     s.each{|n|
       with_swing -0.01{

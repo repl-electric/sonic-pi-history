@@ -107,7 +107,7 @@ live_loop :form do
   }
 
 
-  midi (ing :E4 :E3).look,  sus: 4.0,  channel: 6# if spread(7,11).tick(:n1)
+  midi (ing :E4 :Fs3).look,  sus: 4.0,  channel: 6# if spread(7,11).tick(:n1)
 
 
   if (ing 1 1 0 0 1 1 1).look == 1

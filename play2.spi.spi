@@ -121,9 +121,9 @@ live_loop :form do
      [:ds4, ], #long,
      [:ds4, ], #long,
      [:cs4, ],
-     [:gs4, :b3],     #LOVELY,
-     [:es4, :gs3],
-     [:e4, :gs3],
+     [:gs4],     #LOVELY,
+     [:es4],
+     [:e4],
 
 
       ).look

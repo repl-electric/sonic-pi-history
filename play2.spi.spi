@@ -117,7 +117,6 @@ live_loop :form do
       piano score[1],82,sus:2
     }
     sleep 1/2.0
-    glitch :a3,127
     sleep 1/2.0
 
     piano score[1], 80, sus:2  if spread(1,2).look
@@ -158,6 +157,8 @@ live_loop :form do
     sleep 1/2.0
     glitch :C3, 50
     glitch :fs3,70
-    sleep 1/2.0
+    sleep 1/4.0
+    glitch :a3,127
+    sleep 1/4.0
   end
 end

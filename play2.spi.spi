@@ -108,8 +108,8 @@ live_loop :form do
 
 
   at{
-    12.times{
-      midi :E4,  sus:1,  channel: 6 if spread(7,11).look
+    12.times{|n|
+      midi :E4,  sus:1,  channel: 6 if spread(7,11).tick(:n1)
       sleep 0.25
       }
     }

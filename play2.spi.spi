@@ -33,7 +33,7 @@ def bass(*args)
   end
 end
 
-vox :cs3
+vox :cs4
 
 live_loop :form do
   tick

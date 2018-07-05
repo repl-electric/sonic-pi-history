@@ -126,7 +126,7 @@ live_loop :form do
       [:e4 :e5 :e4 :e4]
       ).look
     at{
-      sleep 1.0
+      sleep 1.5
     s.each{|n|
       with_swing 0.02{
         midi n, (ing 80 60 50).look,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)

@@ -168,7 +168,7 @@ live_loop :form do
     glitch :ds3,60+rand*5 if spread(2,3).look
     sleep 1/2.0
 
-    midi score[1], 45,  sus:4,  channel: 5
+    midi score[1], 32,  sus:4,  channel: 5
 
     glitch :fs3,60+rand*5 if spread(2,3).look
     sleep 1/4.0

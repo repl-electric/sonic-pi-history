@@ -109,22 +109,21 @@ live_loop :form do
 
   with_transpose 0{
     s = (ing
-      #, [:a4, :a4],
-      #, [:fs5],
-      #, [:a3, :b4, :b5],
-      #, [:a4, :cs4, :Cs5],
-      #, [:fs5, :fs4],
-      #, [:gs5, :gs4],
-      #, [:e5, :e4],
+      [:a4, :a4],
+      [:fs5],
+      [:a3, :b4, :b5],
+      [:a4, :cs4, :Cs5],
+      [:fs5, :fs4],
+      [:gs5, :gs4],
+      [:e5, :e4],
 
      [:e4, :e5],
-     [:ds4, ], #long,
-     [:ds4, ], #long,
+     [:ds4, ],
+     [:ds4, ],
      [:cs4, ],
-     [:gs4],     #LOVELY,
+     [:gs4],
      [:es4],
      [:e4],
-
 
       ).look
     s.each{|n|

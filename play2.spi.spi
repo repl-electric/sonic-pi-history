@@ -112,6 +112,7 @@ live_loop :form do
       [:a4 :a4]
       [:fs4]
       [:a3 :b4 :b5]
+      [:gs4]
       ).look
     s.each{|n|
       puts n

@@ -106,9 +106,15 @@ live_loop :form do
     bass root(score),120, sus: 2.5
   }
 
+
+  midi score[1],    sus:1,  channel: 6
+
   if (ing 1 1 0 0 1 1 1).look == 1
   #if (ing 1 1).look == 1
     #if (ing 1 1 0 1 1 1).look == 1
+
+
+
 
     midi score[1],    sus:4,  channel: 5
 

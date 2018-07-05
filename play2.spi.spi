@@ -166,7 +166,6 @@ live_loop :form do
 
     glitch :e3,60+rand*5 if spread(2,3).look
     sleep 1/2.0
-
     glitch :d3,60+rand*5 if spread(2,3).look
     sleep 1/2.0
 

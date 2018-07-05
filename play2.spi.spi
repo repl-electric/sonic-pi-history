@@ -136,7 +136,7 @@ live_loop :form do
     glitch :fs3,60+rand*5 #if spread(1,4).look
     sleep 1/4.0
     glitch :fs3,70+rand*5 #if spread(1,4).look
-    glitch :a3,127
+
     sleep 1/4.0
   else
     vox score[0],       sus:2
@@ -159,7 +159,7 @@ live_loop :form do
     glitch :C3, 50
     glitch :fs3,70
     sleep 1/4.0
-    #glitch :a3,127
+    glitch :a3,127
     sleep 1/4.0
   end
 end

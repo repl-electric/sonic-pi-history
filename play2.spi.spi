@@ -105,7 +105,7 @@ live_loop :form do
     at{
       bass root(score),120, sus: 2.5
 
-      midi :e3, channel: 4
+      midi :e3, channel: 4, sustain: 4
 
       sleep 3.5
       bass root(score),105, sus: 0.5

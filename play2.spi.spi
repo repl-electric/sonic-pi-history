@@ -109,7 +109,7 @@ live_loop :form do
 
 
   with_transpose 12{
-    midi (ing :e4).look, 80,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
+    midi (ing :e4 :b3).look, 80,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
   }
 
   if (ing 1 1 0 0 1 1 1).look == 1

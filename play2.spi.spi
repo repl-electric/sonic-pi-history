@@ -102,7 +102,11 @@ live_loop :form do
   #end
 
   with_transpose 0{
-    bass root(score),120, sus: 2.5
+    at{
+      bass root(score),120, sus: 2.5
+      sleep 2
+      bass root(score),120, sus: 2.5
+      }
   }
 
   with_transpose 0{

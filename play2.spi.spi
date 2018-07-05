@@ -146,7 +146,7 @@ live_loop :form do
     #vox  score[2], 80, sus:3.5
     #vox  score[3], 80, sus:3.5
     with_transpose 12{
-      #piano score[1],82,sus:2
+      piano score[1],82,sus:2
     }
     sleep 1/2.0
     sleep 1/2.0

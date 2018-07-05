@@ -136,7 +136,8 @@ live_loop :form do
     }
     }
 
-  if (ing 1 1 0 0 1 1 1).look == 1
+  if false#(ing 1 1 0 0 1 1 1).look == 1
+
   #if (ing 1 1).look == 1
     #if (ing 1 1 0 1 1 1).look == 1
 

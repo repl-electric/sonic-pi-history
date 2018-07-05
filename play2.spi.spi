@@ -107,7 +107,6 @@ live_loop :form do
     bass root(score),120, sus: 2.5
   }
 
-
   with_transpose 0{
     s = (ing [:a4 :a4] [:fs4]).look
     s.each{|n|

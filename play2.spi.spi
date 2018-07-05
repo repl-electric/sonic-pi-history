@@ -104,6 +104,9 @@ live_loop :form do
   with_transpose 0{
     at{
       bass root(score),120, sus: 2.5
+
+      midi :e3, channel: 4
+
       sleep 3.5
       bass root(score),105, sus: 0.5
       }

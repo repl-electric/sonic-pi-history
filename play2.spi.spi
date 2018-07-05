@@ -36,55 +36,55 @@ end
 live_loop :form do
   tick
   score = (ing
-   #, [:e3,  :g4, :b3],
+   # [:e3  :g4 :b3]
 
-    #PART, 4,
-    #, [:e3,  :gs4, :b3],
-    #, [:fs3, :a3,  :cs4],
-    #, [:a3,  :cs4,  :e4],
-    #, [:b3,  :ds4,  :fs4, ],
-    #, [:cs3,  :e4,  :gs4],
-    #, [:gs3,  :b4,  :ds4],
+    #PART 4
+    # [:e3  :gs4 :b3]
+    # [:fs3 :a3  :cs4]
+    # [:a3  :cs4  :e4]
+    # [:b3  :ds4  :fs4 ]
+    # [:cs3  :e4  :gs4]
+    # [:gs3  :b4  :ds4]
 
-    #, [:e3,  :gs3, :b3],
-    #, [:fs3, :a3,  :cs4],
-    #, [:a3,  :cs5,  :e4, :gs4],
-    #, [:b3,  :ds4,  :fs4],
-    #, [:cs3, :e4,  :gs4],
-    #, [:b3,  :ds4,  :fs4],
+    # [:e3  :gs3 :b3]
+    # [:fs3 :a3  :cs4]
+    # [:a3  :cs5  :e4 :gs4]
+    # [:b3  :ds4  :fs4]
+    # [:cs3 :e4  :gs4]
+    # [:b3  :ds4  :fs4]
 
-    #PART, 3,
-    #, [:e3, :gs4, :b3],
-    #, [:a3, :cs4, :e4, :gs4],
-    #, [:b3, :ds4, :fs4],
-    #, [:e3, :gs4, :b4],
-    #, [:a3, :cs5, :e4, :gs4],
-    #, [:b3, :ds4, :fs4],
+    #PART 3
+    # [:e3 :gs4 :b3]
+    # [:a3 :cs4 :e4 :gs4]
+    # [:b3 :ds4 :fs4]
+    # [:e3 :gs4 :b4]
+    # [:a3 :cs5 :e4 :gs4]
+    # [:b3 :ds4 :fs4]
 
-    #PART, 2,
-    [:e3,  :g4,  :b3, :fs3],
-    #[:b3,  :ds4, :fs4],
-    #, [:cs3, :e4,  :gs3],
-    #, [:a2,  :cs4, :e3, ],
-    #, [:b2,  :ds4, :fs3],
-    #, [:cs3, :fs4, :gs4],
-    #, [:cs3, :e4,  :gs5],
+    #PART 2
+    [:e3  :g4  :b3 :fs3]
+    #[:b3  :ds4 :fs4]
+    # [:cs3 :e4  :gs3]
+    # [:a2  :cs4 :e3 ]
+    # [:b2  :ds4 :fs3]
+    # [:cs3 :fs4 :gs4]
+    # [:cs3 :e4  :gs5]
 
-    #COMPOS, 1,
-     #, [:cs3, :e4, :gs3],
-     #, [:b2, :ds4, :fs3], #long,
-     #, [:b2, :ds4, :fs3], #long,
-     #, [:a2, :cs4, :e3],
-     #, [:e3, :gs4, :b3],     #LOVELY,
-     #, [:cs3, :es4, :gs3],
-     #, [:cs3, :e4, :gs3],
+    #COMPOS 1
+     # [:cs3 :e4 :gs3]
+     # [:b2 :ds4 :fs3] #long
+     # [:b2 :ds4 :fs3] #long
+     # [:a2 :cs4 :e3]
+     # [:e3 :gs4 :b3]     #LOVELY
+     # [:cs3 :es4 :gs3]
+     # [:cs3 :e4 :gs3]
 
 
-    #, [:gs3, :b4, :ds4],
-    #, [:b3,  :ds4, :fs3],
-    #, [:ds3,  :fs4, :as3],
-    #, [:cs4,  :e4, :gs3],
-    #[_, _, _, _],
+    # [:gs3 :b4 :ds4]
+    # [:b3  :ds4 :fs3]
+    # [:ds3  :fs4 :as3]
+    # [:cs4  :e4 :gs3]
+    #[_ _ _ _]
 
     ).look
 
@@ -107,37 +107,37 @@ live_loop :form do
 
   with_transpose 0{
     s = (ing
-      [:a4, :a4],
-      [:fs5, _, :fs5],
-      [:a3, :b4, :b5],
-      [:a4, :cs4, :Cs5],
-      [:fs4, :fs4],
-      [:gs4, :gs4],
-      [:e5, :e4],
+      [:a4 :a4]
+      [:fs5 _ :fs5]
+      [:a3 :b4 :b5]
+      [:a4 :cs4 :Cs5]
+      [:fs4 :fs4]
+      [:gs4 :gs4]
+      [:e5 :e4]
 
-      [:e4, :e5],
-      [:ds4],
-      [:fs4],
-      [:cs4],
-      [:gs4],
-      [:es4],
-      [:e4, :e5, :e4, :e4],
+      [:e4 :e5]
+      [:ds4]
+      [:fs4]
+      [:cs4]
+      [:gs4]
+      [:es4]
+      [:e4 :e5 :e4 :e4]
       ).look
     at{
       sleep 1.5
     s.each{|n|
       with_swing 0.02{
-        #midi n, (ing 80, 60, 50,).look,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
+        #midi n, (ing 80 60 50).look,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
       }
       sleep 0.25
     }
     }
     }
 
-  if true#(ing 1, 1, 0, 0, 1, 1, 1,).look == 1
+  if true#(ing 1 1 0 0 1 1 1).look == 1
 
-  #if (ing 1, 1,).look == 1
-    #if (ing 1, 1, 0, 1, 1, 1,).look == 1
+  #if (ing 1 1).look == 1
+    #if (ing 1 1 0 1 1 1).look == 1
 
 
     vox  score[0],      sus:1.0
@@ -168,7 +168,7 @@ live_loop :form do
 
     sleep 1/2.0
 
-    midi score[2], 45,  sus:4,  channel: 5
+    midi score[1], 45,  sus:4,  channel: 5
 
     glitch :fs3,60+rand*5 if spread(2,3).look
     sleep 1/4.0

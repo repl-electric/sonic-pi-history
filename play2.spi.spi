@@ -33,6 +33,8 @@ def bass(*args)
   end
 end
 
+vox :A3
+
 puts chord("cs", :major).map{|n| note_inspect(n)}
 # E, F ♯, G ♯, A, B, C ♯, and D ♯.
 live_loop :form do

@@ -33,8 +33,6 @@ def bass(*args)
   end
 end
 
-vox :cs4
-
 live_loop :form do
   tick
   score = (ing

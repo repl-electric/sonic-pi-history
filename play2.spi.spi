@@ -108,9 +108,10 @@ live_loop :form do
 
 
   at{
-
+    8.times{
     midi :E4,  sus:1,  channel: 6
-    sleep 0.5
+      sleep 0.5
+      }
     }
 
   if (ing 1 1 0 0 1 1 1).look == 1

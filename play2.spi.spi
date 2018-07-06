@@ -177,10 +177,10 @@ live_loop :form do
     #glitch :f3, 60
     sleep 1/2.0
 
-    #glitch :as3,50
+    glitch :as3,50
     sleep 1/2.0
 
-    glitch :e3,60+rand*5 if spread(1,2).look
+    #glitch :e3, 60+rand*5 if spread(1,2).look
     sleep 1/2.0
     #glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look
     sleep 1/2.0

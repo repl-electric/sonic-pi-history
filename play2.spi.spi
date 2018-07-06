@@ -170,7 +170,7 @@ live_loop :form do
       #piano score[1], 62, sus:2
     }
 
-    #vox  score[3], 80,  sus: 2.5
+    vox  score[3], 80,  sus: 2.5
 
     sleep 1/2.0
     glitch :f3, 60

@@ -1,48 +1,7 @@
-use_bpm 127/2.0
-def glitch(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n
-    midi n,vel, channel: 3
-  end
-end
-def piano(*args)
-  #return
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n
-    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 1})
-  end
-end
-def vox(*args)
-  #looper(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n
-    midi n,vel, *(args << {port: :iac_bus_1} << {channel: 2})
-  end
-end
-def bass(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n
-    midi n,vel, *(args << {channel: 4})
-  end
-end
-def looper(*args)
-  params, opts = split_params_and_merge_opts_array(args)
-  opts         = current_midi_defaults.merge(opts)
-  n, vel = *params
-  if n
-    midi n,vel, *(args << {channel: 7})
-  end
-end
+load_support('working_title'); use_bpm 127/2.0
+live_loop(:unsyncable) do; sleep 1.0;end
 
-live_loop :form do
+live_loop :form, sync: :unsyncable do
   tick
   score = (ing
    # [:e3  :g4 :b3]
@@ -141,14 +100,14 @@ live_loop :form do
       ).look
     at{
       sleep 1.5
-    s.each{|n|
-      with_swing 0.02{
-        #midi n, (ing 80 60 50).look,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
+      s.each{|n|
+        with_swing 0.02{
+          #midi n, (ing 80 60 50).look,  sus: 0.25,  channel: 6# if spread(7,11).tick(:n1)
+        }
+        sleep 0.25
       }
-      sleep 0.25
     }
-    }
-    }
+  }
 
   if true#(ing 1 1 0 0 1 1 1).look == 1
 

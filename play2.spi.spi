@@ -187,9 +187,9 @@ live_loop :form do
 
     #midi score[1], 32,  sus:4,  channel: 5
 
-    #glitch :fs3,60+rand*5 if spread(2,3).look
+    glitch :fs3,60+rand*5 if spread(2,3).look
     sleep 1/4.0
-    #glitch :fs3,70+rand*5 if spread(4,5).look
+    glitch :fs3,70+rand*5 if spread(4,5).look
     sleep 1/4.0
   else
     vox score[0],       sus:2

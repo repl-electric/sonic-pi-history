@@ -4,7 +4,9 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 live_loop :name do
   tick
 
-  looper :A3, tune: 0.45
+  #looper :A3, tune: 0.45
+
+  midi_cc 50, 127.0, port: :iac_bus_1, channel: 7
 
   sleep 1
   sleep 1

@@ -9,7 +9,7 @@ live_loop :name do
 
 
   midi_channel_pressure 10, channel: 7, port: :iac_bus_2
-  midi_channel_pressure 10, channel: 8, port: :iac_bus_2
+  midi_channel_pressure 127, channel: 8, port: :iac_bus_2
 
 
 

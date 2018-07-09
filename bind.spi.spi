@@ -4,7 +4,7 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 live_loop :name do
   tick
 
-  looper :A3, sus: 4, tune: 0.5, elec: 1
+  looper :A3, sus: 4, tune: 0.501, elec: 1
 
 
   #midi_channel_pressure 127, channel: 7, port: :iac_bus_2

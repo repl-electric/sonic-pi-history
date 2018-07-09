@@ -10,9 +10,6 @@ live_loop :name do
 
   #midi_channel_pressure 127, channel: 7, port: :iac_bus_2
   #midi_channel_pressure 127, channel: 8, port: :iac_bus_2
-  midi_pitch_bend 0.50, channel: 7
-
-
 
   #midi_cc 50, 63.5, port: :iac_bus_1, channel: 7
 

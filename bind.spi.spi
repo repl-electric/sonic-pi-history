@@ -12,6 +12,6 @@ live_loop :name do
 
   #midi_cc 50, 63.5, port: :iac_bus_1, channel: 7
 
-  sleep 4
+  sleep 2
 #  sleep
 end

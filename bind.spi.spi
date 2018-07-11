@@ -4,9 +4,7 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 live_loop :name do
   tick
 
-  glitch :C3
-  vox :e3, sus: 1.5
-  vox_cc sync: 1
+  vox_cc wet: rand
   sleep 4
 
 end

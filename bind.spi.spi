@@ -4,7 +4,7 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 live_loop :name do
   tick
 
-  vox :a3
+  vox :fs3
   vox_cc wet: 0.47
   sleep 4
 

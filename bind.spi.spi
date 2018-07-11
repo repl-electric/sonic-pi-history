@@ -5,7 +5,7 @@ live_loop :name do
   tick
 
   glitch :C3
-  vox :e3, sus: 2
+  vox :e3, sus: 1.5
   vox_cc sync: 1
   sleep 4
 

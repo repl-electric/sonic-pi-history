@@ -5,6 +5,7 @@ live_loop :name do
   tick
 
 
+  vox :e3
   vox_cc sync: rand
   sleep 4
 

@@ -5,7 +5,7 @@ live_loop :name do
   tick
 
 
-  vox_cc sync: 1.0
+  vox_cc sync: rand
   sleep 4
 
 end

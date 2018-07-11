@@ -5,7 +5,7 @@ live_loop :name do
   tick
 
   vox :a3
-  vox_cc wet:
+  vox_cc wet: 0
   sleep 4
 
 end

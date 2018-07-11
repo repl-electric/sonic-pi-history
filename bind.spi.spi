@@ -6,7 +6,7 @@ live_loop :name do
 
   glitch :C3
   vox :e3, sus: 1.5
-  vox_cc sync: 0
+  vox_cc sync: 1
   sleep 4
 
 end

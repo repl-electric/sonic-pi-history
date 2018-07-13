@@ -138,7 +138,7 @@ live_loop :form, sync: :unsyncable do
 
     glitch :fs3, 60+rand*5 if spread(2,3).look
     sleep 1/4.0
-    with_swing -0.02{
+    with_swing -0.05{
       glitch :fs3, 70+rand*5 if spread(4,5).look
     }
     sleep 1/4.0

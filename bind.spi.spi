@@ -8,6 +8,6 @@ live_loop :name do
   vox2 :c3
   glitch :C3, 80
   fx wash: 0.3
-  sleep 1
+  sleep 2
 
 end

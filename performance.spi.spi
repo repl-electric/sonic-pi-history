@@ -84,7 +84,7 @@ live_loop :form, sync: :unsyncable do
       }
     }
   }
-  #/Applications/Ableton\ Live\ 9\ Standard.app/Contents/App-Resources/Core\ Library/Audio\ Effect\ Racks/Mixing\ \&\ Mastering/Meaty\ Analogue\ Master.adg vox_cc semitone: 5
+  #vox_cc semitone: 5
   if true#(ing 1 1 0 0 1 1 1).look == 1
 
   #if (ing 1 1).look == 1

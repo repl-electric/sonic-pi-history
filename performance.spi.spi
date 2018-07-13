@@ -10,7 +10,7 @@ live_loop(:unsyncable) do; sleep 1.0;end
 # F# -1- G -2- A -2-  B -1- C -2- D -2- E -2    F->B   5 sem   B->E          F->D#
 
 
-midi_cc 55, 0.05*127, port: :iac_bus_1, channel: 2
+midi_cc 55, 0.1*127, port: :iac_bus_1, channel: 2
 
 
 #vox_x :e3, 15

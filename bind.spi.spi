@@ -7,7 +7,7 @@ live_loop :name do
 
   vox2 :c3
 
-  fx wash: 0.25
+  fx wash: 0.0
   sleep 1
 
 end

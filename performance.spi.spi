@@ -15,7 +15,7 @@ live_loop(:unsyncable) do; sleep 1.0;end
 
 #vox_x :e3, 15
 vox_cc semitone: -12
-vox_on :e3
+#vox_on :e3
 stop
 
 #stop

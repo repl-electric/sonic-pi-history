@@ -134,7 +134,11 @@ live_loop :form, sync: :unsyncable do
     }
 
     sleep 1/2.0
-    glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look
+
+    with_swing 0.05{
+      glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look
+    }
+
     sleep 1/2.0
 
     #sop score[2], 50, sus:4    #2

@@ -47,7 +47,10 @@ live_loop :form, sync: :unsyncable do
 
   glitch_cc wash: 0.125
   glitch :C3, 85
-  glitch_cc wash: 0.0
+  at{
+    sleep 0.25
+    glitch_cc wash: 0.0
+    }
 
   if score[0] == _
     #vox :e2, sus:2.0

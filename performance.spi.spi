@@ -47,6 +47,8 @@ live_loop :form, sync: :unsyncable do
     ).look
   puts score
 
+  d=[8,6,2].shuffle
+  glitch_cc rdelay: d[0], ldelay: d[1], cdelay: d[2]
   glitch_cc wash: 0.25*1
   glitch :C3, 85
   at{

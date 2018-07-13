@@ -8,7 +8,7 @@ live_loop :zzzz do
   # vox2 :c3
   glitch :C3, 80
   # fx wash: 0.0
-  glitch_cc rdelay: 8, ldelay: 6
+  glitch_cc rdelay: 8, ldelay: 6, cdelay: 3
 
   sleep 2
 

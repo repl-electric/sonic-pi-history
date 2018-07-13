@@ -10,7 +10,7 @@ live_loop(:unsyncable) do; sleep 1.0;end
 # F# -1- G -2- A -2-  B -1- C -2- D -2- E -2    F->B   5 sem   B->E          F->D#
 
 #vox_on :a3, 10
-vox_cc semitone: 0.4
+vox_cc semitone: 0.6
 #vox_on :fs3
 stop
 

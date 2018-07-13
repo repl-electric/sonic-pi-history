@@ -11,6 +11,6 @@ live_loop :name do
 
   glitch_cc wash: rand
 
-  sleep 2
+  sleep 1
 
 end

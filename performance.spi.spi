@@ -45,7 +45,7 @@ live_loop :form, sync: :unsyncable do
     ).look
   puts score
 
-  glitch_cc wash: 0.25
+  glitch_cc wash: 0.125
   glitch :C3, 85
   glitch_cc wash: 0.0
 

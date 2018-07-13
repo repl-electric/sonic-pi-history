@@ -11,6 +11,6 @@ live_loop :zzzz do
 
   glitch_cc wash: rand
 
-  sleep 1
+  sleep 2
 
 end

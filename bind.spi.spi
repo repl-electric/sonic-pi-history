@@ -9,7 +9,7 @@ live_loop :zzzz do
   glitch :C3, 80
   # fx wash: 0.0
 
-  glitch_cc delay: 0.2, wash: 0.2
+  glitch_cc delay: 0.4, wash: 0.2
 
   sleep 2
 

@@ -84,7 +84,7 @@ live_loop :form, sync: :unsyncable do
       }
     }
   }
-  vox_cc semitone: -2
+  vox_cc semitone: 5
   if true#(ing 1 1 0 0 1 1 1).look == 1
 
   #if (ing 1 1).look == 1
@@ -136,9 +136,9 @@ live_loop :form, sync: :unsyncable do
 
     #sop score[2], 50, sus:4    #2
 
-    #glitch :fs3, 60+rand*5 if spread(2,3).look
+    glitch :fs3, 60+rand*5 if spread(2,3).look
     sleep 1/4.0
-    #glitch :fs3, 70+rand*5 if spread(4,5).look
+    glitch :fs3, 70+rand*5 if spread(4,5).look
     sleep 1/4.0
   else
     vox score[0],       sus:2

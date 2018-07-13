@@ -6,6 +6,8 @@ live_loop(:unsyncable) do; sleep 1.0;end
 #vox_cc sync: 0, wet: 1.0, spray: 0.0
 glitch_cc mode: 4
 glitch_cc wash: 0.125
+glitch_cc rdelay: 8, ldelay: 6, cdelay: 2
+
 live_loop :form, sync: :unsyncable do
   tick
   score = (ing

@@ -4,6 +4,9 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 live_loop :name do
   tick
   #  vox_cc semitone: 0.721
+
+  vox2 :c3
+
   fx wash: 0
   sleep 1
 

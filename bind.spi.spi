@@ -5,9 +5,12 @@ live_loop :name do
   tick
   #  vox_cc semitone: 0.721
 
-  vox2 :c3
-  glitch :C3, 80
-  fx wash: 0.0
+  # vox2 :c3
+  # glitch :C3, 80
+  #fx wash: 0.0
+
+  glitch_cc wash: rand
+
   sleep 2
 
 end

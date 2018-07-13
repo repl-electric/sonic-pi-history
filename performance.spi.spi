@@ -11,10 +11,8 @@ live_loop(:unsyncable) do; sleep 1.0;end
 
 
 #midi_cc 55, 0.9*127, port: :iac_bus_1, channel: 2
-
-
 #vox_x :e3, 15
-vox_cc semitone: 5
+vox_cc semitone: 5, sync: 1
 #vox_on :e3
 stop
 

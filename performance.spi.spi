@@ -36,13 +36,13 @@ live_loop :name do
   rot_a = [4,3,2].choose
   8.times{
     sleep 1
-    #midi :A3,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
-    #midi :A3,127, channel: 8, sus: 1.5 if spread(1,6).rot(rot_a).look(:inside)
+    midi :A3,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
+    midi :A3,127, channel: 8, sus: 1.5 if spread(1,6).rot(rot_a).look(:inside)
 
     if !spread(1,64).rot(-6).tick(:inside)
-      midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+      #midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       if spread(1,2).rot(0).look(:inside)
-        midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+        #midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       end
     else
       at{

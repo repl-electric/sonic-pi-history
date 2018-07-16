@@ -1,4 +1,4 @@
-load_support('working'); use_bpm 128
+load_support('working'); use_bpm 130
 live_loop(:unsyncable) do; sleep 1.0;end
 
 # D, E, F♯, G, A, B, and C♯

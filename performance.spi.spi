@@ -13,6 +13,8 @@ live_loop :melo, sync: :name do
     [:E4 122 1/2.0]
     [:A3 122 1/2.0]
     [:D4 110 1]
+    [:cs4 110 2]
+
     [_ _ 1]
     ).look
 

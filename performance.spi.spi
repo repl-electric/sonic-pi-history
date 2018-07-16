@@ -6,11 +6,11 @@ live_loop(:unsyncable) do; sleep 1.0;end
 live_loop :name do
   tick
   s = (ing
-    [,  :Fs4,  :a3],
-    [, :a4,   :cs4],
-    [,  :d4,   :Fs3],
-    [,  :B4,   :D4],
-    [,  :Cs4,  :E4], ).look
+    [:Fs4,  :a3],
+    [:a4,   :cs4],
+    [:d4,   :Fs3],
+    [:B4,   :D4],
+    [:Cs4,  :E4], ).look
   score = s[0]
   puts score
   midi score, 25, sus: 4, channel:  1, port: :iac_bus_1

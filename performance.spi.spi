@@ -3,6 +3,16 @@ live_loop(:unsyncable) do; sleep 1.0;end
 
 # D, E, F♯, G, A, B, and C♯
 
+live_loop :melo, sync: :name do
+  tick
+
+
+  midi (ing :D4), 127, sus: 1.0, channel: 3, port: :iac_bus_1
+  sleep 1
+  sleep 1
+end
+
+
 live_loop :name do
   tick
   s = (ing
@@ -14,7 +24,7 @@ live_loop :name do
   score = s[0]
   puts score
   midi score, 25, sus: 4, channel:  1, port: :iac_bus_1
-  midi root(s), 127, sus: 1.0, channel: 3, port: :iac_bus_1
+  #midi root(s), 127, sus: 1.0, channel: 3, port: :iac_bus_1
 
   if spread(1,4).look
     at{

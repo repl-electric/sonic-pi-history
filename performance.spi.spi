@@ -102,7 +102,7 @@ live_loop :name do
   8.times{
     sleep 1
     midi root(s),127, channel: 10, sus: 1.5 if spread(3,5).look(:inside)
-    midi (nit :A4 8).look,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
+    midi (nit :A3 8).look,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
     midi (nit :A3 7 :A3 1  :Fs3 7 :A3 1).look,127, channel: 8, sus: 1.5 if spread(1,6).rot(rot_a).look(:inside)
 
     if !spread(1,64).rot(-6).tick(:inside)

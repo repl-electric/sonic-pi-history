@@ -41,14 +41,12 @@ live_loop :melo, sync: :name do
     # [:a3  110 1/4.0]
     # [:a4 110 1/4.0]
 
-
     [_ _ 1]
     ).look
 
   if s[0].is_a?(Array)
-    s[0].each{|s1|
+    s.each{|s1|
       midi s1[0], s1[1], sus: s[-1]/2.0, channel: 3, port: :iac_bus_1
-
     }
     s[-1] = s[0][-1]
   else

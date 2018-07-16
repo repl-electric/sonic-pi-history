@@ -7,7 +7,7 @@ live_loop :melo, sync: :name do
   tick
 
 
-  midi (ing :D4), 127, sus: 1.0, channel: 3, port: :iac_bus_1
+  midi (ing :D4 :E4), 127, sus: 1.0, channel: 3, port: :iac_bus_1
   sleep 1
   sleep 1
 end

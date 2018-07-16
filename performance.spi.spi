@@ -48,7 +48,7 @@ live_loop :melo, sync: :name do
 
   s = score.look
   puts score.reduce(0){|s,n|
-    if n.is_a?(Array)
+    if n[0].is_a?(Array)
       puts n
       s+= [n[0][-1], n[1][-1]].min
       else

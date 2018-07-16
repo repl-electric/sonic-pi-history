@@ -132,9 +132,9 @@ live_loop :name3, sync: :name do
       midi (ing :f3 :ds4).look, 80, channel: 4
       }
   else
-    #with_swing -0.05{
-      #midi (ing :fs4).look,10, channel: 4 if spread(7,11).look
-    #}
+    with_swing -0.05{
+      midi (ing :fs4).look,10, channel: 4 if spread(7,11).look
+    }
   end
   sleep 1/2.0
 end

@@ -37,7 +37,7 @@ live_loop :name do
   8.times{
     sleep 1
     #midi :A3,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
-    midi note(:g4),127, channel: 8, sus: 1.5*4 if spread(1,1).rot(rot_a).look(:inside)
+    midi note(:g3),127, channel: 8, sus: 1.5*4 if spread(1,1).rot(rot_a).look(:inside)
 
     if !spread(1,64).rot(-6).tick(:inside)
       #midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1

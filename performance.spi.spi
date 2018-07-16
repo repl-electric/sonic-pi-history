@@ -45,7 +45,10 @@ live_loop :melo, sync: :name do
     [_ _ 1]
     ).look
 
-  midi s[0], s[1], sus: s[-1]/2.0, channel: 3, port: :iac_bus_1
+  if s[0].is_a?(Array)
+  else
+    midi s[0], s[1], sus: s[-1]/2.0, channel: 3, port: :iac_bus_1
+  end
   sleep s[-1]
 end
 

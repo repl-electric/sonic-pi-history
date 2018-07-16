@@ -14,7 +14,7 @@ live_loop :name do
   score = s[0]
   puts score
   midi score, 25, sus: 4, channel:  1, port: :iac_bus_1
-  midi score, s[0], sus: 1.0, channel: 3, port: :iac_bus_1
+  midi s[1], 1, sus: 1.0, channel: 3, port: :iac_bus_1
 
   if spread(1,4).look
     at{

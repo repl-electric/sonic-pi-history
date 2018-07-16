@@ -5,9 +5,9 @@ live_loop(:unsyncable) do; sleep 1.0;end
 
 live_loop :melo, sync: :name do
   tick
-
-  midi (ing :D4 :D4 :E4).look, 127, sus: 1.0/2.0, channel: 3, port: :iac_bus_1
-  sleep 1
+  s = (ing [:D4 1] [:D4 1] [:E4 1]).look
+  midi s[0], 127, sus: 1.0/2.0, channel: 3, port: :iac_bus_1
+  sleep s[1]
 end
 
 

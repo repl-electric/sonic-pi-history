@@ -7,7 +7,7 @@ live_loop :melo, sync: :name do
   tick
   s = (ing
     [:D4 127 1]
-    [:D4 130 1]
+    [:D4 120 1]
     [:E4 127 1/2.0]
     [:E4 127 1/2.0]).look
   midi s[0], s[1], sus: s[-1]/2.0, channel: 3, port: :iac_bus_1

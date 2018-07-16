@@ -6,15 +6,15 @@ live_loop(:unsyncable) do; sleep 1.0;end
 live_loop :name do
   tick
   s = (ing
-    [:Fs4  :a3]
-    [:a4   :cs4]
-    [:d4   :Fs3]
-    [:B4   :D4]
-    [:Cs4  :E4] ).look
+    [:D3  :Fs4  :a3]
+    [:Fs3 :a4   :cs4]
+    [:B2  :d4   :Fs3]
+    [:G3  :B4   :D4]
+    [:A3  :Cs4  :E4] ).look
   score = s[0]
   puts score
   midi score, 25, sus: 4, channel:  1, port: :iac_bus_1
-  midi s[0], 127, sus: 2.0, channel: 3, port: :iac_bus_1
+  midi s[0], 127, sus: 1.0, channel: 3, port: :iac_bus_1
 
   if spread(1,4).look
     at{
@@ -36,22 +36,22 @@ live_loop :name do
   rot_a = [4,3,2].choose
   8.times{
     sleep 1
-    midi :D3,127, channel: 6, sus: 4*1.5 if spread(3,5).look(:inside)
-    #midi :A3,127, channel: 8, sus: 1.5 if spread(1,6).rot(rot_a).look(:inside)
+    midi :A3,127, channel: 6, sus: 1.5 if spread(3,5).look(:inside)
+    midi :A3,127, channel: 8, sus: 1.5 if spread(1,6).rot(rot_a).look(:inside)
 
     if !spread(1,64).rot(-6).tick(:inside)
-      #midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+      midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       if spread(1,2).rot(0).look(:inside)
-        #midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+        midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       end
     else
       at{
-        #midi :c3, 80, channel: 4, port: :iac_bus_1
+        midi :c3, 80, channel: 4, port: :iac_bus_1
         sleep 0.25
-        #midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
-        #midi (ing :as3).look, channel: 4
+        midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+        midi (ing :as3).look, channel: 4
         sleep 0.25
-        #midi :c3, 105, channel: 4, port: :iac_bus_1
+        midi :c3, 105, channel: 4, port: :iac_bus_1
       }
     end
     }
@@ -61,9 +61,9 @@ live_loop :name2, sync: :name do
   sleep 1/2.0
   if spread(1,16).look
     at{
-      #midi (ing :f3 :ds3).look, channel: 4
+      midi (ing :f3 :ds3).look, channel: 4
       sleep 1/2.0
-      #midi (ing :f3 :ds4).look, 80, channel: 4
+      midi (ing :f3 :ds4).look, 80, channel: 4
       }
   else
     #with_swing -0.05{

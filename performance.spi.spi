@@ -40,13 +40,13 @@ live_loop :name do
     midi note(:cs4)+10,127, channel: 8, sus: 1.5*4 if spread(1,6).rot(rot_a).look(:inside)
 
     if !spread(1,64).rot(-6).tick(:inside)
-      midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
+      #midi :c3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       if spread(1,2).rot(0).look(:inside)
         midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
       end
     else
       at{
-        midi :c3, 80, channel: 4, port: :iac_bus_1
+        #midi :c3, 80, channel: 4, port: :iac_bus_1
         sleep 0.25
         midi :g3, 100-5.0*rand, channel: 4, port: :iac_bus_1
         midi (ing :as3).look, channel: 4

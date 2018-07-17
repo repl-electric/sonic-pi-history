@@ -11,11 +11,7 @@ live_loop :zzzz do
 
   glitch :C3
 
-  glitch_cc kick: false
-
-
-
-
+  glitch_cc kick: true
 
   #voxe_cc semitone: 8
   sleep 4

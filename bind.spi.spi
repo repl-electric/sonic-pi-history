@@ -11,7 +11,7 @@ live_loop :zzzz do
 
   glitch :C3
 
-  glitch_cc kick: (ing true false).look
+  glitch_cc kick: false
 
 
 

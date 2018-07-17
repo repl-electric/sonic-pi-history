@@ -9,9 +9,9 @@ live_loop :zzzz do
   #glitch :C3, 80
   # fx wash: 0.0
 
-  #  glitch_cc kick: (ing true, false,).look
+  glitch_cc kick: (ing true, false,).look
 
-  midi_cc 56, 127, port: :iac_bus_1, channel: 3
+
 
 
 

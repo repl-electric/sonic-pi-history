@@ -3,7 +3,7 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 #vox_cc sync: 0
 #glitch_cc mode: 2
 
-bass_cc shape: 1, more: 0.2, wet: 0
+bass_cc shape: 1, more: 0.3, wet: 0
 #glitch_cc kick: 1
 
 stop

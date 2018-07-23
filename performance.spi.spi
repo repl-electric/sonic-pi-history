@@ -22,7 +22,7 @@ live_loop :form, sync: :unsyncable do
 
     #P2
     [:e3    :g3    :g3   :fs3]
-    [:fs3   :g3    _    :a3]
+    [:fs3   :g3    :e3    :a3]
     # [:e3     _     :c4   :g3]
     # [:e3     _     :d4   :fs3]
 

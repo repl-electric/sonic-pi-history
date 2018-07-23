@@ -136,7 +136,7 @@ live_loop :form, sync: :unsyncable do
 
     sleep 1/2.0
 
-    with_transpose 0{sop score.choose, 40, sus: (ramp 0.25, 8.0, 64).look if spread(11,11).rot(-1).look }
+    with_transpose 0 {sop force_octave(score.choose,4), 40, sus: (ramp 0.25, 8.0, 64).look if spread(11,11).rot(-1).look }
 
     with_swing 0.05{ glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look }
 

@@ -104,7 +104,7 @@ live_loop :form, sync: :unsyncable do
     #vox_cc sync: 0, wet: 0
 
     bass_x :G3
-    vox_on  score[0],  sus: 1.5
+    vox  score[0],  sus: 1.5
     if (ing 1 0).look == 0
       #vox   score[0],  sus: 1.5
     else

@@ -21,7 +21,7 @@ live_loop :form, sync: :unsyncable do
     # [:d3   :fs4  [:E4].choose :cs5]
 
     #P2
-    [:e3    :g3    :g3   :fs3]
+    [:e3    :g3    :b3   :fs3]
     [:fs3   :g3    :e3    :a3]
     # [:e3     _     :c4   :g3]
     # [:e3     _     :d4   :fs3]
@@ -136,7 +136,7 @@ live_loop :form, sync: :unsyncable do
 
     sleep 1/2.0
 
-    sop_cc mode: 0
+    #sop_cc mode: 0
     sop score[2], 20, sus: 4.0    #2
 
     #glitch :fs3, 60+rand*5 if spread(2,3).look

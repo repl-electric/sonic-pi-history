@@ -21,8 +21,8 @@ live_loop :form, sync: :unsyncable do
     # [:d3   :fs4  [:E4].choose :cs5]
 
     #P2
-    [:e3    :g3    :b3   :fs3]
-    [:fs3   :g3    :e3    :a3]
+    [:e3    :g3    :a3   :fs3]
+    [:fs3   :g3    :b3    :a3]
     # [:e3     _     :c4   :g3]
     # [:e3     _     :d4   :fs3]
 

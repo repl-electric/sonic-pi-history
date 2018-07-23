@@ -4,6 +4,7 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 #glitch_cc mode: 2
 
 bass_cc shape: 1, more: 0.1, wet: 0
+bass_x
 stop
 
 #stop

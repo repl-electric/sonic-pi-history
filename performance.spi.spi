@@ -136,7 +136,7 @@ live_loop :form, sync: :unsyncable do
 
     sleep 1/2.0
 
-    sop_cc mode: (ing 0 0 6  0 0 8).look
+    sop_cc mode: (ing 0 6  0 6).look
     sop score[2], 5, sus: 4.0    #2
 
     #glitch :fs3, 60+rand*5 if spread(2,3).look

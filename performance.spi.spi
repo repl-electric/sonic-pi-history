@@ -102,7 +102,7 @@ live_loop :form, sync: :unsyncable do
   if true
     #vox_cc sync: 0, wet: 0
 
-    bass_on :G3
+    bass_x :G3
     vox  score[0],  sus: 1.5
     if (ing 1 0).look == 0
       #vox   score[0],  sus: 1.5
@@ -159,7 +159,7 @@ live_loop :form, sync: :unsyncable do
     with_swing -0.05{ glitch :fs3, 70+rand*5  if spread(4,5).look }
     piano score[0]-5, 60, sus:2  if spread(1,3).rot(-2).look
     sleep 1/4.0
-    stop
+    #stop
   elsif true
     bass_x
     sop_cc mode: (ing 0 4 0 3).look

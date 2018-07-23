@@ -136,7 +136,7 @@ live_loop :form, sync: :unsyncable do
     #with_swing 0.05{ glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look }
 
     sleep 1/2.0
-    piano score[0], 100, sus:2
+    piano score[1], 100, sus:2
 
     sop_cc mode: (ing 0 6  0 8).look
     sop score[2], (ing 5 10).look, sus: 4.0    #2

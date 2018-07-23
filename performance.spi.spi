@@ -102,7 +102,7 @@ live_loop :form, sync: :unsyncable do
       #vox2  score[0],  sus: 1.5
     end
     with_transpose 12{
-      looper score[0],127,  sus: 1.5*2, pat: (ing 1/8.0 1/8.0).look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
+      looper score[0],127, sus: 1.5*, pat: (ing 1/8.0 1/8.0).look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
       }
     with_transpose 12{
       piano score[1],62,sus:2

@@ -3,6 +3,9 @@ load_support('analog_in_the_digital'); use_bpm 127/2.0
 #vox_cc sync: 0
 #glitch_cc mode: 2
 
+bass_cc shape: 1
+stop
+
 #stop
 live_loop :form, sync: :unsyncable do
   tick
@@ -96,7 +99,7 @@ live_loop :form, sync: :unsyncable do
   #vox_cc semitone: 5
   #glitch_cc kick: true
   #stop
-  if true
+  if false
     #vox_cc sync: 0, wet: 0
 
     bass_on :G3

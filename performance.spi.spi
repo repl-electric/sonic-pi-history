@@ -63,6 +63,8 @@ live_loop :form, sync: :unsyncable do
   #(look % 9 == 0) ? bass_cc(wet: 0.0, more: 0.5, shape: 0.8) : bass_cc(wet: 1.0, more: 0.2, shape: 0.5)
   bass_cc(wet: 1.0, more: 0.0, shape: 1.0)
   bass (ing :e3 :e3 :d3 :d3 :g2 :fs2 :fs2 :g2 :g2).look, 120, sus: 1.5*2
+
+
   #midi :e3, channel: 4, sustain: 4, sus: 2
   at{
       sleep 1.0/2.0
@@ -96,6 +98,7 @@ live_loop :form, sync: :unsyncable do
   if true
     #vox_cc sync: 0, wet: 0
 
+    bass_on :D3
     vox  score[0],  sus: 1.5
     if (ing 1 0).look == 0
       #vox   score[0],  sus: 1.5
@@ -152,7 +155,7 @@ live_loop :form, sync: :unsyncable do
     with_swing -0.05{ glitch :fs3, 70+rand*5  if spread(4,5).look }
     piano score[0]-5, 60, sus:2  if spread(1,3).rot(-2).look
     sleep 1/4.0
-    #stop
+    stop
   elsif true
     sop_cc mode: (ing 0 4 0 3).look
 

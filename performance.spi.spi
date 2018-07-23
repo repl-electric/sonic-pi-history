@@ -113,7 +113,7 @@ live_loop :form, sync: :unsyncable do
       piano score[1], 62, sus:2
     }
 
-    vox  score[3], 82,  sus: 2.5, detune: 0.55     # 3
+    vox  score[3], 82,  sus: 2.5, detune: 0.58     # 3
     if (ing 1 0).look == 0
       #vox   score[3], 80,  sus: 2.5     # 3
     else

@@ -39,9 +39,9 @@ end
 live_loop :test do
   tick
   score = (ing
-    # [[:C3   :Eb3  :G3]  8]
-    # [[:F3   :Ab3  :C4] 4]
-    # [[:Eb3  :G3   :Bb3] 4]
+    [[:C3   :Eb3  :G3]  8]
+    [[:F3   :Ab3  :C4] 4]
+    [[:Eb3  :G3   :Bb3] 4]
     [[:Ab3  :C4   :Eb4]  8]
     [[_] 4]
 

@@ -67,7 +67,7 @@ live_loop :test do
   at{
     8.times{
       sleep 1/4.0
-      midi (ing :gs3 :g3).look(:in2), (ramp 75, 100, 128).look(:in2), channel: 3 #if spread(3,7).tick(:in2)
+      midi (ing :g3 :g3).look(:in2), (ramp 75, 100, 128).look(:in2), channel: 3 #if spread(3,7).tick(:in2)
     }
   }
 

@@ -55,6 +55,9 @@ live_loop :test do
     sleep s[-1] - (s[-1]/4.0)
     midi octave(root(s[0]),2), 100, sus: 0.5, channel: 4
   }
+  if s[0][0] == nil
+    midi :Ab2,10, sus: s[-1]/2.0, channel: 4
+  end
 
   midi s[0][0], 80,  sus: s[-1], channel: 5
   pad s[0][0],100, sus: s[-1]+0.2, channel: 1, port: :iac_bus_1

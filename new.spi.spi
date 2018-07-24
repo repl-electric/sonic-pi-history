@@ -42,8 +42,12 @@ live_loop :test do
     [[:C3   :Eb4  :G3]  4]
     [[:F3   :Ab4  :C3] 2]
     [[:Eb3  :G4   :Bb3] 2]
-    [[:Ab3  :C4   :Eb4]  2]
-    [[_] 2])
+    [[:Ab3  :C4   :Eb4]  4]
+    [[_] 2]
+
+
+
+    )
   s = score.look
   midi :c3,120, channel: 3
 

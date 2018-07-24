@@ -54,6 +54,7 @@ live_loop :test do
     midi octave(root(s[0]),2),10, sus: s[-1]/2.0, channel: 4
     puts s[0][0]
     if s[0][0] == nil
+      midi :C3, 100, sus: 0.5, channel: 4
       puts :HIT
       sleep s[-1] - (s[-1]/2.0)
       midi :C3, 100, sus: 0.5, channel: 4

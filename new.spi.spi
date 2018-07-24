@@ -57,10 +57,10 @@ live_loop :test do
   }
   if s[0][0] == nil
     #more tension....
-    midi :G3, 127, sus: s[-1], channel: 4
+    midi :Ab3, 127, sus: s[-1], channel: 4
     at{
       sleep 1/8.0
-      midi :Ab3, 127, sus: s[-1] - 1/4.0, channel: 4
+      midi :G3, 127, sus: s[-1] - 1/4.0, channel: 4
     }
   end
 

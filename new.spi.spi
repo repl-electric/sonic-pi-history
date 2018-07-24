@@ -3,7 +3,7 @@ live_loop :test, sync: :unsyncable do
 
   #smp Mountain[/subkick/,0]
 
-  midi :C3, sus: 2
+  midi :C3, sus: 2, channel: 1
 
   sleep 1
   sleep 1

@@ -55,6 +55,8 @@ live_loop :test do
     if s[0][0] == _
       sleep s[-1] - (s[-1]/2.0)
       midi octave(root(s[0]),2), 100, sus: 0.5, channel: 4
+      sleep (s[-1]/2.0)
+      midi octave(root(s[0]),2), 100, sus: 0.5, channel: 4
     else
       sleep s[-1] - (s[-1]/4.0)
       midi octave(root(s[0]),2), 100, sus: 0.5, channel: 4

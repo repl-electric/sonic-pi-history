@@ -36,6 +36,10 @@ def octave(n, oct)
 end
 #scale C, D, E♭, F, G, A♭, and B♭.
 
+def kick
+  midi :C3 ,120, channel:7
+end
+
 live_loop :test do
   tick
   score = (ing
@@ -50,7 +54,7 @@ live_loop :test do
   s = score.look
   midi :c3,120, channel: 3
 
-  midi :c3,120, channel:7
+  kick
 
   at{
     #sleep (s[-1]/4.0)*2

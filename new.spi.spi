@@ -39,6 +39,5 @@ live_loop :test do
     sleep 1/2.0
     midi :E3 channel: 2
     sleep 1/2.0
-
   }
 end

@@ -70,7 +70,6 @@ live_loop :test do
     tick(:in)
     midi :fs3, 75, channel: 3 if spread(3,5).look(:in)
 
-    with_transpose 12{
       midi s[0][-1], (ing 50 50 60).look,  sus: s[-1], channel: 5 if spread(7,11).look(:in)
 
 

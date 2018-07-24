@@ -55,7 +55,7 @@ live_loop :test do
   }
 
   pad s[0][0],100, sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
-  pad s[0][1],100, sus: s[-1]+0.0, channel: 1, port: :iac_bus_1
+  pad s[0][1],120, sus: s[-1]+0.0, channel: 1, port: :iac_bus_1
   pad_cc tone: ((line 0.0, 0.5, 128) + (line 0.5, 0.0, 128)).look
   pad_cc motion: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look
 

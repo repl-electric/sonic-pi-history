@@ -71,7 +71,7 @@ live_loop :test do
       #bass :Ab3, 100, sus: 0.5
     else
       sleep s[-1] - (s[-1]/4.0)
-      bass octave(root(s[0]),2), 100, sus: 0.5
+      #bass octave(root(s[0]),2), 100, sus: 0.5
     end
   }
 

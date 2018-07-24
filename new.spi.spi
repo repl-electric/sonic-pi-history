@@ -31,8 +31,7 @@ live_loop :test do
   tick
   score = (ing [:C3 4] [:F3 4] [:As3 4])
   s = score.look
-  pad s, sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
+  pad s[0], sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
   pad_cc tone: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look
-
   sleep s[-1]
 end

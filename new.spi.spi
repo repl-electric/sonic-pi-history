@@ -7,10 +7,8 @@ def pad(*args)
   n, vel = *params
   if n
     midi_note_on n,vel, *(args << {channel: 1})
-    bass_cc(opts)
   end
 end
-
 
 live_loop :test do
   tick

@@ -56,7 +56,7 @@ live_loop :test do
     midi octave(root(s[0]),2), 100, sus: 0.5, channel: 4
   }
   if s[0][0] == nil
-    midi :Ab3, 10, sus: s[-1]/2.0, channel: 4
+    midi :Ab3, 20, sus: s[-1]/2.0, channel: 4
   end
 
   midi s[0][0], 80,  sus: s[-1], channel: 5

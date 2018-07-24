@@ -1,4 +1,4 @@
-live_loop :test, sync: :unsyncable do
+live_loop :test do
   tick
 
   #smp Mountain[/subkick/,0]

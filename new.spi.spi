@@ -59,7 +59,7 @@ live_loop :test do
     midi :G3, 127, sus: s[-1], channel: 4
     at{
       sleep 1/4.0
-      midi :Ab4, 127, sus: s[-1], channel: 4
+      midi :Ab4, 127, sus: s[-1] - 1/4.0, channel: 4
     }
   end
 

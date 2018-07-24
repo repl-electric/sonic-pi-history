@@ -69,12 +69,13 @@ live_loop :test do
   if s[0][0] == nil
     #more tension....
     midi :G3, 127, sus: s[-1], channel: 4
+    vocal_note =  (ing :G4 :G4 :Eb4).look
     at{
       sleep 1/8.0
       midi :G2, 127, sus: s[-1] - 1/8.0, channel: 4
       sleep 3/8.0
       #vocals
-      midi :Eb4, 127, channel: 6, sus: 6
+      midi vocal_note, 127- rand*10.0, channel: 6, sus: 6
     }
   end
 

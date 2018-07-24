@@ -52,7 +52,7 @@ live_loop :test do
   at{
     #sleep (s[-1]/4.0)*2
     midi octave(root(s[0]),2),10, sus: s[-1]/2.0, channel: 4
-    sleep s[-1]/2.0
+    sleep s[-1] - s[-1]/8.0
     midi octave(root(s[0]),2)-7, 100, sus: 0.5, channel: 4
   }
 

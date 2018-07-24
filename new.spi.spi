@@ -5,8 +5,8 @@ live_loop :test do
 
   #smp Mountain[/subkick/,0]
 
-  midi (ing :C3 :F3 :As3).look, sus: 4.2, channel: 1, port: :iac_bus_1
+  midi (ing :C3 :F3 :As3).look, sus: 8.2, channel: 1, port: :iac_bus_1
 
-  sleep 2
-  sleep 2
+  sleep 4
+  sleep 4
 end

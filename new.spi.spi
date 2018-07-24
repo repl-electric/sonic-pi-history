@@ -33,7 +33,7 @@ live_loop :test do
   s = score.look
 
   at{
-    midi :C2,10, sus: 2, channel: 4
+    midi :C2,10, sus: 1, channel: 4
     sleep 1
     midi note(:C2)-5, 5, sus: 1, channel: 4
   }

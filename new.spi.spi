@@ -65,8 +65,10 @@ live_loop :test do
   }
 
   at{
+    8.times{
     sleep 1/4.0
-    midi :gs3, 75, channel: 3
+      midi :gs3, 75, channel: 3
+      }
   }
 
   at{

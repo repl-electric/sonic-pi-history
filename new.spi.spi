@@ -1,6 +1,6 @@
 use_bpm 127
 
-#scale C, D, E♭, F, G, A♭, and B♭.
+
 def pad(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
@@ -34,12 +34,13 @@ def octave(n, oct)
     n
   end
 end
+#scale C, D, E♭, F, G, A♭, and B♭.
 
 live_loop :test do
   tick
   score = (ing
-    [[:C3 :E3] 4  ]
-    [[:F3] 2]
+    [[:C3 :E3 :G3]  4  ]
+    [[:F3 ] 2]
     [[:As3] 2]
     [[_] 2])
   s = score.look
@@ -52,7 +53,7 @@ live_loop :test do
     #midi octave(s[0],2)-7, 2, sus: 1/2.0, channel: 4
   }
 
-  pad s[0][0], sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
+  pad s[0][0],     sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
   pad s[0][1],100, sus: s[-1]+0.0, channel: 1, port: :iac_bus_1
   pad_cc tone: ((line 0.0, 0.5, 128) + (line 0.5, 0.0, 128)).look
   pad_cc motion: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look

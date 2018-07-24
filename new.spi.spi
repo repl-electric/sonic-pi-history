@@ -43,7 +43,7 @@ live_loop :test do
     [[:F3   :Ab4  :C3] 2]
     [[:Eb3  :G4   :Bb3] 2]
     [[:Ab3  :C4   :Eb4]  4]
-    [[_] 4]
+    [[_] 2]
 
     )
   s = score.look

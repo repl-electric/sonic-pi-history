@@ -35,7 +35,8 @@ live_loop :test do
 
   #smp Mountain[/subkick/,0]
 
-  pad (ing :C3, :F3, :As3,).look, sus: 8.2, channel: 1, port: :iac_bus_1
+  pad (ing :C3 :F3 :As3).look, sus: 8.2, channel: 1, port: :iac_bus_1
+  pad_cc tone: rand
 
   sleep 4
   sleep 4

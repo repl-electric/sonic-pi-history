@@ -3,7 +3,7 @@ live_loop :test do
 
   #smp Mountain[/subkick/,0]
 
-  midi :C3, sus: 2, channel: 1, port: :iac_bus_1
+  midi :C2, sus: 2, channel: 1, port: :iac_bus_1
 
   sleep 1
   sleep 1

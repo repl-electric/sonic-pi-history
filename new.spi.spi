@@ -5,6 +5,6 @@ live_loop :test do
 
   midi :C2, sus: 2, channel: 1, port: :iac_bus_1
 
-  sleep 1
-  sleep 1
+  sleep 2
+  sleep 2
 end

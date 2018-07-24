@@ -36,7 +36,7 @@ def octave(n, oct)
 end
 #scale C, D, E♭, F, G, A♭, and B♭.
 
-def kick(v)
+def kick(v=100)
   midi :C3 ,v, channel:7
 end
 

@@ -1,13 +1,23 @@
 use_bpm 127
 
 #scale C, D, E♭, F, G, A♭, and B♭.
+def pad(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi_note_on n,vel, *(args << {channel: 1})
+    bass_cc(opts)
+  end
+end
+
 
 live_loop :test do
   tick
 
   #smp Mountain[/subkick/,0]
 
-  midi (ing :C3 :F3 :As3).look, sus: 8.2, channel: 1, port: :iac_bus_1
+  pad (ing :C3, :F3, :As3,).look, sus: 8.2, channel: 1, port: :iac_bus_1
 
   sleep 4
   sleep 4

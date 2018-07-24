@@ -1,7 +1,7 @@
 live_loop :test, sync: :unsyncable do
   tick
 
-  smp Mountain[/subkick/,0]
+  #smp Mountain[/subkick/,0]
 
   sleep 1
   sleep 1

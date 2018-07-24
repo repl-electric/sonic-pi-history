@@ -26,6 +26,14 @@ def pad_cc(cc)
   end
 end
 
+def octave(n, oct)
+  if n
+    note = SonicPi::Note.new(n)
+    "#{note.pitch_class}#{oct}"
+  else
+    n
+  end
+end
 
 live_loop :test do
   tick

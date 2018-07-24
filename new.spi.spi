@@ -59,8 +59,8 @@ live_loop :test do
   s = score.look
   midi :c3,120, channel: 3
 
+  bass octave(root(s[0]),2),10, sus: s[-1]/2.0
   at{
-    bass octave(root(s[0]),2),10, sus: s[-1]/2.0
     puts s[0][0]
     if s[0][0] == nil
       puts :HIT

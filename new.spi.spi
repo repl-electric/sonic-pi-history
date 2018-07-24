@@ -1,3 +1,5 @@
+use_bpm 127
+
 #scale C, D, E♭, F, G, A♭, and B♭.
 
 live_loop :test do

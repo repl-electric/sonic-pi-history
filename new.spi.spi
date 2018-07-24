@@ -21,7 +21,7 @@ def pad_cc(cc)
           nil
         end
     if n
-      midi_cc n, cc[k]*127.0, channel: 4
+      midi_cc n, cc[k]*127.0, channel: 1
     end
   end
 end

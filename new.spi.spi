@@ -50,7 +50,7 @@ live_loop :test do
     [[_] 4]
 
     )
-  tick_reset_all
+  #tick_reset_all
   s = score.look
 
   midi :c3,120, channel: 3

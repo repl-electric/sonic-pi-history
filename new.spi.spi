@@ -54,11 +54,12 @@ live_loop :test do
   s = score.look
 
   midi :c3,120, channel: 3
+  x = spread(1,4).look
   at{
     sleep s[-1] - (s[-1]/2.0)
     kick 100
     sleep (s[-1]/2.0)
-    kick 127 if spread(1,4).look
+    kick 127 if x
   }
 
   at{

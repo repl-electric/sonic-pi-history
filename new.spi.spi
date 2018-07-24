@@ -57,6 +57,7 @@ live_loop :test do
   }
   if s[0][0] == nil
     midi :G4, 127, sus: s[-1], channel: 4
+    midi :A4, 127, sus: s[-1], channel: 4
   end
 
   midi s[0][0], 80,  sus: s[-1], channel: 5

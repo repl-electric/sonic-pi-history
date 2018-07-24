@@ -73,6 +73,8 @@ live_loop :test do
     at{
       sleep 1/8.0
       midi :G2, 127, sus: s[-1] - 1/8.0, channel: 4
+
+      midi vocal_note, 50-(rand*10.0), channel: 6, sus: 6
       sleep 3/8.0
       #vocals
       midi vocal_note, 127-(rand*10.0), channel: 6, sus: 6

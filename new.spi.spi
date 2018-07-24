@@ -60,12 +60,11 @@ live_loop :test do
   midi :c3,120, channel: 3
 
   at{
-    #sleep (s[-1]/4.0)*2
     bass octave(root(s[0]),2),10, sus: s[-1]/2.0
     puts s[0][0]
     if s[0][0] == nil
       puts :HIT
-      bass :C2, 100, sus: s[-1]
+      bass :Ab2, 100, sus: s[-1]
       sleep s[-1] - (s[-1]/2.0)
       bass :C4, 100, sus: 0.5
       sleep (s[-1]/4.0)

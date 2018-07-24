@@ -64,7 +64,8 @@ live_loop :test do
   }
   s[-1].times{
     sleep 1/2.0
-    midi :fs3, 75, channel: 3
+    midi :fs3, 75, channel: 3 if spread(3,5).look
     sleep 1/2.0
+    midi :fs3, 75, channel: 3 if spread(3,5).rot(-1).look
   }
 end

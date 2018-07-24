@@ -10,6 +10,26 @@ def pad(*args)
   end
 end
 
+def pad_cc(cc)
+  cc.keys.each do |k|
+    n = case k
+        when :tone; 50
+        when :pitch; 51
+        when :motion; 52
+        when :fx; 53
+        else
+          nil
+        end
+    if n
+      midi_cc n, cc[k]*127.0, channel: 4
+    end
+  end
+end
+
+
+
+
+
 live_loop :test do
   tick
 

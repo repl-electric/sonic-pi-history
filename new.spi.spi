@@ -27,17 +27,12 @@ def pad_cc(cc)
 end
 
 
-
-
-
 live_loop :test do
   tick
-
-  #smp Mountain[/subkick/,0]
-
-  pad (ing :C3 :F3 :As3).look, sus: 8.2, channel: 1, port: :iac_bus_1
+  score = (ing [:C3 4] [:F3 4] [:As3 4])
+  s = score.look
+  pad s, sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
   pad_cc tone: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look
 
-  sleep 4
-  sleep 4
+  sleep s[-1]
 end

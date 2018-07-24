@@ -29,11 +29,11 @@ end
 
 live_loop :test do
   tick
-  score = (ing [:C3 4] [:F3 2] [:As3 2] [_ 2])
+  score = (ing [:C3, 4], [:F3, 2], [:As3, 2], [_, 2],)
   s = score.look
 
   at{
-    midi :C2,10, sus: 1, channel: 4
+    midi score[0],10, sus: 1, channel: 4
     sleep 1
     midi note(:C2)-5, 5, sus: 1, channel: 4
   }

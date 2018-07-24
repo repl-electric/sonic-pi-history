@@ -29,13 +29,13 @@ end
 
 live_loop :test do
   tick
-  score = (ing [:C3 4] [:F3 2] [:As3 2] [_ 2])
+  score = (ing [:C3, 4], [:F3, 2], [:As3, 2], [_, 2],)
   s = score.look
   pad s[0], sus: s[-1]+0.2, channel: 1, port: :iac_bus_1
   pad_cc tone: ((line 0.0, 0.5, 128) + (line 0.5, 0.0, 128)).look
   pad_cc motion: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look
 
-  midi :F4,50, channel: 2, sus: s[-1]
+  midi :F4,55, channel: 2, sus: s[-1]
   s[-1].times{
     sleep 1/2.0
     sleep 1/2.0

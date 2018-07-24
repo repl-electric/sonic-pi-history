@@ -58,7 +58,9 @@ live_loop :test do
   pad_cc tone: ((line 0.0, 0.5, 128) + (line 0.5, 0.0, 128)).look
   pad_cc motion: ((line 0.0, 1.0, 128) + (line 1.0, 0.0, 128)).look
 
-  midi :F4, 75, channel: 2, sus: s[-1]
+  with_transpose 12{
+    midi s[-1], 75, channel: 2, sus: s[-1]
+  }
   s[-1].times{
     sleep 1/2.0
     midi :fs3, 75, channel: 3

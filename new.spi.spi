@@ -39,16 +39,16 @@ end
 live_loop :test do
   tick
   score = (ing
-    [[:C3 :E4 :G3]  4]
-    [[:F3 :As3] 2]
-    [[:As3 :C4] 2]
-    [[_] 2])
+    [[:C3, :E4, :G3],  4],
+    [[:F3, :As3], 2],
+    [[:As3, :C4], 2],
+    [[_], 2],)
   s = score.look
   midi :c3,120, channel: 3
 
   at{
     #sleep (s[-1]/4.0)*2
-    midi octave(s[0][0],2),10, sus: s[-1]/2.0, channel: 4
+    midi octave(root(s[0]),2),10, sus: s[-1]/2.0, channel: 4
     #sleep s[-1]/2.0
     #midi octave(s[0],2)-7, 2, sus: 1/2.0, channel: 4
   }

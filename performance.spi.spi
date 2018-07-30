@@ -174,11 +174,11 @@ live_loop :form, sync: :unsyncable do
     if (ing 1 0).look == 0
       #voxe  score[0],  sus: 1.5
     else
-      #vox2  score[0],  sus: 1.5
+      vox2  score[0],  sus: 1.5
     end
 
     with_transpose 12*0{
-      #looper score[1],40, sus: 2.5, pat: (ing 1/2.0 '1/2d').look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
+      looper score[1],40, sus: 2.5, pat: (ing 1/2.0 '1/2d').look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
     }
     #midi score[0], 50, channel: 10, sus: 0.5 if spread(1,2).look
     sleep 1/2.0

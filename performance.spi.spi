@@ -172,13 +172,13 @@ live_loop :form, sync: :unsyncable do
     #vox score[0], 30, sus: 1.5
     voxe_cc x: (ing 0.0 0.0 1.0 1.0).look-(rand*0.1), y: (ing 0.0 1.0 1.0 0.0).look-(rand*0.1)
     if (ing 1 0).look == 0
-      voxe  score[0],  sus: 1.5
+  #    voxe  score[0],  sus: 1.5
     else
-      vox2  score[0],  sus: 1.5
+  #    vox2  score[0],  sus: 1.5
     end
 
     with_transpose 12*0{
-      looper score[1],40, sus: 2.5, pat: (ing 1/2.0 '1/2d').look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
+   #   looper score[1],40, sus: 2.5, pat: (ing 1/2.0 '1/2d').look#, elec: false, cutoff: (ramp 0.9, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.0, atk: 0.6, reverb: 1.0, creverb: 1.0
     }
     #midi score[0], 50, channel: 10, sus: 0.5 if spread(1,2).look
     sleep 1/2.0
@@ -200,27 +200,27 @@ live_loop :form, sync: :unsyncable do
 
     sleep 1/2.0
     piano score[0], 60+5, sus:2  if spread(1,3).rot(-1).look
-    glitch :f3, 60
+    #glitch :f3, 60
     sleep 1/2.0
 
-    glitch :as3,50
+    #glitch :as3,50
     piano score[-1]+12, 60+5, sus:2 if spread(1,2).rot(1).look
     sleep 1/2.0
 
-    glitch :e3, 60+rand*5 if spread(1,2).look
+    #glitch :e3, 60+rand*5 if spread(1,2).look
 
     sleep 1/2.0
 
     #with_transpose 12 {sop :e3, 40, sus: (ramp 0.25, 8.0, 64).tick(:f1) if spread(7,11).rot(-1).look }
 
-    with_swing 0.05{ glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look }
+    #with_swing 0.05{ glitch :d3, 60+rand*5 if spread(1,2).rot(-1).look }
 
     sleep 1/2.0
     piano score[-1]+12+5, 55+5, sus:2  if spread(2,2).rot(0).look
 
-    sop score[2], 2*(ing 5.5 10).look, sus: 4.1, more: false
+    sop score[2], 2*(ing 5.5 10).look, sus: 4.1, more: true
 
-    glitch :fs3, 60+rand*5 if spread(2,3).look
+    #glitch :fs3, 60+rand*5 if spread(2,3).look
     sleep 1/4.0
     with_swing -0.05{ glitch :fs3, 70+rand*5  if spread(4,5).look }
     piano score[0]-5, 60+5, sus:2  if spread(1,3).rot(-2).look

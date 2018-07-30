@@ -251,7 +251,7 @@ live_loop :form, sync: :unsyncable do
     #bass_x
     sop_cc mode: (ing 0 4 0 3).look
 
-    voltage :e2,80, sus: 4 #e g b
+    voltage :e2,60, sus: 4 #e g b
     fx wash: 0.0
     vox  :fs3,   sus: 1.5
     vox_cc sync: 0, wet: 0.5, detune: 0.5, semitone: 5

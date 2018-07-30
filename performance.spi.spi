@@ -30,9 +30,9 @@ live_loop :form, sync: :unsyncable do
 
     #P2
 
-     [:e3    :g3                :b3   :fs3]
-     [:e3    :g3                :b3   :fs3]
-     [:fs3   :g3                :b3   :e3]
+     [:e3    _                :b3   :fs3]
+     [:e3    _                :b3   :fs3]
+     [:fs3   _                :b3   :e3]
 
     #P3
 

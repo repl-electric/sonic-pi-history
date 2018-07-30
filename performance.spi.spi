@@ -254,7 +254,7 @@ live_loop :form, sync: :unsyncable do
     piano score[1],60, sus:1
     sleep 1/4.0
     voxe :g3, 45,  sus: 2.5
-    vox  :b4, 50,  sus: 1.5
+    vox  :b3, 50,  sus: 1.5
 
     piano :d5, 72, sus:1
     sleep 1/2.0

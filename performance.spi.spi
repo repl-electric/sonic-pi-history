@@ -1,6 +1,6 @@
 load_support('analog_in_the_digital'); use_bpm 127/2.0
 #init!
-vox_cc sync: 0
+#vox_cc sync: 0
 #glitch_cc mode: 2
 #bass_cc shape: 1, more: 1.0, wet: 0
 #glitch_cc kick: 1
@@ -13,8 +13,8 @@ live_loop :form, sync: :unsyncable do
     #P0
      [:e3    :g3                _   :fs3]
      [:fs3   [:g3 :a3].choose   _    :g3]
-    #[:d3    :b3                 _    :fs3]
-    # [:e3    :g3                :d4   :fs3]
+    [:d3    :b3                 _    :fs3]
+    [:e3    :g3                _   :fs3]
 
     # [:e3    :g3                :a3   :fs3]
     # [:fs3   [:g3 :a3].choose   :b3    :g3]

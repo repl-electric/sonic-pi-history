@@ -237,7 +237,7 @@ live_loop :form, sync: :unsyncable do
       voltage :e2,35, sus: 8 #e g b
     end
     fx wash: 0.0
-    vox  :fs3,   sus: 1.5
+    #vox  :fs3,   sus: 1.5
     vox_cc sync: 0, wet: 0.5, detune: 0.5, semitone: 5
     #vox_cc
     piano score[2],82, sus:2.5

@@ -252,9 +252,9 @@ live_loop :form, sync: :unsyncable do
     sop_cc mode: (ing 0 4 0 3).look
 
     if spread(1,2).look
-      voltage :e3,10, sus: 8 #e g b
+      #voltage :e3,10, sus: 8 #e g b
     end
-    fx wash: 0.0
+    fx wash: 0.2
     vox  :fs3,   sus: 1.5
     vox_cc sync: 0, wet: 0.5, detune: 0.5, semitone: 5
     #vox_cc
@@ -273,8 +273,8 @@ live_loop :form, sync: :unsyncable do
     sleep 1/4.0
     piano score[1],60, sus:1
     sleep 1/4.0
-    vox  :b3, 45,  sus: 2.5
-    vox  :d4, 50,  sus: 1.5
+    #vox  :b3, 45,  sus: 2.5
+    #vox  :d4, 50,  sus: 1.5
 
     piano :d5, 72, sus:1
     sleep 1/2.0

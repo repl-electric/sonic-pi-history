@@ -128,7 +128,7 @@ live_loop :form, sync: :unsyncable do
         c = (ing
           [:e3 :g4  :b3 :g5]
           [:e3 :fs4 :b3 :fs5]
-          [:b2 :d4 :fs3 :a5]
+          #[:b2 :d4 :fs3 :a5]
 
           [:a3 :c4 :e4 :c4]
 

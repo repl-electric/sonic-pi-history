@@ -100,7 +100,7 @@ live_loop :form, sync: :unsyncable do
   if spread(1,2).look
     #bass_cc(wet: 1.0, more: 0.2, shape: 1.0)
     #bass (ing :e3 :e3   :d3 :d3   :g2 :fs3 :fs3 :g2 :g2).look, 120, sus: 8#1.5*2*2
-    bass (ing :e3 :e3 :fs3 :fs3  :g3 :g3 :c3 :c3).look, 120, sus: 8#1.5*2*2
+    bass (ing :e3 :e3  :fs3 :fs3  :g3 :g3  :c3 :c3).look, 120, sus: 8#1.5*2*2
   end
   #bass root(score), 120, sus: 1.5*2
 
@@ -135,7 +135,7 @@ live_loop :form, sync: :unsyncable do
   #glitch_cc kick: true
   #midi score[-1], 50, channel: 12, sus: 8 if spread(1,2).look
   if true
-    no{
+    yes{
       with_transpose 12*0{
         c = (ing
           [:e3 :g4  :b3 :g5]

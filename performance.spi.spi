@@ -96,10 +96,10 @@ live_loop :form, sync: :unsyncable do
       #midi :g5,127, channel: 4, sustain: 4, sus: 2
       #bass root(score)-5,115, sus: 0.5 if s
       sleep 0.25
-      #sop_cc mode: (ing 0 0 1  0 0 2  0 0 3  0 0 4  4 4 5).look
-      #with_swing((line 0, -0.05, 32).look){
-      #  sop score[0], sus: 0.5
-      #}
+      sop_cc mode: (ing 0 0 1  0 0 2  0 0 3  0 0 4  4 4 5).look
+      with_swing((line 0, -0.05, 32).look){
+        sop score[0], sus: 0.5
+      }
       sleep 0.25
       #at{
       #  sleep 0.25

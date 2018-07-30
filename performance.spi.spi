@@ -32,8 +32,8 @@ live_loop :form, sync: :unsyncable do
 
     #P3
 
-     [:e3    _                _    :fs3]
-     [:e3    _                _    :fs3]
+     [:e3    _                _      :fs3]
+     [:e3    _                _      :fs3]
      [:fs3   _                :g4     :e3]
      [:b2    _                :A4    :fs3]
 
@@ -238,7 +238,7 @@ live_loop :form, sync: :unsyncable do
     sleep 1/2.0
     piano score[-1]+12+5, 55+5, sus:2  if spread(2,2).rot(0).look
 
-    sop score[2], 1*(ing 5.5 10).look, sus: 4.1, more: false
+    sop score[2], 2*(ing 5.5 10).look, sus: 4.1, more: false
 
     #glitch :fs3, 60+rand*5 if spread(2,3).look
     sleep 1/4.0

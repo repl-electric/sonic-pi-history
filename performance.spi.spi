@@ -89,7 +89,7 @@ live_loop :form, sync: :unsyncable do
   at{
       sleep 1.0/2.0
       #sop_cc mode: 0
-      sop :b3, sus: 0.5
+      #sop :b3, sus: 0.5
       sleep 2
       sleep 1.0/2.0
       #looper score[1],60
@@ -98,7 +98,7 @@ live_loop :form, sync: :unsyncable do
       sleep 0.25
       sop_cc mode: (ing 0 0 1  0 0 2  0 0 3  0 0 4  4 4 5).look
       with_swing((line 0, -0.05, 32).look){
-        sop score[0], sus: 0.5
+      #  sop score[0], sus: 0.5
       }
       sleep 0.25
       #at{

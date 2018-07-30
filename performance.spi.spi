@@ -126,8 +126,8 @@ live_loop :form, sync: :unsyncable do
 #          [:a3 :c4 :e4 :c4]
 
           [:c3 :e4  :g4 :e5]
-          #[:fs3 :a4 :c4 :e5]
-          #[:d3 :fs4 :a4 :fs5]
+          [:fs3 :a4 :c4 :e5]
+          [:d3 :fs4 :a4 :fs5]
           ).look
         puts "piano solo: #{c}"
 

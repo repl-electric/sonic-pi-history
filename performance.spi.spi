@@ -13,8 +13,8 @@ live_loop :form, sync: :unsyncable do
     #P0
      [:e3    :g3                :a3   :fs3]
      [:fs3   [:g3 :a3].choose   :b3    :g3]
-     [:d3    :b3                 :b3    :fs3]
-     [:e3    :g3                :d4   :fs3]
+    [:d3    :b3                 :b3    :fs3]
+     [:e3    :g3                :e4   :fs3]
 
     # [:e3    :g3                :a3   :fs3]
     # [:fs3   [:g3 :a3].choose   :b3    :g3]

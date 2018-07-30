@@ -254,7 +254,7 @@ live_loop :form, sync: :unsyncable do
     if spread(1,2).look
       #voltage :e3,10, sus: 8 #e g b
     end
-    fx wash: 0.4
+    fx wash: 0.6
     #vox  :fs3,   sus: 1.5
     vox_cc sync: 0, wet: 0.5, detune: 0.5, semitone: 5
     #vox_cc

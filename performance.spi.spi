@@ -11,7 +11,7 @@ live_loop :form, sync: :unsyncable do
   tick
   score = (ing
     #P0
-     [:e3    :g3                _   :fs3]
+     [:e3    :g3                :a3   :fs3]
      [:fs3   [:g3 :a3].choose   _    :g3]
     [:d3    :b3                 _    :fs3]
     [:e3    :g3                _   :fs3]

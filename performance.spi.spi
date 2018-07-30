@@ -18,10 +18,10 @@ live_loop :form, sync: :unsyncable do
 
     #P1--------------------------------------
 
-    [:e3    _                _    :fs3]
-    [:e3    _                _    :fs3]
-    [:fs3   _                _     :e3]
-    [:b2    _                _    :fs3]
+     [:e3    _                _    :fs3]
+     [:e3    _                _    :fs3]
+     [:fs3   _                _     :e3]
+     [:b2    _                _    :fs3]
 
     #[:fs3   [:g3 :a3].choose   :b3   :g3]
     #[:d3    :b3                 _    :fs3]
@@ -123,7 +123,7 @@ live_loop :form, sync: :unsyncable do
   #glitch_cc kick: true
   #midi score[-1], 50, channel: 12, sus: 8 if spread(1,2).look
   if true
-    yes{
+    no{
       with_transpose 12*0{
         c = (ing
           [:e3 :g4  :b3 :g5]

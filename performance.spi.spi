@@ -233,9 +233,9 @@ live_loop :form, sync: :unsyncable do
     #bass_x
     sop_cc mode: (ing 0 4 0 3).look
 
-    #if spread(1,2).look
+    if spread(1,2).look
     voltage :e3,15, sus: 8 #e g b
-    #end
+    end
     fx wash: 0.0
     vox  :e3,   sus: 1.5
     vox_cc sync: 0, wet: 0.5, detune: 0.5, semitone: 5

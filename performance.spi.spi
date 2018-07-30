@@ -175,7 +175,7 @@ live_loop :form, sync: :unsyncable do
     vox score[0], 30, sus: 1.5
     voxe_cc x: (ing 0.0 0.0 1.0 1.0).look-(rand*0.1), y: (ing 0.0 1.0 1.0 0.0).look-(rand*0.1)
     if (ing 1 0).look == 0
-  #    voxe  score[0],  sus: 1.5
+      voxe  score[0],  sus: 1.5
     else
   #    vox2  score[0],  sus: 1.5
     end

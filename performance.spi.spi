@@ -18,13 +18,10 @@ live_loop :form, sync: :unsyncable do
 
     #P1--------------------------------------
 
-     [:e3    _                _    :fs3]
-     [:e3    _                _    :fs3]
-     [:fs3   _                _     :e3]
-     [:b2    _                _    :fs3]
-
-    #[:fs3   [:g3 :a3].choose   :b3   :g3]
-    #[:d3    :b3                 _    :fs3]
+     #[:e3    _                _    :fs3]
+     #[:e3    _                _    :fs3]
+     #[:fs3   _                _     :e3]
+     #[:b2    _                _    :fs3]
 
     #P2-------------------------------------
      # [:e3    _   _      :g3]
@@ -197,7 +194,7 @@ live_loop :form, sync: :unsyncable do
       piano score[1], 62+5, sus:2
     }
 
-    vox  score[3], 85,  sus: 2.5, detune: (ing 0.5 0.50).look
+    #vox  score[3], 85,  sus: 2.5, detune: (ing 0.5 0.50).look
 
     if (ing 1 0).look == 0
       #vox2   score[3], 80,  sus: 2.5     # 3

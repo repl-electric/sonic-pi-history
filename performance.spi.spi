@@ -152,8 +152,12 @@ live_loop :form, sync: :unsyncable do
             piano n, 95, sus: 2
           }
         }
+        z=spread(1,3).look
         at{
-          sleep 3
+          sleep 1
+          sleep 1
+          piano c[1],80, sus: 1/2.0 if z
+          sleep 1
           with_swing((line -0.04, 0.0, 32).look){
             piano c[1],80,sus: 1/2.0
           }

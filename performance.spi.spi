@@ -266,7 +266,7 @@ live_loop :form, sync: :unsyncable do
     #glitch :a3,45
 
     sleep 1/4.0
-    sop :fs4, 40
+#    sop :fs4, 40
     sleep 1
 
     with_transpose 12{

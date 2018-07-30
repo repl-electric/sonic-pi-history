@@ -123,7 +123,7 @@ live_loop :form, sync: :unsyncable do
 #          [:b2 :d4 :fs3 :a5]
           [_ :c4 :e4 :c4]
 
-          [_ :e4  :g4 :e5]
+          [_ :e4  :g4 _]
           #[:fs3 :a4 :c4 :e5]
           #[:d3 :fs4 :a4 :fs5]
           ).look

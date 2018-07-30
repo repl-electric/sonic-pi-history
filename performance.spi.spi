@@ -118,8 +118,8 @@ live_loop :form, sync: :unsyncable do
     yes{
       with_transpose 12*0{
         c = (ing
-          [:e3 :g4  :b3 :g5]
-          [:e3 :fs4 :b3 :fs5]
+          [_ :g4  :b3 :g5]
+          [_ :fs4 :b3 :fs5]
 #          [:b2 :d4 :fs3 :a5]
           [:a3 :c4 :e4 :c4]
 
@@ -133,7 +133,7 @@ live_loop :form, sync: :unsyncable do
         bass octave(root(score),4), 127, sus: 4, shape: 1.0, more: 0.2
         voltage (ing :e3 :fs3 :d3 :c4  #:c3 :D3
                      :g3 :fs3 :b3 :c4  #:c3 :D3
-                 ).look, (ing 85 80 70 3).look*2.0, sus: 4
+                 ).look, (ing 85 80 70 3).look*1.0, sus: 4
 
         with_transpose 12*1{
           looper c[1],  sus: 2.5, pat: (ing 1/2.0 '1/2d' 1/2.0 1/4.0).look, elec: false, cutoff: (ramp 0.2, 1.0,256).tick(:hitit), abite: 0.0, bbite:  0.1, atk: 0.6, reverb: 1.0, creverb: 1.0

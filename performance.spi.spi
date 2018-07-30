@@ -156,9 +156,9 @@ live_loop :form, sync: :unsyncable do
         z2=spread(1,8*2).rot(-15).look
         at{
           sleep 1/2.0
-          piano :b5, 115, sus: 1/2.0 if z
+          piano :e5, 115, sus: 1/2.0 if z
           sleep 1/2.0
-          piano :b5, 115, sus: 1/2.0 if z2
+          piano :b5, 115, sus: 1/2.0 if z
           sleep 1
           piano [:G6, :D6].choose, 110, sus: 1 if z
           sleep 1

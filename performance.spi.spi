@@ -1,7 +1,7 @@
 load_support('analog_in_the_digital'); use_bpm 127/2.0
 #init!
 vox_cc sync: 0
-#glitch_cc mode: 2
+glitch_cc mode: 9
 #bass_cc shape: 1, more: 1.0, wet: 0
 #glitch_cc kick: 1
 #bass_on :A3

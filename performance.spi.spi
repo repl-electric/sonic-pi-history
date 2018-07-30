@@ -38,9 +38,9 @@ live_loop :form, sync: :unsyncable do
     #P3
 
     [:e3    _                :B3      :fs3]
-    [:e3    _                         :fs3]
-    [:fs3   _                :g4      :e3]
-    [:b2    _                :A4      :fs3]
+    # [:e3    _                         :fs3]
+    # [:fs3   _                :g4      :e3]
+    # [:b2    _                :A4      :fs3]
 
     #P2-------------------------------------
     # [:e3    _   _      :g3]
@@ -251,7 +251,7 @@ live_loop :form, sync: :unsyncable do
       piano score[0],82, sus:1
     }
 
-    glitch :a3,40
+#    glitch :a3,40
     sleep 1/4.0
     piano score[1],60, sus:1
     sleep 1/4.0

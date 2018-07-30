@@ -79,7 +79,8 @@ live_loop :form, sync: :unsyncable do
   #bass octave(score[1] || score[2] , 3), 120, sus: 2.5*2, wet: 1
 
   if spread(1,2).look
-    (look % 7 == 0) ? bass_cc(wet: 0.0, more: 0.5, shape: 0.8) : bass_cc(wet: 1.0, more: 0.2, shape: 0.5)
+    b= (ing :e3 :e3  :fs3 :fs3  :g3 :g3  :c3 :c3).look
+    (b == :e3) ? bass_cc(wet: 0.0, more: 0.5, shape: 0.8) : bass_cc(wet: 1.0, more: 0.2, shape: 0.5)
     #bass_cc(wet: 1.0, more: 0.2, shape: 1.0)
     #bass (ing :e3 :e3   :d3 :d3   :g2 :fs3 :fs3 :g2 :g2).look, 120, sus: 8#1.5*2*2
     bass (ing :e3 :e3  :fs3 :fs3  :g3 :g3  :c3 :c3).look, 120, sus: 8#1.5*2*2

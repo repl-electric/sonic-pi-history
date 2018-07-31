@@ -68,12 +68,12 @@ live_loop :start do
   }
 
   with_transpose 12{
-    midi mscore.look(offset: 1)[1], 75, channel: 4, sus: 2
+    midi mscore.look(offset: 1)[-1], 75, channel: 4, sus: 2
   }
   sleep 1
   with_transpose 12{
     midi mscore.look(offset: 1)[1], 85, channel: 4, sus: 2
-    }
+  }
   sleep 1
 end
 

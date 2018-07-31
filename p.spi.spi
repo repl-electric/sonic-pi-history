@@ -11,7 +11,6 @@ def octave(n, oct)
   end
 end
 
-
 def harp(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)
@@ -48,7 +47,7 @@ live_loop :start do
   score = mscore.look
 
   if spread(1,8).look
-    midi octave(score[0],4), channel: 3, sus: 4*4
+    midi octave(score[0],3), channel: 3, sus: 4*4
   end
 
 

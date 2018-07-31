@@ -46,15 +46,15 @@ live_loop :start do
       [:c3 :f4 :G3 :as4]
       [:c3 :f4 :G3 :as4]
 
-     [:c3 :eb4 :G3 :Bb4]
-     [:f3 :ab4 :c4]
-     [:Ab3 :C5 :eb4]
-     [:ab3 :Bb5 :eb4]
+     # [:c3 :eb4 :G3 :Bb4]
+     # [:f3 :ab4 :c4]
+     # [:Ab3 :C5 :eb4]
+     # [:ab3 :Bb5 :eb4]
 
-     [:c3 :eb4 :G3 :Bb4]
-     [:f3 :ab4 :c4]
-     [:Ab3 :D5 :eb4]
-     [:ab3 :c5 :eb4]
+     # [:c3 :eb4 :G3 :Bb4]
+     # [:f3 :ab4 :c4]
+     # [:Ab3 :D5 :eb4]
+     # [:ab3 :c5 :eb4]
     )
   #tick_reset_all
   score = mscore.look

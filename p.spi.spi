@@ -101,7 +101,7 @@ live_loop :start do
   }
   sleep 1/2.0
 
-  midi :d3, channel: 6
+  midi :d3,100, channel: 6
 
   if spread(1,4).look
     with_transpose 12{

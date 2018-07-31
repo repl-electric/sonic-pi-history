@@ -101,7 +101,7 @@ live_loop :start do
   }
 
   if spread(1,11).look
-    midi :b3, 75+rand*2.0, channel: 6
+    midi :b3, 35+rand*2.0, channel: 6
   end
 
 

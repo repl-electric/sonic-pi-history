@@ -2,7 +2,7 @@ use_bpm 127.0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
-midi :c4, channel: 5, sus: 4
+midi :c4, channel: , sus: 4
 stop
 def octave(n, oct)
   if n

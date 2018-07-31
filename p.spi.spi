@@ -18,7 +18,7 @@ live_loop :start do
   sleep 1
   sleep 1
 
-  with_transpose -12{
+  with_transpose 12{
     midi score, 100, sus: 4.0, channel: 2
   }
 

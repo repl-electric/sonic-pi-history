@@ -31,7 +31,7 @@ end
 
 live_loop :start do
   tick
-  midi :c3, 65, channel: 6
+  midi :cs3, 65, channel: 6
   mscore = (ing
     [:c3 :eb4 :G3 :Bb4]
     [:f3 :ab4 :c4]

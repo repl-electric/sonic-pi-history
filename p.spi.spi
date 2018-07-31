@@ -99,10 +99,16 @@ live_loop :start do
   with_transpose 12{
     midi mscore.look(offset: 1)[1], 85, channel: 4, sus: 2
   }
+
+  if spread(1,11).look
+    midi :b3, 75+rand*2.0, channel: 6
+  end
+
+
   sleep 1/2.0
 
   if spread(7,11).look
-    midi :d3, 80+rand*2.0, channel: 6
+    midi :d3, 75+rand*2.0, channel: 6
   else
     at{
       sleep 1/2.0

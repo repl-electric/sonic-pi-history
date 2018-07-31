@@ -4,7 +4,7 @@
 live_loop :start do
   tick
 
-  midi :c3,50, sus: 4
+  midi :c3,50, sus: 4.1
 
 
   sleep 2

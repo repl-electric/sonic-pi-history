@@ -6,7 +6,6 @@ live_loop :start do
 
   midi :c3, 100, sus: 4.1, channel: 1
 
-
   sleep 2
   sleep 2
 end

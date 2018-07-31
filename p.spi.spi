@@ -83,6 +83,8 @@ live_loop :start do
     puts :HIT
     midi_cc 52, 1.0, channel: 2 #filter
     midi [:c5, :eb5, :g5].choose,102, channel: 1, sus: 4+2
+  else
+    midi_cc 52, 0.1, channel: 2 #filter
   end
 
   with_transpose 12{

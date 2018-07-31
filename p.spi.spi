@@ -23,22 +23,22 @@ live_loop :start do
   tick
   if spread(1,4).look
     #midi :C4, channel: 3, sus: 4*4
-    midi (ing :C4,).look,100, channel: 4, sus: 2
+    midi (ing :C4 :g4 :C4 :E4).look,100, channel: 4, sus: 2
   end
 
 
 
-  score = (ing :c3, :f3, :Ab3, :ab3,).look
+  score = (ing :c3 :f3 :Ab3 :ab3).look
 
   harp score, 100, sus: 3.5
 
   sleep 1
   sleep 1
 
-  score2 = (ing :c2, :f4, :Ab3,  _,).look
+  score2 = (ing :c2 :f4 :Ab3  _).look
   with_transpose 12{
     midi_cc 50, (line 0, 1.0, 128).look*127.0, channel: 2
-    dragon score, (ing 100, 80, 70,).look, sus: 2.5
+    dragon score, (ing 100 80 70).look, sus: 2.5
   }
 
   sleep 1

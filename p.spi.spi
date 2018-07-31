@@ -23,7 +23,9 @@ live_loop :start do
   tick
   if spread(1,4).look
     #midi :C4, channel: 3, sus: 4*4
-    midi (ing :C4 :g4 :C4 :E4).look,100, channel: 4, sus: 2
+    at{
+      midi (ing :C4 :g4 :C4 :E4).look,100, channel: 4, sus: 2
+    }
   end
 
 

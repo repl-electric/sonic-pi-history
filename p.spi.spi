@@ -4,9 +4,9 @@
 live_loop :start do
   tick
 
-  midi :c3
+  midi :c3, sus: 2
 
 
-  sleep 1
-  sleep 1
+  sleep 2
+  sleep 2
 end

@@ -33,7 +33,7 @@ live_loop :start do
 
     [:c3 :eb4 :G3 :Bb4]
     [:f3 :ab4 :c4]
-    [:Ab3 :C5 :eb4]
+    [:Ab3 :D5 :eb4]
     [:ab3 :c5 :eb4]
     )
   score = mscore.look

@@ -2,6 +2,16 @@ use_bpm 127.0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
+def octave(n, oct)
+  if n
+    note = SonicPi::Note.new(n)
+    "#{note.pitch_class}#{oct}"
+  else
+    n
+  end
+end
+
+
 def harp(*args)
   params, opts = split_params_and_merge_opts_array(args)
   opts         = current_midi_defaults.merge(opts)

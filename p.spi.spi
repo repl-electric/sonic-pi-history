@@ -23,7 +23,13 @@ live_loop :start do
   tick
   #if spread(1,4).look
   #midi :C4, channel: 3, sus: 4*4
-  score = (ing [:c3 :eb4] [:f3 :ab4] [:Ab3 :C4] [:ab3 :Bb4]).look
+
+
+  #Need a lead, something melodic...
+
+  score = (ing [:c3 :eb4 :G3] [:f3 :ab4 :c4] [:Ab3 :C5 :e4] [:ab3 :Bb5 :e4]).look
+
+
   at{
     sleep 2
     midi score[1], 85, channel: 4, sus: 1

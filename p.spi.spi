@@ -21,7 +21,10 @@ end
 
 live_loop :start do
   tick
+  midi :C4, channel: 3
+
   score = (ing :c3 :f3 :Ab3 :ab3).look
+
   harp score, 100, sus: 4.1
 
   sleep 1

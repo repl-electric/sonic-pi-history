@@ -68,7 +68,7 @@ live_loop :start do
   }
 
   sleep 1
-  midi mscore.look(offset: 1), 85, channel: 4, sus: 2
+  midi mscore.look, 85, channel: 4, sus: 2
   sleep 1
 end
 

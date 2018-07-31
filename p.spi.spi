@@ -101,6 +101,8 @@ live_loop :start do
   }
   sleep 1/2.0
 
+  midi :c3 channel: 6
+
   if spread(1,4).look
     with_transpose 12{
       midi mscore.look(offset: 1)[0], 95, channel: 4, sus: 5

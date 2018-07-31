@@ -21,7 +21,9 @@ end
 
 live_loop :start do
   tick
-  midi :C4, channel: 3
+  if spread(1,4).look
+    midi :C4, channel: 3, sus: 4*4
+  end
 
   score = (ing :c3 :f3 :Ab3 :ab3).look
 

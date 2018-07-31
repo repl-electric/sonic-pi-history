@@ -109,6 +109,6 @@ end
 live_loop :control, sync: :start do
   tick
   midi_cc 51, ((line 0, 1.0, 128).look+(line 1.0, 0.0, 128).look)*127.0, channel: 2 #pulse
-  midi_cc 52, 0.5, channel: 2 #filter
+  midi_cc 52, 0.6, channel: 2 #filter
   sleep 1/2.0
 end

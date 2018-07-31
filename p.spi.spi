@@ -27,7 +27,7 @@ live_loop :start do
   at{
     midi p,100, channel: 4, sus: 2
     sleep 2
-    midi p,100, channel: 4, sus: 2
+    midi p,110, channel: 4, sus: 2
   }
   #end
 

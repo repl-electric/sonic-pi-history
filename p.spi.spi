@@ -1,1 +1,12 @@
-play :A3
+# c minor
+# C, D, E♭, F, G, A♭, and B♭.
+
+live_loop :start do
+  tick
+
+  midi :c3
+
+
+  sleep 1
+  sleep 1
+end

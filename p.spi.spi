@@ -23,7 +23,7 @@ live_loop :start do
   tick
   #if spread(1,4).look
   #midi :C4, channel: 3, sus: 4*4
-  score = (ing [:c3 :eb3] [:f3] [:Ab3] [:ab3]).look
+  score = (ing [:c3 :eb3] [:f3 :ab3] [:Ab3] [:ab3]).look
 
   at{
     midi score[1], 80, channel: 4, sus: 2

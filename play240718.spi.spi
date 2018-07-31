@@ -57,7 +57,7 @@ live_loop :test do
   x = spread(1,4).look
   at{
     sleep s[-1] - (s[-1]/2.0)
-    #kick 127
+    kick 127
     sleep (s[-1]/2.0)
     kick 127 if x
   }

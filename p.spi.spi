@@ -15,10 +15,11 @@ live_loop :start do
   score = (ing :c3 :f3 :Ab3).look
   harp score, 100, sus: 4.1
 
+  sleep 1
+  sleep 1
+
   midi :ds3, 100, sus: 1.0, channel: 2
 
-  sleep 1
-  sleep 1
   sleep 1
   sleep 1
 

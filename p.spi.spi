@@ -34,7 +34,7 @@ live_loop :start do
   if spread(1,32).rot(-6).look
     midi :cs3, 65, channel: 6
   end
-  midi :c3, (ing 75 62 68 61).look, channel: 6
+  midi :c3, (ing 78 62 68 61).look, channel: 6
   mscore = (ing
     [:c3 :eb4 :G3 :Bb4]
     [:f3 :ab4 :c4]

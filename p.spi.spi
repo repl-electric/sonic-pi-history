@@ -19,7 +19,7 @@ live_loop :start do
   sleep 1
 
   with_transpose 12{
-    midi_cc 50, rand*127.0, channel: 2
+    midi_cc 50, (line 0, 1.0, 128).look*127.0, channel: 2
     midi score, 100, sus: 4.0, channel: 2
   }
 

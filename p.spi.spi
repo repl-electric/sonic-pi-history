@@ -58,7 +58,7 @@ live_loop :start do
   score2 = (ing
     :c2
     [:f4 :c4].choose
-    :Ab3
+    [:Ab3 :G4].choose
     _).look
   with_transpose 12{
     midi_cc 50, (line 0, 1.0, 128).look*127.0, channel: 2

@@ -83,7 +83,7 @@ live_loop :start do
 
   if score2 == _
     puts :HIT
-    midi :c4,85, channel: 1, sus: 4
+    midi :c5,85, channel: 1, sus: 4
 
   end
 

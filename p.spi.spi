@@ -31,7 +31,7 @@ end
 
 live_loop :start do
   tick
-  if spread(1,32).rot(-6)
+  if spread(1,32).rot(-6).look
     midi :cs3, 65, channel: 6
   end
   midi :c3, 65, channel: 6

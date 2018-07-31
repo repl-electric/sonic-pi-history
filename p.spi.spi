@@ -12,13 +12,15 @@ end
 
 live_loop :start do
   tick
-  score = (ing :c3 :f3 :Ab3).look
+  score = (ing :c3, :f3, :Ab3,).look
   harp score, 100, sus: 4.1
 
   sleep 1
   sleep 1
 
-  midi score, 100, sus: 2.0, channel: 2
+  with_transpose -12{
+    midi score, 100, sus: 2.0, channel: 2
+  }
 
   sleep 1
   sleep 1

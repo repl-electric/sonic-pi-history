@@ -12,8 +12,8 @@ end
 
 live_loop :start do
   tick
-  score = (ing :c3, :f3, :Ab3,).look
-  harp score, 100, sus: 4.1
+  score = (ing :c3 :f3 :Ab3).look
+  #harp score, 100, sus: 4.1
 
   sleep 1
   sleep 1

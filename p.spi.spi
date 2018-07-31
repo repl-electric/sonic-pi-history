@@ -35,7 +35,7 @@ live_loop :start do
     [:ab3 :Bb5 :eb4]).look
 
   at{
-    midi score[-1],100, channel: 5, sus: 4
+   # midi score[-1],100, channel: 5, sus: 4
     sleep 1/2.0
     with_transpose 12{
       midi score[1], channel: 5, sus: 4-(1/2.0)

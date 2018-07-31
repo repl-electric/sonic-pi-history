@@ -8,6 +8,9 @@ live_loop :start do
 
   #midi :eb3, 100, sus: 4.1, channel: 2
 
-  sleep 2
-  sleep 2
+  sleep 1
+  sleep 1
+  sleep 1
+  sleep 1
+
 end

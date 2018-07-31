@@ -3,7 +3,8 @@
 
 live_loop :start do
   tick
-  midi :d3, 100, sus: 4.1, channel: 1
+  score = (ing :c3).look
+  midi score, 100, sus: 4.1, channel: 1
 
   #midi :eb3, 100, sus: 4.1, channel: 2
 

@@ -43,7 +43,7 @@ live_loop :start do
       midi score[-2], channel: 5, sus: 2 #odd...
     }
     sleep 2.5
-    #midi score[-3], channel: 5, sus: 1
+    midi score[-3], channel: 5, sus: 1
   }
 
   at{

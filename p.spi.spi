@@ -27,14 +27,14 @@ live_loop :start do
 
   #Need a lead, something melodic...
 
-  score = (ing [:c3, :eb4, :G3, :Bb4], [:f3, :ab4, :c4], [:Ab3, :C5, :eb4], [:ab3, :Bb5, :eb4],).look
+  score = (ing [:c3 :eb4 :G3 :Bb4] [:f3 :ab4 :c4] [:Ab3 :C5 :eb4] [:ab3 :Bb5 :eb4]).look
 
   at{
     midi score[-1],100, channel: 5, sus: 4
     sleep 1/2.0
     midi score[-2], channel: 5, sus: 4-(1/2.0)
     sleep 2.5
-    midi score[-3], channel: 5, sus: 4-(2.5)
+    midi score[-3], channel: 5, sus: 1
   }
 
   at{
@@ -50,10 +50,10 @@ live_loop :start do
   sleep 1
   sleep 1
 
-  score2 = (ing :c2, :f4, :Ab3,  _,).look
+  score2 = (ing :c2 :f4 :Ab3  _).look
   with_transpose 12{
     midi_cc 50, (line 0, 1.0, 128).look*127.0, channel: 2
-    dragon score2, (ing 100, 80, 70,).look, sus: 2.5
+    dragon score2, (ing 100 80 70).look, sus: 2.5
   }
 
   sleep 1

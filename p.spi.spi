@@ -1,10 +1,20 @@
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
+def harp(*args)
+  params, opts = split_params_and_merge_opts_array(args)
+  opts         = current_midi_defaults.merge(opts)
+  n, vel = *params
+  if n
+    midi n,vel, *(args << {channel: 1})
+  end
+end
+
+
 live_loop :start do
   tick
-  score = (ing :c3 :f3 :Ab3).look
-  midi score, 100, sus: 4.1, channel: 1
+  score = (ing :c3, :f3, :Ab3,).look
+  harp score, 100, sus: 4.1
 
   #midi :eb3, 100, sus: 4.1, channel: 2
 

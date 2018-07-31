@@ -100,8 +100,8 @@ live_loop :start do
     midi mscore.look(offset: 1)[1], 85, channel: 4, sus: 2
   }
 
-  if spread(1,12).look
-    midi :c4, 60, channel: 6
+  if spread(1,11).look
+    midi :c3, 60, channel: 6
   end
 
   sleep 1/2.0

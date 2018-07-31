@@ -29,6 +29,7 @@ live_loop :start do
 
   score = (ing [:c3 :eb4 :G3] [:f3 :ab4 :c4] [:Ab3 :C5 :e4] [:ab3 :Bb5 :e4]).look
 
+  midi score[-1], channel: 5
 
   at{
     sleep 2

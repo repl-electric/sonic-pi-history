@@ -3,7 +3,6 @@
 
 live_loop :start do
   tick
-
   midi :c3, 100, sus: 4.1, channel: 1
 
   sleep 2

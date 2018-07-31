@@ -10,13 +10,12 @@ def harp(*args)
   end
 end
 
-
 live_loop :start do
   tick
-  score = (ing :c3, :f3, :Ab3,).look
+  score = (ing :c3 :f3 :Ab3).look
   harp score, 100, sus: 4.1
 
-  #midi :eb3, 100, sus: 4.1, channel: 2
+  midi :eb3, 100, sus: 1.0, channel: 2
 
   sleep 1
   sleep 1

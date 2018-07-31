@@ -102,7 +102,7 @@ live_loop :start do
     midi_cc 52, 0.1, channel: 2 #filter
   end
 
-  with_transpose 12*2{
+  with_transpose 12*1{
     midi_cc 50, (line 0.9, 1.0, 128).look*127.0, channel: 2
     dragon score2, (ing 100 80 70).look, sus: 2.5+1
   }

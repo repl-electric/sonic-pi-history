@@ -25,13 +25,11 @@ live_loop :start do
   #midi :C4, channel: 3, sus: 4*4
   p = (ing :C4 :g4 :C4 :E4).look(:in)
   at{
-    midi p,100, channel: 4, sus: 2
+    midi p,90, channel: 4, sus: 2
     sleep 2
     midi p,110, channel: 4, sus: 2
   }
   #end
-
-
 
   score = (ing :c3 :f3 :Ab3 :ab3).look
 

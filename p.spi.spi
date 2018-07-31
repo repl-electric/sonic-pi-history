@@ -104,7 +104,10 @@ live_loop :start do
   if spread(7,11).look
     midi :d3, 80, channel: 6
   else
-    midi :ds3, 75, channel: 6
+    at{
+      sleep 1/4.0
+      midi :ds3, 75, channel: 6
+      }
   end
 
   if spread(1,4).look

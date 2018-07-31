@@ -28,7 +28,7 @@ live_loop :start do
     sleep 2
     midi score[1], 75, channel: 4, sus: 1
     sleep 1
-    midi score[0], 85, channel: 4, sus: 1
+    midi score[0], 95, channel: 4, sus: 1
   }
   #end
 

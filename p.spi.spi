@@ -83,7 +83,7 @@ live_loop :start do
 
 
   if score2 == _
-    midi score[0],120, channel: 5, sus: 4
+    midi score[0],127, channel: 5, sus: 4
   end
 
   with_transpose 12{

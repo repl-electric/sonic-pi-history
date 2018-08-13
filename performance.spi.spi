@@ -109,6 +109,9 @@ live_loop :start, sync: :unsyncable do
   }
 
   puts score
+  if score[0] == :c3
+    pluck score[-1]
+  end
   no{
   at{
     pluck score[-1],100, sus: zzz

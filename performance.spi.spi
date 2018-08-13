@@ -23,7 +23,7 @@ live_loop :start, sync: :unsyncable do
  #   midi :c3, (ing 78 62 68 61).look, channel: 6
   end
   mscore = (ing
-#    [[:c3 :D4   :G3  :as4] 4]
+    [[:c3 :D4   :G3  :as4] 4]
     #[[:c3 :D4   :G3 :as4] 4]
 #    [[:c3 :Eb4  :G4  :Bb4] 4]
     #[[:Ab4] 6]
@@ -35,7 +35,7 @@ live_loop :start, sync: :unsyncable do
      [[:f3 :ab4 :c4] 4]
      [[:Ab3 :C5 :eb4] 4]
      [[:ab3 :Bb5 :eb4] 4]
-    [[:bb3 :Eb4  :G4  :Bb4] 4]
+     #[[:bb3 :Eb4  :G4  :Bb4] 4]
 
     # [[:G4  :C5 :eb4] 2]
     # [[_] 2]

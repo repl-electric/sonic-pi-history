@@ -63,7 +63,7 @@ live_loop :start, sync: :unsyncable do
     [[:Ab3  :Bb3 :Eb4] 4]
     [[:Ab3  :C4 :Eb4] 4]
     [[:Bb3  :D4 :F4] 4]
-    [[:C3   :Eb4  :G4] 4]
+    [[:C4   :Eb4  :G4] 4]
 
 
     [[_] 2]

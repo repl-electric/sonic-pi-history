@@ -83,7 +83,7 @@ live_loop :start, sync: :unsyncable do
   score = score[0]
 
   if spread(1,8).look
-    hpad octave(score[0],3), sus: 4*4
+    #hpad octave(score[0],3), sus: 4*4
 
     at{
       sleep 4

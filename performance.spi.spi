@@ -24,7 +24,7 @@ live_loop :start, sync: :unsyncable do
   end
   mscore = (ing
     [[:c3 :D4   :G3  :as4] 4]
-    [[:C4] 2]
+    [[:a4] 2]
     [[:c3 :Eb4  :G4  :Bb4] 4]
     [[:C4] 2]
     # [[:bb3 :ds5 :f4 ] 4]

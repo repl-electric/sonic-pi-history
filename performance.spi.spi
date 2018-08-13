@@ -113,7 +113,7 @@ live_loop :start, sync: :unsyncable do
     pluck n[1],100, sus: 2
   end
   if (n=mscore.look(offset: 0)[0])[0] == :c3
-    pluck [n[0],n[1]].choose,100, sus: 2
+    pluck n[0],120, sus: 2
   end
 
   no{

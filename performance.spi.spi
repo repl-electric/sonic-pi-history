@@ -1,6 +1,6 @@
 load_support('dflipflop'); use_bpm 127.0
 
-alive dragon: 0, pluck: 0, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 1, bass: 1
+alive dragon: 0, pluck: 1, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 1, bass: 1
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
@@ -67,9 +67,9 @@ live_loop :start, sync: :unsyncable do
 
     [[:f3 :ab4 :c4] 4]
     #    [[:F3 :D4 :Ab4] 4]
+
     #[[:Bb3 :D4 :F4] 4]
     [[:G3 :Bb4 :D4] 4]
-
 
 
 

@@ -1,7 +1,7 @@
 load_support('dflipflop'); use_bpm 127.0
 
 
-alive dragon: 0, pluck: 0, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 0, bass: 0
+alive dragon: 0, pluck: 0, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, bass: 0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 #dragon_cc detune: 0.5

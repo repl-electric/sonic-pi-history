@@ -2,7 +2,7 @@ load_support('dflipflop'); use_bpm 127.0
 
 
 
-live_loop :name, sync: :unsyncable do
+live_loop :name do
   tick
   spad_cc filter: rand
   puts rand

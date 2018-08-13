@@ -110,7 +110,6 @@ live_loop :start, sync: :unsyncable do
 
   puts score
   if (n=mscore.look(offset: 1)[0])[0] == :c3
-    puts n
     pluck n.choose,100, sus: 2
   end
 

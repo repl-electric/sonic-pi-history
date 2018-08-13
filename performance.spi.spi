@@ -59,7 +59,7 @@ live_loop :start, sync: :unsyncable do
     #
     #E♭,  F, G, A♭, and B♭  C D
 
-    #1 -> 7  |  3 |  6 (4->2) | (7 -> 5 -> 6)
+    # 1 -> 7  |  3 |  6 (4->2) | (7 -> 5 -> 6)
 
     [[:f3 :ab4 :c4] 4]
     [[:Ab3 :C5 :eb4 :G4] 4]

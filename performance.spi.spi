@@ -38,8 +38,10 @@ live_loop :start, sync: :unsyncable do
 
 
     # LIKE
-        [[:Ab3 :D4 :eb4] 4]                   # 6 -> 4
-        [[:f3  :a5 :c5 :eb5] 4]
+    [[:Ab3 :D4 :eb4] 4]                   # 6 -> 4
+    [[:f3  :ab5 :c5 :eb5] 4]
+
+
     #[[_] 2]
 
 

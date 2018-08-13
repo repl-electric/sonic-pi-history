@@ -42,6 +42,11 @@ live_loop :start, sync: :unsyncable do
     #[[:f3  :ab5 :c5 :eb5] 4]               #sharp Ab
 
 
+
+
+    [[:Eb3 :G3 :Bb3] 4]
+
+
     #[[_] 2]
 
 

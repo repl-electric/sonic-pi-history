@@ -27,6 +27,8 @@ live_loop :start, sync: :unsyncable do
     [[:G3  :A3] 6]
     #[[:c3 :Eb4  :G4  :Bb4] 4]
     [[:Ab4] 6]
+
+    [[_] 2]
     # [[:bb3 :ds5 :f4 ] 4]
     # [[:eb3 :g5 :bb4 ] 4]
 

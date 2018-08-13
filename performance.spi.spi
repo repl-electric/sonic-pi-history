@@ -99,7 +99,7 @@ live_loop :start, sync: :unsyncable do
   bass_cc delay: 0.2, dirt: 0.2, noise: 0.3, more: (ing 1.0 1.0 1.0 0.0).look
 
   if score[0] == :c3
-    bass root(score)
+    bass root(score), sustain: 8
   end
 
   no{

@@ -97,14 +97,20 @@ live_loop :start, sync: :unsyncable do
   d = (ring spread(7,11),spread(7,11),spread(7,11), spread(3,8)).look
 
   bass_cc delay: 0.2, dirt: 0.2, noise: 0.3, more: (ing 1.0 1.0 1.0 0.0).look
-  at{
 
+  if score[0] == :c3
+    bass root(score)
+  end
+
+  no{
+  at{
     (zzz*1.0).times{
       bass_cc more: (ing 1.0 0.0 0.0).look(:in), dirt: (line 0.5, 0.2, zzz*2).look(:in)
       with_transpose -12*0{
         bass root(score), (ing 95 60 82 65).look(:in), sus: 2.0 if d.tick(:in)
       }
       sleep 1
+    }
     }
   }
 

@@ -100,7 +100,7 @@ live_loop :start, sync: :unsyncable do
   if spread(1,4).look
     hpad octave(score[0],3), sus: 4*4
 
-    piano_echos [:ab4, :G4].choose, [127,90].choose, sus: 4.0
+    piano_echos [:ab4, :G4].choose, [127,95].choose, sus: 4.0
     no{
     at{
       sleep 4

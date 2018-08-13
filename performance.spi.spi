@@ -1,6 +1,6 @@
 load_support('dflipflop'); use_bpm 127.0
 
-alive dragon: 0, pluck: 0, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 0, bass: 0
+alive dragon: 0, pluck: 0, hpad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 1, bass: 0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
@@ -104,7 +104,7 @@ live_loop :start, sync: :unsyncable do
   if spread(1,8).look
     hpad octave(score[0],3), sus: 4*4
 
-    midi :ab5, 127, sus: 4.0, channel: 16
+    midi :ab4, 127, sus: 4.0, channel: 16
     no{
     at{
       sleep 4

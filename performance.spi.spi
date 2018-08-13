@@ -134,9 +134,9 @@ live_loop :start, sync: :unsyncable do
     yes{
     at{
       sleep 4
-      piano_echos :ab4, 122, sus: 4.0, channel: 16
+      piano_echos :ab4, 122, sus: 4.0
       sleep 4
-      piano_echos :f5, 122, sus: 4.0, channel: 16
+      piano_echos :f5, 122, sus: 4.0
       }
     }
   else

@@ -122,15 +122,13 @@ live_loop :start, sync: :unsyncable do
 
 
 
-
-
     )
   #tick_reset_all
   score = mscore.look
   zzz   = score[-1]
   score = score[0]
 
-  if spread(1,2).rot(1).look
+  if spread(1,1).rot(1).look
     hpad octave(score[1],4), sus: 4*zzz
 
     piano_echos [:ab4, :G4].choose, [127,95].choose, sus: 4.0

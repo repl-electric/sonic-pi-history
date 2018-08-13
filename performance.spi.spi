@@ -51,6 +51,9 @@ live_loop :start, sync: :unsyncable do
     # LIKE
     [[:Ab3 :D4 :eb4] 4]                   # 6 -> 4
     [[:f3  :g5 :c5 :eb5] 4]               #sharp Ab
+    [[:d3  :f5 :ab5 ] 4]               #sharp Ab
+
+
 
     #---------------------------------------
 

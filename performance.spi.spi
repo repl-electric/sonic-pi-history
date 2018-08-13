@@ -109,8 +109,8 @@ live_loop :start, sync: :unsyncable do
   }
 
   puts score
-  if mscore.look(offset: -1)[0][0] == :c3 || score[0] == :f3
-    pluck score[0],100, sus: 2
+  if n=mscore.look(offset: -1)[0][0] == :c3 || score[0] == :f3
+    pluck n,100, sus: 2
   end
 
   no{

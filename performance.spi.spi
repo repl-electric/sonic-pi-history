@@ -16,6 +16,9 @@ alive dragon: 0, hpad: 0, spad: 1, glitch: 0, zero: 0, piano: 1, wpiano: 1, pian
 #pluck detune: 0.5
 #stop
 
+puts chord(:Bb3, :m)
+
+
 live_loop :start, sync: :unsyncable do
   tick
   if spread(1,32).rot(-6).look

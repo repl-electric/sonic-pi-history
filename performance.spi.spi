@@ -166,7 +166,7 @@ live_loop :start, sync: :unsyncable do
 
   at{
     4.times{
-      sleep 2
+      sleep 3
       pluck score[0],127, sus: 4
       }
   }

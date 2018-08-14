@@ -33,6 +33,13 @@ live_loop :start, sync: :unsyncable do
   end
   mscore = (ing
 
+
+    #Intro
+
+    [[:c3 :Eb4  :G4  :Bb4] 4]
+
+
+
 #CRAZY BASS---------------------------
 
     # [[:c3 :Eb4  :G4  :Bb4] 4]
@@ -155,14 +162,14 @@ live_loop :start, sync: :unsyncable do
 
 #---------------------------------------
 
-    [[:Eb3  :G4  :Bb3 :d4] 4]
-    [[:Eb3  :G4  :Bb4 :eb4] 4]
-    [[:Ab3  :Bb3 :Eb4] 4]
-    [[:Ab3  :C4 :Eb4] 4]
-    [[:Bb3  :D4 :F4] 4]
-    [[:C4   :Eb3  :G3] 8]
+    # [[:Eb3  :G4  :Bb3 :d4] 4]
+    # [[:Eb3  :G4  :Bb4 :eb4] 4]
+    # [[:Ab3  :Bb3 :Eb4] 4]
+    # [[:Ab3  :C4 :Eb4] 4]
+    # [[:Bb3  :D4 :F4] 4]
+    # [[:C4   :Eb3  :G3] 8]
 
-    [[_] 2]
+    # [[_] 2]
 
 
    #  [[:c3 :Eb4  :G4  :Bb4] 4]

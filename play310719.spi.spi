@@ -38,19 +38,19 @@ live_loop :start do
 #    midi :cs3, 65, channel: 6
   end
   if spread(15,16).look
- #   midi :c3, (ing 78, 62, 68, 61,).look, channel: 6
+ #   midi :c3, (ing 78 62 68 61).look, channel: 6
   end
   mscore = (ing
-      [:c3, :eb4,  :G3, :as4],
-      [:c3, :eb4, :G3, :Bb4],
-     #, [:f3, :ab4, :c4],
-     #, [:Ab3, :C5, :eb4],
-     #, [:ab3, :Bb5, :eb4],
+     # [:c3 :eb4  :G3 :as4]
+      [:c3 :eb4 :G3 :Bb4]
+      [:f3 :ab4 :c4]
+      [:Ab3 :C5 :eb4]
+      [:ab3 :Bb5 :eb4]
 
-     #, [:c3, :eb4, :G3, :Bb4],
-     #, [:f3, :ab4, :c4],
-     #, [:Ab3, :D5, :eb4],
-     #, [:ab3, :c5, :eb4],
+      [:c3 :eb4 :G3 :Bb4]
+      [:f3 :ab4 :c4]
+      [:Ab3 :D5 :eb4]
+      [:ab3 :c5 :eb4]
     )
   #tick_reset_all
   score = mscore.look
@@ -64,7 +64,7 @@ live_loop :start do
     midi score[-1],100, channel: 5, sus: 4
     sleep 1/2.0
     with_transpose 0{
-      midi_cc 50, (ing 0, 0, 127, 0,).look, channel: 5 #odd...
+      midi_cc 50, (ing 0 0 127 0).look, channel: 5 #odd...
       midi score[-2], channel: 5, sus: 2 #odd...
     }
     sleep 2.5
@@ -85,10 +85,10 @@ live_loop :start do
   sleep 1
 
   score2 = (ing
-    [:c2, :C3].choose,
-    [:f4, :c4].choose,
-    [:Ab3, :G4].choose,
-    _,).look
+    [:c2 :C3].choose
+    [:f4 :c4].choose
+    [:Ab3 :G4].choose
+    _).look
 
   if score2 == _
     puts :HIT
@@ -100,7 +100,7 @@ live_loop :start do
 
   with_transpose 12*1{
     midi_cc 50, (line 0.9, 1.0, 128).look*127.0, channel: 2
-    dragon score2, (ing 100, 80, 70,).look, sus: 2.5+2
+    dragon score2, (ing 100 80 70).look, sus: 2.5+2
   }
 
   with_transpose 12{

@@ -149,7 +149,7 @@ live_loop :start, sync: :unsyncable do
 
   at{
     4.times{
-      pluck :eb3, sus: 2
+      pluck :eb3, sus: 1
       sleep 1
       bass :c3, sus: 1  #Genlte waves
       }

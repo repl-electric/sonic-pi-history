@@ -6,7 +6,7 @@ load_support('dflipflop'); use_bpm 127.0
 alive dragon: 0, hpad: 0, spad: 0,
 glitch: 0, zero: 0,
 piano: 1, wpiano: 1, piano_echos: 1,
-pluck: 0, bass: 0, derbass: 1,  marimba: 0
+pluck: 0, bass: 0, derbass: 0,  marimba: 0
 
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.

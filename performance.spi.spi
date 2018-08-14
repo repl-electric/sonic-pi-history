@@ -57,10 +57,10 @@ live_loop :start, sync: :unsyncable do
 
 
     # LIKE
-    [[:Ab3 :D4 :eb4] 4]                   # 6 -> 4
+    #[[:Ab3 :D4 :eb4] 4]                   # 6 -> 4
     [[:c3 :D4   :G3  :as4] 4]
-    [[:f3  [:ab5 :ab6 :g5].choose :c5 :eb5] 4]
-    [[:f3 :d4 :ab3] 4]
+    #[[:f3  [:ab5 :ab6 :g5].choose :c5 :eb5] 4]
+    #[[:f3 :d4 :ab3] 4]
 
 
 

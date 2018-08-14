@@ -1,6 +1,6 @@
 load_support('dflipflop'); use_bpm 127.0
 
-wpiano :A3, wash: 0.4
+wpiano :A3, wash: 0.1
 
 stop
 spad_cc filter: 0.15*1

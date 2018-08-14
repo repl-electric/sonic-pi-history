@@ -148,9 +148,9 @@ live_loop :start, sync: :unsyncable do
   bass_cc delay: 0.2, dirt: 0.2, noise: 0.3, more: (ing 1.0 1.0 1.0 0.0).look
 
   at{
-    2.times{
-      sleep 2
-      bass :c3, sus: 2
+    4.times{
+      sleep 1
+      bass :c3, sus: 1
       }
   }
 

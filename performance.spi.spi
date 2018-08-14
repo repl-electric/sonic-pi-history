@@ -169,7 +169,7 @@ live_loop :start, sync: :unsyncable do
   puts score
 
   at{
-    pluck_cc pulse: 0
+    #pluck_cc pulse: 0
     8.times{
       sleep 1.0
       puts (line 0, -0.125,8).look(:in)

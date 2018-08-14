@@ -24,7 +24,7 @@ puts chord(:Bb3, '7sus4').map{|n| note_inspect(n)}
 
 bass_cc noise: 0.0
 
-bass_x :Ab2
+bass_on :Ab3
 
 
 

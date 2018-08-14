@@ -3,7 +3,7 @@ load_support('dflipflop'); use_bpm 127.0
 #pluck_cc pulse: 1.0
 #wpiano_cc wash: 0.5
 #spad_cc filter: 0.15*1
-alive dragon: 1, hpad: 0, spad: 1, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 0, pluck: 0, bass: 0, marimba: 0
+alive dragon: 1, hpad: 0, spad: 1, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 0, pluck: 0, bass: 1, marimba: 0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
@@ -33,14 +33,14 @@ live_loop :start, sync: :unsyncable do
     #[[:c3 :D4  :G3  :as4] 4]
     [[:c3 :Eb4  :G4  :Bb4] 4]
 
-    [[:f3 :ab4 :c4] 4]
-    [[:Ab3 :C5 :eb4] 4]
-    [[:ab3 :Bb5 :eb4] 4]
-    [[:f3 :ab4 :c4] 4]
-    [[:bb3 :d4 :f4 ] 4]
-    [[:ab2 :c4 :eb4 ] 4]
+    # [[:f3 :ab4 :c4] 4]
+    # [[:Ab3 :C5 :eb4] 4]
+    # [[:ab3 :Bb5 :eb4] 4]
+    # [[:f3 :ab4 :c4] 4]
+    # [[:bb3 :d4 :f4 ] 4]
+    # [[:ab2 :c4 :eb4 ] 4]
 
-    [[[:Bb5 :G5].choose] 4]
+    # [[[:Bb5 :G5].choose] 4]
 
 #Bb Ds F Ab
     #[[:c3 :eb4 :G3 :Bb4] 4]

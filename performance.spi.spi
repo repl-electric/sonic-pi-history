@@ -129,7 +129,7 @@ live_loop :start, sync: :unsyncable do
    #  [[_] 2]
 
     )
-  tick_reset_all
+  #tick_reset_all
   score = mscore.look
   zzz   = score[-1]
   score = score[0]

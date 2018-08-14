@@ -77,7 +77,7 @@ live_loop :start, sync: :unsyncable do
     [[:c4 :Eb4  :G3 :ab4] 4]
     [[:f3] 8]
     [[:ab3] 4]
-
+    [[_] 2]
 
     # [[:bb3 :ds5 :f4 ] 4]
     # [[:eb3 :g5 :bb4 ] 4]

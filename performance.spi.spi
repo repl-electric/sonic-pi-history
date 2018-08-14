@@ -54,7 +54,7 @@ live_loop :start, sync: :unsyncable do
     [[:g3 :bb4 :d4] 2]
     [[:f3 :ab4 :c4 :eb4] 4]
     [[:c4 :d4 :g4 ] 4]
-    [[[:Bb3 :Ab3].choose] 8]
+    [[[:Bb3 :Ab3].choose] 4]
 
 
 

@@ -318,7 +318,7 @@ end
 
 live_loop :control, sync: :start do
   tick
-  #dragon_cc pulse: ((line 0, 1.0, 128).look+(line 1.0, 0.0, 128).look)
+  dragon_cc pulse: ((line 0, 1.0, 128).look+(line 1.0, 0.0, 128).look)
   dragon_cc filter: 0.1
   sleep 1/2.0
 end

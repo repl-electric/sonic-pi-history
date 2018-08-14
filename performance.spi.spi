@@ -39,10 +39,9 @@ live_loop :start, sync: :unsyncable do
     #[[_] 8]
 
 
-
     [[:c3 :eb4 :G3 :Bb4] 4]
     #[[:f3 :ab4 :c4] 4]
-    [[:bb3 :d4 :f4 :ab4] 4]
+    [[:bb3 :e4 :f4 :ab4] 4]
     #[[:Ab3 :D4 :eb4] 4]
     #[[:f3  :ab5 :c5 :eb5] 4]
     #[[_] 2]

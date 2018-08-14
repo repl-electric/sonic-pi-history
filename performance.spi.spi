@@ -16,7 +16,7 @@ alive dragon: 1, hpad: 0, spad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, pian
 #pluck detune: 0.5
 #stop
 
-puts chord(:Bb3, :msus7).map{|n| note_inspect(n)}
+puts chord(:Bb3, :sus7).map{|n| note_inspect(n)}
 
 
 live_loop :start, sync: :unsyncable do

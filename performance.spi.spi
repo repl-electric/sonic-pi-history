@@ -149,8 +149,9 @@ live_loop :start, sync: :unsyncable do
 
   at{
     4.times{
+      pluck :eb3 if spread(1,3).look
       sleep 1
-      bass :c3, sus: 1
+      bass :c3, sus: 1  #Genlte waves
       }
   }
 

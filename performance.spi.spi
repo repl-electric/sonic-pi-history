@@ -257,9 +257,9 @@ live_loop :start, sync: :unsyncable do
     _).look
 
   if score2 == _
-    puts "#{zzz} HIT"
     dragon_cc filter: 0.01
-    wpiano [:db5, :db5, :db5].choose,100, sus: zzz+2
+    wpiano x=[:db5, :db5, :db5].choose,100, sus: zzz+2
+    puts "#{zzz} HIT #{x}"
   else
     dragon_cc filter: 0.01
   end

@@ -24,11 +24,8 @@ puts chord(:Bb3, '7sus4').map{|n| note_inspect(n)}
 
 bass_cc noise: 1.0
 
-#bass_on :Ab3
+bass_x# :Ab3
 
-
-
-stop
 
 live_loop :start, sync: :unsyncable do
   tick

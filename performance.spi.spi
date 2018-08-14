@@ -22,7 +22,7 @@ pluck: 0, bass: 0, derbass: 1,  marimba: 0
 
 puts chord(:Bb3, '7sus4').map{|n| note_inspect(n)}
 
-bass_cc noise: 0.4
+bass_cc noise: 0.5
 bass_x :Ab3
 #stop
 

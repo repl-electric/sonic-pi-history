@@ -1,5 +1,9 @@
 load_support('dflipflop'); use_bpm 127.0
 
+spiano wash: 0.1
+
+
+stop
 spad_cc filter: 0.15*1
 alive dragon: 0, pluck: 0, hpad: 1, spad: 0, glitch: 0, zero: 0, piano: 1, wpiano: 1, piano_echos: 0, bass: 0, marimba: 0
 # c minor

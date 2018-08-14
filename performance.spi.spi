@@ -163,7 +163,7 @@ live_loop :start, sync: :unsyncable do
   }
 
   puts score
-  pluck score[-1],100, sus: zzz
+  pluck score[-1],120, sus: zzz
   # at{
   #   pluck score[-1],100, sus: zzz
   #   sleep 1/2.0

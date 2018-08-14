@@ -251,7 +251,7 @@ live_loop :start, sync: :unsyncable do
   sleep zzz / 4.0
 
   score2 = (ing
-    [:c2 :C3].choose  #146
+    [:c2 :C2].choose  #146
     [:f2 :c2].choose
     [:Ab3 :G3].choose
     _).look

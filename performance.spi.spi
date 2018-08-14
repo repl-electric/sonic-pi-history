@@ -1,6 +1,6 @@
 load_support('dflipflop'); use_bpm 127.0
 
-pluck_cc pulse: 0.0
+pluck_cc pulse: 1.0
 stop
 #wpiano_cc wash: 0.5
 #spad_cc filter: 0.15*1

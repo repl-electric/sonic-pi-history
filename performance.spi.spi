@@ -1,4 +1,7 @@
 load_support('dflipflop'); use_bpm 127.0
+alive derbass: 1
+
+stop
 
 #pluck_cc pulse: 1.0
 #wpiano_cc wash: 0.5

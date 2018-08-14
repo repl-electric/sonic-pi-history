@@ -166,7 +166,7 @@ live_loop :start, sync: :unsyncable do
     }
   }
 
-  puts "SCORE: {score}"
+  puts "SCORE: #{score}"
 
   # at{
   #   #pluck_cc pulse: 0

@@ -69,15 +69,6 @@ live_loop :start, sync: :unsyncable do
     # [[:ab3 :c4 :eb4 ] 4]
     # [[[:Bb4 :G4].choose] 4]
 
-
-    # [[:c4 :f4 :ab4] 4]
-    # [[:g3 :c4 :eb4 :g4] 4]
-    # [[:ab3 :c4 :eb4 :g4 :bb4] 4]
-    # [[[:Bb4 :Ab4].choose] 4]
-
-
-
-
 #---------------------------------------
 
     #Bb Ds F Ab

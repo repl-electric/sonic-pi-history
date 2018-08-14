@@ -163,16 +163,17 @@ live_loop :start, sync: :unsyncable do
   }
 
   puts score
-  at{
-    pluck score[-1],100, sus: zzz
-    sleep 1/2.0
-    with_transpose 0{
-      pluck_cc ryth: 1.0
-      pluck score[-2], sus: 2
-    }
-    sleep 2.5
-    pluck score[-3], sus: 1
-  }
+  pluck score[-1],100, sus: zzz
+  # at{
+  #   pluck score[-1],100, sus: zzz
+  #   sleep 1/2.0
+  #   with_transpose 0{
+  #     pluck_cc ryth: 1.0
+  #     pluck score[-2], sus: 2
+  #   }
+  #   sleep 2.5
+  #   pluck score[-3], sus: 1
+  # }
 
   at{
     sleep 2

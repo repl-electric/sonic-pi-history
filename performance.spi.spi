@@ -19,7 +19,7 @@ pluck: 1, bass: 0, derbass: 0,  marimba: 0
 #dragon_cc detune: 0.5
 #pluck detune: 0.5
 #stop
-puts chord(:Bb3, '7sus2').map{|n| note_inspect(n)}
+#puts chord(:Bb3, '7sus2').map{|n| note_inspect(n)}
 #stop
 
 
@@ -54,7 +54,7 @@ live_loop :start, sync: :unsyncable do
     [[:ab3 :Bb5 :eb4] 4]
 
     [[:f3 :ab4 :c4] 4]
-    [[:bb3 :cs4 :f4 :ab4] 4]
+    [[:bb3 :c4 :f4 :ab4] 4]
     [[:ab3 :c4 :eb4 ] 4]
     [[[:Bb5 :G5].choose] 4]
 

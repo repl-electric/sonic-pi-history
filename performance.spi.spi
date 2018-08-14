@@ -253,7 +253,7 @@ live_loop :start, sync: :unsyncable do
   score2 = (ing
     [:c2 :C2].choose  #146
     [:f2 :c2].choose
-    [:Ab3 :G3].choose
+    [:Ab2 :G2].choose
     _).look
 
   if score2 == _

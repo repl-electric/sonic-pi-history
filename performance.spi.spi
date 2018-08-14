@@ -207,7 +207,7 @@ live_loop :start, sync: :unsyncable do
 
   d = (ring spread(7,11),spread(7,11),spread(7,11), spread(3,8)).look
 
-  bass_cc delay: 0.2, dirt: 0.2, noise: 0.3, more: (ing 1.0 1.0 1.0 0.0).look
+  bass_cc delay: 0.2, dirt: 0.2, noise: 1.0, more: (ing 1.0 1.0 1.0 0.0).look
 
   yes{
   at{

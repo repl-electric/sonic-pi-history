@@ -154,7 +154,6 @@ live_loop :start, sync: :unsyncable do
 
   #pluck :e4 if spread(1,3).look
 
-  bass score[0], sus: zzz
 
   no{
   at{

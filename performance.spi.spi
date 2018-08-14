@@ -35,15 +35,15 @@ live_loop :start, sync: :unsyncable do
 
 #CRAZY BASS---------------------------
 
-    # [[:c3 :Eb4  :G4  :Bb4] 4]
-    # [[:f3 :ab4 :c4] 4]
-    # [[:Ab3 :C5 :eb4] 4]
-    # [[:ab3 :Bb5 :eb4] 4]
+    [[:c3 :Eb4  :G4  :Bb4] 4]
+    [[:f3 :ab4 :c4] 4]
+    [[:Ab3 :C5 :eb4] 4]
+    [[:ab3 :Bb5 :eb4] 4]
 
-    # [[:f3 :ab4 :c4] 4]
-    # [[:bb3 :cs4 :f4 :ab4] 4]
-    # [[:ab3 :c4 :eb4 ] 4]
-    # [[[:Bb5 :G5].choose] 4]
+    [[:f3 :ab4 :c4] 4]
+    [[:bb3 :cs4 :f4 :ab4] 4]
+    [[:ab3 :c4 :eb4 ] 4]
+    [[[:Bb5 :G5].choose] 4]
 
 
     [[:Eb3 :G3 :c4 :Ab4] 4]

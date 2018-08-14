@@ -1,4 +1,7 @@
 load_support('dflipflop'); use_bpm 127.0
+alive derbass: 1
+
+stop
 
 #pluck_cc pulse: 1.0
 #wpiano_cc wash: 0.5
@@ -6,7 +9,7 @@ load_support('dflipflop'); use_bpm 127.0
 alive dragon: 0, hpad: 0, spad: 0,
 glitch: 1, zero: 0,
 piano: 1, wpiano: 1, piano_echos: 1,
-pluck: 0, bass: 1, derbass: 1,  marimba: 0
+pluck: 0, bass: 1, derbass: ,  marimba: 0
 
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
@@ -22,8 +25,8 @@ pluck: 0, bass: 1, derbass: 1,  marimba: 0
 
 puts chord(:Bb3, '7sus4').map{|n| note_inspect(n)}
 
-#bass_cc noise: 1.0
-#bass_x :Ab3
+bass_cc noise: 1.0
+bass_x :Ab3
 #stop
 
 
@@ -48,7 +51,7 @@ live_loop :start, sync: :unsyncable do
     [[:bb3 :d4 :f4 ] 4]
     [[:ab2 :c4 :eb4 ] 4]
 
-    [[[:Ds5 :Ds6].choose] 4]
+    [[[:Bb5 :G5].choose] 4]
 
 
 #---------------------------------------

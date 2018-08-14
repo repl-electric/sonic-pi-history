@@ -252,7 +252,7 @@ live_loop :start, sync: :unsyncable do
 
   score2 = (ing
     [:c2 :C3].choose  #146
-    [:f4 :c3].choose
+    [:f3 :c3].choose
     [:Ab3 :G3].choose
     _).look
 

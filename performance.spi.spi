@@ -166,9 +166,10 @@ live_loop :start, sync: :unsyncable do
 
   at{
     8.times{
-
       sleep 1/2.0
-      pluck score[0],127, sus: 1/2.0
+      with_swing ((line 0, 0.05).look){
+        pluck score[0],127, sus: 1/2.0
+      }
       }
   }
 

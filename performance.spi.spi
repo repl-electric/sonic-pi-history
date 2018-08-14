@@ -3,7 +3,7 @@ load_support('dflipflop'); use_bpm 127.0
 #pluck_cc pulse: 1.0
 #wpiano_cc wash: 0.5
 #spad_cc filter: 0.15*1
-alive dragon: 0, hpad: 0, spad: 0, glitch: 0, zero: 1, piano: 1, wpiano: 1, piano_echos: 1, pluck: 1, bass: 0, marimba: 0
+alive dragon: 1, hpad: 0, spad: 0, glitch: 0, zero: 1, piano: 1, wpiano: 1, piano_echos: 1, pluck: 1, bass: 0, marimba: 0
 # c minor
 # C, D, E♭, F, G, A♭, and B♭.
 
@@ -25,7 +25,7 @@ live_loop :start, sync: :unsyncable do
  #   midi :c3, (ing 78 62 68 61).look, channel: 6
   end
   mscore = (ing
-    [[:c3 :D4  :G3  :as4] 4]
+    #[[:c3 :D4  :G3  :as4] 4]
     [[:c3 :Eb5  :G4  :Bb4] 4]
     #[[:Ab4] 6]
 
@@ -33,9 +33,9 @@ live_loop :start, sync: :unsyncable do
     # [[:bb3 :ds5 :f4 ] 4]
     # [[:eb3 :g5 :bb4 ] 4]
 
-   #  [[:f3 :ab4 :c4] 4]
-   #  [[:Ab3 :C5 :eb4] 4]
-   #  [[:ab3 :Bb5 :eb4] 4]
+     [[:f3 :ab4 :c4] 4]
+     [[:Ab3 :C5 :eb4] 4]
+     [[:ab3 :Bb5 :eb4] 4]
      #[[:bb3 :Eb4  :G4  :Bb4] 4]
 
     # [[:G4  :C5 :eb4] 2]
@@ -44,13 +44,15 @@ live_loop :start, sync: :unsyncable do
     # [[:Ab4 :Bb5 :eb4] 2]
     # [[_] 2]
 
+    [[:c3 :D4  :G3  :as4] 4]
+    #[[:c3 :Eb5  :G4  :Bb4] 4]
 
-    #[[:f3 :ab4 :c3 :f3] 4]
-    #[[:f3 :ab4 :c3 :f3]  4]
+    [[:f3 :ab4 :c3 :f3] 4]
+    [[:f3 :ab4 :c3 :f3]  4]
 
     # [[:c3 :eb4 :G3 :Bb4] 4]
    # [[:f3 :ab4 :c4] 4]
-   # [[:bb2 :g3 :d4 :f3] 4]
+    [[:bb2 :g3 :d4 :f3] 4]
 
     #---------------------------------------
 

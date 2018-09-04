@@ -1,8 +1,17 @@
+s = [:c3, :d3, :e3]
+
+midi :c2,127, channel: 0, port: "midisport_2x2_anniv_a", sus: 4
+
+
+stop
+
+
+
 (scale :A3, :major).each {|s|
   s = :d3
   (0..16).each {|c|
     puts c
-    midi s,127, channel: c, port: "midisport_2x2_anniv_a", sus: 2
+#    midi s,127, channel: c, port: "midisport_2x2_anniv_a", sus: 2
     sleep 0.25
     }
   #midi s,10, channel: '1', port: "midisport_2x2_anniv_a"

@@ -1,14 +1,15 @@
 s = [:c3, :d3, :e3]
 
+
+
 def organ(n,v=127)
   midi n,v, channel: '*', port: "midisport_2x2_anniv_a", sus: 8
 end
 
-#midi chord(:c3, :M),1, channel: '*', port: "midisport_2x2_anniv_a", sus: 8
 
+organ :c3
 
 stop
-
 
 
 (scale :A3, :major).each {|s|

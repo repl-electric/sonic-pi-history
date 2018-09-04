@@ -1,5 +1,5 @@
 (scale :A3, :major).each {|s|
-  midi s,1, channel: '*', port: "midisport_2x2_anniv_a", sus: 2
+  midi s,127, channel: '*', port: "midisport_2x2_anniv_a", sus: 2
   #midi s,10, channel: '1', port: "midisport_2x2_anniv_a"
   sleep 1
 }

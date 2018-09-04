@@ -1,1 +1,2 @@
 midi :A3, channel: '*', port: "midisport_2x2_anniv_a"
+midi :A3, channel: '1', port: "midisport_2x2_anniv_a"

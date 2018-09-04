@@ -1,9 +1,8 @@
 s = [:c3, :d3, :e3]
 
 
-
 def organ(n,v=127)
-  midi n,v, channel: '*', port: "midisport_2x2_anniv_a", sus: 8
+  midi n,v, channel: '*', port: "midisport_2x2_anniv_a", sus: 4
 end
 
 

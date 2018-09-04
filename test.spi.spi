@@ -1,2 +1,5 @@
-midi :A3, channel: '*', port: "midisport_2x2_anniv_a"
-midi :A3, channel: '1', port: "midisport_2x2_anniv_a"
+(scale :A3, :majoe).each {|s|
+
+midi s, channel: '*', port: "midisport_2x2_anniv_a"
+midi s, channel: '1', port: "midisport_2x2_anniv_a"
+}

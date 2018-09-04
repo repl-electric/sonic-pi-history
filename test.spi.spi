@@ -1,6 +1,6 @@
 s = [:c3, :d3, :e3]
 
-midi :c2,127, channel: '*', port: "midisport_2x2_anniv_a", sus: 4
+midi :c1,127, channel: '*', port: "midisport_2x2_anniv_a", sus: 4
 
 
 stop

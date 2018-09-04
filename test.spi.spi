@@ -1,9 +1,9 @@
 s = [:c3, :d3, :e3]
 
 
-def organ(n,v=127)
-  midi n,v, channel: '*', port: "midisport_2x2_anniv_a", sus: 4
-end
+# def organ(n,v=127)
+#   midi n,v, channel: '*', port: "midisport_2x2_anniv_a", sus: 4
+# end
 
 
 # organ :c3
@@ -11,7 +11,7 @@ end
 # stop
 
 
-(scale :A3, :major).each {|s|
+(scale :A3, :major, octave: 2).each {|s|
   (0..16).each {|c|
     puts c
     midi s,127, channel: '8', port: "midisport_2x2_anniv_a", sus: 2

@@ -1,4 +1,4 @@
-(scale :A3, :majoe).each {|s|
+(scale :A3, :major).each {|s|
 
 midi s, channel: '*', port: "midisport_2x2_anniv_a"
 midi s, channel: '1', port: "midisport_2x2_anniv_a"

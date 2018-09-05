@@ -7,12 +7,12 @@ sss=(ring "amharic8.wav","arabic1.wav","arabic2.wav","arabic3.wav","arabic4.wav"
 live_loop :name do
   tick
   #with_fx(:echo, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
-    sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.look}", onset: (ing 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14).look, amp: 2, parts: 2
+    sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.look}", onset: (ing 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,).look, amp: 2, parts: 2
   #}
 
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
 
-  sleep 1/4.0
+  sleep 1/8.0
 end

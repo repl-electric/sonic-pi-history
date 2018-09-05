@@ -6,7 +6,7 @@ sss=["amharic8.wav","arabic1.wav","arabic2.wav","arabic3.wav","arabic4.wav","ara
 
 live_loop :name do
   tick
-  sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.choose}", onset: 0, amp: 2
+  sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.choose}", onset: 1, amp: 2
 
   sleep 1/4.0
 end

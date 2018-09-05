@@ -1,6 +1,6 @@
 live_loop :name do
   tick
-  sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/bamun1.wav", onset: 1
+  sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/bamun1.wav", onset: (line 32, 1).look
 
 
   sleep 1

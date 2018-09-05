@@ -8,5 +8,5 @@ live_loop :name do
   tick
   sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.choose}", onset: 0, amp: 2
 
-  sleep 1/2.0
+  sleep 1/4.0
 end

@@ -1,6 +1,6 @@
 live_loop :name, sync: :unsyncable do
   tick
-sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/bamun1.wav", onset: 1
+  sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/bamun1.wav", onset: 1
 
 
   sleep 1

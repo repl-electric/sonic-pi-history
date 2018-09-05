@@ -13,7 +13,7 @@ live_loop :name do
       sample "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/#{sss.choose}", onset: (ing 0, 1, 2,).look, amp: 2, rpitch: -2 if spread(3,7).look
 
 
-  smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
+  #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
 
   sleep 1/4.0

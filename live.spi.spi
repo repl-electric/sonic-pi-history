@@ -1,7 +1,1 @@
-live_loop :name do
-  tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
-
-end
+smp "/Users/josephwilk/Workspace/josephwilk/clojure/speech_accent/waves/bamun1.wav"

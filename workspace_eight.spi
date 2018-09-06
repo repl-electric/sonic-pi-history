@@ -1,4 +1,4 @@
 live_loop :metro do
 sample :ambi_choir
-  sync "/osc/myo/1/emg/"
+  sync "/osc/myo/1/emg/*"
 end

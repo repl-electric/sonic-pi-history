@@ -5,10 +5,10 @@ live_loop :name do
   tick
 #  with_fx(:echo, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
 
-stop
+#stop
   sample Voices[/finni/].look, num_slices: 35, slice: 1, attack: 0.08, amp: 1.2
   #sample Voices[/./].look, num_slices: 50, slice: (line 0, 69,60).look
-  #sample Voices[/./].look #onset: (ing 1, 2,).look, amp: 2, parts: 4
+  #sample Voices[/./].look #onset: (ing 1,2).look, amp: 2, parts: 4
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  ### }
@@ -19,6 +19,10 @@ stop
   sleep 2
 end
 
+
+
+
+## 169.254.81.116
 
 ## 169.254.81.116
 

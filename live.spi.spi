@@ -4,12 +4,37 @@ load_support('play'); use_bpm 127.0
 live_loop :name do
   tick
   #with_fx(:echo, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
-    sample Voices[//].look, onset: (ing 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,).look, amp: 2
+
+
+
+  sample Voices[/./].look, onset: (ing 1,).look, amp: 2
   #}
 
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
 
-  sleep 1/8.0
+  sleep 1/4.0
 end
+
+
+
+
+
+#sensors = SonicPi::OSC::UDPServer.new("169.254.152.232", 7777)
+
+  #use_osc 'localhost',4559
+live_loop :a do
+  use_real_time
+  puts :awaitin
+
+  w = sync "/osc/NGIMU1/Intensity"
+
+  puts w
+
+#  sleep 1
+end
+
+
+"/NGIMU/"
+"/NGIMU/Intensity/" #float

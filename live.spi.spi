@@ -8,7 +8,6 @@ live_loop :a do
 
   w = sync "/osc/agh"
 
-
   puts w
 
   sleep 1

@@ -20,6 +20,12 @@ live_loop :name do
       sample Voices[/./].tick, num_slices: 25, slice: 1, attack: 0.1, amp: 2.7
     end
 
+    if spread(3,7).look
+      sample Voices[/./].tick, num_slices: 25, slice: 1, attack: 0.1, amp: 2.7
+    end
+
+
+
   sleep 1.5
   end
   }

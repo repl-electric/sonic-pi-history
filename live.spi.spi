@@ -9,7 +9,12 @@ live_loop :name do
       #stop
       if spread(4*2,8*2).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
-        sample Voices[/./].look, onset: (ing 1 2 3 4).look
+        at{
+          sample Voices[/./].look, onset: 1
+          sleep 0.5
+          sample Voices[/./].look, onset: 2
+
+        }
       else
         sample Voices[/./].look, num_slices: 24, slice: 23, attack: 0.01, amp: 2.0
       end

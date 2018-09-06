@@ -3,12 +3,12 @@ load_support('play'); use_bpm 127.0
 
 live_loop :name do
   tick
-  with_fx(:echo, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
+#  with_fx(:echo, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
 
 
 
-    sample Voices[/./].look, num_slices: 12, slice: 1 #onset: (ing 1,2).look, amp: 2, parts: 4
-  }
+    sample Voices[/./].look, num_slices: 12, slice: 0 #onset: (ing 1,2).look, amp: 2, parts: 4
+ # }
 
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look

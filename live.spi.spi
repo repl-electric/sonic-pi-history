@@ -8,14 +8,14 @@ live_loop :name do
 #stop
   #ample Voices[/mandarin/].look, num_slices: 65, slice: 1, attack: 0.1, amp: 2.5
   #sample Voices[/./].look, num_slices: 50, slice: (line 0, 69,60).look
-  sample Voices[/./].look, onset: (ing 1, 2, 3,).look, amp: 2
+  sample Voices[/./].look, onset: (ing 1,2,3).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  }
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
-  sleep 1.0/4.0
+  sleep 1.0
 end
 
 

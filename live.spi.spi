@@ -14,6 +14,15 @@ live_loop :name do
       end
 
 
+      if !spread(1,8*2).look
+        #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
+      else
+        sample Voices[/./].look, onset: 1
+      end
+
+
+
+
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end

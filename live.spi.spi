@@ -3,7 +3,7 @@ load_support('play'); use_bpm 127.0
 
 
 live_loop :a do
-  sample Voices[/./][0].look
+  sample Voices[/./][0]
   sleep 1
 end
 

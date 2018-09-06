@@ -15,7 +15,7 @@ live_loop :name do
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
-  sleep 1.0
+  sleep 2.0
 end
 
 

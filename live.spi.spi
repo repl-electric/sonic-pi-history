@@ -1,5 +1,7 @@
 load_support('play'); use_bpm 127.0
 
+use_osc
+
 live_loop :a do
   use_real_time
   puts :awaitin

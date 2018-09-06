@@ -3,7 +3,7 @@ load_support('play'); use_bpm 127.0
 
 live_loop :name do
   tick
-  with_fx(:reverb, room: 200, mix: 0.5, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
+  with_fx(:reverb, room: 200, mix: 0.2, decay: 0.1, phase: (ring 0.25, 0.125, 0.5).look) {
 
 #stop
   sample Voices[/./].look, num_slices: 25, slice: 24, attack: 0.08, amp: 3.2

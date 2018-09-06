@@ -10,7 +10,7 @@ live_loop :name do
       if spread(4,8*4).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
       else
-        sample Voices[/german/].look, num_slices: 20, slice: 1, attack: 0.0, amp: 2.0
+        sample Voices[/german/].look, num_slices: 24, slice: 1, attack: 0.0, amp: 2.0
       end
 
 

@@ -23,7 +23,7 @@ live_loop :name do
     end
 
     if spread(3,7).look
-      sample Voices[/./].tick, num_slices: 25, slice: 1, attack: 0.1, amp: 2.7
+      sample Voices[/./].tick, num_slices: 25, slice: 1, attack: 0.1, amp: 1.7
     end
 
 

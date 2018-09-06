@@ -7,14 +7,14 @@ live_loop :name do
 
 
 
-    sample Voices[/./].look, num_slices: 22, slice: 0 #onset: (ing 1,2).look, amp: 2, parts: 4
+    sample Voices[/./].look, num_slices: 25, slice: 0 #onset: (ing 1,2).look, amp: 2, parts: 4
  # }
 
 
   #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
 
 
-  sleep 1
+  sleep 1/2.0
 end
 
 

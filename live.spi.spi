@@ -8,7 +8,7 @@ live_loop :name do
 stop
   sample Voices[/finni/].look, num_slices: 35, slice: 1, attack: 0.08, amp: 1.2
   #sample Voices[/./].look, num_slices: 50, slice: (line 0, 69,60).look
-  #sample Voices[/./].look #onset: (ing 1,2).look, amp: 2, parts: 4
+  #sample Voices[/./].look #onset: (ing 1, 2,).look, amp: 2, parts: 4
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  ### }
@@ -20,9 +20,8 @@ stop
 end
 
 
-#sensors = SonicPi::OSC::UDPServer.new("169.254.152.232", 7777)
+## 169.254.81.116
 
-  #use_osc 'localhost',4559
 live_loop :a do
   use_real_time
   puts :awaitin

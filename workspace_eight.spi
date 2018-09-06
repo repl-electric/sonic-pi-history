@@ -1,4 +1,4 @@
 live_loop :metro do
 sample :ambi_choir
   s = sync "/osc/*"
-end
+end,

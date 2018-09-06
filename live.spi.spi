@@ -6,7 +6,7 @@ live_loop :a do
 
 #  w = sync "/osc/NGIMU1/Intensity"
 
-  w = sync "/agh"
+  w = sync "/osc/agh"
 
 
   puts w

@@ -7,7 +7,7 @@ live_loop :name do
 
 
 
-    sample Voices[/./].look, num_slices: 25, slice: 0 #onset: (ing 1,2).look, amp: 2, parts: 4
+    sample Voices[/./].look, num_slices: 22, slice: 0 #onset: (ing 1,2).look, amp: 2, parts: 4
  # }
 
 

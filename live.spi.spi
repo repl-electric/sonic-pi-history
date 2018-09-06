@@ -76,7 +76,7 @@ live_loop :a do
 
   puts w
 
-#  sleep 1
+  sleep 1
 end
 
 

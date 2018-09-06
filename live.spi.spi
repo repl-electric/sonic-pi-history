@@ -1,5 +1,21 @@
 load_support('play'); use_bpm 127.0
 
+live_loop :a do
+  use_real_time
+  puts :awaitin
+
+  w = sync "/osc/NGIMU1/Intensity"
+
+  puts w
+
+  sleep 1
+end
+
+
+
+
+
+
 # live_loop :name, sync: :unsyncable do
 #   tick
 #   sample Voices[/./].shuffle.choose, amp: 1.8, attack: 0.1
@@ -68,16 +84,6 @@ live_loop :name do
 
 ## 169.254.81.116
 
-live_loop :a do
-  use_real_time
-  puts :awaitin
-
-  w = sync "/osc/NGIMU1/Intensity"
-
-  puts w
-
-  sleep 1
-end
 
 
 "/NGIMU/"

@@ -1,10 +1,18 @@
 load_support('play'); use_bpm 127.0
 
+# live_loop :name, sync: :unsyncable do
+#   tick
+#   sample Voices[/./].shuffle.choose, amp: 1.8, attack: 0.1
 
-sample Voices[/./].shuffle.choose, amp: 1.8, attack: 0.1
-stop
+#   sleep 1
+# end
 
-stop
+
+
+
+# stop
+
+# stop
 
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
 live_loop :name do

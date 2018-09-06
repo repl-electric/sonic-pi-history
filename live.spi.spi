@@ -1,7 +1,7 @@
 load_support('play'); use_bpm 127.0
 
 
-sample Voices[/./][0]
+sample Voices[/./].first
 stop
 
 stop
@@ -9,7 +9,7 @@ stop
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
 live_loop :name do
   tick
-stop
+    stop
   with_fx(:echo, room: 200, mix: 0.2, decay: 0.5, phase: (ring 0.25, 0.125, 0.5).look) {
 
       #stop

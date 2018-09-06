@@ -1,6 +1,6 @@
 load_support('play'); use_bpm 127.0
 
-with_fx :reverb, mix: 0.5, room: 100{
+with_fx :reverb, mix: 0.5, room: 100, wet: 0.5{
 live_loop :name do
   tick
 

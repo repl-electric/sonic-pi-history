@@ -1,9 +1,11 @@
 load_support('play'); use_bpm 127.0
 
 
-
+sample Voices[/./][0]
+stop
 live_loop :a do
-  sample Voices[/./][0]
+
+
   sleep 1
 end
 

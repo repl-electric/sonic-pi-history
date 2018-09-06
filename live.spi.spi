@@ -8,9 +8,9 @@ live_loop :name do
 #stop
   #sample Voices[/finni/].look, num_OBslices: 35, slice: 1, attack: 0.08, amp: 1.2
   #sample Voices[/./].look, num_slices: 20, slice: (line 0, 19,20).look
-  sample Voices[/./].look #onset: (ing 1,2).look, amp: 2, parts: 4
+  #sample Voices[/./].look #onset: (ing 1,2).look, amp: 2, parts: 4
 
-#  sample Voices[/./].look num_slices: 335, slice: 1
+  sample Voices[/./].look num_slices: 335, slice: 1
  # }
 
 

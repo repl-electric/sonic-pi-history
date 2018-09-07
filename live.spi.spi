@@ -22,7 +22,7 @@ live_loop :name do
       if !spread(8,8*1).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
         at{
-          #sample Voices[/./].look, onset: 1
+          sample Voices[/./].look, onset: 1
           sleep 0.5
           ##sample Voices[/./].look, onset: 2
         }
@@ -32,7 +32,7 @@ live_loop :name do
         #sample Voices[/./].look, num_slices: 20, slice: 0, attack: 0.08, amp: 0.25
 
         #sample Voices[/./].shuffle.look, num_slices: 36, slice: 0, attack: 0.1, amp: 0.3
-        sample Voices[/./].shuffle.look, onset: (ing 1 2 3 gggyyyyyyyyyyyyyyyy=9).look, amp: 0.5
+        sample Voices[/./].shuffle.look, onset: (ing 1 2 3).look, amp: 0.5
       end
 
 

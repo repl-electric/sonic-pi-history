@@ -42,7 +42,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           amp_ratio=1.5
           yes{
           if spread(3,8).look
-            sample Voices[/arabic/].shuffle.look, onset: (ing -1).look, amp: (ing 0.5 0.4 0.45).look*amp_ratio, pan: -1,
+            sample Voices[/ara/].shuffle.look, onset: (ing -1).look, amp: (ing 0.5 0.4 0.45).look*amp_ratio, pan: -1,
             attack: 0.1, decay: 0.1, pan: 0.5
           end
           if spread(7,11).look

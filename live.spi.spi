@@ -22,7 +22,7 @@ with_fx :reverb, mix: 0.1, room: 200{
 
 sleep 2
 tick
-set_mixer_control! lpf: 0, lpf_slide: 1
+set_mixer_control! lpf: 0, lpf_slide: 2
 
 
 

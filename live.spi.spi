@@ -31,14 +31,14 @@ live_loop :name do
         #sample Voices[/./].look, num_slices: 24*2, slice: 2, attack: 0.01, amp: 1.0
         #sample Voices[/./].look, num_slices: 20, slice: 0, attack: 0.08, amp: 0.25
 
-        sample Voices[/./].shuffle.look, num_slices: 45, slice: 0, attack: 0.02, amp: 0.55
+        sample Voices[/./].shuffle.look, num_slices: 45, slice: 0, attack: 0.02, amp: 1.05
       end
 
 
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end
-  #sample Voices[/english/].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 2
+  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  }

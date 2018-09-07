@@ -7,7 +7,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
         #stop
         if spread(1,8).look
           s = spread(2,3).rot(-1).look
-          #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
+          sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 0.4
           at{
             # sample Voices[/./].look, onset: -1, rate: -1, rpitch: 0
             sleep 0.5

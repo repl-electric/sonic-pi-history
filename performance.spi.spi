@@ -23,7 +23,10 @@ world time: 1.0
 #cam :cube
 #zoomout
 
-overclock_on :A3,80, sus: 12
+overclock_on :A3,100, sus: 12
+
+
+
 
 overclock_cc oct: (ing 0 -12 0 19).look
 

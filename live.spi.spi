@@ -12,7 +12,7 @@ live_loop :name do
       if spread(1,8).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
         at{
-          sample Voices[/./].look, onset: -1, rate: -1, rpitch: -12
+          sample Voices[/./].look, onset: -1, rate: -1, rpitch: 0
           sleep 0.5
           sample Voices[/./].look, onset: 29, rpitch: -12  #29   20
         }
@@ -22,14 +22,14 @@ live_loop :name do
         #sample Voices[/./].look, num_slices: 20, slice: 0, attack: 0.08, amp: 0.25
 
         #sample Voices[/./].shuffle.look, num_slices: 36, slice: 0, attack: 0.1, amp: 0.3
-  #      sample Voices[/./].shuffle.look, onset: (ing 1, 2, 3,).look, amp: 0.5
+  #      sample Voices[/./].shuffle.look, onset: (ing 1 2 3).look, amp: 0.5
       end
 
 
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end
-  #sample Voices[/english/].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 2
+  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
     }

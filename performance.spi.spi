@@ -24,7 +24,7 @@ world time: 1.0
 
 
 
-stop
+#stop
 #cam :cube
 #fx reverb: 1.00, tube: 0.60
 #flop_cc motion: 0.30,  drive: 0.00

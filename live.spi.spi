@@ -5,7 +5,7 @@ set_volume! 1.1
 #stop
 
 
-sample Voices[/./][0], finish: 0.3. pan: -1
+sample Voices[/./][0], finish: 0.3, pan: -1
 sample Voices[/./][-1], finish: 0.3, pan: 1
 
 

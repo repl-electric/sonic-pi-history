@@ -1,5 +1,10 @@
 load_support('play'); use_bpm 127.0
 set_volume! 1.1
+
+Voices[/arabic/].each {|v| load_sample v }
+stop
+
+
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
   live_loop :name do
     tick

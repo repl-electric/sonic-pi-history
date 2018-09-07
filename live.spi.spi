@@ -5,7 +5,7 @@ load_support('play'); use_bpm 127.0
 
 #END OF THE VOICES
 
-no{
+yes{
 with_fx :reverb, mix: 0.2, room: 200{
   with_fx :level, amp: 0.4{
     sample Voices[/./][1399], finish: 0.195, pan: -1, amp: 12.5
@@ -17,7 +17,7 @@ with_fx :reverb, mix: 0.2, room: 200{
 }
 
 }
-#stop
+stop
 
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
   live_loop :name do

@@ -1,7 +1,7 @@
 load_support('play'); use_bpm 127.0
 set_volume! 1.1
 
-Voices[/./].each {|v| load_sample v }
+Voices[/./].each {|v| load_sample v; sleep 0.5 }
 stop
 
 

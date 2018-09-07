@@ -22,7 +22,7 @@ live_loop :name do
       if spread(1,8).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
         at{
-          sample Voices[/./].look, onset: -1, rate: -1, rpitch: 2
+          sample Voices[/./].look, onset: -1, rate: -1, rpitch: 4
           sleep 0.5
           sample Voices[/./].look, onset: 29  #29   20
         }

@@ -33,12 +33,12 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           if spread(1,2).look
             #ending
             p = with_fx(:pitch_shift, window_size: 0.01, time_dis: 0.01, mix: 1.0, pitch_dis: (ramp 0.0, 1, 512).tick(:ramp)){
-#              sample Voices[/./].shuffle.look, amp: 0.3
+              sample Voices[/./].shuffle.look, amp: 0.3, pan: (line -1, 1, 256).look
 
             }
           end
           amp_ratio=1.9
-          yes{
+          no{
           if spread(3,8).look
             sample Voices[/./].shuffle.look, onset: (ing -1).look, amp: (ing 0.5 0.4 0.45).look*amp_ratio, pan: -1,
             attack: 0.1, decay: 0.1, pan: 0.5

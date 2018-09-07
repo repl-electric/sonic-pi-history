@@ -19,7 +19,7 @@ live_loop :name do
   with_fx(:echo, room: 200, mix: 0.2, decay: 0.5, phase: (ring 0.25, 0.125, 0.5).look) {
 
       #stop
-      if !spread(4*2,8*1).look
+      if !spread(8,8*1).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
         at{
           #sample Voices[/./].look, onset: 1
@@ -38,7 +38,7 @@ live_loop :name do
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end
-  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
+  #sample Voices[/english/].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  }

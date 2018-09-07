@@ -4,11 +4,11 @@ set_volume! 1.1
 #Voices[/./].each {|v| load_sample v; sleep 0.5 }
 #stop
 
-
+with_fx :level, amp: 0.5{
 sample Voices[/./][1399],  finish: 0.19, pan: -1, amp: 15.5
 sample Voices[/./][500],  finish: 0.19, pan: 0, amp: 1
 sample Voices[/./][-1], finish: 0.19, pan: 1, amp: 0.8*1
-
+}
 
 stop
 

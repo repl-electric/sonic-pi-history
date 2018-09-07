@@ -1,8 +1,8 @@
 load_support('play'); use_bpm 127.0
 set_volume! 1.1
 
-Voices[/./].each {|v| load_sample v; sleep 0.5 }
-stop
+#Voices[/./].each {|v| load_sample v; sleep 0.5 }
+#stop
 
 
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{

@@ -18,7 +18,6 @@ with_fx :reverb, mix: 0.1, room: 200{
 }
 
 
-
 set_mixer_control! lpf: 130, lpf_slide: 0
 sleep 9
 tick

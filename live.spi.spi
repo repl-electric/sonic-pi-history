@@ -1,7 +1,66 @@
-live_loop :name do
-  tick
-  sleep 1
- # shader :shader, "wave.glsl", "rope.vert", "points", 20000
-#  shader :iRotate, (ring 0,1).look
+load_support('play'); use_bpm 127.0
 
-end
+# live_loop :name, sync: :unsyncable do
+#   tick
+#   sample Voices[/./].shuffle.choose, amp: 1.8, attack: 0.1
+
+#   sleep 1
+# end
+
+#------------------------------
+#3-4mins. 3:30
+#-----------------------------
+
+with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
+live_loop :name do
+
+    tick
+#    stop
+  with_fx(:echo, room: 200, mix: 0.2, decay: 0.5, phase: (ring 0.25, 0.125, 0.5).look) {
+
+      #stop
+      if spread(4*2,8*2).look
+        #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
+        at{
+          sample Voices[/./].look, onset: 1
+          sleep 0.5
+          sample Voices[/./].look, onset: 2
+        }
+      else
+        sample Voices[/./].look, num_slices: 24*2, slice: 10, attack: 0.01, amp: 2.0
+      end
+
+
+      if spread(1,4).look
+        #sample Voices[/./].look, num_slices: 25, slice: 24
+      end
+  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
+
+  #sample Voices[/./].look num_slices: 335, slice: 1
+ }
+
+  #smp Mountain[/subkick/,1], amp: 2 if spread(7,11).look
+
+    # if spread(7,11).look
+    #   sample Voices[/./].tick, num_slices: 25, slice: 1, attack: 0.1, amp: 1.7
+    # end
+
+    # if spread(3,7).look
+    #   sample Voices[/./].tick, num_slices: 25, slice: 24, attack: 0.01, amp: 1.7
+    # end
+
+  sleep 1.0
+  end
+  }
+
+
+
+
+## 169.254.81.116
+
+## 169.254.81.116
+
+
+
+"/NGIMU/"
+"/NGIMU/Intensity/" #float

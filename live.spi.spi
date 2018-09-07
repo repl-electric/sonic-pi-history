@@ -5,7 +5,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
 live_loop :name do
     tick
     with_fx(:echo, room: 200, mix: 0.2, decay: 0.5, phase: (ring 0.25, 0.125, 0.5).look) {
-      with_bpm 80 {
+      with_bpm 60 {
 
       #stop
       if spread(1,8).look

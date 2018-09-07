@@ -17,7 +17,13 @@ with_fx :reverb, mix: 0.1, room: 200{
   }
 }
 
-set_mixer_control! lpf: 135
+
+sleep 2
+
+loop do
+  tick
+  set_mixer_control! lpf: (ing 135, 0, 256).look
+end
 
 
 

@@ -25,6 +25,9 @@ world time: 1.0
 
 overclock_on :A3,80, sus: 12
 
+overclock_cc oct: (ing 0 -12 0 19).look
+
+
 #stop
 #cam :cube
 #fx reverb: 1.00, tube: 0.60

@@ -38,7 +38,7 @@ live_loop :name do
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end
-  #sample Voices[/english/].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 2
+  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
  }
@@ -53,7 +53,7 @@ live_loop :name do
     #   sample Voices[/./].tick, num_slices: 25, slice: 24, attack: 0.01, amp: 1.7
     # end
 
-  sleep 1.0
+  sleep 1.0/2.0
   end
   }
 

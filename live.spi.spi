@@ -32,7 +32,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
 
           if spread(1,2).look
             #ending
-            with_fx :wobble, phase: 100 {
+            with_fx :pitch_shift, time_window: 1 {
               sample Voices[/./].shuffle.look, amp: 0.5
               }
           end

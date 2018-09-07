@@ -15,6 +15,9 @@ live_loop :name do
           sample Voices[/./].look, onset: -1, rate: -1, rpitch: 0
           sleep 0.25
           sample Voices[/./].look, onset: 29, rpitch: -3  #29   20
+          sleep 0.25
+          sample Voices[/./].look, onset: 29, rpitch: -3  #29   20
+
         }
       else
         #sample Voices[/./].look, num_slices: 24*2, slice: 10, attack: 0.01, amp: 1,.0

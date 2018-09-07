@@ -24,7 +24,7 @@ loop do
 sleep 2
   tick
   set_mixer_control! lpf: (ing 135, 0, 256).look
-  sleep 0.125
+  sleep 0.25
 end
 
 

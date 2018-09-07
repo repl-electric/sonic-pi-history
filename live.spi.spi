@@ -5,7 +5,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
 live_loop :name do
     tick
     with_fx(:echo, room: 200, mix: 0.2, decay: 0.5, phase: (ring 0.25, 0.125, 0.5).look) {
-      with_bpm 127*0.5 {
+      with_bpm 127*1.0 {
 
       #stop
       if spread(1,8).look
@@ -26,14 +26,14 @@ live_loop :name do
         #sample Voices[/./].look, num_slices: 20, slice: 0, attack: 0.08, amp: 0.25
 
         #sample Voices[/./].shuffle.look, num_slices: 36, slice: 0, attack: 0.1, amp: 0.3
-        sample Voices[/./].shuffle.look, onset: (ing 1, 2, 3,).look, amp: 0.5, attack: 0.1
+        sample Voices[/./].shuffle.look, onset: (ing 1 2 3).look, amp: 0.5, attack: 0.1
       end
 
 
       if spread(1,4).look
         #sample Voices[/./].look, num_slices: 25, slice: 24
       end
-  #sample Voices[/english/].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 2
+  #sample Voices[/english/].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 2
 
   #sample Voices[/./].look num_slices: 335, slice: 1
     }

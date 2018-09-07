@@ -53,7 +53,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
         #   sample Voices[/./].tick, num_slices: 25, slice: 24, attack: 0.01, amp: 1.7
         # end
       }
-      sleep 1.0/4.0
+      sleep 1.0/2.0
     }
   end
 }

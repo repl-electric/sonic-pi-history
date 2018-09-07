@@ -31,7 +31,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           #sample Voices[/./].shuffle.look, onset: (ing 1 2 3 4 5).look, amp: 0.35, attack: 0.08, decay: 0.1
 
           if spread(1,2).look
-            #sample Voices[/./].shuffle.look, amp: 1.5
+            sample Voices[/./].shuffle.look, amp: 1.5
           end
           amp_ratio=2.9
           if spread(3,8).look

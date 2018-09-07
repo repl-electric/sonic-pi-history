@@ -22,12 +22,13 @@ live_loop :name do
       if spread(4*2,8*2).look
         #sample Voices[/./].look, num_slices: 65, slice: rand_i(65), attack: 0.01, amp: 1.7
         at{
-          sample Voices[/./].look, onset: 1
+          #sample Voices[/./].look, onset: 1
           sleep 0.5
-          sample Voices[/./].look, onset: 2
+          ##sample Voices[/./].look, onset: 2
         }
       else
-        sample Voices[/./].look, num_slices: 24*2, slice: 10, attack: 0.01, amp: 1.0
+        #sample Voices[/./].look, num_slices: 24*2, slice: 10, attack: 0.01, amp: 1,.0
+        sample Voices[/./].look, num_slices: 24*2, slice: 1, attack: 0.01, amp: 1,.0
       end
 
 

@@ -17,7 +17,7 @@ with_fx :reverb, mix: 0.1, room: 200{
   }
 }
 
-set_mixer lpf: 0.2
+set_mixer_control! lpf: 0.2
 
 
 stop

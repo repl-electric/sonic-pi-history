@@ -7,7 +7,7 @@ load_support('play'); use_bpm 127.0
 #set_volume! 1
 
 set_volume! 1
-stop
+#stop
 no{
 
   #stop

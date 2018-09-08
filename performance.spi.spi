@@ -1,5 +1,7 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
 
+scene0
+
 eq hi: 0.00
 eq hi: 0.85
 eq lo: 0.00
@@ -10,6 +12,7 @@ eq lo: 0.00
 #camlogo logo: 0, off: 1
 
 cam4
+
 stop
 
 #camend

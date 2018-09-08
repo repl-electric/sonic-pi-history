@@ -59,7 +59,7 @@ stop
   end
 end
 
-alivecol  2
+#alivecol  2
 
 #alivecol 0.2
 
@@ -110,8 +110,8 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   end
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
   cpu2 note
-  pf=2.8
-    i=(method :callstack)
+  pf=4.8
+  i=(method :callstack)
   at{
     i.call(score[0], 60*pf, sus: 4)
     sleep 0.5

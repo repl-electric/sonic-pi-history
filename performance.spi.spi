@@ -1,7 +1,13 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
 scene3
 scene1
+
+
+alivecol 0.1
 stop
+
+
+
 eq hi: 0.00
 eq hi: 0.85
 eq lo: 0.00

@@ -23,13 +23,14 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     future_note=score.look(offset: 1)
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
-    zero_x
+   # zero_x
 
     chd = find_chord future_note
 
     sleep 1/2.0
 
     if spread(1,2).rot(1).look
+      with_transpose 0 { zero chd[1],1,sus:12 }
       with_transpose 0 { zero chd[1],1,sus:12 }
 
     else

@@ -8,6 +8,7 @@ set_volume! 1
 
 no{
   set_volume! 0
+  sleep 0.25
   with_fx :reverb, mix: 0.2, room: 200{
     with_fx :level, amp: 1.5{
       sample Voices[/./][1399], finish: 0.195, pan: -1, amp: 12.5

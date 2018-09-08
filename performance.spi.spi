@@ -9,13 +9,13 @@ bitsea_cc octave: 0.55  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 electric 20
 #invcol 0
 
-zero_on :a4
+#zero_on :a4
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   #  corrupt :a0, motion: 0.8
 
   score=(ing
-    [:a2, :cs4, :e3], Zz,
+    [:a2, :cs4, :e3], [:fs4],
     [:cs2, :e4, :gs3], Zz,
 
     ).look

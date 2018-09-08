@@ -4,7 +4,7 @@ load_support('play'); use_bpm 127.0
 #set_volume! 0; stop
 yes{
   set_volume! 1
-  with_fx :reverb, mix: 0.3, room: 200{
+  with_fx :reverb, mix: 0.4, room: 200{
     with_fx :level, amp: 1.5{
       sample Voices[/./][1399], finish: 0.195, pan: -1, amp: 12.5
       sample Voices[/./][800],  finish: 0.195, pan: -0.25, amp: 1.6

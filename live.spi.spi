@@ -6,9 +6,12 @@ load_support('play'); use_bpm 127.0
 #END OF THE VOICES
 #set_volume! 1
 
-yes{
+no{
   set_volume! 0
+  stop
+
   sleep 0.25
+  set_volume! 0
   with_fx :reverb, mix: 0.2, room: 200{
     with_fx :level, amp: 1.5{
       sample Voices[/./][1399], finish: 0.195, pan: -1, amp: 12.5
@@ -47,7 +50,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           #sample Voices[/./].look, num_slices: 20, slice: 0, attack: 0.08, amp: 0.25
 
           #sample Voices[/./].shuffle.look, num_slices: 36, slice: 0, attack: 0.1, amp: 0.3
-          #sample Voices[/./].shuffle.look, onset: (ing 1, 2, 3, 4, 5,).look, amp: 0.35, attack: 0.08, decay: 0.1
+          #sample Voices[/./].shuffle.look, onset: (ing 1 2 3 4 5).look, amp: 0.35, attack: 0.08, decay: 0.1
 
           if spread(1,3).look
             #ending
@@ -61,11 +64,11 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           amp_ratio=1.9
           yes{
           if spread(3,8).look
-            sample Voices[/manda/].shuffle.look, onset: (ing -1,).look, amp: (ing 0.5, 0.4, 0.45,).look*amp_ratio, pan: -1,
+            sample Voices[/manda/].shuffle.look, onset: (ing -1).look, amp: (ing 0.5 0.4 0.45).look*amp_ratio, pan: -1,
             attack: 0.1, decay: 0.1, pan: 0.5
           end
           if spread(7,11).look
-            sample Voices[/fren/].shuffle.look, onset: (ing -1,).look, amp: (ing 0.8, 0.7, 0.82,).look*amp_ratio, pan: 1,
+            sample Voices[/fren/].shuffle.look, onset: (ing -1).look, amp: (ing 0.8 0.7 0.82).look*amp_ratio, pan: 1,
             attack: 0.1, decay: 0.1
           end
             }
@@ -74,7 +77,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
         if spread(1,4).look
           #sample Voices[/./].look, num_slices: 25, slice: 24
         end
-        #sample Voices[//].look, onset: (ing 1, 2, 3, 4, 5, 6, 7, 8,).look, amp: 0.5
+        #sample Voices[//].look, onset: (ing 1,2,3,4,5,6,7,8).look, amp: 0.5
 
         #sample Voices[/./].look num_slices: 335, slice: 1
 

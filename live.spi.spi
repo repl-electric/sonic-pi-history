@@ -17,7 +17,7 @@ with_fx :reverb, mix: 0.2, room: 200{
 }
 
 }
-
+stop
 
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
   live_loop :name do

@@ -7,7 +7,7 @@ eq lo: 0.00
 
 
 #init!
-camlogo
+camlogo logo: 0
 stop
 
 #camend

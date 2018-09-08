@@ -28,6 +28,9 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     chd = find_chord future_note
 
     sleep 1/2.0
+
+
+
     sleep 1/2.0
     sleep 1/4.0
   end

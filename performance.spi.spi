@@ -6,9 +6,9 @@ eq lo: 0.00
 
 
 
+init!
 
-
-camend
+#camend
 viz breath: 1.0
 viz shard: 1.0
 alive rotate: 1.0

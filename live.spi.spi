@@ -19,7 +19,7 @@ with_fx :reverb, mix: 0.2, room: 200{
 }
 
 
-set_volume 0
+set_volume! 0
 
 
 with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{

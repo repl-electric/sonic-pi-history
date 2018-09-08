@@ -1,7 +1,7 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
 #init!
 camlogo logo: 1
-null :cs1, sus: 2
+null :cs1, sus: 12
 
 
 

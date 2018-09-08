@@ -11,7 +11,13 @@ electric 10
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-  corrupt :a0, motion: 0.8
+  #  corrupt :a0, motion: 0.8
+
+  score=(ing
+    [:a2 :cs4 :e3] Zz
+    ).look
+
+
   shard 0.1
   sleep 1
   sleep 1

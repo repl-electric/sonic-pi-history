@@ -49,7 +49,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
             #ending
             yes{
               p = with_fx(:pitch_shift, window_size: 0.01, time_dis: 0.01, mix: 1.0, pitch_dis: (ramp 0.0, 1.0, 512*2).tick(:gogssso)){
-                sample Voices[/./].shuffle.look, amp: 0.9, pan: (line -1, 1, 256).look
+                sample Voices[/./].shuffle.look, amp: 1.2, pan: (line -1, 1, 256).look
 
               }
               }

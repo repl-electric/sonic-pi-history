@@ -6,7 +6,7 @@ load_support('play'); use_bpm 127.0
 #END OF THE VOICES
 set_volume! 1
 
-yes{
+no{
   set_volume! 0
   with_fx :reverb, mix: 0.2, room: 200{
     with_fx :level, amp: 1.5{

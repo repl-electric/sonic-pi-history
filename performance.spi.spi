@@ -99,7 +99,12 @@ live_loop :fall_into_your_screen, sync: :unsyncable do; tick
     qbitsea n, 1.0*(ing 80 70 85 70).look(:in), mode: 0, cutoff: 1.0, sus: 2.5
   }
   if score.length > 1
-    exception root(score), atk: 0.01, more: 0.8, sus: 2
+    at{
+      exception root(score), atk: 0.01, more: 0.8, sus: 2
+      sleep 0.5
+            exception root(score), atk: 0.01, more: 0.8, sus: 2
+
+      }
   end
   with_transpose -12 {cpu2 score[1], 60, sus: 2 }
   cpu2 note

@@ -4,14 +4,13 @@ load_support('play'); use_bpm 127.0
 #stop
 
 #END OF THE VOICES
-#set_volume! 1
+set_volume! 1
 
-yes{
-live_loop :name do
-  sleep 1
-  end
 
-  set_volume! 0
+
+
+no{
+
   #stop
 
   sleep 1

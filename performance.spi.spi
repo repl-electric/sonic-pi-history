@@ -1,6 +1,6 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
-init!
-#camlogo
+#init!
+camlogo
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
 
@@ -12,7 +12,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

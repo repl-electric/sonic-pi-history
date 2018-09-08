@@ -4,7 +4,7 @@ load_support('play'); use_bpm 127.0
 #stop
 
 #END OF THE VOICES
-#set_volume! 1
+set_volume! 1
 
 no{
   set_volume! 0

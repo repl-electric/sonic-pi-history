@@ -45,7 +45,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
           #sample Voices[/./].shuffle.look, num_slices: 36, slice: 0, attack: 0.1, amp: 0.3
           #sample Voices[/./].shuffle.look, onset: (ing 1 2 3 4 5).look, amp: 0.35, attack: 0.08, decay: 0.1
 
-          if spread(1,3).look
+          if spread(1,2).look
             #ending
             yes{
               p = with_fx(:pitch_shift, window_size: 0.01, time_dis: 0.01, mix: 1.0, pitch_dis: (ramp 0.0, 1.0, 512*1).tick(:gogssso)){

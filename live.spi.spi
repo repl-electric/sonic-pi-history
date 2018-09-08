@@ -53,7 +53,7 @@ with_fx :reverb, mix: 0.25, room: 100, wet: 0.5, decay: 0.9{
               }
               }
           end
-          amp_ratio=0.8
+          amp_ratio=1.8
           yes{
           if spread(3,8).look
             sample Voices[/manda/].shuffle.look, onset: (ing -1).look, amp: (ing 0.5 0.4 0.45).look*amp_ratio, pan: -1,

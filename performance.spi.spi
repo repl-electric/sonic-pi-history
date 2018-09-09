@@ -1,5 +1,18 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
 
+camend
+viz breath: 1.0
+viz shard: 1.0
+alive rotate: 1.0
+128.times{
+  electric
+  sleep 2.0
+  viz :alive, spike: 1.0
+  alive color: (rand+0.2*0.8)*-1.0
+}
+stop
+
+
 #camlogo logo: 1, off: 1
 #null :e2
 #bitsea_on :cs4
@@ -70,9 +83,9 @@ alivecol 0.3
 
 no{
   qbitsea_cc oct: 0.50
-  qbitsea_cc drive: 0.27
+  qbitsea_cc drive: 1.00
   qbitsea_cc charge: 0.50
-  qbitsea_cc fm: 0.32
+  qbitsea_cc fm: 0.53
   qbitsea_cc wav: 0.01
   qbitsea_cc wav_amp: 0.30
   qbitsea_cc atk: 0.83

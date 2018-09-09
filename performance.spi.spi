@@ -66,7 +66,7 @@ electric 20
 
 
 alivecol 0.3
-bitsea_on :b2
+
 
 no{
   qbitsea_cc oct: 0.50
@@ -87,6 +87,7 @@ no{
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
+bitsea_on :b2
   shard 0.3
   score=(ing
     [:b2  :d5 :fs3]        Zz

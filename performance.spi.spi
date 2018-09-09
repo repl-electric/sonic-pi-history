@@ -21,7 +21,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     operator note
     callstack note,(ing 70 65 60).look, sus: 2
     shard 0.2
-    zero_x
+    #zero_x
 
     chd = find_chord future_note
     sleep 1/2.0

@@ -5,7 +5,29 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 #bitsea_on :cs4
 #invcol 0
 
-zero_on :a4
+#zero_on :a4
+
+
+live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
+  live_loop :fall_into_your_screen {stop}
+  dcam3
+  with_bpm 45.125 do #63.5
+    score=(ing
+      D4 CS4 _ A3 _ E4 _ A4 A4 A4 A4 A4
+
+      )
+    note=score.look
+    future_note=score.look(offset: 1)
+    operator note
+    callstack note,(ing 70 65 60).look, sus: 2
+    zero_x
+
+    sleep 1/2.0
+    sleep 1/2.0
+    sleep 1/4.0
+  end
+end
+
 
 
 bitsea_cc motion: 0.37  #╟▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╢
@@ -55,6 +77,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
   end
 end
 live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
+
   kick_machine k=(ing
     [KT[1]] _ _ _  TS[8] _ _ _  K3 _ _ _   _ _ _ _
     K1    _ _ _   _ _ _ _      K3 _ _ _   _ _ _ _
@@ -67,7 +90,7 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
     K1    _ _ _   _ _ _ _      K3 _ %l{TC[6]} _   _ _ _ _
     ).map{|c| look % 4 == 0 ? c : c}.look, def: 8, accent: 1.5
 
-  no{
+  yes{
     if k && spread(1,64).rot(0).look
       bitsea :fs4, sus: 4.0
     end

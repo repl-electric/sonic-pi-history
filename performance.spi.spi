@@ -32,7 +32,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
       tick
       pp=(ing
 
-        D1 _ _ D1    _ _
+        D1 _ _ D1    _ _ _ _
+        D1 _ _ D1    _ _ _ _
 
         ).look
       smp_dust(pp)

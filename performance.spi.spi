@@ -33,7 +33,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        D1 D1 D1 _ _ _
+        D1 _ D1 _ _ _
         D1 _ D1 _ _ _
 
         ).look

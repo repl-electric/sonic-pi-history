@@ -57,7 +57,7 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
   end
 end
 
-
+alivecol 0.2
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   kick_machine K1

@@ -1,8 +1,8 @@
 ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fall_into_your_screen/support"; load "#{ROOT}/midi.rb";load "#{ROOT}/init.rb";use_bpm 127*0.5
 
 camlogo logo: 1
-null :e2
-bitsea_on :a2
+#null :e2
+bitsea_on :e3
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick

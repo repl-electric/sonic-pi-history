@@ -22,7 +22,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         ).look
       smp_dust(pp)
       if pp
-        dterrain (line 0.5, 2.0, 256).look+rand*0.2
+        dterrain (line 0.5, 1.2, 256).look+rand*0.2
       end
 
       sleep 1/8.0

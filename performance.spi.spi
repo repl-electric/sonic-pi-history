@@ -12,7 +12,7 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick0
       pp=(ing
-        _
+        _,
         ).look
       smp_dust(pp)
 

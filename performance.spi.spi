@@ -5,8 +5,6 @@ ROOT="/Users/josephwilk/Workspace/repl-electric/adventures-in-algorhythm/you_fal
 bitsea_on :e3
 
 
-
-
 focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
   corrupt :a0, motion: 0.2
@@ -18,7 +16,9 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
     8.times{
       tick
       pp=(ing
-        _
+        _ _ _ _    _ _ _ _    _ _ _ _   _ _ _ _
+        _ _ _ _    _ _ D1 _    _ _ _ _   _ _ _ _
+
         ).look
       smp_dust(pp)
 

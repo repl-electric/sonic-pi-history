@@ -164,7 +164,8 @@ live_loop :by_the_light_of_the_terminal, sync: :unsyncable do
         ).look
       smp_dust(pp)
       if pp
-        dterrain (line 0.5, 2.2, 256).tick(:gpog)+rand*0.2
+        dterrain (line 0.5, 1.0, 256).tick(:sigh)+rand*0.2
+
       end
       mt mt_pat.look.look, accent=(line 75, 127, 16*4).look, 120
       mt_cc morph: ((line 0.0, 1.1,16*16*2)+(line 1.1, 0.0, 16*16*2)).look
@@ -244,3 +245,4 @@ live_loop :its_all_just_text_in_a_file, sync: :unsyncable do; tick
   sleep 1/8.0
 end
 live_loop(:unsyncable) do; sleep 1.0 end
+one

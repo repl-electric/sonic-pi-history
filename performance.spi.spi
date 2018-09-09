@@ -23,7 +23,17 @@ live_loop :playing_piano_through_a_keyhole, sync: :hit do;tick
     shard 0.2
     zero_x
 
+    chd = find_chord future_note
     sleep 1/2.0
+
+    if spread(1,2).rot(1).look
+      with_transpose 0 { zero chd[1],1,sus:12 }
+
+    else
+
+    end
+
+
     sleep 1/2.0
     sleep 1/4.0
   end

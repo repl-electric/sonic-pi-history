@@ -74,7 +74,7 @@ no{
 }
 
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-bitsea :a0
+bitsea :a1
   kick_machine K1
   score=(ing
     [:b2  :d5 :fs3]        Zz

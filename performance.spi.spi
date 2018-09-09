@@ -70,7 +70,7 @@ alivecol 0.3
 
 #focus
 live_loop :fall_into_your_screen, sync: :unsyncable do; tick
-
+  shard 0.3
   score=(ing
     [:b2  :d5 :fs3]        Zz
     [:fs2  :a4 :cs3]       Zz

@@ -1,0 +1,72 @@
+load_support('workingtitle'); use_bpm 127.0
+#cminor
+#C, D, E♭, F, G, A♭, and B♭.
+
+live_loop :pattern, sync: :unsyncable do
+  tick
+  score = (ing
+    [[:c3 :eb4  :G3  [:g4  :ab4].choose] 2]
+    [[:c3 :eb4  :Gs3   [:Bb4].choose] 2]
+    [[:f3 :ab4 :c4   [:eb3 _].choose] 2]
+    [[:Ab3 [:C5 :bb4].choose :eb4] 2]
+    [[:ab3 :Bb3 :eb4 ] 8]
+
+#     #Cm / Ab / Bb	Cm / Eb / Bb / Ab	Cm / Bb / Fm / Ab	Cm / Gm / Ab / Bb	Cm / Gm / Bb / Fm	Cm / Gm / Fm / Bb
+
+     [[:c3  :Eb4  :G3 ] 2]
+     [[:c3  :Eb4  :Gs3 ] 4]
+
+     [[:G3  :Bb4 :d3] 2]
+
+     [[:Ab3 [:C5 :bb4].choose :eb4] 2]
+
+     [[:g3 :bb4 :d3] 2]
+     [[:g3 :bb4 :d3] 4]
+
+
+    # [[:c3  :eb4 :g3]  2]
+    # [[:eb3  :g4 :bb3] 8]
+    # [[:c3 :eb4 :g3]   2]
+
+    # [[:c3  :eb4 :g3]  2]
+    # [[:f3  :ab4 :c3]  4]
+    # [[:c3 :eb4 :g3]   2]
+
+#    i – VII – VI – V7
+
+    # [[:c3  :eb4 :g3]  2]
+    # [[:bb3 :d4 :f4]  2]
+    # [[:ab3 :c4 :eb4]  2]
+    # [[:g3  :bb4 :d4 :f5]  2]
+
+
+
+    ).look
+  zz = score[-1]
+  score = score[0]
+  puts score
+
+  with_transpose 0{
+    #midi score[0], 80, channel: 4, sus: 1.0
+  }
+
+  midi score[0], channel: 1
+
+  midi score[2],42, channel: 2
+
+  with_swing((line 0.0, -0.1, 32).look){
+    midi score[1], 80, channel: 5, sus: zz / 2.0
+  }
+  sleep zz / 2.0
+
+  with_swing((line 0.0, -0.1, 32).look){
+    midi score[3], 70, channel: 6, sus: (zz / 2.0 / 2.0)
+  }
+
+  sleep (zz / 2.0 / 2.0)
+  with_swing((line 0.0, -0.1, 32).look){
+    midi score[-1], 45, channel: 2, sus:  (zz / 2.0 / 2.0)
+  }
+  sleep zz / 2.0 / 2.0
+end
+live_loop(:unsyncable) do; sleep 1.0;end

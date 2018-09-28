@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 live_loop :test, sync: :slicing do
@@ -35,4 +36,22 @@ live_loop :patterns, sync: :test  do
     smp MagicDust[/_MI/,1], amp: 1
   end
   sleep 1/8.0
+=======
+def bass(note, *args)
+  if note.is_a?(Array)
+    args = args << {sustain: note[1]}
+    note = note[0]
+  end
+  args_h = resolve_synth_opts_hash_or_array(args)
+  if(args_h[:cutoff])
+    bass_cc(args_h[:cutoff])
+  end
+  midi note, *(args << {port: :iac_bus_1} << {channel: 5})
 end
+def bass_cc(vv)
+  #6=>cutoff
+  midi_cc 6, vv*127.0, port: :iac_bus_1, channel: 5
+>>>>>>> 6fab41b
+end
+
+bass_cc 0.35

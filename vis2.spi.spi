@@ -1,0 +1,12 @@
+D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
+shader :fx, :bloom, 1
+shader :bloom, 1.5
+shader :iMode, 4.0
+#shader :fx, :bloom, 0
+shader :fx, :rim, 1
+shader :fx, :vts, 0
+shader :fx, :toon, 0
+shader :fx, :kal, 0
+shader :fx, :pixel, 0
+shader :fx, :rgb, 1
+shader :fx, :bleach, 1

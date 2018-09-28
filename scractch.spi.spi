@@ -1,0 +1,220 @@
+def sop_mode(mode)
+  sop ['C-1','Cs-1','D-1','Ds-1','E-1', 'F-1', 'Fs-1', 'G-1', 'Gs-1', 'A-1', 'As-1', 'B-1'][mode]
+end
+
+def sop_cc(cc)
+  puts cc.keys
+  cc.keys.each do |k|
+    n = case k
+        when :motion; 1
+        when :form_amp; 99
+        when :formant; 98
+        else
+          nil
+        end
+    if n
+      midi_cc n, cc[k]*127.0, port: :iac_bus_1, channel: 10
+    end
+  end
+end
+
+def sop(n,*args)
+  if n
+    if n.is_a?(Array)
+      args =  args  << {sustain: n[1]}
+      n = n[0]
+    end
+    if args && args[0].is_a?(Numeric)
+      velocity = args[0]
+      args = args[1..-1]
+    else
+      velocity = 30
+    end
+    args_h = resolve_synth_opts_hash_or_array(args)
+    if(args_h[:mode])
+      sop_mode(args_h[:mode])
+    end
+    if(args_h[:motion] || args_h[:formant])
+      sop_cc args_h
+    end
+    if n && ((n != "_") && n != :_)
+      midi n, velocity, *(args << {port: :iac_bus_1} << {channel: 10})
+    end
+  end
+end
+
+
+
+live_loop :piano do
+  tick
+  stop
+  n = (ing
+    [:A2  :Cs3  :E3 ]        #1
+    [:E3  :Gs3  :B3 ]        #5
+    [:D3  :Fs3  :A3 ]        #4
+    [_ _ _]
+    [:B3  :D3   :FS3]        #2
+    [:FS3 :A3   :Cs3]        #6
+    [:E3  :Gs3  :B3 ]        #5
+    [:A3  :B3   :E4 ]        #1
+    [:A3  :cs4  :E4 ]        #1
+    [_ _ _]                   #10
+    ).look
+
+
+  n = (ring
+    [(chord :A2, 'M', i: -1),  2],               #    [(chord :A2, '7sus4', i: 2),  2],
+    [(chord :cs3), 4],
+
+    [(chord :A2, :M, i: 1),  2],
+    [(chord :cs3, :m, i: 0), 4],
+
+    [(chord :A2, :M, i: 0), 2],
+    [(chord :cs3,:m, i: 1), 1],
+    [(chord :A2, :M, i: 1), 1],
+
+    [(chord :E3), 2],
+    [(chord :D3), 2],
+
+    [(chord :b3, :m, i: -1), 2],
+    [(chord :b3, :m, i: 0), 2],
+
+    [(chord :fs3), 2],
+    [(chord :E3),2],
+
+    #[(chord :A2, '7sus4', i: 2),  2],               #    [(chord :A2, '7sus4', i: 2),  2],
+    [(chord :A3,:sus2),2],
+    [(chord :A3),2],
+
+
+
+#    [(chord :b3, :m, i: 0), 3],
+
+#    [(chord :E3, 'M'), 3],
+#    [(chord :A3, :sus2), 3],
+#    [(chord :A3), 3],
+
+
+#    [(chord :A2), 3],
+#    [(chord :E3), 3],
+#    [(chord :E3, :sus4, i: -1), 3],   # B2 E3 A3
+#    [(chord :D3), 3],
+
+#    [(chord :b3), 3],
+#    [(chord :fs3),3],
+#    [(chord :E3, '11'), 3],
+
+
+#    [(chord :A3, :sus2),1],
+#    [(chord :A3),2],
+
+    [_, 3]
+
+    ).look.to_a
+
+  n = (ring
+    [(chord :Ds3),  4],
+    [(chord :G3), 4],
+
+    [(chord :c3),  4],
+    [(chord :C3), 4],
+
+    [(chord :G3), 4],
+
+
+#    [(chord :cs3), 2]
+    ).look.to_a
+
+
+
+  n = (ring
+    [(chord :A2), 4],
+    [(chord :C3), 2],
+    [_,2],
+
+    [(chord :A2), 4],
+    [(chord :cs3, :m, i:1), 4],
+
+    [(chord :A2), 4],
+    [(chord :E3), 4],
+    [(chord :D3), 4],  #THIS IS A KICK ASS CHORD
+    [_,2],
+
+    [(chord :b3,:m, i: -1), 2],
+    [(chord :b3,:m, i: 0), 2],
+    [(chord :fs3), 4],
+    [(chord :E3), 4],
+    [(chord :A3, :sus2), 6],
+    [(chord :A3), 2],
+    [_,4]
+
+    ).look.to_a
+
+
+  n = (ring
+    [(chord :A2, :M,  i:-1), 4],
+    [(chord :cs3, :m, i:0),  4],
+    [(chord :A2, :M,  i:-1), 4],
+    [(chord :C3, :M,  i:0),  4],
+    [(chord :A2, :M,  i:0),  4],
+    [(chord :cs3, :m, i:1),  4],
+    ).look.to_a
+
+
+  nf = (ring
+    [:A2, 0.75]            ,[:A3, 0.75], [:D3, 1.0],   #D
+    [:D3, 1.0],             [:E3, 0.5] , [:E3, 0.5],    #D
+    [:fs3, 0.75]           ,[:A3, 1.0],  [:D3, 0.5],   #D
+    [_, 0.5],
+    [:cs3,1]
+
+#    [:D3, 0.75]            ,[:E3, 1.0], [:Cs3, 0.5],   #D
+
+).look
+
+  #nf[0] = chord(n[0])
+  puts n[0]
+
+ puts note_inspect(n[0])
+  (n[0]||[]).each {|i|
+#    puts i
+    piano i, 60,sustain: n[-1] #/3.0
+  }
+
+  sleep n[-1]
+end
+
+
+live_loop :play do
+#stop
+  tick
+  score = (ring
+    [[:Cs3, :E3], 8, 4],
+    [[:A2], 4, 4],
+
+    [[:CS3, :Fs3, :Gs3], 4, 4],
+    [[:E3, :Gs3],       4, 4],
+    )
+
+  score = (ring
+    [[:Cs3, :E3],  4*3, 4],
+    [[:A2],        4*2, 4],
+    [[:Cs3],       4*4, 4],
+    [[:Fs3],       4*2, 4],
+    [[:Gs3],       4,   4],
+    [[:E3, :Gs3],  4,   4],
+    )
+
+  s = score.look
+  puts s
+  s[0].each{|n|  sop n, sustain: s[1], form_amp: 0.5, mode: [8].choose, formant: 0.5 }
+  sleep (s[-1])
+end
+
+live_loop :for do
+  stop
+  tick
+#  sop_cc formant: (line 0,127).look
+  puts (line 0,127).look
+  sleep 1/8.0
+end

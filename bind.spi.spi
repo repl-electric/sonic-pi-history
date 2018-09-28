@@ -1,0 +1,23 @@
+load_support('analog_in_the_digital'); use_bpm 127/2.0
+
+#solo :piano
+
+
+fx smear: 0.0
+
+live_loop :name do
+  tick
+#  voxe_cc x: rand, y: rand
+  #  voxe :e3, sus: 2
+
+
+
+
+  sleep 1
+  sleep 1
+end
+
+
+
+
+#  glitch_cc kick: true

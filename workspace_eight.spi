@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 puts 🍓.slice(:Fs3)
+=======
+live_loop :metro do
+sample :ambi_choir
+  s = sync "/osc/*"
+end,
+>>>>>>> 6fab41b

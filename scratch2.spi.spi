@@ -1,0 +1,106 @@
+D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
+use_bpm 125
+#sub-zero-minimal-techno
+#https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
+
+
+
+#use_bpm 60
+#sub-zero-minimal-techno
+#https://www.attackmagazine.com/technique/beat-dissected/sub-zero-minimal-techno
+_=nil
+
+
+
+
+
+
+  s=(ing
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ true
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+    _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _             _ _ _ _   _ _ _ _   _ _ _ _   _ _ _ _
+  )
+
+
+#s = (ing 1 _ _ _   _ _ _ _ ).rot(-8*7)
+
+
+puts spread(1,128).rot(-8*8 + 1).to_a.map{|a| !a ?  _ : a } == s.to_a
+
+puts spread(1,128).rot(-8*8 + 1).to_a.map{|a| !a ?  _ : a }
+puts s.to_a
+
+
+#puts s
+
+
+
+
+
+
+
+
+
+
+
+live_loop :drums do
+  stop
+  with_fx :level, amp: 1.0 do
+    with_bpm 120 do
+      k1 = Mountain[/Subkick/,0]
+      #h1,h2 = @slices["Fs3/4"][17],  Frag[/hats/,8]
+      h1,h2 = Frag[/hats/,9], Frag[/hats/,8]
+      s1,s2,s3 = MagicDust[/Hit_HI/,58],Tech[/Drum_Hits/,/snare/,3],Tech[/Drum_Hits/,/snare/,6]
+      p1 = MagicDust[/_HI/,49]
+      v1 = "/Users/josephwilk/Dropbox/repl-electric/samples/beauty_and_practical.wav"#Word#Tech[/vocal/,12]
+      r1 = Tech[/cymbal/,10]
+      kick = (ing k1 _ _ _   _  _ _ _)
+      hat = (ing _ _ h1 _)
+      hat2 = (ing
+        _ _ h2 _
+        _ _ h2 {path:h2,amp:0.05}
+        _ _ h2 _
+        _ _ h2 _)
+      snare = (ing _ _ _ _  s1 _ _ _)
+      snare2 = (ing
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ s2
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ s3
+                         )
+      voice = (ing
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ v1 _)
+      cymbal = (ing _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ _ _ _ _ _
+                         _ _ _ r1 _ _ _ _
+                         )
+      perc = (ing
+        _ _ _ p1
+        _ _ p1 _
+        _ p1 _ _
+        _ _ _ _)
+
+      (4).times{
+        tick
+        smp (kick.look)#, cutoff: 80, amp: 1.0#, rpitch: (ring 12, 24, 24).look
+        smp (hat.look), amp: 1.0# rpitch: 0
+        smp (hat2.look),amp: 1.0
+
+        #smp (snare.look), amp: 1.0
+        #smp (snare2.look), amp: 1.0
+        #smp (voice.look), finish: 0.5, start: 0.3, rate: 1.0, amp: 1.5
+        #smp (voice.look), finish: 0.40, start: 0.2, rate: 0.125, amp: 1.5
+        smp (cymbal.look), finish: 0.95, start: 1.0
+        #smp (perc.look), amp: 1.0
+        sleep 1/4.0
+      }
+    end
+  end
+end

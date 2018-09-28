@@ -1,0 +1,10 @@
+live_loop :a do
+  tick
+  #  eek :A2, 30, sustain: 6, at: 0.1, mod: 0.4
+
+
+  sop :A2, 100, mode: 0#, sustain: s[1]*2, mode: 1*(ring 1, 2, 3).look(:inner) # formant: 0.5, # form_amp: 0.5,
+
+  #eek_cc mod: rand(1.0)
+  sleep 3
+end

@@ -1,0 +1,28 @@
+D4=:d4;E4=:e4;FS4=:Fs4;GS4=:Gs4;Cs4=:Cs4;A4=:A4;B4=:B4;D3=:d3;E3=:e3;FS3=:Fs3;GS3=:Gs3;Cs3=:Cs3;A3=:A3;B3=:B3;D2=:d2;E2=:e2;FS2=:Fs2;GS2=:Gs2;Cs2=:Cs2;A2=:A2;B2=:B2;C2=:c2;C3=:c3 #__nonsave__
+no{
+  sop2_cc :motion
+  sop2_cc :formant
+  sop2_cc :form_amp
+  sop2_cc :cutoff
+  sop2_cc :drive
+  sop2_cc :bass
+  sop2_cc :fm
+  sop2_cc :mod
+  sop2_cc :mul
+  sop2_cc :atk
+  sop2_cc :wav
+  sop2_cc :oct
+  sop2_cc :charge
+}
+
+sop2_cc oct: 0.68
+sop2_cc drive: 0.7
+sop2_cc charge: 0.6
+sop2_cc fm: 0.4
+sop2_cc wav: 0.8
+sop2_cc atk: 0.08
+sop2_cc mod: 1.0
+sop2_cc motion: 0.036
+sop2_cc formant: 0.5
+sop2_cc mul: 0.5
+sop2_cc bass: 0.8
